@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TasteTable - taste-grounded weekly plans for the people you care for</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1>TasteTable</h1>
+  <p class="tag">A weekly plan of restaurants + one cultural outing, grounded in Qloo taste data and checked against care constraints.</p>
+  <div class="disclaimer" role="note">
+    <strong>Not medical or dietary advice.</strong> Constraint checks are heuristics over public venue tags and menu keywords.
+    Always confirm accessibility, texture and sodium needs with the venue and the person's care team.
+    Sample personas are fictional; do not enter real health information.
+  </div>
+  <div id="mode" class="mode"></div>
+</header>
+
+<main>
+  <section class="card">
+    <h2>1. Tastes &amp; constraints</h2>
+    <div class="sample">
+      <button id="sampleBtn" class="primary">Try a sample persona</button>
+      <select id="personaSel" aria-label="Sample persona"></select>
+    </div>
+    <form id="form">
+      <label>Favourite cuisines <input name="cuisines" placeholder="Cuban, Mexican"></label>
+      <label>Music they love (artists / era) <input name="music" placeholder="Celia Cruz"></label>
+      <label>Favourite films <input name="films" placeholder="West Side Story"></label>
+      <label>City <input name="city" value="Pasadena"></label>
+      <fieldset>
+        <legend>Constraints</legend>
+        <label class="inline"><input type="checkbox" name="constraints" value="soft_foods"> Soft foods</label>
+        <label class="inline"><input type="checkbox" name="constraints" value="low_sodium"> Low sodium</label>
+        <label class="inline"><input type="checkbox" name="constraints" value="wheelchair"> Wheelchair access</label>
+      </fieldset>
+      <button type="submit">Plan my week</button>
+    </form>
+  </section>
+
+  <section id="results" hidden>
+    <div class="cols">
+      <div class="card grounded">
+        <h2>Qloo-grounded plan</h2>
+        <ol id="plan"></ol>
+        <div id="notes"></div>
+      </div>
+      <div class="card baseline">
+        <h2>LLM-only (no Qloo)</h2>
+        <ol id="baseline"></ol>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Side-by-side</h2>
+      <table id="compare"></table>
+    </div>
+    <details class="card"><summary>Rejected by constraint check</summary><ul id="rejected"></ul></details>
+    <details class="card"><summary>Agent tool trace</summary><ol id="trace" class="mono"></ol></details>
+  </section>
+</main>
+<footer>MIT licensed &middot; Uses Qloo's Taste AI insights. Qloo results describe aggregate affinities, not facts about any individual.</footer>
+<script src="/static/app.js"></script>
+</body>
+</html>
