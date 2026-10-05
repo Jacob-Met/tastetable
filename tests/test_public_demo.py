@@ -13,6 +13,7 @@ def test_static_demo_has_relative_assets_and_fixture_data():
     fixtures = json.loads((DOCS / "fixtures.json").read_text(encoding="utf-8"))
 
     assert 'href="./style.css"' in page
+    assert 'href="./favicon.svg"' in page
     assert 'src="./demo.js"' in page
     assert "Offline preview" in page
     assert "Qloo or LLM API calls" in page
