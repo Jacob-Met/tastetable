@@ -1,6 +1,7 @@
 import json
 import sys
 from pathlib import Path
+from urllib.parse import parse_qs, urlsplit
 
 import pytest
 
@@ -10,7 +11,7 @@ import agent  # noqa: E402
 from constraints import evaluate, filter_entities  # noqa: E402
 from personas import PERSONAS  # noqa: E402
 from qloo_client import (FixtureTransport, QlooClient, QlooError, parse_entity,  # noqa: E402
-                         parse_insights, parse_search, parse_tags)
+                         http_transport, parse_insights, parse_search, parse_tags)
 
 
 @pytest.fixture
@@ -83,6 +84,57 @@ def test_client_caches_identical_requests(mock):
 def test_default_from_env_is_mock(monkeypatch):
     monkeypatch.delenv("TASTETABLE_LIVE", raising=False)
     assert QlooClient.from_env().is_mock
+
+
+def test_live_mode_requires_both_explicit_opt_ins(monkeypatch):
+    monkeypatch.setenv("QLOO_API_KEY", "unit-test-only")
+    monkeypatch.delenv("TASTETABLE_LIVE", raising=False)
+    monkeypatch.delenv("QLOO_BASE_URL", raising=False)
+    assert QlooClient.from_env().is_mock
+
+    monkeypatch.setenv("TASTETABLE_LIVE", "1")
+    client = QlooClient.from_env()
+    assert not client.is_mock
+    assert client.base_url == "https://hackathon.api.qloo.com"
+
+
+def test_http_transport_uses_get_and_sends_key_only_as_header(monkeypatch):
+    captured = {}
+
+    class FakeResponse:
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *args):
+            return False
+
+        def read(self):
+            return b'{"success":true}'
+
+    def fake_urlopen(request, timeout):
+        captured["request"] = request
+        captured["timeout"] = timeout
+        return FakeResponse()
+
+    monkeypatch.setattr("qloo_client.urllib.request.urlopen", fake_urlopen)
+    result = http_transport("https://hackathon.api.qloo.com")(
+        "/v2/insights",
+        {"filter.type": "urn:entity:place", "take": 2, "ignored": None},
+        {"X-Api-Key": "unit-test-only", "accept": "application/json"},
+    )
+
+    request = captured["request"]
+    headers = {key.lower(): value for key, value in request.header_items()}
+    assert request.get_method() == "GET"
+    assert urlsplit(request.full_url).scheme == "https"
+    assert urlsplit(request.full_url).netloc == "hackathon.api.qloo.com"
+    assert urlsplit(request.full_url).path == "/v2/insights"
+    assert parse_qs(urlsplit(request.full_url).query) == {
+        "filter.type": ["urn:entity:place"], "take": ["2"]}
+    assert headers["x-api-key"] == "unit-test-only"
+    assert "unit-test-only" not in request.full_url
+    assert captured["timeout"] == 15.0
+    assert result == {"success": True}
 
 
 # ---------------------------------------------------------------- constraints
