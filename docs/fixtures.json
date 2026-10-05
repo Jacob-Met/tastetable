@@ -1,0 +1,1027 @@
+{
+ "_note": "SYNTHETIC fixture. Fictional venues, FIX- ids, hand-set affinities. Not Qloo data.",
+ "_doc_shapes": [
+  "https://docs.qloo.com/reference/insights-api-deep-dive",
+  "https://docs.qloo.com/reference/get-search",
+  "https://docs.qloo.com/reference/get-tags-1"
+ ],
+ "search_entities": [
+  {
+   "entity_id": "FIX-A-celia",
+   "name": "Celia Cruz",
+   "types": [
+    "urn:entity:artist"
+   ],
+   "popularity": 0.97,
+   "tags": []
+  },
+  {
+   "entity_id": "FIX-A-nat",
+   "name": "Nat King Cole",
+   "types": [
+    "urn:entity:artist"
+   ],
+   "popularity": 0.97,
+   "tags": []
+  },
+  {
+   "entity_id": "FIX-A-frank",
+   "name": "Frank Sinatra",
+   "types": [
+    "urn:entity:artist"
+   ],
+   "popularity": 0.97,
+   "tags": []
+  },
+  {
+   "entity_id": "FIX-A-beatles",
+   "name": "The Beatles",
+   "types": [
+    "urn:entity:artist"
+   ],
+   "popularity": 0.97,
+   "tags": []
+  },
+  {
+   "entity_id": "FIX-A-ella",
+   "name": "Ella Fitzgerald",
+   "types": [
+    "urn:entity:artist"
+   ],
+   "popularity": 0.97,
+   "tags": []
+  },
+  {
+   "entity_id": "FIX-M-roman",
+   "name": "Roman Holiday",
+   "types": [
+    "urn:entity:movie"
+   ],
+   "popularity": 0.95,
+   "tags": []
+  },
+  {
+   "entity_id": "FIX-M-casa",
+   "name": "Casablanca",
+   "types": [
+    "urn:entity:movie"
+   ],
+   "popularity": 0.95,
+   "tags": []
+  },
+  {
+   "entity_id": "FIX-M-singin",
+   "name": "Singin' in the Rain",
+   "types": [
+    "urn:entity:movie"
+   ],
+   "popularity": 0.95,
+   "tags": []
+  },
+  {
+   "entity_id": "FIX-M-wss",
+   "name": "West Side Story",
+   "types": [
+    "urn:entity:movie"
+   ],
+   "popularity": 0.95,
+   "tags": []
+  }
+ ],
+ "tags": [
+  {
+   "id": "urn:tag:genre:restaurant:Cuban",
+   "name": "Cuban",
+   "type": "urn:tag:genre:place:restaurant",
+   "aka": []
+  },
+  {
+   "id": "urn:tag:genre:restaurant:Mexican",
+   "name": "Mexican",
+   "type": "urn:tag:genre:place:restaurant",
+   "aka": []
+  },
+  {
+   "id": "urn:tag:genre:restaurant:Southern",
+   "name": "Southern",
+   "type": "urn:tag:genre:place:restaurant",
+   "aka": [
+    "soul food"
+   ]
+  },
+  {
+   "id": "urn:tag:genre:restaurant:Diner",
+   "name": "Diner",
+   "type": "urn:tag:genre:place:restaurant",
+   "aka": [
+    "american",
+    "comfort food"
+   ]
+  },
+  {
+   "id": "urn:tag:genre:restaurant:Japanese",
+   "name": "Japanese",
+   "type": "urn:tag:genre:place:restaurant",
+   "aka": []
+  },
+  {
+   "id": "urn:tag:genre:restaurant:Italian",
+   "name": "Italian",
+   "type": "urn:tag:genre:place:restaurant",
+   "aka": []
+  },
+  {
+   "id": "urn:tag:category:place:jazz_club",
+   "name": "Jazz Club",
+   "type": "urn:tag:category:place",
+   "aka": [
+    "jazz"
+   ]
+  },
+  {
+   "id": "urn:tag:category:place:movie_theater",
+   "name": "Movie Theater",
+   "type": "urn:tag:category:place",
+   "aka": [
+    "cinema",
+    "classic film"
+   ]
+  },
+  {
+   "id": "urn:tag:category:place:museum",
+   "name": "Museum",
+   "type": "urn:tag:category:place",
+   "aka": []
+  },
+  {
+   "id": "urn:tag:category:place:concert_hall",
+   "name": "Concert Hall",
+   "type": "urn:tag:category:place",
+   "aka": [
+    "symphony",
+    "big band"
+   ]
+  }
+ ],
+ "places": [
+  {
+   "entity_id": "FIX-P-01",
+   "name": "Casa Habana Kitchen",
+   "types": [
+    "urn:entity:place"
+   ],
+   "popularity": 0.71,
+   "tags": [
+    {
+     "tag_id": "urn:tag:genre:restaurant:Cuban",
+     "name": "Cuban",
+     "type": "urn:tag:genre:place:restaurant"
+    },
+    {
+     "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance",
+     "name": "Wheelchair accessible entrance",
+     "type": "urn:tag:accessibility:place"
+    }
+   ],
+   "properties": {
+    "address": "Synthetic address (fixture)",
+    "geocode": {
+     "city": "Pasadena",
+     "country_code": "US"
+    },
+    "keywords": [
+     {
+      "name": "black bean soup",
+      "count": 10
+     },
+     {
+      "name": "picadillo",
+      "count": 10
+     },
+     {
+      "name": "flan",
+      "count": 10
+     },
+     {
+      "name": "made to order",
+      "count": 10
+     }
+    ],
+    "price_level": 2,
+    "hours_summary": "Mon-Sun"
+   },
+   "_signals": {
+    "FIX-A-celia": 0.91,
+    "FIX-M-wss": 0.74
+   }
+  },
+  {
+   "entity_id": "FIX-P-02",
+   "name": "La Paloma Cantina",
+   "types": [
+    "urn:entity:place"
+   ],
+   "popularity": 0.8,
+   "tags": [
+    {
+     "tag_id": "urn:tag:genre:restaurant:Mexican",
+     "name": "Mexican",
+     "type": "urn:tag:genre:place:restaurant"
+    },
+    {
+     "tag_id": "urn:tag:accessibility:place:steps_at_entrance",
+     "name": "Steps at entrance",
+     "type": "urn:tag:accessibility:place"
+    }
+   ],
+   "properties": {
+    "address": "Synthetic address (fixture)",
+    "geocode": {
+     "city": "Pasadena",
+     "country_code": "US"
+    },
+    "keywords": [
+     {
+      "name": "pozole",
+      "count": 10
+     },
+     {
+      "name": "tamales",
+      "count": 10
+     },
+     {
+      "name": "live mariachi",
+      "count": 10
+     }
+    ],
+    "price_level": 2,
+    "hours_summary": "Mon-Sun"
+   },
+   "_signals": {
+    "FIX-A-celia": 0.86
+   }
+  },
+  {
+   "entity_id": "FIX-P-03",
+   "name": "Abuela's Table",
+   "types": [
+    "urn:entity:place"
+   ],
+   "popularity": 0.62,
+   "tags": [
+    {
+     "tag_id": "urn:tag:genre:restaurant:Mexican",
+     "name": "Mexican",
+     "type": "urn:tag:genre:place:restaurant"
+    },
+    {
+     "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance",
+     "name": "Wheelchair accessible entrance",
+     "type": "urn:tag:accessibility:place"
+    }
+   ],
+   "properties": {
+    "address": "Synthetic address (fixture)",
+    "geocode": {
+     "city": "Pasadena",
+     "country_code": "US"
+    },
+    "keywords": [
+     {
+      "name": "caldo de pollo",
+      "count": 10
+     },
+     {
+      "name": "refried beans",
+      "count": 10
+     },
+     {
+      "name": "low sodium options",
+      "count": 10
+     }
+    ],
+    "price_level": 1,
+    "hours_summary": "Mon-Sun"
+   },
+   "_signals": {
+    "FIX-A-celia": 0.83,
+    "FIX-M-roman": 0.55
+   }
+  },
+  {
+   "entity_id": "FIX-P-04",
+   "name": "Malecon Sandwich Shop",
+   "types": [
+    "urn:entity:place"
+   ],
+   "popularity": 0.66,
+   "tags": [
+    {
+     "tag_id": "urn:tag:genre:restaurant:Cuban",
+     "name": "Cuban",
+     "type": "urn:tag:genre:place:restaurant"
+    }
+   ],
+   "properties": {
+    "address": "Synthetic address (fixture)",
+    "geocode": {
+     "city": "Pasadena",
+     "country_code": "US"
+    },
+    "keywords": [
+     {
+      "name": "cuban sandwich",
+      "count": 10
+     },
+     {
+      "name": "pressed bread",
+      "count": 10
+     },
+     {
+      "name": "cured ham",
+      "count": 10
+     },
+     {
+      "name": "pickles",
+      "count": 10
+     }
+    ],
+    "price_level": 1,
+    "hours_summary": "Mon-Sun"
+   },
+   "_signals": {
+    "FIX-A-celia": 0.88
+   }
+  },
+  {
+   "entity_id": "FIX-P-05",
+   "name": "Magnolia Supper Club",
+   "types": [
+    "urn:entity:place"
+   ],
+   "popularity": 0.69,
+   "tags": [
+    {
+     "tag_id": "urn:tag:genre:restaurant:Southern",
+     "name": "Southern",
+     "type": "urn:tag:genre:place:restaurant"
+    },
+    {
+     "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance",
+     "name": "Wheelchair accessible entrance",
+     "type": "urn:tag:accessibility:place"
+    }
+   ],
+   "properties": {
+    "address": "Synthetic address (fixture)",
+    "geocode": {
+     "city": "Pasadena",
+     "country_code": "US"
+    },
+    "keywords": [
+     {
+      "name": "grits",
+      "count": 10
+     },
+     {
+      "name": "mashed potatoes",
+      "count": 10
+     },
+     {
+      "name": "heart-healthy menu",
+      "count": 10
+     },
+     {
+      "name": "steamed vegetables",
+      "count": 10
+     }
+    ],
+    "price_level": 3,
+    "hours_summary": "Mon-Sun"
+   },
+   "_signals": {
+    "FIX-A-nat": 0.89,
+    "FIX-A-frank": 0.84,
+    "FIX-M-casa": 0.81
+   }
+  },
+  {
+   "entity_id": "FIX-P-06",
+   "name": "Smokehouse 66",
+   "types": [
+    "urn:entity:place"
+   ],
+   "popularity": 0.83,
+   "tags": [
+    {
+     "tag_id": "urn:tag:genre:restaurant:Southern",
+     "name": "Southern",
+     "type": "urn:tag:genre:place:restaurant"
+    },
+    {
+     "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance",
+     "name": "Wheelchair accessible entrance",
+     "type": "urn:tag:accessibility:place"
+    }
+   ],
+   "properties": {
+    "address": "Synthetic address (fixture)",
+    "geocode": {
+     "city": "Pasadena",
+     "country_code": "US"
+    },
+    "keywords": [
+     {
+      "name": "bbq ribs",
+      "count": 10
+     },
+     {
+      "name": "brisket",
+      "count": 10
+     },
+     {
+      "name": "cured meats",
+      "count": 10
+     },
+     {
+      "name": "fried pickles",
+      "count": 10
+     }
+    ],
+    "price_level": 2,
+    "hours_summary": "Mon-Sun"
+   },
+   "_signals": {
+    "FIX-A-nat": 0.72,
+    "FIX-A-frank": 0.7
+   }
+  },
+  {
+   "entity_id": "FIX-P-07",
+   "name": "Blue Plate Diner",
+   "types": [
+    "urn:entity:place"
+   ],
+   "popularity": 0.75,
+   "tags": [
+    {
+     "tag_id": "urn:tag:genre:restaurant:Diner",
+     "name": "Diner",
+     "type": "urn:tag:genre:place:restaurant"
+    },
+    {
+     "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance",
+     "name": "Wheelchair accessible entrance",
+     "type": "urn:tag:accessibility:place"
+    }
+   ],
+   "properties": {
+    "address": "Synthetic address (fixture)",
+    "geocode": {
+     "city": "Pasadena",
+     "country_code": "US"
+    },
+    "keywords": [
+     {
+      "name": "meatloaf",
+      "count": 10
+     },
+     {
+      "name": "mashed potatoes",
+      "count": 10
+     },
+     {
+      "name": "soups",
+      "count": 10
+     },
+     {
+      "name": "made to order",
+      "count": 10
+     }
+    ],
+    "price_level": 1,
+    "hours_summary": "Mon-Sun"
+   },
+   "_signals": {
+    "FIX-A-frank": 0.87,
+    "FIX-M-casa": 0.77,
+    "FIX-A-beatles": 0.61
+   }
+  },
+  {
+   "entity_id": "FIX-P-08",
+   "name": "Starlight Grill",
+   "types": [
+    "urn:entity:place"
+   ],
+   "popularity": 0.78,
+   "tags": [
+    {
+     "tag_id": "urn:tag:genre:restaurant:Diner",
+     "name": "Diner",
+     "type": "urn:tag:genre:place:restaurant"
+    },
+    {
+     "tag_id": "urn:tag:accessibility:place:steps_at_entrance",
+     "name": "Steps at entrance",
+     "type": "urn:tag:accessibility:place"
+    }
+   ],
+   "properties": {
+    "address": "Synthetic address (fixture)",
+    "geocode": {
+     "city": "Pasadena",
+     "country_code": "US"
+    },
+    "keywords": [
+     {
+      "name": "burgers",
+      "count": 10
+     },
+     {
+      "name": "milkshakes",
+      "count": 10
+     },
+     {
+      "name": "fried chicken",
+      "count": 10
+     }
+    ],
+    "price_level": 1,
+    "hours_summary": "Mon-Sun"
+   },
+   "_signals": {
+    "FIX-A-nat": 0.8
+   }
+  },
+  {
+   "entity_id": "FIX-P-09",
+   "name": "Kotobuki Tofu House",
+   "types": [
+    "urn:entity:place"
+   ],
+   "popularity": 0.64,
+   "tags": [
+    {
+     "tag_id": "urn:tag:genre:restaurant:Japanese",
+     "name": "Japanese",
+     "type": "urn:tag:genre:place:restaurant"
+    },
+    {
+     "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance",
+     "name": "Wheelchair accessible entrance",
+     "type": "urn:tag:accessibility:place"
+    }
+   ],
+   "properties": {
+    "address": "Synthetic address (fixture)",
+    "geocode": {
+     "city": "Pasadena",
+     "country_code": "US"
+    },
+    "keywords": [
+     {
+      "name": "tofu",
+      "count": 10
+     },
+     {
+      "name": "steamed fish",
+      "count": 10
+     },
+     {
+      "name": "chawanmushi",
+      "count": 10
+     },
+     {
+      "name": "low sodium options",
+      "count": 10
+     }
+    ],
+    "price_level": 2,
+    "hours_summary": "Mon-Sun"
+   },
+   "_signals": {
+    "FIX-A-beatles": 0.82,
+    "FIX-M-singin": 0.58
+   }
+  },
+  {
+   "entity_id": "FIX-P-10",
+   "name": "Ramen Tatsu",
+   "types": [
+    "urn:entity:place"
+   ],
+   "popularity": 0.88,
+   "tags": [
+    {
+     "tag_id": "urn:tag:genre:restaurant:Japanese",
+     "name": "Japanese",
+     "type": "urn:tag:genre:place:restaurant"
+    },
+    {
+     "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance",
+     "name": "Wheelchair accessible entrance",
+     "type": "urn:tag:accessibility:place"
+    }
+   ],
+   "properties": {
+    "address": "Synthetic address (fixture)",
+    "geocode": {
+     "city": "Pasadena",
+     "country_code": "US"
+    },
+    "keywords": [
+     {
+      "name": "tonkotsu ramen",
+      "count": 10
+     },
+     {
+      "name": "rich broth",
+      "count": 10
+     },
+     {
+      "name": "pickled vegetables",
+      "count": 10
+     }
+    ],
+    "price_level": 1,
+    "hours_summary": "Mon-Sun"
+   },
+   "_signals": {
+    "FIX-A-beatles": 0.79
+   }
+  },
+  {
+   "entity_id": "FIX-P-11",
+   "name": "Trattoria Nonna Lucia",
+   "types": [
+    "urn:entity:place"
+   ],
+   "popularity": 0.73,
+   "tags": [
+    {
+     "tag_id": "urn:tag:genre:restaurant:Italian",
+     "name": "Italian",
+     "type": "urn:tag:genre:place:restaurant"
+    },
+    {
+     "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance",
+     "name": "Wheelchair accessible entrance",
+     "type": "urn:tag:accessibility:place"
+    }
+   ],
+   "properties": {
+    "address": "Synthetic address (fixture)",
+    "geocode": {
+     "city": "Pasadena",
+     "country_code": "US"
+    },
+    "keywords": [
+     {
+      "name": "risotto",
+      "count": 10
+     },
+     {
+      "name": "polenta",
+      "count": 10
+     },
+     {
+      "name": "minestrone",
+      "count": 10
+     },
+     {
+      "name": "made to order",
+      "count": 10
+     }
+    ],
+    "price_level": 2,
+    "hours_summary": "Mon-Sun"
+   },
+   "_signals": {
+    "FIX-M-roman": 0.92,
+    "FIX-A-frank": 0.9,
+    "FIX-A-beatles": 0.76,
+    "FIX-M-singin": 0.71
+   }
+  },
+  {
+   "entity_id": "FIX-P-12",
+   "name": "Salumeria Roma",
+   "types": [
+    "urn:entity:place"
+   ],
+   "popularity": 0.7,
+   "tags": [
+    {
+     "tag_id": "urn:tag:genre:restaurant:Italian",
+     "name": "Italian",
+     "type": "urn:tag:genre:place:restaurant"
+    }
+   ],
+   "properties": {
+    "address": "Synthetic address (fixture)",
+    "geocode": {
+     "city": "Pasadena",
+     "country_code": "US"
+    },
+    "keywords": [
+     {
+      "name": "cured meats",
+      "count": 10
+     },
+     {
+      "name": "crusty bread",
+      "count": 10
+     },
+     {
+      "name": "olives",
+      "count": 10
+     }
+    ],
+    "price_level": 2,
+    "hours_summary": "Mon-Sun"
+   },
+   "_signals": {
+    "FIX-M-roman": 0.85
+   }
+  },
+  {
+   "entity_id": "FIX-P-13",
+   "name": "Osteria del Ponte",
+   "types": [
+    "urn:entity:place"
+   ],
+   "popularity": 0.67,
+   "tags": [
+    {
+     "tag_id": "urn:tag:genre:restaurant:Italian",
+     "name": "Italian",
+     "type": "urn:tag:genre:place:restaurant"
+    },
+    {
+     "tag_id": "urn:tag:accessibility:place:steps_at_entrance",
+     "name": "Steps at entrance",
+     "type": "urn:tag:accessibility:place"
+    }
+   ],
+   "properties": {
+    "address": "Synthetic address (fixture)",
+    "geocode": {
+     "city": "Pasadena",
+     "country_code": "US"
+    },
+    "keywords": [
+     {
+      "name": "gnocchi",
+      "count": 10
+     },
+     {
+      "name": "soups",
+      "count": 10
+     }
+    ],
+    "price_level": 3,
+    "hours_summary": "Mon-Sun"
+   },
+   "_signals": {
+    "FIX-A-frank": 0.86,
+    "FIX-M-roman": 0.8
+   }
+  },
+  {
+   "entity_id": "FIX-V-01",
+   "name": "The Blue Note Room (fictional)",
+   "types": [
+    "urn:entity:place"
+   ],
+   "popularity": 0.72,
+   "tags": [
+    {
+     "tag_id": "urn:tag:category:place:jazz_club",
+     "name": "Jazz Club",
+     "type": "urn:tag:category:place"
+    },
+    {
+     "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance",
+     "name": "Wheelchair accessible entrance",
+     "type": "urn:tag:accessibility:place"
+    }
+   ],
+   "properties": {
+    "address": "Synthetic address (fixture)",
+    "geocode": {
+     "city": "Pasadena",
+     "country_code": "US"
+    },
+    "keywords": [
+     {
+      "name": "live jazz",
+      "count": 10
+     },
+     {
+      "name": "early seating",
+      "count": 10
+     },
+     {
+      "name": "big band night",
+      "count": 10
+     }
+    ],
+    "price_level": 2,
+    "hours_summary": "Thu-Sun"
+   },
+   "_signals": {
+    "FIX-A-nat": 0.93,
+    "FIX-A-frank": 0.91,
+    "FIX-A-ella": 0.94,
+    "FIX-A-celia": 0.7
+   }
+  },
+  {
+   "entity_id": "FIX-V-02",
+   "name": "Rialto Revival Cinema (fictional)",
+   "types": [
+    "urn:entity:place"
+   ],
+   "popularity": 0.68,
+   "tags": [
+    {
+     "tag_id": "urn:tag:category:place:movie_theater",
+     "name": "Movie Theater",
+     "type": "urn:tag:category:place"
+    },
+    {
+     "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance",
+     "name": "Wheelchair accessible entrance",
+     "type": "urn:tag:accessibility:place"
+    }
+   ],
+   "properties": {
+    "address": "Synthetic address (fixture)",
+    "geocode": {
+     "city": "Pasadena",
+     "country_code": "US"
+    },
+    "keywords": [
+     {
+      "name": "classic film series",
+      "count": 10
+     },
+     {
+      "name": "matinee",
+      "count": 10
+     },
+     {
+      "name": "assisted listening",
+      "count": 10
+     }
+    ],
+    "price_level": 1,
+    "hours_summary": "Mon-Sun"
+   },
+   "_signals": {
+    "FIX-M-roman": 0.95,
+    "FIX-M-casa": 0.94,
+    "FIX-M-singin": 0.92,
+    "FIX-M-wss": 0.9
+   }
+  },
+  {
+   "entity_id": "FIX-V-03",
+   "name": "Arroyo Museum of Latin Music (fictional)",
+   "types": [
+    "urn:entity:place"
+   ],
+   "popularity": 0.58,
+   "tags": [
+    {
+     "tag_id": "urn:tag:category:place:museum",
+     "name": "Museum",
+     "type": "urn:tag:category:place"
+    },
+    {
+     "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance",
+     "name": "Wheelchair accessible entrance",
+     "type": "urn:tag:accessibility:place"
+    }
+   ],
+   "properties": {
+    "address": "Synthetic address (fixture)",
+    "geocode": {
+     "city": "Pasadena",
+     "country_code": "US"
+    },
+    "keywords": [
+     {
+      "name": "exhibits",
+      "count": 10
+     },
+     {
+      "name": "salsa history",
+      "count": 10
+     },
+     {
+      "name": "guided tours",
+      "count": 10
+     }
+    ],
+    "price_level": 1,
+    "hours_summary": "Mon-Sun"
+   },
+   "_signals": {
+    "FIX-A-celia": 0.96,
+    "FIX-M-wss": 0.66
+   }
+  },
+  {
+   "entity_id": "FIX-V-04",
+   "name": "Colorado Street Concert Hall (fictional)",
+   "types": [
+    "urn:entity:place"
+   ],
+   "popularity": 0.77,
+   "tags": [
+    {
+     "tag_id": "urn:tag:category:place:concert_hall",
+     "name": "Concert Hall",
+     "type": "urn:tag:category:place"
+    },
+    {
+     "tag_id": "urn:tag:accessibility:place:steps_at_entrance",
+     "name": "Steps at entrance",
+     "type": "urn:tag:accessibility:place"
+    }
+   ],
+   "properties": {
+    "address": "Synthetic address (fixture)",
+    "geocode": {
+     "city": "Pasadena",
+     "country_code": "US"
+    },
+    "keywords": [
+     {
+      "name": "symphony",
+      "count": 10
+     },
+     {
+      "name": "british invasion tribute",
+      "count": 10
+     }
+    ],
+    "price_level": 3,
+    "hours_summary": "Mon-Sun"
+   },
+   "_signals": {
+    "FIX-A-beatles": 0.95,
+    "FIX-A-frank": 0.82
+   }
+  },
+  {
+   "entity_id": "FIX-V-05",
+   "name": "Pacific Pops Pavilion (fictional)",
+   "types": [
+    "urn:entity:place"
+   ],
+   "popularity": 0.63,
+   "tags": [
+    {
+     "tag_id": "urn:tag:category:place:concert_hall",
+     "name": "Concert Hall",
+     "type": "urn:tag:category:place"
+    },
+    {
+     "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance",
+     "name": "Wheelchair accessible entrance",
+     "type": "urn:tag:accessibility:place"
+    }
+   ],
+   "properties": {
+    "address": "Synthetic address (fixture)",
+    "geocode": {
+     "city": "Pasadena",
+     "country_code": "US"
+    },
+    "keywords": [
+     {
+      "name": "pops concerts",
+      "count": 10
+     },
+     {
+      "name": "60s tribute",
+      "count": 10
+     },
+     {
+      "name": "matinee",
+      "count": 10
+     }
+    ],
+    "price_level": 2,
+    "hours_summary": "Mon-Sun"
+   },
+   "_signals": {
+    "FIX-A-beatles": 0.89,
+    "FIX-M-singin": 0.7
+   }
+  }
+ ]
+}

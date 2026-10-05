@@ -13,6 +13,19 @@ Built for the [Qloo Agentic Hackathon](https://qloo.devpost.com/).
 > menu keywords. Confirm needs with the venue and the care team. The sample personas are
 > fictional. The app stores nothing, and it never sends names or health details to Qloo.
 
+## Offline static preview
+
+A polished, browser-only preview lives in [`docs/`](docs/). It uses only the repository's synthetic fixture data and local rules; it makes no Qloo or LLM requests, stores nothing, and should not receive real personal or health information. The static preview is explicitly a mock, not a live Qloo result or a medical/accessibility guarantee.
+
+Run it locally from the repository root:
+
+```bash
+python -m http.server 8000 --directory docs
+# open http://localhost:8000
+```
+
+`docs/` is ready to be used as a GitHub Pages source if Pages is enabled for the repository. Pages is not currently configured, so this repository does not yet have a hosted public-demo URL. The separate FastAPI app below remains the project backend; its default is also mock mode.
+
 ## Problem
 
 Caregivers plan outings that need to be *enjoyable* (familiar food, music from their youth)

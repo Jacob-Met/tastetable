@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2eb">
+  <meta name="description" content="An offline TasteTable preview with fictional sample data. No Qloo or LLM calls.">
+  <title>TasteTable — a week that feels like their own</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./demo.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to planner</a>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="TasteTable home">
+      <span class="brand-mark" aria-hidden="true">t</span>
+      <span>TasteTable</span>
+    </a>
+    <div class="topbar-right">
+      <span class="offline-pill"><span class="status-dot"></span> Offline preview</span>
+      <a class="repo-link" href="https://github.com/Jacob-Met/tastetable" target="_blank" rel="noreferrer">Open source ↗</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">CARE PLANNING, INFORMED BY TASTE</p>
+        <h1 id="hero-title">A week that feels like<br><em>their own.</em></h1>
+        <p class="hero-lede">Turn the music, films and food someone loves into a thoughtful week out—with practical checks before a place makes the list.</p>
+        <div class="hero-tags" aria-label="Preview features">
+          <span>Fictional profiles</span><span>Care-aware checks</span><span>Runs in this browser</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a place setting and weekly plan">
+        <div class="sun-disc"></div><div class="plate plate-back"></div><div class="plate plate-front"><span>TT</span></div>
+        <div class="art-note note-one"><span class="note-dot"></span>MON · A favorite flavor</div>
+        <div class="art-note note-two"><span class="note-dot"></span>SAT · A familiar song</div>
+        <span class="art-spark spark-one" aria-hidden="true">✳</span><span class="art-spark spark-two" aria-hidden="true">✳</span>
+      </div>
+    </section>
+
+    <section class="demo-ribbon" aria-label="Demo safety notice">
+      <span class="ribbon-icon" aria-hidden="true">i</span>
+      <p><strong>Demo only.</strong> All people, places, IDs and scores shown here come from synthetic fixtures. This preview makes <strong>no Qloo or LLM API calls</strong>; your edits stay in this browser tab. Do not enter real personal or health information.</p>
+    </section>
+
+    <div class="workspace">
+      <section class="planner-panel panel" aria-labelledby="planner-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">YOUR STARTING POINT</p><h2 id="planner-title">Build a taste profile</h2></div>
+          <span class="step-number" aria-hidden="true">01</span>
+        </div>
+        <p class="panel-intro">Try a fictional example, then adjust the tastes and preferences to see how the plan changes.</p>
+
+        <label class="field-label" for="persona">Start with an example <span class="field-note">all profiles are fictional</span></label>
+        <div class="preset-row">
+          <select id="persona" name="persona" aria-label="Fictional sample profile">
+            <option value="rosa">Rosa · salsa &amp; Cuban home cooking</option>
+            <option value="harold">Harold · crooners &amp; supper clubs</option>
+            <option value="mei">Mei · Beatles, classic films &amp; tofu</option>
+          </select>
+          <button id="loadPreset" class="button button-quiet" type="button">Load</button>
+        </div>
+        <div id="presetNotice" class="preset-notice" aria-live="polite">Rosa’s fictional example is loaded. Nothing here describes a real person.</div>
+
+        <form id="profileForm">
+          <label class="field-label" for="cuisines">Favorite cuisines <span class="field-note">separate with commas</span></label>
+          <input id="cuisines" name="cuisines" type="text" value="Cuban, Mexican" autocomplete="off" placeholder="Cuban, Mexican">
+
+          <label class="field-label" for="music">Music, artists or eras</label>
+          <input id="music" name="music" type="text" value="Celia Cruz" autocomplete="off" placeholder="Celia Cruz">
+
+          <label class="field-label" for="films">Favorite films</label>
+          <input id="films" name="films" type="text" value="West Side Story" autocomplete="off" placeholder="West Side Story">
+
+          <label class="field-label" for="city">Demo location <span class="field-note">fixture city only</span></label>
+          <input id="city" name="city" type="text" value="Pasadena" autocomplete="off" placeholder="Pasadena">
+
+          <fieldset class="care-fieldset">
+            <legend>Care preferences to check</legend>
+            <p class="fieldset-hint">These are simple fixture-based signals, not medical guidance.</p>
+            <label class="check-row"><input type="checkbox" name="constraints" value="soft_foods" checked><span class="check-box" aria-hidden="true"></span><span><strong>Soft-food options</strong><small>Look for soft-texture menu keywords</small></span></label>
+            <label class="check-row"><input type="checkbox" name="constraints" value="low_sodium" checked><span class="check-box" aria-hidden="true"></span><span><strong>Lower-sodium signals</strong><small>Look for menu keywords that may help</small></span></label>
+            <label class="check-row"><input type="checkbox" name="constraints" value="wheelchair" checked><span class="check-box" aria-hidden="true"></span><span><strong>Wheelchair entrance signal</strong><small>Unknown or steps are excluded in this demo</small></span></label>
+          </fieldset>
+          <div class="form-actions">
+            <button id="runPlan" class="button button-primary" type="submit"><span>Make a sample week</span><span aria-hidden="true">→</span></button>
+            <button id="resetForm" class="text-button" type="button">Reset example</button>
+          </div>
+        </form>
+        <p id="formError" class="form-error" role="alert" hidden></p>
+        <p class="privacy-note"><span aria-hidden="true">◇</span> No names are requested. Input is processed locally and is not saved.</p>
+      </section>
+
+      <section class="results-panel" aria-labelledby="results-title">
+        <div class="results-header">
+          <div><p class="eyebrow">A LITTLE MORE PERSONAL</p><h2 id="results-title">The week ahead</h2></div>
+          <span class="mock-label"><span class="status-dot"></span> Mock fixture results</span>
+        </div>
+        <div id="emptyState" class="empty-state" hidden>
+          <div class="empty-icon" aria-hidden="true">✳</div>
+          <h3>Make room for what they love.</h3>
+          <p>Choose a fictional profile or add a few tastes, then build a sample week. No live services are contacted.</p>
+          <button id="emptyRun" class="button button-primary" type="button">Build the sample week <span aria-hidden="true">→</span></button>
+        </div>
+        <div id="resultsContent" hidden>
+          <div class="summary-strip">
+            <div><span class="summary-kicker">PROFILE</span><strong id="summaryTaste">—</strong></div>
+            <div><span class="summary-kicker">FIXTURE PLACES</span><strong id="summaryCount">0 picks</strong></div>
+            <div><span class="summary-kicker">SCREENED OUT</span><strong id="summaryRejected">0 candidates</strong></div>
+          </div>
+          <div id="planNotice" class="plan-notice" role="status"></div>
+          <ol id="weekPlan" class="week-plan" aria-label="Sample weekly plan"></ol>
+
+          <section class="comparison-card" aria-labelledby="compare-title">
+            <div class="comparison-heading"><div><p class="eyebrow">WHY GROUNDING MATTERS</p><h3 id="compare-title">Evidence, not just a suggestion</h3></div><span class="compare-mark" aria-hidden="true">↗</span></div>
+            <p class="comparison-copy">A generic template can sound plausible. This mock plan shows which fixture records and checks support each pick.</p>
+            <div class="compare-grid" id="comparison"></div>
+            <div class="baseline-preview"><span class="baseline-tag">TEMPLATE ONLY · UNVERIFIED</span><p id="baselineText">—</p></div>
+          </section>
+
+          <details class="disclosure-card">
+            <summary><span>Candidates screened out</span><span id="rejectedCount" class="count-pill">0</span></summary>
+            <div id="rejectedList" class="disclosure-body"></div>
+          </details>
+          <details class="disclosure-card">
+            <summary><span>How this mock plan was assembled</span></summary>
+            <div class="disclosure-body"><p class="trace-caption">A local simulation of the project’s resolve → rank → check → widen flow. No network tools or models ran.</p><ol id="traceList" class="trace-list"></ol></div>
+          </details>
+        </div>
+      </section>
+    </div>
+
+    <section class="safety-footer" aria-labelledby="safety-title">
+      <div class="safety-symbol" aria-hidden="true">!</div>
+      <div><h2 id="safety-title">A helpful starting point—not a promise.</h2><p>Tags and menu keywords are incomplete signals. “Pass” means only that this synthetic fixture matched a simple rule; “unknown” never means safe. Confirm ingredients, preparation, sodium and step-free access with the venue and care team before making plans.</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">t</span><span>TasteTable</span></a>
+    <p>Open source · MIT license · Offline synthetic preview</p>
+    <a href="https://github.com/Jacob-Met/tastetable/blob/main/LICENSE" target="_blank" rel="noreferrer">View license ↗</a>
+  </footer>
+  <div id="liveMessage" class="sr-only" role="status" aria-live="polite"></div>
+</body>
+</html>
