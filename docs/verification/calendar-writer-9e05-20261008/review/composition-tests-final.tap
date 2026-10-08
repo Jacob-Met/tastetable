@@ -1,0 +1,23 @@
+✔ native picks are exported from the arranged rows with full receiving evidence (23.974584ms)
+✔ moving Monday's pick onto Wednesday retains two separate restaurant events (5.570216ms)
+✔ off-week picks are omitted, all-off-week refuses download, and restore keeps identity (12.049902ms)
+✔ pick-key UIDs survive within-week moves and reset; selected weeks are distinct occurrences (25.758927ms)
+✔ duplicate source entity IDs retain distinct keys and UIDs on the same day (3.930851ms)
+✔ new source sessions receive distinct identities and old sessions reject replacement (17.024372ms)
+✔ partial and empty native plans preserve omissions without borrowing rejected picks (3.297919ms)
+✔ source provenance is immutable and unknown sourceMode cannot become live (3.77755ms)
+✔ existing accepted unknown qualification is preserved without promoting its status (2.55993ms)
+✔ stale rows cannot silently export a different week or assignment than current state (4.325035ms)
+✔ changed source, notes, keys, original days and injected rejected picks are refused (3.951573ms)
+✔ malformed row carrier cannot lose, duplicate, invent or relabel an accepted pick (6.166653ms)
+✔ invalid assignments and planner-accepted incomplete native records fail closed (4.800499ms)
+✔ mutable response, returned preview, and cloned state cannot rewrite the session (6.441106ms)
+✔ same accepted arrangement gives exact repeat bytes without mutating source or rows (6.625233ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 252.393039

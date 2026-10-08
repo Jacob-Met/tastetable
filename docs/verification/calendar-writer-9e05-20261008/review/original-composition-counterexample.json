@@ -1,0 +1,101 @@
+{
+  "schema": "calendar-original-composition-counterexample.v1",
+  "node": "v24.19.0",
+  "original_writer_sha256": "22234deea83994607c4a6441a711224e303da256d2a3781670a17b00278fa3c4",
+  "planner_sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+  "expected_arrangement": [
+    {
+      "key": "pick-0",
+      "day": "Wednesday",
+      "date": "2026-10-07",
+      "name": "Casa Habana Kitchen"
+    },
+    {
+      "key": "pick-1",
+      "day": "Wednesday",
+      "date": "2026-10-07",
+      "name": "Abuela's Table"
+    },
+    {
+      "key": "pick-2",
+      "day": "Friday",
+      "date": "2026-10-09",
+      "name": "Blue Plate Diner"
+    },
+    {
+      "key": "pick-3",
+      "day": "Sunday",
+      "date": "2026-10-11",
+      "name": "Trattoria Nonna Lucia"
+    }
+  ],
+  "raw_response_export_preview": [
+    {
+      "day": "Monday",
+      "kind": "restaurant",
+      "entityId": "FIX-P-01",
+      "name": "Casa Habana Kitchen",
+      "why": "Qloo affinity 0.91 for audiences who like Celia Cruz, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+      "date": "2026-10-05",
+      "endDate": "2026-10-06",
+      "summary": "[DEMO] TasteTable suggestion: Casa Habana Kitchen"
+    },
+    {
+      "day": "Wednesday",
+      "kind": "restaurant",
+      "entityId": "FIX-P-03",
+      "name": "Abuela's Table",
+      "why": "Qloo affinity 0.83 for audiences who like Celia Cruz, West Side Story (tag match: Mexican). Checks: Soft foods: pass (soft options listed: caldo de pollo, refried beans); Low sodium: pass (lower-sodium signals: low sodium options); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+      "date": "2026-10-07",
+      "endDate": "2026-10-08",
+      "summary": "[DEMO] TasteTable suggestion: Abuela's Table"
+    },
+    {
+      "day": "Friday",
+      "kind": "restaurant",
+      "entityId": "FIX-P-07",
+      "name": "Blue Plate Diner",
+      "why": "Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Diner). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, mashed potatoes, soups); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+      "date": "2026-10-09",
+      "endDate": "2026-10-10",
+      "summary": "[DEMO] TasteTable suggestion: Blue Plate Diner"
+    },
+    {
+      "day": "Saturday",
+      "kind": "outing",
+      "entityId": "FIX-V-03",
+      "name": "Arroyo Museum of Latin Music (fictional)",
+      "why": "Qloo affinity 0.96 for audiences who like Celia Cruz, West Side Story (tag match: Museum). Checks: Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+      "date": "2026-10-10",
+      "endDate": "2026-10-11",
+      "summary": "[DEMO] TasteTable suggestion: Arroyo Museum of Latin Music (fictional)"
+    },
+    {
+      "day": "Sunday",
+      "kind": "restaurant",
+      "entityId": "FIX-P-11",
+      "name": "Trattoria Nonna Lucia",
+      "why": "Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Italian). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+      "date": "2026-10-11",
+      "endDate": "2026-10-12",
+      "summary": "[DEMO] TasteTable suggestion: Trattoria Nonna Lucia"
+    }
+  ],
+  "arranged_response_repack_error": "The plan repeats a day and type. Generate a new plan before exporting.",
+  "same_source_old_week_uids": [
+    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261005-restaurant@tastetable.invalid",
+    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261007-restaurant@tastetable.invalid",
+    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261009-restaurant@tastetable.invalid",
+    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261010-outing@tastetable.invalid",
+    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261011-restaurant@tastetable.invalid"
+  ],
+  "same_source_new_week_uids": [
+    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261012-restaurant@tastetable.invalid",
+    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261014-restaurant@tastetable.invalid",
+    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261016-restaurant@tastetable.invalid",
+    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261017-outing@tastetable.invalid",
+    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261018-restaurant@tastetable.invalid"
+  ],
+  "actual_product_integration_claim": false,
+  "conclusion": "The original writer cannot consume arranged week state. Raw-response export ignores move/omission, repacking rejects legitimate same-kind co-scheduling, and original event identity changes with the week."
+}

@@ -1,0 +1,63 @@
+{
+  "frozen_at_utc": "2026-10-08T08:42:47.097Z",
+  "candidate": "/workspace/scratch/9e05c01af69c/agents/estate/calendar-composition/tastetable",
+  "source_pin": {
+    "accepted_calendar_sha256": "22234deea83994607c4a6441a711224e303da256d2a3781670a17b00278fa3c4",
+    "accepted_files_copied": 21,
+    "planner": {
+      "path": "/workspace/scratch/0df473646168/agents/product/tastetable/static/week_plan.mjs",
+      "local_commit": "02c5e91f2c3e7220162b651ba3c1ec589ac2eea2",
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "read_only": true,
+      "reference_only": true
+    },
+    "scope": "Owned calendar writer and tests only; no frontend or owner source integration"
+  },
+  "changed_files": [
+    {
+      "path": "static/calendar.js",
+      "bytes": 15169,
+      "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+      "git_blob": "dbed22d2cb91090bccec9472fbffd2854eed2722"
+    },
+    {
+      "path": "tests/calendar-week.test.cjs",
+      "bytes": 12876,
+      "sha256": "0169b753f81431545669cd97a0765ee469b36112c06c93e6285f92869f334adf",
+      "git_blob": "49bc39f7665683696708692989f1d5921c8ed587"
+    }
+  ],
+  "accepted_source_still_unchanged": true,
+  "other_candidate_files_unchanged": 20,
+  "tests": {
+    "command": "node --test --test-reporter=tap tests/calendar.test.cjs tests/calendar-week.test.cjs",
+    "pass": 23,
+    "fail": 0,
+    "skip": 0,
+    "log": "evidence/calendar-tests.tap"
+  },
+  "legacy_output_exactly_unchanged_for": [
+    "rosa",
+    "harold",
+    "mei",
+    "healthy",
+    "outing_unavailable",
+    "restaurants_unavailable",
+    "all_recommendations_unavailable"
+  ],
+  "scope": "Owned writer/test packet only; no app/index/request/README edits and no peer module publication",
+  "uid_contract": "namespace + weekStart + stable pick key; within-week moves/off-week/reset retain IDs, other weeks distinct",
+  "prior_contract_snapshot": "earlier-contract",
+  "independent_composition": {
+    "pass": 15,
+    "fail": 0,
+    "skip": 0,
+    "source_sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+    "source": "/workspace/scratch/9e05c01af69c/review/calendar-composition/writer-snapshot-final/static/calendar.js",
+    "log": "/workspace/scratch/9e05c01af69c/review/calendar-composition/composition-tests-final.tap",
+    "observations": "/workspace/scratch/9e05c01af69c/review/calendar-composition/composition-observations.json",
+    "scope": "Pinned actual native week_plan.mjs, source fixtures and writer API; no composed frontend or importer claims"
+  },
+  "final_legacy_readback": "evidence/final-legacy-readback.json"
+}

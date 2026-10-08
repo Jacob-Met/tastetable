@@ -1,0 +1,14 @@
+{
+  "writer_sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+  "legacy_exact_output_cases": [
+    "rosa",
+    "harold",
+    "mei",
+    "healthy",
+    "outing_unavailable",
+    "restaurants_unavailable",
+    "all_recommendations_unavailable"
+  ],
+  "accepted_source_unchanged": true,
+  "passed": true
+}

@@ -1,0 +1,148 @@
+TAP version 13
+# Subtest: the writer receives the existing week and preserves checked source details
+ok 1 - the writer receives the existing week and preserves checked source details
+  ---
+  duration_ms: 9.185194
+  type: 'test'
+  ...
+# Subtest: moved picks share a day without collisions and keep their original explanations
+ok 2 - moved picks share a day without collisions and keep their original explanations
+  ---
+  duration_ms: 3.999926
+  type: 'test'
+  ...
+# Subtest: off-week picks are absent, and reset restores byte-identical content and identities
+ok 3 - off-week picks are absent, and reset restores byte-identical content and identities
+  ---
+  duration_ms: 9.959628
+  type: 'test'
+  ...
+# Subtest: moves preserve a weekly pick's UID, while other weeks and new plans get distinct identities
+ok 4 - moves preserve a weekly pick's UID, while other weeks and new plans get distinct identities
+  ---
+  duration_ms: 15.024656
+  type: 'test'
+  ...
+# Subtest: repeated source entities remain separate stable picks when arranged together
+ok 5 - repeated source entities remain separate stable picks when arranged together
+  ---
+  duration_ms: 4.510413
+  type: 'test'
+  ...
+# Subtest: partial and empty checked source plans remain partial and empty
+ok 6 - partial and empty checked source plans remain partial and empty
+  ---
+  duration_ms: 1.235579
+  type: 'test'
+  ...
+# Subtest: stale, missing, repeated or altered rows refuse the whole export
+ok 7 - stale, missing, repeated or altered rows refuse the whole export
+  ---
+  duration_ms: 1.637943
+  type: 'test'
+  ...
+# Subtest: malformed assignments, source identity, provenance and picker dates refuse export
+ok 8 - malformed assignments, source identity, provenance and picker dates refuse export
+  ---
+  duration_ms: 2.05458
+  type: 'test'
+  ...
+# Subtest: source and preview mutations cannot silently change an existing session
+ok 9 - source and preview mutations cannot silently change an existing session
+  ---
+  duration_ms: 3.937672
+  type: 'test'
+  ...
+# Subtest: live source and UTF-8 descriptions keep provenance, escaping and byte limits
+ok 10 - live source and UTF-8 descriptions keep provenance, escaping and byte limits
+  ---
+  duration_ms: 2.868013
+  type: 'test'
+  ...
+# Subtest: the native weekday layout becomes five dated all-day suggestions
+ok 11 - the native weekday layout becomes five dated all-day suggestions
+  ---
+  duration_ms: 7.794352
+  type: 'test'
+  ...
+# Subtest: each description preserves the selected source and notes, excluding other columns
+ok 12 - each description preserves the selected source and notes, excluding other columns
+  ---
+  duration_ms: 5.647053
+  type: 'test'
+  ...
+# Subtest: partial plans keep missing slots absent and retain the partial-plan note
+ok 13 - partial plans keep missing slots absent and retain the partial-plan note
+  ---
+  duration_ms: 0.738711
+  type: 'test'
+  ...
+# Subtest: an empty checked plan is a readable preview but never a calendar download
+ok 14 - an empty checked plan is a readable preview but never a calendar download
+  ---
+  duration_ms: 0.582887
+  type: 'test'
+  ...
+# Subtest: mock provenance comes from the actual response, and live suggestions remain tentative
+ok 15 - mock provenance comes from the actual response, and live suggestions remain tentative
+  ---
+  duration_ms: 2.903176
+  type: 'test'
+  ...
+# Subtest: dates require an explicit valid Monday and reject normalization or injected syntax
+ok 16 - dates require an explicit valid Monday and reject normalization or injected syntax
+  ---
+  duration_ms: 0.437758
+  type: 'test'
+  ...
+# Subtest: leap days, year changes, and DST weeks retain calendar dates
+ok 17 - leap days, year changes, and DST weeks retain calendar dates
+  ---
+  duration_ms: 9.112103
+  type: 'test'
+  ...
+# Subtest: calendar bytes do not depend on the host timezone
+ok 18 - calendar bytes do not depend on the host timezone
+  ---
+  duration_ms: 194.4088
+  type: 'test'
+  ...
+# Subtest: source text cannot inject events or calendar properties
+ok 19 - source text cannot inject events or calendar properties
+  ---
+  duration_ms: 2.638568
+  type: 'test'
+  ...
+# Subtest: UTF-8 folding keeps every physical line at most 75 bytes and every code point intact
+ok 20 - UTF-8 folding keeps every physical line at most 75 bytes and every code point intact
+  ---
+  duration_ms: 2.776205
+  type: 'test'
+  ...
+# Subtest: a displayed plan is immutable and same-week re-exports are byte-stable
+ok 21 - a displayed plan is immutable and same-week re-exports are byte-stable
+  ---
+  duration_ms: 5.479771
+  type: 'test'
+  ...
+# Subtest: malformed result envelopes and missing provenance refuse the whole export
+ok 22 - malformed result envelopes and missing provenance refuse the whole export
+  ---
+  duration_ms: 0.776568
+  type: 'test'
+  ...
+# Subtest: unsupported text, excessive fields, and metadata injection refuse before output
+ok 23 - unsupported text, excessive fields, and metadata injection refuse before output
+  ---
+  duration_ms: 0.250377
+  type: 'test'
+  ...
+1..23
+# tests 23
+# suites 0
+# pass 23
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 320.546225
