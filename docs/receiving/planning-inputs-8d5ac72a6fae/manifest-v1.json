@@ -1,0 +1,68 @@
+{
+  "schema": "tastetable-planning-input-receiving/1",
+  "repository": "Jacob-Met/tastetable",
+  "base": "328df51af830e91f304417a66d74f43d94ae0c02",
+  "candidate": {
+    "static/profile_file.mjs": {
+      "sha256": "18a7e309718b518665817a6d1d50fdfcbd72946dddb5630832cb12b6cef8a67a",
+      "git_blob": "d230e5f65f5b5de7627f239afd306310ad9345c2",
+      "bytes": 5641
+    },
+    "static/profile_file_ui.mjs": {
+      "sha256": "3b304b6d15da2765551f1b8b3a39b9c06c8b37e7c73cb2eeee2305e0a4f6ef22",
+      "git_blob": "e075c5f1f73ffaebb9b23f419d08068f68674d98",
+      "bytes": 4810
+    },
+    "static/profile_file.css": {
+      "sha256": "8b254ad78d5e6e75bfae329e1bfd9b8780b1e894517a123a3043ac39126fca34",
+      "git_blob": "5170b43e6232ea3cb6de220e44e8b1b434c329ed",
+      "bytes": 690
+    },
+    "static/app.js": {
+      "sha256": "5731f5ad00e2082ac9b33c2c3671ddcfec70c3758d717f1c7c89e316f813c6b3",
+      "git_blob": "dd92431f141d04981d552770baeb70b09033006b",
+      "bytes": 19866
+    },
+    "static/index.html": {
+      "sha256": "59e667c4d4eb4a2ced0c856133b48b5f69ef69c17fd0662a3ecdf5060fbc8538",
+      "git_blob": "d4e81f51ed6d72fb26036a0c94562ffebbde93aa",
+      "bytes": 10821
+    },
+    "README.md": {
+      "sha256": "4afba843df5e52edb0dd47804ce254ac78743dcb13cd6f62aabf23ee3f61b245",
+      "git_blob": "617288516396a8fba4f2c5c51fdf93aca80a566a",
+      "bytes": 21189
+    },
+    "tests/profile_file.test.mjs": {
+      "sha256": "173687763f0aeb1c85903952ed1ddb8c45555a09085cc7cde9a2686703eea053",
+      "git_blob": "3aa4e2617c50d6c1a8f040c939805cb1c8765065",
+      "bytes": 6331
+    }
+  },
+  "nativeAuthor": {
+    "command": "node --test tests/profile_file.test.mjs",
+    "runtime": "Node v24.19.0",
+    "pass": 12,
+    "fail": 0,
+    "skip": 0,
+    "exitCode": 0
+  },
+  "negativeControls": "Malformed UTF-8/BOM, duplicate/unknown JSON keys, invalid shapes/constraints, controls/surrogates, unrepresentable comma or edge-FEFF tastes, bounded byte/text limits are refused by maintained native tests. Baseline lacks all four Save/Open/Replace profile controls.",
+  "independent": {
+    "browserOracleGitBlob": "b6387c0041646e51e81c4296b0545c183ffdcec6",
+    "codecCorpusSha256": "6147a9eaa97bb89f9fe2595e7b4bfbb21b8616463cd9326ebd2df5d1426a010a",
+    "status": "Frozen independently before candidate exposure; results pending."
+  },
+  "coordination": {
+    "issue": "https://github.com/Jacob-Met/tastetable/issues/56",
+    "centralComment": "https://github.com/Jacob-Met/hamon/issues/140#issuecomment-6068209585"
+  },
+  "publication": "Only immutable unreferenced Git blobs at this checkpoint. No ref update, PR, merge, workflow dispatch or deployment.",
+  "limits": [
+    "Source control absence is not actual-browser acceptance.",
+    "Local Python producer runs synthetic fixtures with explicit offline policy, not a live provider.",
+    "The feature preserves normalized profile values, not raw form spacing or unfinished invalid inputs.",
+    "The native CLI accepts additional text that the browser's existing comma-separated single-line fields cannot represent; that text is refused explicitly.",
+    "Runtime and source integration are distinct; root owns receiving and branch publication."
+  ]
+}

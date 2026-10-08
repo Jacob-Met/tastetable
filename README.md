@@ -92,6 +92,36 @@ pytest -q                                # run the test suite
 
 By default the app runs in **mock mode** (it uses the fixture and makes no network calls).
 
+### Reuse tastes and constraints for a new week
+
+Use **Save planning inputs (.json)** to keep the current cuisines, music, films, city
+and constraints without first generating a plan. **Open planning inputs** reads a
+local file and shows a preview. Your current inputs and week stay unchanged until
+you choose **Replace inputs**. Cancel leaves them intact. Replacement clears the
+current result and venue notes, retains your chosen week date, and requests nothing:
+review the inputs, then choose **Plan my week** for fresh suggestions.
+
+The file uses the existing native planner's profile object, so an exported file can
+also be passed to `python tastetable_cli.py --profile tastetable-profile.json`.
+It contains no generated plan, source receipt, saved week, venue notes, provider
+settings or credentials. No profile is uploaded or stored automatically. The
+regular planning action retains its existing server/provider behavior.
+
+Files are limited to 64 KiB of UTF-8 JSON, with up to five entries per taste field,
+60 Unicode characters per entry or city, at least one taste, and the three existing
+constraint names. Saving uses the form's comma-separated entries and trims text;
+it does not preserve raw spacing. Native profile defaults are retained on opening.
+The form refuses entries containing a comma, text containing control characters,
+and taste entries with edge byte-order characters because its single-line comma
+fields cannot reopen those values faithfully.
+Duplicate or unknown JSON fields, invalid UTF-8 and unsupported values are refused.
+A file still being read or reviewed is retired when inputs or the current planning
+request change, or when another plan is accepted.
+
+~~~bash
+node --test tests/profile_file.test.mjs
+~~~
+
 ### Arrange and print your week
 
 After generating a plan, choose any date to display its Monday–Sunday week. Each checked pick

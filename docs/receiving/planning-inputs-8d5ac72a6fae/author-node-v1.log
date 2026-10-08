@@ -1,0 +1,20 @@
+✔ a file contains only detached native planning inputs and reopens them (2.176154ms)
+✔ native defaults include Pasadena, while null or empty city stays empty (0.328154ms)
+✔ counts Unicode code points and applies native whitespace trimming (1.006093ms)
+✔ the existing comma form never silently splits a native taste entry (0.274002ms)
+✔ single-line fields reject interior controls and invalid Unicode escapes (1.027206ms)
+✔ empty tastes, null arrays and more than five entries are refused (0.35868ms)
+✔ only supported unique constraint names can become selected controls (0.61134ms)
+✔ unknown object fields and wrong top-level shapes cannot become profile metadata (0.474363ms)
+✔ duplicate fields are refused even with escaped keys or unrelated key order (0.385561ms)
+✔ JSON key scanning does not treat quoted commas or braces as fields (0.41167ms)
+✔ byte admission refuses BOM, malformed UTF-8 and non-JSON input (0.424309ms)
+✔ the 64 KiB bound is exact and measured in bytes (2.284748ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 117.931127

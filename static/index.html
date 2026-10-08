@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="/static/style.css">
 <link rel="stylesheet" href="/static/calendar.css">
 <link rel="stylesheet" href="/static/venue_followup.css">
+<link rel="stylesheet" href="/static/profile_file.css">
 </head>
 <body>
 <header>
@@ -48,6 +49,25 @@
     </form>
     <p id="requestStatus" class="why" role="status" aria-live="polite" aria-atomic="true"></p>
     <button id="cancelPlan" type="button" hidden>Stop waiting</button>
+    <section id="profileFiles" class="profile-files" aria-labelledby="profileFilesTitle">
+      <h3 id="profileFilesTitle">Reuse your planning inputs</h3>
+      <p class="why">Save tastes, city and constraints to use for another week. Files stay on your device and can also be used with the native planner. Saving keeps trimmed entries, not the original spacing or a suggested week.</p>
+      <div class="profile-file-actions">
+        <button id="saveProfile" type="button">Save planning inputs (.json)</button>
+        <button id="openProfile" type="button">Open planning inputs</button>
+        <input id="profileFile" type="file" accept=".json,application/json" aria-label="Choose saved TasteTable planning inputs" hidden>
+      </div>
+      <p id="profileStatus" class="why" role="status" aria-live="polite" aria-atomic="true"></p>
+      <section id="profilePreview" class="profile-file-preview" aria-labelledby="profilePreviewTitle" hidden>
+        <h4 id="profilePreviewTitle">Review planning inputs before replacing</h4>
+        <div id="profilePreviewDetails"></div>
+        <p>Replace inputs clears the current week and venue notes. Save those first if you want to keep them. Review the new inputs, then choose Plan my week to request fresh suggestions.</p>
+        <div class="profile-file-actions">
+          <button id="replaceProfile" type="button" disabled>Replace inputs</button>
+          <button id="cancelProfile" type="button">Cancel replacement</button>
+        </div>
+      </section>
+    </section>
   </section>
 
   <section id="results" hidden>

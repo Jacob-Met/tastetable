@@ -1,0 +1,255 @@
+{
+  "schema": 1,
+  "mode": "visual",
+  "baseline": "328df51af830e91f304417a66d74f43d94ae0c02",
+  "fixture_boundary": "Actual browser and maintained modules; local recorded HTTP response, no provider or installed service",
+  "sourcePins": {
+    "static/index.html": {
+      "git_blob": "d4e81f51ed6d72fb26036a0c94562ffebbde93aa",
+      "sha256": "59e667c4d4eb4a2ced0c856133b48b5f69ef69c17fd0662a3ecdf5060fbc8538",
+      "bytes": 10821
+    },
+    "static/style.css": {
+      "git_blob": "28df6c5229b6b592db33e929ae058fe514304af4",
+      "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+      "bytes": 5064
+    },
+    "static/plan-request.js": {
+      "git_blob": "b21276dda840fe6dd96a3bf3258a851970ff5e4d",
+      "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+      "bytes": 1420
+    },
+    "static/calendar.js": {
+      "git_blob": "dbed22d2cb91090bccec9472fbffd2854eed2722",
+      "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+      "bytes": 15169
+    },
+    "static/calendar.css": {
+      "git_blob": "9e53b951316d841b86f0256cd2444a3ce547269f",
+      "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+      "bytes": 708
+    },
+    "static/week_file.mjs": {
+      "git_blob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "bytes": 6642
+    },
+    "static/week_plan.mjs": {
+      "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "bytes": 3913
+    },
+    "static/venue_followup.mjs": {
+      "git_blob": "0c1923ecdad8fe9b14f0193a6aba5f3a1e2b9d63",
+      "sha256": "61bb9cf497b5a37a32afd1b23729e128aed2631cf2c570a1485ca4f0ffbe632c",
+      "bytes": 18444
+    },
+    "static/venue_note_file.mjs": {
+      "git_blob": "f8406cb540d52222996c585666ae1a55a1030def",
+      "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+      "bytes": 10435
+    },
+    "static/venue_followup.css": {
+      "git_blob": "dd88e221133be5281330cba11a6d141ae5e8d239",
+      "sha256": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+      "bytes": 2166
+    },
+    "static/app.js": {
+      "git_blob": "dd92431f141d04981d552770baeb70b09033006b",
+      "sha256": "5731f5ad00e2082ac9b33c2c3671ddcfec70c3758d717f1c7c89e316f813c6b3",
+      "bytes": 19866
+    },
+    "static/profile_file.mjs": {
+      "git_blob": "d230e5f65f5b5de7627f239afd306310ad9345c2",
+      "sha256": "18a7e309718b518665817a6d1d50fdfcbd72946dddb5630832cb12b6cef8a67a",
+      "bytes": 5641
+    },
+    "static/profile_file_ui.mjs": {
+      "git_blob": "e075c5f1f73ffaebb9b23f419d08068f68674d98",
+      "sha256": "3b304b6d15da2765551f1b8b3a39b9c06c8b37e7c73cb2eeee2305e0a4f6ef22",
+      "bytes": 4810
+    },
+    "static/profile_file.css": {
+      "git_blob": "5170b43e6232ea3cb6de220e44e8b1b434c329ed",
+      "sha256": "8b254ad78d5e6e75bfae329e1bfd9b8780b1e894517a123a3043ac39126fca34",
+      "bytes": 690
+    }
+  },
+  "cases": [
+    {
+      "name": "actual desktop and mobile profile preview captures",
+      "status": "pass"
+    }
+  ],
+  "calls": [],
+  "errors": [],
+  "origin": "http://127.0.0.1:39439",
+  "browser": {
+    "path": "/workspace/scratch/86776bb3cdb8/product-delivery/browser-runtime/chromium",
+    "sha256": "53a15d6c3a3d27dfb54c4ba60278b1683136f70cf1e67e989da7dfbd3d451ef0",
+    "version": "153.0.8010.0"
+  },
+  "visuals": [
+    {
+      "mimeType": "image/jpeg",
+      "width": 1280,
+      "sha256": "01660b434ae2a609560c8030d5f02a8e99c54534cfb68206b93b04549d4c5aa7",
+      "bytes": 105721,
+      "bounds": {
+        "innerWidth": 1280,
+        "scrollWidth": 1280,
+        "preview": {
+          "x": 125.1875,
+          "y": 218.265625,
+          "width": 1029.625,
+          "height": 580.921875,
+          "top": 218.265625,
+          "right": 1154.8125,
+          "bottom": 799.1875,
+          "left": 125.1875
+        },
+        "buttons": [
+          {
+            "id": "saveProfile",
+            "bounds": {
+              "x": 125.1875,
+              "y": 125.28125,
+              "width": 253,
+              "height": 40.1875,
+              "top": 125.28125,
+              "right": 378.1875,
+              "bottom": 165.46875,
+              "left": 125.1875
+            }
+          },
+          {
+            "id": "openProfile",
+            "bounds": {
+              "x": 386.1875,
+              "y": 125.28125,
+              "width": 203,
+              "height": 40.1875,
+              "top": 125.28125,
+              "right": 589.1875,
+              "bottom": 165.46875,
+              "left": 386.1875
+            }
+          },
+          {
+            "id": "replaceProfile",
+            "bounds": {
+              "x": 142.1875,
+              "y": 742,
+              "width": 150,
+              "height": 40.1875,
+              "top": 742,
+              "right": 292.1875,
+              "bottom": 782.1875,
+              "left": 142.1875
+            }
+          },
+          {
+            "id": "cancelProfile",
+            "bounds": {
+              "x": 300.1875,
+              "y": 742,
+              "width": 195,
+              "height": 40.1875,
+              "top": 742,
+              "right": 495.1875,
+              "bottom": 782.1875,
+              "left": 300.1875
+            }
+          }
+        ]
+      },
+      "path": "docs/receiving/planning-inputs-8d5ac72a6fae/preview-1280.jpg",
+      "git_blob": "f65da0b43ec04eb9117f7444ea1449b5b3b465b0",
+      "inspection": "Root visually inspected the actual browser capture: all preview fields and actions are legible at this viewport; document width equals viewport width."
+    },
+    {
+      "mimeType": "image/jpeg",
+      "width": 390,
+      "sha256": "7b88a273ca3f3fc1e76eee5e96611b13c3e64709db289be52a29ed9274a90d7c",
+      "bytes": 84984,
+      "bounds": {
+        "innerWidth": 390,
+        "scrollWidth": 390,
+        "preview": {
+          "x": 35.1875,
+          "y": 2.25,
+          "width": 319.625,
+          "height": 756.609375,
+          "top": 2.25,
+          "right": 354.8125,
+          "bottom": 758.859375,
+          "left": 35.1875
+        },
+        "buttons": [
+          {
+            "id": "saveProfile",
+            "bounds": {
+              "x": 35.1875,
+              "y": -161,
+              "width": 253,
+              "height": 40.1875,
+              "top": -161,
+              "right": 288.1875,
+              "bottom": -120.8125,
+              "left": 35.1875
+            }
+          },
+          {
+            "id": "openProfile",
+            "bounds": {
+              "x": 35.1875,
+              "y": -112.8125,
+              "width": 203,
+              "height": 40.1875,
+              "top": -112.8125,
+              "right": 238.1875,
+              "bottom": -72.625,
+              "left": 35.1875
+            }
+          },
+          {
+            "id": "replaceProfile",
+            "bounds": {
+              "x": 52.1875,
+              "y": 653.484375,
+              "width": 150,
+              "height": 40.1875,
+              "top": 653.484375,
+              "right": 202.1875,
+              "bottom": 693.671875,
+              "left": 52.1875
+            }
+          },
+          {
+            "id": "cancelProfile",
+            "bounds": {
+              "x": 52.1875,
+              "y": 701.671875,
+              "width": 195,
+              "height": 40.1875,
+              "top": 701.671875,
+              "right": 247.1875,
+              "bottom": 741.859375,
+              "left": 52.1875
+            }
+          }
+        ]
+      },
+      "path": "docs/receiving/planning-inputs-8d5ac72a6fae/preview-390.jpg",
+      "git_blob": "e983e922d0f3c7032466bd660c7293287e4def37",
+      "inspection": "Root visually inspected the actual browser capture: all preview fields and actions are legible at this viewport; document width equals viewport width."
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 0,
+    "expectedMissing": 0
+  },
+  "sourcePreserved": true,
+  "capture_receiving_note": "An earlier PNG-only visual capture process exited 0, but tool output was truncated (88488 original output tokens, 75000 requested) and the report could not be parsed. This JPEG-only capture repeated the two visual snapshots to retrieve reviewable output; it did not rerun the 16-case behavioral suite."
+}

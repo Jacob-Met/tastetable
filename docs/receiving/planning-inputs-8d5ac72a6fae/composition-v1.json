@@ -1,0 +1,214 @@
+{
+  "schema": "tastetable-planning-input-composition/1",
+  "repository": "Jacob-Met/tastetable",
+  "ref": "refs/heads/main",
+  "baseCommit": "328df51af830e91f304417a66d74f43d94ae0c02",
+  "baseTree": "df0251092f77d96169daa097abaec409ecabe6ba",
+  "baseTreeComplete": true,
+  "baseLeaves": 786,
+  "baseUnchangedSinceAuthorTests": true,
+  "sourcePaths": [
+    {
+      "path": "static/profile_file.mjs",
+      "base": null,
+      "current": null,
+      "sameBefore": true,
+      "candidate": {
+        "sha": "d230e5f65f5b5de7627f239afd306310ad9345c2"
+      }
+    },
+    {
+      "path": "static/profile_file_ui.mjs",
+      "base": null,
+      "current": null,
+      "sameBefore": true,
+      "candidate": {
+        "sha": "e075c5f1f73ffaebb9b23f419d08068f68674d98"
+      }
+    },
+    {
+      "path": "static/profile_file.css",
+      "base": null,
+      "current": null,
+      "sameBefore": true,
+      "candidate": {
+        "sha": "5170b43e6232ea3cb6de220e44e8b1b434c329ed"
+      }
+    },
+    {
+      "path": "static/app.js",
+      "base": {
+        "sha": "aa2fa0ff7aa0a1dd370c4fa6fef4f4222792414b",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "current": {
+        "sha": "aa2fa0ff7aa0a1dd370c4fa6fef4f4222792414b",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "sameBefore": true,
+      "candidate": {
+        "sha": "dd92431f141d04981d552770baeb70b09033006b"
+      }
+    },
+    {
+      "path": "static/index.html",
+      "base": {
+        "sha": "d195d45b8f56a2dee25cf4740e679f80c0c8c547",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "current": {
+        "sha": "d195d45b8f56a2dee25cf4740e679f80c0c8c547",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "sameBefore": true,
+      "candidate": {
+        "sha": "d4e81f51ed6d72fb26036a0c94562ffebbde93aa"
+      }
+    },
+    {
+      "path": "README.md",
+      "base": {
+        "sha": "17e2c93cd4361c13a694f5d0ce71b8df2780a43b",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "current": {
+        "sha": "17e2c93cd4361c13a694f5d0ce71b8df2780a43b",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "sameBefore": true,
+      "candidate": {
+        "sha": "617288516396a8fba4f2c5c51fdf93aca80a566a"
+      }
+    },
+    {
+      "path": "tests/profile_file.test.mjs",
+      "base": null,
+      "current": null,
+      "sameBefore": true,
+      "candidate": {
+        "sha": "3aa4e2617c50d6c1a8f040c939805cb1c8765065"
+      }
+    }
+  ],
+  "sourceBeforeImages": "Three edited existing files retain exact immutable base blobs; four source/test paths are additions absent from the complete base tree.",
+  "sourceEntryCount": 7,
+  "evidenceEntryCount": 3,
+  "entries": [
+    {
+      "path": "static/profile_file.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d230e5f65f5b5de7627f239afd306310ad9345c2"
+    },
+    {
+      "path": "static/profile_file_ui.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e075c5f1f73ffaebb9b23f419d08068f68674d98"
+    },
+    {
+      "path": "static/profile_file.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5170b43e6232ea3cb6de220e44e8b1b434c329ed"
+    },
+    {
+      "path": "static/app.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd92431f141d04981d552770baeb70b09033006b"
+    },
+    {
+      "path": "static/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4e81f51ed6d72fb26036a0c94562ffebbde93aa"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "617288516396a8fba4f2c5c51fdf93aca80a566a"
+    },
+    {
+      "path": "tests/profile_file.test.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3aa4e2617c50d6c1a8f040c939805cb1c8765065"
+    },
+    {
+      "path": "docs/receiving/planning-inputs-8d5ac72a6fae/baseline-native-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fc9649fa7de0af36175f11bae7f1aff3fe3e38d"
+    },
+    {
+      "path": "docs/receiving/planning-inputs-8d5ac72a6fae/author-node-v1.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "503106a40fbe714faa522260c68833ec3024a7ad"
+    },
+    {
+      "path": "docs/receiving/planning-inputs-8d5ac72a6fae/manifest-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07f19d814b86c4d33e10be8dc5c3bc04fbaddc76"
+    }
+  ],
+  "preservedBaseLeaves": 783,
+  "projectedLeaves": 793,
+  "unchangedLeavesAndModes": true,
+  "workflows": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "git_blob": "0e6273139a9bf417a4ee42f4501d067b1c9d95a0",
+      "events": {
+        "push": {
+          "branches": [
+            "main"
+          ]
+        },
+        "pull_request": true
+      },
+      "preserved": true
+    },
+    {
+      "path": ".github/workflows/native-plan-week-browser.yml",
+      "git_blob": "d674f2698d1b048075a1c49c2035b1096be668f2",
+      "events": {
+        "push": {
+          "branches": [
+            "main"
+          ]
+        },
+        "pull_request": true
+      },
+      "preserved": true
+    },
+    {
+      "path": ".github/workflows/week-compare.yml",
+      "git_blob": "e591fca2db970460611269ad7d1c53a6bc70f028",
+      "events": {
+        "push": {
+          "branches": [
+            "main"
+          ]
+        },
+        "pull_request": true
+      },
+      "preserved": true
+    }
+  ],
+  "publicationPlan": {
+    "method": "Create tree with exact baseTree and only the listed entries; commit parent exact baseCommit; create a new isolated branch. Existing owner refs remain unchanged.",
+    "branchName": "contrib/planning-input-files-8d5ac72a6fae",
+    "actions": "The three current workflow definitions trigger only pull_request or push to main. No PR, main update, dispatch, workflow edit or skip marker is proposed."
+  },
+  "receiving": "No repeated test run: current parent equals tested original base. Root and independent engine receiver remain responsible for their frozen controls. This proof is a proposed source composition, not a created tree or ref."
+}

@@ -1,0 +1,9 @@
+.profile-files { margin-top: 1.3rem; padding-top: 1rem; border-top: 1px solid #d8dfd5; }
+.profile-files h3 { margin-top: 0; }
+.profile-file-actions { display: flex; flex-wrap: wrap; gap: .5rem; }
+.profile-file-preview { margin-top: 1rem; padding: 1rem; border: 1px solid #7b947a; border-radius: .4rem; background: #f7faf5; }
+.profile-file-preview dt { font-weight: 700; }
+.profile-file-preview dd { margin: .15rem 0 .65rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+.profile-file-preview p, #profileStatus { overflow-wrap: anywhere; }
+.profile-file-preview button:focus-visible { outline: 3px solid #16492a; outline-offset: 3px; }
+@media print { .profile-files { display: none; } }

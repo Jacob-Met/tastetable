@@ -1,6 +1,7 @@
 import { DAYS, createWeekPlan, localDate, offWeekPicks, resetDays, setPickDay, setWeek, weekRows } from "./week_plan.mjs";
 import { makeWeekFile, readWeekFile } from "./week_file.mjs";
 import { mountVenueFollowup } from "./venue_followup.mjs";
+import { mountProfileFiles } from "./profile_file_ui.mjs";
 
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -281,6 +282,7 @@ const planRequests = TasteTablePlanRequests.create({
     };
   },
   onStart() {
+    profileFiles.retire();
     retirePlan();
     $("#form").setAttribute("aria-busy", "true");
     $("#cancelPlan").hidden = false;
@@ -288,6 +290,7 @@ const planRequests = TasteTablePlanRequests.create({
       ? "Opening the saved week…" : "Planning with the current tastes and constraints…";
   },
   onResult(result) {
+    profileFiles.retire();
     render(result.response, result.state);
     if (result.state) fillForm(result.inputs);
     acceptedPlan = {
@@ -322,10 +325,24 @@ const planRequests = TasteTablePlanRequests.create({
 });
 
 function clearPlan(message) {
+  profileFiles.retire();
   planRequests.invalidate();
   retirePlan();
   $("#requestStatus").textContent = message;
 }
+
+const profileFiles = mountProfileFiles($("#profileFiles"), {
+  readInputs() {
+    const f = $("#form");
+    return { cuisines: split(f.cuisines.value), music: split(f.music.value), films: split(f.films.value),
+      city: f.city.value, constraints: [...f.querySelectorAll("[name=constraints]:checked")].map((c) => c.value) };
+  },
+  replaceInputs(profile) {
+    clearPlan("Saved inputs opened. Review them, then choose Plan my week to request fresh suggestions.");
+    fillForm(profile);
+    $("#form [name=cuisines]").focus();
+  },
+});
 
 $("#sampleBtn").addEventListener("click", () => {
   const id = $("#personaSel").value;

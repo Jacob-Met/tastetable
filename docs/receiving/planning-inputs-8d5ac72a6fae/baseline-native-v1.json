@@ -1,0 +1,54 @@
+{
+  "base": "328df51af830e91f304417a66d74f43d94ae0c02",
+  "command": "Python 3.12.14: exact seven-file native closure; tastetable_cli.validate_profile → run_agent with FixtureTransport + ScriptedModel; original index control absence.",
+  "verification": "Original source hashes checked before native execution. UI control absence is a source witness, not an actual browser execution.",
+  "toolResult": {
+    "chunk_id": "afcd09",
+    "wall_time_seconds": 0.002252338,
+    "exit_code": 0,
+    "original_token_count": 259,
+    "output": "{\"base\": \"328df51af830e91f304417a66d74f43d94ae0c02\", \"python\": \"3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]\", \"verified_files\": 7, \"missing_controls\": {\"id=\\\"saveProfile\\\"\": true, \"id=\\\"openProfile\\\"\": true, \"id=\\\"profileFile\\\"\": true, \"id=\\\"replaceProfile\\\"\": true}, \"native_normalized_profile\": {\"cuisines\": [\"Cuban\"], \"music\": [\"Celia Cruz\"], \"films\": [], \"constraints\": [\"soft_foods\"], \"city\": \"Pasadena\"}, \"native_plan_meals\": 4, \"native_source_mode\": null, \"native_cli_controls\": {\"default_city\": {\"cuisines\": [], \"music\": [\"Bach\"], \"films\": [], \"constraints\": [], \"city\": \"Pasadena\"}, \"empty_city\": {\"cuisines\": [], \"music\": [\"Bach\"], \"films\": [], \"constraints\": [], \"city\": \"\"}, \"unicode\": {\"cuisines\": [], \"music\": [\"🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻🎻\"], \"films\": [], \"constraints\": [], \"city\": \"Pasadena\"}}}\n"
+  },
+  "retainedInputs": {
+    "cuisines": [
+      "  Cuban  "
+    ],
+    "music": [
+      "Celia Cruz"
+    ],
+    "constraints": [
+      "soft_foods"
+    ],
+    "city": " Pasadena "
+  },
+  "sourcePins": [
+    {
+      "path": "agent.py",
+      "git_blob": "883aff984464f2d43cda18f8e60b81240d6c3fb3"
+    },
+    {
+      "path": "constraints.py",
+      "git_blob": "e9d5cd1575df72b089273740e4b6a444d0cd21a8"
+    },
+    {
+      "path": "fixtures/qloo_fixtures.json",
+      "git_blob": "60c5d92f905755454bb280b8181f8836a74bd955"
+    },
+    {
+      "path": "personas.py",
+      "git_blob": "1eb6768780cafaf9b1666e39b7fc17aa21204f16"
+    },
+    {
+      "path": "qloo_client.py",
+      "git_blob": "cca322e0c9af96c481ba8f7ef286e85d3b90cfd2"
+    },
+    {
+      "path": "static/index.html",
+      "git_blob": "d195d45b8f56a2dee25cf4740e679f80c0c8c547"
+    },
+    {
+      "path": "tastetable_cli.py",
+      "git_blob": "d375cb64c6c631cccca2bb43db286e8efd21eedb"
+    }
+  ]
+}
