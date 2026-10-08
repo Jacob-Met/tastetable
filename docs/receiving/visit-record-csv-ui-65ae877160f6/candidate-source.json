@@ -1,0 +1,51 @@
+{
+  "base": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+  "baseline_base": "1cba17347baa7528147c244c1046658960b7fae2",
+  "paths": [
+    {
+      "path": "static/visit-record.html",
+      "bytes": 4338,
+      "sha256": "a9b59ef15324068998a8fa23c6c745329b036f40e7210bd92f3747538d9721f4"
+    },
+    {
+      "path": "static/visit_record_ui.mjs",
+      "bytes": 10229,
+      "sha256": "717be547c5833c1baca6f5b9c79791b28c3928dfcefe48666eeabf97a7a63836"
+    },
+    {
+      "path": "static/visit_record_csv.mjs",
+      "bytes": 1646,
+      "sha256": "a233a983918291ef93577f91eb64c56adb4644c10cd8f4046e875d4536cc970c"
+    },
+    {
+      "path": "static/visit_record.css",
+      "bytes": 4621,
+      "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403"
+    },
+    {
+      "path": "static/visit_record.mjs",
+      "bytes": 7525,
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f"
+    },
+    {
+      "path": "static/week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+    },
+    {
+      "path": "docs/visit-record/README.md",
+      "bytes": 7639,
+      "sha256": "05c8283b6d8eccf2fdb217a27620885cb87fce2a304b4234cccb1d352c3f9b29"
+    },
+    {
+      "path": "tools/check_visit_record_csv_browser.mjs",
+      "bytes": 17650,
+      "sha256": "7680ee3ca881284fa8019109574bcbf6acaca4bffb825e577b2c0dad290f7375"
+    }
+  ]
+}

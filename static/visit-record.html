@@ -56,9 +56,11 @@
       <div><h2>What happened</h2><p id="recordSummary" role="status" aria-live="polite"></p></div>
       <div class="actions no-print">
         <button id="saveRecord" type="button" disabled>Download visit record</button>
+        <button id="downloadCsv" type="button" class="secondary" disabled>Download CSV</button>
         <button id="printRecord" type="button" class="secondary" disabled>Print record</button>
       </div>
       <p class="field-help">Dates below are when the visit or decision happened. They may be outside the planned week. Notes and dates do not change the outcome.</p>
+      <p class="field-help no-print">CSV is a tabular report of every original pick, including omitted and unrecorded visits. Import spreadsheet columns as text to preserve literal values. Keep the JSON file to reopen and edit.</p>
       <p id="draftError" class="error" role="alert"></p>
       <p id="saveStatus" role="status" aria-live="polite" class="no-print"></p>
     </div>
