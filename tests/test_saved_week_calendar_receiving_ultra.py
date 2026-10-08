@@ -86,17 +86,20 @@ const {syncBuiltinESMExports} = require("node:module");
 const mode = process.env.TT_REVIEW_FAULT, out = path.resolve(process.env.TT_REVIEW_OUTPUT);
 const tracePath = process.env.TT_REVIEW_TRACE;
 const realWrite = fs.writeFileSync.bind(fs);
-const trace = {mode, linkCalls:[], published:false, cleanupAttempts:0, stdoutAttempts:0};
-let staged = null;
+const trace = {mode, linkCalls:[], published:false, cleanupAttempts:0, stdoutAttempts:0,
+  initialEntries:fs.readdirSync(path.dirname(out))};
+let staged = null, stageContainer = null;
 const norm = p => path.resolve(String(p));
 function failure(message, code) { return Object.assign(new Error(message), {code}); }
 function beforeLink(a,b) {
   if (norm(b) !== out) return;
   staged = norm(a);
+  stageContainer = path.dirname(staged) === path.dirname(out) ? staged : path.dirname(staged);
   const openStageFds = fs.readdirSync("/proc/self/fd").filter(fd => {
     try { return fs.readlinkSync("/proc/self/fd/" + fd) === staged; } catch { return false; }
   });
-  trace.linkCalls.push({stage:staged, output:norm(b), openStageFds,
+  trace.linkCalls.push({stage:staged, stageContainer, output:norm(b), openStageFds,
+    regularStage:fs.lstatSync(a).isFile(),
     sha256:crypto.createHash("sha256").update(fs.readFileSync(a)).digest("hex")});
   if (mode === "race") realWrite(out, "independent competing destination\n", {flag:"wx"});
   if (mode === "link-failure") throw failure("independent unavailable hard link", "EXDEV");
@@ -112,7 +115,7 @@ fs.link = function(a,b,cb) {
 const plink = fsp.link;
 fsp.link = async function(a,b) { beforeLink(a,b); const v=await plink.call(this,a,b); afterLink(b); return v; };
 function cleanup(p) {
-  if (trace.published && staged === norm(p)) {
+  if (trace.published && [staged, stageContainer].includes(norm(p))) {
     trace.cleanupAttempts++;
     if (mode === "cleanup") throw failure("independent stage cleanup refusal", "EPERM");
   }
@@ -130,6 +133,14 @@ for (const name of ["unlink", "rm"]) {
   const poriginal=fsp[name];
   fsp[name]=async function(p,...args) { cleanup(p); return await poriginal.call(this,p,...args); };
 }
+const writeSync = fs.writeSync;
+fs.writeSync = function(fd, ...args) {
+  if (fd === 1 && trace.published && mode === "receipt") {
+    trace.stdoutAttempts++;
+    throw failure("independent receipt delivery refusal", "EPIPE");
+  }
+  return writeSync.call(this, fd, ...args);
+};
 const write = process.stdout.write;
 process.stdout.write = function(...args) {
   if (trace.published && mode === "receipt") {
@@ -546,7 +557,7 @@ def test_help_is_standalone_and_creates_nothing(tmp_path):
 
 
 @pytest.mark.parametrize("mode", ["observe", "race", "link-failure", "cleanup", "receipt"])
-def test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic(week, tmp_path, mode):
+def test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic(week, tmp_path, mode, capsys):
     text = _text(week)
     expected = _oracle(text)
     directory, source, output = _files(tmp_path, text)
@@ -561,7 +572,11 @@ def test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic(week, 
     trace = json.loads(trace_path.read_text())
     assert len(trace["linkCalls"]) == 1, trace
     observed = trace["linkCalls"][0]
-    assert Path(observed["stage"]).parent == output.parent
+    container = Path(observed["stageContainer"])
+    assert container.parent == output.parent
+    assert container.name not in trace["initialEntries"]
+    assert Path(observed["stage"]) == container or Path(observed["stage"]).parent == container
+    assert observed["regularStage"] is True
     assert Path(observed["stage"]) not in [source, output]
     assert observed["openStageFds"] == [], trace
     assert observed["sha256"] == _sha(expected["calendar"]["text"].encode())
@@ -590,7 +605,8 @@ def test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic(week, 
             assert trace["cleanupAttempts"] >= 1
         else:
             assert trace["stdoutAttempts"] >= 1
-    print("TASTETABLE_INDEPENDENT_DELIVERY " + json.dumps({
-        "mode": mode, "status": p.returncode, "trace": trace,
-        "output_sha256": _sha(output.read_bytes()) if output.is_file() else None,
-    }, sort_keys=True), flush=True)
+    with capsys.disabled():
+        print("TASTETABLE_INDEPENDENT_DELIVERY " + json.dumps({
+            "mode": mode, "status": p.returncode, "trace": trace,
+            "output_sha256": _sha(output.read_bytes()) if output.is_file() else None,
+        }, sort_keys=True), flush=True)
