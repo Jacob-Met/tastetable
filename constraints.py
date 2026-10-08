@@ -66,9 +66,34 @@ def check_soft_foods(e: Entity) -> Check:
     return Check("soft_foods", "unknown", "no texture signal in Qloo keywords; ask the venue")
 
 
+def _positive_low_sodium_hits(words: list[str]) -> list[str]:
+    """Keep existing cues except explicit local denials or unavailability.
+
+    This only interprets short keyword phrases, not arbitrary menu prose. A
+    negated cue is missing positive evidence, not a new high-sodium signal.
+    Check each occurrence so separate affirmative evidence remains usable.
+    """
+    hits = set()
+    for word in words:
+        for cue in LOW_SODIUM:
+            for match in re.finditer(re.escape(cue), word):
+                before, after = word[:match.start()], word[match.end():]
+                if re.search(r"\b(?:no(?:\s+longer)?|not|without)\s+(?:(?:any|a|an)\s+)?$", before):
+                    continue
+                if re.match(
+                    r"(?:\s+|\s*[:,(-]\s*)"
+                    r"(?:(?:options?|choices?|meals?|dishes|preparation)\s+)?"
+                    r"(?:(?:is|are)\s+)?(?:unavailable|not\s+(?:available|offered))\b",
+                    after,
+                ):
+                    continue
+                hits.add(word)
+    return sorted(hits)
+
+
 def check_low_sodium(e: Entity) -> Check:
     kw = _keywords(e)
-    low, high = _hits(kw, LOW_SODIUM), _hits(kw, HIGH_SODIUM)
+    low, high = _positive_low_sodium_hits(kw), _hits(kw, HIGH_SODIUM)
     if high and not low:
         return Check("low_sodium", "fail", f"high-sodium signals: {', '.join(high[:3])}")
     if low:

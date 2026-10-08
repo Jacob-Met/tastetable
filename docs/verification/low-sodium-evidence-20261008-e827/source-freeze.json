@@ -1,0 +1,111 @@
+{
+  "repository": "Jacob-Met/tastetable",
+  "issue": 22,
+  "receiving_commit": "0758d2cca881fb5b5041f80bae2174cf485f4bdd",
+  "receiving_tree": "5760b8268b1a4b8f5ef919861a118c5900fec87d",
+  "production_files": [
+    {
+      "path": "constraints.py",
+      "git_blob": "5d1570db8af6dd167909e7f289dec2fc81f8f21e",
+      "sha256": "9ac27f69daae0ee6087be1993157df89572fd67dbee9816bd7eb751fbeffbca6",
+      "bytes": 5548
+    }
+  ],
+  "test_files": [
+    {
+      "path": "tests/test_low_sodium_evidence.py",
+      "git_blob": "89b3daa81b235807c13ef53ea4a99142c1fbec10",
+      "sha256": "f69d213abcadd6bca35e0cb2d587f9bd43c10426a5e4c101e09e22e31a545171",
+      "bytes": 6370
+    }
+  ],
+  "changed_existing_functions": [
+    "check_low_sodium"
+  ],
+  "added_helpers": [
+    "_positive_low_sodium_hits"
+  ],
+  "other_top_level_ast_unchanged": true,
+  "unchanged_selected_files": [
+    {
+      "path": "agent.py",
+      "git_blob": "883aff984464f2d43cda18f8e60b81240d6c3fb3"
+    },
+    {
+      "path": "qloo_client.py",
+      "git_blob": "cca322e0c9af96c481ba8f7ef286e85d3b90cfd2"
+    },
+    {
+      "path": "personas.py",
+      "git_blob": "1eb6768780cafaf9b1666e39b7fc17aa21204f16"
+    },
+    {
+      "path": "fixtures/qloo_fixtures.json",
+      "git_blob": "60c5d92f905755454bb280b8181f8836a74bd955"
+    },
+    {
+      "path": "README.md",
+      "git_blob": "8ff6de7f3bd91f0ff130775631dd0fe2dc98791c"
+    },
+    {
+      "path": "docs/verification/constraint-binding-20261008.md",
+      "git_blob": "0b0f2877d7a22d655d4e3a4b5194c5054535c6bf"
+    },
+    {
+      "path": "tests/test_tastetable.py",
+      "git_blob": "e6731e2c560a921074f034057404ce9bdd81e6ac"
+    }
+  ],
+  "author_methods": {
+    "baseline": {
+      "passed": 3,
+      "failures": 6,
+      "errors": 0,
+      "skips": 0
+    },
+    "candidate": {
+      "passed": 9,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    }
+  },
+  "original_reproduction": {
+    "baseline": {
+      "passed": 1,
+      "failures": 2,
+      "errors": 0,
+      "skips": 0
+    },
+    "candidate": {
+      "passed": 3,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    }
+  },
+  "ordinary_persona_outputs": [
+    {
+      "persona": "rosa",
+      "bytes": 8610,
+      "sha256": "3212518dedbe996ebd4edc7c2a16fd0b41548239fa1a4cacefde2bb07fa45476",
+      "byte_identical_to_baseline": true,
+      "synthetic_input_unchanged": true
+    },
+    {
+      "persona": "harold",
+      "bytes": 7532,
+      "sha256": "96fb0409be2b80be4c87d2a473b381b3cb72815fc2e2c15d5efc658834deed87",
+      "byte_identical_to_baseline": true,
+      "synthetic_input_unchanged": true
+    },
+    {
+      "persona": "mei",
+      "bytes": 5498,
+      "sha256": "50de1a5b6d931d950aad8697bb859c359ed93d42f7be9fe28b158bfa418dc144",
+      "byte_identical_to_baseline": true,
+      "synthetic_input_unchanged": true
+    }
+  ],
+  "boundary": "Local native stdlib qualification. Existing full hosted pytest CI remains required; no live provider, venue, clinical, browser or deployment claim."
+}

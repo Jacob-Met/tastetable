@@ -1,0 +1,111 @@
+{
+  "repository": "Jacob-Met/tastetable",
+  "coordination_issue": 22,
+  "baseline_commit": "0758d2cca881fb5b5041f80bae2174cf485f4bdd",
+  "candidate_constraints_git_blob": "5d1570db8af6dd167909e7f289dec2fc81f8f21e",
+  "test": {
+    "bytes": 9474,
+    "sha256": "a0748ab61b8c49f4b7f56d823ffabba40bf7d82401ae10084d47777df1a4cb58",
+    "git_blob": "5a3740afe223441780aaf5bf5c3e5e082f22f5e7"
+  },
+  "results": {
+    "baseline": {
+      "tests": 4,
+      "passed": 0,
+      "failures": 4,
+      "errors": 0,
+      "skipped": 0,
+      "source_unchanged": true,
+      "source_sha256": {
+        "constraints.py": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e",
+        "agent.py": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+        "qloo_client.py": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b"
+      },
+      "native_agent": {
+        "meal_ids": [
+          "PEER-NEGATED",
+          "PEER-MIXED",
+          "PEER-POSITIVE",
+          "PEER-UNKNOWN"
+        ],
+        "rejected_ids": [
+          "PEER-HIGH"
+        ],
+        "outing_id": "PEER-OUTING",
+        "fixture_sha256": "33375f70e9a9dab2d1e78b8adff814aebb986d9cdc5aedfac51e12b0a68161a9",
+        "fixture_unchanged": true,
+        "persona_unchanged": true,
+        "mock": true
+      }
+    },
+    "candidate": {
+      "tests": 4,
+      "passed": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "source_unchanged": true,
+      "source_sha256": {
+        "constraints.py": "9ac27f69daae0ee6087be1993157df89572fd67dbee9816bd7eb751fbeffbca6",
+        "agent.py": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+        "qloo_client.py": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b"
+      },
+      "native_agent": {
+        "meal_ids": [
+          "PEER-MIXED",
+          "PEER-POSITIVE",
+          "PEER-UNKNOWN",
+          "PEER-BACKUP"
+        ],
+        "rejected_ids": [
+          "PEER-NEGATED",
+          "PEER-HIGH"
+        ],
+        "outing_id": "PEER-OUTING",
+        "fixture_sha256": "33375f70e9a9dab2d1e78b8adff814aebb986d9cdc5aedfac51e12b0a68161a9",
+        "fixture_unchanged": true,
+        "persona_unchanged": true,
+        "mock": true
+      }
+    }
+  },
+  "source_review": {
+    "changed_named_units": [
+      "_positive_low_sodium_hits",
+      "check_low_sodium"
+    ],
+    "all_other_function_and_class_AST_nodes_identical": true
+  },
+  "archive_files": {
+    "test_low_sodium_peer.py": {
+      "bytes": 9474,
+      "sha256": "a0748ab61b8c49f4b7f56d823ffabba40bf7d82401ae10084d47777df1a4cb58",
+      "git_blob": "5a3740afe223441780aaf5bf5c3e5e082f22f5e7"
+    },
+    "baseline.log": {
+      "bytes": 3440,
+      "sha256": "50b55f72dd78356cb3211b322629b5b21c199178d0bd9020c53406384da246f8",
+      "git_blob": "66369712e6d900a17e0515603c8dd5b779923d8c"
+    },
+    "candidate.log": {
+      "bytes": 736,
+      "sha256": "bec16893fd3cb24ade93ef7cfcce23787c110dcac4b9370a7b85f6caf206f116",
+      "git_blob": "2dcf88410d0bc552e1d4effd04fa8577cadc7065"
+    },
+    "baseline/receiving.json": {
+      "bytes": 24021,
+      "sha256": "ba18a6164b229649d6ef6e537207592bbc8f6991e46eb533f260433b20be40df",
+      "git_blob": "b0b1437c35960d79e2acb5e45b5a8d3399835b3f"
+    },
+    "candidate/receiving.json": {
+      "bytes": 24338,
+      "sha256": "dc9ed7986d2ef89114c8af80f5277fb3c4e38c285deb4f6b2eba372cb7618485",
+      "git_blob": "d2fe95e62124e81dce2d69efa212a5e076539cd4"
+    }
+  },
+  "qualification_limits": [
+    "Independent replay binds the original candidate constraints blob and source SHA256 values shown here. Later current-main composition requires its own hosted gate.",
+    "Uses the repository native FixtureTransport, QlooClient, ScriptedModel, and run_agent on wholly synthetic data. No live provider, model, browser, deployment, or clinical outcome was tested.",
+    "Hosted pytest on the published current-main composition is pending at handoff; no extra local replay was performed."
+  ]
+}
