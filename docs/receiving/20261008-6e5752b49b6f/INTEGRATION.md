@@ -4,9 +4,9 @@ Receiver: `estate-6e5752b49b6f`, 2026-10-08 UTC.
 
 ## Reviewed source
 
-The lead reviewed the independent API harness, the original three production
-changes in `agent.py`, and the complete inherited source manifest. The
-production file remains exactly the PR #3 `agent.py`; its complete blob
+The lead initially reviewed the independent API harness, the original three
+production changes in `agent.py`, and the complete inherited source manifest.
+That initial production file exactly matched PR #3 `agent.py`; its complete blob
 identity is retained in `source-manifest.json`. Original PR #2/#3 authorship and
 history are retained as integration parents rather than rewritten.
 
@@ -35,8 +35,49 @@ entire tree identical to the independently tested receiving commit above.
 
 The CI workflow's checkout and setup-python pins were independently compared
 with their public upstream Git release-tag refs: both matched exactly.
-Hosted CI is a separate receiving result; local test success does not imply
-that a GitHub run occurred.
+Published receiving commit `1b8e07856b48318974fc20621975536424113cbe` had
+[successful hosted CI run 37753313683](https://github.com/Jacob-Met/tastetable/actions/runs/37753313683).
+The test job's dependency-install and test steps both completed successfully.
+
+## Receiving the subsequent main changes
+
+The original authors then integrated PR #5's authoritative caregiver checks
+and malformed recommendation-purpose handling, followed by PR #2 and PR #3.
+The observed resulting main is
+`8fdd78dbd1bd7e72385b2f5bd684e02b0971fa14`. Its production `agent.py` blob is
+`15ae2c26dd14a8eec43dc328e87d6f12c8d460d2`; `app.py` is
+`2c2f1524e62c74db21fdbcc69faec643903c23b8`.
+
+The lead merged that current main with the published receiving commit in an
+isolated checkout. Local merge `60bfb7dd3ec11fa2dcd02b4f802dc980dabb9af0`, tree
+`b403bc46cf9bc395f3724560669efedc31a2212b`, preserves every production source
+and the new constraint/purpose tests from current main. Against that main,
+the remaining contribution consists only of the API receiving tests and the
+scoped receiving documentation and evidence.
+
+The updated full suite passes **57 tests and 35 subtests** in 0.66 seconds,
+with the same single deprecation warning. Raw output is preserved in
+`current-main-pytest.txt`. Earlier 35-test and browser receipts retain their
+original source pins; they are not relabeled as executions of the newer
+caregiver-constraint implementation. The source and receiving history remain
+separate so a future worker can reproduce each result exactly.
+
+The peer then added an independent combined route challenge, now retained as
+`tests/test_api_constraint_receiving.py`. Both form and sample routes run an
+authored configured-model exchange containing invalid recommendation purposes,
+a recommendation refusal and repair, attempts to weaken saved checks, and a
+later outing refusal. The updated implementation keeps one properly checked
+meal, rejects the failing fixture against every saved requirement, leaves the
+outing empty, and preserves all seven tool results. The same challenge fails
+against the earlier published production source, with the rejected fixture
+admitted there; `current-main-peer/` preserves that actual counterexample and
+the author's initially cached-query mistake before correcting the test input.
+
+The lead inspected the proposed test and copied its exact accepted bytes into
+the repository. With that persistent check included, the complete suite passes
+**58 tests and 37 subtests** in 0.56 seconds. Raw output is retained in
+`current-composition-pytest.txt`. No production source changed during this
+addition, and the existing CI workflow will exercise the combined interaction.
 
 ## Browser outcome and remaining presentation work
 
