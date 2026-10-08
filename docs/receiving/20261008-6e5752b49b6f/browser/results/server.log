@@ -1,0 +1,17 @@
+INFO:     Started server process [14]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:47380 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47396 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47406 - "GET /static/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47396 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47396 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47396 - "GET /api/personas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47396 - "POST /api/plan/sample/rosa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47396 - "POST /api/plan/sample/rosa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47396 - "POST /api/plan/sample/rosa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47396 - "POST /api/plan HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [14]
