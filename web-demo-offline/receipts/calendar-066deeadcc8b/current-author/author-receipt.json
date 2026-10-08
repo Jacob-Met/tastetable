@@ -1,0 +1,62 @@
+{
+  "format": "tastetable.offline-calendar-current-author-receipt/1",
+  "frozen_at": "2026-10-08T16:55:04Z",
+  "source_projection": "64171a6690b141ddbd9c430baa315bee38c5e743",
+  "canonical_parent": "e0f6fbaf1f81fbb1e9926948294549c744228def",
+  "files": {
+    "README.md": {
+      "bytes": 10761,
+      "sha256": "e4d034f1dc81093eaab2bedb18759cdcfc479a6a3e3f352895b1605d74712e76"
+    },
+    "frozen-source.json": {
+      "bytes": 21091,
+      "sha256": "81d7e62583bc13a3f9398b010ccf2ff8055c18fc04999f5a27e9573e9660f36c"
+    },
+    "native-current.tar.xz": {
+      "bytes": 500316,
+      "sha256": "27b6d0b1dfb5b0a0117fbfba5e44f639b01789022891c781d5c14d22eb6bdaf0"
+    },
+    "native-manifest.json": {
+      "bytes": 22565,
+      "sha256": "2d77bdd0abf99de4a3eba379e2f35dc2d6aa04da54b1c2cdde9b9673f46064ba"
+    },
+    "verification-commands.json": {
+      "bytes": 1277,
+      "sha256": "5d4b0aba86a222c94dee652d615dfce1e17c316c29530c8bd2651bdc6e366ec0"
+    },
+    "verification-first-failure.log": {
+      "bytes": 568,
+      "sha256": "4b5e238cc713ecaabc0075bfd3fe6a5c5d410773077d207da272eccdbc08f1fa"
+    },
+    "verification-normal.log": {
+      "bytes": 568,
+      "sha256": "4b5e238cc713ecaabc0075bfd3fe6a5c5d410773077d207da272eccdbc08f1fa"
+    },
+    "verification-preparation-failure.json": {
+      "bytes": 1145,
+      "sha256": "4182a7a1cf73a7fd117aa3fbdec9c97d2a519f08728a1541c448a73fa791f8ba"
+    },
+    "verification-v2-normal.log": {
+      "bytes": 1424,
+      "sha256": "fd3613b6d07921cbfe0a14ce2423b0bc305f82776f676d466e6c1be7f806db2f"
+    },
+    "verification-v2-optimized.log": {
+      "bytes": 1424,
+      "sha256": "fd3613b6d07921cbfe0a14ce2423b0bc305f82776f676d466e6c1be7f806db2f"
+    },
+    "verification.json": {
+      "bytes": 1424,
+      "sha256": "fd3613b6d07921cbfe0a14ce2423b0bc305f82776f676d466e6c1be7f806db2f"
+    },
+    "verify-current-author.before-command-binding.py": {
+      "bytes": 18970,
+      "sha256": "a0b939521c001e523c8d95d649d98801f0b72b83b2baf9383d15ce72d5cc2857"
+    },
+    "verify-current-author.py": {
+      "bytes": 19376,
+      "sha256": "b26a41f53da53c53868781f5faa7aea715ff3f7b2bc405d68e78b2a1b1ac46be"
+    }
+  },
+  "verdict": "Author qualification passes; root independent receiving is separately attributed.",
+  "complete_ordinary_files": 14
+}

@@ -1,0 +1,11 @@
+{
+  "format": "tastetable.offline-calendar-source/1",
+  "repository": "Jacob-Met/tastetable",
+  "commit": "689ddc9a6a4f5f12068e1e99127cc77482c53924",
+  "tree": "25b453e345bedd3f280e3d555df12561ef084cc6",
+  "path": "static/calendar.js",
+  "git_blob": "dbed22d2cb91090bccec9472fbffd2854eed2722",
+  "bytes": 15169,
+  "copy": "calendar.js",
+  "copy_policy": "Exact source bytes; only the separate offline consumer and its UI are new."
+}

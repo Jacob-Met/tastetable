@@ -1,0 +1,29 @@
+{
+  "normal": {
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/me/tastetable-calendar-066deeadcc8b/author-v1/verify-author.py",
+      "/Users/me/tastetable-calendar-066deeadcc8b/author-v1/native-author.tar.xz"
+    ],
+    "cwd": "/Users/me/tastetable-calendar-066deeadcc8b/author-v1",
+    "started_unix": 1791477091.527416,
+    "finished_unix": 1791477091.6978931,
+    "returncode": 0
+  },
+  "optimized": {
+    "argv": [
+      "python3",
+      "-B",
+      "-O",
+      "/Users/me/tastetable-calendar-066deeadcc8b/author-v1/verify-author.py",
+      "/Users/me/tastetable-calendar-066deeadcc8b/author-v1/native-author.tar.xz"
+    ],
+    "cwd": "/Users/me/tastetable-calendar-066deeadcc8b/author-v1",
+    "started_unix": 1791477115.166998,
+    "finished_unix": 1791477115.361961,
+    "returncode": 0
+  },
+  "outputs_byte_identical": true,
+  "output_sha256": "92b7981c1e38dd959c7f28725980f3347d3d44943bb9e0e05eb4dc6928995433"
+}

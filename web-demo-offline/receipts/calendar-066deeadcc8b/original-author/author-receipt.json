@@ -1,0 +1,36 @@
+{
+  "format": "tastetable.offline-calendar-author-receipt/1",
+  "frozen_at": "2026-10-08T16:31:55Z",
+  "source_projection": "e1babdbfa64b63fc1443f4efee44897681545c26",
+  "qualification": "Author native/browser/static-package qualification only; root owns independent receiving.",
+  "files": {
+    "README.md": {
+      "bytes": 7428,
+      "sha256": "f1d44cfeabc0accb9e12ee4b5162198b45d7b43c6b7aa1d86a2cfb83bc199014"
+    },
+    "frozen-source.json": {
+      "bytes": 17186,
+      "sha256": "856b8761f80276fec0b32496144c7c40b9090ef38b9333a2effd2216772dc50b"
+    },
+    "native-author.tar.xz": {
+      "bytes": 628472,
+      "sha256": "399c8cf82d10aedae17806dc9b8e1bf1f2b74c3170bf15333756d1a827641f64"
+    },
+    "native-manifest.json": {
+      "bytes": 17270,
+      "sha256": "800b2a1045186f4b724f0b6a474b1c7f9ae3fc38a2b585c79d866c574aaae726"
+    },
+    "verification-commands.json": {
+      "bytes": 932,
+      "sha256": "5fa4694b3d56c7bb85f2ccad894ecda42230574d10a6fe52eb81d4107a68d149"
+    },
+    "verification.json": {
+      "bytes": 1393,
+      "sha256": "92b7981c1e38dd959c7f28725980f3347d3d44943bb9e0e05eb4dc6928995433"
+    },
+    "verify-author.py": {
+      "bytes": 14371,
+      "sha256": "6a25b6ef1a70b4bb3ba673e0cc9ea21cbe70b5d699ca9bc24f81d1fc7933f670"
+    }
+  }
+}

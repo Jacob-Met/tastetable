@@ -93,7 +93,7 @@ Use **Save week** after choosing a date and scheduled days. The browser prepares
 
 Use **Open saved week** to choose that file. The studio validates it and shows its profile, constraints, saved time, scheduled days and omitted picks before **Replace displayed week** changes anything. Cancelled, unreadable, oversized or nonmatching files leave the displayed draft in place. A new file, cancellation or a profile, constraint, date, day or reset edit retires an unfinished read and any previous preview. There is no automatic browser storage, upload or new backend planning.
 
-The existing shared `static/week_file.mjs` is copied unchanged. [week-file-source.json](week-file-source.json) records its separate current-source provenance; the original recordings retain their earlier source pin. The offline admission module requires the complete saved response and original inputs to match exactly one of the 24 bundled records. Object key order can vary; array order, values and all fields must match. Overflowing JSON numbers are refused before comparison can normalize them to null. Files from other recorded versions or live responses are refused without replacing the draft. State is rebuilt from the canonical record before applying saved day choices, so reopening and saving again preserves source identity. Existing valid calendar identities are retained, but the offline studio does not create one or offer a calendar action.
+The existing shared `static/week_file.mjs` is copied unchanged. [week-file-source.json](week-file-source.json) records its separate current-source provenance; the original recordings retain their earlier source pin. The offline admission module requires the complete saved response and original inputs to match exactly one of the 24 bundled records. Object key order can vary; array order, values and all fields must match. Overflowing JSON numbers are refused before comparison can normalize them to null. Files from other recorded versions or live responses are refused without replacing the draft. State is rebuilt from the canonical record before applying saved day choices, so reopening and saving again preserves source identity. Existing valid calendar identities are retained. The calendar handoff below can create an identity when you first prepare a calendar file.
 
 Only UTF-8 JSON up to 128 KiB is read; both the advertised and actual byte counts are checked. A saved copy keeps its fictional-recording label and original venue-confirmation reasons on screen and in print. Saving or reopening a week does not confirm current accessibility, dietary suitability or opening hours.
 
@@ -155,3 +155,22 @@ TASTETABLE_BROWSER_EXECUTABLE=/absolute/path/to/chrome \
 The browser check uses an already available Playwright/Chrome runtime and the real
 offline controls and downloads. It does not install dependencies. Its only fault
 injection holds named file reads to check that Undo/Redo retire a late result.
+
+
+## Take the arranged week to a calendar
+
+After choosing the week and scheduling its visits, review **Calendar handoff** below the organizer. It lists the exact scheduled day, date and venue for every all-day suggestion. **Download calendar (.ics)** prepares a local calendar file; open it in a calendar app to review and import. Several visits on one day remain distinct, and visits kept off the week stay out of the file. An empty arrangement or invalid displayed date keeps the download unavailable.
+
+The file retains the existing writer's fictional/demo labels, source entity IDs, original explanations and plan notes, including care and venue-confirmation cautions. It creates no reservation, live recommendation or verified opening hours. Preparing or downloading this file makes no calendar-service request. A later file cannot update or cancel an earlier import by itself; the calendar app controls its import behavior.
+
+The first successfully prepared calendar assigns an identity to the currently accepted recording. Repeated exports, moves, omissions and restores within the same week keep each occurrence's event identity. Changing the week gives those occurrences different week-specific identities. Showing a newly accepted recording starts a separate identity.
+
+Use **Save week after preparing the calendar** to keep that identity in your saved copy. Reopening a matching file that contains the identity and original received timestamp reproduces the same calendar bytes when the arrangement is unchanged. Earlier saved files can contain no calendar identity: they still open normally, but separate later openings will start separate calendar identities on their first export. The saved-week format and source-admission rules are unchanged.
+
+The calendar uses the received **static/calendar.js** writer without edits. [calendar-source.json](calendar-source.json) binds the exact copied writer to its canonical Git source. The original 24 recordings and their source pin are unchanged; this action consumes the arrangement you display.
+
+Run the focused calendar consumer tests with:
+
+```sh
+node --test web-demo-offline/tests/offline_calendar.test.mjs
+```

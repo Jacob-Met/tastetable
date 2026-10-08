@@ -1,0 +1,33 @@
+[
+  {
+    "mode": "normal",
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/me/tastetable-calendar-066deeadcc8b/author-current/verify-current-author.py",
+      "/Users/me/tastetable-calendar-066deeadcc8b/author-current/native-current.tar.xz"
+    ],
+    "returncode": 0,
+    "started_unix": 1791478415.9601989,
+    "finished_unix": 1791478416.135183,
+    "stdout_sha256": "fd3613b6d07921cbfe0a14ce2423b0bc305f82776f676d466e6c1be7f806db2f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verifier_sha256": "b26a41f53da53c53868781f5faa7aea715ff3f7b2bc405d68e78b2a1b1ac46be"
+  },
+  {
+    "mode": "optimized",
+    "argv": [
+      "python3",
+      "-B",
+      "-O",
+      "/Users/me/tastetable-calendar-066deeadcc8b/author-current/verify-current-author.py",
+      "/Users/me/tastetable-calendar-066deeadcc8b/author-current/native-current.tar.xz"
+    ],
+    "returncode": 0,
+    "started_unix": 1791478416.135307,
+    "finished_unix": 1791478416.327841,
+    "stdout_sha256": "fd3613b6d07921cbfe0a14ce2423b0bc305f82776f676d466e6c1be7f806db2f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verifier_sha256": "b26a41f53da53c53868781f5faa7aea715ff3f7b2bc405d68e78b2a1b1ac46be"
+  }
+]
