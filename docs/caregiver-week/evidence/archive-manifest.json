@@ -1,0 +1,237 @@
+{
+  "schema": "tastetable.caregiver-week.raw-evidence.v1",
+  "candidate_local_commit": "02c5e91f2c3e7220162b651ba3c1ec589ac2eea2",
+  "archive": {
+    "path": "docs/caregiver-week/evidence/raw-reviews.tar.gz",
+    "sha256": "1c3d99c81641fbb7966c2e50932e169f489f6c0b99881e34c75c5b09630113c9",
+    "git_blob": "149cd4c4690518c133b66704adc8a2feda07ff03",
+    "bytes": 366051,
+    "encoding": "base64"
+  },
+  "author_original_archive": {
+    "path": "/workspace/scratch/0df473646168/agents/product/tastetable-week-evidence.tar.gz",
+    "sha256": "7695c8a405b0bdcfd33710e93a978a8a2cd7111c5976b75f4f63da46912c7681",
+    "bytes": 349534
+  },
+  "raw_file_counts": {
+    "author": 22,
+    "independent": 12,
+    "total": 34
+  },
+  "preservation": "All original author and independent regular-file contents remain byte-identical. Names are placed under author/ and independent/. Only tar owner/time metadata is normalized. Original nested source, browser-input and binary artifacts are retained without recompression or content edits.",
+  "direct_readable_copies": {
+    "candidate_manifest.json": "author/candidate_manifest.json",
+    "browser-final.json": "author/browser-final.json",
+    "author-node-tests.log": "author/node-tests.log",
+    "author-python-regression.log": "author/python-regression.log",
+    "independent-REVIEW.md": "independent/REVIEW.md",
+    "independent-review.log": "independent/independent-review.log",
+    "independent-review-run.json": "independent/independent-review-run.json"
+  },
+  "files": [
+    {
+      "path": "author/README.md",
+      "sha256": "ab4abd2f7bef20412abbd6c83461e488793dc01e90729159350be34be549fd9d",
+      "git_blob": "95f3464ad53cbcbdcab7f43caa16fc2769219c0e",
+      "bytes": 6670
+    },
+    {
+      "path": "author/baseline-browser.json",
+      "sha256": "a62a27d57219513c1a1ebc7c13de934a5771141d2ff4d41ccadaf72b179e519d",
+      "git_blob": "6e6e72ebb0bd37d8296ba1912c075e7105658202",
+      "bytes": 1622
+    },
+    {
+      "path": "author/baseline_responses.json",
+      "sha256": "c8933cfdc2072901c57e92c124c8cae430859b21233e51b512255987ad99e071",
+      "git_blob": "1d9398b632293cb302ea322e2d51db52073d80af",
+      "bytes": 35128
+    },
+    {
+      "path": "author/browser-final.json",
+      "sha256": "ae0ebaa5abddd04945de2ace7d0c08b5ba85cf108a1620dea72285ab7b375147",
+      "git_blob": "9c52f5d884678a8b5e7450b7278486d56134f2ad",
+      "bytes": 9503
+    },
+    {
+      "path": "author/browser-initial-focus-check.json",
+      "sha256": "84c2a4392c03e1a623d772debb2f4b496ef560cc4b284852b64d897fd91d479e",
+      "git_blob": "d2f3da7446650533b6b5fa36d0f988cbb9511908",
+      "bytes": 16714
+    },
+    {
+      "path": "author/browser-inputs.tar.gz",
+      "sha256": "8433036df449dd4262895df346b9cf1c8da7f705c13946431daf9f525db3383a",
+      "git_blob": "c8a80ce0f605d28858ef0c057edde29492f5e73a",
+      "bytes": 17433
+    },
+    {
+      "path": "author/browser-r2-request-check.json",
+      "sha256": "4a4b8f6c26f2f18d890d6c4a49a3e4ec7d43e398e6b11031f09c5eb60635fd68",
+      "git_blob": "613fc47e6f690d51fed716ee3e85ce231949b08c",
+      "bytes": 14631
+    },
+    {
+      "path": "author/browser-r3-request-detail.json",
+      "sha256": "1d3682904ef8c62b0116de1274f189f96a3c73e39d2cdfc23649087dbd90c21e",
+      "git_blob": "85950f1d8349a7791759d56a3761891bfa9a4405",
+      "bytes": 15609
+    },
+    {
+      "path": "author/browser_fixture.json",
+      "sha256": "66b0f5725773deb5d402b7aaac7880ceda679e6cea39a3a128090a03511c0d22",
+      "git_blob": "cad5e99d0e1fe045d680d391f34b0f6caf895dd8",
+      "bytes": 41337
+    },
+    {
+      "path": "author/candidate_manifest.json",
+      "sha256": "8161a155a16a4d9fda3302b0a4996607297021e440da4a41b3f159aea7a14cbf",
+      "git_blob": "6c644110c11ca43c56942af3b00896a797ef3476",
+      "bytes": 1504
+    },
+    {
+      "path": "author/check_browser.mjs",
+      "sha256": "67be1f4a23f2e1e789173b53c95dfcbd3a8be842ffa373650e577f269c3e78d2",
+      "git_blob": "8169cfdcc0edba8262e3acfe8dd0d1c85097f3a8",
+      "bytes": 18765
+    },
+    {
+      "path": "author/evidence-manifest.json",
+      "sha256": "3b39361246db2bbffcf2e619658e4fa903cf8d071673dc5bfbccfeda3e6634b6",
+      "git_blob": "b5b3ed9711df709e2c3cce4c9f44c72a539d6c7d",
+      "bytes": 3354
+    },
+    {
+      "path": "author/native-preservation.json",
+      "sha256": "3c4ad9fa915fd018509659ea642313cea5cd297bdbe48b3b6669f7e8ae425009",
+      "git_blob": "725668fa2a5d033237a63a59c43d71178fd17f0a",
+      "bytes": 596
+    },
+    {
+      "path": "author/node-tests.log",
+      "sha256": "d323178465d0d5c5800f9b2a4af96153e208853bc34e2075a977c337123d1cc2",
+      "git_blob": "427435e7c292a7121c2b1fe21cba1ba3105b0ef3",
+      "bytes": 1024
+    },
+    {
+      "path": "author/print-extraction.md",
+      "sha256": "895a702ae7bfc8004f33816f4184f50ff1ef7a4b755d3ab9ea65334fce75a9e5",
+      "git_blob": "8ad8c18565a85193c6512b8fb4f5499826779e1f",
+      "bytes": 3188
+    },
+    {
+      "path": "author/python-regression.log",
+      "sha256": "45fe7e0c2dd74e9d1de2f69a2cee2a2c925084a47bbd5351635a2a873188d310",
+      "git_blob": "66b1c135223604ec794149fc8f4f271767bfbd0a",
+      "bytes": 113
+    },
+    {
+      "path": "author/source-manifest.json",
+      "sha256": "3f9392234d826c6c4f835b177c824181f1f49b5fa450581b080c860db309ba26",
+      "git_blob": "54a51056bc3b2e21846ce804369bfde290b16052",
+      "bytes": 2241
+    },
+    {
+      "path": "author/source-snapshot.tar.gz",
+      "sha256": "6f24d2ca0cff8b3dbab710eb16821eb87bfa75a78ec06096b4fa249776b416f7",
+      "git_blob": "e6836e77d975807134f4b68e8a145873ffdc8c8c",
+      "bytes": 34579
+    },
+    {
+      "path": "author/week-desktop.png",
+      "sha256": "afd6f80f0ddd2f92169a2719d175b091be44838e1fefd60163a3327f4c947448",
+      "git_blob": "0f466156e5265c4bc65432e78563a5285efd7a03",
+      "bytes": 141334
+    },
+    {
+      "path": "author/week-handoff.pdf",
+      "sha256": "e1a652ac2f1cbf39d412760e49a7cad0037fe028b09413220bf326f9ebe81081",
+      "git_blob": "f8a2ad39f723a8818481a163adac47a19ef689e0",
+      "bytes": 59311
+    },
+    {
+      "path": "author/week-mobile.png",
+      "sha256": "667a467d6863e111f6b74a8aa2c52f79f899ff58422f52a5a5be3bff28b96e1d",
+      "git_blob": "6da02c4dfa0f94cd71283660444fbeb6d0a739b6",
+      "bytes": 74438
+    },
+    {
+      "path": "author/week-plan.patch",
+      "sha256": "9945e9b13eb5fa9327eb0bf89d2cd636f235d993d7fb125cd71bc648ac158821",
+      "git_blob": "789d968ee22cdd3a4a2842dcf11aae8853e752bf",
+      "bytes": 28253
+    },
+    {
+      "path": "independent/REVIEW.md",
+      "sha256": "2c2d266501945230aa44b4ddad0e9b961a5effc9ad9250d8ba23979355166137",
+      "git_blob": "5725d2a859e44ccfe1ef487fa89b0a96352b8a08",
+      "bytes": 6183
+    },
+    {
+      "path": "independent/build-fixtures.py",
+      "sha256": "5ba2b84ea38617ab84751de7d17754e3cf278847fee74f1c3d1a286676c5d5d3",
+      "git_blob": "9900ff8119b2b3c16fdb0b58cd4b8cb8f206dc22",
+      "bytes": 1701
+    },
+    {
+      "path": "independent/calendar-python-oracle.json",
+      "sha256": "a762effc5d12639a3249b3e998f9db87b76c0b5e5a0d82a80fac10882fe3c12f",
+      "git_blob": "3f321b646ebb2fdbcb092cf10a9bf1e27d85c927",
+      "bytes": 31044
+    },
+    {
+      "path": "independent/fixture-replay.json",
+      "sha256": "36f48bfe012cd89cd1605d6dd6d30cd90219c82258935e6ac4deef961bd177ba",
+      "git_blob": "6c6a5d16da7169acc3624bc1175aa0caef9120b0",
+      "bytes": 521
+    },
+    {
+      "path": "independent/independent-review-run.json",
+      "sha256": "25aa28fa634821e2239770d3a9788cb036cab37aa595f99b0ab60855c2a6ca4e",
+      "git_blob": "6acdf0a4ff660f600a6c5bcb0bd5cc2d42bfd187",
+      "bytes": 352
+    },
+    {
+      "path": "independent/independent-review.log",
+      "sha256": "b5fbaab1b9adad1d48425c81c83b1fc4dadfdffd92090f8974fb5abbafa3133a",
+      "git_blob": "f39b2ed1aba4dc44fdb1bd020c2d132b6d3665c1",
+      "bytes": 1373
+    },
+    {
+      "path": "independent/independent-review.mjs",
+      "sha256": "7bec9d7dae6024b697755b7e261edac530b63febe08820b4eb2edde6a1ba1ea7",
+      "git_blob": "99732dabf5e76bb13f679b6c21b83ccb693a2493",
+      "bytes": 15638
+    },
+    {
+      "path": "independent/native-fixture-responses.json",
+      "sha256": "67add3858ffcdf66f74349379f5dbfccca2fcddcb06002f22377c92c099e2083",
+      "git_blob": "fd899fe0338db773a6daf6dc831aab7c6ba2b78f",
+      "bytes": 35128
+    },
+    {
+      "path": "independent/review-files.json",
+      "sha256": "5b32a671066a8053540dd655a7a3433441f2768e1caf68912b4343ea8c02ee67",
+      "git_blob": "8fe963bf9f5064817da2901c24ff7e91c0fbdbfc",
+      "bytes": 1645
+    },
+    {
+      "path": "independent/source-after.json",
+      "sha256": "af87b40db905e5d6569a319ec0e5e052ec1f4c0549321f62e12bd232950d3bf4",
+      "git_blob": "326e1d8f67d5cdeb27e0ff755c5f74a259579221",
+      "bytes": 2681
+    },
+    {
+      "path": "independent/source-before.json",
+      "sha256": "af87b40db905e5d6569a319ec0e5e052ec1f4c0549321f62e12bd232950d3bf4",
+      "git_blob": "326e1d8f67d5cdeb27e0ff755c5f74a259579221",
+      "bytes": 2681
+    },
+    {
+      "path": "independent/source-stability.json",
+      "sha256": "f292b2f399e37656752c8778ca24597145a06a62460634fdda250d55b09ce387",
+      "git_blob": "938eb5a14920b9320efa5678fd5d0953b179c75a",
+      "bytes": 202
+    }
+  ]
+}
