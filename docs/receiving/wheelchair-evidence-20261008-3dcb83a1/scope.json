@@ -1,0 +1,23 @@
+{
+  "owner": "estate-3dcb83a1/production_scope",
+  "repository": "Jacob-Met/tastetable",
+  "base": "b8d384e5522e17cf15d73e8b06adbe6665e4bdcc",
+  "tree": "06409d6f67d0c99ee99305fe4f745963ec2da2a2",
+  "status": "Native isolated source scope selected; GitHub publication held by root-wide secondary-rate-limit cooldown until root's single normal probe succeeds.",
+  "source_scope": [
+    "constraints.py::check_wheelchair",
+    "tests/test_wheelchair_evidence.py",
+    "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/"
+  ],
+  "observed": "Actual run_agent/QlooClient/FixtureTransport with negated, unrelated, or partial wheelchair tags returns5 checked picks with affirmative entrance wording. Missing tag control returns0; affirmative control returns5.",
+  "policy": "Require the existing full affirmative entrance label; known local fixture identifier may establish the signal when unlabelled. Unsupported/ambiguous labels are unknown and use existing strict exclusion. Preserve explicit steps refusal and all dietary heuristics.",
+  "owners_read": [
+    "issue4 current comments through6057736274",
+    "mergedPR5 constraint binding explicitly leaves care heuristics unchanged",
+    "currentPR7 frontend lifecycle",
+    "PR10 calendar writer",
+    "currentmainPR11 model argument recovery",
+    "note wording owner6056817650"
+  ],
+  "limitations": "Synthetic evidence only; no live Qloo/venue accessibility verification, care advice, reservation, source deployment, native goal/attempt lease or service change."
+}

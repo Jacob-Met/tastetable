@@ -1,0 +1,308 @@
+{
+  "source": "/home/jacob/tastetable-accessibility-3dcb83a1/source",
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+  "elapsed_seconds": 0.053887404035776854,
+  "cases": [
+    {
+      "case": "mixed_period_denial",
+      "tags": [
+        {
+          "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance",
+          "name": "Wheelchair accessible entrance"
+        },
+        {
+          "tag_id": "urn:tag:accessibility:place:entrance_note",
+          "name": "Not wheelchair accessible."
+        }
+      ],
+      "expected_status": "unknown",
+      "actual_verdict": {
+        "entity_id": "INDEPENDENT-FIXTURE",
+        "name": "Independent fictional venue",
+        "ok": false,
+        "checks": [
+          {
+            "constraint": "wheelchair",
+            "status": "unknown",
+            "reason": "no unambiguous affirmative entrance evidence; ask the venue"
+          }
+        ]
+      },
+      "expected_picks": 0,
+      "actual_picks": 0,
+      "first_pick_why": null,
+      "rejected": 16,
+      "fixture_requests": 14,
+      "mock": true,
+      "passed": true
+    },
+    {
+      "case": "mixed_colon_uncertainty",
+      "tags": [
+        {
+          "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance",
+          "name": "Wheelchair accessible entrance"
+        },
+        {
+          "tag_id": "urn:tag:accessibility:place:entrance_note",
+          "name": "Wheelchair accessibility: unconfirmed"
+        }
+      ],
+      "expected_status": "unknown",
+      "actual_verdict": {
+        "entity_id": "INDEPENDENT-FIXTURE",
+        "name": "Independent fictional venue",
+        "ok": false,
+        "checks": [
+          {
+            "constraint": "wheelchair",
+            "status": "unknown",
+            "reason": "no unambiguous affirmative entrance evidence; ask the venue"
+          }
+        ]
+      },
+      "expected_picks": 0,
+      "actual_picks": 0,
+      "first_pick_why": null,
+      "rejected": 16,
+      "fixture_requests": 14,
+      "mock": true,
+      "passed": true
+    },
+    {
+      "case": "unlabelled_positive_mixed_denial",
+      "tags": [
+        {
+          "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance"
+        },
+        {
+          "tag_id": "urn:tag:accessibility:place:entrance_note",
+          "name": "No wheelchair access."
+        }
+      ],
+      "expected_status": "unknown",
+      "actual_verdict": {
+        "entity_id": "INDEPENDENT-FIXTURE",
+        "name": "Independent fictional venue",
+        "ok": false,
+        "checks": [
+          {
+            "constraint": "wheelchair",
+            "status": "unknown",
+            "reason": "no unambiguous affirmative entrance evidence; ask the venue"
+          }
+        ]
+      },
+      "expected_picks": 0,
+      "actual_picks": 0,
+      "first_pick_why": null,
+      "rejected": 16,
+      "fixture_requests": 14,
+      "mock": true,
+      "passed": true
+    },
+    {
+      "case": "qualified_entrance_only",
+      "tags": [
+        {
+          "tag_id": "urn:tag:accessibility:place:entrance_note",
+          "name": "Wheelchair accessible entrance (advance arrangement required)"
+        }
+      ],
+      "expected_status": "unknown",
+      "actual_verdict": {
+        "entity_id": "INDEPENDENT-FIXTURE",
+        "name": "Independent fictional venue",
+        "ok": false,
+        "checks": [
+          {
+            "constraint": "wheelchair",
+            "status": "unknown",
+            "reason": "no unambiguous affirmative entrance evidence; ask the venue"
+          }
+        ]
+      },
+      "expected_picks": 0,
+      "actual_picks": 0,
+      "first_pick_why": null,
+      "rejected": 16,
+      "fixture_requests": 14,
+      "mock": true,
+      "passed": true
+    },
+    {
+      "case": "affirmative_and_unrelated_service",
+      "tags": [
+        {
+          "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance",
+          "name": "Wheelchair accessible entrance"
+        },
+        {
+          "tag_id": "urn:tag:amenity:place:wheelchair_rental",
+          "name": "Wheelchair rental"
+        }
+      ],
+      "expected_status": "pass",
+      "actual_verdict": {
+        "entity_id": "INDEPENDENT-FIXTURE",
+        "name": "Independent fictional venue",
+        "ok": true,
+        "checks": [
+          {
+            "constraint": "wheelchair",
+            "status": "pass",
+            "reason": "tagged 'wheelchair accessible entrance'"
+          }
+        ]
+      },
+      "expected_picks": 5,
+      "actual_picks": 5,
+      "first_pick_why": "Qloo affinity 0.91 for audiences who like Celia Cruz, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+      "rejected": 4,
+      "fixture_requests": 14,
+      "mock": true,
+      "passed": true
+    },
+    {
+      "case": "established_id_without_label",
+      "tags": [
+        {
+          "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance"
+        }
+      ],
+      "expected_status": "pass",
+      "actual_verdict": {
+        "entity_id": "INDEPENDENT-FIXTURE",
+        "name": "Independent fictional venue",
+        "ok": true,
+        "checks": [
+          {
+            "constraint": "wheelchair",
+            "status": "pass",
+            "reason": "tagged 'wheelchair accessible entrance'"
+          }
+        ]
+      },
+      "expected_picks": 5,
+      "actual_picks": 5,
+      "first_pick_why": "Qloo affinity 0.91 for audiences who like Celia Cruz, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+      "rejected": 4,
+      "fixture_requests": 14,
+      "mock": true,
+      "passed": true
+    },
+    {
+      "case": "steps_take_precedence",
+      "tags": [
+        {
+          "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance",
+          "name": "Wheelchair accessible entrance"
+        },
+        {
+          "tag_id": "urn:tag:accessibility:place:steps_at_entrance",
+          "name": "Steps at entrance"
+        }
+      ],
+      "expected_status": "fail",
+      "actual_verdict": {
+        "entity_id": "INDEPENDENT-FIXTURE",
+        "name": "Independent fictional venue",
+        "ok": false,
+        "checks": [
+          {
+            "constraint": "wheelchair",
+            "status": "fail",
+            "reason": "tagged 'steps at entrance'"
+          }
+        ]
+      },
+      "expected_picks": 0,
+      "actual_picks": 0,
+      "first_pick_why": null,
+      "rejected": 16,
+      "fixture_requests": 14,
+      "mock": true,
+      "passed": true
+    },
+    {
+      "case": "mixed_accessibility_namespace_denial",
+      "tags": [
+        {
+          "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance",
+          "name": "Wheelchair accessible entrance"
+        },
+        {
+          "tag_id": "urn:tag:accessibility:place:entrance_note",
+          "name": "Wheelchair users prohibited"
+        }
+      ],
+      "expected_status": "unknown",
+      "actual_verdict": {
+        "entity_id": "INDEPENDENT-FIXTURE",
+        "name": "Independent fictional venue",
+        "ok": false,
+        "checks": [
+          {
+            "constraint": "wheelchair",
+            "status": "unknown",
+            "reason": "no unambiguous affirmative entrance evidence; ask the venue"
+          }
+        ]
+      },
+      "expected_picks": 0,
+      "actual_picks": 0,
+      "first_pick_why": null,
+      "rejected": 16,
+      "fixture_requests": 14,
+      "mock": true,
+      "passed": true
+    }
+  ],
+  "passed": 8,
+  "total": 8,
+  "source_unchanged": true,
+  "external_attempts": 0,
+  "source_pins": {
+    "agent.py": {
+      "bytes": 25053,
+      "sha256": "5366635d101cb7010e6ad3586de9a8d76f222b98118cbc5c4bf73ea11b58a903",
+      "git_blob": "1d8bfd5a300c1d4824dc895b324e7d0cfb096058"
+    },
+    "constraints.py": {
+      "bytes": 5667,
+      "sha256": "248789e3a4a31b7dcab499d8e3d445f566e26927c5fc4706c6a76a0e7ac6069f",
+      "git_blob": "941ccc6f21c72d9563388301609ef978894336ca"
+    },
+    "fixtures/qloo_fixtures.json": {
+      "bytes": 21190,
+      "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+      "git_blob": "60c5d92f905755454bb280b8181f8836a74bd955"
+    },
+    "personas.py": {
+      "bytes": 1247,
+      "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+      "git_blob": "1eb6768780cafaf9b1666e39b7fc17aa21204f16"
+    },
+    "qloo_client.py": {
+      "bytes": 12206,
+      "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+      "git_blob": "cca322e0c9af96c481ba8f7ef286e85d3b90cfd2"
+    },
+    "tests/test_constraint_binding.py": {
+      "bytes": 12500,
+      "sha256": "fd12768b12765f333f1e95f571105eb02fe252f91b3c61168c6fba6f18691692",
+      "git_blob": "ee385279cd2f803f92bcfe251741aa491c84afa3"
+    },
+    "tests/test_tastetable.py": {
+      "bytes": 8240,
+      "sha256": "7ace6361e9baf4a1e1a4ccfa528df1a4d2165b99bacb0423a572ac78bf3e9c5b",
+      "git_blob": "e6731e2c560a921074f034057404ce9bdd81e6ac"
+    },
+    "tests/test_wheelchair_evidence.py": {
+      "bytes": 8030,
+      "sha256": "f3c8675177b51d508e7d297a3ff07da64fc7b73c03d5b7405493ec3099f3f252",
+      "git_blob": "96a8202b1016688405783033b19a50f98ff69649"
+    }
+  }
+}

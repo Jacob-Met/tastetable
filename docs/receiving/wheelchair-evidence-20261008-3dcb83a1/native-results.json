@@ -1,0 +1,174 @@
+{
+  "at": "2026-10-08T10:43:40.736056+00:00",
+  "base": "b8d384e5522e17cf15d73e8b06adbe6665e4bdcc",
+  "tree": "06409d6f67d0c99ee99305fe4f745963ec2da2a2",
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "pytest": "9.0.2",
+  "commands": [
+    {
+      "name": "original_planner_and_constraint_tests",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "tests/test_tastetable.py",
+        "tests/test_constraint_binding.py",
+        "-k",
+        "not web_endpoints"
+      ],
+      "cwd": "/home/jacob/tastetable-accessibility-3dcb83a1/baseline",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "stdout": "......................................                    [100%]\n38 passed, 1 deselected, 15 subtests passed in 0.22s\n",
+      "stdout_sha256": "fc1a787cb91078f554f8ac560fa99bd46da44aeb41f2b46ad2c2293088e37c72",
+      "stderr": "",
+      "before": {
+        "free_bytes": 2446159872,
+        "own_bytes": 380731
+      },
+      "after": {
+        "free_bytes": 2395189248,
+        "own_bytes": 380731
+      }
+    },
+    {
+      "name": "new_controls_on_original",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "tests/test_wheelchair_evidence.py"
+      ],
+      "cwd": "/home/jacob/tastetable-accessibility-3dcb83a1/baseline-control",
+      "returncode": 1,
+      "expected_returncode": 1,
+      "stdout": "FFFFFF........FFFFFFFFF.F                                                [100%]\n=================================== FAILURES ===================================\n________ test_unclear_or_negated_tag_is_not_an_entrance_pass[negation] _________\n\ntag = {'name': 'Not wheelchair accessible', 'tag_id': 'urn:tag:accessibility:place:no_wheelchair_access'}\n\n    @pytest.mark.parametrize(\"tag\", UNCLEAR, ids=[\n        \"negation\", \"unrelated-service\", \"restroom-only\", \"unavailable\",\n        \"contrary-label\", \"unconfirmed-identifier\",\n    ])\n    def test_unclear_or_negated_tag_is_not_an_entrance_pass(tag):\n        entity = venue([copy.deepcopy(tag)])\n        before = copy.deepcopy(entity.to_dict())\n        check = check_wheelchair(entity)\n>       assert check.status == \"unknown\"\nE       AssertionError: assert 'pass' == 'unknown'\nE         \nE         - unknown\nE         + pass\n\ntests/test_wheelchair_evidence.py:39: AssertionError\n____ test_unclear_or_negated_tag_is_not_an_entrance_pass[unrelated-service] ____\n\ntag = {'name': 'Wheelchair rental', 'tag_id': 'urn:tag:amenity:place:wheelchair_rental'}\n\n    @pytest.mark.parametrize(\"tag\", UNCLEAR, ids=[\n        \"negation\", \"unrelated-service\", \"restroom-only\", \"unavailable\",\n        \"contrary-label\", \"unconfirmed-identifier\",\n    ])\n    def test_unclear_or_negated_tag_is_not_an_entrance_pass(tag):\n        entity = venue([copy.deepcopy(tag)])\n        before = copy.deepcopy(entity.to_dict())\n        check = check_wheelchair(entity)\n>       assert check.status == \"unknown\"\nE       AssertionError: assert 'pass' == 'unknown'\nE         \nE         - unknown\nE         + pass\n\ntests/test_wheelchair_evidence.py:39: AssertionError\n______ test_unclear_or_negated_tag_is_not_an_entrance_pass[restroom-only] ______\n\ntag = {'name': 'Wheelchair accessible restroom only', 'tag_id': 'urn:tag:accessibility:place:wheelchair_accessible_restroom'}\n\n    @pytest.mark.parametrize(\"tag\", UNCLEAR, ids=[\n        \"negation\", \"unrelated-service\", \"restroom-only\", \"unavailable\",\n        \"contrary-label\", \"unconfirmed-identifier\",\n    ])\n    def test_unclear_or_negated_tag_is_not_an_entrance_pass(tag):\n        entity = venue([copy.deepcopy(tag)])\n        before = copy.deepcopy(entity.to_dict())\n        check = check_wheelchair(entity)\n>       assert check.status == \"unknown\"\nE       AssertionError: assert 'pass' == 'unknown'\nE         \nE         - unknown\nE         + pass\n\ntests/test_wheelchair_evidence.py:39: AssertionError\n_______ test_unclear_or_negated_tag_is_not_an_entrance_pass[unavailable] _______\n\ntag = {'name': 'Wheelchair accessible entrance unavailable'}\n\n    @pytest.mark.parametrize(\"tag\", UNCLEAR, ids=[\n        \"negation\", \"unrelated-service\", \"restroom-only\", \"unavailable\",\n        \"contrary-label\", \"unconfirmed-identifier\",\n    ])\n    def test_unclear_or_negated_tag_is_not_an_entrance_pass(tag):\n        entity = venue([copy.deepcopy(tag)])\n        before = copy.deepcopy(entity.to_dict())\n        check = check_wheelchair(entity)\n>       assert check.status == \"unknown\"\nE       AssertionError: assert 'pass' == 'unknown'\nE         \nE         - unknown\nE         + pass\n\ntests/test_wheelchair_evidence.py:39: AssertionError\n_____ test_unclear_or_negated_tag_is_not_an_entrance_pass[contrary-label] ______\n\ntag = {'name': 'Not wheelchair accessible', 'tag_id': 'urn:tag:accessibility:place:wheelchair_accessible_entrance'}\n\n    @pytest.mark.parametrize(\"tag\", UNCLEAR, ids=[\n        \"negation\", \"unrelated-service\", \"restroom-only\", \"unavailable\",\n        \"contrary-label\", \"unconfirmed-identifier\",\n    ])\n    def test_unclear_or_negated_tag_is_not_an_entrance_pass(tag):\n        entity = venue([copy.deepcopy(tag)])\n        before = copy.deepcopy(entity.to_dict())\n        check = check_wheelchair(entity)\n>       assert check.status == \"unknown\"\nE       AssertionError: assert 'pass' == 'unknown'\nE         \nE         - unknown\nE         + pass\n\ntests/test_wheelchair_evidence.py:39: AssertionError\n_ test_unclear_or_negated_tag_is_not_an_entrance_pass[unconfirmed-identifier] __\n\ntag = {'tag_id': 'urn:tag:accessibility:place:wheelchair_accessible_entrance_unconfirmed'}\n\n    @pytest.mark.parametrize(\"tag\", UNCLEAR, ids=[\n        \"negation\", \"unrelated-service\", \"restroom-only\", \"unavailable\",\n        \"contrary-label\", \"unconfirmed-identifier\",\n    ])\n    def test_unclear_or_negated_tag_is_not_an_entrance_pass(tag):\n        entity = venue([copy.deepcopy(tag)])\n        before = copy.deepcopy(entity.to_dict())\n        check = check_wheelchair(entity)\n>       assert check.status == \"unknown\"\nE       AssertionError: assert 'pass' == 'unknown'\nE         \nE         - unknown\nE         + pass\n\ntests/test_wheelchair_evidence.py:39: AssertionError\n___________ test_unknown_access_remains_optional_when_not_requested ____________\n\n    def test_unknown_access_remains_optional_when_not_requested():\n        entity = venue([{\"name\": \"Wheelchair rental\"}])\n>       assert check_wheelchair(entity).status == \"unknown\"\nE       AssertionError: assert 'pass' == 'unknown'\nE         \nE         - unknown\nE         + pass\n\ntests/test_wheelchair_evidence.py:76: AssertionError\n__ test_actual_planner_keeps_unqualified_venues_out_of_checked_week[negative] __\n\ntag = {'name': 'Not wheelchair accessible', 'tag_id': 'urn:tag:accessibility:place:no_wheelchair_access'}\n\n    @pytest.mark.parametrize(\"tag\", UNCLEAR[:3], ids=[\"negative\", \"unrelated\", \"partial\"])\n    def test_actual_planner_keeps_unqualified_venues_out_of_checked_week(tag):\n        transport = FixtureTransport()\n        for place in transport.data[\"places\"]:\n            place[\"tags\"] = [t for t in place[\"tags\"]\n                             if not t[\"tag_id\"].startswith(\"urn:tag:accessibility:\")]\n            place[\"tags\"].append(copy.deepcopy(tag))\n        original_data = copy.deepcopy(transport.data)\n        result = run_agent(copy.deepcopy(PERSONAS[\"rosa\"]),\n                           qloo=QlooClient(api_key=\"SYNTHETIC-FIXTURE\", transport=transport),\n                           model=ScriptedModel())\n        assert result[\"mock\"] is True\n>       assert result[\"plan\"][\"meals\"] == []\nE       AssertionError: assert [{'affinity':...': True, ...}] == []\nE         \nE         Left contains 4 more items, first extra item: {'affinity': 0.91, 'day': 'Monday', 'entity_id': 'FIX-P-01', 'fallback': False, ...}\nE         Use -v to get more diff\n\ntests/test_wheelchair_evidence.py:95: AssertionError\n_ test_actual_planner_keeps_unqualified_venues_out_of_checked_week[unrelated] __\n\ntag = {'name': 'Wheelchair rental', 'tag_id': 'urn:tag:amenity:place:wheelchair_rental'}\n\n    @pytest.mark.parametrize(\"tag\", UNCLEAR[:3], ids=[\"negative\", \"unrelated\", \"partial\"])\n    def test_actual_planner_keeps_unqualified_venues_out_of_checked_week(tag):\n        transport = FixtureTransport()\n        for place in transport.data[\"places\"]:\n            place[\"tags\"] = [t for t in place[\"tags\"]\n                             if not t[\"tag_id\"].startswith(\"urn:tag:accessibility:\")]\n            place[\"tags\"].append(copy.deepcopy(tag))\n        original_data = copy.deepcopy(transport.data)\n        result = run_agent(copy.deepcopy(PERSONAS[\"rosa\"]),\n                           qloo=QlooClient(api_key=\"SYNTHETIC-FIXTURE\", transport=transport),\n                           model=ScriptedModel())\n        assert result[\"mock\"] is True\n>       assert result[\"plan\"][\"meals\"] == []\nE       AssertionError: assert [{'affinity':...': True, ...}] == []\nE         \nE         Left contains 4 more items, first extra item: {'affinity': 0.91, 'day': 'Monday', 'entity_id': 'FIX-P-01', 'fallback': False, ...}\nE         Use -v to get more diff\n\ntests/test_wheelchair_evidence.py:95: AssertionError\n__ test_actual_planner_keeps_unqualified_venues_out_of_checked_week[partial] ___\n\ntag = {'name': 'Wheelchair accessible restroom only', 'tag_id': 'urn:tag:accessibility:place:wheelchair_accessible_restroom'}\n\n    @pytest.mark.parametrize(\"tag\", UNCLEAR[:3], ids=[\"negative\", \"unrelated\", \"partial\"])\n    def test_actual_planner_keeps_unqualified_venues_out_of_checked_week(tag):\n        transport = FixtureTransport()\n        for place in transport.data[\"places\"]:\n            place[\"tags\"] = [t for t in place[\"tags\"]\n                             if not t[\"tag_id\"].startswith(\"urn:tag:accessibility:\")]\n            place[\"tags\"].append(copy.deepcopy(tag))\n        original_data = copy.deepcopy(transport.data)\n        result = run_agent(copy.deepcopy(PERSONAS[\"rosa\"]),\n                           qloo=QlooClient(api_key=\"SYNTHETIC-FIXTURE\", transport=transport),\n                           model=ScriptedModel())\n        assert result[\"mock\"] is True\n>       assert result[\"plan\"][\"meals\"] == []\nE       AssertionError: assert [{'affinity':...': True, ...}] == []\nE         \nE         Left contains 4 more items, first extra item: {'affinity': 0.91, 'day': 'Monday', 'entity_id': 'FIX-P-01', 'fallback': False, ...}\nE         Use -v to get more diff\n\ntests/test_wheelchair_evidence.py:95: AssertionError\n______________ test_mixed_access_claims_remain_unknown[negative] _______________\n\nother = {'name': 'Not wheelchair accessible', 'tag_id': 'urn:tag:accessibility:place:no_wheelchair_access'}\n\n    @pytest.mark.parametrize(\"other\", [UNCLEAR[0], UNCLEAR[2], UNCLEAR[3], UNCLEAR[4], UNCLEAR[5]],\n                             ids=[\"negative\", \"partial\", \"unavailable\", \"contrary-label\", \"unknown-id\"])\n    def test_mixed_access_claims_remain_unknown(other):\n        entity = venue([{\"tag_id\": ACCESS_ID, \"name\": \"Wheelchair accessible entrance\"},\n                        copy.deepcopy(other)])\n>       assert check_wheelchair(entity).status == \"unknown\"\nE       AssertionError: assert 'pass' == 'unknown'\nE         \nE         - unknown\nE         + pass\n\ntests/test_wheelchair_evidence.py:109: AssertionError\n_______________ test_mixed_access_claims_remain_unknown[partial] _______________\n\nother = {'name': 'Wheelchair accessible restroom only', 'tag_id': 'urn:tag:accessibility:place:wheelchair_accessible_restroom'}\n\n    @pytest.mark.parametrize(\"other\", [UNCLEAR[0], UNCLEAR[2], UNCLEAR[3], UNCLEAR[4], UNCLEAR[5]],\n                             ids=[\"negative\", \"partial\", \"unavailable\", \"contrary-label\", \"unknown-id\"])\n    def test_mixed_access_claims_remain_unknown(other):\n        entity = venue([{\"tag_id\": ACCESS_ID, \"name\": \"Wheelchair accessible entrance\"},\n                        copy.deepcopy(other)])\n>       assert check_wheelchair(entity).status == \"unknown\"\nE       AssertionError: assert 'pass' == 'unknown'\nE         \nE         - unknown\nE         + pass\n\ntests/test_wheelchair_evidence.py:109: AssertionError\n_____________ test_mixed_access_claims_remain_unknown[unavailable] _____________\n\nother = {'name': 'Wheelchair accessible entrance unavailable'}\n\n    @pytest.mark.parametrize(\"other\", [UNCLEAR[0], UNCLEAR[2], UNCLEAR[3], UNCLEAR[4], UNCLEAR[5]],\n                             ids=[\"negative\", \"partial\", \"unavailable\", \"contrary-label\", \"unknown-id\"])\n    def test_mixed_access_claims_remain_unknown(other):\n        entity = venue([{\"tag_id\": ACCESS_ID, \"name\": \"Wheelchair accessible entrance\"},\n                        copy.deepcopy(other)])\n>       assert check_wheelchair(entity).status == \"unknown\"\nE       AssertionError: assert 'pass' == 'unknown'\nE         \nE         - unknown\nE         + pass\n\ntests/test_wheelchair_evidence.py:109: AssertionError\n___________ test_mixed_access_claims_remain_unknown[contrary-label] ____________\n\nother = {'name': 'Not wheelchair accessible', 'tag_id': 'urn:tag:accessibility:place:wheelchair_accessible_entrance'}\n\n    @pytest.mark.parametrize(\"other\", [UNCLEAR[0], UNCLEAR[2], UNCLEAR[3], UNCLEAR[4], UNCLEAR[5]],\n                             ids=[\"negative\", \"partial\", \"unavailable\", \"contrary-label\", \"unknown-id\"])\n    def test_mixed_access_claims_remain_unknown(other):\n        entity = venue([{\"tag_id\": ACCESS_ID, \"name\": \"Wheelchair accessible entrance\"},\n                        copy.deepcopy(other)])\n>       assert check_wheelchair(entity).status == \"unknown\"\nE       AssertionError: assert 'pass' == 'unknown'\nE         \nE         - unknown\nE         + pass\n\ntests/test_wheelchair_evidence.py:109: AssertionError\n_____________ test_mixed_access_claims_remain_unknown[unknown-id] ______________\n\nother = {'tag_id': 'urn:tag:accessibility:place:wheelchair_accessible_entrance_unconfirmed'}\n\n    @pytest.mark.parametrize(\"other\", [UNCLEAR[0], UNCLEAR[2], UNCLEAR[3], UNCLEAR[4], UNCLEAR[5]],\n                             ids=[\"negative\", \"partial\", \"unavailable\", \"contrary-label\", \"unknown-id\"])\n    def test_mixed_access_claims_remain_unknown(other):\n        entity = venue([{\"tag_id\": ACCESS_ID, \"name\": \"Wheelchair accessible entrance\"},\n                        copy.deepcopy(other)])\n>       assert check_wheelchair(entity).status == \"unknown\"\nE       AssertionError: assert 'pass' == 'unknown'\nE         \nE         - unknown\nE         + pass\n\ntests/test_wheelchair_evidence.py:109: AssertionError\n_ test_affirmative_label_does_not_override_a_different_accessibility_identifier _\n\n    def test_affirmative_label_does_not_override_a_different_accessibility_identifier():\n        entity = venue([{\"tag_id\": UNCLEAR[0][\"tag_id\"], \"name\": \"Wheelchair accessible entrance\"}])\n>       assert check_wheelchair(entity).status == \"unknown\"\nE       AssertionError: assert 'pass' == 'unknown'\nE         \nE         - unknown\nE         + pass\n\ntests/test_wheelchair_evidence.py:121: AssertionError\n=========================== short test summary info ============================\nFAILED tests/test_wheelchair_evidence.py::test_unclear_or_negated_tag_is_not_an_entrance_pass[negation]\nFAILED tests/test_wheelchair_evidence.py::test_unclear_or_negated_tag_is_not_an_entrance_pass[unrelated-service]\nFAILED tests/test_wheelchair_evidence.py::test_unclear_or_negated_tag_is_not_an_entrance_pass[restroom-only]\nFAILED tests/test_wheelchair_evidence.py::test_unclear_or_negated_tag_is_not_an_entrance_pass[unavailable]\nFAILED tests/test_wheelchair_evidence.py::test_unclear_or_negated_tag_is_not_an_entrance_pass[contrary-label]\nFAILED tests/test_wheelchair_evidence.py::test_unclear_or_negated_tag_is_not_an_entrance_pass[unconfirmed-identifier]\nFAILED tests/test_wheelchair_evidence.py::test_unknown_access_remains_optional_when_not_requested\nFAILED tests/test_wheelchair_evidence.py::test_actual_planner_keeps_unqualified_venues_out_of_checked_week[negative]\nFAILED tests/test_wheelchair_evidence.py::test_actual_planner_keeps_unqualified_venues_out_of_checked_week[unrelated]\nFAILED tests/test_wheelchair_evidence.py::test_actual_planner_keeps_unqualified_venues_out_of_checked_week[partial]\nFAILED tests/test_wheelchair_evidence.py::test_mixed_access_claims_remain_unknown[negative]\nFAILED tests/test_wheelchair_evidence.py::test_mixed_access_claims_remain_unknown[partial]\nFAILED tests/test_wheelchair_evidence.py::test_mixed_access_claims_remain_unknown[unavailable]\nFAILED tests/test_wheelchair_evidence.py::test_mixed_access_claims_remain_unknown[contrary-label]\nFAILED tests/test_wheelchair_evidence.py::test_mixed_access_claims_remain_unknown[unknown-id]\nFAILED tests/test_wheelchair_evidence.py::test_affirmative_label_does_not_override_a_different_accessibility_identifier\n16 failed, 9 passed in 0.23s\n",
+      "stdout_sha256": "88cc5ed242faa73309ef0bcdc9e2419208671b3973d18b08502382d50325b20f",
+      "stderr": "",
+      "before": {
+        "free_bytes": 2394226688,
+        "own_bytes": 380731
+      },
+      "after": {
+        "free_bytes": 2467405824,
+        "own_bytes": 380731
+      }
+    },
+    {
+      "name": "candidate_planner_and_constraint_tests",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "tests/test_tastetable.py",
+        "tests/test_constraint_binding.py",
+        "tests/test_wheelchair_evidence.py",
+        "-k",
+        "not web_endpoints"
+      ],
+      "cwd": "/home/jacob/tastetable-accessibility-3dcb83a1/source",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "stdout": "......................................................... [ 90%]\n......                                                                   [100%]\n63 passed, 1 deselected, 15 subtests passed in 0.26s\n",
+      "stdout_sha256": "fea381f2757271d7194e6127a14e42459500536fd631387b3e45e9bf0ac79722",
+      "stderr": "",
+      "before": {
+        "free_bytes": 2467057664,
+        "own_bytes": 380731
+      },
+      "after": {
+        "free_bytes": 2498965504,
+        "own_bytes": 380731
+      }
+    },
+    {
+      "name": "candidate_actual_planner_receiving",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/jacob/tastetable-accessibility-3dcb83a1/reproduce.py",
+        "/home/jacob/tastetable-accessibility-3dcb83a1/source"
+      ],
+      "cwd": "/home/jacob/tastetable-accessibility-3dcb83a1",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "stdout": "{\n  \"source\": \"/home/jacob/tastetable-accessibility-3dcb83a1/source\",\n  \"cases\": [\n    {\n      \"label\": \"affirmative\",\n      \"authored_tag\": {\n        \"tag_id\": \"urn:tag:accessibility:place:wheelchair_accessible_entrance\",\n        \"name\": \"Wheelchair accessible entrance\"\n      },\n      \"direct\": {\n        \"entity_id\": \"AUTHORED\",\n        \"name\": \"Authored venue\",\n        \"ok\": true,\n        \"checks\": [\n          {\n            \"constraint\": \"wheelchair\",\n            \"status\": \"pass\",\n            \"reason\": \"tagged 'wheelchair accessible entrance'\"\n          }\n        ]\n      },\n      \"picked_count\": 5,\n      \"first_why\": \"Qloo affinity 0.91 for audiences who like Celia Cruz, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').\",\n      \"rejected_count\": 4,\n      \"fixture_requests\": 14,\n      \"returned_mock_label\": true\n    },\n    {\n      \"label\": \"negated\",\n      \"authored_tag\": {\n        \"tag_id\": \"urn:tag:accessibility:place:no_wheelchair_access\",\n        \"name\": \"Not wheelchair accessible\"\n      },\n      \"direct\": {\n        \"entity_id\": \"AUTHORED\",\n        \"name\": \"Authored venue\",\n        \"ok\": false,\n        \"checks\": [\n          {\n            \"constraint\": \"wheelchair\",\n            \"status\": \"unknown\",\n            \"reason\": \"no unambiguous affirmative entrance evidence; ask the venue\"\n          }\n        ]\n      },\n      \"picked_count\": 0,\n      \"first_why\": null,\n      \"rejected_count\": 16,\n      \"fixture_requests\": 14,\n      \"returned_mock_label\": true\n    },\n    {\n      \"label\": \"unrelated\",\n      \"authored_tag\": {\n        \"tag_id\": \"urn:tag:amenity:place:wheelchair_rental\",\n        \"name\": \"Wheelchair rental\"\n      },\n      \"direct\": {\n        \"entity_id\": \"AUTHORED\",\n        \"name\": \"Authored venue\",\n        \"ok\": false,\n        \"checks\": [\n          {\n            \"constraint\": \"wheelchair\",\n            \"status\": \"unknown\",\n            \"reason\": \"no unambiguous affirmative entrance evidence; ask the venue\"\n          }\n        ]\n      },\n      \"picked_count\": 0,\n      \"first_why\": null,\n      \"rejected_count\": 16,\n      \"fixture_requests\": 14,\n      \"returned_mock_label\": true\n    },\n    {\n      \"label\": \"partial\",\n      \"authored_tag\": {\n        \"tag_id\": \"urn:tag:accessibility:place:wheelchair_accessible_restroom\",\n        \"name\": \"Wheelchair accessible restroom only\"\n      },\n      \"direct\": {\n        \"entity_id\": \"AUTHORED\",\n        \"name\": \"Authored venue\",\n        \"ok\": false,\n        \"checks\": [\n          {\n            \"constraint\": \"wheelchair\",\n            \"status\": \"unknown\",\n            \"reason\": \"no unambiguous affirmative entrance evidence; ask the venue\"\n          }\n        ]\n      },\n      \"picked_count\": 0,\n      \"first_why\": null,\n      \"rejected_count\": 16,\n      \"fixture_requests\": 14,\n      \"returned_mock_label\": true\n    },\n    {\n      \"label\": \"missing\",\n      \"authored_tag\": null,\n      \"direct\": {\n        \"entity_id\": \"AUTHORED\",\n        \"name\": \"Authored venue\",\n        \"ok\": false,\n        \"checks\": [\n          {\n            \"constraint\": \"wheelchair\",\n            \"status\": \"unknown\",\n            \"reason\": \"no accessibility tag in Qloo data\"\n          }\n        ]\n      },\n      \"picked_count\": 0,\n      \"first_why\": null,\n      \"rejected_count\": 16,\n      \"fixture_requests\": 14,\n      \"returned_mock_label\": true\n    }\n  ],\n  \"external_calls\": 0\n}\n",
+      "stdout_sha256": "5b918dc1ee6fb520b8013d2a9a2f822cd6ba1b1dd96eac9b04519dcf5d166331",
+      "stderr": "",
+      "before": {
+        "free_bytes": 2498310144,
+        "own_bytes": 380731
+      },
+      "after": {
+        "free_bytes": 2498310144,
+        "own_bytes": 380731
+      }
+    },
+    {
+      "name": "original_complete_persona_outputs",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/jacob/tastetable-accessibility-3dcb83a1/healthy.py",
+        "/home/jacob/tastetable-accessibility-3dcb83a1/baseline"
+      ],
+      "cwd": "/home/jacob/tastetable-accessibility-3dcb83a1",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "stdout": null,
+      "stdout_sha256": "3e662d7214c8bb2b946fa335b3680cf5824858c265c4c95edbb481bf92d63a77",
+      "stderr": "",
+      "before": {
+        "free_bytes": 2498310144,
+        "own_bytes": 380731
+      },
+      "after": {
+        "free_bytes": 2498310144,
+        "own_bytes": 380731
+      }
+    },
+    {
+      "name": "candidate_complete_persona_outputs",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/jacob/tastetable-accessibility-3dcb83a1/healthy.py",
+        "/home/jacob/tastetable-accessibility-3dcb83a1/source"
+      ],
+      "cwd": "/home/jacob/tastetable-accessibility-3dcb83a1",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "stdout": null,
+      "stdout_sha256": "3e662d7214c8bb2b946fa335b3680cf5824858c265c4c95edbb481bf92d63a77",
+      "stderr": "",
+      "before": {
+        "free_bytes": 2498310144,
+        "own_bytes": 380731
+      },
+      "after": {
+        "free_bytes": 2498310144,
+        "own_bytes": 380731
+      }
+    }
+  ],
+  "source_collection": "9 exact selected text files; original control overlays only the new test",
+  "native_check_sha256": "ad94a35db595ec6a07420eec29bb44f0ba9e8308ed33d21fd7757d92976717c6",
+  "guards": {
+    "minimum_free_bytes": 536870912,
+    "maximum_own_bytes": 16777216,
+    "command_timeout_seconds": 45
+  },
+  "scope": "Native stdlib planner/Qloo fixture and constraint tests. One FastAPI test is explicitly deselected because FastAPI/httpx are absent; no HTTP/browser/deployment/full-suite claim."
+}

@@ -1,0 +1,106 @@
+{
+  "at": "2026-10-08T11:00:22.577532+00:00",
+  "base": "b8d384e5522e17cf15d73e8b06adbe6665e4bdcc",
+  "tree": "06409d6f67d0c99ee99305fe4f745963ec2da2a2",
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "commands": [
+    {
+      "name": "independent_punctuation_regressions_on_v1",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "tests/test_wheelchair_evidence.py",
+        "-k",
+        "punctuated_mixed"
+      ],
+      "cwd": "/home/jacob/tastetable-accessibility-3dcb83a1/punctuation-v1-control",
+      "returncode": 1,
+      "expected_returncode": 1,
+      "stdout": "FF                                                                       [100%]\n=================================== FAILURES ===================================\n_ test_punctuated_mixed_access_claims_remain_unknown_in_actual_planner[contrary-period] _\n\nlabel = 'Not wheelchair accessible.'\n\n    @pytest.mark.parametrize(\"label\", [\n        \"Not wheelchair accessible.\",\n        \"Wheelchair accessibility: unconfirmed\",\n    ], ids=[\"contrary-period\", \"unconfirmed-colon\"])\n    def test_punctuated_mixed_access_claims_remain_unknown_in_actual_planner(label):\n        note = {\"tag_id\": \"urn:tag:amenity:place:entrance_note\", \"name\": label}\n        entity = venue([{\"tag_id\": ACCESS_ID, \"name\": \"Wheelchair accessible entrance\"}, note])\n>       assert check_wheelchair(entity).status == \"unknown\"\nE       AssertionError: assert 'pass' == 'unknown'\nE         \nE         - unknown\nE         + pass\n\ntests/test_wheelchair_evidence.py:131: AssertionError\n_ test_punctuated_mixed_access_claims_remain_unknown_in_actual_planner[unconfirmed-colon] _\n\nlabel = 'Wheelchair accessibility: unconfirmed'\n\n    @pytest.mark.parametrize(\"label\", [\n        \"Not wheelchair accessible.\",\n        \"Wheelchair accessibility: unconfirmed\",\n    ], ids=[\"contrary-period\", \"unconfirmed-colon\"])\n    def test_punctuated_mixed_access_claims_remain_unknown_in_actual_planner(label):\n        note = {\"tag_id\": \"urn:tag:amenity:place:entrance_note\", \"name\": label}\n        entity = venue([{\"tag_id\": ACCESS_ID, \"name\": \"Wheelchair accessible entrance\"}, note])\n>       assert check_wheelchair(entity).status == \"unknown\"\nE       AssertionError: assert 'pass' == 'unknown'\nE         \nE         - unknown\nE         + pass\n\ntests/test_wheelchair_evidence.py:131: AssertionError\n=========================== short test summary info ============================\nFAILED tests/test_wheelchair_evidence.py::test_punctuated_mixed_access_claims_remain_unknown_in_actual_planner[contrary-period]\nFAILED tests/test_wheelchair_evidence.py::test_punctuated_mixed_access_claims_remain_unknown_in_actual_planner[unconfirmed-colon]\n2 failed, 25 deselected in 0.07s\n",
+      "stderr": "",
+      "stdout_sha256": "9905fbe6331279876d3ec14cd84a780291a38f3cf3d6d0342ebe104d3545986b",
+      "before": {
+        "free_bytes": 1509224448,
+        "own_bytes": 939642
+      },
+      "after": {
+        "free_bytes": 1509195776,
+        "own_bytes": 939642
+      }
+    },
+    {
+      "name": "v2_planner_and_constraint_tests",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "tests/test_tastetable.py",
+        "tests/test_constraint_binding.py",
+        "tests/test_wheelchair_evidence.py",
+        "-k",
+        "not web_endpoints"
+      ],
+      "cwd": "/home/jacob/tastetable-accessibility-3dcb83a1/source",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "stdout": "......................................................... [ 87%]\n........                                                                 [100%]\n65 passed, 1 deselected, 15 subtests passed in 0.23s\n",
+      "stderr": "",
+      "stdout_sha256": "1344c2683802c875c445b31463f3044dd52de42bc7029879ed399d33c1657568",
+      "before": {
+        "free_bytes": 1509195776,
+        "own_bytes": 939642
+      },
+      "after": {
+        "free_bytes": 1507590144,
+        "own_bytes": 939642
+      }
+    },
+    {
+      "name": "v2_complete_persona_output_matches_retained_original",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/jacob/tastetable-accessibility-3dcb83a1/healthy.py",
+        "/home/jacob/tastetable-accessibility-3dcb83a1/source"
+      ],
+      "cwd": "/home/jacob/tastetable-accessibility-3dcb83a1",
+      "returncode": 0,
+      "stdout_sha256": "3e662d7214c8bb2b946fa335b3680cf5824858c265c4c95edbb481bf92d63a77",
+      "expected_sha256": "3e662d7214c8bb2b946fa335b3680cf5824858c265c4c95edbb481bf92d63a77",
+      "byte_identical": true,
+      "stdout_bytes": 23132,
+      "stderr": "",
+      "before": {
+        "free_bytes": 1507590144,
+        "own_bytes": 939642
+      },
+      "after": {
+        "free_bytes": 1503993856,
+        "own_bytes": 939642
+      }
+    }
+  ],
+  "guards": {
+    "minimum_free_bytes": 536870912,
+    "maximum_own_bytes": 16777216,
+    "command_timeout_seconds": 45
+  },
+  "runner_sha256": "888639bcc5b6bceaa7093c834ad66862ce770a119fc491d8cf7feabb36db6a98",
+  "finding": "Independent actual planner receiver found a period/colon on a mixed wheelchair access label did not cancel separate affirmative evidence.",
+  "previous_candidate_source": {
+    "path": "constraints.py",
+    "git_blob": "2ae4c3fd580f6a1c9eb943bc57801c43ddd9cf21",
+    "sha256": "43b190472229b560d7090c4d01a90dc8f30d14d7a9e95f485aacfe8cf32e4644",
+    "bytes": 5615
+  },
+  "scope": "English accessibility word recognition across punctuation only; same exact positive admission and steps precedence. Historical original/v1 tests remain in native-results.json."
+}

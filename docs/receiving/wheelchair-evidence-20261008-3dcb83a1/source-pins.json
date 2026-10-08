@@ -1,0 +1,62 @@
+{
+  "repository": "Jacob-Met/tastetable",
+  "base": "b8d384e5522e17cf15d73e8b06adbe6665e4bdcc",
+  "tree": "06409d6f67d0c99ee99305fe4f745963ec2da2a2",
+  "collection": "selected exact text source; not a full clone",
+  "files": [
+    {
+      "path": "agent.py",
+      "git_blob": "1d8bfd5a300c1d4824dc895b324e7d0cfb096058",
+      "sha256": "5366635d101cb7010e6ad3586de9a8d76f222b98118cbc5c4bf73ea11b58a903",
+      "bytes": 25053
+    },
+    {
+      "path": "qloo_client.py",
+      "git_blob": "cca322e0c9af96c481ba8f7ef286e85d3b90cfd2",
+      "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+      "bytes": 12206
+    },
+    {
+      "path": "constraints.py",
+      "git_blob": "53138a106455cc3fa40d812d1ade3c60fcbbb916",
+      "sha256": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e",
+      "bytes": 4451
+    },
+    {
+      "path": "personas.py",
+      "git_blob": "1eb6768780cafaf9b1666e39b7fc17aa21204f16",
+      "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+      "bytes": 1247
+    },
+    {
+      "path": "fixtures/qloo_fixtures.json",
+      "git_blob": "60c5d92f905755454bb280b8181f8836a74bd955",
+      "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+      "bytes": 21190
+    },
+    {
+      "path": "requirements.txt",
+      "git_blob": "d2fa2b085ecd75cc196fa8a02ddb54e1728c0b23",
+      "sha256": "80f580784e41edbf585cdc133c99d6e52ad9fae5876459c74ba6cbb4ed6b0602",
+      "bytes": 74
+    },
+    {
+      "path": "tests/test_tastetable.py",
+      "git_blob": "e6731e2c560a921074f034057404ce9bdd81e6ac",
+      "sha256": "7ace6361e9baf4a1e1a4ccfa528df1a4d2165b99bacb0423a572ac78bf3e9c5b",
+      "bytes": 8240
+    },
+    {
+      "path": "tests/test_constraint_binding.py",
+      "git_blob": "ee385279cd2f803f92bcfe251741aa491c84afa3",
+      "sha256": "fd12768b12765f333f1e95f571105eb02fe252f91b3c61168c6fba6f18691692",
+      "bytes": 12500
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "git_blob": "0e6273139a9bf417a4ee42f4501d067b1c9d95a0",
+      "sha256": "2f83a6f17995602ec28e9f0dacc901511bae2dd3e348e2dfc9190494830da876",
+      "bytes": 652
+    }
+  ]
+}

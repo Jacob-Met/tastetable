@@ -10,7 +10,6 @@ with GET /v2/tags (https://docs.qloo.com/reference/get-tags-1) before going live
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-import re
 
 from qloo_client import Entity
 
@@ -92,11 +91,11 @@ def check_wheelchair(e: Entity) -> Check:
         if label == "wheelchair accessible entrance" or (not label and tag_id == access_id):
             affirmative = True
         elif (tag_id == access_id or
-              ("wheelchair" in label and set(re.findall(r"[a-z]+", label)) &
+              ("wheelchair" in label and set(label.split()) &
                {"access", "accessible", "accessibility", "inaccessible", "entrance"})):
             unclear = True
         if (tag_id.startswith("urn:tag:accessibility:place:") and
-                ("wheelchair" in tag_id or "wheelchair" in label) and tag_id != access_id):
+                "wheelchair" in tag_id and tag_id != access_id):
             unclear = True
     if affirmative and not unclear:
         return Check("wheelchair", "pass", "tagged 'wheelchair accessible entrance'")
