@@ -1,0 +1,42 @@
+{
+  "format": "tastetable.offline-calendar-current-verification/1",
+  "qualified_parent": "e0f6fbaf1f81fbb1e9926948294549c744228def",
+  "source_projection": "64171a6690b141ddbd9c430baa315bee38c5e743",
+  "raw_archive": {
+    "bytes": 500316,
+    "sha256": "27b6d0b1dfb5b0a0117fbfba5e44f639b01789022891c781d5c14d22eb6bdaf0",
+    "ordinary_members": 131,
+    "listed_artifacts": 130
+  },
+  "source": {
+    "current_parent_files": 52,
+    "frozen_source_files": 56,
+    "scoped_paths": 10,
+    "unowned_current_files_preserved": 46,
+    "unchanged_original_new_files": 4,
+    "current_app_reconstructs_parent": true,
+    "original_browser_criteria_reconstructed": true
+  },
+  "native_unit": {
+    "methods": 69,
+    "passed": 69,
+    "failed": 0
+  },
+  "actual_browser": {
+    "full_checks": 73,
+    "history_checks": 19,
+    "python_package_checks": 7,
+    "actual_downloads": 38,
+    "calendar_downloads": 21,
+    "recomputed_complete_events": 97,
+    "application_errors": 0
+  },
+  "portable": {
+    "current_parent_members": 39,
+    "qualified_members": 42,
+    "actual_static_readbacks": 84,
+    "rollback_status": 404,
+    "fresh_python_http_server": true
+  },
+  "interpretation": "This is saved-evidence verification, not an additional application run or independent review. Original v1 evidence and peer acceptance remain separately scoped; these actual current-source runs cover the arrangement-history composition."
+}

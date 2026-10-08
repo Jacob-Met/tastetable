@@ -1,0 +1,583 @@
+{
+  "format": "tastetable-calendar-current-parent-composition-v1",
+  "qualified_receiving_parent": "2b347cee4ff4e2b806362730a8520a3360b45f5a",
+  "qualified_receiving_tree": "66d62a724c1667913cb581fb35e4b6db6111dae8",
+  "accepted_calendar_head": "783a763e57c84986332a69c0c7a699db958ebec3",
+  "accepted_calendar_tree": "72802fe2d959e397983505801e768c4338b28ab1",
+  "publication_parent": "7a0c55c4e608ae4e910745a97270fde966575cd0",
+  "publication_tree": "d98738c38c4bc5ea31ce246a9e2aefcf16b3eb15",
+  "complete_parent_blob_leaves": 627,
+  "no_AGENTS": true,
+  "changed_existing": [
+    {
+      "path": "README.md",
+      "before": "4200b7f3b1ddea34493e1d740ea91bd2e8f304de",
+      "after": "ef24a2f094ba5819caacb4ceaa59f15fd008bace",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    {
+      "path": "static/compare-weeks.html",
+      "before": "0e314d8f054d565706b4a0cf8905abeec6aaac77",
+      "after": "03c1a353915dc3ccb8a215aac957d9cf5cfff78c",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    {
+      "path": "static/week_compare_ui.mjs",
+      "before": "ad3ebd39e21becf0ada3cc86ba965756fe8df83d",
+      "after": "2a185f0b850f0f35aaead19aeb06bc38ca4d1f1f",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    }
+  ],
+  "added": [
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/RECEIVING.md",
+      "sha": "9a8ed0bc568b45f1f3ac93639f77855cf9e6ecf9",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-baseline.log",
+      "sha": "14535efc7a530514904ac4136a8247f726aab4c8",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-baseline/baseline.png",
+      "sha": "aa88441e0cb7268b8a63c44985c66bdb0c7c657a",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-baseline/earlier.json",
+      "sha": "6296450c646dc32cac9af3da3f461c603a3147fa",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-baseline/native-result.json",
+      "sha": "3b904a7b33842d98b756f3660c63c271d4532df8",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-baseline/receipt.json",
+      "sha": "1c02700bed6c176b078f23f0b90ca9edc90e5433",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-baseline/revised.json",
+      "sha": "9c41d326f19ffaa3364f6fb1c4162c1625bc8552",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1.log",
+      "sha": "9b110b52f2e143d613586e361ffcc382dce77056",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/browser-downloads/0111fd62-bc58-4742-941e-0fb87d8a3c2b",
+      "sha": "504a610273625c65e50a34253d8ad12f0ea69043",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/browser-downloads/3d1c4442-8dea-4f59-a442-bc0bf89305f7",
+      "sha": "c634c599a84731004d8add6a309686bcdf173a0d",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/browser-downloads/4a5b7314-3706-4764-be75-a5687e91da9a",
+      "sha": "2d63440ac544eec3a564a0fed03a09754d5b2980",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/browser-downloads/83cad045-3f87-4a2e-81c1-9189bcf30b4f",
+      "sha": "661d4d2542800c88138645f38c66114fcec44c7a",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/browser-downloads/a5c508bd-4226-4168-8a53-9d1e4526a7cc",
+      "sha": "e5ebc27d01495eedd6109e60c18eb3bf208d2fbc",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/browser-downloads/a99699fd-1d86-4fe3-88e9-34d9cc4c8a41",
+      "sha": "5a4c7a39753b1cb2dd26db2e8e472918380417a7",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/browser-downloads/b5676225-13c0-490a-b17c-9b2f81529727",
+      "sha": "31aeae91d0838ae7001220d4305012813820643c",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/browser-downloads/cafd3547-6bd7-4d7f-bef0-21fffbe12da8",
+      "sha": "427d0b0415eb07e46385fdd165c965588ed85770",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/browser-downloads/d5b6d365-0d10-41b3-8945-dc47a736fa12",
+      "sha": "b2e9a0948145e144503b5a27bef471fe6006f9af",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/browser-downloads/f6225bf2-d733-495a-bd94-38d6591755ef",
+      "sha": "1d478bf95bf28ddb8a5d4569738792a13279100e",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/desktop.png",
+      "sha": "03e85eee7f8fb037b1b5084aef709bea88cfebe1",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/download-1.txt",
+      "sha": "1d478bf95bf28ddb8a5d4569738792a13279100e",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/download-10.txt",
+      "sha": "427d0b0415eb07e46385fdd165c965588ed85770",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/download-2.txt",
+      "sha": "31aeae91d0838ae7001220d4305012813820643c",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/download-3.txt",
+      "sha": "2d63440ac544eec3a564a0fed03a09754d5b2980",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/download-4.txt",
+      "sha": "b2e9a0948145e144503b5a27bef471fe6006f9af",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/download-5.txt",
+      "sha": "504a610273625c65e50a34253d8ad12f0ea69043",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/download-6.txt",
+      "sha": "5a4c7a39753b1cb2dd26db2e8e472918380417a7",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/download-7.txt",
+      "sha": "e5ebc27d01495eedd6109e60c18eb3bf208d2fbc",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/download-8.txt",
+      "sha": "c634c599a84731004d8add6a309686bcdf173a0d",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/download-9.txt",
+      "sha": "661d4d2542800c88138645f38c66114fcec44c7a",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/earlier.json",
+      "sha": "6296450c646dc32cac9af3da3f461c603a3147fa",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/empty-native-result.json",
+      "sha": "3898dbbfd676c047ab456143e65c5900e077dfe7",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/mobile.png",
+      "sha": "2ecca713087b4bbce6e263cd05ddbdf725d29fc2",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/native-result.json",
+      "sha": "3b904a7b33842d98b756f3660c63c271d4532df8",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/receipt.json",
+      "sha": "0692f64681dff6567303196fa7084fa8765d3d52",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/revised.json",
+      "sha": "9c41d326f19ffaa3364f6fb1c4162c1625bc8552",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/claim.json",
+      "sha": "e193b9bd8348998511d8a2c136b580e9c8db65bd",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/composition-receipt.json",
+      "sha": "7fe6d1a987b6ee670b50b99d69a64db22d6cf6a4",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/independent-la7/oracle-before-output.json",
+      "sha": "370238babdf08045c87937d5891c43888d471882",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/independent-la7/receipt.json",
+      "sha": "ace6c6737ad28e65574d66c1f5d0d5255d30726b",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/independent-la7/receive.mjs",
+      "sha": "0428e69670b981680af99d23640a3410ceeea734",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/native-result.json",
+      "sha": "3b904a7b33842d98b756f3660c63c271d4532df8",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/node-ci-gate.log",
+      "sha": "07e35eef30f7eceddd84ea818af85d5472cba0ff",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/node-first.log",
+      "sha": "3781cf52a03ea5264ae849c2daceeaee19be98d8",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/root-source-review.md",
+      "sha": "1fab2e770415c2063146de6c70640195037db45e",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/source-receipt.json",
+      "sha": "838ec26ed30b6c9f735848ff5edc6951eb5b96de",
+      "mode": "100644"
+    },
+    {
+      "path": "static/week_change_brief.mjs",
+      "sha": "18e637273fb20b4ab1703db450fa16f1bcd39cf1",
+      "mode": "100644"
+    },
+    {
+      "path": "tests/test_week_change_brief.mjs",
+      "sha": "93f2e3dad4ee0ce47c86507057f6ed61785c77b2",
+      "mode": "100644"
+    },
+    {
+      "path": "tools/check_week_change_brief_browser.mjs",
+      "sha": "7ef0d0b160396909a14e8579fa6e0e2a0afaefd7",
+      "mode": "100644"
+    }
+  ],
+  "unchanged_previous_offline_leaves": 77,
+  "unchanged_runtime_files": [
+    {
+      "path": "static/calendar.js",
+      "git_blob": "dbed22d2cb91090bccec9472fbffd2854eed2722",
+      "mode": "100644"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "mode": "100644"
+    },
+    {
+      "path": "tests/calendar-week.test.cjs",
+      "git_blob": "49bc39f7665683696708692989f1d5921c8ed587",
+      "mode": "100644"
+    },
+    {
+      "path": "tests/calendar.test.cjs",
+      "git_blob": "4fb00c14c7b61639f8122bc5b0c655944c97cde3",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/LICENSE",
+      "git_blob": "3757eabcdbaee0b03b44aad0a7c01ff8c5ada81b",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/catalogue.mjs",
+      "git_blob": "6cddccf85bff98efcc3dd2dc0400eb8769dd9113",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/capture-receipt.json",
+      "git_blob": "b63c74e39d5659ba2168b4a18c8a3702194fd1b3",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/catalogue.json",
+      "git_blob": "70f022b18b2f33f67c139c59e1cd36e192fbb29f",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/records/harold-0.json",
+      "git_blob": "e6d11ae83fa2cbfb6f9fc588c3760f7e215c960e",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/records/harold-1.json",
+      "git_blob": "dc4dda8b1a31efec4a5137bb23f516b603f1f729",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/records/harold-2.json",
+      "git_blob": "be73f456f300b4019727007dc7f91c2bf8e51718",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/records/harold-3.json",
+      "git_blob": "20fed9e69ab37218c52247d1ff763c0bc2608b02",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/records/harold-4.json",
+      "git_blob": "159bcab25f270ebeb7112698145243a91ab07fc8",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/records/harold-5.json",
+      "git_blob": "95a8ca0205620cf2847cef5500c533efc082170b",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/records/harold-6.json",
+      "git_blob": "cdb47cac1dc91fe7111b1cda8cf4d8171ffe8f3e",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/records/harold-7.json",
+      "git_blob": "7f8110eaa5d16ead3acaf19d052a33761ee62c88",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/records/mei-0.json",
+      "git_blob": "8e4e436f531c95b0e231fe76342e01fcfdf24164",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/records/mei-1.json",
+      "git_blob": "ee842ee7e0fb253ffd7ecb073e153da7450e263d",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/records/mei-2.json",
+      "git_blob": "03383aa9a18b0f27d6905b924f67d547035a4af8",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/records/mei-3.json",
+      "git_blob": "62d7bf901ec084edb20727a8735df3ea2b333ef6",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/records/mei-4.json",
+      "git_blob": "a816099b90c43764ba458c8ead47983e1350c73d",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/records/mei-5.json",
+      "git_blob": "d92d984aa36f75db171d990a2867c30315a0b0f3",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/records/mei-6.json",
+      "git_blob": "801a7c6a62f4e0b30df932ed6fb6adbd3452e44d",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/records/mei-7.json",
+      "git_blob": "5be0c601487eddd651f1ea1110cbc84069c2e5d0",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/records/rosa-0.json",
+      "git_blob": "634e4cb8b7143a9fee679207cf572fef9ec3da59",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/records/rosa-1.json",
+      "git_blob": "c704890764be21b896c0ed2ed42c076910cf8aea",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/records/rosa-2.json",
+      "git_blob": "4f0a444d3cc9555c6ec25aec607171ecc2ef26e5",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/records/rosa-3.json",
+      "git_blob": "ccd441d2d4e3ce3cb60454f7d0d1375f1b2b02bc",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/records/rosa-4.json",
+      "git_blob": "ef06b9331298707ecc96d663bea16e18b41feb4f",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/records/rosa-5.json",
+      "git_blob": "21f88a767c5dddca053957bb52741fc17e1551ce",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/records/rosa-6.json",
+      "git_blob": "a3f1748e458cd58fedeaf3a65dc710f250070ebb",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/data/records/rosa-7.json",
+      "git_blob": "da86f6e03c0f4c2013eb430a51c1177ffe58cca6",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/saved_week.mjs",
+      "git_blob": "a363e788fc99c34a735295a209e5f5db04dc9e39",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/source-pin.json",
+      "git_blob": "44e730d82e79476922f76bbcf8507f94e18160d8",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/style.css",
+      "git_blob": "b47c49cc6b502a8e6dedc8d02fa1cadb1241dc1d",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/tests/catalogue.test.mjs",
+      "git_blob": "3ba4eb08598f918b9d57d4140c505ba2976f455d",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/tests/saved_week.test.mjs",
+      "git_blob": "da0a1cce68167c50c89a54a0cf2e118eea56c841",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/tools/capture_catalogue.py",
+      "git_blob": "0788041da481788de0e567ce0e5bbeadfdea7f19",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/tools/check_browser.mjs",
+      "git_blob": "a81a9bc51e6ecbe28aa66835a51b20d285030eb6",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/tools/check_saved_week_browser.mjs",
+      "git_blob": "903315f4877ffa4d7b683352cfa936347ea66ac4",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/week-file-source.json",
+      "git_blob": "9ba0f0c59fb6edfa368e0ff26310aae505443989",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/week_file.mjs",
+      "git_blob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/week_plan.mjs",
+      "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/arrangement_history.mjs",
+      "git_blob": "ef1e8643370045c021e820cc7919a5692ede44bc",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/tests/arrangement_history.test.mjs",
+      "git_blob": "5e5f7d8bacf09b4c194ca70967568d8cd55742de",
+      "mode": "100644"
+    },
+    {
+      "path": "web-demo-offline/tools/check_arrangement_history_browser.mjs",
+      "git_blob": "c98d0cc222bcca28e0beb35f66fe94ee3fd28acd",
+      "mode": "100644"
+    }
+  ],
+  "scope_beforeimages": {
+    "web-demo-offline/README.md": {
+      "before_git_blob": "131d160589f62efe6dab338849932320dccdc9e9",
+      "bytes": 14043,
+      "sha256": "c2444fedbe19cf582823b16895594cef379ad23c831b8855c8d10dd6534beb8b",
+      "git_blob": "e5c1bec48e1f591c0bb4c2d885d34c6c4eba7710",
+      "mode": "100644"
+    },
+    "web-demo-offline/app.mjs": {
+      "before_git_blob": "d974e65009c89b0a90ebb516bcac361ca169842a",
+      "bytes": 19839,
+      "sha256": "7b57b6e78425aae11fb3b220d508ad6e2b1c3976965f97c7e455551cd1511a4b",
+      "git_blob": "a14e54efe892c53558934f2524a1b07b166f33e6",
+      "mode": "100644"
+    },
+    "web-demo-offline/calendar-source.json": {
+      "before_git_blob": null,
+      "bytes": 433,
+      "sha256": "517d717e93a2d2768c0b2f5c814706990ca66f0a9c08885912cfc6270a3608dd",
+      "git_blob": "5a19fed22de93c5c02f584a0773d95d88bdc5672",
+      "mode": "100644"
+    },
+    "web-demo-offline/calendar.js": {
+      "before_git_blob": null,
+      "bytes": 15169,
+      "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+      "git_blob": "dbed22d2cb91090bccec9472fbffd2854eed2722",
+      "mode": "100644"
+    },
+    "web-demo-offline/dist/tastetable-offline-studio.zip": {
+      "before_git_blob": "6a8affc08decdc9510b00410e94efa1495520bd6",
+      "bytes": 108205,
+      "sha256": "024f2787700897d7f96b9289390d054603b54edad42df6db2cd9284137852392",
+      "git_blob": "100561cc6ba28292865061206185517163b54852",
+      "mode": "100644"
+    },
+    "web-demo-offline/index.html": {
+      "before_git_blob": "60a20e68ef6deaaea535a6d51c589c8dfd948c21",
+      "bytes": 9688,
+      "sha256": "7f98beb217a0dba60c6c8a2f7511cc70be3f4666e1f84e9782026062e8dbe706",
+      "git_blob": "f77919d6eb7d8b8e44d3fe08c70efe31f9ccb300",
+      "mode": "100644"
+    },
+    "web-demo-offline/offline.css": {
+      "before_git_blob": "26271eaf29ded4ec07dbff7d8e0bc6ab42d5f482",
+      "bytes": 9577,
+      "sha256": "87fbe79d58aff98b55e7968a9f23eb6f2da25e1507fd4f6db0c9660454699480",
+      "git_blob": "a5e2d422106cae4d85671f3ea6ddc3cc69a6ebe6",
+      "mode": "100644"
+    },
+    "web-demo-offline/offline_calendar.mjs": {
+      "before_git_blob": null,
+      "bytes": 6979,
+      "sha256": "3d271e40062979e3425e2b4a97e1f6d3346f653402d1585b578650fbafc243c8",
+      "git_blob": "27242740ccd535b6ff204961c50d842c5b42e982",
+      "mode": "100644"
+    },
+    "web-demo-offline/tests/offline_calendar.test.mjs": {
+      "before_git_blob": null,
+      "bytes": 12117,
+      "sha256": "da3bb0cd9867045b5c50c2ef1b0aadfe3f5c13eccdbc420e97e7f980f3806af5",
+      "git_blob": "d5b5063ebad7de40cd7ba16c1abe2684476e49c5",
+      "mode": "100644"
+    },
+    "web-demo-offline/tools/receive_static.py": {
+      "before_git_blob": "b4137bcbe2d558bacc917e34191a670353378984",
+      "bytes": 4672,
+      "sha256": "e121f93b47e9a0fc0d709c2972d9b5a2600dde0cbc0cc5635216f4385fc23150",
+      "git_blob": "4d6434a797768ff7bb96d5bcaeb337685288a8fb",
+      "mode": "100644"
+    }
+  },
+  "peer_receipt_sha256": "a9b5ecb116011cd3e81b302447e4a56fc6d57ba674b00cf1287808966558efb5",
+  "interpretation": "Source-only composition. All ten calendar source bytes and all original/current author and independent Linux peer files remain unchanged. New main changes the separate caregiver comparison consumer only. No application/browser run is attributed to the newer parent. Final exact-head hosted CI is required."
+}

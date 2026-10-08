@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/me/tastetable-calendar-066deeadcc8b/author-current/verify-current-author.py", line 219, in <module>
+    print(json.dumps(verify(args.archive),indent=2,ensure_ascii=False))
+                     ~~~~~~^^^^^^^^^^^^^^
+  File "/Users/me/tastetable-calendar-066deeadcc8b/author-current/verify-current-author.py", line 166, in verify
+    require(sha(driver)==command["driver_sha256"] and len(driver)==command["driver_bytes"],"browser driver "+stem)
+                         ~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'driver_sha256'

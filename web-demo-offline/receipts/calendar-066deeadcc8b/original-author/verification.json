@@ -1,0 +1,43 @@
+{
+  "format": "tastetable.offline-calendar-author-verification/1",
+  "source_projection": "e1babdbfa64b63fc1443f4efee44897681545c26",
+  "raw_archive": {
+    "bytes": 628472,
+    "sha256": "399c8cf82d10aedae17806dc9b8e1bf1f2b74c3170bf15333756d1a827641f64",
+    "ordinary_members": 105,
+    "listed_artifacts": 104
+  },
+  "source": {
+    "canonical_parent": "689ddc9a6a4f5f12068e1e99127cc77482c53924",
+    "baseline_files": 48,
+    "candidate_files": 53,
+    "scoped_paths": 10,
+    "unowned_files_preserved": 43,
+    "calendar_writer_git": "dbed22d2cb91090bccec9472fbffd2854eed2722",
+    "existing_app_reconstructs_exactly": true
+  },
+  "qualification": {
+    "native_unit_methods": 61,
+    "baseline_browser": {
+      "passed": 9,
+      "missing_capability": 1
+    },
+    "candidate_browser": {
+      "checks": 73,
+      "actual_calendar_downloads": 8,
+      "actual_saved_week_downloads": 10,
+      "actual_source_downloads": 1
+    },
+    "portable_browser": {
+      "checks": 7,
+      "actual_calendar_downloads": 2,
+      "actual_saved_week_downloads": 1
+    },
+    "calendar_events_recomputed": 43,
+    "exact_complete_descriptions": true,
+    "static_files": 41,
+    "http_readbacks": 82,
+    "rollback_status": 404
+  },
+  "interpretation": "Saved native author evidence recomputed without running the application, writer, browser or tests. Independent receiving is a separate packet."
+}

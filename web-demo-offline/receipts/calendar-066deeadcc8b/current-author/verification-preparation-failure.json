@@ -1,0 +1,17 @@
+[
+  {
+    "mode": "normal",
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/me/tastetable-calendar-066deeadcc8b/author-current/verify-current-author.py",
+      "/Users/me/tastetable-calendar-066deeadcc8b/author-current/native-current.tar.xz"
+    ],
+    "returncode": 1,
+    "started_unix": 1791478384.265444,
+    "finished_unix": 1791478384.438505,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "4b5e238cc713ecaabc0075bfd3fe6a5c5d410773077d207da272eccdbc08f1fa",
+    "output": "Traceback (most recent call last):\n  File \"/Users/me/tastetable-calendar-066deeadcc8b/author-current/verify-current-author.py\", line 219, in <module>\n    print(json.dumps(verify(args.archive),indent=2,ensure_ascii=False))\n                     ~~~~~~^^^^^^^^^^^^^^\n  File \"/Users/me/tastetable-calendar-066deeadcc8b/author-current/verify-current-author.py\", line 166, in verify\n    require(sha(driver)==command[\"driver_sha256\"] and len(driver)==command[\"driver_bytes\"],\"browser driver \"+stem)\n                         ~~~~~~~^^^^^^^^^^^^^^^^^\nKeyError: 'driver_sha256'\n"
+  }
+]

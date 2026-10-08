@@ -105,6 +105,17 @@
         <ul id="omittedPicks" class="omitted-picks"></ul>
       </section>
       <div id="weekNotes"></div>
+      <section id="offlineCalendar" class="offline-calendar" aria-labelledby="offlineCalendarTitle" hidden>
+        <div class="offline-calendar-heading">
+          <div><p class="eyebrow">Take the arranged week with you</p><h3 id="offlineCalendarTitle">Calendar handoff</h3></div>
+          <button id="offlineCalendarDownload" type="button" class="primary" aria-describedby="offlineCalendarHelp" disabled>Download calendar (.ics)</button>
+        </div>
+        <p id="offlineCalendarHelp" class="why">Review the dates and visits below before downloading. The file contains all-day suggestions from this fictional recording. Downloading does not book visits or update or cancel an earlier calendar import.</p>
+        <p id="offlineCalendarSource" class="mode"></p>
+        <ul id="offlineCalendarPreview" class="offline-calendar-preview" aria-label="Scheduled calendar suggestions"></ul>
+        <p id="offlineCalendarStatus" class="why" role="status" aria-live="polite"></p>
+        <p id="offlineCalendarError" class="error" role="alert"></p>
+      </section>
       <p class="handoff-note">Planning draft. Dates are your choices, not reservations or confirmed opening hours. Confirm the venue, accessibility and food needs with the venue and care team before going.</p>
     </section>
     <details class="original-evidence">
@@ -131,6 +142,7 @@
   </div>
 </main>
 <footer><strong>TasteTable · Offline studio</strong><p>Finite recordings from the existing ScriptedModel and synthetic Qloo fixture. The source record includes its original native response and transport trace; schedule edits appear in Print week and your explicit saved-week file. No live recommendation, reservation or model call is made.</p><p>MIT licensed · <a href="./README.md">Run and recapture</a> · <a href="./source-pin.json">Pinned source</a></p></footer>
+<script src="./calendar.js"></script>
 <script type="module" src="./app.mjs"></script>
 </body>
 </html>

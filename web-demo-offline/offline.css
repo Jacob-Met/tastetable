@@ -134,3 +134,22 @@ footer a { color:#65408e; }
 .arrangement-history button { min-height: 44px; }
 .arrangement-history p { flex-basis: 100%; margin: .1rem 0; overflow-wrap: anywhere; }
 @media print { .arrangement-history, #historyHelp { display: none !important; } }
+
+
+/* Explicit calendar preview; the existing printed week already carries these visits. */
+.offline-calendar { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #d7ded8; }
+.offline-calendar-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.offline-calendar-heading h3 { margin: 0; }
+.offline-calendar-heading .eyebrow { margin-top: 0; }
+.offline-calendar-heading button { max-width: 100%; white-space: normal; }
+.offline-calendar-preview { display: grid; gap: .65rem; list-style: none; margin: 1rem 0; padding: 0; }
+.offline-calendar-preview li { display: grid; grid-template-columns: minmax(11rem, auto) minmax(0, 1fr); gap: .5rem 1rem; padding: .75rem; border-radius: .5rem; background: #f0f5ef; overflow-wrap: anywhere; }
+.offline-calendar-preview time { font-weight: 650; }
+.offline-calendar [role="alert"], .offline-calendar [role="status"] { overflow-wrap: anywhere; }
+@media (max-width: 480px) {
+  .offline-calendar-heading { align-items: flex-start; }
+  .offline-calendar-preview li { grid-template-columns: minmax(0, 1fr); }
+}
+@media print {
+  .offline-calendar { display: none !important; }
+}

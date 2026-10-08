@@ -1,0 +1,34 @@
+{
+  "schema": "tastetable.root.cold-process.v1",
+  "verifier_sha256": "c3fd5b741b5b56ff950eb725b9f541e5174f8e5f08c09439daf5a6c0ccea2096",
+  "archive_sha256": "0bcc70dfd5ec03607ff42cc6aeb6f20f2e65459108931b4aa019e8e87b47d539",
+  "runs": [
+    {
+      "name": "normal",
+      "command": [
+        "python3",
+        "/home/jacob/hamon-root-066deeadcc8b/tastetable-calendar-review-frozen/verify-peer-v1.py",
+        "/home/jacob/hamon-root-066deeadcc8b/tastetable-calendar-review-frozen"
+      ],
+      "started": "2026-10-08T19:01:09.368692+00:00",
+      "finished": "2026-10-08T19:01:12.226726+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "9e98d2c2508e824f8d0628043627e65204c5df53ad51c62df13b5baef135b19e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "optimized",
+      "command": [
+        "python3",
+        "-O",
+        "/home/jacob/hamon-root-066deeadcc8b/tastetable-calendar-review-frozen/verify-peer-v1.py",
+        "/home/jacob/hamon-root-066deeadcc8b/tastetable-calendar-review-frozen"
+      ],
+      "started": "2026-10-08T19:01:12.226845+00:00",
+      "finished": "2026-10-08T19:01:19.231042+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "9e98d2c2508e824f8d0628043627e65204c5df53ad51c62df13b5baef135b19e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

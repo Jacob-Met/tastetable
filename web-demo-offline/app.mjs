@@ -2,6 +2,7 @@ import { DAYS, createWeekPlan, localDate, offWeekPicks, resetDays, setPickDay, s
 
 import { CONSTRAINTS, chooseRecord, validateCatalogue } from "./catalogue.mjs";
 import { readOfflineWeekFile, saveOfflineWeek } from "./saved_week.mjs";
+import { mountOfflineCalendar } from "./offline_calendar.mjs";
 import { canRedoArrangement, canUndoArrangement, createArrangementHistory, recordArrangement, redoArrangement, undoArrangement } from "./arrangement_history.mjs";
 
 const $ = (s) => document.querySelector(s);
@@ -18,6 +19,22 @@ let openingVersion = 0;
 let pendingWeek = null;
 let downloadUrl = null;
 let arrangementHistory = null;
+
+function calendarContext() {
+  return { record: currentRecord, state: weekState, anchor: $("#weekDate").value, receivedAt, calendarId };
+}
+const offlineCalendar = mountOfflineCalendar($("#offlineCalendar"), {
+  calendarApi: globalThis.TasteTableCalendar,
+  getContext: calendarContext,
+  retainCalendarId(before, id) {
+    const now = calendarContext();
+    if (["record", "state", "anchor", "receivedAt", "calendarId"].some(key => now[key] !== before[key])) {
+      return false;
+    }
+    calendarId = id;
+    return true;
+  },
+});
 
 function retireOpening(message = "") {
   openingVersion += 1;
@@ -132,6 +149,7 @@ function renderWeek(message = "") {
     ? `Opened a saved copy dated ${new Date(openedSavedAt).toLocaleString()}. Its recommendations are the original finite recording; any further arrangement changes need another Save week.`
     : "";
   renderHistoryControls();
+  offlineCalendar.refresh();
 }
 
 function applyWeekDate() {
@@ -151,6 +169,7 @@ function applyWeekDate() {
     $("#weekError").textContent = error.message;
     $("#printWeek").disabled = true;
     $("#saveWeek").disabled = true;
+    offlineCalendar.refresh();
     return false;
   }
 }
@@ -221,6 +240,7 @@ function invalidateSelection(message) {
   weekState = null;
   $("#downloadRecord").removeAttribute("href");
   $("#requestStatus").textContent = message;
+  offlineCalendar.refresh();
 }
 
 function acceptRecord(record, {scroll = true, state = null, originalReceivedAt = new Date().toISOString(),
