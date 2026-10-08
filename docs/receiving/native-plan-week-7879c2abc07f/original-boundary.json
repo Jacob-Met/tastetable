@@ -1,0 +1,47 @@
+{
+  "schema": "tastetable.native-plan-week.original-boundary/1",
+  "repository": "Jacob-Met/tastetable",
+  "issue": 25,
+  "pullRequest": 27,
+  "base": "d66ab91d62ba243cef2ba387cea73a684fa3b04e",
+  "baseTree": "e5c3f77b0263d8bc1379a99cab591e2194231f49",
+  "baselineHead": "366bd4e0d78983883859dacfea213b4614ed5dc5",
+  "baselineTree": "bb4d00a351ac7f18a75f3ce3f87075fd7110b864",
+  "checkout": "a401c3f35833dfb03249551b95d6f8b5cee2aecb",
+  "checkoutParents": [
+    "d66ab91d62ba243cef2ba387cea73a684fa3b04e",
+    "366bd4e0d78983883859dacfea213b4614ed5dc5"
+  ],
+  "test": {
+    "path": "tests/test_native_plan_week.py",
+    "blob": "00a0bb1a32ab626f5588b97b8ca981a6aae4e930",
+    "bytes": 19155,
+    "sha256": "dc1e65ff357672218799adf0152baf9d7041e2f15d74a1e9c9c614e3f87e964a",
+    "methods": 10
+  },
+  "sourcePreservation": "All 279 inherited tree leaves are exact; only the frozen test file is added. The actual run reports all 12 producer/consumer source hashes unchanged.",
+  "run": {
+    "id": 37784495321,
+    "job": 113335644662,
+    "conclusion": "failure",
+    "url": "https://github.com/Jacob-Met/tastetable/actions/runs/37784495321/job/113335644662",
+    "node": "22.23.3",
+    "summary": "35 failed, 146 passed, 1 warning, 116 subtests passed in 9.44s",
+    "logBytes": 226947,
+    "logSha256": "77aab215cc1fc37a618a1cdb6c6770b8bfd1a8717fded4ac9da336b87acc5093"
+  },
+  "cause": "All 35 failure records report MODULE_NOT_FOUND or ERR_MODULE_NOT_FOUND for tools/native_plan_to_week.mjs, which does not exist in the original source.",
+  "failingMethods": [
+    "test_actual_producer_results_become_exact_editable_weeks",
+    "test_argument_errors_do_not_wait_for_stdin",
+    "test_bounded_utf8_input_is_admitted_as_a_whole",
+    "test_existing_consumer_can_move_resave_and_preserve_calendar_identity",
+    "test_existing_outputs_and_input_aliases_are_never_replaced",
+    "test_incompatible_complete_results_and_dates_publish_nothing",
+    "test_literal_response_fields_and_original_order_survive",
+    "test_real_partial_write_failure_leaves_no_output_or_temporary_files",
+    "test_separate_conversions_get_new_file_identity"
+  ],
+  "preservedControls": "Four real original Python producer results completed. The authored no-match result has no meals or outing. The original raw-envelope reader refusal is the one new passing method.",
+  "boundary": "Original capability absence only, not a regression in an existing promised command. This run does not establish candidate output refusal or browser behavior."
+}
