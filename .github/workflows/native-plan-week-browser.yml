@@ -1,0 +1,82 @@
+name: native-plan-week-browser
+
+on:
+  pull_request:
+    paths:
+      - 'tools/native_plan_to_week.mjs'
+      - 'tools/check_native_plan_week_browser.mjs'
+      - 'tests/test_native_plan_week.py'
+      - 'tastetable_cli.py'
+      - 'agent.py'
+      - 'constraints.py'
+      - 'qloo_client.py'
+      - 'personas.py'
+      - 'fixtures/qloo_fixtures.json'
+      - 'static/**'
+      - '.github/workflows/native-plan-week-browser.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/native_plan_to_week.mjs'
+      - 'tools/check_native_plan_week_browser.mjs'
+      - 'tests/test_native_plan_week.py'
+      - 'tastetable_cli.py'
+      - 'agent.py'
+      - 'constraints.py'
+      - 'qloo_client.py'
+      - 'personas.py'
+      - 'fixtures/qloo_fixtures.json'
+      - 'static/**'
+      - '.github/workflows/native-plan-week-browser.yml'
+
+concurrency:
+  group: native-plan-week-browser-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  receive-week:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # Existing maintained pin.
+      - name: Require cached Node 22, Python and installed system Chrome
+        id: runtime
+        shell: bash
+        run: |
+          set -euo pipefail
+          NATIVE_WEEK_NODE=
+          for NATIVE_WEEK_NODE_DIR in "${RUNNER_TOOL_CACHE}/node"/22.*; do
+            if [[ -x "${NATIVE_WEEK_NODE_DIR}/x64/bin/node" && -f "${NATIVE_WEEK_NODE_DIR}/x64.complete" ]]; then
+              NATIVE_WEEK_NODE="${NATIVE_WEEK_NODE_DIR}/x64/bin/node"
+            fi
+          done
+          [[ -n "${NATIVE_WEEK_NODE}" ]] || { echo "A complete cached Node 22 is required."; exit 1; }
+          NATIVE_WEEK_BROWSER=
+          for NATIVE_WEEK_BROWSER_NAME in google-chrome google-chrome-stable chromium chromium-browser; do
+            if command -v "${NATIVE_WEEK_BROWSER_NAME}" >/dev/null 2>&1; then
+              NATIVE_WEEK_BROWSER="$(command -v "${NATIVE_WEEK_BROWSER_NAME}")"
+              break
+            fi
+          done
+          [[ -n "${NATIVE_WEEK_BROWSER}" ]] || { echo "An installed Chrome/Chromium is required."; exit 1; }
+          NATIVE_WEEK_PYTHON="$(command -v python3)"
+          "${NATIVE_WEEK_NODE}" --version
+          "${NATIVE_WEEK_BROWSER}" --version
+          "${NATIVE_WEEK_PYTHON}" --version
+          printf 'node=%s\nbrowser=%s\npython=%s\n' "${NATIVE_WEEK_NODE}" "${NATIVE_WEEK_BROWSER}" "${NATIVE_WEEK_PYTHON}" >> "${GITHUB_OUTPUT}"
+      - name: Receive actual native result, saved file and unchanged browser consumer
+        env:
+          NATIVE_WEEK_PYTHON: ${{ steps.runtime.outputs.python }}
+        run: '"${{ steps.runtime.outputs.node }}" tools/check_native_plan_week_browser.mjs --browser "${{ steps.runtime.outputs.browser }}" --output "${RUNNER_TEMP}/native-plan-week-receiving"'
+      - name: Preserve bounded native inputs, actual downloads and browser artifacts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # Official v4 pin.
+        with:
+          name: native-plan-week-receiving-${{ github.run_id }}
+          path: ${{ runner.temp }}/native-plan-week-receiving
+          if-no-files-found: warn
+          retention-days: 14
+          compression-level: 6
