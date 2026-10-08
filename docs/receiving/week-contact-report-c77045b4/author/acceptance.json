@@ -1,0 +1,78 @@
+{
+  "format": "tastetable.week-contact-report.author.v1",
+  "at": "2026-10-08T20:15:39.281Z",
+  "sourceIssue": "https://github.com/Jacob-Met/tastetable/issues/54",
+  "base": "328df51af830e91f304417a66d74f43d94ae0c02",
+  "canonicalBaseTree": "df0251092f77d96169daa097abaec409ecabe6ba",
+  "canonicalBaseLeaves": 786,
+  "nativeSourceHead": "3f56aced54d31c8df5189d39440adea84910902a",
+  "contractSha256": "01a5e83f8bd2a57e81b0038678b44e8bfb338467ec1679c9edc9ab21da197cc6",
+  "product": [
+    {
+      "path": "static/week_contact_report.mjs",
+      "bytes": 2277,
+      "sha256": "5ded016e4eab391a562cb6735ea1a70fc267c29f36a3b17fbc263e71a6310448",
+      "gitBlob": "721945e65cc2b459cc9c074f8cffee75711944dd"
+    },
+    {
+      "path": "static/week_report.mjs",
+      "bytes": 15054,
+      "sha256": "1525022981dce054283a1a3b5de7592736125b2fb5ee5f57f339eebfbbc14f21",
+      "gitBlob": "afb6902409f51781dface924f6a5039b2cbc1886"
+    },
+    {
+      "path": "tools/saved_week_to_html.mjs",
+      "bytes": 6759,
+      "sha256": "ca5e4e64753c4a93ce43a493cf9c59f41cddf71687c7eeb702fcfa3a76148acd",
+      "gitBlob": "cfb06087c90ca13748d007d310925d974c6f3aa5"
+    },
+    {
+      "path": "tests/test_week_contact_report.mjs",
+      "bytes": 8179,
+      "sha256": "8c03325bbabe23da9bbbd7cfb6e0c9d78d457c76cd290ffad809cc4974752877",
+      "gitBlob": "6cc432910f4dfe93da1f4fb1177f806b4c11b2a3"
+    },
+    {
+      "path": "tests/test_saved_week_notes_to_html.mjs",
+      "bytes": 5745,
+      "sha256": "7bdc8d4c5cfb1e5bd072185121ef425f698aa4e458242bc81427902c8a722480",
+      "gitBlob": "d1b10b1c084d8e610a43267b9d7f8f6209c316fa"
+    },
+    {
+      "path": "tools/check_week_contact_report_browser.mjs",
+      "bytes": 12435,
+      "sha256": "012a809a2dc09feedfa6f2ff77217b166c2bd4d3797a081a4dd791ad76d4e38e",
+      "gitBlob": "9f9b7de4939b7e911fdb0af22bff9bd7d3a75cba"
+    },
+    {
+      "path": "docs/NATIVE_PLAN_CLI.md",
+      "bytes": 16570,
+      "sha256": "2085ad362234dbf6801c7e9f13314b9e9ee9f5a017ea5992c4b0d473b809a10d",
+      "gitBlob": "a23afe4825584187cb0eec060baf3ae4a28d5102"
+    }
+  ],
+  "baseline": {
+    "nodeTests": 122,
+    "exit": 0,
+    "missingOptionalArgumentExit": 2,
+    "plainHtmlSha256": "16ff7b881f7f4e3983b25122e9f05c8950f63fc4832e5db913bfd5df95ec6a9a"
+  },
+  "candidate": {
+    "nodeTests": 135,
+    "exit": 0,
+    "plainByteExact": true,
+    "browserGroups": 5,
+    "browserExit": 0,
+    "chrome": "Chrome/154.0.8037.98",
+    "htmlSha256": "2de95f6bc570354fc545ab156d39588af1bd74d9381e5aba019c2d1960e44ecc"
+  },
+  "unrelatedIntakeFilesPreserved": 27,
+  "visualInspection": [
+    "desktop/contact detail and390px phone inspected: literal text/earlier questions and long next step readable"
+  ],
+  "limits": [
+    "Authored fictional fixtures; no real venue, care decision, provider, source authentication or runtime deployment.",
+    "Independent receiving, public source publication, hosted CI and normal integration remain pending.",
+    "Canonical tree queried by commit returned the query ref in its top-level sha; separately fetched actual tree df0251092f77d96169daa097abaec409ecabe6ba has identical786leaf entries. Raw original binding retained."
+  ]
+}

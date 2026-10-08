@@ -11,7 +11,7 @@ const MAX_INPUT_BYTES = 4 * 1024 * 1024;
 const MAX_OUTPUT_BYTES = 32 * 1024 * 1024;
 const USAGE = [
   "Usage:",
-  "  node tools/saved_week_to_html.mjs --input WEEK.json --output HANDOFF.html",
+  "  node tools/saved_week_to_html.mjs --input WEEK.json --output HANDOFF.html [--venue-notes NOTES.json]",
   "",
   "Read a saved-week v1 JSON through TasteTable's existing codec and make a",
   "standalone readable HTML handoff. Open it in a browser to read or print offline.",
@@ -20,7 +20,9 @@ const USAGE = [
   "",
   "Preserves arranged dates, original explanations, saved/source timestamps and",
   "source labels. Does not rerun checks or make a provider request. Visit-only",
-  "venue worksheet notes are not in the saved-week v1 file and are not included.",
+  "venue worksheet notes require an explicitly selected matching companion.",
+  "--venue-notes admits a regular strict UTF-8 companion, at most 2 MiB.",
+  "Current and retained other-date/omitted records stay separately labelled.",
   "Requires Node.js 18+ with no npm dependencies.",
   "",
 ].join("\n");
@@ -39,7 +41,7 @@ function write(fd, text) {
 
 function argsFor(argv) {
   if (argv.length === 1 && argv[0] === "--help") return null;
-  const names = new Map([["--input", "input"], ["--output", "output"]]);
+  const names = new Map([["--input", "input"], ["--output", "output"], ["--venue-notes", "venueNotes"]]);
   const args = {};
   for (let index = 0; index < argv.length; index += 2) {
     const option = argv[index];
@@ -51,33 +53,33 @@ function argsFor(argv) {
     args[key] = value;
   }
   if (!args.input || !args.output) throw new InputError("--input and --output are required. Use --help.");
-  if (args.input === "-" || args.output === "-") {
+  if (args.input === "-" || args.output === "-" || args.venueNotes === "-") {
     throw new InputError("Choose explicit input and output files; streams are not accepted.");
   }
   return args;
 }
 
-async function readInput(filename) {
+async function readInput(filename, limit = MAX_INPUT_BYTES, label = "saved week") {
   let handle;
   try {
     if (!(await fs.stat(filename)).isFile()) throw new Error("Choose a regular file.");
     handle = await fs.open(filename, "r");
     if (!(await handle.stat()).isFile()) throw new Error("Choose a regular file.");
-    const buffer = Buffer.alloc(MAX_INPUT_BYTES + 1);
+    const buffer = Buffer.alloc(limit + 1);
     let length = 0;
     while (length < buffer.length) {
       const result = await handle.read(buffer, length, buffer.length - length, null);
       if (!result.bytesRead) break;
       length += result.bytesRead;
     }
-    if (length > MAX_INPUT_BYTES) throw new Error("Saved week exceeds 4 MiB.");
+    if (length > limit) throw new Error(label === "saved week" ? "Saved week exceeds 4 MiB." : "Venue notes exceed 2 MiB.");
     const bytes = buffer.subarray(0, length);
     return {
       text: new TextDecoder("utf-8", { fatal: true }).decode(bytes),
       sha256: createHash("sha256").update(bytes).digest("hex"),
     };
   } catch (error) {
-    throw new InputError("Cannot read saved week: " + error.message);
+    throw new InputError("Cannot read " + label + ": " + error.message);
   } finally {
     if (handle) await handle.close();
   }
@@ -121,11 +123,13 @@ export async function main(argv = process.argv.slice(2)) {
       return 0;
     }
     const input = await readInput(args.input);
+    const companion = args.venueNotes ? await readInput(args.venueNotes, 2 * 1024 * 1024, "venue notes") : null;
     let report;
     try {
       report = renderSavedWeekReport(input.text, {
         sourceName: basename(args.input),
         sourceSha256: input.sha256,
+        ...(companion ? { venueNotes: { text: companion.text, sourceName: basename(args.venueNotes), sourceSha256: companion.sha256 } } : {}),
       });
       if (Buffer.byteLength(report.html, "utf8") > MAX_OUTPUT_BYTES) {
         throw new Error("Rendered handoff exceeds 32 MiB.");
@@ -145,6 +149,7 @@ export async function main(argv = process.argv.slice(2)) {
       picks: report.picks,
       scheduled: report.scheduled,
       omitted: report.omitted,
+      ...(companion ? { venueNotes: { input: resolve(args.venueNotes), inputSha256: companion.sha256, ...report.venueNotes } } : {}),
     }) + "\n");
     return 0;
   } catch (error) {

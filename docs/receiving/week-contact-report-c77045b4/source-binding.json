@@ -1,0 +1,234 @@
+{
+  "schema": "hamon.source_composition.v1",
+  "parent": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+  "parentTree": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6",
+  "parentLeaves": 818,
+  "authorCommit": "3f56aced54d31c8df5189d39440adea84910902a",
+  "originalPublic": "328df51af830e91f304417a66d74f43d94ae0c02",
+  "acceptedInputsPreserved": [
+    {
+      "path": "docs/NATIVE_PLAN_CLI.md",
+      "blob": "fee371448dbc4ff9c563f4b171f290dcaf2deeef"
+    },
+    {
+      "path": "static/app.js",
+      "blob": "aa2fa0ff7aa0a1dd370c4fa6fef4f4222792414b"
+    },
+    {
+      "path": "static/calendar.js",
+      "blob": "dbed22d2cb91090bccec9472fbffd2854eed2722"
+    },
+    {
+      "path": "static/plan-request.js",
+      "blob": "b21276dda840fe6dd96a3bf3258a851970ff5e4d"
+    },
+    {
+      "path": "static/venue_followup.mjs",
+      "blob": "0c1923ecdad8fe9b14f0193a6aba5f3a1e2b9d63"
+    },
+    {
+      "path": "static/venue_note_file.mjs",
+      "blob": "f8406cb540d52222996c585666ae1a55a1030def"
+    },
+    {
+      "path": "static/visit_record.mjs",
+      "blob": "2b5b37e3d4a227e00a5b0052a962d13512b53e48"
+    },
+    {
+      "path": "static/visit_record_ui.mjs",
+      "blob": "b136fa1a9f688d8a27db7d96668ace0895e547ee"
+    },
+    {
+      "path": "static/week_change_brief.mjs",
+      "blob": "18e637273fb20b4ab1703db450fa16f1bcd39cf1"
+    },
+    {
+      "path": "static/week_compare.mjs",
+      "blob": "2dfc4fb5e9c30481a4bd4276bc4ed6ff3bb114b8"
+    },
+    {
+      "path": "static/week_compare_ui.mjs",
+      "blob": "2a185f0b850f0f35aaead19aeb06bc38ca4d1f1f"
+    },
+    {
+      "path": "static/week_file.mjs",
+      "blob": "420ddb8f63fca264dcf97be7147801105696155d"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+    },
+    {
+      "path": "static/week_report.mjs",
+      "blob": "09f1c8ef5077a2d78eea62ea22ca99fde2feded2"
+    },
+    {
+      "path": "tests/calendar-week.test.cjs",
+      "blob": "49bc39f7665683696708692989f1d5921c8ed587"
+    },
+    {
+      "path": "tests/calendar.test.cjs",
+      "blob": "4fb00c14c7b61639f8122bc5b0c655944c97cde3"
+    },
+    {
+      "path": "tests/fixtures/saved-week-recovery.json",
+      "blob": "1d2086d31d8d832aa578bc6ef75fd75b3bc0fbff"
+    },
+    {
+      "path": "tests/fixtures/saved-week-response.json",
+      "blob": "eca4eee4d93d0046833fc798e6c34bf87879c858"
+    },
+    {
+      "path": "tests/plan-request.test.cjs",
+      "blob": "d2d60519b5cd3d3679449f941e795e32ba14634d"
+    },
+    {
+      "path": "tests/test_saved_week_to_html.mjs",
+      "blob": "05020ff8718f37fec3fae0ea229c36fe63d307f3"
+    },
+    {
+      "path": "tests/test_visit_record.mjs",
+      "blob": "3250402051342a873994e7d84ff2c5612c67a804"
+    },
+    {
+      "path": "tests/test_week_change_brief.mjs",
+      "blob": "93f2e3dad4ee0ce47c86507057f6ed61785c77b2"
+    },
+    {
+      "path": "tests/test_week_compare.mjs",
+      "blob": "82f424b7237d5be463772e883b7a094d17f106d1"
+    },
+    {
+      "path": "tests/test_week_file.mjs",
+      "blob": "98c7fa65f00c08042f842012aa600096f9f238a3"
+    },
+    {
+      "path": "tests/test_week_plan.mjs",
+      "blob": "5808a2279c5ad23fd0aac2308f9e546fa03ca6a9"
+    },
+    {
+      "path": "tests/test_week_report.mjs",
+      "blob": "f6459f55d6f9c261c35bf0ac76cac95a4c00ccdb"
+    },
+    {
+      "path": "tests/venue_followup.test.mjs",
+      "blob": "515fe959d7217b10b325cab368eb92a6d33b8e6d"
+    },
+    {
+      "path": "tests/venue_note_file.test.mjs",
+      "blob": "a32d542a76779e8d820a9fc233b6e1a82d9aff2c"
+    },
+    {
+      "path": "tools/native_plan_to_week.mjs",
+      "blob": "cf9fc5e0ecde5a839e6e6a577039b88bcc31f302"
+    },
+    {
+      "path": "tools/saved_week_to_html.mjs",
+      "blob": "20a013e0cefc7f33f9cdcd1d5c26ae2c418316c1"
+    }
+  ],
+  "acceptedProduct": [
+    {
+      "path": "docs/NATIVE_PLAN_CLI.md",
+      "bytes": 16570,
+      "sha256": "2085ad362234dbf6801c7e9f13314b9e9ee9f5a017ea5992c4b0d473b809a10d",
+      "blob": "a23afe4825584187cb0eec060baf3ae4a28d5102",
+      "mode": "100644"
+    },
+    {
+      "path": "static/week_contact_report.mjs",
+      "bytes": 2277,
+      "sha256": "5ded016e4eab391a562cb6735ea1a70fc267c29f36a3b17fbc263e71a6310448",
+      "blob": "721945e65cc2b459cc9c074f8cffee75711944dd",
+      "mode": "100644"
+    },
+    {
+      "path": "static/week_report.mjs",
+      "bytes": 15054,
+      "sha256": "1525022981dce054283a1a3b5de7592736125b2fb5ee5f57f339eebfbbc14f21",
+      "blob": "afb6902409f51781dface924f6a5039b2cbc1886",
+      "mode": "100644"
+    },
+    {
+      "path": "tests/test_saved_week_notes_to_html.mjs",
+      "bytes": 5745,
+      "sha256": "7bdc8d4c5cfb1e5bd072185121ef425f698aa4e458242bc81427902c8a722480",
+      "blob": "d1b10b1c084d8e610a43267b9d7f8f6209c316fa",
+      "mode": "100644"
+    },
+    {
+      "path": "tests/test_week_contact_report.mjs",
+      "bytes": 8179,
+      "sha256": "8c03325bbabe23da9bbbd7cfb6e0c9d78d457c76cd290ffad809cc4974752877",
+      "blob": "6cc432910f4dfe93da1f4fb1177f806b4c11b2a3",
+      "mode": "100644"
+    },
+    {
+      "path": "tools/check_week_contact_report_browser.mjs",
+      "bytes": 12435,
+      "sha256": "012a809a2dc09feedfa6f2ff77217b166c2bd4d3797a081a4dd791ad76d4e38e",
+      "blob": "9f9b7de4939b7e911fdb0af22bff9bd7d3a75cba",
+      "mode": "100644"
+    },
+    {
+      "path": "tools/saved_week_to_html.mjs",
+      "bytes": 6759,
+      "sha256": "ca5e4e64753c4a93ce43a493cf9c59f41cddf71687c7eeb702fcfa3a76148acd",
+      "blob": "cfb06087c90ca13748d007d310925d974c6f3aa5",
+      "mode": "100644"
+    }
+  ],
+  "independentSource": [
+    {
+      "path": "static\\venue_followup.mjs",
+      "bytes": 18444,
+      "sha256": "61bb9cf497b5a37a32afd1b23729e128aed2631cf2c570a1485ca4f0ffbe632c"
+    },
+    {
+      "path": "static\\venue_note_file.mjs",
+      "bytes": 10435,
+      "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1"
+    },
+    {
+      "path": "static\\week_contact_report.mjs",
+      "bytes": 2277,
+      "sha256": "5ded016e4eab391a562cb6735ea1a70fc267c29f36a3b17fbc263e71a6310448"
+    },
+    {
+      "path": "static\\week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+    },
+    {
+      "path": "static\\week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+    },
+    {
+      "path": "static\\week_report.mjs",
+      "bytes": 15054,
+      "sha256": "1525022981dce054283a1a3b5de7592736125b2fb5ee5f57f339eebfbbc14f21"
+    },
+    {
+      "path": "tools\\saved_week_to_html.mjs",
+      "bytes": 6759,
+      "sha256": "ca5e4e64753c4a93ce43a493cf9c59f41cddf71687c7eeb702fcfa3a76148acd"
+    }
+  ],
+  "independentReceiving": {
+    "head": "8bbae8db1509e2b9b968ee9702f246a578ba9f8f",
+    "tree": "7fdc2fea417bbdbdc9bd3d56bca0d40389218f58",
+    "files": 204,
+    "bundle": {
+      "name": "receiver.bundle",
+      "bytes": 313620,
+      "sha256": "5d4fecc2d4ac6c9ce7214b8e7a1acc6246b4cdb5c66d7579b54a18469d772524",
+      "gitBlob": "c740a4710654c43f65f4adc9db8bedb5158a3215",
+      "verificationExit": 0,
+      "verificationStdout": "The bundle contains these 2 refs:\n8bbae8db1509e2b9b968ee9702f246a578ba9f8f refs/heads/receiving\n8bbae8db1509e2b9b968ee9702f246a578ba9f8f HEAD\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1\n",
+      "verificationStderr": "C:/Users/minec/hamon-tastetable-notes-receiving-c77045b4/publication/receiver.bundle is okay\n"
+    }
+  },
+  "sourceComposition": "All accepted consumer and model input blobs remain exact; new independent visit-record CSV source/tests are retained from the current parent.",
+  "qualification": "Exact accepted product unchanged. Expanded maintained Node suite runs in native composition; prior exact CLI/browser qualification is retained. Complete parent leaf metadata is preserved in native custody; unrelated parent evidence blobs are not redundantly materialized."
+}

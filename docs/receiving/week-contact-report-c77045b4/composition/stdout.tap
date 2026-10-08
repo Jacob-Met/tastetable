@@ -1,0 +1,910 @@
+TAP version 13
+# Subtest: the writer receives the existing week and preserves checked source details
+ok 1 - the writer receives the existing week and preserves checked source details
+  ---
+  duration_ms: 12.3176
+  type: 'test'
+  ...
+# Subtest: moved picks share a day without collisions and keep their original explanations
+ok 2 - moved picks share a day without collisions and keep their original explanations
+  ---
+  duration_ms: 3.9393
+  type: 'test'
+  ...
+# Subtest: off-week picks are absent, and reset restores byte-identical content and identities
+ok 3 - off-week picks are absent, and reset restores byte-identical content and identities
+  ---
+  duration_ms: 14.4001
+  type: 'test'
+  ...
+# Subtest: moves preserve a weekly pick's UID, while other weeks and new plans get distinct identities
+ok 4 - moves preserve a weekly pick's UID, while other weeks and new plans get distinct identities
+  ---
+  duration_ms: 15.8027
+  type: 'test'
+  ...
+# Subtest: repeated source entities remain separate stable picks when arranged together
+ok 5 - repeated source entities remain separate stable picks when arranged together
+  ---
+  duration_ms: 3.6006
+  type: 'test'
+  ...
+# Subtest: partial and empty checked source plans remain partial and empty
+ok 6 - partial and empty checked source plans remain partial and empty
+  ---
+  duration_ms: 1.3349
+  type: 'test'
+  ...
+# Subtest: stale, missing, repeated or altered rows refuse the whole export
+ok 7 - stale, missing, repeated or altered rows refuse the whole export
+  ---
+  duration_ms: 3.238
+  type: 'test'
+  ...
+# Subtest: malformed assignments, source identity, provenance and picker dates refuse export
+ok 8 - malformed assignments, source identity, provenance and picker dates refuse export
+  ---
+  duration_ms: 2.3284
+  type: 'test'
+  ...
+# Subtest: source and preview mutations cannot silently change an existing session
+ok 9 - source and preview mutations cannot silently change an existing session
+  ---
+  duration_ms: 13.7648
+  type: 'test'
+  ...
+# Subtest: live source and UTF-8 descriptions keep provenance, escaping and byte limits
+ok 10 - live source and UTF-8 descriptions keep provenance, escaping and byte limits
+  ---
+  duration_ms: 6.2241
+  type: 'test'
+  ...
+# Subtest: the native weekday layout becomes five dated all-day suggestions
+ok 11 - the native weekday layout becomes five dated all-day suggestions
+  ---
+  duration_ms: 17.6948
+  type: 'test'
+  ...
+# Subtest: each description preserves the selected source and notes, excluding other columns
+ok 12 - each description preserves the selected source and notes, excluding other columns
+  ---
+  duration_ms: 6.4323
+  type: 'test'
+  ...
+# Subtest: partial plans keep missing slots absent and retain the partial-plan note
+ok 13 - partial plans keep missing slots absent and retain the partial-plan note
+  ---
+  duration_ms: 0.8612
+  type: 'test'
+  ...
+# Subtest: an empty checked plan is a readable preview but never a calendar download
+ok 14 - an empty checked plan is a readable preview but never a calendar download
+  ---
+  duration_ms: 0.6599
+  type: 'test'
+  ...
+# Subtest: mock provenance comes from the actual response, and live suggestions remain tentative
+ok 15 - mock provenance comes from the actual response, and live suggestions remain tentative
+  ---
+  duration_ms: 3.9514
+  type: 'test'
+  ...
+# Subtest: dates require an explicit valid Monday and reject normalization or injected syntax
+ok 16 - dates require an explicit valid Monday and reject normalization or injected syntax
+  ---
+  duration_ms: 0.525
+  type: 'test'
+  ...
+# Subtest: leap days, year changes, and DST weeks retain calendar dates
+ok 17 - leap days, year changes, and DST weeks retain calendar dates
+  ---
+  duration_ms: 11.2225
+  type: 'test'
+  ...
+# Subtest: calendar bytes do not depend on the host timezone
+ok 18 - calendar bytes do not depend on the host timezone
+  ---
+  duration_ms: 305.0725
+  type: 'test'
+  ...
+# Subtest: source text cannot inject events or calendar properties
+ok 19 - source text cannot inject events or calendar properties
+  ---
+  duration_ms: 2.9618
+  type: 'test'
+  ...
+# Subtest: UTF-8 folding keeps every physical line at most 75 bytes and every code point intact
+ok 20 - UTF-8 folding keeps every physical line at most 75 bytes and every code point intact
+  ---
+  duration_ms: 5.1509
+  type: 'test'
+  ...
+# Subtest: a displayed plan is immutable and same-week re-exports are byte-stable
+ok 21 - a displayed plan is immutable and same-week re-exports are byte-stable
+  ---
+  duration_ms: 10.2685
+  type: 'test'
+  ...
+# Subtest: malformed result envelopes and missing provenance refuse the whole export
+ok 22 - malformed result envelopes and missing provenance refuse the whole export
+  ---
+  duration_ms: 1.1637
+  type: 'test'
+  ...
+# Subtest: unsupported text, excessive fields, and metadata injection refuse before output
+ok 23 - unsupported text, excessive fields, and metadata injection refuse before output
+  ---
+  duration_ms: 0.4779
+  type: 'test'
+  ...
+# Subtest: only newest result commits when earlier transport ignores abort
+ok 24 - only newest result commits when earlier transport ignores abort
+  ---
+  duration_ms: 2.5981
+  type: 'test'
+  ...
+# Subtest: stale errors cannot clear newer loading state or replace its result
+ok 25 - stale errors cannot clear newer loading state or replace its result
+  ---
+  duration_ms: 0.3522
+  type: 'test'
+  ...
+# Subtest: input invalidation suppresses a response already being read
+ok 26 - input invalidation suppresses a response already being read
+  ---
+  duration_ms: 0.2758
+  type: 'test'
+  ...
+# Subtest: invalidated failure remains silent and a later request can succeed
+ok 27 - invalidated failure remains silent and a later request can succeed
+  ---
+  duration_ms: 1.102
+  type: 'test'
+  ...
+# Subtest: disposal blocks new work and suppresses all pending completion callbacks
+ok 28 - disposal blocks new work and suppresses all pending completion callbacks
+  ---
+  duration_ms: 0.3309
+  type: 'test'
+  ...
+# Subtest: current transport error is reported once and returns to idle
+ok 29 - current transport error is reported once and returns to idle
+  ---
+  duration_ms: 0.2457
+  type: 'test'
+  ...
+# Subtest: a malformed current result cannot leave the request busy
+ok 30 - a malformed current result cannot leave the request busy
+  ---
+  duration_ms: 0.2679
+  type: 'test'
+  ...
+# Subtest: actual AbortSignal rejection from supersession is not a user error
+ok 31 - actual AbortSignal rejection from supersession is not a user error
+  ---
+  duration_ms: 0.4382
+  type: 'test'
+  ...
+# Subtest: real CLI physically publishes exact companion identity and counts
+ok 32 - real CLI physically publishes exact companion identity and counts
+  ---
+  duration_ms: 260.6036
+  type: 'test'
+  ...
+# Subtest: bad companion bytes/schema/origin refuse with no artifact or input change
+ok 33 - bad companion bytes/schema/origin refuse with no artifact or input change
+  ---
+  duration_ms: 464.7317
+  type: 'test'
+  ...
+# Subtest: missing/directory notes and strict option refusals preserve the filesystem
+ok 34 - missing/directory notes and strict option refusals preserve the filesystem
+  ---
+  duration_ms: 359.9387
+  type: 'test'
+  ...
+# Subtest: occupied output and notes/input aliases retain their exact bytes
+ok 35 - occupied output and notes/input aliases retain their exact bytes
+  ---
+  duration_ms: 439.6452
+  type: 'test'
+  ...
+# Subtest: BOM companion fingerprints raw bytes and no-companion receipt remains unchanged in shape
+ok 36 - BOM companion fingerprints raw bytes and no-companion receipt remains unchanged in shape
+  ---
+  duration_ms: 171.2116
+  type: 'test'
+  ...
+# Subtest: real CLI publishes a UTF-8 handoff and receipt without changing the input
+ok 37 - real CLI publishes a UTF-8 handoff and receipt without changing the input
+  ---
+  duration_ms: 217.7649
+  type: 'test'
+  ...
+# Subtest: BOM input is accepted and the receipt fingerprints its exact bytes
+ok 38 - BOM input is accepted and the receipt fingerprints its exact bytes
+  ---
+  duration_ms: 124.9955
+  type: 'test'
+  ...
+# Subtest: malformed, unsupported, non-UTF8 and over-limit input are refused before output
+ok 39 - malformed, unsupported, non-UTF8 and over-limit input are refused before output
+  ---
+  duration_ms: 331.4327
+  type: 'test'
+  ...
+# Subtest: missing and directory input are refused with no output
+ok 40 - missing and directory input are refused with no output
+  ---
+  duration_ms: 165.7449
+  type: 'test'
+  ...
+# Subtest: occupied file, directory and input aliases retain their original bytes
+ok 41 - occupied file, directory and input aliases retain their original bytes
+  ---
+  duration_ms: 325.7008
+  type: 'test'
+  ...
+# Subtest: strict arguments and help do not consume the input or create a report
+ok 42 - strict arguments and help do not consume the input or create a report
+  ---
+  duration_ms: 603.341
+  type: 'test'
+  ...
+# Subtest: missing output parent is a delivery failure without a partially accepted file
+ok 43 - missing output parent is a delivery failure without a partially accepted file
+  ---
+  duration_ms: 75.5478
+  type: 'test'
+  ...
+# Subtest: a competing output created before publication is preserved and the stage is removed
+ok 44 - a competing output created before publication is preserved and the stage is removed
+  ---
+  duration_ms: 83.1248
+  type: 'test'
+  ...
+# Subtest: a real partial staged write is removed and never published
+ok 45 - a real partial staged write is removed and never published
+  ---
+  duration_ms: 67.8246
+  type: 'test'
+  ...
+# Subtest: failure after publication identifies the complete report and refuses overwrite on retry
+ok 46 - failure after publication identifies the complete report and refuses overwrite on retry
+  ---
+  duration_ms: 133.937
+  type: 'test'
+  ...
+# Subtest: unrepresentable displayed JSON text is refused without publishing output
+ok 47 - unrepresentable displayed JSON text is refused without publishing output
+  ---
+  duration_ms: 206.4433
+  type: 'test'
+  ...
+# Subtest: native codec accepts the original fixture before the new module consumes it
+ok 48 - native codec accepts the original fixture before the new module consumes it
+  ---
+  duration_ms: 4.5039
+  type: 'test'
+  ...
+# Subtest: each occurrence starts unrecorded, including omitted and repeated identities
+ok 49 - each occurrence starts unrecorded, including omitted and repeated identities
+  ---
+  duration_ms: 3.3332
+  type: 'test'
+  ...
+# Subtest: projection retains the complete original pick, saved assignments and exact dates
+ok 50 - projection retains the complete original pick, saved assignments and exact dates
+  ---
+  duration_ms: 1.7725
+  type: 'test'
+  ...
+# Subtest: date and note do not infer attendance; outside-week dates are explicit
+ok 51 - date and note do not infer attendance; outside-week dates are explicit
+  ---
+  duration_ms: 1.9791
+  type: 'test'
+  ...
+# Subtest: literal CR/LF, whitespace and astral Unicode survive unrelated updates and export
+ok 52 - literal CR/LF, whitespace and astral Unicode survive unrelated updates and export
+  ---
+  duration_ms: 2.0431
+  type: 'test'
+  ...
+# Subtest: Gregorian dates admit year endpoints and leap-century rules
+ok 53 - Gregorian dates admit year endpoints and leap-century rules
+  ---
+  duration_ms: 10.8388
+  type: 'test'
+  ...
+# Subtest: notes and source names count code points and preserve admitted whitespace
+ok 54 - notes and source names count code points and preserve admitted whitespace
+  ---
+  duration_ms: 8.9746
+  type: 'test'
+  ...
+# Subtest: valid reordered visits are restored to original occurrence order
+ok 55 - valid reordered visits are restored to original occurrence order
+  ---
+  duration_ms: 1.498
+  type: 'test'
+  ...
+# Subtest: all operations validate full records without mutating a refused input
+ok 56 - all operations validate full records without mutating a refused input
+  ---
+  duration_ms: 7.9296
+  type: 'test'
+  ...
+# Subtest: invalid patches and unsupported outcomes refuse atomically
+ok 57 - invalid patches and unsupported outcomes refuse atomically
+  ---
+  duration_ms: 3.412
+  type: 'test'
+  ...
+# Subtest: record envelope uses an exact field set and canonical finite save time
+ok 58 - record envelope uses an exact field set and canonical finite save time
+  ---
+  duration_ms: 3.7202
+  type: 'test'
+  ...
+# Subtest: zero and 100 original picks are supported; 101 is refused without changing source
+ok 59 - zero and 100 original picks are supported; 101 is refused without changing source
+  ---
+  duration_ms: 9.1081
+  type: 'test'
+  ...
+# Subtest: source and file UTF-8 budgets are enforced before parsing
+ok 60 - source and file UTF-8 budgets are enforced before parsing
+  ---
+  duration_ms: 11.2022
+  type: 'test'
+  ...
+# Subtest: exact CSV retains all occurrences, original order, planned/actual dates and literal source text
+ok 61 - exact CSV retains all occurrences, original order, planned/actual dates and literal source text
+  ---
+  duration_ms: 5.404
+  type: 'test'
+  ...
+# Subtest: source labels follow unchanged saved-week admission without inferred authenticity
+ok 62 - source labels follow unchanged saved-week admission without inferred authenticity
+  ---
+  duration_ms: 3.7618
+  type: 'test'
+  ...
+# Subtest: an admitted week with zero occurrences produces only its exact header
+ok 63 - an admitted week with zero occurrences produces only its exact header
+  ---
+  duration_ms: 1.0848
+  type: 'test'
+  ...
+# Subtest: identifiers and formula-like notes remain exact text, without spreadsheet inference
+ok 64 - identifiers and formula-like notes remain exact text, without spreadsheet inference
+  ---
+  duration_ms: 0.8296
+  type: 'test'
+  ...
+# Subtest: all original codec refusals happen before a CSV is returned
+ok 65 - all original codec refusals happen before a CSV is returned
+  ---
+  duration_ms: 2.0613
+  type: 'test'
+  ...
+# Subtest: a lone surrogate in an inherited pick is refused instead of silently replaced in UTF-8
+ok 66 - a lone surrogate in an inherited pick is refused instead of silently replaced in UTF-8
+  ---
+  duration_ms: 1.0768
+  type: 'test'
+  ...
+# Subtest: a BOM on a valid record is admitted and export stays deterministic
+ok 67 - a BOM on a valid record is admitted and export stays deterministic
+  ---
+  duration_ms: 1.4115
+  type: 'test'
+  ...
+# Subtest: actual command publishes complete CSV and byte-bound receipt without changing input
+ok 68 - actual command publishes complete CSV and byte-bound receipt without changing input
+  ---
+  duration_ms: 197.6492
+  type: 'test'
+  ...
+# Subtest: existing file, input alias and directory destinations refuse without replacement
+ok 69 - existing file, input alias and directory destinations refuse without replacement
+  ---
+  duration_ms: 282.2141
+  type: 'test'
+  ...
+# Subtest: invalid UTF-8, oversize, malformed or unsupported input never creates output
+ok 70 - invalid UTF-8, oversize, malformed or unsupported input never creates output
+  ---
+  duration_ms: 484.8981
+  type: 'test'
+  ...
+# Subtest: input BOM is decoded but receipt hashes exact original bytes
+ok 71 - input BOM is decoded but receipt hashes exact original bytes
+  ---
+  duration_ms: 81.0126
+  type: 'test'
+  ...
+# Subtest: two actual concurrent commands publish one complete file without overwrite
+ok 72 - two actual concurrent commands publish one complete file without overwrite
+  ---
+  duration_ms: 89.6794
+  type: 'test'
+  ...
+# Subtest: argument, missing-file, non-file and missing-parent refusals leave source intact
+ok 73 - argument, missing-file, non-file and missing-parent refusals leave source intact
+  ---
+  duration_ms: 594.1414
+  type: 'test'
+  ...
+# Subtest: publication failure removes its private stage and preserves another writer's destination
+ok 74 - publication failure removes its private stage and preserves another writer's destination
+  ---
+  duration_ms: 78.9541
+  type: 'test'
+  ...
+# Subtest: failed final cleanup reports the completed file rather than claiming no publication
+ok 75 - failed final cleanup reports the completed file rather than claiming no publication
+  ---
+  duration_ms: 75.8318
+  type: 'test'
+  ...
+# Subtest: caregiver brief carries exact date transitions, counts and original occurrence identity
+ok 76 - caregiver brief carries exact date transitions, counts and original occurrence identity
+  ---
+  duration_ms: 11.0703
+  type: 'test'
+  ...
+# Subtest: chosen-week shifts include actual dates, even when weekday assignments are unchanged
+ok 77 - chosen-week shifts include actual dates, even when weekday assignments are unchanged
+  ---
+  duration_ms: 3.3004
+  type: 'test'
+  ...
+# Subtest: repeated venue names and IDs never collapse distinct original occurrences
+ok 78 - repeated venue names and IDs never collapse distinct original occurrences
+  ---
+  duration_ms: 4.1257
+  type: 'test'
+  ...
+# Subtest: changed source, profile, received time or calendar identity refuses an actionable brief
+ok 79 - changed source, profile, received time or calendar identity refuses an actionable brief
+  ---
+  duration_ms: 14.9949
+  type: 'test'
+  ...
+# Subtest: unchanged, all-off and empty plans have explicit, useful brief states
+ok 80 - unchanged, all-off and empty plans have explicit, useful brief states
+  ---
+  duration_ms: 11.8709
+  type: 'test'
+  ...
+# Subtest: unknown/live source labels and legacy null identities stay explicit
+ok 81 - unknown/live source labels and legacy null identities stay explicit
+  ---
+  duration_ms: 5.113
+  type: 'test'
+  ...
+# Subtest: literal Unicode and embedded controls remain quoted data in the text artifact
+ok 82 - literal Unicode and embedded controls remain quoted data in the text artifact
+  ---
+  duration_ms: 7.133
+  type: 'test'
+  ...
+# Subtest: codec-created copies compare exact moves, omissions and inclusion without mutating inputs
+ok 83 - codec-created copies compare exact moves, omissions and inclusion without mutating inputs
+  ---
+  duration_ms: 11.107
+  type: 'test'
+  ...
+# Subtest: different chosen weeks compare actual dates through the year boundary
+ok 84 - different chosen weeks compare actual dates through the year boundary
+  ---
+  duration_ms: 2.8877
+  type: 'test'
+  ...
+# Subtest: repeated venue identities retain original occurrence mapping
+ok 85 - repeated venue identities retain original occurrence mapping
+  ---
+  duration_ms: 2.7496
+  type: 'test'
+  ...
+# Subtest: changed response, profile, timestamp or calendar identity prevents inferred movement
+ok 86 - changed response, profile, timestamp or calendar identity prevents inferred movement
+  ---
+  duration_ms: 9.1101
+  type: 'test'
+  ...
+# Subtest: JSON property order is immaterial, source array order is not
+ok 87 - JSON property order is immaterial, source array order is not
+  ---
+  duration_ms: 2.5994
+  type: 'test'
+  ...
+# Subtest: all-omitted arrangements and empty original plans have honest counts
+ok 88 - all-omitted arrangements and empty original plans have honest counts
+  ---
+  duration_ms: 5.846
+  type: 'test'
+  ...
+# Subtest: unknown source and legacy null calendar IDs remain explicitly saved-source comparisons
+ok 89 - unknown source and legacy null calendar IDs remain explicitly saved-source comparisons
+  ---
+  duration_ms: 3.0963
+  type: 'test'
+  ...
+# Subtest: same-name same-date occurrences retain separate records and scheduled order
+ok 90 - same-name same-date occurrences retain separate records and scheduled order
+  ---
+  duration_ms: 24.8882
+  type: 'test'
+  ...
+# Subtest: moved, omitted and different-week records never become current replies
+ok 91 - moved, omitted and different-week records never become current replies
+  ---
+  duration_ms: 14.452
+  type: 'test'
+  ...
+# Subtest: changed questions preserve earlier questions, literal replies and follow-up context
+ok 92 - changed questions preserve earlier questions, literal replies and follow-up context
+  ---
+  duration_ms: 6.6365
+  type: 'test'
+  ...
+# Subtest: empty companion is explicit and does not invent stored caregiver records
+ok 93 - empty companion is explicit and does not invent stored caregiver records
+  ---
+  duration_ms: 17.9031
+  type: 'test'
+  ...
+# Subtest: all omitted visits still preserve every companion record in the appendix
+ok 94 - all omitted visits still preserve every companion record in the appendix
+  ---
+  duration_ms: 5.7175
+  type: 'test'
+  ...
+# Subtest: complete source and native note validation refuse mismatches before rendering
+ok 95 - complete source and native note validation refuse mismatches before rendering
+  ---
+  duration_ms: 29.023
+  type: 'test'
+  ...
+# Subtest: unrepresentable current or retained text and source labels refuse the whole report
+ok 96 - unrepresentable current or retained text and source labels refuse the whole report
+  ---
+  duration_ms: 70.2355
+  type: 'test'
+  ...
+# Subtest: optional metadata validates fingerprints and plain result shape stays inherited
+ok 97 - optional metadata validates fingerprints and plain result shape stays inherited
+  ---
+  duration_ms: 14.0286
+  type: 'test'
+  ...
+# Subtest: native response and edited occurrences round-trip across a new state
+ok 98 - native response and edited occurrences round-trip across a new state
+  ---
+  duration_ms: 7.1469
+  type: 'test'
+  ...
+# Subtest: resaving preserves the accepted source and new local arrangement
+ok 99 - resaving preserves the accepted source and new local arrangement
+  ---
+  duration_ms: 2.8785
+  type: 'test'
+  ...
+# Subtest: occurrence keys keep repeated entity IDs distinct after reopening
+ok 100 - occurrence keys keep repeated entity IDs distinct after reopening
+  ---
+  duration_ms: 1.4265
+  type: 'test'
+  ...
+# Subtest: UTF-8 JSON with BOM or different indentation preserves source values
+ok 101 - UTF-8 JSON with BOM or different indentation preserves source values
+  ---
+  duration_ms: 2.4657
+  type: 'test'
+  ...
+# Subtest: empty arrangements and unknown source remain usable snapshots
+ok 102 - empty arrangements and unknown source remain usable snapshots
+  ---
+  duration_ms: 9.6951
+  type: 'test'
+  ...
+# Subtest: save refuses a derived week whose original evidence has changed
+ok 103 - save refuses a derived week whose original evidence has changed
+  ---
+  duration_ms: 2.7775
+  type: 'test'
+  ...
+# Subtest: malformed format, dates, timestamps and inconsistent source inputs fail
+ok 104 - malformed format, dates, timestamps and inconsistent source inputs fail
+  ---
+  duration_ms: 10.035
+  type: 'test'
+  ...
+# Subtest: missing, additional or invalid occurrence assignments cannot silently drop picks
+ok 105 - missing, additional or invalid occurrence assignments cannot silently drop picks
+  ---
+  duration_ms: 7.4732
+  type: 'test'
+  ...
+# Subtest: saved files validate native response types before reaching HTML or late render fields
+ok 106 - saved files validate native response types before reaching HTML or late render fields
+  ---
+  duration_ms: 12.1944
+  type: 'test'
+  ...
+# Subtest: current native recovery traces retain null and list args with the checked partial plan
+ok 107 - current native recovery traces retain null and list args with the checked partial plan
+  ---
+  duration_ms: 5.0381
+  type: 'test'
+  ...
+# Subtest: initial week retains every suggestion and exposes all seven dates
+ok 108 - initial week retains every suggestion and exposes all seven dates
+  ---
+  duration_ms: 7.4518
+  type: 'test'
+  ...
+# Subtest: move, omit and restore preserve source evidence and unrelated picks
+ok 109 - move, omit and restore preserve source evidence and unrelated picks
+  ---
+  duration_ms: 0.8296
+  type: 'test'
+  ...
+# Subtest: reset restores original assignments while keeping the chosen week
+ok 110 - reset restores original assignments while keeping the chosen week
+  ---
+  duration_ms: 0.4913
+  type: 'test'
+  ...
+# Subtest: calendar weeks handle leap days and year boundaries
+ok 111 - calendar weeks handle leap days and year boundaries
+  ---
+  duration_ms: 0.2975
+  type: 'test'
+  ...
+# Subtest: invalid dates and unknown transitions refuse without changing the plan
+ok 112 - invalid dates and unknown transitions refuse without changing the plan
+  ---
+  duration_ms: 0.9366
+  type: 'test'
+  ...
+# Subtest: source plan is a detached immutable snapshot
+ok 113 - source plan is a detached immutable snapshot
+  ---
+  duration_ms: 0.382
+  type: 'test'
+  ...
+# Subtest: empty and partial plans remain honest and rejected candidates cannot be scheduled
+ok 114 - empty and partial plans remain honest and rejected candidates cannot be scheduled
+  ---
+  duration_ms: 0.3387
+  type: 'test'
+  ...
+# Subtest: duplicate source IDs remain distinct suggestions through scheduling
+ok 115 - duplicate source IDs remain distinct suggestions through scheduling
+  ---
+  duration_ms: 0.365
+  type: 'test'
+  ...
+# Subtest: mode is retained explicitly and absence is never labeled live
+ok 116 - mode is retained explicitly and absence is never labeled live
+  ---
+  duration_ms: 0.6039
+  type: 'test'
+  ...
+# Subtest: missing source identity cannot create a local suggestion
+ok 117 - missing source identity cannot create a local suggestion
+  ---
+  duration_ms: 0.3594
+  type: 'test'
+  ...
+# Subtest: calendar arithmetic stays stable across time zones and daylight-saving boundaries
+ok 118 - calendar arithmetic stays stable across time zones and daylight-saving boundaries
+  ---
+  duration_ms: 212.7984
+  type: 'test'
+  ...
+# Subtest: edited arrangement uses the saved seven dates and retains each original occurrence
+ok 119 - edited arrangement uses the saved seven dates and retains each original occurrence
+  ---
+  duration_ms: 14.3385
+  type: 'test'
+  ...
+# Subtest: repeated venues remain distinct scheduled and omitted occurrences
+ok 120 - repeated venues remain distinct scheduled and omitted occurrences
+  ---
+  duration_ms: 2.0525
+  type: 'test'
+  ...
+# Subtest: all-omitted and empty files remain readable without inventing a scheduled visit
+ok 121 - all-omitted and empty files remain readable without inventing a scheduled visit
+  ---
+  duration_ms: 2.6184
+  type: 'test'
+  ...
+# Subtest: mock, live and unknown labels describe saved source rather than fresh verification
+ok 122 - mock, live and unknown labels describe saved source rather than fresh verification
+  ---
+  duration_ms: 6.2117
+  type: 'test'
+  ...
+# Subtest: source timestamps, constraint text, zero affinity and incomplete notes are preserved
+ok 123 - source timestamps, constraint text, zero affinity and incomplete notes are preserved
+  ---
+  duration_ms: 1.6724
+  type: 'test'
+  ...
+# Subtest: all file-controlled text stays literal, including markup, quotes, Unicode and newlines
+ok 124 - all file-controlled text stays literal, including markup, quotes, Unicode and newlines
+  ---
+  duration_ms: 1.6628
+  type: 'test'
+  ...
+# Subtest: the canonical codec rejects malformed files and changed source/arrangement agreement
+ok 125 - the canonical codec rejects malformed files and changed source/arrangement agreement
+  ---
+  duration_ms: 5.5839
+  type: 'test'
+  ...
+# Subtest: the same saved bytes yield a deterministic report with a literal source filename
+ok 126 - the same saved bytes yield a deterministic report with a literal source filename
+  ---
+  duration_ms: 3.1168
+  type: 'test'
+  ...
+# Subtest: carriage returns and valid surrogate pairs retain their literal report text
+ok 127 - carriage returns and valid surrogate pairs retain their literal report text
+  ---
+  duration_ms: 1.9723
+  type: 'test'
+  ...
+# Subtest: displayed NUL and unpaired surrogates admitted by the codec refuse HTML export
+ok 128 - displayed NUL and unpaired surrogates admitted by the codec refuse HTML export
+  ---
+  duration_ms: 36.2001
+  type: 'test'
+  ...
+# Subtest: questions use the native purpose and constraints; original unknown explanation survives
+ok 129 - questions use the native purpose and constraints; original unknown explanation survives
+  ---
+  duration_ms: 5.5998
+  type: 'test'
+  ...
+# Subtest: a different date starts a separate note; returning restores only that occurrence's note
+ok 130 - a different date starts a separate note; returning restores only that occurrence's note
+  ---
+  duration_ms: 1.1922
+  type: 'test'
+  ...
+# Subtest: two occurrences sharing an entity and date retain distinct caregiver notes
+ok 131 - two occurrences sharing an entity and date retain distinct caregiver notes
+  ---
+  duration_ms: 1.4451
+  type: 'test'
+  ...
+# Subtest: omitted picks have no active contact card or exported note, and restore retains its date
+ok 132 - omitted picks have no active contact card or exported note, and restore retains its date
+  ---
+  duration_ms: 2.5626
+  type: 'test'
+  ...
+# Subtest: another week has separate notes even when weekday and occurrence are unchanged
+ok 133 - another week has separate notes even when weekday and occurrence are unchanged
+  ---
+  duration_ms: 0.5563
+  type: 'test'
+  ...
+# Subtest: an identical newly accepted response cannot inherit or access the prior worksheet
+ok 134 - an identical newly accepted response cannot inherit or access the prior worksheet
+  ---
+  duration_ms: 0.5445
+  type: 'test'
+  ...
+# Subtest: source provenance cannot be relabeled while borrowing the original source objects
+ok 135 - source provenance cannot be relabeled while borrowing the original source objects
+  ---
+  duration_ms: 0.2972
+  type: 'test'
+  ...
+# Subtest: an event still carrying the old date cannot update the newly scheduled visit
+ok 136 - an event still carrying the old date cannot update the newly scheduled visit
+  ---
+  duration_ms: 0.475
+  type: 'test'
+  ...
+# Subtest: the printable export carries exact source, dates and labeled multiline caregiver notes
+ok 137 - the printable export carries exact source, dates and labeled multiline caregiver notes
+  ---
+  duration_ms: 0.9297
+  type: 'test'
+  ...
+# Subtest: empty scheduled weeks cannot create an apparently populated call sheet
+ok 138 - empty scheduled weeks cannot create an apparently populated call sheet
+  ---
+  duration_ms: 0.5052
+  type: 'test'
+  ...
+# Subtest: unknown fields, status values and oversized notes do not modify a retained note
+ok 139 - unknown fields, status values and oversized notes do not modify a retained note
+  ---
+  duration_ms: 0.8327
+  type: 'test'
+  ...
+# Subtest: a reopened source retains its filename, age and unchanged-check label in the call sheet
+ok 140 - a reopened source retains its filename, age and unchanged-check label in the call sheet
+  ---
+  duration_ms: 0.4941
+  type: 'test'
+  ...
+# Subtest: editable questions remain literal, occurrence/date-bound text alongside unchanged source checks
+ok 141 - editable questions remain literal, occurrence/date-bound text alongside unchanged source checks
+  ---
+  duration_ms: 1.4581
+  type: 'test'
+  ...
+# Subtest: revising questions retains the earlier reply with its actual question context and a follow-up hold
+ok 142 - revising questions retains the earlier reply with its actual question context and a follow-up hold
+  ---
+  duration_ms: 1.5955
+  type: 'test'
+  ...
+# Subtest: unchanged questions preserve status; returning to the earlier questions removes only the mismatch
+ok 143 - unchanged questions preserve status; returning to the earlier questions removes only the mismatch
+  ---
+  duration_ms: 0.6769
+  type: 'test'
+  ...
+# Subtest: companion restores all exact records across reopening, omitted visits and other dates
+ok 144 - companion restores all exact records across reopening, omitted visits and other dates
+  ---
+  duration_ms: 11.7877
+  type: 'test'
+  ...
+# Subtest: same venue, day and visible name keep their separate original occurrence identities
+ok 145 - same venue, day and visible name keep their separate original occurrence identities
+  ---
+  duration_ms: 7.8703
+  type: 'test'
+  ...
+# Subtest: late invalid or duplicate records cannot partially replace current notes
+ok 146 - late invalid or duplicate records cannot partially replace current notes
+  ---
+  duration_ms: 3.5616
+  type: 'test'
+  ...
+# Subtest: unsupported field types and inconsistent reply history are refused literally
+ok 147 - unsupported field types and inconsistent reply history are refused literally
+  ---
+  duration_ms: 10.06
+  type: 'test'
+  ...
+# Subtest: full origin equality accepts reordered JSON keys but refuses another request or response
+ok 148 - full origin equality accepts reordered JSON keys but refuses another request or response
+  ---
+  duration_ms: 5.3018
+  type: 'test'
+  ...
+# Subtest: bounded v1 file admission and explicit empty replacement preserve the original week codec
+ok 149 - bounded v1 file admission and explicit empty replacement preserve the original week codec
+  ---
+  duration_ms: 7.6346
+  type: 'test'
+  ...
+# Subtest: source-bound model guard and exact existing field limits remain in the new file boundary
+ok 150 - source-bound model guard and exact existing field limits remain in the new file boundary
+  ---
+  duration_ms: 2.2614
+  type: 'test'
+  ...
+1..150
+# tests 150
+# suites 0
+# pass 150
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2500.4637

@@ -1,0 +1,28 @@
+{
+  "start": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Process started with PID 47032 (shell: powershell.exe)\nInitial output:\n{\"at\":\"2026-10-08T21:53:10.265Z\",\"node\":\"v24.21.0\",\"sourceBefore\":\"75cea7fc77fc52818cd354cd561b3eaa8114f1d9\",\"command\":[\"C:\\\\Users\\\\minec\\\\AppData\\\\Local\\\\Hamon\\\\node\\\\node-v24.21.0-win-x64\\\\node.exe\",\"--test\",\"--test-reporter=tap\",\"tests/calendar-week.test.cjs\",\"tests/calendar.test.cjs\",\"tests/plan-request.test.cjs\",\"tests/test_saved_week_notes_to_html.mjs\",\"tests/test_saved_week_to_html.mjs\",\"tests/test_visit_record.mjs\",\"tests/test_visit_record_csv.mjs\",\"tests/test_visit_record_to_csv.mjs\",\"tests/test_week_change_brief.mjs\",\"tests/test_week_compare.mjs\",\"tests/test_week_contact_report.mjs\",\"tests/test_week_file.mjs\",\"tests/test_week_plan.mjs\",\"tests/test_week_report.mjs\",\"tests/venue_followup.test.mjs\",\"tests/venue_note_file.test.mjs\"],\"exit\":0,\"signal\":null,\"error\":null,\"elapsedMs\":2605,\"tests\":150,\"pass\":150,\"fail\":0,\"allSourceClosureBytesUnchanged\":true,\"stdoutSha256\":\"0bacfb994c430d59182b8483a80e7e47ead3f203c4ba4de96aa0d0ff5fcbf513\",\"stderrSha256\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"scope\":\"Maintained Node mjs/cjs suite includes newly integrated visit-record CSV cases and exact accepted note-handoff cases; not a Python/full hosted CI claim.\"}\n"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: DESKTOP-LA7CMTA (42ad330c-bb9a-4d2f-bcb4-6efeb4c6583e)]"
+      }
+    ],
+    "isError": false
+  },
+  "firstExitRead": {
+    "content": [
+      {
+        "type": "text",
+        "text": "[Reading 2 new lines (total: 2 lines)]\n\n{\"at\":\"2026-10-08T21:53:10.265Z\",\"node\":\"v24.21.0\",\"sourceBefore\":\"75cea7fc77fc52818cd354cd561b3eaa8114f1d9\",\"command\":[\"C:\\\\Users\\\\minec\\\\AppData\\\\Local\\\\Hamon\\\\node\\\\node-v24.21.0-win-x64\\\\node.exe\",\"--test\",\"--test-reporter=tap\",\"tests/calendar-week.test.cjs\",\"tests/calendar.test.cjs\",\"tests/plan-request.test.cjs\",\"tests/test_saved_week_notes_to_html.mjs\",\"tests/test_saved_week_to_html.mjs\",\"tests/test_visit_record.mjs\",\"tests/test_visit_record_csv.mjs\",\"tests/test_visit_record_to_csv.mjs\",\"tests/test_week_change_brief.mjs\",\"tests/test_week_compare.mjs\",\"tests/test_week_contact_report.mjs\",\"tests/test_week_file.mjs\",\"tests/test_week_plan.mjs\",\"tests/test_week_report.mjs\",\"tests/venue_followup.test.mjs\",\"tests/venue_note_file.test.mjs\"],\"exit\":0,\"signal\":null,\"error\":null,\"elapsedMs\":2605,\"tests\":150,\"pass\":150,\"fail\":0,\"allSourceClosureBytesUnchanged\":true,\"stdoutSha256\":\"0bacfb994c430d59182b8483a80e7e47ead3f203c4ba4de96aa0d0ff5fcbf513\",\"stderrSha256\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"scope\":\"Maintained Node mjs/cjs suite includes newly integrated visit-record CSV cases and exact accepted note-handoff cases; not a Python/full hosted CI claim.\"}\n\n✅ Process completed with exit code 0 (runtime: 2.92s)"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: DESKTOP-LA7CMTA (42ad330c-bb9a-4d2f-bcb4-6efeb4c6583e)]"
+      }
+    ],
+    "isError": false
+  }
+}

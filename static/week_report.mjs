@@ -1,6 +1,8 @@
 /** A read-only, script-free handoff from the existing saved-week format. */
 import { readWeekFile } from "./week_file.mjs";
 import { weekRows, offWeekPicks } from "./week_plan.mjs";
+import { prepareWeekContactReport } from "./week_contact_report.mjs";
+import { CONTACT_STATES } from "./venue_followup.mjs";
 
 function escapeText(value) {
   const text = String(value);
@@ -53,7 +55,41 @@ function list(values, emptyText) {
     : '<p class="empty">' + escapeText(emptyText) + "</p>";
 }
 
-function pickHtml({ key, originalDay, pick }) {
+function contactHtml(entry) {
+  const { note, questionsChangedAfterReply } = entry;
+  return '<section class="contact-note" data-contact-key="' + escapeText(entry.key) +
+    '" data-contact-date="' + escapeText(entry.date) + '">' +
+    "<h5>Venue contact · " + escapeText(entry.date) + "</h5>" +
+    "<p>" + (entry.savedRecord ? "Saved caregiver record." : "No saved caregiver record for this occurrence and date. Suggested questions and default contact state follow.") + "</p>" +
+    "<dl><dt>Caregiver contact status</dt><dd>" + escapeText(CONTACT_STATES[note.status]) + "</dd>" +
+    "<dt>Current questions" + (note.question === null ? " (suggested)" : " (caregiver-entered)") + "</dt><dd>" + literal(entry.questionText) + "</dd>" +
+    (questionsChangedAfterReply ? "<dt>Questions for the earlier reply</dt><dd>" + literal(note.replyQuestions) + "</dd>" : "") +
+    "<dt>" + (questionsChangedAfterReply ? "Earlier reply / notes (previous questions)" : "Venue reply / caregiver notes") + "</dt><dd>" +
+    (note.reply ? literal(note.reply) : "No reply details entered.") + "</dd>" +
+    "<dt>Next step</dt><dd>" + (note.nextStep ? literal(note.nextStep) : "No next step recorded.") + "</dd></dl>" +
+    (questionsChangedAfterReply ? '<p class="notice">Questions changed after these notes were entered. Follow up on the revised questions; the earlier reply does not answer them.</p>' : "") +
+    "</section>";
+}
+
+function companionHeader(contact) {
+  return '<section class="source-section" aria-labelledby="contact-source-heading"><h2 id="contact-source-heading">Saved venue-note companion</h2>' +
+    "<p>" + literal(contact.sourceName) + "</p><dl><dt>Companion saved timestamp</dt><dd>" + escapeText(contact.savedAt) + "</dd></dl>" +
+    "<p>" + contact.records + " saved records · " + contact.matchedRecords + " match displayed visits · " + contact.retainedRecords + " retained outside this arrangement.</p>" +
+    "<p>Caregiver-entered planning information. A recorded reply is not a safety check, reservation or confirmation by TasteTable. Notes apply only to the original occurrence and exact date shown.</p>" +
+    "<p class=\"muted\">The timestamp and filename are copied, unauthenticated metadata. The fingerprint identifies the selected bytes; it does not authenticate a venue or its reply.</p>" +
+    (contact.sourceSha256 ? '<p>Venue notes SHA-256: <span class="source-id">' + contact.sourceSha256 + "</span></p>" : "") + "</section>";
+}
+
+function retainedHtml(contact) {
+  return '<section class="source-section" aria-labelledby="retained-contact-heading"><h2 id="retained-contact-heading">Retained notes outside this arrangement</h2>' +
+    "<p>These saved records are not notes for a current displayed visit. Their own original occurrence and recorded date are preserved; no visit is added to the arrangement.</p>" +
+    (contact.retained.length ? contact.retained.map((entry) => '<article class="pick retained-contact"><h3>' +
+      literal(entry.pick.name) + " · " + escapeText(entry.date) + "</h3><p>Original occurrence " + escapeText(entry.key) +
+      " · Qloo entity " + literal(entry.pick.entity_id, "source-id") + "</p><p>" + escapeText(entry.retainedReason) + "</p>" +
+      contactHtml(entry) + "</article>").join("") : '<p class="empty">No saved records are outside this arrangement.</p>') + "</section>";
+}
+
+function pickHtml({ key, originalDay, pick }, contact = null) {
   return '<article class="pick" data-occurrence="' + escapeText(key) + '">' +
     "<h4>" + literal(pick.name) + "</h4>" +
     '<p class="meta">' + escapeText(pick.kind === "outing" ? "Cultural outing" : "Restaurant") +
@@ -62,7 +98,7 @@ function pickHtml({ key, originalDay, pick }) {
     "<dl><dt>Original Qloo ID</dt><dd>" + literal(pick.entity_id, "source-id") + "</dd>" +
     "<dt>Original affinity</dt><dd>" + (pick.affinity == null ? "Not recorded" : escapeText(pick.affinity)) + "</dd></dl>" +
     (pick.fallback === true ? '<p class="meta">Original search was widened.</p>' : "") +
-    '<p class="explanation literal">' + escapeText(pick.why) + "</p></article>";
+    '<p class="explanation literal">' + escapeText(pick.why) + "</p>" + (contact ? contactHtml(contact) : "") + "</article>";
 }
 
 function sourceLabel(mode) {
@@ -84,13 +120,15 @@ function sourceLabel(mode) {
  * Read and validate through the canonical v1 codec. Every arrangement is
  * reconstructed by that codec; no serialized derived picks are accepted here.
  */
-export function renderSavedWeekReport(text, { sourceName = "Saved week", sourceSha256 = null } = {}) {
+export function renderSavedWeekReport(text, { sourceName = "Saved week", sourceSha256 = null, venueNotes = null } = {}) {
   if (typeof sourceName !== "string") throw new TypeError("The source name must be text.");
   if (sourceSha256 !== null && (typeof sourceSha256 !== "string" || !/^[0-9a-f]{64}$/.test(sourceSha256))) {
     throw new TypeError("The source fingerprint must be a lowercase SHA-256 value.");
   }
   const saved = readWeekFile(text);
   const { state, inputs, response, receivedAt, savedAt } = saved;
+  const contact = venueNotes === null ? null : prepareWeekContactReport(saved, venueNotes);
+  const contactByVisit = new Map((contact?.scheduled ?? []).map((entry) => [JSON.stringify([entry.key, entry.date]), entry]));
   const rows = weekRows(state);
   const omitted = offWeekPicks(state);
   const scheduled = state.picks.length - omitted.length;
@@ -113,7 +151,7 @@ export function renderSavedWeekReport(text, { sourceName = "Saved week", sourceS
     '<section class="notice" aria-label="About this saved handoff">',
     "<p><strong>Saved planning suggestions; original checks have not been rerun.</strong> " + source.detail + "</p>",
     "<p>Dates are planning choices, not reservations or verified availability. Food and accessibility checks are heuristics over tags and keywords, not medical or dietary advice. Confirm needs and current details with the venue and care team.</p>",
-    "<p>Visit-only venue questions and caregiver reply notes are not stored in the saved-week v1 file and are not included here.</p>",
+    contact ? "<p>Venue questions and caregiver reply notes below come from the separately selected, identity-matched companion file. They are not stored in the saved-week v1 file.</p>" : "<p>Visit-only venue questions and caregiver reply notes are not stored in the saved-week v1 file and are not included here.</p>",
     "</section>",
     '<section class="source-section" aria-labelledby="source-heading"><h2 id="source-heading">Saved source and requested inputs</h2>',
     "<dl><dt>Original received timestamp</dt><dd>" + escapeText(receivedAt) + "</dd>",
@@ -126,13 +164,15 @@ export function renderSavedWeekReport(text, { sourceName = "Saved week", sourceS
     "<h3>Films</h3>" + list(inputs.films, "None recorded."),
     sourceSha256 ? "<p>Source file SHA-256: <span class=\"source-id\">" + sourceSha256 + "</span></p>" : "",
     "</section>",
+    ...(contact ? [companionHeader(contact)] : []),
     '<section aria-labelledby="arrangement-heading"><h2 id="arrangement-heading">Arranged week</h2>',
     ...rows.map((row) => '<section class="day"><h3>' + escapeText(row.day) + " · " + escapeText(row.date) +
-      "</h3>" + (row.picks.length ? row.picks.map(pickHtml).join("") : '<p class="empty">No visit scheduled.</p>') + "</section>"),
+      "</h3>" + (row.picks.length ? row.picks.map((item) => pickHtml(item, contactByVisit.get(JSON.stringify([item.key, row.date])))).join("") : '<p class="empty">No visit scheduled.</p>') + "</section>"),
     "</section>",
     '<section class="omitted" aria-labelledby="omitted-heading"><h2 id="omitted-heading">Kept off this week</h2>',
-    omitted.length ? omitted.map(pickHtml).join("") : '<p class="empty">No suggestions are kept off the week.</p>',
+    omitted.length ? omitted.map((item) => pickHtml(item)).join("") : '<p class="empty">No suggestions are kept off the week.</p>',
     "</section>",
+    ...(contact ? [retainedHtml(contact)] : []),
     '<section class="source-section" aria-labelledby="notes-heading"><h2 id="notes-heading">Original plan notes</h2>',
     list(response.plan.notes, "No original plan notes were recorded."),
     "</section>",
@@ -155,5 +195,7 @@ export function renderSavedWeekReport(text, { sourceName = "Saved week", sourceS
     picks: state.picks.length,
     scheduled,
     omitted: omitted.length,
+    ...(contact ? { venueNotes: { savedAt: contact.savedAt, records: contact.records,
+      matchedRecords: contact.matchedRecords, retainedRecords: contact.retainedRecords } } : {}),
   };
 }

@@ -132,3 +132,28 @@ node --test tests/test_week_report.mjs tests/test_saved_week_to_html.mjs
 ```
 
 [Windows receiving and exact provenance](receiving/saved-week-html-0378a7b6/README.md) records the original missing consumer, actual native producer/converter, file-URL browser/print behavior and retained failed candidate.
+
+## Include a saved venue-note companion
+
+To carry caregiver questions and replies with the arranged week, explicitly select the separate **Save venue notes** JSON from the existing worksheet:
+
+```sh
+node tools/saved_week_to_html.mjs --input my-week.json --venue-notes my-venue-notes.json --output caregiver-handoff-with-notes.html
+```
+
+This extends the default saved-week-only command above. Omitting `--venue-notes` preserves that command's original HTML and receipt. The optional companion must be a completed regular, strict UTF-8 file of at most **2 MiB**; an initial BOM is accepted. Its complete original source must match the week, including original response, requested inputs, received timestamp and calendar identity. A file for another accepted plan is refused before output.
+
+The handoff attaches notes only to the same original suggestion occurrence and exact scheduled date. Repeated visits to the same venue stay separate. Suggested questions and default contact states without a saved record are labelled explicitly. If questions changed after a reply, both the current questions and the questions associated with that earlier reply remain visible, with a follow-up notice. Contact status is copied from the caregiver record; the exporter does not infer a new status.
+
+Every other saved record appears in **Retained notes outside this arrangement**, in its companion order. These include omitted occurrences and notes for different dates or weeks. They retain their own occurrence and date and do not add or reschedule a visit. An empty companion is explicit. The metadata shows the selected companion filename, saved timestamp, exact-byte fingerprint and matched/retained record counts. Copied timestamps, labels and fingerprints do not authenticate a venue or its reply.
+
+The unchanged create-only publisher still refuses an occupied output, including aliases of either input. Both source files remain unchanged. Companion schema, identity, UTF-8, size or displayed-text refusal creates no accepted output. Current and historical text follow the same carriage-return preservation and NUL/unpaired-surrogate refusal as the original report. This is caregiver-entered planning information, not a safety check, reservation or medical recommendation. No contact is made with a venue, care team or provider.
+
+Additional maintained receiving:
+
+```sh
+node --test tests/test_week_contact_report.mjs tests/test_saved_week_notes_to_html.mjs
+node tools/check_week_contact_report_browser.mjs "/path/to/chrome" "/new/receiving-directory"
+```
+
+The optional browser receiver uses installed Chrome and Node 22+ with built-in WebSocket, creates its own profile, invokes the actual CLI, opens the physical HTML offline, checks exact current/historical notes, phone layout and real print output, and retains the source hashes and artifacts. It does not use a shared browser profile.

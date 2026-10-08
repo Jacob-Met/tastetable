@@ -1,0 +1,124 @@
+{
+  "format": "hamon.independent-receiving.v1",
+  "at": "2026-10-08T21:34:23.652Z",
+  "worker": "hamon-ultra-20261008-c77045b4-lead",
+  "project": "Jacob-Met/tastetable",
+  "issue": 54,
+  "verdict": "accepted exact author source for optional HTML companion; public composition and hosted gates remain author integration work",
+  "authorCommit": "3f56aced54d31c8df5189d39440adea84910902a",
+  "publicOriginal": "328df51af830e91f304417a66d74f43d94ae0c02",
+  "contractCommit": "53a7a5812a3498bf1da8fbe57740d888045cac93",
+  "methodFreezeCommit": "4c824765faa6416826e5d95eb2b13bfa7975a990",
+  "methodFreezeTree": "c2333a4f5eda8d4a842cf48cc14c8a401f2957c2",
+  "candidateIntakeCommit": "c54977d3c2978126d5b071f3c5a708c75ecd12d6",
+  "methods": {
+    "cli": "6f5fa5b831cec5897b407a1d9c44afa5c591650db3f75b843be376b606df1207",
+    "browser": "a9eaf3823d387fa09d7fcd9c5b142c9c64b7bb67ff7f53b954c4b9b4ed9c60de"
+  },
+  "baseline": {
+    "cli": {
+      "pass": 3,
+      "fail": 0
+    },
+    "browser": {
+      "pass": 2,
+      "fail": 0,
+      "observedWrapperExit": 0
+    }
+  },
+  "candidate": {
+    "cli": {
+      "pass": 27,
+      "fail": 0,
+      "observedWrapperExit": 0
+    },
+    "browser": {
+      "pass": 7,
+      "fail": 0,
+      "observedWrapperExit": null,
+      "wrapperRead": "later process no longer available; native receipt and matching start summary retained"
+    }
+  },
+  "mutation": {
+    "receiverExit": 1,
+    "pass": 22,
+    "fail": 5,
+    "failedGroups": [
+      "physical optional report with-notes",
+      "physical optional report with-bom",
+      "physical optional report empty-week",
+      "refuse complete companion nul-next-step.json",
+      "refuse complete companion surrogate-next-step.json"
+    ],
+    "orchestrationHelper": "failed an over-specific 3-failure prediction; raw one-run result retained; no replay",
+    "canonicalUnchanged": true,
+    "methodUnchanged": true
+  },
+  "visualReview": {
+    "files": [
+      "browser-candidate/desktop.png",
+      "browser-candidate/phone.png",
+      "browser-candidate/print.png"
+    ],
+    "phoneWidth": 390,
+    "printCssViewed": true,
+    "separatePaginatedPdfReview": false
+  },
+  "physicalPdf": {
+    "bytes": 147673,
+    "sha256": "b4dc1b3a58b35b24fc9fb35a8aed1e67773a622bfcd80cd33f4b09b267edf570"
+  },
+  "candidateSource": [
+    {
+      "path": "static\\venue_followup.mjs",
+      "bytes": 18444,
+      "sha256": "61bb9cf497b5a37a32afd1b23729e128aed2631cf2c570a1485ca4f0ffbe632c"
+    },
+    {
+      "path": "static\\venue_note_file.mjs",
+      "bytes": 10435,
+      "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1"
+    },
+    {
+      "path": "static\\week_contact_report.mjs",
+      "bytes": 2277,
+      "sha256": "5ded016e4eab391a562cb6735ea1a70fc267c29f36a3b17fbc263e71a6310448"
+    },
+    {
+      "path": "static\\week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+    },
+    {
+      "path": "static\\week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+    },
+    {
+      "path": "static\\week_report.mjs",
+      "bytes": 15054,
+      "sha256": "1525022981dce054283a1a3b5de7592736125b2fb5ee5f57f339eebfbbc14f21"
+    },
+    {
+      "path": "tools\\saved_week_to_html.mjs",
+      "bytes": 6759,
+      "sha256": "ca5e4e64753c4a93ce43a493cf9c59f41cddf71687c7eeb702fcfa3a76148acd"
+    }
+  ],
+  "fixtureCount": 20,
+  "notes": "ASSESSMENT.md and RDC-READ-NOTE.md retain scope, failures and limitations",
+  "custody": {
+    "head": "8bbae8db1509e2b9b968ee9702f246a578ba9f8f",
+    "tree": "7fdc2fea417bbdbdc9bd3d56bca0d40389218f58",
+    "files": 204,
+    "bundle": {
+      "name": "receiver.bundle",
+      "bytes": 313620,
+      "sha256": "5d4fecc2d4ac6c9ce7214b8e7a1acc6246b4cdb5c66d7579b54a18469d772524",
+      "gitBlob": "c740a4710654c43f65f4adc9db8bedb5158a3215",
+      "verificationExit": 0,
+      "verificationStdout": "The bundle contains these 2 refs:\n8bbae8db1509e2b9b968ee9702f246a578ba9f8f refs/heads/receiving\n8bbae8db1509e2b9b968ee9702f246a578ba9f8f HEAD\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1\n",
+      "verificationStderr": "C:/Users/minec/hamon-tastetable-notes-receiving-c77045b4/publication/receiver.bundle is okay\n"
+    }
+  }
+}
