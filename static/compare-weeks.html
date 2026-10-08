@@ -35,6 +35,12 @@
     </section>
   </div>
   <p id="comparisonStatus" role="status" aria-live="polite">Choose both saved weeks to compare them.</p>
+  <div class="brief-actions">
+    <button id="briefDownload" type="button" disabled aria-describedby="briefHelp briefStatus">Download change brief (.txt)</button>
+    <p id="briefHelp">Keep a copy of moved, newly scheduled and omitted visits for another caregiver.
+      A brief is available when both loaded files have a matching saved source. Unchanged visits are counted.</p>
+    <p id="briefStatus" role="status" aria-live="polite"></p>
+  </div>
   <section id="comparison" class="card" aria-labelledby="comparisonTitle" hidden>
     <h2 id="comparisonTitle">Arrangement changes</h2>
     <div id="comparisonBody"></div>

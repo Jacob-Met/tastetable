@@ -1,0 +1,76 @@
+{
+  "reviewer": "chatgpt-0378a7b6b7c2/la7",
+  "phase": "Derived from both original saved-week inputs before viewing brief output or production source",
+  "calendar_rule": "Monday 2026-12-28 through Sunday 2027-01-03; UTC civil-day arithmetic only",
+  "original_response_equal": true,
+  "input_parameters_equal": true,
+  "source": "mock:true in both original responses",
+  "counts": {
+    "moved": 1,
+    "scheduled": 1,
+    "omitted": 1,
+    "unchanged": 2
+  },
+  "rows": [
+    {
+      "id": "pick-0",
+      "name": "Casa Habana Kitchen",
+      "entity_id": "FIX-P-01",
+      "kind": "restaurant",
+      "before_day": "Monday",
+      "before_date": "2026-12-28",
+      "after_day": "Tuesday",
+      "after_date": "2026-12-29",
+      "status": "moved"
+    },
+    {
+      "id": "pick-1",
+      "name": "Abuela's Table",
+      "entity_id": "FIX-P-03",
+      "kind": "restaurant",
+      "before_day": "Wednesday",
+      "before_date": "2026-12-30",
+      "after_day": null,
+      "after_date": null,
+      "status": "omitted"
+    },
+    {
+      "id": "pick-2",
+      "name": "Blue Plate Diner",
+      "entity_id": "FIX-P-07",
+      "kind": "restaurant",
+      "before_day": null,
+      "before_date": null,
+      "after_day": "Sunday",
+      "after_date": "2027-01-03",
+      "status": "scheduled"
+    },
+    {
+      "id": "pick-3",
+      "name": "Trattoria Nonna Lucia",
+      "entity_id": "FIX-P-11",
+      "kind": "restaurant",
+      "before_day": "Sunday",
+      "before_date": "2027-01-03",
+      "after_day": "Sunday",
+      "after_date": "2027-01-03",
+      "status": "unchanged"
+    },
+    {
+      "id": "pick-4",
+      "name": "Arroyo Museum of Latin Music (fictional)",
+      "entity_id": "FIX-V-03",
+      "kind": "outing",
+      "before_day": "Saturday",
+      "before_date": "2027-01-02",
+      "after_day": "Saturday",
+      "after_date": "2027-01-02",
+      "status": "unchanged"
+    }
+  ],
+  "expectedBoundaries": [
+    "Authored mock recommendations, not live provider verification",
+    "A/B file positions define before/after; both receipt/saved timestamps are identical",
+    "No bookings, medical suitability, rerun checks, authenticated history or venue note persistence inferred"
+  ]
+}

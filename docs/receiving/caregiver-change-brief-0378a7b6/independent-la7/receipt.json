@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-08T17:50:36.192Z",
+  "reviewer": "chatgpt-0378a7b6b7c2/la7",
+  "kind": "Independent exact-input/physical-download consumer review; source and browser execution reviewed separately by their owners",
+  "input_sha256": {
+    "earlier": "707bc803293f046213703ae6d4053e0adc95ce37f22c46d585d8a4ac8d9e7828",
+    "revised": "d2eb4c1982a68a94ae71450f220d71ab3d3bdb34e99d821bd1ebb9d3b1c93cf1"
+  },
+  "output_sha256": "2a602138cd3d5d181b29938371a6d974479d91c433ad447c0f94f7fe0dfde1e2",
+  "oracle_sha256": "2f62f7a68074b1392929f3f495ea93300afbe800108f3bc5dc2826bae42b978a",
+  "driver_sha256": "53ca393c0a21acf16c7ae7fd350654437b6ab11e7d0b9dbc3c8a248ca5258053",
+  "counts": {
+    "moved": 1,
+    "scheduled": 1,
+    "omitted": 1,
+    "unchanged": 2
+  },
+  "checked_changed_occurrences": 3,
+  "checked_literal_explanations": 3,
+  "passed": true,
+  "limitations": "This receives one authored native mock-plan input pair and its actual downloaded brief. No additional browser, malformed-input, repeated-venue or full-source acceptance is claimed."
+}

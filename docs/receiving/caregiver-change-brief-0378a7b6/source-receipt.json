@@ -1,0 +1,36 @@
+{
+  "base": "2b347cee4ff4e2b806362730a8520a3360b45f5a",
+  "checkedAt": "2026-10-08T17:49:57.260Z",
+  "files": {
+    "static/week_change_brief.mjs": {
+      "bytes": 5163,
+      "sha256": "689fa56135c4b1ba42a15c676af677615e45ddfbdd1af5e991ea691eeff7098a",
+      "gitBlob": "18e637273fb20b4ab1703db450fa16f1bcd39cf1"
+    },
+    "static/week_compare_ui.mjs": {
+      "bytes": 9037,
+      "sha256": "2ae33874c70d1d9962c69fb53a373e6a9544a0eefe0d95e81289ca7598aaecd3",
+      "gitBlob": "2a185f0b850f0f35aaead19aeb06bc38ca4d1f1f"
+    },
+    "static/compare-weeks.html": {
+      "bytes": 3055,
+      "sha256": "ff74de00afff8fbe7abe675c502962692eeb1eba544c5e0c0e2742810f0a1288",
+      "gitBlob": "03c1a353915dc3ccb8a215aac957d9cf5cfff78c"
+    },
+    "tests/test_week_change_brief.mjs": {
+      "bytes": 7271,
+      "sha256": "cc4b9649c31ac5eb22efbaecae8b4e18296d25342b18ab2da909601a9136fab5",
+      "gitBlob": "93f2e3dad4ee0ce47c86507057f6ed61785c77b2"
+    },
+    "tools/check_week_change_brief_browser.mjs": {
+      "bytes": 16369,
+      "sha256": "5ae07ecd9e34ebc3bdc48222cab4f24d7d350986818a20c73a57c94371f867dc",
+      "gitBlob": "7ef0d0b160396909a14e8579fa6e0e2a0afaefd7"
+    },
+    "README.md": {
+      "bytes": 17810,
+      "sha256": "108aa0a474cd19d8b56edd623871e132043cbc6988194b2b3d3c3ebbfa89f3ca",
+      "gitBlob": "ef24a2f094ba5819caacb4ceaa59f15fd008bace"
+    }
+  }
+}
