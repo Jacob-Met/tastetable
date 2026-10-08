@@ -1,6 +1,7 @@
 import { readWeekFile } from "./week_file.mjs";
 import { calendarWeek } from "./week_plan.mjs";
 import { compareSavedWeeks } from "./week_compare.mjs";
+import { makeWeekChangeBrief } from "./week_change_brief.mjs";
 
 const MAX_BYTES = 2 * 1024 * 1024;
 const slots = Object.fromEntries(["before", "after"].map((key) => [key, { generation: 0, pending: false, value: null }]));
@@ -71,6 +72,8 @@ function separateList(title, visits) {
 function renderComparison() {
   const output = byId("comparison"), body = byId("comparisonBody"), status = byId("comparisonStatus");
   body.replaceChildren(); output.hidden = true;
+  byId("briefDownload").disabled = true;
+  byId("briefStatus").textContent = "";
   if (Object.values(slots).some((s) => s.pending)) { status.textContent = "Reading a selected file. Comparison will return when the read finishes."; return; }
   if (!slots.before.value || !slots.after.value) { status.textContent = "Choose both saved weeks to compare them."; return; }
   const before = slots.before.value.snapshot, after = slots.after.value.snapshot;
@@ -83,6 +86,7 @@ function renderComparison() {
     grid.append(separateList("Earlier file", result.left), separateList("Revised file", result.right));
     body.append(grid); return;
   }
+  byId("briefDownload").disabled = false;
   byId("comparisonTitle").textContent = "Arrangement changes";
   status.textContent = "Matching saved source and identity. Visits are compared by their original occurrence, including repeated venues.";
   const c = result.counts;
@@ -136,3 +140,24 @@ for (const key of Object.keys(slots)) {
     renderSource(key); renderComparison();
   });
 }
+
+byId("briefDownload").addEventListener("click", () => {
+  let url, link;
+  try {
+    if (Object.values(slots).some(slot => slot.pending) || !slots.before.value || !slots.after.value) {
+      throw new Error("Wait until both chosen files are loaded before preparing a change brief.");
+    }
+    const brief = makeWeekChangeBrief(slots.before.value, slots.after.value);
+    url = URL.createObjectURL(new Blob([brief.text], { type: "text/plain;charset=utf-8" }));
+    link = document.createElement("a");
+    link.href = url; link.download = brief.filename;
+    document.body.append(link); link.click();
+    byId("briefStatus").textContent = "Change brief prepared from " + slots.before.value.name
+      + " and " + slots.after.value.name + ". Later edits do not update this copy.";
+  } catch (error) {
+    byId("briefStatus").textContent = "Change brief unavailable: " + error.message;
+  } finally {
+    link?.remove();
+    if (url) setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+});

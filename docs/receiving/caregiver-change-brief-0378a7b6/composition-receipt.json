@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-10-08T17:55:05.154Z",
+  "base": "2b347cee4ff4e2b806362730a8520a3360b45f5a",
+  "baseLeaves": 579,
+  "preservedUnownedLeaves": 576,
+  "allowedEditedBasePaths": [
+    "README.md",
+    "static/compare-weeks.html",
+    "static/week_compare_ui.mjs"
+  ],
+  "allUnownedModesTypesAndBlobsPreserved": true,
+  "allEightBrowserInputsStillExact": true,
+  "sourceReview": "root-source-review.md",
+  "artifactReview": "independent-la7/receipt.json",
+  "publication": "Ordinary GitHub publication pending shared primary rate reset; no alternate route used."
+}

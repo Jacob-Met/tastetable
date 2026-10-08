@@ -265,3 +265,24 @@ the same way with the included `Dockerfile`.
 ## License
 
 MIT © 2026 Jacob Scott-Metoyer. See [LICENSE](LICENSE).
+
+## Keep a caregiver revision brief
+
+On **Compare saved weeks**, load the earlier and revised arrangements, then choose
+**Download change brief (.txt)**. Matching saved sources produce a concise handoff
+with exact dates for moved, newly scheduled and omitted original pick occurrences.
+Repeated venues stay distinct. The brief counts unchanged visits, including those
+still off the week, and labels both filenames, selected weeks and saved/source
+timestamps. These roles follow your file choices; timestamps do not choose the
+current plan.
+
+The brief includes the original explanations for changed picks and explicit
+fictional/live/unknown source labels. It is a copy of the displayed comparison,
+not the complete revised week. It does not reopen a plan, contact a venue, rerun
+checks, carry venue worksheet notes, or update or cancel calendar imports.
+Keep the revised saved-week file for the complete arrangement.
+
+A missing, still-reading or different-source pair cannot produce a change brief.
+A refused replacement keeps the previously loaded file visible, as before; the
+next brief names the files that remain loaded. File-supplied text is quoted in
+the plain-text download so embedded line breaks cannot become report headings.
