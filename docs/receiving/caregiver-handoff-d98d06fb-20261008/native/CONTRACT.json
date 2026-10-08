@@ -1,0 +1,56 @@
+{
+  "schema": "tastetable.caregiver-handoff-receiving-contract.v1",
+  "owner": "chatgpt-d98d06fbfc35/production_recovery",
+  "recoveryContinuation": "production_receiving_2030",
+  "claim": "https://github.com/Jacob-Met/tastetable/issues/55",
+  "source": {
+    "repository": "Jacob-Met/tastetable",
+    "commit": "328df51af830e91f304417a66d74f43d94ae0c02",
+    "tree": "df0251092f77d96169daa097abaec409ecabe6ba"
+  },
+  "priorState": "Approved scope recovered; no earlier candidate or TasteTable browser execution recovered. This is a newly identified native receiving attempt, not a reconstruction of prior results.",
+  "actions": "No Actions dispatch, rerun, PR or main write. Existing current workflows admit main push/pull_request only. Source custody may use a separate non-triggering branch after final review.",
+  "outcome": "Save and explicitly reopen one editable file containing the arranged week and its identity-matched venue notes.",
+  "envelope": {
+    "format": "tastetable.caregiver-handoff.v1",
+    "fields": [
+      "format",
+      "savedAt",
+      "week",
+      "venueNotes"
+    ],
+    "byteLimit": 6291456,
+    "weekFormat": "tastetable.saved-week.v1",
+    "notesFormat": "tastetable.venue-notes.v1"
+  },
+  "contract": [
+    "Reuse unchanged native makeWeekFile/readWeekFile and makeVenueNoteFile/readVenueNoteFile; do not change either format.",
+    "Validate both complete sections and their original accepted-plan binding before changing displayed week, inputs, calendar or any notes.",
+    "Prepare the complete new worksheet model in isolation before explicit replacement. Empty notes replace the previous records with an empty set.",
+    "Opening and previewing are read-only to the current plan. Refused or cancelled handoffs preserve the current week, inputs and notes.",
+    "A later plan/source/date/arrangement/note edit, different file, cancellation or page departure invalidates the prior read or preview; a late completion cannot replace newer work.",
+    "Opening must work before any plan exists. Save requires a valid accepted source and displayed week date.",
+    "Restore the original inputs, arrangement, receivedAt, calendar identity, source evidence and all retained occurrence/date notes, including omitted visits and earlier reply questions.",
+    "Display filename, source, week, scheduled/omitted occurrences and full note records as literal text during review. Do not rerun source checks or label caregiver replies as verified venue facts.",
+    "Preserve current native separate week/notes workflows and adjacent Undo, availability, profile files, taste entry and portable HTML owners.",
+    "No automatic storage, provider request, venue contact, new account, clinical or deployment effect."
+  ],
+  "paths": [
+    "static/caregiver_handoff.mjs",
+    "static/app.js (narrow acceptance and lifecycle hooks)",
+    "static/venue_followup.mjs (snapshot/prepared-model and change notification hooks only)",
+    "static/index.html (additive file controls)",
+    "tests/caregiver_handoff.test.mjs",
+    "tools/check_caregiver_handoff_browser.mjs",
+    "docs/CAREGIVER_HANDOFF.md",
+    "README.md (additive pointer)",
+    "unique docs/receiving/caregiver-handoff-d98d06fb-20261008/"
+  ],
+  "receiving": [
+    "Original native source: existing week/notes model tests and actual separate-file browser save/reopen with retained original outputs; absence of combined controls is a missing-feature witness.",
+    "New model: complete roundtrip; source mismatch; malformed sections; duplicate/unknown record; invalid question history; empty notes; byte limits; inherited source/calendar and arrangement preservation; literal text.",
+    "Actual installed Chromium: physical save and chooser; preview/cancel/replace; page reload; two distinct accepted origins; stale and competing asynchronous reads; source/date/arrangement/note invalidation; invalid/malformed/UTF-8/oversized refusal; empty-note explicit clear; retry after download failure; narrow/desktop keyboard and print projection.",
+    "Freeze and rehash exact source inputs before and after native tests. Preserve all failed attempts and identify receiver corrections separately.",
+    "Independent root receiving precedes integration. CI gates remain pending while triggering Actions is held."
+  ]
+}

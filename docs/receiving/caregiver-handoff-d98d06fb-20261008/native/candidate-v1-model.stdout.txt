@@ -1,0 +1,250 @@
+TAP version 13
+# Subtest: one editable handoff preserves both native formats, original inputs and calendar identity
+ok 1 - one editable handoff preserves both native formats, original inputs and calendar identity
+  ---
+  duration_ms: 53.006068
+  type: 'test'
+  ...
+# Subtest: same named venue occurrences, omitted visits and earlier weeks keep distinct records
+ok 2 - same named venue occurrences, omitted visits and earlier weeks keep distinct records
+  ---
+  duration_ms: 18.77246
+  type: 'test'
+  ...
+# Subtest: a valid week paired with another source's notes is wholly refused
+ok 3 - a valid week paired with another source's notes is wholly refused
+  ---
+  duration_ms: 53.495913
+  type: 'test'
+  ...
+# Subtest: complete native week validation and complete late note validation remain required
+ok 4 - complete native week validation and complete late note validation remain required
+  ---
+  duration_ms: 126.26762
+  type: 'test'
+  ...
+# Subtest: the new outer version and timestamp do not admit a native section by itself
+ok 5 - the new outer version and timestamp do not admit a native section by itself
+  ---
+  duration_ms: 13.988052
+  type: 'test'
+  ...
+# Subtest: the 6 MiB UTF-8 envelope boundary retains the native 2 MiB notes boundary
+ok 6 - the 6 MiB UTF-8 envelope boundary retains the native 2 MiB notes boundary
+  ---
+  duration_ms: 553.439674
+  type: 'test'
+  ...
+# Subtest: a prepared empty handoff has an independent empty model and preserves null calendar identity
+ok 7 - a prepared empty handoff has an independent empty model and preserves null calendar identity
+  ---
+  duration_ms: 6.801378
+  type: 'test'
+  ...
+# Subtest: source labels and source-bound writer guard stay attached to the original response
+ok 8 - source labels and source-bound writer guard stay attached to the original response
+  ---
+  duration_ms: 20.592786
+  type: 'test'
+  ...
+# Subtest: native response and edited occurrences round-trip across a new state
+ok 9 - native response and edited occurrences round-trip across a new state
+  ---
+  duration_ms: 20.156997
+  type: 'test'
+  ...
+# Subtest: resaving preserves the accepted source and new local arrangement
+ok 10 - resaving preserves the accepted source and new local arrangement
+  ---
+  duration_ms: 8.701985
+  type: 'test'
+  ...
+# Subtest: occurrence keys keep repeated entity IDs distinct after reopening
+ok 11 - occurrence keys keep repeated entity IDs distinct after reopening
+  ---
+  duration_ms: 6.464596
+  type: 'test'
+  ...
+# Subtest: UTF-8 JSON with BOM or different indentation preserves source values
+ok 12 - UTF-8 JSON with BOM or different indentation preserves source values
+  ---
+  duration_ms: 7.885618
+  type: 'test'
+  ...
+# Subtest: empty arrangements and unknown source remain usable snapshots
+ok 13 - empty arrangements and unknown source remain usable snapshots
+  ---
+  duration_ms: 7.473684
+  type: 'test'
+  ...
+# Subtest: save refuses a derived week whose original evidence has changed
+ok 14 - save refuses a derived week whose original evidence has changed
+  ---
+  duration_ms: 15.507908
+  type: 'test'
+  ...
+# Subtest: malformed format, dates, timestamps and inconsistent source inputs fail
+ok 15 - malformed format, dates, timestamps and inconsistent source inputs fail
+  ---
+  duration_ms: 36.901931
+  type: 'test'
+  ...
+# Subtest: missing, additional or invalid occurrence assignments cannot silently drop picks
+ok 16 - missing, additional or invalid occurrence assignments cannot silently drop picks
+  ---
+  duration_ms: 55.475338
+  type: 'test'
+  ...
+# Subtest: saved files validate native response types before reaching HTML or late render fields
+ok 17 - saved files validate native response types before reaching HTML or late render fields
+  ---
+  duration_ms: 47.033609
+  type: 'test'
+  ...
+# Subtest: current native recovery traces retain null and list args with the checked partial plan
+ok 18 - current native recovery traces retain null and list args with the checked partial plan
+  ---
+  duration_ms: 5.092019
+  type: 'test'
+  ...
+# Subtest: questions use the native purpose and constraints; original unknown explanation survives
+ok 19 - questions use the native purpose and constraints; original unknown explanation survives
+  ---
+  duration_ms: 14.186399
+  type: 'test'
+  ...
+# Subtest: a different date starts a separate note; returning restores only that occurrence's note
+ok 20 - a different date starts a separate note; returning restores only that occurrence's note
+  ---
+  duration_ms: 5.212299
+  type: 'test'
+  ...
+# Subtest: two occurrences sharing an entity and date retain distinct caregiver notes
+ok 21 - two occurrences sharing an entity and date retain distinct caregiver notes
+  ---
+  duration_ms: 10.314172
+  type: 'test'
+  ...
+# Subtest: omitted picks have no active contact card or exported note, and restore retains its date
+ok 22 - omitted picks have no active contact card or exported note, and restore retains its date
+  ---
+  duration_ms: 6.26083
+  type: 'test'
+  ...
+# Subtest: another week has separate notes even when weekday and occurrence are unchanged
+ok 23 - another week has separate notes even when weekday and occurrence are unchanged
+  ---
+  duration_ms: 1.08805
+  type: 'test'
+  ...
+# Subtest: an identical newly accepted response cannot inherit or access the prior worksheet
+ok 24 - an identical newly accepted response cannot inherit or access the prior worksheet
+  ---
+  duration_ms: 1.352914
+  type: 'test'
+  ...
+# Subtest: source provenance cannot be relabeled while borrowing the original source objects
+ok 25 - source provenance cannot be relabeled while borrowing the original source objects
+  ---
+  duration_ms: 0.857766
+  type: 'test'
+  ...
+# Subtest: an event still carrying the old date cannot update the newly scheduled visit
+ok 26 - an event still carrying the old date cannot update the newly scheduled visit
+  ---
+  duration_ms: 3.510039
+  type: 'test'
+  ...
+# Subtest: the printable export carries exact source, dates and labeled multiline caregiver notes
+ok 27 - the printable export carries exact source, dates and labeled multiline caregiver notes
+  ---
+  duration_ms: 7.558365
+  type: 'test'
+  ...
+# Subtest: empty scheduled weeks cannot create an apparently populated call sheet
+ok 28 - empty scheduled weeks cannot create an apparently populated call sheet
+  ---
+  duration_ms: 1.977028
+  type: 'test'
+  ...
+# Subtest: unknown fields, status values and oversized notes do not modify a retained note
+ok 29 - unknown fields, status values and oversized notes do not modify a retained note
+  ---
+  duration_ms: 1.851405
+  type: 'test'
+  ...
+# Subtest: a reopened source retains its filename, age and unchanged-check label in the call sheet
+ok 30 - a reopened source retains its filename, age and unchanged-check label in the call sheet
+  ---
+  duration_ms: 1.288747
+  type: 'test'
+  ...
+# Subtest: editable questions remain literal, occurrence/date-bound text alongside unchanged source checks
+ok 31 - editable questions remain literal, occurrence/date-bound text alongside unchanged source checks
+  ---
+  duration_ms: 5.033171
+  type: 'test'
+  ...
+# Subtest: revising questions retains the earlier reply with its actual question context and a follow-up hold
+ok 32 - revising questions retains the earlier reply with its actual question context and a follow-up hold
+  ---
+  duration_ms: 2.291448
+  type: 'test'
+  ...
+# Subtest: unchanged questions preserve status; returning to the earlier questions removes only the mismatch
+ok 33 - unchanged questions preserve status; returning to the earlier questions removes only the mismatch
+  ---
+  duration_ms: 1.069474
+  type: 'test'
+  ...
+# Subtest: companion restores all exact records across reopening, omitted visits and other dates
+ok 34 - companion restores all exact records across reopening, omitted visits and other dates
+  ---
+  duration_ms: 23.23637
+  type: 'test'
+  ...
+# Subtest: same venue, day and visible name keep their separate original occurrence identities
+ok 35 - same venue, day and visible name keep their separate original occurrence identities
+  ---
+  duration_ms: 11.108702
+  type: 'test'
+  ...
+# Subtest: late invalid or duplicate records cannot partially replace current notes
+ok 36 - late invalid or duplicate records cannot partially replace current notes
+  ---
+  duration_ms: 3.253794
+  type: 'test'
+  ...
+# Subtest: unsupported field types and inconsistent reply history are refused literally
+ok 37 - unsupported field types and inconsistent reply history are refused literally
+  ---
+  duration_ms: 22.861768
+  type: 'test'
+  ...
+# Subtest: full origin equality accepts reordered JSON keys but refuses another request or response
+ok 38 - full origin equality accepts reordered JSON keys but refuses another request or response
+  ---
+  duration_ms: 39.386832
+  type: 'test'
+  ...
+# Subtest: bounded v1 file admission and explicit empty replacement preserve the original week codec
+ok 39 - bounded v1 file admission and explicit empty replacement preserve the original week codec
+  ---
+  duration_ms: 91.601944
+  type: 'test'
+  ...
+# Subtest: source-bound model guard and exact existing field limits remain in the new file boundary
+ok 40 - source-bound model guard and exact existing field limits remain in the new file boundary
+  ---
+  duration_ms: 47.310594
+  type: 'test'
+  ...
+1..40
+# tests 40
+# suites 0
+# pass 40
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1739.598604

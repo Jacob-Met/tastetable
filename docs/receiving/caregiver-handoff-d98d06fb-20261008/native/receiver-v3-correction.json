@@ -1,0 +1,11 @@
+{
+  "schema": "tastetable.caregiver-handoff-receiver-correction.v1",
+  "at": "2026-10-08T21:13:51.684520+00:00",
+  "priorSha256": "737d385d40e89b79e476e327cad9a25ca99284507ec61f4ec7a5fe70df946eec",
+  "sha256": "a5494390392a2f43fdf1450e371b68162c26d6866710217370b63e22869b01c2",
+  "bytes": 37913,
+  "revision": "v3",
+  "reason": "Static Windows handoff review found that splitting a path on slash cannot extract File.name from a native backslash path. Use the already imported node:path module basename helper. No product, model, resource reserve, startup window or acceptance assertion changed.",
+  "executionStatus": "unexecuted",
+  "productSourceChanged": false
+}

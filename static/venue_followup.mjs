@@ -158,7 +158,7 @@ export function createVenueFollowup(initial, savedSource = "") {
 }
 
 /** Own only this section; the existing app owns plan acceptance and retirement. */
-export function mountVenueFollowup(root, current) {
+export function mountVenueFollowup(root, current, onChange = () => {}) {
   const list = root.querySelector("[data-contact-list]");
   const summary = root.querySelector("[data-contact-summary]");
   const status = root.querySelector("[data-contact-status]");
@@ -194,6 +194,7 @@ export function mountVenueFollowup(root, current) {
 
   function sync() {
     noteFiles.changed();
+    onChange();
     if (!session) return;
     root.hidden = false;
     download.disabled = true;
@@ -258,6 +259,7 @@ export function mountVenueFollowup(root, current) {
     if (event.type !== (input.dataset.contactField === "status" ? "change" : "input")) return;
     const visit = input.closest("[data-contact-key]");
     noteFiles.changed();
+    onChange();
     try {
       const state = currentState();
       const note = session.setField(state, visit.dataset.contactKey, visit.dataset.contactDate, input.dataset.contactField, input.value);
@@ -317,6 +319,19 @@ export function mountVenueFollowup(root, current) {
 
   return Object.freeze({
     accept(state, savedSource = "") { noteFiles.retire(); session = createVenueFollowup(state, savedSource); sync(); },
+    snapshot() {
+      const state = currentState();
+      const origin = current().origin;
+      if (!origin) throw new Error("Open or generate a plan before saving a caregiver handoff.");
+      session.entries(state);
+      return { state, origin, model: session };
+    },
+    acceptPrepared(state, model) {
+      model.entries(state);
+      noteFiles.retire();
+      session = model;
+      sync();
+    },
     sync,
     retire() {
       session = null;
@@ -325,6 +340,7 @@ export function mountVenueFollowup(root, current) {
       list.replaceChildren();
       summary.textContent = source.textContent = status.textContent = "";
       download.disabled = true;
+      onChange();
     },
   });
 }

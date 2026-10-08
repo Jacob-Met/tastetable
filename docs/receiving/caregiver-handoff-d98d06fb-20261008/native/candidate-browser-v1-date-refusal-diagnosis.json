@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-08T20:54:37.160149+00:00",
+  "input": "/home/jacob/tastetable-caregiver-handoff-d98d06fb-20261008/candidate-browser-v1/late-invalid-note.json",
+  "inputSha256": "e279147174c03f43b1c717eefdccd04eaa7bfe23f29a974b70390a99d611cde8",
+  "exitCode": 0,
+  "stdout": "{\"accepted\":false,\"message\":\"Choose a valid calendar date for your week.\"}\n",
+  "stderr": "",
+  "purpose": "Diagnose the exact maintained date-validator message after the browser receiver waited for a narrower text fragment."
+}

@@ -1,6 +1,7 @@
 import { DAYS, createWeekPlan, localDate, offWeekPicks, resetDays, setPickDay, setWeek, weekRows } from "./week_plan.mjs";
 import { makeWeekFile, readWeekFile } from "./week_file.mjs";
 import { mountVenueFollowup } from "./venue_followup.mjs";
+import { mountCaregiverHandoff } from "./caregiver_handoff.mjs";
 
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -14,7 +15,8 @@ let calendarSession = null;
 let acceptedPlan = null;
 let requestKind = "plan";
 const OPEN_SAVED_WEEK = Symbol("open saved week");
-const venueFollowup = mountVenueFollowup($("#venueFollowup"), () => ({ state: weekState, date: $("#weekDate").value, origin: acceptedPlan }));
+let caregiverHandoff = null;
+const venueFollowup = mountVenueFollowup($("#venueFollowup"), () => ({ state: weekState, date: $("#weekDate").value, origin: acceptedPlan }), () => caregiverHandoff?.changed());
 
 function newCalendarId() {
   try {
@@ -223,7 +225,7 @@ async function post(url, body, signal) {
   return j;
 }
 
-function render(res, restoredWeek = null) {
+function preparePlanView(res, restoredWeek = null) {
   const nextWeek = restoredWeek || createWeekPlan(res, preferredWeekStart || localDate());
   const fragments = {};
   const p = res.plan;
@@ -245,7 +247,10 @@ function render(res, restoredWeek = null) {
   fragments["#rejected"] = p.rejected.map((r) => `<li>${esc(r.name)}: ${r.failed.map((f) => esc(f.constraint + " " + f.status + " - " + f.reason)).join("; ")}</li>`).join("") || "<li>None</li>";
   fragments["#trace"] = res.trace.map((t) => `<li>${esc(t.tool)}(${esc(JSON.stringify(t.args))}) &rarr; ${esc(t.result_summary)}</li>`).join("");
   const nextWeekView = prepareWeekView(nextWeek);
+  return { nextWeek, nextWeekView, fragments, restoredWeek: Boolean(restoredWeek) };
+}
 
+function commitPlanView({ nextWeek, nextWeekView, fragments, restoredWeek }) {
   for (const [selector, value] of Object.entries(fragments)) $(selector).innerHTML = value;
   weekState = nextWeek;
   if (restoredWeek || !weekDateInitialized) {
@@ -257,6 +262,10 @@ function render(res, restoredWeek = null) {
   $("#resetWeek").disabled = false;
   $("#results").hidden = false;
   $("#results").scrollIntoView({ behavior: "smooth" });
+}
+
+function render(res, restoredWeek = null) {
+  commitPlanView(preparePlanView(res, restoredWeek));
 }
 
 const planRequests = TasteTablePlanRequests.create({
@@ -318,6 +327,34 @@ const planRequests = TasteTablePlanRequests.create({
   onIdle() {
     $("#form").setAttribute("aria-busy", "false");
     $("#cancelPlan").hidden = true;
+  },
+});
+
+
+caregiverHandoff = mountCaregiverHandoff($("#caregiverHandoff"), {
+  current: () => venueFollowup.snapshot(),
+  prepare(opened, filename) {
+    const supported = [...$("#form").querySelectorAll("[name=constraints]")].map((field) => field.value);
+    if (opened.inputs.constraints.some((value) => !supported.includes(value))) {
+      throw new Error("This handoff uses a constraint that this page cannot display.");
+    }
+    const view = preparePlanView(opened.response, opened.state);
+    opened.model.entries(view.nextWeek);
+    return { view, model: opened.model, inputs: structuredClone(opened.inputs),
+      origin: structuredClone(opened.origin),
+      label: `Caregiver handoff opened from “${filename}” (saved ${opened.handoffSavedAt}). Source labels and checks below are retained from the file; they have not been run again.` };
+  },
+  accept(prepared) {
+    planRequests.invalidate();
+    commitPlanView(prepared.view);
+    fillForm(prepared.inputs);
+    acceptedPlan = prepared.origin;
+    $("#savedWeekSource").textContent = prepared.label;
+    $("#savedWeekSource").hidden = false;
+    venueFollowup.acceptPrepared(weekState, prepared.model);
+    acceptCalendar();
+    refreshWeekSave();
+    $("#requestStatus").textContent = "Caregiver handoff opened. Its original inputs, arrangement and venue notes are restored.";
   },
 });
 

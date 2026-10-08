@@ -1,0 +1,15 @@
+{
+  "schema": "tastetable.caregiver-handoff-review-seal.v1",
+  "recordedAt": "2026-10-08T21:16:35.091492+00:00",
+  "root": "/home/jacob/tastetable-caregiver-review-d98d06fb-20261008-v1",
+  "files": [
+    {
+      "path": "source-review.json",
+      "bytes": 16919,
+      "sha256": "7de1b114c7405bad34a5b078a2f9603cf77e4a68cee7419426e2d141b3e4c8de",
+      "gitBlob": "2f26a498b07594424caac7274786b787cacc1f32"
+    }
+  ],
+  "sourcePins": 23,
+  "mutations": "Only these new independent review files; no source changes or new gate execution."
+}

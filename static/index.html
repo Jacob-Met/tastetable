@@ -50,6 +50,34 @@
     <button id="cancelPlan" type="button" hidden>Stop waiting</button>
   </section>
 
+  <section id="caregiverHandoff" class="card contact-session-help" aria-labelledby="caregiverHandoffTitle">
+    <h2 id="caregiverHandoffTitle">Keep your caregiver handoff</h2>
+    <p>Save the arranged week and all its venue notes in one editable file. Open a handoff to review it before replacing the current week and notes.</p>
+    <div class="contact-actions">
+      <button id="saveCaregiverHandoff" data-handoff-save type="button" disabled>Save caregiver handoff (.json)</button>
+      <button id="openCaregiverHandoff" data-handoff-open type="button">Open caregiver handoff</button>
+      <button data-handoff-cancel type="button" hidden>Cancel opening</button>
+      <input id="caregiverHandoffFile" data-handoff-input type="file" accept=".json,application/json" aria-label="Choose a TasteTable caregiver handoff" hidden>
+    </div>
+    <p data-handoff-status class="why contact-file-status" role="status" aria-live="polite" aria-atomic="true"></p>
+    <section data-handoff-preview class="contact-file-preview" aria-label="Review caregiver handoff" hidden>
+      <h3>Review before replacing</h3>
+      <p data-handoff-description tabindex="-1"></p>
+      <pre data-handoff-source></pre>
+      <details>
+        <summary>Review every scheduled and omitted pick</summary>
+        <ol data-handoff-visits></ol>
+      </details>
+      <details>
+        <summary>Review all retained venue notes, including other dates</summary>
+        <ol data-handoff-records></ol>
+      </details>
+      <p>Replacement includes the original inputs, this arrangement and the complete note set. An empty set clears current venue notes.</p>
+      <button data-handoff-apply type="button" disabled>Replace week and notes</button>
+    </section>
+    <p class="why">Keep the file to continue later. Files are read locally; nothing is saved automatically or sent to a provider. Original checks are retained without being run again.</p>
+  </section>
+
   <section id="results" hidden>
     <section id="weekOrganizer" class="card grounded" aria-labelledby="weekTitle">
       <h2 id="weekTitle">Your week</h2>

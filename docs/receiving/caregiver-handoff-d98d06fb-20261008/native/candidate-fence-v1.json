@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-08T20:56:13.646014+00:00",
+  "modifiedOrAddedPaths": [
+    "README.md",
+    "static/app.js",
+    "static/index.html",
+    "static/venue_followup.mjs",
+    "docs/CAREGIVER_HANDOFF.md",
+    "static/caregiver_handoff.mjs",
+    "tests/caregiver_handoff.test.mjs",
+    "tools/check_caregiver_handoff_browser.mjs"
+  ],
+  "diffCheckExit": 0,
+  "diffCheckOutput": ""
+}

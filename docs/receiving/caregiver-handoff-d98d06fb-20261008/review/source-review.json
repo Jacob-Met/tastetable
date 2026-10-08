@@ -1,0 +1,310 @@
+{
+  "schema": "tastetable.caregiver-handoff-independent-source-review.v1",
+  "reviewer": "chatgpt-d98d06fbfc35/independent-source-review",
+  "issue": "https://github.com/Jacob-Met/tastetable/issues/55",
+  "decision": "No blocking source finding in the exact frozen candidate. Source review supports held source custody; full physical browser qualification and any later source composition remain pending.",
+  "candidate": {
+    "base": "328df51af830e91f304417a66d74f43d94ae0c02",
+    "tree": "df0251092f77d96169daa097abaec409ecabe6ba",
+    "sourceManifestSha256": "44a1eb2180d4cfc83538230149218b6ac6ad88e1b6cb536489f4372b01eb1f31"
+  },
+  "method": [
+    "Read the complete new codec/controller, app acceptance and lifecycle hooks, worksheet module, unchanged saved-week and venue-note codecs, unchanged request-generation controller, eight added model tests, exact hook diff, contract and guide.",
+    "Read retained model/browser result receipts and the exact late-invalid-note diagnosis. Inspect two retained Chrome screenshots. Rehash the source and cited evidence at sealing.",
+    "No product source mutation, test execution, browser launch, provider request, CI action, or claim of a complete physical browser pass."
+  ],
+  "findings": [
+    {
+      "area": "Complete admission and isolation",
+      "result": "clear",
+      "evidence": [
+        "static/caregiver_handoff.mjs: readCaregiverHandoff",
+        "static/venue_note_file.mjs: readVenueNoteFile",
+        "static/venue_followup.mjs: prepareRecords/replaceRecords"
+      ],
+      "reason": "The exact outer envelope and 6 MiB UTF-8 limit are checked before reusing both unchanged native readers. The complete response, original inputs, received timestamp and calendar identity bind the note section. All occurrence/date records are validated before replacement of a newly created isolated model; late invalid, duplicate, unknown and inconsistent-history records cannot partially mutate the live model. An empty valid note set prepares an independent empty model."
+    },
+    {
+      "area": "Read-only preview and explicit replacement",
+      "result": "clear",
+      "evidence": [
+        "static/app.js: preparePlanView/commitPlanView",
+        "static/app.js: mountCaregiverHandoff prepare/accept",
+        "static/caregiver_handoff.mjs: Apply handler"
+      ],
+      "reason": "preparePlanView builds native state and response fragments without mutating the live view or worksheet. The full model, inputs, source label and response view are prepared before review. Apply checks the still-current pending record, discards it and calls a synchronous accept path. That path replaces the week, original form inputs, accepted origin, complete note model and calendar session. The existing synchronous render path may briefly sync the previous model against the new state; its source guard is caught, and the prepared model is installed before control returns. No awaited input-dependent work occurs within acceptance."
+    },
+    {
+      "area": "Stale reads and previews",
+      "result": "clear",
+      "evidence": [
+        "static/caregiver_handoff.mjs: revision/sameCurrent/changed",
+        "static/venue_followup.mjs: onChange/sync/retire",
+        "static/app.js: source/form/date/arrangement/pagehide hooks"
+      ],
+      "reason": "File reads use a revision ticket plus exact accepted-origin, state and model identity checks before and after preparation. Note edits notify before mutating the same model. Source changes, form input, date/arrangement changes, separate-note replacement, cancellation, competing handoff reads and page departure invalidate pending review. Apply rechecks immediately before acceptance."
+    },
+    {
+      "area": "Late ordinary request completion",
+      "result": "clear",
+      "evidence": [
+        "static/plan-request.js: generation/current/invalidate",
+        "static/app.js: caregiver accept"
+      ],
+      "reason": "Apply increments the ordinary request generation and aborts its previous controller before accepting the handoff. The unchanged request controller checks generation after awaited transport/read completion and before delivering results/errors, so a transport that completes after abort cannot overwrite the accepted handoff."
+    },
+    {
+      "area": "Literal review and retained identity",
+      "result": "clear",
+      "evidence": [
+        "static/caregiver_handoff.mjs: showReview",
+        "static/index.html: caregiver controls",
+        "tests/caregiver_handoff.test.mjs"
+      ],
+      "reason": "Review builds filename, source, inputs, scheduled and omitted occurrence descriptions and all note records with textContent. It distinguishes retained source checks from caregiver-entered notes, reports records for other dates, and explicitly describes empty-note clearing. Native state/origin and the existing calendar identity remain in the combined format. Retained desktop screenshot shows the literal filename, original source/input disclosure and scheduled/omitted review."
+    },
+    {
+      "area": "Native workflow preservation",
+      "result": "clear",
+      "evidence": [
+        "review-existing-hooks.diff",
+        "static/week_file.mjs",
+        "static/venue_note_file.mjs",
+        "static/app.js: render wrapper"
+      ],
+      "reason": "Both native file codecs remain unchanged. The original render entry point delegates to prepare then commit. Worksheet additions are optional notification, snapshot and prepared-model acceptance hooks. The candidate's eight changed paths match its declared boundary."
+    }
+  ],
+  "qualification": {
+    "model": {
+      "path": "candidate-v1-model.json",
+      "sha256": "84217c45d52f42fb07b57991b11f160e920732f97a9238300be2559068494fde",
+      "exitCode": 0,
+      "tests": 40,
+      "passed": 40,
+      "failed": 0,
+      "skipped": 0,
+      "newModelTests": 8,
+      "stdoutSha256": "18db5ee3cd1721f9cd9e7ea33a771688007679c0f2c4a17d5739a51eef9eb807",
+      "attribution": "Existing author's native result; not rerun by reviewer."
+    },
+    "browserV1": {
+      "path": "candidate-browser-v1/browser-results.json",
+      "sha256": "7932f42a0b1fd65ba24a249ff9dced1acde3c8259180bb8aa3f03fc3389ab172",
+      "status": "failed",
+      "completedChecks": [
+        "real keyboard edits retain an earlier reply with its exact earlier questions and a distinct second visit note",
+        "actual notes and week downloads retain all three occurrence/date records separately from the unchanged saved-week format",
+        "one physical caregiver-handoff download contains the exact arranged week and all three source-bound native note records",
+        "actual chooser reviews literal filename, complete hidden-date records and earlier reply questions; explicit Cancel preserves the current week, inputs and notes"
+      ],
+      "nativeChooserEvents": 5,
+      "pageErrors": 0,
+      "externalRequests": 0,
+      "scope": "Actual installed Chrome153/Node22, unchanged saved-week fixture, GET-only authored local bootstrap and native static files.",
+      "failure": "Receiver waited for the narrower text fragment 'invalid date'. The exact retained late-invalid-note input is refused with 'Choose a valid calendar date for your week.'; the retained diagnosis records accepted:false. This is a receiver assertion mismatch, not evidence of product acceptance.",
+      "fullRefusalAndLaterGroups": "not completed"
+    },
+    "browserV2": {
+      "path": "candidate-browser-v2/browser-results.json",
+      "sha256": "f26b51a591e581f52f05f20b5f636d3c9a275f7811737fd53173ecc34684dd62",
+      "status": "failed",
+      "checks": 0,
+      "nativeChooserEvents": 0,
+      "pageRequests": 0,
+      "artifacts": 0,
+      "failure": "Installed browser did not produce DevToolsActivePort within its unchanged 12-second readiness window; no page was created. This is a startup failure, not a product result."
+    },
+    "receiverV3": {
+      "path": "tools/check_caregiver_handoff_browser.mjs",
+      "bytes": 37913,
+      "sha256": "a5494390392a2f43fdf1450e371b68162c26d6866710217370b63e22869b01c2",
+      "status": "unexecuted",
+      "ownerReportedChange": "Use node:path basename for a held file's Windows or POSIX filename; mark receiverRevision v3. Original v1/v2 and correction records are retained. No startup or resource guard change.",
+      "boundary": "Receiver continuation is separate from this completed product source review."
+    },
+    "remainingPhysicalReceiving": [
+      "Explicit Replace from empty and existing plans; exact week/input/note/calendar identity after acceptance and reload.",
+      "Full invalid-file preservation, explicit empty-note clearing, stale/competing file reads and source/date/arrangement/note invalidation.",
+      "Download retry, narrow-screen keyboard and print projection under the existing physical browser contract."
+    ],
+    "integration": "Existing failed attempts remain historical failures. Passing model tests and this source review do not establish the uncompleted physical groups."
+  },
+  "composition": {
+    "observedMain": "1cba17347baa7528147c244c1046658960b7fae2",
+    "observedMainParent": "328df51af830e91f304417a66d74f43d94ae0c02",
+    "observedMainDelta": "Native plan batch, docs/evidence and README only; no static runtime delta from reviewed base.",
+    "sourceCustody": "Author plans to preserve the current main tree and compose the additive README paragraph. Runtime/model/guide bytes must retain the reviewed hashes.",
+    "adjacentOwnerComment": "https://github.com/Jacob-Met/tastetable/issues/55#issuecomment-6068688064",
+    "adjacentCollectionCandidateBlob": "a259470e4f2ab12ca7e455c92ab507cd88ba1af3",
+    "boundary": "Collection candidate bytes were unavailable; no claim of combined-source receiving. Preserve its documented refreshCurrent and request-generation hooks when actually composing.",
+    "requiredPlacement": "Keep preparePlanView read-only. Later Undo, availability, collection acceptance or history-reset mutations belong at commitPlanView or explicit accept. Handoff refreshWeekSave occurs again after assigning the accepted origin and model.",
+    "authority": "Final integration remains subject to the root's receiving decision and the existing no-Actions hold."
+  },
+  "recordedAt": "2026-10-08T21:16:35.091492+00:00",
+  "nativeSourceRoot": "/home/jacob/tastetable-caregiver-handoff-d98d06fb-20261008",
+  "evidencePins": [
+    {
+      "path": "source/static/caregiver_handoff.mjs",
+      "bytes": 11673,
+      "sha256": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+      "gitBlob": "4286409b3fe932f61957ba72f5db918d18ff0751",
+      "role": "reviewed candidate source"
+    },
+    {
+      "path": "source/static/app.js",
+      "bytes": 20941,
+      "sha256": "00e234dc9a69ed4b883ffcc70dbe25db50f38f3f0203b8c5c2eda0f3fe2ff129",
+      "gitBlob": "78ea526ea3b7afb2099d51d07eac59bc80dd6e83",
+      "role": "reviewed candidate source"
+    },
+    {
+      "path": "source/static/venue_followup.mjs",
+      "bytes": 18923,
+      "sha256": "cfa96d88aeaf06d55c5a4b7ad457f6a693f571ec06ccd8744141e4922ff3b2c3",
+      "gitBlob": "a3c4b8bd120149441d343cbda2d3c15f6d106ca2",
+      "role": "reviewed candidate source"
+    },
+    {
+      "path": "source/static/index.html",
+      "bytes": 11174,
+      "sha256": "114bbd275d2d7ea899e8cdef003436cf3d68187283427f9333d390c32bab2293",
+      "gitBlob": "0eec83bd03afce0a80e6a2885fb134441f8d4275",
+      "role": "reviewed candidate source"
+    },
+    {
+      "path": "source/tests/caregiver_handoff.test.mjs",
+      "bytes": 10870,
+      "sha256": "dbdcb41b1598970c0ba098216a234887a470ca36fa5a3bfcf7faa4bfdebb7b9f",
+      "gitBlob": "f9a0eb76eed9be3213de714c9ee00f444cee06c7",
+      "role": "reviewed candidate source"
+    },
+    {
+      "path": "source/docs/CAREGIVER_HANDOFF.md",
+      "bytes": 3541,
+      "sha256": "9da5e7bdddac7ade887ee3cf21c2445f47d5cb167070d4a2e56320b5feac9906",
+      "gitBlob": "098c8a73d8eabf8ff66336d04a90c07717e4ece9",
+      "role": "reviewed candidate source"
+    },
+    {
+      "path": "source/README.md",
+      "bytes": 20040,
+      "sha256": "3389097a869bfef85ffc7114c8b7dbc15a7e20d5cfce9bcebd957d13f53de27d",
+      "gitBlob": "b2e339a92917fd1339d5783f73f213252364657a",
+      "role": "reviewed candidate source"
+    },
+    {
+      "path": "source/static/week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "gitBlob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "role": "reviewed unchanged dependency"
+    },
+    {
+      "path": "source/static/venue_note_file.mjs",
+      "bytes": 10435,
+      "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+      "gitBlob": "f8406cb540d52222996c585666ae1a55a1030def",
+      "role": "reviewed unchanged dependency"
+    },
+    {
+      "path": "CONTRACT.json",
+      "bytes": 4293,
+      "sha256": "e4244fc78bf21b62a7ea9d3ccdfe32585031cbcd1f5cf8fac7a6ef8595aeef36",
+      "gitBlob": "d8fb6e173c0e4a595581832b5c93c0fd6e1534d7",
+      "role": "retained receiving evidence"
+    },
+    {
+      "path": "candidate-v1-manifest.json",
+      "bytes": 1605,
+      "sha256": "44a1eb2180d4cfc83538230149218b6ac6ad88e1b6cb536489f4372b01eb1f31",
+      "gitBlob": "c380e5e76aaafa98bcbc4790e65bec881a2328c3",
+      "role": "retained receiving evidence"
+    },
+    {
+      "path": "candidate-fence-v1.json",
+      "bytes": 380,
+      "sha256": "00f9714d9a9e204d2472ee43b4ce3cc91906c5ed8ba40d212c261111a0ab7433",
+      "gitBlob": "7d6299352b7635b84f9ac390f0e2a21cb119e3cc",
+      "role": "retained receiving evidence"
+    },
+    {
+      "path": "review-existing-hooks.diff",
+      "bytes": 6453,
+      "sha256": "cf52c8eeab55c1169b394d6a67ee78c672c819c95fad10caffa0a50d8e4fd858",
+      "gitBlob": "cd1b8ec981d16de46e01c666b13e1f3ed05e119b",
+      "role": "retained receiving evidence"
+    },
+    {
+      "path": "candidate-v1-model.json",
+      "bytes": 1509,
+      "sha256": "84217c45d52f42fb07b57991b11f160e920732f97a9238300be2559068494fde",
+      "gitBlob": "116a7888045ad5f8e50a443041ca7406e950efc0",
+      "role": "retained receiving evidence"
+    },
+    {
+      "path": "candidate-browser-v1/browser-results.json",
+      "bytes": 12831,
+      "sha256": "7932f42a0b1fd65ba24a249ff9dced1acde3c8259180bb8aa3f03fc3389ab172",
+      "gitBlob": "027c1e66cdcf8d68fd96caecb1da73da02c76119",
+      "role": "retained receiving evidence"
+    },
+    {
+      "path": "candidate-browser-v2/browser-results.json",
+      "bytes": 3292,
+      "sha256": "f26b51a591e581f52f05f20b5f636d3c9a275f7811737fd53173ecc34684dd62",
+      "gitBlob": "3c18d5749f7e623babf1199462ad287478573d4d",
+      "role": "retained receiving evidence"
+    },
+    {
+      "path": "source/static/plan-request.js",
+      "bytes": 1420,
+      "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+      "gitBlob": "b21276dda840fe6dd96a3bf3258a851970ff5e4d",
+      "role": "reviewed unchanged request-generation guard"
+    },
+    {
+      "path": "source/tools/check_caregiver_handoff_browser.mjs",
+      "bytes": 37913,
+      "sha256": "a5494390392a2f43fdf1450e371b68162c26d6866710217370b63e22869b01c2",
+      "gitBlob": "110257a55edce314c2dc8ff8f826d294ffad24e6",
+      "role": "receiver v3 custody only; unexecuted"
+    },
+    {
+      "path": "candidate-browser-v1/desktop-handoff-review.png",
+      "bytes": 275146,
+      "sha256": "eafb583eda2832ddacf824f0913aae60235af99e1f8878bb4694f8e30bed27c5",
+      "gitBlob": "a27f785f9f814177064ef8a17bc4e2cd106b44c5",
+      "role": "retained browser artifact"
+    },
+    {
+      "path": "candidate-browser-v1/observed-state.png",
+      "bytes": 197400,
+      "sha256": "6bf2265f5006062d2089c4ca03b56818b32bdf47788e0f86f3addcd2efa2e753",
+      "gitBlob": "05dc2f67ed2ca9c0adac31022e819a4d15791e49",
+      "role": "retained browser artifact"
+    },
+    {
+      "path": "candidate-browser-v1/late-invalid-note.json",
+      "bytes": 34109,
+      "sha256": "e279147174c03f43b1c717eefdccd04eaa7bfe23f29a974b70390a99d611cde8",
+      "gitBlob": "8f0b86d70e03f87c63889a9e58c111b4a553d907",
+      "role": "retained browser artifact"
+    },
+    {
+      "path": "candidate-browser-v1-date-refusal-diagnosis.json",
+      "bytes": 513,
+      "sha256": "849400cef52b7103cf2efa3fc299889950116c5af9ab86b4e0fe33a4581bcefe",
+      "gitBlob": "e615a48e1b6ac1ae972e5288ead3fb3626aec9ec",
+      "role": "retained receiver diagnosis/correction"
+    },
+    {
+      "path": "receiver-v3-correction.json",
+      "bytes": 666,
+      "sha256": "8d63f366e8656b2431514b00347d1b4ad515f86f044dbf15e46c7568765132b4",
+      "gitBlob": "4197c88673ef1806abffb96df8ebe55d0c10ae02",
+      "role": "retained receiver diagnosis/correction"
+    }
+  ],
+  "sealMethod": "Existing native source and retained receipts rehashed; no project code or tests executed. This receipt contains only TasteTable source review and public project evidence."
+}
