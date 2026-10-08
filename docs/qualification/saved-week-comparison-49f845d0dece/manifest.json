@@ -1,0 +1,58 @@
+{
+  "source.patch": {
+    "bytes": 35667,
+    "sha256": "a8a2c2af98e3eb58cba385a16b2de0487f8eaa90063c7f51473bdda66b8d30e1"
+  },
+  "node-first.log": {
+    "bytes": 6014,
+    "sha256": "8bdb48682e6616cc6a2f0b898062b58910691a095f6acdb6ec9dd7748c572dd2"
+  },
+  "native-provenance.json": {
+    "bytes": 840,
+    "sha256": "fa49b892a1f663fdc953846355ac99a44cdb4577dc82e5e0c359550f8d69be6a"
+  },
+  "source-composed.json": {
+    "bytes": 2429,
+    "sha256": "bb81069d2d849005419fa1184e461c23ce4317cbe8904b54ba1e8fe60caed360"
+  },
+  "source-freeze.json": {
+    "bytes": 2176,
+    "sha256": "8da1f0f71a856da406704f7e285b82e6d6d7e6584eb5d1a3aa35fa32712496ae"
+  },
+  "node-all.log": {
+    "bytes": 12654,
+    "sha256": "f0ff5722f0da082777f806c4d8e3dcc2b1da8b48d0e19fee84c2335ec92f7406"
+  },
+  "README.md": {
+    "bytes": 3474,
+    "sha256": "c94e25f709f3daccab06de408322888689c5648f458402528662377c27c61aa1"
+  },
+  "browser-first.log": {
+    "bytes": 651,
+    "sha256": "da1af36ef345ca369cf76961e7b67c026688005215c954acfd935ab1e28a8bdc"
+  },
+  "composition-shallow-history.txt": {
+    "bytes": 336,
+    "sha256": "07e4cefa98fd5a9dabf6362eea9bcf8482d2760e3f80c0f8bf92cce76431c244"
+  },
+  "browser/earlier.json": {
+    "bytes": 14561,
+    "sha256": "7a13e62a2b9d7761d22c3eb32760d9ce4544d640846453fe239ac1665d2ab85c"
+  },
+  "browser/desktop.png": {
+    "bytes": 249745,
+    "sha256": "8169b551b685b18c68d23de85ac8c5a3cc7179a2ed2f9a2fcecdfb5374c1827c"
+  },
+  "browser/revised.json": {
+    "bytes": 14555,
+    "sha256": "8af6894c241e2e076077f012f9f6b5a22851f9ebbe749c8f6bff93dbe143ddf6"
+  },
+  "browser/receipt.json": {
+    "bytes": 1274,
+    "sha256": "bf39bce220b9516721e9536d5f626894d4b195ad55868fe218a8e0b3a85cc542"
+  },
+  "browser/phone.png": {
+    "bytes": 254474,
+    "sha256": "a28ce87a4591453f3524df29baeaf839ea00baae961e5a26c53f294fa3d32817"
+  }
+}

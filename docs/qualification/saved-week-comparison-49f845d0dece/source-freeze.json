@@ -1,0 +1,45 @@
+{
+  "base": "a77175501199ace765cb7ca57742b267351d3e79",
+  "head": "789d17b7c456581e09bed64a6b7aa84376dc84db",
+  "tree": "b9eeca30a50ddde95d639617f245332e4db7ace7",
+  "files": {
+    "README.md": {
+      "sha256": "ad5e8f3e435f938286a1844b5f8bddbcf5a28bdbdceaf5a5b33656c9ea3ce142",
+      "blob": "7385a42bc9e0e4ab3aeecc90ee7510034248b41d"
+    },
+    "static/index.html": {
+      "sha256": "a3a121b6262c657cd6c86d35883738cd02a4aa3eefa03e28e1bbb0b8f56f21f7",
+      "blob": "179a26e7affeea13850a545efac29aed90a98351"
+    },
+    "static/week_compare.mjs": {
+      "sha256": "5bc64a317f28cfccffb844f3c74ebb7b1312034996137891ec5161e0bc0953b7",
+      "blob": "2dfc4fb5e9c30481a4bd4276bc4ed6ff3bb114b8"
+    },
+    "static/week_compare_ui.mjs": {
+      "sha256": "09e739215125b2db9db19c9328ce50a40c5119c7135baac101c2011f637eea47",
+      "blob": "ad3ebd39e21becf0ada3cc86ba965756fe8df83d"
+    },
+    "static/compare-weeks.html": {
+      "sha256": "d61682a7ff59b04a7c9c20876943f5a2860071f2e61c6c8c7ff36a6f2b553fca",
+      "blob": "0e314d8f054d565706b4a0cf8905abeec6aaac77"
+    },
+    "static/week_compare.css": {
+      "sha256": "c37b5b5cade22b7982511e4341f9ec83b9571daae9e1a31ea8e41c1c08d4f236",
+      "blob": "7ee8e8add97261965fcdcbf5612fb0ec126eda89"
+    },
+    "tests/test_week_compare.mjs": {
+      "sha256": "9e984c4929e05a9dd7dab914f6891c91e3b05e13f08221e932813b120917a593",
+      "blob": "82f424b7237d5be463772e883b7a094d17f106d1"
+    },
+    "tools/check_week_compare_browser.mjs": {
+      "sha256": "ecb98dab9bf924dda0edd9ce4ae5ae98b02a44d4160b90bb79b85f50b33b7be1",
+      "blob": "d50c8226196d66f403ac1d556abe860ef3b93614"
+    },
+    ".github/workflows/week-compare.yml": {
+      "sha256": "ea82ca88ff2fc05072503f3c124068ab2fc8cc689e7f22b9b850e07ba96393aa",
+      "blob": "e591fca2db970460611269ad7d1c53a6bc70f028"
+    }
+  },
+  "node_exit": 0,
+  "node_tail": "cross time zones and daylight-saving boundaries\nok 59 - calendar arithmetic stays stable across time zones and daylight-saving boundaries\n  ---\n  duration_ms: 1334.823956\n  type: 'test'\n  ...\n1..59\n# tests 59\n# suites 0\n# pass 59\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 3335.144799\n"
+}
