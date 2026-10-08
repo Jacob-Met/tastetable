@@ -1,0 +1,290 @@
+#!/usr/bin/env node
+/** TasteTable venue-note continuation: real local app/file controls.
+ * CDP helpers adapted from the maintained native-plan-week receiver (cf8447be).
+ * Uses an unchanged, already-published native saved-week artifact. No fresh Python,
+ * FastAPI, live Qloo, venue contact or deployment claim.
+ */
+import assert from "node:assert/strict";
+import {createHash} from "node:crypto";
+import {spawn} from "node:child_process";
+import {createServer} from "node:http";
+import {readFile,writeFile,mkdir,mkdtemp,rm,readdir,statfs} from "node:fs/promises";
+import {freemem} from "node:os";
+import {dirname,extname,join,resolve} from "node:path";
+import {fileURLToPath,pathToFileURL} from "node:url";
+const args=process.argv.slice(2),opt=(key,fallback)=>args.includes(key)?args[args.indexOf(key)+1]:fallback;
+const root=dirname(fileURLToPath(import.meta.url));
+const project=resolve(opt("--project",join(root,"baseline")));
+const output=resolve(opt("--output",join(root,"baseline-browser")));
+const executable=opt("--browser","C:\\Users\\minec\\.cache\\puppeteer\\chrome\\win64-154.0.8037.57\\chrome-win64\\chrome.exe");
+const hash=b=>createHash("sha256").update(b).digest("hex");
+const disk=await statfs(root);
+assert.ok(Number(disk.bavail)*Number(disk.bsize)>=768*1024**2&&freemem()>=1536*1024**2,"Native resource reserve");
+await mkdir(output);const downloadPath=join(output,"downloads");await mkdir(downloadPath);
+const profile=await mkdtemp(join(output,"profile-"));
+const sourcePaths=["static/index.html","static/style.css","static/calendar.js","static/calendar.css","static/venue_followup.css","static/plan-request.js","tests/venue_followup.test.mjs","static/venue_followup.mjs","static/week_plan.mjs","static/week_file.mjs","static/app.js","fixtures/received-week.json"];
+const report={schema:"tastetable.venue-notes-browser/1",status:"running",project,node:process.version,
+ sourceCommit:"2b347cee4ff4e2b806362730a8520a3360b45f5a",
+ input:{path:"fixtures/received-week.json",publishedPath:"docs/venue-followup-6c20bb4b010e/author/final/saved-composition-week.json",git_blob:"8b14090030201d6e8d69cd5bca380a9a71a4da0d",attribution:"Unchanged published native saved-week artifact; this invocation does not run its producer."},
+ bootstrap:"Authored GET-only mock health/personas and exact project static files; no FastAPI or provider.",
+ checks:[],artifacts:[],requests:[],externalRequests:[],serverRequests:[],sourceSha256:{},sourceUnchanged:false};
+for(const name of sourcePaths)report.sourceSha256[name]=hash(await readFile(join(project,name)));
+const sourceBefore={...report.sourceSha256};
+const downloads=new Map(),chooserEvents=[],pageErrors=[],pending=new Map();
+let pageRequests=[],browser,socket,sessionId,browserLog="",sequence=0;
+const sleep=ms=>new Promise(done=>setTimeout(done,ms));
+const server=createServer(async(req,res)=>{try{
+ const pathname=decodeURIComponent(new URL(req.url,"http://localhost").pathname);
+ report.serverRequests.push({method:req.method,path:pathname});
+ if(req.method!=="GET"){res.writeHead(405).end();return;}
+ if(pathname==="/api/health"||pathname==="/api/personas"){res.writeHead(200,{"Content-Type":"application/json"}).end(pathname==="/api/health"?'{"qloo_mode":"mock"}':"[]");return;}
+ const relative=pathname==="/"?"static/index.html":pathname.slice(1);
+ if(!relative.startsWith("static/")||!sourcePaths.includes(relative)){res.writeHead(404).end();return;}
+ const body=await readFile(join(project,relative));
+ const mime={".html":"text/html",".mjs":"text/javascript",".js":"text/javascript",".css":"text/css"}[extname(relative)];
+ res.writeHead(200,{"Content-Type":mime+";charset=utf-8","Cache-Control":"no-store"}).end(body);
+ }catch{res.writeHead(404).end();}});
+await new Promise(done=>server.listen(0,"127.0.0.1",done));const base="http://127.0.0.1:"+server.address().port;
+async function waitFor(check, label, attempts = 120) {
+  let lastError;
+  for (let step = 0; step < attempts; step++) {
+    try { if (await check()) return; } catch (error) { lastError = error; }
+    await sleep(100);
+  }
+  throw new Error('Timed out: ' + label + (lastError ? ' (' + lastError.message + ')' : ''));
+}
+function command(method, params = {}, scoped = true) {
+  const id = ++sequence;
+  return new Promise((resolve_, reject) => {
+    const timer = setTimeout(() => {
+      pending.delete(id); reject(new Error('CDP timeout: ' + method));
+    }, 15000);
+    pending.set(id, {resolve: resolve_, reject, timer});
+    socket.send(JSON.stringify({id, method, params, ...(scoped && sessionId ? {sessionId} : {})}));
+  });
+}
+async function evaluate(expression) {
+  const result = await command('Runtime.evaluate', {expression, returnByValue: true, awaitPromise: true});
+  if (result.exceptionDetails) throw new Error(result.exceptionDetails.exception?.description
+    ?? result.exceptionDetails.text);
+  return result.result.value;
+}
+async function key(key_, code, virtualKey, modifiers = 0) {
+  for (const type of ['keyDown', 'keyUp']) {
+    await command('Input.dispatchKeyEvent', {type, key: key_, code,
+      windowsVirtualKeyCode: virtualKey, nativeVirtualKeyCode: virtualKey, modifiers,
+      ...(key_ === 'Enter' && type === 'keyDown' ? {text: '\r', unmodifiedText: '\r'} : {})});
+  }
+}
+async function activate(selector) {
+  const exists = await evaluate('(() => { const node = document.querySelector(' +
+    JSON.stringify(selector) + '); if (!node || node.matches(":disabled") || !node.getClientRects().length) return false; ' +
+    'node.scrollIntoView({block:"center"}); node.focus(); return true; })()');
+  assert.ok(exists, 'Available keyboard control: ' + selector);
+  await key('Enter', 'Enter', 13);
+}
+async function click(selector) {
+  const box = await evaluate('(() => { const node = document.querySelector(' +
+    JSON.stringify(selector) + '); if (!node || node.matches(":disabled")) return null; ' +
+    'node.scrollIntoView({block:"center"}); const b = node.getBoundingClientRect(); ' +
+    'return {x:b.x+b.width/2,y:b.y+b.height/2,width:b.width,height:b.height}; })()');
+  assert.ok(box && box.width > 0 && box.height > 0, 'Visible pointer control: ' + selector);
+  for (const type of ['mousePressed', 'mouseReleased']) {
+    await command('Input.dispatchMouseEvent', {type, x: box.x, y: box.y,
+      button: 'left', clickCount: 1});
+  }
+}
+async function textInput(selector, value) {
+  await evaluate('(() => {const node=document.querySelector(' + JSON.stringify(selector) +
+    '); if(!node) throw new Error("Missing input"); node.scrollIntoView({block:"center"}); node.focus();})()');
+  await key('a', 'KeyA', 65, 2);
+  await command('Input.insertText', {text: value});
+  assert.equal(await evaluate('document.querySelector(' + JSON.stringify(selector) + ').value'), value);
+}
+async function navigate(url, readySelector, width = 1280, height = 1000) {
+  await command('Emulation.setEmulatedMedia', {media: ''});
+  await command('Emulation.setDeviceMetricsOverride', {width, height, deviceScaleFactor: 1, mobile: false});
+  pageRequests = [];
+  await command('Page.navigate', {url});
+  await waitFor(() => evaluate('document.URL === ' + JSON.stringify(url) +
+    ' && document.readyState === "complete" && !!document.querySelector(' +
+    JSON.stringify(readySelector) + ')'), 'actual page ' + url);
+}
+async function saveArtifact(name, bytes, details = {}) {
+  const buffer = Buffer.isBuffer(bytes) ? bytes : Buffer.from(bytes);
+  assert.ok(buffer.length <= 2 * 1024 * 1024, 'Bounded artifact: ' + name);
+  await writeFile(join(output, name), buffer);
+  const value = {name, bytes: buffer.length, sha256: hash(buffer), ...details};
+  report.artifacts.push(value);
+  return value;
+}
+async function screenshot(name, selector = null) {
+  if (selector) await evaluate('document.querySelector(' + JSON.stringify(selector) +
+    ').scrollIntoView({block:"start"})');
+  const {data} = await command('Page.captureScreenshot', {format: 'png', captureBeyondViewport: false});
+  return saveArtifact(name, Buffer.from(data, 'base64'), {kind: 'actual Chrome screenshot'});
+}
+const passed = name => { report.checks.push(name); console.log('PASS ' + name); };
+
+async function downloaded(button, name) {
+  const prior = new Set(downloads.keys());
+  await activate(button);
+  let actual;
+  await waitFor(() => {
+    actual = [...downloads.values()].find(value => !prior.has(value.guid) && value.state === 'completed');
+    return !!actual;
+  }, 'actual download ' + name);
+  const bytes = await readFile(join(downloadPath, actual.guid));
+  await saveArtifact(name, bytes, {kind: 'actual browser download',
+    suggestedFilename: actual.suggestedFilename});
+  return {bytes, file: join(output, name), suggestedFilename: actual.suggestedFilename};
+}
+async function chooseFile(file, button = '#openWeek', inputSelector = '#weekFile') {
+  const count = chooserEvents.length;
+  await activate(button);
+  await waitFor(() => chooserEvents.length > count, 'native saved-week file chooser');
+  const event = chooserEvents.at(-1);
+  assert.equal(event.mode, 'selectSingle');
+  let identity = {backendNodeId: event.backendNodeId};
+  if (!event.backendNodeId) {
+    const {root} = await command('DOM.getDocument');
+    const {nodeId} = await command('DOM.querySelector', {nodeId: root.nodeId, selector: inputSelector});
+    identity = {nodeId};
+  }
+  const {node} = await command('DOM.describeNode', identity);
+  const attributes = Object.fromEntries(Array.from({length: node.attributes.length / 2},
+    (_, index) => node.attributes.slice(index * 2, index * 2 + 2)));
+  assert.equal(attributes.id, inputSelector.slice(1));
+  assert.equal(attributes.type, 'file');
+  await command('DOM.setFileInputFiles', {files: file ? [file] : [], ...identity});
+}
+
+async function recordExisting(name, details = {}) {
+  const bytes = await readFile(join(output, name));
+  report.artifacts.push({name, bytes: bytes.length, sha256: hash(bytes), ...details});
+  return bytes;
+}
+
+try {
+  assert.ok(typeof WebSocket === 'function', 'Use Node 22 or newer with built-in WebSocket');
+  browser = spawn(executable, [
+    '--headless=new', '--disable-gpu',
+    '--disable-background-networking', '--disable-component-update', '--disable-sync',
+    '--no-first-run', '--no-default-browser-check',
+    '--remote-debugging-address=127.0.0.1', '--remote-debugging-port=0',
+    '--user-data-dir=' + profile, 'about:blank'
+  ], {stdio: ['ignore', 'ignore', 'pipe']});
+  let launchError;
+  browser.on('error', error => { launchError = error; });
+  browser.stderr.on('data', data => { browserLog = (browserLog + data).slice(-6000); });
+  let port;
+  let endpoint;
+  await waitFor(async () => {
+    if (launchError) throw launchError;
+    if (browser.exitCode !== null) throw new Error('Browser exited: ' + browserLog);
+    [port, endpoint] = (await readFile(join(profile, 'DevToolsActivePort'), 'utf8')).trim().split('\n');
+    return !!(port && endpoint);
+  }, 'installed browser startup');
+  socket = new WebSocket('ws://127.0.0.1:' + port + endpoint);
+  socket.addEventListener('message', event => {
+    const message = JSON.parse(event.data);
+    if (message.id) {
+      const request = pending.get(message.id);
+      if (!request) return;
+      pending.delete(message.id);
+      clearTimeout(request.timer);
+      if (message.error) request.reject(new Error(message.error.message));
+      else request.resolve(message.result);
+    } else if (message.method === 'Browser.downloadWillBegin' ||
+               message.method === 'Browser.downloadProgress') {
+      const value = message.params;
+      downloads.set(value.guid, {...downloads.get(value.guid), ...value});
+    } else if (message.method === 'Page.fileChooserOpened') {
+      chooserEvents.push(message.params);
+    } else if (message.method === 'Runtime.exceptionThrown') {
+      pageErrors.push(message.params.exceptionDetails.exception?.description
+        ?? message.params.exceptionDetails.text);
+    } else if (message.method === "Fetch.requestPaused") {
+      const request = message.params.request;
+      const allowed = request.method === "GET" && new URL(request.url).origin === base;
+      if (!allowed) report.externalRequests.push({url: request.url, method: request.method});
+      void command(allowed ? "Fetch.continueRequest" : "Fetch.failRequest", {
+        requestId: message.params.requestId, ...(!allowed ? {errorReason: "BlockedByClient"} : {}),
+      }).catch(error => pageErrors.push(error.message));
+    } else if (message.method === 'Network.requestWillBeSent') {
+      pageRequests.push(message.params.request.url);
+      report.requests.push({url: message.params.request.url, method: message.params.request.method});
+    }
+  });
+  await new Promise((resolve_, reject) => {
+    socket.addEventListener('open', resolve_, {once: true});
+    socket.addEventListener('error', reject, {once: true});
+  });
+  report.browser = await command('Browser.getVersion', {}, false);
+  await command('Browser.setDownloadBehavior', {behavior: 'allowAndName', downloadPath, eventsEnabled: true}, false);
+  const {targetId} = await command('Target.createTarget', {url: 'about:blank'}, false);
+  ({sessionId} = await command('Target.attachToTarget', {targetId, flatten: true}, false));
+  await command('Page.enable');
+  await command('Runtime.enable');
+  await command('Network.enable');
+  await command('Page.setInterceptFileChooserDialog', {enabled: true});
+
+  await command("Fetch.enable", {patterns: [{urlPattern: "http*"}]});
+
+
+  await navigate(base+"/","#openWeek");
+  await chooseFile(join(project,"fixtures/received-week.json"));
+  await waitFor(()=>evaluate('!document.querySelector("#venueFollowup").hidden && document.querySelectorAll("[data-contact-key]").length===4'),"actual recorded week accepted");
+  const original=JSON.parse(await readFile(join(project,"fixtures/received-week.json"),"utf8"));
+  const fixture=await import(pathToFileURL(join(project,"static/week_file.mjs")).href);
+  const restored=fixture.readWeekFile(JSON.stringify(original));
+  assert.equal(await evaluate('document.querySelector("#weekDate").value'),restored.state.weekStart);
+  const selected=await evaluate('Array.from(document.querySelectorAll("[data-contact-key]")).map(n=>({key:n.dataset.contactKey,date:n.dataset.contactDate,reply:n.querySelector("[data-contact-field=reply]").value}))');
+  assert.equal(selected.length,4);assert.ok(selected.every(n=>n.reply===""));
+  report.originalVisits=selected;
+  passed("exact previously produced saved week opens through the native chooser with four empty editable visit records");
+  const target=selected.find(n=>n.key==="pick-0");assert.ok(target);
+  const selector='[data-contact-key="pick-0"] [data-contact-field="reply"]';
+  const note="\nAwaiting the venue’s own reply — 海 / café / 🧭\nKeep this exact visit's questions.";
+  await textInput(selector,note);
+  await activate('[data-contact-key="pick-0"] [data-contact-field="status"]');
+  const before=await evaluate('document.querySelector('+JSON.stringify(selector)+').value');
+  assert.equal(before,note);
+  const saved=await downloaded("#saveWeek","baseline-saved-week.json");
+  const savedObject=JSON.parse(saved.bytes.toString("utf8"));
+  assert.deepEqual(savedObject.inputs,original.inputs);assert.deepEqual(savedObject.response,original.response);
+  assert.deepEqual(savedObject.week,original.week);
+  assert.equal(Object.hasOwn(savedObject,"venueNotes"),false);
+  passed("a literal venue reply is edited in the actual control while existing Save week retains its original format and arrangement");
+  await navigate(base+"/","#openWeek");
+  await chooseFile(saved.file);
+  await waitFor(()=>evaluate('!document.querySelector("#venueFollowup").hidden && document.querySelectorAll("[data-contact-key]").length===4'),"actual saved file reopened");
+  const after=await evaluate('document.querySelector('+JSON.stringify(selector)+').value');
+  const controls=await evaluate('Array.from(document.querySelectorAll("#venueFollowup button")).map(n=>n.textContent)');
+  report.originalCapability={typed:note,afterReload:after,controls,noteSaveControls:await evaluate('document.querySelectorAll("[data-contact-file-save]").length')};
+  assert.equal(after,"");
+  passed("reload and actual reopening preserve the original week but start a fresh empty venue-note session");
+  assert.deepEqual(pageErrors,[]);assert.deepEqual(report.externalRequests,[]);
+  assert.ok(report.serverRequests.every(r=>r.method==="GET"));
+  assert.equal(report.originalCapability.noteSaveControls,1,"Caregiver needs an explicit editable venue-note save/reopen control");
+  report.status="passed";
+
+} catch(error){report.status="failed";report.error=error.stack??String(error);report.browserLog=browserLog;
+ if(sessionId){try{await screenshot("observed-state.png","#venueFollowup");}catch{}}
+ console.error(report.error);process.exitCode=1;
+} finally {
+ if(socket?.readyState===WebSocket.OPEN){try{await command("Browser.close",{},false);}catch{}}
+ socket?.close();for(const p of pending.values())clearTimeout(p.timer);
+ if(browser&&browser.exitCode===null)browser.kill("SIGTERM");
+ server.closeAllConnections();await new Promise(done=>server.close(done));await sleep(300);
+ try{await rm(profile,{recursive:true,force:true,maxRetries:3,retryDelay:150});}catch(error){report.profileCleanup=String(error);}
+ const after={};for(const name of sourcePaths)after[name]=hash(await readFile(join(project,name)));
+ report.sourceUnchanged=JSON.stringify(after)===JSON.stringify(sourceBefore);
+ if(!report.sourceUnchanged){report.status="failed";process.exitCode=1;}
+ report.pageErrors=pageErrors;report.nativeFileChooserEvents=chooserEvents.length;
+ report.artifactBytes=report.artifacts.reduce((n,a)=>n+a.bytes,0);
+ if(report.artifactBytes>8*1024**2){report.status="failed";report.limitExceeded=true;process.exitCode=1;}
+ await writeFile(join(output,"browser-results.json"),JSON.stringify(report,null,2)+"\n");
+ console.log(JSON.stringify({status:report.status,checks:report.checks.length,sourceUnchanged:report.sourceUnchanged,
+ fileChoosers:report.nativeFileChooserEvents,artifacts:report.artifacts.length,output}));
+}

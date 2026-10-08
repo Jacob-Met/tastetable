@@ -211,16 +211,29 @@ this page visit. Repeated suggestions for the same venue remain separate. Omitte
 out of the current worksheet and download. An empty or invalid displayed date keeps the
 worksheet unavailable until corrected.
 
-Notes remain in this tab for the current accepted plan. Replacing the plan, editing its
-inputs, opening a saved week or leaving the page clears them. Print or download the call
-sheet first if you need to keep it. **Save week** and calendar files retain their existing
-formats and do not include contact notes. No venue is contacted and no note is sent to a
-provider or stored automatically. Do not enter names or private health information.
+**Save venue notes (.json)** keeps an editable companion for this accepted plan, including
+notes retained for omitted visits and other dates. Save the week separately. To resume,
+open that saved week, choose **Open venue notes**, review the record preview, then choose
+**Replace venue notes**. Previewing or canceling leaves current notes unchanged. Replacement
+replaces the complete note set; an empty companion clears it only after this explicit action.
+A note edit, arrangement/date change or newly accepted plan retires a pending preview.
+
+The companion must match the complete original accepted plan, inputs and source identity.
+It does not rearrange the week or refresh original checks. A file from another plan is refused;
+keep the matching saved week with your notes. The file admits up to 256 occurrence/date records
+and 2 MiB of UTF-8 JSON. [Venue-note file usage and receiving](docs/venue-notes/README.md)
+explains these limits and the local format.
+
+Unsaved notes remain in this tab for the current accepted plan. Replacing the plan, editing
+its inputs, opening a saved week or leaving the page clears them. **Save week** and calendar
+files retain their existing formats and do not include contact notes. No venue is contacted
+and no note is sent to a provider or stored automatically. Do not enter names or private
+health information.
 
 The worksheet state tests use the same dependency-free Node runner:
 
 ~~~bash
-node --test tests/venue_followup.test.mjs
+node --test tests/venue_followup.test.mjs tests/venue_note_file.test.mjs
 ~~~
 
 ### Going live with Qloo

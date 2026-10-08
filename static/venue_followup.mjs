@@ -1,5 +1,6 @@
 /** A caregiver's visit notes. No venue contact, recommendation or storage calls. */
-import { setWeek, weekRows } from "./week_plan.mjs";
+import { calendarWeek, setWeek, weekRows } from "./week_plan.mjs";
+import { mountVenueNoteFiles } from "./venue_note_file.mjs";
 
 export const CONTACT_STATES = Object.freeze({
   not_contacted: "Not contacted",
@@ -31,20 +32,24 @@ export function createVenueFollowup(initial, savedSource = "") {
   const constraints = initial.constraints;
   const sourceMode = initial.sourceMode;
   const sourceLabel = [SOURCES[sourceMode], savedSource].filter(Boolean).join("\n");
-  const records = new Map();
+  let records = new Map();
+
+  function suggestedQuestions(pick, date) {
+    return [
+      `Will you be open on ${date}, and do we need to book?`,
+      ...constraints.filter((constraint) => QUESTIONS[constraint]
+        && (pick.kind === "restaurant" || constraint === "wheelchair")).map((constraint) => QUESTIONS[constraint]),
+    ];
+  }
 
   function entries(state) {
     if (state?.sourcePlan !== source || state.picks !== picks || state.constraints !== constraints || state.sourceMode !== sourceMode) {
       throw new Error("This worksheet belongs to a different accepted plan.");
     }
     return weekRows(state).flatMap(({ day, date, picks: scheduled }) => scheduled.map(({ key, pick }) => {
-      const suggestedQuestions = [
-        `Will you be open on ${date}, and do we need to book?`,
-        ...constraints.filter((constraint) => QUESTIONS[constraint]
-          && (pick.kind === "restaurant" || constraint === "wheelchair")).map((constraint) => QUESTIONS[constraint]),
-      ];
+      const questionsForVisit = suggestedQuestions(pick, date);
       const note = records.get(JSON.stringify([key, date])) || EMPTY_NOTE;
-      const questionText = note.question ?? suggestedQuestions.join("\n");
+      const questionText = note.question ?? questionsForVisit.join("\n");
       return {
         key, day, date, pick, occurrence: picks.findIndex((item) => item.key === key) + 1,
         questionText, questions: questionText.split(/\r?\n/).filter((line) => line.trim()), note,
@@ -100,7 +105,56 @@ export function createVenueFollowup(initial, savedSource = "") {
     return lines.join("\n");
   }
 
-  return Object.freeze({ entries, setField, text, sourceLabel });
+
+  /** Copy every retained occurrence/date record, including visits currently omitted. */
+  function snapshotRecords() {
+    return Object.freeze([...records].map(([identity, note]) => {
+      const [key, date] = JSON.parse(identity);
+      return Object.freeze({ key, date, note: Object.freeze({ ...note }) });
+    }));
+  }
+
+  /** Validate a complete replacement without changing any live note. */
+  function prepareRecords(rows) {
+    if (!Array.isArray(rows)) throw new TypeError("The notes file must contain a list of visit records.");
+    const seen = new Set();
+    const fields = ["status", "question", "reply", "replyQuestions", "nextStep"];
+    const exact = (value, names) => value !== null && typeof value === "object" && !Array.isArray(value)
+      && Object.keys(value).length === names.length && names.every((name) => Object.hasOwn(value, name));
+    return Object.freeze(rows.map((row) => {
+      if (!exact(row, ["key", "date", "note"])) throw new TypeError("A venue record has unsupported fields.");
+      const item = picks.find(({ key }) => key === row.key);
+      if (!item || typeof row.date !== "string" || !calendarWeek(row.date).some(({ date }) => date === row.date)) {
+        throw new TypeError("A venue record has an unknown pick or invalid date.");
+      }
+      const identity = JSON.stringify([row.key, row.date]);
+      if (seen.has(identity)) throw new TypeError("The notes file repeats a pick and date.");
+      seen.add(identity);
+      const note = row.note;
+      if (!exact(note, fields) || typeof note.status !== "string" || !Object.hasOwn(CONTACT_STATES, note.status)
+          || (note.question !== null && (typeof note.question !== "string" || note.question.length > NOTE_LIMITS.question))
+          || typeof note.reply !== "string" || note.reply.length > NOTE_LIMITS.reply
+          || typeof note.nextStep !== "string" || note.nextStep.length > NOTE_LIMITS.nextStep
+          || (note.replyQuestions !== null && (typeof note.replyQuestions !== "string" || note.replyQuestions.length > NOTE_LIMITS.question))) {
+        throw new TypeError("A venue note has an unsupported status, field type or length.");
+      }
+      const hasReply = Boolean(note.reply.trim());
+      const questionText = note.question ?? suggestedQuestions(item.pick, row.date).join("\n");
+      if (hasReply !== (note.replyQuestions !== null)
+          || (hasReply && note.replyQuestions !== questionText && note.status === "reply_recorded")) {
+        throw new TypeError("A venue note has an inconsistent reply and question history.");
+      }
+      return Object.freeze({ key: row.key, date: row.date, note: Object.freeze({ ...note }) });
+    }));
+  }
+
+  function replaceRecords(rows) {
+    const prepared = prepareRecords(rows);
+    const replacement = new Map(prepared.map(({ key, date, note }) => [JSON.stringify([key, date]), note]));
+    records = replacement;
+  }
+
+  return Object.freeze({ entries, setField, text, sourceLabel, snapshotRecords, prepareRecords, replaceRecords });
 }
 
 /** Own only this section; the existing app owns plan acceptance and retirement. */
@@ -111,6 +165,9 @@ export function mountVenueFollowup(root, current) {
   const source = root.querySelector("[data-contact-source]");
   const download = root.querySelector("[data-contact-download]");
   let session = null;
+  const noteFiles = mountVenueNoteFiles(root, () => ({
+    state: currentState(), origin: current().origin, model: session,
+  }), sync, CONTACT_STATES);
 
   function currentState() {
     const { state, date } = current();
@@ -136,6 +193,7 @@ export function mountVenueFollowup(root, current) {
   }
 
   function sync() {
+    noteFiles.changed();
     if (!session) return;
     root.hidden = false;
     download.disabled = true;
@@ -199,6 +257,7 @@ export function mountVenueFollowup(root, current) {
     // Commit each native control once; the paired event must not erase a refusal.
     if (event.type !== (input.dataset.contactField === "status" ? "change" : "input")) return;
     const visit = input.closest("[data-contact-key]");
+    noteFiles.changed();
     try {
       const state = currentState();
       const note = session.setField(state, visit.dataset.contactKey, visit.dataset.contactDate, input.dataset.contactField, input.value);
@@ -216,7 +275,8 @@ export function mountVenueFollowup(root, current) {
           : note[field] || (field === "reply" ? "No reply details entered." : "No next step recorded.");
       }
       updateSummary(state);
-      status.textContent = "Your note is available for this visit in this tab. Print the week or download the call sheet to keep a copy.";
+      status.textContent = "Your note is available for this visit in this tab. Save venue notes to edit them later, or print/download a readable call sheet.";
+      noteFiles.refresh();
     } catch (error) {
       if (input.dataset.contactField === "status" && session) {
         try {
@@ -256,10 +316,11 @@ export function mountVenueFollowup(root, current) {
   });
 
   return Object.freeze({
-    accept(state, savedSource = "") { session = createVenueFollowup(state, savedSource); sync(); },
+    accept(state, savedSource = "") { noteFiles.retire(); session = createVenueFollowup(state, savedSource); sync(); },
     sync,
     retire() {
       session = null;
+      noteFiles.retire();
       root.hidden = true;
       list.replaceChildren();
       summary.textContent = source.textContent = status.textContent = "";

@@ -1,0 +1,13 @@
+{
+  "created": "2026-10-08 18:58:33 UTC",
+  "stage": "After frozen blind contract and first source inspection; before executing receiver",
+  "originalContractCreated": "2026-10-08 18:54:59 UTC",
+  "sourceOwnerConfirmation": "estate_continuity explicitly confirmed whole-file replacement; all retained occurrence/date records are included in export and reads/preview do not mutate live records.",
+  "adjustment": "The blind bounded-replacement group initially expected local-only records absent from an incoming file to survive. The declared UI clearly promises replacing all current records. Receive preserved off-week and omitted records by including them in the exported file; verify that local-only records are removed only by explicit whole-file apply. This is an expectation correction, not a product defect.",
+  "unchangedGroups": [
+    "distinct occurrence identities",
+    "literal reply and original replyQuestions history after edits",
+    "full original request/trace mismatch refuses without any current-note mutation"
+  ],
+  "currentTarget": "Frozen candidate model0c1923ecdad8fe9b14f0193a6aba5f3a1e2b9d63 and filef8406cb540d52222996c585666ae1a55a1030def"
+}

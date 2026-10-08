@@ -1,0 +1,54 @@
+{
+  "schema": "tastetable.venue-notes-browser/1",
+  "status": "failed",
+  "project": "C:\\Users\\minec\\tastetable-venue-resume-3dcb83a1\\candidate",
+  "node": "v24.21.0",
+  "baseCommit": "2b347cee4ff4e2b806362730a8520a3360b45f5a",
+  "input": {
+    "path": "fixtures/received-week.json",
+    "publishedPath": "docs/venue-followup-6c20bb4b010e/author/final/saved-composition-week.json",
+    "git_blob": "8b14090030201d6e8d69cd5bca380a9a71a4da0d",
+    "attribution": "Unchanged published native saved-week artifact; this invocation does not run its producer.",
+    "actualPath": "C:\\Users\\minec\\tastetable-venue-resume-3dcb83a1\\candidate\\fixtures\\received-week.json",
+    "sha256": "55dfb9c7e50b2aff749dbb33835dcc5cf89c7d7f0eaf4e2b68dd957cb319a824"
+  },
+  "bootstrap": "Authored GET-only mock health/personas and exact project static files; no FastAPI or provider.",
+  "checks": [],
+  "artifacts": [],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:57689/",
+      "method": "GET"
+    }
+  ],
+  "externalRequests": [],
+  "serverRequests": [],
+  "sourceSha256": {
+    "static/index.html": "fee1f0ce63ca3c79e1e2010c3b603aaa429ecfe48d985a7eeabf2bec41d02207",
+    "static/style.css": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+    "static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+    "static/calendar.css": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+    "static/venue_followup.css": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+    "static/plan-request.js": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+    "tests/venue_followup.test.mjs": "a53284b48da8375d7f6cf26b1d4e5943dfd203e60ff1ef44780f9a02f299479f",
+    "static/venue_followup.mjs": "61bb9cf497b5a37a32afd1b23729e128aed2631cf2c570a1485ca4f0ffbe632c",
+    "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+    "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+    "static/app.js": "6e87cfbf89e37792d384795382059a5d2245312c1b4bf0038991a3af3ff8c327",
+    "static/venue_note_file.mjs": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+    "tests/venue_note_file.test.mjs": "8c1b12a02302e414346a04710d5efb14af45e0cb8994ba75135c9e1988252740"
+  },
+  "sourceUnchanged": true,
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/154.0.8037.57",
+    "revision": "@73c14f6228d7cd537c855007e8f88678969cc0eb",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "jsVersion": "15.4.80.11"
+  },
+  "error": "Error: CDP timeout: Page.navigate\n    at Timeout._onTimeout (file:///C:/Users/minec/tastetable-venue-resume-3dcb83a1/receive-candidate-browser-v3.mjs:65:34)\n    at listOnTimeout (node:internal/timers:685:17)\n    at process.processTimers (node:internal/timers:618:7)",
+  "browserLog": "\r\nDevTools listening on ws://127.0.0.1:57737/devtools/browser/89e5c834-8f2a-402f-bcd7-ee474c3476c5\r\n[64704:26424:1008/115352.939:ERROR:content\\browser\\network_service_instance_impl.cc:653] Network service crashed or was terminated, restarting service.\r\n",
+  "pageErrors": [],
+  "nativeFileChooserEvents": 0,
+  "artifactBytes": 0
+}

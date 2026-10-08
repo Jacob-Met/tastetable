@@ -14,7 +14,7 @@ let calendarSession = null;
 let acceptedPlan = null;
 let requestKind = "plan";
 const OPEN_SAVED_WEEK = Symbol("open saved week");
-const venueFollowup = mountVenueFollowup($("#venueFollowup"), () => ({ state: weekState, date: $("#weekDate").value }));
+const venueFollowup = mountVenueFollowup($("#venueFollowup"), () => ({ state: weekState, date: $("#weekDate").value, origin: acceptedPlan }));
 
 function newCalendarId() {
   try {

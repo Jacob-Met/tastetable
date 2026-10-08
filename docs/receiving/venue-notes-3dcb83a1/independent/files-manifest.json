@@ -1,0 +1,79 @@
+{
+  "files": [
+    {
+      "path": "contract.json",
+      "bytes": 2265,
+      "sha256": "8ea36c81dd768262dfacbba2f4a8ea2f2f34ea1caba460fec29aa1b992bd04e2",
+      "git_blob": "ce7248aaada89fe4126065eca8389f85f1e8afd1"
+    },
+    {
+      "path": "contract-adjustment.json",
+      "bytes": 1171,
+      "sha256": "1a80ea76c59fb7ac284691a2a91b7960a946bc06f183cf6cff40e256e5668207",
+      "git_blob": "6dc14b82f8d934b4eb439b5e5bd6a58e9619961e"
+    },
+    {
+      "path": "receive-notes.mjs",
+      "bytes": 12486,
+      "sha256": "f4a27d47ef9093699eff1eab72d9181446b1e5ae6feb5732ff00ecbbb481ad27",
+      "git_blob": "ca4c74659fe6dc7510cba48e52f93d635ed243f3"
+    },
+    {
+      "path": "independent-results.json",
+      "bytes": 47425,
+      "sha256": "e99b4664ab6445615ecd1cc413d9d2ff26c720eb4db1a780cb8a0474d54c5644",
+      "git_blob": "9830a6e8d9bd17c78931b81721542d2c68e3d4ee"
+    },
+    {
+      "path": "authored-venue-notes.json",
+      "bytes": 3908,
+      "sha256": "31e24b7f1ac39cd0bd180e6bcccd7413720ef6f56896f797eb6b3ffe77d3cbc4",
+      "git_blob": "d7922a386503e8a1fbc8de964c20f1aba7bdaf04"
+    },
+    {
+      "path": "authored-saved-week.json",
+      "bytes": 2525,
+      "sha256": "6d171b27e896bf42cc23099e6ba0712d71985affcd58975e1d7c2e7544b93eb8",
+      "git_blob": "b95c3d3c41f42b4d96d6e64eed3a2dfa135dbd1e"
+    },
+    {
+      "path": "reopened-call-sheet.txt",
+      "bytes": 1529,
+      "sha256": "8e1698a68161556587f81e8105a6ce89e052a9c07012f9c626324dd59a2c5d4d",
+      "git_blob": "a1da67f623f46f80576054ea7eedbcb6b0bad41c"
+    },
+    {
+      "path": "REVIEW.md",
+      "bytes": 5139,
+      "sha256": "e6c8c110247f845420db916ed219d44fc31acf9075b571e2b9fb41437688e50a",
+      "git_blob": "6bd27fbec97d728ca543d11d84a862300bf49549"
+    }
+  ],
+  "payload_bytes": 76448,
+  "sourcePins": [
+    {
+      "path": "static/venue_followup.mjs",
+      "bytes": 18444,
+      "sha256": "61bb9cf497b5a37a32afd1b23729e128aed2631cf2c570a1485ca4f0ffbe632c",
+      "git_blob": "0c1923ecdad8fe9b14f0193a6aba5f3a1e2b9d63"
+    },
+    {
+      "path": "static/venue_note_file.mjs",
+      "bytes": 10435,
+      "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+      "git_blob": "f8406cb540d52222996c585666ae1a55a1030def"
+    },
+    {
+      "path": "static/week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "git_blob": "420ddb8f63fca264dcf97be7147801105696155d"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+    }
+  ]
+}

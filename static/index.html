@@ -93,9 +93,27 @@
       <p>Use the questions below to ask about each scheduled visit. Record the venue's reply and the next step for another caregiver.</p>
       <p data-contact-source class="mode"></p>
       <p class="handoff-note">These are caregiver-entered notes. A recorded reply is not a safety check, reservation or confirmation by TasteTable. Confirm needs with the venue and care team; do not enter names or private health information.</p>
-      <p class="why contact-session-help">Notes stay in this tab for the current plan. Each note belongs to one pick and date. Moving a visit starts a separate note; returning to its previous date restores that note during this visit. Print the week or download the call sheet before replacing the plan or leaving. Week save files and calendar files do not include these notes.</p>
+      <p class="why contact-session-help">Notes stay in this tab for the current plan. Each note belongs to one pick and date. Moving a visit starts a separate note; returning to its previous date restores that note during this visit. Save venue notes to reopen these editable records later, or print/download a readable call sheet. Keep the notes file with its matching saved week. Week save files and calendar files keep their existing formats and do not include these notes.</p>
       <p data-contact-summary></p>
-      <div class="contact-actions"><button type="button" data-contact-download disabled>Download call sheet (.txt)</button></div>
+      <div class="contact-actions">
+        <button type="button" data-contact-download disabled>Download call sheet (.txt)</button>
+        <button type="button" data-contact-file-save disabled>Save venue notes (.json)</button>
+        <button type="button" data-contact-file-open disabled>Open venue notes</button>
+        <input type="file" id="venueNotesFile" data-contact-file-input accept=".json,application/json" hidden>
+      </div>
+      <p class="why contact-session-help">Open the matching saved week first, then review a notes file before replacing the current notes. Files include the original plan inputs and source details plus your notes; nothing is uploaded or saved automatically. Limit: 2 MiB and 256 visit/date records.</p>
+      <p data-contact-file-status class="why contact-file-status" role="status" aria-live="polite"></p>
+      <section data-contact-file-preview class="contact-file-preview" aria-labelledby="venueNotesPreviewTitle" hidden>
+        <h4 id="venueNotesPreviewTitle">Review venue notes before replacing</h4>
+        <p data-contact-file-description></p>
+        <details><summary>Inspect the file’s note records</summary><ol data-contact-file-records></ol></details>
+        <p class="why">Save your current venue notes first if you want to keep them.</p>
+        <div class="contact-actions">
+          <button type="button" data-contact-file-apply disabled>Replace venue notes</button>
+          <button type="button" data-contact-file-cancel>Cancel replacement</button>
+        </div>
+      </section>
+      <p data-contact-file-source class="why" hidden></p>
       <p data-contact-status class="why" role="status" aria-live="polite"></p>
       <ol class="contact-visits" data-contact-list></ol>
     </section>

@@ -1,0 +1,145 @@
+{
+  "format": "tastetable.venue-notes.v1",
+  "savedAt": "2026-10-08T13:00:00.000Z",
+  "origin": {
+    "receivedAt": "2026-10-08T12:00:00.000Z",
+    "calendarId": "11111111111111111111111111111111",
+    "inputs": {
+      "city": "Synthetic Source City",
+      "cuisines": [
+        "fixture-cuisine"
+      ],
+      "music": [],
+      "films": [],
+      "constraints": [
+        "wheelchair",
+        "low_sodium"
+      ]
+    },
+    "response": {
+      "mock": true,
+      "plan": {
+        "meals": [
+          {
+            "name": "Synthetic Cedar Cafe",
+            "why": "Authored first occurrence.",
+            "entity_id": "synthetic-shared-venue-01",
+            "kind": "restaurant",
+            "day": "Monday",
+            "affinity": 0.5,
+            "fallback": false
+          },
+          {
+            "name": "Synthetic Cedar Cafe",
+            "why": "Authored second occurrence.",
+            "entity_id": "synthetic-shared-venue-01",
+            "kind": "restaurant",
+            "day": "Monday",
+            "affinity": 0.5,
+            "fallback": false
+          },
+          {
+            "name": "Synthetic Cedar Cafe",
+            "why": "Authored omitted occurrence.",
+            "entity_id": "synthetic-shared-venue-01",
+            "kind": "restaurant",
+            "day": "Tuesday",
+            "affinity": 0.5,
+            "fallback": false
+          }
+        ],
+        "outing": null,
+        "notes": [
+          "Authored independent fixture."
+        ],
+        "rejected": []
+      },
+      "llm_only": {
+        "meals": [],
+        "outing": {
+          "name": "Synthetic comparison only",
+          "why": "Not a recommendation.",
+          "day": "Sunday"
+        }
+      },
+      "comparison": {
+        "constraints": [
+          "wheelchair",
+          "low_sodium"
+        ],
+        "grounded": {
+          "picks": 3,
+          "with_qloo_entity_id": 3,
+          "with_affinity_evidence": 0,
+          "constraint_checked": 3,
+          "unsafe_candidates_rejected": 0
+        },
+        "llm_only": {
+          "picks": 3,
+          "with_qloo_entity_id": 0,
+          "with_affinity_evidence": 0,
+          "constraint_checked": 0,
+          "unsafe_candidates_rejected": 0
+        }
+      },
+      "trace": [
+        {
+          "tool": "synthetic_fixture",
+          "args": {
+            "request_marker": "original-request",
+            "nested": {
+              "trace_identity": "trace-one"
+            }
+          },
+          "result_summary": "Locally authored fixture; no provider contacted."
+        }
+      ]
+    }
+  },
+  "records": [
+    {
+      "key": "pick-0",
+      "date": "2026-10-12",
+      "note": {
+        "status": "follow_up",
+        "question": "Revised: which entrance will be open?\nKeep the exact route in the reply.",
+        "reply": " \nPhone reply: \"ask for Ana\" — α, café 🙂\t ",
+        "replyQuestions": " Can the north entrance fit two chairs?\nPlease confirm the quiet table.  ",
+        "nextStep": "Ask again about the revised entrance."
+      }
+    },
+    {
+      "key": "pick-1",
+      "date": "2026-10-12",
+      "note": {
+        "status": "reply_recorded",
+        "question": "Independent second-visit question.",
+        "reply": "Second visit has a separate reply.",
+        "replyQuestions": "Independent second-visit question.",
+        "nextStep": ""
+      }
+    },
+    {
+      "key": "pick-2",
+      "date": "2026-10-13",
+      "note": {
+        "status": "not_contacted",
+        "question": null,
+        "reply": "",
+        "replyQuestions": null,
+        "nextStep": "Retain this note while the visit is omitted."
+      }
+    },
+    {
+      "key": "pick-0",
+      "date": "2026-10-05",
+      "note": {
+        "status": "not_contacted",
+        "question": null,
+        "reply": "",
+        "replyQuestions": null,
+        "nextStep": "Keep the earlier-date record."
+      }
+    }
+  ]
+}

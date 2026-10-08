@@ -1,0 +1,1546 @@
+{
+  "utc": "2026-10-08T19:02:15.743Z",
+  "source": "C:\\Users\\minec\\tastetable-venue-resume-3dcb83a1\\candidate",
+  "node": "v24.21.0",
+  "baselineSource": "2b347cee",
+  "sourcePins": [
+    {
+      "path": "static/venue_followup.mjs",
+      "bytes": 18444,
+      "sha256": "61bb9cf497b5a37a32afd1b23729e128aed2631cf2c570a1485ca4f0ffbe632c",
+      "git_blob": "0c1923ecdad8fe9b14f0193a6aba5f3a1e2b9d63"
+    },
+    {
+      "path": "static/venue_note_file.mjs",
+      "bytes": 10435,
+      "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+      "git_blob": "f8406cb540d52222996c585666ae1a55a1030def"
+    },
+    {
+      "path": "static/week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "git_blob": "420ddb8f63fca264dcf97be7147801105696155d"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+    }
+  ],
+  "guard": {
+    "free_disk": 461071482880,
+    "available_memory": 22273077248
+  },
+  "checks": [
+    {
+      "group": "occurrence identity",
+      "name": "same venue and date still have different source occurrence keys",
+      "pass": true,
+      "actual": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "group": "occurrence identity",
+      "name": "first reply leaves the same-name second visit unchanged",
+      "pass": true,
+      "actual": {
+        "status": "not_contacted",
+        "question": null,
+        "reply": "",
+        "replyQuestions": null,
+        "nextStep": ""
+      },
+      "expected": {
+        "status": "not_contacted",
+        "question": null,
+        "reply": "",
+        "replyQuestions": null,
+        "nextStep": ""
+      }
+    },
+    {
+      "group": "reply provenance",
+      "name": "revised questions preserve the exact earlier reply questions",
+      "pass": true,
+      "actual": " Can the north entrance fit two chairs?\nPlease confirm the quiet table.  ",
+      "expected": " Can the north entrance fit two chairs?\nPlease confirm the quiet table.  "
+    },
+    {
+      "group": "reply provenance",
+      "name": "literal reply survives later question editing",
+      "pass": true,
+      "actual": " \nPhone reply: \"ask for Ana\" — α, café 🙂\t ",
+      "expected": " \nPhone reply: \"ask for Ana\" — α, café 🙂\t "
+    },
+    {
+      "group": "reply provenance",
+      "name": "revised-question flag and follow-up status are explicit",
+      "pass": true,
+      "actual": [
+        true,
+        "follow_up"
+      ],
+      "expected": [
+        true,
+        "follow_up"
+      ]
+    },
+    {
+      "group": "full record export",
+      "name": "retained record set includes both same-day visits, omitted visit and earlier date",
+      "pass": true,
+      "actual": [
+        [
+          "pick-0",
+          "2026-10-12"
+        ],
+        [
+          "pick-1",
+          "2026-10-12"
+        ],
+        [
+          "pick-2",
+          "2026-10-13"
+        ],
+        [
+          "pick-0",
+          "2026-10-05"
+        ]
+      ],
+      "expected": [
+        [
+          "pick-0",
+          "2026-10-12"
+        ],
+        [
+          "pick-1",
+          "2026-10-12"
+        ],
+        [
+          "pick-2",
+          "2026-10-13"
+        ],
+        [
+          "pick-0",
+          "2026-10-05"
+        ]
+      ]
+    },
+    {
+      "group": "full record export",
+      "name": "actual JSON file roundtrip retains every complete record",
+      "pass": true,
+      "actual": [
+        {
+          "key": "pick-0",
+          "date": "2026-10-12",
+          "note": {
+            "status": "follow_up",
+            "question": "Revised: which entrance will be open?\nKeep the exact route in the reply.",
+            "reply": " \nPhone reply: \"ask for Ana\" — α, café 🙂\t ",
+            "replyQuestions": " Can the north entrance fit two chairs?\nPlease confirm the quiet table.  ",
+            "nextStep": "Ask again about the revised entrance."
+          }
+        },
+        {
+          "key": "pick-1",
+          "date": "2026-10-12",
+          "note": {
+            "status": "reply_recorded",
+            "question": "Independent second-visit question.",
+            "reply": "Second visit has a separate reply.",
+            "replyQuestions": "Independent second-visit question.",
+            "nextStep": ""
+          }
+        },
+        {
+          "key": "pick-2",
+          "date": "2026-10-13",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Retain this note while the visit is omitted."
+          }
+        },
+        {
+          "key": "pick-0",
+          "date": "2026-10-05",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Keep the earlier-date record."
+          }
+        }
+      ],
+      "expected": [
+        {
+          "key": "pick-0",
+          "date": "2026-10-12",
+          "note": {
+            "status": "follow_up",
+            "question": "Revised: which entrance will be open?\nKeep the exact route in the reply.",
+            "reply": " \nPhone reply: \"ask for Ana\" — α, café 🙂\t ",
+            "replyQuestions": " Can the north entrance fit two chairs?\nPlease confirm the quiet table.  ",
+            "nextStep": "Ask again about the revised entrance."
+          }
+        },
+        {
+          "key": "pick-1",
+          "date": "2026-10-12",
+          "note": {
+            "status": "reply_recorded",
+            "question": "Independent second-visit question.",
+            "reply": "Second visit has a separate reply.",
+            "replyQuestions": "Independent second-visit question.",
+            "nextStep": ""
+          }
+        },
+        {
+          "key": "pick-2",
+          "date": "2026-10-13",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Retain this note while the visit is omitted."
+          }
+        },
+        {
+          "key": "pick-0",
+          "date": "2026-10-05",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Keep the earlier-date record."
+          }
+        }
+      ]
+    },
+    {
+      "group": "explicit replacement",
+      "name": "reading and preparing a valid companion does not alter current records",
+      "pass": true,
+      "actual": [
+        {
+          "key": "pick-0",
+          "date": "2026-10-12",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Local current record before preview."
+          }
+        },
+        {
+          "key": "pick-1",
+          "date": "2026-10-19",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Local-only record intentionally replaced on explicit apply."
+          }
+        }
+      ],
+      "expected": [
+        {
+          "key": "pick-0",
+          "date": "2026-10-12",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Local current record before preview."
+          }
+        },
+        {
+          "key": "pick-1",
+          "date": "2026-10-19",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Local-only record intentionally replaced on explicit apply."
+          }
+        }
+      ]
+    },
+    {
+      "group": "explicit replacement",
+      "name": "prepared records are exactly the exported set",
+      "pass": true,
+      "actual": [
+        {
+          "key": "pick-0",
+          "date": "2026-10-12",
+          "note": {
+            "status": "follow_up",
+            "question": "Revised: which entrance will be open?\nKeep the exact route in the reply.",
+            "reply": " \nPhone reply: \"ask for Ana\" — α, café 🙂\t ",
+            "replyQuestions": " Can the north entrance fit two chairs?\nPlease confirm the quiet table.  ",
+            "nextStep": "Ask again about the revised entrance."
+          }
+        },
+        {
+          "key": "pick-1",
+          "date": "2026-10-12",
+          "note": {
+            "status": "reply_recorded",
+            "question": "Independent second-visit question.",
+            "reply": "Second visit has a separate reply.",
+            "replyQuestions": "Independent second-visit question.",
+            "nextStep": ""
+          }
+        },
+        {
+          "key": "pick-2",
+          "date": "2026-10-13",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Retain this note while the visit is omitted."
+          }
+        },
+        {
+          "key": "pick-0",
+          "date": "2026-10-05",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Keep the earlier-date record."
+          }
+        }
+      ],
+      "expected": [
+        {
+          "key": "pick-0",
+          "date": "2026-10-12",
+          "note": {
+            "status": "follow_up",
+            "question": "Revised: which entrance will be open?\nKeep the exact route in the reply.",
+            "reply": " \nPhone reply: \"ask for Ana\" — α, café 🙂\t ",
+            "replyQuestions": " Can the north entrance fit two chairs?\nPlease confirm the quiet table.  ",
+            "nextStep": "Ask again about the revised entrance."
+          }
+        },
+        {
+          "key": "pick-1",
+          "date": "2026-10-12",
+          "note": {
+            "status": "reply_recorded",
+            "question": "Independent second-visit question.",
+            "reply": "Second visit has a separate reply.",
+            "replyQuestions": "Independent second-visit question.",
+            "nextStep": ""
+          }
+        },
+        {
+          "key": "pick-2",
+          "date": "2026-10-13",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Retain this note while the visit is omitted."
+          }
+        },
+        {
+          "key": "pick-0",
+          "date": "2026-10-05",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Keep the earlier-date record."
+          }
+        }
+      ]
+    },
+    {
+      "group": "explicit replacement",
+      "name": "explicit apply replaces the complete validated record set",
+      "pass": true,
+      "actual": [
+        {
+          "key": "pick-0",
+          "date": "2026-10-12",
+          "note": {
+            "status": "follow_up",
+            "question": "Revised: which entrance will be open?\nKeep the exact route in the reply.",
+            "reply": " \nPhone reply: \"ask for Ana\" — α, café 🙂\t ",
+            "replyQuestions": " Can the north entrance fit two chairs?\nPlease confirm the quiet table.  ",
+            "nextStep": "Ask again about the revised entrance."
+          }
+        },
+        {
+          "key": "pick-1",
+          "date": "2026-10-12",
+          "note": {
+            "status": "reply_recorded",
+            "question": "Independent second-visit question.",
+            "reply": "Second visit has a separate reply.",
+            "replyQuestions": "Independent second-visit question.",
+            "nextStep": ""
+          }
+        },
+        {
+          "key": "pick-2",
+          "date": "2026-10-13",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Retain this note while the visit is omitted."
+          }
+        },
+        {
+          "key": "pick-0",
+          "date": "2026-10-05",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Keep the earlier-date record."
+          }
+        }
+      ],
+      "expected": [
+        {
+          "key": "pick-0",
+          "date": "2026-10-12",
+          "note": {
+            "status": "follow_up",
+            "question": "Revised: which entrance will be open?\nKeep the exact route in the reply.",
+            "reply": " \nPhone reply: \"ask for Ana\" — α, café 🙂\t ",
+            "replyQuestions": " Can the north entrance fit two chairs?\nPlease confirm the quiet table.  ",
+            "nextStep": "Ask again about the revised entrance."
+          }
+        },
+        {
+          "key": "pick-1",
+          "date": "2026-10-12",
+          "note": {
+            "status": "reply_recorded",
+            "question": "Independent second-visit question.",
+            "reply": "Second visit has a separate reply.",
+            "replyQuestions": "Independent second-visit question.",
+            "nextStep": ""
+          }
+        },
+        {
+          "key": "pick-2",
+          "date": "2026-10-13",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Retain this note while the visit is omitted."
+          }
+        },
+        {
+          "key": "pick-0",
+          "date": "2026-10-05",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Keep the earlier-date record."
+          }
+        }
+      ]
+    },
+    {
+      "group": "explicit replacement",
+      "name": "local-only record is removed only by declared whole-file replacement",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "group": "reply provenance",
+      "name": "first visit retains exact reply and old/current question distinction",
+      "pass": true,
+      "actual": [
+        " \nPhone reply: \"ask for Ana\" — α, café 🙂\t ",
+        " Can the north entrance fit two chairs?\nPlease confirm the quiet table.  ",
+        "Revised: which entrance will be open?\nKeep the exact route in the reply.",
+        "follow_up",
+        true
+      ],
+      "expected": [
+        " \nPhone reply: \"ask for Ana\" — α, café 🙂\t ",
+        " Can the north entrance fit two chairs?\nPlease confirm the quiet table.  ",
+        "Revised: which entrance will be open?\nKeep the exact route in the reply.",
+        "follow_up",
+        true
+      ]
+    },
+    {
+      "group": "occurrence identity",
+      "name": "same-name second visit keeps its own reply and original attribution",
+      "pass": true,
+      "actual": [
+        "Second visit has a separate reply.",
+        "Independent second-visit question.",
+        "pick-1",
+        "2026-10-12"
+      ],
+      "expected": [
+        "Second visit has a separate reply.",
+        "Independent second-visit question.",
+        "pick-1",
+        "2026-10-12"
+      ]
+    },
+    {
+      "group": "full record export",
+      "name": "earlier-date record survives fresh-week and companion roundtrip",
+      "pass": true,
+      "actual": "Keep the earlier-date record.",
+      "expected": "Keep the earlier-date record."
+    },
+    {
+      "group": "full record export",
+      "name": "omitted record reappears with its exact note when rescheduled",
+      "pass": true,
+      "actual": "Retain this note while the visit is omitted.",
+      "expected": "Retain this note while the visit is omitted."
+    },
+    {
+      "group": "real native consumer",
+      "name": "call sheet names the first and second occurrences",
+      "pass": true,
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ]
+    },
+    {
+      "group": "real native consumer",
+      "name": "call sheet preserves the earlier question and literal reply blocks",
+      "pass": true,
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ]
+    },
+    {
+      "group": "real native consumer",
+      "name": "call sheet retains the revised-question warning",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "full origin refusal",
+      "name": "original request control retains the same visible week and arrangement",
+      "pass": true,
+      "actual": {
+        "weekStart": "2026-10-12",
+        "sourceMode": "mock",
+        "constraints": [
+          "wheelchair",
+          "low_sodium"
+        ],
+        "sourcePlan": {
+          "meals": [
+            {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored first occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Monday",
+              "affinity": 0.5,
+              "fallback": false
+            },
+            {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored second occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Monday",
+              "affinity": 0.5,
+              "fallback": false
+            },
+            {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored omitted occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Tuesday",
+              "affinity": 0.5,
+              "fallback": false
+            }
+          ],
+          "outing": null,
+          "notes": [
+            "Authored independent fixture."
+          ],
+          "rejected": []
+        },
+        "picks": [
+          {
+            "key": "pick-0",
+            "originalDay": "Monday",
+            "pick": {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored first occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Monday",
+              "affinity": 0.5,
+              "fallback": false
+            }
+          },
+          {
+            "key": "pick-1",
+            "originalDay": "Monday",
+            "pick": {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored second occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Monday",
+              "affinity": 0.5,
+              "fallback": false
+            }
+          },
+          {
+            "key": "pick-2",
+            "originalDay": "Tuesday",
+            "pick": {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored omitted occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Tuesday",
+              "affinity": 0.5,
+              "fallback": false
+            }
+          }
+        ],
+        "assignments": {
+          "pick-0": "Monday",
+          "pick-1": "Monday",
+          "pick-2": null
+        }
+      },
+      "expected": {
+        "weekStart": "2026-10-12",
+        "sourceMode": "mock",
+        "constraints": [
+          "wheelchair",
+          "low_sodium"
+        ],
+        "sourcePlan": {
+          "meals": [
+            {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored first occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Monday",
+              "affinity": 0.5,
+              "fallback": false
+            },
+            {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored second occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Monday",
+              "affinity": 0.5,
+              "fallback": false
+            },
+            {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored omitted occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Tuesday",
+              "affinity": 0.5,
+              "fallback": false
+            }
+          ],
+          "outing": null,
+          "notes": [
+            "Authored independent fixture."
+          ],
+          "rejected": []
+        },
+        "picks": [
+          {
+            "key": "pick-0",
+            "originalDay": "Monday",
+            "pick": {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored first occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Monday",
+              "affinity": 0.5,
+              "fallback": false
+            }
+          },
+          {
+            "key": "pick-1",
+            "originalDay": "Monday",
+            "pick": {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored second occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Monday",
+              "affinity": 0.5,
+              "fallback": false
+            }
+          },
+          {
+            "key": "pick-2",
+            "originalDay": "Tuesday",
+            "pick": {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored omitted occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Tuesday",
+              "affinity": 0.5,
+              "fallback": false
+            }
+          }
+        ],
+        "assignments": {
+          "pick-0": "Monday",
+          "pick-1": "Monday",
+          "pick-2": null
+        }
+      }
+    },
+    {
+      "group": "full origin refusal",
+      "name": "original request mismatch refuses specifically as a different accepted plan",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "full origin refusal",
+      "name": "original request refusal preserves all current occurrence/date records",
+      "pass": true,
+      "actual": [
+        {
+          "key": "pick-0",
+          "date": "2026-10-12",
+          "note": {
+            "status": "follow_up",
+            "question": "Revised: which entrance will be open?\nKeep the exact route in the reply.",
+            "reply": " \nPhone reply: \"ask for Ana\" — α, café 🙂\t ",
+            "replyQuestions": " Can the north entrance fit two chairs?\nPlease confirm the quiet table.  ",
+            "nextStep": "Ask again about the revised entrance."
+          }
+        },
+        {
+          "key": "pick-1",
+          "date": "2026-10-12",
+          "note": {
+            "status": "reply_recorded",
+            "question": "Independent second-visit question.",
+            "reply": "Second visit has a separate reply.",
+            "replyQuestions": "Independent second-visit question.",
+            "nextStep": ""
+          }
+        },
+        {
+          "key": "pick-2",
+          "date": "2026-10-13",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Retain this note while the visit is omitted."
+          }
+        },
+        {
+          "key": "pick-0",
+          "date": "2026-10-05",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Keep the earlier-date record."
+          }
+        }
+      ],
+      "expected": [
+        {
+          "key": "pick-0",
+          "date": "2026-10-12",
+          "note": {
+            "status": "follow_up",
+            "question": "Revised: which entrance will be open?\nKeep the exact route in the reply.",
+            "reply": " \nPhone reply: \"ask for Ana\" — α, café 🙂\t ",
+            "replyQuestions": " Can the north entrance fit two chairs?\nPlease confirm the quiet table.  ",
+            "nextStep": "Ask again about the revised entrance."
+          }
+        },
+        {
+          "key": "pick-1",
+          "date": "2026-10-12",
+          "note": {
+            "status": "reply_recorded",
+            "question": "Independent second-visit question.",
+            "reply": "Second visit has a separate reply.",
+            "replyQuestions": "Independent second-visit question.",
+            "nextStep": ""
+          }
+        },
+        {
+          "key": "pick-2",
+          "date": "2026-10-13",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Retain this note while the visit is omitted."
+          }
+        },
+        {
+          "key": "pick-0",
+          "date": "2026-10-05",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Keep the earlier-date record."
+          }
+        }
+      ]
+    },
+    {
+      "group": "full origin refusal",
+      "name": "original trace control retains the same visible week and arrangement",
+      "pass": true,
+      "actual": {
+        "weekStart": "2026-10-12",
+        "sourceMode": "mock",
+        "constraints": [
+          "wheelchair",
+          "low_sodium"
+        ],
+        "sourcePlan": {
+          "meals": [
+            {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored first occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Monday",
+              "affinity": 0.5,
+              "fallback": false
+            },
+            {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored second occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Monday",
+              "affinity": 0.5,
+              "fallback": false
+            },
+            {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored omitted occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Tuesday",
+              "affinity": 0.5,
+              "fallback": false
+            }
+          ],
+          "outing": null,
+          "notes": [
+            "Authored independent fixture."
+          ],
+          "rejected": []
+        },
+        "picks": [
+          {
+            "key": "pick-0",
+            "originalDay": "Monday",
+            "pick": {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored first occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Monday",
+              "affinity": 0.5,
+              "fallback": false
+            }
+          },
+          {
+            "key": "pick-1",
+            "originalDay": "Monday",
+            "pick": {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored second occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Monday",
+              "affinity": 0.5,
+              "fallback": false
+            }
+          },
+          {
+            "key": "pick-2",
+            "originalDay": "Tuesday",
+            "pick": {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored omitted occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Tuesday",
+              "affinity": 0.5,
+              "fallback": false
+            }
+          }
+        ],
+        "assignments": {
+          "pick-0": "Monday",
+          "pick-1": "Monday",
+          "pick-2": null
+        }
+      },
+      "expected": {
+        "weekStart": "2026-10-12",
+        "sourceMode": "mock",
+        "constraints": [
+          "wheelchair",
+          "low_sodium"
+        ],
+        "sourcePlan": {
+          "meals": [
+            {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored first occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Monday",
+              "affinity": 0.5,
+              "fallback": false
+            },
+            {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored second occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Monday",
+              "affinity": 0.5,
+              "fallback": false
+            },
+            {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored omitted occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Tuesday",
+              "affinity": 0.5,
+              "fallback": false
+            }
+          ],
+          "outing": null,
+          "notes": [
+            "Authored independent fixture."
+          ],
+          "rejected": []
+        },
+        "picks": [
+          {
+            "key": "pick-0",
+            "originalDay": "Monday",
+            "pick": {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored first occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Monday",
+              "affinity": 0.5,
+              "fallback": false
+            }
+          },
+          {
+            "key": "pick-1",
+            "originalDay": "Monday",
+            "pick": {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored second occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Monday",
+              "affinity": 0.5,
+              "fallback": false
+            }
+          },
+          {
+            "key": "pick-2",
+            "originalDay": "Tuesday",
+            "pick": {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored omitted occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Tuesday",
+              "affinity": 0.5,
+              "fallback": false
+            }
+          }
+        ],
+        "assignments": {
+          "pick-0": "Monday",
+          "pick-1": "Monday",
+          "pick-2": null
+        }
+      }
+    },
+    {
+      "group": "full origin refusal",
+      "name": "original trace mismatch refuses specifically as a different accepted plan",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "group": "full origin refusal",
+      "name": "original trace refusal preserves all current occurrence/date records",
+      "pass": true,
+      "actual": [
+        {
+          "key": "pick-0",
+          "date": "2026-10-12",
+          "note": {
+            "status": "follow_up",
+            "question": "Revised: which entrance will be open?\nKeep the exact route in the reply.",
+            "reply": " \nPhone reply: \"ask for Ana\" — α, café 🙂\t ",
+            "replyQuestions": " Can the north entrance fit two chairs?\nPlease confirm the quiet table.  ",
+            "nextStep": "Ask again about the revised entrance."
+          }
+        },
+        {
+          "key": "pick-1",
+          "date": "2026-10-12",
+          "note": {
+            "status": "reply_recorded",
+            "question": "Independent second-visit question.",
+            "reply": "Second visit has a separate reply.",
+            "replyQuestions": "Independent second-visit question.",
+            "nextStep": ""
+          }
+        },
+        {
+          "key": "pick-2",
+          "date": "2026-10-13",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Retain this note while the visit is omitted."
+          }
+        },
+        {
+          "key": "pick-0",
+          "date": "2026-10-05",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Keep the earlier-date record."
+          }
+        }
+      ],
+      "expected": [
+        {
+          "key": "pick-0",
+          "date": "2026-10-12",
+          "note": {
+            "status": "follow_up",
+            "question": "Revised: which entrance will be open?\nKeep the exact route in the reply.",
+            "reply": " \nPhone reply: \"ask for Ana\" — α, café 🙂\t ",
+            "replyQuestions": " Can the north entrance fit two chairs?\nPlease confirm the quiet table.  ",
+            "nextStep": "Ask again about the revised entrance."
+          }
+        },
+        {
+          "key": "pick-1",
+          "date": "2026-10-12",
+          "note": {
+            "status": "reply_recorded",
+            "question": "Independent second-visit question.",
+            "reply": "Second visit has a separate reply.",
+            "replyQuestions": "Independent second-visit question.",
+            "nextStep": ""
+          }
+        },
+        {
+          "key": "pick-2",
+          "date": "2026-10-13",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Retain this note while the visit is omitted."
+          }
+        },
+        {
+          "key": "pick-0",
+          "date": "2026-10-05",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Keep the earlier-date record."
+          }
+        }
+      ]
+    },
+    {
+      "group": "source custody",
+      "name": "original exporting model remains unchanged",
+      "pass": true,
+      "actual": [
+        {
+          "key": "pick-0",
+          "date": "2026-10-12",
+          "note": {
+            "status": "follow_up",
+            "question": "Revised: which entrance will be open?\nKeep the exact route in the reply.",
+            "reply": " \nPhone reply: \"ask for Ana\" — α, café 🙂\t ",
+            "replyQuestions": " Can the north entrance fit two chairs?\nPlease confirm the quiet table.  ",
+            "nextStep": "Ask again about the revised entrance."
+          }
+        },
+        {
+          "key": "pick-1",
+          "date": "2026-10-12",
+          "note": {
+            "status": "reply_recorded",
+            "question": "Independent second-visit question.",
+            "reply": "Second visit has a separate reply.",
+            "replyQuestions": "Independent second-visit question.",
+            "nextStep": ""
+          }
+        },
+        {
+          "key": "pick-2",
+          "date": "2026-10-13",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Retain this note while the visit is omitted."
+          }
+        },
+        {
+          "key": "pick-0",
+          "date": "2026-10-05",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Keep the earlier-date record."
+          }
+        }
+      ],
+      "expected": [
+        {
+          "key": "pick-0",
+          "date": "2026-10-12",
+          "note": {
+            "status": "follow_up",
+            "question": "Revised: which entrance will be open?\nKeep the exact route in the reply.",
+            "reply": " \nPhone reply: \"ask for Ana\" — α, café 🙂\t ",
+            "replyQuestions": " Can the north entrance fit two chairs?\nPlease confirm the quiet table.  ",
+            "nextStep": "Ask again about the revised entrance."
+          }
+        },
+        {
+          "key": "pick-1",
+          "date": "2026-10-12",
+          "note": {
+            "status": "reply_recorded",
+            "question": "Independent second-visit question.",
+            "reply": "Second visit has a separate reply.",
+            "replyQuestions": "Independent second-visit question.",
+            "nextStep": ""
+          }
+        },
+        {
+          "key": "pick-2",
+          "date": "2026-10-13",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Retain this note while the visit is omitted."
+          }
+        },
+        {
+          "key": "pick-0",
+          "date": "2026-10-05",
+          "note": {
+            "status": "not_contacted",
+            "question": null,
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": "Keep the earlier-date record."
+          }
+        }
+      ]
+    },
+    {
+      "group": "source custody",
+      "name": "all four imported source files remain byte-identical",
+      "pass": true,
+      "actual": [
+        {
+          "path": "static/venue_followup.mjs",
+          "bytes": 18444,
+          "sha256": "61bb9cf497b5a37a32afd1b23729e128aed2631cf2c570a1485ca4f0ffbe632c",
+          "git_blob": "0c1923ecdad8fe9b14f0193a6aba5f3a1e2b9d63"
+        },
+        {
+          "path": "static/venue_note_file.mjs",
+          "bytes": 10435,
+          "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+          "git_blob": "f8406cb540d52222996c585666ae1a55a1030def"
+        },
+        {
+          "path": "static/week_file.mjs",
+          "bytes": 6642,
+          "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+          "git_blob": "420ddb8f63fca264dcf97be7147801105696155d"
+        },
+        {
+          "path": "static/week_plan.mjs",
+          "bytes": 3913,
+          "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+          "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+        }
+      ],
+      "expected": [
+        {
+          "path": "static/venue_followup.mjs",
+          "bytes": 18444,
+          "sha256": "61bb9cf497b5a37a32afd1b23729e128aed2631cf2c570a1485ca4f0ffbe632c",
+          "git_blob": "0c1923ecdad8fe9b14f0193a6aba5f3a1e2b9d63"
+        },
+        {
+          "path": "static/venue_note_file.mjs",
+          "bytes": 10435,
+          "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+          "git_blob": "f8406cb540d52222996c585666ae1a55a1030def"
+        },
+        {
+          "path": "static/week_file.mjs",
+          "bytes": 6642,
+          "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+          "git_blob": "420ddb8f63fca264dcf97be7147801105696155d"
+        },
+        {
+          "path": "static/week_plan.mjs",
+          "bytes": 3913,
+          "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+          "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+        }
+      ]
+    }
+  ],
+  "refusals": [
+    {
+      "kind": "original request",
+      "error": {
+        "name": "TypeError",
+        "message": "These notes belong to a different accepted plan. Open the original saved week first."
+      }
+    },
+    {
+      "kind": "original trace",
+      "error": {
+        "name": "TypeError",
+        "message": "These notes belong to a different accepted plan. Open the original saved week first."
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "authored-venue-notes.json",
+      "bytes": 3908,
+      "sha256": "31e24b7f1ac39cd0bd180e6bcccd7413720ef6f56896f797eb6b3ffe77d3cbc4",
+      "git_blob": "d7922a386503e8a1fbc8de964c20f1aba7bdaf04"
+    },
+    {
+      "path": "authored-saved-week.json",
+      "bytes": 2525,
+      "sha256": "6d171b27e896bf42cc23099e6ba0712d71985affcd58975e1d7c2e7544b93eb8",
+      "git_blob": "b95c3d3c41f42b4d96d6e64eed3a2dfa135dbd1e"
+    },
+    {
+      "path": "reopened-call-sheet.txt",
+      "bytes": 1529,
+      "sha256": "8e1698a68161556587f81e8105a6ce89e052a9c07012f9c626324dd59a2c5d4d",
+      "git_blob": "a1da67f623f46f80576054ea7eedbcb6b0bad41c"
+    }
+  ],
+  "sourceUnchanged": true,
+  "scope": "Actual public note model/file APIs, maintained saved-week roundtrip, real local JSON write/read and public call-sheet consumer. No browser/provider mocks or source edits.",
+  "fixture": {
+    "origin": {
+      "receivedAt": "2026-10-08T12:00:00.000Z",
+      "calendarId": "11111111111111111111111111111111",
+      "inputs": {
+        "city": "Synthetic Source City",
+        "cuisines": [
+          "fixture-cuisine"
+        ],
+        "music": [],
+        "films": [],
+        "constraints": [
+          "wheelchair",
+          "low_sodium"
+        ]
+      },
+      "response": {
+        "mock": true,
+        "plan": {
+          "meals": [
+            {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored first occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Monday",
+              "affinity": 0.5,
+              "fallback": false
+            },
+            {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored second occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Monday",
+              "affinity": 0.5,
+              "fallback": false
+            },
+            {
+              "name": "Synthetic Cedar Cafe",
+              "why": "Authored omitted occurrence.",
+              "entity_id": "synthetic-shared-venue-01",
+              "kind": "restaurant",
+              "day": "Tuesday",
+              "affinity": 0.5,
+              "fallback": false
+            }
+          ],
+          "outing": null,
+          "notes": [
+            "Authored independent fixture."
+          ],
+          "rejected": []
+        },
+        "llm_only": {
+          "meals": [],
+          "outing": {
+            "name": "Synthetic comparison only",
+            "why": "Not a recommendation.",
+            "day": "Sunday"
+          }
+        },
+        "comparison": {
+          "constraints": [
+            "wheelchair",
+            "low_sodium"
+          ],
+          "grounded": {
+            "picks": 3,
+            "with_qloo_entity_id": 3,
+            "with_affinity_evidence": 0,
+            "constraint_checked": 3,
+            "unsafe_candidates_rejected": 0
+          },
+          "llm_only": {
+            "picks": 3,
+            "with_qloo_entity_id": 0,
+            "with_affinity_evidence": 0,
+            "constraint_checked": 0,
+            "unsafe_candidates_rejected": 0
+          }
+        },
+        "trace": [
+          {
+            "tool": "synthetic_fixture",
+            "args": {
+              "request_marker": "original-request",
+              "nested": {
+                "trace_identity": "trace-one"
+              }
+            },
+            "result_summary": "Locally authored fixture; no provider contacted."
+          }
+        ]
+      }
+    },
+    "sourceRecords": [
+      {
+        "key": "pick-0",
+        "date": "2026-10-12",
+        "note": {
+          "status": "follow_up",
+          "question": "Revised: which entrance will be open?\nKeep the exact route in the reply.",
+          "reply": " \nPhone reply: \"ask for Ana\" — α, café 🙂\t ",
+          "replyQuestions": " Can the north entrance fit two chairs?\nPlease confirm the quiet table.  ",
+          "nextStep": "Ask again about the revised entrance."
+        }
+      },
+      {
+        "key": "pick-1",
+        "date": "2026-10-12",
+        "note": {
+          "status": "reply_recorded",
+          "question": "Independent second-visit question.",
+          "reply": "Second visit has a separate reply.",
+          "replyQuestions": "Independent second-visit question.",
+          "nextStep": ""
+        }
+      },
+      {
+        "key": "pick-2",
+        "date": "2026-10-13",
+        "note": {
+          "status": "not_contacted",
+          "question": null,
+          "reply": "",
+          "replyQuestions": null,
+          "nextStep": "Retain this note while the visit is omitted."
+        }
+      },
+      {
+        "key": "pick-0",
+        "date": "2026-10-05",
+        "note": {
+          "status": "not_contacted",
+          "question": null,
+          "reply": "",
+          "replyQuestions": null,
+          "nextStep": "Keep the earlier-date record."
+        }
+      }
+    ],
+    "exportFilename": "tastetable-venue-notes-2026-10-12.json",
+    "sourceWeekStart": "2026-10-12",
+    "sourceAssignments": {
+      "pick-0": "Monday",
+      "pick-1": "Monday",
+      "pick-2": null
+    }
+  },
+  "finalRecords": [
+    {
+      "key": "pick-0",
+      "date": "2026-10-12",
+      "note": {
+        "status": "follow_up",
+        "question": "Revised: which entrance will be open?\nKeep the exact route in the reply.",
+        "reply": " \nPhone reply: \"ask for Ana\" — α, café 🙂\t ",
+        "replyQuestions": " Can the north entrance fit two chairs?\nPlease confirm the quiet table.  ",
+        "nextStep": "Ask again about the revised entrance."
+      }
+    },
+    {
+      "key": "pick-1",
+      "date": "2026-10-12",
+      "note": {
+        "status": "reply_recorded",
+        "question": "Independent second-visit question.",
+        "reply": "Second visit has a separate reply.",
+        "replyQuestions": "Independent second-visit question.",
+        "nextStep": ""
+      }
+    },
+    {
+      "key": "pick-2",
+      "date": "2026-10-13",
+      "note": {
+        "status": "not_contacted",
+        "question": null,
+        "reply": "",
+        "replyQuestions": null,
+        "nextStep": "Retain this note while the visit is omitted."
+      }
+    },
+    {
+      "key": "pick-0",
+      "date": "2026-10-05",
+      "note": {
+        "status": "not_contacted",
+        "question": null,
+        "reply": "",
+        "replyQuestions": null,
+        "nextStep": "Keep the earlier-date record."
+      }
+    }
+  ],
+  "originalImportClosureIsUnmodified": true,
+  "passed": 26,
+  "failed": 0,
+  "completedUTC": "2026-10-08T19:02:15.768Z"
+}

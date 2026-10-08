@@ -1,0 +1,64 @@
+{
+  "schema": "tastetable.venue-notes-product-freeze.v1",
+  "at": "2026-10-08T18:58:36.873Z",
+  "node": "v24.21.0",
+  "freeBefore": 461720772608,
+  "reserve": 805306368,
+  "runtimeUnchanged": true,
+  "products": [
+    {
+      "path": "static/venue_followup.mjs",
+      "bytes": 18444,
+      "sha256": "61bb9cf497b5a37a32afd1b23729e128aed2631cf2c570a1485ca4f0ffbe632c",
+      "git_blob": "0c1923ecdad8fe9b14f0193a6aba5f3a1e2b9d63"
+    },
+    {
+      "path": "static/venue_note_file.mjs",
+      "bytes": 10435,
+      "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+      "git_blob": "f8406cb540d52222996c585666ae1a55a1030def"
+    },
+    {
+      "path": "static/app.js",
+      "bytes": 19190,
+      "sha256": "6e87cfbf89e37792d384795382059a5d2245312c1b4bf0038991a3af3ff8c327",
+      "git_blob": "aa2fa0ff7aa0a1dd370c4fa6fef4f4222792414b"
+    },
+    {
+      "path": "static/index.html",
+      "bytes": 9143,
+      "sha256": "fee1f0ce63ca3c79e1e2010c3b603aaa429ecfe48d985a7eeabf2bec41d02207",
+      "git_blob": "ea449ce14790381f4dd63cea8bc03717d88412b8"
+    },
+    {
+      "path": "static/venue_followup.css",
+      "bytes": 2166,
+      "sha256": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+      "git_blob": "dd88e221133be5281330cba11a6d141ae5e8d239"
+    },
+    {
+      "path": "tests/venue_note_file.test.mjs",
+      "bytes": 10558,
+      "sha256": "8c1b12a02302e414346a04710d5efb14af45e0cb8994ba75135c9e1988252740",
+      "git_blob": "a32d542a76779e8d820a9fc233b6e1a82d9aff2c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 17513,
+      "sha256": "31703fcf23dd75fa94cecb79020b4f19e6d1c781d7a337ab24ddd9dd67c77d0d",
+      "git_blob": "99a990ef30c9f3d8f15801e95af07a7f1704760b"
+    },
+    {
+      "path": "docs/venue-notes/README.md",
+      "bytes": 4360,
+      "sha256": "af3b635013c24d1dc8175bc06b8ff8bc170633c9933d5836488794902973e2d7",
+      "git_blob": "94895dc1478f2f6e963844bd202387bbda55ccc5"
+    },
+    {
+      "path": "tools/check_venue_note_files_browser.mjs",
+      "bytes": 31406,
+      "sha256": "4f72dced4680c4055d60839ae08ba4c83c4e74991ac81c8a87501842ac9bea6f",
+      "git_blob": "5fc5a9fa07d9ec55ddafa88f56db1630ef606403"
+    }
+  ]
+}
