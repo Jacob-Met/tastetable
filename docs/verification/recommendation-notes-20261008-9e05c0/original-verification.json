@@ -1,0 +1,319 @@
+{
+  "created_utc": "2026-10-08T10:12:51.395746+00:00",
+  "scope": "Independent native plan.notes provenance and receiving preservation; synthetic fixture transport only.",
+  "receiving_commit": "9f9105c29ab1a68a501b5f4c0b7180f0db968d38",
+  "receiving_agent_git_blob": "15ae2c26dd14a8eec43dc328e87d6f12c8d460d2",
+  "source_agent_sha256": {
+    "baseline": "b301247b8e9459327afa19964d02a9647c0d39f36e55c380115af3b30d538817",
+    "held_2101": "2101ecf2ae244cf6e9bbc57903dc2d9035941d5af0087e130afa15fccc29fdd8",
+    "repaired_4d2b": "4d2b2438c39635b34d98ce10d751c9e70f14be057b7c68b4fd298e505cc5787d"
+  },
+  "test_path": "/dev/shm/tastetable-notes-review-9e05c01af69c-memory/test_notes_receiving.py",
+  "test_sha256": "445069383261f8e25ef79d8a52b4ad3aa23c9fb8a95ed2745d9697fc0b641096",
+  "initial_oracle_sha256": "7d7ec04174b423a49bbe41fc2246920041a75c821c36064181957cd83bd8db6d",
+  "oracle_change": "Accept semantically accurate requested checks wording for actual rejection; add two direct single-pass ID scenarios and one method. Initial oracle and every earlier log retained.",
+  "scenario_count": 18,
+  "runs": [
+    {
+      "source": "baseline",
+      "mode": "normal",
+      "methods": 16,
+      "passed_methods": 6,
+      "failed_methods": [
+        "test_all_native_503_failures_have_factual_lookup_notes",
+        "test_empty_same_query_recovery_does_not_retain_stale_failure",
+        "test_invalid_pre_request_arguments_do_not_claim_provider_failure",
+        "test_native_oserror_failures_receive_the_same_plain_explanation",
+        "test_original_call_budget_is_preserved_without_automatic_retries",
+        "test_outing_failure_preserves_meals_and_is_purpose_specific",
+        "test_partial_restaurant_failure_retains_checked_meal_and_outing",
+        "test_response_parse_failure_is_never_reported_as_empty_or_constraint_rejection",
+        "test_same_query_success_clears_failed_lookup_but_another_query_does_not",
+        "test_successful_empty_results_are_not_outages_or_rejections"
+      ],
+      "failure_records": 11,
+      "error_records": 0,
+      "log": "baseline-expanded.log",
+      "log_sha256": "1c377dee5df150831f5501764adf82b8936cf7cd38fbfd8258899145d861ad97",
+      "observations": "baseline-expanded-observations.json",
+      "observations_sha256": "684000dab7fce166090b2a263a71633f8e9efa537d3ca059d8fe7a5fcdca9934"
+    },
+    {
+      "source": "baseline",
+      "mode": "optimized",
+      "methods": 16,
+      "passed_methods": 6,
+      "failed_methods": [
+        "test_all_native_503_failures_have_factual_lookup_notes",
+        "test_empty_same_query_recovery_does_not_retain_stale_failure",
+        "test_invalid_pre_request_arguments_do_not_claim_provider_failure",
+        "test_native_oserror_failures_receive_the_same_plain_explanation",
+        "test_original_call_budget_is_preserved_without_automatic_retries",
+        "test_outing_failure_preserves_meals_and_is_purpose_specific",
+        "test_partial_restaurant_failure_retains_checked_meal_and_outing",
+        "test_response_parse_failure_is_never_reported_as_empty_or_constraint_rejection",
+        "test_same_query_success_clears_failed_lookup_but_another_query_does_not",
+        "test_successful_empty_results_are_not_outages_or_rejections"
+      ],
+      "failure_records": 11,
+      "error_records": 0,
+      "log": "baseline-expanded-optimized.log",
+      "log_sha256": "60d241f65d94c6c950de1babff2564df543a17b39c6be71b94100e31f7a19a46",
+      "observations": "baseline-expanded-optimized-observations.json",
+      "observations_sha256": "684000dab7fce166090b2a263a71633f8e9efa537d3ca059d8fe7a5fcdca9934"
+    },
+    {
+      "source": "held_2101",
+      "mode": "normal",
+      "methods": 16,
+      "passed_methods": 14,
+      "failed_methods": [
+        "test_all_non_note_results_traces_and_requests_match_exact_receiving_source",
+        "test_single_pass_toolbox_inputs_preserve_native_request_and_ranking"
+      ],
+      "failure_records": 4,
+      "error_records": 0,
+      "log": "held-2101-expanded.log",
+      "log_sha256": "109243bef89a05dfe9463ef2e7d03c17050de86f31641a81a1d0a8ab31e03c48",
+      "observations": "held-2101-expanded-observations.json",
+      "observations_sha256": "a7b99cc11e0211acbff4ce652a7000e085b657eabad32ebf95127014730f7b44"
+    },
+    {
+      "source": "held_2101",
+      "mode": "optimized",
+      "methods": 16,
+      "passed_methods": 14,
+      "failed_methods": [
+        "test_all_non_note_results_traces_and_requests_match_exact_receiving_source",
+        "test_single_pass_toolbox_inputs_preserve_native_request_and_ranking"
+      ],
+      "failure_records": 4,
+      "error_records": 0,
+      "log": "held-2101-expanded-optimized.log",
+      "log_sha256": "6951ba2e7d00fa99f252cbf3e70e89d560c9ba68577d9b47ef991f22b129e211",
+      "observations": "held-2101-expanded-optimized-observations.json",
+      "observations_sha256": "a7b99cc11e0211acbff4ce652a7000e085b657eabad32ebf95127014730f7b44"
+    },
+    {
+      "source": "repaired_4d2b",
+      "mode": "normal",
+      "methods": 16,
+      "passed_methods": 16,
+      "failed_methods": [],
+      "failure_records": 0,
+      "error_records": 0,
+      "log": "candidate-final-normal.log",
+      "log_sha256": "a82b0bd8095c5c0c74eeb1088d0b36df98bbb3aae4c1e629d4774d96cbbc7458",
+      "observations": "candidate-final-normal-observations.json",
+      "observations_sha256": "30b5221133deb445f8c336654d10a891212dfad53a1eae0ab077ed3035556892"
+    },
+    {
+      "source": "repaired_4d2b",
+      "mode": "optimized",
+      "methods": 16,
+      "passed_methods": 16,
+      "failed_methods": [],
+      "failure_records": 0,
+      "error_records": 0,
+      "log": "candidate-final-optimized.log",
+      "log_sha256": "a82b0bd8095c5c0c74eeb1088d0b36df98bbb3aae4c1e629d4774d96cbbc7458",
+      "observations": "candidate-final-optimized-observations.json",
+      "observations_sha256": "30b5221133deb445f8c336654d10a891212dfad53a1eae0ab077ed3035556892"
+    }
+  ],
+  "all_18_final_non_note_native_results_traces_requests_equal_receiving_source": {
+    "healthy": true,
+    "all_503": true,
+    "all_oserror": true,
+    "model_prose": true,
+    "empty_success": true,
+    "constraint_rejection": true,
+    "outing_failure": true,
+    "partial_restaurants": true,
+    "invalid_filter": true,
+    "invalid_ids": true,
+    "parsed_response_failure": true,
+    "same_query_recovery": true,
+    "different_query_success": true,
+    "empty_after_failure": true,
+    "optional_input_recovery": true,
+    "budget": true,
+    "single_pass_tags": true,
+    "single_pass_signals": true
+  },
+  "final_normal_equals_optimized_observations": true,
+  "source_manifests_before": {
+    "baseline": [
+      {
+        "path": "agent.py",
+        "sha256": "b301247b8e9459327afa19964d02a9647c0d39f36e55c380115af3b30d538817",
+        "bytes": 23754
+      },
+      {
+        "path": "constraints.py",
+        "sha256": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e",
+        "bytes": 4451
+      },
+      {
+        "path": "fixtures/qloo_fixtures.json",
+        "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+        "bytes": 21190
+      },
+      {
+        "path": "personas.py",
+        "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+        "bytes": 1247
+      },
+      {
+        "path": "qloo_client.py",
+        "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+        "bytes": 12206
+      }
+    ],
+    "held_2101": [
+      {
+        "path": "agent.py",
+        "sha256": "2101ecf2ae244cf6e9bbc57903dc2d9035941d5af0087e130afa15fccc29fdd8",
+        "bytes": 26562
+      },
+      {
+        "path": "constraints.py",
+        "sha256": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e",
+        "bytes": 4451
+      },
+      {
+        "path": "fixtures/qloo_fixtures.json",
+        "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+        "bytes": 21190
+      },
+      {
+        "path": "personas.py",
+        "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+        "bytes": 1247
+      },
+      {
+        "path": "qloo_client.py",
+        "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+        "bytes": 12206
+      }
+    ],
+    "repaired_4d2b": [
+      {
+        "path": "agent.py",
+        "sha256": "4d2b2438c39635b34d98ce10d751c9e70f14be057b7c68b4fd298e505cc5787d",
+        "bytes": 27141
+      },
+      {
+        "path": "constraints.py",
+        "sha256": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e",
+        "bytes": 4451
+      },
+      {
+        "path": "fixtures/qloo_fixtures.json",
+        "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+        "bytes": 21190
+      },
+      {
+        "path": "personas.py",
+        "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+        "bytes": 1247
+      },
+      {
+        "path": "qloo_client.py",
+        "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+        "bytes": 12206
+      }
+    ]
+  },
+  "source_manifests_after": {
+    "baseline": [
+      {
+        "path": "agent.py",
+        "sha256": "b301247b8e9459327afa19964d02a9647c0d39f36e55c380115af3b30d538817",
+        "bytes": 23754
+      },
+      {
+        "path": "constraints.py",
+        "sha256": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e",
+        "bytes": 4451
+      },
+      {
+        "path": "fixtures/qloo_fixtures.json",
+        "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+        "bytes": 21190
+      },
+      {
+        "path": "personas.py",
+        "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+        "bytes": 1247
+      },
+      {
+        "path": "qloo_client.py",
+        "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+        "bytes": 12206
+      }
+    ],
+    "held_2101": [
+      {
+        "path": "agent.py",
+        "sha256": "2101ecf2ae244cf6e9bbc57903dc2d9035941d5af0087e130afa15fccc29fdd8",
+        "bytes": 26562
+      },
+      {
+        "path": "constraints.py",
+        "sha256": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e",
+        "bytes": 4451
+      },
+      {
+        "path": "fixtures/qloo_fixtures.json",
+        "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+        "bytes": 21190
+      },
+      {
+        "path": "personas.py",
+        "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+        "bytes": 1247
+      },
+      {
+        "path": "qloo_client.py",
+        "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+        "bytes": 12206
+      }
+    ],
+    "repaired_4d2b": [
+      {
+        "path": "agent.py",
+        "sha256": "4d2b2438c39635b34d98ce10d751c9e70f14be057b7c68b4fd298e505cc5787d",
+        "bytes": 27141
+      },
+      {
+        "path": "constraints.py",
+        "sha256": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e",
+        "bytes": 4451
+      },
+      {
+        "path": "fixtures/qloo_fixtures.json",
+        "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+        "bytes": 21190
+      },
+      {
+        "path": "personas.py",
+        "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+        "bytes": 1247
+      },
+      {
+        "path": "qloo_client.py",
+        "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+        "bytes": 12206
+      }
+    ]
+  },
+  "source_manifests_equal": true,
+  "producer_source_before": "4d2b2438c39635b34d98ce10d751c9e70f14be057b7c68b4fd298e505cc5787d",
+  "producer_source_after": "4d2b2438c39635b34d98ce10d751c9e70f14be057b7c68b4fd298e505cc5787d",
+  "test_sha256_after": "445069383261f8e25ef79d8a52b4ad3aa23c9fb8a95ed2745d9697fc0b641096",
+  "iterable_negative_control": "iterable-negative-control.json",
+  "iterable_negative_control_sha256": "f9d4a5c4711496655bb459ed4a6248725122bd60b4c5dcfb54afe3717848ec8d",
+  "expanded_baseline_results_sha256": "684000dab7fce166090b2a263a71633f8e9efa537d3ca059d8fe7a5fcdca9934",
+  "live_network_guard": "urllib.request.urlopen raises AssertionError; real QlooClient uses synthetic FaultFixture subclass of native FixtureTransport. No provider credentials or network."
+}

@@ -1,0 +1,276 @@
+{
+  "created_utc": "2026-10-08T10:44:54.401930+00:00",
+  "receiving_commit": "b8d384e5522e17cf15d73e8b06adbe6665e4bdcc",
+  "receiving_tree": "06409d6f67d0c99ee99305fe4f745963ec2da2a2",
+  "receiving_agent_sha256": "5366635d101cb7010e6ad3586de9a8d76f222b98118cbc5c4bf73ea11b58a903",
+  "receiving_agent_git_blob": "1d8bfd5a300c1d4824dc895b324e7d0cfb096058",
+  "candidate_agent_sha256": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+  "candidate_agent_git_blob": "883aff984464f2d43cda18f8e60b81240d6c3fb3",
+  "unchanged_independent_verifier_sha256": "445069383261f8e25ef79d8a52b4ad3aa23c9fb8a95ed2745d9697fc0b641096",
+  "independent_scenarios": 18,
+  "native_pr11_test_sha256": "a7a7eb8942970622eae8904cfd1145a0405aa0e404987afd24f1eb0d9b15e374",
+  "native_pr11_test_git_blob": "9e3274bf610a5a7195c30fbe5c6942893b16a64c",
+  "runs": [
+    {
+      "name": "receiving-baseline-normal",
+      "methods": 16,
+      "passed_methods": 6,
+      "failed_methods": 10,
+      "failure_records": 11,
+      "error_records": 0,
+      "log": "receiving-baseline-normal.log",
+      "log_sha256": "5bd7ac75efcb7cc85d627c07520b61c25f5d196d96bb3c416536802ba6e1207b"
+    },
+    {
+      "name": "receiving-baseline-optimized",
+      "methods": 16,
+      "passed_methods": 6,
+      "failed_methods": 10,
+      "failure_records": 11,
+      "error_records": 0,
+      "log": "receiving-baseline-optimized.log",
+      "log_sha256": "1c809ce8f5a28bd2b372989dd47f1477c01a132985bbb2e8c2ea58658f7dcc60"
+    },
+    {
+      "name": "composed-candidate-normal",
+      "methods": 16,
+      "passed_methods": 16,
+      "failed_methods": 0,
+      "failure_records": 0,
+      "error_records": 0,
+      "log": "composed-candidate-normal.log",
+      "log_sha256": "1972167af97214be97c1c86748a835713e29696b0540edd19e56cafaed4b3583"
+    },
+    {
+      "name": "composed-candidate-optimized",
+      "methods": 16,
+      "passed_methods": 16,
+      "failed_methods": 0,
+      "failure_records": 0,
+      "error_records": 0,
+      "log": "composed-candidate-optimized.log",
+      "log_sha256": "45133a3b465aa2c991efee4fa6ac12b55a91af9a216a88d2974a41b509240487"
+    },
+    {
+      "name": "pr11-all-normal",
+      "methods": 12,
+      "passed_methods": 12,
+      "failed_methods": 0,
+      "failure_records": 0,
+      "error_records": 0,
+      "log": "pr11-all-normal.log",
+      "log_sha256": "d08b6ff13f6e5815a156fd1ff4d4cc208e4df6f16e974984b826fe9c14dbdc92"
+    },
+    {
+      "name": "pr11-all-optimized",
+      "methods": 12,
+      "passed_methods": 12,
+      "failed_methods": 0,
+      "failure_records": 0,
+      "error_records": 0,
+      "log": "pr11-all-optimized.log",
+      "log_sha256": "62db812943cd95248dbceb375675daebd89dc649892d1092605f176ce4bd8fd3"
+    }
+  ],
+  "all18_complete_nonnote_results_preserved": {
+    "healthy": true,
+    "all_503": true,
+    "all_oserror": true,
+    "model_prose": true,
+    "empty_success": true,
+    "constraint_rejection": true,
+    "outing_failure": true,
+    "partial_restaurants": true,
+    "invalid_filter": true,
+    "invalid_ids": true,
+    "parsed_response_failure": true,
+    "same_query_recovery": true,
+    "different_query_success": true,
+    "empty_after_failure": true,
+    "optional_input_recovery": true,
+    "budget": true,
+    "single_pass_tags": true,
+    "single_pass_signals": true
+  },
+  "normal_optimized_observations_equal": true,
+  "candidate_source_manifest_before": [
+    {
+      "path": "agent.py",
+      "bytes": 28440,
+      "sha256": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3"
+    },
+    {
+      "path": "app.py",
+      "bytes": 2343,
+      "sha256": "6179e3953e9e6aed009695b9528c8de8622246ab2a1fd5676f18b8b66fa9152c"
+    },
+    {
+      "path": "constraints.py",
+      "bytes": 4451,
+      "sha256": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e"
+    },
+    {
+      "path": "fixtures/qloo_fixtures.json",
+      "bytes": 21190,
+      "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0"
+    },
+    {
+      "path": "personas.py",
+      "bytes": 1247,
+      "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2"
+    },
+    {
+      "path": "qloo_client.py",
+      "bytes": 12206,
+      "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 74,
+      "sha256": "80f580784e41edbf585cdc133c99d6e52ad9fae5876459c74ba6cbb4ed6b0602"
+    },
+    {
+      "path": "tests/test_constraint_binding.py",
+      "bytes": 12500,
+      "sha256": "fd12768b12765f333f1e95f571105eb02fe252f91b3c61168c6fba6f18691692"
+    },
+    {
+      "path": "tests/test_model_selection.py",
+      "bytes": 4333,
+      "sha256": "112b50850eaa21b1a8c8ead86de4321f48c7a8331261fc01c5cdbf90ab0fc08c"
+    },
+    {
+      "path": "tests/test_recommendation_purpose.py",
+      "bytes": 3599,
+      "sha256": "6f237bf2ca7812d18245ce653d50ff8c7ba0fdf1e32fb22f49dd16940bf2c842"
+    },
+    {
+      "path": "tests/test_tastetable.py",
+      "bytes": 8240,
+      "sha256": "7ace6361e9baf4a1e1a4ccfa528df1a4d2165b99bacb0423a572ac78bf3e9c5b"
+    },
+    {
+      "path": "tests/test_tool_argument_recovery.py",
+      "bytes": 12775,
+      "sha256": "a7a7eb8942970622eae8904cfd1145a0405aa0e404987afd24f1eb0d9b15e374"
+    },
+    {
+      "path": "tests/test_tool_error_continuation.py",
+      "bytes": 4186,
+      "sha256": "13ce005e3bbd7c993a889210a69f4cd9f5eb99f3ed64c3e26a88d399f021de34"
+    }
+  ],
+  "candidate_source_manifest_after": [
+    {
+      "path": "agent.py",
+      "bytes": 28440,
+      "sha256": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3"
+    },
+    {
+      "path": "app.py",
+      "bytes": 2343,
+      "sha256": "6179e3953e9e6aed009695b9528c8de8622246ab2a1fd5676f18b8b66fa9152c"
+    },
+    {
+      "path": "constraints.py",
+      "bytes": 4451,
+      "sha256": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e"
+    },
+    {
+      "path": "fixtures/qloo_fixtures.json",
+      "bytes": 21190,
+      "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0"
+    },
+    {
+      "path": "personas.py",
+      "bytes": 1247,
+      "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2"
+    },
+    {
+      "path": "qloo_client.py",
+      "bytes": 12206,
+      "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 74,
+      "sha256": "80f580784e41edbf585cdc133c99d6e52ad9fae5876459c74ba6cbb4ed6b0602"
+    },
+    {
+      "path": "tests/test_constraint_binding.py",
+      "bytes": 12500,
+      "sha256": "fd12768b12765f333f1e95f571105eb02fe252f91b3c61168c6fba6f18691692"
+    },
+    {
+      "path": "tests/test_model_selection.py",
+      "bytes": 4333,
+      "sha256": "112b50850eaa21b1a8c8ead86de4321f48c7a8331261fc01c5cdbf90ab0fc08c"
+    },
+    {
+      "path": "tests/test_recommendation_purpose.py",
+      "bytes": 3599,
+      "sha256": "6f237bf2ca7812d18245ce653d50ff8c7ba0fdf1e32fb22f49dd16940bf2c842"
+    },
+    {
+      "path": "tests/test_tastetable.py",
+      "bytes": 8240,
+      "sha256": "7ace6361e9baf4a1e1a4ccfa528df1a4d2165b99bacb0423a572ac78bf3e9c5b"
+    },
+    {
+      "path": "tests/test_tool_argument_recovery.py",
+      "bytes": 12775,
+      "sha256": "a7a7eb8942970622eae8904cfd1145a0405aa0e404987afd24f1eb0d9b15e374"
+    },
+    {
+      "path": "tests/test_tool_error_continuation.py",
+      "bytes": 4186,
+      "sha256": "13ce005e3bbd7c993a889210a69f4cd9f5eb99f3ed64c3e26a88d399f021de34"
+    }
+  ],
+  "candidate_source_manifest_equal": true,
+  "receiving_source_manifest_after_matches_frozen": true,
+  "producer_agent_after_sha256": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+  "pr11_source_preservation": {
+    "run_agent": {
+      "source_equal": true,
+      "sha256": "42fa1d75b6a6bae00903eaf347c37d9deb15219d39cec946980b350eac418899"
+    },
+    "_trace_args": {
+      "source_equal": true,
+      "sha256": "1cd767e456d7c7775238b6c9b53529cafefab7e230ad9df3a88f63995e5df15a"
+    },
+    "_trace_text": {
+      "source_equal": true,
+      "sha256": "212fc6dd192c4543d4999e4b6166cedbd6cc4ae13b8e83ea197734a0f43d4a57"
+    }
+  },
+  "current_baseline_results_sha256": "684000dab7fce166090b2a263a71633f8e9efa537d3ca059d8fe7a5fcdca9934",
+  "candidate_normal_observations_sha256": "30b5221133deb445f8c336654d10a891212dfad53a1eae0ab077ed3035556892",
+  "candidate_optimized_observations_sha256": "30b5221133deb445f8c336654d10a891212dfad53a1eae0ab077ed3035556892",
+  "runtimes": {
+    "notes": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "pr11": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+      "executable": "/workspace/scratch/de626312ee85/integration-review/venv/bin/python",
+      "packages": {
+        "fastapi": "0.142.4",
+        "httpx": "0.28.1",
+        "starlette": "1.7.0"
+      }
+    }
+  },
+  "environment": "PYTHONDONTWRITEBYTECODE=1, own TMPDIR, synthetic FixtureTransport and explicit network-failure guard; dependency runtime reused read-only.",
+  "api_snapshot_scaffold": {
+    "directory": "candidate-fae9ec/static",
+    "contents": [],
+    "reason": "Native13-file backend snapshot omits frontend files. Unchanged app.py mounts this directory on import; these inherited tests call only API routes. Empty owned directory satisfies import precondition without source edits.",
+    "initial_setup_attempt_log": "pr11-missing-static-normal.log",
+    "initial_setup_attempt_sha256": "38b3c1732386d077411a8dda565048cb73ea7d3da9b4bda6b0ff03b9288f499b",
+    "initial_setup_attempt_results": "9 passed methods,3 import errors caused solely by missing static directory. Preserved separately from successful final12-method gates."
+  },
+  "earlier_original_acceptance": "../tastetable-notes-review-9e05c01af69c-memory/final-verification.json",
+  "earlier_original_acceptance_sha256": "cb102ffdb5638ef08ada59e773533ee5674c139a0a85c2c2c11949e81eb60c49",
+  "interrupted_attempt": "interrupted-enospc-receipt.json",
+  "dedup_custody": "owned-dedup-receipt.json",
+  "publication": "No remote writes by this reviewer."
+}

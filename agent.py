@@ -24,7 +24,7 @@ from dataclasses import dataclass, field
 from typing import Any, Optional
 
 from constraints import evaluate
-from qloo_client import Entity, QlooClient
+from qloo_client import Entity, INSIGHTS_TYPES, QlooClient
 
 MEAL_DAYS = ["Monday", "Wednesday", "Friday", "Sunday"]
 OUTING_DAY = "Saturday"
@@ -231,12 +231,40 @@ class AgentState:
     verdicts: dict[str, dict] = field(default_factory=dict)
     tag_names: dict[str, str] = field(default_factory=dict)
     trace: list[dict] = field(default_factory=list)
+    # Latest result for each purpose/query: candidate count, or no usable result.
+    # This describes lookup completion, never provider or network availability.
+    recommendation_outcomes: dict[tuple[str, str], Optional[int]] = field(default_factory=dict)
 
 
 def _candidate_verdict(state: AgentState, candidate: dict) -> dict:
     """Bind every check to caregiver input and the candidate actually retained."""
     return evaluate(candidate["entity"], state.persona.get("constraints", []),
                     candidate["purpose"]).to_dict()
+
+
+def _recommendation_key(filter_type, tag_ids, signal_entity_ids, location, take):
+    """Mirror native pre-request preparation without changing its diagnostics.
+
+    Unpreparable tool inputs have no lookup outcome. Equivalent omitted/empty
+    filters share a key, so a later completed repeat resolves only that lookup.
+    """
+    # Bookkeeping observes JSON tool carriers only. Iterators and custom values
+    # must reach the original client without extra iteration or conversion.
+    if type(filter_type) is not str or type(take) is not int or \
+            (location is not None and type(location) is not str):
+        return None
+    for values in (tag_ids, signal_entity_ids):
+        if values is not None and (type(values) is not list or
+                                   any(type(value) is not str for value in values)):
+            return None
+    try:
+        if filter_type not in INSIGHTS_TYPES:
+            return None
+        return json.dumps([filter_type, ",".join(tag_ids or []),
+                           ",".join(signal_entity_ids or []), location or None, take],
+                          sort_keys=True)
+    except Exception:
+        return None  # Bookkeeping must not replace the native argument error.
 
 
 class Toolbox:
@@ -262,8 +290,17 @@ class Toolbox:
                   take: int = 10) -> dict:
         if not isinstance(purpose, str) or purpose not in ("restaurant", "outing"):
             raise ValueError("purpose must be restaurant or outing")
-        ents = self.qloo.insights(filter_type, signal_entities=signal_entity_ids,
-                                  filter_tags=tag_ids, location_query=location, take=take)
+        key = (_recommendation_key(filter_type, tag_ids, signal_entity_ids, location, take)
+               if type(purpose) is str else None)
+        try:
+            ents = self.qloo.insights(filter_type, signal_entities=signal_entity_ids,
+                                      filter_tags=tag_ids, location_query=location, take=take)
+        except Exception:
+            if key is not None:
+                self.state.recommendation_outcomes[(purpose, key)] = None
+            raise
+        if key is not None:
+            self.state.recommendation_outcomes[(purpose, key)] = len(ents)
         for e in ents:
             if e.entity_id not in self.state.candidates:
                 self.state.candidates[e.entity_id] = {
@@ -330,6 +367,34 @@ def explain(c: dict, v: dict, state: AgentState) -> str:
     return s
 
 
+def _plan_notes(state: AgentState, verdicts: dict, meal_count: int, has_outing: bool) -> list[str]:
+    notes = []
+    for purpose, count, target in (("restaurant", meal_count, len(MEAL_DAYS)),
+                                   ("outing", int(has_outing), 1)):
+        outcomes = [value for (kind, _), value in state.recommendation_outcomes.items()
+                    if kind == purpose]
+        incomplete = any(value is None for value in outcomes)
+        if incomplete:
+            article = "An" if purpose == "outing" else "A"
+            notes.append(f"{article} {purpose} recommendation lookup could not be completed; "
+                         "any checked suggestions are retained.")
+        if count >= target:
+            continue
+        candidates = [eid for eid, candidate in state.candidates.items()
+                      if candidate["purpose"] == purpose]
+        if not incomplete and outcomes and all(value == 0 for value in outcomes) and not candidates:
+            notes.append(f"A completed {purpose} recommendation lookup returned no candidates.")
+        elif any(eid in verdicts and not verdicts[eid]["ok"] for eid in candidates):
+            notes.append(f"Some {purpose} candidates did not pass the requested checks.")
+        if purpose == "restaurant":
+            noun = "suggestion" if count == 1 else "suggestions"
+            notes.append(f"The plan contains {count} checked restaurant {noun}; "
+                         "unfilled meal days are left open.")
+        else:
+            notes.append("No checked outing suggestion is available in this plan.")
+    return notes
+
+
 def assemble_plan(state: AgentState) -> dict:
     # Only candidates submitted for checking can enter the plan. Re-evaluate
     # those candidates at assembly so old/partial verdicts cannot admit a pick
@@ -360,10 +425,7 @@ def assemble_plan(state: AgentState) -> dict:
     rejected = [{"name": state.candidates[eid]["entity"].name, "entity_id": eid,
                  "failed": [ch for ch in v["checks"] if ch["status"] != "pass"]}
                 for eid, v in verdicts.items() if not v["ok"]]
-    notes = []
-    if len(days) < len(MEAL_DAYS):
-        notes.append(f"Only {len(days)} restaurants passed every constraint; "
-                     "remaining days left open rather than suggesting an unsafe pick.")
+    notes = _plan_notes(state, verdicts, len(days), outing is not None)
     return {"meals": days, "outing": outing, "rejected": rejected, "notes": notes}
 
 

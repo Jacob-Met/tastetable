@@ -1,0 +1,984 @@
+{
+  "created_utc": "2026-10-08T10:57:46.543Z",
+  "scope": "Full original/current author evidence plus both complete frozen independent notes review histories; includes negative controls and setup/interruption history",
+  "archive": {
+    "path": "evidence.tar.gz",
+    "bytes": 322333,
+    "sha256": "4921e0000180ee556b366c4635540a0f414530b2978c6acd9ff21375f5a1e162"
+  },
+  "source_roots": [
+    "tastetable-notes-9e05c01af69c-estate",
+    "tastetable-notes-main-b8d384-9e05c01af69c-estate/baseline",
+    "tastetable-notes-main-b8d384-9e05c01af69c-estate/candidate",
+    "tastetable-notes-main-b8d384-9e05c01af69c-estate/evidence",
+    "tastetable-notes-main-b8d384-9e05c01af69c-estate/source-manifest.json",
+    "tastetable-notes-main-b8d384-9e05c01af69c-estate/source-manifest-native13.json",
+    "tastetable-notes-main-b8d384-9e05c01af69c-estate/candidate-manifest.json",
+    "tastetable-notes-main-b8d384-9e05c01af69c-estate/original-notes.patch",
+    "tastetable-notes-main-b8d384-9e05c01af69c-estate/notes.patch",
+    "tastetable-notes-main-b8d384-9e05c01af69c-estate/run_retained_native.py",
+    "tastetable-notes-main-b8d384-9e05c01af69c-estate/run_full_native.py",
+    "tastetable-notes-review-9e05c01af69c-memory",
+    "tastetable-notes-b8d384-review-9e05c01af69c-memory"
+  ],
+  "excluded_directory_names": [
+    "tmp",
+    "__pycache__",
+    ".pytest_cache"
+  ],
+  "regular_file_count": 190,
+  "total_uncompressed_payload_bytes": 5630446,
+  "review_history_regular_files": 101,
+  "files": [
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/baseline/agent.py",
+      "bytes": 23754,
+      "sha256": "b301247b8e9459327afa19964d02a9647c0d39f36e55c380115af3b30d538817"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/baseline/app.py",
+      "bytes": 2343,
+      "sha256": "6179e3953e9e6aed009695b9528c8de8622246ab2a1fd5676f18b8b66fa9152c"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/baseline/constraints.py",
+      "bytes": 4451,
+      "sha256": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/baseline/fixtures/qloo_fixtures.json",
+      "bytes": 21190,
+      "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/baseline/personas.py",
+      "bytes": 1247,
+      "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/baseline/qloo_client.py",
+      "bytes": 12206,
+      "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/baseline/requirements.txt",
+      "bytes": 74,
+      "sha256": "80f580784e41edbf585cdc133c99d6e52ad9fae5876459c74ba6cbb4ed6b0602"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/baseline/tests/test_constraint_binding.py",
+      "bytes": 12500,
+      "sha256": "fd12768b12765f333f1e95f571105eb02fe252f91b3c61168c6fba6f18691692"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/baseline/tests/test_model_selection.py",
+      "bytes": 4333,
+      "sha256": "112b50850eaa21b1a8c8ead86de4321f48c7a8331261fc01c5cdbf90ab0fc08c"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/baseline/tests/test_recommendation_purpose.py",
+      "bytes": 3599,
+      "sha256": "6f237bf2ca7812d18245ce653d50ff8c7ba0fdf1e32fb22f49dd16940bf2c842"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/baseline/tests/test_tastetable.py",
+      "bytes": 8240,
+      "sha256": "7ace6361e9baf4a1e1a4ccfa528df1a4d2165b99bacb0423a572ac78bf3e9c5b"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/baseline/tests/test_tool_error_continuation.py",
+      "bytes": 4186,
+      "sha256": "13ce005e3bbd7c993a889210a69f4cd9f5eb99f3ed64c3e26a88d399f021de34"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/candidate-manifest.json",
+      "bytes": 3679,
+      "sha256": "0cf0289bd6f552531192662ac7fd5304a5f086155f28bf88f41debb4524c5a38"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/candidate/agent.py",
+      "bytes": 27141,
+      "sha256": "4d2b2438c39635b34d98ce10d751c9e70f14be057b7c68b4fd298e505cc5787d"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/candidate/app.py",
+      "bytes": 2343,
+      "sha256": "6179e3953e9e6aed009695b9528c8de8622246ab2a1fd5676f18b8b66fa9152c"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/candidate/constraints.py",
+      "bytes": 4451,
+      "sha256": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/candidate/fixtures/qloo_fixtures.json",
+      "bytes": 21190,
+      "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/candidate/personas.py",
+      "bytes": 1247,
+      "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/candidate/qloo_client.py",
+      "bytes": 12206,
+      "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/candidate/requirements.txt",
+      "bytes": 74,
+      "sha256": "80f580784e41edbf585cdc133c99d6e52ad9fae5876459c74ba6cbb4ed6b0602"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/candidate/tests/test_constraint_binding.py",
+      "bytes": 12500,
+      "sha256": "fd12768b12765f333f1e95f571105eb02fe252f91b3c61168c6fba6f18691692"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/candidate/tests/test_model_selection.py",
+      "bytes": 4333,
+      "sha256": "112b50850eaa21b1a8c8ead86de4321f48c7a8331261fc01c5cdbf90ab0fc08c"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/candidate/tests/test_recommendation_notes.py",
+      "bytes": 14234,
+      "sha256": "14d33c42bec3694215b9fdb3118cd1e200a8192f462b4c72ae2d8f1487a4b48b"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/candidate/tests/test_recommendation_purpose.py",
+      "bytes": 3599,
+      "sha256": "6f237bf2ca7812d18245ce653d50ff8c7ba0fdf1e32fb22f49dd16940bf2c842"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/candidate/tests/test_tastetable.py",
+      "bytes": 8240,
+      "sha256": "7ace6361e9baf4a1e1a4ccfa528df1a4d2165b99bacb0423a572ac78bf3e9c5b"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/candidate/tests/test_tool_error_continuation.py",
+      "bytes": 4186,
+      "sha256": "13ce005e3bbd7c993a889210a69f4cd9f5eb99f3ed64c3e26a88d399f021de34"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/evidence/author-baseline.log",
+      "bytes": 22182,
+      "sha256": "a0f8050fc7ecbd07d467d123037cb62602da6b2966c0270d0c3854384fcc455d"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/evidence/author-candidate-optimized.log",
+      "bytes": 2430,
+      "sha256": "87fdefc719c1a277f72605f15972eaa722f48d5e24d2960e2f3d9b8a5aad6d71"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/evidence/author-candidate.log",
+      "bytes": 2430,
+      "sha256": "c3581f6b7e67896e94a00765f1404c2260aabc09b8bbc617a724b417deceb052"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/evidence/author-test-receipt.json",
+      "bytes": 525,
+      "sha256": "48b9058d2e513e4ab6cea417e3d876e487f2a39dd473f08f2e9f7798964b4bcb"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/evidence/retained-native.log",
+      "bytes": 5347,
+      "sha256": "843f492ae8c32ede981f59edec60fbd1beaf566abd5ee40f6a715848be0f1d17"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/first-cut/candidate/agent.py",
+      "bytes": 26562,
+      "sha256": "2101ecf2ae244cf6e9bbc57903dc2d9035941d5af0087e130afa15fccc29fdd8"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/first-cut/candidate/tests/test_recommendation_notes.py",
+      "bytes": 12713,
+      "sha256": "08dad607d18f4c2ead0c7794c10381a707b0ad1b67083e17fdee975f88fff256"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/first-cut/evidence/author-baseline.log",
+      "bytes": 22003,
+      "sha256": "5e22f279f4b5fe66332104e9b91f95e57c23fa9c4c3cf4eaab0a80ad1e265278"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/first-cut/evidence/author-candidate-optimized.log",
+      "bytes": 2251,
+      "sha256": "f12bacb44737ec5683009dbea5ecfae7528d15518cdc3aeb4e44e93da01418be"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/first-cut/evidence/author-candidate.log",
+      "bytes": 2251,
+      "sha256": "42f5e41807b14730fab2a4a09d741a31bcf0f5555192ede4683dcb750bd69b90"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/HANDOFF.md",
+      "bytes": 3478,
+      "sha256": "31e6ae934e9b99c9e680cde4300adb6738ed053c97340866996cd9656083d709"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/notes.patch",
+      "bytes": 20956,
+      "sha256": "21ae2b2f03251e830ce379f9e1e9fed68bbeb4874e68bf691c5b67f1ac75a358"
+    },
+    {
+      "path": "tastetable-notes-9e05c01af69c-estate/source-manifest.json",
+      "bytes": 2849,
+      "sha256": "985a65f23459e7cc6a513a54a45b66a36c0c54e602a321ec2c57dba6d6a87444"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/baseline-results.json",
+      "bytes": 223829,
+      "sha256": "684000dab7fce166090b2a263a71633f8e9efa537d3ca059d8fe7a5fcdca9934"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/baseline/agent.py",
+      "bytes": 25053,
+      "sha256": "5366635d101cb7010e6ad3586de9a8d76f222b98118cbc5c4bf73ea11b58a903"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/baseline/app.py",
+      "bytes": 2343,
+      "sha256": "6179e3953e9e6aed009695b9528c8de8622246ab2a1fd5676f18b8b66fa9152c"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/baseline/constraints.py",
+      "bytes": 4451,
+      "sha256": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/baseline/fixtures/qloo_fixtures.json",
+      "bytes": 21190,
+      "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/baseline/personas.py",
+      "bytes": 1247,
+      "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/baseline/qloo_client.py",
+      "bytes": 12206,
+      "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/baseline/requirements.txt",
+      "bytes": 74,
+      "sha256": "80f580784e41edbf585cdc133c99d6e52ad9fae5876459c74ba6cbb4ed6b0602"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/baseline/tests/test_constraint_binding.py",
+      "bytes": 12500,
+      "sha256": "fd12768b12765f333f1e95f571105eb02fe252f91b3c61168c6fba6f18691692"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/baseline/tests/test_model_selection.py",
+      "bytes": 4333,
+      "sha256": "112b50850eaa21b1a8c8ead86de4321f48c7a8331261fc01c5cdbf90ab0fc08c"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/baseline/tests/test_recommendation_purpose.py",
+      "bytes": 3599,
+      "sha256": "6f237bf2ca7812d18245ce653d50ff8c7ba0fdf1e32fb22f49dd16940bf2c842"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/baseline/tests/test_tastetable.py",
+      "bytes": 8240,
+      "sha256": "7ace6361e9baf4a1e1a4ccfa528df1a4d2165b99bacb0423a572ac78bf3e9c5b"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/baseline/tests/test_tool_argument_recovery.py",
+      "bytes": 12775,
+      "sha256": "a7a7eb8942970622eae8904cfd1145a0405aa0e404987afd24f1eb0d9b15e374"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/baseline/tests/test_tool_error_continuation.py",
+      "bytes": 4186,
+      "sha256": "13ce005e3bbd7c993a889210a69f4cd9f5eb99f3ed64c3e26a88d399f021de34"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/candidate-fae9ec/agent.py",
+      "bytes": 28440,
+      "sha256": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/candidate-fae9ec/app.py",
+      "bytes": 2343,
+      "sha256": "6179e3953e9e6aed009695b9528c8de8622246ab2a1fd5676f18b8b66fa9152c"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/candidate-fae9ec/constraints.py",
+      "bytes": 4451,
+      "sha256": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/candidate-fae9ec/fixtures/qloo_fixtures.json",
+      "bytes": 21190,
+      "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/candidate-fae9ec/personas.py",
+      "bytes": 1247,
+      "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/candidate-fae9ec/qloo_client.py",
+      "bytes": 12206,
+      "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/candidate-fae9ec/requirements.txt",
+      "bytes": 74,
+      "sha256": "80f580784e41edbf585cdc133c99d6e52ad9fae5876459c74ba6cbb4ed6b0602"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/candidate-fae9ec/tests/test_constraint_binding.py",
+      "bytes": 12500,
+      "sha256": "fd12768b12765f333f1e95f571105eb02fe252f91b3c61168c6fba6f18691692"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/candidate-fae9ec/tests/test_model_selection.py",
+      "bytes": 4333,
+      "sha256": "112b50850eaa21b1a8c8ead86de4321f48c7a8331261fc01c5cdbf90ab0fc08c"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/candidate-fae9ec/tests/test_recommendation_purpose.py",
+      "bytes": 3599,
+      "sha256": "6f237bf2ca7812d18245ce653d50ff8c7ba0fdf1e32fb22f49dd16940bf2c842"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/candidate-fae9ec/tests/test_tastetable.py",
+      "bytes": 8240,
+      "sha256": "7ace6361e9baf4a1e1a4ccfa528df1a4d2165b99bacb0423a572ac78bf3e9c5b"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/candidate-fae9ec/tests/test_tool_argument_recovery.py",
+      "bytes": 12775,
+      "sha256": "a7a7eb8942970622eae8904cfd1145a0405aa0e404987afd24f1eb0d9b15e374"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/candidate-fae9ec/tests/test_tool_error_continuation.py",
+      "bytes": 4186,
+      "sha256": "13ce005e3bbd7c993a889210a69f4cd9f5eb99f3ed64c3e26a88d399f021de34"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/candidate-source-manifest.json",
+      "bytes": 2701,
+      "sha256": "12cf1773e3467ad07abd1111071d934ede62e452f9bc85b76447e6e4acec7e0a"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/composed-candidate-normal-observations.json",
+      "bytes": 226304,
+      "sha256": "30b5221133deb445f8c336654d10a891212dfad53a1eae0ab077ed3035556892"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/composed-candidate-normal.log",
+      "bytes": 2703,
+      "sha256": "1972167af97214be97c1c86748a835713e29696b0540edd19e56cafaed4b3583"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/composed-candidate-optimized-observations.json",
+      "bytes": 226304,
+      "sha256": "30b5221133deb445f8c336654d10a891212dfad53a1eae0ab077ed3035556892"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/composed-candidate-optimized.log",
+      "bytes": 2703,
+      "sha256": "45133a3b465aa2c991efee4fa6ac12b55a91af9a216a88d2974a41b509240487"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/interrupted-enospc-composed-candidate-normal-observations.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/interrupted-enospc-composed-candidate-normal.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/interrupted-enospc-receipt.json",
+      "bytes": 499,
+      "sha256": "7574cd77ccfb291b88f6b36a547023004c02ba0f2b1d4e279c99f3b50d9b5197"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/interrupted-enospc-run_pr11_receiving.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/owned-dedup-receipt.json",
+      "bytes": 10389,
+      "sha256": "e967bfb742c5073a22c72ca4cbe26a92bb7000e7ad2ac53a6db919efbc1491c7"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/pr11-all-normal.log",
+      "bytes": 2009,
+      "sha256": "d08b6ff13f6e5815a156fd1ff4d4cc208e4df6f16e974984b826fe9c14dbdc92"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/pr11-all-optimized.log",
+      "bytes": 2009,
+      "sha256": "62db812943cd95248dbceb375675daebd89dc649892d1092605f176ce4bd8fd3"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/pr11-missing-static-normal.log",
+      "bytes": 5408,
+      "sha256": "38b3c1732386d077411a8dda565048cb73ea7d3da9b4bda6b0ff03b9288f499b"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/pr11-source-preservation.json",
+      "bytes": 394,
+      "sha256": "e19aaa228ab50724f58fdd4a723388a34606014dadd56f847d47ed24ac7e8d87"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/RECEIVING_REVIEW.md",
+      "bytes": 7060,
+      "sha256": "c9ace4e217fd2eb8b200573cca8b3f7be864bfe85ee3062621be25a35f1369d0"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/receiving-baseline-normal-observations.json",
+      "bytes": 223829,
+      "sha256": "684000dab7fce166090b2a263a71633f8e9efa537d3ca059d8fe7a5fcdca9934"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/receiving-baseline-normal.log",
+      "bytes": 11937,
+      "sha256": "5bd7ac75efcb7cc85d627c07520b61c25f5d196d96bb3c416536802ba6e1207b"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/receiving-baseline-optimized-observations.json",
+      "bytes": 223829,
+      "sha256": "684000dab7fce166090b2a263a71633f8e9efa537d3ca059d8fe7a5fcdca9934"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/receiving-baseline-optimized.log",
+      "bytes": 11937,
+      "sha256": "1c809ce8f5a28bd2b372989dd47f1477c01a132985bbb2e8c2ea58658f7dcc60"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/receiving-handoff-manifest.json",
+      "bytes": 2778,
+      "sha256": "c26a8a565c0100e6d8af0993b00c27ac4956983de73501a9f73d256603999a61"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/receiving-source-manifest.json",
+      "bytes": 3437,
+      "sha256": "9629a8ca9dbe05a880de039ed00ffc51eaba4a871bed30586ac2f238fd610d49"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/receiving-verification.json",
+      "bytes": 10165,
+      "sha256": "b863fc5188087e6011d13c12ee80665e6d7365282d6eb90457c85f38a92cd9d7"
+    },
+    {
+      "path": "tastetable-notes-b8d384-review-9e05c01af69c-memory/test_notes_receiving.py",
+      "bytes": 17353,
+      "sha256": "445069383261f8e25ef79d8a52b4ad3aa23c9fb8a95ed2745d9697fc0b641096"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/baseline/agent.py",
+      "bytes": 25053,
+      "sha256": "5366635d101cb7010e6ad3586de9a8d76f222b98118cbc5c4bf73ea11b58a903"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/baseline/app.py",
+      "bytes": 2343,
+      "sha256": "6179e3953e9e6aed009695b9528c8de8622246ab2a1fd5676f18b8b66fa9152c"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/baseline/constraints.py",
+      "bytes": 4451,
+      "sha256": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/baseline/fixtures/qloo_fixtures.json",
+      "bytes": 21190,
+      "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/baseline/personas.py",
+      "bytes": 1247,
+      "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/baseline/qloo_client.py",
+      "bytes": 12206,
+      "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/baseline/requirements.txt",
+      "bytes": 74,
+      "sha256": "80f580784e41edbf585cdc133c99d6e52ad9fae5876459c74ba6cbb4ed6b0602"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/baseline/static/app.js",
+      "bytes": 9250,
+      "sha256": "cb666959df8a4921987e67b98efbeca0f0399502184f3743e732c7c295cfd395"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/baseline/static/index.html",
+      "bytes": 4559,
+      "sha256": "ddd912eb1af81611551c2ddb10f6f1fbd9fceb9e2a691b7ba35746ba08f9404d"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/baseline/static/style.css",
+      "bytes": 5046,
+      "sha256": "0d58ae4d0fef286374808eda0dc90b5e8249432a248b8332441738eb04dc0840"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/baseline/static/week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/baseline/tests/test_constraint_binding.py",
+      "bytes": 12500,
+      "sha256": "fd12768b12765f333f1e95f571105eb02fe252f91b3c61168c6fba6f18691692"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/baseline/tests/test_model_selection.py",
+      "bytes": 4333,
+      "sha256": "112b50850eaa21b1a8c8ead86de4321f48c7a8331261fc01c5cdbf90ab0fc08c"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/baseline/tests/test_recommendation_purpose.py",
+      "bytes": 3599,
+      "sha256": "6f237bf2ca7812d18245ce653d50ff8c7ba0fdf1e32fb22f49dd16940bf2c842"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/baseline/tests/test_tastetable.py",
+      "bytes": 8240,
+      "sha256": "7ace6361e9baf4a1e1a4ccfa528df1a4d2165b99bacb0423a572ac78bf3e9c5b"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/baseline/tests/test_tool_argument_recovery.py",
+      "bytes": 12775,
+      "sha256": "a7a7eb8942970622eae8904cfd1145a0405aa0e404987afd24f1eb0d9b15e374"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/baseline/tests/test_tool_error_continuation.py",
+      "bytes": 4186,
+      "sha256": "13ce005e3bbd7c993a889210a69f4cd9f5eb99f3ed64c3e26a88d399f021de34"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/candidate-manifest.json",
+      "bytes": 6121,
+      "sha256": "d7c5836ca7f4894243a48159fd924da8475ff8e1fd6fe5b3045b04a62ac4beeb"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/candidate/agent.py",
+      "bytes": 28440,
+      "sha256": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/candidate/app.py",
+      "bytes": 2343,
+      "sha256": "6179e3953e9e6aed009695b9528c8de8622246ab2a1fd5676f18b8b66fa9152c"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/candidate/constraints.py",
+      "bytes": 4451,
+      "sha256": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/candidate/fixtures/qloo_fixtures.json",
+      "bytes": 21190,
+      "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/candidate/personas.py",
+      "bytes": 1247,
+      "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/candidate/qloo_client.py",
+      "bytes": 12206,
+      "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/candidate/requirements.txt",
+      "bytes": 74,
+      "sha256": "80f580784e41edbf585cdc133c99d6e52ad9fae5876459c74ba6cbb4ed6b0602"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/candidate/static/app.js",
+      "bytes": 9250,
+      "sha256": "cb666959df8a4921987e67b98efbeca0f0399502184f3743e732c7c295cfd395"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/candidate/static/index.html",
+      "bytes": 4559,
+      "sha256": "ddd912eb1af81611551c2ddb10f6f1fbd9fceb9e2a691b7ba35746ba08f9404d"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/candidate/static/style.css",
+      "bytes": 5046,
+      "sha256": "0d58ae4d0fef286374808eda0dc90b5e8249432a248b8332441738eb04dc0840"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/candidate/static/week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/candidate/tests/test_constraint_binding.py",
+      "bytes": 12500,
+      "sha256": "fd12768b12765f333f1e95f571105eb02fe252f91b3c61168c6fba6f18691692"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/candidate/tests/test_model_selection.py",
+      "bytes": 4333,
+      "sha256": "112b50850eaa21b1a8c8ead86de4321f48c7a8331261fc01c5cdbf90ab0fc08c"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/candidate/tests/test_recommendation_notes.py",
+      "bytes": 14234,
+      "sha256": "14d33c42bec3694215b9fdb3118cd1e200a8192f462b4c72ae2d8f1487a4b48b"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/candidate/tests/test_recommendation_purpose.py",
+      "bytes": 3599,
+      "sha256": "6f237bf2ca7812d18245ce653d50ff8c7ba0fdf1e32fb22f49dd16940bf2c842"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/candidate/tests/test_tastetable.py",
+      "bytes": 8240,
+      "sha256": "7ace6361e9baf4a1e1a4ccfa528df1a4d2165b99bacb0423a572ac78bf3e9c5b"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/candidate/tests/test_tool_argument_recovery.py",
+      "bytes": 12775,
+      "sha256": "a7a7eb8942970622eae8904cfd1145a0405aa0e404987afd24f1eb0d9b15e374"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/candidate/tests/test_tool_error_continuation.py",
+      "bytes": 4186,
+      "sha256": "13ce005e3bbd7c993a889210a69f4cd9f5eb99f3ed64c3e26a88d399f021de34"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/evidence/author-current-main-optimized.log",
+      "bytes": 2430,
+      "sha256": "a3b2dc3c606cd35c54bba703f6dc27637f9ba33e4ef0b589c5d23e7af9321618"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/evidence/author-current-main.log",
+      "bytes": 2430,
+      "sha256": "26dcedfb5cfa5c5528bae0672ef74d7111b28703979a283bdbfc5e35a2812976"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/evidence/author-test-receipt.json",
+      "bytes": 973,
+      "sha256": "87fed778875ebf854df3c826866ff8feff296d462cc0cdbe0a523182035a12a4"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/evidence/full-current-native-receipt.json",
+      "bytes": 551,
+      "sha256": "7ce91b0670f032c25833c8f0443fc65d79f5102ef2c2b20848da85eb8feab107"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/evidence/full-current-native.log",
+      "bytes": 201,
+      "sha256": "40b1d39d6896523a81ffbc1630a20481bce4f17a8811678b867ae9febbee7fb7"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/evidence/notes-before-after.json",
+      "bytes": 9277,
+      "sha256": "40462008bc6f6dd3d8454c9be0e52cac2ceeead1eb5bf19eccbe5f8a61c4103d"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/evidence/pr11-preserved.patch",
+      "bytes": 3142,
+      "sha256": "c93951b6e3e9c08e297aa574f7c38d02552addee597bef906a8ab640a455aabe"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/evidence/retained-current-native.log",
+      "bytes": 7078,
+      "sha256": "f3319fedf9485b77cba84b9f0541f65dd22442651aeee71a452482b682a77438"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/notes.patch",
+      "bytes": 20956,
+      "sha256": "d92dcf763cbf857ca1ac51aee3b04dcae7f088de94cff0707db8a6caecf2a131"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/original-notes.patch",
+      "bytes": 20956,
+      "sha256": "21ae2b2f03251e830ce379f9e1e9fed68bbeb4874e68bf691c5b67f1ac75a358"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/run_full_native.py",
+      "bytes": 627,
+      "sha256": "43f0f8e8939704bcbdf149c74c383f7c999ee8b988b7fa0ab3418fe01e86c896"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/run_retained_native.py",
+      "bytes": 1434,
+      "sha256": "2a1e2c47154d7584895d851a0913ab4d17080e457148d018ed7791b72abd217c"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/source-manifest-native13.json",
+      "bytes": 3437,
+      "sha256": "9629a8ca9dbe05a880de039ed00ffc51eaba4a871bed30586ac2f238fd610d49"
+    },
+    {
+      "path": "tastetable-notes-main-b8d384-9e05c01af69c-estate/source-manifest.json",
+      "bytes": 4432,
+      "sha256": "cb8fae0edc73ce49980de70e7d700c3c063344cac79993d78d0fbef798fb2ab4"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/baseline-expanded-observations.json",
+      "bytes": 223829,
+      "sha256": "684000dab7fce166090b2a263a71633f8e9efa537d3ca059d8fe7a5fcdca9934"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/baseline-expanded-optimized-observations.json",
+      "bytes": 223829,
+      "sha256": "684000dab7fce166090b2a263a71633f8e9efa537d3ca059d8fe7a5fcdca9934"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/baseline-expanded-optimized.log",
+      "bytes": 11832,
+      "sha256": "60d241f65d94c6c950de1babff2564df543a17b39c6be71b94100e31f7a19a46"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/baseline-expanded.log",
+      "bytes": 11832,
+      "sha256": "1c377dee5df150831f5501764adf82b8936cf7cd38fbfd8258899145d861ad97"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/baseline-normal.log",
+      "bytes": 11660,
+      "sha256": "b16b5b86dabfe71c4e5106915989c3f18473f4db3b277dfd6826262a8e0577c4"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/baseline-observations-normal.json",
+      "bytes": 214733,
+      "sha256": "3fd6d26da89032863e8c3ae36bf73361a80b8cd72c9900ce621d6c67cdc62781"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/baseline-observations-optimized.json",
+      "bytes": 214733,
+      "sha256": "3fd6d26da89032863e8c3ae36bf73361a80b8cd72c9900ce621d6c67cdc62781"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/baseline-optimized.log",
+      "bytes": 11660,
+      "sha256": "b16b5b86dabfe71c4e5106915989c3f18473f4db3b277dfd6826262a8e0577c4"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/baseline-results.json",
+      "bytes": 214733,
+      "sha256": "3fd6d26da89032863e8c3ae36bf73361a80b8cd72c9900ce621d6c67cdc62781"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/baseline-verification.json",
+      "bytes": 4462,
+      "sha256": "2f6c7cefd337dcc69a47acf65cb14ffa1ac742db48e93d7999375be97759fa21"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/baseline/agent.py",
+      "bytes": 23754,
+      "sha256": "b301247b8e9459327afa19964d02a9647c0d39f36e55c380115af3b30d538817"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/baseline/constraints.py",
+      "bytes": 4451,
+      "sha256": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/baseline/fixtures/qloo_fixtures.json",
+      "bytes": 21190,
+      "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/baseline/personas.py",
+      "bytes": 1247,
+      "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/baseline/qloo_client.py",
+      "bytes": 12206,
+      "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/candidate-final-4d2b-manifest.json",
+      "bytes": 705,
+      "sha256": "0369bd89a6594fa1360aee2e621ae18ee34c75448e27963d1e7f5d93e6a3475e"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/candidate-final-4d2b/agent.py",
+      "bytes": 27141,
+      "sha256": "4d2b2438c39635b34d98ce10d751c9e70f14be057b7c68b4fd298e505cc5787d"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/candidate-final-4d2b/constraints.py",
+      "bytes": 4451,
+      "sha256": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/candidate-final-4d2b/fixtures/qloo_fixtures.json",
+      "bytes": 21190,
+      "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/candidate-final-4d2b/personas.py",
+      "bytes": 1247,
+      "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/candidate-final-4d2b/qloo_client.py",
+      "bytes": 12206,
+      "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/candidate-final-normal-observations.json",
+      "bytes": 226304,
+      "sha256": "30b5221133deb445f8c336654d10a891212dfad53a1eae0ab077ed3035556892"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/candidate-final-normal.log",
+      "bytes": 2703,
+      "sha256": "a82b0bd8095c5c0c74eeb1088d0b36df98bbb3aae4c1e629d4774d96cbbc7458"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/candidate-final-optimized-observations.json",
+      "bytes": 226304,
+      "sha256": "30b5221133deb445f8c336654d10a891212dfad53a1eae0ab077ed3035556892"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/candidate-final-optimized.log",
+      "bytes": 2703,
+      "sha256": "a82b0bd8095c5c0c74eeb1088d0b36df98bbb3aae4c1e629d4774d96cbbc7458"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/candidate-v1-normal.log",
+      "bytes": 3420,
+      "sha256": "3ee912f1f1666ad753ee5995bb739bb411274f53ae67489b6e255681d4ec9c4f"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/candidate-v1-observations-normal.json",
+      "bytes": 216966,
+      "sha256": "3c9560ae671a315f1df255c92f13dad0834bad90ba7524be789cd0727a8a8da7"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/candidate-v1-observations-optimized.json",
+      "bytes": 216966,
+      "sha256": "3c9560ae671a315f1df255c92f13dad0834bad90ba7524be789cd0727a8a8da7"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/candidate-v1-optimized.log",
+      "bytes": 3420,
+      "sha256": "2886b8098bf050a8097d7e394ea1d506c9ffd37044b11c145d9216389541426f"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/candidate-v1-verification.json",
+      "bytes": 2542,
+      "sha256": "44cddec3bae168dca50b1b7c5177ab7fdb8351ef2fa0044b773cfc3fa65f7d8f"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/development-baseline-results-v1.json",
+      "bytes": 202854,
+      "sha256": "db9dbcf412fbc53b66e8fb28fc94e895b670636ed91ed3dd928b7d21339d0ca3"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/development-test-v1.py",
+      "bytes": 14509,
+      "sha256": "f2ef15f57fc20e15ef1b1a7c59092700332d113fe19e1d77d06d593ba11c9f4b"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/expanded-baseline-results.json",
+      "bytes": 223829,
+      "sha256": "684000dab7fce166090b2a263a71633f8e9efa537d3ca059d8fe7a5fcdca9934"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/final-verification.json",
+      "bytes": 12435,
+      "sha256": "cb102ffdb5638ef08ada59e773533ee5674c139a0a85c2c2c11949e81eb60c49"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/handoff-manifest.json",
+      "bytes": 2615,
+      "sha256": "c9c12db7fa9e15f73e2c69f5fcecb40f2f52e343789a4330cee0ca787b2c2318"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/held-2101-expanded-observations.json",
+      "bytes": 248500,
+      "sha256": "a7b99cc11e0211acbff4ce652a7000e085b657eabad32ebf95127014730f7b44"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/held-2101-expanded-optimized-observations.json",
+      "bytes": 248500,
+      "sha256": "a7b99cc11e0211acbff4ce652a7000e085b657eabad32ebf95127014730f7b44"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/held-2101-expanded-optimized.log",
+      "bytes": 6720,
+      "sha256": "6951ba2e7d00fa99f252cbf3e70e89d560c9ba68577d9b47ef991f22b129e211"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/held-2101-expanded.log",
+      "bytes": 6720,
+      "sha256": "109243bef89a05dfe9463ef2e7d03c17050de86f31641a81a1d0a8ab31e03c48"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/held-candidate-2101-manifest.json",
+      "bytes": 705,
+      "sha256": "fc3bb8b92b2136ac5b5d0e7cbd78d03f325e7793af9cf2c9e4f04484f1ca80c4"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/held-candidate-2101/agent.py",
+      "bytes": 26562,
+      "sha256": "2101ecf2ae244cf6e9bbc57903dc2d9035941d5af0087e130afa15fccc29fdd8"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/held-candidate-2101/constraints.py",
+      "bytes": 4451,
+      "sha256": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/held-candidate-2101/fixtures/qloo_fixtures.json",
+      "bytes": 21190,
+      "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/held-candidate-2101/personas.py",
+      "bytes": 1247,
+      "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/held-candidate-2101/qloo_client.py",
+      "bytes": 12206,
+      "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/initial-baseline-results.json",
+      "bytes": 214733,
+      "sha256": "3fd6d26da89032863e8c3ae36bf73361a80b8cd72c9900ce621d6c67cdc62781"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/initial-oracle-test.py",
+      "bytes": 15022,
+      "sha256": "7d7ec04174b423a49bbe41fc2246920041a75c821c36064181957cd83bd8db6d"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/iterable-negative-control.json",
+      "bytes": 6062,
+      "sha256": "f9d4a5c4711496655bb459ed4a6248725122bd60b4c5dcfb54afe3717848ec8d"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/receiving-source.json",
+      "bytes": 1408,
+      "sha256": "5646808f840ef913d3a0df0fd2d0093efaeb8f7bf0987b4a59573efb881ab573"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/REVIEW.md",
+      "bytes": 7929,
+      "sha256": "69897b45d5e537051f370cdeab60c356adb60920f72e01925ddb33715af958d1"
+    },
+    {
+      "path": "tastetable-notes-review-9e05c01af69c-memory/test_notes_receiving.py",
+      "bytes": 17353,
+      "sha256": "445069383261f8e25ef79d8a52b4ad3aa23c9fb8a95ed2745d9697fc0b641096"
+    }
+  ]
+}
