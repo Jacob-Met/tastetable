@@ -104,3 +104,31 @@ python3 -m unittest discover -s tests -p 'test_native_plan_week*.py' -v
 These additional tests require installed Node.js as well as Python. They execute the actual native producer and converter, then receive the file through the unchanged week reader, arrangement model and calendar writer. They cover empty results, Unicode/literal fields, identity, exact response preservation, complete-input refusal, occupied outputs and real partial-write cleanup on POSIX. A separate unprivileged-POSIX control makes the completed stage unwritable after the real hard-link operation, then verifies the native cleanup error, valid final content, explicit created-file diagnostic and refusal to replace that file on retry. The original planner-only tests above still require no Node runtime.
 
 The separate `native-plan-week-browser` workflow uses an already cached Node 22 and installed system Chrome. Its actual file-picker, Open/move/save/calendar checks serve the unchanged application files with a read-only loopback health/persona bootstrap; they do not claim an application-server deployment or a live API execution.
+
+## Read a saved week as a standalone handoff
+
+Turn an existing arranged saved-week file into a readable HTML document. The recipient can open it in a browser and read or print it offline without running TasteTable or Node:
+
+```sh
+node tools/saved_week_to_html.mjs --input my-week.json --output caregiver-handoff.html
+```
+
+Run the command with Node.js 18+ from this repository; it needs no npm packages. Both paths are required. Use an unused output filename in an existing directory. `--help` describes the command.
+
+The handoff shows all seven actual dates, scheduled and omitted suggestion occurrences, the original names/explanations/Qloo IDs/affinities, original plan notes and rejected-check details, requested inputs, source labels and saved/source timestamps. Repeated venues retain their individual occurrence assignments. Empty weeks remain empty. Source strings render literally, including Unicode and markup-like text. The self-contained HTML has no scripts, remote assets or automatic network requests.
+
+These are saved suggestions and original heuristic checks, not new venue verification or reservations. The report does not authenticate the saved source label. The original JSON remains the editable source and retains its complete comparison and tool trace. **Visit-only venue questions and caregiver reply notes are absent from saved-week v1 and are not included.** The report labels that boundary visibly.
+
+Input is a completed regular UTF-8 saved-week v1 JSON of at most **4 MiB**. A UTF-8 BOM is accepted. Displayed carriage returns are preserved as HTML character references. Displayed NUL or unpaired UTF-16 surrogate characters are refused because HTML cannot preserve them. The unchanged saved-week reader validates and reconstructs its arrangement. The report fingerprints the exact input bytes with SHA-256; the HTML and successful stdout receipt carry that fingerprint. This identifies the file read, not the authenticity of its contents. Rendered HTML is limited to 32 MiB.
+
+The command follows the existing native converter's create-only delivery convention: write and close an owned temporary file beside the destination, then admit the completed output through a same-filesystem hard link. Existing files, directories and input aliases are refused. There is no overwrite fallback if the filesystem does not support that operation. An invalid input or failed pre-publication write leaves no accepted output and removes the owned stage when cleanup succeeds.
+
+Exit **0** means the complete HTML and receipt were delivered, or help was displayed. Exit **2** means invalid input/arguments or an occupied destination. Exit **1** means a delivery or runtime failure. If final cleanup or receipt delivery fails after publication, stderr explicitly says the HTML handoff was created; inspect that completed output before choosing another filename. A cleanup failure can leave its uniquely named temporary stage.
+
+Maintained native tests:
+
+```sh
+node --test tests/test_week_report.mjs tests/test_saved_week_to_html.mjs
+```
+
+[Windows receiving and exact provenance](receiving/saved-week-html-0378a7b6/README.md) records the original missing consumer, actual native producer/converter, file-URL browser/print behavior and retained failed candidate.

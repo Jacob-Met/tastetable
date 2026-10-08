@@ -1,0 +1,47 @@
+✔ real CLI publishes a UTF-8 handoff and receipt without changing the input (57.6886ms)
+✔ BOM input is accepted and the receipt fingerprints its exact bytes (49.2137ms)
+✔ malformed, unsupported, non-UTF8 and over-limit input are refused before output (180.2203ms)
+✔ missing and directory input are refused with no output (82.0455ms)
+✔ occupied file, directory and input aliases retain their original bytes (188.4664ms)
+✔ strict arguments and help do not consume the input or create a report (364.7221ms)
+✔ missing output parent is a delivery failure without a partially accepted file (46.2619ms)
+✔ a competing output created before publication is preserved and the stage is removed (51.6544ms)
+✔ a real partial staged write is removed and never published (49.0005ms)
+✔ failure after publication identifies the complete report and refuses overwrite on retry (93.1859ms)
+✔ native response and edited occurrences round-trip across a new state (4.6986ms)
+✔ resaving preserves the accepted source and new local arrangement (1.5681ms)
+✔ occurrence keys keep repeated entity IDs distinct after reopening (0.7912ms)
+✔ UTF-8 JSON with BOM or different indentation preserves source values (1.1492ms)
+✔ empty arrangements and unknown source remain usable snapshots (1.6274ms)
+✔ save refuses a derived week whose original evidence has changed (1.4942ms)
+✔ malformed format, dates, timestamps and inconsistent source inputs fail (5.9814ms)
+✔ missing, additional or invalid occurrence assignments cannot silently drop picks (3.6733ms)
+✔ saved files validate native response types before reaching HTML or late render fields (6.5794ms)
+✔ current native recovery traces retain null and list args with the checked partial plan (1.1174ms)
+✔ initial week retains every suggestion and exposes all seven dates (2.8466ms)
+✔ move, omit and restore preserve source evidence and unrelated picks (0.4757ms)
+✔ reset restores original assignments while keeping the chosen week (0.27ms)
+✔ calendar weeks handle leap days and year boundaries (0.1864ms)
+✔ invalid dates and unknown transitions refuse without changing the plan (0.5953ms)
+✔ source plan is a detached immutable snapshot (0.2274ms)
+✔ empty and partial plans remain honest and rejected candidates cannot be scheduled (0.2215ms)
+✔ duplicate source IDs remain distinct suggestions through scheduling (0.224ms)
+✔ mode is retained explicitly and absence is never labeled live (0.3638ms)
+✔ missing source identity cannot create a local suggestion (0.267ms)
+✔ calendar arithmetic stays stable across time zones and daylight-saving boundaries (72.9604ms)
+✔ edited arrangement uses the saved seven dates and retains each original occurrence (5.3362ms)
+✔ repeated venues remain distinct scheduled and omitted occurrences (0.9825ms)
+✔ all-omitted and empty files remain readable without inventing a scheduled visit (1.5851ms)
+✔ mock, live and unknown labels describe saved source rather than fresh verification (2.6028ms)
+✔ source timestamps, constraint text, zero affinity and incomplete notes are preserved (0.934ms)
+✔ all file-controlled text stays literal, including markup, quotes, Unicode and newlines (0.8843ms)
+✔ the canonical codec rejects malformed files and changed source/arrangement agreement (2.6354ms)
+✔ the same saved bytes yield a deterministic report with a literal source filename (1.4697ms)
+ℹ tests 39
+ℹ suites 0
+ℹ pass 39
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1225.53

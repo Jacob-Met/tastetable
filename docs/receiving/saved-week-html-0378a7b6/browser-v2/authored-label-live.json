@@ -1,0 +1,364 @@
+{
+  "format": "tastetable.saved-week.v1",
+  "receivedAt": "2026-10-08T17:16:07.772Z",
+  "savedAt": "2026-10-08T12:00:00.000Z",
+  "calendarId": "0a77675f81a19c29bb69be2db8acad8e",
+  "inputs": {
+    "cuisines": [
+      "Japanese",
+      "Italian"
+    ],
+    "music": [
+      "The Beatles"
+    ],
+    "films": [
+      "Roman Holiday",
+      "Singin' in the Rain"
+    ],
+    "constraints": [
+      "soft_foods"
+    ],
+    "city": "Pasadena"
+  },
+  "response": {
+    "plan": {
+      "meals": [
+        {
+          "day": "Monday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-11",
+          "name": "Trattoria Nonna Lucia",
+          "affinity": 0.92,
+          "fallback": false,
+          "why": "Qloo affinity 0.92 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Italian). Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto)."
+        },
+        {
+          "day": "Wednesday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-09",
+          "name": "Kotobuki Tofu House",
+          "affinity": 0.82,
+          "fallback": false,
+          "why": "Qloo affinity 0.82 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Japanese). Checks: Soft foods: pass (soft options listed: chawanmushi, steamed fish, tofu)."
+        },
+        {
+          "day": "Friday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-13",
+          "name": "Osteria del Ponte",
+          "affinity": 0.8,
+          "fallback": false,
+          "why": "Qloo affinity 0.80 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Italian). Checks: Soft foods: pass (soft options listed: gnocchi, soups)."
+        },
+        {
+          "day": "Sunday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-10",
+          "name": "Ramen Tatsu",
+          "affinity": 0.79,
+          "fallback": false,
+          "why": "Qloo affinity 0.79 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Japanese). Checks: Soft foods: unknown (no texture signal in Qloo keywords; ask the venue)."
+        }
+      ],
+      "outing": {
+        "day": "Saturday",
+        "kind": "outing",
+        "entity_id": "FIX-V-02",
+        "name": "Rialto Revival Cinema (fictional)",
+        "affinity": 0.95,
+        "why": "Qloo affinity 0.95 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Movie Theater)."
+      },
+      "rejected": [
+        {
+          "name": "Salumeria Roma",
+          "entity_id": "FIX-P-12",
+          "failed": [
+            {
+              "constraint": "soft_foods",
+              "status": "fail",
+              "reason": "menu signals are mostly firm: crusty bread, cured meats"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    "llm_only": {
+      "meals": [
+        {
+          "day": "Monday",
+          "name": "A well-reviewed Japanese restaurant nearby",
+          "why": "They enjoy Japanese food.",
+          "verified": {
+            "exists": false,
+            "entity_id": null,
+            "constraints_checked": false
+          }
+        },
+        {
+          "day": "Wednesday",
+          "name": "A well-reviewed Italian restaurant nearby",
+          "why": "They enjoy Italian food.",
+          "verified": {
+            "exists": false,
+            "entity_id": null,
+            "constraints_checked": false
+          }
+        },
+        {
+          "day": "Friday",
+          "name": "A well-reviewed Japanese restaurant nearby",
+          "why": "They enjoy Japanese food.",
+          "verified": {
+            "exists": false,
+            "entity_id": null,
+            "constraints_checked": false
+          }
+        },
+        {
+          "day": "Sunday",
+          "name": "A well-reviewed Italian restaurant nearby",
+          "why": "They enjoy Italian food.",
+          "verified": {
+            "exists": false,
+            "entity_id": null,
+            "constraints_checked": false
+          }
+        }
+      ],
+      "outing": {
+        "day": "Saturday",
+        "name": "A concert or show featuring music like The Beatles",
+        "why": "Matches their music taste.",
+        "verified": {
+          "exists": false,
+          "entity_id": null,
+          "constraints_checked": false
+        }
+      },
+      "source": "template (ungrounded baseline)"
+    },
+    "comparison": {
+      "grounded": {
+        "picks": 5,
+        "with_qloo_entity_id": 5,
+        "with_affinity_evidence": 5,
+        "constraint_checked": 5,
+        "unsafe_candidates_rejected": 1
+      },
+      "llm_only": {
+        "picks": 5,
+        "with_qloo_entity_id": 0,
+        "with_affinity_evidence": 0,
+        "constraint_checked": 0,
+        "unsafe_candidates_rejected": 0
+      },
+      "constraints": [
+        "soft_foods"
+      ]
+    },
+    "trace": [
+      {
+        "step": 0,
+        "tool": "qloo_search",
+        "args": {
+          "query": "The Beatles",
+          "kind": "entity",
+          "types": "urn:entity:artist"
+        },
+        "result_summary": "The Beatles"
+      },
+      {
+        "step": 0,
+        "tool": "qloo_search",
+        "args": {
+          "query": "Roman Holiday",
+          "kind": "entity",
+          "types": "urn:entity:movie"
+        },
+        "result_summary": "Roman Holiday"
+      },
+      {
+        "step": 0,
+        "tool": "qloo_search",
+        "args": {
+          "query": "Singin' in the Rain",
+          "kind": "entity",
+          "types": "urn:entity:movie"
+        },
+        "result_summary": "Singin' in the Rain"
+      },
+      {
+        "step": 0,
+        "tool": "qloo_search",
+        "args": {
+          "query": "Japanese",
+          "kind": "tag"
+        },
+        "result_summary": "Japanese"
+      },
+      {
+        "step": 0,
+        "tool": "qloo_search",
+        "args": {
+          "query": "Italian",
+          "kind": "tag"
+        },
+        "result_summary": "Italian"
+      },
+      {
+        "step": 1,
+        "tool": "qloo_recs",
+        "args": {
+          "filter_type": "urn:entity:place",
+          "purpose": "restaurant",
+          "tag_ids": [
+            "urn:tag:genre:restaurant:Japanese",
+            "urn:tag:genre:restaurant:Italian"
+          ],
+          "signal_entity_ids": [
+            "FIX-A-beatles",
+            "FIX-M-roman",
+            "FIX-M-singin"
+          ],
+          "location": "Pasadena",
+          "take": 10
+        },
+        "result_summary": "5 candidates"
+      },
+      {
+        "step": 2,
+        "tool": "constraint_check",
+        "args": {
+          "entity_ids": [
+            "FIX-P-11",
+            "FIX-P-12",
+            "FIX-P-09",
+            "FIX-P-13",
+            "FIX-P-10"
+          ],
+          "constraints": [
+            "soft_foods"
+          ],
+          "kind": "restaurant"
+        },
+        "result_summary": "4/5 passed"
+      },
+      {
+        "step": 3,
+        "tool": "qloo_search",
+        "args": {
+          "query": "",
+          "kind": "tag"
+        },
+        "result_summary": "no match"
+      },
+      {
+        "step": 4,
+        "tool": "qloo_search",
+        "args": {
+          "query": "",
+          "kind": "tag"
+        },
+        "result_summary": "no match"
+      },
+      {
+        "step": 5,
+        "tool": "qloo_search",
+        "args": {
+          "query": "",
+          "kind": "tag"
+        },
+        "result_summary": "no match"
+      },
+      {
+        "step": 6,
+        "tool": "qloo_search",
+        "args": {
+          "query": "jazz",
+          "kind": "tag"
+        },
+        "result_summary": "Jazz Club"
+      },
+      {
+        "step": 6,
+        "tool": "qloo_search",
+        "args": {
+          "query": "cinema",
+          "kind": "tag"
+        },
+        "result_summary": "Movie Theater"
+      },
+      {
+        "step": 6,
+        "tool": "qloo_search",
+        "args": {
+          "query": "museum",
+          "kind": "tag"
+        },
+        "result_summary": "Museum"
+      },
+      {
+        "step": 6,
+        "tool": "qloo_search",
+        "args": {
+          "query": "concert hall",
+          "kind": "tag"
+        },
+        "result_summary": "Concert Hall"
+      },
+      {
+        "step": 7,
+        "tool": "qloo_recs",
+        "args": {
+          "filter_type": "urn:entity:place",
+          "purpose": "outing",
+          "tag_ids": [
+            "urn:tag:category:place:jazz_club",
+            "urn:tag:category:place:movie_theater",
+            "urn:tag:category:place:museum",
+            "urn:tag:category:place:concert_hall"
+          ],
+          "signal_entity_ids": [
+            "FIX-A-beatles",
+            "FIX-M-roman",
+            "FIX-M-singin"
+          ],
+          "location": "Pasadena",
+          "take": 5
+        },
+        "result_summary": "5 candidates"
+      },
+      {
+        "step": 8,
+        "tool": "constraint_check",
+        "args": {
+          "entity_ids": [
+            "FIX-V-02",
+            "FIX-V-04",
+            "FIX-V-05",
+            "FIX-V-01",
+            "FIX-V-03"
+          ],
+          "constraints": [
+            "soft_foods"
+          ],
+          "kind": "outing"
+        },
+        "result_summary": "5/5 passed"
+      }
+    ],
+    "model_message": "Plan inputs gathered; assembling weekly plan from tool results.",
+    "mock": false
+  },
+  "week": {
+    "start": "2026-10-05",
+    "assignments": {
+      "pick-0": "Monday",
+      "pick-1": "Wednesday",
+      "pick-2": "Friday",
+      "pick-3": "Sunday",
+      "pick-4": "Saturday"
+    }
+  }
+}

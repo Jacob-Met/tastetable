@@ -1,0 +1,17 @@
+import fs from "node:fs";
+import {spawnSync,execFileSync} from "node:child_process";
+import {createHash} from "node:crypto";
+import {dirname,join,resolve} from "node:path";
+import {fileURLToPath} from "node:url";
+const here=dirname(fileURLToPath(import.meta.url)), root=resolve(here,"../../..");
+const hash=x=>createHash("sha256").update(x).digest("hex");
+const baseline=JSON.parse(fs.readFileSync(join(here,"baseline.json"),"utf8"));
+const run=spawnSync(process.execPath,["--test","tests/test_week_plan.mjs","tests/test_week_file.mjs","tests/test_week_report.mjs","tests/test_saved_week_to_html.mjs"],{cwd:root,encoding:"utf8"});
+fs.writeFileSync(join(here,"native-tests.log"),run.stdout+run.stderr);
+const before=baseline.sourceHashes, changed=[];
+for(const [path,expected] of Object.entries(before)) if(hash(fs.readFileSync(join(root,path)))!==expected) changed.push(path);
+const owned=["static/week_report.mjs","tools/saved_week_to_html.mjs","tests/test_week_report.mjs","tests/test_saved_week_to_html.mjs","docs/NATIVE_PLAN_CLI.md"];
+const receipt={when:new Date().toISOString(),node:process.version,platform:process.platform,sourceBase:baseline.source,exit:run.status,testLogSha256:hash(run.stdout+run.stderr),changedOriginalPaths:changed,unchangedOriginalFiles:Object.keys(before).length-changed.length,ownedHashes:Object.fromEntries(owned.map(p=>[p,hash(fs.readFileSync(join(root,p)))])),status:execFileSync("git",["status","--porcelain=v1"],{cwd:root,encoding:"utf8"})};
+fs.writeFileSync(join(here,"native-verification.json"),JSON.stringify(receipt,null,2)+"\n");
+console.log(JSON.stringify({exit:run.status,changedOriginalPaths:changed,unchangedOriginalFiles:receipt.unchangedOriginalFiles,ownedHashes:receipt.ownedHashes,summary:run.stdout.split("\n").slice(-10)}));
+if(run.status!==0||changed.some(p=>p!=="docs/NATIVE_PLAN_CLI.md")) process.exitCode=1;
