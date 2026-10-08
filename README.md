@@ -299,3 +299,7 @@ A missing, still-reading or different-source pair cannot produce a change brief.
 A refused replacement keeps the previously loaded file visible, as before; the
 next brief names the files that remain loaded. File-supplied text is quoted in
 the plain-text download so embedded line breaks cannot become report headings.
+
+## Keep a visit record
+
+Open **Visit record (new tab)** in the planner to record what happened beside the original saved suggestions. Open a JSON saved week from the planner or offline studio, review it, and choose **Use this file**. Each original occurrence has its own explicit outcome, optional actual date and note, including repeated venues and omitted picks. Download the separate visit-record JSON to reopen it later, or print a readable copy. Original dates, explanations and source text remain preserved; checks are not rerun and notes do not change future recommendations. Nothing is uploaded or stored automatically. [Usage, file contract and native checks](docs/visit-record/README.md).
