@@ -1,0 +1,500 @@
+{
+  "startedAt": "2026-10-08T15:22:53.510Z",
+  "base": "a77175501199ace765cb7ca57742b267351d3e79",
+  "candidateInspected": false,
+  "method": "Real current baseline static planner Open saved week, select controls, date field, restore button, and native Chrome downloads; the authentic inputs were made by the actual native CLI and official converter. No FastAPI execution or synthesized API planning response.",
+  "downloads": [
+    {
+      "name": "a-original.json",
+      "suggestedFilename": "tastetable-week-2026-12-28.json",
+      "bytes": 9575,
+      "sha256": "e7405768912354ce750afa768d217feaaec1b15fe52525e06cc348d2b82788d6",
+      "receivedAt": "2026-10-08T15:22:11.573Z",
+      "savedAt": "2026-10-08T15:22:54.759Z",
+      "calendarId": "ed16a49c505871cb383acaae1405ab1a",
+      "weekStart": "2026-12-28",
+      "assignments": {
+        "pick-0": "Monday",
+        "pick-1": "Wednesday",
+        "pick-2": "Friday",
+        "pick-3": "Sunday",
+        "pick-4": null
+      },
+      "picks": [
+        {
+          "key": "pick-0",
+          "name": "Trattoria Nonna Lucia",
+          "entity_id": "FIX-P-11",
+          "originalDay": "Monday",
+          "day": "Monday"
+        },
+        {
+          "key": "pick-1",
+          "name": "Kotobuki Tofu House",
+          "entity_id": "FIX-P-09",
+          "originalDay": "Wednesday",
+          "day": "Wednesday"
+        },
+        {
+          "key": "pick-2",
+          "name": "Osteria del Ponte",
+          "entity_id": "FIX-P-13",
+          "originalDay": "Friday",
+          "day": "Friday"
+        },
+        {
+          "key": "pick-3",
+          "name": "Ramen Tatsu",
+          "entity_id": "FIX-P-10",
+          "originalDay": "Sunday",
+          "day": "Sunday"
+        },
+        {
+          "key": "pick-4",
+          "name": "Rialto Revival Cinema (fictional)",
+          "entity_id": "FIX-V-02",
+          "originalDay": "Saturday",
+          "day": null
+        }
+      ]
+    },
+    {
+      "name": "b-rearranged.json",
+      "suggestedFilename": "tastetable-week-2026-12-28.json",
+      "bytes": 9576,
+      "sha256": "1d43909477af11c10997e84575eff54c87f06be92e199a76027d8e466a895f50",
+      "receivedAt": "2026-10-08T15:22:11.573Z",
+      "savedAt": "2026-10-08T15:22:54.861Z",
+      "calendarId": "ed16a49c505871cb383acaae1405ab1a",
+      "weekStart": "2026-12-28",
+      "assignments": {
+        "pick-0": "Tuesday",
+        "pick-1": null,
+        "pick-2": "Friday",
+        "pick-3": "Tuesday",
+        "pick-4": "Saturday"
+      },
+      "picks": [
+        {
+          "key": "pick-0",
+          "name": "Trattoria Nonna Lucia",
+          "entity_id": "FIX-P-11",
+          "originalDay": "Monday",
+          "day": "Tuesday"
+        },
+        {
+          "key": "pick-1",
+          "name": "Kotobuki Tofu House",
+          "entity_id": "FIX-P-09",
+          "originalDay": "Wednesday",
+          "day": null
+        },
+        {
+          "key": "pick-2",
+          "name": "Osteria del Ponte",
+          "entity_id": "FIX-P-13",
+          "originalDay": "Friday",
+          "day": "Friday"
+        },
+        {
+          "key": "pick-3",
+          "name": "Ramen Tatsu",
+          "entity_id": "FIX-P-10",
+          "originalDay": "Sunday",
+          "day": "Tuesday"
+        },
+        {
+          "key": "pick-4",
+          "name": "Rialto Revival Cinema (fictional)",
+          "entity_id": "FIX-V-02",
+          "originalDay": "Saturday",
+          "day": "Saturday"
+        }
+      ]
+    },
+    {
+      "name": "c-next-week.json",
+      "suggestedFilename": "tastetable-week-2027-01-04.json",
+      "bytes": 9576,
+      "sha256": "5319f5e7fec6463a12631c865ddf6eb2a6aec7e05c958c5b1beb4617ff1a3bfb",
+      "receivedAt": "2026-10-08T15:22:11.573Z",
+      "savedAt": "2026-10-08T15:22:55.023Z",
+      "calendarId": "ed16a49c505871cb383acaae1405ab1a",
+      "weekStart": "2027-01-04",
+      "assignments": {
+        "pick-0": "Tuesday",
+        "pick-1": null,
+        "pick-2": "Friday",
+        "pick-3": "Tuesday",
+        "pick-4": "Saturday"
+      },
+      "picks": [
+        {
+          "key": "pick-0",
+          "name": "Trattoria Nonna Lucia",
+          "entity_id": "FIX-P-11",
+          "originalDay": "Monday",
+          "day": "Tuesday"
+        },
+        {
+          "key": "pick-1",
+          "name": "Kotobuki Tofu House",
+          "entity_id": "FIX-P-09",
+          "originalDay": "Wednesday",
+          "day": null
+        },
+        {
+          "key": "pick-2",
+          "name": "Osteria del Ponte",
+          "entity_id": "FIX-P-13",
+          "originalDay": "Friday",
+          "day": "Friday"
+        },
+        {
+          "key": "pick-3",
+          "name": "Ramen Tatsu",
+          "entity_id": "FIX-P-10",
+          "originalDay": "Sunday",
+          "day": "Tuesday"
+        },
+        {
+          "key": "pick-4",
+          "name": "Rialto Revival Cinema (fictional)",
+          "entity_id": "FIX-V-02",
+          "originalDay": "Saturday",
+          "day": "Saturday"
+        }
+      ]
+    },
+    {
+      "name": "d-all-omitted.json",
+      "suggestedFilename": "tastetable-week-2027-01-04.json",
+      "bytes": 9556,
+      "sha256": "7101d711053af2017c9eab0aa99b0402ff5388512df36488ac1cb5ecc85a877d",
+      "receivedAt": "2026-10-08T15:22:11.573Z",
+      "savedAt": "2026-10-08T15:22:55.089Z",
+      "calendarId": "ed16a49c505871cb383acaae1405ab1a",
+      "weekStart": "2027-01-04",
+      "assignments": {
+        "pick-0": null,
+        "pick-1": null,
+        "pick-2": null,
+        "pick-3": null,
+        "pick-4": null
+      },
+      "picks": [
+        {
+          "key": "pick-0",
+          "name": "Trattoria Nonna Lucia",
+          "entity_id": "FIX-P-11",
+          "originalDay": "Monday",
+          "day": null
+        },
+        {
+          "key": "pick-1",
+          "name": "Kotobuki Tofu House",
+          "entity_id": "FIX-P-09",
+          "originalDay": "Wednesday",
+          "day": null
+        },
+        {
+          "key": "pick-2",
+          "name": "Osteria del Ponte",
+          "entity_id": "FIX-P-13",
+          "originalDay": "Friday",
+          "day": null
+        },
+        {
+          "key": "pick-3",
+          "name": "Ramen Tatsu",
+          "entity_id": "FIX-P-10",
+          "originalDay": "Sunday",
+          "day": null
+        },
+        {
+          "key": "pick-4",
+          "name": "Rialto Revival Cinema (fictional)",
+          "entity_id": "FIX-V-02",
+          "originalDay": "Saturday",
+          "day": null
+        }
+      ]
+    },
+    {
+      "name": "e-restored.json",
+      "suggestedFilename": "tastetable-week-2027-01-04.json",
+      "bytes": 9581,
+      "sha256": "4008c6b7dc8135867348c8f383a4a50eb965f7d46fd26f912bf5030718ce78fe",
+      "receivedAt": "2026-10-08T15:22:11.573Z",
+      "savedAt": "2026-10-08T15:22:55.156Z",
+      "calendarId": "ed16a49c505871cb383acaae1405ab1a",
+      "weekStart": "2027-01-04",
+      "assignments": {
+        "pick-0": "Monday",
+        "pick-1": "Wednesday",
+        "pick-2": "Friday",
+        "pick-3": "Sunday",
+        "pick-4": "Saturday"
+      },
+      "picks": [
+        {
+          "key": "pick-0",
+          "name": "Trattoria Nonna Lucia",
+          "entity_id": "FIX-P-11",
+          "originalDay": "Monday",
+          "day": "Monday"
+        },
+        {
+          "key": "pick-1",
+          "name": "Kotobuki Tofu House",
+          "entity_id": "FIX-P-09",
+          "originalDay": "Wednesday",
+          "day": "Wednesday"
+        },
+        {
+          "key": "pick-2",
+          "name": "Osteria del Ponte",
+          "entity_id": "FIX-P-13",
+          "originalDay": "Friday",
+          "day": "Friday"
+        },
+        {
+          "key": "pick-3",
+          "name": "Ramen Tatsu",
+          "entity_id": "FIX-P-10",
+          "originalDay": "Sunday",
+          "day": "Sunday"
+        },
+        {
+          "key": "pick-4",
+          "name": "Rialto Revival Cinema (fictional)",
+          "entity_id": "FIX-V-02",
+          "originalDay": "Saturday",
+          "day": "Saturday"
+        }
+      ]
+    },
+    {
+      "name": "f-new-declared-identity.json",
+      "suggestedFilename": "tastetable-week-2026-12-28.json",
+      "bytes": 9581,
+      "sha256": "b66c82fd4a7d30e91c7310108252cf810e9d34f4d8affcbb92efac393b712ab8",
+      "receivedAt": "2026-10-08T15:22:11.658Z",
+      "savedAt": "2026-10-08T15:22:56.108Z",
+      "calendarId": "93c51f71d9c9e76ab13d605229f245c4",
+      "weekStart": "2026-12-28",
+      "assignments": {
+        "pick-0": "Monday",
+        "pick-1": "Wednesday",
+        "pick-2": "Friday",
+        "pick-3": "Sunday",
+        "pick-4": "Saturday"
+      },
+      "picks": [
+        {
+          "key": "pick-0",
+          "name": "Trattoria Nonna Lucia",
+          "entity_id": "FIX-P-11",
+          "originalDay": "Monday",
+          "day": "Monday"
+        },
+        {
+          "key": "pick-1",
+          "name": "Kotobuki Tofu House",
+          "entity_id": "FIX-P-09",
+          "originalDay": "Wednesday",
+          "day": "Wednesday"
+        },
+        {
+          "key": "pick-2",
+          "name": "Osteria del Ponte",
+          "entity_id": "FIX-P-13",
+          "originalDay": "Friday",
+          "day": "Friday"
+        },
+        {
+          "key": "pick-3",
+          "name": "Ramen Tatsu",
+          "entity_id": "FIX-P-10",
+          "originalDay": "Sunday",
+          "day": "Sunday"
+        },
+        {
+          "key": "pick-4",
+          "name": "Rialto Revival Cinema (fictional)",
+          "entity_id": "FIX-V-02",
+          "originalDay": "Saturday",
+          "day": "Saturday"
+        }
+      ]
+    },
+    {
+      "name": "g-empty-literal.json",
+      "suggestedFilename": "tastetable-week-2026-12-28.json",
+      "bytes": 7672,
+      "sha256": "b5171e6e52f5c35ed7da311a122a7d64ea60f3e733a28c00272f2e07b065ed36",
+      "receivedAt": "2026-10-08T15:22:11.831Z",
+      "savedAt": "2026-10-08T15:22:57.089Z",
+      "calendarId": "c331185df24c1750e7307fb49793479a",
+      "weekStart": "2026-12-28",
+      "assignments": {},
+      "picks": []
+    },
+    {
+      "name": "h-empty-next-week.json",
+      "suggestedFilename": "tastetable-week-2027-01-04.json",
+      "bytes": 7672,
+      "sha256": "a6f26be639870c62c8e09a6dac24e1f6e32709424709dd383a74092f9426f91d",
+      "receivedAt": "2026-10-08T15:22:11.831Z",
+      "savedAt": "2026-10-08T15:22:57.138Z",
+      "calendarId": "c331185df24c1750e7307fb49793479a",
+      "weekStart": "2027-01-04",
+      "assignments": {},
+      "picks": []
+    }
+  ],
+  "steps": [
+    "Baseline has no comparison link; /api/health correctly 404s on the static-only server and ordinary saved-week controls remain usable.",
+    {
+      "action": "native-file-picker-open",
+      "path": "/Users/me/workspace/estate/tastetable-week-compare-receiving-49f845d0dece-mac/evidence/native-mei-week.json"
+    },
+    {
+      "action": "select",
+      "key": "pick-4",
+      "day": null
+    },
+    {
+      "action": "select",
+      "key": "pick-0",
+      "day": "Tuesday"
+    },
+    {
+      "action": "select",
+      "key": "pick-1",
+      "day": null
+    },
+    {
+      "action": "select",
+      "key": "pick-3",
+      "day": "Tuesday"
+    },
+    {
+      "action": "select",
+      "key": "pick-4",
+      "day": "Saturday"
+    },
+    {
+      "action": "date-input",
+      "value": "2027-01-06"
+    },
+    {
+      "action": "select",
+      "key": "pick-0",
+      "day": null
+    },
+    {
+      "action": "select",
+      "key": "pick-1",
+      "day": null
+    },
+    {
+      "action": "select",
+      "key": "pick-2",
+      "day": null
+    },
+    {
+      "action": "select",
+      "key": "pick-3",
+      "day": null
+    },
+    {
+      "action": "select",
+      "key": "pick-4",
+      "day": null
+    },
+    {
+      "action": "Restore suggested days",
+      "weekStartRetained": "2027-01-04"
+    },
+    {
+      "action": "native-file-picker-open",
+      "path": "/Users/me/workspace/estate/tastetable-week-compare-receiving-49f845d0dece-mac/evidence/native-mei-independent-conversion.json"
+    },
+    {
+      "action": "native-file-picker-open",
+      "path": "/Users/me/workspace/estate/tastetable-week-compare-receiving-49f845d0dece-mac/evidence/native-literal-empty-week.json"
+    },
+    {
+      "action": "date-input",
+      "value": "2027-01-06"
+    }
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/plan-request.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_plan.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/favicon.ico"
+    }
+  ],
+  "pageErrors": [],
+  "status": "passed",
+  "baselineManifestSha256": "9989cfb82fd17e3be03ff32b1b4346c3d557fde57c01c1b95a7ef79a4b1a1d02",
+  "origin": "http://127.0.0.1:64093",
+  "browser": "154.0.8037.98",
+  "storage": {
+    "writes": [],
+    "local": {},
+    "session": {}
+  },
+  "inputsUnchanged": [
+    {
+      "name": "native-mei-week.json",
+      "sha256": "bdf73e1c2b3e60557b2c32453385b1adf738c45e01e3f9e310a85f05ab419bea"
+    },
+    {
+      "name": "native-mei-independent-conversion.json",
+      "sha256": "d59f88df672ac193e50f482b883247b2eb25528fd8cfc806031e861798813e34"
+    },
+    {
+      "name": "native-literal-empty-week.json",
+      "sha256": "3f4216040ea7b7d738d982165214bd7b8edc9005d8ab0cc5ee6f187ae351389e"
+    }
+  ],
+  "finishedAt": "2026-10-08T15:22:57.165Z"
+}

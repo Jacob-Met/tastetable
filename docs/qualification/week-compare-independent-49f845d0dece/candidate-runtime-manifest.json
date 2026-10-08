@@ -1,0 +1,91 @@
+{
+  "publicCommit": "771b2ebfa41aef093e58b4801aae93ef24a152ce",
+  "publicTree": "25b453e345bedd3f280e3d555df12561ef084cc6",
+  "nativeRuntime": "c924cda40d0960d40f723a35ef84037110f06efc",
+  "files": [
+    {
+      "path": "static/app.js",
+      "mode": "100644",
+      "sha": "9903d257f9d60d8b216ba01c4d795e4aa199f629",
+      "size": 18804,
+      "sha256": "5bae509c7ba0287d3b7398cc05bce1e0d8429340413be14ac8a29ce4452ae578"
+    },
+    {
+      "path": "static/calendar.css",
+      "mode": "100644",
+      "sha": "9e53b951316d841b86f0256cd2444a3ce547269f",
+      "size": 708,
+      "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733"
+    },
+    {
+      "path": "static/calendar.js",
+      "mode": "100644",
+      "sha": "dbed22d2cb91090bccec9472fbffd2854eed2722",
+      "size": 15169,
+      "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b"
+    },
+    {
+      "path": "static/compare-weeks.html",
+      "mode": "100644",
+      "sha": "0e314d8f054d565706b4a0cf8905abeec6aaac77",
+      "size": 2605,
+      "sha256": "d61682a7ff59b04a7c9c20876943f5a2860071f2e61c6c8c7ff36a6f2b553fca"
+    },
+    {
+      "path": "static/index.html",
+      "mode": "100644",
+      "sha": "179a26e7affeea13850a545efac29aed90a98351",
+      "size": 6212,
+      "sha256": "a3a121b6262c657cd6c86d35883738cd02a4aa3eefa03e28e1bbb0b8f56f21f7"
+    },
+    {
+      "path": "static/plan-request.js",
+      "mode": "100644",
+      "sha": "b21276dda840fe6dd96a3bf3258a851970ff5e4d",
+      "size": 1420,
+      "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995"
+    },
+    {
+      "path": "static/style.css",
+      "mode": "100644",
+      "sha": "28df6c5229b6b592db33e929ae058fe514304af4",
+      "size": 5064,
+      "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96"
+    },
+    {
+      "path": "static/week_compare.css",
+      "mode": "100644",
+      "sha": "7ee8e8add97261965fcdcbf5612fb0ec126eda89",
+      "size": 1345,
+      "sha256": "c37b5b5cade22b7982511e4341f9ec83b9571daae9e1a31ea8e41c1c08d4f236"
+    },
+    {
+      "path": "static/week_compare.mjs",
+      "mode": "100644",
+      "sha": "2dfc4fb5e9c30481a4bd4276bc4ed6ff3bb114b8",
+      "size": 1829,
+      "sha256": "5bc64a317f28cfccffb844f3c74ebb7b1312034996137891ec5161e0bc0953b7"
+    },
+    {
+      "path": "static/week_compare_ui.mjs",
+      "mode": "100644",
+      "sha": "ad3ebd39e21becf0ada3cc86ba965756fe8df83d",
+      "size": 7862,
+      "sha256": "09e739215125b2db9db19c9328ce50a40c5119c7135baac101c2011f637eea47"
+    },
+    {
+      "path": "static/week_file.mjs",
+      "mode": "100644",
+      "sha": "420ddb8f63fca264dcf97be7147801105696155d",
+      "size": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "mode": "100644",
+      "sha": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "size": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+    }
+  ]
+}

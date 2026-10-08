@@ -1,0 +1,31 @@
+{
+  "status": "ThinkPad browser inconclusive; fresh Mac receiving completed separately",
+  "thinkpad": {
+    "device": "cadafaf3-4d0b-4c4f-a0d3-34a95d2cec90",
+    "root": "/home/jacob/tastetable-week-compare-receiving-49f845d0dece",
+    "producer": "passed",
+    "nativeMeiSha256": "4d6ee08feea84dfb877e673844ad6f481f13449b661b153219d32ee31d7f7f76",
+    "firstWrite": "MCP request timed out; script absent",
+    "firstStartPid": 3353978,
+    "firstStartResult": "MODULE_NOT_FOUND, before browser/product execution",
+    "successfulStagedDriverSha256": "5b785600da1364419c8601e1e8345b5981d8cc72ba3a070895a90dd0ba312f8a",
+    "browserPid": 3358634,
+    "browserResult": "unrecovered after route interruption; no claim"
+  },
+  "mac": {
+    "device": "c3fa0821-5650-494d-9d2a-f78fda394b4d",
+    "continuityArchive": "/Users/me/Developer/hamon-pr85-allocation-review-Cth5D7nn.tar.gz",
+    "continuitySha256": "5a1e3eed8bfe55335ceb6d398db74129bab82a33915b112689fd82290357cd18",
+    "hostname": "Mac.lan",
+    "arch": "arm64",
+    "node": "v26.3.0",
+    "retainedLongwaterHead": "a67b89362208507e1f9f6a61248b504b4c5387ff",
+    "inlineDataCommandRefusal": "Remote tool reported Command not allowed on second source-data batch; remaining source transferred via structured write_file and all20 exact public Git blobs verified before producer execution.",
+    "metadataPreparationError": "Host-side source fetch validation initially checked nonexistent .sha; corrected to existing manifest .gitBlobSha1 before further staging."
+  },
+  "contractDifference": {
+    "original": "Section8 retirement after invalid replacement",
+    "rootAccepted": "Retain prior accepted comparison with pending concealment, visible old filename, explicit refusal and retention message",
+    "actualWitness": "All conditions passed alongside generation-based late-read/clear retirement."
+  }
+}

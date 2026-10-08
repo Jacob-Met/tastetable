@@ -1,0 +1,18 @@
+{
+  "nativeHead": "d8480eb7f062a3dc57a587a26aea8a871333a1be",
+  "nativeTree": "ee89f6c4d32b66aa47b16ba2a477e9c3ad359d9d",
+  "coreFiles": 107,
+  "coreBytes": 5253872,
+  "coreManifestSha256": "67a49da16a486fd7e1348c4af394f0732ac09aedefb651581b8cfcd880549332",
+  "archive": {
+    "name": "native-packet.tar.gz",
+    "bytes": 488057,
+    "sha256": "6aacdaf244734192b3788c356299a0b366e49718e8968c71e2234ad017b482d7",
+    "gitBlobSha1": "1a55c59fdf31ecf3028ab0928923653f577d4e2d"
+  },
+  "candidatePublic": "771b2ebfa41aef093e58b4801aae93ef24a152ce",
+  "candidateRuntimeManifestSha256": "0183b7b023753adf638bfe48da8e7db6e67d2adeffe3706279ac4ad90399c42b",
+  "receiverSha256": "2b7374da6d96c7477993e871c192ca56ac3e43d03eea77d4dfcc1f050f22a8de",
+  "result": "11/11 passed",
+  "sourceFilesUnchangedAfterBrowser": 32
+}

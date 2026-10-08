@@ -1,0 +1,48 @@
+{
+  "contract": "7eb3f5098c8cd5510a68da5299859e0f0543721e",
+  "sealedBeforeCandidateExecution": "2026-10-08T15:23:27.416Z",
+  "nativeResultSha256": "4d6ee08feea84dfb877e673844ad6f481f13449b661b153219d32ee31d7f7f76",
+  "downloads": [
+    {
+      "name": "a-original.json",
+      "sha256": "e7405768912354ce750afa768d217feaaec1b15fe52525e06cc348d2b82788d6",
+      "bytes": 9575
+    },
+    {
+      "name": "b-rearranged.json",
+      "sha256": "1d43909477af11c10997e84575eff54c87f06be92e199a76027d8e466a895f50",
+      "bytes": 9576
+    },
+    {
+      "name": "c-next-week.json",
+      "sha256": "5319f5e7fec6463a12631c865ddf6eb2a6aec7e05c958c5b1beb4617ff1a3bfb",
+      "bytes": 9576
+    },
+    {
+      "name": "d-all-omitted.json",
+      "sha256": "7101d711053af2017c9eab0aa99b0402ff5388512df36488ac1cb5ecc85a877d",
+      "bytes": 9556
+    },
+    {
+      "name": "e-restored.json",
+      "sha256": "4008c6b7dc8135867348c8f383a4a50eb965f7d46fd26f912bf5030718ce78fe",
+      "bytes": 9581
+    },
+    {
+      "name": "f-new-declared-identity.json",
+      "sha256": "b66c82fd4a7d30e91c7310108252cf810e9d34f4d8affcbb92efac393b712ab8",
+      "bytes": 9581
+    },
+    {
+      "name": "g-empty-literal.json",
+      "sha256": "b5171e6e52f5c35ed7da311a122a7d64ea60f3e733a28c00272f2e07b065ed36",
+      "bytes": 7672
+    },
+    {
+      "name": "h-empty-next-week.json",
+      "sha256": "a6f26be639870c62c8e09a6dac24e1f6e32709424709dd383a74092f9426f91d",
+      "bytes": 7672
+    }
+  ],
+  "rootAcceptance": "Prior accepted comparison may remain after refused replacement only with pending comparison concealment, visible old filename and explicit refusal/retention notice; original contract remains intact."
+}

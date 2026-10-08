@@ -1,0 +1,193 @@
+{
+  "owner": "estate-49f845d0dece/recall_import_receiving",
+  "startedAt": "2026-10-08T14:56:41.342Z",
+  "base": "a77175501199ace765cb7ca57742b267351d3e79",
+  "source": "/home/jacob/tastetable-week-compare-receiving-49f845d0dece/baseline-source",
+  "method": "Actual unchanged standard-library native CLI and unchanged official Node saved-week converter; no web server/provider or replacement planner.",
+  "steps": [
+    {
+      "name": "native-mei",
+      "command": "/usr/bin/python3",
+      "args": [
+        "-B",
+        "tastetable_cli.py",
+        "--persona",
+        "mei"
+      ],
+      "startedAt": "2026-10-08T14:56:41.342Z",
+      "finishedAt": "2026-10-08T14:56:41.547Z",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdout": "/home/jacob/tastetable-week-compare-receiving-49f845d0dece/evidence/native-mei.stdout.log",
+      "stderr": "/home/jacob/tastetable-week-compare-receiving-49f845d0dece/evidence/native-mei.stderr.log"
+    },
+    {
+      "name": "convert-mei-first",
+      "command": "/usr/bin/node",
+      "args": [
+        "tools/native_plan_to_week.mjs",
+        "--input",
+        "/home/jacob/tastetable-week-compare-receiving-49f845d0dece/evidence/native-mei-result.json",
+        "--week",
+        "2026-12-30",
+        "--output",
+        "/home/jacob/tastetable-week-compare-receiving-49f845d0dece/evidence/native-mei-week.json"
+      ],
+      "startedAt": "2026-10-08T14:56:41.549Z",
+      "finishedAt": "2026-10-08T14:56:41.848Z",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdout": "/home/jacob/tastetable-week-compare-receiving-49f845d0dece/evidence/convert-mei-first.stdout.log",
+      "stderr": "/home/jacob/tastetable-week-compare-receiving-49f845d0dece/evidence/convert-mei-first.stderr.log"
+    },
+    {
+      "name": "convert-mei-new-identity",
+      "command": "/usr/bin/node",
+      "args": [
+        "tools/native_plan_to_week.mjs",
+        "--input",
+        "/home/jacob/tastetable-week-compare-receiving-49f845d0dece/evidence/native-mei-result.json",
+        "--week",
+        "2026-12-30",
+        "--output",
+        "/home/jacob/tastetable-week-compare-receiving-49f845d0dece/evidence/native-mei-independent-conversion.json"
+      ],
+      "startedAt": "2026-10-08T14:56:41.849Z",
+      "finishedAt": "2026-10-08T14:56:42.143Z",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdout": "/home/jacob/tastetable-week-compare-receiving-49f845d0dece/evidence/convert-mei-new-identity.stdout.log",
+      "stderr": "/home/jacob/tastetable-week-compare-receiving-49f845d0dece/evidence/convert-mei-new-identity.stderr.log"
+    },
+    {
+      "name": "native-literal-empty",
+      "command": "/usr/bin/python3",
+      "args": [
+        "-B",
+        "tastetable_cli.py",
+        "--profile",
+        "/home/jacob/tastetable-week-compare-receiving-49f845d0dece/evidence/literal-profile.json"
+      ],
+      "startedAt": "2026-10-08T14:56:42.144Z",
+      "finishedAt": "2026-10-08T14:56:42.357Z",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdout": "/home/jacob/tastetable-week-compare-receiving-49f845d0dece/evidence/native-literal-empty.stdout.log",
+      "stderr": "/home/jacob/tastetable-week-compare-receiving-49f845d0dece/evidence/native-literal-empty.stderr.log"
+    },
+    {
+      "name": "convert-literal-empty",
+      "command": "/usr/bin/node",
+      "args": [
+        "tools/native_plan_to_week.mjs",
+        "--input",
+        "/home/jacob/tastetable-week-compare-receiving-49f845d0dece/evidence/native-literal-empty-result.json",
+        "--week",
+        "2026-12-30",
+        "--output",
+        "/home/jacob/tastetable-week-compare-receiving-49f845d0dece/evidence/native-literal-empty-week.json"
+      ],
+      "startedAt": "2026-10-08T14:56:42.360Z",
+      "finishedAt": "2026-10-08T14:56:42.694Z",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdout": "/home/jacob/tastetable-week-compare-receiving-49f845d0dece/evidence/convert-literal-empty.stdout.log",
+      "stderr": "/home/jacob/tastetable-week-compare-receiving-49f845d0dece/evidence/convert-literal-empty.stderr.log"
+    }
+  ],
+  "status": "passed",
+  "finishedAt": "2026-10-08T14:56:42.703Z",
+  "node": "v22.22.1",
+  "python": "Python 3.14.4",
+  "nativeResultSha256": "4d6ee08feea84dfb877e673844ad6f481f13449b661b153219d32ee31d7f7f76",
+  "originalInputs": {
+    "cuisines": [
+      "Japanese",
+      "Italian"
+    ],
+    "music": [
+      "The Beatles"
+    ],
+    "films": [
+      "Roman Holiday",
+      "Singin' in the Rain"
+    ],
+    "constraints": [
+      "soft_foods"
+    ],
+    "city": "Pasadena"
+  },
+  "picks": [
+    {
+      "key": "pick-0",
+      "day": "Monday",
+      "kind": "restaurant",
+      "entity_id": "FIX-P-11",
+      "name": "Trattoria Nonna Lucia",
+      "affinity": 0.92,
+      "fallback": false,
+      "why": "Qloo affinity 0.92 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Italian). Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto)."
+    },
+    {
+      "key": "pick-1",
+      "day": "Wednesday",
+      "kind": "restaurant",
+      "entity_id": "FIX-P-09",
+      "name": "Kotobuki Tofu House",
+      "affinity": 0.82,
+      "fallback": false,
+      "why": "Qloo affinity 0.82 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Japanese). Checks: Soft foods: pass (soft options listed: chawanmushi, steamed fish, tofu)."
+    },
+    {
+      "key": "pick-2",
+      "day": "Friday",
+      "kind": "restaurant",
+      "entity_id": "FIX-P-13",
+      "name": "Osteria del Ponte",
+      "affinity": 0.8,
+      "fallback": false,
+      "why": "Qloo affinity 0.80 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Italian). Checks: Soft foods: pass (soft options listed: gnocchi, soups)."
+    },
+    {
+      "key": "pick-3",
+      "day": "Sunday",
+      "kind": "restaurant",
+      "entity_id": "FIX-P-10",
+      "name": "Ramen Tatsu",
+      "affinity": 0.79,
+      "fallback": false,
+      "why": "Qloo affinity 0.79 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Japanese). Checks: Soft foods: unknown (no texture signal in Qloo keywords; ask the venue)."
+    },
+    {
+      "key": "pick-4",
+      "day": "Saturday",
+      "kind": "outing",
+      "entity_id": "FIX-V-02",
+      "name": "Rialto Revival Cinema (fictional)",
+      "affinity": 0.95,
+      "why": "Qloo affinity 0.95 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Movie Theater)."
+    }
+  ],
+  "emptyLiteralInput": {
+    "cuisines": [
+      "Japanese",
+      "Italian"
+    ],
+    "music": [
+      "The Beatles"
+    ],
+    "films": [
+      "Roman Holiday",
+      "Singin' in the Rain"
+    ],
+    "constraints": [
+      "soft_foods"
+    ],
+    "city": "Málaga & <img src=x onerror=window.__tw49=1> 🥣"
+  }
+}

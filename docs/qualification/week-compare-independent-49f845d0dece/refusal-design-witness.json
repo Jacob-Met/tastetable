@@ -1,0 +1,240 @@
+{
+  "contractDifference": "Preinspection contract section8 expected retirement after an invalid replacement. The candidate explicitly keeps the previous accepted file and comparison, labels it as previous, and retires pending/cleared stale reads. Root independently inspected and accepted explicit prior-file retention, requiring pending comparison concealment, visible previous filename and explicit refusal/retention notice. Original contract remains preserved.",
+  "previous": {
+    "title": "Arrangement changes",
+    "status": "Matching saved source and identity. Visits are compared by their original occurrence, including repeated venues.",
+    "hidden": false,
+    "summary": "2 moved · 1 newly scheduled · 1 kept off · 1 unchanged",
+    "rows": [
+      {
+        "key": "pick-0",
+        "name": "Trattoria Nonna Lucia",
+        "earlier": "Monday · 2026-12-28",
+        "revised": "Tuesday · 2026-12-29",
+        "change": "Moved",
+        "original": {
+          "Original day": "Monday",
+          "Kind": "restaurant",
+          "Source entity ID": "FIX-P-11",
+          "Affinity": "0.92",
+          "Explanation from file": "Qloo affinity 0.92 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Italian). Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto)."
+        }
+      },
+      {
+        "key": "pick-1",
+        "name": "Kotobuki Tofu House",
+        "earlier": "Wednesday · 2026-12-30",
+        "revised": "Not scheduled",
+        "change": "Kept off the week",
+        "original": {
+          "Original day": "Wednesday",
+          "Kind": "restaurant",
+          "Source entity ID": "FIX-P-09",
+          "Affinity": "0.82",
+          "Explanation from file": "Qloo affinity 0.82 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Japanese). Checks: Soft foods: pass (soft options listed: chawanmushi, steamed fish, tofu)."
+        }
+      },
+      {
+        "key": "pick-2",
+        "name": "Osteria del Ponte",
+        "earlier": "Friday · 2027-01-01",
+        "revised": "Friday · 2027-01-01",
+        "change": "Unchanged",
+        "original": {
+          "Original day": "Friday",
+          "Kind": "restaurant",
+          "Source entity ID": "FIX-P-13",
+          "Affinity": "0.8",
+          "Explanation from file": "Qloo affinity 0.80 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Italian). Checks: Soft foods: pass (soft options listed: gnocchi, soups)."
+        }
+      },
+      {
+        "key": "pick-3",
+        "name": "Ramen Tatsu",
+        "earlier": "Sunday · 2027-01-03",
+        "revised": "Tuesday · 2026-12-29",
+        "change": "Moved",
+        "original": {
+          "Original day": "Sunday",
+          "Kind": "restaurant",
+          "Source entity ID": "FIX-P-10",
+          "Affinity": "0.79",
+          "Explanation from file": "Qloo affinity 0.79 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Japanese). Checks: Soft foods: unknown (no texture signal in Qloo keywords; ask the venue)."
+        }
+      },
+      {
+        "key": "pick-4",
+        "name": "Rialto Revival Cinema (fictional)",
+        "earlier": "Not scheduled",
+        "revised": "Saturday · 2027-01-02",
+        "change": "Newly scheduled",
+        "original": {
+          "Original day": "Saturday",
+          "Kind": "outing",
+          "Source entity ID": "FIX-V-02",
+          "Affinity": "0.95",
+          "Explanation from file": "Qloo affinity 0.95 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Movie Theater)."
+        }
+      }
+    ],
+    "before": {
+      "name": "a-original.json",
+      "fields": {
+        "Week": "2026-12-28 to 2027-01-03",
+        "Source": "Demo / synthetic source",
+        "Saved at": "2026-10-08T15:22:54.759Z",
+        "Source received at": "2026-10-08T15:22:11.573Z",
+        "City": "Pasadena",
+        "Cuisines": "Japanese · Italian",
+        "Music": "The Beatles",
+        "Films": "Roman Holiday · Singin' in the Rain",
+        "Constraints": "soft_foods"
+      },
+      "notes": []
+    },
+    "after": {
+      "name": "b-rearranged.json",
+      "fields": {
+        "Week": "2026-12-28 to 2027-01-03",
+        "Source": "Demo / synthetic source",
+        "Saved at": "2026-10-08T15:22:54.861Z",
+        "Source received at": "2026-10-08T15:22:11.573Z",
+        "City": "Pasadena",
+        "Cuisines": "Japanese · Italian",
+        "Music": "The Beatles",
+        "Films": "Roman Holiday · Singin' in the Rain",
+        "Constraints": "soft_foods"
+      },
+      "notes": []
+    },
+    "separate": []
+  },
+  "refusals": [
+    {
+      "file": "invalid-json.json",
+      "status": "Could not open invalid-json.json: This file is not valid JSON. Choose a saved TasteTable week. The previously loaded file remains shown."
+    },
+    {
+      "file": "invalid-utf8.json",
+      "status": "Could not open invalid-utf8.json: Failed to execute 'decode' on 'TextDecoder': The encoded data was not valid. The previously loaded file remains shown."
+    },
+    {
+      "file": "invalid-schema.json",
+      "status": "Could not open invalid-schema.json: Choose a TasteTable saved-week file in the supported v1 format. The previously loaded file remains shown."
+    },
+    {
+      "file": "above-two-mib.json",
+      "status": "Could not open above-two-mib.json: Choose a saved-week file no larger than 2 MiB. The previously loaded file remains shown."
+    }
+  ],
+  "reads": [
+    {
+      "name": "a-original.json",
+      "size": 9575
+    },
+    {
+      "name": "b-rearranged.json",
+      "size": 9576
+    },
+    {
+      "name": "b-rearranged.json",
+      "size": 9576
+    },
+    {
+      "name": "c-next-week.json",
+      "size": 9576
+    },
+    {
+      "name": "d-all-omitted.json",
+      "size": 9556
+    },
+    {
+      "name": "e-restored.json",
+      "size": 9581
+    },
+    {
+      "name": "a-original.json",
+      "size": 9575
+    },
+    {
+      "name": "f-new-declared-identity.json",
+      "size": 9581
+    },
+    {
+      "name": "reordered-a.json",
+      "size": 5974
+    },
+    {
+      "name": "b-rearranged.json",
+      "size": 9576
+    },
+    {
+      "name": "response-changed-a.json",
+      "size": 6040
+    },
+    {
+      "name": "b-rearranged.json",
+      "size": 9576
+    },
+    {
+      "name": "inputs-changed-a.json",
+      "size": 5998
+    },
+    {
+      "name": "b-rearranged.json",
+      "size": 9576
+    },
+    {
+      "name": "structural-repeated-a.json",
+      "size": 9582
+    },
+    {
+      "name": "structural-repeated-b.json",
+      "size": 9582
+    },
+    {
+      "name": "g-empty-literal.json",
+      "size": 7672
+    },
+    {
+      "name": "h-empty-next-week.json",
+      "size": 7672
+    },
+    {
+      "name": "literal-&-<img src=x>.json",
+      "size": 9583
+    },
+    {
+      "name": "literal-&-<img src=x>.json",
+      "size": 9583
+    },
+    {
+      "name": "a-original.json",
+      "size": 9575
+    },
+    {
+      "name": "b-rearranged.json",
+      "size": 9576
+    },
+    {
+      "name": "exact-two-mib.json",
+      "size": 2097152
+    },
+    {
+      "name": "b-rearranged.json",
+      "size": 9576
+    },
+    {
+      "name": "invalid-json.json",
+      "size": 10
+    },
+    {
+      "name": "invalid-utf8.json",
+      "size": 2
+    },
+    {
+      "name": "invalid-schema.json",
+      "size": 5962
+    }
+  ]
+}
