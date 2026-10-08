@@ -1,0 +1,714 @@
+{
+  "at": "2026-10-08T16:01:37.243Z",
+  "actor": "estate-db371a37f4c8-capability",
+  "repository": "Jacob-Met/tastetable",
+  "owner": "estate-6c20bb4b010e/optimizer_capability",
+  "issue": 16,
+  "coordinationComment": 6062797765,
+  "archive": {
+    "filename": "venue-followup-r3-qualification.tar.gz",
+    "bytes": 1495040,
+    "sha256": "5be791c8a2ffd3558780bbba107a9a088f021615fdba0a9fe784efecea84bc9b",
+    "gitBlobSHA1": "2725c8a455d7c7c7d0d79ce233853c0cd05bde77",
+    "base64Chars": 1993388,
+    "base64LineChars": 64000,
+    "payloadLines": 32
+  },
+  "sourceBefore": "0573f3c9b60f33f105c64bd61d86cbdcc66664f8f47ae06b998c00bc988fa832",
+  "sourceAfter": "6bc409d09b47efe6653d0d7f13c285f4f3f7f61360a949fda676fff84dde6089",
+  "receiverSHA256": "f89afb78f8109525fa53301b20d69fc42a2120067f1ba4b9a670da66161d4673",
+  "baseline": {
+    "started": "2026-10-08T15:39:16.639Z",
+    "finished": "2026-10-08T15:39:19.664Z",
+    "passed": 4,
+    "failed": 2,
+    "receiptSHA256": "67549d6daa458e6d10bbd28df839c65c3da388c015b143fc63c6f36990c38210"
+  },
+  "proposal": {
+    "exit": 0,
+    "passed": 6,
+    "receiptSHA256": "34c553adb8a669620f890ba447cf15b3baa528bef5070ab3be0ec8d84961f4d3"
+  },
+  "verification": {
+    "memberNamesExact": true,
+    "everyMemberRecoveredByTarStdout": true,
+    "everyModeAndSizeVerifiedFromUSTAR": true,
+    "allSourcesUnchanged": true,
+    "finalArtifactHashesVerified": 15,
+    "filesystemExtraction": false
+  },
+  "packaging": {
+    "mode": "Read-only native tar/gzip and standard tar stdout verification; archive and manifest remain in process/functions memory for GitHub checkpoint.",
+    "nativeBytesWrittenByBuilder": 0,
+    "availableAtCompletion": 1734492160,
+    "earlierDiskPackingRefusal": "The retained seal-r3-packet.cjs refused its 512 MiB admission guard before creating inputs, roundtrip, archive or manifest. This read-only path does not lower that disk guard or allocate native artifact directories.",
+    "commands": {
+      "pack": [
+        "--format",
+        "ustar",
+        "-czf",
+        "-",
+        "-C",
+        "/Users/me/hamon-tastetable-r3-db371a37f4c8",
+        "RECEIVING.md",
+        "before-run-exit.json",
+        "before-run.log",
+        "before-run/browser-evidence/chromium.log",
+        "before-run/browser-evidence/receipt.json",
+        "before-run2-exit.json",
+        "before-run2.log",
+        "before-run2/browser-evidence/chromium.log",
+        "before-run2/browser-evidence/receipt.json",
+        "before-run3-exit.json",
+        "before-run3.log",
+        "before-run3/browser-evidence/chromium.log",
+        "before-run3/browser-evidence/receipt.json",
+        "before-run4-exit.json",
+        "before-run4.log",
+        "before-run4/browser-evidence/chromium.log",
+        "before-run4/browser-evidence/downloads/tastetable-venue-contacts-2026-12-28.txt",
+        "before-run4/browser-evidence/downloads/tastetable-week-2026-12-28.json",
+        "before-run4/browser-evidence/receipt.json",
+        "before-run4/browser-evidence/revised-question-print.png",
+        "before-run5-exit.json",
+        "before-run5.log",
+        "before-run5/browser-evidence/chromium.log",
+        "before-run5/browser-evidence/downloads/capture-01/tastetable-venue-contacts-2026-12-28.txt",
+        "before-run5/browser-evidence/downloads/capture-02/tastetable-week-2026-12-28.json",
+        "before-run5/browser-evidence/downloads/capture-03/tastetable-venue-contacts-2026-12-28.txt",
+        "before-run5/browser-evidence/downloads/capture-04/tastetable-venue-contacts-2026-12-28.txt",
+        "before-run5/browser-evidence/r3-desktop.png",
+        "before-run5/browser-evidence/r3-phone.png",
+        "before-run5/browser-evidence/receipt.json",
+        "before-run5/browser-evidence/revised-question-print.png",
+        "before/source-manifest.json",
+        "before/static/app.js",
+        "before/static/calendar.css",
+        "before/static/calendar.js",
+        "before/static/index.html",
+        "before/static/plan-request.js",
+        "before/static/style.css",
+        "before/static/venue_followup.css",
+        "before/static/venue_followup.mjs",
+        "before/static/week_file.mjs",
+        "before/static/week_plan.mjs",
+        "browser-before-mac-shortcut.mjs",
+        "browser-seam.mjs",
+        "controller-write-refusal.json",
+        "environment-reconciliation.json",
+        "fixture.json",
+        "owner-source-freeze-r3.json",
+        "peer-root-source-review.json",
+        "peer-root-visual-review.json",
+        "proposal-run-exit.json",
+        "proposal-run.log",
+        "proposal-run/browser-evidence/chromium.log",
+        "proposal-run/browser-evidence/downloads/capture-01/tastetable-venue-contacts-2026-12-28.txt",
+        "proposal-run/browser-evidence/downloads/capture-02/tastetable-week-2026-12-28.json",
+        "proposal-run/browser-evidence/downloads/capture-03/tastetable-venue-contacts-2026-12-28.txt",
+        "proposal-run/browser-evidence/downloads/capture-04/tastetable-venue-contacts-2026-12-28.txt",
+        "proposal-run/browser-evidence/downloads/capture-05/tastetable-venue-contacts-2026-12-28.txt",
+        "proposal-run/browser-evidence/r3-desktop.png",
+        "proposal-run/browser-evidence/r3-phone.png",
+        "proposal-run/browser-evidence/receipt.json",
+        "proposal-run/browser-evidence/revised-question-print.png",
+        "proposal-source-receipt.json",
+        "proposal/source-manifest.json",
+        "proposal/static/app.js",
+        "proposal/static/calendar.css",
+        "proposal/static/calendar.js",
+        "proposal/static/index.html",
+        "proposal/static/plan-request.js",
+        "proposal/static/style.css",
+        "proposal/static/venue_followup.css",
+        "proposal/static/venue_followup.mjs",
+        "proposal/static/week_file.mjs",
+        "proposal/static/week_plan.mjs",
+        "qualification-summary.json",
+        "receiver-adaptation.json",
+        "receiver-attempt1-disposition.json",
+        "receiver-attempt1.mjs",
+        "receiver-attempt2-disposition.json",
+        "receiver-attempt3-disposition.json",
+        "receiver-attempt4-disposition.json",
+        "receiver-attempt4.mjs",
+        "retired-completed-consumer-target.json",
+        "run-before.cjs",
+        "run-before2.cjs",
+        "run-before3.cjs",
+        "run-before4.cjs",
+        "run-before5.cjs",
+        "run-proposal.cjs",
+        "seal-r3-packet.cjs",
+        "staging.json",
+        "two-fix-proposal.patch"
+      ],
+      "list": [
+        "-tzf",
+        "-"
+      ],
+      "recover": [
+        "-xOf",
+        "-"
+      ]
+    },
+    "constructionSource": "const fs=require('node:fs'),p=require('node:path'),c=require('node:crypto'),z=require('node:zlib'),cp=require('node:child_process');\nconst root='/Users/me/hamon-tastetable-r3-db371a37f4c8',sha=b=>c.createHash('sha256').update(b).digest('hex'),git=b=>c.createHash('sha1').update('blob '+b.length+'\\0').update(b).digest('hex');\nconst top=['RECEIVING.md','browser-before-mac-shortcut.mjs','browser-seam.mjs','controller-write-refusal.json','environment-reconciliation.json','fixture.json','owner-source-freeze-r3.json','peer-root-source-review.json','peer-root-visual-review.json','proposal-source-receipt.json','qualification-summary.json','receiver-adaptation.json','receiver-attempt1-disposition.json','receiver-attempt1.mjs','receiver-attempt2-disposition.json','receiver-attempt3-disposition.json','receiver-attempt4-disposition.json','receiver-attempt4.mjs','retired-completed-consumer-target.json','staging.json','two-fix-proposal.patch','run-before.cjs','run-before2.cjs','run-before3.cjs','run-before4.cjs','run-before5.cjs','run-proposal.cjs','before-run-exit.json','before-run.log','before-run2-exit.json','before-run2.log','before-run3-exit.json','before-run3.log','before-run4-exit.json','before-run4.log','before-run5-exit.json','before-run5.log','proposal-run-exit.json','proposal-run.log','seal-r3-packet.cjs'];\nconst directories=['before','proposal','before-run','before-run2','before-run3','before-run4','before-run5','proposal-run'];const names=[...top];\nfunction walk(rel){for(const entry of fs.readdirSync(root+'/'+rel,{withFileTypes:true})){const path=rel+'/'+entry.name;if(entry.isSymbolicLink())throw Error('No symlink in source packet');if(entry.isDirectory())walk(path);else if(entry.isFile())names.push(path);else throw Error('Non-file source');}}\nfor(const d of directories)walk(d);names.sort();if(new Set(names).size!==names.length||names.some(x=>x.startsWith('/')||x.split('/').includes('..')||Buffer.byteLength(x)>100))throw Error('Unsafe or unsupported fixed USTAR name');\nconst summary=JSON.parse(fs.readFileSync(root+'/qualification-summary.json'));if(summary.proposal.exit.code!==0||summary.baseline.passed!==4||summary.baseline.failed!==2||summary.proposal.checks.length!==6||!summary.proposal.checks.every(x=>x.passed))throw Error('Native qualification incomplete');\nfor(const item of summary.artifacts){const b=fs.readFileSync(item.filename);if(b.length!==item.bytes||sha(b)!==item.sha256)throw Error('Final artifact drift');}\nfor(const variant of ['before','proposal'])for(const item of JSON.parse(fs.readFileSync(root+'/'+variant+'/source-manifest.json')).files)if(sha(fs.readFileSync(root+'/'+variant+'/'+item.path))!==item.sha256)throw Error('Source drift');\nif(sha(fs.readFileSync(root+'/browser-seam.mjs'))!==summary.receiverSHA256)throw Error('Receiver drift');\nconst members=names.map(path=>{const st=fs.lstatSync(root+'/'+path);if(!st.isFile()||st.isSymbolicLink())throw Error('Not a regular source');const b=fs.readFileSync(root+'/'+path);return{path,mode:st.mode&511,bytes:b.length,sha256:sha(b)};});\nconst total=members.reduce((n,x)=>n+x.bytes,0);if(total>8*1024*1024)throw Error('Bounded read-only packaging size exceeded');\nconst env={...process.env,COPYFILE_DISABLE:'1'},args=['--format','ustar','-czf','-','-C',root,...names];\nconst pack=cp.spawnSync('/usr/bin/tar',args,{env,maxBuffer:16*1024*1024,timeout:30000});if(pack.status!==0)throw Error('Archive stream failed: '+pack.stderr);\nconst archive=pack.stdout,listing=cp.spawnSync('/usr/bin/tar',['-tzf','-'],{env,input:archive,encoding:'utf8',maxBuffer:1024*1024,timeout:30000});if(listing.status!==0||JSON.stringify(listing.stdout.trim().split('\\n'))!==JSON.stringify(names))throw Error('Stream member names differ');\nconst recovered=cp.spawnSync('/usr/bin/tar',['-xOf','-'],{env,input:archive,maxBuffer:16*1024*1024,timeout:30000});if(recovered.status!==0||recovered.stdout.length!==total)throw Error('Stream recovery failed');\nlet offset=0;for(const item of members){if(sha(recovered.stdout.subarray(offset,offset+item.bytes))!==item.sha256)throw Error('Recovered member differs '+item.path);offset+=item.bytes;}\nconst raw=z.gunzipSync(archive);let pos=0,index=0;while(pos+512<=raw.length&&raw.subarray(pos,pos+512).some(b=>b!==0)){const h=raw.subarray(pos,pos+512),str=(a,b)=>h.subarray(a,b).toString('utf8').split('\\0')[0],name=str(0,100),mode=parseInt(str(100,108).trim(),8),size=parseInt(str(124,136).trim(),8),type=h[156];const expected=members[index++];if(!expected||name!==expected.path||mode!==expected.mode||size!==expected.bytes||!(type===0||type===48)||str(345,500)!=='')throw Error('USTAR header differs from source');pos+=512+Math.ceil(size/512)*512;}if(index!==members.length)throw Error('USTAR count differs');\nfor(const item of members)if(sha(fs.readFileSync(root+'/'+item.path))!==item.sha256)throw Error('Source changed during packaging');\nconst s=fs.statfsSync(root),base64=archive.toString('base64'),builder=process.execArgv[process.execArgv.indexOf('-e')+1];\nconst manifest={at:new Date().toISOString(),actor:'estate-db371a37f4c8-capability',repository:'Jacob-Met/tastetable',owner:'estate-6c20bb4b010e/optimizer_capability',issue:16,coordinationComment:6062797765,archive:{filename:'venue-followup-r3-qualification.tar.gz',bytes:archive.length,sha256:sha(archive),gitBlobSHA1:git(archive),base64Chars:base64.length,base64LineChars:64000,payloadLines:Math.ceil(base64.length/64000)},sourceBefore:summary.sourceBefore,sourceAfter:summary.sourceAfter,receiverSHA256:summary.receiverSHA256,baseline:summary.baseline,proposal:{exit:summary.proposal.exit.code,passed:summary.proposal.checks.length,receiptSHA256:summary.proposal.receiptSHA256},verification:{memberNamesExact:true,everyMemberRecoveredByTarStdout:true,everyModeAndSizeVerifiedFromUSTAR:true,allSourcesUnchanged:true,finalArtifactHashesVerified:summary.artifacts.length,filesystemExtraction:false},packaging:{mode:'Read-only native tar/gzip and standard tar stdout verification; archive and manifest remain in process/functions memory for GitHub checkpoint.',nativeBytesWrittenByBuilder:0,availableAtCompletion:Number(s.bavail)*Number(s.bsize),earlierDiskPackingRefusal:'The retained seal-r3-packet.cjs refused its 512 MiB admission guard before creating inputs, roundtrip, archive or manifest. This read-only path does not lower that disk guard or allocate native artifact directories.',commands:{pack:args,list:['-tzf','-'],recover:['-xOf','-']},constructionSource:builder},scope:'Bounded revised-contract receiving and exact one-file two-fix proposal; owner final source publication and integration remain separate.',memberCount:members.length,totalMemberBytes:total,members};\nconsole.log('META '+JSON.stringify(manifest));for(const line of base64.match(/.{1,64000}/g))console.log(line);\n"
+  },
+  "scope": "Bounded revised-contract receiving and exact one-file two-fix proposal; owner final source publication and integration remain separate.",
+  "memberCount": 92,
+  "totalMemberBytes": 2027744,
+  "members": [
+    {
+      "path": "RECEIVING.md",
+      "mode": 420,
+      "bytes": 10787,
+      "sha256": "cdd29558cb6fa485f77f85a70be7285cbd1432fd4e61763d6819fbefbcf29422"
+    },
+    {
+      "path": "before-run-exit.json",
+      "mode": 420,
+      "bytes": 133,
+      "sha256": "d193258f880180ecde55c77d893898b727bb9a894fbbfedbf0602c319b6895f5"
+    },
+    {
+      "path": "before-run.log",
+      "mode": 420,
+      "bytes": 898,
+      "sha256": "91d8814f6bac065c8b19d79ed3033da483bf6d4e02dc2cd8c07b21fd233478c5"
+    },
+    {
+      "path": "before-run/browser-evidence/chromium.log",
+      "mode": 420,
+      "bytes": 1336,
+      "sha256": "718afc599c34784bec4af5beb1728aaa93bc374f7d6864cea26de30c06f496b6"
+    },
+    {
+      "path": "before-run/browser-evidence/receipt.json",
+      "mode": 420,
+      "bytes": 18541,
+      "sha256": "112776a4a42ba482de9a38ce0a949d42ea86fd200f040336c8a337162c2569c4"
+    },
+    {
+      "path": "before-run2-exit.json",
+      "mode": 420,
+      "bytes": 133,
+      "sha256": "52cb9a1418679d212b3a9721b2735ddad4b2ccdd78ee9b83e69d98708f2a47c6"
+    },
+    {
+      "path": "before-run2.log",
+      "mode": 420,
+      "bytes": 244,
+      "sha256": "80874bbd714586e6b32871c5886323be939f03a9d9df3ac1894ab81d039b9103"
+    },
+    {
+      "path": "before-run2/browser-evidence/chromium.log",
+      "mode": 420,
+      "bytes": 32636,
+      "sha256": "75ecb21d504d5f3ce2da1a3e954126ec3d90f076d75eb8c557df1c4f620c06ef"
+    },
+    {
+      "path": "before-run2/browser-evidence/receipt.json",
+      "mode": 420,
+      "bytes": 9021,
+      "sha256": "2ef867bc86e2db7bd9a3f241a30e26a8f62294be06fbf45865a5f7f96edc1407"
+    },
+    {
+      "path": "before-run3-exit.json",
+      "mode": 420,
+      "bytes": 133,
+      "sha256": "3efed6e0be0380ab84c8b515af21c7adf9b5e87531e12122fe989fb3da68a0c9"
+    },
+    {
+      "path": "before-run3.log",
+      "mode": 420,
+      "bytes": 244,
+      "sha256": "80874bbd714586e6b32871c5886323be939f03a9d9df3ac1894ab81d039b9103"
+    },
+    {
+      "path": "before-run3/browser-evidence/chromium.log",
+      "mode": 420,
+      "bytes": 32620,
+      "sha256": "5fbb7d5c5665c617203331eed3854b01fcec9ee70914ef92fa37696701927c12"
+    },
+    {
+      "path": "before-run3/browser-evidence/receipt.json",
+      "mode": 420,
+      "bytes": 9021,
+      "sha256": "a3b6dd1fd254db1e918810679002afe85614c09bd09562d61bb606ceb636c8b9"
+    },
+    {
+      "path": "before-run4-exit.json",
+      "mode": 420,
+      "bytes": 133,
+      "sha256": "ae150060276bfd5a498edda1cfe7152cc7fe68eae8e0b984ed0bc69a77754c17"
+    },
+    {
+      "path": "before-run4.log",
+      "mode": 420,
+      "bytes": 573,
+      "sha256": "8b11d37dd8b366bca9a102d7d5b70bc69a2a65f68be61e6e90c7354a7b7d5b8b"
+    },
+    {
+      "path": "before-run4/browser-evidence/chromium.log",
+      "mode": 420,
+      "bytes": 572,
+      "sha256": "9f8d1c61b6c860cf844735d6e08b666c38e9d0ccc2a288f510d496593048f2d3"
+    },
+    {
+      "path": "before-run4/browser-evidence/downloads/tastetable-venue-contacts-2026-12-28.txt",
+      "mode": 420,
+      "bytes": 5131,
+      "sha256": "ad74ac885fa0194602b2118956aa5e3706fbab71ef5ad0cb28b3a0f61330c2fe"
+    },
+    {
+      "path": "before-run4/browser-evidence/downloads/tastetable-week-2026-12-28.json",
+      "mode": 420,
+      "bytes": 14607,
+      "sha256": "dcaf816e35f3bb7699556cb89a178c6603273426ae2cb435fe018a05013e2d2f"
+    },
+    {
+      "path": "before-run4/browser-evidence/receipt.json",
+      "mode": 420,
+      "bytes": 23510,
+      "sha256": "294bae0b9f8f862373ff7e5c0f71f45ab8427e2609e5f043fe90ee0c9a7a43e9"
+    },
+    {
+      "path": "before-run4/browser-evidence/revised-question-print.png",
+      "mode": 420,
+      "bytes": 231546,
+      "sha256": "c38b7b8ece45ea103bf9658062a48a6d7e585522fe2b47755c105fd8ff41e626"
+    },
+    {
+      "path": "before-run5-exit.json",
+      "mode": 420,
+      "bytes": 133,
+      "sha256": "d41ee259cb57676742c551f267b1c5c2e198f99cce2073b91b37e9143da462e0"
+    },
+    {
+      "path": "before-run5.log",
+      "mode": 420,
+      "bytes": 1032,
+      "sha256": "dec89b526f408567afd13ec0852ae367b487193646238e173d5fe3afe9e97411"
+    },
+    {
+      "path": "before-run5/browser-evidence/chromium.log",
+      "mode": 420,
+      "bytes": 572,
+      "sha256": "da852a2bd90f6a8329e289b9aeefe8e19b48dd9cdbaaf3f521d47a6e9961b7d3"
+    },
+    {
+      "path": "before-run5/browser-evidence/downloads/capture-01/tastetable-venue-contacts-2026-12-28.txt",
+      "mode": 420,
+      "bytes": 5085,
+      "sha256": "8b0163271500ac9afdae84c9e075cb1500220d4162877ba2b4af26435085586d"
+    },
+    {
+      "path": "before-run5/browser-evidence/downloads/capture-02/tastetable-week-2026-12-28.json",
+      "mode": 420,
+      "bytes": 14607,
+      "sha256": "84c55471f33fc4dbeb3d8b6dbd3e8637449cc20eb412b126ba3602469ed1f191"
+    },
+    {
+      "path": "before-run5/browser-evidence/downloads/capture-03/tastetable-venue-contacts-2026-12-28.txt",
+      "mode": 420,
+      "bytes": 5131,
+      "sha256": "ce10f22a619ef5bc9de4d557ddd11acbf76f2a0d19c341a0db82b4df17ceb4c2"
+    },
+    {
+      "path": "before-run5/browser-evidence/downloads/capture-04/tastetable-venue-contacts-2026-12-28.txt",
+      "mode": 420,
+      "bytes": 5132,
+      "sha256": "bf06146df5e07f966b6a8ee6e7a8a46fcadc12b0668248a9e622346c1bfb4901"
+    },
+    {
+      "path": "before-run5/browser-evidence/r3-desktop.png",
+      "mode": 420,
+      "bytes": 221187,
+      "sha256": "cf18a28972c6d8c30e9dedfa726cae2d777ecdc5ef807954bc5d850ceb5a7150"
+    },
+    {
+      "path": "before-run5/browser-evidence/r3-phone.png",
+      "mode": 420,
+      "bytes": 139255,
+      "sha256": "2d86482dc99a5e508a6ae249ee9a68dd8188b8d625194df7e3409b8791a9b4af"
+    },
+    {
+      "path": "before-run5/browser-evidence/receipt.json",
+      "mode": 420,
+      "bytes": 28313,
+      "sha256": "67549d6daa458e6d10bbd28df839c65c3da388c015b143fc63c6f36990c38210"
+    },
+    {
+      "path": "before-run5/browser-evidence/revised-question-print.png",
+      "mode": 420,
+      "bytes": 231546,
+      "sha256": "c38b7b8ece45ea103bf9658062a48a6d7e585522fe2b47755c105fd8ff41e626"
+    },
+    {
+      "path": "before/source-manifest.json",
+      "mode": 420,
+      "bytes": 1962,
+      "sha256": "d56ba03e906c1e9131154d94ea033a96dffbe1df772edcaa40fe2dde0a888ba1"
+    },
+    {
+      "path": "before/static/app.js",
+      "mode": 420,
+      "bytes": 19168,
+      "sha256": "d6c742457a4824acaad929d3db37f8d4c30a26e2ae326cac3ad41e30c4a3941d"
+    },
+    {
+      "path": "before/static/calendar.css",
+      "mode": 420,
+      "bytes": 708,
+      "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733"
+    },
+    {
+      "path": "before/static/calendar.js",
+      "mode": 420,
+      "bytes": 15169,
+      "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b"
+    },
+    {
+      "path": "before/static/index.html",
+      "mode": 420,
+      "bytes": 7460,
+      "sha256": "57d222afffc0fa36f50bf542e8e032134b449adf840aa546b804cf6fe5ae1a1e"
+    },
+    {
+      "path": "before/static/plan-request.js",
+      "mode": 420,
+      "bytes": 1420,
+      "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995"
+    },
+    {
+      "path": "before/static/style.css",
+      "mode": 420,
+      "bytes": 5064,
+      "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96"
+    },
+    {
+      "path": "before/static/venue_followup.css",
+      "mode": 420,
+      "bytes": 1711,
+      "sha256": "d2ef0569debf8ed7f94b2df64d9d819da58df72460809cb81ef848124a187d3b"
+    },
+    {
+      "path": "before/static/venue_followup.mjs",
+      "mode": 420,
+      "bytes": 14742,
+      "sha256": "0573f3c9b60f33f105c64bd61d86cbdcc66664f8f47ae06b998c00bc988fa832"
+    },
+    {
+      "path": "before/static/week_file.mjs",
+      "mode": 420,
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+    },
+    {
+      "path": "before/static/week_plan.mjs",
+      "mode": 420,
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+    },
+    {
+      "path": "browser-before-mac-shortcut.mjs",
+      "mode": 420,
+      "bytes": 28604,
+      "sha256": "326c0d8fe97fa5f7a0b08550999d12401dd2fcd170edb1d4d735811a574fb3ac"
+    },
+    {
+      "path": "browser-seam.mjs",
+      "mode": 420,
+      "bytes": 29794,
+      "sha256": "f89afb78f8109525fa53301b20d69fc42a2120067f1ba4b9a670da66161d4673"
+    },
+    {
+      "path": "controller-write-refusal.json",
+      "mode": 420,
+      "bytes": 537,
+      "sha256": "4d6cbcff9f9b835dcb8eb3365108b8be58ed72f96e375dab863c80db77e0906c"
+    },
+    {
+      "path": "environment-reconciliation.json",
+      "mode": 420,
+      "bytes": 3509,
+      "sha256": "414c74348f499e7d11de6351f847e3df387954bc044d6981cc40a13fb7857872"
+    },
+    {
+      "path": "fixture.json",
+      "mode": 420,
+      "bytes": 12983,
+      "sha256": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f"
+    },
+    {
+      "path": "owner-source-freeze-r3.json",
+      "mode": 420,
+      "bytes": 1506,
+      "sha256": "35086b3dd4cccfbdca171df8ba802321c1630671c1f602b2e146dd289b12ebc7"
+    },
+    {
+      "path": "peer-root-source-review.json",
+      "mode": 420,
+      "bytes": 1318,
+      "sha256": "f8eeb34ce7ee3fb13bc9a79c2673657e4cb530358c753fc435f27bfdc5d416e1"
+    },
+    {
+      "path": "peer-root-visual-review.json",
+      "mode": 420,
+      "bytes": 1745,
+      "sha256": "7c5e45dcb78d7d213a0d225884556d1dbea8ba1f4c34115fee65eee85b1290d8"
+    },
+    {
+      "path": "proposal-run-exit.json",
+      "mode": 420,
+      "bytes": 133,
+      "sha256": "0dfeb5ac2c1fcee6b10a5c8f84cb75044add1ab36246f649a1a34d7c5259afd6"
+    },
+    {
+      "path": "proposal-run.log",
+      "mode": 420,
+      "bytes": 877,
+      "sha256": "4d6a04a22b01f719963807d9d4a160142a1de1e3d30bbe29e024c39e018e69a4"
+    },
+    {
+      "path": "proposal-run/browser-evidence/chromium.log",
+      "mode": 420,
+      "bytes": 572,
+      "sha256": "1a754beb4f35c76aeced1e11a9ef612a94db0abdfd48a1e1c56a5108daf6c9eb"
+    },
+    {
+      "path": "proposal-run/browser-evidence/downloads/capture-01/tastetable-venue-contacts-2026-12-28.txt",
+      "mode": 420,
+      "bytes": 5113,
+      "sha256": "5974a2d3f556d5486fe1537667b2b0d40aa7e84c95e673bf78bae843d85f3c7f"
+    },
+    {
+      "path": "proposal-run/browser-evidence/downloads/capture-02/tastetable-week-2026-12-28.json",
+      "mode": 420,
+      "bytes": 14607,
+      "sha256": "cb9a3e3d876f592f65a3def3cfac619b23a0482d039a58574acb1b6dd7ca1769"
+    },
+    {
+      "path": "proposal-run/browser-evidence/downloads/capture-03/tastetable-venue-contacts-2026-12-28.txt",
+      "mode": 420,
+      "bytes": 5166,
+      "sha256": "b7cd74766bc820c620af86b84b7ed724b72c0c72ebc6388fbd258dd8affe957b"
+    },
+    {
+      "path": "proposal-run/browser-evidence/downloads/capture-04/tastetable-venue-contacts-2026-12-28.txt",
+      "mode": 420,
+      "bytes": 5167,
+      "sha256": "04121f466a3eda58da4e600ebbe95243b6ef82ede646672cfaf70999145e9343"
+    },
+    {
+      "path": "proposal-run/browser-evidence/downloads/capture-05/tastetable-venue-contacts-2026-12-28.txt",
+      "mode": 420,
+      "bytes": 5204,
+      "sha256": "03a097f465292e1bf424bba17a77291e9e6665f9d04e877ce1d5d557ae1b4511"
+    },
+    {
+      "path": "proposal-run/browser-evidence/r3-desktop.png",
+      "mode": 420,
+      "bytes": 220640,
+      "sha256": "867cfde72160ab173ca46c8cf527cd84216285e784ea81f0ac6a7239f3775d36"
+    },
+    {
+      "path": "proposal-run/browser-evidence/r3-phone.png",
+      "mode": 420,
+      "bytes": 139115,
+      "sha256": "23946167c5132b4347dc7e31666b02ced32fc3b03a5efb45d0fd167fdb59da99"
+    },
+    {
+      "path": "proposal-run/browser-evidence/receipt.json",
+      "mode": 420,
+      "bytes": 18996,
+      "sha256": "34c553adb8a669620f890ba447cf15b3baa528bef5070ab3be0ec8d84961f4d3"
+    },
+    {
+      "path": "proposal-run/browser-evidence/revised-question-print.png",
+      "mode": 420,
+      "bytes": 232114,
+      "sha256": "f55665747830f5543275a89ac4c062c11d940b188e0a6b5e479f517d50dc3365"
+    },
+    {
+      "path": "proposal-source-receipt.json",
+      "mode": 420,
+      "bytes": 5049,
+      "sha256": "80beb70ef65671b46a6656c3f207e25e3aea841f113969e7a2495dbf14e6ff4b"
+    },
+    {
+      "path": "proposal/source-manifest.json",
+      "mode": 420,
+      "bytes": 2232,
+      "sha256": "10312e7fcb5a873ad42258e72c50c2d62d73268fa9dc5c13a5f4d011999aa458"
+    },
+    {
+      "path": "proposal/static/app.js",
+      "mode": 420,
+      "bytes": 19168,
+      "sha256": "d6c742457a4824acaad929d3db37f8d4c30a26e2ae326cac3ad41e30c4a3941d"
+    },
+    {
+      "path": "proposal/static/calendar.css",
+      "mode": 420,
+      "bytes": 708,
+      "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733"
+    },
+    {
+      "path": "proposal/static/calendar.js",
+      "mode": 420,
+      "bytes": 15169,
+      "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b"
+    },
+    {
+      "path": "proposal/static/index.html",
+      "mode": 420,
+      "bytes": 7460,
+      "sha256": "57d222afffc0fa36f50bf542e8e032134b449adf840aa546b804cf6fe5ae1a1e"
+    },
+    {
+      "path": "proposal/static/plan-request.js",
+      "mode": 420,
+      "bytes": 1420,
+      "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995"
+    },
+    {
+      "path": "proposal/static/style.css",
+      "mode": 420,
+      "bytes": 5064,
+      "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96"
+    },
+    {
+      "path": "proposal/static/venue_followup.css",
+      "mode": 420,
+      "bytes": 1711,
+      "sha256": "d2ef0569debf8ed7f94b2df64d9d819da58df72460809cb81ef848124a187d3b"
+    },
+    {
+      "path": "proposal/static/venue_followup.mjs",
+      "mode": 420,
+      "bytes": 14875,
+      "sha256": "6bc409d09b47efe6653d0d7f13c285f4f3f7f61360a949fda676fff84dde6089"
+    },
+    {
+      "path": "proposal/static/week_file.mjs",
+      "mode": 420,
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+    },
+    {
+      "path": "proposal/static/week_plan.mjs",
+      "mode": 420,
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+    },
+    {
+      "path": "qualification-summary.json",
+      "mode": 420,
+      "bytes": 8802,
+      "sha256": "a9130d8815a265aaa7941d36a276d7100b00c69d28901552dc6bbd60e331e5f7"
+    },
+    {
+      "path": "receiver-adaptation.json",
+      "mode": 420,
+      "bytes": 375,
+      "sha256": "4fd5994ad6d4e7f7d11c37d1b37a90f30f7892bc1d57cc6844cb6f85107767c4"
+    },
+    {
+      "path": "receiver-attempt1-disposition.json",
+      "mode": 420,
+      "bytes": 836,
+      "sha256": "055c72cd5d323183addbd06fdd8ca1c179859a2052d9a2d9324ad42fe921ea03"
+    },
+    {
+      "path": "receiver-attempt1.mjs",
+      "mode": 420,
+      "bytes": 28664,
+      "sha256": "445e451c9ea20893ddca82ccedc370e20204856f021f728a32a7eaef122d020b"
+    },
+    {
+      "path": "receiver-attempt2-disposition.json",
+      "mode": 420,
+      "bytes": 1100,
+      "sha256": "31d4dbed367410897361065275beb32faa6eb145300c0f5836df6ff6dfa906f5"
+    },
+    {
+      "path": "receiver-attempt3-disposition.json",
+      "mode": 420,
+      "bytes": 1077,
+      "sha256": "e41521eae1207a01c1ede6115db483325e1c0b206c3fb2eb1ca2de75555e835b"
+    },
+    {
+      "path": "receiver-attempt4-disposition.json",
+      "mode": 420,
+      "bytes": 2423,
+      "sha256": "a1f3cced6117e8dec21f795611ec6b0d0477729a9f0082400e81dac8f1f1da3c"
+    },
+    {
+      "path": "receiver-attempt4.mjs",
+      "mode": 420,
+      "bytes": 29539,
+      "sha256": "b9db1fbde8ecc003f770d9f7ec1ed9fe4da7f708f811b0796d5d4cc437a3f6bd"
+    },
+    {
+      "path": "retired-completed-consumer-target.json",
+      "mode": 420,
+      "bytes": 1424,
+      "sha256": "327bbee83d385f4ad00eb036bcd24820468750e47cc7178a09d2b2861ebe696e"
+    },
+    {
+      "path": "run-before.cjs",
+      "mode": 420,
+      "bytes": 1304,
+      "sha256": "e72f81b47554eb5a3eae8f74fbee722df890d58c6f7ae53094f3f90d623f5e82"
+    },
+    {
+      "path": "run-before2.cjs",
+      "mode": 420,
+      "bytes": 1310,
+      "sha256": "c9b79992dacdd983b584e6db65eaf372ff103e86dac07708f36d53ffaf2d90a8"
+    },
+    {
+      "path": "run-before3.cjs",
+      "mode": 420,
+      "bytes": 1310,
+      "sha256": "c151738b5a726b71e816fd4f445ef0d391cce9cf7add8e80f340f0d94460a807"
+    },
+    {
+      "path": "run-before4.cjs",
+      "mode": 420,
+      "bytes": 1371,
+      "sha256": "9cd5f30a03f7a9ebeeb2da46533c0f7f8d180e20d565a2c1fe4a5cd6d76765a6"
+    },
+    {
+      "path": "run-before5.cjs",
+      "mode": 420,
+      "bytes": 1371,
+      "sha256": "880166f8f8d994f7f7db26bd81a5daa36aa7c484e884ddef2f156bcb73b00b79"
+    },
+    {
+      "path": "run-proposal.cjs",
+      "mode": 420,
+      "bytes": 1379,
+      "sha256": "75f216de110263186d06a95e56de4db16400df492ce18b6c64164ad2b6bbf443"
+    },
+    {
+      "path": "seal-r3-packet.cjs",
+      "mode": 420,
+      "bytes": 6951,
+      "sha256": "6eb1112c45622c2e212796c1385c6e76fe1b491399a8a50bc3267d87657d8175"
+    },
+    {
+      "path": "staging.json",
+      "mode": 420,
+      "bytes": 3014,
+      "sha256": "ddb32d77ff4acdc1dca1fedfdb723100d1fd9ea544c31f6a0c305e9324793cbf"
+    },
+    {
+      "path": "two-fix-proposal.patch",
+      "mode": 420,
+      "bytes": 2612,
+      "sha256": "aab21c0bf6cf20058c432c64b5aac5c797d064eb6d4045234b9a50fca28e2c4d"
+    }
+  ]
+}
