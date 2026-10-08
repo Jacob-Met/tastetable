@@ -1,0 +1,50 @@
+{
+  "at": "2026-10-08T19:12:29.133671+00:00",
+  "bothOriginalProcessFailuresPreserved": true,
+  "exactInlineSvgParsed": true,
+  "operation": "read-only verification of actual reports/source/download/frame bytes; no browser or product replay",
+  "reviewer": "root-3dab",
+  "subjects": [
+    {
+      "browser": "Chrome/153.0.8010.47",
+      "completedGroups": 2,
+      "downloads": 7,
+      "finished": "2026-10-08T18:52:50.689Z",
+      "frames": 3,
+      "guardsExact": 15,
+      "report": {
+        "bytes": 42644,
+        "git_blob": "67a3b5842e4d8b5cf3242c8aa2ea63fd04c4b6fc",
+        "sha256": "803599fc600239026b6fb44225cf5dd99e9e792176628383534326c6e3bb407b"
+      },
+      "started": "2026-10-08T18:51:39.752Z",
+      "status": "failed",
+      "version": "browser-v1"
+    },
+    {
+      "browser": "Chrome/153.0.8010.47",
+      "completedGroups": 6,
+      "downloads": 8,
+      "finished": "2026-10-08T18:56:15.041Z",
+      "frames": 4,
+      "guardsExact": 15,
+      "report": {
+        "bytes": 19238,
+        "git_blob": "a0296e8009a1afbcb8b71d6739cf6f07fc5fedd6",
+        "sha256": "47f8194420900ff42aed259b99fb3cd1736c823ce4e6f7d9a4eebccc60f8acc5"
+      },
+      "started": "2026-10-08T18:54:57.016Z",
+      "status": "failed",
+      "version": "browser-v2"
+    }
+  ],
+  "v2AuditChecks": 5,
+  "v2CallSheetContainsOnlyCorrectDateNote": true,
+  "v2EditedRestoredCalendarBytesIdentical": true,
+  "v2RecordedAudit": {
+    "bytes": 10776,
+    "git_blob": "1f773b74c698bfb10ab3a1e8ec470f69d1e9a74c",
+    "sha256": "1e4f5163e551ce0730d11c48964034f7c1de008d803e320edf903051d3f83c89"
+  },
+  "visualReview": "Root inspected V2 desktop week, desktop worksheet and390px controls; complete control labels and focus outline visible, no observed clipping or overlap."
+}

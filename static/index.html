@@ -61,11 +61,13 @@
           <input id="weekDate" type="date" aria-describedby="weekHelp weekError">
         </label>
         <button id="resetWeek" type="button" disabled>Restore suggested days</button>
+        <button id="undoWeek" type="button" disabled aria-controls="weekDays omittedPicks" aria-describedby="weekHelp weekStatus">Undo change</button>
+        <button id="redoWeek" type="button" disabled aria-controls="weekDays omittedPicks" aria-describedby="weekHelp weekStatus">Redo change</button>
         <button id="printWeek" type="button" class="primary" disabled>Print week</button>
         <button id="saveWeek" type="button" disabled aria-describedby="weekFileStatus">Save week (.json)</button>
         <button id="calendarDownload" type="button" disabled aria-describedby="calendarStatus">Download calendar (.ics)</button>
       </div>
-      <p id="weekHelp" class="why organizer-help">Choose any date to show its Monday–Sunday week. Move checked picks to the days that suit you, or keep a pick off this week. Several picks can share a day. Save your week to continue editing after this visit.</p>
+      <p id="weekHelp" class="why organizer-help">Choose any date to show its Monday–Sunday week. Move checked picks to the days that suit you, or keep a pick off this week. Several picks can share a day. Undo or redo up to 20 arrangement changes in this displayed plan. Opening another file or requesting a plan starts fresh. Save your week to continue editing after this visit; history stays in this tab.</p>
       <p id="weekFileStatus" class="why organizer-help" role="status" aria-live="polite"></p>
       <p id="weekError" class="error" role="alert"></p>
       <p id="weekSummary"></p>
