@@ -286,3 +286,13 @@ A missing, still-reading or different-source pair cannot produce a change brief.
 A refused replacement keeps the previously loaded file visible, as before; the
 next brief names the files that remain loaded. File-supplied text is quoted in
 the plain-text download so embedded line breaks cannot become report headings.
+
+## Export a saved week from the terminal
+
+Use `node tools/saved_week_to_calendar.mjs --input "my week.json" --output "my week.ics"`
+to prepare the existing calendar writer's exact all-day suggestions from an
+arranged saved-week file. The command preserves a stored calendar identity and
+original received timestamp, refuses occupied output names, and makes no provider
+or calendar-account call. A file without an identity needs an explicit
+`--new-calendar` request. See [the saved-week calendar guide](docs/SAVED_WEEK_CALENDAR.md)
+for identity, preview receipts, file limits and delivery behavior.

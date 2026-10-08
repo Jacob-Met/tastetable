@@ -1,0 +1,7 @@
+{
+  "chunk_id": "b256a3",
+  "wall_time_seconds": 0.000018899,
+  "exit_code": 0,
+  "original_token_count": 83,
+  "output": "{\"syntax\":\"pass\",\"bytes\":10400,\"sha256\":\"a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80\",\"git_blob\":\"d8d910eb315c4ffc58a3e37d58cbe4de6be84b4d\"}\n(node:5) ExperimentalWarning: VM Modules is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+}
