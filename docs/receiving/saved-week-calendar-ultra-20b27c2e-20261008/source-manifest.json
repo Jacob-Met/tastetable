@@ -1,0 +1,105 @@
+{
+  "schema": "tastetable.saved-week-calendar-source.v1",
+  "baseline": "2b347cee4ff4e2b806362730a8520a3360b45f5a",
+  "baselineTree": "66d62a724c1667913cb581fb35e4b6db6111dae8",
+  "baselineLeaves": 579,
+  "claim": "https://github.com/Jacob-Met/tastetable/issues/42",
+  "status": "First draft source checkpoint: syntax checks passed; actual filesystem CLI and independent receiving pending.",
+  "sourcePreservation": {
+    "sharedChanged": [
+      "README.md (append only)"
+    ],
+    "runtimeDependenciesUnchanged": [
+      "static/week_plan.mjs",
+      "static/week_file.mjs",
+      "static/calendar.js"
+    ],
+    "allOtherOriginalLeaves": "Must match baseline tree exactly; publication reads the resulting complete tree before branch/PR creation."
+  },
+  "files": [
+    {
+      "path": "tools/saved_week_to_calendar.mjs",
+      "mode": "100644",
+      "bytes": 10400,
+      "sha256": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80",
+      "git_blob": "d8d910eb315c4ffc58a3e37d58cbe4de6be84b4d"
+    },
+    {
+      "path": "tests/test_saved_week_calendar.py",
+      "mode": "100644",
+      "bytes": 23099,
+      "sha256": "2635c90f26fc7b8338396ba5456e98563e42937c550784f8bfbc77d7b54101b0",
+      "git_blob": "80d110bb4a1e88bee17597822e9a8e5dfd4981c6"
+    },
+    {
+      "path": "docs/SAVED_WEEK_CALENDAR.md",
+      "mode": "100644",
+      "bytes": 6747,
+      "sha256": "18296f792fe79da5f6727237ed005655410cbf5bebafb201911e72d1600b7f7c",
+      "git_blob": "1f79ae537601c64ae04b91e2112c7a566ca63808"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "bytes": 17174,
+      "sha256": "f1feac46da278db60ab8f0d0b4de045284d3bdcd11bfd53ebc4496d13ddd3c42",
+      "git_blob": "d842a3d82aa80e06b0e881c5ced7f93cbeb8ab13"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/README.md",
+      "mode": "100644",
+      "bytes": 4218,
+      "sha256": "5fd8b447c659ff5a04e3607dac94e74a122d8034ffeefd670cd314be2744f8af",
+      "git_blob": "d11033c8b21735e42d9ceab214488f1558ad81ae"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/PUBLIC_CONTRACT.md",
+      "mode": "100644",
+      "bytes": 5639,
+      "sha256": "291f16b78e4686e22a6a25f1ff7cc0f23538dfc93bdecd27c91b46b8a894fd54",
+      "git_blob": "ab2040bd5ed8147d3dbe8d0067fe51d6ada5a6a3"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/custody.json",
+      "mode": "100644",
+      "bytes": 3155,
+      "sha256": "89550117ee97abeb68c0465063328606c233cead124ed0484ce28712e3bf4da9",
+      "git_blob": "353cea9070ea3fedc8cbd975c26462529a660d13"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/runtime-syntax.json",
+      "mode": "100644",
+      "bytes": 475,
+      "sha256": "f7c9e704a95bcb947fdac6f13cfaea8b66973eb4e1b5703d03b3d3ad1bbfdaa1",
+      "git_blob": "903bdb9acc4dfa7dfaf9a660e7f0c295c747a6f1"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/test-syntax.json",
+      "mode": "100644",
+      "bytes": 328,
+      "sha256": "f47337a60803faacd4a5c208c524f0f2d75fe135feb95b2cf007df39da95c660",
+      "git_blob": "b1458aaa2eee0e0105b5ca3f3c413f98a3ee0ce9"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/before/native-receiver.cjs",
+      "mode": "100644",
+      "bytes": 4690,
+      "sha256": "41b32935463836d111d67e3c5687e4a71847b8393cc89771047231b98a0a8dd3",
+      "git_blob": "75712606b81062a5b22cf48223e5e4d41c388116"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/before/primary-source-packet.json",
+      "mode": "100644",
+      "bytes": 50897,
+      "sha256": "a41689fa1a791ad8a77ad131c0c2c93cfa931db7b534467e1c915014b3b5fce7",
+      "git_blob": "393dbe029bdf5c2f9dc17b6d7a9e8f50c20f23e9"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/before/source-scope.json",
+      "mode": "100644",
+      "bytes": 1322,
+      "sha256": "71b6f3b39addb89be81ddb18d345001d4a6ad4ead7d1b74109eceb7eff4dee34",
+      "git_blob": "bad2aa89d161ba6b88b587cfd420f66847083bdf"
+    }
+  ]
+}
