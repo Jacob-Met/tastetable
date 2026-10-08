@@ -1,0 +1,39 @@
+{
+  "catalogue_sha256": "94be521e658225ff9a23b31834d03d620143943da2329bebefa0397cfa92b2f4",
+  "checks": {
+    "full_agent_capture_runs": 0,
+    "native_recorded_insight_replays": 68,
+    "network_attempts": 0,
+    "passed": 7,
+    "recorded_choices": 24,
+    "visible_picks": 118
+  },
+  "findings": [
+    "All12 pinned Git source blobs and three reused runtime/license files match exact originals",
+    "All24 downloadable records match the corresponding catalogue object and capture hash",
+    "All118 displayed picks retain original fixture identity and affinity; exact recorded verdicts match the pinned native evaluator",
+    "Requested constraints retain their native dietary/outing applicability; no retained wheelchair result is unknown or failed",
+    "All12 retained dietary unknown checks preserve their actual unknown status and ask-venue reason in rendered why text",
+    "Comparison counts bind the actual visible picks, affinity evidence, recorded checks, and rejection lists",
+    "Frontend chooses only the complete finite profile/mask grid; persona tastes are readonly, input changes hide stale results, selection failures clear the download link",
+    "All dynamic displayed text is escaped or constrained to validated enums/counts; app requests only its relative static catalogue/record files",
+    "Print styling retains the fixture origin, heuristic constraint notice, and venue confirmation note"
+  ],
+  "native_checks_log_sha256": "6654c325ea706068e780b3519c45058985eb39d7f6715cde327ea73a5364c506",
+  "native_checks_receipt_sha256": "0efbc9afe0b6b35093325e7f6f7ca7ff30c9e957f1e591305961c14454dd2a92",
+  "native_checks_source_sha256": "d69f3da6580fb4aeac6376881c329a31de988efa146da054bc8db5cff81cd49b",
+  "remaining_receiving_boundary": "Coordination owns exact installed-artifact browser and print verification, including the requested explicit UNKNOWN dietary case, and guarded install/rollback. This reviewer did not run Chrome, install, or modify product sources.",
+  "result": "accepted bounded source and native recorded-data semantics; no blocking issue",
+  "reviewer": "estate-81ba1ed0179c/estate_production",
+  "runtime_sha256": {
+    "app.mjs": "e1c8976816be2fcb4ccacbf914bfabb8ca384f88ac1255d2b74a57c2649cd046",
+    "catalogue.mjs": "63d4e75c7b08d12dc5fc78d3927baba88e2fabdd8eaa2996897efbd5698a8e0a",
+    "index.html": "feea13a997cf9e0b48885df934f5657034e7645b0bc5d9854d0ddfa866dbe898",
+    "offline.css": "e13d985e9f8f4542ba0dbacfd2d7b30cfb76c02c2f224a10665666ccd0351d15",
+    "style.css": "0d58ae4d0fef286374808eda0dc90b5e8249432a248b8332441738eb04dc0840",
+    "week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+  },
+  "schema": "hamon.tastetable.independent-production-review.v1",
+  "source_commit": "59a5b23cedbd758945a1c80bcc9d83a6f564b819",
+  "utc": "2026-10-08T11:32:47.998583+00:00"
+}

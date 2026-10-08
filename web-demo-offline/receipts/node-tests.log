@@ -1,0 +1,22 @@
+✔ all 24 supported selections retain the exact native response and download (9.795042ms)
+✔ constraint order is canonical; duplicate, foreign and malformed choices are refused (0.22925ms)
+✔ loaded records are immutable and weekly edits cannot change source responses (1.264791ms)
+✔ catalogue refuses wrong schema before rendering (1.4495ms)
+✔ catalogue refuses wrong source before rendering (1.3655ms)
+✔ catalogue refuses missing record before rendering (1.58225ms)
+✔ catalogue refuses duplicate record before rendering (1.425917ms)
+✔ catalogue refuses wrong profile before rendering (1.367041ms)
+✔ catalogue refuses false live source before rendering (1.561375ms)
+✔ catalogue refuses stale constraints before rendering (1.669458ms)
+✔ catalogue refuses malformed pick before rendering (1.646959ms)
+✔ catalogue refuses missing native trace before rendering (1.298ms)
+✔ the strict Mei recording keeps its actual missing meal and explicit note (0.277917ms)
+✔ calendar year/leap boundaries preserve the selected recorded identities (0.272833ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 115.467167

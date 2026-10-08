@@ -1,0 +1,100 @@
+/* Offline presentation extends the byte-preserved shipping TasteTable stylesheet. */
+:root { --accent:#6733ad; --bg:#f6f4ee; --ink:#272635; --muted:#666373; }
+html { scroll-behavior:smooth; }
+body { font-size:16px; }
+[hidden] { display:none !important; }
+header, main, footer { max-width:1320px; padding:1.5rem 2rem; }
+header { padding-top:1.5rem; padding-bottom:.25rem; }
+.masthead { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:2.7rem; }
+.wordmark { font-size:1.3rem; color:var(--ink); text-decoration:none; font-weight:750; letter-spacing:-.04em; }
+.wordmark span { display:block; color:var(--muted); font-size:.72rem; font-weight:500; letter-spacing:.05em; text-transform:uppercase; }
+.record-pill { padding:.45rem .75rem; border:1px solid #d6cce4; border-radius:30px; font-size:.76rem; color:#633990; background:#f0eaf7; }
+.eyebrow { color:#756b83; text-transform:uppercase; letter-spacing:.1em; font-size:.68rem; font-weight:750; margin:0 0 .8rem; }
+h1 { font-size:clamp(2.25rem,4.6vw,4.25rem); line-height:1.07; letter-spacing:-.055em; font-weight:620; margin:0 0 1rem; max-width:900px; }
+header .tag { font-size:1rem; max-width:670px; margin-bottom:1.4rem; }
+.disclaimer { border:1px solid #e5dbc5; border-left:3px solid #baa574; border-radius:4px; padding:.65rem .8rem; font-size:.78rem; background:#f5efe2; }
+#mode { font-size:.75rem; margin:.7rem 0 0; }
+main { display:grid; grid-template-columns:310px minmax(0,1fr); gap:1.8rem; align-items:start; }
+.card { box-shadow:none; border:1px solid #e3dfd9; border-radius:12px; padding:1.15rem; }
+.taste-form { position:sticky; top:1.5rem; margin:0; background:#fffdf9; }
+.taste-form h2 { font-size:1.35rem; letter-spacing:-.035em; margin:0 0 .7rem; }
+.taste-form .why { font-size:.8rem; }
+.sample { flex-direction:column-reverse; gap:.5rem; margin:1rem 0; }
+.sample select { min-width:0; font-size:.85rem; text-overflow:ellipsis; }
+.sample button { border-color:#d9cbe9; font-size:.77rem; text-align:left; padding:.45rem .65rem; }
+.profile-note { color:var(--muted); font-size:.72rem; margin:.5rem 0; }
+#form > label { font-size:.76rem; color:var(--muted); margin:.6rem 0; }
+input[readonly] { background:#f3f0e9; color:#484453; border-color:#e5e0d7; padding:.4rem .55rem; font-size:.85rem; }
+fieldset { margin:1rem 0; padding:.55rem .75rem; border-color:#dcd5e4; }
+legend { font-size:.8rem; font-weight:600; }
+label.inline { display:flex; gap:.5rem; font-size:.82rem; align-items:center; margin:.55rem 0; }
+input[type=checkbox] { width:17px; height:17px; accent-color:var(--accent); margin:0; }
+#showPlan { width:100%; display:flex; align-items:center; justify-content:space-between; margin-top:1rem; }
+#requestStatus { min-height:2.5rem; margin:.85rem 0 0; }
+#results { min-width:0; scroll-margin-top:1rem; }
+.record-note { border:1px solid #ded3e9; background:#efe9f5; border-radius:12px; padding:1rem 1.15rem; margin:0 0 1rem; }
+.record-note .eyebrow { margin:0 0 .35rem; color:#67428b; }
+#recordSummary { margin:.25rem 0; font-size:.97rem; font-weight:650; }
+.record-note .why { font-size:.78rem; margin:.5rem 0 .8rem; }
+.button-link { display:inline-block; border-bottom:1px solid #986cb8; padding:.1rem 0; color:#5d327d; font-size:.79rem; font-weight:600; text-decoration:none; }
+.button-link:focus-visible, .wordmark:focus-visible, footer a:focus-visible { outline:3px solid #39236b; outline-offset:4px; }
+#weekOrganizer { border-top:3px solid #5b866b; margin:0 0 1rem; }
+#weekTitle { font-size:1.7rem; letter-spacing:-.035em; margin:.1rem 0 .55rem; }
+.week-controls { gap:.65rem; }
+.week-controls button { font-size:.81rem; padding:.55rem .7rem; }
+.week-controls label { font-size:.78rem; }
+#weekSummary { font-size:.83rem; font-weight:600; }
+.week-days { gap:.8rem; }
+.week-day { border-color:#e0e4de; background:#fcfdfa; padding:.8rem; }
+.week-day h3 { font-size:.89rem; }
+.week-day time { font-size:.72rem; }
+.scheduled-pick h4 { font-size:.96rem; letter-spacing:-.015em; }
+.scheduled-pick .why { font-size:.77rem; line-height:1.55; }
+.pick-control { font-size:.73rem; }
+.pick-control select { font-size:.81rem; padding:.4rem; }
+.open-day { font-size:.85rem; padding:.45rem 0; }
+.open-day span { font-size:.74rem; }
+.handoff-note { font-size:.76rem; line-height:1.5; background:#f6f1e7; border-color:#b7a276; }
+.original-evidence { font-size:.85rem; }
+.original-evidence .cols { grid-template-columns:1fr; }
+.original-evidence .card { margin:.7rem 0; }
+.original-evidence h2 { font-size:1.15rem; }
+.original-evidence li, #compare { overflow-wrap:anywhere; }
+#compare { font-size:.76rem; }
+#trace { font-size:.68rem; padding-left:1.2rem; }
+footer { border-top:1px solid #e1ddd5; margin-top:1rem; font-size:.75rem; }
+footer p { max-width:800px; }
+footer a { color:#65408e; }
+.skip-link { position:absolute; top:.4rem; left:.6rem; transform:translateY(-150%); opacity:0; z-index:5; background:#fff; color:#39236b; padding:.6rem; }
+.skip-link:focus { transform:none; opacity:1; }
+@media (max-width:1000px) {
+  main { grid-template-columns:270px minmax(0,1fr); gap:1rem; }
+  header,main,footer { padding-left:1.2rem; padding-right:1.2rem; }
+  .week-days,.omitted-picks { grid-template-columns:1fr; }
+}
+@media (max-width:720px) {
+  main { display:block; }
+  .taste-form { position:static; margin-bottom:1.25rem; }
+  .masthead { align-items:flex-start; margin-bottom:2rem; }
+  .record-pill { max-width:155px; font-size:.65rem; padding:.35rem .6rem; }
+  header,main,footer { padding-left:1rem; padding-right:1rem; }
+  h1 { font-size:2.85rem; }
+  header .tag { font-size:.92rem; }
+  .disclaimer { font-size:.74rem; }
+  .sample select { flex-basis:auto; }
+  .week-controls button { flex:1 1 130px; }
+  .week-controls label { flex-basis:100%; }
+  #compare { font-size:.67rem; }
+  th,td { padding:.35rem .2rem; }
+}
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+@media print {
+  header,main,footer { max-width:none; padding:0; }
+  main { display:block; }
+  .skip-link,.masthead,.record-pill,.eyebrow,.record-note,#mode { display:none !important; }
+  header h1 { font-size:20pt; letter-spacing:0; }
+  .card { border:0; border-radius:0; padding:0; }
+  .week-day { background:#fff; }
+  .week-days,.omitted-picks { display:block; }
+  .scheduled-pick .why,.handoff-note { font-size:9pt; }
+}

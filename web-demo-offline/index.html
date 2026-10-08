@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TasteTable Offline Studio — a recorded week of familiar tastes</title>
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./offline.css">
+</head>
+<body>
+<a class="skip-link" href="#form">Skip to recorded choices</a>
+<header>
+  <div class="masthead"><a class="wordmark" href="./">TasteTable <span>Offline studio</span></a><span class="record-pill">24 recorded choices · no live calls</span></div>
+  <p class="eyebrow">Familiar tastes. A little room to explore.</p>
+  <h1>A thoughtful week,<br>ready to arrange.</h1>
+  <p class="tag">Explore three fictional taste profiles, inspect recorded constraint checks, and arrange their suggestions into a week that suits you.</p>
+  <div class="disclaimer" role="note">
+    <strong>Not medical or dietary advice.</strong> Constraint checks are heuristics over public venue tags and menu keywords.
+    Always confirm accessibility, texture and sodium needs with the venue and the person's care team.
+    Sample personas are fictional; do not enter real health information.
+  </div>
+  <div id="mode" class="mode">Loading the finite recorded catalogue…</div>
+</header>
+
+<main>
+  <section class="card taste-form">
+    <p class="eyebrow">01 / Choose a recording</p>
+    <h2>Whose tastes today?</h2>
+    <p class="why">Select a fictional profile and constraint combination. Each of the 24 choices was run through TasteTable in advance; this page selects that recording.</p>
+    <div class="sample">
+      <button id="sampleBtn" type="button" disabled>Restore profile defaults</button>
+      <select id="personaSel" aria-label="Recorded taste profile" disabled></select>
+    </div>
+    <form id="form" tabindex="-1">
+      <p class="profile-note">These tastes belong to the selected fictional profile.</p>
+      <label>Favourite cuisines <input name="cuisines" readonly></label>
+      <label>Music they love (artists / era) <input name="music" readonly></label>
+      <label>Favourite films <input name="films" readonly></label>
+      <label>City <input name="city" readonly></label>
+      <fieldset id="constraintGroup" disabled>
+        <legend>Constraints</legend>
+        <label class="inline"><input type="checkbox" name="constraints" value="soft_foods"> Soft foods</label>
+        <label class="inline"><input type="checkbox" name="constraints" value="low_sodium"> Low sodium</label>
+        <label class="inline"><input type="checkbox" name="constraints" value="wheelchair"> Wheelchair access</label>
+      </fieldset>
+      <button id="showPlan" type="submit" disabled>Show recorded plan <span aria-hidden="true">→</span></button>
+    </form>
+    <p id="requestStatus" class="why" role="status" aria-live="polite"></p>
+  </section>
+
+  <section id="results" hidden>
+    <div class="record-note" aria-labelledby="recordLabel">
+      <div><p class="eyebrow" id="recordLabel">02 / Recorded result</p><p id="recordSummary"></p>
+      <p class="why">Fictional venues and hand-set affinities. Scheduling below changes your draft, not the recorded recommendation.</p></div>
+      <a id="downloadRecord" class="button-link" download>Download source record</a>
+    </div>
+    <section id="weekOrganizer" class="card grounded" aria-labelledby="weekTitle">
+      <h2 id="weekTitle">Your week</h2>
+      <p id="weekRange" class="week-range"></p>
+      <p id="weekSource" class="mode"></p>
+      <p id="weekConstraints" class="why"></p>
+      <div class="week-controls">
+        <label>A date in your week
+          <input id="weekDate" type="date" aria-describedby="weekHelp weekError">
+        </label>
+        <button id="resetWeek" type="button">Restore suggested days</button>
+        <button id="printWeek" type="button" class="primary">Print week</button>
+      </div>
+      <p id="weekHelp" class="why organizer-help">Choose any date to show its Monday–Sunday week. Move checked picks to the days that suit you, or keep a pick off this week. Several picks can share a day. Changes last for this page visit.</p>
+      <p id="weekError" class="error" role="alert"></p>
+      <p id="weekSummary"></p>
+      <p id="weekStatus" class="why organizer-help" role="status" aria-live="polite"></p>
+      <ol id="weekDays" class="week-days"></ol>
+      <section id="omittedSection" hidden aria-labelledby="omittedTitle">
+        <h3 id="omittedTitle">Not scheduled this week</h3>
+        <ul id="omittedPicks" class="omitted-picks"></ul>
+      </section>
+      <div id="weekNotes"></div>
+      <p class="handoff-note">Planning draft. Dates are your choices, not reservations or confirmed opening hours. Confirm the venue, accessibility and food needs with the venue and care team before going.</p>
+    </section>
+    <details class="original-evidence">
+      <summary>Original suggestions and comparison</summary>
+    <div class="cols">
+      <div class="card grounded">
+        <h2>Synthetic fixture plan</h2>
+        <ol id="plan"></ol>
+        <div id="notes"></div>
+      </div>
+      <div class="card baseline">
+        <h2>Fixed ungrounded template</h2>
+        <ol id="baseline"></ol>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Side-by-side</h2>
+      <table id="compare"></table>
+    </div>
+    <details class="card"><summary>Rejected by constraint check</summary><ul id="rejected"></ul></details>
+    <details class="card"><summary>Recorded native tool trace</summary><ol id="trace" class="mono"></ol></details>
+    </details>
+  </section>
+</main>
+<footer><strong>TasteTable · Offline studio</strong><p>Finite recordings from the existing ScriptedModel and synthetic Qloo fixture. The source record includes its original native response and transport trace; schedule edits appear in Print week. No live recommendation, reservation or model call is made.</p><p>MIT licensed · <a href="./README.md">Run and recapture</a> · <a href="./source-pin.json">Pinned source</a></p></footer>
+<script type="module" src="./app.mjs"></script>
+</body>
+</html>

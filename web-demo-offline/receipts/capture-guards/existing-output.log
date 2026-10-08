@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/tmp/tastetable-offline-81ba1ed0179c/source/web-demo-offline/tools/capture_catalogue.py", line 126, in <module>
+    print(json.dumps(capture(args.source_root, args.output), ensure_ascii=False))
+                     ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tastetable-offline-81ba1ed0179c/source/web-demo-offline/tools/capture_catalogue.py", line 42, in capture
+    raise FileExistsError("Capture output must be a new directory.")
+FileExistsError: Capture output must be a new directory.

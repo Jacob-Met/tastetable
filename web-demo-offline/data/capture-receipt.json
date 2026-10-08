@@ -1,0 +1,206 @@
+{
+  "source_commit": "59a5b23cedbd758945a1c80bcc9d83a6f564b819",
+  "profiles": 3,
+  "records": 24,
+  "native_pipeline_runs": 24,
+  "source_blobs_verified_before_and_after": 12,
+  "network_calls_attempted": 0,
+  "catalogue_bytes": 419244,
+  "catalogue_sha256": "94be521e658225ff9a23b31834d03d620143943da2329bebefa0397cfa92b2f4",
+  "record_hashes": {
+    "rosa-0": "341729d2aaaf469a4384f1da273d6bef532f40b889c98bc3b5845a2a3a4b4017",
+    "rosa-1": "4bb8231a614897b8c1dc898ad4d37cf2466f13d28b5e12c3243ad570c0909a3d",
+    "rosa-2": "9e00fee884e46aa6b4d4fad5c56c9cfcce973f2c8d3295ea5d9c33c6461e6b39",
+    "rosa-3": "164d40807bf2d1e0a43637d710472f22e36a06eeccd40be8622483c000dd55c5",
+    "rosa-4": "1e969a2e80015eb8cf3ea2003f7ea2c162b504ada2716c1cf28c93951db42e34",
+    "rosa-5": "d0f26d7a97fb809fef464d4fc26cc51e089424b1283f448a50931ab85b15ddf0",
+    "rosa-6": "c691e2c7af4bab96c5b9c497e80e179bb594ef15c1fa42ae46fff0004fceca62",
+    "rosa-7": "82a455386cca210d6824620893c0bffb8740b501f444004d7cadc3d8f2e00cfa",
+    "harold-0": "b5f3c156fb19720133d44e659d1574c6cc578c9bde0494c0894cf2c257a2dde9",
+    "harold-1": "a73589e78f281124d87b6a04252e5f51f87d24890a63433c141e5fd78e830dc6",
+    "harold-2": "85f3d6545397fd755169272ce663c4276d41d0950cc1c5ce4ccc8a4d97baebea",
+    "harold-3": "b3516927fc22497043cad9aa1950c4230e5ddd5a1963ec8f146b9b7807760196",
+    "harold-4": "893e48a5c0b6bd878667ba13b527a96c5c2b75388d35448f52724265406e3207",
+    "harold-5": "3102f18cba88a771bf1ec7a7520b11a9ac8c705f29be19a0c982a242566bf821",
+    "harold-6": "0cf8d290184089c169bcc23c6df0e2f7363af656fd97e7be26abb455d236367a",
+    "harold-7": "077ec4744f3fd4048509062e7e82a004b206503bc60ce6262e7167b36443a77d",
+    "mei-0": "e7be0110305ffcfa2ad999ed25f4d83fc577d8f5e2d4d02f784b660b25487963",
+    "mei-1": "102f39772f7df59e8946e623115f31f41c212326c0c879098f0b426ead9a0194",
+    "mei-2": "69bbddb9432c1253323818993f9afcd08594f24b445d34f383d63688b426f513",
+    "mei-3": "c4bd281510826ed7db60eb53cfb3e297f44f29bf8fc9a06ebd285d9b74366a18",
+    "mei-4": "255788cd15d330753b390da4565fbd816f76e555f9520a2655298baf122cb95a",
+    "mei-5": "19549bd36c6b4fae6d50551ed617a1db5a38e30de93217eba3e4c7b9409e0fef",
+    "mei-6": "d7f7a0cf74fe689a3da0a421a5adabd0992302e8cf579fb4034763c5fc62cf88",
+    "mei-7": "abab7e7bd6f34f808e33ea0532ba1091152473374d05152eebc66f939511b1c0"
+  },
+  "outcomes": [
+    {
+      "key": "rosa-0",
+      "meals": 4,
+      "outing": true,
+      "rejected": 0,
+      "fixture_calls": 10
+    },
+    {
+      "key": "rosa-1",
+      "meals": 4,
+      "outing": true,
+      "rejected": 3,
+      "fixture_calls": 14
+    },
+    {
+      "key": "rosa-2",
+      "meals": 4,
+      "outing": true,
+      "rejected": 3,
+      "fixture_calls": 14
+    },
+    {
+      "key": "rosa-3",
+      "meals": 4,
+      "outing": true,
+      "rejected": 4,
+      "fixture_calls": 14
+    },
+    {
+      "key": "rosa-4",
+      "meals": 4,
+      "outing": true,
+      "rejected": 6,
+      "fixture_calls": 14
+    },
+    {
+      "key": "rosa-5",
+      "meals": 4,
+      "outing": true,
+      "rejected": 6,
+      "fixture_calls": 14
+    },
+    {
+      "key": "rosa-6",
+      "meals": 4,
+      "outing": true,
+      "rejected": 7,
+      "fixture_calls": 14
+    },
+    {
+      "key": "rosa-7",
+      "meals": 4,
+      "outing": true,
+      "rejected": 7,
+      "fixture_calls": 14
+    },
+    {
+      "key": "harold-0",
+      "meals": 4,
+      "outing": true,
+      "rejected": 0,
+      "fixture_calls": 11
+    },
+    {
+      "key": "harold-1",
+      "meals": 4,
+      "outing": true,
+      "rejected": 3,
+      "fixture_calls": 14
+    },
+    {
+      "key": "harold-2",
+      "meals": 4,
+      "outing": true,
+      "rejected": 3,
+      "fixture_calls": 14
+    },
+    {
+      "key": "harold-3",
+      "meals": 4,
+      "outing": true,
+      "rejected": 4,
+      "fixture_calls": 14
+    },
+    {
+      "key": "harold-4",
+      "meals": 4,
+      "outing": true,
+      "rejected": 4,
+      "fixture_calls": 14
+    },
+    {
+      "key": "harold-5",
+      "meals": 4,
+      "outing": true,
+      "rejected": 5,
+      "fixture_calls": 14
+    },
+    {
+      "key": "harold-6",
+      "meals": 4,
+      "outing": true,
+      "rejected": 6,
+      "fixture_calls": 14
+    },
+    {
+      "key": "harold-7",
+      "meals": 4,
+      "outing": true,
+      "rejected": 6,
+      "fixture_calls": 14
+    },
+    {
+      "key": "mei-0",
+      "meals": 4,
+      "outing": true,
+      "rejected": 0,
+      "fixture_calls": 11
+    },
+    {
+      "key": "mei-1",
+      "meals": 4,
+      "outing": true,
+      "rejected": 1,
+      "fixture_calls": 11
+    },
+    {
+      "key": "mei-2",
+      "meals": 4,
+      "outing": true,
+      "rejected": 2,
+      "fixture_calls": 13
+    },
+    {
+      "key": "mei-3",
+      "meals": 4,
+      "outing": true,
+      "rejected": 3,
+      "fixture_calls": 13
+    },
+    {
+      "key": "mei-4",
+      "meals": 4,
+      "outing": true,
+      "rejected": 4,
+      "fixture_calls": 13
+    },
+    {
+      "key": "mei-5",
+      "meals": 4,
+      "outing": true,
+      "rejected": 4,
+      "fixture_calls": 13
+    },
+    {
+      "key": "mei-6",
+      "meals": 3,
+      "outing": true,
+      "rejected": 5,
+      "fixture_calls": 13
+    },
+    {
+      "key": "mei-7",
+      "meals": 3,
+      "outing": true,
+      "rejected": 5,
+      "fixture_calls": 13
+    }
+  ]
+}

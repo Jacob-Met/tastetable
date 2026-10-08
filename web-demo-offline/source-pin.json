@@ -1,0 +1,77 @@
+{
+  "repository": "Jacob-Met/tastetable",
+  "commit": "59a5b23cedbd758945a1c80bcc9d83a6f564b819",
+  "files": [
+    {
+      "path": "README.md",
+      "git_sha": "4927123d731b742094c08b2a90ad66188bbaadaf",
+      "mode": "100644"
+    },
+    {
+      "path": "static/index.html",
+      "git_sha": "1350d9500b0d5d90ac0e040885de5c4f0d4b497d",
+      "mode": "100644"
+    },
+    {
+      "path": "static/app.js",
+      "git_sha": "fab0cb5398d3e6553373a99d9d56afa92f2bfcbb",
+      "mode": "100644"
+    },
+    {
+      "path": "static/style.css",
+      "git_sha": "b47c49cc6b502a8e6dedc8d02fa1cadb1241dc1d",
+      "mode": "100644"
+    },
+    {
+      "path": "qloo_client.py",
+      "git_sha": "cca322e0c9af96c481ba8f7ef286e85d3b90cfd2",
+      "mode": "100644"
+    },
+    {
+      "path": "constraints.py",
+      "git_sha": "53138a106455cc3fa40d812d1ade3c60fcbbb916",
+      "mode": "100644"
+    },
+    {
+      "path": "fixtures/qloo_fixtures.json",
+      "git_sha": "60c5d92f905755454bb280b8181f8836a74bd955",
+      "mode": "100644"
+    },
+    {
+      "path": "agent.py",
+      "git_sha": "1d8bfd5a300c1d4824dc895b324e7d0cfb096058",
+      "mode": "100644"
+    },
+    {
+      "path": "personas.py",
+      "git_sha": "1eb6768780cafaf9b1666e39b7fc17aa21204f16",
+      "mode": "100644"
+    },
+    {
+      "path": "app.py",
+      "git_sha": "2c2f1524e62c74db21fdbcc69faec643903c23b8",
+      "mode": "100644"
+    },
+    {
+      "path": "LICENSE",
+      "git_sha": "3757eabcdbaee0b03b44aad0a7c01ff8c5ada81b",
+      "mode": "100644"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "git_sha": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "mode": "100644"
+    }
+  ],
+  "reuse": {
+    "unchanged": [
+      "static/week_plan.mjs",
+      "static/style.css",
+      "LICENSE"
+    ],
+    "adapted": [
+      "static/index.html",
+      "static/app.js"
+    ]
+  }
+}

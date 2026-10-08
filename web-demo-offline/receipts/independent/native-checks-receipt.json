@@ -1,0 +1,38 @@
+{
+  "boundary": "Downloads and visible identity/affinity/verdicts checked against native fixture and evaluator; browser and installation owned by coordination",
+  "catalogue_sha256": "94be521e658225ff9a23b31834d03d620143943da2329bebefa0397cfa92b2f4",
+  "checks_source_sha256": "d69f3da6580fb4aeac6376881c329a31de988efa146da054bc8db5cff81cd49b",
+  "errors": 0,
+  "failures": 0,
+  "native_full_agent_capture_runs": 0,
+  "native_recorded_insight_replays": 68,
+  "network_attempts": 0,
+  "pinned_source_sha256": {
+    "LICENSE": "23882b44a5d39c220ecb4dccdbef766635e3b610d5ef87904fe4133c6b6439ed",
+    "README.md": "36518c8efd77143fe4186a53057b9ca806a7b5fb62530c5325b79f628e2c4794",
+    "agent.py": "5366635d101cb7010e6ad3586de9a8d76f222b98118cbc5c4bf73ea11b58a903",
+    "app.py": "6179e3953e9e6aed009695b9528c8de8622246ab2a1fd5676f18b8b66fa9152c",
+    "constraints.py": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e",
+    "fixtures/qloo_fixtures.json": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+    "personas.py": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+    "qloo_client.py": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+    "static/app.js": "cb666959df8a4921987e67b98efbeca0f0399502184f3743e732c7c295cfd395",
+    "static/index.html": "ddd912eb1af81611551c2ddb10f6f1fbd9fceb9e2a691b7ba35746ba08f9404d",
+    "static/style.css": "0d58ae4d0fef286374808eda0dc90b5e8249432a248b8332441738eb04dc0840",
+    "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+  },
+  "recorded_choices": 24,
+  "runtime_sha256": {
+    "app.mjs": "e1c8976816be2fcb4ccacbf914bfabb8ca384f88ac1255d2b74a57c2649cd046",
+    "catalogue.mjs": "63d4e75c7b08d12dc5fc78d3927baba88e2fabdd8eaa2996897efbd5698a8e0a",
+    "index.html": "feea13a997cf9e0b48885df934f5657034e7645b0bc5d9854d0ddfa866dbe898",
+    "offline.css": "e13d985e9f8f4542ba0dbacfd2d7b30cfb76c02c2f224a10665666ccd0351d15",
+    "style.css": "0d58ae4d0fef286374808eda0dc90b5e8249432a248b8332441738eb04dc0840",
+    "week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+  },
+  "schema": "hamon.tastetable.independent-recorded-receiving.v1",
+  "source_commit": "59a5b23cedbd758945a1c80bcc9d83a6f564b819",
+  "tests": 7,
+  "utc": "2026-10-08T11:31:28.243834+00:00",
+  "visible_picks": 118
+}

@@ -1,0 +1,419 @@
+{
+  "schema": "tastetable.native-browser.v1",
+  "source_commit": "59a5b23cedbd758945a1c80bcc9d83a6f564b819",
+  "catalogue_sha256": "94be521e658225ff9a23b31834d03d620143943da2329bebefa0397cfa92b2f4",
+  "started_at": "2026-10-08T11:34:35.809Z",
+  "checks": [
+    {
+      "name": "desktop: ready default and finite-record provenance",
+      "pass": true
+    },
+    {
+      "name": "desktop: actual keyboard skip link",
+      "pass": true
+    },
+    {
+      "name": "desktop: rosa-0 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "desktop: rosa-1 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "desktop: rosa-2 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "desktop: rosa-3 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "desktop: rosa-4 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "desktop: rosa-5 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "desktop: rosa-6 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "desktop: rosa-7 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "desktop: harold-0 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "desktop: harold-1 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "desktop: harold-2 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "desktop: harold-3 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "desktop: harold-4 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "desktop: harold-5 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "desktop: harold-6 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "desktop: harold-7 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "desktop: mei-0 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "desktop: mei-1 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "desktop: mei-2 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "desktop: mei-3 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "desktop: mei-4 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "desktop: mei-5 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "desktop: mei-6 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "desktop: mei-7 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "desktop: three exact raw native downloads",
+      "pass": true
+    },
+    {
+      "name": "desktop: changed constraints retire the previous plan",
+      "pass": true
+    },
+    {
+      "name": "desktop: profile changes and explicit default restore",
+      "pass": true
+    },
+    {
+      "name": "desktop: year boundary, move, omit, focus and reset preserve the chosen week",
+      "pass": true
+    },
+    {
+      "name": "desktop: invalid-date refusal and leap-day recovery",
+      "pass": true
+    },
+    {
+      "name": "desktop: native trace, reasons and rejection evidence",
+      "pass": true
+    },
+    {
+      "name": "desktop: retained dietary UNKNOWN and ask-venue reason are visible",
+      "pass": true
+    },
+    {
+      "name": "desktop: actual native print-media receiving",
+      "pass": true
+    },
+    {
+      "name": "desktop: responsive layout without horizontal overflow",
+      "pass": true,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "name": "phone: ready default and finite-record provenance",
+      "pass": true
+    },
+    {
+      "name": "phone: actual keyboard skip link",
+      "pass": true
+    },
+    {
+      "name": "phone: rosa-0 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "phone: harold-6 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "phone: mei-7 matches actual native response",
+      "pass": true
+    },
+    {
+      "name": "phone: three exact raw native downloads",
+      "pass": true
+    },
+    {
+      "name": "phone: changed constraints retire the previous plan",
+      "pass": true
+    },
+    {
+      "name": "phone: profile changes and explicit default restore",
+      "pass": true
+    },
+    {
+      "name": "phone: year boundary, move, omit, focus and reset preserve the chosen week",
+      "pass": true
+    },
+    {
+      "name": "phone: invalid-date refusal and leap-day recovery",
+      "pass": true
+    },
+    {
+      "name": "phone: native trace, reasons and rejection evidence",
+      "pass": true
+    },
+    {
+      "name": "phone: retained dietary UNKNOWN and ask-venue reason are visible",
+      "pass": true
+    },
+    {
+      "name": "phone: actual native print-media receiving",
+      "pass": true
+    },
+    {
+      "name": "phone: responsive layout without horizontal overflow",
+      "pass": true,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "http-refusal: explicit unavailable state without a stale plan",
+      "pass": true
+    },
+    {
+      "name": "wrong-source: explicit unavailable state without a stale plan",
+      "pass": true
+    },
+    {
+      "name": "No browser errors, external requests, backend calls or POSTs",
+      "pass": true
+    }
+  ],
+  "downloads": [
+    {
+      "tag": "desktop",
+      "key": "rosa-7",
+      "bytes": 19223,
+      "sha256": "82a455386cca210d6824620893c0bffb8740b501f444004d7cadc3d8f2e00cfa",
+      "filename": "tastetable-rosa-7-source.json"
+    },
+    {
+      "tag": "desktop",
+      "key": "harold-6",
+      "bytes": 16933,
+      "sha256": "0cf8d290184089c169bcc23c6df0e2f7363af656fd97e7be26abb455d236367a",
+      "filename": "tastetable-harold-6-source.json"
+    },
+    {
+      "tag": "desktop",
+      "key": "mei-7",
+      "bytes": 16686,
+      "sha256": "abab7e7bd6f34f808e33ea0532ba1091152473374d05152eebc66f939511b1c0",
+      "filename": "tastetable-mei-7-source.json"
+    },
+    {
+      "tag": "phone",
+      "key": "rosa-7",
+      "bytes": 19223,
+      "sha256": "82a455386cca210d6824620893c0bffb8740b501f444004d7cadc3d8f2e00cfa",
+      "filename": "tastetable-rosa-7-source.json"
+    },
+    {
+      "tag": "phone",
+      "key": "harold-6",
+      "bytes": 16933,
+      "sha256": "0cf8d290184089c169bcc23c6df0e2f7363af656fd97e7be26abb455d236367a",
+      "filename": "tastetable-harold-6-source.json"
+    },
+    {
+      "tag": "phone",
+      "key": "mei-7",
+      "bytes": 16686,
+      "sha256": "abab7e7bd6f34f808e33ea0532ba1091152473374d05152eebc66f939511b1c0",
+      "filename": "tastetable-mei-7-source.json"
+    }
+  ],
+  "requests": [
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "path": "/style.css"
+    },
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "path": "/offline.css"
+    },
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "path": "/app.mjs"
+    },
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "path": "/week_plan.mjs"
+    },
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "path": "/catalogue.mjs"
+    },
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "path": "/data/catalogue.json"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "path": "/style.css"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "path": "/offline.css"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "path": "/app.mjs"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "path": "/week_plan.mjs"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "path": "/catalogue.mjs"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "path": "/data/catalogue.json"
+    },
+    {
+      "tag": "http-refusal",
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "tag": "http-refusal",
+      "method": "GET",
+      "path": "/style.css"
+    },
+    {
+      "tag": "http-refusal",
+      "method": "GET",
+      "path": "/offline.css"
+    },
+    {
+      "tag": "http-refusal",
+      "method": "GET",
+      "path": "/app.mjs"
+    },
+    {
+      "tag": "http-refusal",
+      "method": "GET",
+      "path": "/week_plan.mjs"
+    },
+    {
+      "tag": "http-refusal",
+      "method": "GET",
+      "path": "/catalogue.mjs"
+    },
+    {
+      "tag": "http-refusal",
+      "method": "GET",
+      "path": "/data/catalogue.json"
+    },
+    {
+      "tag": "wrong-source",
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "tag": "wrong-source",
+      "method": "GET",
+      "path": "/style.css"
+    },
+    {
+      "tag": "wrong-source",
+      "method": "GET",
+      "path": "/offline.css"
+    },
+    {
+      "tag": "wrong-source",
+      "method": "GET",
+      "path": "/app.mjs"
+    },
+    {
+      "tag": "wrong-source",
+      "method": "GET",
+      "path": "/week_plan.mjs"
+    },
+    {
+      "tag": "wrong-source",
+      "method": "GET",
+      "path": "/catalogue.mjs"
+    },
+    {
+      "tag": "wrong-source",
+      "method": "GET",
+      "path": "/data/catalogue.json"
+    }
+  ],
+  "errors": [],
+  "external_requests": [],
+  "complete": true,
+  "browser": "154.0.8037.98",
+  "print_artifact": {
+    "bytes": 291480,
+    "sha256": "55de05caacc540fb3c7910770add13132ef6913847e7b42db0f50b3913ce6627"
+  },
+  "finished_at": "2026-10-08T11:34:43.348Z"
+}
