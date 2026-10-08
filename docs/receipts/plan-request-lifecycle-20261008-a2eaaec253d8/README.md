@@ -11,9 +11,10 @@ visible plan could therefore describe inputs that are no longer selected.
 
 The native JavaScript controller uses request identity as well as best-effort
 AbortController cancellation. Only the current request may render a result or
-error. Starting another plan, editing the input form, stopping the wait, or leaving
-the page invalidates older requests and hides their results. Request errors remain
-beside the editable form; deliberate API validation details use `textContent`.
+error. Starting another plan, editing the input form or sample selection, stopping
+the wait, or leaving the page invalidates older requests and hides their results.
+Request errors remain beside the editable form; deliberate API validation details
+use `textContent`.
 Sample selection stays disabled until its choices load. No automatic retry is added.
 
 ## Source and ownership
@@ -39,6 +40,18 @@ status hooks in `static/app.js`, and the status/cancel/script hooks in
 in `source-manifest.json`; backend/provider/constraint source is unchanged.
 The original and candidate browser receipts describe the actual working-source
 bytes, rather than incorrectly treating the base HEAD as the modified source.
+The author's renderer hash excludes the trailing newline; the independent review
+includes one trailing newline. Both extraction boundaries match their respective
+original bytes, and the complete runtime-file hashes agree.
+
+At handoff, the GitHub branch held predecessor
+`7d123e9d9d402ed3c7018ef0921a8b38bba74463`, whose tree is identical to local
+`184186da3805bb2f434d2219ec0dc3f2f7b8e472`. A draft-PR creation attempt at
+2026-10-08 08:02:10 UTC returned GitHub's secondary content-creation limit. No
+further GitHub write followed that rejection during this contribution. The
+accepted persona-selector repair and this evidence-only follow-up remain local
+pending coordinated publication. The independent acceptance applies to the
+corrected runtime, not that older published predecessor.
 
 ## Verification
 
@@ -68,6 +81,36 @@ The exact environment is recorded in the receipts: Node v24.19.0 and Chromium
 `git diff --check` is clean. No backend source or backend test scope was changed;
 these results do not represent a full Python/provider test run or hosted CI.
 
+### Independent receiving correction
+
+`mac_production` independently authored a separate real-browser history against
+local candidate `184186da3805bb2f434d2219ec0dc3f2f7b8e472`. It found that the
+sample selector, which sits outside the input form, did not invalidate pending
+sample A when the visitor selected B. The response body had already been parsed;
+the verifier delayed its final reader resolution. Late A then became visible with
+the ready message while B remained selected. The editable fields still contained
+A, which the receipt records rather than conflating selection with form population.
+
+A three-line event listener now invalidates on sample selection and gives an
+explicit **Try a sample persona** instruction. It preserves those fields and makes
+no request itself. The independent reviewer reran the same history against frozen
+`e2489f3ecc18b57d8ffd461aafc741000a56554f`: all six checks pass. The old request is
+aborted, its delayed completion remains hidden, selection alone starts no request,
+current fields remain intact, a subsequent explicit B request succeeds, and the
+existing expanded trace disclosure remains open. There are zero page errors.
+The final `static/app.js` SHA-256 is
+`a77c583b2d7991ccfd401c96b01f09ebdd70c1ce7edab4c4181a9d751311ab54`;
+controller/index are unchanged. The seven authored browser scenarios were also
+rerun against these final static bytes and pass with unchanged-source custody.
+
+The exact independent driver, failed predecessor receipt and accepted successor
+receipt are retained under `independent/`, with their screenshots. The reviewer's
+`REVIEW.md` and `integration-ready-receipt.json` are copied unchanged alongside
+them, keeping their relative evidence paths valid. The driver
+retains the review environment's explicit Playwright and Chromium paths; its two
+arguments are the source directory and a new evidence directory. This independent
+acceptance covers the frozen request runtime, not the organizer/calendar composition.
+
 ## Reproduce
 
 ```bash
@@ -94,9 +137,10 @@ current response was rendered; a stale, abandoned or failed request resolves fal
 `invalidate` aborts and retires pending work but permits later requests. `dispose`
 also refuses future requests. Old completion cannot clear the newer loading state.
 
-The application calls `invalidate` for input edits, Stop waiting and pagehide;
-using invalidation on pagehide allows a preserved page to submit again. Organizer
-controls belong outside the tastes/constraints form. During composition, hide the
+The application calls `invalidate` for input edits, sample selection, Stop waiting
+and pagehide; using invalidation on pagehide allows a preserved page to submit
+again. Organizer controls belong outside the tastes/constraints form. During
+composition, hide the
 shared results container and retire any separate export draft on invalidation so
 old handoff controls cannot remain usable for superseded inputs. Keep the latest
 accepted response as the only source for new week/calendar state.
@@ -116,3 +160,5 @@ outside this browser lifecycle qualification.
 - `candidate/controller-tests.log`: eight native JavaScript controls, zero skips.
 - `candidate/latest-plan-desktop.png`, `candidate/fresh-plan-phone.png`: actual
   Chromium renders using fictional local fixtures.
+- `independent/`: separately authored delayed-reader persona-selection proof,
+  including the failed predecessor and accepted successor.

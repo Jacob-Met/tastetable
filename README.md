@@ -95,10 +95,13 @@ By default the app runs in **mock mode** (it uses the fixture and makes no netwo
 ### Changing or stopping a plan request
 
 The browser shows results only for the newest submitted inputs. Starting another
-sample or manual plan hides the previous result. Editing tastes or constraints
-also clears the displayed plan and invalidates any pending response, so an older
-request cannot restore a plan for inputs that are no longer selected. Request
+sample or manual plan hides the previous result. Editing tastes or constraints or
+choosing a different sample persona also clears the displayed plan and invalidates
+any pending response, so an older request cannot restore a plan for inputs that
+are no longer selected. Request
 errors appear beside the form and leave the fields available to correct or retry.
+Changing the sample selector preserves the current form fields; use **Try a sample
+persona** to load the selected sample and request its plan.
 
 **Stop waiting** abandons the current browser request and permits a fresh one.
 The browser requests cancellation, but this does not establish that work already

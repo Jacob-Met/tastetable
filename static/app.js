@@ -110,6 +110,9 @@ $("#form").addEventListener("submit", (ev) => {
 $("#form").addEventListener("input", () => {
   clearPlan("Inputs changed. Generate a new plan to use these tastes and constraints.");
 });
+$("#personaSel").addEventListener("change", () => {
+  clearPlan("Sample selection changed. Use Try a sample persona to load it, or enter your own tastes to request a plan.");
+});
 $("#cancelPlan").addEventListener("click", () => {
   clearPlan("Stopped waiting. Generate another plan when you are ready.");
 });

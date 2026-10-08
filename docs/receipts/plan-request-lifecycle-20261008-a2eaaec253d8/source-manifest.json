@@ -7,13 +7,13 @@
   "runtimeAndVerificationFiles": [
     {
       "file": "README.md",
-      "sha256": "1c9ba461c487a828ca8e1d295fd2159358da5cee8bac90e70b8c4d3186f9af3b",
-      "gitBlob": "8cca985c751664e8946ec9847f0caed805d55d06"
+      "sha256": "2216ce7d925198fe2fbe77a5613eb3e87b01c7fda838780792b77d557760bf86",
+      "gitBlob": "245e46a0e4f89c9c793d519a046e0b385cb8394d"
     },
     {
       "file": "static/app.js",
-      "sha256": "ee6f2743b9b44fc43c25de384d36e5fb226b3d75c5e40f8c3297fb2a3a3589fd",
-      "gitBlob": "0bd3bdf503798e213ce37a82f7c4196c12fc0b50"
+      "sha256": "a77c583b2d7991ccfd401c96b01f09ebdd70c1ce7edab4c4181a9d751311ab54",
+      "gitBlob": "d6881d97b6b1eb2ff19a06824475d3eba3fd02cc"
     },
     {
       "file": "static/index.html",
@@ -35,5 +35,43 @@
       "sha256": "90d6f347d87edb47445e361759f640bfaf41b972de293811003665fd8210ef80",
       "gitBlob": "b30f8c97d81b59eec9decfeec0bf88f9fa805e92"
     }
-  ]
+  ],
+  "renderHashBoundary": "function render(res) { through its final closing brace, excluding the trailing newline",
+  "independentReview": {
+    "acceptedRuntimeCommit": "e2489f3ecc18b57d8ffd461aafc741000a56554f",
+    "acceptedRuntimeTree": "f4b3e4d08c06aaae419ca5a23549f15ac68e5d74",
+    "reviewer": "chatgpt-a2eaaec253d8/mac_production",
+    "checksPassed": 6,
+    "checksFailed": 0,
+    "artifacts": [
+      {
+        "file": "independent/REVIEW.md",
+        "sha256": "299527b5f106054a0b86bd753489e5334c2c29806235d856e0477859536ff2e4"
+      },
+      {
+        "file": "independent/integration-ready-receipt.json",
+        "sha256": "cd5c8b569aa29c73633eb992e731f59d02deb5513f369a2058ecdb6072feafd0"
+      },
+      {
+        "file": "independent/persona-invalidation.cjs",
+        "sha256": "5a09eb701105b4cb55a97b0b36a65bfec16d834fd363a1239e6eb7a0a597e1c8"
+      },
+      {
+        "file": "independent/frozen-evidence/receipt.json",
+        "sha256": "6a368adcc70af59b45026b423ed7ea75c7f4ff69f102e13932c7741641f84ffc"
+      },
+      {
+        "file": "independent/frozen-evidence/after-late-a.png",
+        "sha256": "987ef5e1b8b720a985260fb7ccccf5a78e0fc88f88cb6138917689384981c8ce"
+      },
+      {
+        "file": "independent/candidate-evidence/receipt.json",
+        "sha256": "d4b27fc65f48141f40d3e25d436c5c698073bc67b84d6da8162d9998d4c15fa4"
+      },
+      {
+        "file": "independent/candidate-evidence/after-late-a.png",
+        "sha256": "9a496c17b3233c6486b8e130fb7ce06e0de48a5133f8728db0b430b145cb9e26"
+      }
+    ]
+  }
 }

@@ -1,0 +1,196 @@
+{
+  "reviewer": "chatgpt-a2eaaec253d8/mac_production",
+  "checkedAt": "2026-10-08T08:07:45.285Z",
+  "source": "/workspace/scratch/a2eaaec253d8/tastetable-review/candidate",
+  "sourceHashes": {
+    "app.js": "a77c583b2d7991ccfd401c96b01f09ebdd70c1ce7edab4c4181a9d751311ab54",
+    "index.html": "34827c57d1bb3b81f11a56b5f4c905b2c88491c84bb1c8991ad61bca8dbe8f51",
+    "plan-request.js": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995"
+  },
+  "scenario": "Two fictional personas; parsed HTTP response A waits past persona selection B; explicit next sample succeeds and expanded trace/input state persists.",
+  "asynchronousBoundary": "Actual loopback fetch and Response.json parse complete before delayed reader resolves; abort cannot remove the authored delayed completion.",
+  "requests": [
+    {
+      "url": "/api/plan",
+      "body": {
+        "cuisines": [
+          "Manual cuisine"
+        ],
+        "music": [],
+        "films": [],
+        "city": "Manual City",
+        "constraints": []
+      }
+    },
+    {
+      "url": "/api/plan/sample/sample-a",
+      "body": null
+    },
+    {
+      "url": "/api/plan/sample/sample-b",
+      "body": null
+    }
+  ],
+  "ordinary": {
+    "persona": "sample-a",
+    "form": {
+      "cuisines": "Manual cuisine",
+      "music": "",
+      "films": "",
+      "city": "Manual City"
+    },
+    "constraints": [],
+    "resultsHidden": false,
+    "plan": "Monday · Initial plan\n      restaurant\n      affinity 0.75\n      Synthetic receiving responseQloo id: INDEPENDENT-FIXTURE",
+    "status": "Plan ready for the current inputs.",
+    "busy": "false",
+    "cancelHidden": true,
+    "traceExpanded": true,
+    "reads": [
+      {
+        "url": "/api/plan",
+        "aborted": false,
+        "released": true
+      }
+    ]
+  },
+  "pendingA": {
+    "persona": "sample-a",
+    "form": {
+      "cuisines": "Cuisine A",
+      "music": "Artist A",
+      "films": "Film A",
+      "city": "City A"
+    },
+    "constraints": [
+      "wheelchair"
+    ],
+    "resultsHidden": true,
+    "plan": "Monday · Initial plan\n      restaurant\n      affinity 0.75\n      Synthetic receiving responseQloo id: INDEPENDENT-FIXTURE",
+    "status": "Planning with the current tastes and constraints…",
+    "busy": "true",
+    "cancelHidden": false,
+    "traceExpanded": true,
+    "reads": [
+      {
+        "url": "/api/plan",
+        "aborted": false,
+        "released": true
+      },
+      {
+        "url": "/api/plan/sample/sample-a",
+        "aborted": false,
+        "released": false
+      }
+    ]
+  },
+  "afterSelection": {
+    "persona": "sample-b",
+    "form": {
+      "cuisines": "Cuisine A",
+      "music": "Artist A",
+      "films": "Film A",
+      "city": "City A"
+    },
+    "constraints": [
+      "wheelchair"
+    ],
+    "resultsHidden": true,
+    "plan": "Monday · Initial plan\n      restaurant\n      affinity 0.75\n      Synthetic receiving responseQloo id: INDEPENDENT-FIXTURE",
+    "status": "Sample selection changed. Use Try a sample persona to load it, or enter your own tastes to request a plan.",
+    "busy": "false",
+    "cancelHidden": true,
+    "traceExpanded": true,
+    "reads": [
+      {
+        "url": "/api/plan",
+        "aborted": false,
+        "released": true
+      },
+      {
+        "url": "/api/plan/sample/sample-a",
+        "aborted": true,
+        "released": false
+      }
+    ]
+  },
+  "afterLateA": {
+    "persona": "sample-b",
+    "form": {
+      "cuisines": "Cuisine A",
+      "music": "Artist A",
+      "films": "Film A",
+      "city": "City A"
+    },
+    "constraints": [
+      "wheelchair"
+    ],
+    "resultsHidden": true,
+    "plan": "Monday · Initial plan\n      restaurant\n      affinity 0.75\n      Synthetic receiving responseQloo id: INDEPENDENT-FIXTURE",
+    "status": "Sample selection changed. Use Try a sample persona to load it, or enter your own tastes to request a plan.",
+    "busy": "false",
+    "cancelHidden": true,
+    "traceExpanded": true,
+    "reads": [
+      {
+        "url": "/api/plan",
+        "aborted": false,
+        "released": true
+      },
+      {
+        "url": "/api/plan/sample/sample-a",
+        "aborted": true,
+        "released": true
+      }
+    ]
+  },
+  "currentB": {
+    "persona": "sample-b",
+    "form": {
+      "cuisines": "Cuisine B",
+      "music": "Artist B",
+      "films": "Film B",
+      "city": "City B"
+    },
+    "constraints": [
+      "low_sodium"
+    ],
+    "resultsHidden": false,
+    "plan": "Monday · B plan\n      restaurant\n      affinity 0.75\n      Synthetic receiving responseQloo id: INDEPENDENT-FIXTURE",
+    "status": "Plan ready for the current inputs.",
+    "busy": "false",
+    "cancelHidden": true,
+    "traceExpanded": true,
+    "reads": [
+      {
+        "url": "/api/plan",
+        "aborted": false,
+        "released": true
+      },
+      {
+        "url": "/api/plan/sample/sample-a",
+        "aborted": true,
+        "released": true
+      },
+      {
+        "url": "/api/plan/sample/sample-b",
+        "aborted": false,
+        "released": true
+      }
+    ]
+  },
+  "errors": [],
+  "checks": {
+    "selectionStartsNoRequest": true,
+    "selectionPreservesFields": true,
+    "selectionAbortsA": true,
+    "lateAHidden": true,
+    "currentBShown": true,
+    "expandedTracePreserved": true
+  },
+  "limits": [
+    "Synthetic fixture responses; no backend, provider or recommendation-quality check.",
+    "Organizer/calendar owner composition is not present in this frozen source; this test preserves the existing trace disclosure widget."
+  ],
+  "passed": true
+}

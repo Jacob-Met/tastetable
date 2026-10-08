@@ -1,0 +1,63 @@
+{
+  "schema": "hamon.independent_receiving.v1",
+  "reviewer": "chatgpt-a2eaaec253d8/mac_production",
+  "author": "chatgpt-a2eaaec253d8/production_receiving",
+  "project": "TasteTable",
+  "decision": "accept exact revised source for existing organizer-owner composition",
+  "accepted_commit": "e2489f3ecc18b57d8ffd461aafc741000a56554f",
+  "accepted_tree": "f4b3e4d08c06aaae419ca5a23549f15ac68e5d74",
+  "rejected_predecessor": "184186da3805bb2f434d2219ec0dc3f2f7b8e472",
+  "author_reported_published_predecessor": "7d123e9d9d402ed3c7018ef0921a8b38bba74463",
+  "runtime_hashes": {
+    "app.js": "a77c583b2d7991ccfd401c96b01f09ebdd70c1ce7edab4c4181a9d751311ab54",
+    "index.html": "34827c57d1bb3b81f11a56b5f4c905b2c88491c84bb1c8991ad61bca8dbe8f51",
+    "plan-request.js": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995"
+  },
+  "driver_sha256": "5a09eb701105b4cb55a97b0b36a65bfec16d834fd363a1239e6eb7a0a597e1c8",
+  "renderer_unchanged_from": "d1c7a4e39cfdc0bb5b9fe026bc9660b75b456e81",
+  "renderer_sha256": "b16a4e8cea94d27cbea682063da930e3a02a50e8963f2b395480dbe868a76b8f",
+  "native_tools": {
+    "node": "v24.19.0",
+    "chromium": "Chromium 153.0.8010.0"
+  },
+  "independent_finding": "Changing the sample selector while a parsed sample A response remained pending let A render beside selected B. Existing editable A fields were preserved; the defect was selector/request ambiguity under the required persona-edit contract.",
+  "revision": "Exactly three application lines add a selector change handler that invalidates the request, hides results and explains how to load the selected persona, without changing editable fields or automatically submitting.",
+  "independent_checks": {
+    "selectionStartsNoRequest": true,
+    "selectionPreservesFields": true,
+    "selectionAbortsA": true,
+    "lateAHidden": true,
+    "currentBShown": true,
+    "expandedTracePreserved": true
+  },
+  "predecessor_checks": {
+    "selectionStartsNoRequest": true,
+    "selectionPreservesFields": true,
+    "selectionAbortsA": false,
+    "lateAHidden": false,
+    "currentBShown": true,
+    "expandedTracePreserved": true
+  },
+  "adverse_boundary": "Actual loopback fetch and Response.json parse complete before delayed reader resolves; abort cannot remove the authored delayed completion.",
+  "run_count": 2,
+  "run_scope": "One independent browser history on predecessor and once on repaired candidate; no broad repeated test suite.",
+  "errors": [],
+  "source_review": [
+    "Request generation fences stale success, failure and idle callbacks.",
+    "Constraint input invalidates before late response completion can render.",
+    "Current error and explicit Stop waiting return the UI to idle while retaining form values.",
+    "Pagehide invalidates outstanding work; its later generation cannot render.",
+    "Existing renderer bytes are unchanged; trace disclosure open state remains intact."
+  ],
+  "evidence": {
+    "predecessor": "frozen-evidence/receipt.json",
+    "candidate": "candidate-evidence/receipt.json",
+    "driver": "persona-invalidation.cjs"
+  },
+  "limits": [
+    "Authored loopback HTTP responses; no backend/provider or recommendation-quality claims.",
+    "The accepted source does not yet include the other owner's organizer/calendar composition; that composed widget requires its receiving check.",
+    "Acceptance applies only to revised e2489f3e, not the reported older GitHub publication."
+  ],
+  "checked_at": "2026-10-08T08:09:34.909Z"
+}
