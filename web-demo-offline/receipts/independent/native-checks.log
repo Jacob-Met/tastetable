@@ -1,0 +1,14 @@
+3.13.7 (v3.13.7:bcee1c32211, Aug 14 2025, 19:10:51) [Clang 16.0.0 (clang-1600.0.26.6)]
+test_comparison_counts_describe_visible_recorded_picks (__main__.RecordedReceivingTests.test_comparison_counts_describe_visible_recorded_picks) ... ok
+test_dietary_and_outing_checks_keep_native_semantics (__main__.RecordedReceivingTests.test_dietary_and_outing_checks_keep_native_semantics) ... ok
+test_downloads_are_exact_catalogue_objects (__main__.RecordedReceivingTests.test_downloads_are_exact_catalogue_objects) ... ok
+test_profiles_and_finite_choices_match_native_personas (__main__.RecordedReceivingTests.test_profiles_and_finite_choices_match_native_personas) ... ok
+test_retained_unknown_dietary_results_keep_their_actual_reason (__main__.RecordedReceivingTests.test_retained_unknown_dietary_results_keep_their_actual_reason) ... ok
+test_reused_runtime_files_preserve_pinned_source_bytes (__main__.RecordedReceivingTests.test_reused_runtime_files_preserve_pinned_source_bytes) ... ok
+test_visible_identity_affinity_and_verdicts_bind_native_evidence (__main__.RecordedReceivingTests.test_visible_identity_affinity_and_verdicts_bind_native_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.009s
+
+OK
+{"tests": 7, "failures": 0, "errors": 0, "recorded_choices": 24, "visible_picks": 118, "native_recorded_insight_replays": 68, "network_attempts": 0}

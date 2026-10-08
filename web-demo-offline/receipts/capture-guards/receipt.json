@@ -1,0 +1,15 @@
+{
+  "checks": [
+    {
+      "name": "existing output refused",
+      "exit_code": 1
+    },
+    {
+      "name": "changed source refused before output",
+      "exit_code": 1,
+      "output_absent": true
+    }
+  ],
+  "original_source_blobs_still_exact": 12,
+  "candidate_commit": "f3beb43f839d93116567712ce48c72637ae8d6cb"
+}

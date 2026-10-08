@@ -1,0 +1,469 @@
+{
+  "schema": "tastetable.static-receiving.v1",
+  "source": "/private/tmp/tastetable-offline-81ba1ed0179c/source/web-demo-offline",
+  "target": "/private/tmp/tastetable-offline-81ba1ed0179c/installed",
+  "rollback": "/private/tmp/tastetable-offline-81ba1ed0179c/installed.rolled-back",
+  "files": {
+    "index.html": "feea13a997cf9e0b48885df934f5657034e7645b0bc5d9854d0ddfa866dbe898",
+    "app.mjs": "e1c8976816be2fcb4ccacbf914bfabb8ca384f88ac1255d2b74a57c2649cd046",
+    "catalogue.mjs": "63d4e75c7b08d12dc5fc78d3927baba88e2fabdd8eaa2996897efbd5698a8e0a",
+    "week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+    "style.css": "0d58ae4d0fef286374808eda0dc90b5e8249432a248b8332441738eb04dc0840",
+    "offline.css": "e13d985e9f8f4542ba0dbacfd2d7b30cfb76c02c2f224a10665666ccd0351d15",
+    "source-pin.json": "a25c636d8b067d85861439cccccbe5cfe76b190b3b5b17b8792fe18c685bdeda",
+    "README.md": "051c566f3e3a216c74b90afe57c9982730e829472a68b7d60930b4e8218e96f9",
+    "LICENSE": "23882b44a5d39c220ecb4dccdbef766635e3b610d5ef87904fe4133c6b6439ed",
+    "data/capture-receipt.json": "b02035ecacec4ef4cbaa281724a473a5677e2c5178576f0916d091eb839437b5",
+    "data/catalogue.json": "94be521e658225ff9a23b31834d03d620143943da2329bebefa0397cfa92b2f4",
+    "data/records/harold-0.json": "b5f3c156fb19720133d44e659d1574c6cc578c9bde0494c0894cf2c257a2dde9",
+    "data/records/harold-1.json": "a73589e78f281124d87b6a04252e5f51f87d24890a63433c141e5fd78e830dc6",
+    "data/records/harold-2.json": "85f3d6545397fd755169272ce663c4276d41d0950cc1c5ce4ccc8a4d97baebea",
+    "data/records/harold-3.json": "b3516927fc22497043cad9aa1950c4230e5ddd5a1963ec8f146b9b7807760196",
+    "data/records/harold-4.json": "893e48a5c0b6bd878667ba13b527a96c5c2b75388d35448f52724265406e3207",
+    "data/records/harold-5.json": "3102f18cba88a771bf1ec7a7520b11a9ac8c705f29be19a0c982a242566bf821",
+    "data/records/harold-6.json": "0cf8d290184089c169bcc23c6df0e2f7363af656fd97e7be26abb455d236367a",
+    "data/records/harold-7.json": "077ec4744f3fd4048509062e7e82a004b206503bc60ce6262e7167b36443a77d",
+    "data/records/mei-0.json": "e7be0110305ffcfa2ad999ed25f4d83fc577d8f5e2d4d02f784b660b25487963",
+    "data/records/mei-1.json": "102f39772f7df59e8946e623115f31f41c212326c0c879098f0b426ead9a0194",
+    "data/records/mei-2.json": "69bbddb9432c1253323818993f9afcd08594f24b445d34f383d63688b426f513",
+    "data/records/mei-3.json": "c4bd281510826ed7db60eb53cfb3e297f44f29bf8fc9a06ebd285d9b74366a18",
+    "data/records/mei-4.json": "255788cd15d330753b390da4565fbd816f76e555f9520a2655298baf122cb95a",
+    "data/records/mei-5.json": "19549bd36c6b4fae6d50551ed617a1db5a38e30de93217eba3e4c7b9409e0fef",
+    "data/records/mei-6.json": "d7f7a0cf74fe689a3da0a421a5adabd0992302e8cf579fb4034763c5fc62cf88",
+    "data/records/mei-7.json": "abab7e7bd6f34f808e33ea0532ba1091152473374d05152eebc66f939511b1c0",
+    "data/records/rosa-0.json": "341729d2aaaf469a4384f1da273d6bef532f40b889c98bc3b5845a2a3a4b4017",
+    "data/records/rosa-1.json": "4bb8231a614897b8c1dc898ad4d37cf2466f13d28b5e12c3243ad570c0909a3d",
+    "data/records/rosa-2.json": "9e00fee884e46aa6b4d4fad5c56c9cfcce973f2c8d3295ea5d9c33c6461e6b39",
+    "data/records/rosa-3.json": "164d40807bf2d1e0a43637d710472f22e36a06eeccd40be8622483c000dd55c5",
+    "data/records/rosa-4.json": "1e969a2e80015eb8cf3ea2003f7ea2c162b504ada2716c1cf28c93951db42e34",
+    "data/records/rosa-5.json": "d0f26d7a97fb809fef464d4fc26cc51e089424b1283f448a50931ab85b15ddf0",
+    "data/records/rosa-6.json": "c691e2c7af4bab96c5b9c497e80e179bb594ef15c1fa42ae46fff0004fceca62",
+    "data/records/rosa-7.json": "82a455386cca210d6824620893c0bffb8740b501f444004d7cadc3d8f2e00cfa"
+  },
+  "started_at": "2026-10-08T11:34:34.966967+00:00",
+  "http": [
+    {
+      "phase": "installed",
+      "path": "index.html",
+      "status": 200,
+      "sha256": "feea13a997cf9e0b48885df934f5657034e7645b0bc5d9854d0ddfa866dbe898"
+    },
+    {
+      "phase": "installed",
+      "path": "app.mjs",
+      "status": 200,
+      "sha256": "e1c8976816be2fcb4ccacbf914bfabb8ca384f88ac1255d2b74a57c2649cd046"
+    },
+    {
+      "phase": "installed",
+      "path": "catalogue.mjs",
+      "status": 200,
+      "sha256": "63d4e75c7b08d12dc5fc78d3927baba88e2fabdd8eaa2996897efbd5698a8e0a"
+    },
+    {
+      "phase": "installed",
+      "path": "week_plan.mjs",
+      "status": 200,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+    },
+    {
+      "phase": "installed",
+      "path": "style.css",
+      "status": 200,
+      "sha256": "0d58ae4d0fef286374808eda0dc90b5e8249432a248b8332441738eb04dc0840"
+    },
+    {
+      "phase": "installed",
+      "path": "offline.css",
+      "status": 200,
+      "sha256": "e13d985e9f8f4542ba0dbacfd2d7b30cfb76c02c2f224a10665666ccd0351d15"
+    },
+    {
+      "phase": "installed",
+      "path": "source-pin.json",
+      "status": 200,
+      "sha256": "a25c636d8b067d85861439cccccbe5cfe76b190b3b5b17b8792fe18c685bdeda"
+    },
+    {
+      "phase": "installed",
+      "path": "README.md",
+      "status": 200,
+      "sha256": "051c566f3e3a216c74b90afe57c9982730e829472a68b7d60930b4e8218e96f9"
+    },
+    {
+      "phase": "installed",
+      "path": "LICENSE",
+      "status": 200,
+      "sha256": "23882b44a5d39c220ecb4dccdbef766635e3b610d5ef87904fe4133c6b6439ed"
+    },
+    {
+      "phase": "installed",
+      "path": "data/capture-receipt.json",
+      "status": 200,
+      "sha256": "b02035ecacec4ef4cbaa281724a473a5677e2c5178576f0916d091eb839437b5"
+    },
+    {
+      "phase": "installed",
+      "path": "data/catalogue.json",
+      "status": 200,
+      "sha256": "94be521e658225ff9a23b31834d03d620143943da2329bebefa0397cfa92b2f4"
+    },
+    {
+      "phase": "installed",
+      "path": "data/records/harold-0.json",
+      "status": 200,
+      "sha256": "b5f3c156fb19720133d44e659d1574c6cc578c9bde0494c0894cf2c257a2dde9"
+    },
+    {
+      "phase": "installed",
+      "path": "data/records/harold-1.json",
+      "status": 200,
+      "sha256": "a73589e78f281124d87b6a04252e5f51f87d24890a63433c141e5fd78e830dc6"
+    },
+    {
+      "phase": "installed",
+      "path": "data/records/harold-2.json",
+      "status": 200,
+      "sha256": "85f3d6545397fd755169272ce663c4276d41d0950cc1c5ce4ccc8a4d97baebea"
+    },
+    {
+      "phase": "installed",
+      "path": "data/records/harold-3.json",
+      "status": 200,
+      "sha256": "b3516927fc22497043cad9aa1950c4230e5ddd5a1963ec8f146b9b7807760196"
+    },
+    {
+      "phase": "installed",
+      "path": "data/records/harold-4.json",
+      "status": 200,
+      "sha256": "893e48a5c0b6bd878667ba13b527a96c5c2b75388d35448f52724265406e3207"
+    },
+    {
+      "phase": "installed",
+      "path": "data/records/harold-5.json",
+      "status": 200,
+      "sha256": "3102f18cba88a771bf1ec7a7520b11a9ac8c705f29be19a0c982a242566bf821"
+    },
+    {
+      "phase": "installed",
+      "path": "data/records/harold-6.json",
+      "status": 200,
+      "sha256": "0cf8d290184089c169bcc23c6df0e2f7363af656fd97e7be26abb455d236367a"
+    },
+    {
+      "phase": "installed",
+      "path": "data/records/harold-7.json",
+      "status": 200,
+      "sha256": "077ec4744f3fd4048509062e7e82a004b206503bc60ce6262e7167b36443a77d"
+    },
+    {
+      "phase": "installed",
+      "path": "data/records/mei-0.json",
+      "status": 200,
+      "sha256": "e7be0110305ffcfa2ad999ed25f4d83fc577d8f5e2d4d02f784b660b25487963"
+    },
+    {
+      "phase": "installed",
+      "path": "data/records/mei-1.json",
+      "status": 200,
+      "sha256": "102f39772f7df59e8946e623115f31f41c212326c0c879098f0b426ead9a0194"
+    },
+    {
+      "phase": "installed",
+      "path": "data/records/mei-2.json",
+      "status": 200,
+      "sha256": "69bbddb9432c1253323818993f9afcd08594f24b445d34f383d63688b426f513"
+    },
+    {
+      "phase": "installed",
+      "path": "data/records/mei-3.json",
+      "status": 200,
+      "sha256": "c4bd281510826ed7db60eb53cfb3e297f44f29bf8fc9a06ebd285d9b74366a18"
+    },
+    {
+      "phase": "installed",
+      "path": "data/records/mei-4.json",
+      "status": 200,
+      "sha256": "255788cd15d330753b390da4565fbd816f76e555f9520a2655298baf122cb95a"
+    },
+    {
+      "phase": "installed",
+      "path": "data/records/mei-5.json",
+      "status": 200,
+      "sha256": "19549bd36c6b4fae6d50551ed617a1db5a38e30de93217eba3e4c7b9409e0fef"
+    },
+    {
+      "phase": "installed",
+      "path": "data/records/mei-6.json",
+      "status": 200,
+      "sha256": "d7f7a0cf74fe689a3da0a421a5adabd0992302e8cf579fb4034763c5fc62cf88"
+    },
+    {
+      "phase": "installed",
+      "path": "data/records/mei-7.json",
+      "status": 200,
+      "sha256": "abab7e7bd6f34f808e33ea0532ba1091152473374d05152eebc66f939511b1c0"
+    },
+    {
+      "phase": "installed",
+      "path": "data/records/rosa-0.json",
+      "status": 200,
+      "sha256": "341729d2aaaf469a4384f1da273d6bef532f40b889c98bc3b5845a2a3a4b4017"
+    },
+    {
+      "phase": "installed",
+      "path": "data/records/rosa-1.json",
+      "status": 200,
+      "sha256": "4bb8231a614897b8c1dc898ad4d37cf2466f13d28b5e12c3243ad570c0909a3d"
+    },
+    {
+      "phase": "installed",
+      "path": "data/records/rosa-2.json",
+      "status": 200,
+      "sha256": "9e00fee884e46aa6b4d4fad5c56c9cfcce973f2c8d3295ea5d9c33c6461e6b39"
+    },
+    {
+      "phase": "installed",
+      "path": "data/records/rosa-3.json",
+      "status": 200,
+      "sha256": "164d40807bf2d1e0a43637d710472f22e36a06eeccd40be8622483c000dd55c5"
+    },
+    {
+      "phase": "installed",
+      "path": "data/records/rosa-4.json",
+      "status": 200,
+      "sha256": "1e969a2e80015eb8cf3ea2003f7ea2c162b504ada2716c1cf28c93951db42e34"
+    },
+    {
+      "phase": "installed",
+      "path": "data/records/rosa-5.json",
+      "status": 200,
+      "sha256": "d0f26d7a97fb809fef464d4fc26cc51e089424b1283f448a50931ab85b15ddf0"
+    },
+    {
+      "phase": "installed",
+      "path": "data/records/rosa-6.json",
+      "status": 200,
+      "sha256": "c691e2c7af4bab96c5b9c497e80e179bb594ef15c1fa42ae46fff0004fceca62"
+    },
+    {
+      "phase": "installed",
+      "path": "data/records/rosa-7.json",
+      "status": 200,
+      "sha256": "82a455386cca210d6824620893c0bffb8740b501f444004d7cadc3d8f2e00cfa"
+    },
+    {
+      "phase": "restored",
+      "path": "index.html",
+      "status": 200,
+      "sha256": "feea13a997cf9e0b48885df934f5657034e7645b0bc5d9854d0ddfa866dbe898"
+    },
+    {
+      "phase": "restored",
+      "path": "app.mjs",
+      "status": 200,
+      "sha256": "e1c8976816be2fcb4ccacbf914bfabb8ca384f88ac1255d2b74a57c2649cd046"
+    },
+    {
+      "phase": "restored",
+      "path": "catalogue.mjs",
+      "status": 200,
+      "sha256": "63d4e75c7b08d12dc5fc78d3927baba88e2fabdd8eaa2996897efbd5698a8e0a"
+    },
+    {
+      "phase": "restored",
+      "path": "week_plan.mjs",
+      "status": 200,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+    },
+    {
+      "phase": "restored",
+      "path": "style.css",
+      "status": 200,
+      "sha256": "0d58ae4d0fef286374808eda0dc90b5e8249432a248b8332441738eb04dc0840"
+    },
+    {
+      "phase": "restored",
+      "path": "offline.css",
+      "status": 200,
+      "sha256": "e13d985e9f8f4542ba0dbacfd2d7b30cfb76c02c2f224a10665666ccd0351d15"
+    },
+    {
+      "phase": "restored",
+      "path": "source-pin.json",
+      "status": 200,
+      "sha256": "a25c636d8b067d85861439cccccbe5cfe76b190b3b5b17b8792fe18c685bdeda"
+    },
+    {
+      "phase": "restored",
+      "path": "README.md",
+      "status": 200,
+      "sha256": "051c566f3e3a216c74b90afe57c9982730e829472a68b7d60930b4e8218e96f9"
+    },
+    {
+      "phase": "restored",
+      "path": "LICENSE",
+      "status": 200,
+      "sha256": "23882b44a5d39c220ecb4dccdbef766635e3b610d5ef87904fe4133c6b6439ed"
+    },
+    {
+      "phase": "restored",
+      "path": "data/capture-receipt.json",
+      "status": 200,
+      "sha256": "b02035ecacec4ef4cbaa281724a473a5677e2c5178576f0916d091eb839437b5"
+    },
+    {
+      "phase": "restored",
+      "path": "data/catalogue.json",
+      "status": 200,
+      "sha256": "94be521e658225ff9a23b31834d03d620143943da2329bebefa0397cfa92b2f4"
+    },
+    {
+      "phase": "restored",
+      "path": "data/records/harold-0.json",
+      "status": 200,
+      "sha256": "b5f3c156fb19720133d44e659d1574c6cc578c9bde0494c0894cf2c257a2dde9"
+    },
+    {
+      "phase": "restored",
+      "path": "data/records/harold-1.json",
+      "status": 200,
+      "sha256": "a73589e78f281124d87b6a04252e5f51f87d24890a63433c141e5fd78e830dc6"
+    },
+    {
+      "phase": "restored",
+      "path": "data/records/harold-2.json",
+      "status": 200,
+      "sha256": "85f3d6545397fd755169272ce663c4276d41d0950cc1c5ce4ccc8a4d97baebea"
+    },
+    {
+      "phase": "restored",
+      "path": "data/records/harold-3.json",
+      "status": 200,
+      "sha256": "b3516927fc22497043cad9aa1950c4230e5ddd5a1963ec8f146b9b7807760196"
+    },
+    {
+      "phase": "restored",
+      "path": "data/records/harold-4.json",
+      "status": 200,
+      "sha256": "893e48a5c0b6bd878667ba13b527a96c5c2b75388d35448f52724265406e3207"
+    },
+    {
+      "phase": "restored",
+      "path": "data/records/harold-5.json",
+      "status": 200,
+      "sha256": "3102f18cba88a771bf1ec7a7520b11a9ac8c705f29be19a0c982a242566bf821"
+    },
+    {
+      "phase": "restored",
+      "path": "data/records/harold-6.json",
+      "status": 200,
+      "sha256": "0cf8d290184089c169bcc23c6df0e2f7363af656fd97e7be26abb455d236367a"
+    },
+    {
+      "phase": "restored",
+      "path": "data/records/harold-7.json",
+      "status": 200,
+      "sha256": "077ec4744f3fd4048509062e7e82a004b206503bc60ce6262e7167b36443a77d"
+    },
+    {
+      "phase": "restored",
+      "path": "data/records/mei-0.json",
+      "status": 200,
+      "sha256": "e7be0110305ffcfa2ad999ed25f4d83fc577d8f5e2d4d02f784b660b25487963"
+    },
+    {
+      "phase": "restored",
+      "path": "data/records/mei-1.json",
+      "status": 200,
+      "sha256": "102f39772f7df59e8946e623115f31f41c212326c0c879098f0b426ead9a0194"
+    },
+    {
+      "phase": "restored",
+      "path": "data/records/mei-2.json",
+      "status": 200,
+      "sha256": "69bbddb9432c1253323818993f9afcd08594f24b445d34f383d63688b426f513"
+    },
+    {
+      "phase": "restored",
+      "path": "data/records/mei-3.json",
+      "status": 200,
+      "sha256": "c4bd281510826ed7db60eb53cfb3e297f44f29bf8fc9a06ebd285d9b74366a18"
+    },
+    {
+      "phase": "restored",
+      "path": "data/records/mei-4.json",
+      "status": 200,
+      "sha256": "255788cd15d330753b390da4565fbd816f76e555f9520a2655298baf122cb95a"
+    },
+    {
+      "phase": "restored",
+      "path": "data/records/mei-5.json",
+      "status": 200,
+      "sha256": "19549bd36c6b4fae6d50551ed617a1db5a38e30de93217eba3e4c7b9409e0fef"
+    },
+    {
+      "phase": "restored",
+      "path": "data/records/mei-6.json",
+      "status": 200,
+      "sha256": "d7f7a0cf74fe689a3da0a421a5adabd0992302e8cf579fb4034763c5fc62cf88"
+    },
+    {
+      "phase": "restored",
+      "path": "data/records/mei-7.json",
+      "status": 200,
+      "sha256": "abab7e7bd6f34f808e33ea0532ba1091152473374d05152eebc66f939511b1c0"
+    },
+    {
+      "phase": "restored",
+      "path": "data/records/rosa-0.json",
+      "status": 200,
+      "sha256": "341729d2aaaf469a4384f1da273d6bef532f40b889c98bc3b5845a2a3a4b4017"
+    },
+    {
+      "phase": "restored",
+      "path": "data/records/rosa-1.json",
+      "status": 200,
+      "sha256": "4bb8231a614897b8c1dc898ad4d37cf2466f13d28b5e12c3243ad570c0909a3d"
+    },
+    {
+      "phase": "restored",
+      "path": "data/records/rosa-2.json",
+      "status": 200,
+      "sha256": "9e00fee884e46aa6b4d4fad5c56c9cfcce973f2c8d3295ea5d9c33c6461e6b39"
+    },
+    {
+      "phase": "restored",
+      "path": "data/records/rosa-3.json",
+      "status": 200,
+      "sha256": "164d40807bf2d1e0a43637d710472f22e36a06eeccd40be8622483c000dd55c5"
+    },
+    {
+      "phase": "restored",
+      "path": "data/records/rosa-4.json",
+      "status": 200,
+      "sha256": "1e969a2e80015eb8cf3ea2003f7ea2c162b504ada2716c1cf28c93951db42e34"
+    },
+    {
+      "phase": "restored",
+      "path": "data/records/rosa-5.json",
+      "status": 200,
+      "sha256": "d0f26d7a97fb809fef464d4fc26cc51e089424b1283f448a50931ab85b15ddf0"
+    },
+    {
+      "phase": "restored",
+      "path": "data/records/rosa-6.json",
+      "status": 200,
+      "sha256": "c691e2c7af4bab96c5b9c497e80e179bb594ef15c1fa42ae46fff0004fceca62"
+    },
+    {
+      "phase": "restored",
+      "path": "data/records/rosa-7.json",
+      "status": 200,
+      "sha256": "82a455386cca210d6824620893c0bffb8740b501f444004d7cadc3d8f2e00cfa"
+    }
+  ],
+  "complete": true,
+  "rollback_http_status": 404,
+  "finished_at": "2026-10-08T11:34:35.557908+00:00"
+}

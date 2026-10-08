@@ -1,0 +1,590 @@
+{
+  "key": "mei-5",
+  "profile_id": "mei",
+  "constraint_mask": 5,
+  "constraints": [
+    "soft_foods",
+    "wheelchair"
+  ],
+  "response": {
+    "plan": {
+      "meals": [
+        {
+          "day": "Monday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-11",
+          "name": "Trattoria Nonna Lucia",
+          "affinity": 0.92,
+          "fallback": false,
+          "why": "Qloo affinity 0.92 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Italian). Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        },
+        {
+          "day": "Wednesday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-09",
+          "name": "Kotobuki Tofu House",
+          "affinity": 0.82,
+          "fallback": false,
+          "why": "Qloo affinity 0.82 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Japanese). Checks: Soft foods: pass (soft options listed: chawanmushi, steamed fish, tofu); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        },
+        {
+          "day": "Friday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-10",
+          "name": "Ramen Tatsu",
+          "affinity": 0.79,
+          "fallback": false,
+          "why": "Qloo affinity 0.79 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Japanese). Checks: Soft foods: unknown (no texture signal in Qloo keywords; ask the venue); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        },
+        {
+          "day": "Sunday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-07",
+          "name": "Blue Plate Diner",
+          "affinity": 0.61,
+          "fallback": true,
+          "why": "Qloo affinity 0.61 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Diner). Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, mashed potatoes, soups); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        }
+      ],
+      "outing": {
+        "day": "Saturday",
+        "kind": "outing",
+        "entity_id": "FIX-V-02",
+        "name": "Rialto Revival Cinema (fictional)",
+        "affinity": 0.95,
+        "why": "Qloo affinity 0.95 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Movie Theater). Checks: Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+      },
+      "rejected": [
+        {
+          "name": "Salumeria Roma",
+          "entity_id": "FIX-P-12",
+          "failed": [
+            {
+              "constraint": "soft_foods",
+              "status": "fail",
+              "reason": "menu signals are mostly firm: crusty bread, cured meats"
+            },
+            {
+              "constraint": "wheelchair",
+              "status": "unknown",
+              "reason": "no accessibility tag in Qloo data"
+            }
+          ]
+        },
+        {
+          "name": "Osteria del Ponte",
+          "entity_id": "FIX-P-13",
+          "failed": [
+            {
+              "constraint": "wheelchair",
+              "status": "fail",
+              "reason": "tagged 'steps at entrance'"
+            }
+          ]
+        },
+        {
+          "name": "Starlight Grill",
+          "entity_id": "FIX-P-08",
+          "failed": [
+            {
+              "constraint": "soft_foods",
+              "status": "fail",
+              "reason": "menu signals are mostly firm: burgers, fried chicken"
+            },
+            {
+              "constraint": "wheelchair",
+              "status": "fail",
+              "reason": "tagged 'steps at entrance'"
+            }
+          ]
+        },
+        {
+          "name": "Colorado Street Concert Hall (fictional)",
+          "entity_id": "FIX-V-04",
+          "failed": [
+            {
+              "constraint": "wheelchair",
+              "status": "fail",
+              "reason": "tagged 'steps at entrance'"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    "llm_only": {
+      "meals": [
+        {
+          "day": "Monday",
+          "name": "A well-reviewed Japanese restaurant nearby",
+          "why": "They enjoy Japanese food.",
+          "verified": {
+            "exists": false,
+            "entity_id": null,
+            "constraints_checked": false
+          }
+        },
+        {
+          "day": "Wednesday",
+          "name": "A well-reviewed Italian restaurant nearby",
+          "why": "They enjoy Italian food.",
+          "verified": {
+            "exists": false,
+            "entity_id": null,
+            "constraints_checked": false
+          }
+        },
+        {
+          "day": "Friday",
+          "name": "A well-reviewed Japanese restaurant nearby",
+          "why": "They enjoy Japanese food.",
+          "verified": {
+            "exists": false,
+            "entity_id": null,
+            "constraints_checked": false
+          }
+        },
+        {
+          "day": "Sunday",
+          "name": "A well-reviewed Italian restaurant nearby",
+          "why": "They enjoy Italian food.",
+          "verified": {
+            "exists": false,
+            "entity_id": null,
+            "constraints_checked": false
+          }
+        }
+      ],
+      "outing": {
+        "day": "Saturday",
+        "name": "A concert or show featuring music like The Beatles",
+        "why": "Matches their music taste.",
+        "verified": {
+          "exists": false,
+          "entity_id": null,
+          "constraints_checked": false
+        }
+      },
+      "source": "template (ungrounded baseline)"
+    },
+    "comparison": {
+      "grounded": {
+        "picks": 5,
+        "with_qloo_entity_id": 5,
+        "with_affinity_evidence": 5,
+        "constraint_checked": 5,
+        "unsafe_candidates_rejected": 4
+      },
+      "llm_only": {
+        "picks": 5,
+        "with_qloo_entity_id": 0,
+        "with_affinity_evidence": 0,
+        "constraint_checked": 0,
+        "unsafe_candidates_rejected": 0
+      },
+      "constraints": [
+        "soft_foods",
+        "wheelchair"
+      ]
+    },
+    "trace": [
+      {
+        "step": 0,
+        "tool": "qloo_search",
+        "args": {
+          "query": "The Beatles",
+          "kind": "entity",
+          "types": "urn:entity:artist"
+        },
+        "result_summary": "The Beatles"
+      },
+      {
+        "step": 0,
+        "tool": "qloo_search",
+        "args": {
+          "query": "Roman Holiday",
+          "kind": "entity",
+          "types": "urn:entity:movie"
+        },
+        "result_summary": "Roman Holiday"
+      },
+      {
+        "step": 0,
+        "tool": "qloo_search",
+        "args": {
+          "query": "Singin' in the Rain",
+          "kind": "entity",
+          "types": "urn:entity:movie"
+        },
+        "result_summary": "Singin' in the Rain"
+      },
+      {
+        "step": 0,
+        "tool": "qloo_search",
+        "args": {
+          "query": "Japanese",
+          "kind": "tag"
+        },
+        "result_summary": "Japanese"
+      },
+      {
+        "step": 0,
+        "tool": "qloo_search",
+        "args": {
+          "query": "Italian",
+          "kind": "tag"
+        },
+        "result_summary": "Italian"
+      },
+      {
+        "step": 1,
+        "tool": "qloo_recs",
+        "args": {
+          "filter_type": "urn:entity:place",
+          "purpose": "restaurant",
+          "tag_ids": [
+            "urn:tag:genre:restaurant:Japanese",
+            "urn:tag:genre:restaurant:Italian"
+          ],
+          "signal_entity_ids": [
+            "FIX-A-beatles",
+            "FIX-M-roman",
+            "FIX-M-singin"
+          ],
+          "location": "Pasadena",
+          "take": 10
+        },
+        "result_summary": "5 candidates"
+      },
+      {
+        "step": 2,
+        "tool": "constraint_check",
+        "args": {
+          "entity_ids": [
+            "FIX-P-11",
+            "FIX-P-12",
+            "FIX-P-09",
+            "FIX-P-13",
+            "FIX-P-10"
+          ],
+          "constraints": [
+            "soft_foods",
+            "wheelchair"
+          ],
+          "kind": "restaurant"
+        },
+        "result_summary": "3/5 passed"
+      },
+      {
+        "step": 3,
+        "tool": "qloo_search",
+        "args": {
+          "query": "Diner",
+          "kind": "tag"
+        },
+        "result_summary": "Diner"
+      },
+      {
+        "step": 4,
+        "tool": "qloo_recs",
+        "args": {
+          "filter_type": "urn:entity:place",
+          "purpose": "restaurant",
+          "tag_ids": [
+            "urn:tag:genre:restaurant:Diner"
+          ],
+          "signal_entity_ids": [
+            "FIX-A-beatles",
+            "FIX-M-roman",
+            "FIX-M-singin"
+          ],
+          "location": "Pasadena",
+          "take": 10
+        },
+        "result_summary": "2 candidates"
+      },
+      {
+        "step": 5,
+        "tool": "constraint_check",
+        "args": {
+          "entity_ids": [
+            "FIX-P-07",
+            "FIX-P-08"
+          ],
+          "constraints": [
+            "soft_foods",
+            "wheelchair"
+          ],
+          "kind": "restaurant"
+        },
+        "result_summary": "1/2 passed"
+      },
+      {
+        "step": 6,
+        "tool": "qloo_search",
+        "args": {
+          "query": "jazz",
+          "kind": "tag"
+        },
+        "result_summary": "Jazz Club"
+      },
+      {
+        "step": 6,
+        "tool": "qloo_search",
+        "args": {
+          "query": "cinema",
+          "kind": "tag"
+        },
+        "result_summary": "Movie Theater"
+      },
+      {
+        "step": 6,
+        "tool": "qloo_search",
+        "args": {
+          "query": "museum",
+          "kind": "tag"
+        },
+        "result_summary": "Museum"
+      },
+      {
+        "step": 6,
+        "tool": "qloo_search",
+        "args": {
+          "query": "concert hall",
+          "kind": "tag"
+        },
+        "result_summary": "Concert Hall"
+      },
+      {
+        "step": 7,
+        "tool": "qloo_recs",
+        "args": {
+          "filter_type": "urn:entity:place",
+          "purpose": "outing",
+          "tag_ids": [
+            "urn:tag:category:place:jazz_club",
+            "urn:tag:category:place:movie_theater",
+            "urn:tag:category:place:museum",
+            "urn:tag:category:place:concert_hall"
+          ],
+          "signal_entity_ids": [
+            "FIX-A-beatles",
+            "FIX-M-roman",
+            "FIX-M-singin"
+          ],
+          "location": "Pasadena",
+          "take": 5
+        },
+        "result_summary": "5 candidates"
+      },
+      {
+        "step": 8,
+        "tool": "constraint_check",
+        "args": {
+          "entity_ids": [
+            "FIX-V-02",
+            "FIX-V-04",
+            "FIX-V-05",
+            "FIX-V-01",
+            "FIX-V-03"
+          ],
+          "constraints": [
+            "soft_foods",
+            "wheelchair"
+          ],
+          "kind": "outing"
+        },
+        "result_summary": "4/5 passed"
+      }
+    ],
+    "model_message": "Plan inputs gathered; assembling weekly plan from tool results.",
+    "mock": true
+  },
+  "pick_verdicts": [
+    {
+      "entity_id": "FIX-P-11",
+      "name": "Trattoria Nonna Lucia",
+      "ok": true,
+      "checks": [
+        {
+          "constraint": "soft_foods",
+          "status": "pass",
+          "reason": "soft options listed: made to order, polenta, risotto"
+        },
+        {
+          "constraint": "wheelchair",
+          "status": "pass",
+          "reason": "tagged 'wheelchair accessible entrance'"
+        }
+      ]
+    },
+    {
+      "entity_id": "FIX-P-09",
+      "name": "Kotobuki Tofu House",
+      "ok": true,
+      "checks": [
+        {
+          "constraint": "soft_foods",
+          "status": "pass",
+          "reason": "soft options listed: chawanmushi, steamed fish, tofu"
+        },
+        {
+          "constraint": "wheelchair",
+          "status": "pass",
+          "reason": "tagged 'wheelchair accessible entrance'"
+        }
+      ]
+    },
+    {
+      "entity_id": "FIX-P-10",
+      "name": "Ramen Tatsu",
+      "ok": true,
+      "checks": [
+        {
+          "constraint": "soft_foods",
+          "status": "unknown",
+          "reason": "no texture signal in Qloo keywords; ask the venue"
+        },
+        {
+          "constraint": "wheelchair",
+          "status": "pass",
+          "reason": "tagged 'wheelchair accessible entrance'"
+        }
+      ]
+    },
+    {
+      "entity_id": "FIX-P-07",
+      "name": "Blue Plate Diner",
+      "ok": true,
+      "checks": [
+        {
+          "constraint": "soft_foods",
+          "status": "pass",
+          "reason": "soft options listed: made to order, mashed potatoes, soups"
+        },
+        {
+          "constraint": "wheelchair",
+          "status": "pass",
+          "reason": "tagged 'wheelchair accessible entrance'"
+        }
+      ]
+    },
+    {
+      "entity_id": "FIX-V-02",
+      "name": "Rialto Revival Cinema (fictional)",
+      "ok": true,
+      "checks": [
+        {
+          "constraint": "wheelchair",
+          "status": "pass",
+          "reason": "tagged 'wheelchair accessible entrance'"
+        }
+      ]
+    }
+  ],
+  "fixture_calls": [
+    {
+      "path": "/search",
+      "params": {
+        "query": "The Beatles",
+        "take": 3,
+        "types": "urn:entity:artist"
+      }
+    },
+    {
+      "path": "/search",
+      "params": {
+        "query": "Roman Holiday",
+        "take": 3,
+        "types": "urn:entity:movie"
+      }
+    },
+    {
+      "path": "/search",
+      "params": {
+        "query": "Singin' in the Rain",
+        "take": 3,
+        "types": "urn:entity:movie"
+      }
+    },
+    {
+      "path": "/v2/tags",
+      "params": {
+        "filter.query": "Japanese",
+        "take": 3
+      }
+    },
+    {
+      "path": "/v2/tags",
+      "params": {
+        "filter.query": "Italian",
+        "take": 3
+      }
+    },
+    {
+      "path": "/v2/insights",
+      "params": {
+        "filter.type": "urn:entity:place",
+        "take": 10,
+        "signal.interests.entities": "FIX-A-beatles,FIX-M-roman,FIX-M-singin",
+        "filter.tags": "urn:tag:genre:restaurant:Japanese,urn:tag:genre:restaurant:Italian",
+        "filter.location.query": "Pasadena"
+      }
+    },
+    {
+      "path": "/v2/tags",
+      "params": {
+        "filter.query": "Diner",
+        "take": 3
+      }
+    },
+    {
+      "path": "/v2/insights",
+      "params": {
+        "filter.type": "urn:entity:place",
+        "take": 10,
+        "signal.interests.entities": "FIX-A-beatles,FIX-M-roman,FIX-M-singin",
+        "filter.tags": "urn:tag:genre:restaurant:Diner",
+        "filter.location.query": "Pasadena"
+      }
+    },
+    {
+      "path": "/v2/tags",
+      "params": {
+        "filter.query": "jazz",
+        "take": 3
+      }
+    },
+    {
+      "path": "/v2/tags",
+      "params": {
+        "filter.query": "cinema",
+        "take": 3
+      }
+    },
+    {
+      "path": "/v2/tags",
+      "params": {
+        "filter.query": "museum",
+        "take": 3
+      }
+    },
+    {
+      "path": "/v2/tags",
+      "params": {
+        "filter.query": "concert hall",
+        "take": 3
+      }
+    },
+    {
+      "path": "/v2/insights",
+      "params": {
+        "filter.type": "urn:entity:place",
+        "take": 5,
+        "signal.interests.entities": "FIX-A-beatles,FIX-M-roman,FIX-M-singin",
+        "filter.tags": "urn:tag:category:place:jazz_club,urn:tag:category:place:movie_theater,urn:tag:category:place:museum,urn:tag:category:place:concert_hall",
+        "filter.location.query": "Pasadena"
+      }
+    }
+  ]
+}

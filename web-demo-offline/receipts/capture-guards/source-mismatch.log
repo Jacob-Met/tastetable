@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/tmp/tastetable-offline-81ba1ed0179c/source/web-demo-offline/tools/capture_catalogue.py", line 126, in <module>
+    print(json.dumps(capture(args.source_root, args.output), ensure_ascii=False))
+                     ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tastetable-offline-81ba1ed0179c/source/web-demo-offline/tools/capture_catalogue.py", line 44, in capture
+    before = verify_source(source_root, pin)
+  File "/tmp/tastetable-offline-81ba1ed0179c/source/web-demo-offline/tools/capture_catalogue.py", line 29, in verify_source
+    raise ValueError(f"Source pin mismatch: {entry['path']}")
+ValueError: Source pin mismatch: agent.py
