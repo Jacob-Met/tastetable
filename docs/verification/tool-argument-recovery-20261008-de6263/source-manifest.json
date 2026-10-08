@@ -1,0 +1,305 @@
+{
+  "repository": "Jacob-Met/tastetable",
+  "original_upstream_parent": "8fdd78dbd1bd7e72385b2f5bd684e02b0971fa14",
+  "publication_parent": "9f9105c29ab1a68a501b5f4c0b7180f0db968d38",
+  "publication_parent_tree": "778b466e70b3d69f28dc49f574cb7002adf45c29",
+  "frozen_local_commit": "ae8ae9b27737ce025ed68f4f8d7280929bd34c96",
+  "local_commit_note": "The review pin belongs to the isolated reconstructed checkout; publication creates a new commit on the genuine current GitHub parent. File hashes bind the reviewed content.",
+  "changed_source": [
+    {
+      "path": "agent.py",
+      "bytes": 25053,
+      "sha256": "5366635d101cb7010e6ad3586de9a8d76f222b98118cbc5c4bf73ea11b58a903",
+      "git_blob": "1d8bfd5a300c1d4824dc895b324e7d0cfb096058"
+    },
+    {
+      "path": "tests/test_tool_argument_recovery.py",
+      "bytes": 12775,
+      "sha256": "a7a7eb8942970622eae8904cfd1145a0405aa0e404987afd24f1eb0d9b15e374",
+      "git_blob": "9e3274bf610a5a7195c30fbe5c6942893b16a64c"
+    }
+  ],
+  "parent_leaves": [
+    {
+      "path": ".dockerignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7bd83dbf601064e93411e55fa40047a7faa62e76",
+      "size": 43
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e6273139a9bf417a4ee42f4501d067b1c9d95a0",
+      "size": 652
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abec94fd25b2bf8bf714b7ea3b37ae36cf5b6891",
+      "size": 46
+    },
+    {
+      "path": "Dockerfile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79cad53cfa5f3d02abf7717773dd8ddbe1e1c6a4",
+      "size": 306
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3757eabcdbaee0b03b44aad0a7c01ff8c5ada81b",
+      "size": 1076
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4927123d731b742094c08b2a90ad66188bbaadaf",
+      "size": 9463
+    },
+    {
+      "path": "agent.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15ae2c26dd14a8eec43dc328e87d6f12c8d460d2",
+      "size": 23754
+    },
+    {
+      "path": "app.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c2f1524e62c74db21fdbcc69faec643903c23b8",
+      "size": 2343
+    },
+    {
+      "path": "constraints.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53138a106455cc3fa40d812d1ade3c60fcbbb916",
+      "size": 4451
+    },
+    {
+      "path": "docs/caregiver-week/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0560361c7745ff81be5aef07994023105268c1a4",
+      "size": 8015
+    },
+    {
+      "path": "docs/caregiver-week/REPLAY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6658d6f9240ef9840a177738d639f98868a4820d",
+      "size": 5684
+    },
+    {
+      "path": "docs/caregiver-week/author-node-tests.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "427435e7c292a7121c2b1fe21cba1ba3105b0ef3",
+      "size": 1024
+    },
+    {
+      "path": "docs/caregiver-week/author-python-regression.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66b1c135223604ec794149fc8f4f271767bfbd0a",
+      "size": 113
+    },
+    {
+      "path": "docs/caregiver-week/browser-final.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c52f5d884678a8b5e7450b7278486d56134f2ad",
+      "size": 9503
+    },
+    {
+      "path": "docs/caregiver-week/candidate_manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c644110c11ca43c56942af3b00896a797ef3476",
+      "size": 1504
+    },
+    {
+      "path": "docs/caregiver-week/composition-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51b553207affd33a569679a2abbe832a4e8b9164",
+      "size": 9626
+    },
+    {
+      "path": "docs/caregiver-week/evidence/archive-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "854e399612430dd795ec884b62ed2a934106f4c9",
+      "size": 9219
+    },
+    {
+      "path": "docs/caregiver-week/evidence/raw-reviews.tar.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "149cd4c4690518c133b66704adc8a2feda07ff03",
+      "size": 366051
+    },
+    {
+      "path": "docs/caregiver-week/independent-REVIEW.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5725d2a859e44ccfe1ef487fa89b0a96352b8a08",
+      "size": 6183
+    },
+    {
+      "path": "docs/caregiver-week/independent-review-run.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6acdf0a4ff660f600a6c5bcb0bd5cc2d42bfd187",
+      "size": 352
+    },
+    {
+      "path": "docs/caregiver-week/independent-review.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f39b2ed1aba4dc44fdb1bd020c2d132b6d3665c1",
+      "size": 1373
+    },
+    {
+      "path": "docs/caregiver-week/publication-files.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eab69d85b81b9f2c9ba963e1e37fcfc9ad7651f7",
+      "size": 8470
+    },
+    {
+      "path": "docs/caregiver-week/receiving-native-fixtures.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40963b45b99517218f11f118a521ef8408dac404",
+      "size": 38964
+    },
+    {
+      "path": "docs/caregiver-week/receiving-source.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b718a30a4089fdf677f2b31f15ca2a13925ed905",
+      "size": 8418
+    },
+    {
+      "path": "docs/verification/constraint-binding-20261008.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b0f2877d7a22d655d4e3a4b5194c5054535c6bf",
+      "size": 7007
+    },
+    {
+      "path": "fixtures/qloo_fixtures.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60c5d92f905755454bb280b8181f8836a74bd955",
+      "size": 21190
+    },
+    {
+      "path": "personas.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1eb6768780cafaf9b1666e39b7fc17aa21204f16",
+      "size": 1247
+    },
+    {
+      "path": "qloo_client.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cca322e0c9af96c481ba8f7ef286e85d3b90cfd2",
+      "size": 12206
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2fa2b085ecd75cc196fa8a02ddb54e1728c0b23",
+      "size": 74
+    },
+    {
+      "path": "scripts/build_fixtures.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb06538576362d80ca67bedc33c73a92379533b1",
+      "size": 7227
+    },
+    {
+      "path": "static/app.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fab0cb5398d3e6553373a99d9d56afa92f2bfcbb",
+      "size": 9250
+    },
+    {
+      "path": "static/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1350d9500b0d5d90ac0e040885de5c4f0d4b497d",
+      "size": 4559
+    },
+    {
+      "path": "static/style.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b47c49cc6b502a8e6dedc8d02fa1cadb1241dc1d",
+      "size": 5046
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "size": 3913
+    },
+    {
+      "path": "tests/test_constraint_binding.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee385279cd2f803f92bcfe251741aa491c84afa3",
+      "size": 12500
+    },
+    {
+      "path": "tests/test_model_selection.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a98c1a173ff9026716be973aa3efa2dc8f3e0d42",
+      "size": 4333
+    },
+    {
+      "path": "tests/test_recommendation_purpose.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4425c22e8213a1816d6580093f9c04048caa23b0",
+      "size": 3599
+    },
+    {
+      "path": "tests/test_tastetable.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6731e2c560a921074f034057404ce9bdd81e6ac",
+      "size": 8240
+    },
+    {
+      "path": "tests/test_tool_error_continuation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65401ab730cd3a604c2deafc7fed17a8e85aa70d",
+      "size": 4186
+    },
+    {
+      "path": "tests/test_week_plan.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5808a2279c5ad23fd0aac2308f9e546fa03ca6a9",
+      "size": 7606
+    }
+  ],
+  "preservation": "Only agent.py changes among the 40 existing parent blobs; the new test and this unique verification directory are additions. Every other parent blob and mode must remain identical."
+}

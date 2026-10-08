@@ -31,6 +31,7 @@ OUTING_DAY = "Saturday"
 FALLBACK_CUISINES = ["Diner", "Italian", "Japanese"]  # broad, soft-food-friendly
 VENUE_CONCEPTS = ["jazz", "cinema", "museum", "concert hall"]
 MAX_STEPS = 12
+MAX_TRACE_DEPTH = 32
 
 TOOLS = [
     {"type": "function", "function": {
@@ -434,10 +435,17 @@ def run_agent(persona: dict, qloo: Optional[QlooClient] = None, model=None,
             final_text = msg.get("content") or ""
             break
         for tc in calls:
-            args = json.loads(tc["function"]["arguments"] or "{}")
-            result = tools.run(tc["function"]["name"], args)
-            state.trace.append({"step": step, "tool": tc["function"]["name"], "args": args,
-                                "result_summary": _summ(result)})
+            args = None
+            try:
+                args = json.loads(tc["function"]["arguments"] or "{}")
+            except (ValueError, TypeError, RecursionError) as error:
+                # Keep parser failures on the same model-visible error path as
+                # tool failures. An undecoded call must never be dispatched.
+                result = {"error": f"{type(error).__name__}: {error}"}
+            else:
+                result = tools.run(tc["function"]["name"], args)
+            state.trace.append({"step": step, "tool": _trace_text(tc["function"]["name"]),
+                                "args": _trace_args(args), "result_summary": _trace_text(_summ(result))})
             messages.append({"role": "tool", "tool_call_id": tc["id"],
                              "content": json.dumps(result)})
     plan = assemble_plan(state)
@@ -445,6 +453,27 @@ def run_agent(persona: dict, qloo: Optional[QlooClient] = None, model=None,
     return {"plan": plan, "llm_only": baseline,
             "comparison": compare(plan, baseline, taste_only["constraints"]),
             "trace": state.trace, "model_message": final_text, "mock": qloo.is_mock}
+
+
+def _trace_args(args: Any) -> Any:
+    """Keep diagnostic previews serializable without changing tool arguments."""
+    pending = [(args, 0)]
+    while pending:
+        value, depth = pending.pop()
+        if isinstance(value, (dict, list)):
+            if depth >= MAX_TRACE_DEPTH:
+                return {"trace_omitted": "argument nesting exceeds the diagnostic preview limit"}
+            children = value.values() if isinstance(value, dict) else value
+            pending.extend((child, depth + 1) for child in children)
+    try:
+        json.dumps(args, ensure_ascii=False, allow_nan=False).encode("utf-8")
+    except (ValueError, TypeError, RecursionError):
+        return {"trace_omitted": "arguments cannot be rendered as UTF-8 JSON"}
+    return args
+
+
+def _trace_text(value: str) -> str:
+    return value.encode("utf-8", errors="backslashreplace").decode("utf-8")
 
 
 def _summ(result: dict) -> str:

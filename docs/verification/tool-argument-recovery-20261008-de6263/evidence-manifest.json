@@ -1,0 +1,285 @@
+{
+  "archive": {
+    "path": "evidence.tar.gz",
+    "bytes": 72617,
+    "sha256": "9578f4cd5109aaac48c57fe803e3e1380b0462bc0d9e89241928c40811d06d21"
+  },
+  "artifacts": [
+    {
+      "path": "author/complete-composition-source.json",
+      "bytes": 1648,
+      "sha256": "fffb0abe15002c6e95c9e151f685ae51148bf836c9b82fcd975b29d38752625b",
+      "original_path": "/dev/shm/tastetable-argument-evidence-de6263/complete-composition-source.json"
+    },
+    {
+      "path": "author/complete-composition.stdout.log",
+      "bytes": 146,
+      "sha256": "56d8b6fc0cf1ef69d41030237173002861e498bbb41ad07a75ae8c0fd57eff79",
+      "original_path": "/dev/shm/tastetable-argument-evidence-de6263/complete-composition.stdout.log"
+    },
+    {
+      "path": "author/complete-normal.stderr.log",
+      "bytes": 2009,
+      "sha256": "e1915b248a3ce7c1c21c7206a6f6576b1595e23e9ed55dfccd79f8e342208ee4",
+      "original_path": "/dev/shm/tastetable-argument-evidence-de6263/complete-normal.stderr.log"
+    },
+    {
+      "path": "author/complete-optimized.stderr.log",
+      "bytes": 2009,
+      "sha256": "96e5bb809a56c5edee054a14c85973dc127a4da2497736cfb1b33cf831432eab",
+      "original_path": "/dev/shm/tastetable-argument-evidence-de6263/complete-optimized.stderr.log"
+    },
+    {
+      "path": "author/complete-qualification.json",
+      "bytes": 5451,
+      "sha256": "29707adc670e52564baa6368aca8125aa408708e2d40415f95d8f8bfa39b8ee5",
+      "original_path": "/dev/shm/tastetable-argument-evidence-de6263/complete-qualification.json"
+    },
+    {
+      "path": "author/composition-node.log",
+      "bytes": 1023,
+      "sha256": "9b26fca293763422fa92c4573c5720ebaf302f3ed45c0914938b751836e5fcda",
+      "original_path": "/dev/shm/tastetable-argument-evidence-de6263/composition-node.log"
+    },
+    {
+      "path": "author/current-main-tree.json",
+      "bytes": 14744,
+      "sha256": "9dd275a47b80196332d7d07e5a6b982f1f8e58cb0a848746fe13478ba715e24e",
+      "original_path": "/dev/shm/tastetable-argument-evidence-de6263/current-main-tree.json"
+    },
+    {
+      "path": "author/decoder-only-normal.stderr.log",
+      "bytes": 59673,
+      "sha256": "2947ef3bf9ae353ffee04bdf08318e0e91bba5152f34dfff14e0027762d4abd9",
+      "original_path": "/dev/shm/tastetable-argument-evidence-de6263/decoder-only-normal.stderr.log"
+    },
+    {
+      "path": "author/decoder-only-optimized.stderr.log",
+      "bytes": 59673,
+      "sha256": "3905c5158d0d39d91a49949b6b8b12d27d836879f69eeb6d267e583bcd07ef6d",
+      "original_path": "/dev/shm/tastetable-argument-evidence-de6263/decoder-only-optimized.stderr.log"
+    },
+    {
+      "path": "author/original-main-manifest.json",
+      "bytes": 4931,
+      "sha256": "1747d3eae46752f18ff2d400dc7a1962f96fda4069220811c71ee16cf59330ff",
+      "original_path": "/workspace/scratch/de626312ee85/integration-review/current-main-manifest.json"
+    },
+    {
+      "path": "author/run_final_qualification.py",
+      "bytes": 2491,
+      "sha256": "cf50e0613f8a1c6d049c043c0ef0f6de2cf20d8942e3b1e2898f349d48b6c9fa",
+      "original_path": "/dev/shm/tastetable-argument-evidence-de6263/run_final_qualification.py"
+    },
+    {
+      "path": "author/trace-before.json",
+      "bytes": 80996,
+      "sha256": "7a794cb6befc4db9d7d45f4e94fea04036a6fe96b65b13b89c863a01060b9a39",
+      "original_path": "/dev/shm/tastetable-argument-evidence-de6263/trace-before.json"
+    },
+    {
+      "path": "author/trace-final.json",
+      "bytes": 101494,
+      "sha256": "75a46a3c50e2f58c5e23243f76d75f9b70ea7506166106b3bc6743360629bce9",
+      "original_path": "/dev/shm/tastetable-argument-evidence-de6263/trace-final.json"
+    },
+    {
+      "path": "author/upstream-normal.stderr.log",
+      "bytes": 98478,
+      "sha256": "a0449c082d86133304affcd0a5c80da78d0d2ca85c9daa661837edb06c30a611",
+      "original_path": "/dev/shm/tastetable-argument-evidence-de6263/upstream-normal.stderr.log"
+    },
+    {
+      "path": "author/upstream-optimized.stderr.log",
+      "bytes": 98478,
+      "sha256": "538e72bdccbdb53ee520149d19606234fb3a07d24a9e95bdf8d33b6cf0dbf840",
+      "original_path": "/dev/shm/tastetable-argument-evidence-de6263/upstream-optimized.stderr.log"
+    },
+    {
+      "path": "contributed/README.md",
+      "bytes": 5968,
+      "sha256": "8bf6ef8ff9e91587913b30a50fb68305b5e006eebeed21cf5a79f4c929d3bfcc",
+      "original_path": "/workspace/scratch/6e5752b49b6f/agents/github_integration/tastetable-argument-boundary-review/README.md"
+    },
+    {
+      "path": "contributed/current-main.json",
+      "bytes": 50981,
+      "sha256": "4c76d1c1154b7306f895ff62b488a4947febf03faf63f04f013a95429e75af92",
+      "original_path": "/workspace/scratch/6e5752b49b6f/agents/github_integration/tastetable-argument-boundary-review/current-main.json"
+    },
+    {
+      "path": "contributed/owner-candidate.json",
+      "bytes": 71008,
+      "sha256": "a0d67c1e26fb5e7430a7b49fbaffc25d2bc5941c9e25c5eb13714ca3e3d5c340",
+      "original_path": "/workspace/scratch/6e5752b49b6f/agents/github_integration/tastetable-argument-boundary-review/owner-candidate.json"
+    },
+    {
+      "path": "contributed/receive_argument_limits.py",
+      "bytes": 6761,
+      "sha256": "7d7e805e8932c659cdd44247750577b05b68fc32bc3e09f7992c055eced2c216",
+      "original_path": "/workspace/scratch/6e5752b49b6f/agents/github_integration/tastetable-argument-boundary-review/receive_argument_limits.py"
+    },
+    {
+      "path": "contributed/upstream-main-tree.json",
+      "bytes": 14850,
+      "sha256": "e2248133a9ccb30ef6c1adc84c4e967abc4984c7c1bfbf3c94fafc9cf088bb1d",
+      "original_path": "/workspace/scratch/6e5752b49b6f/agents/github_integration/tastetable-argument-boundary-review/upstream-main-tree.json"
+    },
+    {
+      "path": "decoder-only/agent.py",
+      "bytes": 24117,
+      "sha256": "c4fad5a23a24167dc0a7020c7b4251b518d20069b487517475f0d7e2195083e1",
+      "original_path": "/dev/shm/tastetable-argument-de6263/agent.py"
+    },
+    {
+      "path": "decoder-only/tests/test_tool_argument_recovery.py",
+      "bytes": 8398,
+      "sha256": "8d760e36188ff4a7cdf169215902d4a1f23755836de1be5d0ea4d3b0745dabed",
+      "original_path": "/dev/shm/tastetable-argument-de6263/tests/test_tool_argument_recovery.py"
+    },
+    {
+      "path": "first-candidate/agent.py",
+      "bytes": 24111,
+      "sha256": "216d66441efa9d73da84827154109920b6ed66a00e709fdcea7f9a8ceee41934",
+      "original_path": "/workspace/scratch/de626312ee85/integration-review/tool-argument-recovery/agent.py"
+    },
+    {
+      "path": "first-candidate/tests/test_tool_argument_recovery.py",
+      "bytes": 7461,
+      "sha256": "8725f2055cb2b535231d02f25fb9f7f42c55e2576866a30432dca1a31756820c",
+      "original_path": "/workspace/scratch/de626312ee85/integration-review/tool-argument-recovery/tests/test_tool_argument_recovery.py"
+    },
+    {
+      "path": "peer/acceptance-receipt.json",
+      "bytes": 5782,
+      "sha256": "5d6bdf863cbf8544d1b0f0f5f0e34abd95e87003d85f2bf4e91a7722372e4f4f",
+      "original_path": "/dev/shm/tool-argument-independent-review/acceptance-receipt.json"
+    },
+    {
+      "path": "peer/corrected-deep-http.json",
+      "bytes": 1573,
+      "sha256": "75e20ea4c39ada4b8b85a4d53ae448a5f66e270ee6b80aa3841d0099516b4a36",
+      "original_path": "/dev/shm/tool-argument-independent-review/corrected-deep-http.json"
+    },
+    {
+      "path": "peer/corrected-deep-http.stdout.log",
+      "bytes": 522,
+      "sha256": "bf528c8cc6fa5d4fe11f5e24824747b73b4bc2bc74fd9e0ea19667443de1430c",
+      "original_path": "/dev/shm/tool-argument-independent-review/corrected-deep-http.stdout.log"
+    },
+    {
+      "path": "peer/corrected-http.json",
+      "bytes": 3595,
+      "sha256": "c189e9ea8bea4fadb98aab7400ced85da8b6a8ec6f9427251bb9f11b6e1a3341",
+      "original_path": "/dev/shm/tool-argument-independent-review/corrected-http.json"
+    },
+    {
+      "path": "peer/corrected-limits-optimized.log",
+      "bytes": 232,
+      "sha256": "4ed4b9439271d1b415f9b21822aa450e9ceded3ce5f4ed7345d1fe0578f0a8cb",
+      "original_path": "/dev/shm/tool-argument-independent-review/corrected-limits-optimized.log"
+    },
+    {
+      "path": "peer/final-decoder-http.json",
+      "bytes": 1643,
+      "sha256": "44e20a52ad2b62b2b3e3ba892f97758162025eaeb2eecc2f94d63b44893e8a20",
+      "original_path": "/dev/shm/tool-argument-independent-review/final-decoder-http.json"
+    },
+    {
+      "path": "peer/final-decoder-http.stdout.log",
+      "bytes": 585,
+      "sha256": "4d3db7159af07fbd42b83c23c4efdb7641be47252e9c0407b3001c77b4855a5e",
+      "original_path": "/dev/shm/tool-argument-independent-review/final-decoder-http.stdout.log"
+    },
+    {
+      "path": "peer/final-focused-optimized.log",
+      "bytes": 718,
+      "sha256": "80ff5d4526106c218ee5c4269991ea1a114f6fa72ed1846ab7e43b10a691a202",
+      "original_path": "/dev/shm/tool-argument-independent-review/final-focused-optimized.log"
+    },
+    {
+      "path": "peer/final-trace-native.json",
+      "bytes": 15082,
+      "sha256": "b795ab321d4ed094bd98a9e5d07579f851cd055a35c6fb5568f3f0645acf6757",
+      "original_path": "/dev/shm/tool-argument-independent-review/final-trace-native.json"
+    },
+    {
+      "path": "peer/final-trace-native.stdout.log",
+      "bytes": 132,
+      "sha256": "ee3db4165dd91fa2d77f28db2454ee5d58970c879d63ecbf27ea0cb4b44a4fdc",
+      "original_path": "/dev/shm/tool-argument-independent-review/final-trace-native.stdout.log"
+    },
+    {
+      "path": "peer/final_trace_receiving.py",
+      "bytes": 8713,
+      "sha256": "ddd0ecde5ce8ec26741f0040419ce3230393d1c9239afa792b5e666e5cedf518",
+      "original_path": "/dev/shm/tool-argument-independent-review/final_trace_receiving.py"
+    },
+    {
+      "path": "peer/http_probe.py",
+      "bytes": 10032,
+      "sha256": "aa8311cc53af927f23137b76bc2eddb0dfbb90fcfb29129a78a77152778bda7d",
+      "original_path": "/workspace/scratch/de626312ee85/coordination/tool-argument-independent-review/http_probe.py"
+    },
+    {
+      "path": "peer/http_probe_deep.py",
+      "bytes": 10738,
+      "sha256": "ce02f3962a6467811f5c6da4886118f60186ddfd996fcb2a3f486149699bf5c5",
+      "original_path": "/dev/shm/tool-argument-independent-review/http_probe_deep.py"
+    },
+    {
+      "path": "peer/initial-http.json",
+      "bytes": 3447,
+      "sha256": "531175c77312e54a41fa8293f93b0348b558fc7b09a99d69eaccb8d8e0ec2216",
+      "original_path": "/workspace/scratch/de626312ee85/coordination/tool-argument-independent-review/initial-http.json"
+    },
+    {
+      "path": "peer/initial-http.stdout.log",
+      "bytes": 2048,
+      "sha256": "80d6b742bba452b1226be32775e27bbcf5f50134c83db8c45066cb104d7c43c5",
+      "original_path": "/workspace/scratch/de626312ee85/coordination/tool-argument-independent-review/initial-http.stdout.log"
+    },
+    {
+      "path": "peer/trace-acceptance-receipt.json",
+      "bytes": 6785,
+      "sha256": "bf28e416607a653d1f22360e39a327a4392d4c600149c044c433da1d8d90f6e6",
+      "original_path": "/dev/shm/tool-argument-independent-review/trace-acceptance-receipt.json"
+    },
+    {
+      "path": "peer/trace_encoder_comparison.json",
+      "bytes": 3384,
+      "sha256": "eef7d61737d8f0868e25107b731976f89ac41038999adcc7f74eb382d6c06a19",
+      "original_path": "/dev/shm/tool-argument-independent-review/trace_encoder_comparison.json"
+    },
+    {
+      "path": "peer/trace_encoder_comparison.py",
+      "bytes": 1756,
+      "sha256": "4a66f3ddfe18c2d48f37cbe0384155c0d84ca5ba76c107c23c651387c9d5c505",
+      "original_path": "/dev/shm/tool-argument-independent-review/trace_encoder_comparison.py"
+    },
+    {
+      "path": "peer/trace_encoder_comparison.stdout.log",
+      "bytes": 2544,
+      "sha256": "f4b20907554840f35046a9cb21ba8b35f7c3338eee4cee13260e615a52191f48",
+      "original_path": "/dev/shm/tool-argument-independent-review/trace_encoder_comparison.stdout.log"
+    },
+    {
+      "path": "peer/trace_route_prototype.json",
+      "bytes": 15188,
+      "sha256": "1d79371b3f08c14f5254ae7b21a1835a3750a992bd43e5756d1d3d4dd4884109",
+      "original_path": "/dev/shm/tool-argument-independent-review/trace_route_prototype.json"
+    },
+    {
+      "path": "peer/trace_route_prototype.py",
+      "bytes": 7718,
+      "sha256": "d5eca1cdf4d2074a299291fc734636aaa7f3d9b6426845b4ad6f57dc52a8c2f3",
+      "original_path": "/dev/shm/tool-argument-independent-review/trace_route_prototype.py"
+    },
+    {
+      "path": "peer/trace_route_prototype.stdout.log",
+      "bytes": 811,
+      "sha256": "28654e8fc9ca42813bae6f092cc82a199fa91b38d88951e68deec80704fec368",
+      "original_path": "/dev/shm/tool-argument-independent-review/trace_route_prototype.stdout.log"
+    }
+  ]
+}
