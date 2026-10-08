@@ -55,7 +55,9 @@ TOOLS = [
             "required": ["filter_type", "purpose"]}}},
     {"type": "function", "function": {
         "name": "constraint_check",
-        "description": "Check fetched candidates against caregiver constraints.",
+        "description": "Check fetched candidates against the caregiver's saved constraints. "
+                       "The server uses every requested constraint and each candidate's "
+                       "retained purpose; tool arguments cannot weaken these checks.",
         "parameters": {"type": "object", "properties": {
             "entity_ids": {"type": "array", "items": {"type": "string"}},
             "constraints": {"type": "array", "items": {"type": "string"}},
@@ -230,6 +232,12 @@ class AgentState:
     trace: list[dict] = field(default_factory=list)
 
 
+def _candidate_verdict(state: AgentState, candidate: dict) -> dict:
+    """Bind every check to caregiver input and the candidate actually retained."""
+    return evaluate(candidate["entity"], state.persona.get("constraints", []),
+                    candidate["purpose"]).to_dict()
+
+
 class Toolbox:
     def __init__(self, qloo: QlooClient, state: AgentState):
         self.qloo, self.state = qloo, state
@@ -251,6 +259,8 @@ class Toolbox:
     def qloo_recs(self, filter_type: str, purpose: str, tag_ids: Optional[list] = None,
                   signal_entity_ids: Optional[list] = None, location: Optional[str] = None,
                   take: int = 10) -> dict:
+        if not isinstance(purpose, str) or purpose not in ("restaurant", "outing"):
+            raise ValueError("purpose must be restaurant or outing")
         ents = self.qloo.insights(filter_type, signal_entities=signal_entity_ids,
                                   filter_tags=tag_ids, location_query=location, take=take)
         for e in ents:
@@ -265,13 +275,23 @@ class Toolbox:
                                 "affinity": e.affinity} for e in ents]}
 
     def constraint_check(self, entity_ids: list, constraints: list, kind: str) -> dict:
+        # Keep constraints/kind in the tool interface for existing model clients,
+        # but never let model-supplied values replace the caregiver's requirements
+        # or exempt a retained restaurant from its dietary checks.
+        if not isinstance(entity_ids, list) or any(
+                not isinstance(eid, str) or not eid for eid in entity_ids):
+            raise ValueError("entity_ids must be a list of non-empty strings")
+        if not isinstance(constraints, list) or any(not isinstance(c, str) for c in constraints):
+            raise ValueError("constraints must be a list of strings")
+        if kind not in ("restaurant", "outing"):
+            raise ValueError("kind must be restaurant or outing")
         out = []
         for eid in entity_ids:
             c = self.state.candidates.get(eid)
             if not c:
                 out.append({"entity_id": eid, "ok": False, "checks": [], "error": "unknown id"})
                 continue
-            v = evaluate(c["entity"], constraints, kind).to_dict()
+            v = _candidate_verdict(self.state, c)
             self.state.verdicts[eid] = v
             out.append(v)
         return {"verdicts": out}
@@ -310,9 +330,16 @@ def explain(c: dict, v: dict, state: AgentState) -> str:
 
 
 def assemble_plan(state: AgentState) -> dict:
+    # Only candidates submitted for checking can enter the plan. Re-evaluate
+    # those candidates at assembly so old/partial verdicts cannot admit a pick
+    # after its evidence, purpose or the caregiver's requirements have changed.
+    # Keep the original tool results intact for the trace and its callers.
+    verdicts = {eid: _candidate_verdict(state, c)
+                for eid, c in state.candidates.items() if eid in state.verdicts}
+
     def ranked(purpose: str) -> list[dict]:
         pool = [c for eid, c in state.candidates.items()
-                if c["purpose"] == purpose and state.verdicts.get(eid, {}).get("ok")]
+                if c["purpose"] == purpose and verdicts.get(eid, {}).get("ok")]
         # primary-cuisine picks first, then by Qloo affinity
         return sorted(pool, key=lambda c: (c.get("fallback", False), -(c["entity"].affinity or 0)))
 
@@ -321,17 +348,17 @@ def assemble_plan(state: AgentState) -> dict:
         e = c["entity"]
         days.append({"day": day, "kind": "restaurant", "entity_id": e.entity_id, "name": e.name,
                      "affinity": e.affinity, "fallback": c.get("fallback", False),
-                     "why": explain(c, state.verdicts[e.entity_id], state)})
+                     "why": explain(c, verdicts[e.entity_id], state)})
     outing = None
     outs = ranked("outing")
     if outs:
         c = outs[0]
         e = c["entity"]
         outing = {"day": OUTING_DAY, "kind": "outing", "entity_id": e.entity_id, "name": e.name,
-                  "affinity": e.affinity, "why": explain(c, state.verdicts[e.entity_id], state)}
+                  "affinity": e.affinity, "why": explain(c, verdicts[e.entity_id], state)}
     rejected = [{"name": state.candidates[eid]["entity"].name, "entity_id": eid,
                  "failed": [ch for ch in v["checks"] if ch["status"] != "pass"]}
-                for eid, v in state.verdicts.items() if not v["ok"]]
+                for eid, v in verdicts.items() if not v["ok"]]
     notes = []
     if len(days) < len(MEAL_DAYS):
         notes.append(f"Only {len(days)} restaurants passed every constraint; "
