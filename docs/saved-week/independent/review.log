@@ -1,0 +1,3 @@
+PASS complete-week: separate save → ordinary JSON rewrite → restore/edit → re-save/reopen; evidence and calendar identity retained.
+PASS invalid_json: separate save → ordinary JSON rewrite → restore/edit → re-save/reopen; evidence and calendar identity retained.
+PASS decoded_list: separate save → ordinary JSON rewrite → restore/edit → re-save/reopen; evidence and calendar identity retained.

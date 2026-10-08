@@ -1,0 +1,29 @@
+{
+  "schema": "tastetable.saved-week.native-recovery-consumer.v1",
+  "source": "/dev/shm/universal-0df473646168/memory-week-file/candidate-v3",
+  "weekFileSHA256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+  "nativeResponseSHA256": "bf7deb561e44545b39fa82878a8e2f2d1baab41ab4a2d3ecdbf1e99741753ad9",
+  "nativeCommit": "b8d384e5522e17cf15d73e8b06adbe6665e4bdcc",
+  "node": "v24.19.0",
+  "driverSHA256": "dba676f42a9695178225afcd01dd27a21880055b98c0b18954a5153b0f2fea7e",
+  "cases": [
+    {
+      "case": "invalid_json",
+      "passed": true,
+      "traceArgs": null,
+      "sourceIDs": [
+        "FIX-P-01"
+      ],
+      "assignment": "Sunday"
+    },
+    {
+      "case": "decoded_list",
+      "passed": true,
+      "traceArgs": [],
+      "sourceIDs": [
+        "FIX-P-01"
+      ],
+      "assignment": "Sunday"
+    }
+  ]
+}

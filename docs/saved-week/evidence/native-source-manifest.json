@@ -1,0 +1,36 @@
+{
+  "repository": "Jacob-Met/tastetable",
+  "commit": "b8d384e5522e17cf15d73e8b06adbe6665e4bdcc",
+  "files": [
+    {
+      "path": "agent.py",
+      "bytes": 25053,
+      "git_blob": "1d8bfd5a300c1d4824dc895b324e7d0cfb096058",
+      "sha256": "5366635d101cb7010e6ad3586de9a8d76f222b98118cbc5c4bf73ea11b58a903"
+    },
+    {
+      "path": "qloo_client.py",
+      "bytes": 12206,
+      "git_blob": "cca322e0c9af96c481ba8f7ef286e85d3b90cfd2",
+      "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b"
+    },
+    {
+      "path": "constraints.py",
+      "bytes": 4451,
+      "git_blob": "53138a106455cc3fa40d812d1ade3c60fcbbb916",
+      "sha256": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e"
+    },
+    {
+      "path": "personas.py",
+      "bytes": 1247,
+      "git_blob": "1eb6768780cafaf9b1666e39b7fc17aa21204f16",
+      "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2"
+    },
+    {
+      "path": "fixtures/qloo_fixtures.json",
+      "bytes": 21190,
+      "git_blob": "60c5d92f905755454bb280b8181f8836a74bd955",
+      "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0"
+    }
+  ]
+}

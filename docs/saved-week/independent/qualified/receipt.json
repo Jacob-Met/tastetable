@@ -1,0 +1,110 @@
+{
+  "schema": "tastetable.saved-week.independent-cross-process-review.v1",
+  "status": "passed",
+  "started_at": "2026-10-08T10:52:51.419Z",
+  "finished_at": "2026-10-08T10:52:52.086Z",
+  "node": "v24.19.0",
+  "candidate": "/dev/shm/universal-0df473646168/memory-week-file/candidate-v3",
+  "freeze": {
+    "path": "/dev/shm/universal-0df473646168/memory-week-file/source-freeze-v3.json",
+    "bytes": 3999,
+    "sha256": "e846337117171e02b21788bff561f1f9648b6d8ae5763d57992e0d01cf84bd67",
+    "git_blob": "8627826abac1ebc36586f707f782ce3e37835809"
+  },
+  "receiving_base_commit": "614aa0a98429ba52182376e38a57e32d01b461b9",
+  "receiving_base_tree": "299cabf86343faab77b78bd1cd9e9f8847c7b81d",
+  "native_parent": "b8d384e5522e17cf15d73e8b06adbe6665e4bdcc",
+  "receiver": {
+    "path": "/dev/shm/universal-0df473646168/runtime-export/saved-week-v3-review/review_saved_week.mjs",
+    "bytes": 17982,
+    "sha256": "7c1820be31f9c12e569653e1c76ea04d0e07d223aaaead25aea1afb007104921",
+    "git_blob": "fae907e7606ae06460cf664cb3efad724bf90de5"
+  },
+  "workflows": [
+    {
+      "case": "complete-week",
+      "status": "passed",
+      "child_processes": [
+        13,
+        21,
+        29
+      ],
+      "original_events": 5,
+      "arranged_events": 4,
+      "edited_events": 5,
+      "original_saved_file": {
+        "bytes": 14600,
+        "sha256": "219012924dc2d3e0bb86bc09fe85f2f2f8a5bded01ca7f7efab6cbcab60f33f2",
+        "git_blob": "34b2a4e0299290e71b3dd1490726a724b7674df2"
+      },
+      "ordinary_rewritten_file": {
+        "bytes": 12762,
+        "sha256": "b972c516d3c17d9d4f620d8cb37050bb55ca843893eecfe92521ef37709a7820",
+        "git_blob": "c4b1b1bb82b0e2566c64011b4e97f7e41a16dfb1"
+      },
+      "original_evidence_preserved": true,
+      "per_pick_uids_preserved": true,
+      "reexport_byte_identical_at_each_arrangement": true
+    },
+    {
+      "case": "invalid_json",
+      "status": "passed",
+      "child_processes": [
+        37,
+        45,
+        53
+      ],
+      "original_events": 1,
+      "arranged_events": 1,
+      "edited_events": 1,
+      "original_saved_file": {
+        "bytes": 5081,
+        "sha256": "3291b034b38fabc0551ba3efc2f4eed4da5162071b329871fd657b94c672cd84",
+        "git_blob": "4b20a8892dcc235520309b9fdbcba4baa3e1528e"
+      },
+      "ordinary_rewritten_file": {
+        "bytes": 4519,
+        "sha256": "4d8d7db4b380e2a4f092b8735d5406f5083b592517fcc3d87e0dbb05c600d4e5",
+        "git_blob": "bf787dcc471d08e81167ba6eb70b30d22f5177bf"
+      },
+      "original_evidence_preserved": true,
+      "per_pick_uids_preserved": true,
+      "reexport_byte_identical_at_each_arrangement": true
+    },
+    {
+      "case": "decoded_list",
+      "status": "passed",
+      "child_processes": [
+        61,
+        69,
+        77
+      ],
+      "original_events": 1,
+      "arranged_events": 1,
+      "edited_events": 1,
+      "original_saved_file": {
+        "bytes": 5069,
+        "sha256": "1b04e9f8b2f82b5697ec67cf2ca4d9eaf6fa78a06934bed607b7ad0390097c9b",
+        "git_blob": "2981a35f426176fc373110b581380a6e1d9a6423"
+      },
+      "ordinary_rewritten_file": {
+        "bytes": 4507,
+        "sha256": "029d9a5cb1917c2a9f1cadc767f1cce5a0400e21ca58aefab3aceaf6e281c4b2",
+        "git_blob": "d1c9086befe723aa731555afad51497f21d321f3"
+      },
+      "original_evidence_preserved": true,
+      "per_pick_uids_preserved": true,
+      "reexport_byte_identical_at_each_arrangement": true
+    }
+  ],
+  "workflow_count": 3,
+  "child_process_count": 9,
+  "source_file_count": 16,
+  "source_unchanged": true,
+  "environment": "Node subprocesses and ordinary files in authorized owned /dev/shm RAM scratch; no browser, network, API calls or live data stores.",
+  "limits": [
+    "Three exact native synthetic fixtures; no live data generation or independent source revalidation.",
+    "Uses the frozen native file and calendar APIs, not browser controls or a third-party calendar importer.",
+    "Explicit saved calendar ID and receivedAt tested; null calendar-ID UI fallback and author validation cases not repeated."
+  ]
+}
