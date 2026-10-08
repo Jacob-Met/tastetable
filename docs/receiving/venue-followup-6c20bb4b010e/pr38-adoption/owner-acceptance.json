@@ -1,0 +1,36 @@
+{
+  "schema": "tastetable.owner-followup.patch-acceptance.v1",
+  "ownerPR": 33,
+  "ownerHead": "f3e72efb13844b7cd8e5cdd5d14c6a21941351c4",
+  "externalPR": 38,
+  "externalMerge": "e0f6fbaf1f81fbb1e9926948294549c744228def",
+  "inputModule": {
+    "bytes": 14920,
+    "sha256": "1635bc5f1e4377325528214af071bc1242be65eeaa57ed4e5ac41a350a1cd077"
+  },
+  "patch": {
+    "bytes": 2612,
+    "sha256": "aab21c0bf6cf20058c432c64b5aac5c797d064eb6d4045234b9a50fca28e2c4d",
+    "check": {
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "apply": {
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  },
+  "outputModule": {
+    "bytes": 15053,
+    "sha256": "b27315a0bc526f44863a9b8b39c0a217208edbd722a25cba72419f6d34456835",
+    "gitBlob": "fa8575ab921070fd008c1e2b45705bf3d4a09d75"
+  },
+  "pairedEventGuardOccurrences": 1,
+  "outputMinusGuardSHA256": "6bc409d09b47efe6653d0d7f13c285f4f3f7f61360a949fda676fff84dde6089",
+  "originalMinusGuardSHA256": "0573f3c9b60f33f105c64bd61d86cbdcc66664f8f47ae06b998c00bc988fa832",
+  "sourceEdits": 1,
+  "otherOwnerFilesModified": 0,
+  "externalQualifiedProbeExecuted": 0
+}

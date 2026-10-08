@@ -1,0 +1,120 @@
+{"constraints": "/tmp/tastetable-soft-cue-review-cf5799f6d38b/baseline/constraints.py", "sha256": "a7ad868ece3cb83b15b02f8f059a94da749059bb96a8c97f7fb207ccb85d604c", "pytest": "8.4.2", "python": "3.12.8 (main, Dec  3 2024, 18:42:41) [Clang 16.0.0 (clang-1600.0.26.4)]"}
+...........................................................FFFFF.F.F.    [100%]
+=================================== FAILURES ===================================
+_ SoftFoodEvidenceTests.test_actual_planner_keeps_unknown_with_accurate_explanation _
+
+self = <test_soft_food_evidence.SoftFoodEvidenceTests testMethod=test_actual_planner_keeps_unknown_with_accurate_explanation>
+
+    def test_actual_planner_keeps_unknown_with_accurate_explanation(self):
+        plan = self._native_plan(["no soup"])
+        retained = [meal for meal in plan["meals"] if meal["entity_id"] == "FIX-P-03"]
+        self.assertEqual(len(retained), 1)
+>       self.assertIn("Soft foods: unknown (no texture signal in Qloo keywords; ask the venue)",
+                      retained[0]["why"])
+E       AssertionError: 'Soft foods: unknown (no texture signal in Qloo keywords; ask the venue)' not found in "Qloo affinity 0.83 for audiences who like Celia Cruz, West Side Story (tag match: Mexican). Checks: Soft foods: pass (soft options listed: no soup); Low sodium: unknown (no sodium signal; ask for low-salt preparation); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+
+/tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_soft_food_evidence.py:136: AssertionError
+_ SoftFoodEvidenceTests.test_actual_planner_rejects_firm_signal_after_denied_soft_cue _
+
+self = <test_soft_food_evidence.SoftFoodEvidenceTests testMethod=test_actual_planner_rejects_firm_signal_after_denied_soft_cue>
+
+    def test_actual_planner_rejects_firm_signal_after_denied_soft_cue(self):
+        plan = self._native_plan(["burger", "no soup"])
+>       self.assertFalse(any(meal["entity_id"] == "FIX-P-03" for meal in plan["meals"]))
+E       AssertionError: True is not false
+
+/tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_soft_food_evidence.py:143: AssertionError
+_ SoftFoodEvidenceTests.test_denied_soft_cue_does_not_override_existing_firm_signal _
+
+self = <test_soft_food_evidence.SoftFoodEvidenceTests testMethod=test_denied_soft_cue_does_not_override_existing_firm_signal>
+
+    def test_denied_soft_cue_does_not_override_existing_firm_signal(self):
+        for phrase in ("no soup", "soup unavailable", "without any risotto"):
+            with self.subTest(phrase=phrase):
+                verdict = evaluate(entity(["burger", phrase]), ["soft_foods"])
+>               self.assertFalse(verdict.ok)
+E               AssertionError: True is not false
+
+/tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_soft_food_evidence.py:54: AssertionError
+_ SoftFoodEvidenceTests.test_direct_prefix_denials_are_unknown_without_firm_evidence _
+
+self = <test_soft_food_evidence.SoftFoodEvidenceTests testMethod=test_direct_prefix_denials_are_unknown_without_firm_evidence>
+
+    def test_direct_prefix_denials_are_unknown_without_firm_evidence(self):
+        phrases = ["no soup", "NOT RISOTTO", "without any tofu",
+                   "no longer made to order", "not a soup", "without steamed options"]
+        for phrase in phrases:
+            for dictionaries in (False, True):
+                with self.subTest(phrase=phrase, dictionaries=dictionaries):
+                    verdict = evaluate(entity([phrase], dictionaries=dictionaries),
+                                       ["soft_foods"])
+>                   self.assertEqual(verdict.checks[0].status, "unknown")
+E                   AssertionError: 'pass' != 'unknown'
+E                   - pass
+E                   + unknown
+
+/tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_soft_food_evidence.py:36: AssertionError
+__ SoftFoodEvidenceTests.test_direct_unavailability_is_not_a_positive_signal ___
+
+self = <test_soft_food_evidence.SoftFoodEvidenceTests testMethod=test_direct_unavailability_is_not_a_positive_signal>
+
+    def test_direct_unavailability_is_not_a_positive_signal(self):
+        phrases = ["soup unavailable", "risotto options not available",
+                   "tofu choices are unavailable", "steamed preparation is not available",
+                   "made to order: not offered", "soup (not available)"]
+        for phrase in phrases:
+            with self.subTest(phrase=phrase):
+                verdict = evaluate(entity([phrase]), ["soft_foods"])
+>               self.assertEqual(verdict.checks[0].status, "unknown")
+E               AssertionError: 'pass' != 'unknown'
+E               - pass
+E               + unknown
+
+/tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_soft_food_evidence.py:47: AssertionError
+_ SoftFoodEvidenceTests.test_local_plural_list_and_compound_denials_preserve_separate_evidence _
+
+self = <test_soft_food_evidence.SoftFoodEvidenceTests testMethod=test_local_plural_list_and_compound_denials_preserve_separate_evidence>
+
+    def test_local_plural_list_and_compound_denials_preserve_separate_evidence(self):
+        denied = ("soups unavailable", "no soup or risotto",
+                  "soup and risotto unavailable", "not steamed tofu")
+        for phrase in denied:
+            with self.subTest(phrase=phrase):
+                verdict = evaluate(entity([phrase]), ["soft_foods"])
+>               self.assertEqual(verdict.checks[0].status, "unknown")
+E               AssertionError: 'pass' != 'unknown'
+E               - pass
+E               + unknown
+
+/tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_soft_food_evidence.py:85: AssertionError
+_ SoftFoodEvidenceTests.test_separate_affirmative_cue_keeps_existing_precedence _
+
+self = <test_soft_food_evidence.SoftFoodEvidenceTests testMethod=test_separate_affirmative_cue_keeps_existing_precedence>
+
+    def test_separate_affirmative_cue_keeps_existing_precedence(self):
+        verdict = evaluate(entity(["burger", "no soup", "risotto"]), ["soft_foods"])
+        self.assertTrue(verdict.ok)
+        self.assertEqual(verdict.checks[0].status, "pass")
+>       self.assertEqual(verdict.checks[0].reason, "soft options listed: risotto")
+E       AssertionError: 'soft options listed: no soup, risotto' != 'soft options listed: risotto'
+E       - soft options listed: no soup, risotto
+E       ?                     ---------
+E       + soft options listed: risotto
+
+/tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_soft_food_evidence.py:63: AssertionError
+=============================== warnings summary ===============================
+../../canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/lib/python3.12/site-packages/_pytest/config/__init__.py:1291
+  /private/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/lib/python3.12/site-packages/_pytest/config/__init__.py:1291: PytestConfigWarning: assertions not in test modules or plugins will be ignored because assert statements are not executed by the underlying Python interpreter (are you using python -O?)
+  
+    self._warn_about_missing_assertion(mode)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_soft_food_evidence.py::SoftFoodEvidenceTests::test_actual_planner_keeps_unknown_with_accurate_explanation
+FAILED ../../../../tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_soft_food_evidence.py::SoftFoodEvidenceTests::test_actual_planner_rejects_firm_signal_after_denied_soft_cue
+FAILED ../../../../tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_soft_food_evidence.py::SoftFoodEvidenceTests::test_denied_soft_cue_does_not_override_existing_firm_signal
+FAILED ../../../../tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_soft_food_evidence.py::SoftFoodEvidenceTests::test_direct_prefix_denials_are_unknown_without_firm_evidence
+FAILED ../../../../tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_soft_food_evidence.py::SoftFoodEvidenceTests::test_direct_unavailability_is_not_a_positive_signal
+FAILED ../../../../tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_soft_food_evidence.py::SoftFoodEvidenceTests::test_local_plural_list_and_compound_denials_preserve_separate_evidence
+FAILED ../../../../tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_soft_food_evidence.py::SoftFoodEvidenceTests::test_separate_affirmative_cue_keeps_existing_precedence
+7 failed, 62 passed, 1 warning in 3.82s

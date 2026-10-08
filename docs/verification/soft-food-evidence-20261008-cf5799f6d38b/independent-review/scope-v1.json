@@ -1,0 +1,145 @@
+{
+  "schema": "tastetable.soft-food-independent-controls.v1",
+  "basis": {
+    "baseline_commit": "a77175501199ace765cb7ca57742b267351d3e79",
+    "constraints_blob": "cab2cecbe4c3a6112022d194a927b9025ec67ab6",
+    "candidate_implementation_read_before_freeze": false,
+    "public_contract": "Existing soft-food lexicon; affirmative soft evidence wins over firm evidence; absent affirmative evidence plus firm cues fails; absent both is unknown and permitted; dietary checks do not apply to outings."
+  },
+  "controls": [
+    {
+      "id": "multiword_local_denial",
+      "cases": [
+        {
+          "keywords": [
+            {
+              "name": "GNOCCHI DISHES ARE NOT OFFERED",
+              "count": 3
+            },
+            "nuts"
+          ],
+          "status": "fail",
+          "ok": false
+        },
+        {
+          "keywords": [
+            "without any refried beans",
+            "crusty bread"
+          ],
+          "status": "fail",
+          "ok": false
+        }
+      ]
+    },
+    {
+      "id": "independent_affirmative_occurrences",
+      "cases": [
+        {
+          "keywords": [
+            "no soup; soup available",
+            "burger"
+          ],
+          "status": "pass",
+          "ok": true
+        },
+        {
+          "keywords": [
+            "no soup; polenta",
+            "ribs"
+          ],
+          "status": "pass",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "non_denial_controls",
+      "cases": [
+        {
+          "keywords": [
+            "known soup selections",
+            "burger"
+          ],
+          "status": "pass",
+          "ok": true
+        },
+        {
+          "keywords": [
+            "not only soup",
+            "burger"
+          ],
+          "status": "pass",
+          "ok": true
+        },
+        {
+          "keywords": [
+            "soup without croutons",
+            "burger"
+          ],
+          "status": "pass",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "unknown_and_outing_policy",
+      "cases": [
+        {
+          "keywords": [
+            "refried beans: unavailable"
+          ],
+          "status": "unknown",
+          "ok": true
+        },
+        {
+          "keywords": [
+            "no soup or gnocchi",
+            "pressed bread"
+          ],
+          "kind": "outing",
+          "checks": [],
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "coordinated_explicit_denial",
+      "cases": [
+        {
+          "keywords": [
+            "no soup or gnocchi",
+            "pressed bread"
+          ],
+          "status": "fail",
+          "ok": false
+        }
+      ],
+      "rationale": "The single short keyword phrase explicitly denies both listed soft options. Its second cue is not an independent affirmative statement."
+    },
+    {
+      "id": "native_scripted_fixture_plan",
+      "entry": "agent.run_agent with actual ScriptedModel and FixtureTransport(fictional fixture)",
+      "expected_meals": [
+        "PEER-SAME",
+        "PEER-MIXED",
+        "PEER-UNKNOWN",
+        "PEER-PLAIN"
+      ],
+      "expected_rejected": [
+        "PEER-COORD",
+        "PEER-MULTI"
+      ],
+      "expected_outing": "PEER-OUTING",
+      "expected_unknown_label": "PEER-UNKNOWN retains Soft foods: unknown",
+      "scope": "No substitute planner/checker/model; explicit fictional transport and private fixture only."
+    }
+  ],
+  "exclusions": [
+    "No medical classification claim",
+    "No general menu-prose parser requirement",
+    "No changes to existing lexicons or low-sodium/wheelchair checkers",
+    "No unknown-to-failure policy change",
+    "No live provider, network or service mutation"
+  ],
+  "frozen_before_candidate_read": true
+}

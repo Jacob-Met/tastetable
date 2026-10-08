@@ -1,0 +1,11 @@
+test_coordinated_explicit_denial (__main__.SoftFoodIndependentTests.test_coordinated_explicit_denial) ... ok
+test_independent_affirmative_occurrences (__main__.SoftFoodIndependentTests.test_independent_affirmative_occurrences) ... ok
+test_multiword_local_denial (__main__.SoftFoodIndependentTests.test_multiword_local_denial) ... ok
+test_native_scripted_fixture_plan (__main__.SoftFoodIndependentTests.test_native_scripted_fixture_plan) ... ok
+test_non_denial_controls (__main__.SoftFoodIndependentTests.test_non_denial_controls) ... ok
+test_unknown_and_outing_policy (__main__.SoftFoodIndependentTests.test_unknown_and_outing_policy) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.004s
+
+OK

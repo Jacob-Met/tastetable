@@ -10,7 +10,7 @@ Notes stay in the current tab and planning visit. Source-input edits, replacemen
 
 ## Source and integration
 
-The latest composition and maintained browser correction are recorded in [integration-02](integration-02/README.md). The source and publication pins below describe the initial r4 packet; the latest publication manifest accounts for current-main README/index composition and the receiver's new asset entries.
+The latest owner adoption and integration are recorded in [integration-03](integration-03/README.md): two worksheet fixes qualified on the current native app and the unchanged browser CLI moved to tools/. [Integration-02](integration-02/README.md) preserves the earlier current-main composition and maintained receiver asset correction. Source and publication pins below describe their declared historical revisions.
 
 The seven final product/test files are pinned by [source-freeze-r4.json](source-freeze-r4.json). The native app adds six lines for import, mount, rendering, retirement, invalid-date handling and accepted results. Its index adds one section and stylesheet. The new module owns that section and its private in-memory records.
 
@@ -44,7 +44,7 @@ node --test tests/venue_followup.test.mjs
 TASTETABLE_PLAYWRIGHT=/path/to/node_modules/playwright \
 TASTETABLE_CHROMIUM=/path/to/chromium \
 TASTETABLE_PYTHON=/path/to/python \
-node tests/venue_followup.browser.cjs /path/to/app /path/to/new-output
+node tools/venue_followup.browser.cjs /path/to/app /path/to/new-output
 ~~~
 
 The Python interpreter must supply the native dependencies; TASTETABLE_PYTHONPATH selects an existing dependency directory when needed. The author driver starts the actual app in explicit mock mode, clears optional live model settings, uses a private browser profile, blocks external browser requests, hashes source before/after and closes its own processes. The independent README gives the separate unchanged probe invocation and actual runtime origins.

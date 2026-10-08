@@ -1,0 +1,16 @@
+{
+  "schema": "tastetable.soft-cue-exact-source-preservation.v1",
+  "helper_removal_and_single_call_inverse_reconstruct_original_bytes": true,
+  "all_other_source_bytes_preserved": true,
+  "fresh_publication_parent": "1a609bfdd77dc07222eb70f8a4a1f565a8bc8fa0",
+  "fresh_tree": "ef80f9f0134d613571861278978477152548a5ed",
+  "all_16_captured_preimages_match_fresh_tree": true,
+  "product_changes": [
+    "constraints.py"
+  ],
+  "added_test": "tests/test_soft_food_evidence.py",
+  "source_readback": {
+    "baseline_sha256": "a7ad868ece3cb83b15b02f8f059a94da749059bb96a8c97f7fb207ccb85d604c",
+    "candidate_sha256": "f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa"
+  }
+}

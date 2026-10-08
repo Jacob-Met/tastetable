@@ -1,0 +1,579 @@
+{
+  "schema": "tastetable.soft-food-independent-review-publication.v1",
+  "captured_utc": "2026-10-08T15:29:36.354002+00:00",
+  "native_root": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb",
+  "publication_prefix": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review",
+  "candidate_constraints_sha256": "f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa",
+  "baseline_commit": "a77175501199ace765cb7ca57742b267351d3e79",
+  "file_count": 62,
+  "total_bytes": 468622,
+  "manifest_is_declared_file": false,
+  "path_aliases": {
+    "independent_soft_food_v1.py": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/independent_soft_food_v1.py.txt",
+    "independent_soft_food_v2.py": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/independent_soft_food_v2.py.txt",
+    "run_phase.py": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/run_phase.py.txt",
+    "run_phase_v2.py": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/run_phase_v2.py.txt",
+    "baseline/constraints.py": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/source/baseline-constraints.py.txt",
+    "candidate/constraints.py": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/source/candidate-constraints.py.txt"
+  },
+  "files": [
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/README.md",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/README.md",
+      "native_relative_path": "README.md",
+      "bytes": 8636,
+      "sha256": "66139b91c3afd5d815e46702b51636a505e020239c2b03e1250d5e7512149d49",
+      "git_blob": "b7e2f8d4b2965a7570d4ecdcfb6a7182dc400b14",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-normal/independent-fixture.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-normal/independent-fixture.json",
+      "native_relative_path": "baseline-normal/independent-fixture.json",
+      "bytes": 4708,
+      "sha256": "676b8a917adbc4eed1bd5abf064257db2648649d2789f525f0d496206f3c2824",
+      "git_blob": "05b1a7efa7c5b9e9c4ae5ef8a41d3e6a32029846",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-normal/native-agent-result.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-normal/native-agent-result.json",
+      "native_relative_path": "baseline-normal/native-agent-result.json",
+      "bytes": 9305,
+      "sha256": "76f0267d8e6fae02d7d150992eecfbf573452adcf17c4a8e25c06a707712ebc8",
+      "git_blob": "e97b1f100a4767fe26c7886a5e4bcc45a318347c",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-normal/receipt.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-normal/receipt.json",
+      "native_relative_path": "baseline-normal/receipt.json",
+      "bytes": 27388,
+      "sha256": "4f49378145b154d08ff3ef8795fb85bbb068064e406c3158015682b0eefe613e",
+      "git_blob": "e577a30fc056d444dd8df715b1cf2dd477835192",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-normal.stderr.log",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-normal.stderr.log",
+      "native_relative_path": "baseline-normal.stderr.log",
+      "bytes": 6353,
+      "sha256": "8ca8b6554599189eb5bc40c378015a1ce0558f300e4c645aff98c289e54a8a0d",
+      "git_blob": "7957de90889da3562ba016594c30ba9c31168779",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-normal.stdout.log",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-normal.stdout.log",
+      "native_relative_path": "baseline-normal.stdout.log",
+      "bytes": 471,
+      "sha256": "20130d673122c422915cc997f8264ec15cc37d0a5dfa0ccbf0ac9832e6e7fc55",
+      "git_blob": "9a6f4d5ef8ee7f0caa2d5ba1e085952501b0d6b7",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-optimized/independent-fixture.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-optimized/independent-fixture.json",
+      "native_relative_path": "baseline-optimized/independent-fixture.json",
+      "bytes": 4708,
+      "sha256": "676b8a917adbc4eed1bd5abf064257db2648649d2789f525f0d496206f3c2824",
+      "git_blob": "05b1a7efa7c5b9e9c4ae5ef8a41d3e6a32029846",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-optimized/native-agent-result.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-optimized/native-agent-result.json",
+      "native_relative_path": "baseline-optimized/native-agent-result.json",
+      "bytes": 9305,
+      "sha256": "76f0267d8e6fae02d7d150992eecfbf573452adcf17c4a8e25c06a707712ebc8",
+      "git_blob": "e97b1f100a4767fe26c7886a5e4bcc45a318347c",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-optimized/receipt.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-optimized/receipt.json",
+      "native_relative_path": "baseline-optimized/receipt.json",
+      "bytes": 27387,
+      "sha256": "9930e225f19bad8302746314b83d951d6b4a877b14f65505c48f2e5532386624",
+      "git_blob": "501c73a80f8dac9258cb5aadbb87c7691ac056b4",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-optimized.stderr.log",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-optimized.stderr.log",
+      "native_relative_path": "baseline-optimized.stderr.log",
+      "bytes": 6353,
+      "sha256": "8ca8b6554599189eb5bc40c378015a1ce0558f300e4c645aff98c289e54a8a0d",
+      "git_blob": "7957de90889da3562ba016594c30ba9c31168779",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-optimized.stdout.log",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-optimized.stdout.log",
+      "native_relative_path": "baseline-optimized.stdout.log",
+      "bytes": 471,
+      "sha256": "20130d673122c422915cc997f8264ec15cc37d0a5dfa0ccbf0ac9832e6e7fc55",
+      "git_blob": "9a6f4d5ef8ee7f0caa2d5ba1e085952501b0d6b7",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-processes.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-processes.json",
+      "native_relative_path": "baseline-processes.json",
+      "bytes": 2677,
+      "sha256": "05e3ec105052a281f16912e489a5562a5a679a4a93aa5f474a62ad78ec842a10",
+      "git_blob": "0644c8d2dfe1fcb8d5421fd3e5f0d95461318dbc",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-v2-normal/independent-fixture.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-v2-normal/independent-fixture.json",
+      "native_relative_path": "baseline-v2-normal/independent-fixture.json",
+      "bytes": 4702,
+      "sha256": "00f246046dbd7b7d94f12c7feed620d8eec8cd9ef4e7a725642882a6980227df",
+      "git_blob": "6b22147e0dfae0056676a7bdaeae59f0855db469",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-v2-normal/native-agent-result.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-v2-normal/native-agent-result.json",
+      "native_relative_path": "baseline-v2-normal/native-agent-result.json",
+      "bytes": 9305,
+      "sha256": "59f7e47e2897d22507b6f02f1707e90fde1e11e3bffe021d438ef78b740e0bee",
+      "git_blob": "bfa382533d96733eba60382754687bee6971a7cc",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-v2-normal/receipt.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-v2-normal/receipt.json",
+      "native_relative_path": "baseline-v2-normal/receipt.json",
+      "bytes": 27370,
+      "sha256": "ffe29e5cdc123dcc3f64057dd371a6602b2f2c939f3dc97934803121e1f18979",
+      "git_blob": "2eb48b4189f2de96e688e08afcc3bf8777a827bf",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-v2-normal.stderr.log",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-v2-normal.stderr.log",
+      "native_relative_path": "baseline-v2-normal.stderr.log",
+      "bytes": 6353,
+      "sha256": "55d76ba9981c793e801e628d2f232338f6864c29ea336819abe415ce7250bb9b",
+      "git_blob": "37985e53c68bb1f38fc77b71a4bd6bd976c1414c",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-v2-normal.stdout.log",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-v2-normal.stdout.log",
+      "native_relative_path": "baseline-v2-normal.stdout.log",
+      "bytes": 471,
+      "sha256": "20130d673122c422915cc997f8264ec15cc37d0a5dfa0ccbf0ac9832e6e7fc55",
+      "git_blob": "9a6f4d5ef8ee7f0caa2d5ba1e085952501b0d6b7",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-v2-optimized/independent-fixture.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-v2-optimized/independent-fixture.json",
+      "native_relative_path": "baseline-v2-optimized/independent-fixture.json",
+      "bytes": 4702,
+      "sha256": "00f246046dbd7b7d94f12c7feed620d8eec8cd9ef4e7a725642882a6980227df",
+      "git_blob": "6b22147e0dfae0056676a7bdaeae59f0855db469",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-v2-optimized/native-agent-result.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-v2-optimized/native-agent-result.json",
+      "native_relative_path": "baseline-v2-optimized/native-agent-result.json",
+      "bytes": 9305,
+      "sha256": "59f7e47e2897d22507b6f02f1707e90fde1e11e3bffe021d438ef78b740e0bee",
+      "git_blob": "bfa382533d96733eba60382754687bee6971a7cc",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-v2-optimized/receipt.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-v2-optimized/receipt.json",
+      "native_relative_path": "baseline-v2-optimized/receipt.json",
+      "bytes": 27369,
+      "sha256": "2f7a446e42512cbce699ef11ef8f2d63cb418a8727dda35e78d23d0a63dd7e02",
+      "git_blob": "a81f5835465ae8cdbaca91e18463704ccff2a03c",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-v2-optimized.stderr.log",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-v2-optimized.stderr.log",
+      "native_relative_path": "baseline-v2-optimized.stderr.log",
+      "bytes": 6353,
+      "sha256": "55d76ba9981c793e801e628d2f232338f6864c29ea336819abe415ce7250bb9b",
+      "git_blob": "37985e53c68bb1f38fc77b71a4bd6bd976c1414c",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-v2-optimized.stdout.log",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-v2-optimized.stdout.log",
+      "native_relative_path": "baseline-v2-optimized.stdout.log",
+      "bytes": 471,
+      "sha256": "20130d673122c422915cc997f8264ec15cc37d0a5dfa0ccbf0ac9832e6e7fc55",
+      "git_blob": "9a6f4d5ef8ee7f0caa2d5ba1e085952501b0d6b7",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-v2-processes.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-v2-processes.json",
+      "native_relative_path": "baseline-v2-processes.json",
+      "bytes": 2695,
+      "sha256": "d2f03be82ad296fd4b73fb41d9daa45ce0178c8e605b51ab15fb0f7031c25875",
+      "git_blob": "dd425eaff18ccd0bba2b297e2ef94cbee0435a4d",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-normal/independent-fixture.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-normal/independent-fixture.json",
+      "native_relative_path": "candidate-normal/independent-fixture.json",
+      "bytes": 4708,
+      "sha256": "676b8a917adbc4eed1bd5abf064257db2648649d2789f525f0d496206f3c2824",
+      "git_blob": "05b1a7efa7c5b9e9c4ae5ef8a41d3e6a32029846",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-normal/native-agent-result.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-normal/native-agent-result.json",
+      "native_relative_path": "candidate-normal/native-agent-result.json",
+      "bytes": 10456,
+      "sha256": "f617b5789c3400e21ed8502968a8feaae43f5c6777b32fb85336ae5fde19e262",
+      "git_blob": "d6d1bf18436d9baeacc391f83be1853a785c87ed",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-normal/receipt.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-normal/receipt.json",
+      "native_relative_path": "candidate-normal/receipt.json",
+      "bytes": 29036,
+      "sha256": "56821838c0daaded5522f9d4afec7f8d01f47e57b2d44fefcac1d67427173247",
+      "git_blob": "e3e67139d5cedf204c2459814920d62d168baccf",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-normal.stderr.log",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-normal.stderr.log",
+      "native_relative_path": "candidate-normal.stderr.log",
+      "bytes": 5339,
+      "sha256": "a00697403482290383a7adda088423ae5e784e6075f8e8bbb6a234713165e22b",
+      "git_blob": "30f5c3e92b753881a27fd1a91ce3bc2d36746dab",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-normal.stdout.log",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-normal.stdout.log",
+      "native_relative_path": "candidate-normal.stdout.log",
+      "bytes": 336,
+      "sha256": "1c1e2f6f72a723c35fde8f048cf6585d86e4e670ed4e060410a6a6f2f010ed0b",
+      "git_blob": "9557d15d30e48609c23bc02aedb9c9cea437c4b1",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-optimized/independent-fixture.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-optimized/independent-fixture.json",
+      "native_relative_path": "candidate-optimized/independent-fixture.json",
+      "bytes": 4708,
+      "sha256": "676b8a917adbc4eed1bd5abf064257db2648649d2789f525f0d496206f3c2824",
+      "git_blob": "05b1a7efa7c5b9e9c4ae5ef8a41d3e6a32029846",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-optimized/native-agent-result.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-optimized/native-agent-result.json",
+      "native_relative_path": "candidate-optimized/native-agent-result.json",
+      "bytes": 10456,
+      "sha256": "f617b5789c3400e21ed8502968a8feaae43f5c6777b32fb85336ae5fde19e262",
+      "git_blob": "d6d1bf18436d9baeacc391f83be1853a785c87ed",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-optimized/receipt.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-optimized/receipt.json",
+      "native_relative_path": "candidate-optimized/receipt.json",
+      "bytes": 29035,
+      "sha256": "034c68488c25e27f43d44a7920ee5a0e015d299669e7c2f3b06858faf63a20a6",
+      "git_blob": "5b2c2b64f43bd9d0e09af94f3fdfe07c72535cd3",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-optimized.stderr.log",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-optimized.stderr.log",
+      "native_relative_path": "candidate-optimized.stderr.log",
+      "bytes": 5339,
+      "sha256": "57d61b42a58f3451721202f01e505125b7c50883c76c1a69c5186223a4aa18e7",
+      "git_blob": "ccf8a504545b364cedcc76c0b3f8812ddaeb2db3",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-optimized.stdout.log",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-optimized.stdout.log",
+      "native_relative_path": "candidate-optimized.stdout.log",
+      "bytes": 336,
+      "sha256": "1c1e2f6f72a723c35fde8f048cf6585d86e4e670ed4e060410a6a6f2f010ed0b",
+      "git_blob": "9557d15d30e48609c23bc02aedb9c9cea437c4b1",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-processes.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-processes.json",
+      "native_relative_path": "candidate-processes.json",
+      "bytes": 2384,
+      "sha256": "e28171c289341599805a31728217ebe2dd4f921ecfb0f1992589958081a00de6",
+      "git_blob": "e285058b9b54e6aacd5dfd2fc0996f1057259570",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-source.diff",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-source.diff",
+      "native_relative_path": "candidate-source.diff",
+      "bytes": 2679,
+      "sha256": "f63bab6b58bda9f478ce6f9576ea5993f7ff7358ae80a3e3f65af76bdde33a20",
+      "git_blob": "61b84bbd563d1aa939e209273619a40f8bc0649e",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-v2-normal/independent-fixture.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-v2-normal/independent-fixture.json",
+      "native_relative_path": "candidate-v2-normal/independent-fixture.json",
+      "bytes": 4702,
+      "sha256": "00f246046dbd7b7d94f12c7feed620d8eec8cd9ef4e7a725642882a6980227df",
+      "git_blob": "6b22147e0dfae0056676a7bdaeae59f0855db469",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-v2-normal/native-agent-result.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-v2-normal/native-agent-result.json",
+      "native_relative_path": "candidate-v2-normal/native-agent-result.json",
+      "bytes": 9931,
+      "sha256": "49fb08ec47f4439a68aa630b0c58756780d68bc316e493bdbeb29825e846b289",
+      "git_blob": "61f1041c98f0bf8e4b6947beda4cb7d1cff25a96",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-v2-normal/receipt.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-v2-normal/receipt.json",
+      "native_relative_path": "candidate-v2-normal/receipt.json",
+      "bytes": 28264,
+      "sha256": "f19b073acf4118be10af9ba19d28dd21d374faaec6bd07d71ef87621a7d970fc",
+      "git_blob": "c30ff6d5db22e3c651c8d3a1ebafab4d5a774263",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-v2-normal.stderr.log",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-v2-normal.stderr.log",
+      "native_relative_path": "candidate-v2-normal.stderr.log",
+      "bytes": 740,
+      "sha256": "ae6960c64a9b042ebdaf215bf094a9fcfb24410e77bf54a12c1e9327c5233dd4",
+      "git_blob": "6bf623b211a33c4b2b123cba434a2a572e8169b4",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-v2-normal.stdout.log",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-v2-normal.stdout.log",
+      "native_relative_path": "candidate-v2-normal.stdout.log",
+      "bytes": 198,
+      "sha256": "c96a4fb73c28961ded69aa3a52b3779ca4ed8310453ae95074de0a13089cb6d8",
+      "git_blob": "2f2a17f1717dbeddcb166bbe8fe7bb33e8f9618a",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-v2-optimized/independent-fixture.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-v2-optimized/independent-fixture.json",
+      "native_relative_path": "candidate-v2-optimized/independent-fixture.json",
+      "bytes": 4702,
+      "sha256": "00f246046dbd7b7d94f12c7feed620d8eec8cd9ef4e7a725642882a6980227df",
+      "git_blob": "6b22147e0dfae0056676a7bdaeae59f0855db469",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-v2-optimized/native-agent-result.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-v2-optimized/native-agent-result.json",
+      "native_relative_path": "candidate-v2-optimized/native-agent-result.json",
+      "bytes": 9931,
+      "sha256": "49fb08ec47f4439a68aa630b0c58756780d68bc316e493bdbeb29825e846b289",
+      "git_blob": "61f1041c98f0bf8e4b6947beda4cb7d1cff25a96",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-v2-optimized/receipt.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-v2-optimized/receipt.json",
+      "native_relative_path": "candidate-v2-optimized/receipt.json",
+      "bytes": 28263,
+      "sha256": "fa38938f970f509d667c67d54e74faa056164d823f2990f5130aaa8b1bf4d91c",
+      "git_blob": "88df7348e7f0aef7832961bb280f6933a53a8a04",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-v2-optimized.stderr.log",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-v2-optimized.stderr.log",
+      "native_relative_path": "candidate-v2-optimized.stderr.log",
+      "bytes": 740,
+      "sha256": "3c8ee65c668b368daebc4c30e4c8e735ae2d844244f8d329a457f5b652c00b4c",
+      "git_blob": "779a4cfe7268974517a660711224fbb729ee5a75",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-v2-optimized.stdout.log",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-v2-optimized.stdout.log",
+      "native_relative_path": "candidate-v2-optimized.stdout.log",
+      "bytes": 198,
+      "sha256": "c96a4fb73c28961ded69aa3a52b3779ca4ed8310453ae95074de0a13089cb6d8",
+      "git_blob": "2f2a17f1717dbeddcb166bbe8fe7bb33e8f9618a",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-v2-processes.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-v2-processes.json",
+      "native_relative_path": "candidate-v2-processes.json",
+      "bytes": 2079,
+      "sha256": "b849c7b7bf7e4598cecda40704c194ddf9a3aa1de36d16e15dd84fd885df79c7",
+      "git_blob": "4e2c023f426e5e9ec76278765fdad141335ece69",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/final-qualification.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/final-qualification.json",
+      "native_relative_path": "final-qualification.json",
+      "bytes": 5028,
+      "sha256": "7666479ff75b266ed4a5cecb11c8320c90aade6817a68bbddc14a49786ee8552",
+      "git_blob": "a04083fcdbd0e77635400b3da4226d1bf4db5ea5",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/independent_soft_food_v1.py.txt",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/independent_soft_food_v1.py",
+      "native_relative_path": "independent_soft_food_v1.py",
+      "bytes": 10222,
+      "sha256": "ae02c02ff98d1663038209bca33172e0834b94096a72f5cef314278a8b9b1fdf",
+      "git_blob": "a1ac0353165b37866b457a98f19d8b0d3d338229",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/independent_soft_food_v2.py.txt",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/independent_soft_food_v2.py",
+      "native_relative_path": "independent_soft_food_v2.py",
+      "bytes": 10210,
+      "sha256": "767b023cc5c1d32a97f2e30a226bbfa64ff812ba46767738f6b76800ed45c1f1",
+      "git_blob": "3a3026083bbc4236bf4915d5995dfed87c2fe1c5",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/owner-review-freeze-v2.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/owner-review-freeze-v2.json",
+      "native_relative_path": "owner-review-freeze-v2.json",
+      "bytes": 9267,
+      "sha256": "eb68fe3838e4b0798c99cdcfbabcd620e9b4a912709da85e6ba14742c65234e7",
+      "git_blob": "d7a4a68950417f4548efeb81ba509dfc4819c5fe",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/owner-source-final-readback.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/owner-source-final-readback.json",
+      "native_relative_path": "owner-source-final-readback.json",
+      "bytes": 280,
+      "sha256": "0f35ede03c5a55ed6dd53111b297017f07917ce7688067fd0f5a75efd8ae26df",
+      "git_blob": "cae0a6701e1530fee04e67100cb74bf8b0f7cbcd",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/receiver-freeze-v1.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/receiver-freeze-v1.json",
+      "native_relative_path": "receiver-freeze-v1.json",
+      "bytes": 573,
+      "sha256": "92dc90e6c6c3285594686fed3ba62ffadaf5de9aa79bb89339757e497803cfbd",
+      "git_blob": "8fff0280360348ab5b3670a2efdbb11ecd6c8014",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/receiver-freeze-v2.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/receiver-freeze-v2.json",
+      "native_relative_path": "receiver-freeze-v2.json",
+      "bytes": 732,
+      "sha256": "329cace7a48514b365d3e6d0f49170e05bc4e83d333356c4d34244dc06d9b8f3",
+      "git_blob": "b2eb2894c53df3d771036ab761a44c5a7750d802",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/run_phase.py.txt",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/run_phase.py",
+      "native_relative_path": "run_phase.py",
+      "bytes": 2096,
+      "sha256": "463e289d2d8474d9d2b58ee384e0fe2cc609fe6163dd18515dd8ecf2377b4dc8",
+      "git_blob": "01bda21c9a35b453e8cbc53b7421623294484cae",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/run_phase_v2.py.txt",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/run_phase_v2.py",
+      "native_relative_path": "run_phase_v2.py",
+      "bytes": 2107,
+      "sha256": "9414e8824a79be49e8c448d4c45107e830a43a764b7bc518b7c725c0e8fffa19",
+      "git_blob": "f1da6dff1b9558f56018cd200a2ab25830a97da0",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/scope-freeze.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/scope-freeze.json",
+      "native_relative_path": "scope-freeze.json",
+      "bytes": 270,
+      "sha256": "7af72a78a5967d7ee08736997c75ba64d814c60a879c53b58e5cc925801a9708",
+      "git_blob": "0ebf9dca45db6f27ea777a106bfdf262de610aa4",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/scope-v1.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/scope-v1.json",
+      "native_relative_path": "scope-v1.json",
+      "bytes": 3720,
+      "sha256": "6a2c7da6879c37927ca8a4953eb4f4611da403504c6d4662f6d4c495d0fbe408",
+      "git_blob": "2e5e06b4ece84e366b337d1fb0703c33129e5df6",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/scope-v2.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/scope-v2.json",
+      "native_relative_path": "scope-v2.json",
+      "bytes": 4094,
+      "sha256": "a7ee2971daa787bf6d1065d3e919a7e55d70b844a32f77036c45a9c203aceacf",
+      "git_blob": "8382ad7db6a2e0fb285a7d37f401b593122a6a79",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/source-transfer-receipt.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/source-transfer-receipt.json",
+      "native_relative_path": "source-transfer-receipt.json",
+      "bytes": 174,
+      "sha256": "2b6bb0881925b5dad633773665548804a64585fe03f927a641ee24bb106719c4",
+      "git_blob": "f313efae78e550129928bb697d6cf1a4b0be25d5",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/static-scopes-v2.json",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/static-scopes-v2.json",
+      "native_relative_path": "static-scopes-v2.json",
+      "bytes": 2957,
+      "sha256": "2b34db0509ab791e5acd559e15ae18e6d14225fb7ba76b41ed6a0b0e20cc5ced",
+      "git_blob": "9f4549a963d5a37da71f50208d25e31f4a2373d3",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/source/baseline-constraints.py.txt",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline/constraints.py",
+      "native_relative_path": "baseline/constraints.py",
+      "bytes": 6754,
+      "sha256": "a7ad868ece3cb83b15b02f8f059a94da749059bb96a8c97f7fb207ccb85d604c",
+      "git_blob": "cab2cecbe4c3a6112022d194a927b9025ec67ab6",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/source/candidate-constraints.py.txt",
+      "source_path": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate/constraints.py",
+      "native_relative_path": "candidate/constraints.py",
+      "bytes": 8720,
+      "sha256": "f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa",
+      "git_blob": "e9d5cd1575df72b089273740e4b6a444d0cd21a8",
+      "mode": "100644"
+    }
+  ]
+}

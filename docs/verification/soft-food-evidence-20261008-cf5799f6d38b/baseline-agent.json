@@ -1,0 +1,109 @@
+{
+  "schema": "tastetable.soft-food-native-agent-baseline.v1",
+  "rows": [
+    {
+      "keywords": [
+        "no soup"
+      ],
+      "mock": true,
+      "requests": [
+        "/search",
+        "/search",
+        "/v2/tags",
+        "/v2/tags",
+        "/v2/insights",
+        "/v2/tags",
+        "/v2/tags",
+        "/v2/tags",
+        "/v2/insights",
+        "/v2/tags",
+        "/v2/tags",
+        "/v2/tags",
+        "/v2/tags",
+        "/v2/insights"
+      ],
+      "included": [
+        {
+          "day": "Wednesday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-03",
+          "name": "Abuela's Table",
+          "affinity": 0.83,
+          "fallback": false,
+          "why": "Qloo affinity 0.83 for audiences who like Celia Cruz, West Side Story (tag match: Mexican). Checks: Soft foods: pass (soft options listed: no soup); Low sodium: unknown (no sodium signal; ask for low-salt preparation); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        }
+      ],
+      "rejected": []
+    },
+    {
+      "keywords": [
+        "burger",
+        "no soup"
+      ],
+      "mock": true,
+      "requests": [
+        "/search",
+        "/search",
+        "/v2/tags",
+        "/v2/tags",
+        "/v2/insights",
+        "/v2/tags",
+        "/v2/tags",
+        "/v2/tags",
+        "/v2/insights",
+        "/v2/tags",
+        "/v2/tags",
+        "/v2/tags",
+        "/v2/tags",
+        "/v2/insights"
+      ],
+      "included": [
+        {
+          "day": "Wednesday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-03",
+          "name": "Abuela's Table",
+          "affinity": 0.83,
+          "fallback": false,
+          "why": "Qloo affinity 0.83 for audiences who like Celia Cruz, West Side Story (tag match: Mexican). Checks: Soft foods: pass (soft options listed: no soup); Low sodium: unknown (no sodium signal; ask for low-salt preparation); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        }
+      ],
+      "rejected": []
+    },
+    {
+      "keywords": [
+        "burger",
+        "soup"
+      ],
+      "mock": true,
+      "requests": [
+        "/search",
+        "/search",
+        "/v2/tags",
+        "/v2/tags",
+        "/v2/insights",
+        "/v2/tags",
+        "/v2/tags",
+        "/v2/tags",
+        "/v2/insights",
+        "/v2/tags",
+        "/v2/tags",
+        "/v2/tags",
+        "/v2/tags",
+        "/v2/insights"
+      ],
+      "included": [
+        {
+          "day": "Wednesday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-03",
+          "name": "Abuela's Table",
+          "affinity": 0.83,
+          "fallback": false,
+          "why": "Qloo affinity 0.83 for audiences who like Celia Cruz, West Side Story (tag match: Mexican). Checks: Soft foods: pass (soft options listed: soup); Low sodium: unknown (no sodium signal; ask for low-salt preparation); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        }
+      ],
+      "rejected": []
+    }
+  ]
+}

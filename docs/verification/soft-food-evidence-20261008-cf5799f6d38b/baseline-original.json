@@ -1,0 +1,185 @@
+{
+  "schema": "tastetable.soft-food-original-receiving.v1",
+  "source": "/workspace/scratch/cf5799f6d38b/optimizer-work/taste-soft-evidence/baseline",
+  "scope": "actual evaluate and assemble_plan with authored entity evidence; no provider/model/health-outcome claim",
+  "inputs": [
+    {
+      "path": "/workspace/scratch/cf5799f6d38b/optimizer-work/taste-soft-evidence/baseline/agent.py",
+      "sha256": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3"
+    },
+    {
+      "path": "/workspace/scratch/cf5799f6d38b/optimizer-work/taste-soft-evidence/baseline/constraints.py",
+      "sha256": "a7ad868ece3cb83b15b02f8f059a94da749059bb96a8c97f7fb207ccb85d604c"
+    },
+    {
+      "path": "/workspace/scratch/cf5799f6d38b/optimizer-work/taste-soft-evidence/baseline/qloo_client.py",
+      "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b"
+    }
+  ],
+  "cases": [
+    {
+      "name": "denied_existing_soft_cue",
+      "keywords": [
+        "no soup"
+      ],
+      "expected_status": "unknown",
+      "expected_included": true,
+      "actual_verdict": {
+        "entity_id": "FICTIONAL-SOFT-denied_existing_soft_cue",
+        "name": "Authored evidence counterexample",
+        "ok": true,
+        "checks": [
+          {
+            "constraint": "soft_foods",
+            "status": "pass",
+            "reason": "soft options listed: no soup"
+          }
+        ]
+      },
+      "actual_plan": {
+        "meals": [
+          {
+            "day": "Monday",
+            "kind": "restaurant",
+            "entity_id": "FICTIONAL-SOFT-denied_existing_soft_cue",
+            "name": "Authored evidence counterexample",
+            "affinity": null,
+            "fallback": false,
+            "why": "Qloo-ranked. Checks: Soft foods: pass (soft options listed: no soup)."
+          }
+        ],
+        "outing": null,
+        "rejected": [],
+        "notes": [
+          "The plan contains 1 checked restaurant suggestion; unfilled meal days are left open.",
+          "No checked outing suggestion is available in this plan."
+        ]
+      },
+      "pass": false
+    },
+    {
+      "name": "unavailable_existing_soft_cue",
+      "keywords": [
+        "soup unavailable"
+      ],
+      "expected_status": "unknown",
+      "expected_included": true,
+      "actual_verdict": {
+        "entity_id": "FICTIONAL-SOFT-unavailable_existing_soft_cue",
+        "name": "Authored evidence counterexample",
+        "ok": true,
+        "checks": [
+          {
+            "constraint": "soft_foods",
+            "status": "pass",
+            "reason": "soft options listed: soup unavailable"
+          }
+        ]
+      },
+      "actual_plan": {
+        "meals": [
+          {
+            "day": "Monday",
+            "kind": "restaurant",
+            "entity_id": "FICTIONAL-SOFT-unavailable_existing_soft_cue",
+            "name": "Authored evidence counterexample",
+            "affinity": null,
+            "fallback": false,
+            "why": "Qloo-ranked. Checks: Soft foods: pass (soft options listed: soup unavailable)."
+          }
+        ],
+        "outing": null,
+        "rejected": [],
+        "notes": [
+          "The plan contains 1 checked restaurant suggestion; unfilled meal days are left open.",
+          "No checked outing suggestion is available in this plan."
+        ]
+      },
+      "pass": false
+    },
+    {
+      "name": "denied_soft_does_not_erase_firm_signal",
+      "keywords": [
+        "burger",
+        "no soup"
+      ],
+      "expected_status": "fail",
+      "expected_included": false,
+      "actual_verdict": {
+        "entity_id": "FICTIONAL-SOFT-denied_soft_does_not_erase_firm_signal",
+        "name": "Authored evidence counterexample",
+        "ok": true,
+        "checks": [
+          {
+            "constraint": "soft_foods",
+            "status": "pass",
+            "reason": "soft options listed: no soup"
+          }
+        ]
+      },
+      "actual_plan": {
+        "meals": [
+          {
+            "day": "Monday",
+            "kind": "restaurant",
+            "entity_id": "FICTIONAL-SOFT-denied_soft_does_not_erase_firm_signal",
+            "name": "Authored evidence counterexample",
+            "affinity": null,
+            "fallback": false,
+            "why": "Qloo-ranked. Checks: Soft foods: pass (soft options listed: no soup)."
+          }
+        ],
+        "outing": null,
+        "rejected": [],
+        "notes": [
+          "The plan contains 1 checked restaurant suggestion; unfilled meal days are left open.",
+          "No checked outing suggestion is available in this plan."
+        ]
+      },
+      "pass": false
+    },
+    {
+      "name": "affirmative_soft_keeps_existing_precedence",
+      "keywords": [
+        "burger",
+        "soup"
+      ],
+      "expected_status": "pass",
+      "expected_included": true,
+      "actual_verdict": {
+        "entity_id": "FICTIONAL-SOFT-affirmative_soft_keeps_existing_precedence",
+        "name": "Authored evidence counterexample",
+        "ok": true,
+        "checks": [
+          {
+            "constraint": "soft_foods",
+            "status": "pass",
+            "reason": "soft options listed: soup"
+          }
+        ]
+      },
+      "actual_plan": {
+        "meals": [
+          {
+            "day": "Monday",
+            "kind": "restaurant",
+            "entity_id": "FICTIONAL-SOFT-affirmative_soft_keeps_existing_precedence",
+            "name": "Authored evidence counterexample",
+            "affinity": null,
+            "fallback": false,
+            "why": "Qloo-ranked. Checks: Soft foods: pass (soft options listed: soup)."
+          }
+        ],
+        "outing": null,
+        "rejected": [],
+        "notes": [
+          "The plan contains 1 checked restaurant suggestion; unfilled meal days are left open.",
+          "No checked outing suggestion is available in this plan."
+        ]
+      },
+      "pass": true
+    }
+  ],
+  "passed": 1,
+  "failed": 3
+}

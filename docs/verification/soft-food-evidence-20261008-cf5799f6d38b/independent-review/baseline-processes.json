@@ -1,0 +1,69 @@
+[
+  {
+    "phase": "baseline",
+    "optimized": false,
+    "command": [
+      "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3",
+      "-B",
+      "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/independent_soft_food_v1.py",
+      "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline",
+      "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-normal"
+    ],
+    "started_utc": "2026-10-08T15:18:10.148599+00:00",
+    "finished_utc": "2026-10-08T15:18:10.275146+00:00",
+    "seconds": 0.12640524993184954,
+    "returncode": 1,
+    "stdout": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-normal.stdout.log",
+    "stderr": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-normal.stderr.log",
+    "result": {
+      "test_methods": 6,
+      "passed_test_methods": 2,
+      "failed_test_methods": [
+        "__main__.SoftFoodIndependentTests.test_coordinated_explicit_denial",
+        "__main__.SoftFoodIndependentTests.test_multiword_local_denial",
+        "__main__.SoftFoodIndependentTests.test_native_scripted_fixture_plan",
+        "__main__.SoftFoodIndependentTests.test_unknown_and_outing_policy"
+      ],
+      "failure_records": 6,
+      "error_records": 0,
+      "skipped": 0,
+      "source_unchanged": true,
+      "network_attempts": [],
+      "qualified": false
+    }
+  },
+  {
+    "phase": "baseline",
+    "optimized": true,
+    "command": [
+      "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3",
+      "-B",
+      "-O",
+      "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/independent_soft_food_v1.py",
+      "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline",
+      "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-optimized"
+    ],
+    "started_utc": "2026-10-08T15:18:10.275677+00:00",
+    "finished_utc": "2026-10-08T15:18:10.610782+00:00",
+    "seconds": 0.33511708304286003,
+    "returncode": 1,
+    "stdout": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-optimized.stdout.log",
+    "stderr": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline-optimized.stderr.log",
+    "result": {
+      "test_methods": 6,
+      "passed_test_methods": 2,
+      "failed_test_methods": [
+        "__main__.SoftFoodIndependentTests.test_coordinated_explicit_denial",
+        "__main__.SoftFoodIndependentTests.test_multiword_local_denial",
+        "__main__.SoftFoodIndependentTests.test_native_scripted_fixture_plan",
+        "__main__.SoftFoodIndependentTests.test_unknown_and_outing_policy"
+      ],
+      "failure_records": 6,
+      "error_records": 0,
+      "skipped": 0,
+      "source_unchanged": true,
+      "network_attempts": [],
+      "qualified": false
+    }
+  }
+]

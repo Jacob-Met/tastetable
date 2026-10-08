@@ -1,0 +1,217 @@
+{
+  "_note": "Wholly fictional independent soft-food receiving fixture; no actual venues or persons.",
+  "search_entities": [
+    {
+      "entity_id": "PEER-ARTIST",
+      "name": "Synthetic Chamber Group",
+      "types": [
+        "urn:entity:artist"
+      ],
+      "tags": []
+    }
+  ],
+  "tags": [
+    {
+      "id": "urn:tag:genre:restaurant:Diner",
+      "name": "Diner",
+      "type": "urn:tag:genre:place:restaurant"
+    },
+    {
+      "id": "urn:tag:genre:place:cinema",
+      "name": "cinema",
+      "type": "urn:tag:genre:place"
+    }
+  ],
+  "places": [
+    {
+      "entity_id": "PEER-COORD",
+      "name": "Fictional PEER-COORD",
+      "types": [
+        "urn:entity:place"
+      ],
+      "popularity": 0.5,
+      "tags": [
+        {
+          "tag_id": "urn:tag:genre:restaurant:Diner",
+          "name": "Diner",
+          "type": "urn:tag:genre:place:restaurant"
+        }
+      ],
+      "properties": {
+        "geocode": {
+          "city": "Independent Fixture City"
+        },
+        "keywords": [
+          "no soup or gnocchi",
+          "pressed bread"
+        ]
+      },
+      "_signals": {
+        "PEER-ARTIST": 0.99
+      }
+    },
+    {
+      "entity_id": "PEER-MULTI",
+      "name": "Fictional PEER-MULTI",
+      "types": [
+        "urn:entity:place"
+      ],
+      "popularity": 0.5,
+      "tags": [
+        {
+          "tag_id": "urn:tag:genre:restaurant:Diner",
+          "name": "Diner",
+          "type": "urn:tag:genre:place:restaurant"
+        }
+      ],
+      "properties": {
+        "geocode": {
+          "city": "Independent Fixture City"
+        },
+        "keywords": [
+          {
+            "name": "GNOCCHI DISHES ARE NOT OFFERED",
+            "count": 3
+          },
+          "nuts"
+        ]
+      },
+      "_signals": {
+        "PEER-ARTIST": 0.98
+      }
+    },
+    {
+      "entity_id": "PEER-SAME",
+      "name": "Fictional PEER-SAME",
+      "types": [
+        "urn:entity:place"
+      ],
+      "popularity": 0.5,
+      "tags": [
+        {
+          "tag_id": "urn:tag:genre:restaurant:Diner",
+          "name": "Diner",
+          "type": "urn:tag:genre:place:restaurant"
+        }
+      ],
+      "properties": {
+        "geocode": {
+          "city": "Independent Fixture City"
+        },
+        "keywords": [
+          "no soup; soup available",
+          "burger"
+        ]
+      },
+      "_signals": {
+        "PEER-ARTIST": 0.94
+      }
+    },
+    {
+      "entity_id": "PEER-MIXED",
+      "name": "Fictional PEER-MIXED",
+      "types": [
+        "urn:entity:place"
+      ],
+      "popularity": 0.5,
+      "tags": [
+        {
+          "tag_id": "urn:tag:genre:restaurant:Diner",
+          "name": "Diner",
+          "type": "urn:tag:genre:place:restaurant"
+        }
+      ],
+      "properties": {
+        "geocode": {
+          "city": "Independent Fixture City"
+        },
+        "keywords": [
+          "no soup; polenta",
+          "ribs"
+        ]
+      },
+      "_signals": {
+        "PEER-ARTIST": 0.9
+      }
+    },
+    {
+      "entity_id": "PEER-UNKNOWN",
+      "name": "Fictional PEER-UNKNOWN",
+      "types": [
+        "urn:entity:place"
+      ],
+      "popularity": 0.5,
+      "tags": [
+        {
+          "tag_id": "urn:tag:genre:restaurant:Diner",
+          "name": "Diner",
+          "type": "urn:tag:genre:place:restaurant"
+        }
+      ],
+      "properties": {
+        "geocode": {
+          "city": "Independent Fixture City"
+        },
+        "keywords": [
+          "gnocchi: unavailable"
+        ]
+      },
+      "_signals": {
+        "PEER-ARTIST": 0.86
+      }
+    },
+    {
+      "entity_id": "PEER-PLAIN",
+      "name": "Fictional PEER-PLAIN",
+      "types": [
+        "urn:entity:place"
+      ],
+      "popularity": 0.5,
+      "tags": [
+        {
+          "tag_id": "urn:tag:genre:restaurant:Diner",
+          "name": "Diner",
+          "type": "urn:tag:genre:place:restaurant"
+        }
+      ],
+      "properties": {
+        "geocode": {
+          "city": "Independent Fixture City"
+        },
+        "keywords": [
+          "seasonal specials"
+        ]
+      },
+      "_signals": {
+        "PEER-ARTIST": 0.8
+      }
+    },
+    {
+      "entity_id": "PEER-OUTING",
+      "name": "Fictional PEER-OUTING",
+      "types": [
+        "urn:entity:place"
+      ],
+      "popularity": 0.5,
+      "tags": [
+        {
+          "tag_id": "urn:tag:genre:place:cinema",
+          "name": "cinema",
+          "type": "urn:tag:genre:place"
+        }
+      ],
+      "properties": {
+        "geocode": {
+          "city": "Independent Fixture City"
+        },
+        "keywords": [
+          "no soup or gnocchi",
+          "pressed bread"
+        ]
+      },
+      "_signals": {
+        "PEER-ARTIST": 0.95
+      }
+    }
+  ]
+}

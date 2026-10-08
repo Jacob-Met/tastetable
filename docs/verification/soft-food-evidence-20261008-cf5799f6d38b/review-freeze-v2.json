@@ -1,0 +1,250 @@
+{
+  "schema": "tastetable.soft-cue-review-freeze.v2",
+  "repository": "Jacob-Met/tastetable",
+  "base": "a77175501199ace765cb7ca57742b267351d3e79",
+  "base_tree": "2031698fbc8fcf94ad9af06117c2d9858bc83190",
+  "capture": "16 exact main files; candidate adds one test and changes only constraints.py",
+  "source": {
+    "baseline": [
+      {
+        "path": "README.md",
+        "bytes": 12889,
+        "sha256": "6deaf38706959c75e6beff6aeed0b3dfb521b1ce0efe48cffdb8ec52585b383d",
+        "git_blob": "8ff6de7f3bd91f0ff130775631dd0fe2dc98791c"
+      },
+      {
+        "path": "agent.py",
+        "bytes": 28440,
+        "sha256": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+        "git_blob": "883aff984464f2d43cda18f8e60b81240d6c3fb3"
+      },
+      {
+        "path": "constraints.py",
+        "bytes": 6754,
+        "sha256": "a7ad868ece3cb83b15b02f8f059a94da749059bb96a8c97f7fb207ccb85d604c",
+        "git_blob": "cab2cecbe4c3a6112022d194a927b9025ec67ab6"
+      },
+      {
+        "path": "fixtures/qloo_fixtures.json",
+        "bytes": 21190,
+        "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+        "git_blob": "60c5d92f905755454bb280b8181f8836a74bd955"
+      },
+      {
+        "path": "personas.py",
+        "bytes": 1247,
+        "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+        "git_blob": "1eb6768780cafaf9b1666e39b7fc17aa21204f16"
+      },
+      {
+        "path": "qloo_client.py",
+        "bytes": 12206,
+        "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+        "git_blob": "cca322e0c9af96c481ba8f7ef286e85d3b90cfd2"
+      },
+      {
+        "path": "requirements.txt",
+        "bytes": 74,
+        "sha256": "80f580784e41edbf585cdc133c99d6e52ad9fae5876459c74ba6cbb4ed6b0602",
+        "git_blob": "d2fa2b085ecd75cc196fa8a02ddb54e1728c0b23"
+      },
+      {
+        "path": "static/week_file.mjs",
+        "bytes": 6642,
+        "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+        "git_blob": "420ddb8f63fca264dcf97be7147801105696155d"
+      },
+      {
+        "path": "static/week_plan.mjs",
+        "bytes": 3913,
+        "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+        "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+      },
+      {
+        "path": "tastetable_cli.py",
+        "bytes": 6994,
+        "sha256": "5244b5d5108eb60a5c79dbe76d5abc352a9145915a5851c2f69a57e90aa71e3f",
+        "git_blob": "d375cb64c6c631cccca2bb43db286e8efd21eedb"
+      },
+      {
+        "path": "tests/test_low_sodium_evidence.py",
+        "bytes": 6370,
+        "sha256": "f69d213abcadd6bca35e0cb2d587f9bd43c10426a5e4c101e09e22e31a545171",
+        "git_blob": "89b3daa81b235807c13ef53ea4a99142c1fbec10"
+      },
+      {
+        "path": "tests/test_low_sodium_peer.py",
+        "bytes": 9474,
+        "sha256": "a0748ab61b8c49f4b7f56d823ffabba40bf7d82401ae10084d47777df1a4cb58",
+        "git_blob": "5a3740afe223441780aaf5bf5c3e5e082f22f5e7"
+      },
+      {
+        "path": "tests/test_native_plan_cli.py",
+        "bytes": 13463,
+        "sha256": "f69958f8d0e5d34cbacc243cc3fffb260fe17c717d3b28c437f5e45df9134fe5",
+        "git_blob": "202ba42feffc662e46f5df9d22ae67640104cf58"
+      },
+      {
+        "path": "tests/test_tastetable.py",
+        "bytes": 8240,
+        "sha256": "7ace6361e9baf4a1e1a4ccfa528df1a4d2165b99bacb0423a572ac78bf3e9c5b",
+        "git_blob": "e6731e2c560a921074f034057404ce9bdd81e6ac"
+      },
+      {
+        "path": "tests/test_wheelchair_evidence.py",
+        "bytes": 8030,
+        "sha256": "f3c8675177b51d508e7d297a3ff07da64fc7b73c03d5b7405493ec3099f3f252",
+        "git_blob": "96a8202b1016688405783033b19a50f98ff69649"
+      },
+      {
+        "path": "tools/native_plan_to_week.mjs",
+        "bytes": 8426,
+        "sha256": "bbdf06cf5f358ef5eb3d0875d6f2182382a625b246f0c39df159b6b15b025563",
+        "git_blob": "cf9fc5e0ecde5a839e6e6a577039b88bcc31f302"
+      }
+    ],
+    "candidate": [
+      {
+        "path": "README.md",
+        "bytes": 12889,
+        "sha256": "6deaf38706959c75e6beff6aeed0b3dfb521b1ce0efe48cffdb8ec52585b383d",
+        "git_blob": "8ff6de7f3bd91f0ff130775631dd0fe2dc98791c"
+      },
+      {
+        "path": "agent.py",
+        "bytes": 28440,
+        "sha256": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+        "git_blob": "883aff984464f2d43cda18f8e60b81240d6c3fb3"
+      },
+      {
+        "path": "constraints.py",
+        "bytes": 8720,
+        "sha256": "f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa",
+        "git_blob": "e9d5cd1575df72b089273740e4b6a444d0cd21a8"
+      },
+      {
+        "path": "fixtures/qloo_fixtures.json",
+        "bytes": 21190,
+        "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+        "git_blob": "60c5d92f905755454bb280b8181f8836a74bd955"
+      },
+      {
+        "path": "personas.py",
+        "bytes": 1247,
+        "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+        "git_blob": "1eb6768780cafaf9b1666e39b7fc17aa21204f16"
+      },
+      {
+        "path": "qloo_client.py",
+        "bytes": 12206,
+        "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+        "git_blob": "cca322e0c9af96c481ba8f7ef286e85d3b90cfd2"
+      },
+      {
+        "path": "requirements.txt",
+        "bytes": 74,
+        "sha256": "80f580784e41edbf585cdc133c99d6e52ad9fae5876459c74ba6cbb4ed6b0602",
+        "git_blob": "d2fa2b085ecd75cc196fa8a02ddb54e1728c0b23"
+      },
+      {
+        "path": "static/week_file.mjs",
+        "bytes": 6642,
+        "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+        "git_blob": "420ddb8f63fca264dcf97be7147801105696155d"
+      },
+      {
+        "path": "static/week_plan.mjs",
+        "bytes": 3913,
+        "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+        "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+      },
+      {
+        "path": "tastetable_cli.py",
+        "bytes": 6994,
+        "sha256": "5244b5d5108eb60a5c79dbe76d5abc352a9145915a5851c2f69a57e90aa71e3f",
+        "git_blob": "d375cb64c6c631cccca2bb43db286e8efd21eedb"
+      },
+      {
+        "path": "tests/test_low_sodium_evidence.py",
+        "bytes": 6370,
+        "sha256": "f69d213abcadd6bca35e0cb2d587f9bd43c10426a5e4c101e09e22e31a545171",
+        "git_blob": "89b3daa81b235807c13ef53ea4a99142c1fbec10"
+      },
+      {
+        "path": "tests/test_low_sodium_peer.py",
+        "bytes": 9474,
+        "sha256": "a0748ab61b8c49f4b7f56d823ffabba40bf7d82401ae10084d47777df1a4cb58",
+        "git_blob": "5a3740afe223441780aaf5bf5c3e5e082f22f5e7"
+      },
+      {
+        "path": "tests/test_native_plan_cli.py",
+        "bytes": 13463,
+        "sha256": "f69958f8d0e5d34cbacc243cc3fffb260fe17c717d3b28c437f5e45df9134fe5",
+        "git_blob": "202ba42feffc662e46f5df9d22ae67640104cf58"
+      },
+      {
+        "path": "tests/test_soft_food_evidence.py",
+        "bytes": 7783,
+        "sha256": "6262543e7cfbd799fd5de3cd5621c13db2aacba54914f803e949755337d3d067",
+        "git_blob": "ca77fabe3d44d8f807c05b52b87a7f713ae9c92d"
+      },
+      {
+        "path": "tests/test_tastetable.py",
+        "bytes": 8240,
+        "sha256": "7ace6361e9baf4a1e1a4ccfa528df1a4d2165b99bacb0423a572ac78bf3e9c5b",
+        "git_blob": "e6731e2c560a921074f034057404ce9bdd81e6ac"
+      },
+      {
+        "path": "tests/test_wheelchair_evidence.py",
+        "bytes": 8030,
+        "sha256": "f3c8675177b51d508e7d297a3ff07da64fc7b73c03d5b7405493ec3099f3f252",
+        "git_blob": "96a8202b1016688405783033b19a50f98ff69649"
+      },
+      {
+        "path": "tools/native_plan_to_week.mjs",
+        "bytes": 8426,
+        "sha256": "bbdf06cf5f358ef5eb3d0875d6f2182382a625b246f0c39df159b6b15b025563",
+        "git_blob": "cf9fc5e0ecde5a839e6e6a577039b88bcc31f302"
+      }
+    ]
+  },
+  "changed": [
+    "constraints.py"
+  ],
+  "new": [
+    "tests/test_soft_food_evidence.py"
+  ],
+  "original_receivers": [
+    {
+      "path": "receive_original.py",
+      "bytes": 1906,
+      "sha256": "59c3de53754f87ce70538c186b110ac7e6fc55e57db57eb4e7a5fa972f8800e6",
+      "git_blob": "5a3341673a63604c92e92c8730a1e0c951c4744e"
+    },
+    {
+      "path": "receive_local_cues.py",
+      "bytes": 992,
+      "sha256": "b3ec9c464abbd9365aa410f22fcc19838e262d21e6cabf41ed65f8a7170e1cd4",
+      "git_blob": "bcfcd6c889cb96822545f4396b356068e52e7efe"
+    },
+    {
+      "path": "receive_native_cli.py",
+      "bytes": 9370,
+      "sha256": "bb2a3afe8385abf16a2670d997b38f41f1966676a569155fb6660d8d48e7f691",
+      "git_blob": "c3e9a6acb7fd70fe29f9d5cf1d7073d6142caa86"
+    },
+    {
+      "path": "test_soft_food_evidence_original.py.txt",
+      "bytes": 6767,
+      "sha256": "efbce899d21a12621399cf23b95f6adaac372154e520385e45cdd03305423d5f",
+      "git_blob": "8396b2bf68b563d5f4dc89b775c3659108184982"
+    }
+  ],
+  "known_retained_failures": [
+    "baseline-original.json",
+    "baseline-agent.json",
+    "baseline-soft-normal.stderr",
+    "intermediate-v1-local-cues.json"
+  ],
+  "scope": "private _positive_soft_food_hits and one check_soft_foods call site; no lexicon or other checker changes"
+}

@@ -1,0 +1,160 @@
+{
+  "schema": 1,
+  "actor": "estate-db371a37f4c8-capability",
+  "observedAt": "2026-10-08T16:12:52.452Z",
+  "scope": "Read-only published-source comparison and exact patch applicability in an isolated private controller copy; no application/browser execution or owner edits.",
+  "owner": {
+    "issue": 16,
+    "pullRequest": 33,
+    "head": "9e3b074abfebfd63a4d9563088ab16c39df17f00",
+    "tree": "6ec9fdb8ee5b2b4a4d9858bc687a6a9777daf9c8",
+    "module": {
+      "gitBlob": "ebf93dcc10628c6362f9f337269413e50ff8bf28",
+      "sha256": "1635bc5f1e4377325528214af071bc1242be65eeaa57ed4e5ac41a350a1cd077",
+      "bytes": 14920
+    }
+  },
+  "qualifiedSnapshot": {
+    "beforeSHA256": "0573f3c9b60f33f105c64bd61d86cbdcc66664f8f47ae06b998c00bc988fa832",
+    "proposalSHA256": "6bc409d09b47efe6653d0d7f13c285f4f3f7f61360a949fda676fff84dde6089",
+    "receiverSHA256": "f89afb78f8109525fa53301b20d69fc42a2120067f1ba4b9a670da66161d4673",
+    "archiveSHA256": "5be791c8a2ffd3558780bbba107a9a088f021615fdba0a9fe784efecea84bc9b",
+    "browserDisposition": "Six native proposal groups passed on the qualified snapshot; no new native run is claimed for the published owner head."
+  },
+  "guard": {
+    "exactText": "    // Commit each native control once; the paired event must not erase a refusal.\n    if (event.type !== (input.dataset.contactField === \"status\" ? \"change\" : \"input\")) return;\n",
+    "publishedMinusGuardEqualsQualifiedBefore": true,
+    "patchedMinusGuardEqualsQualifiedProposal": true,
+    "retainedExactlyOnce": true,
+    "why": "Owner paired-event admission prevents a second native event from erasing a refusal."
+  },
+  "runtimeComparison": [
+    {
+      "path": "static/app.js",
+      "mode": "100644",
+      "publishedGitBlob": "c49c8c042fac52fee6d4ca5c71f55a0490909564",
+      "publishedBytes": 19168,
+      "qualifiedBytes": 19168,
+      "qualifiedSHA256": "d6c742457a4824acaad929d3db37f8d4c30a26e2ae326cac3ad41e30c4a3941d",
+      "qualifiedGitBlob": "c49c8c042fac52fee6d4ca5c71f55a0490909564",
+      "unchangedFromQualified": true
+    },
+    {
+      "path": "static/calendar.css",
+      "mode": "100644",
+      "publishedGitBlob": "9e53b951316d841b86f0256cd2444a3ce547269f",
+      "publishedBytes": 708,
+      "qualifiedBytes": 708,
+      "qualifiedSHA256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+      "qualifiedGitBlob": "9e53b951316d841b86f0256cd2444a3ce547269f",
+      "unchangedFromQualified": true
+    },
+    {
+      "path": "static/calendar.js",
+      "mode": "100644",
+      "publishedGitBlob": "dbed22d2cb91090bccec9472fbffd2854eed2722",
+      "publishedBytes": 15169,
+      "qualifiedBytes": 15169,
+      "qualifiedSHA256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+      "qualifiedGitBlob": "dbed22d2cb91090bccec9472fbffd2854eed2722",
+      "unchangedFromQualified": true
+    },
+    {
+      "path": "static/index.html",
+      "mode": "100644",
+      "publishedGitBlob": "7a5c551b259f32bb9784f7b5fec67fdeb9683b4b",
+      "publishedBytes": 7460,
+      "qualifiedBytes": 7460,
+      "qualifiedSHA256": "57d222afffc0fa36f50bf542e8e032134b449adf840aa546b804cf6fe5ae1a1e",
+      "qualifiedGitBlob": "7a5c551b259f32bb9784f7b5fec67fdeb9683b4b",
+      "unchangedFromQualified": true
+    },
+    {
+      "path": "static/plan-request.js",
+      "mode": "100644",
+      "publishedGitBlob": "b21276dda840fe6dd96a3bf3258a851970ff5e4d",
+      "publishedBytes": 1420,
+      "qualifiedBytes": 1420,
+      "qualifiedSHA256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+      "qualifiedGitBlob": "b21276dda840fe6dd96a3bf3258a851970ff5e4d",
+      "unchangedFromQualified": true
+    },
+    {
+      "path": "static/style.css",
+      "mode": "100644",
+      "publishedGitBlob": "28df6c5229b6b592db33e929ae058fe514304af4",
+      "publishedBytes": 5064,
+      "qualifiedBytes": 5064,
+      "qualifiedSHA256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+      "qualifiedGitBlob": "28df6c5229b6b592db33e929ae058fe514304af4",
+      "unchangedFromQualified": true
+    },
+    {
+      "path": "static/venue_followup.css",
+      "mode": "100644",
+      "publishedGitBlob": "2a8e084a566e763323f03bf712b8615452d657ea",
+      "publishedBytes": 1711,
+      "qualifiedBytes": 1711,
+      "qualifiedSHA256": "d2ef0569debf8ed7f94b2df64d9d819da58df72460809cb81ef848124a187d3b",
+      "qualifiedGitBlob": "2a8e084a566e763323f03bf712b8615452d657ea",
+      "unchangedFromQualified": true
+    },
+    {
+      "path": "static/venue_followup.mjs",
+      "mode": "100644",
+      "publishedGitBlob": "ebf93dcc10628c6362f9f337269413e50ff8bf28",
+      "publishedBytes": 14920,
+      "qualifiedBytes": 14742,
+      "qualifiedSHA256": "0573f3c9b60f33f105c64bd61d86cbdcc66664f8f47ae06b998c00bc988fa832",
+      "qualifiedGitBlob": "03335a3a4f4da7f7b602a425c490b4876439542d",
+      "unchangedFromQualified": false
+    },
+    {
+      "path": "static/week_file.mjs",
+      "mode": "100644",
+      "publishedGitBlob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "publishedBytes": 6642,
+      "qualifiedBytes": 6642,
+      "qualifiedSHA256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "qualifiedGitBlob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "unchangedFromQualified": true
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "mode": "100644",
+      "publishedGitBlob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "publishedBytes": 3913,
+      "qualifiedBytes": 3913,
+      "qualifiedSHA256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "qualifiedGitBlob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "unchangedFromQualified": true
+    }
+  ],
+  "patch": {
+    "sha256": "aab21c0bf6cf20058c432c64b5aac5c797d064eb6d4045234b9a50fca28e2c4d",
+    "bytes": 2612,
+    "check": {
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "apply": {
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  },
+  "result": {
+    "sha256": "b27315a0bc526f44863a9b8b39c0a217208edbd722a25cba72419f6d34456835",
+    "gitBlob": "fa8575ab921070fd008c1e2b45705bf3d4a09d75",
+    "bytes": 15053,
+    "ownerGuardPreserved": true
+  },
+  "handoff": "Apply the exact four-hunk patch to the published owner source. Do not overwrite the current module with the older complete proposal snapshot, which predates the owner's guard. The owner retains feature integration and final source receiving.",
+  "local": {
+    "path": "/dev/shm/hamon-query-db371a37f4c8-capability/receiving/taste-r3-followup/current-pr33-handoff",
+    "freeBytesAtAdmission": 192512,
+    "node": "v24.19.0",
+    "git": "git version 2.51.1"
+  }
+}

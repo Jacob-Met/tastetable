@@ -1,0 +1,229 @@
+﻿2026-10-08T16:17:55.3382101Z Current runner version: '2.337.0'
+2026-10-08T16:17:55.3407618Z ##[group]Runner Image Provisioner
+2026-10-08T16:17:55.3408597Z Hosted Compute Agent
+2026-10-08T16:17:55.3409213Z Version: 20261002.596
+2026-10-08T16:17:55.3409900Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-08T16:17:55.3410663Z Build Date: 2026-10-02T22:28:27Z
+2026-10-08T16:17:55.3411435Z Worker ID: {ca90fdf2-f4a9-41be-8bd3-b10f2add2c39}
+2026-10-08T16:17:55.3412220Z Region: northcentralus
+2026-10-08T16:17:55.3412801Z Cloud: Azure
+2026-10-08T16:17:55.3413412Z ##[endgroup]
+2026-10-08T16:17:55.3414998Z ##[group]Operating System
+2026-10-08T16:17:55.3415657Z Ubuntu
+2026-10-08T16:17:55.3416264Z 24.04.5
+2026-10-08T16:17:55.3416779Z LTS
+2026-10-08T16:17:55.3417591Z ##[endgroup]
+2026-10-08T16:17:55.3418236Z ##[group]Runner Image
+2026-10-08T16:17:55.3418888Z Image: ubuntu-24.04
+2026-10-08T16:17:55.3419497Z Version: 20261004.327.1
+2026-10-08T16:17:55.3420775Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-08T16:17:55.3422444Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-08T16:17:55.3423430Z ##[endgroup]
+2026-10-08T16:17:55.3424610Z ##[group]GITHUB_TOKEN Permissions
+2026-10-08T16:17:55.3426494Z Contents: read
+2026-10-08T16:17:55.3427600Z Metadata: read
+2026-10-08T16:17:55.3428249Z ##[endgroup]
+2026-10-08T16:17:55.3430371Z Secret source: Actions
+2026-10-08T16:17:55.3431435Z Cache mode: write
+2026-10-08T16:17:55.3432190Z Prepare workflow directory
+2026-10-08T16:17:55.3912160Z Prepare all required actions
+2026-10-08T16:17:55.3985917Z Getting action download info
+2026-10-08T16:17:55.6440412Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-08T16:17:55.7372802Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-08T16:17:55.9507648Z Complete job name: receive-week
+2026-10-08T16:17:56.0299481Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-08T16:17:56.0300559Z with:
+2026-10-08T16:17:56.0301018Z   repository: Jacob-Met/tastetable
+2026-10-08T16:17:56.0305069Z   token: ***
+2026-10-08T16:17:56.0305566Z   ssh-strict: true
+2026-10-08T16:17:56.0306013Z   ssh-user: git
+2026-10-08T16:17:56.0306474Z   persist-credentials: true
+2026-10-08T16:17:56.0307175Z   clean: true
+2026-10-08T16:17:56.0307646Z   sparse-checkout-cone-mode: true
+2026-10-08T16:17:56.0308181Z   fetch-depth: 1
+2026-10-08T16:17:56.0308630Z   fetch-tags: false
+2026-10-08T16:17:56.0309081Z   show-progress: true
+2026-10-08T16:17:56.0309539Z   lfs: false
+2026-10-08T16:17:56.0309956Z   submodules: false
+2026-10-08T16:17:56.0310413Z   set-safe-directory: true
+2026-10-08T16:17:56.0310934Z   allow-unsafe-pr-checkout: false
+2026-10-08T16:17:56.0311728Z ##[endgroup]
+2026-10-08T16:17:56.1367459Z Syncing repository: Jacob-Met/tastetable
+2026-10-08T16:17:56.1370589Z ##[group]Getting Git version info
+2026-10-08T16:17:56.1371891Z Working directory is '/home/runner/work/tastetable/tastetable'
+2026-10-08T16:17:56.1373792Z [command]/usr/bin/git version
+2026-10-08T16:17:56.1481288Z git version 2.55.0
+2026-10-08T16:17:56.1519026Z ##[endgroup]
+2026-10-08T16:17:56.1528339Z Temporarily overriding HOME='/home/runner/work/_temp/3c9f050d-635e-47f2-9a42-668a28a24ff0' before making global git config changes
+2026-10-08T16:17:56.1531043Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T16:17:56.1533025Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tastetable/tastetable
+2026-10-08T16:17:56.1584342Z Deleting the contents of '/home/runner/work/tastetable/tastetable'
+2026-10-08T16:17:56.1588495Z ##[group]Determining repository object format
+2026-10-08T16:17:56.1590539Z ##[endgroup]
+2026-10-08T16:17:56.1591827Z ##[group]Initializing the repository
+2026-10-08T16:17:56.1595950Z [command]/usr/bin/git init /home/runner/work/tastetable/tastetable
+2026-10-08T16:17:56.1732720Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-08T16:17:56.1734774Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-08T16:17:56.1736709Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-08T16:17:56.1738499Z hint: call:
+2026-10-08T16:17:56.1739510Z hint:
+2026-10-08T16:17:56.1740845Z hint: 	git config --global init.defaultBranch <name>
+2026-10-08T16:17:56.1742105Z hint:
+2026-10-08T16:17:56.1743113Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-08T16:17:56.1744693Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-08T16:17:56.1745992Z hint:
+2026-10-08T16:17:56.1746775Z hint: 	git branch -m <name>
+2026-10-08T16:17:56.1748221Z hint:
+2026-10-08T16:17:56.1749460Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-08T16:17:56.1751558Z Initialized empty Git repository in /home/runner/work/tastetable/tastetable/.git/
+2026-10-08T16:17:56.1755008Z [command]/usr/bin/git remote add origin https://github.com/Jacob-Met/tastetable
+2026-10-08T16:17:56.1876060Z ##[endgroup]
+2026-10-08T16:17:56.1877948Z ##[group]Disabling automatic garbage collection
+2026-10-08T16:17:56.1879521Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-08T16:17:56.1919072Z ##[endgroup]
+2026-10-08T16:17:56.1921060Z ##[group]Setting up auth
+2026-10-08T16:17:56.1922159Z Removing SSH command configuration
+2026-10-08T16:17:56.1925633Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T16:17:56.1967733Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T16:17:56.2361606Z Removing HTTP extra header
+2026-10-08T16:17:56.2367253Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T16:17:56.2406726Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T16:17:56.2629788Z Removing includeIf entries pointing to credentials config files
+2026-10-08T16:17:56.2635126Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T16:17:56.2679836Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T16:17:56.2917432Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-ee3d297e-7de6-4c18-8f3b-8c94ad4788d8.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-08T16:17:56.2963749Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/tastetable/tastetable/.git.path /home/runner/work/_temp/git-credentials-ee3d297e-7de6-4c18-8f3b-8c94ad4788d8.config
+2026-10-08T16:17:56.3005160Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/tastetable/tastetable/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-ee3d297e-7de6-4c18-8f3b-8c94ad4788d8.config
+2026-10-08T16:17:56.3052609Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-ee3d297e-7de6-4c18-8f3b-8c94ad4788d8.config
+2026-10-08T16:17:56.3095783Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-ee3d297e-7de6-4c18-8f3b-8c94ad4788d8.config
+2026-10-08T16:17:56.3129185Z ##[endgroup]
+2026-10-08T16:17:56.3130003Z ##[group]Fetching the repository
+2026-10-08T16:17:56.3136210Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +22d7a35d7d359ec315c6390657be2939aa2682d0:refs/remotes/pull/33/merge
+2026-10-08T16:17:57.5210816Z From https://github.com/Jacob-Met/tastetable
+2026-10-08T16:17:57.5213446Z  * [new ref]         22d7a35d7d359ec315c6390657be2939aa2682d0 -> pull/33/merge
+2026-10-08T16:17:57.5218790Z ##[endgroup]
+2026-10-08T16:17:57.5220878Z ##[group]Determining the checkout info
+2026-10-08T16:17:57.5223463Z ##[endgroup]
+2026-10-08T16:17:57.5224902Z [command]/usr/bin/git sparse-checkout disable
+2026-10-08T16:17:57.5288715Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-08T16:17:57.5324004Z ##[group]Checking out the ref
+2026-10-08T16:17:57.5330012Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/33/merge
+2026-10-08T16:17:57.5948398Z Note: switching to 'refs/remotes/pull/33/merge'.
+2026-10-08T16:17:57.5950341Z 
+2026-10-08T16:17:57.5951830Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-08T16:17:57.5955432Z changes and commit them, and you can discard any commits you make in this
+2026-10-08T16:17:57.5958792Z state without impacting any branches by switching back to a branch.
+2026-10-08T16:17:57.5960651Z 
+2026-10-08T16:17:57.5961817Z If you want to create a new branch to retain commits you create, you may
+2026-10-08T16:17:57.5964839Z do so (now or later) by using -c with the switch command. Example:
+2026-10-08T16:17:57.5966549Z 
+2026-10-08T16:17:57.5967467Z   git switch -c <new-branch-name>
+2026-10-08T16:17:57.5968697Z 
+2026-10-08T16:17:57.5969497Z Or undo this operation with:
+2026-10-08T16:17:57.5970877Z 
+2026-10-08T16:17:57.5971684Z   git switch -
+2026-10-08T16:17:57.5972616Z 
+2026-10-08T16:17:57.5973962Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-08T16:17:57.5975919Z 
+2026-10-08T16:17:57.5978435Z HEAD is now at 22d7a35 Merge f3e72efb13844b7cd8e5cdd5d14c6a21941351c4 into 7ff625da5df02b64e8141ce2c16150c6169fdada
+2026-10-08T16:17:57.5984846Z ##[endgroup]
+2026-10-08T16:17:57.6021377Z [command]/usr/bin/git log -1 --format=%H
+2026-10-08T16:17:57.6052024Z 22d7a35d7d359ec315c6390657be2939aa2682d0
+2026-10-08T16:17:57.6404575Z ##[group]Run set -euo pipefail
+2026-10-08T16:17:57.6406024Z [36;1mset -euo pipefail[0m
+2026-10-08T16:17:57.6407560Z [36;1mNATIVE_WEEK_NODE=[0m
+2026-10-08T16:17:57.6409208Z [36;1mfor NATIVE_WEEK_NODE_DIR in "${RUNNER_TOOL_CACHE}/node"/22.*; do[0m
+2026-10-08T16:17:57.6411809Z [36;1m  if [[ -x "${NATIVE_WEEK_NODE_DIR}/x64/bin/node" && -f "${NATIVE_WEEK_NODE_DIR}/x64.complete" ]]; then[0m
+2026-10-08T16:17:57.6414346Z [36;1m    NATIVE_WEEK_NODE="${NATIVE_WEEK_NODE_DIR}/x64/bin/node"[0m
+2026-10-08T16:17:57.6415974Z [36;1m  fi[0m
+2026-10-08T16:17:57.6417240Z [36;1mdone[0m
+2026-10-08T16:17:57.6418961Z [36;1m[[ -n "${NATIVE_WEEK_NODE}" ]] || { echo "A complete cached Node 22 is required."; exit 1; }[0m
+2026-10-08T16:17:57.6421014Z [36;1mNATIVE_WEEK_BROWSER=[0m
+2026-10-08T16:17:57.6423237Z [36;1mfor NATIVE_WEEK_BROWSER_NAME in google-chrome google-chrome-stable chromium chromium-browser; do[0m
+2026-10-08T16:17:57.6426043Z [36;1m  if command -v "${NATIVE_WEEK_BROWSER_NAME}" >/dev/null 2>&1; then[0m
+2026-10-08T16:17:57.6428572Z [36;1m    NATIVE_WEEK_BROWSER="$(command -v "${NATIVE_WEEK_BROWSER_NAME}")"[0m
+2026-10-08T16:17:57.6430383Z [36;1m    break[0m
+2026-10-08T16:17:57.6431402Z [36;1m  fi[0m
+2026-10-08T16:17:57.6432369Z [36;1mdone[0m
+2026-10-08T16:17:57.6434156Z [36;1m[[ -n "${NATIVE_WEEK_BROWSER}" ]] || { echo "An installed Chrome/Chromium is required."; exit 1; }[0m
+2026-10-08T16:17:57.6436464Z [36;1mNATIVE_WEEK_PYTHON="$(command -v python3)"[0m
+2026-10-08T16:17:57.6438189Z [36;1m"${NATIVE_WEEK_NODE}" --version[0m
+2026-10-08T16:17:57.6439557Z [36;1m"${NATIVE_WEEK_BROWSER}" --version[0m
+2026-10-08T16:17:57.6440922Z [36;1m"${NATIVE_WEEK_PYTHON}" --version[0m
+2026-10-08T16:17:57.6443515Z [36;1mprintf 'node=%s\nbrowser=%s\npython=%s\n' "${NATIVE_WEEK_NODE}" "${NATIVE_WEEK_BROWSER}" "${NATIVE_WEEK_PYTHON}" >> "${GITHUB_OUTPUT}"[0m
+2026-10-08T16:17:57.6729038Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-08T16:17:57.6731220Z ##[endgroup]
+2026-10-08T16:17:57.7585078Z v22.23.3
+2026-10-08T16:18:06.3821284Z Google Chrome 154.0.8037.97 
+2026-10-08T16:18:06.5454502Z Python 3.12.3
+2026-10-08T16:18:06.5565404Z ##[group]Run "/opt/hostedtoolcache/node/22.23.3/x64/bin/node" tools/check_native_plan_week_browser.mjs --browser "/usr/bin/google-chrome" --output "${RUNNER_TEMP}/native-plan-week-receiving"
+2026-10-08T16:18:06.5566857Z [36;1m"/opt/hostedtoolcache/node/22.23.3/x64/bin/node" tools/check_native_plan_week_browser.mjs --browser "/usr/bin/google-chrome" --output "${RUNNER_TEMP}/native-plan-week-receiving"[0m
+2026-10-08T16:18:06.5634285Z shell: /usr/bin/bash -e {0}
+2026-10-08T16:18:06.5634624Z env:
+2026-10-08T16:18:06.5634902Z   NATIVE_WEEK_PYTHON: /usr/bin/python3
+2026-10-08T16:18:06.5635242Z ##[endgroup]
+2026-10-08T16:18:07.1484541Z PASS actual original Python producer and new converter preserve authored and empty native results
+2026-10-08T16:18:19.2224513Z Error: Timed out: installed browser startup (ENOENT: no such file or directory, open '/home/runner/work/_temp/native-plan-week-receiving/profile-ZuUJjf/DevToolsActivePort')
+2026-10-08T16:18:19.2228643Z     at waitFor (file:///home/runner/work/tastetable/tastetable/tools/check_native_plan_week_browser.mjs:90:9)
+2026-10-08T16:18:19.2230651Z     at async file:///home/runner/work/tastetable/tastetable/tools/check_native_plan_week_browser.mjs:320:3
+2026-10-08T16:18:19.5299210Z NATIVE_WEEK_BROWSER_RESULT FAILED checks=1 artifacts=6 source_unchanged=true
+2026-10-08T16:18:19.5343899Z NATIVE_WEEK_BROWSER_RECEIPT {"schema":"tastetable.native-plan-week-browser/1","status":"failed","project":"/home/runner/work/tastetable/tastetable","executable":"/usr/bin/google-chrome","node":"v22.23.3","checkout":"22d7a35d7d359ec315c6390657be2939aa2682d0","claim":"https://github.com/Jacob-Met/tastetable/issues/25","bootstrap":"Unchanged application files; authored GET-only /api/health mock and /api/personas empty responses. No FastAPI/deployment claim.","fileSelection":"Actual Open saved week keyboard control, Page.fileChooserOpened and DOM.setFileInputFiles; native File.text is unchanged.","checks":["actual original Python producer and new converter preserve authored and empty native results"],"artifacts":[{"name":"authored-profile.json","bytes":197,"sha256":"344dddbf74cb2dac1a2b6958f55821ef78be440c2f807b8018788693c4c83065","kind":"authored native input"},{"name":"authored-native.json","bytes":9063,"sha256":"1d1d0d56c13796a229b13f5171b80c306a74cb998d5b7dc0f6d488d57f9ff48f","kind":"actual Python CLI stdout"},{"name":"authored-converted-week.json","bytes":9179,"sha256":"723aa8bfa3d76c777ccf717af616df1585b57e53ccdb6c2cb3235b746ec7e0c4","kind":"actual create-only converter output"},{"name":"empty-profile.json","bytes":213,"sha256":"70ec9404c123ad0018291e329e92f12e51fb591ea1b7828edd7d19dfe867fcc8","kind":"authored native input"},{"name":"empty-native.json","bytes":7154,"sha256":"7321a1a9e55deb6f715974549f359b8789e27b9e34e2c2cf447fad555effe3c3","kind":"actual Python CLI stdout"},{"name":"empty-converted-week.json","bytes":7131,"sha256":"88542e5d01b38c9ff3af7cdf288f07dbd1105a807c10282f780c5b693e72e8c6","kind":"actual create-only converter output"}],"programs":[{"label":"authored native producer","executable":"/usr/bin/python3","args":["/home/runner/work/tastetable/tastetable/tastetable_cli.py","--profile","/home/runner/work/_temp/native-plan-week-receiving/authored-profile.json"],"status":0,"signal":null,"stdoutSha256":"1d1d0d56c13796a229b13f5171b80c306a74cb998d5b7dc0f6d488d57f9ff48f","stderr":"","error":null},{"label":"authored actual converter","executable":"/opt/hostedtoolcache/node/22.23.3/x64/bin/node","args":["/home/runner/work/tastetable/tastetable/tools/native_plan_to_week.mjs","--input","/home/runner/work/_temp/native-plan-week-receiving/authored-native.json","--week","2026-12-30","--output","/home/runner/work/_temp/native-plan-week-receiving/authored-converted-week.json"],"status":0,"signal":null,"stdoutSha256":"18a8eefe2259b2d3adec3a754b1e9e37a4661e47f2ebe0d8fad7ecd19704460e","stderr":"","error":null},{"label":"empty native producer","executable":"/usr/bin/python3","args":["/home/runner/work/tastetable/tastetable/tastetable_cli.py","--profile","/home/runner/work/_temp/native-plan-week-receiving/empty-profile.json"],"status":0,"signal":null,"stdoutSha256":"7321a1a9e55deb6f715974549f359b8789e27b9e34e2c2cf447fad555effe3c3","stderr":"","error":null},{"label":"empty actual converter","executable":"/opt/hostedtoolcache/node/22.23.3/x64/bin/node","args":["/home/runner/work/tastetable/tastetable/tools/native_plan_to_week.mjs","--input","/home/runner/work/_temp/native-plan-week-receiving/empty-native.json","--week","2026-12-30","--output","/home/runner/work/_temp/native-plan-week-receiving/empty-converted-week.json"],"status":0,"signal":null,"stdoutSha256":"702d271ca4464b28ba1eaebd8e83c4ef59a9649fdfc47de4c02c8860aebd10d3","stderr":"","error":null}],"requests":[],"externalRequests":[],"serverRequests":[],"sourceSha256":{"tastetable_cli.py":"5244b5d5108eb60a5c79dbe76d5abc352a9145915a5851c2f69a57e90aa71e3f","agent.py":"fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3","constraints.py":"f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa","qloo_client.py":"88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b","personas.py":"caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2","fixtures/qloo_fixtures.json":"5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0","static/week_plan.mjs":"e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809","static/week_file.mjs":"914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614","static/calendar.js":"09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b","static/calendar.css":"36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733","static/app.js":"d6c742457a4824acaad929d3db37f8d4c30a26e2ae326cac3ad41e30c4a3941d","static/index.html":"70219c0e195cd75b8f4688aa30418bdf0cffe28792c13d543838b76fde8d10cb","static/venue_followup.mjs":"1635bc5f1e4377325528214af071bc1242be65eeaa57ed4e5ac41a350a1cd077","static/venue_followup.css":"d2ef0569debf8ed7f94b2df64d9d819da58df72460809cb81ef848124a187d3b","static/style.css":"0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96","static/plan-request.js":"b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995","tools/native_plan_to_week.mjs":"bbdf06cf5f358ef5eb3d0875d6f2182382a625b246f0c39df159b6b15b025563","tests/test_native_plan_week.py":"dc1e65ff357672218799adf0152baf9d7041e2f15d74a1e9c9c614e3f87e964a","tools/check_native_plan_week_browser.mjs":"d8d5aabd44aa8b1e54b26f0e76a8b40a19b324e8262a5c6c716c9655469c0ff6",".github/workflows/native-plan-week-browser.yml":"b40992512e13d653c51fb8b4dfb0d15ad0a090ae4754c4082a18ab20ca62ace3"},"sourceUnchanged":true,"error":"Error: Timed out: installed browser startup (ENOENT: no such file or directory, open '/home/runner/work/_temp/native-plan-week-receiving/profile-ZuUJjf/DevToolsActivePort')\n    at waitFor (file:///home/runner/work/tastetable/tastetable/tools/check_native_plan_week_browser.mjs:90:9)\n    at async file:///home/runner/work/tastetable/tastetable/tools/check_native_plan_week_browser.mjs:320:3","browserLog":"","pageErrors":[],"nativeFileChooserEvents":0,"totalArtifactBytes":32937}
+2026-10-08T16:18:30.8346335Z ##[error]Process completed with exit code 1.
+2026-10-08T16:18:30.8434381Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+2026-10-08T16:18:30.8434839Z with:
+2026-10-08T16:18:30.8435098Z   name: native-plan-week-receiving-37807671926
+2026-10-08T16:18:30.8435498Z   path: /home/runner/work/_temp/native-plan-week-receiving
+2026-10-08T16:18:30.8435845Z   if-no-files-found: warn
+2026-10-08T16:18:30.8436084Z   retention-days: 14
+2026-10-08T16:18:30.8436320Z   compression-level: 6
+2026-10-08T16:18:30.8436541Z   overwrite: false
+2026-10-08T16:18:30.8436758Z   include-hidden-files: false
+2026-10-08T16:18:30.8437355Z ##[endgroup]
+2026-10-08T16:18:31.0113493Z (node:2455) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-08T16:18:31.0114685Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-08T16:18:31.0521319Z With the provided path, there will be 103 files uploaded
+2026-10-08T16:18:31.0527962Z Artifact name is valid!
+2026-10-08T16:18:31.0528737Z Root directory input is valid!
+2026-10-08T16:18:31.2993739Z Beginning upload of artifact content to blob storage
+2026-10-08T16:18:31.4275677Z (node:2455) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-08T16:18:31.5868682Z Uploaded bytes 47362
+2026-10-08T16:18:31.6256487Z Finished uploading artifact content to blob storage!
+2026-10-08T16:18:31.6257993Z SHA256 digest of uploaded artifact zip is 5ca9dab3baf7d9195970ac311d6fda782b56b6992e60a285eac62b74e6b717a1
+2026-10-08T16:18:31.6260144Z Finalizing artifact upload
+2026-10-08T16:18:31.8737581Z Artifact native-plan-week-receiving-37807671926.zip successfully finalized. Artifact ID 11564060281
+2026-10-08T16:18:31.8739579Z Artifact native-plan-week-receiving-37807671926 has been successfully uploaded! Final size is 47362 bytes. Artifact ID is 11564060281
+2026-10-08T16:18:31.8746080Z Artifact download URL: https://github.com/Jacob-Met/tastetable/actions/runs/37807671926/artifacts/11564060281
+2026-10-08T16:18:31.8977596Z Post job cleanup.
+2026-10-08T16:18:31.9827045Z [command]/usr/bin/git version
+2026-10-08T16:18:31.9870226Z git version 2.55.0
+2026-10-08T16:18:31.9908750Z Temporarily overriding HOME='/home/runner/work/_temp/b5269eb6-261d-47f7-9c16-7fc1d09cb3d6' before making global git config changes
+2026-10-08T16:18:31.9910149Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T16:18:31.9914708Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tastetable/tastetable
+2026-10-08T16:18:31.9948484Z Removing SSH command configuration
+2026-10-08T16:18:31.9955124Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T16:18:31.9991728Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T16:18:32.0240417Z Removing HTTP extra header
+2026-10-08T16:18:32.0247762Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T16:18:32.0285346Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T16:18:32.0537678Z Removing includeIf entries pointing to credentials config files
+2026-10-08T16:18:32.0544031Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T16:18:32.0577306Z includeif.gitdir:/home/runner/work/tastetable/tastetable/.git.path
+2026-10-08T16:18:32.0578435Z includeif.gitdir:/home/runner/work/tastetable/tastetable/.git/worktrees/*.path
+2026-10-08T16:18:32.0579377Z includeif.gitdir:/github/workspace/.git.path
+2026-10-08T16:18:32.0580128Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-08T16:18:32.0586219Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/tastetable/tastetable/.git.path
+2026-10-08T16:18:32.0613297Z /home/runner/work/_temp/git-credentials-ee3d297e-7de6-4c18-8f3b-8c94ad4788d8.config
+2026-10-08T16:18:32.0623526Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/tastetable/tastetable/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-ee3d297e\-7de6\-4c18\-8f3b\-8c94ad4788d8\.config
+2026-10-08T16:18:32.0691993Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/tastetable/tastetable/.git/worktrees/*.path
+2026-10-08T16:18:32.0724307Z /home/runner/work/_temp/git-credentials-ee3d297e-7de6-4c18-8f3b-8c94ad4788d8.config
+2026-10-08T16:18:32.0733543Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/tastetable/tastetable/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-ee3d297e\-7de6\-4c18\-8f3b\-8c94ad4788d8\.config
+2026-10-08T16:18:32.0771718Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-08T16:18:32.0799820Z /github/runner_temp/git-credentials-ee3d297e-7de6-4c18-8f3b-8c94ad4788d8.config
+2026-10-08T16:18:32.0808578Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-ee3d297e\-7de6\-4c18\-8f3b\-8c94ad4788d8\.config
+2026-10-08T16:18:32.0848040Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-08T16:18:32.0874653Z /github/runner_temp/git-credentials-ee3d297e-7de6-4c18-8f3b-8c94ad4788d8.config
+2026-10-08T16:18:32.0883925Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-ee3d297e\-7de6\-4c18\-8f3b\-8c94ad4788d8\.config
+2026-10-08T16:18:32.0921493Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T16:18:32.1140939Z Removing credentials config '/home/runner/work/_temp/git-credentials-ee3d297e-7de6-4c18-8f3b-8c94ad4788d8.config'
+2026-10-08T16:18:32.1285906Z Cleaning up orphan processes
+2026-10-08T16:18:32.1687783Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
