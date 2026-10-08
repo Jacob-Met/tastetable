@@ -1,0 +1,14 @@
+{
+  "originalDriverSha256": "3e45ce8a3668241870a6eea2be871d367455a8840f8114a6d1029132e4d028c9",
+  "correctedDriverSha256": "15865d93405c0af5056670ed6b8bcaeeefb8fb155ba4c255d1be7dd92ade20e6",
+  "originalFailureReceiptSha256": "f6de6495706eef914a9c530693a708077166d0dec256266f276b9a8999f00109",
+  "originalInvocationCwd": "/home/jacob/hamon-universal-e3a41d2b3368-tastetable-batch/mixed-result-example",
+  "originalReceiptSha256": "4207d445338a5a2325e1a69d89dd25451c5dadcb133b55121c23e16c5b44fed4",
+  "changes": [
+    "Resolve relative input labels against the established original invocation cwd",
+    "Use the standard Node readFileSync numeric-stdin interface before first Node execution"
+  ],
+  "applicationSourceChanged": false,
+  "batchRerun": false,
+  "availableBytes": 2897965056
+}

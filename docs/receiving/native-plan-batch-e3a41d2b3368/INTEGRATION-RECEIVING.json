@@ -1,0 +1,18 @@
+{
+  "schema": "tastetable.batch.integration-receiving.v1",
+  "state": "Source qualification PR; hosted final v2 suite and normal integration pending",
+  "authorArchive": "evidence.tar.gz remains byte-identical; its historical status labels are preserved.",
+  "qualification": [
+    "Original documented single-profile baseline: 11 commands and 16 unchanged tests pass; missing multi-profile consumer, not regression.",
+    "Frozen v1: all 20 actual-process tests pass with zero skips.",
+    "Only v2 runtime change names safely quoted created destination after publication failure. Two strengthened assertions fail on v1 and pass on v2. Full 20-case v2 run is the hosted gate.",
+    "Root source/guide/README review accepted. Independent retained-ZIP receive: two strict native saved weeks, independent calendars, visible middle failure, all 15 source pins and input/output bytes unchanged.",
+    "Root archive receive: 84 unique regular members exact; no links/extraction/test execution."
+  ],
+  "receiverCorrections": [
+    "Initial root receiver resolved relative input labels against tool cwd; stopped before Node. v2 binds original invocation cwd.",
+    "Unexecuted Node stdin receiver call corrected to readFileSync(0). No product change or batch rerun."
+  ],
+  "otherIndependentReceiver": "Issue 41 comment 6066961124 reserves isolated receiving of historical v1. It is not a competing implementation or claimed completed acceptance.",
+  "boundaries": "No original producer/converter, fixtures, saved-week model/codec, provider, UI, workflow or other owner files change; no live provider/account/deployment action."
+}

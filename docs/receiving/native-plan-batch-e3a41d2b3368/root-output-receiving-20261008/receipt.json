@@ -1,0 +1,20 @@
+{
+  "archive": {
+    "bytes": 9782,
+    "path": "/home/jacob/hamon-universal-e3a41d2b3368-tastetable-batch/mixed-result-example/caregiver-week-example.zip",
+    "sha256": "e53f8bc2f3482e9436bd1ed851705a33d24207d04af814c479aac8ce28441516"
+  },
+  "batchRerun": false,
+  "currentSourceVersion": "v2 diagnostic-only successor",
+  "driverSha256": "3e45ce8a3668241870a6eea2be871d367455a8840f8114a6d1029132e4d028c9",
+  "error": {
+    "message": "Input outside authored example",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/jacob/hamon-universal-e3a41d2b3368-tastetable-batch/root-output-receiving-20261008/receive_existing_bundle.py\", line 39, in <module>\n    require(source.is_relative_to((ROOT/\"mixed-result-example\").resolve()),\"Input outside authored example\")\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/jacob/hamon-universal-e3a41d2b3368-tastetable-batch/root-output-receiving-20261008/receive_existing_bundle.py\", line 9, in require\n    if not ok:raise RuntimeError(message)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Input outside authored example\n",
+    "type": "RuntimeError"
+  },
+  "finishedAt": "2026-10-08T18:57:23.046591+00:00",
+  "passed": false,
+  "schema": "tastetable.root-existing-bundle-receiving/1",
+  "sourceVersionOfOrdinaryZip": "v1",
+  "startedAt": "2026-10-08T18:57:23.025194+00:00"
+}
