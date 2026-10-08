@@ -1,0 +1,76 @@
+{
+  "schema": "tastetable.independent-admission-closure.v1",
+  "at": "2026-10-08T14:27:07.297257+00:00",
+  "source_head": "a87380052b8dd815707e63f809f954876fdfb482",
+  "admission_sha256": "52530c5ee1913c297382283bc600a0e548c0c839bffd06d7c6807a2a1cc3fda1",
+  "probe_sha256": "ebd47f6c74e287a3d398b9e7b5bef42179719f5c182868ab1b3d282b100a22fd",
+  "exit": 0,
+  "stdout": {
+    "record": "rosa-0",
+    "nullPaths": 5,
+    "findings": [
+      {
+        "path": [
+          "response",
+          "llm_only",
+          "meals",
+          "0",
+          "verified",
+          "entity_id"
+        ],
+        "accepted": false,
+        "error": "This saved week contains a non-finite number."
+      },
+      {
+        "path": [
+          "response",
+          "llm_only",
+          "meals",
+          "1",
+          "verified",
+          "entity_id"
+        ],
+        "accepted": false,
+        "error": "This saved week contains a non-finite number."
+      },
+      {
+        "path": [
+          "response",
+          "llm_only",
+          "meals",
+          "2",
+          "verified",
+          "entity_id"
+        ],
+        "accepted": false,
+        "error": "This saved week contains a non-finite number."
+      },
+      {
+        "path": [
+          "response",
+          "llm_only",
+          "meals",
+          "3",
+          "verified",
+          "entity_id"
+        ],
+        "accepted": false,
+        "error": "This saved week contains a non-finite number."
+      },
+      {
+        "path": [
+          "response",
+          "llm_only",
+          "outing",
+          "verified",
+          "entity_id"
+        ],
+        "accepted": false,
+        "error": "This saved week contains a non-finite number."
+      }
+    ]
+  },
+  "stderr": "",
+  "all_five_original_overflow_cases_refused": true,
+  "production_files_changed_by_probe": 0
+}

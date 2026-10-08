@@ -98,3 +98,33 @@ footer a { color:#65408e; }
   .week-days,.omitted-picks { display:block; }
   .scheduled-pick .why,.handoff-note { font-size:9pt; }
 }
+
+/* Explicit local files, with preview kept outside the replaceable result. */
+.studio-workspace { min-width:0; }
+.week-files { margin:0 0 1rem; background:#fffdf9; }
+.week-file-actions { display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+.week-file-actions .eyebrow { margin-bottom:.3rem; }
+.week-file-actions h2 { margin:0; font-size:1.12rem; letter-spacing:-.02em; }
+.week-file-actions button { flex-shrink:0; font-size:.8rem; }
+.week-files .why { font-size:.78rem; line-height:1.55; }
+#fileStatus:empty, #fileError:empty { display:none; }
+.week-preview { margin:1rem 0 .65rem; padding:1rem; border:1px solid #cbbbdf; border-radius:8px; background:#f4f0f9; }
+.week-preview h3 { margin:0 0 .6rem; font-size:1rem; }
+.week-preview p { overflow-wrap:anywhere; }
+#previewSummary { font-size:.85rem; font-weight:600; }
+.preview-days { margin:.8rem 0; padding:0; list-style:none; }
+.preview-days li { display:grid; grid-template-columns:86px minmax(0,1fr); gap:.5rem; padding:.35rem 0; border-top:1px solid #e0d7ea; font-size:.76rem; }
+.preview-days span { overflow-wrap:anywhere; }
+#cancelWeek { margin-top:.5rem; font-size:.8rem; }
+.opened-copy { padding:.6rem .7rem; border-left:3px solid #8b73a6; background:#f3eff8; }
+#weekTitle:focus, #weekPreviewTitle:focus { outline:2px solid #6733ad; outline-offset:4px; }
+@media (max-width:720px) {
+  .week-file-actions { flex-wrap:wrap; gap:.7rem; }
+  .week-file-actions button { min-height:42px; }
+  .week-preview { padding:.75rem; }
+  .preview-days li { grid-template-columns:74px minmax(0,1fr); }
+}
+@media print {
+  .week-files { display:none !important; }
+  .opened-copy { color:#111; background:#fff; border-color:#555; font-size:9pt; }
+}

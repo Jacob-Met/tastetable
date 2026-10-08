@@ -1,0 +1,495 @@
+{
+  "schema": "tastetable.offline-week-browser.v1",
+  "started_at": "2026-10-08T14:24:28.948Z",
+  "source": "/tmp/tastetable-offline-81ba1ed0179c/weekly-files-installed-finite",
+  "source_sha256": {
+    "index.html": "44a7b38c44b48c0ae86e622f894b06dc81608220a89af020711c254bb87137a5",
+    "app.mjs": "5c48f5c7a3feefe45d37df5edb05b0b06174d4c3e43f7db45951bce35fba9008",
+    "saved_week.mjs": "52530c5ee1913c297382283bc600a0e548c0c839bffd06d7c6807a2a1cc3fda1",
+    "week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+    "week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+    "offline.css": "3696087c37b9ca409934d41491b56e87d9d4f011877403939092707624f804a9",
+    "style.css": "0d58ae4d0fef286374808eda0dc90b5e8249432a248b8332441738eb04dc0840"
+  },
+  "catalogue_sha256": "94be521e658225ff9a23b31834d03d620143943da2329bebefa0397cfa92b2f4",
+  "checks": [
+    {
+      "name": "Actual Save week download includes date, day, omission and complete original response",
+      "pass": true,
+      "bytes": 10843
+    },
+    {
+      "name": "Real downloaded file reopens after reload as a focused preview without replacing the current plan",
+      "pass": true
+    },
+    {
+      "name": "Keyboard confirmation restores canonical profile, constraints, source and exact arrangement",
+      "pass": true
+    },
+    {
+      "name": "Cancel preserves the accepted draft and returns focus to Open saved week",
+      "pass": true
+    },
+    {
+      "name": "Resave retains original acceptance/source metadata; original raw download stays byte-exact",
+      "pass": true
+    },
+    {
+      "name": "Restored unknown dietary reason, ask-venue text and saved-copy label survive actual print media and PDF",
+      "pass": true
+    },
+    {
+      "name": "Object-key-reordered file is admitted and can be saved again with canonical source order",
+      "pass": true
+    },
+    {
+      "name": "Refused file preserves draft and retires previous preview: different-source.json",
+      "pass": true
+    },
+    {
+      "name": "Refused file preserves draft and retires previous preview: different-inputs.json",
+      "pass": true
+    },
+    {
+      "name": "Refused file preserves draft and retires previous preview: incomplete-arrangement.json",
+      "pass": true
+    },
+    {
+      "name": "Refused file preserves draft and retires previous preview: nonfinite-source.json",
+      "pass": true
+    },
+    {
+      "name": "Refused file preserves draft and retires previous preview: numeric-markup.json",
+      "pass": true
+    },
+    {
+      "name": "Refused file preserves draft and retires previous preview: wrong-format.json",
+      "pass": true
+    },
+    {
+      "name": "Refused file preserves draft and retires previous preview: not-json.json",
+      "pass": true
+    },
+    {
+      "name": "Refused file preserves draft and retires previous preview: invalid-utf8.json",
+      "pass": true
+    },
+    {
+      "name": "Refused file preserves draft and retires previous preview: oversized.json",
+      "pass": true
+    },
+    {
+      "name": "Refused file preserves draft and retires previous preview: authored-unreadable.json",
+      "pass": true
+    },
+    {
+      "name": "Opening and cancelling another file chooser retires the prior preview",
+      "pass": true
+    },
+    {
+      "name": "Current date edit retires a prepared saved-week preview",
+      "pass": true
+    },
+    {
+      "name": "Current day edit retires a prepared saved-week preview",
+      "pass": true
+    },
+    {
+      "name": "Current restore days edit retires a prepared saved-week preview",
+      "pass": true
+    },
+    {
+      "name": "Current profile edit retires a prepared saved-week preview",
+      "pass": true
+    },
+    {
+      "name": "Current constraints edit retires a prepared saved-week preview",
+      "pass": true
+    },
+    {
+      "name": "Current show record edit retires a prepared saved-week preview",
+      "pass": true
+    },
+    {
+      "name": "Current profile defaults edit retires a prepared saved-week preview",
+      "pass": true
+    },
+    {
+      "name": "Cancelling an actual selected but held file read prevents its later completion from changing state",
+      "pass": true
+    },
+    {
+      "name": "A day edit while a file read is pending remains authoritative after the old read completes",
+      "pass": true
+    },
+    {
+      "name": "A newer selected file wins over late completion of the older file, including different profile and constraints",
+      "pass": true
+    },
+    {
+      "name": "An invalid draft date blocks Save; explicit valid saved-week replacement restores a valid week",
+      "pass": true
+    },
+    {
+      "name": "An explicitly all-omitted arrangement survives a real download and reopen",
+      "pass": true
+    },
+    {
+      "name": "Phone real Save/Open/Replace retains leap-week arrangement and readable nonoverflowing preview",
+      "pass": true
+    },
+    {
+      "name": "Fresh browser contexts make no API/external requests or automatic local/session writes",
+      "pass": true
+    }
+  ],
+  "downloads": [
+    {
+      "tag": "desktop-arranged",
+      "filename": "tastetable-week-2027-02-08.json",
+      "saved_path": "/tmp/tastetable-offline-81ba1ed0179c/weekly-files-browser-finite/desktop-arranged-tastetable-week-2027-02-08.json",
+      "bytes": 10843,
+      "sha256": "4cfa10c581952c4627a96ae2ba89b46a426e424b99890273dc5a8bfaa1b83333"
+    },
+    {
+      "tag": "desktop-resaved",
+      "filename": "tastetable-week-2027-02-08.json",
+      "saved_path": "/tmp/tastetable-offline-81ba1ed0179c/weekly-files-browser-finite/desktop-resaved-tastetable-week-2027-02-08.json",
+      "bytes": 10843,
+      "sha256": "e37f344d006ec3b7bc9a662c3d192bb5fd21595493f54876320e4a8d133ff0ca"
+    },
+    {
+      "tag": "retained-original-record",
+      "filename": "tastetable-rosa-1-source.json",
+      "saved_path": "/tmp/tastetable-offline-81ba1ed0179c/weekly-files-browser-finite/retained-original-record-tastetable-rosa-1-source.json",
+      "bytes": 14122,
+      "sha256": "4bb8231a614897b8c1dc898ad4d37cf2466f13d28b5e12c3243ad570c0909a3d"
+    },
+    {
+      "tag": "reordered-resaved",
+      "filename": "tastetable-week-2027-02-08.json",
+      "saved_path": "/tmp/tastetable-offline-81ba1ed0179c/weekly-files-browser-finite/reordered-resaved-tastetable-week-2027-02-08.json",
+      "bytes": 10843,
+      "sha256": "21f57ec3d2c4ca279588643c9f133638ac3e12b9c4dced1a8c61d8d7059ace02"
+    },
+    {
+      "tag": "all-off-week",
+      "filename": "tastetable-week-2027-02-08.json",
+      "saved_path": "/tmp/tastetable-offline-81ba1ed0179c/weekly-files-browser-finite/all-off-week-tastetable-week-2027-02-08.json",
+      "bytes": 10823,
+      "sha256": "069579de0e80b8e15caaf2664ffbd760cf0862c47d0d1bc6ea497a0c4888638a"
+    },
+    {
+      "tag": "phone-arranged",
+      "filename": "tastetable-week-2028-02-28.json",
+      "saved_path": "/tmp/tastetable-offline-81ba1ed0179c/weekly-files-browser-finite/phone-arranged-tastetable-week-2028-02-28.json",
+      "bytes": 8799,
+      "sha256": "c275ef35f85f0e0c3f856a3ea3ce613e2a8e7597b78b5c214facbda12ecc0019"
+    }
+  ],
+  "authored_files": [
+    {
+      "name": "reordered-saved-week.json",
+      "bytes": 6658,
+      "sha256": "5e91264895632f9b78972b5e2acfc240ff8189b1be5e7594a2a56146f8b3255e"
+    },
+    {
+      "name": "different-source.json",
+      "bytes": 6671,
+      "sha256": "1d32ea5ad81164f510922295602fa15c938a61e4b6de9606db895fc629825010"
+    },
+    {
+      "name": "different-inputs.json",
+      "bytes": 6662,
+      "sha256": "e9a0b863adcafe93b506387ac5f133c62d570aa22122d6d2066dce30c6f31cb9"
+    },
+    {
+      "name": "incomplete-arrangement.json",
+      "bytes": 6644,
+      "sha256": "d67c11b087b9a3abe0b76e78f64f82b1af4d04e065fb54a444eb008e3d966dd3"
+    },
+    {
+      "name": "nonfinite-source.json",
+      "bytes": 6659,
+      "sha256": "d3bca2dafc3b97f3dde893bc02d02bf67a2efc6f4ca3de825522cba04f253de5"
+    },
+    {
+      "name": "numeric-markup.json",
+      "bytes": 6687,
+      "sha256": "388df734e4f35af6fcd181a5b5dbcd80cd3c3108cff3ac4c7dc604096c74049a"
+    },
+    {
+      "name": "wrong-format.json",
+      "bytes": 21,
+      "sha256": "268cd6c6cf728de2c8a1e979db4966c290541b9bda016b76b1dc0f26c4568f68"
+    },
+    {
+      "name": "not-json.json",
+      "bytes": 10,
+      "sha256": "258f701f40f8866c2fa437533bdca0f0ee446d307a5ddab295c5e7ee1b581f91"
+    },
+    {
+      "name": "invalid-utf8.json",
+      "bytes": 2,
+      "sha256": "eddf68639913a3cb8331cdfe7f87559e0beccf2c289c0d90ac4d89b3204004f8"
+    },
+    {
+      "name": "oversized.json",
+      "bytes": 131073,
+      "sha256": "8c3f1a6fae47b52bf2eadc82ab4a991bd37ef2281270850ad1b22d06b839ad83"
+    },
+    {
+      "name": "authored-unreadable.json",
+      "bytes": 10843,
+      "sha256": "4cfa10c581952c4627a96ae2ba89b46a426e424b99890273dc5a8bfaa1b83333"
+    },
+    {
+      "name": "held-cancel.json",
+      "bytes": 10843,
+      "sha256": "4cfa10c581952c4627a96ae2ba89b46a426e424b99890273dc5a8bfaa1b83333"
+    },
+    {
+      "name": "held-edit.json",
+      "bytes": 10843,
+      "sha256": "4cfa10c581952c4627a96ae2ba89b46a426e424b99890273dc5a8bfaa1b83333"
+    },
+    {
+      "name": "authored-valid-mei-week.json",
+      "bytes": 8836,
+      "sha256": "f665217a88543a2c8248df3ce7e865987d1db95d30abf2502e7d146064abe562"
+    },
+    {
+      "name": "held-older-choice.json",
+      "bytes": 10843,
+      "sha256": "4cfa10c581952c4627a96ae2ba89b46a426e424b99890273dc5a8bfaa1b83333"
+    }
+  ],
+  "requests": [
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/"
+    },
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/style.css"
+    },
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/offline.css"
+    },
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/app.mjs"
+    },
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/week_plan.mjs"
+    },
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/catalogue.mjs"
+    },
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/saved_week.mjs"
+    },
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/week_file.mjs"
+    },
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/data/catalogue.json"
+    },
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/"
+    },
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/style.css"
+    },
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/offline.css"
+    },
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/app.mjs"
+    },
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/week_plan.mjs"
+    },
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/catalogue.mjs"
+    },
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/saved_week.mjs"
+    },
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/week_file.mjs"
+    },
+    {
+      "tag": "desktop",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/data/catalogue.json"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/style.css"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/offline.css"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/app.mjs"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/week_plan.mjs"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/catalogue.mjs"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/saved_week.mjs"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/week_file.mjs"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/data/catalogue.json"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/style.css"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/offline.css"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/app.mjs"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/week_plan.mjs"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/catalogue.mjs"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/saved_week.mjs"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/week_file.mjs"
+    },
+    {
+      "tag": "phone",
+      "method": "GET",
+      "origin": "http://127.0.0.1:51949",
+      "path": "/data/catalogue.json"
+    }
+  ],
+  "external_requests": [],
+  "page_errors": [],
+  "complete": true,
+  "fault_injection": "Explicit receiver-only held/rejected File.arrayBuffer promises; product code has no test hooks.",
+  "browser_version": "154.0.8037.98",
+  "print_pdf": {
+    "bytes": 328287,
+    "sha256": "80e24f2d9e5e87498fe344ff99c32fa091ea7f031d399268a5846b7bb3922a1f"
+  },
+  "finished_at": "2026-10-08T14:24:35.247Z"
+}

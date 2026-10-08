@@ -1,0 +1,73 @@
+{
+  "schema": "tastetable.independent-admission-negative.v1",
+  "source": "RDC native Mac process 56003 stdout",
+  "runtime": "Node on Mac.lan",
+  "reviewer": "estate-81ba1ed0179c/estate_production",
+  "source_sha256": "8a1a42061f16bb0afe89f69bc69c60856a3a0435039e450dbc463eb9d9282f52",
+  "record": "rosa-0",
+  "nullPaths": 5,
+  "findings": [
+    {
+      "path": [
+        "response",
+        "llm_only",
+        "meals",
+        "0",
+        "verified",
+        "entity_id"
+      ],
+      "accepted": true,
+      "record": "rosa-0"
+    },
+    {
+      "path": [
+        "response",
+        "llm_only",
+        "meals",
+        "1",
+        "verified",
+        "entity_id"
+      ],
+      "accepted": true,
+      "record": "rosa-0"
+    },
+    {
+      "path": [
+        "response",
+        "llm_only",
+        "meals",
+        "2",
+        "verified",
+        "entity_id"
+      ],
+      "accepted": true,
+      "record": "rosa-0"
+    },
+    {
+      "path": [
+        "response",
+        "llm_only",
+        "meals",
+        "3",
+        "verified",
+        "entity_id"
+      ],
+      "accepted": true,
+      "record": "rosa-0"
+    },
+    {
+      "path": [
+        "response",
+        "llm_only",
+        "outing",
+        "verified",
+        "entity_id"
+      ],
+      "accepted": true,
+      "record": "rosa-0"
+    }
+  ],
+  "interpretation": "JSON number 1e400 parsed as Infinity and canonical comparison collapsed it to native null. Restored rendering still uses canonical catalogue data.",
+  "files_changed_by_probe": 0,
+  "packaged_at": "2026-10-08T14:20:38.975958+00:00"
+}

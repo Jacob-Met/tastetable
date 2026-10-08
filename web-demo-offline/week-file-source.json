@@ -1,0 +1,21 @@
+{
+  "schema": "tastetable.offline-week-codec-source.v1",
+  "repository": "Jacob-Met/tastetable",
+  "source_commit": "9930c0a18f339ca00bb7c43b4defd5b0d61ae56c",
+  "codec": {
+    "source_path": "static/week_file.mjs",
+    "copied_path": "web-demo-offline/week_file.mjs",
+    "git_blob": "420ddb8f63fca264dcf97be7147801105696155d",
+    "modified": false
+  },
+  "organizer": {
+    "source_path": "static/week_plan.mjs",
+    "copied_path": "web-demo-offline/week_plan.mjs",
+    "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+    "modified": false
+  },
+  "original_recording_pin": "59a5b23cedbd758945a1c80bcc9d83a6f564b819",
+  "schema_format": "tastetable.saved-week.v1",
+  "shared_schema_changed": false,
+  "source_issue": "https://github.com/Jacob-Met/tastetable/issues/26"
+}

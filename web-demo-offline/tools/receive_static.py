@@ -14,7 +14,8 @@ import urllib.request
 from pathlib import Path
 
 RUNTIME = ("index.html", "app.mjs", "catalogue.mjs", "week_plan.mjs", "style.css",
-           "offline.css", "source-pin.json", "README.md", "LICENSE")
+           "offline.css", "source-pin.json", "README.md", "LICENSE",
+           "week_file.mjs", "saved_week.mjs", "week-file-source.json")
 
 
 def receive(source: Path, target: Path, output: Path) -> dict:
@@ -27,8 +28,8 @@ def receive(source: Path, target: Path, output: Path) -> dict:
     if any(path.is_symlink() or not path.is_file() for path in paths):
         raise ValueError("The static artifact must contain regular files.")
     content = {path.relative_to(source).as_posix(): path.read_bytes() for path in paths}
-    if len(content) != 35:
-        raise ValueError("Expected nine runtime files and 26 native data files.")
+    if len(content) != 38:
+        raise ValueError("Expected 12 runtime files and 26 native data files.")
     expected = {name: hashlib.sha256(data).hexdigest() for name, data in content.items()}
     output.mkdir(parents=True)
     record = {"schema": "tastetable.static-receiving.v1", "source": str(source),

@@ -1,0 +1,28 @@
+{
+  "schema": "tastetable.actual-output-envelope.v1",
+  "receipt": {
+    "schema": "tastetable.offline-week-admission-negative.v1",
+    "created_at": "2026-10-08T14:23:04.098729+00:00",
+    "source_head": "e994fc5de903edf4468c2c4249fc2d550f3764a2",
+    "command": [
+      "/opt/homebrew/bin/node",
+      "--test",
+      "--test-name-pattern=nonfinite JSON",
+      "web-demo-offline/tests/saved_week.test.mjs"
+    ],
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "admission_sha256": "8a1a42061f16bb0afe89f69bc69c60856a3a0435039e450dbc463eb9d9282f52",
+    "test_sha256": "5a088391340992f4a41e8a813294d321d1e8c585cdc1b0bb2c087131c371781a",
+    "log_sha256": "ec4a013a2ed9740e1308f40fe9c9a98c13aba1bbc1a1f43ad7dac623b85a5e71",
+    "actual_record_key": "rosa-0",
+    "nullable_paths": "llm_only.meals[0..3].verified.entity_id and llm_only.outing.verified.entity_id",
+    "tokens": [
+      "1e400",
+      "-1e400"
+    ],
+    "rendered_canonical_source_changed": false
+  },
+  "output_sha256": "ec4a013a2ed9740e1308f40fe9c9a98c13aba1bbc1a1f43ad7dac623b85a5e71",
+  "output_text": "\u2716 nonfinite JSON numbers cannot compare equal to actual recorded nullable fields (27.4855ms)\n\u2139 tests 1\n\u2139 suites 0\n\u2139 pass 0\n\u2139 fail 1\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 115.985875\n\n\u2716 failing tests:\n\ntest at web-demo-offline/tests/saved_week.test.mjs:168:1\n\u2716 nonfinite JSON numbers cannot compare equal to actual recorded nullable fields (27.4855ms)\n  AssertionError [ERR_ASSERTION]: Changed nonfinite scalars must not match native null.\n  + actual - expected\n  \n  + [\n  +   {\n  +     position: 0,\n  +     token: '1e400'\n  +   },\n  +   {\n  +     position: 0,\n  +     token: '-1e400'\n  +   },\n  +   {\n  +     position: 1,\n  +     token: '1e400'\n  +   },\n  +   {\n  +     position: 1,\n  +     token: '-1e400'\n  +   },\n  +   {\n  +     position: 2,\n  +     token: '1e400'\n  +   },\n  +   {\n  +     position: 2,\n  +     token: '-1e400'\n  +   },\n  +   {\n  +     position: 3,\n  +     token: '1e400'\n  +   },\n  +   {\n  +     position: 3,\n  +     token: '-1e400'\n  +   },\n  +   {\n  +     position: 'outing',\n  +     token: '1e400'\n  +   },\n  +   {\n  +     position: 'outing',\n  +     token: '-1e400'\n  +   }\n  + ]\n  - []\n  \n      at TestContext.<anonymous> (file:///private/tmp/tastetable-offline-81ba1ed0179c/weekly-files/web-demo-offline/tests/saved_week.test.mjs:185:10)\n      at Test.runInAsyncScope (node:async_hooks:226:14)\n      at Test.run (node:internal/test_runner/test:1382:25)\n      at Test.start (node:internal/test_runner/test:1242:17)\n      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {\n    generatedMessage: false,\n    code: 'ERR_ASSERTION',\n    actual: [ { position: 0, token: '1e400' }, { position: 0, token: '-1e400' }, { position: 1, token: '1e400' }, { position: 1, token: '-1e400' }, { position: 2, token: '1e400' }, { position: 2, token: '-1e400' }, { position: 3, token: '1e400' }, { position: 3, token: '-1e400' }, { position: 'outing', token: '1e400' }, { position: 'outing', token: '-1e400' } ],\n    expected: [],\n    operator: 'deepStrictEqual',\n    diff: 'simple'\n  }\n"
+}
