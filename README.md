@@ -299,3 +299,7 @@ A missing, still-reading or different-source pair cannot produce a change brief.
 A refused replacement keeps the previously loaded file visible, as before; the
 next brief names the files that remain loaded. File-supplied text is quoted in
 the plain-text download so embedded line breaks cannot become report headings.
+
+## Plan for several people locally
+
+Create an ordered, create-only ZIP of native fixture plans and editable saved weeks from explicit profile files with [the native batch command](docs/NATIVE_PLAN_BATCH.md). Every requested profile receives a saved or failed entry; a partial bundle has a nonzero process exit.

@@ -1,0 +1,17 @@
+{
+  "schema": "hamon.root-tastetable-archive-receiving/1",
+  "status": "passed",
+  "all_member_bytes_sha256_git_blobs_exact": true,
+  "archive_bytes": 123437,
+  "archive_sha256": "0acd0e66316df54c0502ff87a163b7d824884ca642d36fe12500214669a8fafc",
+  "no_extraction_or_test_execution": true,
+  "no_links": true,
+  "no_unsafe_paths": true,
+  "payload_sha256": "3220a8e320b55df55da180ad625fe746a0b8c48df4151450eff4b6c65919c9fd",
+  "regular_members": 84,
+  "receivingAttribution": "Root independently ran read-only native verifier. This is the exact reported compact result plus process metadata; no original loose receipt existed.",
+  "device": "d55b2499-5e82-4805-819a-d0d7ddea1efe",
+  "pid": 873528,
+  "observedExit": 0,
+  "observedRuntimeSeconds": 0.81
+}
