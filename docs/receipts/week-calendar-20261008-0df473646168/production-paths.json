@@ -1,0 +1,111 @@
+{
+  "repository": "Jacob-Met/tastetable",
+  "base_commit": "69a8098292da12d4d960118cae072a5885ff5171",
+  "base_tree": "778b466e70b3d69f28dc49f574cb7002adf45c29",
+  "candidate_revision": "consumer-v1",
+  "runtime_qualified_without_later_edits": true,
+  "files": [
+    {
+      "path": "README.md",
+      "source": "/dev/shm/universal-0df473646168/product/week-calendar-integration/candidate/README.md",
+      "operation": "update",
+      "mode": "100644",
+      "expected_before_blob": "4927123d731b742094c08b2a90ad66188bbaadaf",
+      "sha256": "a188b41b3c44d24af4fbfefb8c152646b3da052b841c2650784abd63f6b4857f",
+      "git_blob": "0dff0227e176963c119e9eb968226da14f518d44",
+      "bytes": 11041
+    },
+    {
+      "path": "static/app.js",
+      "source": "/dev/shm/universal-0df473646168/product/week-calendar-integration/candidate/static/app.js",
+      "operation": "update",
+      "mode": "100644",
+      "expected_before_blob": "fab0cb5398d3e6553373a99d9d56afa92f2bfcbb",
+      "sha256": "faa47a7c5b71a5c12f004868e68b71df33d4486002b983943185c3d9928dd5e1",
+      "git_blob": "1709ed872442b10e17f8a85491cc92526db361a0",
+      "bytes": 14492
+    },
+    {
+      "path": "static/calendar.css",
+      "source": "/dev/shm/universal-0df473646168/product/week-calendar-integration/candidate/static/calendar.css",
+      "operation": "add",
+      "mode": "100644",
+      "expected_before_blob": null,
+      "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+      "git_blob": "9e53b951316d841b86f0256cd2444a3ce547269f",
+      "bytes": 708
+    },
+    {
+      "path": "static/calendar.js",
+      "source": "/dev/shm/universal-0df473646168/product/week-calendar-integration/candidate/static/calendar.js",
+      "operation": "add",
+      "mode": "100644",
+      "expected_before_blob": null,
+      "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+      "git_blob": "dbed22d2cb91090bccec9472fbffd2854eed2722",
+      "bytes": 15169
+    },
+    {
+      "path": "static/index.html",
+      "source": "/dev/shm/universal-0df473646168/product/week-calendar-integration/candidate/static/index.html",
+      "operation": "update",
+      "mode": "100644",
+      "expected_before_blob": "1350d9500b0d5d90ac0e040885de5c4f0d4b497d",
+      "sha256": "2e9a8ab6a77355acc6276fc584269cadce29499ec25666b7bda6b16c56705ea1",
+      "git_blob": "a65d926fb044732d4c29517a6dba8b3dfcbda2c0",
+      "bytes": 5597
+    },
+    {
+      "path": "static/plan-request.js",
+      "source": "/dev/shm/universal-0df473646168/product/week-calendar-integration/candidate/static/plan-request.js",
+      "operation": "add",
+      "mode": "100644",
+      "expected_before_blob": null,
+      "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+      "git_blob": "b21276dda840fe6dd96a3bf3258a851970ff5e4d",
+      "bytes": 1420
+    },
+    {
+      "path": "static/style.css",
+      "source": "/dev/shm/universal-0df473646168/product/week-calendar-integration/candidate/static/style.css",
+      "operation": "update",
+      "mode": "100644",
+      "expected_before_blob": "b47c49cc6b502a8e6dedc8d02fa1cadb1241dc1d",
+      "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+      "git_blob": "28df6c5229b6b592db33e929ae058fe514304af4",
+      "bytes": 5064
+    },
+    {
+      "path": "tests/calendar-week.test.cjs",
+      "source": "/dev/shm/universal-0df473646168/product/week-calendar-integration/candidate/tests/calendar-week.test.cjs",
+      "operation": "add",
+      "mode": "100644",
+      "expected_before_blob": null,
+      "sha256": "0169b753f81431545669cd97a0765ee469b36112c06c93e6285f92869f334adf",
+      "git_blob": "49bc39f7665683696708692989f1d5921c8ed587",
+      "bytes": 12876
+    },
+    {
+      "path": "tests/calendar.test.cjs",
+      "source": "/dev/shm/universal-0df473646168/product/week-calendar-integration/candidate/tests/calendar.test.cjs",
+      "operation": "add",
+      "mode": "100644",
+      "expected_before_blob": null,
+      "sha256": "901a483387ddb260ee0d6b00b7c12f6374d4e423980e7ba58eb1117f0bda30d1",
+      "git_blob": "4fb00c14c7b61639f8122bc5b0c655944c97cde3",
+      "bytes": 11714
+    },
+    {
+      "path": "tests/plan-request.test.cjs",
+      "source": "/dev/shm/universal-0df473646168/product/week-calendar-integration/candidate/tests/plan-request.test.cjs",
+      "operation": "add",
+      "mode": "100644",
+      "expected_before_blob": null,
+      "sha256": "b8926affe4690e29429e4ef73e3187fe8c24d00a39deb8d08a56e554258f5eab",
+      "git_blob": "d2d60519b5cd3d3679449f941e795e32ba14634d",
+      "bytes": 4648
+    }
+  ],
+  "unmodified_native_week_module": "static/week_plan.mjs",
+  "no_backend_or_provider_changes": true
+}

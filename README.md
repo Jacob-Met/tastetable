@@ -108,14 +108,34 @@ their counts describe the original recommendation, even after you rearrange your
 
 Scheduling runs in the browser and uses only the returned suggestions. It does not make another
 Qloo/model request, alter the checks, or send the chosen dates to the server. Edits last for
-the current page visit; generating a new plan starts fresh assignments. Dates are planning
+the current page visit; an accepted new plan starts fresh assignments. Dates are planning
 choices, not reservations or verified venue availability. Printed copies retain the existing
 care and synthetic-fixture caveats.
 
-The calendar/state checks use Node.js 18+ with no npm dependencies:
+**Download calendar (.ics)** exports the same currently scheduled picks and dates shown in
+your week. Review the calendar dates below the week before downloading, then open the file
+in a calendar app to review and import its all-day suggestions. Moving several picks onto
+one day keeps each occurrence distinct; picks kept off the week stay out of the file. The
+file retains original explanations, entity IDs, source notes and demo/live provenance.
+An invalid date, an unknown source or no scheduled picks keeps download unavailable.
+
+The existing week picker controls both printing and export. Moves, omissions and restores
+within a week retain calendar event identities for this page's current plan; another week or
+a newly accepted plan receives separate event identities. Downloading a file does not update
+or cancel earlier imports. Calendar-app import behavior is outside TasteTable's control.
+
+Changing tastes or constraints, choosing another sample, starting a replacement request,
+or selecting **Stop waiting** retires the old result and its print/export state. Editable
+inputs and your chosen week date remain available for the next request. Only the latest
+accepted response creates a fresh week; a late abandoned response cannot restore a stale
+plan. Stopping the browser's wait is not proof that a server or provider stopped its work.
+If a replacement fails or cannot render, the old handoff remains retired and you can retry
+from the preserved inputs.
+
+The state, calendar writer and request controller checks use Node.js 18+ with no npm dependencies:
 
 ```bash
-node --test tests/test_week_plan.mjs
+node --test tests/test_week_plan.mjs tests/calendar.test.cjs tests/calendar-week.test.cjs tests/plan-request.test.cjs
 ```
 
 ### Going live with Qloo

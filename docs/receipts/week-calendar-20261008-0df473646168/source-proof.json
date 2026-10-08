@@ -1,0 +1,107 @@
+{
+  "receiving_commit": "9f9105c29ab1a68a501b5f4c0b7180f0db968d38",
+  "receiving_tree": "778b466e70b3d69f28dc49f574cb7002adf45c29",
+  "source_paths": [
+    {
+      "path": "README.md",
+      "before": "4927123d731b742094c08b2a90ad66188bbaadaf",
+      "after": "0dff0227e176963c119e9eb968226da14f518d44",
+      "mode": "100644"
+    },
+    {
+      "path": "static/app.js",
+      "before": "fab0cb5398d3e6553373a99d9d56afa92f2bfcbb",
+      "after": "1709ed872442b10e17f8a85491cc92526db361a0",
+      "mode": "100644"
+    },
+    {
+      "path": "static/calendar.css",
+      "before": null,
+      "after": "9e53b951316d841b86f0256cd2444a3ce547269f",
+      "mode": "100644"
+    },
+    {
+      "path": "static/calendar.js",
+      "before": null,
+      "after": "dbed22d2cb91090bccec9472fbffd2854eed2722",
+      "mode": "100644"
+    },
+    {
+      "path": "static/index.html",
+      "before": "1350d9500b0d5d90ac0e040885de5c4f0d4b497d",
+      "after": "a65d926fb044732d4c29517a6dba8b3dfcbda2c0",
+      "mode": "100644"
+    },
+    {
+      "path": "static/plan-request.js",
+      "before": null,
+      "after": "b21276dda840fe6dd96a3bf3258a851970ff5e4d",
+      "mode": "100644"
+    },
+    {
+      "path": "static/style.css",
+      "before": "b47c49cc6b502a8e6dedc8d02fa1cadb1241dc1d",
+      "after": "28df6c5229b6b592db33e929ae058fe514304af4",
+      "mode": "100644"
+    },
+    {
+      "path": "tests/calendar-week.test.cjs",
+      "before": null,
+      "after": "49bc39f7665683696708692989f1d5921c8ed587",
+      "mode": "100644"
+    },
+    {
+      "path": "tests/calendar.test.cjs",
+      "before": null,
+      "after": "4fb00c14c7b61639f8122bc5b0c655944c97cde3",
+      "mode": "100644"
+    },
+    {
+      "path": "tests/plan-request.test.cjs",
+      "before": null,
+      "after": "d2d60519b5cd3d3679449f941e795e32ba14634d",
+      "mode": "100644"
+    }
+  ],
+  "unchanged_week": {
+    "path": "static/week_plan.mjs",
+    "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+    "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+  },
+  "published_owner_sources": [
+    {
+      "pr": "https://github.com/Jacob-Met/tastetable/pull/10",
+      "head": "674e67aa7cc5c1d7618da9cc9ba3047ebca73206",
+      "tree": "fb0756f44b435dd5f569e98d92e67ca17cc7c2b1",
+      "paths": [
+        "static/calendar.js",
+        "tests/calendar-week.test.cjs",
+        "tests/calendar.test.cjs"
+      ]
+    },
+    {
+      "pr": "https://github.com/Jacob-Met/tastetable/pull/7",
+      "head": "981118bbc2c7a2173e56ac1c26da754803b40b22",
+      "tree": "21ae3ad6d76081ef48ce60db6ae4d7779ee68eea",
+      "paths": [
+        "static/plan-request.js",
+        "tests/plan-request.test.cjs"
+      ]
+    }
+  ],
+  "css_original_intake": {
+    "source_manifest_sha256": "3ec5f85f98253b75bf5c81d7817f545d91feccdb2370db90aeaf43b4568a689d",
+    "producer_original_manifest_sha256": "20e94578af142f70d0856711f78f0ac1f15ef385e954cbb1b6d8ea7dc8e6c620",
+    "source_path": "static/calendar.css",
+    "git_blob": "9e53b951316d841b86f0256cd2444a3ce547269f",
+    "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+    "note": "Received from the producer's original source handoff. This CSS is not part of PR10."
+  },
+  "atomic_renderer_evidence": {
+    "commit": "e1994ba62621bd09fa50e576bf8d022ecec0c552",
+    "tree": "559a3c24989ce20a9059e9a5727f57cdd10024b0",
+    "source_sha256": "376fb899f912b9e74b5869c0cc05eb863e86bc812602295f54af85802d15705c"
+  },
+  "qualified_app_sha256": "faa47a7c5b71a5c12f004868e68b71df33d4486002b983943185c3d9928dd5e1",
+  "qualification_scope": "Native static UI with local fixture responses; source integration, not deployment, provider receiving or external calendar import."
+}

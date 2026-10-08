@@ -1,0 +1,101 @@
+{
+  "base_week_head": "69a8098292da12d4d960118cae072a5885ff5171",
+  "base_week_tree": "778b466e70b3d69f28dc49f574cb7002adf45c29",
+  "candidate_app_sha256": "faa47a7c5b71a5c12f004868e68b71df33d4486002b983943185c3d9928dd5e1",
+  "candidate_manifest_sha256": "9843dad9ce68a55d14b0091e1c08481d83407c299810f0a4dadf9d4f3f223c9d",
+  "candidate_source": "/dev/shm/universal-0df473646168/product/week-calendar-integration/candidate",
+  "ics_consumer_sha256": "64b22d706e6c757f31a8c4cb54a20499386c94081daa566ba82c65bf1b06f8c4",
+  "lifecycle_head": "981118bbc2c7a2173e56ac1c26da754803b40b22",
+  "limits": [
+    "No new browser/layout/PDF run: existing author browser and print evidence remain separately attributed.",
+    "ICS consumer supports the exported all-day schema, not arbitrary calendar features or application-specific import behavior.",
+    "Native fixture response bytes are unchanged recorded native outputs, not new backend/provider execution.",
+    "No production edits, evaluator changes, external requests, publication or merge by reviewer.",
+    "VM import adaptation binds the sole app import to the exact native module and appends a read-only state observer; production files are never edited.",
+    "Controlled DOM verifies handler state and generated markup, not layout or browser-native input behavior beyond the covered empty-date case.",
+    "Existing author Chromium/PDF work is supporting evidence, not new independent browser execution.",
+    "Calendar import synchronization, account/service behavior and arbitrary RFC features are outside this receiving contract."
+  ],
+  "native_module_pins": {
+    "static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+    "static/plan-request.js": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+    "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+  },
+  "other_owner_attribution": [
+    {
+      "component": "native week organizer and original tests",
+      "source": "PR9 head 69a8098292da12d4d960118cae072a5885ff5171",
+      "unchanged": true
+    },
+    {
+      "component": "calendar producer adaptation and tests",
+      "evidence": "supporting/calendar-producer-HANDOFF.md",
+      "unchanged": true
+    },
+    {
+      "component": "request lifecycle controller",
+      "source": "PR7 head 981118bbc2c7a2173e56ac1c26da754803b40b22",
+      "unchanged": true
+    },
+    {
+      "component": "staged rendering supplement",
+      "intake_sha256": "376fb899f912b9e74b5869c0cc05eb863e86bc812602295f54af85802d15705c"
+    },
+    {
+      "component": "composed consumer and author browser qualification",
+      "evidence": "supporting/author-browser-receipt.json",
+      "owner": "/root/estate_product"
+    },
+    {
+      "author": "chatgpt-a2eaaec253d8/production_receiving",
+      "component": "request-owner browser driver",
+      "evidence": "supporting/request-owner-driver-execution.json",
+      "executor": "/root/estate_product",
+      "note": "The raw receipt retains its original hardcoded reviewer field; this is not a new execution by its author."
+    }
+  ],
+  "print_consumer_sha256": "d6ca85ca257f82c666092f55e9b9d646c853236e4aee58851e7d241be96d92d8",
+  "receiver_sha256": "69c5c6d52719332b1d635da6e6b4f962ea5aba8574e074ad6455b7380fec25cf",
+  "receiver_strengthening": {
+    "change": "One malformed response field changed from early plan affinity to late trace=null; every other receiver byte, including all assertions, is unchanged.",
+    "initial_run_preserved": "receiving-initial/",
+    "initial_source_sha256": "12921dd22364fdb548cfbb00acfbccbe460e2bc5baab5caa4cb8f692283b4a43",
+    "new_run": "receiving-final/",
+    "old_receiver_preserved": "test_consumer_composition_early_original.cjs",
+    "purpose": "Exercise staged response failure after all earlier source/comparison fragments have been prepared."
+  },
+  "results": {
+    "all_three_fixture_responses_equal_prior_current_native": true,
+    "app_blob_files_consumed": 11,
+    "candidate_bytes_unchanged": true,
+    "failures": 0,
+    "final_methods": 4,
+    "fixture_bytes_unchanged": true,
+    "previous_actual_browser_files_consumed": 3,
+    "separate_stdlib_html_print_vs_calendar_comparison": true,
+    "total_calendar_files_consumed": 14
+  },
+  "reviewer": "/root/memory_capability",
+  "scope": [
+    "Actual composed app handlers and exact native request/week/calendar modules, with controlled DOM and deferred transport adapters.",
+    "Edited occurrences at leap day and year boundary; same-week stable UID, omission/reset restoration, different-week identity and original-week return.",
+    "Independent strict UTF-8/calendar-date parser consumes actual Blob output and three actual Chromium-downloaded files.",
+    "Python stdlib HTMLParser compares printed dated occurrence multiset directly with the parsed edited calendar.",
+    "Invalid displayed date remains non-exportable/non-printable through move, reset and fresh response; all-omitted state cannot reuse an earlier file.",
+    "New request/input/cancel/current HTTP error retire old output; aborted late transport cannot restore it.",
+    "Single late malformed response property triggers onError with hidden, unchanged old evidence and no mixed new week/export.",
+    "Fresh source resets local assignments and obtains a new calendar namespace while retaining selected week and current form values.",
+    "Current native backend/source policy is preserved by the frontend-only candidate; recorded complete responses match prior current-native execution."
+  ],
+  "standards_reference": {
+    "scope": "Bounded exported all-day schema: content line folding, DATE values, escaped TEXT and exclusive event ends.",
+    "sections": [
+      "3.1",
+      "3.3.4",
+      "3.3.11",
+      "3.6.1"
+    ],
+    "url": "https://www.rfc-editor.org/info/rfc5545/"
+  },
+  "status": "accepted at unchanged consumer-v1 freeze; root owns composition, publication and merge"
+}
