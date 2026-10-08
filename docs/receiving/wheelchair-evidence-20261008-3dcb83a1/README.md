@@ -65,3 +65,16 @@ Current ownership reads preserved the calendar/lifecycle/week consumer, saved-we
 ## Compatibility with current planner notes
 
 Main `f04353ffe4de808543031f56a2a59fac589cb0ab` includes new recommendation-completion bookkeeping and planner notes. An isolated current composition preserves that Agent source byte-for-byte and carries the exact final classifier and tests. Its 13 newly integrated recommendation-note tests and 17 subtests pass. The unchanged independently authored final eight-case parser/planner receiver also passes 8/8 with zero external attempts when replayed by the author against this composition. All 11 selected source/test/fixture files are pinned before and after. `compose_current.py` and `current-composition.json` retain these commands and current-source observations. The original root acceptance stays pinned to the original base; this later replay is author compatibility evidence, with no new browser or live provider claim.
+
+## Historical test filenames and hosted collection
+
+The first published head, `489aedaf22fa28e7b217c6676b1d180927fde54d`, preserved both superseded test snapshots under their original `.py` filenames. Hosted run [37777800056](https://github.com/Jacob-Met/tastetable/actions/runs/37777800056), job `113312952041`, checked out merge `a57d5638a0d1a890bd0ca3b32c008999ae7a8c7f` against main `0758d2cca881fb5b5041f80bae2174cf485f4bdd`. Pytest found the two historical modules during recursive discovery and stopped with two import-file-mismatch collection errors before behavioral tests ran.
+
+Both archived test files now have a `.py.txt` extension. Their bytes and Git blob identities remain unchanged:
+
+| Historical command path | Published archive path | Git blob |
+| --- | --- | --- |
+| `candidate-v1/test_wheelchair_evidence.py` | `candidate-v1/test_wheelchair_evidence.py.txt` | `7ebfb2280237b5fa9fe273a46916b3553d5ce1ed` |
+| `candidate-v2/test_wheelchair_evidence.py` | `candidate-v2/test_wheelchair_evidence.py.txt` | `61ee32541b96e24aae3bd953808998dd459dd531` |
+
+The original command receipts and native runner files retain the paths that were actually executed. To reproduce an older candidate, copy its archived text file back to `tests/test_wheelchair_evidence.py` in a separate checkout containing that candidate's recorded source. Do not restore old snapshots into the active test collection. The maintained `tests/test_wheelchair_evidence.py` and final `constraints.py` are unchanged and remain subject to the repository's ordinary test command. No collection configuration, workflow or active regression is changed.
