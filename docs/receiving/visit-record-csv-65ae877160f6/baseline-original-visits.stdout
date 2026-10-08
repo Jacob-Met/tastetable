@@ -1,0 +1,88 @@
+TAP version 13
+# Subtest: native codec accepts the original fixture before the new module consumes it
+ok 1 - native codec accepts the original fixture before the new module consumes it
+  ---
+  duration_ms: 13.078316
+  type: 'test'
+  ...
+# Subtest: each occurrence starts unrecorded, including omitted and repeated identities
+ok 2 - each occurrence starts unrecorded, including omitted and repeated identities
+  ---
+  duration_ms: 15.183312
+  type: 'test'
+  ...
+# Subtest: projection retains the complete original pick, saved assignments and exact dates
+ok 3 - projection retains the complete original pick, saved assignments and exact dates
+  ---
+  duration_ms: 6.570305
+  type: 'test'
+  ...
+# Subtest: date and note do not infer attendance; outside-week dates are explicit
+ok 4 - date and note do not infer attendance; outside-week dates are explicit
+  ---
+  duration_ms: 2.489168
+  type: 'test'
+  ...
+# Subtest: literal CR/LF, whitespace and astral Unicode survive unrelated updates and export
+ok 5 - literal CR/LF, whitespace and astral Unicode survive unrelated updates and export
+  ---
+  duration_ms: 7.007514
+  type: 'test'
+  ...
+# Subtest: Gregorian dates admit year endpoints and leap-century rules
+ok 6 - Gregorian dates admit year endpoints and leap-century rules
+  ---
+  duration_ms: 29.325535
+  type: 'test'
+  ...
+# Subtest: notes and source names count code points and preserve admitted whitespace
+ok 7 - notes and source names count code points and preserve admitted whitespace
+  ---
+  duration_ms: 17.514196
+  type: 'test'
+  ...
+# Subtest: valid reordered visits are restored to original occurrence order
+ok 8 - valid reordered visits are restored to original occurrence order
+  ---
+  duration_ms: 3.680685
+  type: 'test'
+  ...
+# Subtest: all operations validate full records without mutating a refused input
+ok 9 - all operations validate full records without mutating a refused input
+  ---
+  duration_ms: 19.6351
+  type: 'test'
+  ...
+# Subtest: invalid patches and unsupported outcomes refuse atomically
+ok 10 - invalid patches and unsupported outcomes refuse atomically
+  ---
+  duration_ms: 9.110124
+  type: 'test'
+  ...
+# Subtest: record envelope uses an exact field set and canonical finite save time
+ok 11 - record envelope uses an exact field set and canonical finite save time
+  ---
+  duration_ms: 11.397358
+  type: 'test'
+  ...
+# Subtest: zero and 100 original picks are supported; 101 is refused without changing source
+ok 12 - zero and 100 original picks are supported; 101 is refused without changing source
+  ---
+  duration_ms: 27.77119
+  type: 'test'
+  ...
+# Subtest: source and file UTF-8 budgets are enforced before parsing
+ok 13 - source and file UTF-8 budgets are enforced before parsing
+  ---
+  duration_ms: 35.718973
+  type: 'test'
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 783.370115
