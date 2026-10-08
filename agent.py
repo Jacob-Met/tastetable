@@ -147,7 +147,7 @@ class ScriptedModel:
                 "tag_ids": cuisine_tags, "signal_entity_ids": signals,
                 "location": persona.get("city"), "take": 10})])
         if phase == 3:
-            ids = [c["entity_id"] for c in self._results(messages, 2)[0]["candidates"]]
+            ids = [c["entity_id"] for c in self._results(messages, 2)[0].get("candidates", [])]
             return _completion(None, [_call("p3_0", "constraint_check",
                                             {"entity_ids": ids, "constraints": cons,
                                              "kind": "restaurant"})])
@@ -185,7 +185,7 @@ class ScriptedModel:
                 "tag_ids": first_ids(7, "tag_id"), "signal_entity_ids": signals,
                 "location": persona.get("city"), "take": 5})])
         if phase == 9:
-            ids = [c["entity_id"] for c in self._results(messages, 8)[0]["candidates"]]
+            ids = [c["entity_id"] for c in self._results(messages, 8)[0].get("candidates", [])]
             return _completion(None, [_call("p9_0", "constraint_check",
                                             {"entity_ids": ids, "constraints": cons,
                                              "kind": "outing"})])
