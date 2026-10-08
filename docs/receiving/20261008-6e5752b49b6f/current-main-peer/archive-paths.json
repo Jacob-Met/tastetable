@@ -1,0 +1,17 @@
+{
+  "reason": "Preserve historical receiver source bytes without collecting archived experiments as current pytest tests. Original manifest filenames retain their meaning within the receiving packet.",
+  "files": [
+    {
+      "original_receiving_filename": "test_current_composition.py",
+      "repository_archive_filename": "test_current_composition.py.txt",
+      "bytes": 7240,
+      "sha256": "58ad8ed07235e111e438027b5737bed8a5f11a564bc121db6071bc842606112e"
+    },
+    {
+      "original_receiving_filename": "test_current_composition_r0.py",
+      "repository_archive_filename": "test_current_composition_r0.py.txt",
+      "bytes": 7110,
+      "sha256": "7148ffed21a7ea32fc6803e800f6b90b9b45d83820405b6ecaac8d19cc9e8220"
+    }
+  ]
+}

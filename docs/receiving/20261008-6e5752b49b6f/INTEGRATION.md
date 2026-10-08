@@ -79,6 +79,36 @@ the repository. With that persistent check included, the complete suite passes
 `current-composition-pytest.txt`. No production source changed during this
 addition, and the existing CI workflow will exercise the combined interaction.
 
+### Correcting evidence discovery in the hosted workflow
+
+The first published current-composition head,
+`eaa70a67aa6357f2d5d76a885795609e45c5dc7f`, failed hosted run
+[37761257044](https://github.com/Jacob-Met/tastetable/actions/runs/37761257044).
+The local 58-test command had named `tests/` explicitly. The workflow correctly
+uses repository-wide `python -m pytest -q`, which also collected both archived
+`test_current_composition*.py` files. One was the intentionally failed historical
+receiver draft whose duplicate query hit the provider cache. The actual workflow
+log records three failures, 59 passes and 39 passing subtests; it is preserved in
+`hosted-collection-failure.log.txt`.
+
+Both historical sources now have `.py.txt` archive names. Their source bytes are
+unchanged, and `current-main-peer/archive-paths.json` maps original receiving
+filenames to the archived names with byte counts and SHA-256 values. The original
+packet's manifests and failure logs retain their original names and meaning.
+To reproduce an archived script explicitly, Python also accepts its `.py.txt`
+path; only automatic current-test discovery is affected. The accepted regression
+remains under `tests/test_api_constraint_receiving.py`; no assertion, production
+code or CI selection rule was weakened.
+
+The first local rename attempt left the tracked original names present at the
+next inspection. Its failed repository-wide run is retained in
+`archive-rename-without-index-failure.txt`. Removing and staging those names
+allowed the exact repository-wide CI command to pass with **58 tests and 37
+subtests**; its complete output is `ci-command-after-archive-rename.txt`. The
+next filesystem inspection again showed the old files as untracked, so the
+final committed tree explicitly excludes those names and a separate clean Git
+export is used to verify the actual publication contents.
+
 ## Browser outcome and remaining presentation work
 
 The `browser/` directory preserves a real Chromium receiving run, its authored

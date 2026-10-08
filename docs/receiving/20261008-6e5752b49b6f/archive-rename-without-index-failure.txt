@@ -1,0 +1,213 @@
+.F..........................................................                                            [100%]
+=================================== FAILURES ===================================
+_ CurrentComposition.test_configured_model_repairs_invalid_purpose_and_refusal_without_weakening_care (sample=False) _
+
+self = <test_current_composition_r0.CurrentComposition testMethod=test_configured_model_repairs_invalid_purpose_and_refusal_without_weakening_care>
+
+    def test_configured_model_repairs_invalid_purpose_and_refusal_without_weakening_care(self):
+        results = []
+        for sample in (False, True):
+            with self.subTest(sample=sample):
+                fixture = InterruptedFixture()
+                qloo = QlooClient(api_key="synthetic-fixture-only", transport=fixture)
+                posted = []
+                recs = {"filter_type": "urn:entity:place", "take": 50}
+                calls = [
+                    ("qloo_recs", {**recs, "purpose": None}),
+                    ("qloo_recs", {**recs, "purpose": "restaurant"}),
+                    ("qloo_recs", {**recs, "purpose": "restaurant"}),
+                    ("constraint_check", {"entity_ids": ["FIX-P-01", "FIX-P-04"],
+                                          "constraints": [], "kind": "outing"}),
+                    ("qloo_recs", {**recs, "purpose": ""}),
+                    ("constraint_check", {"entity_ids": ["FIX-P-04"],
+                                          "constraints": [], "kind": "restaurant"}),
+                    ("qloo_recs", {**recs, "purpose": "outing"}),
+                ]
+    
+                def completion(request, timeout):
+                    self.assertEqual(request.full_url, "https://composition.invalid/v1/chat/completions")
+                    self.assertEqual(request.get_method(), "POST")
+                    self.assertNotIn("Authorization", request.headers)
+                    body = json.loads(request.data)
+                    self.assertEqual(body["model"], "current-composition-authored-model")
+                    posted.append(body)
+                    turn = len(posted) - 1
+                    self.assertLessEqual(turn, len(calls))
+                    message = {"role": "assistant", "content": "authored combined receiving complete"}
+                    if turn < len(calls):
+                        name, args = calls[turn]
+                        message["tool_calls"] = [{"id": f"composition-{turn}", "type": "function",
+                            "function": {"name": name, "arguments": json.dumps(args)}}]
+                    return io.BytesIO(json.dumps({"choices": [{"message": message}]}).encode())
+    
+                env = {"TASTETABLE_LLM_BASE_URL": "https://composition.invalid/v1",
+                       "TASTETABLE_LLM_MODEL": "current-composition-authored-model"}
+                with patch.dict(os.environ, env, clear=True), \
+                        patch("urllib.request.urlopen", side_effect=completion), \
+                        patch.object(app.QlooClient, "from_env", return_value=qloo), \
+                        TestClient(app.app, raise_server_exceptions=False) as client:
+                    response = (client.post("/api/plan/sample/rosa") if sample else
+                                client.post("/api/plan", json=PERSONAS["rosa"]))
+                self.assertEqual(response.status_code, 200, response.text)
+                result = response.json()
+                self.assertEqual(len(posted), 8)
+>               self.assertEqual(len(fixture.insights), 3,
+                                 "malformed purposes must not contact or shift the provider sequence")
+E               AssertionError: 2 != 3 : malformed purposes must not contact or shift the provider sequence
+
+docs/receiving/20261008-6e5752b49b6f/current-main-peer/test_current_composition_r0.py:89: AssertionError
+_ CurrentComposition.test_configured_model_repairs_invalid_purpose_and_refusal_without_weakening_care (sample=True) _
+
+self = <test_current_composition_r0.CurrentComposition testMethod=test_configured_model_repairs_invalid_purpose_and_refusal_without_weakening_care>
+
+    def test_configured_model_repairs_invalid_purpose_and_refusal_without_weakening_care(self):
+        results = []
+        for sample in (False, True):
+            with self.subTest(sample=sample):
+                fixture = InterruptedFixture()
+                qloo = QlooClient(api_key="synthetic-fixture-only", transport=fixture)
+                posted = []
+                recs = {"filter_type": "urn:entity:place", "take": 50}
+                calls = [
+                    ("qloo_recs", {**recs, "purpose": None}),
+                    ("qloo_recs", {**recs, "purpose": "restaurant"}),
+                    ("qloo_recs", {**recs, "purpose": "restaurant"}),
+                    ("constraint_check", {"entity_ids": ["FIX-P-01", "FIX-P-04"],
+                                          "constraints": [], "kind": "outing"}),
+                    ("qloo_recs", {**recs, "purpose": ""}),
+                    ("constraint_check", {"entity_ids": ["FIX-P-04"],
+                                          "constraints": [], "kind": "restaurant"}),
+                    ("qloo_recs", {**recs, "purpose": "outing"}),
+                ]
+    
+                def completion(request, timeout):
+                    self.assertEqual(request.full_url, "https://composition.invalid/v1/chat/completions")
+                    self.assertEqual(request.get_method(), "POST")
+                    self.assertNotIn("Authorization", request.headers)
+                    body = json.loads(request.data)
+                    self.assertEqual(body["model"], "current-composition-authored-model")
+                    posted.append(body)
+                    turn = len(posted) - 1
+                    self.assertLessEqual(turn, len(calls))
+                    message = {"role": "assistant", "content": "authored combined receiving complete"}
+                    if turn < len(calls):
+                        name, args = calls[turn]
+                        message["tool_calls"] = [{"id": f"composition-{turn}", "type": "function",
+                            "function": {"name": name, "arguments": json.dumps(args)}}]
+                    return io.BytesIO(json.dumps({"choices": [{"message": message}]}).encode())
+    
+                env = {"TASTETABLE_LLM_BASE_URL": "https://composition.invalid/v1",
+                       "TASTETABLE_LLM_MODEL": "current-composition-authored-model"}
+                with patch.dict(os.environ, env, clear=True), \
+                        patch("urllib.request.urlopen", side_effect=completion), \
+                        patch.object(app.QlooClient, "from_env", return_value=qloo), \
+                        TestClient(app.app, raise_server_exceptions=False) as client:
+                    response = (client.post("/api/plan/sample/rosa") if sample else
+                                client.post("/api/plan", json=PERSONAS["rosa"]))
+                self.assertEqual(response.status_code, 200, response.text)
+                result = response.json()
+                self.assertEqual(len(posted), 8)
+>               self.assertEqual(len(fixture.insights), 3,
+                                 "malformed purposes must not contact or shift the provider sequence")
+E               AssertionError: 2 != 3 : malformed purposes must not contact or shift the provider sequence
+
+docs/receiving/20261008-6e5752b49b6f/current-main-peer/test_current_composition_r0.py:89: AssertionError
+_ CurrentComposition.test_configured_model_repairs_invalid_purpose_and_refusal_without_weakening_care _
+
+self = <test_current_composition_r0.CurrentComposition testMethod=test_configured_model_repairs_invalid_purpose_and_refusal_without_weakening_care>
+
+    def test_configured_model_repairs_invalid_purpose_and_refusal_without_weakening_care(self):
+        results = []
+        for sample in (False, True):
+            with self.subTest(sample=sample):
+                fixture = InterruptedFixture()
+                qloo = QlooClient(api_key="synthetic-fixture-only", transport=fixture)
+                posted = []
+                recs = {"filter_type": "urn:entity:place", "take": 50}
+                calls = [
+                    ("qloo_recs", {**recs, "purpose": None}),
+                    ("qloo_recs", {**recs, "purpose": "restaurant"}),
+                    ("qloo_recs", {**recs, "purpose": "restaurant"}),
+                    ("constraint_check", {"entity_ids": ["FIX-P-01", "FIX-P-04"],
+                                          "constraints": [], "kind": "outing"}),
+                    ("qloo_recs", {**recs, "purpose": ""}),
+                    ("constraint_check", {"entity_ids": ["FIX-P-04"],
+                                          "constraints": [], "kind": "restaurant"}),
+                    ("qloo_recs", {**recs, "purpose": "outing"}),
+                ]
+    
+                def completion(request, timeout):
+                    self.assertEqual(request.full_url, "https://composition.invalid/v1/chat/completions")
+                    self.assertEqual(request.get_method(), "POST")
+                    self.assertNotIn("Authorization", request.headers)
+                    body = json.loads(request.data)
+                    self.assertEqual(body["model"], "current-composition-authored-model")
+                    posted.append(body)
+                    turn = len(posted) - 1
+                    self.assertLessEqual(turn, len(calls))
+                    message = {"role": "assistant", "content": "authored combined receiving complete"}
+                    if turn < len(calls):
+                        name, args = calls[turn]
+                        message["tool_calls"] = [{"id": f"composition-{turn}", "type": "function",
+                            "function": {"name": name, "arguments": json.dumps(args)}}]
+                    return io.BytesIO(json.dumps({"choices": [{"message": message}]}).encode())
+    
+                env = {"TASTETABLE_LLM_BASE_URL": "https://composition.invalid/v1",
+                       "TASTETABLE_LLM_MODEL": "current-composition-authored-model"}
+                with patch.dict(os.environ, env, clear=True), \
+                        patch("urllib.request.urlopen", side_effect=completion), \
+                        patch.object(app.QlooClient, "from_env", return_value=qloo), \
+                        TestClient(app.app, raise_server_exceptions=False) as client:
+                    response = (client.post("/api/plan/sample/rosa") if sample else
+                                client.post("/api/plan", json=PERSONAS["rosa"]))
+                self.assertEqual(response.status_code, 200, response.text)
+                result = response.json()
+                self.assertEqual(len(posted), 8)
+                self.assertEqual(len(fixture.insights), 3,
+                                 "malformed purposes must not contact or shift the provider sequence")
+                trace = result["trace"]
+                self.assertEqual(len(trace), 7)
+                self.assertEqual([row["args"] for row in trace], [args for _, args in calls])
+                for index in (0, 4):
+                    self.assertEqual(trace[index]["result_summary"],
+                                     "ValueError: purpose must be restaurant or outing")
+                for index in (1, 6):
+                    self.assertIn("QlooError:", trace[index]["result_summary"])
+                    self.assertIn("503", trace[index]["result_summary"])
+                self.assertEqual(trace[3]["result_summary"], "1/2 passed")
+                self.assertEqual(trace[5]["result_summary"], "0/1 passed")
+                self.assertEqual([meal["entity_id"] for meal in result["plan"]["meals"]], ["FIX-P-01"])
+                self.assertEqual([meal["day"] for meal in result["plan"]["meals"]], ["Monday"])
+                self.assertIsNone(result["plan"]["outing"])
+                self.assertEqual([row["entity_id"] for row in result["plan"]["rejected"]], ["FIX-P-04"])
+                self.assertEqual({row["constraint"] for row in result["plan"]["rejected"][0]["failed"]},
+                                 set(PERSONAS["rosa"]["constraints"]))
+                for label in ("Soft foods", "Low sodium", "Wheelchair"):
+                    self.assertIn(f"{label}: pass", result["plan"]["meals"][0]["why"])
+                self.assertEqual(result["comparison"]["grounded"]["picks"], 1)
+                self.assertEqual(result["comparison"]["grounded"]["constraint_checked"], 1)
+                self.assertEqual(result["model_message"], "authored combined receiving complete")
+                self.assertEqual(result["comparison"]["constraints"], PERSONAS["rosa"]["constraints"])
+                self.assertTrue(result["mock"])
+                RECEIPTS.append({"sample_route": sample, "status_code": response.status_code,
+                    "model_names": [body["model"] for body in posted],
+                    "insights_attempts": fixture.insights, "result": result})
+                results.append(result)
+>       self.assertEqual(results[0], results[1], "sample and form routes must enforce identical requirements")
+                         ^^^^^^^^^^
+E       IndexError: list index out of range
+
+docs/receiving/20261008-6e5752b49b6f/current-main-peer/test_current_composition_r0.py:119: IndexError
+----------------------------- Captured stdout call -----------------------------
+uu
+=============================== warnings summary ===============================
+../agents/github_integration/venv/lib/python3.12/site-packages/fastapi/testclient.py:1
+  /workspace/scratch/6e5752b49b6f/agents/github_integration/venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+SUBFAILED(sample=False) docs/receiving/20261008-6e5752b49b6f/current-main-peer/test_current_composition_r0.py::CurrentComposition::test_configured_model_repairs_invalid_purpose_and_refusal_without_weakening_care
+SUBFAILED(sample=True) docs/receiving/20261008-6e5752b49b6f/current-main-peer/test_current_composition_r0.py::CurrentComposition::test_configured_model_repairs_invalid_purpose_and_refusal_without_weakening_care
+FAILED docs/receiving/20261008-6e5752b49b6f/current-main-peer/test_current_composition_r0.py::CurrentComposition::test_configured_model_repairs_invalid_purpose_and_refusal_without_weakening_care
+3 failed, 59 passed, 1 warning, 39 subtests passed in 0.77s
