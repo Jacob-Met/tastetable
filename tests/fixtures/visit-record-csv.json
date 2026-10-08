@@ -1,0 +1,28 @@
+{
+  "format": "tastetable.visit-record.v1",
+  "savedAt": "2024-03-03T12:00:00.000Z",
+  "source": {
+    "name": " original,week.json ",
+    "weekText": "{\"format\": \"tastetable.saved-week.v1\", \"receivedAt\": \"2024-02-01T00:00:00.000Z\", \"savedAt\": \"2024-02-25T18:00:00.000Z\", \"calendarId\": null, \"inputs\": {\"city\": \"Example\", \"cuisines\": [], \"music\": [], \"films\": [], \"constraints\": []}, \"response\": {\"mock\": true, \"plan\": {\"meals\": [{\"name\": \"Café, \\\"Same\\\"\", \"entity_id\": \"same-id\", \"kind\": \"restaurant\", \"day\": \"Monday\", \"why\": \"  First\\r\\nreason  \"}, {\"name\": \"Café, \\\"Same\\\"\", \"entity_id\": \"same-id\", \"kind\": \"restaurant\", \"day\": \"Tuesday\", \"why\": \"Second reason\"}, {\"name\": \"Third café\", \"entity_id\": \"third-id\", \"kind\": \"restaurant\", \"day\": \"Friday\", \"why\": \"Third reason\"}], \"outing\": null, \"notes\": [], \"rejected\": []}, \"llm_only\": {\"meals\": [], \"outing\": {\"name\": \"Comparison\", \"why\": \"Original\", \"day\": \"Saturday\"}}, \"comparison\": {\"constraints\": [], \"grounded\": {\"picks\": 0, \"with_qloo_entity_id\": 0, \"with_affinity_evidence\": 0, \"constraint_checked\": 0, \"unsafe_candidates_rejected\": 0}, \"llm_only\": {\"picks\": 0, \"with_qloo_entity_id\": 0, \"with_affinity_evidence\": 0, \"constraint_checked\": 0, \"unsafe_candidates_rejected\": 0}}, \"trace\": []}, \"week\": {\"start\": \"2024-02-26\", \"assignments\": {\"pick-0\": \"Thursday\", \"pick-1\": null, \"pick-2\": \"Friday\"}}}"
+  },
+  "visits": [
+    {
+      "key": "pick-2",
+      "outcome": "unrecorded",
+      "date": null,
+      "note": ""
+    },
+    {
+      "key": "pick-1",
+      "outcome": "did_not_go",
+      "date": "2024-03-02",
+      "note": "  A\rB\r\nC\n🙂\t "
+    },
+    {
+      "key": "pick-0",
+      "outcome": "went",
+      "date": "2024-03-01",
+      "note": "He said \"yes\", then went."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "tastetable.batch.example-invocation-supplement.v1",
+  "recordedAt": "2026-10-08T19:44:28.951977+00:00",
+  "provenance": "Retrospectively saved from the exact already-executed original receiver command. This is not an additional batch execution or an original contemporaneous cwd field. The historical receipt and archive remain unchanged.",
+  "cwd": "/home/jacob/hamon-universal-e3a41d2b3368-tastetable-batch/mixed-result-example",
+  "argv": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/jacob/hamon-universal-e3a41d2b3368-tastetable-batch/candidate/tastetable_batch.py",
+    "--node",
+    "/usr/bin/node",
+    "--profile",
+    "profiles/a/profile.json",
+    "--profile",
+    "profiles/invalid/profile.json",
+    "--profile",
+    "profiles/b/profile.json",
+    "--week",
+    "2026-10-08",
+    "--output",
+    "caregiver-week-example.zip"
+  ],
+  "originalDriver": {
+    "bytes": 4114,
+    "gitBlob": "676214e83683b8589a3023dd0243724fa04f3f8a",
+    "sha256": "b2686ae9488f8e15caf083dff70699a3609f32005e72b0bb8384986ac3c3dfa3"
+  },
+  "originalReceiptSha256": "4207d445338a5a2325e1a69d89dd25451c5dadcb133b55121c23e16c5b44fed4",
+  "originalRuntimeSha256": "8fa000e53b843a442f43aaad978b6610ec91af766de919880c7a8684857eb542",
+  "bundleSha256": "e53f8bc2f3482e9436bd1ed851705a33d24207d04af814c479aac8ce28441516"
+}

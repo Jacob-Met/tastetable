@@ -1,0 +1,1564 @@
+{
+  "schema": "tastetable.profile-codec-independent-receiving/2",
+  "startedAt": "2026-10-08T21:30:05.269Z",
+  "completedAt": "2026-10-08T21:30:05.428Z",
+  "scope": "Exact v2 codec receiving in native Node; original 120-case frozen oracle plus the pre-exposure comma-only overlay and nine separate interaction cases.",
+  "runtime": {
+    "node": "v24.19.0",
+    "executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "base": {
+    "commit": "328df51af830e91f304417a66d74f43d94ae0c02",
+    "nativeValidatorGitBlob": "d375cb64c6c631cccca2bb43db286e8efd21eedb",
+    "nativeCliChanged": false
+  },
+  "v1": {
+    "gitBlob": "d230e5f65f5b5de7627f239afd306310ad9345c2",
+    "sha256": "18a7e309718b518665817a6d1d50fdfcbd72946dddb5630832cb12b6cef8a67a",
+    "bytes": 5641,
+    "archivedEvidenceGitBlob": "aef6e1c6186dee7460cac53383b6875886473764",
+    "archivedGzipSha256": "d7d3ff988eb8a86bc3b2f7d1ed561091c2000c2bc6b5a4405b6ae0cd63936e6b",
+    "archivedReceiptSha256": "da82cc745bf6d405a1d975807079030bbcc4806aba3ba4b85aaec332f51ffecb",
+    "historicalCounts": {
+      "nativeProcesses": 172,
+      "originalFileProcesses": 120,
+      "savedFileProcesses": 47,
+      "stdinProcesses": 5,
+      "explicitExpectedNativeAccepts": 59,
+      "explicitExpectedBrowserAccepts": 47,
+      "failures": 0
+    },
+    "historicalRuntime": {
+      "node": "v24.19.0",
+      "python": "Python 3.12.14",
+      "platform": "linux",
+      "arch": "x64"
+    },
+    "historicalCompletedAt": "2026-10-08T20:21:49.610Z"
+  },
+  "v2": {
+    "gitBlob": "83289bac26a281292595bd351c5f312165ccf87f",
+    "sha256": "c201a1ecbfa04a0ec22d02bfd2819d06a9e568ef8cc9820d39805ef0237bcb89",
+    "bytes": 5438
+  },
+  "corpus": {
+    "sha256": "6147a9eaa97bb89f9fe2595e7b4bfbb21b8616463cd9326ebd2df5d1426a010a",
+    "bytes": 301010,
+    "cases": 120,
+    "originalBytesAndExpectationsPreserved": true
+  },
+  "overlay": {
+    "gitBlob": "6fe7d3481c6bf22d9f74b7d948cdd7efbaf35298",
+    "sha256": "3a9cc22a78a5653e2f3f75046337ff0e6d0eb3ba652473ce9e6337511c5b8c36",
+    "bytes": 6121,
+    "frozenAt": "2026-10-08T21:24:35.642Z",
+    "candidateSourceUnreadAtFreeze": true,
+    "originalExpectationChanges": [
+      {
+        "caseName": "taste-comma",
+        "field": "browser",
+        "before": false,
+        "after": true,
+        "expectedProfileUnchanged": {
+          "cuisines": [],
+          "music": [
+            "Earth, Wind & Fire"
+          ],
+          "films": [],
+          "constraints": [],
+          "city": "Pasadena"
+        }
+      }
+    ]
+  },
+  "sourceDelta": {
+    "method": "Byte comparison of v1 after one exact block removal against all v2 bytes",
+    "removedBlock": "  if (field !== \"city\" && clean.includes(\",\")) {\n    throw new Error(field + \" contains a comma inside an entry. This form uses commas to separate entries and cannot reopen that value faithfully.\");\n  }\n",
+    "removedUtf8Bytes": 203,
+    "otherBytesIdentical": true
+  },
+  "counts": {
+    "originalCases": 120,
+    "originalV1BrowserAccepts": 47,
+    "originalV2ExpectedAccepts": 48,
+    "originalV2ObservedAccepts": 48,
+    "supplementalCases": 9,
+    "supplementalExpectedAccepts": 4,
+    "supplementalObservedAccepts": 4,
+    "savedNormalizedFiles": 52,
+    "assertions": 1066,
+    "operationCalls": {
+      "read": 134,
+      "subview": 129,
+      "normalize": 101,
+      "make": 101,
+      "savedReread": 52
+    },
+    "operationAccepts": {
+      "read": 53,
+      "subview": 52,
+      "normalize": 49,
+      "make": 49,
+      "savedReread": 52
+    },
+    "nativeCliProcessesThisRun": 0,
+    "fixtureOrApiRequestsThisRun": 0,
+    "failures": 0
+  },
+  "controls": {
+    "arrayBufferAccepted": true,
+    "nonbytes": [
+      {
+        "name": "string",
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Read planning inputs as UTF-8 bytes."
+        }
+      },
+      {
+        "name": "number",
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Read planning inputs as UTF-8 bytes."
+        }
+      },
+      {
+        "name": "plain-array",
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Read planning inputs as UTF-8 bytes."
+        }
+      },
+      {
+        "name": "null",
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Read planning inputs as UTF-8 bytes."
+        }
+      }
+    ],
+    "sourceInputAndSavedFileHashesPreserved": 186,
+    "callerAndBackingBytesPreserved": true
+  },
+  "failures": [],
+  "limitations": [
+    "This packet does not repeat native CLI, browser, UI race, or hosted CI execution. Prior CLI evidence is preserved and cited separately."
+  ],
+  "setupHistory": [
+    {
+      "phase": "overlay authoring before candidate exposure",
+      "outcome": "serialization rejected before native execution",
+      "message": "failed to serialize JavaScript value: unexpected end of hex escape at line 1 column 2103",
+      "correction": "Represent the unpaired-surrogate negative case as escaped raw JSON; no original corpus or candidate changed."
+    }
+  ],
+  "evidence": {
+    "reproductionEnvelopeGitBlob": "0d8de7c70acdd913b2d76f552192c66468dcc7cb",
+    "gzipSha256": "91962e5931989cb58b230d13e71ad20e2b3ea45a1ca9d990a0e08f610579fbfd",
+    "decodedMembers": 64,
+    "completeReceiptSha256": "98afb1b386007c65cd1c3d55cc807753b6cdd051be86967adeb18d53c716dd4a",
+    "receiverSha256": "7b730d93a9bcbc3480529d2c38f1fd9e4bdb3bf1a06363c0d5aaf71aa20597eb"
+  },
+  "interpretation": "The original corpus and its v1 expectations/results remain unchanged. The separately frozen overlay permits only the original taste-comma case; the 119 other original outcomes are identical. The nine additional cases do not alter the original oracle.",
+  "originalCaseOutcomes": [
+    {
+      "name": "omitted-defaults",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "trim-five-fields",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "null-city",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "blank-city",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "duplicate-tastes-kept",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "five-each",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "astral-sixty",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "astral-sixty-one",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "city-astral-sixty-one",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "combining-sixty-codepoints",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "combining-sixty-two-codepoints",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "zwj-fifty-six-codepoints",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "zwj-sixty-three-codepoints",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "literal-html-and-key-tokens",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "city-comma",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "taste-comma",
+      "v1": false,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "taste-feff-leading",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "taste-feff-trailing",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "city-feff-edges",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "text-feff-interior",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "zero-width-not-trimmed",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "internal-unicode-lines",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-0009",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-000a",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-000b",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-000c",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-000d",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-001c",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-001d",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-001e",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-001f",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-0020",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-0085",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-00a0",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-1680",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-2000",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-2001",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-2002",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-2003",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-2004",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-2005",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-2006",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-2007",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-2008",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-2009",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-200a",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-2028",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-2029",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-202f",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-205f",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "python-edge-space-3000",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "native-only-taste-control-0",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "native-only-taste-control-1",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "native-only-taste-control-7",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "native-only-taste-control-9",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "native-only-taste-control-10",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "native-only-taste-control-13",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "native-only-taste-control-31",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "native-only-taste-control-127",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "native-only-city-control",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "empty-object",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "empty-all",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "null-top",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "array-top",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "number-top",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "string-top",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "bool-top",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "blank-taste",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "cuisines-null",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "music-string",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "films-object",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "number-taste",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "null-taste",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "bool-taste",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "constraints-null",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "constraints-string",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "constraint-unknown",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "constraint-padded",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "constraint-case",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "constraint-duplicate",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "constraint-four",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "constraint-number",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "city-number",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "city-array",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "city-bool",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "unknown-profile-key",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "constructor-key",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "proto-key",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "lone-high-surrogate",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "lone-low-surrogate",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "lone-city-surrogate",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "six-cuisines",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "six-music",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "six-films",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "escaped-pair-and-key",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true
+      }
+    },
+    {
+      "name": "duplicate-literal-key",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    },
+    {
+      "name": "duplicate-escaped-key",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    },
+    {
+      "name": "duplicate-all-escaped-key",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    },
+    {
+      "name": "duplicate-array-key",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    },
+    {
+      "name": "json-trailing-comma",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    },
+    {
+      "name": "json-comment",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    },
+    {
+      "name": "json-trailing-root",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    },
+    {
+      "name": "json-unescaped-newline",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    },
+    {
+      "name": "json-nan",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    },
+    {
+      "name": "json-infinity",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    },
+    {
+      "name": "json-negative-infinity",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    },
+    {
+      "name": "empty-file",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    },
+    {
+      "name": "whitespace-only",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    },
+    {
+      "name": "file-leading-utf8-bom",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    },
+    {
+      "name": "file-whitespace-bom",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    },
+    {
+      "name": "invalid-byte",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    },
+    {
+      "name": "overlong-utf8",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    },
+    {
+      "name": "surrogate-utf8",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    },
+    {
+      "name": "too-high-utf8",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    },
+    {
+      "name": "truncated-utf8",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    },
+    {
+      "name": "utf16le-file",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    },
+    {
+      "name": "byte-limit-65535",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true
+      }
+    },
+    {
+      "name": "byte-limit-65536",
+      "v1": true,
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true
+      }
+    },
+    {
+      "name": "byte-limit-65537",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    },
+    {
+      "name": "nested-refusal",
+      "v1": false,
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    }
+  ],
+  "supplementalCaseOutcomes": [
+    {
+      "name": "v2-comma-and-quote",
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "v2-comma-only-after-trim",
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "v2-comma-astral-60",
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "v2-comma-astral-61",
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "v2-comma-remaining-control",
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "v2-comma-leading-feff",
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false,
+        "normalize": false,
+        "make": false
+      }
+    },
+    {
+      "name": "v2-city-feff-and-comma",
+      "expectedV2": true,
+      "actual": {
+        "read": true,
+        "subview": true,
+        "normalize": true,
+        "make": true
+      }
+    },
+    {
+      "name": "v2-comma-escaped-duplicate-key",
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    },
+    {
+      "name": "v2-comma-unpaired-surrogate",
+      "expectedV2": false,
+      "actual": {
+        "read": false,
+        "subview": false
+      }
+    }
+  ],
+  "artifactLauncherVerification": {
+    "command": "node run.mjs",
+    "cwd": "Extracted artifact directory",
+    "node": "v24.19.0",
+    "status": 0,
+    "stderr": "",
+    "completedAt": "2026-10-08T21:31:40.383Z",
+    "counts": {
+      "originalCases": 120,
+      "originalV1BrowserAccepts": 47,
+      "originalV2ExpectedAccepts": 48,
+      "originalV2ObservedAccepts": 48,
+      "supplementalCases": 9,
+      "supplementalExpectedAccepts": 4,
+      "supplementalObservedAccepts": 4,
+      "savedNormalizedFiles": 52,
+      "assertions": 1066,
+      "operationCalls": {
+        "read": 134,
+        "subview": 129,
+        "normalize": 101,
+        "make": 101,
+        "savedReread": 52
+      },
+      "operationAccepts": {
+        "read": 53,
+        "subview": 52,
+        "normalize": 49,
+        "make": 49,
+        "savedReread": 52
+      },
+      "nativeCliProcessesThisRun": 0,
+      "fixtureOrApiRequestsThisRun": 0,
+      "failures": 0
+    },
+    "scope": "One artifact-launcher verification of the same frozen Node receiver; not additional independent coverage and no native CLI processes."
+  }
+}

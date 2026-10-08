@@ -23,9 +23,6 @@ function text(value, field, allowEmpty = false) {
   if (field !== "city" && clean.trim() !== clean) {
     throw new Error(field + " has edge characters that the form cannot preserve.");
   }
-  if (field !== "city" && clean.includes(",")) {
-    throw new Error(field + " contains a comma inside an entry. This form uses commas to separate entries and cannot reopen that value faithfully.");
-  }
   return clean;
 }
 

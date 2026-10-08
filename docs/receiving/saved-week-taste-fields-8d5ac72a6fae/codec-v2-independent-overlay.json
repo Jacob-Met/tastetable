@@ -1,0 +1,189 @@
+{
+  "schema": "tastetable.profile-codec-expectation-overlay/2",
+  "frozenAt": "2026-10-08T21:24:35.642Z",
+  "parentCodec": "d230e5f65f5b5de7627f239afd306310ad9345c2",
+  "candidateCodec": "83289bac26a281292595bd351c5f312165ccf87f",
+  "candidateSourceRead": false,
+  "baseCorpus": {
+    "sha256": "6147a9eaa97bb89f9fe2595e7b4bfbb21b8616463cd9326ebd2df5d1426a010a",
+    "bytes": 301010,
+    "cases": 120
+  },
+  "authorization": "Root and source owner explicitly expanded only comma admission in taste entries for the reversible #57 form. Native profile contract and every other browser restriction are unchanged.",
+  "edits": [
+    {
+      "caseName": "taste-comma",
+      "field": "browser",
+      "before": false,
+      "after": true,
+      "expectedProfileUnchanged": {
+        "cuisines": [],
+        "music": [
+          "Earth, Wind & Fire"
+        ],
+        "films": [],
+        "constraints": [],
+        "city": "Pasadena"
+      }
+    }
+  ],
+  "invariants": {
+    "originalInputsUnchanged": true,
+    "originalExpectedNativeAccepts": 59,
+    "originalBrowserAccepts": 47,
+    "newBrowserAccepts": 48,
+    "allOtherOriginalExpectationsUnchanged": true
+  },
+  "remainingBrowserExceptions": [
+    "C0 U+0000..U+001F or DEL U+007F in normalized taste/city",
+    "U+FEFF at normalized taste edges"
+  ],
+  "supplementalCases": [
+    {
+      "name": "v2-comma-and-quote",
+      "input": {
+        "music": [
+          "  \"Miles, Davis\"  "
+        ],
+        "films": [
+          "a, \"b\""
+        ]
+      },
+      "browser": true,
+      "expected": {
+        "cuisines": [],
+        "music": [
+          "\"Miles, Davis\""
+        ],
+        "films": [
+          "a, \"b\""
+        ],
+        "constraints": [],
+        "city": "Pasadena"
+      },
+      "kind": "value",
+      "rawBase64": "eyJtdXNpYyI6WyIgIFwiTWlsZXMsIERhdmlzXCIgICJdLCJmaWxtcyI6WyJhLCBcImJcIiJdfQ=="
+    },
+    {
+      "name": "v2-comma-only-after-trim",
+      "input": {
+        "music": [
+          " , "
+        ]
+      },
+      "browser": true,
+      "expected": {
+        "cuisines": [],
+        "music": [
+          ","
+        ],
+        "films": [],
+        "constraints": [],
+        "city": "Pasadena"
+      },
+      "kind": "value",
+      "rawBase64": "eyJtdXNpYyI6WyIgLCAiXX0="
+    },
+    {
+      "name": "v2-comma-astral-60",
+      "input": {
+        "music": [
+          ",😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀"
+        ]
+      },
+      "browser": true,
+      "expected": {
+        "cuisines": [],
+        "music": [
+          ",😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀"
+        ],
+        "films": [],
+        "constraints": [],
+        "city": "Pasadena"
+      },
+      "kind": "value",
+      "rawBase64": "eyJtdXNpYyI6WyIs8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIAiXX0="
+    },
+    {
+      "name": "v2-comma-astral-61",
+      "input": {
+        "music": [
+          ",😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀"
+        ]
+      },
+      "browser": false,
+      "expected": null,
+      "kind": "value",
+      "rawBase64": "eyJtdXNpYyI6WyIs8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iA8J+YgPCfmIDwn5iAIl19"
+    },
+    {
+      "name": "v2-comma-remaining-control",
+      "input": {
+        "music": [
+          "Earth,\nWind"
+        ]
+      },
+      "browser": false,
+      "expected": null,
+      "kind": "value",
+      "rawBase64": "eyJtdXNpYyI6WyJFYXJ0aCxcbldpbmQiXX0="
+    },
+    {
+      "name": "v2-comma-leading-feff",
+      "input": {
+        "music": [
+          "﻿Earth, Wind"
+        ]
+      },
+      "browser": false,
+      "expected": null,
+      "kind": "value",
+      "rawBase64": "eyJtdXNpYyI6WyLvu79FYXJ0aCwgV2luZCJdfQ=="
+    },
+    {
+      "name": "v2-city-feff-and-comma",
+      "input": {
+        "music": [
+          "x,y"
+        ],
+        "city": "﻿Paris, FR﻿"
+      },
+      "browser": true,
+      "expected": {
+        "cuisines": [],
+        "music": [
+          "x,y"
+        ],
+        "films": [],
+        "constraints": [],
+        "city": "﻿Paris, FR﻿"
+      },
+      "kind": "value",
+      "rawBase64": "eyJtdXNpYyI6WyJ4LHkiXSwiY2l0eSI6Iu+7v1BhcmlzLCBGUu+7vyJ9"
+    },
+    {
+      "name": "v2-comma-escaped-duplicate-key",
+      "raw": "{\"mu\\u0073ic\":[\"A,B\"],\"music\":[\"C\"]}",
+      "browser": false,
+      "expected": null,
+      "kind": "raw",
+      "rawBase64": "eyJtdVx1MDA3M2ljIjpbIkEsQiJdLCJtdXNpYyI6WyJDIl19"
+    },
+    {
+      "name": "v2-comma-unpaired-surrogate",
+      "raw": "{\"music\":[\"x,\\ud800\"]}",
+      "browser": false,
+      "expected": null,
+      "kind": "raw",
+      "rawBase64": "eyJtdXNpYyI6WyJ4LFx1ZDgwMCJdfQ=="
+    }
+  ],
+  "setupHistory": [
+    {
+      "phase": "overlay authoring before candidate exposure",
+      "outcome": "serialization rejected before native execution",
+      "message": "failed to serialize JavaScript value: unexpected end of hex escape at line 1 column 2103",
+      "correction": "Represent the unpaired-surrogate negative case as escaped raw JSON; no original corpus or candidate changed."
+    }
+  ]
+}

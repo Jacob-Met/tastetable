@@ -1,0 +1,894 @@
+{
+  "schema": "tastetable.taste-fields.independent-receiving.v1",
+  "node": "v24.19.0",
+  "oracleGitBlob": "e560b77c27ee603d826e0f197b02821ca36dfc10",
+  "candidateGitBlob": "80d9c4a63b395bd3afb1005cad8e3bb52ac71df8",
+  "candidateSha256": "271ceeb91e0bb2e7b3a5f6a94beb5c6065d552c83e36e89e461ff7c49e9a8f0b",
+  "counts": {
+    "parse": 26,
+    "malformed": 11,
+    "format": 13,
+    "roundTrips": 169,
+    "total": 219,
+    "passed": 219,
+    "failed": 0
+  },
+  "results": [
+    {
+      "name": "parse: empty",
+      "status": "pass"
+    },
+    {
+      "name": "parse: whitespace",
+      "status": "pass"
+    },
+    {
+      "name": "parse: delimiter empties",
+      "status": "pass"
+    },
+    {
+      "name": "parse: ordinary",
+      "status": "pass"
+    },
+    {
+      "name": "parse: artist with comma",
+      "status": "pass"
+    },
+    {
+      "name": "parse: embedded quote",
+      "status": "pass"
+    },
+    {
+      "name": "parse: empty quoted",
+      "status": "pass"
+    },
+    {
+      "name": "parse: quoted space",
+      "status": "pass"
+    },
+    {
+      "name": "parse: empty between quoted",
+      "status": "pass"
+    },
+    {
+      "name": "parse: edge whitespace",
+      "status": "pass"
+    },
+    {
+      "name": "parse: mid entry quotes",
+      "status": "pass"
+    },
+    {
+      "name": "parse: literal quote at end",
+      "status": "pass"
+    },
+    {
+      "name": "parse: unquoted old comma",
+      "status": "pass"
+    },
+    {
+      "name": "parse: unicode labels",
+      "status": "pass"
+    },
+    {
+      "name": "parse: quoted comma",
+      "status": "pass"
+    },
+    {
+      "name": "parse: only quote",
+      "status": "pass"
+    },
+    {
+      "name": "parse: quote then comma",
+      "status": "pass"
+    },
+    {
+      "name": "parse: quote second",
+      "status": "pass"
+    },
+    {
+      "name": "parse: nonbreaking outer",
+      "status": "pass"
+    },
+    {
+      "name": "parse: FEFF quoted edge",
+      "status": "pass"
+    },
+    {
+      "name": "parse: explicit quoted tabs",
+      "status": "pass"
+    },
+    {
+      "name": "parse: leading delimiter",
+      "status": "pass"
+    },
+    {
+      "name": "parse: trailing delimiter",
+      "status": "pass"
+    },
+    {
+      "name": "parse: doubled commas",
+      "status": "pass"
+    },
+    {
+      "name": "parse: apostrophes",
+      "status": "pass"
+    },
+    {
+      "name": "parse: quoted apostrophe",
+      "status": "pass"
+    },
+    {
+      "name": "malformed 0",
+      "status": "pass"
+    },
+    {
+      "name": "malformed 1",
+      "status": "pass"
+    },
+    {
+      "name": "malformed 2",
+      "status": "pass"
+    },
+    {
+      "name": "malformed 3",
+      "status": "pass"
+    },
+    {
+      "name": "malformed 4",
+      "status": "pass"
+    },
+    {
+      "name": "malformed 5",
+      "status": "pass"
+    },
+    {
+      "name": "malformed 6",
+      "status": "pass"
+    },
+    {
+      "name": "malformed 7",
+      "status": "pass"
+    },
+    {
+      "name": "malformed 8",
+      "status": "pass"
+    },
+    {
+      "name": "malformed 9",
+      "status": "pass"
+    },
+    {
+      "name": "malformed 10",
+      "status": "pass"
+    },
+    {
+      "name": "format 0",
+      "status": "pass"
+    },
+    {
+      "name": "format 1",
+      "status": "pass"
+    },
+    {
+      "name": "format 2",
+      "status": "pass"
+    },
+    {
+      "name": "format 3",
+      "status": "pass"
+    },
+    {
+      "name": "format 4",
+      "status": "pass"
+    },
+    {
+      "name": "format 5",
+      "status": "pass"
+    },
+    {
+      "name": "format 6",
+      "status": "pass"
+    },
+    {
+      "name": "format 7",
+      "status": "pass"
+    },
+    {
+      "name": "format 8",
+      "status": "pass"
+    },
+    {
+      "name": "format 9",
+      "status": "pass"
+    },
+    {
+      "name": "format 10",
+      "status": "pass"
+    },
+    {
+      "name": "format 11",
+      "status": "pass"
+    },
+    {
+      "name": "format 12",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 0",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 1",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 2",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 3",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 4",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 5",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 6",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 7",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 8",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 9",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 10",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 11",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 12",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 13",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 14",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 15",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 16",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 17",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 18",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 19",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 20",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 21",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 22",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 23",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 24",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 25",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 26",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 27",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 28",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 29",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 30",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 31",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 32",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 33",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 34",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 35",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 36",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 37",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 38",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 39",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 40",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 41",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 42",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 43",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 44",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 45",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 46",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 47",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 48",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 49",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 50",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 51",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 52",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 53",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 54",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 55",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 56",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 57",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 58",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 59",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 60",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 61",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 62",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 63",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 64",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 65",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 66",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 67",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 68",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 69",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 70",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 71",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 72",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 73",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 74",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 75",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 76",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 77",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 78",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 79",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 80",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 81",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 82",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 83",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 84",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 85",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 86",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 87",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 88",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 89",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 90",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 91",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 92",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 93",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 94",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 95",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 96",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 97",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 98",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 99",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 100",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 101",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 102",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 103",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 104",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 105",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 106",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 107",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 108",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 109",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 110",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 111",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 112",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 113",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 114",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 115",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 116",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 117",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 118",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 119",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 120",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 121",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 122",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 123",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 124",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 125",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 126",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 127",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 128",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 129",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 130",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 131",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 132",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 133",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 134",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 135",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 136",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 137",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 138",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 139",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 140",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 141",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 142",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 143",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 144",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 145",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 146",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 147",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 148",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 149",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 150",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 151",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 152",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 153",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 154",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 155",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 156",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 157",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 158",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 159",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 160",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 161",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 162",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 163",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 164",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 165",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 166",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 167",
+      "status": "pass"
+    },
+    {
+      "name": "round trip 168",
+      "status": "pass"
+    }
+  ]
+}

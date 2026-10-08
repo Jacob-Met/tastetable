@@ -1,0 +1,51 @@
+{
+  "schema": "tastetable.visit_csv.baseline.v1",
+  "at": "2026-10-08T20:44:51.136263+00:00",
+  "base_commit": "328df51af830e91f304417a66d74f43d94ae0c02",
+  "base_tree": "df0251092f77d96169daa097abaec409ecabe6ba",
+  "node": "v22.22.1",
+  "runs": [
+    {
+      "label": "baseline-original-visits",
+      "argv": [
+        "node",
+        "--test",
+        "tests/test_visit_record.mjs"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "baseline-command-absence",
+      "argv": [
+        "node",
+        "tools/visit_record_to_csv.mjs",
+        "--input",
+        "/home/jacob/tastetable-visit-csv-65ae877160f6/tests/fixtures/visit-record-csv.json",
+        "--output",
+        "/home/jacob/tastetable-visit-csv-65ae877160f6/docs/receiving/visit-record-csv-65ae877160f6/baseline-must-not-exist.csv"
+      ],
+      "returncode": 1
+    }
+  ],
+  "no_output_published": true,
+  "source_pins": {
+    "static/visit_record.mjs": {
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f",
+      "bytes": 7525
+    },
+    "static/week_file.mjs": {
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "bytes": 6642
+    },
+    "static/week_plan.mjs": {
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "bytes": 3913
+    },
+    "tests/test_visit_record.mjs": {
+      "sha256": "c228ef3d8481afb1b9944e662a5388f04fbed74ff2ecc9bf434faa73436a0fcb",
+      "bytes": 8011
+    }
+  },
+  "fixture_sha256": "ee45bdd3fb7dd31d48094a9752e88be7fc15331cad4e702e29b0eb5626df0624",
+  "notes": "New capability absence; no defect claim against original JSON/print contract. Existing visit suite executed once."
+}

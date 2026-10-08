@@ -1,0 +1,971 @@
+{
+  "schema": "tastetable.taste-fields.independent-oracle.v1",
+  "receiver": "estate-8d5ac72a6fae/root",
+  "sourceBase": "328df51af830e91f304417a66d74f43d94ae0c02",
+  "frozenBeforeCandidateAccess": true,
+  "contract": "parseTasteEntries and formatTasteEntries as declared in issue57; ordinary comma lists preserve former trim/empty-drop. Quoted values preserve contents and escape double quotes by doubling. This is a pure module grammar oracle; single-line DOM sanitization and native profile admission are separately bounded.",
+  "parseCases": [
+    {
+      "name": "empty",
+      "input": "",
+      "expected": []
+    },
+    {
+      "name": "whitespace",
+      "input": " \t  ",
+      "expected": []
+    },
+    {
+      "name": "delimiter empties",
+      "input": ", ,,,",
+      "expected": []
+    },
+    {
+      "name": "ordinary",
+      "input": " Cuban, Mexican ",
+      "expected": [
+        "Cuban",
+        "Mexican"
+      ]
+    },
+    {
+      "name": "artist with comma",
+      "input": "\"Earth, Wind & Fire\", Celia Cruz",
+      "expected": [
+        "Earth, Wind & Fire",
+        "Celia Cruz"
+      ]
+    },
+    {
+      "name": "embedded quote",
+      "input": "\"He said \"\"hello\"\"\", Jazz",
+      "expected": [
+        "He said \"hello\"",
+        "Jazz"
+      ]
+    },
+    {
+      "name": "empty quoted",
+      "input": "\"\"",
+      "expected": [
+        ""
+      ]
+    },
+    {
+      "name": "quoted space",
+      "input": "\" \"",
+      "expected": [
+        " "
+      ]
+    },
+    {
+      "name": "empty between quoted",
+      "input": "\"a\",, \"b\"",
+      "expected": [
+        "a",
+        "b"
+      ]
+    },
+    {
+      "name": "edge whitespace",
+      "input": "\t \"  jazz  \" \t, blues ",
+      "expected": [
+        "  jazz  ",
+        "blues"
+      ]
+    },
+    {
+      "name": "mid entry quotes",
+      "input": "Stop \"Making\" Sense, Jazz",
+      "expected": [
+        "Stop \"Making\" Sense",
+        "Jazz"
+      ]
+    },
+    {
+      "name": "literal quote at end",
+      "input": "hello\", goodbye",
+      "expected": [
+        "hello\"",
+        "goodbye"
+      ]
+    },
+    {
+      "name": "unquoted old comma",
+      "input": "He said \"Hello, World\"",
+      "expected": [
+        "He said \"Hello",
+        "World\""
+      ]
+    },
+    {
+      "name": "unicode labels",
+      "input": "日本料理, \"Amélie, le film\"",
+      "expected": [
+        "日本料理",
+        "Amélie, le film"
+      ]
+    },
+    {
+      "name": "quoted comma",
+      "input": "\",\", x",
+      "expected": [
+        ",",
+        "x"
+      ]
+    },
+    {
+      "name": "only quote",
+      "input": "\"\"\"\"",
+      "expected": [
+        "\""
+      ]
+    },
+    {
+      "name": "quote then comma",
+      "input": "\"\"\",\"",
+      "expected": [
+        "\","
+      ]
+    },
+    {
+      "name": "quote second",
+      "input": "Jazz, \"\"\"Quoted\"\"\"",
+      "expected": [
+        "Jazz",
+        "\"Quoted\""
+      ]
+    },
+    {
+      "name": "nonbreaking outer",
+      "input": " \"Jazz\" , Blues ",
+      "expected": [
+        "Jazz",
+        "Blues"
+      ]
+    },
+    {
+      "name": "FEFF quoted edge",
+      "input": "\"﻿Jazz﻿\"",
+      "expected": [
+        "﻿Jazz﻿"
+      ]
+    },
+    {
+      "name": "explicit quoted tabs",
+      "input": "\"\tJazz\t\"",
+      "expected": [
+        "\tJazz\t"
+      ]
+    },
+    {
+      "name": "leading delimiter",
+      "input": ", \"Jazz\"",
+      "expected": [
+        "Jazz"
+      ]
+    },
+    {
+      "name": "trailing delimiter",
+      "input": "\"Jazz\",",
+      "expected": [
+        "Jazz"
+      ]
+    },
+    {
+      "name": "doubled commas",
+      "input": "Jazz,,,Blues",
+      "expected": [
+        "Jazz",
+        "Blues"
+      ]
+    },
+    {
+      "name": "apostrophes",
+      "input": "O'Brother, Don't Stop",
+      "expected": [
+        "O'Brother",
+        "Don't Stop"
+      ]
+    },
+    {
+      "name": "quoted apostrophe",
+      "input": "\"O'Brother, Where Art Thou?\"",
+      "expected": [
+        "O'Brother, Where Art Thou?"
+      ]
+    }
+  ],
+  "invalidInputs": [
+    "\"",
+    "\"Jazz",
+    "\"Jazz, Blues",
+    "\"Jazz\"x",
+    "\"Jazz\" \"Blues\"",
+    "\"Jazz\";Blues",
+    "\"\"\"",
+    "\"a\"\"",
+    "Jazz, \"unterminated",
+    "\"a\" b",
+    "\"a\", \"b\"oops"
+  ],
+  "formatCases": [
+    {
+      "input": [],
+      "expected": ""
+    },
+    {
+      "input": [
+        "Jazz"
+      ],
+      "expected": "Jazz"
+    },
+    {
+      "input": [
+        "Jazz",
+        "Blues"
+      ],
+      "expected": "Jazz, Blues"
+    },
+    {
+      "input": [
+        "Earth, Wind & Fire",
+        "Celia Cruz"
+      ],
+      "expected": "\"Earth, Wind & Fire\", Celia Cruz"
+    },
+    {
+      "input": [
+        "He said \"hello\""
+      ],
+      "expected": "\"He said \"\"hello\"\"\""
+    },
+    {
+      "input": [
+        ""
+      ],
+      "expected": "\"\""
+    },
+    {
+      "input": [
+        " Jazz "
+      ],
+      "expected": "\" Jazz \""
+    },
+    {
+      "input": [
+        "日本料理",
+        "映画"
+      ],
+      "expected": "日本料理, 映画"
+    },
+    {
+      "input": [
+        "\""
+      ],
+      "expected": "\"\"\"\""
+    },
+    {
+      "input": [
+        ","
+      ],
+      "expected": "\",\""
+    },
+    {
+      "input": [
+        " Jazz"
+      ],
+      "expected": "\" Jazz\""
+    },
+    {
+      "input": [
+        "﻿Jazz﻿"
+      ],
+      "expected": "\"﻿Jazz﻿\""
+    },
+    {
+      "input": [
+        "Stop \"Making\" Sense"
+      ],
+      "expected": "\"Stop \"\"Making\"\" Sense\""
+    }
+  ],
+  "roundTrips": [
+    [
+      "Jazz",
+      "Jazz"
+    ],
+    [
+      "Jazz",
+      "Earth, Wind & Fire"
+    ],
+    [
+      "Jazz",
+      "\"Quoted\""
+    ],
+    [
+      "Jazz",
+      " a "
+    ],
+    [
+      "Jazz",
+      "日本料理"
+    ],
+    [
+      "Jazz",
+      "👩🏽‍🎤"
+    ],
+    [
+      "Jazz",
+      ","
+    ],
+    [
+      "Jazz",
+      "a\"b"
+    ],
+    [
+      "Jazz",
+      " film"
+    ],
+    [
+      "Jazz",
+      "﻿taste﻿"
+    ],
+    [
+      "Jazz",
+      ""
+    ],
+    [
+      "Jazz",
+      "Rock & Roll"
+    ],
+    [
+      "Jazz",
+      "Celia Cruz"
+    ],
+    [
+      "Earth, Wind & Fire",
+      "Jazz"
+    ],
+    [
+      "Earth, Wind & Fire",
+      "Earth, Wind & Fire"
+    ],
+    [
+      "Earth, Wind & Fire",
+      "\"Quoted\""
+    ],
+    [
+      "Earth, Wind & Fire",
+      " a "
+    ],
+    [
+      "Earth, Wind & Fire",
+      "日本料理"
+    ],
+    [
+      "Earth, Wind & Fire",
+      "👩🏽‍🎤"
+    ],
+    [
+      "Earth, Wind & Fire",
+      ","
+    ],
+    [
+      "Earth, Wind & Fire",
+      "a\"b"
+    ],
+    [
+      "Earth, Wind & Fire",
+      " film"
+    ],
+    [
+      "Earth, Wind & Fire",
+      "﻿taste﻿"
+    ],
+    [
+      "Earth, Wind & Fire",
+      ""
+    ],
+    [
+      "Earth, Wind & Fire",
+      "Rock & Roll"
+    ],
+    [
+      "Earth, Wind & Fire",
+      "Celia Cruz"
+    ],
+    [
+      "\"Quoted\"",
+      "Jazz"
+    ],
+    [
+      "\"Quoted\"",
+      "Earth, Wind & Fire"
+    ],
+    [
+      "\"Quoted\"",
+      "\"Quoted\""
+    ],
+    [
+      "\"Quoted\"",
+      " a "
+    ],
+    [
+      "\"Quoted\"",
+      "日本料理"
+    ],
+    [
+      "\"Quoted\"",
+      "👩🏽‍🎤"
+    ],
+    [
+      "\"Quoted\"",
+      ","
+    ],
+    [
+      "\"Quoted\"",
+      "a\"b"
+    ],
+    [
+      "\"Quoted\"",
+      " film"
+    ],
+    [
+      "\"Quoted\"",
+      "﻿taste﻿"
+    ],
+    [
+      "\"Quoted\"",
+      ""
+    ],
+    [
+      "\"Quoted\"",
+      "Rock & Roll"
+    ],
+    [
+      "\"Quoted\"",
+      "Celia Cruz"
+    ],
+    [
+      " a ",
+      "Jazz"
+    ],
+    [
+      " a ",
+      "Earth, Wind & Fire"
+    ],
+    [
+      " a ",
+      "\"Quoted\""
+    ],
+    [
+      " a ",
+      " a "
+    ],
+    [
+      " a ",
+      "日本料理"
+    ],
+    [
+      " a ",
+      "👩🏽‍🎤"
+    ],
+    [
+      " a ",
+      ","
+    ],
+    [
+      " a ",
+      "a\"b"
+    ],
+    [
+      " a ",
+      " film"
+    ],
+    [
+      " a ",
+      "﻿taste﻿"
+    ],
+    [
+      " a ",
+      ""
+    ],
+    [
+      " a ",
+      "Rock & Roll"
+    ],
+    [
+      " a ",
+      "Celia Cruz"
+    ],
+    [
+      "日本料理",
+      "Jazz"
+    ],
+    [
+      "日本料理",
+      "Earth, Wind & Fire"
+    ],
+    [
+      "日本料理",
+      "\"Quoted\""
+    ],
+    [
+      "日本料理",
+      " a "
+    ],
+    [
+      "日本料理",
+      "日本料理"
+    ],
+    [
+      "日本料理",
+      "👩🏽‍🎤"
+    ],
+    [
+      "日本料理",
+      ","
+    ],
+    [
+      "日本料理",
+      "a\"b"
+    ],
+    [
+      "日本料理",
+      " film"
+    ],
+    [
+      "日本料理",
+      "﻿taste﻿"
+    ],
+    [
+      "日本料理",
+      ""
+    ],
+    [
+      "日本料理",
+      "Rock & Roll"
+    ],
+    [
+      "日本料理",
+      "Celia Cruz"
+    ],
+    [
+      "👩🏽‍🎤",
+      "Jazz"
+    ],
+    [
+      "👩🏽‍🎤",
+      "Earth, Wind & Fire"
+    ],
+    [
+      "👩🏽‍🎤",
+      "\"Quoted\""
+    ],
+    [
+      "👩🏽‍🎤",
+      " a "
+    ],
+    [
+      "👩🏽‍🎤",
+      "日本料理"
+    ],
+    [
+      "👩🏽‍🎤",
+      "👩🏽‍🎤"
+    ],
+    [
+      "👩🏽‍🎤",
+      ","
+    ],
+    [
+      "👩🏽‍🎤",
+      "a\"b"
+    ],
+    [
+      "👩🏽‍🎤",
+      " film"
+    ],
+    [
+      "👩🏽‍🎤",
+      "﻿taste﻿"
+    ],
+    [
+      "👩🏽‍🎤",
+      ""
+    ],
+    [
+      "👩🏽‍🎤",
+      "Rock & Roll"
+    ],
+    [
+      "👩🏽‍🎤",
+      "Celia Cruz"
+    ],
+    [
+      ",",
+      "Jazz"
+    ],
+    [
+      ",",
+      "Earth, Wind & Fire"
+    ],
+    [
+      ",",
+      "\"Quoted\""
+    ],
+    [
+      ",",
+      " a "
+    ],
+    [
+      ",",
+      "日本料理"
+    ],
+    [
+      ",",
+      "👩🏽‍🎤"
+    ],
+    [
+      ",",
+      ","
+    ],
+    [
+      ",",
+      "a\"b"
+    ],
+    [
+      ",",
+      " film"
+    ],
+    [
+      ",",
+      "﻿taste﻿"
+    ],
+    [
+      ",",
+      ""
+    ],
+    [
+      ",",
+      "Rock & Roll"
+    ],
+    [
+      ",",
+      "Celia Cruz"
+    ],
+    [
+      "a\"b",
+      "Jazz"
+    ],
+    [
+      "a\"b",
+      "Earth, Wind & Fire"
+    ],
+    [
+      "a\"b",
+      "\"Quoted\""
+    ],
+    [
+      "a\"b",
+      " a "
+    ],
+    [
+      "a\"b",
+      "日本料理"
+    ],
+    [
+      "a\"b",
+      "👩🏽‍🎤"
+    ],
+    [
+      "a\"b",
+      ","
+    ],
+    [
+      "a\"b",
+      "a\"b"
+    ],
+    [
+      "a\"b",
+      " film"
+    ],
+    [
+      "a\"b",
+      "﻿taste﻿"
+    ],
+    [
+      "a\"b",
+      ""
+    ],
+    [
+      "a\"b",
+      "Rock & Roll"
+    ],
+    [
+      "a\"b",
+      "Celia Cruz"
+    ],
+    [
+      " film",
+      "Jazz"
+    ],
+    [
+      " film",
+      "Earth, Wind & Fire"
+    ],
+    [
+      " film",
+      "\"Quoted\""
+    ],
+    [
+      " film",
+      " a "
+    ],
+    [
+      " film",
+      "日本料理"
+    ],
+    [
+      " film",
+      "👩🏽‍🎤"
+    ],
+    [
+      " film",
+      ","
+    ],
+    [
+      " film",
+      "a\"b"
+    ],
+    [
+      " film",
+      " film"
+    ],
+    [
+      " film",
+      "﻿taste﻿"
+    ],
+    [
+      " film",
+      ""
+    ],
+    [
+      " film",
+      "Rock & Roll"
+    ],
+    [
+      " film",
+      "Celia Cruz"
+    ],
+    [
+      "﻿taste﻿",
+      "Jazz"
+    ],
+    [
+      "﻿taste﻿",
+      "Earth, Wind & Fire"
+    ],
+    [
+      "﻿taste﻿",
+      "\"Quoted\""
+    ],
+    [
+      "﻿taste﻿",
+      " a "
+    ],
+    [
+      "﻿taste﻿",
+      "日本料理"
+    ],
+    [
+      "﻿taste﻿",
+      "👩🏽‍🎤"
+    ],
+    [
+      "﻿taste﻿",
+      ","
+    ],
+    [
+      "﻿taste﻿",
+      "a\"b"
+    ],
+    [
+      "﻿taste﻿",
+      " film"
+    ],
+    [
+      "﻿taste﻿",
+      "﻿taste﻿"
+    ],
+    [
+      "﻿taste﻿",
+      ""
+    ],
+    [
+      "﻿taste﻿",
+      "Rock & Roll"
+    ],
+    [
+      "﻿taste﻿",
+      "Celia Cruz"
+    ],
+    [
+      "",
+      "Jazz"
+    ],
+    [
+      "",
+      "Earth, Wind & Fire"
+    ],
+    [
+      "",
+      "\"Quoted\""
+    ],
+    [
+      "",
+      " a "
+    ],
+    [
+      "",
+      "日本料理"
+    ],
+    [
+      "",
+      "👩🏽‍🎤"
+    ],
+    [
+      "",
+      ","
+    ],
+    [
+      "",
+      "a\"b"
+    ],
+    [
+      "",
+      " film"
+    ],
+    [
+      "",
+      "﻿taste﻿"
+    ],
+    [
+      "",
+      ""
+    ],
+    [
+      "",
+      "Rock & Roll"
+    ],
+    [
+      "",
+      "Celia Cruz"
+    ],
+    [
+      "Rock & Roll",
+      "Jazz"
+    ],
+    [
+      "Rock & Roll",
+      "Earth, Wind & Fire"
+    ],
+    [
+      "Rock & Roll",
+      "\"Quoted\""
+    ],
+    [
+      "Rock & Roll",
+      " a "
+    ],
+    [
+      "Rock & Roll",
+      "日本料理"
+    ],
+    [
+      "Rock & Roll",
+      "👩🏽‍🎤"
+    ],
+    [
+      "Rock & Roll",
+      ","
+    ],
+    [
+      "Rock & Roll",
+      "a\"b"
+    ],
+    [
+      "Rock & Roll",
+      " film"
+    ],
+    [
+      "Rock & Roll",
+      "﻿taste﻿"
+    ],
+    [
+      "Rock & Roll",
+      ""
+    ],
+    [
+      "Rock & Roll",
+      "Rock & Roll"
+    ],
+    [
+      "Rock & Roll",
+      "Celia Cruz"
+    ],
+    [
+      "Celia Cruz",
+      "Jazz"
+    ],
+    [
+      "Celia Cruz",
+      "Earth, Wind & Fire"
+    ],
+    [
+      "Celia Cruz",
+      "\"Quoted\""
+    ],
+    [
+      "Celia Cruz",
+      " a "
+    ],
+    [
+      "Celia Cruz",
+      "日本料理"
+    ],
+    [
+      "Celia Cruz",
+      "👩🏽‍🎤"
+    ],
+    [
+      "Celia Cruz",
+      ","
+    ],
+    [
+      "Celia Cruz",
+      "a\"b"
+    ],
+    [
+      "Celia Cruz",
+      " film"
+    ],
+    [
+      "Celia Cruz",
+      "﻿taste﻿"
+    ],
+    [
+      "Celia Cruz",
+      ""
+    ],
+    [
+      "Celia Cruz",
+      "Rock & Roll"
+    ],
+    [
+      "Celia Cruz",
+      "Celia Cruz"
+    ]
+  ]
+}

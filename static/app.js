@@ -1,12 +1,13 @@
 import { DAYS, createWeekPlan, localDate, offWeekPicks, resetDays, setPickDay, setWeek, weekRows } from "./week_plan.mjs";
 import { makeWeekFile, readWeekFile } from "./week_file.mjs";
 import { mountVenueFollowup } from "./venue_followup.mjs";
+import { formatTasteEntries, parseTasteEntries } from "./taste_fields.mjs";
 import { mountProfileFiles } from "./profile_file_ui.mjs";
 
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const byDay = (a, b) => DAYS.indexOf(a.day) - DAYS.indexOf(b.day);
-const split = (s) => s.split(",").map((x) => x.trim()).filter(Boolean);
+const split = parseTasteEntries;
 let personas = [];
 let weekState = null;
 let preferredWeekStart = null;
@@ -206,9 +207,9 @@ async function init() {
 
 function fillForm(p) {
   const f = $("#form");
-  f.cuisines.value = p.cuisines.join(", ");
-  f.music.value = p.music.join(", ");
-  f.films.value = p.films.join(", ");
+  f.cuisines.value = formatTasteEntries(p.cuisines);
+  f.music.value = formatTasteEntries(p.music);
+  f.films.value = formatTasteEntries(p.films);
   f.city.value = p.city || "";
   f.querySelectorAll("[name=constraints]").forEach((c) => (c.checked = p.constraints.includes(c.value)));
 }
@@ -332,6 +333,11 @@ function clearPlan(message) {
 }
 
 const profileFiles = mountProfileFiles($("#profileFiles"), {
+  readInputState() {
+    const f = $("#form");
+    return { cuisines: f.cuisines.value, music: f.music.value, films: f.films.value,
+      city: f.city.value, constraints: [...f.querySelectorAll("[name=constraints]:checked")].map((c) => c.value) };
+  },
   readInputs() {
     const f = $("#form");
     return { cuisines: split(f.cuisines.value), music: split(f.music.value), films: split(f.films.value),
@@ -361,8 +367,19 @@ $("#sampleBtn").addEventListener("click", () => {
 $("#form").addEventListener("submit", (ev) => {
   ev.preventDefault();
   const f = ev.target;
-  const body = { cuisines: split(f.cuisines.value), music: split(f.music.value), films: split(f.films.value),
-    city: f.city.value, constraints: [...f.querySelectorAll("[name=constraints]:checked")].map((c) => c.value) };
+  const tastes = {};
+  const labels = { cuisines: "Cuisines", music: "Music", films: "Films" };
+  for (const field of ["cuisines", "music", "films"]) {
+    try {
+      tastes[field] = split(f[field].value);
+    } catch (error) {
+      $("#requestStatus").textContent = labels[field] + ": " + error.message;
+      f[field].focus();
+      return;
+    }
+  }
+  const body = { ...tastes, city: f.city.value,
+    constraints: [...f.querySelectorAll("[name=constraints]:checked")].map((c) => c.value) };
   requestKind = "plan";
   void planRequests.run("/api/plan", { body, inputs: body });
 });

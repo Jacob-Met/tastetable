@@ -1,7 +1,9 @@
 import { MAX_PROFILE_BYTES, makeProfileFile, normalizeProfile, readProfileFile } from "./profile_file.mjs";
 
-/** Local file preview. Only the explicit Replace action may change planner inputs. */
-export function mountProfileFiles(root, { readInputs, replaceInputs }) {
+/** Local file preview. Only the explicit Replace action may change planner inputs.
+ * readInputState can snapshot a draft even when readInputs cannot yet parse it.
+ */
+export function mountProfileFiles(root, { readInputs, readInputState = readInputs, replaceInputs }) {
   const find = (selector) => root.querySelector(selector);
   const status = find("#profileStatus");
   const preview = find("#profilePreview");
@@ -66,7 +68,7 @@ export function mountProfileFiles(root, { readInputs, replaceInputs }) {
       const bytes = await file.arrayBuffer();
       if (ticket !== generation) return;
       const profile = readProfileFile(bytes);
-      pending = { profile, filename: file.name, baseline: JSON.stringify(readInputs()) };
+      pending = { profile, filename: file.name, baseline: JSON.stringify(readInputState()) };
       reading = false;
       show(profile, file.name);
       status.textContent = "Planning inputs are ready for review. Your current inputs and week are unchanged.";
@@ -84,11 +86,11 @@ export function mountProfileFiles(root, { readInputs, replaceInputs }) {
 
   replace.addEventListener("click", () => {
     if (!pending) return;
-    if (pending.baseline !== JSON.stringify(readInputs())) {
-      retire("Your inputs changed after this preview. Open the file again before replacing them.");
-      return;
-    }
     try {
+      if (pending.baseline !== JSON.stringify(readInputState())) {
+        retire("Your inputs changed after this preview. Open the file again before replacing them.");
+        return;
+      }
       const profile = normalizeProfile(pending.profile);
       replaceInputs(profile);
       retire();

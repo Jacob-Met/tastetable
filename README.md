@@ -78,6 +78,10 @@ app.py (FastAPI) ──► agent.py  tool loop (OpenAI chat.completions shape)
 * The "LLM-only" column is a fixed, ungrounded template that shows what a model without tools
   typically returns. It is not a live model call.
 
+## Plan for several people locally
+
+Create an ordered, create-only ZIP of native fixture plans and editable saved weeks from explicit profile files with [the native batch command](docs/NATIVE_PLAN_BATCH.md). Every requested profile receives a saved or failed entry; a partial bundle has a nonzero process exit.
+
 ## Setup
 
 Requires Python 3.12.
@@ -97,7 +101,8 @@ By default the app runs in **mock mode** (it uses the fixture and makes no netwo
 Use **Save planning inputs (.json)** to keep the current cuisines, music, films, city
 and constraints without first generating a plan. **Open planning inputs** reads a
 local file and shows a preview. Your current inputs and week stay unchanged until
-you choose **Replace inputs**. Cancel leaves them intact. Replacement clears the
+you choose **Replace inputs**. Cancel leaves them intact. A valid file can also
+replace an unfinished or malformed quoted entry in the current form. Replacement clears the
 current result and venue notes, retains your chosen week date, and requests nothing:
 review the inputs, then choose **Plan my week** for fresh suggestions.
 
@@ -109,17 +114,36 @@ regular planning action retains its existing server/provider behavior.
 
 Files are limited to 64 KiB of UTF-8 JSON, with up to five entries per taste field,
 60 Unicode characters per entry or city, at least one taste, and the three existing
-constraint names. Saving uses the form's comma-separated entries and trims text;
-it does not preserve raw spacing. Native profile defaults are retained on opening.
-The form refuses entries containing a comma, text containing control characters,
-and taste entries with edge byte-order characters because its single-line comma
-fields cannot reopen those values faithfully.
+constraint names. Saving parses the quoted entry format below and applies native
+text trimming; it does not preserve raw spacing. Native profile defaults are retained
+on opening. Names containing commas or quotes remain whole entries. The form refuses
+text containing control characters and taste entries with edge byte-order characters
+because its single-line fields cannot reopen those values faithfully.
 Duplicate or unknown JSON fields, invalid UTF-8 and unsupported values are refused.
 A file still being read or reviewed is retired when inputs or the current planning
 request change, or when another plan is accepted.
 
 ~~~bash
 node --test tests/profile_file.test.mjs
+~~~
+
+### Keep artist and film names together
+
+Separate taste entries with commas. If a name itself contains a comma, wrap that
+entry in double quotes: `"Earth, Wind & Fire", Celia Cruz` is two music
+entries. Within a quoted entry, double an internal quote: `"He said ""hello"""`
+keeps the name `He said "hello"`. Ordinary lists and literal quotes inside
+an unquoted name retain their existing meaning.
+
+Opening a saved week formats its original tastes this way automatically. Requesting
+another week then retains comma-bearing artist and film names as whole entries.
+A missing closing quote or extra text after it produces feedback beside the form
+and focuses the affected field before a request can start. Correct the field and
+submit again. The existing behavior that input edits retire the previous result
+is unchanged.
+
+~~~bash
+node --test tests/taste_fields.test.mjs
 ~~~
 
 ### Arrange and print your week
@@ -333,3 +357,7 @@ the plain-text download so embedded line breaks cannot become report headings.
 ## Keep a visit record
 
 Open **Visit record (new tab)** in the planner to record what happened beside the original saved suggestions. Open a JSON saved week from the planner or offline studio, review it, and choose **Use this file**. Each original occurrence has its own explicit outcome, optional actual date and note, including repeated venues and omitted picks. Download the separate visit-record JSON to reopen it later, or print a readable copy. Original dates, explanations and source text remain preserved; checks are not rerun and notes do not change future recommendations. Nothing is uploaded or stored automatically. [Usage, file contract and native checks](docs/visit-record/README.md).
+
+### Visit records as CSV
+
+Export an explicitly selected saved visit record with `node tools/visit_record_to_csv.mjs --input visits.json --output visits.csv` (Node.js 22+). The create-only CSV retains every original occurrence, including omitted and unrecorded picks, with separate planned and actual dates, outcomes and literal notes. Keep the JSON for reopening the record. See [CSV columns, text import and file delivery](docs/VISIT_RECORD_CSV.md).

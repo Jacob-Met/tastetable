@@ -35,9 +35,10 @@
       <select id="personaSel" aria-label="Sample persona"></select>
     </div>
     <form id="form" aria-busy="false">
-      <label>Favourite cuisines <input name="cuisines" placeholder="Cuban, Mexican"></label>
-      <label>Music they love (artists / era) <input name="music" placeholder="Celia Cruz"></label>
-      <label>Favourite films <input name="films" placeholder="West Side Story"></label>
+      <label>Favourite cuisines <input name="cuisines" placeholder="Cuban, Mexican" aria-describedby="tasteEntryHelp"></label>
+      <label>Music they love (artists / era) <input name="music" placeholder="Celia Cruz" aria-describedby="tasteEntryHelp"></label>
+      <label>Favourite films <input name="films" placeholder="West Side Story" aria-describedby="tasteEntryHelp"></label>
+      <p id="tasteEntryHelp" class="why">Separate entries with commas. Put a name containing a comma inside double quotes, for example <code>"Earth, Wind &amp; Fire"</code>. Double a quote inside a quoted name, for example <code>"He said ""hello"""</code>. Reopened saved names use this format automatically.</p>
       <label>City <input name="city" value="Pasadena"></label>
       <fieldset>
         <legend>Constraints</legend>

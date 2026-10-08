@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { MAX_PROFILE_BYTES, makeProfileFile, normalizeProfile, readProfileFile } from "../static/profile_file.mjs";
+import { formatTasteEntries, parseTasteEntries } from "../static/taste_fields.mjs";
 
 const bytes = (source) => new TextEncoder().encode(source);
 const read = (value) => readProfileFile(bytes(JSON.stringify(value)));
@@ -47,11 +48,19 @@ test("counts Unicode code points and applies native whitespace trimming", () => 
   assert.throws(() => read({ music: ["Bach\uFEFF"] }), /cannot preserve/);
 });
 
-test("the existing comma form never silently splits a native taste entry", () => {
+test("native comma and quote entries round-trip through files and quoted form fields", () => {
+  const entries = ['An artist, Jr.', 'He said "hello"', '"Leading quote', 'A, "B", C', 'A：B，C'];
   for (const field of ["cuisines", "music", "films"]) {
-    assert.throws(() => read({ [field]: ["An artist, Jr."] }), /comma inside an entry/);
+    const input = { [field]: [...entries] };
+    const before = structuredClone(input);
+    const profile = read(input);
+    assert.deepEqual(profile[field], entries);
+    const displayed = formatTasteEntries(profile[field]);
+    assert.deepEqual(parseTasteEntries(displayed), entries);
+    const output = makeProfileFile({ ...profile, [field]: parseTasteEntries(displayed) });
+    assert.deepEqual(readProfileFile(bytes(output.text)), profile);
+    assert.deepEqual(input, before);
   }
-  assert.deepEqual(read({ films: ["A：B，C"] }).films, ["A：B，C"]);
 });
 
 test("single-line fields reject interior controls and invalid Unicode escapes", () => {

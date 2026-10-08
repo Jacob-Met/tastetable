@@ -1,0 +1,142 @@
+{
+  "schema": "tastetable.native-batch.author-receiving.v2",
+  "claim": "https://github.com/Jacob-Met/tastetable/issues/41",
+  "sourceBase": "2b347cee4ff4e2b806362730a8520a3360b45f5a",
+  "sourceBaseTree": "66d62a724c1667913cb581fb35e4b6db6111dae8",
+  "finalProductFiles": [
+    {
+      "path": "tastetable_batch.py",
+      "encoding": "utf-8",
+      "beforeGitBlob": null,
+      "bytes": 14189,
+      "gitBlob": "5035e393de9854acd9739fb5996aa54c2b4ef7a3",
+      "sha256": "7f36651d98c66ae3d0ccc4228c72172d53f0b803fd8b1d4cd9a8e3906ed583ae"
+    },
+    {
+      "path": "tests/test_native_plan_batch.py",
+      "encoding": "utf-8",
+      "beforeGitBlob": null,
+      "bytes": 21251,
+      "gitBlob": "6a72c0190666d45017935b318ae95ba5d84b978f",
+      "sha256": "57ee06369e752ed0d0739c5b6c78f8967c47405a72dc040a272e45995900631b"
+    },
+    {
+      "path": "docs/NATIVE_PLAN_BATCH.md",
+      "encoding": "utf-8",
+      "beforeGitBlob": null,
+      "bytes": 4918,
+      "gitBlob": "1dcf4b0ed6bfd357fc117870848873df9e695911",
+      "sha256": "b48fcc57c5c9a1b0bb0efaf7643af2f95327df254aa7ee261a8e61c84fda7b69"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf-8",
+      "beforeGitBlob": "4200b7f3b1ddea34493e1d740ea91bd2e8f304de",
+      "bytes": 16887,
+      "gitBlob": "90a7a8bc8d0d2103c74eedac91dcb17e6f0c17ee",
+      "sha256": "aeb8451823433120f5e8067b116d7a0c18bd023e78d141e5e4f73fcb8654bf8c"
+    }
+  ],
+  "unchangedDependencies": [
+    {
+      "path": "tastetable_cli.py",
+      "gitBlob": "d375cb64c6c631cccca2bb43db286e8efd21eedb",
+      "sha256": "5244b5d5108eb60a5c79dbe76d5abc352a9145915a5851c2f69a57e90aa71e3f"
+    },
+    {
+      "path": "agent.py",
+      "gitBlob": "883aff984464f2d43cda18f8e60b81240d6c3fb3",
+      "sha256": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3"
+    },
+    {
+      "path": "constraints.py",
+      "gitBlob": "e9d5cd1575df72b089273740e4b6a444d0cd21a8",
+      "sha256": "f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa"
+    },
+    {
+      "path": "qloo_client.py",
+      "gitBlob": "cca322e0c9af96c481ba8f7ef286e85d3b90cfd2",
+      "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b"
+    },
+    {
+      "path": "personas.py",
+      "gitBlob": "1eb6768780cafaf9b1666e39b7fc17aa21204f16",
+      "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2"
+    },
+    {
+      "path": "fixtures/qloo_fixtures.json",
+      "gitBlob": "60c5d92f905755454bb280b8181f8836a74bd955",
+      "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0"
+    },
+    {
+      "path": "tools/native_plan_to_week.mjs",
+      "gitBlob": "cf9fc5e0ecde5a839e6e6a577039b88bcc31f302",
+      "sha256": "bbdf06cf5f358ef5eb3d0875d6f2182382a625b246f0c39df159b6b15b025563"
+    },
+    {
+      "path": "static/week_file.mjs",
+      "gitBlob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "gitBlob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+    },
+    {
+      "path": "tests/test_native_plan_cli.py",
+      "gitBlob": "202ba42feffc662e46f5df9d22ae67640104cf58",
+      "sha256": "f69958f8d0e5d34cbacc243cc3fffb260fe17c717d3b28c437f5e45df9134fe5"
+    },
+    {
+      "path": "examples/native-profile.json",
+      "gitBlob": "42bbbd183986f6e3e5014172d595b0168aeafb9f",
+      "sha256": "8c7f05f6dbc49f624386784c5454bc1e5f7f77c13e638e2228b12ef31118119b"
+    }
+  ],
+  "qualification": {
+    "baseline": {
+      "commands": 11,
+      "legacyTests": 16,
+      "receiptSha256": "18f76d683c940d3c8b316a89cdf268c419f100a50dcaf82ec8c7629a772b6117"
+    },
+    "v1": {
+      "tests": 20,
+      "skips": 0,
+      "runtimeSha256": "8fa000e53b843a442f43aaad978b6610ec91af766de919880c7a8684857eb542"
+    },
+    "v2": {
+      "change": "Only the post-publication diagnostic names the safely JSON-quoted destination",
+      "originalNegativeCases": 2,
+      "targetedPassingCases": 2,
+      "receiptSha256": "2e5c67aaa4d4ab3c2475539139189fc7a124f3a7ce7da2fa737cf1084d02c284",
+      "fullSuiteRepeated": false
+    },
+    "ordinaryOutput": {
+      "sourceVersion": "v1",
+      "path": "/home/jacob/hamon-universal-e3a41d2b3368-tastetable-batch/mixed-result-example/caregiver-week-example.zip",
+      "bytes": 9782,
+      "sha256": "e53f8bc2f3482e9436bd1ed851705a33d24207d04af814c479aac8ce28441516",
+      "requested": 3,
+      "saved": 2,
+      "failed": 1,
+      "exit": 3
+    }
+  },
+  "environment": {
+    "pythonExecutable": "/usr/bin/python3",
+    "pythonVersion": "3.14.4",
+    "nodeExecutable": "/usr/bin/node",
+    "nodeVersion": "22.22.1"
+  },
+  "archive": {
+    "bytes": 123437,
+    "gitBlob": "347101dd59113deedad1b050e71923525b6823e0",
+    "sha256": "0acd0e66316df54c0502ff87a163b7d824884ca642d36fe12500214669a8fafc"
+  },
+  "archiveRegularFiles": 84,
+  "archiveRoundtripExact": true,
+  "independentReview": "Root source review found the v1 missing-destination diagnostic; its requested correction and both negative controls are retained. Final independent API/consumer receiving is pending.",
+  "publication": "Claim exists. This packet does not claim a source PR, merge, installed deployment or real-world care outcome.",
+  "finishedAt": "2026-10-08T18:52:34.659129+00:00"
+}
