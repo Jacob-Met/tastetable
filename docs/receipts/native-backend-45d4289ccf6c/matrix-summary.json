@@ -1,0 +1,50 @@
+{
+  "main": {
+    "cases": 26,
+    "passed": 7,
+    "failed": 19,
+    "server_stopped": true,
+    "mode_outcomes": {
+      "scripted": {
+        "passed": 7,
+        "failed": 6
+      },
+      "http-model": {
+        "passed": 0,
+        "failed": 13
+      }
+    }
+  },
+  "pr2": {
+    "cases": 26,
+    "passed": 14,
+    "failed": 12,
+    "server_stopped": true,
+    "mode_outcomes": {
+      "scripted": {
+        "passed": 7,
+        "failed": 6
+      },
+      "http-model": {
+        "passed": 7,
+        "failed": 6
+      }
+    }
+  },
+  "candidate": {
+    "cases": 26,
+    "passed": 26,
+    "failed": 0,
+    "server_stopped": true,
+    "mode_outcomes": {
+      "scripted": {
+        "passed": 13,
+        "failed": 0
+      },
+      "http-model": {
+        "passed": 13,
+        "failed": 0
+      }
+    }
+  }
+}

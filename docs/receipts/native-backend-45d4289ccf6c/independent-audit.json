@@ -1,0 +1,176 @@
+{
+  "reviewer": "estate-45d4289ccf6c/production_recovery",
+  "receivingManifestSha256": "515bb3ade0b081a68bee7ac093d8395ee664e1d1e4d466925b5f34c5cc107be8",
+  "receivingManifestEntries": 20,
+  "manifestMismatches": [],
+  "sourceVerificationAfterReplays": [
+    {
+      "name": "candidate",
+      "commit": "7002a16a3b46c7318826ce9975fd812096925f42",
+      "leaves": 19,
+      "exact": true,
+      "errors": []
+    },
+    {
+      "name": "main",
+      "commit": "d1c7a4e39cfdc0bb5b9fe026bc9660b75b456e81",
+      "leaves": 17,
+      "exact": true,
+      "errors": []
+    },
+    {
+      "name": "pr2",
+      "commit": "cdd6475f5ad31bdb0deec2abe8bc7180ac1fc581",
+      "leaves": 18,
+      "exact": true,
+      "errors": []
+    }
+  ],
+  "suiteReplays": {
+    "main": {
+      "passed": 19,
+      "summary": "19 passed, 1 warning in 0.57s",
+      "log_sha256": "1229be9bcb28034db571779911ec1b07e36fec4504524eeddaa3d01e91afb2fd"
+    },
+    "pr2": {
+      "passed": 25,
+      "summary": "25 passed, 1 warning, 3 subtests passed in 0.57s",
+      "log_sha256": "234e468affbab0e2096dbe86cba8be3cf2a4386202ac0403c77190027350e736"
+    },
+    "candidate": {
+      "passed": 30,
+      "summary": "30 passed, 1 warning, 6 subtests passed in 0.38s",
+      "log_sha256": "8705e4125614bb3544dd90c6f9a1786a7967e51f1250915a9106c7452a18683c"
+    }
+  },
+  "httpReplay": {
+    "cases": 26,
+    "passed": 26,
+    "failed": 0,
+    "serversStopped": true,
+    "exactBehavioralRecords": true,
+    "sha256": "44255c727e82f710cc7138c2899e3cb81f4795e648fb94675ba914052faac904"
+  },
+  "crossSourceControls": [
+    {
+      "source": "main",
+      "mode": "scripted",
+      "case": "healthy-rosa",
+      "route": "sample",
+      "unchanged": true
+    },
+    {
+      "source": "main",
+      "mode": "scripted",
+      "case": "healthy-harold",
+      "route": "sample",
+      "unchanged": true
+    },
+    {
+      "source": "main",
+      "mode": "scripted",
+      "case": "healthy-mei",
+      "route": "sample",
+      "unchanged": true
+    },
+    {
+      "source": "main",
+      "mode": "scripted",
+      "case": "recovered",
+      "route": "sample",
+      "unchanged": true
+    },
+    {
+      "source": "main",
+      "mode": "scripted",
+      "case": "recovered",
+      "route": "form",
+      "unchanged": true
+    },
+    {
+      "source": "pr2",
+      "mode": "scripted",
+      "case": "healthy-rosa",
+      "route": "sample",
+      "unchanged": true
+    },
+    {
+      "source": "pr2",
+      "mode": "scripted",
+      "case": "healthy-harold",
+      "route": "sample",
+      "unchanged": true
+    },
+    {
+      "source": "pr2",
+      "mode": "scripted",
+      "case": "healthy-mei",
+      "route": "sample",
+      "unchanged": true
+    },
+    {
+      "source": "pr2",
+      "mode": "scripted",
+      "case": "recovered",
+      "route": "sample",
+      "unchanged": true
+    },
+    {
+      "source": "pr2",
+      "mode": "scripted",
+      "case": "recovered",
+      "route": "form",
+      "unchanged": true
+    },
+    {
+      "source": "pr2",
+      "mode": "http-model",
+      "case": "healthy-rosa",
+      "route": "sample",
+      "unchanged": true
+    },
+    {
+      "source": "pr2",
+      "mode": "http-model",
+      "case": "healthy-harold",
+      "route": "sample",
+      "unchanged": true
+    },
+    {
+      "source": "pr2",
+      "mode": "http-model",
+      "case": "healthy-mei",
+      "route": "sample",
+      "unchanged": true
+    },
+    {
+      "source": "pr2",
+      "mode": "http-model",
+      "case": "recovered",
+      "route": "sample",
+      "unchanged": true
+    },
+    {
+      "source": "pr2",
+      "mode": "http-model",
+      "case": "recovered",
+      "route": "form",
+      "unchanged": true
+    }
+  ],
+  "sourceReview": {
+    "pr2": "Only the model_name default/selection boundary changes; explicit overrides and ordinary scripted defaults remain covered.",
+    "pr3": "Only the two primary/outing result candidate reads change to .get(\"candidates\", []). The existing tool-error envelope and deterministic assembly remain unchanged.",
+    "acceptanceBasis": "Exact narrow source changes, full native suites, real local HTTP routing/error counterexamples, candidate replay, and unchanged healthy responses across predecessors."
+  },
+  "limits": [
+    "The HTTP model peer executes this same source's scripted policy. It verifies transport, serialization, configured model routing and application composition; it is not independent inference behavior.",
+    "Qloo outage numbers are synthetic fixture-call positions. No live Qloo, production provider, caregiver study, deployment or medical/scientific validity is established.",
+    "HTTP pick admission checks trace membership, not independent constraint re-evaluation. The existing native suite re-evaluates healthy fixture meals, and unchanged deterministic assembly was independently inspected.",
+    "Suite counts 19/25/30 reflect added test modules, not a standalone before/after outcome metric. The identical HTTP matrix supplies the comparative behavioral evidence.",
+    "The original optimized source suite is reviewed evidence; this peer independently reran the three ordinary suites and the candidate HTTP matrix.",
+    "Remote source/draft/head checks in github-receiving.json were supplied by github_receiving. Root retains current expected-head integration and custody checks."
+  ],
+  "decision": "accepted for source-only receiving of original PR2 followed by stacked PR3; no material defect found within their claimed scope",
+  "sourceMutations": false
+}
