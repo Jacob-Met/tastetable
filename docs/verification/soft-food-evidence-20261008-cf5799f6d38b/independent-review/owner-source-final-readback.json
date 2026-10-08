@@ -1,0 +1,14 @@
+{
+  "original_owner_files": {
+    "baseline": {
+      "files": 16,
+      "mismatches": []
+    },
+    "candidate": {
+      "files": 17,
+      "mismatches": []
+    }
+  },
+  "manifest_sha256": "eb68fe3838e4b0798c99cdcfbabcd620e9b4a912709da85e6ba14742c65234e7",
+  "all_match": true
+}

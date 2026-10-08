@@ -1,0 +1,143 @@
+{
+  "schema": "tastetable.soft-food-independent-final.v1",
+  "sealed_utc": "2026-10-08T15:29:36.341758+00:00",
+  "candidate_constraints_sha256": "f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa",
+  "candidate_constraints_git_blob": "e9d5cd1575df72b089273740e4b6a444d0cd21a8",
+  "baseline_commit": "a77175501199ace765cb7ca57742b267351d3e79",
+  "owner_manifest_sha256": "eb68fe3838e4b0798c99cdcfbabcd620e9b4a912709da85e6ba14742c65234e7",
+  "captured_source_files_still_exact": {
+    "baseline": 16,
+    "candidate": 17
+  },
+  "both_receiver_freezes_still_exact": true,
+  "phases": {
+    "baseline-normal": {
+      "test_methods": 6,
+      "passed_test_methods": 2,
+      "failed_test_methods": [
+        "__main__.SoftFoodIndependentTests.test_coordinated_explicit_denial",
+        "__main__.SoftFoodIndependentTests.test_multiword_local_denial",
+        "__main__.SoftFoodIndependentTests.test_native_scripted_fixture_plan",
+        "__main__.SoftFoodIndependentTests.test_unknown_and_outing_policy"
+      ],
+      "failure_records": 6,
+      "error_records": 0,
+      "skipped": 0,
+      "source_unchanged": true,
+      "optimized": false,
+      "network_attempts": [],
+      "qualified": false
+    },
+    "baseline-optimized": {
+      "test_methods": 6,
+      "passed_test_methods": 2,
+      "failed_test_methods": [
+        "__main__.SoftFoodIndependentTests.test_coordinated_explicit_denial",
+        "__main__.SoftFoodIndependentTests.test_multiword_local_denial",
+        "__main__.SoftFoodIndependentTests.test_native_scripted_fixture_plan",
+        "__main__.SoftFoodIndependentTests.test_unknown_and_outing_policy"
+      ],
+      "failure_records": 6,
+      "error_records": 0,
+      "skipped": 0,
+      "source_unchanged": true,
+      "optimized": true,
+      "network_attempts": [],
+      "qualified": false
+    },
+    "candidate-normal": {
+      "test_methods": 6,
+      "passed_test_methods": 4,
+      "failed_test_methods": [
+        "__main__.SoftFoodIndependentTests.test_native_scripted_fixture_plan",
+        "__main__.SoftFoodIndependentTests.test_unknown_and_outing_policy"
+      ],
+      "failure_records": 5,
+      "error_records": 0,
+      "skipped": 0,
+      "source_unchanged": true,
+      "optimized": false,
+      "network_attempts": [],
+      "qualified": false
+    },
+    "candidate-optimized": {
+      "test_methods": 6,
+      "passed_test_methods": 4,
+      "failed_test_methods": [
+        "__main__.SoftFoodIndependentTests.test_native_scripted_fixture_plan",
+        "__main__.SoftFoodIndependentTests.test_unknown_and_outing_policy"
+      ],
+      "failure_records": 5,
+      "error_records": 0,
+      "skipped": 0,
+      "source_unchanged": true,
+      "optimized": true,
+      "network_attempts": [],
+      "qualified": false
+    },
+    "baseline-v2-normal": {
+      "test_methods": 6,
+      "passed_test_methods": 2,
+      "failed_test_methods": [
+        "__main__.SoftFoodIndependentTests.test_coordinated_explicit_denial",
+        "__main__.SoftFoodIndependentTests.test_multiword_local_denial",
+        "__main__.SoftFoodIndependentTests.test_native_scripted_fixture_plan",
+        "__main__.SoftFoodIndependentTests.test_unknown_and_outing_policy"
+      ],
+      "failure_records": 6,
+      "error_records": 0,
+      "skipped": 0,
+      "source_unchanged": true,
+      "optimized": false,
+      "network_attempts": [],
+      "qualified": false
+    },
+    "baseline-v2-optimized": {
+      "test_methods": 6,
+      "passed_test_methods": 2,
+      "failed_test_methods": [
+        "__main__.SoftFoodIndependentTests.test_coordinated_explicit_denial",
+        "__main__.SoftFoodIndependentTests.test_multiword_local_denial",
+        "__main__.SoftFoodIndependentTests.test_native_scripted_fixture_plan",
+        "__main__.SoftFoodIndependentTests.test_unknown_and_outing_policy"
+      ],
+      "failure_records": 6,
+      "error_records": 0,
+      "skipped": 0,
+      "source_unchanged": true,
+      "optimized": true,
+      "network_attempts": [],
+      "qualified": false
+    },
+    "candidate-v2-normal": {
+      "test_methods": 6,
+      "passed_test_methods": 6,
+      "failed_test_methods": [],
+      "failure_records": 0,
+      "error_records": 0,
+      "skipped": 0,
+      "source_unchanged": true,
+      "optimized": false,
+      "network_attempts": [],
+      "qualified": true
+    },
+    "candidate-v2-optimized": {
+      "test_methods": 6,
+      "passed_test_methods": 6,
+      "failed_test_methods": [],
+      "failure_records": 0,
+      "error_records": 0,
+      "skipped": 0,
+      "source_unchanged": true,
+      "optimized": true,
+      "network_attempts": [],
+      "qualified": true
+    }
+  },
+  "original_fixture_oracle_error_preserved": true,
+  "correction": "refried beans: unavailable -> gnocchi: unavailable; preserve existing fried hard substring",
+  "assertion_calls_identical_across_receiver_versions": 20,
+  "no_blocker_within_scoped_repair": true,
+  "product_source_edits_by_reviewer": false,
+  "github_or_service_mutations_by_reviewer": false
+}

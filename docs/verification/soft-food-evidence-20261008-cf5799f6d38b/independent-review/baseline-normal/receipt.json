@@ -1,0 +1,896 @@
+{
+  "schema": "tastetable.soft-food-independent-native-receiving.v1",
+  "source": "/private/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline",
+  "python": "3.12.8",
+  "python_executable": "/private/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3",
+  "optimized": false,
+  "receiver_sha256": "ae02c02ff98d1663038209bca33172e0834b94096a72f5cef314278a8b9b1fdf",
+  "scope_sha256": "6a2c7da6879c37927ca8a4953eb4f4611da403504c6d4662f6d4c495d0fbe408",
+  "source_before": {
+    "README.md": {
+      "bytes": 12889,
+      "sha256": "6deaf38706959c75e6beff6aeed0b3dfb521b1ce0efe48cffdb8ec52585b383d",
+      "git_blob": "8ff6de7f3bd91f0ff130775631dd0fe2dc98791c"
+    },
+    "agent.py": {
+      "bytes": 28440,
+      "sha256": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+      "git_blob": "883aff984464f2d43cda18f8e60b81240d6c3fb3"
+    },
+    "constraints.py": {
+      "bytes": 6754,
+      "sha256": "a7ad868ece3cb83b15b02f8f059a94da749059bb96a8c97f7fb207ccb85d604c",
+      "git_blob": "cab2cecbe4c3a6112022d194a927b9025ec67ab6"
+    },
+    "fixtures/qloo_fixtures.json": {
+      "bytes": 21190,
+      "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+      "git_blob": "60c5d92f905755454bb280b8181f8836a74bd955"
+    },
+    "personas.py": {
+      "bytes": 1247,
+      "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+      "git_blob": "1eb6768780cafaf9b1666e39b7fc17aa21204f16"
+    },
+    "qloo_client.py": {
+      "bytes": 12206,
+      "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+      "git_blob": "cca322e0c9af96c481ba8f7ef286e85d3b90cfd2"
+    },
+    "requirements.txt": {
+      "bytes": 74,
+      "sha256": "80f580784e41edbf585cdc133c99d6e52ad9fae5876459c74ba6cbb4ed6b0602",
+      "git_blob": "d2fa2b085ecd75cc196fa8a02ddb54e1728c0b23"
+    },
+    "static/week_file.mjs": {
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "git_blob": "420ddb8f63fca264dcf97be7147801105696155d"
+    },
+    "static/week_plan.mjs": {
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+    },
+    "tastetable_cli.py": {
+      "bytes": 6994,
+      "sha256": "5244b5d5108eb60a5c79dbe76d5abc352a9145915a5851c2f69a57e90aa71e3f",
+      "git_blob": "d375cb64c6c631cccca2bb43db286e8efd21eedb"
+    },
+    "tests/test_low_sodium_evidence.py": {
+      "bytes": 6370,
+      "sha256": "f69d213abcadd6bca35e0cb2d587f9bd43c10426a5e4c101e09e22e31a545171",
+      "git_blob": "89b3daa81b235807c13ef53ea4a99142c1fbec10"
+    },
+    "tests/test_low_sodium_peer.py": {
+      "bytes": 9474,
+      "sha256": "a0748ab61b8c49f4b7f56d823ffabba40bf7d82401ae10084d47777df1a4cb58",
+      "git_blob": "5a3740afe223441780aaf5bf5c3e5e082f22f5e7"
+    },
+    "tests/test_native_plan_cli.py": {
+      "bytes": 13463,
+      "sha256": "f69958f8d0e5d34cbacc243cc3fffb260fe17c717d3b28c437f5e45df9134fe5",
+      "git_blob": "202ba42feffc662e46f5df9d22ae67640104cf58"
+    },
+    "tests/test_tastetable.py": {
+      "bytes": 8240,
+      "sha256": "7ace6361e9baf4a1e1a4ccfa528df1a4d2165b99bacb0423a572ac78bf3e9c5b",
+      "git_blob": "e6731e2c560a921074f034057404ce9bdd81e6ac"
+    },
+    "tests/test_wheelchair_evidence.py": {
+      "bytes": 8030,
+      "sha256": "f3c8675177b51d508e7d297a3ff07da64fc7b73c03d5b7405493ec3099f3f252",
+      "git_blob": "96a8202b1016688405783033b19a50f98ff69649"
+    },
+    "tools/native_plan_to_week.mjs": {
+      "bytes": 8426,
+      "sha256": "bbdf06cf5f358ef5eb3d0875d6f2182382a625b246f0c39df159b6b15b025563",
+      "git_blob": "cf9fc5e0ecde5a839e6e6a577039b88bcc31f302"
+    }
+  },
+  "source_after": {
+    "README.md": {
+      "bytes": 12889,
+      "sha256": "6deaf38706959c75e6beff6aeed0b3dfb521b1ce0efe48cffdb8ec52585b383d",
+      "git_blob": "8ff6de7f3bd91f0ff130775631dd0fe2dc98791c"
+    },
+    "agent.py": {
+      "bytes": 28440,
+      "sha256": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+      "git_blob": "883aff984464f2d43cda18f8e60b81240d6c3fb3"
+    },
+    "constraints.py": {
+      "bytes": 6754,
+      "sha256": "a7ad868ece3cb83b15b02f8f059a94da749059bb96a8c97f7fb207ccb85d604c",
+      "git_blob": "cab2cecbe4c3a6112022d194a927b9025ec67ab6"
+    },
+    "fixtures/qloo_fixtures.json": {
+      "bytes": 21190,
+      "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+      "git_blob": "60c5d92f905755454bb280b8181f8836a74bd955"
+    },
+    "personas.py": {
+      "bytes": 1247,
+      "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+      "git_blob": "1eb6768780cafaf9b1666e39b7fc17aa21204f16"
+    },
+    "qloo_client.py": {
+      "bytes": 12206,
+      "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+      "git_blob": "cca322e0c9af96c481ba8f7ef286e85d3b90cfd2"
+    },
+    "requirements.txt": {
+      "bytes": 74,
+      "sha256": "80f580784e41edbf585cdc133c99d6e52ad9fae5876459c74ba6cbb4ed6b0602",
+      "git_blob": "d2fa2b085ecd75cc196fa8a02ddb54e1728c0b23"
+    },
+    "static/week_file.mjs": {
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "git_blob": "420ddb8f63fca264dcf97be7147801105696155d"
+    },
+    "static/week_plan.mjs": {
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+    },
+    "tastetable_cli.py": {
+      "bytes": 6994,
+      "sha256": "5244b5d5108eb60a5c79dbe76d5abc352a9145915a5851c2f69a57e90aa71e3f",
+      "git_blob": "d375cb64c6c631cccca2bb43db286e8efd21eedb"
+    },
+    "tests/test_low_sodium_evidence.py": {
+      "bytes": 6370,
+      "sha256": "f69d213abcadd6bca35e0cb2d587f9bd43c10426a5e4c101e09e22e31a545171",
+      "git_blob": "89b3daa81b235807c13ef53ea4a99142c1fbec10"
+    },
+    "tests/test_low_sodium_peer.py": {
+      "bytes": 9474,
+      "sha256": "a0748ab61b8c49f4b7f56d823ffabba40bf7d82401ae10084d47777df1a4cb58",
+      "git_blob": "5a3740afe223441780aaf5bf5c3e5e082f22f5e7"
+    },
+    "tests/test_native_plan_cli.py": {
+      "bytes": 13463,
+      "sha256": "f69958f8d0e5d34cbacc243cc3fffb260fe17c717d3b28c437f5e45df9134fe5",
+      "git_blob": "202ba42feffc662e46f5df9d22ae67640104cf58"
+    },
+    "tests/test_tastetable.py": {
+      "bytes": 8240,
+      "sha256": "7ace6361e9baf4a1e1a4ccfa528df1a4d2165b99bacb0423a572ac78bf3e9c5b",
+      "git_blob": "e6731e2c560a921074f034057404ce9bdd81e6ac"
+    },
+    "tests/test_wheelchair_evidence.py": {
+      "bytes": 8030,
+      "sha256": "f3c8675177b51d508e7d297a3ff07da64fc7b73c03d5b7405493ec3099f3f252",
+      "git_blob": "96a8202b1016688405783033b19a50f98ff69649"
+    },
+    "tools/native_plan_to_week.mjs": {
+      "bytes": 8426,
+      "sha256": "bbdf06cf5f358ef5eb3d0875d6f2182382a625b246f0c39df159b6b15b025563",
+      "git_blob": "cf9fc5e0ecde5a839e6e6a577039b88bcc31f302"
+    }
+  },
+  "source_unchanged": true,
+  "actual_project_imports": {
+    "agent": "/private/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline/agent.py",
+    "constraints": "/private/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline/constraints.py",
+    "qloo_client": "/private/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/baseline/qloo_client.py"
+  },
+  "test_methods": 6,
+  "failed_test_methods": [
+    "__main__.SoftFoodIndependentTests.test_coordinated_explicit_denial",
+    "__main__.SoftFoodIndependentTests.test_multiword_local_denial",
+    "__main__.SoftFoodIndependentTests.test_native_scripted_fixture_plan",
+    "__main__.SoftFoodIndependentTests.test_unknown_and_outing_policy"
+  ],
+  "passed_test_methods": 2,
+  "failure_records": 6,
+  "error_records": 0,
+  "skipped": 0,
+  "observations": [
+    {
+      "control": "coordinated_explicit_denial",
+      "input": {
+        "entity_id": "CHECK-coordinated_explicit_denial-0",
+        "name": "CHECK-coordinated_explicit_denial-0",
+        "types": [
+          "urn:entity:place"
+        ],
+        "affinity": null,
+        "popularity": null,
+        "tags": [],
+        "properties": {
+          "keywords": [
+            "no soup or gnocchi",
+            "pressed bread"
+          ]
+        }
+      },
+      "verdict": {
+        "entity_id": "CHECK-coordinated_explicit_denial-0",
+        "name": "CHECK-coordinated_explicit_denial-0",
+        "ok": true,
+        "checks": [
+          {
+            "constraint": "soft_foods",
+            "status": "pass",
+            "reason": "soft options listed: no soup or gnocchi"
+          }
+        ]
+      }
+    },
+    {
+      "control": "independent_affirmative_occurrences",
+      "input": {
+        "entity_id": "CHECK-independent_affirmative_occurrences-0",
+        "name": "CHECK-independent_affirmative_occurrences-0",
+        "types": [
+          "urn:entity:place"
+        ],
+        "affinity": null,
+        "popularity": null,
+        "tags": [],
+        "properties": {
+          "keywords": [
+            "no soup; soup available",
+            "burger"
+          ]
+        }
+      },
+      "verdict": {
+        "entity_id": "CHECK-independent_affirmative_occurrences-0",
+        "name": "CHECK-independent_affirmative_occurrences-0",
+        "ok": true,
+        "checks": [
+          {
+            "constraint": "soft_foods",
+            "status": "pass",
+            "reason": "soft options listed: no soup; soup available"
+          }
+        ]
+      }
+    },
+    {
+      "control": "independent_affirmative_occurrences",
+      "input": {
+        "entity_id": "CHECK-independent_affirmative_occurrences-1",
+        "name": "CHECK-independent_affirmative_occurrences-1",
+        "types": [
+          "urn:entity:place"
+        ],
+        "affinity": null,
+        "popularity": null,
+        "tags": [],
+        "properties": {
+          "keywords": [
+            "no soup; polenta",
+            "ribs"
+          ]
+        }
+      },
+      "verdict": {
+        "entity_id": "CHECK-independent_affirmative_occurrences-1",
+        "name": "CHECK-independent_affirmative_occurrences-1",
+        "ok": true,
+        "checks": [
+          {
+            "constraint": "soft_foods",
+            "status": "pass",
+            "reason": "soft options listed: no soup; polenta"
+          }
+        ]
+      }
+    },
+    {
+      "control": "multiword_local_denial",
+      "input": {
+        "entity_id": "CHECK-multiword_local_denial-0",
+        "name": "CHECK-multiword_local_denial-0",
+        "types": [
+          "urn:entity:place"
+        ],
+        "affinity": null,
+        "popularity": null,
+        "tags": [],
+        "properties": {
+          "keywords": [
+            {
+              "name": "GNOCCHI DISHES ARE NOT OFFERED",
+              "count": 3
+            },
+            "nuts"
+          ]
+        }
+      },
+      "verdict": {
+        "entity_id": "CHECK-multiword_local_denial-0",
+        "name": "CHECK-multiword_local_denial-0",
+        "ok": true,
+        "checks": [
+          {
+            "constraint": "soft_foods",
+            "status": "pass",
+            "reason": "soft options listed: gnocchi dishes are not offered"
+          }
+        ]
+      }
+    },
+    {
+      "control": "multiword_local_denial",
+      "input": {
+        "entity_id": "CHECK-multiword_local_denial-1",
+        "name": "CHECK-multiword_local_denial-1",
+        "types": [
+          "urn:entity:place"
+        ],
+        "affinity": null,
+        "popularity": null,
+        "tags": [],
+        "properties": {
+          "keywords": [
+            "without any refried beans",
+            "crusty bread"
+          ]
+        }
+      },
+      "verdict": {
+        "entity_id": "CHECK-multiword_local_denial-1",
+        "name": "CHECK-multiword_local_denial-1",
+        "ok": true,
+        "checks": [
+          {
+            "constraint": "soft_foods",
+            "status": "pass",
+            "reason": "soft options listed: without any refried beans"
+          }
+        ]
+      }
+    },
+    {
+      "control": "native_scripted_fixture_plan",
+      "fixture_sha256": "676b8a917adbc4eed1bd5abf064257db2648649d2789f525f0d496206f3c2824",
+      "fixture_unchanged": true,
+      "profile": {
+        "label": "Wholly Fictional Independent Reviewer Persona",
+        "city": "Independent Fixture City",
+        "cuisines": [
+          "Diner"
+        ],
+        "music": [
+          "Synthetic Chamber Group"
+        ],
+        "films": [],
+        "constraints": [
+          "soft_foods"
+        ]
+      },
+      "profile_unchanged": true,
+      "result": {
+        "plan": {
+          "meals": [
+            {
+              "day": "Monday",
+              "kind": "restaurant",
+              "entity_id": "PEER-COORD",
+              "name": "Fictional PEER-COORD",
+              "affinity": 0.99,
+              "fallback": false,
+              "why": "Qloo affinity 0.99 for audiences who like Synthetic Chamber Group (tag match: Diner). Checks: Soft foods: pass (soft options listed: no soup or gnocchi)."
+            },
+            {
+              "day": "Wednesday",
+              "kind": "restaurant",
+              "entity_id": "PEER-MULTI",
+              "name": "Fictional PEER-MULTI",
+              "affinity": 0.98,
+              "fallback": false,
+              "why": "Qloo affinity 0.98 for audiences who like Synthetic Chamber Group (tag match: Diner). Checks: Soft foods: pass (soft options listed: gnocchi dishes are not offered)."
+            },
+            {
+              "day": "Friday",
+              "kind": "restaurant",
+              "entity_id": "PEER-SAME",
+              "name": "Fictional PEER-SAME",
+              "affinity": 0.94,
+              "fallback": false,
+              "why": "Qloo affinity 0.94 for audiences who like Synthetic Chamber Group (tag match: Diner). Checks: Soft foods: pass (soft options listed: no soup; soup available)."
+            },
+            {
+              "day": "Sunday",
+              "kind": "restaurant",
+              "entity_id": "PEER-MIXED",
+              "name": "Fictional PEER-MIXED",
+              "affinity": 0.9,
+              "fallback": false,
+              "why": "Qloo affinity 0.90 for audiences who like Synthetic Chamber Group (tag match: Diner). Checks: Soft foods: pass (soft options listed: no soup; polenta)."
+            }
+          ],
+          "outing": {
+            "day": "Saturday",
+            "kind": "outing",
+            "entity_id": "PEER-OUTING",
+            "name": "Fictional PEER-OUTING",
+            "affinity": 0.95,
+            "why": "Qloo affinity 0.95 for audiences who like Synthetic Chamber Group (tag match: cinema)."
+          },
+          "rejected": [],
+          "notes": []
+        },
+        "llm_only": {
+          "meals": [
+            {
+              "day": "Monday",
+              "name": "A well-reviewed Diner restaurant nearby",
+              "why": "They enjoy Diner food.",
+              "verified": {
+                "exists": false,
+                "entity_id": null,
+                "constraints_checked": false
+              }
+            },
+            {
+              "day": "Wednesday",
+              "name": "A well-reviewed Diner restaurant nearby",
+              "why": "They enjoy Diner food.",
+              "verified": {
+                "exists": false,
+                "entity_id": null,
+                "constraints_checked": false
+              }
+            },
+            {
+              "day": "Friday",
+              "name": "A well-reviewed Diner restaurant nearby",
+              "why": "They enjoy Diner food.",
+              "verified": {
+                "exists": false,
+                "entity_id": null,
+                "constraints_checked": false
+              }
+            },
+            {
+              "day": "Sunday",
+              "name": "A well-reviewed Diner restaurant nearby",
+              "why": "They enjoy Diner food.",
+              "verified": {
+                "exists": false,
+                "entity_id": null,
+                "constraints_checked": false
+              }
+            }
+          ],
+          "outing": {
+            "day": "Saturday",
+            "name": "A concert or show featuring music like Synthetic Chamber Group",
+            "why": "Matches their music taste.",
+            "verified": {
+              "exists": false,
+              "entity_id": null,
+              "constraints_checked": false
+            }
+          },
+          "source": "template (ungrounded baseline)"
+        },
+        "comparison": {
+          "grounded": {
+            "picks": 5,
+            "with_qloo_entity_id": 5,
+            "with_affinity_evidence": 5,
+            "constraint_checked": 5,
+            "unsafe_candidates_rejected": 0
+          },
+          "llm_only": {
+            "picks": 5,
+            "with_qloo_entity_id": 0,
+            "with_affinity_evidence": 0,
+            "constraint_checked": 0,
+            "unsafe_candidates_rejected": 0
+          },
+          "constraints": [
+            "soft_foods"
+          ]
+        },
+        "trace": [
+          {
+            "step": 0,
+            "tool": "qloo_search",
+            "args": {
+              "query": "Synthetic Chamber Group",
+              "kind": "entity",
+              "types": "urn:entity:artist"
+            },
+            "result_summary": "Synthetic Chamber Group"
+          },
+          {
+            "step": 0,
+            "tool": "qloo_search",
+            "args": {
+              "query": "Diner",
+              "kind": "tag"
+            },
+            "result_summary": "Diner"
+          },
+          {
+            "step": 1,
+            "tool": "qloo_recs",
+            "args": {
+              "filter_type": "urn:entity:place",
+              "purpose": "restaurant",
+              "tag_ids": [
+                "urn:tag:genre:restaurant:Diner"
+              ],
+              "signal_entity_ids": [
+                "PEER-ARTIST"
+              ],
+              "location": "Independent Fixture City",
+              "take": 10
+            },
+            "result_summary": "6 candidates"
+          },
+          {
+            "step": 2,
+            "tool": "constraint_check",
+            "args": {
+              "entity_ids": [
+                "PEER-COORD",
+                "PEER-MULTI",
+                "PEER-SAME",
+                "PEER-MIXED",
+                "PEER-UNKNOWN",
+                "PEER-PLAIN"
+              ],
+              "constraints": [
+                "soft_foods"
+              ],
+              "kind": "restaurant"
+            },
+            "result_summary": "6/6 passed"
+          },
+          {
+            "step": 3,
+            "tool": "qloo_search",
+            "args": {
+              "query": "",
+              "kind": "tag"
+            },
+            "result_summary": "no match"
+          },
+          {
+            "step": 4,
+            "tool": "qloo_search",
+            "args": {
+              "query": "",
+              "kind": "tag"
+            },
+            "result_summary": "no match"
+          },
+          {
+            "step": 5,
+            "tool": "qloo_search",
+            "args": {
+              "query": "",
+              "kind": "tag"
+            },
+            "result_summary": "no match"
+          },
+          {
+            "step": 6,
+            "tool": "qloo_search",
+            "args": {
+              "query": "jazz",
+              "kind": "tag"
+            },
+            "result_summary": "no match"
+          },
+          {
+            "step": 6,
+            "tool": "qloo_search",
+            "args": {
+              "query": "cinema",
+              "kind": "tag"
+            },
+            "result_summary": "cinema"
+          },
+          {
+            "step": 6,
+            "tool": "qloo_search",
+            "args": {
+              "query": "museum",
+              "kind": "tag"
+            },
+            "result_summary": "no match"
+          },
+          {
+            "step": 6,
+            "tool": "qloo_search",
+            "args": {
+              "query": "concert hall",
+              "kind": "tag"
+            },
+            "result_summary": "no match"
+          },
+          {
+            "step": 7,
+            "tool": "qloo_recs",
+            "args": {
+              "filter_type": "urn:entity:place",
+              "purpose": "outing",
+              "tag_ids": [
+                "urn:tag:genre:place:cinema"
+              ],
+              "signal_entity_ids": [
+                "PEER-ARTIST"
+              ],
+              "location": "Independent Fixture City",
+              "take": 5
+            },
+            "result_summary": "1 candidates"
+          },
+          {
+            "step": 8,
+            "tool": "constraint_check",
+            "args": {
+              "entity_ids": [
+                "PEER-OUTING"
+              ],
+              "constraints": [
+                "soft_foods"
+              ],
+              "kind": "outing"
+            },
+            "result_summary": "1/1 passed"
+          }
+        ],
+        "model_message": "Plan inputs gathered; assembling weekly plan from tool results.",
+        "mock": true
+      },
+      "fixture_transport_requests": [
+        {
+          "path": "/search",
+          "params": {
+            "query": "Synthetic Chamber Group",
+            "take": 3,
+            "types": "urn:entity:artist"
+          }
+        },
+        {
+          "path": "/v2/tags",
+          "params": {
+            "filter.query": "Diner",
+            "take": 3
+          }
+        },
+        {
+          "path": "/v2/insights",
+          "params": {
+            "filter.type": "urn:entity:place",
+            "take": 10,
+            "signal.interests.entities": "PEER-ARTIST",
+            "filter.tags": "urn:tag:genre:restaurant:Diner",
+            "filter.location.query": "Independent Fixture City"
+          }
+        },
+        {
+          "path": "/v2/tags",
+          "params": {
+            "filter.query": "jazz",
+            "take": 3
+          }
+        },
+        {
+          "path": "/v2/tags",
+          "params": {
+            "filter.query": "cinema",
+            "take": 3
+          }
+        },
+        {
+          "path": "/v2/tags",
+          "params": {
+            "filter.query": "museum",
+            "take": 3
+          }
+        },
+        {
+          "path": "/v2/tags",
+          "params": {
+            "filter.query": "concert hall",
+            "take": 3
+          }
+        },
+        {
+          "path": "/v2/insights",
+          "params": {
+            "filter.type": "urn:entity:place",
+            "take": 5,
+            "signal.interests.entities": "PEER-ARTIST",
+            "filter.tags": "urn:tag:genre:place:cinema",
+            "filter.location.query": "Independent Fixture City"
+          }
+        }
+      ]
+    },
+    {
+      "control": "non_denial_controls",
+      "input": {
+        "entity_id": "CHECK-non_denial_controls-0",
+        "name": "CHECK-non_denial_controls-0",
+        "types": [
+          "urn:entity:place"
+        ],
+        "affinity": null,
+        "popularity": null,
+        "tags": [],
+        "properties": {
+          "keywords": [
+            "known soup selections",
+            "burger"
+          ]
+        }
+      },
+      "verdict": {
+        "entity_id": "CHECK-non_denial_controls-0",
+        "name": "CHECK-non_denial_controls-0",
+        "ok": true,
+        "checks": [
+          {
+            "constraint": "soft_foods",
+            "status": "pass",
+            "reason": "soft options listed: known soup selections"
+          }
+        ]
+      }
+    },
+    {
+      "control": "non_denial_controls",
+      "input": {
+        "entity_id": "CHECK-non_denial_controls-1",
+        "name": "CHECK-non_denial_controls-1",
+        "types": [
+          "urn:entity:place"
+        ],
+        "affinity": null,
+        "popularity": null,
+        "tags": [],
+        "properties": {
+          "keywords": [
+            "not only soup",
+            "burger"
+          ]
+        }
+      },
+      "verdict": {
+        "entity_id": "CHECK-non_denial_controls-1",
+        "name": "CHECK-non_denial_controls-1",
+        "ok": true,
+        "checks": [
+          {
+            "constraint": "soft_foods",
+            "status": "pass",
+            "reason": "soft options listed: not only soup"
+          }
+        ]
+      }
+    },
+    {
+      "control": "non_denial_controls",
+      "input": {
+        "entity_id": "CHECK-non_denial_controls-2",
+        "name": "CHECK-non_denial_controls-2",
+        "types": [
+          "urn:entity:place"
+        ],
+        "affinity": null,
+        "popularity": null,
+        "tags": [],
+        "properties": {
+          "keywords": [
+            "soup without croutons",
+            "burger"
+          ]
+        }
+      },
+      "verdict": {
+        "entity_id": "CHECK-non_denial_controls-2",
+        "name": "CHECK-non_denial_controls-2",
+        "ok": true,
+        "checks": [
+          {
+            "constraint": "soft_foods",
+            "status": "pass",
+            "reason": "soft options listed: soup without croutons"
+          }
+        ]
+      }
+    },
+    {
+      "control": "unknown_and_outing_policy",
+      "input": {
+        "entity_id": "CHECK-unknown_and_outing_policy-0",
+        "name": "CHECK-unknown_and_outing_policy-0",
+        "types": [
+          "urn:entity:place"
+        ],
+        "affinity": null,
+        "popularity": null,
+        "tags": [],
+        "properties": {
+          "keywords": [
+            "refried beans: unavailable"
+          ]
+        }
+      },
+      "verdict": {
+        "entity_id": "CHECK-unknown_and_outing_policy-0",
+        "name": "CHECK-unknown_and_outing_policy-0",
+        "ok": true,
+        "checks": [
+          {
+            "constraint": "soft_foods",
+            "status": "pass",
+            "reason": "soft options listed: refried beans: unavailable"
+          }
+        ]
+      }
+    },
+    {
+      "control": "unknown_and_outing_policy",
+      "input": {
+        "entity_id": "CHECK-unknown_and_outing_policy-1",
+        "name": "CHECK-unknown_and_outing_policy-1",
+        "types": [
+          "urn:entity:place"
+        ],
+        "affinity": null,
+        "popularity": null,
+        "tags": [],
+        "properties": {
+          "keywords": [
+            "no soup or gnocchi",
+            "pressed bread"
+          ]
+        }
+      },
+      "verdict": {
+        "entity_id": "CHECK-unknown_and_outing_policy-1",
+        "name": "CHECK-unknown_and_outing_policy-1",
+        "ok": true,
+        "checks": []
+      }
+    },
+    {
+      "control": "unknown_filter_policy",
+      "kept": [
+        "CHECK-UNKNOWN"
+      ],
+      "verdicts": [
+        {
+          "entity_id": "CHECK-UNKNOWN",
+          "name": "CHECK-UNKNOWN",
+          "ok": true,
+          "checks": [
+            {
+              "constraint": "soft_foods",
+              "status": "pass",
+              "reason": "soft options listed: refried beans: unavailable"
+            }
+          ]
+        },
+        {
+          "entity_id": "CHECK-FIRM",
+          "name": "CHECK-FIRM",
+          "ok": false,
+          "checks": [
+            {
+              "constraint": "soft_foods",
+              "status": "fail",
+              "reason": "menu signals are mostly firm: pressed bread"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "network_attempts": [],
+  "qualified": false
+}

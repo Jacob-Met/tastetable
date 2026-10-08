@@ -1,0 +1,226 @@
+"""Independent literal-evidence controls through TasteTable's public check and planner."""
+from __future__ import annotations
+
+import copy
+import hashlib
+import json
+from pathlib import Path
+import platform
+import sys
+import unittest
+
+SOURCE = Path(sys.argv[1]).resolve()
+OUTPUT = Path(sys.argv[2]).resolve()
+OUTPUT.mkdir()
+REVIEW_ROOT = Path(__file__).resolve().parent
+SCOPE = json.loads((REVIEW_ROOT / "scope-v2.json").read_text())
+sys.path.insert(0, str(SOURCE))
+NETWORK_ATTEMPTS = []
+
+
+def deny_network(event, arguments):
+    if event in {"socket.connect", "socket.getaddrinfo", "http.client.connect", "urllib.Request"}:
+        NETWORK_ATTEMPTS.append({"event": event})
+        raise RuntimeError("Independent fixture receiving forbids network operations")
+
+
+sys.addaudithook(deny_network)
+import agent
+import constraints
+import qloo_client
+
+
+def sha(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def source_pins():
+    return {
+        p.relative_to(SOURCE).as_posix(): {
+            "bytes": p.stat().st_size,
+            "sha256": sha(p.read_bytes()),
+            "git_blob": hashlib.sha1(f"blob {p.stat().st_size}\0".encode() + p.read_bytes()).hexdigest(),
+        }
+        for p in sorted(SOURCE.rglob("*"))
+        if p.is_file() and "__pycache__" not in p.parts
+    }
+
+
+BEFORE = source_pins()
+OBSERVATIONS = []
+CONTROLS = {row["id"]: row for row in SCOPE["controls"]}
+
+
+def entity(identifier, words):
+    return qloo_client.parse_entity({
+        "entity_id": identifier, "name": identifier, "types": ["urn:entity:place"],
+        "properties": {"keywords": words},
+    })
+
+
+def synthetic_fixture():
+    restaurant_tag = {
+        "tag_id": "urn:tag:genre:restaurant:Diner", "name": "Diner",
+        "type": "urn:tag:genre:place:restaurant",
+    }
+    outing_tag = {
+        "tag_id": "urn:tag:genre:place:cinema", "name": "cinema",
+        "type": "urn:tag:genre:place",
+    }
+    rows = [
+        ("PEER-COORD", ["no soup or gnocchi", "pressed bread"], 0.99),
+        ("PEER-MULTI", [{"name": "GNOCCHI DISHES ARE NOT OFFERED", "count": 3}, "nuts"], 0.98),
+        ("PEER-SAME", ["no soup; soup available", "burger"], 0.94),
+        ("PEER-MIXED", ["no soup; polenta", "ribs"], 0.90),
+        ("PEER-UNKNOWN", ["gnocchi: unavailable"], 0.86),
+        ("PEER-PLAIN", ["seasonal specials"], 0.80),
+        ("PEER-OUTING", ["no soup or gnocchi", "pressed bread"], 0.95),
+    ]
+    places = []
+    for identifier, words, affinity in rows:
+        places.append({
+            "entity_id": identifier,
+            "name": "Fictional " + identifier,
+            "types": ["urn:entity:place"],
+            "popularity": 0.5,
+            "tags": [copy.deepcopy(outing_tag if identifier == "PEER-OUTING" else restaurant_tag)],
+            "properties": {"geocode": {"city": "Independent Fixture City"}, "keywords": copy.deepcopy(words)},
+            "_signals": {"PEER-ARTIST": affinity},
+        })
+    return {
+        "_note": "Wholly fictional independent soft-food receiving fixture; no actual venues or persons.",
+        "search_entities": [{
+            "entity_id": "PEER-ARTIST", "name": "Synthetic Chamber Group",
+            "types": ["urn:entity:artist"], "tags": [],
+        }],
+        "tags": [{"id": row["tag_id"], "name": row["name"], "type": row["type"]}
+                 for row in (restaurant_tag, outing_tag)],
+        "places": places,
+    }
+
+
+class SoftFoodIndependentTests(unittest.TestCase):
+    def check_group(self, identifier):
+        for index, case in enumerate(CONTROLS[identifier]["cases"]):
+            with self.subTest(group=identifier, index=index):
+                value = entity(f"CHECK-{identifier}-{index}", copy.deepcopy(case["keywords"]))
+                before = copy.deepcopy(value.to_dict())
+                verdict = constraints.evaluate(value, ["soft_foods"], kind=case.get("kind", "restaurant"))
+                observed = {"control": identifier, "input": before, "verdict": verdict.to_dict()}
+                OBSERVATIONS.append(observed)
+                self.assertEqual(value.to_dict(), before, "Checker must not mutate input evidence")
+                if "status" in case:
+                    self.assertEqual(verdict.checks[0].status, case["status"])
+                if "checks" in case:
+                    self.assertEqual(verdict.checks, case["checks"])
+                self.assertEqual(verdict.ok, case["ok"])
+
+    def test_multiword_local_denial(self):
+        self.check_group("multiword_local_denial")
+
+    def test_independent_affirmative_occurrences(self):
+        self.check_group("independent_affirmative_occurrences")
+
+    def test_non_denial_controls(self):
+        self.check_group("non_denial_controls")
+
+    def test_unknown_and_outing_policy(self):
+        self.check_group("unknown_and_outing_policy")
+        uncertain = entity("CHECK-UNKNOWN", ["gnocchi: unavailable"])
+        firm = entity("CHECK-FIRM", ["pressed bread"])
+        kept, verdicts = constraints.filter_entities([uncertain, firm], ["soft_foods"])
+        OBSERVATIONS.append({"control": "unknown_filter_policy", "kept": [row.entity_id for row in kept],
+                             "verdicts": [row.to_dict() for row in verdicts]})
+        self.assertEqual([row.entity_id for row in kept], ["CHECK-UNKNOWN"])
+        self.assertEqual([row.ok for row in verdicts], [True, False])
+
+    def test_coordinated_explicit_denial(self):
+        self.check_group("coordinated_explicit_denial")
+
+    def test_native_scripted_fixture_plan(self):
+        fixture_data = synthetic_fixture()
+        fixture = OUTPUT / "independent-fixture.json"
+        fixture.write_text(json.dumps(fixture_data, indent=2) + "\n", encoding="utf-8")
+        fixture_before = fixture.read_bytes()
+        profile = {
+            "label": "Wholly Fictional Independent Reviewer Persona",
+            "city": "Independent Fixture City",
+            "cuisines": ["Diner"],
+            "music": ["Synthetic Chamber Group"],
+            "films": [],
+            "constraints": ["soft_foods"],
+        }
+        profile_before = copy.deepcopy(profile)
+        transport = qloo_client.FixtureTransport(fixture)
+        client = qloo_client.QlooClient(api_key="FICTIONAL-LOCAL-TRANSPORT-ONLY", transport=transport)
+        result = agent.run_agent(profile, qloo=client, model=agent.ScriptedModel())
+        observation = {
+            "control": "native_scripted_fixture_plan",
+            "fixture_sha256": sha(fixture_before),
+            "fixture_unchanged": fixture.read_bytes() == fixture_before,
+            "profile": profile_before,
+            "profile_unchanged": profile == profile_before,
+            "result": result,
+            "fixture_transport_requests": transport.log,
+        }
+        OBSERVATIONS.append(observation)
+        (OUTPUT / "native-agent-result.json").write_text(json.dumps(observation, indent=2) + "\n")
+        expected = CONTROLS["native_scripted_fixture_plan"]
+        meals = {row["entity_id"]: row for row in result["plan"]["meals"]}
+        rejected = {row["entity_id"]: row for row in result["plan"]["rejected"]}
+        with self.subTest(field="identity_and_transport"):
+            self.assertTrue(result["mock"])
+            self.assertTrue(observation["fixture_unchanged"])
+            self.assertTrue(observation["profile_unchanged"])
+            self.assertEqual(set(meals), set(expected["expected_meals"]))
+            self.assertEqual(set(rejected), set(expected["expected_rejected"]))
+        with self.subTest(field="honest_unknown_and_positive_labels"):
+            self.assertIn("PEER-UNKNOWN", meals)
+            self.assertIn("Soft foods: unknown", meals["PEER-UNKNOWN"]["why"])
+            for identifier in ("PEER-SAME", "PEER-MIXED"):
+                self.assertIn("Soft foods: pass", meals[identifier]["why"])
+        with self.subTest(field="outing_and_actual_calls"):
+            self.assertEqual(result["plan"]["outing"]["entity_id"], expected["expected_outing"])
+            self.assertNotIn("Soft foods:", result["plan"]["outing"]["why"])
+            self.assertTrue(any(row["tool"] == "constraint_check" for row in result["trace"]))
+            self.assertTrue(any(row["path"] == "/v2/insights" for row in transport.log))
+            self.assertNotIn(profile["label"], json.dumps(transport.log))
+            self.assertEqual(result["comparison"]["grounded"]["with_qloo_entity_id"], 5)
+
+
+suite = unittest.defaultTestLoader.loadTestsFromTestCase(SoftFoodIndependentTests)
+result = unittest.TextTestRunner(verbosity=2).run(suite)
+after = source_pins()
+failed_methods = set()
+for case, _ in result.failures + result.errors:
+    parent = getattr(case, "test_case", case)
+    failed_methods.add(parent.id())
+receipt = {
+    "schema": "tastetable.soft-food-independent-native-receiving.v1",
+    "source": str(SOURCE),
+    "python": platform.python_version(),
+    "python_executable": sys.executable,
+    "optimized": bool(sys.flags.optimize),
+    "receiver_sha256": sha(Path(__file__).read_bytes()),
+    "scope_sha256": sha((REVIEW_ROOT / "scope-v2.json").read_bytes()),
+    "source_before": BEFORE,
+    "source_after": after,
+    "source_unchanged": BEFORE == after,
+    "actual_project_imports": {name: str(Path(module.__file__).resolve())
+                               for name, module in (("agent", agent), ("constraints", constraints),
+                                                    ("qloo_client", qloo_client))},
+    "test_methods": result.testsRun,
+    "failed_test_methods": sorted(failed_methods),
+    "passed_test_methods": result.testsRun - len(failed_methods),
+    "failure_records": len(result.failures),
+    "error_records": len(result.errors),
+    "skipped": len(result.skipped),
+    "observations": OBSERVATIONS,
+    "network_attempts": NETWORK_ATTEMPTS,
+    "qualified": result.wasSuccessful() and BEFORE == after and not NETWORK_ATTEMPTS,
+}
+(OUTPUT / "receipt.json").write_text(json.dumps(receipt, indent=2) + "\n")
+print(json.dumps({key: receipt[key] for key in
+                 ("test_methods", "passed_test_methods", "failed_test_methods", "failure_records",
+                  "error_records", "skipped", "source_unchanged", "network_attempts", "qualified")}))
+raise SystemExit(0 if receipt["qualified"] else 1)

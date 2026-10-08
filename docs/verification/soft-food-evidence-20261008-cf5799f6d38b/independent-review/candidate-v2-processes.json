@@ -1,0 +1,59 @@
+[
+  {
+    "phase": "candidate",
+    "optimized": false,
+    "command": [
+      "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3",
+      "-B",
+      "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/independent_soft_food_v2.py",
+      "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate",
+      "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-v2-normal"
+    ],
+    "started_utc": "2026-10-08T15:23:08.445394+00:00",
+    "finished_utc": "2026-10-08T15:23:08.569930+00:00",
+    "seconds": 0.12440004199743271,
+    "returncode": 0,
+    "stdout": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-v2-normal.stdout.log",
+    "stderr": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-v2-normal.stderr.log",
+    "result": {
+      "test_methods": 6,
+      "passed_test_methods": 6,
+      "failed_test_methods": [],
+      "failure_records": 0,
+      "error_records": 0,
+      "skipped": 0,
+      "source_unchanged": true,
+      "network_attempts": [],
+      "qualified": true
+    }
+  },
+  {
+    "phase": "candidate",
+    "optimized": true,
+    "command": [
+      "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3",
+      "-B",
+      "-O",
+      "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/independent_soft_food_v2.py",
+      "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate",
+      "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-v2-optimized"
+    ],
+    "started_utc": "2026-10-08T15:23:08.570453+00:00",
+    "finished_utc": "2026-10-08T15:23:08.858594+00:00",
+    "seconds": 0.28815066593233496,
+    "returncode": 0,
+    "stdout": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-v2-optimized.stdout.log",
+    "stderr": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-v2-optimized.stderr.log",
+    "result": {
+      "test_methods": 6,
+      "passed_test_methods": 6,
+      "failed_test_methods": [],
+      "failure_records": 0,
+      "error_records": 0,
+      "skipped": 0,
+      "source_unchanged": true,
+      "network_attempts": [],
+      "qualified": true
+    }
+  }
+]

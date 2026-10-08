@@ -57,46 +57,27 @@ def _hits(words: list[str], vocab: tuple[str, ...]) -> list[str]:
 
 
 def _positive_soft_food_hits(words: list[str]) -> list[str]:
-    """Keep existing cues except explicit local denial or unavailability.
+    """Keep existing soft cues except explicit local denial or unavailability.
 
-    This covers short keyword phrases, including adjacent cues and cue lists,
-    not arbitrary menu prose. A denial removes positive evidence; it does not
-    add a firm-texture cue. A separate affirmative occurrence remains usable.
+    Interpret short keyword phrases, not arbitrary menu prose. Denied soft
+    evidence is absent evidence, not a new firm-texture cue. Check each
+    occurrence so a separate affirmative cue remains usable.
     """
     hits = set()
     for word in words:
-        cues = []
         for cue in SOFT_TEXTURE:
             for match in re.finditer(re.escape(cue), word):
-                end = match.end()
-                # The established substring cues also match ordinary plurals.
-                if word[end:end + 1] == "s" and (
-                        end + 1 == len(word) or not word[end + 1].isalnum()):
-                    end += 1
-                before, after = word[:match.start()], word[end:]
-                denied = bool(re.search(
-                    r"\b(?:no(?:\s+longer)?|not|without)\s+(?:(?:any|a|an)\s+)?$",
-                    before,
-                ) or re.match(
+                before, after = word[:match.start()], word[match.end():]
+                if re.search(r"\b(?:no(?:\s+longer)?|not|without)\s+(?:(?:any|a|an)\s+)?$", before):
+                    continue
+                if re.match(
                     r"(?:\s+|\s*[:,(-]\s*)"
-                    r"(?:(?:options?|choices?|meals?|dishes|preparations?)\s+)?"
+                    r"(?:(?:options?|choices?|meals?|dishes|preparation)\s+)?"
                     r"(?:(?:is|are)\s+)?(?:unavailable|not\s+(?:available|offered))\b",
                     after,
-                ))
-                cues.append((match.start(), end, denied))
-        cues.sort()
-        groups = []
-        for cue in cues:
-            if groups and re.fullmatch(
-                    r"\s+|\s+(?:and|or)\s+|\s*,\s*(?:(?:and|or)\s+)?",
-                    word[groups[-1][-1][1]:cue[0]]):
-                groups[-1].append(cue)
-            else:
-                groups.append([cue])
-        # "no soup or risotto" and "steamed tofu unavailable" describe one
-        # denied group; a semicolon or "but" leaves another cue independent.
-        if any(not any(cue[2] for cue in group) for group in groups):
-            hits.add(word)
+                ):
+                    continue
+                hits.add(word)
     return sorted(hits)
 
 

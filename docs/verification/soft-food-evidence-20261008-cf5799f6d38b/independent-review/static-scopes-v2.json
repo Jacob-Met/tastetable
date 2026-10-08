@@ -1,0 +1,71 @@
+{
+  "constraints_candidate_sha256": "f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa",
+  "unchanged_scopes": [
+    {
+      "name": "_positive_low_sodium_hits",
+      "bytes_equal": true,
+      "baseline_sha256": "8167785b8052c354b8911740ffb39a55d5ebbfbc31e17ae4f036d7ea01ca4f2e",
+      "candidate_sha256": "8167785b8052c354b8911740ffb39a55d5ebbfbc31e17ae4f036d7ea01ca4f2e"
+    },
+    {
+      "name": "check_low_sodium",
+      "bytes_equal": true,
+      "baseline_sha256": "05605c58ca5f5aa428f7d56829b27aebbab71d563a9cf70f3eda986b0f838aa9",
+      "candidate_sha256": "05605c58ca5f5aa428f7d56829b27aebbab71d563a9cf70f3eda986b0f838aa9"
+    },
+    {
+      "name": "check_wheelchair",
+      "bytes_equal": true,
+      "baseline_sha256": "8238d9959d00a2175afce07ce1bf402ac4619264328f4386ac06bf6e61958b56",
+      "candidate_sha256": "8238d9959d00a2175afce07ce1bf402ac4619264328f4386ac06bf6e61958b56"
+    },
+    {
+      "name": "evaluate",
+      "bytes_equal": true,
+      "baseline_sha256": "6efecc3b7ddb9aa1e66623b356b55aa588495cb820d560690e34fb6139a61f4d",
+      "candidate_sha256": "6efecc3b7ddb9aa1e66623b356b55aa588495cb820d560690e34fb6139a61f4d"
+    },
+    {
+      "name": "filter_entities",
+      "bytes_equal": true,
+      "baseline_sha256": "6daad157256b49fc2d9a4ce37eebf36a2145ddaa6b933a455bfa08f3f23324e9",
+      "candidate_sha256": "6daad157256b49fc2d9a4ce37eebf36a2145ddaa6b933a455bfa08f3f23324e9"
+    },
+    {
+      "name": "HARD_TEXTURE",
+      "bytes_equal": true,
+      "baseline_sha256": "41b3542965d4f0462b6f5fa1ff3c50bd76b695e7ddde6e14c1516a1a3a4ab83f",
+      "candidate_sha256": "41b3542965d4f0462b6f5fa1ff3c50bd76b695e7ddde6e14c1516a1a3a4ab83f"
+    },
+    {
+      "name": "SOFT_TEXTURE",
+      "bytes_equal": true,
+      "baseline_sha256": "f629f612bf680870a568fac4b17f120579bf1744e5cc56aaa1fee67cda1d2132",
+      "candidate_sha256": "f629f612bf680870a568fac4b17f120579bf1744e5cc56aaa1fee67cda1d2132"
+    },
+    {
+      "name": "HIGH_SODIUM",
+      "bytes_equal": true,
+      "baseline_sha256": "3993524fddb7fb87f2c5ad8562d8d7cbc819efde126a58c7f696508879d3b7f7",
+      "candidate_sha256": "3993524fddb7fb87f2c5ad8562d8d7cbc819efde126a58c7f696508879d3b7f7"
+    },
+    {
+      "name": "LOW_SODIUM",
+      "bytes_equal": true,
+      "baseline_sha256": "ec42f103dbb23aa1e287b4db171ab136ea953ac7fa822a42d0a6853174f5e28e",
+      "candidate_sha256": "ec42f103dbb23aa1e287b4db171ab136ea953ac7fa822a42d0a6853174f5e28e"
+    },
+    {
+      "name": "SUPPORTED",
+      "bytes_equal": true,
+      "baseline_sha256": "ef16da9113bea47a7b6b0bd7dbdfb76f8574970a8a185d57880f9b0efea3c351",
+      "candidate_sha256": "ef16da9113bea47a7b6b0bd7dbdfb76f8574970a8a185d57880f9b0efea3c351"
+    },
+    {
+      "name": "STRICT",
+      "bytes_equal": true,
+      "baseline_sha256": "c9b4134940c52b12b37e0318fb39547c88ca4aa1cf2660328a531a8a0622b99d",
+      "candidate_sha256": "c9b4134940c52b12b37e0318fb39547c88ca4aa1cf2660328a531a8a0622b99d"
+    }
+  ]
+}
