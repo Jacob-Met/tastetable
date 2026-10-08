@@ -1,0 +1,511 @@
+{
+  "format": "tastetable.saved-week.v1",
+  "receivedAt": "2026-10-08T10:00:00.000Z",
+  "savedAt": "2026-10-08T11:00:00.000Z",
+  "calendarId": "e9a27c3786b649e483a42cc1a0096fb0",
+  "inputs": {
+    "cuisines": [
+      "Cuban",
+      "Mexican"
+    ],
+    "music": [
+      "Celia Cruz"
+    ],
+    "films": [
+      "West Side Story"
+    ],
+    "constraints": [
+      "soft_foods",
+      "low_sodium",
+      "wheelchair"
+    ],
+    "city": "Pasadena"
+  },
+  "response": {
+    "plan": {
+      "meals": [
+        {
+          "day": "Monday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-01",
+          "name": "Casa Habana Kitchen",
+          "affinity": 0.91,
+          "fallback": false,
+          "why": "Qloo affinity 0.91 for audiences who like Celia Cruz, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        },
+        {
+          "day": "Wednesday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-03",
+          "name": "Abuela's Table",
+          "affinity": 0.83,
+          "fallback": false,
+          "why": "Qloo affinity 0.83 for audiences who like Celia Cruz, West Side Story (tag match: Mexican). Checks: Soft foods: pass (soft options listed: caldo de pollo, refried beans); Low sodium: pass (lower-sodium signals: low sodium options); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        },
+        {
+          "day": "Friday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-07",
+          "name": "Blue Plate Diner",
+          "affinity": 0.262,
+          "fallback": true,
+          "why": "Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Diner). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, mashed potatoes, soups); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        },
+        {
+          "day": "Sunday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-11",
+          "name": "Trattoria Nonna Lucia",
+          "affinity": 0.256,
+          "fallback": true,
+          "why": "Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Italian). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        }
+      ],
+      "outing": {
+        "day": "Saturday",
+        "kind": "outing",
+        "entity_id": "FIX-V-03",
+        "name": "Arroyo Museum of Latin Music (fictional)",
+        "affinity": 0.96,
+        "why": "Qloo affinity 0.96 for audiences who like Celia Cruz, West Side Story (tag match: Museum). Checks: Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+      },
+      "rejected": [
+        {
+          "name": "Malecon Sandwich Shop",
+          "entity_id": "FIX-P-04",
+          "failed": [
+            {
+              "constraint": "soft_foods",
+              "status": "fail",
+              "reason": "menu signals are mostly firm: cuban sandwich, cured ham, pressed bread"
+            },
+            {
+              "constraint": "low_sodium",
+              "status": "fail",
+              "reason": "high-sodium signals: cuban sandwich, cured ham, pickles"
+            },
+            {
+              "constraint": "wheelchair",
+              "status": "unknown",
+              "reason": "no accessibility tag in Qloo data"
+            }
+          ]
+        },
+        {
+          "name": "La Paloma Cantina",
+          "entity_id": "FIX-P-02",
+          "failed": [
+            {
+              "constraint": "low_sodium",
+              "status": "unknown",
+              "reason": "no sodium signal; ask for low-salt preparation"
+            },
+            {
+              "constraint": "wheelchair",
+              "status": "fail",
+              "reason": "tagged 'steps at entrance'"
+            }
+          ]
+        },
+        {
+          "name": "Ramen Tatsu",
+          "entity_id": "FIX-P-10",
+          "failed": [
+            {
+              "constraint": "soft_foods",
+              "status": "unknown",
+              "reason": "no texture signal in Qloo keywords; ask the venue"
+            },
+            {
+              "constraint": "low_sodium",
+              "status": "fail",
+              "reason": "high-sodium signals: pickled vegetables, rich broth, tonkotsu ramen"
+            }
+          ]
+        },
+        {
+          "name": "Starlight Grill",
+          "entity_id": "FIX-P-08",
+          "failed": [
+            {
+              "constraint": "soft_foods",
+              "status": "fail",
+              "reason": "menu signals are mostly firm: burgers, fried chicken"
+            },
+            {
+              "constraint": "low_sodium",
+              "status": "unknown",
+              "reason": "no sodium signal; ask for low-salt preparation"
+            },
+            {
+              "constraint": "wheelchair",
+              "status": "fail",
+              "reason": "tagged 'steps at entrance'"
+            }
+          ]
+        },
+        {
+          "name": "Salumeria Roma",
+          "entity_id": "FIX-P-12",
+          "failed": [
+            {
+              "constraint": "soft_foods",
+              "status": "fail",
+              "reason": "menu signals are mostly firm: crusty bread, cured meats"
+            },
+            {
+              "constraint": "low_sodium",
+              "status": "fail",
+              "reason": "high-sodium signals: cured meats, olives"
+            },
+            {
+              "constraint": "wheelchair",
+              "status": "unknown",
+              "reason": "no accessibility tag in Qloo data"
+            }
+          ]
+        },
+        {
+          "name": "Osteria del Ponte",
+          "entity_id": "FIX-P-13",
+          "failed": [
+            {
+              "constraint": "low_sodium",
+              "status": "unknown",
+              "reason": "no sodium signal; ask for low-salt preparation"
+            },
+            {
+              "constraint": "wheelchair",
+              "status": "fail",
+              "reason": "tagged 'steps at entrance'"
+            }
+          ]
+        },
+        {
+          "name": "Colorado Street Concert Hall (fictional)",
+          "entity_id": "FIX-V-04",
+          "failed": [
+            {
+              "constraint": "wheelchair",
+              "status": "fail",
+              "reason": "tagged 'steps at entrance'"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    "llm_only": {
+      "meals": [
+        {
+          "day": "Monday",
+          "name": "A well-reviewed Cuban restaurant nearby",
+          "why": "They enjoy Cuban food.",
+          "verified": {
+            "exists": false,
+            "entity_id": null,
+            "constraints_checked": false
+          }
+        },
+        {
+          "day": "Wednesday",
+          "name": "A well-reviewed Mexican restaurant nearby",
+          "why": "They enjoy Mexican food.",
+          "verified": {
+            "exists": false,
+            "entity_id": null,
+            "constraints_checked": false
+          }
+        },
+        {
+          "day": "Friday",
+          "name": "A well-reviewed Cuban restaurant nearby",
+          "why": "They enjoy Cuban food.",
+          "verified": {
+            "exists": false,
+            "entity_id": null,
+            "constraints_checked": false
+          }
+        },
+        {
+          "day": "Sunday",
+          "name": "A well-reviewed Mexican restaurant nearby",
+          "why": "They enjoy Mexican food.",
+          "verified": {
+            "exists": false,
+            "entity_id": null,
+            "constraints_checked": false
+          }
+        }
+      ],
+      "outing": {
+        "day": "Saturday",
+        "name": "A concert or show featuring music like Celia Cruz",
+        "why": "Matches their music taste.",
+        "verified": {
+          "exists": false,
+          "entity_id": null,
+          "constraints_checked": false
+        }
+      },
+      "source": "template (ungrounded baseline)"
+    },
+    "comparison": {
+      "grounded": {
+        "picks": 5,
+        "with_qloo_entity_id": 5,
+        "with_affinity_evidence": 5,
+        "constraint_checked": 5,
+        "unsafe_candidates_rejected": 7
+      },
+      "llm_only": {
+        "picks": 5,
+        "with_qloo_entity_id": 0,
+        "with_affinity_evidence": 0,
+        "constraint_checked": 0,
+        "unsafe_candidates_rejected": 0
+      },
+      "constraints": [
+        "soft_foods",
+        "low_sodium",
+        "wheelchair"
+      ]
+    },
+    "trace": [
+      {
+        "step": 0,
+        "tool": "qloo_search",
+        "args": {
+          "query": "Celia Cruz",
+          "kind": "entity",
+          "types": "urn:entity:artist"
+        },
+        "result_summary": "Celia Cruz"
+      },
+      {
+        "step": 0,
+        "tool": "qloo_search",
+        "args": {
+          "query": "West Side Story",
+          "kind": "entity",
+          "types": "urn:entity:movie"
+        },
+        "result_summary": "West Side Story"
+      },
+      {
+        "step": 0,
+        "tool": "qloo_search",
+        "args": {
+          "query": "Cuban",
+          "kind": "tag"
+        },
+        "result_summary": "Cuban"
+      },
+      {
+        "step": 0,
+        "tool": "qloo_search",
+        "args": {
+          "query": "Mexican",
+          "kind": "tag"
+        },
+        "result_summary": "Mexican"
+      },
+      {
+        "step": 1,
+        "tool": "qloo_recs",
+        "args": {
+          "filter_type": "urn:entity:place",
+          "purpose": "restaurant",
+          "tag_ids": [
+            "urn:tag:genre:restaurant:Cuban",
+            "urn:tag:genre:restaurant:Mexican"
+          ],
+          "signal_entity_ids": [
+            "FIX-A-celia",
+            "FIX-M-wss"
+          ],
+          "location": "Pasadena",
+          "take": 10
+        },
+        "result_summary": "4 candidates"
+      },
+      {
+        "step": 2,
+        "tool": "constraint_check",
+        "args": {
+          "entity_ids": [
+            "FIX-P-01",
+            "FIX-P-04",
+            "FIX-P-02",
+            "FIX-P-03"
+          ],
+          "constraints": [
+            "soft_foods",
+            "low_sodium",
+            "wheelchair"
+          ],
+          "kind": "restaurant"
+        },
+        "result_summary": "2/4 passed"
+      },
+      {
+        "step": 3,
+        "tool": "qloo_search",
+        "args": {
+          "query": "Diner",
+          "kind": "tag"
+        },
+        "result_summary": "Diner"
+      },
+      {
+        "step": 3,
+        "tool": "qloo_search",
+        "args": {
+          "query": "Italian",
+          "kind": "tag"
+        },
+        "result_summary": "Italian"
+      },
+      {
+        "step": 3,
+        "tool": "qloo_search",
+        "args": {
+          "query": "Japanese",
+          "kind": "tag"
+        },
+        "result_summary": "Japanese"
+      },
+      {
+        "step": 4,
+        "tool": "qloo_recs",
+        "args": {
+          "filter_type": "urn:entity:place",
+          "purpose": "restaurant",
+          "tag_ids": [
+            "urn:tag:genre:restaurant:Diner",
+            "urn:tag:genre:restaurant:Italian",
+            "urn:tag:genre:restaurant:Japanese"
+          ],
+          "signal_entity_ids": [
+            "FIX-A-celia",
+            "FIX-M-wss"
+          ],
+          "location": "Pasadena",
+          "take": 10
+        },
+        "result_summary": "7 candidates"
+      },
+      {
+        "step": 5,
+        "tool": "constraint_check",
+        "args": {
+          "entity_ids": [
+            "FIX-P-10",
+            "FIX-P-08",
+            "FIX-P-07",
+            "FIX-P-11",
+            "FIX-P-12",
+            "FIX-P-13",
+            "FIX-P-09"
+          ],
+          "constraints": [
+            "soft_foods",
+            "low_sodium",
+            "wheelchair"
+          ],
+          "kind": "restaurant"
+        },
+        "result_summary": "3/7 passed"
+      },
+      {
+        "step": 6,
+        "tool": "qloo_search",
+        "args": {
+          "query": "jazz",
+          "kind": "tag"
+        },
+        "result_summary": "Jazz Club"
+      },
+      {
+        "step": 6,
+        "tool": "qloo_search",
+        "args": {
+          "query": "cinema",
+          "kind": "tag"
+        },
+        "result_summary": "Movie Theater"
+      },
+      {
+        "step": 6,
+        "tool": "qloo_search",
+        "args": {
+          "query": "museum",
+          "kind": "tag"
+        },
+        "result_summary": "Museum"
+      },
+      {
+        "step": 6,
+        "tool": "qloo_search",
+        "args": {
+          "query": "concert hall",
+          "kind": "tag"
+        },
+        "result_summary": "Concert Hall"
+      },
+      {
+        "step": 7,
+        "tool": "qloo_recs",
+        "args": {
+          "filter_type": "urn:entity:place",
+          "purpose": "outing",
+          "tag_ids": [
+            "urn:tag:category:place:jazz_club",
+            "urn:tag:category:place:movie_theater",
+            "urn:tag:category:place:museum",
+            "urn:tag:category:place:concert_hall"
+          ],
+          "signal_entity_ids": [
+            "FIX-A-celia",
+            "FIX-M-wss"
+          ],
+          "location": "Pasadena",
+          "take": 5
+        },
+        "result_summary": "5 candidates"
+      },
+      {
+        "step": 8,
+        "tool": "constraint_check",
+        "args": {
+          "entity_ids": [
+            "FIX-V-03",
+            "FIX-V-02",
+            "FIX-V-01",
+            "FIX-V-04",
+            "FIX-V-05"
+          ],
+          "constraints": [
+            "soft_foods",
+            "low_sodium",
+            "wheelchair"
+          ],
+          "kind": "outing"
+        },
+        "result_summary": "4/5 passed"
+      }
+    ],
+    "model_message": "Plan inputs gathered; assembling weekly plan from tool results.",
+    "mock": true
+  },
+  "week": {
+    "start": "2026-12-28",
+    "assignments": {
+      "pick-0": "Monday",
+      "pick-1": "Wednesday",
+      "pick-2": null,
+      "pick-3": "Sunday",
+      "pick-4": "Saturday"
+    }
+  }
+}

@@ -1,0 +1,220 @@
+TAP version 13
+# Subtest: caregiver brief carries exact date transitions, counts and original occurrence identity
+ok 1 - caregiver brief carries exact date transitions, counts and original occurrence identity
+  ---
+  duration_ms: 190.670813
+  type: 'test'
+  ...
+# Subtest: chosen-week shifts include actual dates, even when weekday assignments are unchanged
+ok 2 - chosen-week shifts include actual dates, even when weekday assignments are unchanged
+  ---
+  duration_ms: 54.983103
+  type: 'test'
+  ...
+# Subtest: repeated venue names and IDs never collapse distinct original occurrences
+ok 3 - repeated venue names and IDs never collapse distinct original occurrences
+  ---
+  duration_ms: 88.567599
+  type: 'test'
+  ...
+# Subtest: changed source, profile, received time or calendar identity refuses an actionable brief
+ok 4 - changed source, profile, received time or calendar identity refuses an actionable brief
+  ---
+  duration_ms: 116.359939
+  type: 'test'
+  ...
+# Subtest: unchanged, all-off and empty plans have explicit, useful brief states
+ok 5 - unchanged, all-off and empty plans have explicit, useful brief states
+  ---
+  duration_ms: 102.327082
+  type: 'test'
+  ...
+# Subtest: unknown/live source labels and legacy null identities stay explicit
+ok 6 - unknown/live source labels and legacy null identities stay explicit
+  ---
+  duration_ms: 50.563253
+  type: 'test'
+  ...
+# Subtest: literal Unicode and embedded controls remain quoted data in the text artifact
+ok 7 - literal Unicode and embedded controls remain quoted data in the text artifact
+  ---
+  duration_ms: 77.401717
+  type: 'test'
+  ...
+# Subtest: codec-created copies compare exact moves, omissions and inclusion without mutating inputs
+ok 8 - codec-created copies compare exact moves, omissions and inclusion without mutating inputs
+  ---
+  duration_ms: 166.456549
+  type: 'test'
+  ...
+# Subtest: different chosen weeks compare actual dates through the year boundary
+ok 9 - different chosen weeks compare actual dates through the year boundary
+  ---
+  duration_ms: 17.940087
+  type: 'test'
+  ...
+# Subtest: repeated venue identities retain original occurrence mapping
+ok 10 - repeated venue identities retain original occurrence mapping
+  ---
+  duration_ms: 39.869356
+  type: 'test'
+  ...
+# Subtest: changed response, profile, timestamp or calendar identity prevents inferred movement
+ok 11 - changed response, profile, timestamp or calendar identity prevents inferred movement
+  ---
+  duration_ms: 15.052082
+  type: 'test'
+  ...
+# Subtest: JSON property order is immaterial, source array order is not
+ok 12 - JSON property order is immaterial, source array order is not
+  ---
+  duration_ms: 8.764732
+  type: 'test'
+  ...
+# Subtest: all-omitted arrangements and empty original plans have honest counts
+ok 13 - all-omitted arrangements and empty original plans have honest counts
+  ---
+  duration_ms: 16.703528
+  type: 'test'
+  ...
+# Subtest: unknown source and legacy null calendar IDs remain explicitly saved-source comparisons
+ok 14 - unknown source and legacy null calendar IDs remain explicitly saved-source comparisons
+  ---
+  duration_ms: 13.463155
+  type: 'test'
+  ...
+# Subtest: native response and edited occurrences round-trip across a new state
+ok 15 - native response and edited occurrences round-trip across a new state
+  ---
+  duration_ms: 82.946367
+  type: 'test'
+  ...
+# Subtest: resaving preserves the accepted source and new local arrangement
+ok 16 - resaving preserves the accepted source and new local arrangement
+  ---
+  duration_ms: 16.700263
+  type: 'test'
+  ...
+# Subtest: occurrence keys keep repeated entity IDs distinct after reopening
+ok 17 - occurrence keys keep repeated entity IDs distinct after reopening
+  ---
+  duration_ms: 21.039029
+  type: 'test'
+  ...
+# Subtest: UTF-8 JSON with BOM or different indentation preserves source values
+ok 18 - UTF-8 JSON with BOM or different indentation preserves source values
+  ---
+  duration_ms: 15.013898
+  type: 'test'
+  ...
+# Subtest: empty arrangements and unknown source remain usable snapshots
+ok 19 - empty arrangements and unknown source remain usable snapshots
+  ---
+  duration_ms: 12.636981
+  type: 'test'
+  ...
+# Subtest: save refuses a derived week whose original evidence has changed
+ok 20 - save refuses a derived week whose original evidence has changed
+  ---
+  duration_ms: 27.178547
+  type: 'test'
+  ...
+# Subtest: malformed format, dates, timestamps and inconsistent source inputs fail
+ok 21 - malformed format, dates, timestamps and inconsistent source inputs fail
+  ---
+  duration_ms: 158.171637
+  type: 'test'
+  ...
+# Subtest: missing, additional or invalid occurrence assignments cannot silently drop picks
+ok 22 - missing, additional or invalid occurrence assignments cannot silently drop picks
+  ---
+  duration_ms: 93.437782
+  type: 'test'
+  ...
+# Subtest: saved files validate native response types before reaching HTML or late render fields
+ok 23 - saved files validate native response types before reaching HTML or late render fields
+  ---
+  duration_ms: 138.855639
+  type: 'test'
+  ...
+# Subtest: current native recovery traces retain null and list args with the checked partial plan
+ok 24 - current native recovery traces retain null and list args with the checked partial plan
+  ---
+  duration_ms: 19.896782
+  type: 'test'
+  ...
+# Subtest: initial week retains every suggestion and exposes all seven dates
+ok 25 - initial week retains every suggestion and exposes all seven dates
+  ---
+  duration_ms: 77.080419
+  type: 'test'
+  ...
+# Subtest: move, omit and restore preserve source evidence and unrelated picks
+ok 26 - move, omit and restore preserve source evidence and unrelated picks
+  ---
+  duration_ms: 21.544903
+  type: 'test'
+  ...
+# Subtest: reset restores original assignments while keeping the chosen week
+ok 27 - reset restores original assignments while keeping the chosen week
+  ---
+  duration_ms: 18.479302
+  type: 'test'
+  ...
+# Subtest: calendar weeks handle leap days and year boundaries
+ok 28 - calendar weeks handle leap days and year boundaries
+  ---
+  duration_ms: 0.717936
+  type: 'test'
+  ...
+# Subtest: invalid dates and unknown transitions refuse without changing the plan
+ok 29 - invalid dates and unknown transitions refuse without changing the plan
+  ---
+  duration_ms: 14.63593
+  type: 'test'
+  ...
+# Subtest: source plan is a detached immutable snapshot
+ok 30 - source plan is a detached immutable snapshot
+  ---
+  duration_ms: 0.863274
+  type: 'test'
+  ...
+# Subtest: empty and partial plans remain honest and rejected candidates cannot be scheduled
+ok 31 - empty and partial plans remain honest and rejected candidates cannot be scheduled
+  ---
+  duration_ms: 16.00386
+  type: 'test'
+  ...
+# Subtest: duplicate source IDs remain distinct suggestions through scheduling
+ok 32 - duplicate source IDs remain distinct suggestions through scheduling
+  ---
+  duration_ms: 0.885855
+  type: 'test'
+  ...
+# Subtest: mode is retained explicitly and absence is never labeled live
+ok 33 - mode is retained explicitly and absence is never labeled live
+  ---
+  duration_ms: 17.135671
+  type: 'test'
+  ...
+# Subtest: missing source identity cannot create a local suggestion
+ok 34 - missing source identity cannot create a local suggestion
+  ---
+  duration_ms: 1.620586
+  type: 'test'
+  ...
+# Subtest: calendar arithmetic stays stable across time zones and daylight-saving boundaries
+ok 35 - calendar arithmetic stays stable across time zones and daylight-saving boundaries
+  ---
+  duration_ms: 1580.959096
+  type: 'test'
+  ...
+1..35
+# tests 35
+# suites 0
+# pass 35
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4198.200232

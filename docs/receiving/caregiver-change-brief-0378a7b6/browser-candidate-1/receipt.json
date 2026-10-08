@@ -1,0 +1,109 @@
+{
+  "baseline": false,
+  "sourceRoot": "/home/jacob/tastetable-discovery-0378a7b6",
+  "head": "2b347cee4ff4e2b806362730a8520a3360b45f5a",
+  "browser": "153.0.8010.47",
+  "node": "v22.22.1",
+  "groups": [
+    "actual mock planner → saved files → displayed exact changes → actual UTF-8 download",
+    "same weekdays in a new year/week retain actual changed dates",
+    "repeated venues stay distinct in the downloaded handoff",
+    "no-change, all-off/week-shift and actual native no-match plans download honest brief states",
+    "different source identity refuses a brief, including a dispatched click",
+    "pending/clear/newer selection prevent stale brief publication",
+    "invalid replacements retain and accurately name the previously accepted files",
+    "Unicode/markup and multiline fields remain data in the page and downloaded text",
+    "390px layout and keyboard activation deliver the actual brief without storage writes"
+  ],
+  "pass": 9,
+  "downloads": [
+    {
+      "file": "download-1.txt",
+      "filename": "tastetable-changes-2026-12-28-to-2026-12-28.txt",
+      "sha256": "2a602138cd3d5d181b29938371a6d974479d91c433ad447c0f94f7fe0dfde1e2",
+      "bytes": 3236
+    },
+    {
+      "file": "download-2.txt",
+      "filename": "tastetable-changes-2026-12-28-to-2027-01-04.txt",
+      "sha256": "db0f6d591aa7ed5badd9cb7bfd80265cc020ec46ba2054bc901da9e757a7508f",
+      "bytes": 4295
+    },
+    {
+      "file": "download-3.txt",
+      "filename": "tastetable-changes-2026-12-28-to-2026-12-28.txt",
+      "sha256": "3f5b9ae3485b2db1a822cbadb6c99baef68f769d58e4a092c2c6acc16667203e",
+      "bytes": 2558
+    },
+    {
+      "file": "download-4.txt",
+      "filename": "tastetable-changes-2026-12-28-to-2026-12-28.txt",
+      "sha256": "49013799c75a816d0613b3798f921cf4f6517e978b2bddb4d78a4c86ef04eb51",
+      "bytes": 1602
+    },
+    {
+      "file": "download-5.txt",
+      "filename": "tastetable-changes-2026-12-28-to-2027-01-04.txt",
+      "sha256": "637c3c0e5dfcc1523836505f6a54783ad31ca1cf0476c9fa5d70bda6be2ef837",
+      "bytes": 1661
+    },
+    {
+      "file": "download-6.txt",
+      "filename": "tastetable-changes-2026-12-28-to-2026-12-28.txt",
+      "sha256": "3e14032afee17c913e71d70a5fd204c5af19944c09e6d9e548d15405df962a21",
+      "bytes": 1579
+    },
+    {
+      "file": "download-7.txt",
+      "filename": "tastetable-changes-2026-12-28-to-2026-12-28.txt",
+      "sha256": "51510cb29273ff92eca31b0cf418a8bf732dda74eade459f6d5cd82f66d72734",
+      "bytes": 3236
+    },
+    {
+      "file": "download-8.txt",
+      "filename": "tastetable-changes-2026-12-28-to-2026-12-28.txt",
+      "sha256": "baacae7b8cb0a8c2c4cb95c58a7f9bc3e08511f4f4d30b0c8ae813bbc5b8893e",
+      "bytes": 3236
+    },
+    {
+      "file": "download-9.txt",
+      "filename": "tastetable-changes-2026-12-28-to-2026-12-28.txt",
+      "sha256": "00277d93ad374e6f041471085d22a9d47670a212b5e15c9083d184f6e823fa6f",
+      "bytes": 1874
+    },
+    {
+      "file": "download-10.txt",
+      "filename": "tastetable-changes-2026-12-28-to-2026-12-28.txt",
+      "sha256": "57ac0c6d389372c67f938901085bb08c021f4b9f1c7f5fdcf652dcd66454b176",
+      "bytes": 3236
+    }
+  ],
+  "inputPins": {
+    "earlier.json": "707bc803293f046213703ae6d4053e0adc95ce37f22c46d585d8a4ac8d9e7828",
+    "revised.json": "d2eb4c1982a68a94ae71450f220d71ab3d3bdb34e99d821bd1ebb9d3b1c93cf1"
+  },
+  "sourcePins": {
+    "static/compare-weeks.html": "ff74de00afff8fbe7abe675c502962692eeb1eba544c5e0c0e2742810f0a1288",
+    "static/week_compare_ui.mjs": "2ae33874c70d1d9962c69fb53a373e6a9544a0eefe0d95e81289ca7598aaecd3",
+    "static/week_change_brief.mjs": "689fa56135c4b1ba42a15c676af677615e45ddfbdd1af5e991ea691eeff7098a",
+    "static/week_compare.mjs": "5bc64a317f28cfccffb844f3c74ebb7b1312034996137891ec5161e0bc0953b7",
+    "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+    "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+    "static/week_compare.css": "c37b5b5cade22b7982511e4341f9ec83b9571daae9e1a31ea8e41c1c08d4f236",
+    "static/style.css": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96"
+  },
+  "requests": [
+    "/static/compare-weeks.html",
+    "/static/style.css",
+    "/static/week_compare.css",
+    "/static/week_compare_ui.mjs",
+    "/static/week_file.mjs",
+    "/static/week_plan.mjs",
+    "/static/week_compare.mjs",
+    "/static/week_change_brief.mjs"
+  ],
+  "external": [],
+  "errors": [],
+  "failure": null,
+  "boundary": "Actual native fictional-fixture planner processes produce complete sources; unchanged codec creates chosen arrangements. Selected repeated/literal cases are explicit edits of synthetic source. Held File.arrayBuffer is an authored asynchronous browser seam. Loopback serves exact static files, with no FastAPI deployment, live provider, venue communication or calendar-account execution."
+}

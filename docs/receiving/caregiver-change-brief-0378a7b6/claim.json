@@ -1,0 +1,39 @@
+{
+  "owner": "chatgpt-0378a7b6b7c2/mac_product",
+  "repository": "Jacob-Met/tastetable",
+  "scope": "Caregiver revision brief downloaded from the existing read-only saved-week comparator",
+  "base": "2b347cee4ff4e2b806362730a8520a3360b45f5a",
+  "branch": "hamon/0378a7b6-caregiver-change-brief",
+  "state": "native implementation, source review and independent artifact receiving accepted; publication held until ordinary GitHub quota recovers",
+  "coordinationCoverage": {
+    "nativeReadableScan": "/srv/hamon-estate/coord/*.json",
+    "unreadable": 15,
+    "knownPreserved": [
+      "#29 comparator original integrated source",
+      "066deeadcc8b offline calendar #34",
+      "347f3417824d per-occurrence visit-status and notes file",
+      "venue worksheet #16 / PR33",
+      "0378a7b6 LA7 saved-week standalone HTML #39"
+    ],
+    "centralClaim": "not created; directory is not writable to jacob and native goals wrapper fails cd permission",
+    "nativeLease": false
+  },
+  "productionScope": [
+    "static/week_change_brief.mjs",
+    "static/week_compare_ui.mjs",
+    "static/compare-weeks.html",
+    "README.md additive documentation"
+  ],
+  "excluded": [
+    "planner/controller",
+    "week model",
+    "saved-week codec/schema",
+    "calendar writer",
+    "venue worksheet",
+    "offline studio",
+    "provider/backend/model logic"
+  ],
+  "receiving": "Pure formatter through existing codec and comparison; actual native Chromium file picks/download; repeated occurrences, exact dates/week shifts, mismatched sources, pending/clear/stale reads, invalid replacement, no-change/empty/all-off, literal fields and keyboard/mobile; no live provider calls",
+  "checkedAt": "2026-10-08T17:54:27.354Z",
+  "initialClaimCreatedAt": "2026-10-08T17:42:52.829Z"
+}
