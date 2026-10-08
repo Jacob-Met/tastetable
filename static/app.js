@@ -1,6 +1,7 @@
 import { DAYS, createWeekPlan, localDate, offWeekPicks, resetDays, setPickDay, setWeek, weekRows } from "./week_plan.mjs";
 import { makeWeekFile, readWeekFile } from "./week_file.mjs";
 import { mountVenueFollowup } from "./venue_followup.mjs";
+import { canRedoArrangement, canUndoArrangement, createArrangementHistory, recordArrangement, redoArrangement, undoArrangement } from "./arrangement_history.mjs";
 
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -12,6 +13,8 @@ let preferredWeekStart = null;
 let weekDateInitialized = false;
 let calendarSession = null;
 let acceptedPlan = null;
+let arrangementHistory = null;
+let historyPlan = null;
 let requestKind = "plan";
 const OPEN_SAVED_WEEK = Symbol("open saved week");
 const venueFollowup = mountVenueFollowup($("#venueFollowup"), () => ({ state: weekState, date: $("#weekDate").value }));
@@ -89,10 +92,59 @@ function commitWeekView(view) {
 }
 
 function renderWeek(message = "") {
-  commitWeekView(prepareWeekView(weekState, message));
+  const view = prepareWeekView(weekState, message);
+  const history = currentArrangementHistory();
+  const nextHistory = history
+    ? recordArrangement(history, weekState, arrangementDate(weekState), message || "Change the week.")
+    : arrangementHistory;
+  commitWeekView(view);
+  arrangementHistory = nextHistory;
   refreshCalendar();
   refreshWeekSave();
   venueFollowup.sync();
+  refreshArrangementHistory();
+}
+
+function currentArrangementHistory() {
+  const origin = arrangementHistory?.origin;
+  return origin && historyPlan === acceptedPlan && acceptedPlan && weekState
+    && origin.sourcePlan === weekState.sourcePlan && origin.picks === weekState.picks
+    && origin.constraints === weekState.constraints && origin.sourceMode === weekState.sourceMode
+    ? arrangementHistory : null;
+}
+
+function arrangementDate(state) {
+  const input = $("#weekDate");
+  try {
+    if (input.checkValidity() && setWeek(state, input.value).weekStart === state.weekStart) return input.value;
+  } catch { /* A date draft is not an accepted history state. */ }
+  return arrangementHistory?.present.state.weekStart === state.weekStart
+    ? arrangementHistory.present.date : state.weekStart;
+}
+
+function refreshArrangementHistory() {
+  const history = currentArrangementHistory();
+  $("#undoWeek").disabled = !canUndoArrangement(history);
+  $("#redoWeek").disabled = !canRedoArrangement(history);
+  $("#undoWeek").title = history?.past.at(-1)?.label || "";
+  $("#redoWeek").title = history?.future.at(-1)?.label || "";
+}
+
+function restoreArrangement(direction) {
+  const history = currentArrangementHistory();
+  const undo = direction === "undo";
+  if (!(undo ? canUndoArrangement(history) : canRedoArrangement(history))) return;
+  const label = (undo ? history.past : history.future).at(-1).label;
+  arrangementHistory = undo ? undoArrangement(history) : redoArrangement(history);
+  weekState = arrangementHistory.present.state;
+  $("#weekDate").value = arrangementHistory.present.date;
+  preferredWeekStart = weekState.weekStart;
+  $("#weekDate").removeAttribute("aria-invalid");
+  $("#weekError").textContent = "";
+  $("#printWeek").disabled = false;
+  renderWeek(`${undo ? "Undid" : "Redid"}: ${label}`);
+  const button = $(undo ? "#undoWeek" : "#redoWeek");
+  if (button.disabled) $(undo ? "#redoWeek" : "#undoWeek").focus();
 }
 
 function refreshWeekSave() {
@@ -159,6 +211,9 @@ function acceptCalendar() {
 }
 
 function retirePlan() {
+  arrangementHistory = null;
+  historyPlan = null;
+  refreshArrangementHistory();
   weekState = null;
   venueFollowup.retire();
   acceptedPlan = null;
@@ -189,6 +244,7 @@ function applyWeekDate() {
     refreshCalendar();
     refreshWeekSave();
     venueFollowup.sync();
+    refreshArrangementHistory();
     return false;
   }
 }
@@ -303,6 +359,9 @@ const planRequests = TasteTablePlanRequests.create({
     acceptCalendar();
     refreshWeekSave();
     venueFollowup.accept(weekState, $("#savedWeekSource").hidden ? "" : $("#savedWeekSource").textContent);
+    arrangementHistory = createArrangementHistory(weekState, arrangementDate(weekState));
+    historyPlan = acceptedPlan;
+    refreshArrangementHistory();
     $("#requestStatus").textContent = result.state
       ? "Saved week opened. Its original inputs and your arrangement are restored."
       : "Plan ready for the current inputs.";
@@ -376,6 +435,8 @@ window.addEventListener("pagehide", () => {
 
 $("#weekDate").addEventListener("input", applyWeekDate);
 $("#weekDate").addEventListener("change", applyWeekDate);
+$("#undoWeek").addEventListener("click", () => restoreArrangement("undo"));
+$("#redoWeek").addEventListener("click", () => restoreArrangement("redo"));
 $("#weekOrganizer").addEventListener("change", (event) => {
   const select = event.target.closest("select[data-pick-key]");
   if (!select || !weekState) return;
