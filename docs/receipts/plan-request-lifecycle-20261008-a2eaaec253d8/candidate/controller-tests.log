@@ -1,0 +1,16 @@
+✔ only newest result commits when earlier transport ignores abort (1.775219ms)
+✔ stale errors cannot clear newer loading state or replace its result (0.266861ms)
+✔ input invalidation suppresses a response already being read (0.180722ms)
+✔ invalidated failure remains silent and a later request can succeed (0.154051ms)
+✔ disposal blocks new work and suppresses all pending completion callbacks (0.222525ms)
+✔ current transport error is reported once and returns to idle (0.158499ms)
+✔ a malformed current result cannot leave the request busy (0.21905ms)
+✔ actual AbortSignal rejection from supersession is not a user error (3.739613ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 111.11929

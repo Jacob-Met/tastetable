@@ -12,6 +12,7 @@ async function init() {
     : "Live mode: results from the Qloo Insights API.";
   personas = await fetch("/api/personas").then((r) => r.json());
   $("#personaSel").innerHTML = personas.map((p) => `<option value="${esc(p.id)}">${esc(p.label)}</option>`).join("");
+  $("#sampleBtn").disabled = personas.length === 0;
 }
 
 function fillForm(p) {
@@ -23,10 +24,14 @@ function fillForm(p) {
   f.querySelectorAll("[name=constraints]").forEach((c) => (c.checked = p.constraints.includes(c.value)));
 }
 
-async function post(url, body) {
-  const r = await fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: body ? JSON.stringify(body) : undefined });
+async function post(url, body, signal) {
+  const r = await fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: body ? JSON.stringify(body) : undefined, signal });
   const j = await r.json();
-  if (!r.ok) throw new Error(j.detail || r.statusText);
+  if (!r.ok) {
+    const error = new Error(r.statusText);
+    if (typeof j.detail === "string" && j.detail.trim()) error.userMessage = j.detail.trim();
+    throw error;
+  }
   return j;
 }
 
@@ -53,18 +58,66 @@ function render(res) {
   $("#results").scrollIntoView({ behavior: "smooth" });
 }
 
-$("#sampleBtn").addEventListener("click", async () => {
-  const id = $("#personaSel").value;
-  fillForm(personas.find((p) => p.id === id));
-  try { render(await post(`/api/plan/sample/${encodeURIComponent(id)}`)); } catch (e) { alert(e.message); }
+const planRequests = TasteTablePlanRequests.create({
+  send: post,
+  onStart() {
+    $("#results").hidden = true;
+    $("#form").setAttribute("aria-busy", "true");
+    $("#cancelPlan").hidden = false;
+    $("#requestStatus").textContent = "Planning with the current tastes and constraints…";
+  },
+  onResult(res) {
+    render(res);
+    $("#requestStatus").textContent = "Plan ready for the current inputs.";
+  },
+  onError(error) {
+    $("#results").hidden = true;
+    $("#requestStatus").textContent = error?.userMessage
+      ? `We could not prepare this plan: ${error.userMessage}. Your inputs are still here.`
+      : "We could not prepare this plan. Please try again. Your inputs are still here.";
+  },
+  onIdle() {
+    $("#form").setAttribute("aria-busy", "false");
+    $("#cancelPlan").hidden = true;
+  },
 });
 
-$("#form").addEventListener("submit", async (ev) => {
+function clearPlan(message) {
+  planRequests.invalidate();
+  $("#results").hidden = true;
+  $("#requestStatus").textContent = message;
+}
+
+$("#sampleBtn").addEventListener("click", () => {
+  const id = $("#personaSel").value;
+  const persona = personas.find((p) => p.id === id);
+  if (!persona) {
+    clearPlan("Sample personas are unavailable. Enter tastes and constraints to request a plan.");
+    return;
+  }
+  fillForm(persona);
+  void planRequests.run(`/api/plan/sample/${encodeURIComponent(id)}`);
+});
+
+$("#form").addEventListener("submit", (ev) => {
   ev.preventDefault();
   const f = ev.target;
   const body = { cuisines: split(f.cuisines.value), music: split(f.music.value), films: split(f.films.value),
     city: f.city.value, constraints: [...f.querySelectorAll("[name=constraints]:checked")].map((c) => c.value) };
-  try { render(await post("/api/plan", body)); } catch (e) { alert(e.message); }
+  void planRequests.run("/api/plan", body);
 });
 
-init();
+$("#form").addEventListener("input", () => {
+  clearPlan("Inputs changed. Generate a new plan to use these tastes and constraints.");
+});
+$("#cancelPlan").addEventListener("click", () => {
+  clearPlan("Stopped waiting. Generate another plan when you are ready.");
+});
+window.addEventListener("pagehide", () => {
+  clearPlan("Generate a new plan for the current inputs.");
+});
+
+init().catch(() => {
+  $("#sampleBtn").disabled = true;
+  $("#mode").textContent += " Sample personas could not load. Enter your own tastes to request a plan.";
+});

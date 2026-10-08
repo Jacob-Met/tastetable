@@ -1,0 +1,45 @@
+{
+  "mode": "original-negative-reproduction",
+  "checkedAt": "2026-10-08T07:58:42.455Z",
+  "node": "v24.19.0",
+  "chromium": "153.0.8010.0",
+  "sourceHead": "d1c7a4e39cfdc0bb5b9fe026bc9660b75b456e81",
+  "sourceIsWorkingTree": true,
+  "sourceRoot": "/workspace/scratch/a2eaaec253d8/production-receiving/original-source",
+  "sources": [
+    {
+      "file": "static/app.js",
+      "sha256": "eb928ab2d2c4e9b7e16b32a132b237fb6b96d399cd5b961389bb47d89f309081"
+    },
+    {
+      "file": "static/index.html",
+      "sha256": "645bec7968070fe369cca24f7b2dfe65c5e6c97ee940ae52b84ed11525edefeb"
+    },
+    {
+      "file": "static/style.css",
+      "sha256": "b6d02475b444667386dca7fc1587afadc361071283a96fd75fd30b48ef7178e6"
+    }
+  ],
+  "sourceUnchanged": true,
+  "verifierSha256": "90d6f347d87edb47445e361759f640bfaf41b972de293811003665fd8210ef80",
+  "results": [
+    {
+      "name": "Newest form request wins when transport ignores abort",
+      "passed": false,
+      "error": "Latest inputs were replaced by: Monday · Older plan restaurant affinity 0.80\nAuthored request-lifecycle fixture.\nQloo id: FIX-LIFECYCLE"
+    },
+    {
+      "name": "New request and failure never retain an old visible plan",
+      "passed": false,
+      "error": "Previous-plan visibility: pending=true, after failure=true\n\ntrue !== false\n"
+    }
+  ],
+  "pageErrors": [],
+  "providerCalls": 0,
+  "backendExecution": false,
+  "limits": [
+    "Authored local HTTP responses; no recommendation-model or care-constraint qualification.",
+    "Adverse completion controls deliberately use a fetch wrapper that ignores AbortSignal.",
+    "Pagehide control dispatches the native event; actual back-forward-cache admission is not established."
+  ]
+}

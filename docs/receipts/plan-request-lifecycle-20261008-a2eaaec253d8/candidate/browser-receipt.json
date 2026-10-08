@@ -1,0 +1,97 @@
+{
+  "mode": "candidate-browser-qualification",
+  "checkedAt": "2026-10-08T07:58:42.895Z",
+  "node": "v24.19.0",
+  "chromium": "153.0.8010.0",
+  "sourceHead": "d1c7a4e39cfdc0bb5b9fe026bc9660b75b456e81",
+  "sourceIsWorkingTree": true,
+  "sourceRoot": "/workspace/scratch/a2eaaec253d8/production-receiving/tastetable",
+  "sources": [
+    {
+      "file": "static/app.js",
+      "sha256": "ee6f2743b9b44fc43c25de384d36e5fb226b3d75c5e40f8c3297fb2a3a3589fd"
+    },
+    {
+      "file": "static/index.html",
+      "sha256": "34827c57d1bb3b81f11a56b5f4c905b2c88491c84bb1c8991ad61bca8dbe8f51"
+    },
+    {
+      "file": "static/plan-request.js",
+      "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995"
+    },
+    {
+      "file": "static/style.css",
+      "sha256": "b6d02475b444667386dca7fc1587afadc361071283a96fd75fd30b48ef7178e6"
+    }
+  ],
+  "sourceUnchanged": true,
+  "verifierSha256": "90d6f347d87edb47445e361759f640bfaf41b972de293811003665fd8210ef80",
+  "results": [
+    {
+      "name": "Newest form request wins when transport ignores abort",
+      "passed": true,
+      "evidence": {
+        "visiblePlan": "Monday · Latest plan restaurant affinity 0.80\nAuthored request-lifecycle fixture.\nQloo id: FIX-LIFECYCLE",
+        "transportIgnoresAbort": true
+      }
+    },
+    {
+      "name": "New request and failure never retain an old visible plan",
+      "passed": true,
+      "evidence": {
+        "oldVisibleDuringWait": false,
+        "oldVisibleAfterFailure": false,
+        "inputsPreserved": true
+      }
+    },
+    {
+      "name": "Current validation errors stay actionable and render as plain text",
+      "passed": true,
+      "evidence": {
+        "validationDetailVisible": true,
+        "backendDetailUsesTextContent": true
+      }
+    },
+    {
+      "name": "Editing pending inputs invalidates their eventual result",
+      "passed": true,
+      "evidence": {
+        "lateResultHidden": true,
+        "changedConstraintPreserved": true
+      }
+    },
+    {
+      "name": "Late sample response and stale error cannot replace a manual plan",
+      "passed": true,
+      "evidence": {
+        "staleSampleErrorIgnored": true
+      }
+    },
+    {
+      "name": "Stop waiting aborts actual browser fetch and permits a fresh plan",
+      "passed": true,
+      "evidence": {
+        "browserFetchAborted": true,
+        "nextRequestSucceeded": true,
+        "mobileNoHorizontalOverflow": true
+      }
+    },
+    {
+      "name": "Pagehide invalidates late work and a restored page remains usable",
+      "passed": true,
+      "evidence": {
+        "nativeEventDispatched": "pagehide",
+        "persisted": true,
+        "actualBackForwardCacheNotClaimed": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "providerCalls": 0,
+  "backendExecution": false,
+  "limits": [
+    "Authored local HTTP responses; no recommendation-model or care-constraint qualification.",
+    "Adverse completion controls deliberately use a fetch wrapper that ignores AbortSignal.",
+    "Pagehide control dispatches the native event; actual back-forward-cache admission is not established."
+  ]
+}

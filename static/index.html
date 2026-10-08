@@ -22,10 +22,10 @@
   <section class="card">
     <h2>1. Tastes &amp; constraints</h2>
     <div class="sample">
-      <button id="sampleBtn" class="primary">Try a sample persona</button>
+      <button id="sampleBtn" class="primary" disabled>Try a sample persona</button>
       <select id="personaSel" aria-label="Sample persona"></select>
     </div>
-    <form id="form">
+    <form id="form" aria-busy="false">
       <label>Favourite cuisines <input name="cuisines" placeholder="Cuban, Mexican"></label>
       <label>Music they love (artists / era) <input name="music" placeholder="Celia Cruz"></label>
       <label>Favourite films <input name="films" placeholder="West Side Story"></label>
@@ -38,6 +38,8 @@
       </fieldset>
       <button type="submit">Plan my week</button>
     </form>
+    <p id="requestStatus" class="why" role="status" aria-live="polite" aria-atomic="true"></p>
+    <button id="cancelPlan" type="button" hidden>Stop waiting</button>
   </section>
 
   <section id="results" hidden>
@@ -61,6 +63,7 @@
   </section>
 </main>
 <footer>MIT licensed &middot; Uses Qloo's Taste AI insights. Qloo results describe aggregate affinities, not facts about any individual.</footer>
+<script src="/static/plan-request.js"></script>
 <script src="/static/app.js"></script>
 </body>
 </html>

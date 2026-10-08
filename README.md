@@ -92,6 +92,35 @@ pytest -q                                # run the test suite
 
 By default the app runs in **mock mode** (it uses the fixture and makes no network calls).
 
+### Changing or stopping a plan request
+
+The browser shows results only for the newest submitted inputs. Starting another
+sample or manual plan hides the previous result. Editing tastes or constraints
+also clears the displayed plan and invalidates any pending response, so an older
+request cannot restore a plan for inputs that are no longer selected. Request
+errors appear beside the form and leave the fields available to correct or retry.
+
+**Stop waiting** abandons the current browser request and permits a fresh one.
+The browser requests cancellation, but this does not establish that work already
+started by the server or a provider has stopped. There is no automatic retry.
+Leaving the page invalidates outstanding responses; returning to a preserved
+page allows a new request.
+
+The request controller has dependency-free native JavaScript tests:
+
+```bash
+node --test tests/plan-request.test.cjs
+```
+
+For browser qualification, `node tools/check_plan_request_browser.cjs` serves the
+actual static files on a temporary loopback port and uses authored HTTP responses.
+It requires Playwright and Chromium; `TASTETABLE_PLAYWRIGHT` can point to an installed
+Playwright module and `TASTETABLE_CHROMIUM` to a Chromium executable. Set
+`TASTETABLE_EVIDENCE_DIR` to choose the receipt and screenshot directory. It exercises
+out-of-order completions, failures, input edits, sample/manual overlap, real fetch
+cancellation and a pagehide lifecycle event without contacting Qloo or a model.
+These checks qualify browser request handling, not recommendation or constraint quality.
+
 ### Going live with Qloo
 
 ```bash
