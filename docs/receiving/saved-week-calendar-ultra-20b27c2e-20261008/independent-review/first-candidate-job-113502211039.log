@@ -1,0 +1,516 @@
+﻿2026-10-08T19:33:20.2724578Z Current runner version: '2.337.0'
+2026-10-08T19:33:20.2749893Z ##[group]Runner Image Provisioner
+2026-10-08T19:33:20.2751016Z Hosted Compute Agent
+2026-10-08T19:33:20.2751674Z Version: 20261002.596
+2026-10-08T19:33:20.2752251Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-08T19:33:20.2752943Z Build Date: 2026-10-02T22:28:27Z
+2026-10-08T19:33:20.2753593Z Worker ID: {1c757aad-c6df-4299-9a42-8211086964d9}
+2026-10-08T19:33:20.2754246Z Region: westus3
+2026-10-08T19:33:20.2754830Z Cloud: Azure
+2026-10-08T19:33:20.2755321Z ##[endgroup]
+2026-10-08T19:33:20.2756909Z ##[group]Operating System
+2026-10-08T19:33:20.2757504Z Ubuntu
+2026-10-08T19:33:20.2758006Z 24.04.5
+2026-10-08T19:33:20.2758495Z LTS
+2026-10-08T19:33:20.2758958Z ##[endgroup]
+2026-10-08T19:33:20.2759431Z ##[group]Runner Image
+2026-10-08T19:33:20.2760000Z Image: ubuntu-24.04
+2026-10-08T19:33:20.2760803Z Version: 20261004.327.1
+2026-10-08T19:33:20.2762079Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-08T19:33:20.2763460Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-08T19:33:20.2764381Z ##[endgroup]
+2026-10-08T19:33:20.2765432Z ##[group]GITHUB_TOKEN Permissions
+2026-10-08T19:33:20.2767530Z Contents: read
+2026-10-08T19:33:20.2768085Z Metadata: read
+2026-10-08T19:33:20.2768649Z ##[endgroup]
+2026-10-08T19:33:20.2771104Z Secret source: Actions
+2026-10-08T19:33:20.2772055Z Cache mode: write
+2026-10-08T19:33:20.2772758Z Prepare workflow directory
+2026-10-08T19:33:20.3155878Z Prepare all required actions
+2026-10-08T19:33:20.3206683Z Getting action download info
+2026-10-08T19:33:20.6198643Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-08T19:33:20.6942640Z Download action repository 'actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97' (SHA:5fda3b95a4ea91299a34e894583c3862153e4b97)
+2026-10-08T19:33:20.8795338Z Complete job name: test
+2026-10-08T19:33:20.9619954Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-08T19:33:20.9621180Z with:
+2026-10-08T19:33:20.9621620Z   repository: Jacob-Met/tastetable
+2026-10-08T19:33:20.9625133Z   token: ***
+2026-10-08T19:33:20.9625524Z   ssh-strict: true
+2026-10-08T19:33:20.9625927Z   ssh-user: git
+2026-10-08T19:33:20.9626334Z   persist-credentials: true
+2026-10-08T19:33:20.9626780Z   clean: true
+2026-10-08T19:33:20.9627191Z   sparse-checkout-cone-mode: true
+2026-10-08T19:33:20.9627665Z   fetch-depth: 1
+2026-10-08T19:33:20.9628063Z   fetch-tags: false
+2026-10-08T19:33:20.9628463Z   show-progress: true
+2026-10-08T19:33:20.9628862Z   lfs: false
+2026-10-08T19:33:20.9629241Z   submodules: false
+2026-10-08T19:33:20.9629647Z   set-safe-directory: true
+2026-10-08T19:33:20.9630098Z   allow-unsafe-pr-checkout: false
+2026-10-08T19:33:20.9630927Z ##[endgroup]
+2026-10-08T19:33:21.0630775Z Syncing repository: Jacob-Met/tastetable
+2026-10-08T19:33:21.0633690Z ##[group]Getting Git version info
+2026-10-08T19:33:21.0635162Z Working directory is '/home/runner/work/tastetable/tastetable'
+2026-10-08T19:33:21.0636886Z [command]/usr/bin/git version
+2026-10-08T19:33:21.0732939Z git version 2.55.0
+2026-10-08T19:33:21.0756471Z ##[endgroup]
+2026-10-08T19:33:21.0771170Z Temporarily overriding HOME='/home/runner/work/_temp/d9af2054-c98f-4ea3-a7af-f08fa2d4db2e' before making global git config changes
+2026-10-08T19:33:21.0773640Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T19:33:21.0775676Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tastetable/tastetable
+2026-10-08T19:33:21.0831566Z Deleting the contents of '/home/runner/work/tastetable/tastetable'
+2026-10-08T19:33:21.0837169Z ##[group]Determining repository object format
+2026-10-08T19:33:21.0838934Z ##[endgroup]
+2026-10-08T19:33:21.0840199Z ##[group]Initializing the repository
+2026-10-08T19:33:21.0845459Z [command]/usr/bin/git init /home/runner/work/tastetable/tastetable
+2026-10-08T19:33:21.0954109Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-08T19:33:21.0956998Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-08T19:33:21.0961128Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-08T19:33:21.0963133Z hint: call:
+2026-10-08T19:33:21.0964033Z hint:
+2026-10-08T19:33:21.0965065Z hint: 	git config --global init.defaultBranch <name>
+2026-10-08T19:33:21.0966263Z hint:
+2026-10-08T19:33:21.0969582Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-08T19:33:21.0982310Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-08T19:33:21.0984017Z hint:
+2026-10-08T19:33:21.0984956Z hint: 	git branch -m <name>
+2026-10-08T19:33:21.0986369Z hint:
+2026-10-08T19:33:21.0988619Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-08T19:33:21.0990953Z Initialized empty Git repository in /home/runner/work/tastetable/tastetable/.git/
+2026-10-08T19:33:21.0994747Z [command]/usr/bin/git remote add origin https://github.com/Jacob-Met/tastetable
+2026-10-08T19:33:21.1013952Z ##[endgroup]
+2026-10-08T19:33:21.1015242Z ##[group]Disabling automatic garbage collection
+2026-10-08T19:33:21.1020645Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-08T19:33:21.1055234Z ##[endgroup]
+2026-10-08T19:33:21.1056644Z ##[group]Setting up auth
+2026-10-08T19:33:21.1057806Z Removing SSH command configuration
+2026-10-08T19:33:21.1062536Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T19:33:21.1097877Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T19:33:21.1444682Z Removing HTTP extra header
+2026-10-08T19:33:21.1450578Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T19:33:21.1484848Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T19:33:21.1699752Z Removing includeIf entries pointing to credentials config files
+2026-10-08T19:33:21.1708900Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T19:33:21.1743317Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T19:33:21.1937139Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-175c58e8-3c8a-464c-8b05-82fa443ac1a9.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-08T19:33:21.1971316Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/tastetable/tastetable/.git.path /home/runner/work/_temp/git-credentials-175c58e8-3c8a-464c-8b05-82fa443ac1a9.config
+2026-10-08T19:33:21.2000039Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/tastetable/tastetable/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-175c58e8-3c8a-464c-8b05-82fa443ac1a9.config
+2026-10-08T19:33:21.2032440Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-175c58e8-3c8a-464c-8b05-82fa443ac1a9.config
+2026-10-08T19:33:21.2061062Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-175c58e8-3c8a-464c-8b05-82fa443ac1a9.config
+2026-10-08T19:33:21.2086120Z ##[endgroup]
+2026-10-08T19:33:21.2086900Z ##[group]Fetching the repository
+2026-10-08T19:33:21.2093027Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +2bdc6005bd8e95c87858d945e8bc01c3b24f801c:refs/remotes/pull/46/merge
+2026-10-08T19:33:23.2748637Z From https://github.com/Jacob-Met/tastetable
+2026-10-08T19:33:23.2751158Z  * [new ref]         2bdc6005bd8e95c87858d945e8bc01c3b24f801c -> pull/46/merge
+2026-10-08T19:33:23.2754802Z ##[endgroup]
+2026-10-08T19:33:23.2756366Z ##[group]Determining the checkout info
+2026-10-08T19:33:23.2758136Z ##[endgroup]
+2026-10-08T19:33:23.2759447Z [command]/usr/bin/git sparse-checkout disable
+2026-10-08T19:33:23.2805596Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-08T19:33:23.2834363Z ##[group]Checking out the ref
+2026-10-08T19:33:23.2838695Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/46/merge
+2026-10-08T19:33:23.3627867Z Note: switching to 'refs/remotes/pull/46/merge'.
+2026-10-08T19:33:23.3633497Z 
+2026-10-08T19:33:23.3634817Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-08T19:33:23.3637495Z changes and commit them, and you can discard any commits you make in this
+2026-10-08T19:33:23.3640622Z state without impacting any branches by switching back to a branch.
+2026-10-08T19:33:23.3642498Z 
+2026-10-08T19:33:23.3643613Z If you want to create a new branch to retain commits you create, you may
+2026-10-08T19:33:23.3646495Z do so (now or later) by using -c with the switch command. Example:
+2026-10-08T19:33:23.3648096Z 
+2026-10-08T19:33:23.3648754Z   git switch -c <new-branch-name>
+2026-10-08T19:33:23.3649882Z 
+2026-10-08T19:33:23.3650738Z Or undo this operation with:
+2026-10-08T19:33:23.3651847Z 
+2026-10-08T19:33:23.3652478Z   git switch -
+2026-10-08T19:33:23.3653458Z 
+2026-10-08T19:33:23.3654893Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-08T19:33:23.3656157Z 
+2026-10-08T19:33:23.3657544Z HEAD is now at 2bdc600 Merge 06225ea1e650fa43d9a4847f069dbf83bb58468f into 0f1316eed24611345e722a9938db8ce03c181404
+2026-10-08T19:33:23.3662431Z ##[endgroup]
+2026-10-08T19:33:23.3689015Z [command]/usr/bin/git log -1 --format=%H
+2026-10-08T19:33:23.3713925Z 2bdc6005bd8e95c87858d945e8bc01c3b24f801c
+2026-10-08T19:33:23.4158361Z ##[group]Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+2026-10-08T19:33:23.4160081Z with:
+2026-10-08T19:33:23.4161090Z   python-version: 3.12
+2026-10-08T19:33:23.4162112Z   check-latest: false
+2026-10-08T19:33:23.4171351Z   token: ***
+2026-10-08T19:33:23.4172293Z   update-environment: true
+2026-10-08T19:33:23.4173373Z   allow-prereleases: false
+2026-10-08T19:33:23.4174469Z   freethreaded: false
+2026-10-08T19:33:23.4175441Z ##[endgroup]
+2026-10-08T19:33:23.5377136Z ##[group]Installed versions
+2026-10-08T19:33:23.5451917Z Successfully set up CPython (3.12.15)
+2026-10-08T19:33:23.5454796Z ##[endgroup]
+2026-10-08T19:33:23.5700067Z ##[group]Run pip install -r requirements.txt
+2026-10-08T19:33:23.5702707Z [36;1mpip install -r requirements.txt[0m
+2026-10-08T19:33:23.5933987Z shell: /usr/bin/bash -e {0}
+2026-10-08T19:33:23.5935167Z env:
+2026-10-08T19:33:23.5936275Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T19:33:23.5938062Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-08T19:33:23.5939875Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T19:33:23.5941713Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T19:33:23.5943344Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T19:33:23.5944972Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-08T19:33:23.5946345Z ##[endgroup]
+2026-10-08T19:33:24.4298717Z Collecting fastapi>=0.110 (from -r requirements.txt (line 1))
+2026-10-08T19:33:24.5001066Z   Downloading fastapi-0.143.0-py3-none-any.whl.metadata (26 kB)
+2026-10-08T19:33:24.5427237Z Collecting uvicorn>=0.29 (from -r requirements.txt (line 2))
+2026-10-08T19:33:24.5537508Z   Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+2026-10-08T19:33:24.5771483Z Collecting httpx>=0.27 (from -r requirements.txt (line 3))
+2026-10-08T19:33:24.5882524Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+2026-10-08T19:33:24.6233324Z Collecting pytest>=8 (from -r requirements.txt (line 4))
+2026-10-08T19:33:24.6339489Z   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+2026-10-08T19:33:24.6796375Z Collecting starlette>=0.46.0 (from fastapi>=0.110->-r requirements.txt (line 1))
+2026-10-08T19:33:24.6900187Z   Downloading starlette-1.7.0-py3-none-any.whl.metadata (6.6 kB)
+2026-10-08T19:33:24.8078777Z Collecting pydantic>=2.9.0 (from fastapi>=0.110->-r requirements.txt (line 1))
+2026-10-08T19:33:24.8197027Z   Downloading pydantic-2.14.0-py3-none-any.whl.metadata (131 kB)
+2026-10-08T19:33:24.8578687Z Collecting typing-extensions>=4.8.0 (from fastapi>=0.110->-r requirements.txt (line 1))
+2026-10-08T19:33:24.8689515Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-10-08T19:33:24.8867135Z Collecting typing-inspection>=0.4.2 (from fastapi>=0.110->-r requirements.txt (line 1))
+2026-10-08T19:33:24.8973580Z   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+2026-10-08T19:33:24.9145515Z Collecting annotated-doc>=0.0.2 (from fastapi>=0.110->-r requirements.txt (line 1))
+2026-10-08T19:33:24.9251125Z   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+2026-10-08T19:33:24.9492791Z Collecting opentelemetry-api>=1.44.0 (from fastapi>=0.110->-r requirements.txt (line 1))
+2026-10-08T19:33:24.9599263Z   Downloading opentelemetry_api-1.45.1-py3-none-any.whl.metadata (1.4 kB)
+2026-10-08T19:33:24.9829681Z Collecting click>=7.0 (from uvicorn>=0.29->-r requirements.txt (line 2))
+2026-10-08T19:33:24.9935142Z   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+2026-10-08T19:33:25.0114835Z Collecting h11>=0.8 (from uvicorn>=0.29->-r requirements.txt (line 2))
+2026-10-08T19:33:25.0219809Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-10-08T19:33:25.0472756Z Collecting anyio (from httpx>=0.27->-r requirements.txt (line 3))
+2026-10-08T19:33:25.0584212Z   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+2026-10-08T19:33:25.0842655Z Collecting certifi (from httpx>=0.27->-r requirements.txt (line 3))
+2026-10-08T19:33:25.0951932Z   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+2026-10-08T19:33:25.1218043Z Collecting httpcore==1.* (from httpx>=0.27->-r requirements.txt (line 3))
+2026-10-08T19:33:25.1326887Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+2026-10-08T19:33:25.1625821Z Collecting idna (from httpx>=0.27->-r requirements.txt (line 3))
+2026-10-08T19:33:25.1736486Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+2026-10-08T19:33:25.1934905Z Collecting iniconfig>=1.0.1 (from pytest>=8->-r requirements.txt (line 4))
+2026-10-08T19:33:25.2040099Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+2026-10-08T19:33:25.2253628Z Collecting packaging>=22 (from pytest>=8->-r requirements.txt (line 4))
+2026-10-08T19:33:25.2363694Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-10-08T19:33:25.2553533Z Collecting pluggy<2,>=1.5 (from pytest>=8->-r requirements.txt (line 4))
+2026-10-08T19:33:25.2660907Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2026-10-08T19:33:25.2913760Z Collecting pygments>=2.7.2 (from pytest>=8->-r requirements.txt (line 4))
+2026-10-08T19:33:25.3019550Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-10-08T19:33:25.3237323Z Collecting annotated-types>=0.6.0 (from pydantic>=2.9.0->fastapi>=0.110->-r requirements.txt (line 1))
+2026-10-08T19:33:25.3346509Z   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+2026-10-08T19:33:25.9991900Z Collecting pydantic-core==2.50.0 (from pydantic>=2.9.0->fastapi>=0.110->-r requirements.txt (line 1))
+2026-10-08T19:33:26.0099340Z   Downloading pydantic_core-2.50.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.5 kB)
+2026-10-08T19:33:26.0325178Z Downloading fastapi-0.143.0-py3-none-any.whl (144 kB)
+2026-10-08T19:33:26.0544406Z Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+2026-10-08T19:33:26.0670254Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+2026-10-08T19:33:26.0796382Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+2026-10-08T19:33:26.0924483Z Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+2026-10-08T19:33:26.1162670Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2026-10-08T19:33:26.1288678Z Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+2026-10-08T19:33:26.1414164Z Downloading click-8.5.0-py3-none-any.whl (125 kB)
+2026-10-08T19:33:26.1543229Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-10-08T19:33:26.1666699Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+2026-10-08T19:33:26.1795638Z Downloading opentelemetry_api-1.45.1-py3-none-any.whl (60 kB)
+2026-10-08T19:33:26.1925503Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+2026-10-08T19:33:26.2057335Z Downloading pydantic-2.14.0-py3-none-any.whl (487 kB)
+2026-10-08T19:33:26.2224277Z Downloading pydantic_core-2.50.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.2 MB)
+2026-10-08T19:33:26.2477030Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 84.6 MB/s  0:00:00
+2026-10-08T19:33:26.2586965Z Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+2026-10-08T19:33:26.2715000Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-10-08T19:33:26.2791281Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 186.1 MB/s  0:00:00
+2026-10-08T19:33:26.2897923Z Downloading starlette-1.7.0-py3-none-any.whl (78 kB)
+2026-10-08T19:33:26.3023259Z Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+2026-10-08T19:33:26.3155176Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+2026-10-08T19:33:26.3289864Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-08T19:33:26.3416908Z Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+2026-10-08T19:33:26.3545907Z Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+2026-10-08T19:33:26.4718347Z Installing collected packages: typing-extensions, pygments, pluggy, packaging, iniconfig, idna, h11, click, certifi, annotated-types, annotated-doc, uvicorn, typing-inspection, pytest, pydantic-core, opentelemetry-api, httpcore, anyio, starlette, pydantic, httpx, fastapi
+2026-10-08T19:33:28.4166967Z 
+2026-10-08T19:33:28.4189779Z Successfully installed annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 certifi-2026.7.22 click-8.5.0 fastapi-0.143.0 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.20 iniconfig-2.3.1 opentelemetry-api-1.45.1 packaging-26.3 pluggy-1.6.0 pydantic-2.14.0 pydantic-core-2.50.0 pygments-2.21.0 pytest-9.1.1 starlette-1.7.0 typing-extensions-4.16.0 typing-inspection-0.4.4 uvicorn-0.54.0
+2026-10-08T19:33:28.5492421Z ##[group]Run python -m pytest -q
+2026-10-08T19:33:28.5492738Z [36;1mpython -m pytest -q[0m
+2026-10-08T19:33:28.5532765Z shell: /usr/bin/bash -e {0}
+2026-10-08T19:33:28.5533025Z env:
+2026-10-08T19:33:28.5533301Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T19:33:28.5533727Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-08T19:33:28.5534151Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T19:33:28.5534525Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T19:33:28.5534911Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T19:33:28.5535278Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-08T19:33:28.5535598Z ##[endgroup]
+2026-10-08T19:33:30.1381924Z ............................................. [ 18%]
+2026-10-08T19:33:43.3615749Z ...............................................................TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_native_codec_writer_controls_and_manual_occurrences[False]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:43.4079400Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_native_codec_writer_controls_and_manual_occurrences[True]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:43.5074815Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_public_api_preserves_exact_native_bytes_and_frozen_receipt_fields[mock]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:43.6065166Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_public_api_preserves_exact_native_bytes_and_frozen_receipt_fields[live]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:43.6976084Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_public_api_preserves_exact_native_bytes_and_frozen_receipt_fields[bom]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:43.8451389Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_actual_cli_exact_file_receipt_and_repeat_identity[False]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:43.9953575Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_actual_cli_exact_file_receipt_and_repeat_identity[True]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:44.1390737Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_null_identity_requires_explicit_api_choice_and_retains_timestamps", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:44.1908965Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_existing_identity_refuses_even_equal_api_override[0123456789abcdef0123456789abcdef]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:44.2436148Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_existing_identity_refuses_even_equal_api_override[ffffffffffffffffffffffffffffffff]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:44.2945114Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_new_api_identity_must_be_explicit_native_identifier[]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:44.3447046Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_new_api_identity_must_be_explicit_native_identifier[ABCDEF0123456789ABCDEF0123456789AB]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:44.3947338Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_new_api_identity_must_be_explicit_native_identifier[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:44.4435470Z . [ 48%]
+2026-10-08T19:33:44.4443809Z TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_new_api_identity_must_be_explicit_native_identifier[7]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:44.4975320Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_new_api_identity_must_be_explicit_native_identifier[None]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:44.7311005Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_actual_cli_explicit_new_calendar_repeated_creations_are_distinct", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:44.7676826Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_original_native_rejects_whole_invalid_arrangement_control[unknown-source]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:44.8073812Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_original_native_rejects_whole_invalid_arrangement_control[all-omitted]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:44.8458363Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_original_native_rejects_whole_invalid_arrangement_control[invalid-date]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:44.8826897Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_original_native_rejects_whole_invalid_arrangement_control[extra-assignment]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:44.9176079Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_original_native_rejects_whole_invalid_arrangement_control[missing-calendar-id]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:44.9564232Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_original_native_rejects_whole_invalid_arrangement_control[mismatched-constraints]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:44.9931737Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_original_native_rejects_whole_invalid_arrangement_control[control-in-omitted-pick]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:45.0300946Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_original_native_rejects_whole_invalid_arrangement_control[surrogate-in-source]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:45.0670990Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_original_native_rejects_whole_invalid_arrangement_control[duplicate-original-slot]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:45.1036320Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_original_native_rejects_whole_invalid_arrangement_control[empty-plan]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:45.2099864Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_public_api_and_cli_refuse_whole_native_invalid_input[unknown-source]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:45.3150583Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_public_api_and_cli_refuse_whole_native_invalid_input[all-omitted]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:45.4219181Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_public_api_and_cli_refuse_whole_native_invalid_input[invalid-date]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:45.5248964Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_public_api_and_cli_refuse_whole_native_invalid_input[extra-assignment]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:45.6320194Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_public_api_and_cli_refuse_whole_native_invalid_input[missing-calendar-id]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:45.7386628Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_public_api_and_cli_refuse_whole_native_invalid_input[mismatched-constraints]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:45.8402935Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_public_api_and_cli_refuse_whole_native_invalid_input[control-in-omitted-pick]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:45.9499369Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_public_api_and_cli_refuse_whole_native_invalid_input[surrogate-in-source]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:46.0581202Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_public_api_and_cli_refuse_whole_native_invalid_input[duplicate-original-slot]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:46.1575615Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_public_api_and_cli_refuse_whole_native_invalid_input[empty-plan]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:46.2101420Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_actual_cli_strict_bytes_and_size_are_atomic[trailing-junk]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:46.2645059Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_actual_cli_strict_bytes_and_size_are_atomic[double-bom]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:46.3166901Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_actual_cli_strict_bytes_and_size_are_atomic[invalid-utf8]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:46.3679705Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_actual_cli_strict_bytes_and_size_are_atomic[overlong-utf8]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:46.4186920Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_actual_cli_strict_bytes_and_size_are_atomic[utf8-surrogate]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:46.4853266Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_actual_cli_strict_bytes_and_size_are_atomic[oversize]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:46.6370483Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_exact_four_mib_valid_input_is_accepted_without_rewrite", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:46.6871020Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_occupied_output_and_input_aliases_never_replace[file]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:46.7396890Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_occupied_output_and_input_aliases_never_replace[directory]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:46.7911313Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_occupied_output_and_input_aliases_never_replace[symlink]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:46.8424995Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_occupied_output_and_input_aliases_never_replace[dangling]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:46.8960465Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_occupied_output_and_input_aliases_never_replace[hardlink-input]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:46.9502710Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_occupied_output_and_input_aliases_never_replace[input-itself]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:47.0007795Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_nonregular_or_missing_input_is_bounded_refusal[directory]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:47.0539178Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_nonregular_or_missing_input_is_bounded_refusal[fifo]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:47.1078732Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_nonregular_or_missing_input_is_bounded_refusal[missing]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:47.1639170Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_actual_argument_refusals_leave_no_output[none]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:47.2149222Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_actual_argument_refusals_leave_no_output[unknown]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:47.2658493Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_actual_argument_refusals_leave_no_output[duplicate-input]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:47.3169012Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_actual_argument_refusals_leave_no_output[duplicate-output]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:47.3689220Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_actual_argument_refusals_leave_no_output[duplicate-new]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:47.4246536Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_actual_argument_refusals_leave_no_output[help-mixed]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:47.4777419Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_actual_argument_refusals_leave_no_output[stdin]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:47.5318709Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_actual_argument_refusals_leave_no_output[existing-new]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:47.5837971Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_actual_argument_refusals_leave_no_output[missing-output]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:47.6353626Z .TASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_help_is_standalone_and_creates_nothing", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:47.7698878Z FTASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic[observe]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:47.8817409Z FTASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic[race]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:47.9984118Z FTASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic[link-failure]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:48.1087561Z FTASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic[cleanup]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:48.2171528Z FTASTETABLE_INDEPENDENT_SOURCE {"case": "tests/test_saved_week_calendar_receiving_ultra.py::test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic[receipt]", "sha256": {"static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b", "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614", "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809", "tests/fixtures/saved-week-response.json": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f", "tools/saved_week_to_calendar.mjs": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"}, "unchanged": true}
+2026-10-08T19:33:48.2338425Z .... [ 71%]
+2026-10-08T19:33:48.3345084Z ........................... [ 82%]
+2026-10-08T19:33:48.5061032Z .............................................        [100%]
+2026-10-08T19:33:48.5062021Z =================================== FAILURES ===================================
+2026-10-08T19:33:48.5063169Z _ test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic[observe] _
+2026-10-08T19:33:48.5063739Z 
+2026-10-08T19:33:48.5064531Z week = {'format': 'tastetable.saved-week.v1', 'receivedAt': '2027-12-31T23:59:59.789Z', 'savedAt': '2028-02-27T19:08:07.006Z', 'calendarId': '0123456789abcdef0123456789abcdef', ...}
+2026-10-08T19:33:48.5065971Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b0')
+2026-10-08T19:33:48.5066732Z mode = 'observe'
+2026-10-08T19:33:48.5066949Z 
+2026-10-08T19:33:48.5067373Z     @pytest.mark.parametrize("mode", ["observe", "race", "link-failure", "cleanup", "receipt"])
+2026-10-08T19:33:48.5068402Z     def test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic(week, tmp_path, mode):
+2026-10-08T19:33:48.5069206Z         text = _text(week)
+2026-10-08T19:33:48.5069649Z         expected = _oracle(text)
+2026-10-08T19:33:48.5070189Z         directory, source, output = _files(tmp_path, text)
+2026-10-08T19:33:48.5070996Z         before = _snapshot(directory)
+2026-10-08T19:33:48.5071517Z         preload = tmp_path / "delivery-preload.cjs"
+2026-10-08T19:33:48.5072054Z         preload.write_text(DELIVERY_PRELOAD)
+2026-10-08T19:33:48.5072559Z         trace_path = tmp_path / "delivery-trace.json"
+2026-10-08T19:33:48.5073320Z         p = _cli(["--input", source, "--output", output], preload=preload, extra_env={
+2026-10-08T19:33:48.5074234Z             "TT_REVIEW_FAULT": mode, "TT_REVIEW_OUTPUT": str(output), "TT_REVIEW_TRACE": str(trace_path),
+2026-10-08T19:33:48.5074916Z         })
+2026-10-08T19:33:48.5075580Z         assert trace_path.is_file(), (p.returncode, p.stdout, p.stderr)
+2026-10-08T19:33:48.5076341Z         trace = json.loads(trace_path.read_text())
+2026-10-08T19:33:48.5077070Z         assert len(trace["linkCalls"]) == 1, trace
+2026-10-08T19:33:48.5077723Z         observed = trace["linkCalls"][0]
+2026-10-08T19:33:48.5078554Z >       assert Path(observed["stage"]).parent == output.parent
+2026-10-08T19:33:48.5080876Z E       AssertionError: assert PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b0/files/.tastetable-calendar-SXQBFJ') == PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b0/files')
+2026-10-08T19:33:48.5084367Z E        +  where PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b0/files/.tastetable-calendar-SXQBFJ') = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b0/files/.tastetable-calendar-SXQBFJ/completed.ics').parent
+2026-10-08T19:33:48.5088114Z E        +    where PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b0/files/.tastetable-calendar-SXQBFJ/completed.ics') = Path('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b0/files/.tastetable-calendar-SXQBFJ/completed.ics')
+2026-10-08T19:33:48.5091913Z E        +  and   PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b0/files') = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b0/files/calendar result.ics').parent
+2026-10-08T19:33:48.5093511Z 
+2026-10-08T19:33:48.5093920Z tests/test_saved_week_calendar_receiving_ultra.py:564: AssertionError
+2026-10-08T19:33:48.5095059Z _ test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic[race] __
+2026-10-08T19:33:48.5095794Z 
+2026-10-08T19:33:48.5096880Z week = {'format': 'tastetable.saved-week.v1', 'receivedAt': '2027-12-31T23:59:59.789Z', 'savedAt': '2028-02-27T19:08:07.006Z', 'calendarId': '0123456789abcdef0123456789abcdef', ...}
+2026-10-08T19:33:48.5098636Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b1')
+2026-10-08T19:33:48.5099495Z mode = 'race'
+2026-10-08T19:33:48.5099750Z 
+2026-10-08T19:33:48.5100231Z     @pytest.mark.parametrize("mode", ["observe", "race", "link-failure", "cleanup", "receipt"])
+2026-10-08T19:33:48.5101872Z     def test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic(week, tmp_path, mode):
+2026-10-08T19:33:48.5102967Z         text = _text(week)
+2026-10-08T19:33:48.5103509Z         expected = _oracle(text)
+2026-10-08T19:33:48.5104381Z         directory, source, output = _files(tmp_path, text)
+2026-10-08T19:33:48.5105148Z         before = _snapshot(directory)
+2026-10-08T19:33:48.5105758Z         preload = tmp_path / "delivery-preload.cjs"
+2026-10-08T19:33:48.5106414Z         preload.write_text(DELIVERY_PRELOAD)
+2026-10-08T19:33:48.5107037Z         trace_path = tmp_path / "delivery-trace.json"
+2026-10-08T19:33:48.5107821Z         p = _cli(["--input", source, "--output", output], preload=preload, extra_env={
+2026-10-08T19:33:48.5109033Z             "TT_REVIEW_FAULT": mode, "TT_REVIEW_OUTPUT": str(output), "TT_REVIEW_TRACE": str(trace_path),
+2026-10-08T19:33:48.5109946Z         })
+2026-10-08T19:33:48.5110689Z         assert trace_path.is_file(), (p.returncode, p.stdout, p.stderr)
+2026-10-08T19:33:48.5111473Z         trace = json.loads(trace_path.read_text())
+2026-10-08T19:33:48.5112096Z         assert len(trace["linkCalls"]) == 1, trace
+2026-10-08T19:33:48.5112691Z         observed = trace["linkCalls"][0]
+2026-10-08T19:33:48.5113346Z >       assert Path(observed["stage"]).parent == output.parent
+2026-10-08T19:33:48.5115448Z E       AssertionError: assert PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b1/files/.tastetable-calendar-4gR17R') == PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b1/files')
+2026-10-08T19:33:48.5119023Z E        +  where PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b1/files/.tastetable-calendar-4gR17R') = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b1/files/.tastetable-calendar-4gR17R/completed.ics').parent
+2026-10-08T19:33:48.5123524Z E        +    where PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b1/files/.tastetable-calendar-4gR17R/completed.ics') = Path('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b1/files/.tastetable-calendar-4gR17R/completed.ics')
+2026-10-08T19:33:48.5127045Z E        +  and   PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b1/files') = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b1/files/calendar result.ics').parent
+2026-10-08T19:33:48.5128729Z 
+2026-10-08T19:33:48.5129100Z tests/test_saved_week_calendar_receiving_ultra.py:564: AssertionError
+2026-10-08T19:33:48.5130208Z _ test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic[link-failure] _
+2026-10-08T19:33:48.5130996Z 
+2026-10-08T19:33:48.5132038Z week = {'format': 'tastetable.saved-week.v1', 'receivedAt': '2027-12-31T23:59:59.789Z', 'savedAt': '2028-02-27T19:08:07.006Z', 'calendarId': '0123456789abcdef0123456789abcdef', ...}
+2026-10-08T19:33:48.5134353Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b2')
+2026-10-08T19:33:48.5135627Z mode = 'link-failure'
+2026-10-08T19:33:48.5136012Z 
+2026-10-08T19:33:48.5136732Z     @pytest.mark.parametrize("mode", ["observe", "race", "link-failure", "cleanup", "receipt"])
+2026-10-08T19:33:48.5138670Z     def test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic(week, tmp_path, mode):
+2026-10-08T19:33:48.5140097Z         text = _text(week)
+2026-10-08T19:33:48.5140893Z         expected = _oracle(text)
+2026-10-08T19:33:48.5141750Z         directory, source, output = _files(tmp_path, text)
+2026-10-08T19:33:48.5142347Z         before = _snapshot(directory)
+2026-10-08T19:33:48.5142787Z         preload = tmp_path / "delivery-preload.cjs"
+2026-10-08T19:33:48.5143289Z         preload.write_text(DELIVERY_PRELOAD)
+2026-10-08T19:33:48.5143925Z         trace_path = tmp_path / "delivery-trace.json"
+2026-10-08T19:33:48.5144537Z         p = _cli(["--input", source, "--output", output], preload=preload, extra_env={
+2026-10-08T19:33:48.5145340Z             "TT_REVIEW_FAULT": mode, "TT_REVIEW_OUTPUT": str(output), "TT_REVIEW_TRACE": str(trace_path),
+2026-10-08T19:33:48.5145955Z         })
+2026-10-08T19:33:48.5146356Z         assert trace_path.is_file(), (p.returncode, p.stdout, p.stderr)
+2026-10-08T19:33:48.5147134Z         trace = json.loads(trace_path.read_text())
+2026-10-08T19:33:48.5147624Z         assert len(trace["linkCalls"]) == 1, trace
+2026-10-08T19:33:48.5148070Z         observed = trace["linkCalls"][0]
+2026-10-08T19:33:48.5148536Z >       assert Path(observed["stage"]).parent == output.parent
+2026-10-08T19:33:48.5149910Z E       AssertionError: assert PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b2/files/.tastetable-calendar-9WD0lm') == PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b2/files')
+2026-10-08T19:33:48.5152496Z E        +  where PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b2/files/.tastetable-calendar-9WD0lm') = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b2/files/.tastetable-calendar-9WD0lm/completed.ics').parent
+2026-10-08T19:33:48.5155092Z E        +    where PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b2/files/.tastetable-calendar-9WD0lm/completed.ics') = Path('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b2/files/.tastetable-calendar-9WD0lm/completed.ics')
+2026-10-08T19:33:48.5157335Z E        +  and   PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b2/files') = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b2/files/calendar result.ics').parent
+2026-10-08T19:33:48.5158383Z 
+2026-10-08T19:33:48.5158640Z tests/test_saved_week_calendar_receiving_ultra.py:564: AssertionError
+2026-10-08T19:33:48.5159431Z _ test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic[cleanup] _
+2026-10-08T19:33:48.5160109Z 
+2026-10-08T19:33:48.5160982Z week = {'format': 'tastetable.saved-week.v1', 'receivedAt': '2027-12-31T23:59:59.789Z', 'savedAt': '2028-02-27T19:08:07.006Z', 'calendarId': '0123456789abcdef0123456789abcdef', ...}
+2026-10-08T19:33:48.5162153Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b3')
+2026-10-08T19:33:48.5162749Z mode = 'cleanup'
+2026-10-08T19:33:48.5162936Z 
+2026-10-08T19:33:48.5163310Z     @pytest.mark.parametrize("mode", ["observe", "race", "link-failure", "cleanup", "receipt"])
+2026-10-08T19:33:48.5164238Z     def test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic(week, tmp_path, mode):
+2026-10-08T19:33:48.5164901Z         text = _text(week)
+2026-10-08T19:33:48.5165260Z         expected = _oracle(text)
+2026-10-08T19:33:48.5165682Z         directory, source, output = _files(tmp_path, text)
+2026-10-08T19:33:48.5166147Z         before = _snapshot(directory)
+2026-10-08T19:33:48.5166568Z         preload = tmp_path / "delivery-preload.cjs"
+2026-10-08T19:33:48.5167039Z         preload.write_text(DELIVERY_PRELOAD)
+2026-10-08T19:33:48.5167484Z         trace_path = tmp_path / "delivery-trace.json"
+2026-10-08T19:33:48.5168153Z         p = _cli(["--input", source, "--output", output], preload=preload, extra_env={
+2026-10-08T19:33:48.5168945Z             "TT_REVIEW_FAULT": mode, "TT_REVIEW_OUTPUT": str(output), "TT_REVIEW_TRACE": str(trace_path),
+2026-10-08T19:33:48.5169546Z         })
+2026-10-08T19:33:48.5169958Z         assert trace_path.is_file(), (p.returncode, p.stdout, p.stderr)
+2026-10-08T19:33:48.5170651Z         trace = json.loads(trace_path.read_text())
+2026-10-08T19:33:48.5171086Z         assert len(trace["linkCalls"]) == 1, trace
+2026-10-08T19:33:48.5171522Z         observed = trace["linkCalls"][0]
+2026-10-08T19:33:48.5172005Z >       assert Path(observed["stage"]).parent == output.parent
+2026-10-08T19:33:48.5173478Z E       AssertionError: assert PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b3/files/.tastetable-calendar-Hp6xCq') == PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b3/files')
+2026-10-08T19:33:48.5175823Z E        +  where PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b3/files/.tastetable-calendar-Hp6xCq') = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b3/files/.tastetable-calendar-Hp6xCq/completed.ics').parent
+2026-10-08T19:33:48.5178514Z E        +    where PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b3/files/.tastetable-calendar-Hp6xCq/completed.ics') = Path('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b3/files/.tastetable-calendar-Hp6xCq/completed.ics')
+2026-10-08T19:33:48.5180923Z E        +  and   PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b3/files') = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b3/files/calendar result.ics').parent
+2026-10-08T19:33:48.5181945Z 
+2026-10-08T19:33:48.5182213Z tests/test_saved_week_calendar_receiving_ultra.py:564: AssertionError
+2026-10-08T19:33:48.5182954Z _ test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic[receipt] _
+2026-10-08T19:33:48.5183414Z 
+2026-10-08T19:33:48.5184124Z week = {'format': 'tastetable.saved-week.v1', 'receivedAt': '2027-12-31T23:59:59.789Z', 'savedAt': '2028-02-27T19:08:07.006Z', 'calendarId': '0123456789abcdef0123456789abcdef', ...}
+2026-10-08T19:33:48.5185301Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b4')
+2026-10-08T19:33:48.5185917Z mode = 'receipt'
+2026-10-08T19:33:48.5186097Z 
+2026-10-08T19:33:48.5186460Z     @pytest.mark.parametrize("mode", ["observe", "race", "link-failure", "cleanup", "receipt"])
+2026-10-08T19:33:48.5187397Z     def test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic(week, tmp_path, mode):
+2026-10-08T19:33:48.5188093Z         text = _text(week)
+2026-10-08T19:33:48.5188433Z         expected = _oracle(text)
+2026-10-08T19:33:48.5188867Z         directory, source, output = _files(tmp_path, text)
+2026-10-08T19:33:48.5189522Z         before = _snapshot(directory)
+2026-10-08T19:33:48.5189945Z         preload = tmp_path / "delivery-preload.cjs"
+2026-10-08T19:33:48.5190582Z         preload.write_text(DELIVERY_PRELOAD)
+2026-10-08T19:33:48.5191048Z         trace_path = tmp_path / "delivery-trace.json"
+2026-10-08T19:33:48.5191658Z         p = _cli(["--input", source, "--output", output], preload=preload, extra_env={
+2026-10-08T19:33:48.5192462Z             "TT_REVIEW_FAULT": mode, "TT_REVIEW_OUTPUT": str(output), "TT_REVIEW_TRACE": str(trace_path),
+2026-10-08T19:33:48.5193093Z         })
+2026-10-08T19:33:48.5193499Z         assert trace_path.is_file(), (p.returncode, p.stdout, p.stderr)
+2026-10-08T19:33:48.5194064Z         trace = json.loads(trace_path.read_text())
+2026-10-08T19:33:48.5194529Z         assert len(trace["linkCalls"]) == 1, trace
+2026-10-08T19:33:48.5194955Z         observed = trace["linkCalls"][0]
+2026-10-08T19:33:48.5195391Z >       assert Path(observed["stage"]).parent == output.parent
+2026-10-08T19:33:48.5196727Z E       AssertionError: assert PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b4/files/.tastetable-calendar-cRn2fo') == PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b4/files')
+2026-10-08T19:33:48.5199102Z E        +  where PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b4/files/.tastetable-calendar-cRn2fo') = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b4/files/.tastetable-calendar-cRn2fo/completed.ics').parent
+2026-10-08T19:33:48.5201833Z E        +    where PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b4/files/.tastetable-calendar-cRn2fo/completed.ics') = Path('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b4/files/.tastetable-calendar-cRn2fo/completed.ics')
+2026-10-08T19:33:48.5204134Z E        +  and   PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b4/files') = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b4/files/calendar result.ics').parent
+2026-10-08T19:33:48.5205227Z 
+2026-10-08T19:33:48.5205530Z tests/test_saved_week_calendar_receiving_ultra.py:564: AssertionError
+2026-10-08T19:33:48.5206167Z =============================== warnings summary ===============================
+2026-10-08T19:33:48.5206956Z ../../../../../opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/fastapi/testclient.py:1
+2026-10-08T19:33:48.5208682Z   /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+2026-10-08T19:33:48.5210041Z     from starlette.testclient import TestClient as TestClient  # noqa
+2026-10-08T19:33:48.5210571Z 
+2026-10-08T19:33:48.5210889Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2026-10-08T19:33:48.5211537Z =========================== short test summary info ============================
+2026-10-08T19:33:48.5213639Z FAILED tests/test_saved_week_calendar_receiving_ultra.py::test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic[observe] - AssertionError: assert PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b0/files/.tastetable-calendar-SXQBFJ') == PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b0/files')
+2026-10-08T19:33:48.5216820Z  +  where PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b0/files/.tastetable-calendar-SXQBFJ') = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b0/files/.tastetable-calendar-SXQBFJ/completed.ics').parent
+2026-10-08T19:33:48.5219365Z  +    where PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b0/files/.tastetable-calendar-SXQBFJ/completed.ics') = Path('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b0/files/.tastetable-calendar-SXQBFJ/completed.ics')
+2026-10-08T19:33:48.5221827Z  +  and   PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b0/files') = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b0/files/calendar result.ics').parent
+2026-10-08T19:33:48.5224797Z FAILED tests/test_saved_week_calendar_receiving_ultra.py::test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic[race] - AssertionError: assert PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b1/files/.tastetable-calendar-4gR17R') == PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b1/files')
+2026-10-08T19:33:48.5227789Z  +  where PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b1/files/.tastetable-calendar-4gR17R') = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b1/files/.tastetable-calendar-4gR17R/completed.ics').parent
+2026-10-08T19:33:48.5230207Z  +    where PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b1/files/.tastetable-calendar-4gR17R/completed.ics') = Path('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b1/files/.tastetable-calendar-4gR17R/completed.ics')
+2026-10-08T19:33:48.5233044Z  +  and   PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b1/files') = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b1/files/calendar result.ics').parent
+2026-10-08T19:33:48.5235199Z FAILED tests/test_saved_week_calendar_receiving_ultra.py::test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic[link-failure] - AssertionError: assert PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b2/files/.tastetable-calendar-9WD0lm') == PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b2/files')
+2026-10-08T19:33:48.5237572Z  +  where PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b2/files/.tastetable-calendar-9WD0lm') = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b2/files/.tastetable-calendar-9WD0lm/completed.ics').parent
+2026-10-08T19:33:48.5239484Z  +    where PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b2/files/.tastetable-calendar-9WD0lm/completed.ics') = Path('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b2/files/.tastetable-calendar-9WD0lm/completed.ics')
+2026-10-08T19:33:48.5241533Z  +  and   PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b2/files') = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b2/files/calendar result.ics').parent
+2026-10-08T19:33:48.5243651Z FAILED tests/test_saved_week_calendar_receiving_ultra.py::test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic[cleanup] - AssertionError: assert PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b3/files/.tastetable-calendar-Hp6xCq') == PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b3/files')
+2026-10-08T19:33:48.5245934Z  +  where PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b3/files/.tastetable-calendar-Hp6xCq') = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b3/files/.tastetable-calendar-Hp6xCq/completed.ics').parent
+2026-10-08T19:33:48.5247867Z  +    where PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b3/files/.tastetable-calendar-Hp6xCq/completed.ics') = Path('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b3/files/.tastetable-calendar-Hp6xCq/completed.ics')
+2026-10-08T19:33:48.5624059Z  +  and   PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b3/files') = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b3/files/calendar result.ics').parent
+2026-10-08T19:33:48.5626285Z FAILED tests/test_saved_week_calendar_receiving_ultra.py::test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic[receipt] - AssertionError: assert PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b4/files/.tastetable-calendar-cRn2fo') == PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b4/files')
+2026-10-08T19:33:48.5628891Z  +  where PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b4/files/.tastetable-calendar-cRn2fo') = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b4/files/.tastetable-calendar-cRn2fo/completed.ics').parent
+2026-10-08T19:33:48.5631002Z  +    where PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b4/files/.tastetable-calendar-cRn2fo/completed.ics') = Path('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b4/files/.tastetable-calendar-cRn2fo/completed.ics')
+2026-10-08T19:33:48.5632688Z  +  and   PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b4/files') = PosixPath('/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b4/files/calendar result.ics').parent
+2026-10-08T19:33:48.5633666Z 5 failed, 245 passed, 1 warning, 247 subtests passed in 19.39s
+2026-10-08T19:33:48.6796367Z ##[error]Process completed with exit code 1.
+2026-10-08T19:33:48.7032751Z Post job cleanup.
+2026-10-08T19:33:48.7911422Z [command]/usr/bin/git version
+2026-10-08T19:33:48.7951636Z git version 2.55.0
+2026-10-08T19:33:48.7996753Z Temporarily overriding HOME='/home/runner/work/_temp/b1ab709f-a6fc-4a30-8708-eb390ee6c260' before making global git config changes
+2026-10-08T19:33:48.7998053Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T19:33:48.8003607Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tastetable/tastetable
+2026-10-08T19:33:48.8039451Z Removing SSH command configuration
+2026-10-08T19:33:48.8047864Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T19:33:48.8092929Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T19:33:48.8402030Z Removing HTTP extra header
+2026-10-08T19:33:48.8403235Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T19:33:48.8447273Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T19:33:48.8762526Z Removing includeIf entries pointing to credentials config files
+2026-10-08T19:33:48.8763670Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T19:33:48.8805895Z includeif.gitdir:/home/runner/work/tastetable/tastetable/.git.path
+2026-10-08T19:33:48.8808738Z includeif.gitdir:/home/runner/work/tastetable/tastetable/.git/worktrees/*.path
+2026-10-08T19:33:48.8809724Z includeif.gitdir:/github/workspace/.git.path
+2026-10-08T19:33:48.8810685Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-08T19:33:48.8832524Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/tastetable/tastetable/.git.path
+2026-10-08T19:33:48.8880100Z /home/runner/work/_temp/git-credentials-175c58e8-3c8a-464c-8b05-82fa443ac1a9.config
+2026-10-08T19:33:48.8914572Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/tastetable/tastetable/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-175c58e8\-3c8a\-464c\-8b05\-82fa443ac1a9\.config
+2026-10-08T19:33:48.8992287Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/tastetable/tastetable/.git/worktrees/*.path
+2026-10-08T19:33:48.9042549Z /home/runner/work/_temp/git-credentials-175c58e8-3c8a-464c-8b05-82fa443ac1a9.config
+2026-10-08T19:33:48.9062556Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/tastetable/tastetable/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-175c58e8\-3c8a\-464c\-8b05\-82fa443ac1a9\.config
+2026-10-08T19:33:48.9110797Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-08T19:33:48.9132086Z /github/runner_temp/git-credentials-175c58e8-3c8a-464c-8b05-82fa443ac1a9.config
+2026-10-08T19:33:48.9144656Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-175c58e8\-3c8a\-464c\-8b05\-82fa443ac1a9\.config
+2026-10-08T19:33:48.9197846Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-08T19:33:48.9221817Z /github/runner_temp/git-credentials-175c58e8-3c8a-464c-8b05-82fa443ac1a9.config
+2026-10-08T19:33:48.9227441Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-175c58e8\-3c8a\-464c\-8b05\-82fa443ac1a9\.config
+2026-10-08T19:33:48.9263789Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T19:33:48.9463756Z Removing credentials config '/home/runner/work/_temp/git-credentials-175c58e8-3c8a-464c-8b05-82fa443ac1a9.config'
+2026-10-08T19:33:48.9618707Z Cleaning up orphan processes

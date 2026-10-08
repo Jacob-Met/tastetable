@@ -1,0 +1,519 @@
+{
+  "schema": "tastetable.saved-week-calendar-root-current-composition.v1",
+  "worker": "ultra-20b27c2e-20261008",
+  "repository": "Jacob-Met/tastetable",
+  "claim": 42,
+  "pull_request": 46,
+  "current_primary": "5ce4eb5734543d6d22f4c824ee01d7c3047ae42a",
+  "current_primary_tree": "5148922bb158584d43bf85820fe4d0760f2c7a18",
+  "current_primary_leaves": 774,
+  "qualified_author_head": "d12c0e3326d6596e46fa4a47ad9026971c28fc83",
+  "qualified_author_tree": "26ef51ed9a6b43fb2deea9a6f33c54c1d9aa97b2",
+  "reason": "Primary advanced through venue-contact-note PR49 after qualified author checkout. This composition retains every current-primary leaf except the already-owned additive README pointer; all other 32 contribution paths retain exact final author bytes.",
+  "expected_owned_including_this_receipt": 34,
+  "expected_unowned_preserved": 773,
+  "expected_complete_leaves": 807,
+  "self_excluded_from_files": true,
+  "files": [
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/before/native-receiver.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75712606b81062a5b22cf48223e5e4d41c388116",
+      "bytes": 4690,
+      "sha256": "41b32935463836d111d67e3c5687e4a71847b8393cc89771047231b98a0a8dd3",
+      "git_blob": "75712606b81062a5b22cf48223e5e4d41c388116"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/before/primary-source-packet.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "393dbe029bdf5c2f9dc17b6d7a9e8f50c20f23e9",
+      "bytes": 50897,
+      "sha256": "a41689fa1a791ad8a77ad131c0c2c93cfa931db7b534467e1c915014b3b5fce7",
+      "git_blob": "393dbe029bdf5c2f9dc17b6d7a9e8f50c20f23e9"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/before/source-scope.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bad2aa89d161ba6b88b587cfd420f66847083bdf",
+      "bytes": 1322,
+      "sha256": "71b6f3b39addb89be81ddb18d345001d4a6ad4ead7d1b74109eceb7eff4dee34",
+      "git_blob": "bad2aa89d161ba6b88b587cfd420f66847083bdf"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/ci-first/CORRECTION.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca456938e2726f1abfbfb261f4d28d90ea6bb603",
+      "bytes": 2475,
+      "sha256": "91b8e3c1277cd2b8c6b987151e2fd39cc8da682c97c1c3039955944336c9dde8",
+      "git_blob": "ca456938e2726f1abfbfb261f4d28d90ea6bb603"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/ci-first/job-113490870711.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4fdcab44010082dd62ff8db5678feedc55d1b03",
+      "bytes": 28990,
+      "sha256": "dd3e16ef482841e138fb1c275da0cc00459f4d6e5f69339beff85ac5f15fc801",
+      "git_blob": "d4fdcab44010082dd62ff8db5678feedc55d1b03"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/ci-first/receiving-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ebc387f6643dac77913c22bbb81a25436267553",
+      "bytes": 6619,
+      "sha256": "5bf77d20e52b131da394a67b3a3abfe2f3e6b8e774983978f840ac466c0f94f6",
+      "git_blob": "0ebc387f6643dac77913c22bbb81a25436267553"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/ci-first/run.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb5860772c2626b9ebe1459dd3ccaae0ebba0dbf",
+      "bytes": 22496,
+      "sha256": "ba323e545e89aaa96b7822a01f552174cb68bb692a01d71c239c9b8b5bef9681",
+      "git_blob": "fb5860772c2626b9ebe1459dd3ccaae0ebba0dbf"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/ci-second/job-113494823006.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67dd351e3907fda02e5a66e0dd8316dea94ee070",
+      "bytes": 25242,
+      "sha256": "aa870002ebce337e216cc65da757da9492257255a41f0fe25d33a8731ed6bcb7",
+      "git_blob": "67dd351e3907fda02e5a66e0dd8316dea94ee070"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/ci-second/receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cfbffd89623bfcc7c40413c056b0d6a95493ce3",
+      "bytes": 22485,
+      "sha256": "f1c4feddd0d45768d64f7adf1b743496a7e00aa243e9a8ddd90e1a5f43031199",
+      "git_blob": "3cfbffd89623bfcc7c40413c056b0d6a95493ce3"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/custody.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "353cea9070ea3fedc8cbd975c26462529a660d13",
+      "bytes": 3155,
+      "sha256": "89550117ee97abeb68c0465063328606c233cead124ed0484ce28712e3bf4da9",
+      "git_blob": "353cea9070ea3fedc8cbd975c26462529a660d13"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/independent-review/acceptance.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6bf1999423a38a8bd094b19532c21a322c19c39",
+      "bytes": 15304,
+      "sha256": "62687e3d582f625cb1d372c8602572d6b37d02a747bd44ce553bceb07fcd1511",
+      "git_blob": "f6bf1999423a38a8bd094b19532c21a322c19c39"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/independent-review/baseline-job-113500432534.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b205c735934209c06a6ccf660a7b748adad163f",
+      "bytes": 309724,
+      "sha256": "48c0c1a1433e6c67a401f3c5e196135398ecd4ee1e4d72f63358531c9aad0871",
+      "git_blob": "0b205c735934209c06a6ccf660a7b748adad163f"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/independent-review/baseline-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cecda44d0fb3f7b079c30955d012442eca7aa7b4",
+      "bytes": 35352,
+      "sha256": "8105b9d466da4bae4e59540e848e97270b13810dba0dd0aa961f5a72bde33b8e",
+      "git_blob": "cecda44d0fb3f7b079c30955d012442eca7aa7b4"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/independent-review/delivery-driver-correction-v2.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ad4b1fa153a05e5f63d040eebbff6d601de7359",
+      "bytes": 5125,
+      "sha256": "1bc93c73463096e920ccd9c03a98515cece01a6210472f13f646d6b7297973cd",
+      "git_blob": "5ad4b1fa153a05e5f63d040eebbff6d601de7359"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/independent-review/first-candidate-job-113502211039.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b683f3765d99b125d22d724bef6a83aa8335357a",
+      "bytes": 95521,
+      "sha256": "b2f3b60cd0b80b446550b55c01a303af06979c2efd0ca7c63cb905db0ef313fd",
+      "git_blob": "b683f3765d99b125d22d724bef6a83aa8335357a"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/independent-review/first-candidate-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31ea901c4f79933e7e72631892d869528cb15a96",
+      "bytes": 24759,
+      "sha256": "269147e3f1c54893e00d784ca6180736113e1ef9baf28a835a2043c1a4ff61ff",
+      "git_blob": "31ea901c4f79933e7e72631892d869528cb15a96"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/independent-review/frozen-contract.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "256174c9deba1a1b11af690fe705201b5a781414",
+      "bytes": 9130,
+      "sha256": "fea03c9e47cf164bb36ac8e24b062ba770dca9dbeab64b8358efdd124ce59485",
+      "git_blob": "256174c9deba1a1b11af690fe705201b5a781414"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/independent-review/native-oracle-preparation.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e80b4436d07ad96256531197feeac81d7e606f1",
+      "bytes": 15271,
+      "sha256": "6206bef885d52d2b58b3d8e81dc99f4dfbfdd7451b99a79d847666d19e0265f2",
+      "git_blob": "4e80b4436d07ad96256531197feeac81d7e606f1"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/independent-review/qualified-job-113504162241.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec5c01f79d6e423512144c22b8c03455670bc0bb",
+      "bytes": 77072,
+      "sha256": "5f84a64c63ceceb6821308d2953bd7a32e9c38f4f89c72c608c28296f4904c2c",
+      "git_blob": "ec5c01f79d6e423512144c22b8c03455670bc0bb"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/independent-review/qualified-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff1bdd08c8a8d639ac10c5eefd1e88908c0461a2",
+      "bytes": 27740,
+      "sha256": "8c208e8d510f2b4215e6982eccb4271b74a02fb6dbdf4c1f98d64e14d62938c6",
+      "git_blob": "ff1bdd08c8a8d639ac10c5eefd1e88908c0461a2"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/PUBLIC_CONTRACT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab2040bd5ed8147d3dbe8d0067fe51d6ada5a6a3",
+      "bytes": 5639,
+      "sha256": "291f16b78e4686e22a6a25f1ff7cc0f23538dfc93bdecd27c91b46b8a894fd54",
+      "git_blob": "ab2040bd5ed8147d3dbe8d0067fe51d6ada5a6a3"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/PUBLIC_RESULT_SHAPE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ed7f2fc62be91dbf150a346ea1aba5d6e5963b1",
+      "bytes": 2615,
+      "sha256": "62195dcbdc5de034f0ca927cf5654e3fb81b47f68c2f1f875f968473b5349c6e",
+      "git_blob": "9ed7f2fc62be91dbf150a346ea1aba5d6e5963b1"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/QUALIFICATION.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd7a2d0f3e2c359b3880e32953cff2559cb1dae4",
+      "bytes": 5421,
+      "sha256": "2c6a39e2876533a182067c50d6273e4e53f9444e6aa467ac80637d11180d7f04",
+      "git_blob": "fd7a2d0f3e2c359b3880e32953cff2559cb1dae4"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d11033c8b21735e42d9ceab214488f1558ad81ae",
+      "bytes": 4218,
+      "sha256": "5fd8b447c659ff5a04e3607dac94e74a122d8034ffeefd670cd314be2744f8af",
+      "git_blob": "d11033c8b21735e42d9ceab214488f1558ad81ae"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/runtime-syntax.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "903bdb9acc4dfa7dfaf9a660e7f0c295c747a6f1",
+      "bytes": 475,
+      "sha256": "f7c9e704a95bcb947fdac6f13cfaea8b66973eb4e1b5703d03b3d3ad1bbfdaa1",
+      "git_blob": "903bdb9acc4dfa7dfaf9a660e7f0c295c747a6f1"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/source-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "302a95ee6a6b6351784d9093c5aaefddd1a2ed8d",
+      "bytes": 4158,
+      "sha256": "af890fdbd366319a84a7a1358bbd9e0f6d42a7e03119deba44bf6227b7625ab9",
+      "git_blob": "302a95ee6a6b6351784d9093c5aaefddd1a2ed8d"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/test-syntax.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1458aaa2eee0e0105b5ca3f3c413f98a3ee0ce9",
+      "bytes": 328,
+      "sha256": "f47337a60803faacd4a5c208c524f0f2d75fe135feb95b2cf007df39da95c660",
+      "git_blob": "b1458aaa2eee0e0105b5ca3f3c413f98a3ee0ce9"
+    },
+    {
+      "path": "docs/SAVED_WEEK_CALENDAR.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f79ae537601c64ae04b91e2112c7a566ca63808",
+      "bytes": 6747,
+      "sha256": "18296f792fe79da5f6727237ed005655410cbf5bebafb201911e72d1600b7f7c",
+      "git_blob": "1f79ae537601c64ae04b91e2112c7a566ca63808"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d673b2ccdd321dd0bfe7f6e6c703a6dc41c7ab44",
+      "bytes": 19347,
+      "sha256": "0abd377b4d7cc10ec429c0f14cc7267386a49c478746d220f0535da3e1981668",
+      "git_blob": "d673b2ccdd321dd0bfe7f6e6c703a6dc41c7ab44"
+    },
+    {
+      "path": "tests/test_saved_week_calendar_receiving_ultra.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d022f47add184d49c31d0e7bf325b219d13a47c",
+      "bytes": 26815,
+      "sha256": "905c14980b60c6975c4e830347b17f29bf8d0de53df8c40838951be4303ae6ff",
+      "git_blob": "2d022f47add184d49c31d0e7bf325b219d13a47c"
+    },
+    {
+      "path": "tests/test_saved_week_calendar.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a32b329bb59084cb0aa62e235a731a9449ae2972",
+      "bytes": 23115,
+      "sha256": "5646fcf6dec60c6837bf354d274875cc0ed726483b2edb5e33ffe68bc3a20edf",
+      "git_blob": "a32b329bb59084cb0aa62e235a731a9449ae2972"
+    },
+    {
+      "path": "tools/saved_week_to_calendar.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8d910eb315c4ffc58a3e37d58cbe4de6be84b4d",
+      "bytes": 10400,
+      "sha256": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80",
+      "git_blob": "d8d910eb315c4ffc58a3e37d58cbe4de6be84b4d"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/publication-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6c499a4ed556711ff2c6f1a4ab72e6639acccf6",
+      "bytes": 8814,
+      "sha256": "0e1c49b51548d52c93d7048dfb70d70b240200355ec9e6ed3c51c83009c7ea2d",
+      "git_blob": "a6c499a4ed556711ff2c6f1a4ab72e6639acccf6"
+    }
+  ],
+  "readme": {
+    "current": {
+      "bytes": 18748,
+      "sha256": "d7d61b0653366e82034387839d15b5566fc76b2f182d3e12dae14d1a84ea14d8",
+      "git_blob": "f3d0d137cc1de50b0ad84d68fe5941605065d4e0"
+    },
+    "addition": {
+      "bytes": 599,
+      "sha256": "096004436f985dac023af1269e9222604912d5aabbd451acca394c0012f28670",
+      "git_blob": "dc6c86771fee9b8e5f6a06e6ba4abba4c86c965a"
+    },
+    "composed": {
+      "bytes": 19347,
+      "sha256": "0abd377b4d7cc10ec429c0f14cc7267386a49c478746d220f0535da3e1981668",
+      "git_blob": "d673b2ccdd321dd0bfe7f6e6c703a6dc41c7ab44"
+    },
+    "inverse": "Removing the exact 599-byte appended addition restores the complete current-primary README."
+  },
+  "native_dependencies": [
+    {
+      "path": "static/week_file.mjs",
+      "gitBlob": "420ddb8f63fca264dcf97be7147801105696155d"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "gitBlob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+    },
+    {
+      "path": "static/calendar.js",
+      "gitBlob": "dbed22d2cb91090bccec9472fbffd2854eed2722"
+    },
+    {
+      "path": "tests/fixtures/saved-week-response.json",
+      "gitBlob": "eca4eee4d93d0046833fc798e6c34bf87879c858"
+    },
+    {
+      "path": "tools/native_plan_to_week.mjs",
+      "gitBlob": "cf9fc5e0ecde5a839e6e6a577039b88bcc31f302"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "gitBlob": "0e6273139a9bf417a4ee42f4501d067b1c9d95a0"
+    }
+  ],
+  "independent_acceptance": {
+    "git_blob": "f6bf1999423a38a8bd094b19532c21a322c19c39",
+    "bytes": 15304,
+    "sha256": "62687e3d582f625cb1d372c8602572d6b37d02a747bd44ce553bceb07fcd1511"
+  },
+  "prior_final_gate": {
+    "run": 37834130036,
+    "job": 113506719085,
+    "checkout": "975754c987db9c5c462368ca3ba55ffed0515e8a",
+    "tree": "26ef51ed9a6b43fb2deea9a6f33c54c1d9aa97b2",
+    "parents": [
+      "0f1316eed24611345e722a9938db8ce03c181404",
+      "d12c0e3326d6596e46fa4a47ad9026971c28fc83"
+    ],
+    "tests": 250,
+    "subtests": 247,
+    "inherited_warnings": 1,
+    "independent_cases": 67,
+    "unchanged_custody_records": 67,
+    "delivery_traces": [
+      {
+        "mode": "observe",
+        "output_sha256": "900f8707627e600907928f515217ac36519e3aac0045fa0f3c32870438250d18",
+        "status": 0,
+        "trace": {
+          "cleanupAttempts": 2,
+          "initialEntries": [
+            "arranged week.json"
+          ],
+          "linkCalls": [
+            {
+              "openStageFds": [],
+              "output": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b0/files/calendar result.ics",
+              "regularStage": true,
+              "sha256": "900f8707627e600907928f515217ac36519e3aac0045fa0f3c32870438250d18",
+              "stage": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b0/files/.tastetable-calendar-dewv1m/completed.ics",
+              "stageContainer": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b0/files/.tastetable-calendar-dewv1m"
+            }
+          ],
+          "mode": "observe",
+          "published": true,
+          "stdoutAttempts": 0
+        }
+      },
+      {
+        "mode": "race",
+        "output_sha256": "f2f8f2321577fa3f433a62b266248121945f6be46448f32f79ea267ab1dcdbf2",
+        "status": 2,
+        "trace": {
+          "cleanupAttempts": 0,
+          "initialEntries": [
+            "arranged week.json"
+          ],
+          "linkCalls": [
+            {
+              "openStageFds": [],
+              "output": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b1/files/calendar result.ics",
+              "regularStage": true,
+              "sha256": "900f8707627e600907928f515217ac36519e3aac0045fa0f3c32870438250d18",
+              "stage": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b1/files/.tastetable-calendar-Mz0YRI/completed.ics",
+              "stageContainer": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b1/files/.tastetable-calendar-Mz0YRI"
+            }
+          ],
+          "mode": "race",
+          "published": false,
+          "stdoutAttempts": 0
+        }
+      },
+      {
+        "mode": "link-failure",
+        "output_sha256": null,
+        "status": 1,
+        "trace": {
+          "cleanupAttempts": 0,
+          "initialEntries": [
+            "arranged week.json"
+          ],
+          "linkCalls": [
+            {
+              "openStageFds": [],
+              "output": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b2/files/calendar result.ics",
+              "regularStage": true,
+              "sha256": "900f8707627e600907928f515217ac36519e3aac0045fa0f3c32870438250d18",
+              "stage": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b2/files/.tastetable-calendar-0z34hM/completed.ics",
+              "stageContainer": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b2/files/.tastetable-calendar-0z34hM"
+            }
+          ],
+          "mode": "link-failure",
+          "published": false,
+          "stdoutAttempts": 0
+        }
+      },
+      {
+        "mode": "cleanup",
+        "output_sha256": "900f8707627e600907928f515217ac36519e3aac0045fa0f3c32870438250d18",
+        "status": 1,
+        "trace": {
+          "cleanupAttempts": 1,
+          "initialEntries": [
+            "arranged week.json"
+          ],
+          "linkCalls": [
+            {
+              "openStageFds": [],
+              "output": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b3/files/calendar result.ics",
+              "regularStage": true,
+              "sha256": "900f8707627e600907928f515217ac36519e3aac0045fa0f3c32870438250d18",
+              "stage": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b3/files/.tastetable-calendar-9hpHs8/completed.ics",
+              "stageContainer": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b3/files/.tastetable-calendar-9hpHs8"
+            }
+          ],
+          "mode": "cleanup",
+          "published": true,
+          "stdoutAttempts": 0
+        }
+      },
+      {
+        "mode": "receipt",
+        "output_sha256": "900f8707627e600907928f515217ac36519e3aac0045fa0f3c32870438250d18",
+        "status": 1,
+        "trace": {
+          "cleanupAttempts": 2,
+          "initialEntries": [
+            "arranged week.json"
+          ],
+          "linkCalls": [
+            {
+              "openStageFds": [],
+              "output": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b4/files/calendar result.ics",
+              "regularStage": true,
+              "sha256": "900f8707627e600907928f515217ac36519e3aac0045fa0f3c32870438250d18",
+              "stage": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b4/files/.tastetable-calendar-Fr3Ngz/completed.ics",
+              "stageContainer": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b4/files/.tastetable-calendar-Fr3Ngz"
+            }
+          ],
+          "mode": "receipt",
+          "published": true,
+          "stdoutAttempts": 1
+        }
+      }
+    ],
+    "raw_log": {
+      "git_blob": "7830223ffc2205b63792b61088a9f81b72929284",
+      "bytes": 77070,
+      "sha256": "da34f31a47e57183c9f9220fcf14f2ff0115f4279c6b4c0361570925e57c4246"
+    }
+  },
+  "root_review": [
+    "Read complete original production CLI and native saved-week reader, scheduler and calendar writer; exact delegation preserves original source admission, arrangement, UIDs, timestamp, native calendar and literal UTF-8 bytes.",
+    "Read complete final guide and README pointer. Identity and post-publication failure semantics agree with source and actual hosted traces.",
+    "Received all 33 author payloads from immutable Git blobs and independently computed UTF-8 byte length, SHA256 and Git blob hash: 900523 bytes on original final author composition.",
+    "Verified complete untruncated author tree: 33 owned and742 exact unowned leaves, with no extra or deleted path.",
+    "Read corrected independent 67-case receiver and mechanical correction record: same-parent staging container, actual directory cleanup and fs.writeSync delivery hooks preserve semantic oracles. Production runtime remains original d8d910eb.",
+    "Read decoded final33 job log and bound actual checkout parents/tree. Parsed all67 unchanged custody records and all five actual delivery traces. Complete-file race/EXDEV/cleanup/receipt observations retain exact ordinary native SHA.",
+    "Current-primary delta is venue-note work outside the converter dependency closure. Preserve all31 new owner leaves and every owner modification, including their full README. Run unchanged ordinary gate on this composed head before integration."
+  ],
+  "historical_limits": "The original local before raw output and receipt bodies were lost after memory reset; unchanged old pins and three recovered input payloads remain documented. Separately identified real hosted baseline (12 positive native controls/55 missing-consumer failures) supplies the actual CLI baseline. All red receiver histories are preserved in the original 33-path packet.",
+  "next_gate": "Current-composition native hosted workflow; no result claimed for this new tree by this receipt.",
+  "deployment": "No provider, calendar account, installed data or deployed application action."
+}

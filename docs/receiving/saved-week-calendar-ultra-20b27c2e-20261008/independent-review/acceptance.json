@@ -1,0 +1,323 @@
+{
+  "schema": "tastetable.independent-saved-week-calendar-acceptance.v1",
+  "reviewer": "ultra-20b27c2e-20261008/runtime_integration",
+  "repository": "Jacob-Met/tastetable",
+  "claim": "https://github.com/Jacob-Met/tastetable/issues/42",
+  "pull_request": "https://github.com/Jacob-Met/tastetable/pull/46",
+  "finding": "No blocking finding on the pinned candidate; independent native/API/CLI/filesystem receiving is qualified.",
+  "source": {
+    "bytes": 10400,
+    "sha256": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80",
+    "git_blob_sha": "d8d910eb315c4ffc58a3e37d58cbe4de6be84b4d"
+  },
+  "receiver": {
+    "original": {
+      "bytes": 26002,
+      "sha256": "e10e10e1fd68c5169372597d5be4b91c07a0ee1a8b884f98fd80fcce78f91122",
+      "git_blob_sha": "96b47c48de1a6feb3cf3084463b216ae4987e1e5",
+      "tests": [
+        "test_native_codec_writer_controls_and_manual_occurrences",
+        "test_public_api_preserves_exact_native_bytes_and_frozen_receipt_fields",
+        "test_actual_cli_exact_file_receipt_and_repeat_identity",
+        "test_null_identity_requires_explicit_api_choice_and_retains_timestamps",
+        "test_existing_identity_refuses_even_equal_api_override",
+        "test_new_api_identity_must_be_explicit_native_identifier",
+        "test_actual_cli_explicit_new_calendar_repeated_creations_are_distinct",
+        "test_original_native_rejects_whole_invalid_arrangement_control",
+        "test_public_api_and_cli_refuse_whole_native_invalid_input",
+        "test_actual_cli_strict_bytes_and_size_are_atomic",
+        "test_exact_four_mib_valid_input_is_accepted_without_rewrite",
+        "test_occupied_output_and_input_aliases_never_replace",
+        "test_nonregular_or_missing_input_is_bounded_refusal",
+        "test_actual_argument_refusals_leave_no_output",
+        "test_help_is_standalone_and_creates_nothing",
+        "test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic"
+      ]
+    },
+    "accepted": {
+      "bytes": 26815,
+      "sha256": "905c14980b60c6975c4e830347b17f29bf8d0de53df8c40838951be4303ae6ff",
+      "git_blob_sha": "2d022f47add184d49c31d0e7bf325b219d13a47c",
+      "changed_functions": [
+        "test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic"
+      ],
+      "unchanged_functions": 29
+    },
+    "contract_blob": "256174c9deba1a1b11af690fe705201b5a781414",
+    "native_preparation_blob": "4e80b4436d07ad96256531197feeac81d7e606f1",
+    "driver_correction_blob": "5ad4b1fa153a05e5f63d040eebbff6d601de7359",
+    "candidate_seen_only_after_freeze_and_genuine_baseline": true,
+    "ordinary_cases_unchanged": 62
+  },
+  "baseline": {
+    "run": 37832294755,
+    "job": 113500432534,
+    "checkout": "f5b5792901ec3fe4daeacd98d247a39f322499fa",
+    "raw_log_blob": "0b205c735934209c06a6ccf660a7b748adad163f",
+    "failed": 55,
+    "passed": 175,
+    "subtests": 202,
+    "inherited_warning": 1,
+    "independent_positive": 12,
+    "independent_missing_consumer": 55,
+    "custody_traces": 67,
+    "unchanged": true,
+    "candidate_source_absent": true,
+    "tree": {
+      "baselineHead": "d07dc6fda6b454f56903e7ca4b469e41aba9b782",
+      "baselineTree": "38e95b51619fcebdc8791ecafb6220f4f94461b7",
+      "primaryCommit": "0f1316eed24611345e722a9938db8ce03c181404",
+      "primaryTree": "d9a2cc503ac66d195f93a239ec7eeb1e9f56b955",
+      "primaryLeaves": 743,
+      "changed": [],
+      "added": [
+        [
+          "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/independent-review/frozen-contract.json",
+          "256174c9deba1a1b11af690fe705201b5a781414"
+        ],
+        [
+          "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/independent-review/native-oracle-preparation.json",
+          "4e80b4436d07ad96256531197feeac81d7e606f1"
+        ],
+        [
+          "tests/test_saved_week_calendar_receiving_ultra.py",
+          "96b47c48de1a6feb3cf3084463b216ae4987e1e5"
+        ]
+      ],
+      "truncated": false
+    }
+  },
+  "first_candidate": {
+    "head": "06225ea1e650fa43d9a4847f069dbf83bb58468f",
+    "tree": "0e935a89a1e956d7dd777a335acbf436e0566cbf",
+    "checkout": "2bdc6005bd8e95c87858d945e8bc01c3b24f801c",
+    "run": 37832815710,
+    "job": 113502211039,
+    "log_blob": "b683f3765d99b125d22d724bef6a83aa8335357a",
+    "result": "5 failed, 245 passed, 247 subtests passed; one inherited warning",
+    "independent_passed": 62,
+    "independent_failed": 5,
+    "classification": "All five stopped at the receiver's direct-temp-file layout assertion. Source uses a newly created directory beside the destination. Native product source was unchanged; only driver container/hook reachability and trace reporting were corrected."
+  },
+  "accepted_run": {
+    "head": "5f7b6ff109a92f6caf9f665165a305248e667354",
+    "tree": "658688113a15d2a0a9b3b8d06c26bf4356feb5b8",
+    "checkout": "fd3fb0898bacac858105d3ec86926957f464fdc8",
+    "run": 37833379798,
+    "job": 113504162241,
+    "workflow": ".github/workflows/ci.yml",
+    "unchanged_workflow": true,
+    "log": {
+      "bytes": 77072,
+      "sha256": "5f84a64c63ceceb6821308d2953bd7a32e9c38f4f89c72c608c28296f4904c2c",
+      "git_blob_sha": "ec5c01f79d6e423512144c22b8c03455670bc0bb"
+    },
+    "result": "250 passed, 1 warning, 247 subtests passed in 23.99s",
+    "independent": {
+      "passed": 67,
+      "failed": 0,
+      "skipped": 0
+    },
+    "inherited_warning": "StarletteDeprecationWarning: existing httpx TestClient integration; unchanged dependency/workflow.",
+    "custody": {
+      "count": 67,
+      "unchanged": true,
+      "cli_sha256": [
+        "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80"
+      ]
+    },
+    "actual_delivery_traces": [
+      {
+        "mode": "observe",
+        "output_sha256": "900f8707627e600907928f515217ac36519e3aac0045fa0f3c32870438250d18",
+        "status": 0,
+        "trace": {
+          "cleanupAttempts": 2,
+          "initialEntries": [
+            "arranged week.json"
+          ],
+          "linkCalls": [
+            {
+              "openStageFds": [],
+              "output": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b0/files/calendar result.ics",
+              "regularStage": true,
+              "sha256": "900f8707627e600907928f515217ac36519e3aac0045fa0f3c32870438250d18",
+              "stage": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b0/files/.tastetable-calendar-gBBHym/completed.ics",
+              "stageContainer": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b0/files/.tastetable-calendar-gBBHym"
+            }
+          ],
+          "mode": "observe",
+          "published": true,
+          "stdoutAttempts": 0
+        }
+      },
+      {
+        "mode": "race",
+        "output_sha256": "f2f8f2321577fa3f433a62b266248121945f6be46448f32f79ea267ab1dcdbf2",
+        "status": 2,
+        "trace": {
+          "cleanupAttempts": 0,
+          "initialEntries": [
+            "arranged week.json"
+          ],
+          "linkCalls": [
+            {
+              "openStageFds": [],
+              "output": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b1/files/calendar result.ics",
+              "regularStage": true,
+              "sha256": "900f8707627e600907928f515217ac36519e3aac0045fa0f3c32870438250d18",
+              "stage": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b1/files/.tastetable-calendar-ZTMi0B/completed.ics",
+              "stageContainer": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b1/files/.tastetable-calendar-ZTMi0B"
+            }
+          ],
+          "mode": "race",
+          "published": false,
+          "stdoutAttempts": 0
+        }
+      },
+      {
+        "mode": "link-failure",
+        "output_sha256": null,
+        "status": 1,
+        "trace": {
+          "cleanupAttempts": 0,
+          "initialEntries": [
+            "arranged week.json"
+          ],
+          "linkCalls": [
+            {
+              "openStageFds": [],
+              "output": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b2/files/calendar result.ics",
+              "regularStage": true,
+              "sha256": "900f8707627e600907928f515217ac36519e3aac0045fa0f3c32870438250d18",
+              "stage": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b2/files/.tastetable-calendar-idSjBi/completed.ics",
+              "stageContainer": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b2/files/.tastetable-calendar-idSjBi"
+            }
+          ],
+          "mode": "link-failure",
+          "published": false,
+          "stdoutAttempts": 0
+        }
+      },
+      {
+        "mode": "cleanup",
+        "output_sha256": "900f8707627e600907928f515217ac36519e3aac0045fa0f3c32870438250d18",
+        "status": 1,
+        "trace": {
+          "cleanupAttempts": 1,
+          "initialEntries": [
+            "arranged week.json"
+          ],
+          "linkCalls": [
+            {
+              "openStageFds": [],
+              "output": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b3/files/calendar result.ics",
+              "regularStage": true,
+              "sha256": "900f8707627e600907928f515217ac36519e3aac0045fa0f3c32870438250d18",
+              "stage": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b3/files/.tastetable-calendar-uAzW5l/completed.ics",
+              "stageContainer": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b3/files/.tastetable-calendar-uAzW5l"
+            }
+          ],
+          "mode": "cleanup",
+          "published": true,
+          "stdoutAttempts": 0
+        }
+      },
+      {
+        "mode": "receipt",
+        "output_sha256": "900f8707627e600907928f515217ac36519e3aac0045fa0f3c32870438250d18",
+        "status": 1,
+        "trace": {
+          "cleanupAttempts": 2,
+          "initialEntries": [
+            "arranged week.json"
+          ],
+          "linkCalls": [
+            {
+              "openStageFds": [],
+              "output": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b4/files/calendar result.ics",
+              "regularStage": true,
+              "sha256": "900f8707627e600907928f515217ac36519e3aac0045fa0f3c32870438250d18",
+              "stage": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b4/files/.tastetable-calendar-8x8MP6/completed.ics",
+              "stageContainer": "/tmp/pytest-of-runner/pytest-0/test_explicit_delivery_fault_b4/files/.tastetable-calendar-8x8MP6"
+            }
+          ],
+          "mode": "receipt",
+          "published": true,
+          "stdoutAttempts": 1
+        }
+      }
+    ]
+  },
+  "source_and_tree_review": {
+    "primaryCommit": "0f1316eed24611345e722a9938db8ce03c181404",
+    "primaryTree": "d9a2cc503ac66d195f93a239ec7eeb1e9f56b955",
+    "primaryLeaves": 743,
+    "candidateHead": "5f7b6ff109a92f6caf9f665165a305248e667354",
+    "candidateTree": "658688113a15d2a0a9b3b8d06c26bf4356feb5b8",
+    "candidateLeaves": 770,
+    "truncated": false,
+    "changedExisting": [
+      {
+        "path": "README.md",
+        "before": "ef24a2f094ba5819caacb4ceaa59f15fd008bace",
+        "after": "be9416c35653e11502b511ae4e1fae22c6e96b36"
+      }
+    ],
+    "readmeOriginalIsExactPrefix": true,
+    "all742UnownedLeavesExact": true,
+    "nativeClosure": [
+      {
+        "path": "static/week_plan.mjs",
+        "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+        "exact": true
+      },
+      {
+        "path": "static/week_file.mjs",
+        "git_blob": "420ddb8f63fca264dcf97be7147801105696155d",
+        "exact": true
+      },
+      {
+        "path": "static/calendar.js",
+        "git_blob": "dbed22d2cb91090bccec9472fbffd2854eed2722",
+        "exact": true
+      },
+      {
+        "path": "tests/fixtures/saved-week-response.json",
+        "git_blob": "eca4eee4d93d0046833fc798e6c34bf87879c858",
+        "exact": true
+      },
+      {
+        "path": ".github/workflows/ci.yml",
+        "git_blob": "0e6273139a9bf417a4ee42f4501d067b1c9d95a0",
+        "exact": true
+      }
+    ]
+  },
+  "reviewed_behaviors": [
+    "Pure API freezes native calendar/preview records and returns exact unchanged native writer bytes, timestamp/source/identity and input/output hashes.",
+    "Original receivedAt supplies DTSTAMP; retained ID cannot be overridden even by the same ID. Null-ID input needs explicit new identity, without rewriting the file.",
+    "Leap-week occurrence order, same-day distinct UIDs, omitted picks, Unicode/text escaping, CRLF/folding and all-day tentative/transparent caution semantics remain native.",
+    "Unknown source, all-omitted/empty week, invalid native date/arrangement/text/identity refuse whole input; malformed omitted source is not silently ignored.",
+    "Actual CLI accepts one initial BOM with exact input hash and the exact4MiB boundary; malformed UTF-8, double BOM, trailing JSON and oversize refuse atomically.",
+    "Existing file/directory/symlink/dangling symlink and direct/hardlink input aliases remain unchanged. Nonregular/missing input and malformed CLI arguments refuse without output.",
+    "New output is a real create-only hard link of closed exact staged bytes; competing destination is preserved, with no overwrite fallback.",
+    "Explicit EXDEV refusal leaves no output/stage. Explicit cleanup/receipt failures after publication return1, retain complete native calendar and use the exact created-file diagnostic.",
+    "No existing production source changes beyond the appended README pointer; native codec/writer/fixture/workflow bytes remain pinned and742unowned primary leaves exact.",
+    "Guide accurately separates retained heuristic/source labels from authenticated venue/care verification and calendar import behavior."
+  ],
+  "source_inspection_details": [
+    "New runtime imports only Node builtins and three preserved native modules; no provider, recommendation, calendar-account or subprocess path.",
+    "Strict input decoding preserves a single initial BOM for native reader admission and rejects lossy UTF-8.",
+    "Validation and complete native calendar construction precede createOnly; runtime creates a unique private directory in the output parent, writes/closes completed.ics, then awaits fs.link.",
+    "published is marked immediately after successful link; stage cleanup and synchronous receipt write occur inside the same main error boundary; completed publication is distinguished in diagnostics.",
+    "Native fs.writeSync loops until all bytes are delivered and diagnostic-stream failure preserves intended status."
+  ],
+  "limits": [
+    "Actual hosted Linux native Node/API/CLI/temporary-filesystem receiving; no live provider, calendar import, installed application, real saved-week or account used.",
+    "The five delivery tests explicitly inject faults at the fs/stdout boundary. They do not claim a real disk-full or cross-filesystem incident; the competing destination's hard-link refusal is real.",
+    "Successful calendar SHA900f8707627e600907928f515217ac36519e3aac0045fa0f3c32870438250d18 is specific to the independent synthetic leap-week oracle.",
+    "This receiver does not qualify every Node18+ patch release or calendar application's import/deduplication policy.",
+    "Root/author retain final main-drift, exact-head checks and source-integration responsibility."
+  ]
+}

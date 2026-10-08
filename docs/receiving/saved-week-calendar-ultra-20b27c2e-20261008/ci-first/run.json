@@ -1,0 +1,409 @@
+{
+  "schema": "tastetable.saved-week-calendar-first-hosted-run.v1",
+  "run": {
+    "id": 37829507303,
+    "name": "ci",
+    "node_id": "WFR_kwLOU7nj188AAAAIztB45w",
+    "head_branch": "ultra/20b27c2e-saved-week-calendar",
+    "head_sha": "eb3228b7c9bccff0419002133b935ea93e1a34fd",
+    "path": ".github/workflows/ci.yml",
+    "display_title": "Export saved weeks through the native calendar writer",
+    "run_number": 54,
+    "event": "pull_request",
+    "status": "completed",
+    "conclusion": "failure",
+    "workflow_id": 377698187,
+    "check_suite_id": 102494051701,
+    "check_suite_node_id": "CS_kwDOU7nj188AAAAX3R8ddQ",
+    "url": "https://api.github.com/repos/Jacob-Met/tastetable/actions/runs/37829507303",
+    "html_url": "https://github.com/Jacob-Met/tastetable/actions/runs/37829507303",
+    "pull_requests": [
+      {
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/pulls/46",
+        "id": 4791553280,
+        "number": 46,
+        "head": {
+          "ref": "ultra/20b27c2e-saved-week-calendar",
+          "sha": "eb3228b7c9bccff0419002133b935ea93e1a34fd",
+          "repo": {
+            "id": 1404691415,
+            "url": "https://api.github.com/repos/Jacob-Met/tastetable",
+            "name": "tastetable"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "2b347cee4ff4e2b806362730a8520a3360b45f5a",
+          "repo": {
+            "id": 1404691415,
+            "url": "https://api.github.com/repos/Jacob-Met/tastetable",
+            "name": "tastetable"
+          }
+        }
+      }
+    ],
+    "created_at": "2026-10-08T19:06:58Z",
+    "updated_at": "2026-10-08T19:08:04Z",
+    "actor": {
+      "login": "Jacob-Met",
+      "id": 150724801,
+      "node_id": "U_kgDOCPvgwQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/150724801?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Jacob-Met",
+      "html_url": "https://github.com/Jacob-Met",
+      "followers_url": "https://api.github.com/users/Jacob-Met/followers",
+      "following_url": "https://api.github.com/users/Jacob-Met/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Jacob-Met/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Jacob-Met/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Jacob-Met/subscriptions",
+      "organizations_url": "https://api.github.com/users/Jacob-Met/orgs",
+      "repos_url": "https://api.github.com/users/Jacob-Met/repos",
+      "events_url": "https://api.github.com/users/Jacob-Met/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Jacob-Met/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "run_attempt": 1,
+    "referenced_workflows": [],
+    "run_started_at": "2026-10-08T19:06:58Z",
+    "triggering_actor": {
+      "login": "Jacob-Met",
+      "id": 150724801,
+      "node_id": "U_kgDOCPvgwQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/150724801?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Jacob-Met",
+      "html_url": "https://github.com/Jacob-Met",
+      "followers_url": "https://api.github.com/users/Jacob-Met/followers",
+      "following_url": "https://api.github.com/users/Jacob-Met/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Jacob-Met/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Jacob-Met/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Jacob-Met/subscriptions",
+      "organizations_url": "https://api.github.com/users/Jacob-Met/orgs",
+      "repos_url": "https://api.github.com/users/Jacob-Met/repos",
+      "events_url": "https://api.github.com/users/Jacob-Met/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Jacob-Met/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "jobs_url": "https://api.github.com/repos/Jacob-Met/tastetable/actions/runs/37829507303/jobs",
+    "logs_url": "https://api.github.com/repos/Jacob-Met/tastetable/actions/runs/37829507303/logs",
+    "check_suite_url": "https://api.github.com/repos/Jacob-Met/tastetable/check-suites/102494051701",
+    "artifacts_url": "https://api.github.com/repos/Jacob-Met/tastetable/actions/runs/37829507303/artifacts",
+    "cancel_url": "https://api.github.com/repos/Jacob-Met/tastetable/actions/runs/37829507303/cancel",
+    "rerun_url": "https://api.github.com/repos/Jacob-Met/tastetable/actions/runs/37829507303/rerun",
+    "previous_attempt_url": null,
+    "workflow_url": "https://api.github.com/repos/Jacob-Met/tastetable/actions/workflows/377698187",
+    "head_commit": {
+      "id": "eb3228b7c9bccff0419002133b935ea93e1a34fd",
+      "tree_id": "49b62360fda6f2d2d689f854a04b751541e2a470",
+      "message": "Add an explicit saved-week calendar file consumer",
+      "timestamp": "2026-10-08T19:05:46Z",
+      "author": {
+        "name": "Jacob Metoyer",
+        "email": "150724801+Jacob-Met@users.noreply.github.com"
+      },
+      "committer": {
+        "name": "Jacob Metoyer",
+        "email": "150724801+Jacob-Met@users.noreply.github.com"
+      }
+    },
+    "repository": {
+      "id": 1404691415,
+      "node_id": "R_kgDOU7nj1w",
+      "name": "tastetable",
+      "full_name": "Jacob-Met/tastetable",
+      "private": false,
+      "owner": {
+        "login": "Jacob-Met",
+        "id": 150724801,
+        "node_id": "U_kgDOCPvgwQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/150724801?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Jacob-Met",
+        "html_url": "https://github.com/Jacob-Met",
+        "followers_url": "https://api.github.com/users/Jacob-Met/followers",
+        "following_url": "https://api.github.com/users/Jacob-Met/following{/other_user}",
+        "gists_url": "https://api.github.com/users/Jacob-Met/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/Jacob-Met/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/Jacob-Met/subscriptions",
+        "organizations_url": "https://api.github.com/users/Jacob-Met/orgs",
+        "repos_url": "https://api.github.com/users/Jacob-Met/repos",
+        "events_url": "https://api.github.com/users/Jacob-Met/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/Jacob-Met/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "html_url": "https://github.com/Jacob-Met/tastetable",
+      "description": "Agentic weekly dining + outing planner for seniors and caregivers, grounded in Qloo taste signals. Qloo Agentic Hackathon entry.",
+      "fork": false,
+      "url": "https://api.github.com/repos/Jacob-Met/tastetable",
+      "forks_url": "https://api.github.com/repos/Jacob-Met/tastetable/forks",
+      "keys_url": "https://api.github.com/repos/Jacob-Met/tastetable/keys{/key_id}",
+      "collaborators_url": "https://api.github.com/repos/Jacob-Met/tastetable/collaborators{/collaborator}",
+      "teams_url": "https://api.github.com/repos/Jacob-Met/tastetable/teams",
+      "hooks_url": "https://api.github.com/repos/Jacob-Met/tastetable/hooks",
+      "issue_events_url": "https://api.github.com/repos/Jacob-Met/tastetable/issues/events{/number}",
+      "events_url": "https://api.github.com/repos/Jacob-Met/tastetable/events",
+      "assignees_url": "https://api.github.com/repos/Jacob-Met/tastetable/assignees{/user}",
+      "branches_url": "https://api.github.com/repos/Jacob-Met/tastetable/branches{/branch}",
+      "tags_url": "https://api.github.com/repos/Jacob-Met/tastetable/tags",
+      "blobs_url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/Jacob-Met/tastetable/git/tags{/sha}",
+      "git_refs_url": "https://api.github.com/repos/Jacob-Met/tastetable/git/refs{/sha}",
+      "trees_url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees{/sha}",
+      "statuses_url": "https://api.github.com/repos/Jacob-Met/tastetable/statuses/{sha}",
+      "languages_url": "https://api.github.com/repos/Jacob-Met/tastetable/languages",
+      "stargazers_url": "https://api.github.com/repos/Jacob-Met/tastetable/stargazers",
+      "contributors_url": "https://api.github.com/repos/Jacob-Met/tastetable/contributors",
+      "subscribers_url": "https://api.github.com/repos/Jacob-Met/tastetable/subscribers",
+      "subscription_url": "https://api.github.com/repos/Jacob-Met/tastetable/subscription",
+      "commits_url": "https://api.github.com/repos/Jacob-Met/tastetable/commits{/sha}",
+      "git_commits_url": "https://api.github.com/repos/Jacob-Met/tastetable/git/commits{/sha}",
+      "comments_url": "https://api.github.com/repos/Jacob-Met/tastetable/comments{/number}",
+      "issue_comment_url": "https://api.github.com/repos/Jacob-Met/tastetable/issues/comments{/number}",
+      "contents_url": "https://api.github.com/repos/Jacob-Met/tastetable/contents/{+path}",
+      "compare_url": "https://api.github.com/repos/Jacob-Met/tastetable/compare/{base}...{head}",
+      "merges_url": "https://api.github.com/repos/Jacob-Met/tastetable/merges",
+      "archive_url": "https://api.github.com/repos/Jacob-Met/tastetable/{archive_format}{/ref}",
+      "downloads_url": "https://api.github.com/repos/Jacob-Met/tastetable/downloads",
+      "issues_url": "https://api.github.com/repos/Jacob-Met/tastetable/issues{/number}",
+      "pulls_url": "https://api.github.com/repos/Jacob-Met/tastetable/pulls{/number}",
+      "milestones_url": "https://api.github.com/repos/Jacob-Met/tastetable/milestones{/number}",
+      "notifications_url": "https://api.github.com/repos/Jacob-Met/tastetable/notifications{?since,all,participating}",
+      "labels_url": "https://api.github.com/repos/Jacob-Met/tastetable/labels{/name}",
+      "releases_url": "https://api.github.com/repos/Jacob-Met/tastetable/releases{/id}",
+      "deployments_url": "https://api.github.com/repos/Jacob-Met/tastetable/deployments"
+    },
+    "head_repository": {
+      "id": 1404691415,
+      "node_id": "R_kgDOU7nj1w",
+      "name": "tastetable",
+      "full_name": "Jacob-Met/tastetable",
+      "private": false,
+      "owner": {
+        "login": "Jacob-Met",
+        "id": 150724801,
+        "node_id": "U_kgDOCPvgwQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/150724801?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Jacob-Met",
+        "html_url": "https://github.com/Jacob-Met",
+        "followers_url": "https://api.github.com/users/Jacob-Met/followers",
+        "following_url": "https://api.github.com/users/Jacob-Met/following{/other_user}",
+        "gists_url": "https://api.github.com/users/Jacob-Met/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/Jacob-Met/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/Jacob-Met/subscriptions",
+        "organizations_url": "https://api.github.com/users/Jacob-Met/orgs",
+        "repos_url": "https://api.github.com/users/Jacob-Met/repos",
+        "events_url": "https://api.github.com/users/Jacob-Met/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/Jacob-Met/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "html_url": "https://github.com/Jacob-Met/tastetable",
+      "description": "Agentic weekly dining + outing planner for seniors and caregivers, grounded in Qloo taste signals. Qloo Agentic Hackathon entry.",
+      "fork": false,
+      "url": "https://api.github.com/repos/Jacob-Met/tastetable",
+      "forks_url": "https://api.github.com/repos/Jacob-Met/tastetable/forks",
+      "keys_url": "https://api.github.com/repos/Jacob-Met/tastetable/keys{/key_id}",
+      "collaborators_url": "https://api.github.com/repos/Jacob-Met/tastetable/collaborators{/collaborator}",
+      "teams_url": "https://api.github.com/repos/Jacob-Met/tastetable/teams",
+      "hooks_url": "https://api.github.com/repos/Jacob-Met/tastetable/hooks",
+      "issue_events_url": "https://api.github.com/repos/Jacob-Met/tastetable/issues/events{/number}",
+      "events_url": "https://api.github.com/repos/Jacob-Met/tastetable/events",
+      "assignees_url": "https://api.github.com/repos/Jacob-Met/tastetable/assignees{/user}",
+      "branches_url": "https://api.github.com/repos/Jacob-Met/tastetable/branches{/branch}",
+      "tags_url": "https://api.github.com/repos/Jacob-Met/tastetable/tags",
+      "blobs_url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/Jacob-Met/tastetable/git/tags{/sha}",
+      "git_refs_url": "https://api.github.com/repos/Jacob-Met/tastetable/git/refs{/sha}",
+      "trees_url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees{/sha}",
+      "statuses_url": "https://api.github.com/repos/Jacob-Met/tastetable/statuses/{sha}",
+      "languages_url": "https://api.github.com/repos/Jacob-Met/tastetable/languages",
+      "stargazers_url": "https://api.github.com/repos/Jacob-Met/tastetable/stargazers",
+      "contributors_url": "https://api.github.com/repos/Jacob-Met/tastetable/contributors",
+      "subscribers_url": "https://api.github.com/repos/Jacob-Met/tastetable/subscribers",
+      "subscription_url": "https://api.github.com/repos/Jacob-Met/tastetable/subscription",
+      "commits_url": "https://api.github.com/repos/Jacob-Met/tastetable/commits{/sha}",
+      "git_commits_url": "https://api.github.com/repos/Jacob-Met/tastetable/git/commits{/sha}",
+      "comments_url": "https://api.github.com/repos/Jacob-Met/tastetable/comments{/number}",
+      "issue_comment_url": "https://api.github.com/repos/Jacob-Met/tastetable/issues/comments{/number}",
+      "contents_url": "https://api.github.com/repos/Jacob-Met/tastetable/contents/{+path}",
+      "compare_url": "https://api.github.com/repos/Jacob-Met/tastetable/compare/{base}...{head}",
+      "merges_url": "https://api.github.com/repos/Jacob-Met/tastetable/merges",
+      "archive_url": "https://api.github.com/repos/Jacob-Met/tastetable/{archive_format}{/ref}",
+      "downloads_url": "https://api.github.com/repos/Jacob-Met/tastetable/downloads",
+      "issues_url": "https://api.github.com/repos/Jacob-Met/tastetable/issues{/number}",
+      "pulls_url": "https://api.github.com/repos/Jacob-Met/tastetable/pulls{/number}",
+      "milestones_url": "https://api.github.com/repos/Jacob-Met/tastetable/milestones{/number}",
+      "notifications_url": "https://api.github.com/repos/Jacob-Met/tastetable/notifications{?since,all,participating}",
+      "labels_url": "https://api.github.com/repos/Jacob-Met/tastetable/labels{/name}",
+      "releases_url": "https://api.github.com/repos/Jacob-Met/tastetable/releases{/id}",
+      "deployments_url": "https://api.github.com/repos/Jacob-Met/tastetable/deployments"
+    }
+  },
+  "jobs": {
+    "total_count": 1,
+    "jobs": [
+      {
+        "id": 113490870711,
+        "run_id": 37829507303,
+        "workflow_name": "ci",
+        "head_branch": "ultra/20b27c2e-saved-week-calendar",
+        "run_url": "https://api.github.com/repos/Jacob-Met/tastetable/actions/runs/37829507303",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOU7nj188AAAAabJVBtw",
+        "head_sha": "eb3228b7c9bccff0419002133b935ea93e1a34fd",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/actions/jobs/113490870711",
+        "html_url": "https://github.com/Jacob-Met/tastetable/actions/runs/37829507303/job/113490870711",
+        "status": "completed",
+        "conclusion": "failure",
+        "created_at": "2026-10-08T19:06:59Z",
+        "started_at": "2026-10-08T19:07:37Z",
+        "completed_at": "2026-10-08T19:08:03Z",
+        "name": "test",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-08T19:07:38Z",
+            "completed_at": "2026-10-08T19:07:38Z"
+          },
+          {
+            "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-08T19:07:38Z",
+            "completed_at": "2026-10-08T19:07:40Z"
+          },
+          {
+            "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-08T19:07:40Z",
+            "completed_at": "2026-10-08T19:07:40Z"
+          },
+          {
+            "name": "Install dependencies",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-08T19:07:40Z",
+            "completed_at": "2026-10-08T19:07:46Z"
+          },
+          {
+            "name": "Run tests",
+            "status": "completed",
+            "conclusion": "failure",
+            "number": 5,
+            "started_at": "2026-10-08T19:07:46Z",
+            "completed_at": "2026-10-08T19:08:01Z"
+          },
+          {
+            "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 9,
+            "started_at": "2026-10-08T19:08:01Z",
+            "completed_at": "2026-10-08T19:08:01Z"
+          },
+          {
+            "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10,
+            "started_at": "2026-10-08T19:08:01Z",
+            "completed_at": "2026-10-08T19:08:01Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-10-08T19:08:01Z",
+            "completed_at": "2026-10-08T19:08:01Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/Jacob-Met/tastetable/check-runs/113490870711",
+        "labels": [
+          "ubuntu-latest"
+        ],
+        "runner_id": 1000008240,
+        "runner_name": "GitHub Actions 1000008240",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      }
+    ]
+  },
+  "syntheticMerge": {
+    "sha": "2162a14ed49ed1fe5291add56bfde3fdbcdaa8cf",
+    "node_id": "C_kwDOU7nj19oAKDIxNjJhMTRlZDQ5ZWQxZmU1MjkxYWRkNTZiZmRlM2ZkYmNkYWE4Y2Y",
+    "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/commits/2162a14ed49ed1fe5291add56bfde3fdbcdaa8cf",
+    "html_url": "https://github.com/Jacob-Met/tastetable/commit/2162a14ed49ed1fe5291add56bfde3fdbcdaa8cf",
+    "author": {
+      "name": "Jacob Metoyer",
+      "email": "150724801+Jacob-Met@users.noreply.github.com",
+      "date": "2026-10-08T19:06:56Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-10-08T19:06:56Z"
+    },
+    "tree": {
+      "sha": "49b62360fda6f2d2d689f854a04b751541e2a470",
+      "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/49b62360fda6f2d2d689f854a04b751541e2a470"
+    },
+    "message": "Merge eb3228b7c9bccff0419002133b935ea93e1a34fd into 2b347cee4ff4e2b806362730a8520a3360b45f5a",
+    "parents": [
+      {
+        "sha": "2b347cee4ff4e2b806362730a8520a3360b45f5a",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/commits/2b347cee4ff4e2b806362730a8520a3360b45f5a",
+        "html_url": "https://github.com/Jacob-Met/tastetable/commit/2b347cee4ff4e2b806362730a8520a3360b45f5a"
+      },
+      {
+        "sha": "eb3228b7c9bccff0419002133b935ea93e1a34fd",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/commits/eb3228b7c9bccff0419002133b935ea93e1a34fd",
+        "html_url": "https://github.com/Jacob-Met/tastetable/commit/eb3228b7c9bccff0419002133b935ea93e1a34fd"
+      }
+    ],
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqx+nQCRC1aQ7uu5UhlAAA4SIQAISoxKBgRQlY8wv3EYEE9z6K\nYGE2MIa+mxaNhBs7aZO0RL3sO+nsrNPTcVsIPFNzVZdDnYKH3d2+wCtSmi+p5vrk\nfV6tGxW9Bs2BCAqQ1BytSveAwccEs6IYK1YBMg8ekDCZZwrX980X7rI7vNzxhKXb\nQD58zvgnHkUn87Y9mnBjwbnJQI9xbKI/XNOu/Aj/LvSVU/IImZfZo39+Ru38xozn\nYCfBEtOBS84dTrYQR9lW9M2dsu8y1KgV1JfQvBZ/fli38c+sbTPdKsjLHHlztVsJ\ncedULQNQR23F5zshXS+IVcpDg1LRju7TZ2oFavZ/OJneA7AiP/RG8x+XZRSpOU8o\n+bdovhu6SNCdHVj9tSsz1/MC7RiBaU9DK98PWy3QF5B/FLvPoJ04+rPV5jQGiLcA\n9AoqKIqc6fj8DmSssTWMG8kW8OY42+Da8bybxNFAlr11k+t4Bp4QU9G0yPRKJOiZ\nDqs/jq+4yDFKbLlTXoeQMpRFmQA0ObWzDgXM123iZx5x6wScERnCvfCJ0Y0uDdHJ\nWh/kSw5I9DW2NB+y/qZnNZhDwYQ0oBLTuM0NgoTP4t7QxhguI024xL6e15rCOWHP\nlyZOYO9OclqXE28MMvlRO5PKz2O8zLNZExseWq/I3Hep82XGZeQ7S5qUuF8d6B9I\nK7T2Q2eQsqa7GGMK8QVm\n=igWG\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 49b62360fda6f2d2d689f854a04b751541e2a470\nparent 2b347cee4ff4e2b806362730a8520a3360b45f5a\nparent eb3228b7c9bccff0419002133b935ea93e1a34fd\nauthor Jacob Metoyer <150724801+Jacob-Met@users.noreply.github.com> 1791486416 -0700\ncommitter GitHub <noreply@github.com> 1791486416 -0700\n\nMerge eb3228b7c9bccff0419002133b935ea93e1a34fd into 2b347cee4ff4e2b806362730a8520a3360b45f5a\n",
+      "verified_at": "2026-10-08T19:06:56Z"
+    }
+  },
+  "observedCheckout": "2162a14ed49ed1fe5291add56bfde3fdbcdaa8cf",
+  "log": {
+    "path": "job-113490870711.log",
+    "bytes": 28990,
+    "sha256": "dd3e16ef482841e138fb1c275da0cc00459f4d6e5f69339beff85ac5f15fc801",
+    "gitBlob": "d4fdcab44010082dd62ff8db5678feedc55d1b03"
+  },
+  "originalTest": {
+    "commit": "eb3228b7c9bccff0419002133b935ea93e1a34fd",
+    "path": "tests/test_saved_week_calendar.py",
+    "gitBlob": "80d110bb4a1e88bee17597822e9a8e5dfd4981c6",
+    "sha256": "2635c90f26fc7b8338396ba5456e98563e42937c550784f8bfbc77d7b54101b0"
+  },
+  "testResult": {
+    "failed": 2,
+    "passed": 181,
+    "subtestsPassed": 241,
+    "warnings": 1,
+    "seconds": 14.27
+  },
+  "classification": "Authored API subprocess setup passed imported command as argv[1], triggering its normal entry guard before calling the API. Preserve this failed run; successor inserts a sentinel process entry argument. Product source and semantic assertions are unchanged."
+}

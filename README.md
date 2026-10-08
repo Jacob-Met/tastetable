@@ -303,3 +303,13 @@ the plain-text download so embedded line breaks cannot become report headings.
 ## Keep a visit record
 
 Open **Visit record (new tab)** in the planner to record what happened beside the original saved suggestions. Open a JSON saved week from the planner or offline studio, review it, and choose **Use this file**. Each original occurrence has its own explicit outcome, optional actual date and note, including repeated venues and omitted picks. Download the separate visit-record JSON to reopen it later, or print a readable copy. Original dates, explanations and source text remain preserved; checks are not rerun and notes do not change future recommendations. Nothing is uploaded or stored automatically. [Usage, file contract and native checks](docs/visit-record/README.md).
+
+## Export a saved week from the terminal
+
+Use `node tools/saved_week_to_calendar.mjs --input "my week.json" --output "my week.ics"`
+to prepare the existing calendar writer's exact all-day suggestions from an
+arranged saved-week file. The command preserves a stored calendar identity and
+original received timestamp, refuses occupied output names, and makes no provider
+or calendar-account call. A file without an identity needs an explicit
+`--new-calendar` request. See [the saved-week calendar guide](docs/SAVED_WEEK_CALENDAR.md)
+for identity, preview receipts, file limits and delivery behavior.
