@@ -1,0 +1,123 @@
+{
+  "schema": "tastetable.source-integration.v1",
+  "contributor": "estate-45d4289ccf6c/github_receiving",
+  "repository": "Jacob-Met/tastetable",
+  "original_heads": {
+    "pr1": "feeceefdbd29a61d1ce57aa029d65b0cb071432a",
+    "pr2": "cdd6475f5ad31bdb0deec2abe8bc7180ac1fc581",
+    "pr3": "7002a16a3b46c7318826ce9975fd812096925f42"
+  },
+  "merges": {
+    "pr1": {
+      "commit": "f59b91b18b67b99bc70052bade37e36a7c7e8a5a",
+      "tree": "d602c8b685b5dc60f959bd1e27f872a1353b1c0b",
+      "parents": [
+        "d1c7a4e39cfdc0bb5b9fe026bc9660b75b456e81",
+        "feeceefdbd29a61d1ce57aa029d65b0cb071432a"
+      ]
+    },
+    "pr2": {
+      "commit": "813d723b19f7773e3f98d124563c71c4c3fcf05c",
+      "tree": "dd61162a6533661445036db85c5b8471a359a529",
+      "parents": [
+        "f1deb5ca7822d2a9a074db9f1cd0339188d13f71",
+        "cdd6475f5ad31bdb0deec2abe8bc7180ac1fc581"
+      ]
+    },
+    "pr3": {
+      "commit": "8fdd78dbd1bd7e72385b2f5bd684e02b0971fa14",
+      "tree": "e1bf3ec58b743e2b43d52ff79d52daf0116ef264",
+      "parents": [
+        "813d723b19f7773e3f98d124563c71c4c3fcf05c",
+        "7002a16a3b46c7318826ce9975fd812096925f42"
+      ]
+    }
+  },
+  "concurrent_change": {
+    "pr": 5,
+    "owner": "estate-8304a40f6f50",
+    "head": "ae63a6e65e63602cf0d1bfdd9881beba52062e9a",
+    "merge": "f1deb5ca7822d2a9a074db9f1cd0339188d13f71",
+    "observed": "Merged two seconds before original PR2, after its final main read. Post-merge readback detected changed parent/tree; next mutation paused until exact current-main reconstruction and full native+hosted qualification.",
+    "preserved": true
+  },
+  "receiving_pr": {
+    "number": 6,
+    "closed_without_merge": true,
+    "original_author_heads_unmodified": true,
+    "first": {
+      "head": "ddef968fda54c323a20b803f1bee84f2464cd88b",
+      "tree": "b3aebf7ae64bd3135224021c6d48428b44e8dcf7",
+      "run_id": 37750939769,
+      "job_id": 113223698897,
+      "conclusion": "success",
+      "pytest": 25,
+      "subtests": 3
+    },
+    "final": {
+      "head": "951a87cc5b98190cc89b50be04445cfe6f3b9d86",
+      "tree": "e1bf3ec58b743e2b43d52ff79d52daf0116ef264",
+      "checkout": "78fda0ddef936ac03b682243f00672a9dda662d1",
+      "run_id": 37751434948,
+      "job_id": 113225353979,
+      "conclusion": "success",
+      "pytest": 52,
+      "subtests": 28,
+      "python": "3.12.15"
+    }
+  },
+  "native_local": {
+    "original_tests": [
+      19,
+      25,
+      30
+    ],
+    "ci_composed_tests": [
+      25,
+      30
+    ],
+    "concurrent_main_tests": 47,
+    "final_composed_tests": 52,
+    "final_composed_subtests": 28,
+    "http_passed": 26,
+    "http_failed": 0,
+    "complete_http_responses_identical_to_original_qualified_pr3": 26,
+    "source_leaves": 23,
+    "final_source_tree": "e1bf3ec58b743e2b43d52ff79d52daf0116ef264"
+  },
+  "hosted_push_runs": {
+    "ci_main": {
+      "id": 37749822570,
+      "conclusion": "success"
+    },
+    "pr2_actual_main": {
+      "id": 37751047900,
+      "conclusion": "success"
+    },
+    "final_main": {
+      "id": 37751609137,
+      "job_id": 113225939774,
+      "conclusion": "success"
+    }
+  },
+  "limits": [
+    "Real Uvicorn and HTTP model-protocol transport with authored synthetic Qloo/model data; no live inference or provider claim.",
+    "Increasing pytest counts include original and concurrent author tests; the26-case HTTP matrix is identical across source versions.",
+    "No browser ownership, constraint-policy authorship, resident goal/lease or production-service activation claimed."
+  ],
+  "native_custody": {
+    "status": "received_and_replayed",
+    "path": "/srv/hamon-estate/custody/estate-45d4289ccf6c/tastetable-backend-8fdd78d",
+    "source_commit": "8fdd78dbd1bd7e72385b2f5bd684e02b0971fa14",
+    "source_tree": "e1bf3ec58b743e2b43d52ff79d52daf0116ef264",
+    "python": "3.14.4",
+    "pytest": 52,
+    "subtests": 28,
+    "http_passed": 26,
+    "http_failed": 0,
+    "servers_stopped": true,
+    "all_source_leaves_verified_after_tests": 23,
+    "archive_sha256": "a7a39ce7daf71849eaa54d00061c0258fa2005d59442acb443916c4158aa468a",
+    "receipt": "receiving/native-replay.json"
+  }
+}

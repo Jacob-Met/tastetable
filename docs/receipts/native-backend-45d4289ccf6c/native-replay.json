@@ -1,0 +1,195 @@
+{
+  "schema": "tastetable.native-receiving.v1",
+  "contributor": "estate-45d4289ccf6c/github_receiving",
+  "device": "hamon-thinkpad",
+  "device_id": "d55b2499-5e82-4805-819a-d0d7ddea1efe",
+  "custody": "/srv/hamon-estate/custody/estate-45d4289ccf6c/tastetable-backend-8fdd78d",
+  "source_commit": "8fdd78dbd1bd7e72385b2f5bd684e02b0971fa14",
+  "source_tree": "e1bf3ec58b743e2b43d52ff79d52daf0116ef264",
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+  "runs": [
+    {
+      "name": "native-suite",
+      "exit": 0
+    },
+    {
+      "name": "native-http",
+      "exit": 0
+    }
+  ],
+  "pytest_summary": [
+    "52 passed, 1 warning, 28 subtests passed in 0.73s"
+  ],
+  "http": {
+    "agent_sha256": "b301247b8e9459327afa19964d02a9647c0d39f36e55c380115af3b30d538817",
+    "cases": 26,
+    "failed": 0,
+    "passed": 26,
+    "real_loopback_http": true,
+    "server_stopped": true,
+    "synthetic_qloo_and_model": true
+  },
+  "response_signatures": [
+    {
+      "mode": "scripted",
+      "case": "healthy-rosa",
+      "response_sha256": "f4cd0ab98b8c8c1c83a11109b275f72680c7f49e390bf7b5ad1a818cd33207be"
+    },
+    {
+      "mode": "scripted",
+      "case": "healthy-harold",
+      "response_sha256": "6bef0d4ef7b35136590b291fb8e46705b45d61d318c4854a442546db9b2e7320"
+    },
+    {
+      "mode": "scripted",
+      "case": "healthy-mei",
+      "response_sha256": "8bd9fd4d8df0677b391fbc27e2b10353c11ba0a5825f5311a518dff60ff7988c"
+    },
+    {
+      "mode": "scripted",
+      "case": "primary",
+      "response_sha256": "f2e8a0160a9a044cad01378c1cebdc57400e0d2a005acb5a62c81f683a887da0"
+    },
+    {
+      "mode": "scripted",
+      "case": "fallback",
+      "response_sha256": "134aa52ab2ae12cef9a7d6dee44636c4b9b3a954c579b69c0f4c68e6251b7422"
+    },
+    {
+      "mode": "scripted",
+      "case": "outing",
+      "response_sha256": "cb8c8c9b608b402fa0eec2a0e29f3b48b517eb6f3f02b31eaa246c5ab590a547"
+    },
+    {
+      "mode": "scripted",
+      "case": "all",
+      "response_sha256": "c13903c52e72f0f4f0bf894a03a5c23ce9571532e70e59f768af0efd5bd6d591"
+    },
+    {
+      "mode": "scripted",
+      "case": "recovered",
+      "response_sha256": "f4cd0ab98b8c8c1c83a11109b275f72680c7f49e390bf7b5ad1a818cd33207be"
+    },
+    {
+      "mode": "scripted",
+      "case": "primary",
+      "response_sha256": "f2e8a0160a9a044cad01378c1cebdc57400e0d2a005acb5a62c81f683a887da0"
+    },
+    {
+      "mode": "scripted",
+      "case": "fallback",
+      "response_sha256": "134aa52ab2ae12cef9a7d6dee44636c4b9b3a954c579b69c0f4c68e6251b7422"
+    },
+    {
+      "mode": "scripted",
+      "case": "outing",
+      "response_sha256": "cb8c8c9b608b402fa0eec2a0e29f3b48b517eb6f3f02b31eaa246c5ab590a547"
+    },
+    {
+      "mode": "scripted",
+      "case": "all",
+      "response_sha256": "c13903c52e72f0f4f0bf894a03a5c23ce9571532e70e59f768af0efd5bd6d591"
+    },
+    {
+      "mode": "scripted",
+      "case": "recovered",
+      "response_sha256": "f4cd0ab98b8c8c1c83a11109b275f72680c7f49e390bf7b5ad1a818cd33207be"
+    },
+    {
+      "mode": "http-model",
+      "case": "healthy-rosa",
+      "response_sha256": "f4cd0ab98b8c8c1c83a11109b275f72680c7f49e390bf7b5ad1a818cd33207be"
+    },
+    {
+      "mode": "http-model",
+      "case": "healthy-harold",
+      "response_sha256": "6bef0d4ef7b35136590b291fb8e46705b45d61d318c4854a442546db9b2e7320"
+    },
+    {
+      "mode": "http-model",
+      "case": "healthy-mei",
+      "response_sha256": "8bd9fd4d8df0677b391fbc27e2b10353c11ba0a5825f5311a518dff60ff7988c"
+    },
+    {
+      "mode": "http-model",
+      "case": "primary",
+      "response_sha256": "f2e8a0160a9a044cad01378c1cebdc57400e0d2a005acb5a62c81f683a887da0"
+    },
+    {
+      "mode": "http-model",
+      "case": "fallback",
+      "response_sha256": "134aa52ab2ae12cef9a7d6dee44636c4b9b3a954c579b69c0f4c68e6251b7422"
+    },
+    {
+      "mode": "http-model",
+      "case": "outing",
+      "response_sha256": "cb8c8c9b608b402fa0eec2a0e29f3b48b517eb6f3f02b31eaa246c5ab590a547"
+    },
+    {
+      "mode": "http-model",
+      "case": "all",
+      "response_sha256": "c13903c52e72f0f4f0bf894a03a5c23ce9571532e70e59f768af0efd5bd6d591"
+    },
+    {
+      "mode": "http-model",
+      "case": "recovered",
+      "response_sha256": "f4cd0ab98b8c8c1c83a11109b275f72680c7f49e390bf7b5ad1a818cd33207be"
+    },
+    {
+      "mode": "http-model",
+      "case": "primary",
+      "response_sha256": "f2e8a0160a9a044cad01378c1cebdc57400e0d2a005acb5a62c81f683a887da0"
+    },
+    {
+      "mode": "http-model",
+      "case": "fallback",
+      "response_sha256": "134aa52ab2ae12cef9a7d6dee44636c4b9b3a954c579b69c0f4c68e6251b7422"
+    },
+    {
+      "mode": "http-model",
+      "case": "outing",
+      "response_sha256": "cb8c8c9b608b402fa0eec2a0e29f3b48b517eb6f3f02b31eaa246c5ab590a547"
+    },
+    {
+      "mode": "http-model",
+      "case": "all",
+      "response_sha256": "c13903c52e72f0f4f0bf894a03a5c23ce9571532e70e59f768af0efd5bd6d591"
+    },
+    {
+      "mode": "http-model",
+      "case": "recovered",
+      "response_sha256": "f4cd0ab98b8c8c1c83a11109b275f72680c7f49e390bf7b5ad1a818cd33207be"
+    }
+  ],
+  "source_leaves_verified_after_tests": 23,
+  "files": {
+    "native-suite.log": {
+      "bytes": 800,
+      "sha256": "d2ad13a941a3432a47a7bc1790e15a3a3883b6c44228e15084d6f7f9759e641c"
+    },
+    "native-http.log": {
+      "bytes": 65,
+      "sha256": "57a887e0142c838471785a1222904e6e6071dc9bcf1bbe3467a85de5cedb01bd"
+    },
+    "native-http.json": {
+      "bytes": 377218,
+      "sha256": "a4180fbdeec64c0da39c60176a4da3305c2f9bfb098b3e698dcf114b6545debc"
+    },
+    "native-dependencies.txt": {
+      "bytes": 387,
+      "sha256": "eaacd4d966238bfbdf7e1c8c37305c814f359932aee01b767855a0019cace7a2"
+    },
+    "native-setup.log": {
+      "bytes": 7111,
+      "sha256": "e6ecf28586757bf334c54d777a4ee5789e9f7ab7a323fc5af442bbc899dd14c9"
+    }
+  },
+  "elapsed_seconds": 2.16,
+  "setup_note": "Custody parent is existing root-only0700. Two unprivileged attempts stopped before creating a log; supported sudo -n entrypoint then prepared only this isolated venv. Shared permissions unchanged.",
+  "limits": [
+    "No standing service activated; owned HTTP listeners stopped.",
+    "Synthetic Qloo and fixture-policy model protocol; no provider or live inference.",
+    "Original source and concurrent PR5 source preserved; browser composition remains owned elsewhere."
+  ]
+}

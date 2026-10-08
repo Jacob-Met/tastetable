@@ -1,4 +1,4 @@
-# Native receiving of TasteTable's original backend stack
+# Native receiving and integration of TasteTable's backend
 
 External contributor: `estate-45d4289ccf6c/github_receiving`.
 
@@ -6,6 +6,82 @@ This packet qualifies the unchanged original configured-model and
 recommendation-error contributions for source integration. It introduces no
 production-code change. Source integration, installed runtime, real provider
 operation and user outcomes remain separate states.
+
+## Integrated source and native estate receipt
+
+The three original pull requests are now merged with their author heads and
+ancestry preserved. All remote merges used an expected-head guard. No required
+gate was bypassed; the repository had no active ruleset or branch protection.
+
+| Original contribution | Actual merge commit |
+| --- | --- |
+| #1, CI and Docker requirements | `f59b91b18b67b99bc70052bade37e36a7c7e8a5a` |
+| #2, configured model | `813d723b19f7773e3f98d124563c71c4c3fcf05c` |
+| #3, recommendation-error continuation | `8fdd78dbd1bd7e72385b2f5bd684e02b0971fa14` |
+
+The final complete 23-leaf source tree is
+`e1bf3ec58b743e2b43d52ff79d52daf0116ef264`. Every path, mode and blob was
+read back from GitHub and matched the tested copy after execution. The final
+merge parents are actual main `813d723b...` and unchanged original #3
+`7002a16a...`.
+
+Concurrent #5, owned by `estate-8304a40f6f50`, merged its caregiver-constraint
+and recommendation-purpose corrections two seconds before #2. Its new main
+parent was detected by post-merge readback. The next source mutation was paused;
+the complete 22-leaf actual main was recovered and passed 47 tests. Composing
+only original #3's two-line change and test produced the final source below.
+All concurrent source and unchanged browser assets were preserved. This packet
+does not claim authorship of #5.
+
+| Exact final-source execution | Result |
+| --- | --- |
+| Isolated workspace, Python 3.12.14 | 52 pytest methods, 28 subtests; 26/26 HTTP cases |
+| Hosted receiving #6, Python 3.12.15 | 52 pytest methods, 28 subtests |
+| ThinkPad estate, Python 3.14.4 | 52 pytest methods, 28 subtests; 26/26 HTTP cases |
+
+The same inherited Starlette warning is retained. All 26 complete HTTP response
+signatures match between original qualified #3, the final local composition and
+the actual ThinkPad replay, including both API routes and model modes. All 23
+source leaves remain exact after native tests, and both HTTP servers stopped.
+
+The original backend heads predate the installed CI workflow. Marking #2 ready
+and reopening it produced no run. Temporary receiving-only #6 therefore carried
+the exact compositions while preserving those author heads. Initial CI + #2
+passed [run 37750939769](https://github.com/Jacob-Met/tastetable/actions/runs/37750939769).
+After the concurrent-main change, final-tree #6 passed
+[run 37751434948](https://github.com/Jacob-Met/tastetable/actions/runs/37751434948),
+job `113225353979`. Its actual checkout `78fda0ddef936ac03b682243f00672a9dda662d1`
+has the same final tree. The original #3 was then marked ready and merged.
+Receiving #6 is closed **without merging**. Actual final-main push CI also passed
+[run 37751609137](https://github.com/Jacob-Met/tastetable/actions/runs/37751609137),
+job `113225939774`.
+
+The exact source, isolated virtual environment and replay logs are retained on
+the ThinkPad at
+`/srv/hamon-estate/custody/estate-45d4289ccf6c/tastetable-backend-8fdd78d`.
+The 45,249-byte source packet hashes to
+`a7a39ce7daf71849eaa54d00061c0258fa2005d59442acb443916c4158aa468a`;
+all 28 declared packet members were verified on arrival. Its receiving commands
+use the repository's Python/Uvicorn path under the existing protected custody
+entrypoint. No shared permissions were changed. Two initial unprivileged setup
+attempts stopped before creating files; the existing authorized `sudo -n`
+entrypoint then completed only this isolated environment.
+
+`integration-receipt.json`, `final-source-verification.json`, `native-replay.json`
+and `integrated-http-parity.json` contain the exact source, gate and parity
+receipts. `integration-evidence.tar.gz` preserves composition logs and the full
+local HTTP results. `native-receiving-evidence.tar.gz` preserves the actual
+ThinkPad logs, full HTTP results and dependency freeze; its SHA-256 is
+`55e601b4e70c61aaf3915ac507c5021af84bfacb53b700447c3f03ae9ed83dc2`.
+Both archives have adjacent member/hash manifests.
+
+Bounded native discovery found no TasteTable resident-goal overlap, service
+definition or serving process on the ThinkPad. Existing organizer/lifecycle
+custody and browser composition remain with their owners. This is verified
+native receiving with stopped fixture servers, not a standing production
+deployment or real-provider qualification.
+
+## Original-source comparison
 
 | Source | Exact commit | Native pytest | Identical real-HTTP matrix |
 | --- | --- | --- | --- |

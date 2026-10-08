@@ -1,0 +1,36 @@
+{
+  "sha256": "55e601b4e70c61aaf3915ac507c5021af84bfacb53b700447c3f03ae9ed83dc2",
+  "bytes": 15594,
+  "members": [
+    {
+      "path": "native-replay.json",
+      "bytes": 6410,
+      "sha256": "3b5b5f19c50fb4426d364b6d2275838284c8a97df6a11061fca9b9e86adf80d3"
+    },
+    {
+      "path": "native-suite.log",
+      "bytes": 800,
+      "sha256": "d2ad13a941a3432a47a7bc1790e15a3a3883b6c44228e15084d6f7f9759e641c"
+    },
+    {
+      "path": "native-http.log",
+      "bytes": 65,
+      "sha256": "57a887e0142c838471785a1222904e6e6071dc9bcf1bbe3467a85de5cedb01bd"
+    },
+    {
+      "path": "native-http.json",
+      "bytes": 377218,
+      "sha256": "a4180fbdeec64c0da39c60176a4da3305c2f9bfb098b3e698dcf114b6545debc"
+    },
+    {
+      "path": "native-dependencies.txt",
+      "bytes": 387,
+      "sha256": "eaacd4d966238bfbdf7e1c8c37305c814f359932aee01b767855a0019cace7a2"
+    },
+    {
+      "path": "native-setup.log",
+      "bytes": 7111,
+      "sha256": "e6ecf28586757bf334c54d777a4ee5789e9f7ab7a323fc5af442bbc899dd14c9"
+    }
+  ]
+}
