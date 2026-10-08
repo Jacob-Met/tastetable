@@ -1,0 +1,24 @@
+{
+  "source": {
+    "repository": "Jacob-Met/tastetable",
+    "commit": "8fdd78dbd1bd7e72385b2f5bd684e02b0971fa14"
+  },
+  "source_files_verified": 23,
+  "source_unchanged": true,
+  "native_cases": {
+    "pass": 4,
+    "fail": 0
+  },
+  "calendar_cases": {
+    "pass": 7,
+    "fail": 0
+  },
+  "fixture_sha256": "b3907f9924267e9e386c9054daf7ac486fc3a8f38ad87e1756b9af52b46d7ce7",
+  "calendar_sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+  "planner_sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+  "commands": [
+    "python3 -B capture_current.py",
+    "node receive_calendar.cjs"
+  ],
+  "scope": "Current-source native fixtures and pure calendar receiving only"
+}

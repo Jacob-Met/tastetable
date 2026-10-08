@@ -1,0 +1,52 @@
+{
+  "schema": "calendar-composition-independent-qualification.v1",
+  "recorded_at_utc": "2026-10-08T08:49:09.392114+00:00",
+  "node": "v24.19.0",
+  "command": "node --test composition.test.mjs",
+  "tests": 15,
+  "passed": 15,
+  "failed": 0,
+  "skipped": 0,
+  "exit_code": 0,
+  "source_after_matches_freeze": true,
+  "browser_executed": false,
+  "live_provider_calls": false,
+  "github_writes_attempted": false,
+  "sibling_or_product_source_edits": false,
+  "combined_frontend_available": false,
+  "uid_contract": "namespace + selected Monday + stable pick key",
+  "files": {
+    "writer-snapshot-final/static/calendar.js": {
+      "bytes": 15169,
+      "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b"
+    },
+    "sibling-snapshot/static/week_plan.mjs": {
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+    },
+    "native_results.json": {
+      "bytes": 78815,
+      "sha256": "5f1e885e79ce1d889a860e0cd6a5f1280f3ee84dd776e99ce69f7281ec1048f0"
+    },
+    "composition.test.mjs": {
+      "bytes": 18058,
+      "sha256": "c46a08044ed9fa55ff952af12bcbfc1edacae58d477421d5496b4590e336be4f"
+    },
+    "composition-tests-final.tap": {
+      "bytes": 1590,
+      "sha256": "acd0c85f9021f5ef9bb1ccb8c90ad38e2b30249a73996d90e88300ec8c54d411"
+    },
+    "composition-observations.json": {
+      "bytes": 25582,
+      "sha256": "298b4f4413d193e6df25302f5d36ae0227cee3f3b7c39a99ac3e4364cdb46f0e"
+    },
+    "original-composition-counterexample.json": {
+      "bytes": 5118,
+      "sha256": "9b074487223f7a82a5877fe561e9aa45512edabb6bd8437ed57d84094ebc723c"
+    },
+    "REVIEW.md": {
+      "bytes": 9222,
+      "sha256": "856f7628aee84ccca5541748b245ce70e7a8be5a9cc464f29b1f0c309c70f877"
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "schema": "tastetable-literal-browser-assembly.v1",
+  "owner_root": "/dev/shm/universal-0df473646168/product/week-calendar-integration",
+  "source_root": "/dev/shm/tastetable-composed-browser-9e05c01af69c-consumer-v1/source",
+  "owner_revision": "consumer-v1",
+  "owner_all_12_file_checks": [
+    {
+      "path": "README.md",
+      "sha256": "a188b41b3c44d24af4fbfefb8c152646b3da052b841c2650784abd63f6b4857f"
+    },
+    {
+      "path": "static/app.js",
+      "sha256": "faa47a7c5b71a5c12f004868e68b71df33d4486002b983943185c3d9928dd5e1"
+    },
+    {
+      "path": "static/calendar.css",
+      "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733"
+    },
+    {
+      "path": "static/calendar.js",
+      "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b"
+    },
+    {
+      "path": "static/index.html",
+      "sha256": "2e9a8ab6a77355acc6276fc584269cadce29499ec25666b7bda6b16c56705ea1"
+    },
+    {
+      "path": "static/plan-request.js",
+      "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995"
+    },
+    {
+      "path": "static/style.css",
+      "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+    },
+    {
+      "path": "tests/calendar-week.test.cjs",
+      "sha256": "0169b753f81431545669cd97a0765ee469b36112c06c93e6285f92869f334adf"
+    },
+    {
+      "path": "tests/calendar.test.cjs",
+      "sha256": "901a483387ddb260ee0d6b00b7c12f6374d4e423980e7ba58eb1117f0bda30d1"
+    },
+    {
+      "path": "tests/plan-request.test.cjs",
+      "sha256": "b8926affe4690e29429e4ef73e3187fe8c24d00a39deb8d08a56e554258f5eab"
+    },
+    {
+      "path": "tests/test_week_plan.mjs",
+      "sha256": "ecec21f1d5992b7d8e174e6bacd357846ee3eb8318492d2c8391a2425fcaf636"
+    }
+  ],
+  "copied_static_unchanged": true,
+  "backend_source": {
+    "repository": "Jacob-Met/tastetable",
+    "commit": "8fdd78dbd1bd7e72385b2f5bd684e02b0971fa14"
+  },
+  "fixture_bundle_sha256": "b3907f9924267e9e386c9054daf7ac486fc3a8f38ad87e1756b9af52b46d7ce7",
+  "backend_source_role": "Fixture provenance verification only; HTTP serves exact captured native response JSON and actual static bytes. No backend provider run or implementation change.",
+  "source_or_test_edits": false,
+  "concrete_selectors": {
+    "persona": "#personaSel",
+    "sample": "#sampleBtn",
+    "week": "#weekDate",
+    "reset": "#resetWeek",
+    "dayRows": "#weekDays > li.week-day",
+    "organizer": "#weekOrganizer",
+    "download": "#calendarDownload",
+    "source": "#calendarSource",
+    "results": "#results",
+    "status": "#requestStatus",
+    "form": "#form",
+    "abandonInput": "#form [name=city]",
+    "cancel": "#cancelPlan"
+  }
+}

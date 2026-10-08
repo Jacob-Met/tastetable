@@ -1,0 +1,296 @@
+{
+  "schema": "calendar-composition-independent-observations.v1",
+  "node": "v24.19.0",
+  "writer_sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+  "planner_sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+  "fixture_sha256": "5f1e885e79ce1d889a860e0cd6a5f1280f3ee84dd776e99ce69f7281ec1048f0",
+  "native_provider_calls": false,
+  "browser_run": false,
+  "observations": [
+    {
+      "case": "two_restaurants_one_day",
+      "preview": [
+        {
+          "key": "pick-0",
+          "originalDay": "Monday",
+          "day": "Wednesday",
+          "kind": "restaurant",
+          "entityId": "FIX-P-01",
+          "name": "Casa Habana Kitchen",
+          "why": "Qloo affinity 0.91 for audiences who like Celia Cruz, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "date": "2026-10-07",
+          "endDate": "2026-10-08",
+          "summary": "[DEMO] TasteTable suggestion: Casa Habana Kitchen"
+        },
+        {
+          "key": "pick-1",
+          "originalDay": "Wednesday",
+          "day": "Wednesday",
+          "kind": "restaurant",
+          "entityId": "FIX-P-03",
+          "name": "Abuela's Table",
+          "why": "Qloo affinity 0.83 for audiences who like Celia Cruz, West Side Story (tag match: Mexican). Checks: Soft foods: pass (soft options listed: caldo de pollo, refried beans); Low sodium: pass (lower-sodium signals: low sodium options); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "date": "2026-10-07",
+          "endDate": "2026-10-08",
+          "summary": "[DEMO] TasteTable suggestion: Abuela's Table"
+        },
+        {
+          "key": "pick-2",
+          "originalDay": "Friday",
+          "day": "Friday",
+          "kind": "restaurant",
+          "entityId": "FIX-P-07",
+          "name": "Blue Plate Diner",
+          "why": "Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Diner). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, mashed potatoes, soups); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "date": "2026-10-09",
+          "endDate": "2026-10-10",
+          "summary": "[DEMO] TasteTable suggestion: Blue Plate Diner"
+        },
+        {
+          "key": "pick-4",
+          "originalDay": "Saturday",
+          "day": "Saturday",
+          "kind": "outing",
+          "entityId": "FIX-V-03",
+          "name": "Arroyo Museum of Latin Music (fictional)",
+          "why": "Qloo affinity 0.96 for audiences who like Celia Cruz, West Side Story (tag match: Museum). Checks: Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "date": "2026-10-10",
+          "endDate": "2026-10-11",
+          "summary": "[DEMO] TasteTable suggestion: Arroyo Museum of Latin Music (fictional)"
+        },
+        {
+          "key": "pick-3",
+          "originalDay": "Sunday",
+          "day": "Sunday",
+          "kind": "restaurant",
+          "entityId": "FIX-P-11",
+          "name": "Trattoria Nonna Lucia",
+          "why": "Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Italian). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "date": "2026-10-11",
+          "endDate": "2026-10-12",
+          "summary": "[DEMO] TasteTable suggestion: Trattoria Nonna Lucia"
+        }
+      ],
+      "events": [
+        {
+          "UID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261005-pick-0@tastetable.invalid",
+          "DTSTAMP": "20261008T080000Z",
+          "DTSTART": "20261007",
+          "DTEND": "20261008",
+          "SUMMARY": "[DEMO] TasteTable suggestion: Casa Habana Kitchen",
+          "DESCRIPTION": "DEMO: synthetic Qloo fixture; these venues are fictional.\n\nSuggested outing only; no booking or opening hours confirmed. Not medical or dietary advice. Confirm accessibility, texture and sodium needs with the venue and the person's care team.\n\nQloo entity ID: FIX-P-01\n\nOriginally suggested for: Monday. Arranged for: Wednesday 2026-10-07.\n\nWhy this suggestion: Qloo affinity 0.91 for audiences who like Celia Cruz, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "STATUS": "TENTATIVE",
+          "TRANSP": "TRANSPARENT",
+          "CLASS": "PRIVATE"
+        },
+        {
+          "UID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261005-pick-1@tastetable.invalid",
+          "DTSTAMP": "20261008T080000Z",
+          "DTSTART": "20261007",
+          "DTEND": "20261008",
+          "SUMMARY": "[DEMO] TasteTable suggestion: Abuela's Table",
+          "DESCRIPTION": "DEMO: synthetic Qloo fixture; these venues are fictional.\n\nSuggested outing only; no booking or opening hours confirmed. Not medical or dietary advice. Confirm accessibility, texture and sodium needs with the venue and the person's care team.\n\nQloo entity ID: FIX-P-03\n\nOriginally suggested for: Wednesday. Arranged for: Wednesday 2026-10-07.\n\nWhy this suggestion: Qloo affinity 0.83 for audiences who like Celia Cruz, West Side Story (tag match: Mexican). Checks: Soft foods: pass (soft options listed: caldo de pollo, refried beans); Low sodium: pass (lower-sodium signals: low sodium options); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "STATUS": "TENTATIVE",
+          "TRANSP": "TRANSPARENT",
+          "CLASS": "PRIVATE"
+        },
+        {
+          "UID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261005-pick-2@tastetable.invalid",
+          "DTSTAMP": "20261008T080000Z",
+          "DTSTART": "20261009",
+          "DTEND": "20261010",
+          "SUMMARY": "[DEMO] TasteTable suggestion: Blue Plate Diner",
+          "DESCRIPTION": "DEMO: synthetic Qloo fixture; these venues are fictional.\n\nSuggested outing only; no booking or opening hours confirmed. Not medical or dietary advice. Confirm accessibility, texture and sodium needs with the venue and the person's care team.\n\nQloo entity ID: FIX-P-07\n\nOriginally suggested for: Friday. Arranged for: Friday 2026-10-09.\n\nWhy this suggestion: Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Diner). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, mashed potatoes, soups); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "STATUS": "TENTATIVE",
+          "TRANSP": "TRANSPARENT",
+          "CLASS": "PRIVATE"
+        },
+        {
+          "UID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261005-pick-4@tastetable.invalid",
+          "DTSTAMP": "20261008T080000Z",
+          "DTSTART": "20261010",
+          "DTEND": "20261011",
+          "SUMMARY": "[DEMO] TasteTable suggestion: Arroyo Museum of Latin Music (fictional)",
+          "DESCRIPTION": "DEMO: synthetic Qloo fixture; these venues are fictional.\n\nSuggested outing only; no booking or opening hours confirmed. Not medical or dietary advice. Confirm accessibility, texture and sodium needs with the venue and the person's care team.\n\nQloo entity ID: FIX-V-03\n\nOriginally suggested for: Saturday. Arranged for: Saturday 2026-10-10.\n\nWhy this suggestion: Qloo affinity 0.96 for audiences who like Celia Cruz, West Side Story (tag match: Museum). Checks: Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "STATUS": "TENTATIVE",
+          "TRANSP": "TRANSPARENT",
+          "CLASS": "PRIVATE"
+        },
+        {
+          "UID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261005-pick-3@tastetable.invalid",
+          "DTSTAMP": "20261008T080000Z",
+          "DTSTART": "20261011",
+          "DTEND": "20261012",
+          "SUMMARY": "[DEMO] TasteTable suggestion: Trattoria Nonna Lucia",
+          "DESCRIPTION": "DEMO: synthetic Qloo fixture; these venues are fictional.\n\nSuggested outing only; no booking or opening hours confirmed. Not medical or dietary advice. Confirm accessibility, texture and sodium needs with the venue and the person's care team.\n\nQloo entity ID: FIX-P-11\n\nOriginally suggested for: Sunday. Arranged for: Sunday 2026-10-11.\n\nWhy this suggestion: Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Italian). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "STATUS": "TENTATIVE",
+          "TRANSP": "TRANSPARENT",
+          "CLASS": "PRIVATE"
+        }
+      ]
+    },
+    {
+      "case": "stable_identity_within_week_distinct_weekly_occurrences",
+      "initial": [
+        {
+          "UID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261005-pick-0@tastetable.invalid",
+          "DTSTAMP": "20261008T080000Z",
+          "DTSTART": "20261005",
+          "DTEND": "20261006",
+          "SUMMARY": "[DEMO] TasteTable suggestion: Casa Habana Kitchen",
+          "DESCRIPTION": "DEMO: synthetic Qloo fixture; these venues are fictional.\n\nSuggested outing only; no booking or opening hours confirmed. Not medical or dietary advice. Confirm accessibility, texture and sodium needs with the venue and the person's care team.\n\nQloo entity ID: FIX-P-01\n\nOriginally suggested for: Monday. Arranged for: Monday 2026-10-05.\n\nWhy this suggestion: Qloo affinity 0.91 for audiences who like Celia Cruz, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "STATUS": "TENTATIVE",
+          "TRANSP": "TRANSPARENT",
+          "CLASS": "PRIVATE"
+        },
+        {
+          "UID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261005-pick-1@tastetable.invalid",
+          "DTSTAMP": "20261008T080000Z",
+          "DTSTART": "20261007",
+          "DTEND": "20261008",
+          "SUMMARY": "[DEMO] TasteTable suggestion: Abuela's Table",
+          "DESCRIPTION": "DEMO: synthetic Qloo fixture; these venues are fictional.\n\nSuggested outing only; no booking or opening hours confirmed. Not medical or dietary advice. Confirm accessibility, texture and sodium needs with the venue and the person's care team.\n\nQloo entity ID: FIX-P-03\n\nOriginally suggested for: Wednesday. Arranged for: Wednesday 2026-10-07.\n\nWhy this suggestion: Qloo affinity 0.83 for audiences who like Celia Cruz, West Side Story (tag match: Mexican). Checks: Soft foods: pass (soft options listed: caldo de pollo, refried beans); Low sodium: pass (lower-sodium signals: low sodium options); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "STATUS": "TENTATIVE",
+          "TRANSP": "TRANSPARENT",
+          "CLASS": "PRIVATE"
+        },
+        {
+          "UID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261005-pick-2@tastetable.invalid",
+          "DTSTAMP": "20261008T080000Z",
+          "DTSTART": "20261009",
+          "DTEND": "20261010",
+          "SUMMARY": "[DEMO] TasteTable suggestion: Blue Plate Diner",
+          "DESCRIPTION": "DEMO: synthetic Qloo fixture; these venues are fictional.\n\nSuggested outing only; no booking or opening hours confirmed. Not medical or dietary advice. Confirm accessibility, texture and sodium needs with the venue and the person's care team.\n\nQloo entity ID: FIX-P-07\n\nOriginally suggested for: Friday. Arranged for: Friday 2026-10-09.\n\nWhy this suggestion: Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Diner). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, mashed potatoes, soups); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "STATUS": "TENTATIVE",
+          "TRANSP": "TRANSPARENT",
+          "CLASS": "PRIVATE"
+        },
+        {
+          "UID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261005-pick-4@tastetable.invalid",
+          "DTSTAMP": "20261008T080000Z",
+          "DTSTART": "20261010",
+          "DTEND": "20261011",
+          "SUMMARY": "[DEMO] TasteTable suggestion: Arroyo Museum of Latin Music (fictional)",
+          "DESCRIPTION": "DEMO: synthetic Qloo fixture; these venues are fictional.\n\nSuggested outing only; no booking or opening hours confirmed. Not medical or dietary advice. Confirm accessibility, texture and sodium needs with the venue and the person's care team.\n\nQloo entity ID: FIX-V-03\n\nOriginally suggested for: Saturday. Arranged for: Saturday 2026-10-10.\n\nWhy this suggestion: Qloo affinity 0.96 for audiences who like Celia Cruz, West Side Story (tag match: Museum). Checks: Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "STATUS": "TENTATIVE",
+          "TRANSP": "TRANSPARENT",
+          "CLASS": "PRIVATE"
+        },
+        {
+          "UID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261005-pick-3@tastetable.invalid",
+          "DTSTAMP": "20261008T080000Z",
+          "DTSTART": "20261011",
+          "DTEND": "20261012",
+          "SUMMARY": "[DEMO] TasteTable suggestion: Trattoria Nonna Lucia",
+          "DESCRIPTION": "DEMO: synthetic Qloo fixture; these venues are fictional.\n\nSuggested outing only; no booking or opening hours confirmed. Not medical or dietary advice. Confirm accessibility, texture and sodium needs with the venue and the person's care team.\n\nQloo entity ID: FIX-P-11\n\nOriginally suggested for: Sunday. Arranged for: Sunday 2026-10-11.\n\nWhy this suggestion: Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Italian). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "STATUS": "TENTATIVE",
+          "TRANSP": "TRANSPARENT",
+          "CLASS": "PRIVATE"
+        }
+      ],
+      "changed": [
+        {
+          "UID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261228-pick-1@tastetable.invalid",
+          "DTSTAMP": "20261008T080000Z",
+          "DTSTART": "20261230",
+          "DTEND": "20261231",
+          "SUMMARY": "[DEMO] TasteTable suggestion: Abuela's Table",
+          "DESCRIPTION": "DEMO: synthetic Qloo fixture; these venues are fictional.\n\nSuggested outing only; no booking or opening hours confirmed. Not medical or dietary advice. Confirm accessibility, texture and sodium needs with the venue and the person's care team.\n\nQloo entity ID: FIX-P-03\n\nOriginally suggested for: Wednesday. Arranged for: Wednesday 2026-12-30.\n\nWhy this suggestion: Qloo affinity 0.83 for audiences who like Celia Cruz, West Side Story (tag match: Mexican). Checks: Soft foods: pass (soft options listed: caldo de pollo, refried beans); Low sodium: pass (lower-sodium signals: low sodium options); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "STATUS": "TENTATIVE",
+          "TRANSP": "TRANSPARENT",
+          "CLASS": "PRIVATE"
+        },
+        {
+          "UID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261228-pick-2@tastetable.invalid",
+          "DTSTAMP": "20261008T080000Z",
+          "DTSTART": "20270101",
+          "DTEND": "20270102",
+          "SUMMARY": "[DEMO] TasteTable suggestion: Blue Plate Diner",
+          "DESCRIPTION": "DEMO: synthetic Qloo fixture; these venues are fictional.\n\nSuggested outing only; no booking or opening hours confirmed. Not medical or dietary advice. Confirm accessibility, texture and sodium needs with the venue and the person's care team.\n\nQloo entity ID: FIX-P-07\n\nOriginally suggested for: Friday. Arranged for: Friday 2027-01-01.\n\nWhy this suggestion: Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Diner). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, mashed potatoes, soups); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "STATUS": "TENTATIVE",
+          "TRANSP": "TRANSPARENT",
+          "CLASS": "PRIVATE"
+        },
+        {
+          "UID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261228-pick-0@tastetable.invalid",
+          "DTSTAMP": "20261008T080000Z",
+          "DTSTART": "20270103",
+          "DTEND": "20270104",
+          "SUMMARY": "[DEMO] TasteTable suggestion: Casa Habana Kitchen",
+          "DESCRIPTION": "DEMO: synthetic Qloo fixture; these venues are fictional.\n\nSuggested outing only; no booking or opening hours confirmed. Not medical or dietary advice. Confirm accessibility, texture and sodium needs with the venue and the person's care team.\n\nQloo entity ID: FIX-P-01\n\nOriginally suggested for: Monday. Arranged for: Sunday 2027-01-03.\n\nWhy this suggestion: Qloo affinity 0.91 for audiences who like Celia Cruz, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "STATUS": "TENTATIVE",
+          "TRANSP": "TRANSPARENT",
+          "CLASS": "PRIVATE"
+        },
+        {
+          "UID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261228-pick-3@tastetable.invalid",
+          "DTSTAMP": "20261008T080000Z",
+          "DTSTART": "20270103",
+          "DTEND": "20270104",
+          "SUMMARY": "[DEMO] TasteTable suggestion: Trattoria Nonna Lucia",
+          "DESCRIPTION": "DEMO: synthetic Qloo fixture; these venues are fictional.\n\nSuggested outing only; no booking or opening hours confirmed. Not medical or dietary advice. Confirm accessibility, texture and sodium needs with the venue and the person's care team.\n\nQloo entity ID: FIX-P-11\n\nOriginally suggested for: Sunday. Arranged for: Sunday 2027-01-03.\n\nWhy this suggestion: Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Italian). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "STATUS": "TENTATIVE",
+          "TRANSP": "TRANSPARENT",
+          "CLASS": "PRIVATE"
+        }
+      ],
+      "reset": [
+        {
+          "UID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261228-pick-0@tastetable.invalid",
+          "DTSTAMP": "20261008T080000Z",
+          "DTSTART": "20261228",
+          "DTEND": "20261229",
+          "SUMMARY": "[DEMO] TasteTable suggestion: Casa Habana Kitchen",
+          "DESCRIPTION": "DEMO: synthetic Qloo fixture; these venues are fictional.\n\nSuggested outing only; no booking or opening hours confirmed. Not medical or dietary advice. Confirm accessibility, texture and sodium needs with the venue and the person's care team.\n\nQloo entity ID: FIX-P-01\n\nOriginally suggested for: Monday. Arranged for: Monday 2026-12-28.\n\nWhy this suggestion: Qloo affinity 0.91 for audiences who like Celia Cruz, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "STATUS": "TENTATIVE",
+          "TRANSP": "TRANSPARENT",
+          "CLASS": "PRIVATE"
+        },
+        {
+          "UID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261228-pick-1@tastetable.invalid",
+          "DTSTAMP": "20261008T080000Z",
+          "DTSTART": "20261230",
+          "DTEND": "20261231",
+          "SUMMARY": "[DEMO] TasteTable suggestion: Abuela's Table",
+          "DESCRIPTION": "DEMO: synthetic Qloo fixture; these venues are fictional.\n\nSuggested outing only; no booking or opening hours confirmed. Not medical or dietary advice. Confirm accessibility, texture and sodium needs with the venue and the person's care team.\n\nQloo entity ID: FIX-P-03\n\nOriginally suggested for: Wednesday. Arranged for: Wednesday 2026-12-30.\n\nWhy this suggestion: Qloo affinity 0.83 for audiences who like Celia Cruz, West Side Story (tag match: Mexican). Checks: Soft foods: pass (soft options listed: caldo de pollo, refried beans); Low sodium: pass (lower-sodium signals: low sodium options); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "STATUS": "TENTATIVE",
+          "TRANSP": "TRANSPARENT",
+          "CLASS": "PRIVATE"
+        },
+        {
+          "UID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261228-pick-2@tastetable.invalid",
+          "DTSTAMP": "20261008T080000Z",
+          "DTSTART": "20270101",
+          "DTEND": "20270102",
+          "SUMMARY": "[DEMO] TasteTable suggestion: Blue Plate Diner",
+          "DESCRIPTION": "DEMO: synthetic Qloo fixture; these venues are fictional.\n\nSuggested outing only; no booking or opening hours confirmed. Not medical or dietary advice. Confirm accessibility, texture and sodium needs with the venue and the person's care team.\n\nQloo entity ID: FIX-P-07\n\nOriginally suggested for: Friday. Arranged for: Friday 2027-01-01.\n\nWhy this suggestion: Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Diner). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, mashed potatoes, soups); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "STATUS": "TENTATIVE",
+          "TRANSP": "TRANSPARENT",
+          "CLASS": "PRIVATE"
+        },
+        {
+          "UID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261228-pick-4@tastetable.invalid",
+          "DTSTAMP": "20261008T080000Z",
+          "DTSTART": "20270102",
+          "DTEND": "20270103",
+          "SUMMARY": "[DEMO] TasteTable suggestion: Arroyo Museum of Latin Music (fictional)",
+          "DESCRIPTION": "DEMO: synthetic Qloo fixture; these venues are fictional.\n\nSuggested outing only; no booking or opening hours confirmed. Not medical or dietary advice. Confirm accessibility, texture and sodium needs with the venue and the person's care team.\n\nQloo entity ID: FIX-V-03\n\nOriginally suggested for: Saturday. Arranged for: Saturday 2027-01-02.\n\nWhy this suggestion: Qloo affinity 0.96 for audiences who like Celia Cruz, West Side Story (tag match: Museum). Checks: Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "STATUS": "TENTATIVE",
+          "TRANSP": "TRANSPARENT",
+          "CLASS": "PRIVATE"
+        },
+        {
+          "UID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-20261228-pick-3@tastetable.invalid",
+          "DTSTAMP": "20261008T080000Z",
+          "DTSTART": "20270103",
+          "DTEND": "20270104",
+          "SUMMARY": "[DEMO] TasteTable suggestion: Trattoria Nonna Lucia",
+          "DESCRIPTION": "DEMO: synthetic Qloo fixture; these venues are fictional.\n\nSuggested outing only; no booking or opening hours confirmed. Not medical or dietary advice. Confirm accessibility, texture and sodium needs with the venue and the person's care team.\n\nQloo entity ID: FIX-P-11\n\nOriginally suggested for: Sunday. Arranged for: Sunday 2027-01-03.\n\nWhy this suggestion: Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Italian). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "STATUS": "TENTATIVE",
+          "TRANSP": "TRANSPARENT",
+          "CLASS": "PRIVATE"
+        }
+      ]
+    }
+  ]
+}
