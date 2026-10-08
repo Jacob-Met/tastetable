@@ -1,0 +1,7 @@
+"source_name","week_start","source_mode","source_received_at","source_saved_at","record_saved_at","occurrence_key","venue_name","entity_id","kind","original_day","planned_day","planned_date","outcome","actual_date","note","original_explanation"
+" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-0","Café, ""Same""","same-id","restaurant","Monday","Thursday","2024-02-29","went","2024-03-01","He said ""yes"", then went.","  First
+reason  "
+" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-1","Café, ""Same""","same-id","restaurant","Tuesday","","","did_not_go","2024-03-02","  AB
+C
+🙂	 ","Second reason"
+" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-2","Third café","third-id","restaurant","Friday","Friday","2024-03-01","unrecorded","","","Third reason"

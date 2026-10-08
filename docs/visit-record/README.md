@@ -7,6 +7,7 @@ Open **Visit record (new tab)** in the TasteTable planner. Start with the JSON p
 3. Choose **Use this file** to replace the record in this tab. Cancel keeps the current edits.
 4. For each original occurrence, choose **Unrecorded**, **Went** or **Did not go**. An optional visit or decision date can be outside the planned week. Notes and dates never infer attendance.
 5. **Download visit record** before leaving. **Print record** makes a readable copy; the JSON is the file that can be reopened.
+6. **Download CSV** makes a tabular report of the current valid record. It includes every original occurrence, even omitted or unrecorded picks, and keeps planned dates separate from entered actual dates. Import spreadsheet columns as text to preserve literal values. CSV cannot be reopened here; keep the JSON for editing.
 
 Repeated venue names and IDs remain separate occurrences, including picks omitted from the saved schedule. Planned dates and original explanations are displayed beside the new entries. Original source mode, inputs and saved timestamps stay visible. No checks or recommendations are rerun.
 
@@ -30,7 +31,7 @@ Exported JSON has exactly `{format:"tastetable.visit-record.v1",savedAt,source,v
 
 The browser may display imported CR or CRLF as normalized textarea line breaks. The original admitted note remains in model state until that specific note is edited. Changing outcome or date, rendering, printing and saving do not read the textarea back. Once the note itself is edited, its displayed value becomes the explicit new note.
 
-An invalid date or note draft blocks both export buttons until corrected. New file selections, cancellation and current edits retire pending reads and previews, so a stale completion cannot replace the current record. A valid preview still requires **Use**.
+An invalid date or note draft blocks JSON, CSV and Print until corrected. New file selections, cancellation and current edits retire pending reads and previews, so a stale completion cannot replace the current record. A valid preview still requires **Use**.
 
 ### Public JavaScript API
 
@@ -65,3 +66,18 @@ node tools/check_visit_record_browser.mjs \
 ```
 
 The browser runner retains physical downloaded files, PNG screenshots, a PDF, exact source hashes and an exit-bound receipt. It closes its owned browser and removes only its owned profile. Qualification also includes independently sealed public-API and browser oracles, the original unchanged-codec baseline and exact evidence of the integration source.
+
+## CSV report from this tab
+
+The browser uses the same `renderVisitRecordCsv` renderer as the [native CSV command](../VISIT_RECORD_CSV.md), after the unchanged JSON serializer validates the complete current model. `record_saved_at` records the explicit CSV export time, not the timestamp of an earlier opened file or a visit date. An untouched imported note retains its exact CR/LF/CRLF characters through unrelated date or outcome edits. Export never harvests values from untouched textareas.
+
+CSV contains quoted UTF-8 fields with CRLF row terminators. It retains source labels, opaque occurrence and venue identifiers, original explanations and literal notes without inferred attendance or new venue checks. A record with no original picks produces the header only. Downloading retires a pending file preview or read and exports the record already accepted in the tab. It does not replace that record, upload data or save automatically.
+
+A focused actual-browser receiver exercises physical CSV and JSON downloads, invalid drafts, pending replacement retirement, literal notes and narrow controls:
+
+```sh
+node tools/check_visit_record_csv_browser.mjs \
+  --browser /path/to/chromium \
+  --browser-workdir /browser-readable/directory \
+  --output /new/evidence/directory
+```

@@ -1,0 +1,31 @@
+{
+  "base": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+  "baseline_source": "1cba17347baa7528147c244c1046658960b7fae2",
+  "browser_receiver": {
+    "path": "tools/check_visit_record_csv_browser.mjs",
+    "sha256": "7680ee3ca881284fa8019109574bcbf6acaca4bffb825e577b2c0dad290f7375"
+  },
+  "baseline": {
+    "groups": 2,
+    "downloaded_files": 1,
+    "receipt_sha256": "72490753edcda00c4ba2394d2bed44bde9c5b8871bab44358063d525d09a6e72"
+  },
+  "candidate": {
+    "groups": 9,
+    "downloaded_files": 10,
+    "receipt_sha256": "dfae210de8641f1055c2ff7fea170d67247564b2fc59f5142fb5ffa3cf3366f5"
+  },
+  "visual_review": "Actual desktop1280 and mobile390 PNGs opened and reviewed: all3 labeled export/print buttons and keyboard focus visible, no horizontal clipping; existing responsive CSS retained.",
+  "source_preservation": "Native1cba\u2192145d fast-forward preserves all6 original browser runtime hashes; renderer exact SHAa233a983 added solely by integratedPR59. Candidate changes two UI product files and dedicated guide only.",
+  "checks": {
+    "diff_check": "exit0",
+    "ui_node_check": "exit0",
+    "receiver_node_check": "exit0"
+  },
+  "limits": [
+    "Hosted gates and independent Windows receiving pending.",
+    "Synthetic fictional records; no provider call or live caregiver data.",
+    "Browser downloads prove physical bytes in test runtime; product UI only claims requested download.",
+    "No spreadsheet application import, screen-reader or installed deployment claim."
+  ]
+}
