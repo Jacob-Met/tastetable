@@ -52,3 +52,13 @@ The separate cleanup test executes the real CLI and actual link, makes only its 
 [Native artifact 11555150706](https://github.com/Jacob-Met/tastetable/actions/runs/37786977019/artifacts/11555150706) is a 387,186-byte ZIP with SHA-256 `1da42c5cc9029dd80b9a29ac9a3e210fc83cfc8a0d7c7285df0b547a96a6da09`. It retains actual JSON/ICS downloads, a generated two-page PDF and three PNGs, plus the report. No private transfer URL is persisted.
 
 PDF text and PNG/PDF pixels were not directly received or inspected. The converter preserves all browser production sources and uses their existing print behavior; the accepted scope is actual native conversion and file interoperability, with generated-artifact limits retained. The browser used explicit local read-only health/persona bootstrap with unchanged application files. This does not claim FastAPI deployment, live provider calls, venue suitability, physical printing or a released application.
+
+## Source integration and actual main-push receiving
+
+PR27 merged normally at **`a77175501199ace765cb7ca57742b267351d3e79`**, 2026-10-08 13:58:21 UTC. Its parents are the accepted base and candidate, and its complete tree is exactly **`2031698fbc8fcf94ad9af06117c2d9858bc83190`**. Main and the closed PR were read back; issue 25 closed at 13:58:23 UTC.
+
+The actual main-push jobs both checked out that merge commit. [Maintained run 37788635376 / job 113349807069](https://github.com/Jacob-Met/tastetable/actions/runs/37788635376/job/113349807069) passed **153 tests plus 150 subtests**, with the existing warning and no skips, in 10.16 seconds using Python **3.12.15**. [Browser run 37788635408 / job 113349806628](https://github.com/Jacob-Met/tastetable/actions/runs/37788635408/job/113349806628) passed the same **9 groups**, with all 18 runtime source hashes identical to the candidate, no source mutation, page exceptions or external requests.
+
+This new browser run used Node 22.23.3, Chrome **154.0.8037.57** and Python 3.12.3; the earlier candidate used Chrome 154.0.8037.97. The exact runtime difference is retained. Its [artifact 11556170030](https://github.com/Jacob-Met/tastetable/actions/runs/37788635408/artifacts/11556170030) is 386,470 bytes, ZIP SHA-256 `aa3c839a64edbb29f9f25b19aa19c2bb3ef475574f73ffa53cf1cb4a58503927`, with the same generated-but-uninspected image/PDF boundary.
+
+`integration.json`, `main-push-unit.log` and `main-push-browser.log` retain this integrated graph and exact new executions. The original candidate packet remains immutable at commit `c728c3f549fb3c47b9543cedf60461bac3229399`.
