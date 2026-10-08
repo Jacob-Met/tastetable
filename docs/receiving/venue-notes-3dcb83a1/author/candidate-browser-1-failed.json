@@ -1,0 +1,341 @@
+{
+  "schema": "tastetable.venue-notes-browser/1",
+  "status": "failed",
+  "project": "C:\\Users\\minec\\tastetable-venue-resume-3dcb83a1\\candidate",
+  "node": "v24.21.0",
+  "baseCommit": "2b347cee4ff4e2b806362730a8520a3360b45f5a",
+  "input": {
+    "path": "fixtures/received-week.json",
+    "publishedPath": "docs/venue-followup-6c20bb4b010e/author/final/saved-composition-week.json",
+    "git_blob": "8b14090030201d6e8d69cd5bca380a9a71a4da0d",
+    "attribution": "Unchanged published native saved-week artifact; this invocation does not run its producer.",
+    "actualPath": "C:\\Users\\minec\\tastetable-venue-resume-3dcb83a1\\candidate\\fixtures\\received-week.json",
+    "sha256": "55dfb9c7e50b2aff749dbb33835dcc5cf89c7d7f0eaf4e2b68dd957cb319a824"
+  },
+  "bootstrap": "Authored GET-only mock health/personas and exact project static files; no FastAPI or provider.",
+  "checks": [
+    "real keyboard edits retain an earlier reply with its exact earlier questions and a distinct second visit note",
+    "actual notes and week downloads retain all three occurrence/date records separately from the unchanged saved-week format",
+    "real notes chooser previews exact hidden-date/question-history records without applying them, and Cancel preserves current notes",
+    "ordinary note edits and arrangement changes retire a pending replacement without relabeling dated replies",
+    "changed source identity and invalid UTF-8 refuse through actual file reads, preserving every current note and origin",
+    "a delayed original file completion cannot replace a newer reviewed file or change unsaved notes"
+  ],
+  "artifacts": [
+    {
+      "name": "saved-venue-notes.json",
+      "bytes": 16777,
+      "sha256": "a4cfa935522f84d9a640cb1fa6b56126718e09f9293798f18c1716e6c15e4cd5",
+      "kind": "actual browser download",
+      "suggestedFilename": "tastetable-venue-notes-2026-12-28.json"
+    },
+    {
+      "name": "arranged-week.json",
+      "bytes": 14596,
+      "sha256": "fc8973a16f90874276037e4e4148344a24b98b23dc9d1b7ff86e8a4736684f91",
+      "kind": "actual browser download",
+      "suggestedFilename": "tastetable-week-2026-12-28.json"
+    },
+    {
+      "name": "before-refusal.json",
+      "bytes": 16010,
+      "sha256": "682b86a36fa56110305b5f57b593d8502f67be532eb92ee18a7464a6504c5601",
+      "kind": "actual browser download",
+      "suggestedFilename": "tastetable-venue-notes-2026-12-28.json"
+    },
+    {
+      "name": "different-origin-notes.json",
+      "bytes": 16797,
+      "sha256": "e0c28d67f20dd1a4dc01055e7a2159853675ed340e73dea9aea45b84ee113d82",
+      "kind": "authored changed-origin negative input"
+    },
+    {
+      "name": "invalid-utf8-notes.json",
+      "bytes": 3,
+      "sha256": "ba778c0261008c8f71ae4061ad0162ffcbe63b52c91f89f236738131d1217ec7",
+      "kind": "authored invalid UTF-8 negative input"
+    },
+    {
+      "name": "after-refusal.json",
+      "bytes": 16010,
+      "sha256": "d60c79929ea8af4c73382250b532bc38e070223753a73837c9b688e36afe8e9e",
+      "kind": "actual browser download",
+      "suggestedFilename": "tastetable-venue-notes-2026-12-28.json"
+    },
+    {
+      "name": "newer-notes.json",
+      "bytes": 16821,
+      "sha256": "384b84a393d9f11222704598f946983ed0a648b8b224a9fb067ba575218d196a",
+      "kind": "authored later valid notes choice"
+    },
+    {
+      "name": "other-accepted-week.json",
+      "bytes": 14617,
+      "sha256": "e15e8e1f374ef7264b620037bfdfd704afe272b301ab25a77d600e87c4e45211",
+      "kind": "authored new accepted-origin negative input"
+    },
+    {
+      "name": "observed-state.png",
+      "bytes": 103536,
+      "sha256": "24115c4edbc52ad329f13de5d675f78a9de96ec00193a45f8b0a36084dd9f878",
+      "kind": "actual Chrome screenshot"
+    }
+  ],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:64411/",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/static/style.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/static/calendar.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/static/venue_followup.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/static/plan-request.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/static/calendar.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/static/app.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/static/venue_followup.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/static/venue_note_file.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/api/health",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/favicon.ico",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/api/personas",
+      "method": "GET"
+    },
+    {
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/static/style.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/static/calendar.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/static/venue_followup.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/static/plan-request.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/static/calendar.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/static/app.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/static/venue_followup.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/static/venue_note_file.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/api/health",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:64411/api/personas",
+      "method": "GET"
+    },
+    {
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+      "method": "GET"
+    }
+  ],
+  "externalRequests": [],
+  "serverRequests": [
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/plan-request.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_plan.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_note_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/favicon.ico"
+    },
+    {
+      "method": "GET",
+      "path": "/api/personas"
+    },
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/plan-request.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_plan.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_note_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/api/personas"
+    }
+  ],
+  "sourceSha256": {
+    "static/index.html": "fee1f0ce63ca3c79e1e2010c3b603aaa429ecfe48d985a7eeabf2bec41d02207",
+    "static/style.css": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+    "static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+    "static/calendar.css": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+    "static/venue_followup.css": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+    "static/plan-request.js": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+    "tests/venue_followup.test.mjs": "a53284b48da8375d7f6cf26b1d4e5943dfd203e60ff1ef44780f9a02f299479f",
+    "static/venue_followup.mjs": "61bb9cf497b5a37a32afd1b23729e128aed2631cf2c570a1485ca4f0ffbe632c",
+    "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+    "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+    "static/app.js": "6e87cfbf89e37792d384795382059a5d2245312c1b4bf0038991a3af3ff8c327",
+    "static/venue_note_file.mjs": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+    "tests/venue_note_file.test.mjs": "8c1b12a02302e414346a04710d5efb14af45e0cb8994ba75135c9e1988252740"
+  },
+  "sourceUnchanged": true,
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/154.0.8037.57",
+    "revision": "@73c14f6228d7cd537c855007e8f88678969cc0eb",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "jsVersion": "15.4.80.11"
+  },
+  "error": "Error: TypeError: Cannot read properties of null (reading 'value')\n    at <anonymous>:1:32\n    at evaluate (file:///C:/Users/minec/tastetable-venue-resume-3dcb83a1/receive-candidate-browser.mjs:73:38)\n    at async file:///C:/Users/minec/tastetable-venue-resume-3dcb83a1/receive-candidate-browser.mjs:374:16",
+  "browserLog": "\r\nDevTools listening on ws://127.0.0.1:64413/devtools/browser/8581bc76-be7a-4d6f-b771-342154070d90\r\n[43776:47348:1008/114655.792:ERROR:content\\browser\\network_service_instance_impl.cc:653] Network service crashed or was terminated, restarting service.\r\n[43776:47348:1008/114656.518:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114656.518:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114656.518:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114656.518:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114656.520:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114656.554:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114656.573:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114656.633:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114656.634:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114656.634:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114656.634:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114656.636:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114656.644:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114656.655:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114657.449:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114657.450:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114657.450:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114657.450:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114657.452:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114657.460:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114657.471:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114657.787:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114657.788:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114657.788:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114657.788:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114657.790:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114657.797:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n[43776:47348:1008/114657.809:ERROR:chrome\\browser\\download\\download_status_updater_win.cc:36] Failed initializing an ITaskbarList3 interface.\r\n",
+  "pageErrors": [],
+  "nativeFileChooserEvents": 11,
+  "artifactBytes": 215167
+}

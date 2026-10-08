@@ -1,0 +1,302 @@
+{
+  "schema": "tastetable.venue-notes-hosted-closure.v1",
+  "initialHead": "472ef9f04c2242236fab2f45daed41a0ed586635",
+  "initialTree": "0f0aaa50f4ff734d0560e30504c55eb545f46ad6",
+  "run": 37830737691,
+  "job": 113495098144,
+  "url": "https://github.com/Jacob-Met/tastetable/actions/runs/37830737691/job/113495098144",
+  "actualCheckout": "aa87f5f2258c1e66c54dc90123bc9239d568ef3a",
+  "failureObservedAt": "2026-10-08T19:17:11Z",
+  "otherGates": [
+    {
+      "run": 37830737632,
+      "job": 113495098118,
+      "pythonPassed": 163,
+      "subtestsPassed": 202
+    },
+    {
+      "run": 37830737619,
+      "job": 113495096738,
+      "nodePassed": 88,
+      "failed": 0
+    }
+  ],
+  "causalEvidence": {
+    "receiverPath": "tools/check_native_plan_week_browser.mjs",
+    "originalBlob": "cf8447be076efd547fa2f750834ad18ee48c925d",
+    "sourceListOriginalLine": "  \"static/venue_followup.mjs\", \"static/venue_followup.css\",",
+    "sourceListCorrectedLine": "  \"static/venue_followup.mjs\", \"static/venue_followup.css\", \"static/venue_note_file.mjs\",",
+    "servingGuard": "if (!sourcePaths.includes(relative) || !relative.startsWith(\"static/\")) { response.writeHead(404).end(); return; }",
+    "originalSourceListIncludesImportedModule": false,
+    "actualBrowserRequestedImportedModule": true,
+    "primaryFailure": "The first actual saved-week chooser never appears because the new static module is refused by the receiver's explicit serving list, leaving app module initialization incomplete.",
+    "interpretation": "HTTP404 behavior is established by the exact source and requested URL; the original receiver did not log HTTP response statuses. No page-error absence is treated as a successful application load."
+  },
+  "correction": "Register the one new application module in the existing sourcePaths list, retaining both the strict serving boundary and before/after source hashing. No workflow, product runtime, original author or peer packet change.",
+  "primaryReceipt": {
+    "schema": "tastetable.native-plan-week-browser/1",
+    "status": "failed",
+    "project": "/home/runner/work/tastetable/tastetable",
+    "executable": "/usr/bin/google-chrome",
+    "node": "v22.23.3",
+    "checkout": "aa87f5f2258c1e66c54dc90123bc9239d568ef3a",
+    "claim": "https://github.com/Jacob-Met/tastetable/issues/25",
+    "bootstrap": "Unchanged application files; authored GET-only /api/health mock and /api/personas empty responses. No FastAPI/deployment claim.",
+    "fileSelection": "Actual Open saved week keyboard control, Page.fileChooserOpened and DOM.setFileInputFiles; native File.text is unchanged.",
+    "checks": [
+      "actual original Python producer and new converter preserve authored and empty native results"
+    ],
+    "artifacts": [
+      {
+        "name": "authored-profile.json",
+        "bytes": 197,
+        "sha256": "344dddbf74cb2dac1a2b6958f55821ef78be440c2f807b8018788693c4c83065",
+        "kind": "authored native input"
+      },
+      {
+        "name": "authored-native.json",
+        "bytes": 9063,
+        "sha256": "1d1d0d56c13796a229b13f5171b80c306a74cb998d5b7dc0f6d488d57f9ff48f",
+        "kind": "actual Python CLI stdout"
+      },
+      {
+        "name": "authored-converted-week.json",
+        "bytes": 9179,
+        "sha256": "375fd16d383d4c3d2ab87a33de8b806c5831f14a89e91044d17aa38e47b22fef",
+        "kind": "actual create-only converter output"
+      },
+      {
+        "name": "empty-profile.json",
+        "bytes": 213,
+        "sha256": "70ec9404c123ad0018291e329e92f12e51fb591ea1b7828edd7d19dfe867fcc8",
+        "kind": "authored native input"
+      },
+      {
+        "name": "empty-native.json",
+        "bytes": 7154,
+        "sha256": "7321a1a9e55deb6f715974549f359b8789e27b9e34e2c2cf447fad555effe3c3",
+        "kind": "actual Python CLI stdout"
+      },
+      {
+        "name": "empty-converted-week.json",
+        "bytes": 7131,
+        "sha256": "81fa8dbc38034392de6ee2a1d748f06f1000c8f0332a96c5cbece840e41f5e61",
+        "kind": "actual create-only converter output"
+      },
+      {
+        "name": "failed-state.png",
+        "bytes": 96357,
+        "sha256": "1da3d4a105a577036144c8486f997116022e909b773874f1d1b03feaf1fb2b9f",
+        "kind": "actual Chrome screenshot"
+      }
+    ],
+    "programs": [
+      {
+        "label": "authored native producer",
+        "executable": "/usr/bin/python3",
+        "args": [
+          "/home/runner/work/tastetable/tastetable/tastetable_cli.py",
+          "--profile",
+          "/home/runner/work/_temp/native-plan-week-receiving/authored-profile.json"
+        ],
+        "status": 0,
+        "signal": null,
+        "stdoutSha256": "1d1d0d56c13796a229b13f5171b80c306a74cb998d5b7dc0f6d488d57f9ff48f",
+        "stderr": "",
+        "error": null
+      },
+      {
+        "label": "authored actual converter",
+        "executable": "/opt/hostedtoolcache/node/22.23.3/x64/bin/node",
+        "args": [
+          "/home/runner/work/tastetable/tastetable/tools/native_plan_to_week.mjs",
+          "--input",
+          "/home/runner/work/_temp/native-plan-week-receiving/authored-native.json",
+          "--week",
+          "2026-12-30",
+          "--output",
+          "/home/runner/work/_temp/native-plan-week-receiving/authored-converted-week.json"
+        ],
+        "status": 0,
+        "signal": null,
+        "stdoutSha256": "5991472e1a2e91d6fdf5c142e3224a1bc4713f13589727820d101f53e91f7f8e",
+        "stderr": "",
+        "error": null
+      },
+      {
+        "label": "empty native producer",
+        "executable": "/usr/bin/python3",
+        "args": [
+          "/home/runner/work/tastetable/tastetable/tastetable_cli.py",
+          "--profile",
+          "/home/runner/work/_temp/native-plan-week-receiving/empty-profile.json"
+        ],
+        "status": 0,
+        "signal": null,
+        "stdoutSha256": "7321a1a9e55deb6f715974549f359b8789e27b9e34e2c2cf447fad555effe3c3",
+        "stderr": "",
+        "error": null
+      },
+      {
+        "label": "empty actual converter",
+        "executable": "/opt/hostedtoolcache/node/22.23.3/x64/bin/node",
+        "args": [
+          "/home/runner/work/tastetable/tastetable/tools/native_plan_to_week.mjs",
+          "--input",
+          "/home/runner/work/_temp/native-plan-week-receiving/empty-native.json",
+          "--week",
+          "2026-12-30",
+          "--output",
+          "/home/runner/work/_temp/native-plan-week-receiving/empty-converted-week.json"
+        ],
+        "status": 0,
+        "signal": null,
+        "stdoutSha256": "aaeb3589a56ccb6da8e13cf06128c3c33f8eef2cabc987b5533c5f4b18cfdac2",
+        "stderr": "",
+        "error": null
+      }
+    ],
+    "requests": [
+      {
+        "url": "http://127.0.0.1:37423/",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:37423/static/style.css",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:37423/static/calendar.css",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:37423/static/venue_followup.css",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:37423/static/plan-request.js",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:37423/static/calendar.js",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:37423/static/app.js",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:37423/static/week_plan.mjs",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:37423/static/week_file.mjs",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:37423/static/venue_followup.mjs",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:37423/static/venue_note_file.mjs",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:37423/favicon.ico",
+        "method": "GET"
+      }
+    ],
+    "externalRequests": [],
+    "serverRequests": [
+      {
+        "method": "GET",
+        "path": "/"
+      },
+      {
+        "method": "GET",
+        "path": "/static/style.css"
+      },
+      {
+        "method": "GET",
+        "path": "/static/calendar.css"
+      },
+      {
+        "method": "GET",
+        "path": "/static/venue_followup.css"
+      },
+      {
+        "method": "GET",
+        "path": "/static/plan-request.js"
+      },
+      {
+        "method": "GET",
+        "path": "/static/calendar.js"
+      },
+      {
+        "method": "GET",
+        "path": "/static/app.js"
+      },
+      {
+        "method": "GET",
+        "path": "/static/week_plan.mjs"
+      },
+      {
+        "method": "GET",
+        "path": "/static/week_file.mjs"
+      },
+      {
+        "method": "GET",
+        "path": "/static/venue_followup.mjs"
+      },
+      {
+        "method": "GET",
+        "path": "/static/venue_note_file.mjs"
+      },
+      {
+        "method": "GET",
+        "path": "/favicon.ico"
+      }
+    ],
+    "sourceSha256": {
+      "tastetable_cli.py": "5244b5d5108eb60a5c79dbe76d5abc352a9145915a5851c2f69a57e90aa71e3f",
+      "agent.py": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+      "constraints.py": "f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa",
+      "qloo_client.py": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+      "personas.py": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+      "fixtures/qloo_fixtures.json": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+      "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+      "static/calendar.css": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+      "static/app.js": "6e87cfbf89e37792d384795382059a5d2245312c1b4bf0038991a3af3ff8c327",
+      "static/index.html": "fee1f0ce63ca3c79e1e2010c3b603aaa429ecfe48d985a7eeabf2bec41d02207",
+      "static/venue_followup.mjs": "61bb9cf497b5a37a32afd1b23729e128aed2631cf2c570a1485ca4f0ffbe632c",
+      "static/venue_followup.css": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+      "static/style.css": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+      "static/plan-request.js": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+      "tools/native_plan_to_week.mjs": "bbdf06cf5f358ef5eb3d0875d6f2182382a625b246f0c39df159b6b15b025563",
+      "tests/test_native_plan_week.py": "dc1e65ff357672218799adf0152baf9d7041e2f15d74a1e9c9c614e3f87e964a",
+      "tools/check_native_plan_week_browser.mjs": "d8d5aabd44aa8b1e54b26f0e76a8b40a19b324e8262a5c6c716c9655469c0ff6",
+      ".github/workflows/native-plan-week-browser.yml": "b40992512e13d653c51fb8b4dfb0d15ad0a090ae4754c4082a18ab20ca62ace3"
+    },
+    "sourceUnchanged": true,
+    "browser": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/154.0.8037.97",
+      "revision": "@b510e9d7cd3a2fbd78d0ddc42234103206c5f78d",
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+      "jsVersion": "15.4.80.20"
+    },
+    "error": "Error: Timed out: native saved-week file chooser\n    at waitFor (file:///home/runner/work/tastetable/tastetable/tools/check_native_plan_week_browser.mjs:90:9)\n    at async chooseFile (file:///home/runner/work/tastetable/tastetable/tools/check_native_plan_week_browser.mjs:181:3)\n    at async file:///home/runner/work/tastetable/tastetable/tools/check_native_plan_week_browser.mjs:373:3",
+    "browserLog": "[2362:2386:1008/191653.672320:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2362:2386:1008/191653.681859:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2362:2386:1008/191655.369055:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2362:2386:1008/191655.648593:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n\nDevTools listening on ws://127.0.0.1:42427/devtools/browser/94f6d528-5252-46f5-a25d-a1957d324d13\n[2362:2362:1008/191657.342587:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2362:2362:1008/191657.342646:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2362:2386:1008/191657.342662:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2362:2386:1008/191657.342693:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2362:2362:1008/191657.375018:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2362:2362:1008/191657.421486:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2362:2386:1008/191657.429707:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2362:2362:1008/191657.618694:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2362:2362:1008/191657.635023:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2362:2386:1008/191657.635122:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2362:2362:1008/191657.654270:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2362:2362:1008/191657.825485:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.Properties.GetAll: object_path= /org/freedesktop/UPower/devices/DisplayDevice: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files\n[2362:2362:1008/191657.825936:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2362:2386:1008/191657.826018:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2362:2362:1008/191657.964058:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2362:2386:1008/191657.964310:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2362:2362:1008/191658.032232:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2362:2387:1008/191701.527832:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT\nCreated TensorFlow Lite XNNPACK delegate for CPU.\n",
+    "lastPage": {
+      "url": "http://127.0.0.1:37423/",
+      "focus": "<button id=\"openWeek\" type=\"button\">Open saved week</button>",
+      "text": "TasteTable\n\nA weekly plan of restaurants + one cultural outing, grounded in Qloo taste data and checked against care constraints.\n\nNot medical or dietary advice. Constraint checks are heuristics over public venue tags and menu keywords. Always confirm accessibility, texture and sodium needs with the venue and the person's care team. Sample personas are fictional; do not enter real health information.\n1. Tastes & constraints\nOpen saved week\nCompare saved weeks (new tab)\nTry a sample persona\nFavourite cuisines \nMusic they love (artists / era) \nFavourite films \nCity \nConstraints\n Soft foods  Low sodium  Wheelchair access\nPlan my week\n\nMIT licensed · Uses Qloo's Taste AI insights. Qloo results describe aggregate affinities, not facts about any individual."
+    },
+    "pageErrors": [],
+    "nativeFileChooserEvents": 0,
+    "totalArtifactBytes": 129294
+  },
+  "verification": "Pending the same normal hosted browser gate on the corrected exact head; no blind rerun of the unchanged failing head and no duplicate local suite."
+}

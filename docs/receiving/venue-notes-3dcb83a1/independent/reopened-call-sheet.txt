@@ -1,0 +1,37 @@
+TasteTable — venue call sheet
+Week beginning 2026-10-12
+Demo plan: fictional venues and synthetic source data. Use this sheet to practise the workflow.
+Independent reopened week.
+Caregiver-entered notes. A recorded reply is not a safety check, reservation or confirmation by TasteTable.
+Confirm venue details and care needs before going. Do not include names or private health information.
+Notes apply to the pick occurrence and date shown. Later edits do not update this copy.
+
+Monday 2026-10-12 — Synthetic Cedar Cafe
+Suggested visit 1; Qloo entity: synthetic-shared-venue-01
+Original plan explanation (heuristic):
+  Authored first occurrence.
+Questions to ask:
+  • Revised: which entrance will be open?
+  • Keep the exact route in the reply.
+Caregiver contact status: Needs follow-up
+Questions changed after these notes were entered. Follow up on the revised questions.
+Questions for the earlier reply / notes:
+   Can the north entrance fit two chairs?
+  Please confirm the quiet table.  
+Earlier reply / notes (for the previous questions):
+   
+  Phone reply: "ask for Ana" — α, café 🙂	 
+Next step:
+  Ask again about the revised entrance.
+
+Monday 2026-10-12 — Synthetic Cedar Cafe
+Suggested visit 2; Qloo entity: synthetic-shared-venue-01
+Original plan explanation (heuristic):
+  Authored second occurrence.
+Questions to ask:
+  • Independent second-visit question.
+Caregiver contact status: Reply recorded
+Venue reply / your notes:
+  Second visit has a separate reply.
+Next step:
+  No next step recorded.

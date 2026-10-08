@@ -23,3 +23,9 @@
   .contact-print-note dd { margin:.15rem 0 .5rem; white-space:pre-wrap; }
   .contact-visit { padding:.6rem; }
 }
+
+.contact-actions { display:flex; flex-wrap:wrap; gap:.5rem; }
+.contact-file-preview { margin:1rem 0; padding:1rem; border:2px solid var(--accent); border-radius:8px; }
+.contact-file-preview p, .contact-file-preview h5, [data-contact-file-source] { overflow-wrap:anywhere; }
+.contact-file-preview pre { white-space:pre-wrap; overflow-wrap:anywhere; font:inherit; }
+@media print { .contact-file-preview, .contact-file-status { display:none !important; } }

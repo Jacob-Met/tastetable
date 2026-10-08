@@ -1,0 +1,32 @@
+{
+  "created": "2026-10-08 18:54:59 UTC",
+  "reviewer": "estate_coordination/3dcb83a1",
+  "product": "Jacob-Met/TasteTable",
+  "owner": "estate_continuity / optional venue-notes companion files",
+  "source_before_candidate_inspection": true,
+  "objective": "Independently receive identity, reply-question history, bounded note replacement and exact accepted-origin binding through the actual native model/file API.",
+  "cases": [
+    {
+      "group": "distinct occurrences",
+      "expected": "Two visits share venue identity/name/date but occupy different accepted-week occurrences. Notes/replies from one never attach to the other after a real companion JSON write/read and explicit replacement."
+    },
+    {
+      "group": "reply provenance",
+      "expected": "Record a literal Unicode/whitespace reply to the first visit's original questions, then revise its current questions. A companion roundtrip retains the reply and the exact original replyQuestions separately from the later current questions."
+    },
+    {
+      "group": "bounded replacement",
+      "expected": "Before import retain an off-week note and a current-week note omitted from the companion. Both stay exactly unchanged; supplied occurrence records are replaced only within the existing declared accepted-origin/date binding."
+    },
+    {
+      "group": "full origin refusal",
+      "expected": "Change only the accepted original request identity or only the accepted trace identity while keeping visible week/venue/date values the same. Refuse the earlier companion before any current note changes, including the other occurrence and unrelated retained notes."
+    }
+  ],
+  "execution": "One independently authored native model/file receiving fixture with actual JSON roundtrip, exact input/output hashes and before/after state. No provider/browser operations, no core/source edits, no broad repeated suite. Original behavior is only claimed if the actual original API supports the same invoked path.",
+  "guard": {
+    "free_disk_bytes": 1073741824,
+    "available_memory_bytes": 1610612736
+  },
+  "limits": "The producer owns UI/Worker/stale-read and broad browser qualification. This receiver does not infer cross-version or current-source equivalence without primary blob checks."
+}

@@ -1,0 +1,385 @@
+{
+  "schema": "tastetable.venue-notes-browser/1",
+  "status": "passed",
+  "project": "C:\\Users\\minec\\tastetable-venue-resume-3dcb83a1\\candidate",
+  "node": "v24.21.0",
+  "baseCommit": "2b347cee4ff4e2b806362730a8520a3360b45f5a",
+  "input": {
+    "path": "fixtures/received-week.json",
+    "publishedPath": "docs/venue-followup-6c20bb4b010e/author/final/saved-composition-week.json",
+    "git_blob": "8b14090030201d6e8d69cd5bca380a9a71a4da0d",
+    "attribution": "Unchanged published native saved-week artifact; this invocation does not run its producer.",
+    "actualPath": "C:\\Users\\minec\\tastetable-venue-resume-3dcb83a1\\candidate\\fixtures\\received-week.json",
+    "sha256": "55dfb9c7e50b2aff749dbb33835dcc5cf89c7d7f0eaf4e2b68dd957cb319a824"
+  },
+  "bootstrap": "Authored GET-only mock health/personas and exact project static files; no FastAPI or provider.",
+  "checks": [
+    "real keyboard edits retain an earlier reply with its exact earlier questions and a distinct second visit note",
+    "actual notes and week downloads retain all three occurrence/date records separately from the unchanged saved-week format",
+    "real notes chooser previews exact hidden-date/question-history records without applying them, and Cancel preserves current notes",
+    "ordinary note edits and arrangement changes retire a pending replacement without relabeling dated replies",
+    "changed source identity and invalid UTF-8 refuse through actual file reads, preserving every current note and origin",
+    "a delayed original file completion cannot replace a newer reviewed file or change unsaved notes",
+    "a newly accepted saved-week origin retires the old asynchronous note read and refuses its foreign records",
+    "valid retry and explicit Replace restore the exact complete record set while original week, inputs, checks and calendar identity remain unchanged",
+    "returning to each original date reveals only its own restored note and the readable TXT keeps the earlier-question explanation",
+    "390px file preview and worksheet retain literal multiline content, usable keyboard controls and no horizontal overflow",
+    "download preparation can retry, and an empty companion clears notes only after explicit Replace before a successful restore",
+    "complete flow preserves source files, local-only GET traffic, empty automatic storage and literal text without page errors"
+  ],
+  "artifacts": [
+    {
+      "name": "saved-venue-notes.json",
+      "bytes": 16777,
+      "sha256": "caffbdf2a03439f7588639e6caa5a332e2843d2fe064d40641af7707772cd159",
+      "kind": "actual browser download",
+      "suggestedFilename": "tastetable-venue-notes-2026-12-28.json"
+    },
+    {
+      "name": "arranged-week.json",
+      "bytes": 14596,
+      "sha256": "f6d3fd3fa85c5f1122e4d0311545ebf5aad34c9faf9103e44fae99fa2089e4db",
+      "kind": "actual browser download",
+      "suggestedFilename": "tastetable-week-2026-12-28.json"
+    },
+    {
+      "name": "before-refusal.json",
+      "bytes": 16010,
+      "sha256": "a4a2f976fde04fdc27729f29a5e7481edfd2ed7d67e4cbd07b897ee7460b021b",
+      "kind": "actual browser download",
+      "suggestedFilename": "tastetable-venue-notes-2026-12-28.json"
+    },
+    {
+      "name": "different-origin-notes.json",
+      "bytes": 16797,
+      "sha256": "c86be781a5c6a3ce287726daf3994c39734088c47e9ad82efdda96aa64d40cc1",
+      "kind": "authored changed-origin negative input"
+    },
+    {
+      "name": "invalid-utf8-notes.json",
+      "bytes": 3,
+      "sha256": "ba778c0261008c8f71ae4061ad0162ffcbe63b52c91f89f236738131d1217ec7",
+      "kind": "authored invalid UTF-8 negative input"
+    },
+    {
+      "name": "after-refusal.json",
+      "bytes": 16010,
+      "sha256": "2b87d50aad443a4a1e267c5c662e2b649dbbff22a24608b0ca7c9971ea5c9f92",
+      "kind": "actual browser download",
+      "suggestedFilename": "tastetable-venue-notes-2026-12-28.json"
+    },
+    {
+      "name": "newer-notes.json",
+      "bytes": 16821,
+      "sha256": "f800337cc94c07bf516ebc65ff23502d2844ac33954702c78adf910b5ecb5b9b",
+      "kind": "authored later valid notes choice"
+    },
+    {
+      "name": "other-accepted-week.json",
+      "bytes": 14617,
+      "sha256": "87660c100684b24d1472855cc686936fa36c5074d68c6531dc9096732eea843e",
+      "kind": "authored new accepted-origin negative input"
+    },
+    {
+      "name": "resumed-venue-notes.json",
+      "bytes": 16777,
+      "sha256": "ccc9a4120a7e0e00ed4b617dee0e3f342e800a6836bfaaf6122771810aa2293e",
+      "kind": "actual browser download",
+      "suggestedFilename": "tastetable-venue-notes-2026-12-28.json"
+    },
+    {
+      "name": "resumed-week.json",
+      "bytes": 14596,
+      "sha256": "77b911a8e7f24c501a54e69cc51f7087184a27dbad7eadad9f14b62c0af1a1e9",
+      "kind": "actual browser download",
+      "suggestedFilename": "tastetable-week-2026-12-28.json"
+    },
+    {
+      "name": "resumed-call-sheet.txt",
+      "bytes": 4359,
+      "sha256": "c471e6b1190693247a7258909ddad58119619d44dfcb5e860822c1406dc0a7f1",
+      "kind": "actual browser download",
+      "suggestedFilename": "tastetable-venue-contacts-2026-12-28.txt"
+    },
+    {
+      "name": "phone-note-preview.png",
+      "bytes": 42791,
+      "sha256": "50d5a0498d5097dfed0b955a79f203f0afdb7c87a295c88c3e33017d6d93a231",
+      "kind": "actual Chrome screenshot"
+    },
+    {
+      "name": "phone-resumed-worksheet.png",
+      "bytes": 47556,
+      "sha256": "69fa7c1ee2e25a9ad0730240edb6f3859d5e559ecb94cd9722365a4de20e1e89",
+      "kind": "actual Chrome screenshot"
+    },
+    {
+      "name": "download-retry-notes.json",
+      "bytes": 16777,
+      "sha256": "108535a1406159e8b24958f97ef666458f318929936b10bae16eddf99f685134",
+      "kind": "actual browser download",
+      "suggestedFilename": "tastetable-venue-notes-2026-12-28.json"
+    },
+    {
+      "name": "empty-notes.json",
+      "bytes": 15432,
+      "sha256": "9a38cd77554da6aefaf246822f90ef1596deb3e16bce8c54333169031308d71e",
+      "kind": "authored explicit-clear input"
+    }
+  ],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:59596/",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/static/style.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/static/calendar.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/static/venue_followup.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/static/plan-request.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/static/calendar.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/static/app.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/static/venue_followup.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/static/venue_note_file.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/api/health",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/favicon.ico",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/api/personas",
+      "method": "GET"
+    },
+    {
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/static/style.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/static/calendar.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/static/venue_followup.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/static/plan-request.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/static/calendar.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/static/app.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/static/venue_followup.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/static/venue_note_file.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/api/health",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:59596/api/personas",
+      "method": "GET"
+    },
+    {
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+      "method": "GET"
+    }
+  ],
+  "externalRequests": [],
+  "serverRequests": [
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/plan-request.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_plan.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_note_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/favicon.ico"
+    },
+    {
+      "method": "GET",
+      "path": "/api/personas"
+    },
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/plan-request.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_plan.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_note_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/api/personas"
+    }
+  ],
+  "sourceSha256": {
+    "static/index.html": "fee1f0ce63ca3c79e1e2010c3b603aaa429ecfe48d985a7eeabf2bec41d02207",
+    "static/style.css": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+    "static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+    "static/calendar.css": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+    "static/venue_followup.css": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+    "static/plan-request.js": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+    "tests/venue_followup.test.mjs": "a53284b48da8375d7f6cf26b1d4e5943dfd203e60ff1ef44780f9a02f299479f",
+    "static/venue_followup.mjs": "61bb9cf497b5a37a32afd1b23729e128aed2631cf2c570a1485ca4f0ffbe632c",
+    "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+    "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+    "static/app.js": "6e87cfbf89e37792d384795382059a5d2245312c1b4bf0038991a3af3ff8c327",
+    "static/venue_note_file.mjs": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+    "tests/venue_note_file.test.mjs": "8c1b12a02302e414346a04710d5efb14af45e0cb8994ba75135c9e1988252740"
+  },
+  "sourceUnchanged": true,
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/154.0.8037.57",
+    "revision": "@73c14f6228d7cd537c855007e8f88678969cc0eb",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "jsVersion": "15.4.80.11"
+  },
+  "pageErrors": [],
+  "nativeFileChooserEvents": 17,
+  "artifactBytes": 269919
+}

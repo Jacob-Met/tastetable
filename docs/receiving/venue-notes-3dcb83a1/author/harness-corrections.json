@@ -1,0 +1,36 @@
+{
+  "schema": "tastetable.venue-notes-harness-corrections.v1",
+  "productChanged": false,
+  "finalReplayPath": "tools/check_venue_note_files_browser.mjs",
+  "lineage": [
+    {
+      "run": "candidate-browser-1",
+      "passedGroups": 6,
+      "exit": 1,
+      "cause": "Harness guessed #city; the original and candidate source use input[name=city].",
+      "old": "assert.equal(await evaluate('document.querySelector(\"#city\").value'),otherWeek.inputs.city);",
+      "replacement": "assert.equal(await evaluate(\"document.querySelector('input[name=\\\"city\\\"]').value\"),otherWeek.inputs.city);"
+    },
+    {
+      "run": "candidate-browser-2",
+      "passedGroups": 8,
+      "exit": 1,
+      "cause": "Harness compared raw multiline text with the existing TXT writer's two-space-per-line indentation. Restored UI/input bytes had already matched exactly.",
+      "old": "assert.ok(txt.bytes.toString(\"utf8\").includes(reply)&&txt.bytes.toString(\"utf8\").includes(originalQuestion));",
+      "replacement": "const indented=(value)=>value.split(/\\r?\\n/).map(line=>\"  \"+line).join(\"\\n\");\n  assert.ok(txt.bytes.toString(\"utf8\").includes(indented(reply))&&txt.bytes.toString(\"utf8\").includes(indented(originalQuestion)));"
+    },
+    {
+      "run": "candidate-browser-3",
+      "passedGroups": 0,
+      "exit": 1,
+      "cause": "Page.navigate timed out before the first workflow check. The cause is unproven; source remained exact."
+    },
+    {
+      "run": "candidate-browser-4",
+      "passedGroups": 12,
+      "exit": 0,
+      "cause": "Same final harness and product as run3; separate output and ordinary new browser/profile. No product or timeout change."
+    }
+  ],
+  "replay": "Reverse the declared replacement(s) in the final maintained harness to reconstruct the earlier candidate assertion boundaries. Original source and failed reports retain their exact native pins."
+}

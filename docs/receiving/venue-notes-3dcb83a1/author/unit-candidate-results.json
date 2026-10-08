@@ -1,0 +1,190 @@
+{
+  "source": "2b347cee4ff4e2b806362730a8520a3360b45f5a",
+  "started": "2026-10-08T18:00:15.011Z",
+  "node": "v24.21.0",
+  "command": [
+    "C:\\Users\\minec\\AppData\\Local\\Hamon\\node\\node-v24.21.0-win-x64\\node.exe",
+    "--test",
+    "tests/venue_followup.test.mjs",
+    "tests/venue_note_file.test.mjs"
+  ],
+  "cwd": "C:\\Users\\minec\\tastetable-venue-resume-3dcb83a1\\candidate",
+  "status": 0,
+  "signal": null,
+  "error": null,
+  "stdoutSha256": "58a4ec43c81ac4d014c7b85b5ab9551e73d6cf9d346c0d12a8587c783bfda050",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "before": [
+    {
+      "path": "static/index.html",
+      "bytes": 9143,
+      "sha256": "fee1f0ce63ca3c79e1e2010c3b603aaa429ecfe48d985a7eeabf2bec41d02207",
+      "git_blob": "ea449ce14790381f4dd63cea8bc03717d88412b8"
+    },
+    {
+      "path": "static/style.css",
+      "bytes": 5064,
+      "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+      "git_blob": "28df6c5229b6b592db33e929ae058fe514304af4"
+    },
+    {
+      "path": "static/calendar.js",
+      "bytes": 15169,
+      "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+      "git_blob": "dbed22d2cb91090bccec9472fbffd2854eed2722"
+    },
+    {
+      "path": "static/calendar.css",
+      "bytes": 708,
+      "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+      "git_blob": "9e53b951316d841b86f0256cd2444a3ce547269f"
+    },
+    {
+      "path": "static/venue_followup.css",
+      "bytes": 2166,
+      "sha256": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+      "git_blob": "dd88e221133be5281330cba11a6d141ae5e8d239"
+    },
+    {
+      "path": "static/plan-request.js",
+      "bytes": 1420,
+      "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+      "git_blob": "b21276dda840fe6dd96a3bf3258a851970ff5e4d"
+    },
+    {
+      "path": "tests/venue_followup.test.mjs",
+      "bytes": 11405,
+      "sha256": "a53284b48da8375d7f6cf26b1d4e5943dfd203e60ff1ef44780f9a02f299479f",
+      "git_blob": "515fe959d7217b10b325cab368eb92a6d33b8e6d"
+    },
+    {
+      "path": "static/venue_followup.mjs",
+      "bytes": 18444,
+      "sha256": "61bb9cf497b5a37a32afd1b23729e128aed2631cf2c570a1485ca4f0ffbe632c",
+      "git_blob": "0c1923ecdad8fe9b14f0193a6aba5f3a1e2b9d63"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+    },
+    {
+      "path": "static/week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "git_blob": "420ddb8f63fca264dcf97be7147801105696155d"
+    },
+    {
+      "path": "static/app.js",
+      "bytes": 19190,
+      "sha256": "6e87cfbf89e37792d384795382059a5d2245312c1b4bf0038991a3af3ff8c327",
+      "git_blob": "aa2fa0ff7aa0a1dd370c4fa6fef4f4222792414b"
+    },
+    {
+      "path": "fixtures/received-week.json",
+      "bytes": 14602,
+      "sha256": "55dfb9c7e50b2aff749dbb33835dcc5cf89c7d7f0eaf4e2b68dd957cb319a824",
+      "git_blob": "8b14090030201d6e8d69cd5bca380a9a71a4da0d"
+    },
+    {
+      "path": "static/venue_note_file.mjs",
+      "bytes": 10435,
+      "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+      "git_blob": "f8406cb540d52222996c585666ae1a55a1030def"
+    },
+    {
+      "path": "tests/venue_note_file.test.mjs",
+      "bytes": 10558,
+      "sha256": "8c1b12a02302e414346a04710d5efb14af45e0cb8994ba75135c9e1988252740",
+      "git_blob": "a32d542a76779e8d820a9fc233b6e1a82d9aff2c"
+    }
+  ],
+  "after": [
+    {
+      "path": "static/index.html",
+      "bytes": 9143,
+      "sha256": "fee1f0ce63ca3c79e1e2010c3b603aaa429ecfe48d985a7eeabf2bec41d02207",
+      "git_blob": "ea449ce14790381f4dd63cea8bc03717d88412b8"
+    },
+    {
+      "path": "static/style.css",
+      "bytes": 5064,
+      "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+      "git_blob": "28df6c5229b6b592db33e929ae058fe514304af4"
+    },
+    {
+      "path": "static/calendar.js",
+      "bytes": 15169,
+      "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+      "git_blob": "dbed22d2cb91090bccec9472fbffd2854eed2722"
+    },
+    {
+      "path": "static/calendar.css",
+      "bytes": 708,
+      "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+      "git_blob": "9e53b951316d841b86f0256cd2444a3ce547269f"
+    },
+    {
+      "path": "static/venue_followup.css",
+      "bytes": 2166,
+      "sha256": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+      "git_blob": "dd88e221133be5281330cba11a6d141ae5e8d239"
+    },
+    {
+      "path": "static/plan-request.js",
+      "bytes": 1420,
+      "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+      "git_blob": "b21276dda840fe6dd96a3bf3258a851970ff5e4d"
+    },
+    {
+      "path": "tests/venue_followup.test.mjs",
+      "bytes": 11405,
+      "sha256": "a53284b48da8375d7f6cf26b1d4e5943dfd203e60ff1ef44780f9a02f299479f",
+      "git_blob": "515fe959d7217b10b325cab368eb92a6d33b8e6d"
+    },
+    {
+      "path": "static/venue_followup.mjs",
+      "bytes": 18444,
+      "sha256": "61bb9cf497b5a37a32afd1b23729e128aed2631cf2c570a1485ca4f0ffbe632c",
+      "git_blob": "0c1923ecdad8fe9b14f0193a6aba5f3a1e2b9d63"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+    },
+    {
+      "path": "static/week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "git_blob": "420ddb8f63fca264dcf97be7147801105696155d"
+    },
+    {
+      "path": "static/app.js",
+      "bytes": 19190,
+      "sha256": "6e87cfbf89e37792d384795382059a5d2245312c1b4bf0038991a3af3ff8c327",
+      "git_blob": "aa2fa0ff7aa0a1dd370c4fa6fef4f4222792414b"
+    },
+    {
+      "path": "fixtures/received-week.json",
+      "bytes": 14602,
+      "sha256": "55dfb9c7e50b2aff749dbb33835dcc5cf89c7d7f0eaf4e2b68dd957cb319a824",
+      "git_blob": "8b14090030201d6e8d69cd5bca380a9a71a4da0d"
+    },
+    {
+      "path": "static/venue_note_file.mjs",
+      "bytes": 10435,
+      "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+      "git_blob": "f8406cb540d52222996c585666ae1a55a1030def"
+    },
+    {
+      "path": "tests/venue_note_file.test.mjs",
+      "bytes": 10558,
+      "sha256": "8c1b12a02302e414346a04710d5efb14af45e0cb8994ba75135c9e1988252740",
+      "git_blob": "a32d542a76779e8d820a9fc233b6e1a82d9aff2c"
+    }
+  ],
+  "sourceUnchanged": true
+}

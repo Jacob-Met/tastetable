@@ -1,0 +1,33 @@
+{
+  "schema": "tastetable.venue-notes-continuation-contract/1",
+  "owner": "estate-3dcb83a1/estate_continuity",
+  "source": {
+    "repo": "Jacob-Met/tastetable",
+    "commit": "2b347cee4ff4e2b806362730a8520a3360b45f5a",
+    "tree": "66d62a724c1667913cb581fb35e4b6db6111dae8",
+    "worksheet": "fa8575ab921070fd008c1e2b45705bf3d4a09d75"
+  },
+  "beneficiary": "A caregiver can resume exact editable venue questions, replies and next steps during a later visit to the same saved plan.",
+  "behavior": [
+    "Explicit Save venue notes, Open venue notes, preview, then Replace venue notes; no automatic storage or upload.",
+    "A separate bounded UTF-8 v1 JSON companion contains the exact accepted plan origin (receivedAt, calendarId, original inputs and full response) and all retained occurrence/date records, including currently omitted or other-date notes.",
+    "Reopen the original saved week first. The origin must match completely; current assignment and displayed week need not match. Do not change plan, original checks, assignments, calendar or requester inputs.",
+    "Preserve question null/default distinction, original replyQuestions and questions-changed status. Reject malformed notes, duplicate identities, unsupported status/field/length, invalid dates and inconsistent recorded-reply association before replacing any current record.",
+    "File limit 2 MiB, maximum 256 retained occurrence/date records; original in-tab notes remain unchanged if save exceeds this explicit portable-file limit.",
+    "Preview describes exact filename/save time, record count, matching-current-visit count and replacement. Empty files explicitly clear notes only upon Replace.",
+    "A current plan/date/assignment change, note edit, newer file, cancellation or retirement makes a pending read or preview obsolete. Refused or cancelled opens preserve current notes.",
+    "Use literal text, keyboard controls and readable 390px layout. Fresh valid retry after refusal must work."
+  ],
+  "preserved": [
+    "Existing week_file.mjs schema/reader/writer",
+    "week_plan.mjs and calendar writer",
+    "Existing venue edit/status/refusal/question-history semantics",
+    "Provider/backend/checks/fixtures/request controller",
+    "Other current TasteTable owners #30/#34/#36/#39"
+  ],
+  "receiving": {
+    "originalBrowser": "Open the exact already-published native saved-week artifact through the existing real chooser, enter a literal note, save the week, reload and reopen it; existing editable note is gone and a companion-note restore control is absent.",
+    "author": "Focused model/codec negatives and actual browser file-chooser/download/reload/preview/replace path with exact byte retention and original-source checks.",
+    "independent": "Separate receiver to challenge repeated venue IDs and old-date reply-question history, source mismatch, and stale replacement after a newer accepted origin."
+  }
+}

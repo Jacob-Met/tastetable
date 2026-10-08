@@ -1,0 +1,39 @@
+{
+  "schema": "tastetable.venue-notes-ownership-correspondence.v1",
+  "observedSource": "/srv/hamon-estate/coord/chatgpt-347f3417824d.json",
+  "updatedAt": "2026-10-08T18:35:43.760981+00:00",
+  "nativeToolDevice": "d55b2499-5e82-4805-819a-d0d7ddea1efe",
+  "priorClue": "TasteTable #43 and its published claim blob e193b9bd8348998511d8a2c136b580e9c8db65bd",
+  "observedScope": {
+    "owner": "chatgpt-347f3417824d/event_delivery",
+    "repository": "Jacob-Met/tastetable",
+    "area": "Local caregiver visit records for each original saved-week occurrence",
+    "base": "2b347cee4ff4e2b806362730a8520a3360b45f5a",
+    "base_tree": "66d62a724c1667913cb581fb35e4b6db6111dae8",
+    "state": "Original physical saved-week baseline accepted on ThinkPad; independent receiving sealed before candidate access; authorized source implementation active",
+    "paths": [
+      "static/visit_record.mjs",
+      "static/visit_record_ui.mjs",
+      "static/visit_record.css",
+      "static/visit-record.html",
+      "tests/test_visit_record.mjs",
+      "tools/check_visit_record_browser.mjs",
+      "docs/visit-record/README.md",
+      "docs/receiving/visit-record-347f3417824d/",
+      "static/index.html single separate-tab visit-record link",
+      "README.md additive visit-record usage"
+    ],
+    "contract": "Separate visit-record-v1 local file retains original saved-week raw text; every original occurrence including omissions has one entry in original order. Caregiver explicitly records unrecorded/went/did_not_go, optional real date and literal note. Original recommendation/source/checks/inputs/arrangement remain unchanged. No automatic storage or server requests. Explicit preview/use replacement, invalid/cancel/stale-read preservation, editable print/save/reopen.",
+    "preserved": [
+      "static/app.js",
+      "shared week_file.mjs/week_plan.mjs",
+      "calendar/request/provider/constraints/backend",
+      "venue_followup.mjs/css and call-sheet workflow",
+      "web-demo-offline source and package",
+      "existing comparison/arrangement-history flows"
+    ]
+  },
+  "ourBoundary": "Existing venue_contact worksheet questions/contact status/reply/original reply questions/next step, keyed by original occurrence and exact planned date. No visit_record API, went/did_not_go or actual-visit date. Shared index changes are bounded existing worksheet controls, preserving owner's separate-tab link.",
+  "nativeRecordEdited": false,
+  "nativeLeaseClaimed": false
+}

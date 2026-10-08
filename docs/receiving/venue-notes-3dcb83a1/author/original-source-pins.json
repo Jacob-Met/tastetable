@@ -1,0 +1,98 @@
+{
+  "node": "v24.21.0",
+  "base": "C:\\Users\\minec\\tastetable-venue-resume-3dcb83a1\\baseline",
+  "source": {
+    "repo": "Jacob-Met/tastetable",
+    "commit": "2b347cee4ff4e2b806362730a8520a3360b45f5a",
+    "tree": "66d62a724c1667913cb581fb35e4b6db6111dae8",
+    "worksheet": "fa8575ab921070fd008c1e2b45705bf3d4a09d75"
+  },
+  "pins": [
+    {
+      "path": "static/index.html",
+      "bytes": 7568,
+      "git_blob": "37f233293683df8535fc0845c6feeb586a3b962b",
+      "sha256": "70219c0e195cd75b8f4688aa30418bdf0cffe28792c13d543838b76fde8d10cb",
+      "source_path": "static/index.html"
+    },
+    {
+      "path": "static/style.css",
+      "bytes": 5064,
+      "git_blob": "28df6c5229b6b592db33e929ae058fe514304af4",
+      "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+      "source_path": "static/style.css"
+    },
+    {
+      "path": "static/calendar.js",
+      "bytes": 15169,
+      "git_blob": "dbed22d2cb91090bccec9472fbffd2854eed2722",
+      "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+      "source_path": "static/calendar.js"
+    },
+    {
+      "path": "static/calendar.css",
+      "bytes": 708,
+      "git_blob": "9e53b951316d841b86f0256cd2444a3ce547269f",
+      "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+      "source_path": "static/calendar.css"
+    },
+    {
+      "path": "static/venue_followup.css",
+      "bytes": 1711,
+      "git_blob": "2a8e084a566e763323f03bf712b8615452d657ea",
+      "sha256": "d2ef0569debf8ed7f94b2df64d9d819da58df72460809cb81ef848124a187d3b",
+      "source_path": "static/venue_followup.css"
+    },
+    {
+      "path": "static/plan-request.js",
+      "bytes": 1420,
+      "git_blob": "b21276dda840fe6dd96a3bf3258a851970ff5e4d",
+      "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+      "source_path": "static/plan-request.js"
+    },
+    {
+      "path": "tests/venue_followup.test.mjs",
+      "bytes": 11405,
+      "git_blob": "515fe959d7217b10b325cab368eb92a6d33b8e6d",
+      "sha256": "a53284b48da8375d7f6cf26b1d4e5943dfd203e60ff1ef44780f9a02f299479f",
+      "source_path": "tests/venue_followup.test.mjs"
+    },
+    {
+      "path": "static/venue_followup.mjs",
+      "bytes": 15053,
+      "git_blob": "fa8575ab921070fd008c1e2b45705bf3d4a09d75",
+      "sha256": "b27315a0bc526f44863a9b8b39c0a217208edbd722a25cba72419f6d34456835",
+      "source_path": "static/venue_followup.mjs"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "bytes": 3913,
+      "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "source_path": "static/week_plan.mjs"
+    },
+    {
+      "path": "static/week_file.mjs",
+      "bytes": 6642,
+      "git_blob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "source_path": "static/week_file.mjs"
+    },
+    {
+      "path": "static/app.js",
+      "bytes": 19168,
+      "git_blob": "c49c8c042fac52fee6d4ca5c71f55a0490909564",
+      "sha256": "d6c742457a4824acaad929d3db37f8d4c30a26e2ae326cac3ad41e30c4a3941d",
+      "source_path": "static/app.js"
+    },
+    {
+      "path": "fixtures/received-week.json",
+      "bytes": 14602,
+      "git_blob": "8b14090030201d6e8d69cd5bca380a9a71a4da0d",
+      "sha256": "55dfb9c7e50b2aff749dbb33835dcc5cf89c7d7f0eaf4e2b68dd957cb319a824",
+      "source_path": "docs/venue-followup-6c20bb4b010e/author/final/saved-composition-week.json"
+    }
+  ],
+  "diskFree": 464685060096,
+  "memoryFree": 22959386624
+}
