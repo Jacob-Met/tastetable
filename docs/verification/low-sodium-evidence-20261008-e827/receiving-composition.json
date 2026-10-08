@@ -1,0 +1,26 @@
+{
+  "repository": "Jacob-Met/tastetable",
+  "issue": 22,
+  "parent": "9930c0a18f339ca00bb7c43b4defd5b0d61ae56c",
+  "parent_tree": "e3e3e48675f9f4ce1f5c139ad24f8c1c640f01dd",
+  "parent_leaf_count": 270,
+  "parent_constraints_blob": "941ccc6f21c72d9563388301609ef978894336ca",
+  "qualified_author_constraints_blob": "5d1570db8af6dd167909e7f289dec2fc81f8f21e",
+  "composed_constraints": {
+    "path": "constraints.py",
+    "git_blob": "cab2cecbe4c3a6112022d194a927b9025ec67ab6",
+    "sha256": "a7ad868ece3cb83b15b02f8f059a94da749059bb96a8c97f7fb207ccb85d604c",
+    "bytes": 6754
+  },
+  "frozen_helper_and_function_bytes_preserved": true,
+  "removing_own_scope_restores_exact_parent_bytes": true,
+  "re_import_count": 1,
+  "preserved_owner": {
+    "pr": 21,
+    "head": "4ba587e0ee5fa24558fa5dbc948cfedd26613c44",
+    "merged_commit": "9930c0a18f339ca00bb7c43b4defd5b0d61ae56c",
+    "check_wheelchair_bytes_unchanged": true
+  },
+  "local_tests_repeated": false,
+  "gate": "Root approved actual current-parent composition; unchanged full hosted pytest remains required."
+}
