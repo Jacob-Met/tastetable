@@ -128,3 +128,9 @@ footer a { color:#65408e; }
   .week-files { display:none !important; }
   .opened-copy { color:#111; background:#fff; border-color:#555; font-size:9pt; }
 }
+
+/* Page-local arrangement recovery controls. */
+.arrangement-history { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem; margin-top: .9rem; }
+.arrangement-history button { min-height: 44px; }
+.arrangement-history p { flex-basis: 100%; margin: .1rem 0; overflow-wrap: anywhere; }
+@media print { .arrangement-history, #historyHelp { display: none !important; } }

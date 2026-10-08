@@ -89,6 +89,12 @@
         <button id="saveWeek" type="button" disabled>Save week</button>
         <button id="printWeek" type="button" class="primary">Print week</button>
       </div>
+      <div class="arrangement-history" aria-label="Arrangement history">
+        <button id="undoWeek" type="button" aria-describedby="historyHelp" disabled>Undo change</button>
+        <button id="redoWeek" type="button" aria-describedby="historyHelp" disabled>Redo change</button>
+        <p id="historyStatus" class="why" role="status" aria-live="polite"></p>
+      </div>
+      <p id="historyHelp" class="why organizer-help">Undo or redo up to 20 week, day or off-week changes, including Restore suggested days. Replacing the displayed week or showing a recording starts fresh history. Save week keeps the current arrangement, not its undo history.</p>
       <p id="weekHelp" class="why organizer-help">Choose any date to show its Monday–Sunday week. Move checked picks to the days that suit you, or keep a pick off this week. Several picks can share a day. Use Save week to keep the arrangement in a file. Page changes are not saved automatically.</p>
       <p id="weekError" class="error" role="alert"></p>
       <p id="weekSummary"></p>
