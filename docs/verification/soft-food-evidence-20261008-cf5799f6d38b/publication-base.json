@@ -1,0 +1,2825 @@
+{
+  "head": "1a609bfdd77dc07222eb70f8a4a1f565a8bc8fa0",
+  "tree": {
+    "sha": "ef80f9f0134d613571861278978477152548a5ed",
+    "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/ef80f9f0134d613571861278978477152548a5ed",
+    "tree": [
+      {
+        "path": ".dockerignore",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7bd83dbf601064e93411e55fa40047a7faa62e76",
+        "size": 43,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/7bd83dbf601064e93411e55fa40047a7faa62e76"
+      },
+      {
+        "path": ".github",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "467d75725d231c8c81242229dd61034eb5b67621",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/467d75725d231c8c81242229dd61034eb5b67621"
+      },
+      {
+        "path": ".github/workflows",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "b28e8836dd48cdc157fa6a87e7c83a5a8d5328aa",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/b28e8836dd48cdc157fa6a87e7c83a5a8d5328aa"
+      },
+      {
+        "path": ".github/workflows/ci.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0e6273139a9bf417a4ee42f4501d067b1c9d95a0",
+        "size": 652,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/0e6273139a9bf417a4ee42f4501d067b1c9d95a0"
+      },
+      {
+        "path": ".github/workflows/native-plan-week-browser.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d674f2698d1b048075a1c49c2035b1096be668f2",
+        "size": 3299,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/d674f2698d1b048075a1c49c2035b1096be668f2"
+      },
+      {
+        "path": ".gitignore",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "abec94fd25b2bf8bf714b7ea3b37ae36cf5b6891",
+        "size": 46,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/abec94fd25b2bf8bf714b7ea3b37ae36cf5b6891"
+      },
+      {
+        "path": "Dockerfile",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "79cad53cfa5f3d02abf7717773dd8ddbe1e1c6a4",
+        "size": 306,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/79cad53cfa5f3d02abf7717773dd8ddbe1e1c6a4"
+      },
+      {
+        "path": "LICENSE",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3757eabcdbaee0b03b44aad0a7c01ff8c5ada81b",
+        "size": 1076,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/3757eabcdbaee0b03b44aad0a7c01ff8c5ada81b"
+      },
+      {
+        "path": "README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8ff6de7f3bd91f0ff130775631dd0fe2dc98791c",
+        "size": 12889,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/8ff6de7f3bd91f0ff130775631dd0fe2dc98791c"
+      },
+      {
+        "path": "agent.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "883aff984464f2d43cda18f8e60b81240d6c3fb3",
+        "size": 28440,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/883aff984464f2d43cda18f8e60b81240d6c3fb3"
+      },
+      {
+        "path": "app.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2c2f1524e62c74db21fdbcc69faec643903c23b8",
+        "size": 2343,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/2c2f1524e62c74db21fdbcc69faec643903c23b8"
+      },
+      {
+        "path": "constraints.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cab2cecbe4c3a6112022d194a927b9025ec67ab6",
+        "size": 6754,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/cab2cecbe4c3a6112022d194a927b9025ec67ab6"
+      },
+      {
+        "path": "docs",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "1894d673157c872e2074ce0c1698ae7b071c7832",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/1894d673157c872e2074ce0c1698ae7b071c7832"
+      },
+      {
+        "path": "docs/NATIVE_PLAN_CLI.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d9193cde2a2e89126052a7429563b04324d7a9c7",
+        "size": 10418,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/d9193cde2a2e89126052a7429563b04324d7a9c7"
+      },
+      {
+        "path": "docs/caregiver-week",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "0eb78e972ac61ea28473baa83ec95f409d2ecc14",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/0eb78e972ac61ea28473baa83ec95f409d2ecc14"
+      },
+      {
+        "path": "docs/caregiver-week/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0560361c7745ff81be5aef07994023105268c1a4",
+        "size": 8015,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/0560361c7745ff81be5aef07994023105268c1a4"
+      },
+      {
+        "path": "docs/caregiver-week/REPLAY.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6658d6f9240ef9840a177738d639f98868a4820d",
+        "size": 5684,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/6658d6f9240ef9840a177738d639f98868a4820d"
+      },
+      {
+        "path": "docs/caregiver-week/author-node-tests.log",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "427435e7c292a7121c2b1fe21cba1ba3105b0ef3",
+        "size": 1024,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/427435e7c292a7121c2b1fe21cba1ba3105b0ef3"
+      },
+      {
+        "path": "docs/caregiver-week/author-python-regression.log",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "66b1c135223604ec794149fc8f4f271767bfbd0a",
+        "size": 113,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/66b1c135223604ec794149fc8f4f271767bfbd0a"
+      },
+      {
+        "path": "docs/caregiver-week/browser-final.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9c52f5d884678a8b5e7450b7278486d56134f2ad",
+        "size": 9503,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/9c52f5d884678a8b5e7450b7278486d56134f2ad"
+      },
+      {
+        "path": "docs/caregiver-week/candidate_manifest.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6c644110c11ca43c56942af3b00896a797ef3476",
+        "size": 1504,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/6c644110c11ca43c56942af3b00896a797ef3476"
+      },
+      {
+        "path": "docs/caregiver-week/composition-receipt.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "51b553207affd33a569679a2abbe832a4e8b9164",
+        "size": 9626,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/51b553207affd33a569679a2abbe832a4e8b9164"
+      },
+      {
+        "path": "docs/caregiver-week/evidence",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "75320e49b48f29550316bc9965d929a4b7efdd0f",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/75320e49b48f29550316bc9965d929a4b7efdd0f"
+      },
+      {
+        "path": "docs/caregiver-week/evidence/archive-manifest.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "854e399612430dd795ec884b62ed2a934106f4c9",
+        "size": 9219,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/854e399612430dd795ec884b62ed2a934106f4c9"
+      },
+      {
+        "path": "docs/caregiver-week/evidence/raw-reviews.tar.gz",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "149cd4c4690518c133b66704adc8a2feda07ff03",
+        "size": 366051,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/149cd4c4690518c133b66704adc8a2feda07ff03"
+      },
+      {
+        "path": "docs/caregiver-week/independent-REVIEW.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5725d2a859e44ccfe1ef487fa89b0a96352b8a08",
+        "size": 6183,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/5725d2a859e44ccfe1ef487fa89b0a96352b8a08"
+      },
+      {
+        "path": "docs/caregiver-week/independent-review-run.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6acdf0a4ff660f600a6c5bcb0bd5cc2d42bfd187",
+        "size": 352,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/6acdf0a4ff660f600a6c5bcb0bd5cc2d42bfd187"
+      },
+      {
+        "path": "docs/caregiver-week/independent-review.log",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f39b2ed1aba4dc44fdb1bd020c2d132b6d3665c1",
+        "size": 1373,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/f39b2ed1aba4dc44fdb1bd020c2d132b6d3665c1"
+      },
+      {
+        "path": "docs/caregiver-week/publication-files.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "eab69d85b81b9f2c9ba963e1e37fcfc9ad7651f7",
+        "size": 8470,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/eab69d85b81b9f2c9ba963e1e37fcfc9ad7651f7"
+      },
+      {
+        "path": "docs/caregiver-week/receiving-native-fixtures.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "40963b45b99517218f11f118a521ef8408dac404",
+        "size": 38964,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/40963b45b99517218f11f118a521ef8408dac404"
+      },
+      {
+        "path": "docs/caregiver-week/receiving-source.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b718a30a4089fdf677f2b31f15ca2a13925ed905",
+        "size": 8418,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/b718a30a4089fdf677f2b31f15ca2a13925ed905"
+      },
+      {
+        "path": "docs/qualification",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "b91d9c35bb5353806928da40f10d82031586c64f",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/b91d9c35bb5353806928da40f10d82031586c64f"
+      },
+      {
+        "path": "docs/qualification/native-plan-cli-bd1abdb2f886-20261008",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "028a5e3d692f9b264e48726e603069e78a510164",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/028a5e3d692f9b264e48726e603069e78a510164"
+      },
+      {
+        "path": "docs/qualification/native-plan-cli-bd1abdb2f886-20261008/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "541427c2a3672b47cb9fdba6b56a4a7a214cba8d",
+        "size": 8086,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/541427c2a3672b47cb9fdba6b56a4a7a214cba8d"
+      },
+      {
+        "path": "docs/qualification/native-plan-cli-bd1abdb2f886-20261008/evidence.tar.gz",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "897527d644d868ead125fb3057059835e6a745ce",
+        "size": 62099,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/897527d644d868ead125fb3057059835e6a745ce"
+      },
+      {
+        "path": "docs/receipts",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "44f692b7e9a928108873aa83017f01296b373e1f",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/44f692b7e9a928108873aa83017f01296b373e1f"
+      },
+      {
+        "path": "docs/receipts/week-calendar-20261008-0df473646168",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "c7490acfceaab42de96e690626855ffb6e63fecd",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/c7490acfceaab42de96e690626855ffb6e63fecd"
+      },
+      {
+        "path": "docs/receipts/week-calendar-20261008-0df473646168/HANDOFF.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "163f59541cdc8e6d9355d8a8f97c169161a29be0",
+        "size": 9751,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/163f59541cdc8e6d9355d8a8f97c169161a29be0"
+      },
+      {
+        "path": "docs/receipts/week-calendar-20261008-0df473646168/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c1155b6f1e627fee8d2baa3c89a6c1dd264d6b15",
+        "size": 3813,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/c1155b6f1e627fee8d2baa3c89a6c1dd264d6b15"
+      },
+      {
+        "path": "docs/receipts/week-calendar-20261008-0df473646168/candidate-v1.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9edb08374cfc09d3dc48708b2eb23a96ac2f768b",
+        "size": 4813,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/9edb08374cfc09d3dc48708b2eb23a96ac2f768b"
+      },
+      {
+        "path": "docs/receipts/week-calendar-20261008-0df473646168/delivery.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fbe4eb5046c8566e9012adcc12bd506cf63ec6f0",
+        "size": 1601,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/fbe4eb5046c8566e9012adcc12bd506cf63ec6f0"
+      },
+      {
+        "path": "docs/receipts/week-calendar-20261008-0df473646168/independent-disposition.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6bf6544aba866a2b8c367a7ecc950510eafef212",
+        "size": 5955,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/6bf6544aba866a2b8c367a7ecc950510eafef212"
+      },
+      {
+        "path": "docs/receipts/week-calendar-20261008-0df473646168/independent-review.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "60d0c8db5e09fae8b7210ce163aa729da4d39df0",
+        "size": 8874,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/60d0c8db5e09fae8b7210ce163aa729da4d39df0"
+      },
+      {
+        "path": "docs/receipts/week-calendar-20261008-0df473646168/production-paths.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "05b24685695e718243b81917ac8d970d07719ef1",
+        "size": 4711,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/05b24685695e718243b81917ac8d970d07719ef1"
+      },
+      {
+        "path": "docs/receipts/week-calendar-20261008-0df473646168/raw-reviews.tar.gz",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "753a4ca7d752fd1e367433b7762848fa4e4b8b7f",
+        "size": 1486669,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/753a4ca7d752fd1e367433b7762848fa4e4b8b7f"
+      },
+      {
+        "path": "docs/receipts/week-calendar-20261008-0df473646168/review-consumer-browser.cjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1a2aaf28ae6b407485acc0168fa44871746999e1",
+        "size": 25351,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/1a2aaf28ae6b407485acc0168fa44871746999e1"
+      },
+      {
+        "path": "docs/receipts/week-calendar-20261008-0df473646168/source-proof.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "40b40bba6492fceae0fc0bde11986fa31002bf43",
+        "size": 3712,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/40b40bba6492fceae0fc0bde11986fa31002bf43"
+      },
+      {
+        "path": "docs/receiving",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "1aaf3c9527885ced36cd65b7b54239f3bb782f10",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/1aaf3c9527885ced36cd65b7b54239f3bb782f10"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "ef9fd91d82d1f879135953e0a357a0f7bd113efb",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/ef9fd91d82d1f879135953e0a357a0f7bd113efb"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/INTEGRATION.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fa889269c5cb570bff967830a97a2967fff067a2",
+        "size": 7434,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/fa889269c5cb570bff967830a97a2967fff067a2"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "60f052e2cdbb5b03b0593fe4475f554c004d09fb",
+        "size": 5719,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/60f052e2cdbb5b03b0593fe4475f554c004d09fb"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/archive-rename-without-index-failure.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d52eba84e80ad6b01d5c4e9b77dcbb7f2dc4d71d",
+        "size": 14717,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/d52eba84e80ad6b01d5c4e9b77dcbb7f2dc4d71d"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/baseline-api.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ee6a90caff00e6f8732bbc4e373a759eb12c6611",
+        "size": 6694,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/ee6a90caff00e6f8732bbc4e373a759eb12c6611"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/baseline-full-pytest.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b649285a3b890884ac345518a4eb1cc3e536c20b",
+        "size": 610,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/b649285a3b890884ac345518a4eb1cc3e536c20b"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "34eac02c15e206082708cc9f13e7d72746d90e19",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/34eac02c15e206082708cc9f13e7d72746d90e19"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "98bed2c664742846bf02131889dcc98ceb168286",
+        "size": 9621,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/98bed2c664742846bf02131889dcc98ceb168286"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser/receive_browser.cjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3a812b37c139241004841df63b995cb91ff3ba15",
+        "size": 13500,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/3a812b37c139241004841df63b995cb91ff3ba15"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser/results",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "8a1fbedbea2208a4860d7274f53fd6440fcbccc4",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/8a1fbedbea2208a4860d7274f53fd6440fcbccc4"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser/results/01-complete-persona-response.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "aaaf9acd3847fb74004538593d6fd3595abd7852",
+        "size": 12983,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/aaaf9acd3847fb74004538593d6fd3595abd7852"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser/results/01-complete-persona-visible.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0a5602ad81bcdeb0134a10a3474bb9798513a82e",
+        "size": 3693,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/0a5602ad81bcdeb0134a10a3474bb9798513a82e"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser/results/01-complete-persona.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "14392683e38c8b3fb580e97c566b257a99f2031c",
+        "size": 395152,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/14392683e38c8b3fb580e97c566b257a99f2031c"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser/results/02-outing-refusal-response.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c7d97afab62c16c54f53d700ec4c5e6b869bd424",
+        "size": 12281,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/c7d97afab62c16c54f53d700ec4c5e6b869bd424"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser/results/02-outing-refusal-trace-open.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a318e72ebb237915d1fb35e5b3f0e5c731202bf3",
+        "size": 149264,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/a318e72ebb237915d1fb35e5b3f0e5c731202bf3"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser/results/02-outing-refusal-visible.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a0afb6c4e4f8db4f90c17745dcce5cf9a6f15d9b",
+        "size": 3442,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/a0afb6c4e4f8db4f90c17745dcce5cf9a6f15d9b"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser/results/02-outing-refusal.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "39dbde8ec6a2faec943659478ec2ff6625a4b4f3",
+        "size": 368167,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/39dbde8ec6a2faec943659478ec2ff6625a4b4f3"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser/results/03-all-recommendations-refused-response.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8b9c1c9194b89061b50eb616dca76d9263a0ac2e",
+        "size": 6576,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/8b9c1c9194b89061b50eb616dca76d9263a0ac2e"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser/results/03-all-recommendations-refused-trace-open.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6a55b531210eb0e0eaf55576a503afad1db82177",
+        "size": 139865,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/6a55b531210eb0e0eaf55576a503afad1db82177"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser/results/03-all-recommendations-refused-visible.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "47da07d572e59ac83a03aa93a1651260cf70621b",
+        "size": 1765,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/47da07d572e59ac83a03aa93a1651260cf70621b"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser/results/03-all-recommendations-refused.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "08fab41e359da289be195cc470200ec3102f5cf4",
+        "size": 211290,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/08fab41e359da289be195cc470200ec3102f5cf4"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser/results/04-return-to-editing.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8fcbd8e3225492273b17b1ab57aae9ba759a87d3",
+        "size": 118781,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/8fcbd8e3225492273b17b1ab57aae9ba759a87d3"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser/results/05-edited-form-recovery-response.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f02329c0fff77e1a2f0c702c831afa5e9d24d07c",
+        "size": 13205,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/f02329c0fff77e1a2f0c702c831afa5e9d24d07c"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser/results/05-edited-form-recovery-visible.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4d95f65cc1be20591ee13c3f1c1db4a1bef8fb96",
+        "size": 3622,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/4d95f65cc1be20591ee13c3f1c1db4a1bef8fb96"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser/results/05-edited-form-recovery.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "103b80daf0c636206b3a30a331ccdfc415eb6a52",
+        "size": 390295,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/103b80daf0c636206b3a30a331ccdfc415eb6a52"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser/results/browser-receiving.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d9786d54cc0bdf836ad5a5a3f228605d210938e3",
+        "size": 48018,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/d9786d54cc0bdf836ad5a5a3f228605d210938e3"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser/results/mode.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a26ff891d28783dfe93a0b0a91850986ccd43993",
+        "size": 8,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/a26ff891d28783dfe93a0b0a91850986ccd43993"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser/results/server.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5abdfdf2a8923cd83e7a1fbdb1a6c579c5c11341",
+        "size": 790,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/5abdfdf2a8923cd83e7a1fbdb1a6c579c5c11341"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser/results/server.log",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7c485dbffa07ae52f75557753f7f2d0d3366d16d",
+        "size": 922,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/7c485dbffa07ae52f75557753f7f2d0d3366d16d"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser/results/transport.jsonl",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8d1306c4f87159e03f6b016a50b183abf90e20ea",
+        "size": 12909,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/8d1306c4f87159e03f6b016a50b183abf90e20ea"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/browser/serve_receiving.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a9076a81baa143dcaa8fafa84ae55f6f1ec23aa6",
+        "size": 3176,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/a9076a81baa143dcaa8fafa84ae55f6f1ec23aa6"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/candidate-api.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "13266f786d5e93eaf1c765e007a95f2046a168ec",
+        "size": 1168,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/13266f786d5e93eaf1c765e007a95f2046a168ec"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/ci-command-after-archive-rename.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ddb44d7fc13af48f8efc078229aa6b6cfa316972",
+        "size": 715,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/ddb44d7fc13af48f8efc078229aa6b6cfa316972"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/composed-full-pytest.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e2c4df36f19de6e4a22c730e1fd80981e0b7ddcb",
+        "size": 633,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/e2c4df36f19de6e4a22c730e1fd80981e0b7ddcb"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/current-composition-pytest.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a90fbe6fe2510c2b23fa99e27c0703e1cdb3feb8",
+        "size": 715,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/a90fbe6fe2510c2b23fa99e27c0703e1cdb3feb8"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/current-main-peer",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "f3731f3a5643e3e06b83c56f94af8402df4d64c0",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/f3731f3a5643e3e06b83c56f94af8402df4d64c0"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/current-main-peer/PR5-scope.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b218d636089171fbad7e20de5bc9e22c5fd595ca",
+        "size": 2875,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/b218d636089171fbad7e20de5bc9e22c5fd595ca"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/current-main-peer/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "17b04963b9a77bb363c4cb4572a0a3805018c9f0",
+        "size": 6318,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/17b04963b9a77bb363c4cb4572a0a3805018c9f0"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/current-main-peer/archive-paths.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ffaeb292df2f950e218ab0ddc7e1b67c3a6b1bb8",
+        "size": 740,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/ffaeb292df2f950e218ab0ddc7e1b67c3a6b1bb8"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/current-main-peer/before-main-control.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fe657067fd8434fbc4fdaae1b45ceb2194f92f7b",
+        "size": 1160,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/fe657067fd8434fbc4fdaae1b45ceb2194f92f7b"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/current-main-peer/candidate-manifest.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "67e0d8f10556ba8b883f99188661cbf37dbe329e",
+        "size": 15211,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/67e0d8f10556ba8b883f99188661cbf37dbe329e"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/current-main-peer/combined-before-main.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cc21b4bb08f5ddfa51749aa65367b2c02c17bf50",
+        "size": 13331,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/cc21b4bb08f5ddfa51749aa65367b2c02c17bf50"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/current-main-peer/combined-before-main.log",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "66e2a806d1918d8469ddb79c1d054ef1c65238d7",
+        "size": 2892,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/66e2a806d1918d8469ddb79c1d054ef1c65238d7"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/current-main-peer/combined-normal.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5fcfc7119ecf4672050bc15b156a43357bfb40b5",
+        "size": 14715,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/5fcfc7119ecf4672050bc15b156a43357bfb40b5"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/current-main-peer/combined-r0.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4dafafd0f2f1c0b25b12767bc5460e4b480d5d0e",
+        "size": 240,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/4dafafd0f2f1c0b25b12767bc5460e4b480d5d0e"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/current-main-peer/evidence-manifest.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3b3bf2b8d6d8ed23617c930da8b7e6588d64919d",
+        "size": 5813,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/3b3bf2b8d6d8ed23617c930da8b7e6588d64919d"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/current-main-peer/receiver-r0-observation.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cc31a31b591bc03db74859292db7109ddd4d0af5",
+        "size": 622,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/cc31a31b591bc03db74859292db7109ddd4d0af5"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/current-main-peer/test_current_composition.py.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9ba8541bf1e77427525d28c29c164057d8d85c27",
+        "size": 7240,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/9ba8541bf1e77427525d28c29c164057d8d85c27"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/current-main-peer/test_current_composition_r0.py.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6b835d51ff75fb62ab89e1eac131c0f60c0de2bf",
+        "size": 7110,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/6b835d51ff75fb62ab89e1eac131c0f60c0de2bf"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/current-main-peer/upstream-main-agent.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "15ae2c26dd14a8eec43dc328e87d6f12c8d460d2",
+        "size": 23754,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/15ae2c26dd14a8eec43dc328e87d6f12c8d460d2"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/current-main-peer/upstream-main-tree.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "be0c278de65bc62682a35b5ed480fa4f615e1e4d",
+        "size": 9082,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/be0c278de65bc62682a35b5ed480fa4f615e1e4d"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/current-main-pytest.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ec9f794ac9ed3b9c662dac7606faf90dff4548b3",
+        "size": 717,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/ec9f794ac9ed3b9c662dac7606faf90dff4548b3"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/dependencies.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c688d8ccdad82420475fc31cb40020cccfeeef2b",
+        "size": 30,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/c688d8ccdad82420475fc31cb40020cccfeeef2b"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/executions.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5fa064f68c6066d2591c7407bb30b3bc22a92790",
+        "size": 1516,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/5fa064f68c6066d2591c7407bb30b3bc22a92790"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/github-pr3-leaves.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "28cf9525c3aa1d4bc14cd2cc2edfc7dd2cadee89",
+        "size": 2228,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/28cf9525c3aa1d4bc14cd2cc2edfc7dd2cadee89"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/hosted-collection-failure.log.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8ea14937132e2eb90a855a6a08f7d73198b1841b",
+        "size": 45330,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/8ea14937132e2eb90a855a6a08f7d73198b1841b"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/original-stack-full-pytest.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "19bcc81f3648104e132a7c235dadfea15a72e22a",
+        "size": 623,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/19bcc81f3648104e132a7c235dadfea15a72e22a"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/requirements-resolved.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "22207d30b917cea5c70ecce53d21e07a6fd7df95",
+        "size": 387,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/22207d30b917cea5c70ecce53d21e07a6fd7df95"
+      },
+      {
+        "path": "docs/receiving/20261008-6e5752b49b6f/source-manifest.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b5ab3826fb6973622adc35efdc2c20a93f2c9633",
+        "size": 5799,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/b5ab3826fb6973622adc35efdc2c20a93f2c9633"
+      },
+      {
+        "path": "docs/receiving/native-plan-week-7879c2abc07f",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "d744214cbe990d888e968af7ae09dce592f09a38",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/d744214cbe990d888e968af7ae09dce592f09a38"
+      },
+      {
+        "path": "docs/receiving/native-plan-week-7879c2abc07f/original-boundary.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9ae26300ea63f944cb37775a942d02d65e0c1c63",
+        "size": 2519,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/9ae26300ea63f944cb37775a942d02d65e0c1c63"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "c32c803165b2c621ad41c78099223d3fe4eb1bad",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/c32c803165b2c621ad41c78099223d3fe4eb1bad"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8a3cdd6aa37a20c0044359ee2c18c251ac3217b4",
+        "size": 12283,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/8a3cdd6aa37a20c0044359ee2c18c251ac3217b4"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/baseline-reproduction.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "676335e28606ac8d3df9d1654b611dee2ed4c9de",
+        "size": 5049,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/676335e28606ac8d3df9d1654b611dee2ed4c9de"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/candidate-v1",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "8d95ffadd108c2d31b42ce8d4ff6f48412dd0eda",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/8d95ffadd108c2d31b42ce8d4ff6f48412dd0eda"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/candidate-v1/constraints.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2ae4c3fd580f6a1c9eb943bc57801c43ddd9cf21",
+        "size": 5615,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/2ae4c3fd580f6a1c9eb943bc57801c43ddd9cf21"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/candidate-v1/product-pins.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8571334d19d7818562a1b7b59de6ed2528dc1adb",
+        "size": 968,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/8571334d19d7818562a1b7b59de6ed2528dc1adb"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/candidate-v1/test_wheelchair_evidence.py.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7ebfb2280237b5fa9fe273a46916b3553d5ce1ed",
+        "size": 5323,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/7ebfb2280237b5fa9fe273a46916b3553d5ce1ed"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/candidate-v2",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "b35f24685e4365c01efc56b50c3877296397956d",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/b35f24685e4365c01efc56b50c3877296397956d"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/candidate-v2/constraints.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "986df2d77f26025308517bf27fda8af8fab07e23",
+        "size": 5640,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/986df2d77f26025308517bf27fda8af8fab07e23"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/candidate-v2/product-pins.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "93354ad93808a3f3db90ea27c4cd311de58a7e6f",
+        "size": 1200,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/93354ad93808a3f3db90ea27c4cd311de58a7e6f"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/candidate-v2/test_wheelchair_evidence.py.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "61ee32541b96e24aae3bd953808998dd459dd531",
+        "size": 6649,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/61ee32541b96e24aae3bd953808998dd459dd531"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/compose_current.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c713679d4af1a65e98d36d9abdac76e458bbbf69",
+        "size": 3668,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/c713679d4af1a65e98d36d9abdac76e458bbbf69"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/current-composition.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e2a487f1b6326fb80c47e3505ff570593d1a3c77",
+        "size": 16397,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/e2a487f1b6326fb80c47e3505ff570593d1a3c77"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/healthy-original.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4f3f72b0c806b1e77e60bd6f9f8c11dd515a7f85",
+        "size": 23132,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/4f3f72b0c806b1e77e60bd6f9f8c11dd515a7f85"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/healthy.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2952033fea5dc22dd2d3f63c6f0d4dc0bf9a94f9",
+        "size": 755,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/2952033fea5dc22dd2d3f63c6f0d4dc0bf9a94f9"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/independent",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "5b1b2b7a97061cc24f237ceec0b28b81120c2a05",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/5b1b2b7a97061cc24f237ceec0b28b81120c2a05"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/independent/ACCEPTANCE.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "279db43f402de26bff8ca64f4b578a57fad94079",
+        "size": 2688,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/279db43f402de26bff8ca64f4b578a57fad94079"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/independent/candidate-v3.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b47c113b0b9b457dc8c1eee38416008fdd8a9c6f",
+        "size": 9616,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/b47c113b0b9b457dc8c1eee38416008fdd8a9c6f"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/independent/receive-final.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7a9912240729eb34ea8f9e68c54b0bdff46e1a19",
+        "size": 4956,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/7a9912240729eb34ea8f9e68c54b0bdff46e1a19"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/namespace-results.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "df120513970f1444110ae95779034f1279cc6559",
+        "size": 7129,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/df120513970f1444110ae95779034f1279cc6559"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/namespace_check.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f1909680c4dcb866a7e7e797bde75049ea80b88f",
+        "size": 6365,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/f1909680c4dcb866a7e7e797bde75049ea80b88f"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/native-results.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1d1d7db18e0424a723daf759a27bd2056f909c7f",
+        "size": 25253,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/1d1d7db18e0424a723daf759a27bd2056f909c7f"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/native_check.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bf6c40d62cc726f353ab51c8a55924ba80a663f8",
+        "size": 5465,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/bf6c40d62cc726f353ab51c8a55924ba80a663f8"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/product-pins.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2785016a0b3caa52c464761a1a03c41052b8f472",
+        "size": 1199,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/2785016a0b3caa52c464761a1a03c41052b8f472"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/punctuation-results.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e1ea33e0a4537d83dee9e8ad64fedee303b26945",
+        "size": 5818,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/e1ea33e0a4537d83dee9e8ad64fedee303b26945"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/punctuation_check.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "72d597dc07e2b2af183a20ac5211055c06eabeed",
+        "size": 6242,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/72d597dc07e2b2af183a20ac5211055c06eabeed"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/reproduce.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b99b5b4e0657bfcc2c8d7f95f2b1a1c200b38948",
+        "size": 2220,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/b99b5b4e0657bfcc2c8d7f95f2b1a1c200b38948"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/scope.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cf0df1b43b77a870dbddc535a3b62030c112f6da",
+        "size": 1520,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/cf0df1b43b77a870dbddc535a3b62030c112f6da"
+      },
+      {
+        "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/source-pins.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d4e274d77fdf0a627872c514a9926a29e6619958",
+        "size": 2176,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/d4e274d77fdf0a627872c514a9926a29e6619958"
+      },
+      {
+        "path": "docs/saved-week",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "4b6cf826a0c0b2f7d1ccaf21ecb6f2babf5ae016",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/4b6cf826a0c0b2f7d1ccaf21ecb6f2babf5ae016"
+      },
+      {
+        "path": "docs/saved-week/INTEGRATION.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "76ffb891ba7f6457427bee0845d63f020df366ca",
+        "size": 5091,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/76ffb891ba7f6457427bee0845d63f020df366ca"
+      },
+      {
+        "path": "docs/saved-week/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d34ddd286b370802b12e4be6dda12f2cab41f72c",
+        "size": 8913,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/d34ddd286b370802b12e4be6dda12f2cab41f72c"
+      },
+      {
+        "path": "docs/saved-week/evidence",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "89e369d4a545ffde4c25b6950d2b896d5064a594",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/89e369d4a545ffde4c25b6950d2b896d5064a594"
+      },
+      {
+        "path": "docs/saved-week/evidence/author-qualification.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c5ecf0ce8a6f143828b2f89073b632666f26eaae",
+        "size": 4526,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/c5ecf0ce8a6f143828b2f89073b632666f26eaae"
+      },
+      {
+        "path": "docs/saved-week/evidence/browser-receipt.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "713c2e58a7fa15911adc0e557078473e75061e53",
+        "size": 151160,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/713c2e58a7fa15911adc0e557078473e75061e53"
+      },
+      {
+        "path": "docs/saved-week/evidence/evidence-manifest.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e3c4d1a5aeab85cf59ea64fa38505fc71617d64f",
+        "size": 29870,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/e3c4d1a5aeab85cf59ea64fa38505fc71617d64f"
+      },
+      {
+        "path": "docs/saved-week/evidence/html-boundary-receipt.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "62405e082afb99d806320ea55244f751558f9061",
+        "size": 14242,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/62405e082afb99d806320ea55244f751558f9061"
+      },
+      {
+        "path": "docs/saved-week/evidence/native-browser-receipt.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ccd8c3f72c8cbd4239b7a2cc50381290c116801c",
+        "size": 23128,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/ccd8c3f72c8cbd4239b7a2cc50381290c116801c"
+      },
+      {
+        "path": "docs/saved-week/evidence/native-recovery-receipt.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "86b4b18d69245537c282ea13486e7ae4770196e9",
+        "size": 848,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/86b4b18d69245537c282ea13486e7ae4770196e9"
+      },
+      {
+        "path": "docs/saved-week/evidence/native-source-manifest.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ab5b8341b2b37e451e2a67d7c4ee28c8de02e1bd",
+        "size": 1178,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/ab5b8341b2b37e451e2a67d7c4ee28c8de02e1bd"
+      },
+      {
+        "path": "docs/saved-week/evidence/native-tests.log",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6fb9c1d93d6aac5404c0eb60ff24c5fcb2790eb6",
+        "size": 1006,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/6fb9c1d93d6aac5404c0eb60ff24c5fcb2790eb6"
+      },
+      {
+        "path": "docs/saved-week/evidence/receiving-base.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dbadca6113929701183adaaad5bd36a948601ca7",
+        "size": 3055,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/dbadca6113929701183adaaad5bd36a948601ca7"
+      },
+      {
+        "path": "docs/saved-week/evidence/saved-week-evidence.tar.gz",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "822972e4efc1894b489060dd7fcf1f93c61c9a7a",
+        "size": 464789,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/822972e4efc1894b489060dd7fcf1f93c61c9a7a"
+      },
+      {
+        "path": "docs/saved-week/evidence/source-freeze.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8627826abac1ebc36586f707f782ce3e37835809",
+        "size": 3999,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/8627826abac1ebc36586f707f782ce3e37835809"
+      },
+      {
+        "path": "docs/saved-week/independent",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "55d2f360123481a5acf408d7e53b0c6f2540a1df",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/55d2f360123481a5acf408d7e53b0c6f2540a1df"
+      },
+      {
+        "path": "docs/saved-week/independent/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ff3a5cb0766163bcc468c08303d7766af31886a6",
+        "size": 5228,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/ff3a5cb0766163bcc468c08303d7766af31886a6"
+      },
+      {
+        "path": "docs/saved-week/independent/command.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "55f7753b25a685201d74a5b820d6723b0cb06511",
+        "size": 188,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/55f7753b25a685201d74a5b820d6723b0cb06511"
+      },
+      {
+        "path": "docs/saved-week/independent/consumer-artifacts.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "55f11e3f20f62bc63ac921aa1ab713f388e284c2",
+        "size": 83443,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/55f11e3f20f62bc63ac921aa1ab713f388e284c2"
+      },
+      {
+        "path": "docs/saved-week/independent/qualified",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "ed05457ae66298bd74461b7b69c4dbd32eb7500c",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/ed05457ae66298bd74461b7b69c4dbd32eb7500c"
+      },
+      {
+        "path": "docs/saved-week/independent/qualified/receipt.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a290d3f91360976c1721883462eae60af0523583",
+        "size": 4058,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/a290d3f91360976c1721883462eae60af0523583"
+      },
+      {
+        "path": "docs/saved-week/independent/qualified/source-after.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8528a15d0a90c15f958d25d37781e3a798db2bda",
+        "size": 3327,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/8528a15d0a90c15f958d25d37781e3a798db2bda"
+      },
+      {
+        "path": "docs/saved-week/independent/qualified/source-before.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8528a15d0a90c15f958d25d37781e3a798db2bda",
+        "size": 3327,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/8528a15d0a90c15f958d25d37781e3a798db2bda"
+      },
+      {
+        "path": "docs/saved-week/independent/raw-manifest.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "038ce382e99cc58f66ef88a5f36ece801aee83b9",
+        "size": 15079,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/038ce382e99cc58f66ef88a5f36ece801aee83b9"
+      },
+      {
+        "path": "docs/saved-week/independent/review.log",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "daa410582a1bd8e870b0e93ee454d4e764402f34",
+        "size": 412,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/daa410582a1bd8e870b0e93ee454d4e764402f34"
+      },
+      {
+        "path": "docs/saved-week/independent/review_saved_week.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fae907e7606ae06460cf664cb3efad724bf90de5",
+        "size": 17982,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/fae907e7606ae06460cf664cb3efad724bf90de5"
+      },
+      {
+        "path": "docs/saved-week/independent/saved-week-v3-independent.tar.gz",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0017e3c462f709e0a133e1078029ccec6c1f1a73",
+        "size": 39773,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/0017e3c462f709e0a133e1078029ccec6c1f1a73"
+      },
+      {
+        "path": "docs/saved-week/independent/source-freeze-v3.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8627826abac1ebc36586f707f782ce3e37835809",
+        "size": 3999,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/8627826abac1ebc36586f707f782ce3e37835809"
+      },
+      {
+        "path": "docs/verification",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "3510354a4660e53572686bf3b6c0f93d81f58022",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/3510354a4660e53572686bf3b6c0f93d81f58022"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "5d9e3c9b5d895e3d2ea7d30f785f3095f8048308",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/5d9e3c9b5d895e3d2ea7d30f785f3095f8048308"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "71e84eb365abf7489e2058e6425189488bfa8b6f",
+        "size": 5772,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/71e84eb365abf7489e2058e6425189488bfa8b6f"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/author-manifest.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2d72707ae2c17ed41270150f28cd8d86311ce065",
+        "size": 2715,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/2d72707ae2c17ed41270150f28cd8d86311ce065"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/author-tests.tap",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9787e040c3d0cd624a03ff7221e3d52b8386e32c",
+        "size": 5139,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/9787e040c3d0cd624a03ff7221e3d52b8386e32c"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/composed-browser",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "a6fc161c1fb0b495303dbc95edda7c7df3cd9b1e",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/a6fc161c1fb0b495303dbc95edda7c7df3cd9b1e"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/composed-browser/REVIEW.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b3bde1c2ef6a42d1a4b61a04652a0705e8b917e3",
+        "size": 8972,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/b3bde1c2ef6a42d1a4b61a04652a0705e8b917e3"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/composed-browser/assembly-receipt.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e21966284996119ed7bf9763be783546d15450e2",
+        "size": 2821,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/e21966284996119ed7bf9763be783546d15450e2"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/composed-browser/composed-ui-result.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8b169a68fb62724886b3787740f359f3eb921928",
+        "size": 199109,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/8b169a68fb62724886b3787740f359f3eb921928"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/composed-browser/composed-ui-review.cjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dadd2a3909e4b42d7f282fb408c465de616cdfdc",
+        "size": 36416,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/dadd2a3909e4b42d7f282fb408c465de616cdfdc"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/composed-browser/input-pin.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "23fd4f493805731979ae500101b7c8cce7d2f61f",
+        "size": 1465,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/23fd4f493805731979ae500101b7c8cce7d2f61f"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/composed-browser/owner-candidate-v1.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9edb08374cfc09d3dc48708b2eb23a96ac2f768b",
+        "size": 4813,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/9edb08374cfc09d3dc48708b2eb23a96ac2f768b"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/composed-browser/receiving-packet.tar.gz",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "837528bc7fbcd7c2903d1defb10611ed43862a5e",
+        "size": 763798,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/837528bc7fbcd7c2903d1defb10611ed43862a5e"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/current-main",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "21ec178738fd34f50452053b545ceb8880207c4b",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/21ec178738fd34f50452053b545ceb8880207c4b"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/current-main/REVIEW.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "079d3a0c716ff09bad6a9b574a1f4e2c8b8336ac",
+        "size": 4813,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/079d3a0c716ff09bad6a9b574a1f4e2c8b8336ac"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/current-main/capture_current.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "463157f0647180eb586f1512546f5a4f5a335d61",
+        "size": 6765,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/463157f0647180eb586f1512546f5a4f5a335d61"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/current-main/evidence",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "338da3884608c160664099c4f39af8e1332d8fac",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/338da3884608c160664099c4f39af8e1332d8fac"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/current-main/evidence/calendar-receiving.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "68b723d88b85b04dccaee271e8ae5b5180b09a5f",
+        "size": 1677,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/68b723d88b85b04dccaee271e8ae5b5180b09a5f"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/current-main/evidence/fixture-bundle.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "025b048c578c93c41b9ee96dc8c4959288337700",
+        "size": 74858,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/025b048c578c93c41b9ee96dc8c4959288337700"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/current-main/evidence/review-receipt.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5f9e8c66a4175b657698f0c453974c1afb9b22a0",
+        "size": 723,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/5f9e8c66a4175b657698f0c453974c1afb9b22a0"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/current-main/receive_calendar.cjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7fc8de0603ea7dd4e65243b071277d553da12091",
+        "size": 4420,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/7fc8de0603ea7dd4e65243b071277d553da12091"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/current-main/source-manifest.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "641c0959800349880110248c100a17186b7b8067",
+        "size": 5195,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/641c0959800349880110248c100a17186b7b8067"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/legacy-readback.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bb87def977117d44cfb36f27845f31816f9248ca",
+        "size": 330,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/bb87def977117d44cfb36f27845f31816f9248ca"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/producer-HANDOFF.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5f00042e12c24e06f682f8b8ac5040b7f5290bea",
+        "size": 7468,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/5f00042e12c24e06f682f8b8ac5040b7f5290bea"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/review",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "e7bdeb5db4b000868e8994bb21f928dec91dee1a",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/e7bdeb5db4b000868e8994bb21f928dec91dee1a"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/review/REVIEW.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7756a243c5a5cb58ce984b30bad0067148c090c4",
+        "size": 9222,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/7756a243c5a5cb58ce984b30bad0067148c090c4"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/review/composition-observations.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "91c766d635e16353eb3c447768641fe32885de25",
+        "size": 25582,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/91c766d635e16353eb3c447768641fe32885de25"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/review/composition-tests-final.tap",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b753ab838f3f8144101065c4b1b38e3ba3955439",
+        "size": 1590,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/b753ab838f3f8144101065c4b1b38e3ba3955439"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/review/composition.test.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1d6c1310358185b948cea4e4bda0bdbd4c89d66f",
+        "size": 18058,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/1d6c1310358185b948cea4e4bda0bdbd4c89d66f"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/review/native_results.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "af14f7b9443ab2602b08bd9032341e5afcb3ddac",
+        "size": 78815,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/af14f7b9443ab2602b08bd9032341e5afcb3ddac"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/review/original-composition-counterexample.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0334f51c2c421a0c94b1f56feaea6ad97ab6c61d",
+        "size": 5118,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/0334f51c2c421a0c94b1f56feaea6ad97ab6c61d"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/review/original-writer",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "cc6bafb4d8964f3a0ec90bee7ee666e76900400b",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/cc6bafb4d8964f3a0ec90bee7ee666e76900400b"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/review/original-writer/calendar.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e82d6ad6b9346935924600078053af6c56ebbbb4",
+        "size": 10256,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/e82d6ad6b9346935924600078053af6c56ebbbb4"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/review/qualification.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c6ecb519d1878a2baf37075d67b4917408bcfdff",
+        "size": 1773,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/c6ecb519d1878a2baf37075d67b4917408bcfdff"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/review/reproduce_original.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5a2f273a756f5d8228e22e073d6ca0bc51e4b0f5",
+        "size": 3298,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/5a2f273a756f5d8228e22e073d6ca0bc51e4b0f5"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/review/sibling-snapshot",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "d0bc0df4bfe26e5307360ee7f4ce964848fbd137",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/d0bc0df4bfe26e5307360ee7f4ce964848fbd137"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/review/sibling-snapshot/static",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "1c32866142367e52046caef61076b285b887ac56",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/1c32866142367e52046caef61076b285b887ac56"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/review/sibling-snapshot/static/week_plan.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+        "size": 3913,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/review/writer-snapshot-final",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "834d86ae98c32547b591a8cbbb86477df5d7cfc3",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/834d86ae98c32547b591a8cbbb86477df5d7cfc3"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/review/writer-snapshot-final/static",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "8b204d0f1688794cddd6d49a69d9d974d872aaef",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/8b204d0f1688794cddd6d49a69d9d974d872aaef"
+      },
+      {
+        "path": "docs/verification/calendar-writer-9e05-20261008/review/writer-snapshot-final/static/calendar.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dbed22d2cb91090bccec9472fbffd2854eed2722",
+        "size": 15169,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/dbed22d2cb91090bccec9472fbffd2854eed2722"
+      },
+      {
+        "path": "docs/verification/constraint-binding-20261008.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0b0f2877d7a22d655d4e3a4b5194c5054535c6bf",
+        "size": 7007,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/0b0f2877d7a22d655d4e3a4b5194c5054535c6bf"
+      },
+      {
+        "path": "docs/verification/low-sodium-evidence-20261008-e827",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "00a2edf7725c90565ccb098c5b68d14de39b2839",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/00a2edf7725c90565ccb098c5b68d14de39b2839"
+      },
+      {
+        "path": "docs/verification/low-sodium-evidence-20261008-e827/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0c975066dda29ac6491feaabe8b3cc9c0fca5ab7",
+        "size": 6247,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/0c975066dda29ac6491feaabe8b3cc9c0fca5ab7"
+      },
+      {
+        "path": "docs/verification/low-sodium-evidence-20261008-e827/receiving-composition.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cab5bd393b24cdfd8fe3ee6324608320cdee11e0",
+        "size": 1068,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/cab5bd393b24cdfd8fe3ee6324608320cdee11e0"
+      },
+      {
+        "path": "docs/verification/low-sodium-evidence-20261008-e827/receiving-evidence.zip",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0306c7c966e61e7ef1932121bdaecab84a635c23",
+        "size": 65608,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/0306c7c966e61e7ef1932121bdaecab84a635c23"
+      },
+      {
+        "path": "docs/verification/low-sodium-evidence-20261008-e827/source-freeze.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "187c74d229b89fb2d4cbf9d2e10f5c4865af5086",
+        "size": 3003,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/187c74d229b89fb2d4cbf9d2e10f5c4865af5086"
+      },
+      {
+        "path": "docs/verification/low-sodium-evidence-e82707f2bc62",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "c038f06b8136ed697fd8a1fdb6606938e8baf6cf",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/c038f06b8136ed697fd8a1fdb6606938e8baf6cf"
+      },
+      {
+        "path": "docs/verification/low-sodium-evidence-e82707f2bc62/independent-peer",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "646e930f544f59a9075217a88445d4530681fcb4",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/646e930f544f59a9075217a88445d4530681fcb4"
+      },
+      {
+        "path": "docs/verification/low-sodium-evidence-e82707f2bc62/independent-peer/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0438de221836424195ed3d9176e284f916db6e8c",
+        "size": 3283,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/0438de221836424195ed3d9176e284f916db6e8c"
+      },
+      {
+        "path": "docs/verification/low-sodium-evidence-e82707f2bc62/independent-peer/peer-evidence.zip",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "44b8d03fe23f45e77e4c91adf9523c04009a8b76",
+        "size": 10402,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/44b8d03fe23f45e77e4c91adf9523c04009a8b76"
+      },
+      {
+        "path": "docs/verification/low-sodium-evidence-e82707f2bc62/independent-peer/peer-receipt.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2ac180346d2b68c6aa7bafb46527424326d660c0",
+        "size": 3999,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/2ac180346d2b68c6aa7bafb46527424326d660c0"
+      },
+      {
+        "path": "docs/verification/recommendation-notes-20261008-9e05c0",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "b7fbed80ea64dc5ececa6926150c21aba79dd83c",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/b7fbed80ea64dc5ececa6926150c21aba79dd83c"
+      },
+      {
+        "path": "docs/verification/recommendation-notes-20261008-9e05c0/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2d2a5637f6363a829a90ef683d252213d24c7f83",
+        "size": 12275,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/2d2a5637f6363a829a90ef683d252213d24c7f83"
+      },
+      {
+        "path": "docs/verification/recommendation-notes-20261008-9e05c0/evidence-manifest.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8db371bf760078459240e295cb709fe589c562ef",
+        "size": 41847,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/8db371bf760078459240e295cb709fe589c562ef"
+      },
+      {
+        "path": "docs/verification/recommendation-notes-20261008-9e05c0/evidence.tar.gz",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "057fbc1c20a57d43bd720ac09ac605502df119ab",
+        "size": 322333,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/057fbc1c20a57d43bd720ac09ac605502df119ab"
+      },
+      {
+        "path": "docs/verification/recommendation-notes-20261008-9e05c0/original-verification.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b708ccabd91166bdc6106520ec53013539838139",
+        "size": 12435,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/b708ccabd91166bdc6106520ec53013539838139"
+      },
+      {
+        "path": "docs/verification/recommendation-notes-20261008-9e05c0/receive_notes.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3d59979b806f79b94ab14fb386674fc84364dad9",
+        "size": 17353,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/3d59979b806f79b94ab14fb386674fc84364dad9"
+      },
+      {
+        "path": "docs/verification/recommendation-notes-20261008-9e05c0/receiving-verification.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6478f4ae3bda0ca719a18858723c3ba6a39e8f91",
+        "size": 10165,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/6478f4ae3bda0ca719a18858723c3ba6a39e8f91"
+      },
+      {
+        "path": "docs/verification/recommendation-notes-20261008-9e05c0/source-manifest.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "23975c8fa83fa4bf29d7e5601dd2526a0700d1e4",
+        "size": 4432,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/23975c8fa83fa4bf29d7e5601dd2526a0700d1e4"
+      },
+      {
+        "path": "docs/verification/tool-argument-recovery-20261008-de6263",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "1d3a9895bd71de132fc90863fec9233cc8b3a873",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/1d3a9895bd71de132fc90863fec9233cc8b3a873"
+      },
+      {
+        "path": "docs/verification/tool-argument-recovery-20261008-de6263/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "46741f90257dc9c762345d569baeaed43a523f88",
+        "size": 9776,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/46741f90257dc9c762345d569baeaed43a523f88"
+      },
+      {
+        "path": "docs/verification/tool-argument-recovery-20261008-de6263/evidence-manifest.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5eb5f0f02e5452f895f95ca60ac9d387cc99b7e7",
+        "size": 12629,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/5eb5f0f02e5452f895f95ca60ac9d387cc99b7e7"
+      },
+      {
+        "path": "docs/verification/tool-argument-recovery-20261008-de6263/evidence.tar.gz",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3c4c200a0d900177d6be3ed94e7dd7966738cb80",
+        "size": 72617,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/3c4c200a0d900177d6be3ed94e7dd7966738cb80"
+      },
+      {
+        "path": "docs/verification/tool-argument-recovery-20261008-de6263/source-manifest.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c8b819051208422ba706b3f542665497122c20e1",
+        "size": 8458,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/c8b819051208422ba706b3f542665497122c20e1"
+      },
+      {
+        "path": "examples",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "60c94611019f2d19a11dc84e17fe08a66ec1936d",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/60c94611019f2d19a11dc84e17fe08a66ec1936d"
+      },
+      {
+        "path": "examples/native-profile.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "42bbbd183986f6e3e5014172d595b0168aeafb9f",
+        "size": 155,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/42bbbd183986f6e3e5014172d595b0168aeafb9f"
+      },
+      {
+        "path": "fixtures",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "da4035967ebf7172333e426fd8ddfaf77558cc11",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/da4035967ebf7172333e426fd8ddfaf77558cc11"
+      },
+      {
+        "path": "fixtures/qloo_fixtures.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "60c5d92f905755454bb280b8181f8836a74bd955",
+        "size": 21190,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/60c5d92f905755454bb280b8181f8836a74bd955"
+      },
+      {
+        "path": "personas.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1eb6768780cafaf9b1666e39b7fc17aa21204f16",
+        "size": 1247,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/1eb6768780cafaf9b1666e39b7fc17aa21204f16"
+      },
+      {
+        "path": "qloo_client.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cca322e0c9af96c481ba8f7ef286e85d3b90cfd2",
+        "size": 12206,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/cca322e0c9af96c481ba8f7ef286e85d3b90cfd2"
+      },
+      {
+        "path": "requirements.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d2fa2b085ecd75cc196fa8a02ddb54e1728c0b23",
+        "size": 74,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/d2fa2b085ecd75cc196fa8a02ddb54e1728c0b23"
+      },
+      {
+        "path": "scripts",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "ea5d5c11a784a5bff639e28cb2d3188b33a336d0",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/ea5d5c11a784a5bff639e28cb2d3188b33a336d0"
+      },
+      {
+        "path": "scripts/build_fixtures.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bb06538576362d80ca67bedc33c73a92379533b1",
+        "size": 7227,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/bb06538576362d80ca67bedc33c73a92379533b1"
+      },
+      {
+        "path": "static",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "5fc4e06564bc91d944d4edb3aa39388847e90a5c",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/5fc4e06564bc91d944d4edb3aa39388847e90a5c"
+      },
+      {
+        "path": "static/app.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9903d257f9d60d8b216ba01c4d795e4aa199f629",
+        "size": 18804,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/9903d257f9d60d8b216ba01c4d795e4aa199f629"
+      },
+      {
+        "path": "static/calendar.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9e53b951316d841b86f0256cd2444a3ce547269f",
+        "size": 708,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/9e53b951316d841b86f0256cd2444a3ce547269f"
+      },
+      {
+        "path": "static/calendar.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dbed22d2cb91090bccec9472fbffd2854eed2722",
+        "size": 15169,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/dbed22d2cb91090bccec9472fbffd2854eed2722"
+      },
+      {
+        "path": "static/index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fd568ddd57c183725f0f8f76493160d66c36c7bb",
+        "size": 6104,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/fd568ddd57c183725f0f8f76493160d66c36c7bb"
+      },
+      {
+        "path": "static/plan-request.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b21276dda840fe6dd96a3bf3258a851970ff5e4d",
+        "size": 1420,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/b21276dda840fe6dd96a3bf3258a851970ff5e4d"
+      },
+      {
+        "path": "static/style.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "28df6c5229b6b592db33e929ae058fe514304af4",
+        "size": 5064,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/28df6c5229b6b592db33e929ae058fe514304af4"
+      },
+      {
+        "path": "static/week_file.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "420ddb8f63fca264dcf97be7147801105696155d",
+        "size": 6642,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/420ddb8f63fca264dcf97be7147801105696155d"
+      },
+      {
+        "path": "static/week_plan.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+        "size": 3913,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+      },
+      {
+        "path": "tastetable_cli.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d375cb64c6c631cccca2bb43db286e8efd21eedb",
+        "size": 6994,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/d375cb64c6c631cccca2bb43db286e8efd21eedb"
+      },
+      {
+        "path": "tests",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "397d3fcaf502d65530085711c08f08e50191c8a1",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/397d3fcaf502d65530085711c08f08e50191c8a1"
+      },
+      {
+        "path": "tests/calendar-week.test.cjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "49bc39f7665683696708692989f1d5921c8ed587",
+        "size": 12876,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/49bc39f7665683696708692989f1d5921c8ed587"
+      },
+      {
+        "path": "tests/calendar.test.cjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4fb00c14c7b61639f8122bc5b0c655944c97cde3",
+        "size": 11714,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/4fb00c14c7b61639f8122bc5b0c655944c97cde3"
+      },
+      {
+        "path": "tests/fixtures",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "e4b2394186f608cf815d66ae139a4fb41fb04407",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/e4b2394186f608cf815d66ae139a4fb41fb04407"
+      },
+      {
+        "path": "tests/fixtures/saved-week-recovery.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1d2086d31d8d832aa578bc6ef75fd75b3bc0fbff",
+        "size": 11163,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/1d2086d31d8d832aa578bc6ef75fd75b3bc0fbff"
+      },
+      {
+        "path": "tests/fixtures/saved-week-response.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "eca4eee4d93d0046833fc798e6c34bf87879c858",
+        "size": 12983,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/eca4eee4d93d0046833fc798e6c34bf87879c858"
+      },
+      {
+        "path": "tests/plan-request.test.cjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d2d60519b5cd3d3679449f941e795e32ba14634d",
+        "size": 4648,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/d2d60519b5cd3d3679449f941e795e32ba14634d"
+      },
+      {
+        "path": "tests/test_api_constraint_receiving.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3c5f6d5bfaaddd43445a004d626b9351edf692e9",
+        "size": 7244,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/3c5f6d5bfaaddd43445a004d626b9351edf692e9"
+      },
+      {
+        "path": "tests/test_api_receiving.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5c2b7026781e6d69b6479be0a0460374920e384c",
+        "size": 8371,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/5c2b7026781e6d69b6479be0a0460374920e384c"
+      },
+      {
+        "path": "tests/test_constraint_binding.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ee385279cd2f803f92bcfe251741aa491c84afa3",
+        "size": 12500,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/ee385279cd2f803f92bcfe251741aa491c84afa3"
+      },
+      {
+        "path": "tests/test_low_sodium_evidence.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "89b3daa81b235807c13ef53ea4a99142c1fbec10",
+        "size": 6370,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/89b3daa81b235807c13ef53ea4a99142c1fbec10"
+      },
+      {
+        "path": "tests/test_low_sodium_peer.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5a3740afe223441780aaf5bf5c3e5e082f22f5e7",
+        "size": 9474,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/5a3740afe223441780aaf5bf5c3e5e082f22f5e7"
+      },
+      {
+        "path": "tests/test_model_selection.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a98c1a173ff9026716be973aa3efa2dc8f3e0d42",
+        "size": 4333,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/a98c1a173ff9026716be973aa3efa2dc8f3e0d42"
+      },
+      {
+        "path": "tests/test_native_plan_cli.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "202ba42feffc662e46f5df9d22ae67640104cf58",
+        "size": 13463,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/202ba42feffc662e46f5df9d22ae67640104cf58"
+      },
+      {
+        "path": "tests/test_native_plan_week.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "00a0bb1a32ab626f5588b97b8ca981a6aae4e930",
+        "size": 19155,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/00a0bb1a32ab626f5588b97b8ca981a6aae4e930"
+      },
+      {
+        "path": "tests/test_native_plan_week_cleanup.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0e442ac30405a7b650725679b555c18473a2d357",
+        "size": 6798,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/0e442ac30405a7b650725679b555c18473a2d357"
+      },
+      {
+        "path": "tests/test_recommendation_notes.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "56647ab5191456c196fbf5584c30d56174c52c49",
+        "size": 14234,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/56647ab5191456c196fbf5584c30d56174c52c49"
+      },
+      {
+        "path": "tests/test_recommendation_purpose.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4425c22e8213a1816d6580093f9c04048caa23b0",
+        "size": 3599,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/4425c22e8213a1816d6580093f9c04048caa23b0"
+      },
+      {
+        "path": "tests/test_tastetable.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e6731e2c560a921074f034057404ce9bdd81e6ac",
+        "size": 8240,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/e6731e2c560a921074f034057404ce9bdd81e6ac"
+      },
+      {
+        "path": "tests/test_tool_argument_recovery.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9e3274bf610a5a7195c30fbe5c6942893b16a64c",
+        "size": 12775,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/9e3274bf610a5a7195c30fbe5c6942893b16a64c"
+      },
+      {
+        "path": "tests/test_tool_error_continuation.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "65401ab730cd3a604c2deafc7fed17a8e85aa70d",
+        "size": 4186,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/65401ab730cd3a604c2deafc7fed17a8e85aa70d"
+      },
+      {
+        "path": "tests/test_week_file.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "98c7fa65f00c08042f842012aa600096f9f238a3",
+        "size": 8639,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/98c7fa65f00c08042f842012aa600096f9f238a3"
+      },
+      {
+        "path": "tests/test_week_plan.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5808a2279c5ad23fd0aac2308f9e546fa03ca6a9",
+        "size": 7606,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/5808a2279c5ad23fd0aac2308f9e546fa03ca6a9"
+      },
+      {
+        "path": "tests/test_wheelchair_evidence.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "96a8202b1016688405783033b19a50f98ff69649",
+        "size": 8030,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/96a8202b1016688405783033b19a50f98ff69649"
+      },
+      {
+        "path": "tools",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "30ae98bbefd29db4ec4ba07407fc0ab0af3acdde",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/30ae98bbefd29db4ec4ba07407fc0ab0af3acdde"
+      },
+      {
+        "path": "tools/check_native_plan_week_browser.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "578854f099ef7b81bf845a3a58594bf451146140",
+        "size": 28581,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/578854f099ef7b81bf845a3a58594bf451146140"
+      },
+      {
+        "path": "tools/native_plan_to_week.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cf9fc5e0ecde5a839e6e6a577039b88bcc31f302",
+        "size": 8426,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/cf9fc5e0ecde5a839e6e6a577039b88bcc31f302"
+      },
+      {
+        "path": "web-demo-offline",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "f6258d96699a2e98053220173f8b93aaa081b3c8",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/f6258d96699a2e98053220173f8b93aaa081b3c8"
+      },
+      {
+        "path": "web-demo-offline/LICENSE",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3757eabcdbaee0b03b44aad0a7c01ff8c5ada81b",
+        "size": 1076,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/3757eabcdbaee0b03b44aad0a7c01ff8c5ada81b"
+      },
+      {
+        "path": "web-demo-offline/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6e4ee013ce657e8f074e06ecce4faafa8c29e17c",
+        "size": 9352,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/6e4ee013ce657e8f074e06ecce4faafa8c29e17c"
+      },
+      {
+        "path": "web-demo-offline/app.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "90907fc9081fa7d679a024ec33a68a31415d54a5",
+        "size": 16137,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/90907fc9081fa7d679a024ec33a68a31415d54a5"
+      },
+      {
+        "path": "web-demo-offline/catalogue.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6cddccf85bff98efcc3dd2dc0400eb8769dd9113",
+        "size": 5162,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/6cddccf85bff98efcc3dd2dc0400eb8769dd9113"
+      },
+      {
+        "path": "web-demo-offline/data",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "0f77bba5e1ff2c3219ee93e6d4b834aa6df45d2b",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/0f77bba5e1ff2c3219ee93e6d4b834aa6df45d2b"
+      },
+      {
+        "path": "web-demo-offline/data/capture-receipt.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b63c74e39d5659ba2168b4a18c8a3702194fd1b3",
+        "size": 5310,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/b63c74e39d5659ba2168b4a18c8a3702194fd1b3"
+      },
+      {
+        "path": "web-demo-offline/data/catalogue.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "70f022b18b2f33f67c139c59e1cd36e192fbb29f",
+        "size": 419244,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/70f022b18b2f33f67c139c59e1cd36e192fbb29f"
+      },
+      {
+        "path": "web-demo-offline/data/records",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "c23f88cf98b127925764ee80c6b9f14c05845b86",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/c23f88cf98b127925764ee80c6b9f14c05845b86"
+      },
+      {
+        "path": "web-demo-offline/data/records/harold-0.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e6d11ae83fa2cbfb6f9fc588c3760f7e215c960e",
+        "size": 10758,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/e6d11ae83fa2cbfb6f9fc588c3760f7e215c960e"
+      },
+      {
+        "path": "web-demo-offline/data/records/harold-1.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dc4dda8b1a31efec4a5137bb23f516b603f1f729",
+        "size": 14335,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/dc4dda8b1a31efec4a5137bb23f516b603f1f729"
+      },
+      {
+        "path": "web-demo-offline/data/records/harold-2.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "be73f456f300b4019727007dc7f91c2bf8e51718",
+        "size": 14178,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/be73f456f300b4019727007dc7f91c2bf8e51718"
+      },
+      {
+        "path": "web-demo-offline/data/records/harold-3.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "20fed9e69ab37218c52247d1ff763c0bc2608b02",
+        "size": 16372,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/20fed9e69ab37218c52247d1ff763c0bc2608b02"
+      },
+      {
+        "path": "web-demo-offline/data/records/harold-4.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "159bcab25f270ebeb7112698145243a91ab07fc8",
+        "size": 14594,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/159bcab25f270ebeb7112698145243a91ab07fc8"
+      },
+      {
+        "path": "web-demo-offline/data/records/harold-5.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "95a8ca0205620cf2847cef5500c533efc082170b",
+        "size": 16522,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/95a8ca0205620cf2847cef5500c533efc082170b"
+      },
+      {
+        "path": "web-demo-offline/data/records/harold-6.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cdb47cac1dc91fe7111b1cda8cf4d8171ffe8f3e",
+        "size": 16933,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/cdb47cac1dc91fe7111b1cda8cf4d8171ffe8f3e"
+      },
+      {
+        "path": "web-demo-offline/data/records/harold-7.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7f8110eaa5d16ead3acaf19d052a33761ee62c88",
+        "size": 18764,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/7f8110eaa5d16ead3acaf19d052a33761ee62c88"
+      },
+      {
+        "path": "web-demo-offline/data/records/mei-0.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8e4e436f531c95b0e231fe76342e01fcfdf24164",
+        "size": 10887,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/8e4e436f531c95b0e231fe76342e01fcfdf24164"
+      },
+      {
+        "path": "web-demo-offline/data/records/mei-1.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ee842ee7e0fb253ffd7ecb073e153da7450e263d",
+        "size": 12280,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/ee842ee7e0fb253ffd7ecb073e153da7450e263d"
+      },
+      {
+        "path": "web-demo-offline/data/records/mei-2.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "03383aa9a18b0f27d6905b924f67d547035a4af8",
+        "size": 13512,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/03383aa9a18b0f27d6905b924f67d547035a4af8"
+      },
+      {
+        "path": "web-demo-offline/data/records/mei-3.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "62d7bf901ec084edb20727a8735df3ea2b333ef6",
+        "size": 15402,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/62d7bf901ec084edb20727a8735df3ea2b333ef6"
+      },
+      {
+        "path": "web-demo-offline/data/records/mei-4.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a816099b90c43764ba458c8ead47983e1350c73d",
+        "size": 14241,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/a816099b90c43764ba458c8ead47983e1350c73d"
+      },
+      {
+        "path": "web-demo-offline/data/records/mei-5.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d92d984aa36f75db171d990a2867c30315a0b0f3",
+        "size": 15678,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/d92d984aa36f75db171d990a2867c30315a0b0f3"
+      },
+      {
+        "path": "web-demo-offline/data/records/mei-6.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "801a7c6a62f4e0b30df932ed6fb6adbd3452e44d",
+        "size": 15302,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/801a7c6a62f4e0b30df932ed6fb6adbd3452e44d"
+      },
+      {
+        "path": "web-demo-offline/data/records/mei-7.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5be0c601487eddd651f1ea1110cbc84069c2e5d0",
+        "size": 16686,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/5be0c601487eddd651f1ea1110cbc84069c2e5d0"
+      },
+      {
+        "path": "web-demo-offline/data/records/rosa-0.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "634e4cb8b7143a9fee679207cf572fef9ec3da59",
+        "size": 10234,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/634e4cb8b7143a9fee679207cf572fef9ec3da59"
+      },
+      {
+        "path": "web-demo-offline/data/records/rosa-1.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c704890764be21b896c0ed2ed42c076910cf8aea",
+        "size": 14122,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/c704890764be21b896c0ed2ed42c076910cf8aea"
+      },
+      {
+        "path": "web-demo-offline/data/records/rosa-2.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4f0a444d3cc9555c6ec25aec607171ecc2ef26e5",
+        "size": 14082,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/4f0a444d3cc9555c6ec25aec607171ecc2ef26e5"
+      },
+      {
+        "path": "web-demo-offline/data/records/rosa-3.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ccd441d2d4e3ce3cb60454f7d0d1375f1b2b02bc",
+        "size": 16136,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/ccd441d2d4e3ce3cb60454f7d0d1375f1b2b02bc"
+      },
+      {
+        "path": "web-demo-offline/data/records/rosa-4.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ef06b9331298707ecc96d663bea16e18b41feb4f",
+        "size": 15236,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/ef06b9331298707ecc96d663bea16e18b41feb4f"
+      },
+      {
+        "path": "web-demo-offline/data/records/rosa-5.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "21f88a767c5dddca053957bb52741fc17e1551ce",
+        "size": 16879,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/21f88a767c5dddca053957bb52741fc17e1551ce"
+      },
+      {
+        "path": "web-demo-offline/data/records/rosa-6.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a3f1748e458cd58fedeaf3a65dc710f250070ebb",
+        "size": 17398,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/a3f1748e458cd58fedeaf3a65dc710f250070ebb"
+      },
+      {
+        "path": "web-demo-offline/data/records/rosa-7.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "da86f6e03c0f4c2013eb430a51c1177ffe58cca6",
+        "size": 19223,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/da86f6e03c0f4c2013eb430a51c1177ffe58cca6"
+      },
+      {
+        "path": "web-demo-offline/dist",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "f39c91875ef84588d9abb5e78ac49773847f4a34",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/f39c91875ef84588d9abb5e78ac49773847f4a34"
+      },
+      {
+        "path": "web-demo-offline/dist/tastetable-offline-studio.zip",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2743449261da7f61a18bac12337b0f6e1582f388",
+        "size": 89662,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/2743449261da7f61a18bac12337b0f6e1582f388"
+      },
+      {
+        "path": "web-demo-offline/index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fc4c48306a8c59d8d169e3b399616c567431f8e1",
+        "size": 7928,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/fc4c48306a8c59d8d169e3b399616c567431f8e1"
+      },
+      {
+        "path": "web-demo-offline/offline.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ef4573507c5e5971f0ef7a6c1a840bc95b50586f",
+        "size": 8024,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/ef4573507c5e5971f0ef7a6c1a840bc95b50586f"
+      },
+      {
+        "path": "web-demo-offline/receipts",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "7624b11f08ff314ff85244f861a246332750a55e",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/7624b11f08ff314ff85244f861a246332750a55e"
+      },
+      {
+        "path": "web-demo-offline/receipts/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4486cf20b60b7286dc893d1f4b61df5c6562bccf",
+        "size": 5843,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/4486cf20b60b7286dc893d1f4b61df5c6562bccf"
+      },
+      {
+        "path": "web-demo-offline/receipts/browser",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "3ac2d7b7e1a1771bc067e32b77592022c6756347",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/3ac2d7b7e1a1771bc067e32b77592022c6756347"
+      },
+      {
+        "path": "web-demo-offline/receipts/browser/desktop.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5de7a48ce7f9248847b4f0f58ad97a21ab41d8aa",
+        "size": 182754,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/5de7a48ce7f9248847b4f0f58ad97a21ab41d8aa"
+      },
+      {
+        "path": "web-demo-offline/receipts/browser/phone.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3c198e231076d033e17b5ecf0730ae8410bda81e",
+        "size": 72938,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/3c198e231076d033e17b5ecf0730ae8410bda81e"
+      },
+      {
+        "path": "web-demo-offline/receipts/browser/receipt.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9e5ab62338c1fae2a1649c3e9606407d883058c2",
+        "size": 9697,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/9e5ab62338c1fae2a1649c3e9606407d883058c2"
+      },
+      {
+        "path": "web-demo-offline/receipts/capture-guards",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "7f4974c89048546da3697802160863ffd0f396d0",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/7f4974c89048546da3697802160863ffd0f396d0"
+      },
+      {
+        "path": "web-demo-offline/receipts/capture-guards/existing-output.log",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8de09906c0b1e06310b1f68810c06ed3c86ea6a2",
+        "size": 541,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/8de09906c0b1e06310b1f68810c06ed3c86ea6a2"
+      },
+      {
+        "path": "web-demo-offline/receipts/capture-guards/receipt.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "154c803276f1f9a246b660716e88812ed6c97265",
+        "size": 322,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/154c803276f1f9a246b660716e88812ed6c97265"
+      },
+      {
+        "path": "web-demo-offline/receipts/capture-guards/source-mismatch.log",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ef2126616dcf2a9afe11bd184f798a6cad120c7f",
+        "size": 688,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/ef2126616dcf2a9afe11bd184f798a6cad120c7f"
+      },
+      {
+        "path": "web-demo-offline/receipts/independent",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "283b2ae17977ca238e079c3e8df1d232b8d91a5e",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/283b2ae17977ca238e079c3e8df1d232b8d91a5e"
+      },
+      {
+        "path": "web-demo-offline/receipts/independent/check_recorded_receiving.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "528941cff17bf31c09486acc0e3ceaa9d2c62036",
+        "size": 8968,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/528941cff17bf31c09486acc0e3ceaa9d2c62036"
+      },
+      {
+        "path": "web-demo-offline/receipts/independent/native-checks-receipt.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0d2327031032f54a9fc31e034856797a200dfce7",
+        "size": 2372,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/0d2327031032f54a9fc31e034856797a200dfce7"
+      },
+      {
+        "path": "web-demo-offline/receipts/independent/native-checks.exit",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56",
+        "size": 2,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/573541ac9702dd3969c9bc859d2b91ec1f7e6e56"
+      },
+      {
+        "path": "web-demo-offline/receipts/independent/native-checks.log",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "65d2540e6f0b78b0c93de0949b6f795745c439c0",
+        "size": 1399,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/65d2540e6f0b78b0c93de0949b6f795745c439c0"
+      },
+      {
+        "path": "web-demo-offline/receipts/independent/review.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ccc6d53ef71904baaa35ab92b61a26686e55c69c",
+        "size": 2859,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/ccc6d53ef71904baaa35ab92b61a26686e55c69c"
+      },
+      {
+        "path": "web-demo-offline/receipts/node-tests.log",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6c589b0fcc3b2c47559daee0b5c6072b1b864e77",
+        "size": 1185,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/6c589b0fcc3b2c47559daee0b5c6072b1b864e77"
+      },
+      {
+        "path": "web-demo-offline/receipts/saved-week-20261008-81ba1ed0179c",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "995ca1b668acf5be5036c2197c56fc53d2976584",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/995ca1b668acf5be5036c2197c56fc53d2976584"
+      },
+      {
+        "path": "web-demo-offline/receipts/saved-week-20261008-81ba1ed0179c/admission-negative.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7bc6c1e920496c38589b7b7bc8554999173498d4",
+        "size": 3237,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/7bc6c1e920496c38589b7b7bc8554999173498d4"
+      },
+      {
+        "path": "web-demo-offline/receipts/saved-week-20261008-81ba1ed0179c/browser-receiving.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "12d2bc257f2681b44306f6c38092f1e73e94b401",
+        "size": 14598,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/12d2bc257f2681b44306f6c38092f1e73e94b401"
+      },
+      {
+        "path": "web-demo-offline/receipts/saved-week-20261008-81ba1ed0179c/desktop-preview.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fe1b1cba97f0dca55406e779c0d3e10f127dcfa6",
+        "size": 84693,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/fe1b1cba97f0dca55406e779c0d3e10f127dcfa6"
+      },
+      {
+        "path": "web-demo-offline/receipts/saved-week-20261008-81ba1ed0179c/independent-after.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "37aabd8c98e43fdca04bc386d4e33103619959b5",
+        "size": 1838,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/37aabd8c98e43fdca04bc386d4e33103619959b5"
+      },
+      {
+        "path": "web-demo-offline/receipts/saved-week-20261008-81ba1ed0179c/independent-before.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1ded3f116b6d48ce0f7d9e6dbe47c97900e8be1f",
+        "size": 1575,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/1ded3f116b6d48ce0f7d9e6dbe47c97900e8be1f"
+      },
+      {
+        "path": "web-demo-offline/receipts/saved-week-20261008-81ba1ed0179c/independent-probe.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b11d4a78ae0ad9627b38834dd7b54bfa19165cb7",
+        "size": 1310,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/b11d4a78ae0ad9627b38834dd7b54bfa19165cb7"
+      },
+      {
+        "path": "web-demo-offline/receipts/saved-week-20261008-81ba1ed0179c/native-commands.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f53a4b75022402da4607d2164836e3226e95b078",
+        "size": 6541,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/f53a4b75022402da4607d2164836e3226e95b078"
+      },
+      {
+        "path": "web-demo-offline/receipts/saved-week-20261008-81ba1ed0179c/original-ui.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "45a81accc52403fcd306f27918abcbbacadb5a29",
+        "size": 1469,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/45a81accc52403fcd306f27918abcbbacadb5a29"
+      },
+      {
+        "path": "web-demo-offline/receipts/saved-week-20261008-81ba1ed0179c/phone-preview.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "02c2cfa9c68aede0d611a126932c4ce1248f2e7c",
+        "size": 82444,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/02c2cfa9c68aede0d611a126932c4ce1248f2e7c"
+      },
+      {
+        "path": "web-demo-offline/receipts/saved-week-20261008-81ba1ed0179c/qualification.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1980192f97a745bc3076db0da5b9f84983746bb9",
+        "size": 6191,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/1980192f97a745bc3076db0da5b9f84983746bb9"
+      },
+      {
+        "path": "web-demo-offline/receipts/saved-week-20261008-81ba1ed0179c/source-manifest.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dc49dfe43f87d889f2f61f25e80a38647fd321c9",
+        "size": 2898,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/dc49dfe43f87d889f2f61f25e80a38647fd321c9"
+      },
+      {
+        "path": "web-demo-offline/receipts/saved-week-20261008-81ba1ed0179c/static-receiving.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8d09d003414317c69b281e43ac4fb1d4458a0476",
+        "size": 18070,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/8d09d003414317c69b281e43ac4fb1d4458a0476"
+      },
+      {
+        "path": "web-demo-offline/receipts/static-receiving.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e507066632797f10de193d34e5615e13f6f593a8",
+        "size": 16677,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/e507066632797f10de193d34e5615e13f6f593a8"
+      },
+      {
+        "path": "web-demo-offline/saved_week.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a363e788fc99c34a735295a209e5f5db04dc9e39",
+        "size": 3814,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/a363e788fc99c34a735295a209e5f5db04dc9e39"
+      },
+      {
+        "path": "web-demo-offline/source-pin.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "44e730d82e79476922f76bbcf8507f94e18160d8",
+        "size": 1846,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/44e730d82e79476922f76bbcf8507f94e18160d8"
+      },
+      {
+        "path": "web-demo-offline/style.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b47c49cc6b502a8e6dedc8d02fa1cadb1241dc1d",
+        "size": 5046,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/b47c49cc6b502a8e6dedc8d02fa1cadb1241dc1d"
+      },
+      {
+        "path": "web-demo-offline/tests",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "2cb324897bd7f9fcb118f9a0bc55c897668704d2",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/2cb324897bd7f9fcb118f9a0bc55c897668704d2"
+      },
+      {
+        "path": "web-demo-offline/tests/catalogue.test.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3ba4eb08598f918b9d57d4140c505ba2976f455d",
+        "size": 4423,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/3ba4eb08598f918b9d57d4140c505ba2976f455d"
+      },
+      {
+        "path": "web-demo-offline/tests/saved_week.test.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "da0a1cce68167c50c89a54a0cf2e118eea56c841",
+        "size": 10625,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/da0a1cce68167c50c89a54a0cf2e118eea56c841"
+      },
+      {
+        "path": "web-demo-offline/tools",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "7bf27cfebff37ea17c04a91f25b8d5a46b5724fc",
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/trees/7bf27cfebff37ea17c04a91f25b8d5a46b5724fc"
+      },
+      {
+        "path": "web-demo-offline/tools/capture_catalogue.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0788041da481788de0e567ce0e5bbeadfdea7f19",
+        "size": 6134,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/0788041da481788de0e567ce0e5bbeadfdea7f19"
+      },
+      {
+        "path": "web-demo-offline/tools/check_browser.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a81a9bc51e6ecbe28aa66835a51b20d285030eb6",
+        "size": 13276,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/a81a9bc51e6ecbe28aa66835a51b20d285030eb6"
+      },
+      {
+        "path": "web-demo-offline/tools/check_saved_week_browser.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "903315f4877ffa4d7b683352cfa936347ea66ac4",
+        "size": 21357,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/903315f4877ffa4d7b683352cfa936347ea66ac4"
+      },
+      {
+        "path": "web-demo-offline/tools/receive_static.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9ed247baef6d304b44296a3f3d445f8b221b86f7",
+        "size": 4571,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/9ed247baef6d304b44296a3f3d445f8b221b86f7"
+      },
+      {
+        "path": "web-demo-offline/week-file-source.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9ba0f0c59fb6edfa368e0ff26310aae505443989",
+        "size": 781,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/9ba0f0c59fb6edfa368e0ff26310aae505443989"
+      },
+      {
+        "path": "web-demo-offline/week_file.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "420ddb8f63fca264dcf97be7147801105696155d",
+        "size": 6642,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/420ddb8f63fca264dcf97be7147801105696155d"
+      },
+      {
+        "path": "web-demo-offline/week_plan.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+        "size": 3913,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+      }
+    ],
+    "truncated": false
+  }
+}

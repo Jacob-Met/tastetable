@@ -1,0 +1,1 @@
+{"test_methods": 6, "passed_test_methods": 4, "failed_test_methods": ["__main__.SoftFoodIndependentTests.test_native_scripted_fixture_plan", "__main__.SoftFoodIndependentTests.test_unknown_and_outing_policy"], "failure_records": 5, "error_records": 0, "skipped": 0, "source_unchanged": true, "network_attempts": [], "qualified": false}

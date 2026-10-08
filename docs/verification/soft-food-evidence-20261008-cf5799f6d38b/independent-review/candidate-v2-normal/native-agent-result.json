@@ -1,0 +1,387 @@
+{
+  "control": "native_scripted_fixture_plan",
+  "fixture_sha256": "00f246046dbd7b7d94f12c7feed620d8eec8cd9ef4e7a725642882a6980227df",
+  "fixture_unchanged": true,
+  "profile": {
+    "label": "Wholly Fictional Independent Reviewer Persona",
+    "city": "Independent Fixture City",
+    "cuisines": [
+      "Diner"
+    ],
+    "music": [
+      "Synthetic Chamber Group"
+    ],
+    "films": [],
+    "constraints": [
+      "soft_foods"
+    ]
+  },
+  "profile_unchanged": true,
+  "result": {
+    "plan": {
+      "meals": [
+        {
+          "day": "Monday",
+          "kind": "restaurant",
+          "entity_id": "PEER-SAME",
+          "name": "Fictional PEER-SAME",
+          "affinity": 0.94,
+          "fallback": false,
+          "why": "Qloo affinity 0.94 for audiences who like Synthetic Chamber Group (tag match: Diner). Checks: Soft foods: pass (soft options listed: no soup; soup available)."
+        },
+        {
+          "day": "Wednesday",
+          "kind": "restaurant",
+          "entity_id": "PEER-MIXED",
+          "name": "Fictional PEER-MIXED",
+          "affinity": 0.9,
+          "fallback": false,
+          "why": "Qloo affinity 0.90 for audiences who like Synthetic Chamber Group (tag match: Diner). Checks: Soft foods: pass (soft options listed: no soup; polenta)."
+        },
+        {
+          "day": "Friday",
+          "kind": "restaurant",
+          "entity_id": "PEER-UNKNOWN",
+          "name": "Fictional PEER-UNKNOWN",
+          "affinity": 0.86,
+          "fallback": false,
+          "why": "Qloo affinity 0.86 for audiences who like Synthetic Chamber Group (tag match: Diner). Checks: Soft foods: unknown (no texture signal in Qloo keywords; ask the venue)."
+        },
+        {
+          "day": "Sunday",
+          "kind": "restaurant",
+          "entity_id": "PEER-PLAIN",
+          "name": "Fictional PEER-PLAIN",
+          "affinity": 0.8,
+          "fallback": false,
+          "why": "Qloo affinity 0.80 for audiences who like Synthetic Chamber Group (tag match: Diner). Checks: Soft foods: unknown (no texture signal in Qloo keywords; ask the venue)."
+        }
+      ],
+      "outing": {
+        "day": "Saturday",
+        "kind": "outing",
+        "entity_id": "PEER-OUTING",
+        "name": "Fictional PEER-OUTING",
+        "affinity": 0.95,
+        "why": "Qloo affinity 0.95 for audiences who like Synthetic Chamber Group (tag match: cinema)."
+      },
+      "rejected": [
+        {
+          "name": "Fictional PEER-COORD",
+          "entity_id": "PEER-COORD",
+          "failed": [
+            {
+              "constraint": "soft_foods",
+              "status": "fail",
+              "reason": "menu signals are mostly firm: pressed bread"
+            }
+          ]
+        },
+        {
+          "name": "Fictional PEER-MULTI",
+          "entity_id": "PEER-MULTI",
+          "failed": [
+            {
+              "constraint": "soft_foods",
+              "status": "fail",
+              "reason": "menu signals are mostly firm: nuts"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    "llm_only": {
+      "meals": [
+        {
+          "day": "Monday",
+          "name": "A well-reviewed Diner restaurant nearby",
+          "why": "They enjoy Diner food.",
+          "verified": {
+            "exists": false,
+            "entity_id": null,
+            "constraints_checked": false
+          }
+        },
+        {
+          "day": "Wednesday",
+          "name": "A well-reviewed Diner restaurant nearby",
+          "why": "They enjoy Diner food.",
+          "verified": {
+            "exists": false,
+            "entity_id": null,
+            "constraints_checked": false
+          }
+        },
+        {
+          "day": "Friday",
+          "name": "A well-reviewed Diner restaurant nearby",
+          "why": "They enjoy Diner food.",
+          "verified": {
+            "exists": false,
+            "entity_id": null,
+            "constraints_checked": false
+          }
+        },
+        {
+          "day": "Sunday",
+          "name": "A well-reviewed Diner restaurant nearby",
+          "why": "They enjoy Diner food.",
+          "verified": {
+            "exists": false,
+            "entity_id": null,
+            "constraints_checked": false
+          }
+        }
+      ],
+      "outing": {
+        "day": "Saturday",
+        "name": "A concert or show featuring music like Synthetic Chamber Group",
+        "why": "Matches their music taste.",
+        "verified": {
+          "exists": false,
+          "entity_id": null,
+          "constraints_checked": false
+        }
+      },
+      "source": "template (ungrounded baseline)"
+    },
+    "comparison": {
+      "grounded": {
+        "picks": 5,
+        "with_qloo_entity_id": 5,
+        "with_affinity_evidence": 5,
+        "constraint_checked": 5,
+        "unsafe_candidates_rejected": 2
+      },
+      "llm_only": {
+        "picks": 5,
+        "with_qloo_entity_id": 0,
+        "with_affinity_evidence": 0,
+        "constraint_checked": 0,
+        "unsafe_candidates_rejected": 0
+      },
+      "constraints": [
+        "soft_foods"
+      ]
+    },
+    "trace": [
+      {
+        "step": 0,
+        "tool": "qloo_search",
+        "args": {
+          "query": "Synthetic Chamber Group",
+          "kind": "entity",
+          "types": "urn:entity:artist"
+        },
+        "result_summary": "Synthetic Chamber Group"
+      },
+      {
+        "step": 0,
+        "tool": "qloo_search",
+        "args": {
+          "query": "Diner",
+          "kind": "tag"
+        },
+        "result_summary": "Diner"
+      },
+      {
+        "step": 1,
+        "tool": "qloo_recs",
+        "args": {
+          "filter_type": "urn:entity:place",
+          "purpose": "restaurant",
+          "tag_ids": [
+            "urn:tag:genre:restaurant:Diner"
+          ],
+          "signal_entity_ids": [
+            "PEER-ARTIST"
+          ],
+          "location": "Independent Fixture City",
+          "take": 10
+        },
+        "result_summary": "6 candidates"
+      },
+      {
+        "step": 2,
+        "tool": "constraint_check",
+        "args": {
+          "entity_ids": [
+            "PEER-COORD",
+            "PEER-MULTI",
+            "PEER-SAME",
+            "PEER-MIXED",
+            "PEER-UNKNOWN",
+            "PEER-PLAIN"
+          ],
+          "constraints": [
+            "soft_foods"
+          ],
+          "kind": "restaurant"
+        },
+        "result_summary": "4/6 passed"
+      },
+      {
+        "step": 3,
+        "tool": "qloo_search",
+        "args": {
+          "query": "",
+          "kind": "tag"
+        },
+        "result_summary": "no match"
+      },
+      {
+        "step": 4,
+        "tool": "qloo_search",
+        "args": {
+          "query": "",
+          "kind": "tag"
+        },
+        "result_summary": "no match"
+      },
+      {
+        "step": 5,
+        "tool": "qloo_search",
+        "args": {
+          "query": "",
+          "kind": "tag"
+        },
+        "result_summary": "no match"
+      },
+      {
+        "step": 6,
+        "tool": "qloo_search",
+        "args": {
+          "query": "jazz",
+          "kind": "tag"
+        },
+        "result_summary": "no match"
+      },
+      {
+        "step": 6,
+        "tool": "qloo_search",
+        "args": {
+          "query": "cinema",
+          "kind": "tag"
+        },
+        "result_summary": "cinema"
+      },
+      {
+        "step": 6,
+        "tool": "qloo_search",
+        "args": {
+          "query": "museum",
+          "kind": "tag"
+        },
+        "result_summary": "no match"
+      },
+      {
+        "step": 6,
+        "tool": "qloo_search",
+        "args": {
+          "query": "concert hall",
+          "kind": "tag"
+        },
+        "result_summary": "no match"
+      },
+      {
+        "step": 7,
+        "tool": "qloo_recs",
+        "args": {
+          "filter_type": "urn:entity:place",
+          "purpose": "outing",
+          "tag_ids": [
+            "urn:tag:genre:place:cinema"
+          ],
+          "signal_entity_ids": [
+            "PEER-ARTIST"
+          ],
+          "location": "Independent Fixture City",
+          "take": 5
+        },
+        "result_summary": "1 candidates"
+      },
+      {
+        "step": 8,
+        "tool": "constraint_check",
+        "args": {
+          "entity_ids": [
+            "PEER-OUTING"
+          ],
+          "constraints": [
+            "soft_foods"
+          ],
+          "kind": "outing"
+        },
+        "result_summary": "1/1 passed"
+      }
+    ],
+    "model_message": "Plan inputs gathered; assembling weekly plan from tool results.",
+    "mock": true
+  },
+  "fixture_transport_requests": [
+    {
+      "path": "/search",
+      "params": {
+        "query": "Synthetic Chamber Group",
+        "take": 3,
+        "types": "urn:entity:artist"
+      }
+    },
+    {
+      "path": "/v2/tags",
+      "params": {
+        "filter.query": "Diner",
+        "take": 3
+      }
+    },
+    {
+      "path": "/v2/insights",
+      "params": {
+        "filter.type": "urn:entity:place",
+        "take": 10,
+        "signal.interests.entities": "PEER-ARTIST",
+        "filter.tags": "urn:tag:genre:restaurant:Diner",
+        "filter.location.query": "Independent Fixture City"
+      }
+    },
+    {
+      "path": "/v2/tags",
+      "params": {
+        "filter.query": "jazz",
+        "take": 3
+      }
+    },
+    {
+      "path": "/v2/tags",
+      "params": {
+        "filter.query": "cinema",
+        "take": 3
+      }
+    },
+    {
+      "path": "/v2/tags",
+      "params": {
+        "filter.query": "museum",
+        "take": 3
+      }
+    },
+    {
+      "path": "/v2/tags",
+      "params": {
+        "filter.query": "concert hall",
+        "take": 3
+      }
+    },
+    {
+      "path": "/v2/insights",
+      "params": {
+        "filter.type": "urn:entity:place",
+        "take": 5,
+        "signal.interests.entities": "PEER-ARTIST",
+        "filter.tags": "urn:tag:genre:place:cinema",
+        "filter.location.query": "Independent Fixture City"
+      }
+    }
+  ]
+}

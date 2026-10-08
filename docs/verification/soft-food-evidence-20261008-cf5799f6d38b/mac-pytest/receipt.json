@@ -1,0 +1,132 @@
+{
+  "schema": "tastetable.soft-food-preserved-pytest-receiving.v1",
+  "root": "/tmp/tastetable-soft-cue-review-cf5799f6d38b",
+  "python": "3.12.8 (main, Dec  3 2024, 18:42:41) [Clang 16.0.0 (clang-1600.0.26.4)]",
+  "source_unchanged": true,
+  "source_freeze_sha256": "eb68fe3838e4b0798c99cdcfbabcd620e9b4a912709da85e6ba14742c65234e7",
+  "results": [
+    {
+      "variant": "baseline",
+      "optimized": false,
+      "command": [
+        "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3",
+        "-B",
+        "-c",
+        "import hashlib,json,pathlib,sys; sys.path.insert(0,sys.argv[1]); import constraints,pytest; print(json.dumps({\"constraints\":constraints.__file__,\"sha256\":hashlib.sha256(pathlib.Path(constraints.__file__).read_bytes()).hexdigest(),\"pytest\":pytest.__version__,\"python\":sys.version})); raise SystemExit(pytest.main(sys.argv[2:]))",
+        "/tmp/tastetable-soft-cue-review-cf5799f6d38b/baseline",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "/tmp/tastetable-soft-cue-review-cf5799f6d38b/baseline/tests/test_wheelchair_evidence.py",
+        "/tmp/tastetable-soft-cue-review-cf5799f6d38b/baseline/tests/test_low_sodium_evidence.py",
+        "/tmp/tastetable-soft-cue-review-cf5799f6d38b/baseline/tests/test_low_sodium_peer.py",
+        "/tmp/tastetable-soft-cue-review-cf5799f6d38b/baseline/tests/test_native_plan_cli.py",
+        "/tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_soft_food_evidence.py"
+      ],
+      "exit_code": 1,
+      "stdout": {
+        "bytes": 7976,
+        "sha256": "f96386d8293049f4a83c7f0d4c593154936a27258cdea5c8036e580d92b8a479",
+        "git_blob": "e1e258122e406d3ccf438283ce70a14daec9fa29"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      }
+    },
+    {
+      "variant": "baseline",
+      "optimized": true,
+      "command": [
+        "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3",
+        "-B",
+        "-O",
+        "-c",
+        "import hashlib,json,pathlib,sys; sys.path.insert(0,sys.argv[1]); import constraints,pytest; print(json.dumps({\"constraints\":constraints.__file__,\"sha256\":hashlib.sha256(pathlib.Path(constraints.__file__).read_bytes()).hexdigest(),\"pytest\":pytest.__version__,\"python\":sys.version})); raise SystemExit(pytest.main(sys.argv[2:]))",
+        "/tmp/tastetable-soft-cue-review-cf5799f6d38b/baseline",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "/tmp/tastetable-soft-cue-review-cf5799f6d38b/baseline/tests/test_wheelchair_evidence.py",
+        "/tmp/tastetable-soft-cue-review-cf5799f6d38b/baseline/tests/test_low_sodium_evidence.py",
+        "/tmp/tastetable-soft-cue-review-cf5799f6d38b/baseline/tests/test_low_sodium_peer.py",
+        "/tmp/tastetable-soft-cue-review-cf5799f6d38b/baseline/tests/test_native_plan_cli.py",
+        "/tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_soft_food_evidence.py"
+      ],
+      "exit_code": 1,
+      "stdout": {
+        "bytes": 8613,
+        "sha256": "283181eb04f5e5bc62c32b0ce6ca18b8d632d913bffb9a56bd63f099d2bb5ec5",
+        "git_blob": "568717811865d73738b0656a74c102ffd4682c81"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      }
+    },
+    {
+      "variant": "candidate",
+      "optimized": false,
+      "command": [
+        "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3",
+        "-B",
+        "-c",
+        "import hashlib,json,pathlib,sys; sys.path.insert(0,sys.argv[1]); import constraints,pytest; print(json.dumps({\"constraints\":constraints.__file__,\"sha256\":hashlib.sha256(pathlib.Path(constraints.__file__).read_bytes()).hexdigest(),\"pytest\":pytest.__version__,\"python\":sys.version})); raise SystemExit(pytest.main(sys.argv[2:]))",
+        "/tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "/tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_wheelchair_evidence.py",
+        "/tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_low_sodium_evidence.py",
+        "/tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_low_sodium_peer.py",
+        "/tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_native_plan_cli.py",
+        "/tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_soft_food_evidence.py"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 370,
+        "sha256": "3d27fce6226d9a13417e6e431a03ec933557db767fb363f1b282667c828412ac",
+        "git_blob": "f582d793526bf3155218600496baf84ff4222897"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      }
+    },
+    {
+      "variant": "candidate",
+      "optimized": true,
+      "command": [
+        "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3",
+        "-B",
+        "-O",
+        "-c",
+        "import hashlib,json,pathlib,sys; sys.path.insert(0,sys.argv[1]); import constraints,pytest; print(json.dumps({\"constraints\":constraints.__file__,\"sha256\":hashlib.sha256(pathlib.Path(constraints.__file__).read_bytes()).hexdigest(),\"pytest\":pytest.__version__,\"python\":sys.version})); raise SystemExit(pytest.main(sys.argv[2:]))",
+        "/tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "/tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_wheelchair_evidence.py",
+        "/tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_low_sodium_evidence.py",
+        "/tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_low_sodium_peer.py",
+        "/tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_native_plan_cli.py",
+        "/tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/tests/test_soft_food_evidence.py"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 1007,
+        "sha256": "d4d35db4861810fe0712ea1a8dbb2c9acb7b447fdf67716f8a25ca53ee747705",
+        "git_blob": "59e8e5b04443d9b2fc09ed30b1ff46fd264fc030"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      }
+    }
+  ],
+  "scope": "Actual pytest runner and five exact suites; FastAPI unavailable, no app server or full-repository test claim."
+}

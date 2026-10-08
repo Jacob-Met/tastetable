@@ -1,0 +1,23 @@
+{
+  "frozen_utc": "2026-10-08T15:23:04.118641+00:00",
+  "files": [
+    {
+      "path": "scope-v2.json",
+      "bytes": 4094,
+      "sha256": "a7ee2971daa787bf6d1065d3e919a7e55d70b844a32f77036c45a9c203aceacf"
+    },
+    {
+      "path": "independent_soft_food_v2.py",
+      "bytes": 10210,
+      "sha256": "767b023cc5c1d32a97f2e30a226bbfa64ff812ba46767738f6b76800ed45c1f1"
+    },
+    {
+      "path": "run_phase_v2.py",
+      "bytes": 2107,
+      "sha256": "9414e8824a79be49e8c448d4c45107e830a43a764b7bc518b7c725c0e8fffa19"
+    }
+  ],
+  "assertion_calls_identical": 20,
+  "only_observation_correction": "refried beans: unavailable -> gnocchi: unavailable; old hard cue fried remains inherited",
+  "original_failures_preserved": true
+}

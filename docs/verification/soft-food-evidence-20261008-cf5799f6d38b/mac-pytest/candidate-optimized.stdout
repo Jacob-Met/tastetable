@@ -1,0 +1,10 @@
+{"constraints": "/tmp/tastetable-soft-cue-review-cf5799f6d38b/candidate/constraints.py", "sha256": "f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa", "pytest": "8.4.2", "python": "3.12.8 (main, Dec  3 2024, 18:42:41) [Clang 16.0.0 (clang-1600.0.26.4)]"}
+.....................................................................    [100%]
+=============================== warnings summary ===============================
+../../canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/lib/python3.12/site-packages/_pytest/config/__init__.py:1291
+  /private/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/lib/python3.12/site-packages/_pytest/config/__init__.py:1291: PytestConfigWarning: assertions not in test modules or plugins will be ignored because assert statements are not executed by the underlying Python interpreter (are you using python -O?)
+  
+    self._warn_about_missing_assertion(mode)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+69 passed, 1 warning in 4.09s

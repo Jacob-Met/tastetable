@@ -1,0 +1,125 @@
+{
+  "schema": "tastetable.root-publication-intake.v1",
+  "observed_utc": "2026-10-08 15:58:44 UTC",
+  "receiving_capture": "a77175501199ace765cb7ca57742b267351d3e79",
+  "original_qualified_overlay_parent": "1a609bfdd77dc07222eb70f8a4a1f565a8bc8fa0",
+  "original_qualified_overlay_tree": "5e8dac669162c057267f44a86590406b888a30aa",
+  "original_overlay_manifest_sha256": "fd7c6812f654dc3dd6c589ee7bcbeb12013709aea61c1f1f14f1efba329dcbd2",
+  "original_text_transfer_sha256": "8adaecaa3e0548c1a1cd1578fd1d51d0c80cc651f6e5883c538877e718f52959",
+  "publication_parent": "689ddc9a6a4f5f12068e1e99127cc77482c53924",
+  "publication_base_tree": "25b453e345bedd3f280e3d555df12561ef084cc6",
+  "fresh_base_leaves": 324,
+  "original_overlay_files": 99,
+  "root_review": {
+    "all_99_local_bytes_sha256_git_blobs_and_utf8_roundtrips_verified": true,
+    "production_helper_and_tests_read": true,
+    "author_and_independent_reports_read": true,
+    "product_changed_after_receiving": false
+  },
+  "captured_inputs": [
+    {
+      "path": "README.md",
+      "captured_blob": "8ff6de7f3bd91f0ff130775631dd0fe2dc98791c",
+      "current_blob": "7385a42bc9e0e4ab3aeecc90ee7510034248b41d",
+      "exact": false
+    },
+    {
+      "path": "agent.py",
+      "captured_blob": "883aff984464f2d43cda18f8e60b81240d6c3fb3",
+      "current_blob": "883aff984464f2d43cda18f8e60b81240d6c3fb3",
+      "exact": true
+    },
+    {
+      "path": "constraints.py",
+      "captured_blob": "cab2cecbe4c3a6112022d194a927b9025ec67ab6",
+      "current_blob": "cab2cecbe4c3a6112022d194a927b9025ec67ab6",
+      "exact": true
+    },
+    {
+      "path": "fixtures/qloo_fixtures.json",
+      "captured_blob": "60c5d92f905755454bb280b8181f8836a74bd955",
+      "current_blob": "60c5d92f905755454bb280b8181f8836a74bd955",
+      "exact": true
+    },
+    {
+      "path": "personas.py",
+      "captured_blob": "1eb6768780cafaf9b1666e39b7fc17aa21204f16",
+      "current_blob": "1eb6768780cafaf9b1666e39b7fc17aa21204f16",
+      "exact": true
+    },
+    {
+      "path": "qloo_client.py",
+      "captured_blob": "cca322e0c9af96c481ba8f7ef286e85d3b90cfd2",
+      "current_blob": "cca322e0c9af96c481ba8f7ef286e85d3b90cfd2",
+      "exact": true
+    },
+    {
+      "path": "requirements.txt",
+      "captured_blob": "d2fa2b085ecd75cc196fa8a02ddb54e1728c0b23",
+      "current_blob": "d2fa2b085ecd75cc196fa8a02ddb54e1728c0b23",
+      "exact": true
+    },
+    {
+      "path": "static/week_file.mjs",
+      "captured_blob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "current_blob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "exact": true
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "captured_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "current_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "exact": true
+    },
+    {
+      "path": "tastetable_cli.py",
+      "captured_blob": "d375cb64c6c631cccca2bb43db286e8efd21eedb",
+      "current_blob": "d375cb64c6c631cccca2bb43db286e8efd21eedb",
+      "exact": true
+    },
+    {
+      "path": "tests/test_low_sodium_evidence.py",
+      "captured_blob": "89b3daa81b235807c13ef53ea4a99142c1fbec10",
+      "current_blob": "89b3daa81b235807c13ef53ea4a99142c1fbec10",
+      "exact": true
+    },
+    {
+      "path": "tests/test_low_sodium_peer.py",
+      "captured_blob": "5a3740afe223441780aaf5bf5c3e5e082f22f5e7",
+      "current_blob": "5a3740afe223441780aaf5bf5c3e5e082f22f5e7",
+      "exact": true
+    },
+    {
+      "path": "tests/test_native_plan_cli.py",
+      "captured_blob": "202ba42feffc662e46f5df9d22ae67640104cf58",
+      "current_blob": "202ba42feffc662e46f5df9d22ae67640104cf58",
+      "exact": true
+    },
+    {
+      "path": "tests/test_tastetable.py",
+      "captured_blob": "e6731e2c560a921074f034057404ce9bdd81e6ac",
+      "current_blob": "e6731e2c560a921074f034057404ce9bdd81e6ac",
+      "exact": true
+    },
+    {
+      "path": "tests/test_wheelchair_evidence.py",
+      "captured_blob": "96a8202b1016688405783033b19a50f98ff69649",
+      "current_blob": "96a8202b1016688405783033b19a50f98ff69649",
+      "exact": true
+    },
+    {
+      "path": "tools/native_plan_to_week.mjs",
+      "captured_blob": "cf9fc5e0ecde5a839e6e6a577039b88bcc31f302",
+      "current_blob": "cf9fc5e0ecde5a839e6e6a577039b88bcc31f302",
+      "exact": true
+    }
+  ],
+  "capture_delta": "README.md changed in the saved-week comparison merge. All other 15 captured code, test, fixture and requirements files remain byte-identical. Current README and all incoming comparison paths are preserved.",
+  "native_rerun": "No repeat solely for this README/additive-comparison intake; the executed native code closure is unchanged.",
+  "limits": "Receiving remains on the exact recorded source closure. No full application-server, browser, live provider, venue validation or deployment claim.",
+  "expected_changed_existing": [
+    "constraints.py"
+  ],
+  "expected_unrelated_current_leaves_preserved": 323,
+  "added_root_note": true
+}

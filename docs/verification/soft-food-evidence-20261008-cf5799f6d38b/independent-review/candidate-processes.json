@@ -1,0 +1,65 @@
+[
+  {
+    "phase": "candidate",
+    "optimized": false,
+    "command": [
+      "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3",
+      "-B",
+      "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/independent_soft_food_v1.py",
+      "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate",
+      "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-normal"
+    ],
+    "started_utc": "2026-10-08T15:20:40.514716+00:00",
+    "finished_utc": "2026-10-08T15:20:40.699300+00:00",
+    "seconds": 0.18443983292672783,
+    "returncode": 1,
+    "stdout": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-normal.stdout.log",
+    "stderr": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-normal.stderr.log",
+    "result": {
+      "test_methods": 6,
+      "passed_test_methods": 4,
+      "failed_test_methods": [
+        "__main__.SoftFoodIndependentTests.test_native_scripted_fixture_plan",
+        "__main__.SoftFoodIndependentTests.test_unknown_and_outing_policy"
+      ],
+      "failure_records": 5,
+      "error_records": 0,
+      "skipped": 0,
+      "source_unchanged": true,
+      "network_attempts": [],
+      "qualified": false
+    }
+  },
+  {
+    "phase": "candidate",
+    "optimized": true,
+    "command": [
+      "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3",
+      "-B",
+      "-O",
+      "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/independent_soft_food_v1.py",
+      "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate",
+      "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-optimized"
+    ],
+    "started_utc": "2026-10-08T15:20:40.699802+00:00",
+    "finished_utc": "2026-10-08T15:20:41.044960+00:00",
+    "seconds": 0.3451650420902297,
+    "returncode": 1,
+    "stdout": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-optimized.stdout.log",
+    "stderr": "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/candidate-optimized.stderr.log",
+    "result": {
+      "test_methods": 6,
+      "passed_test_methods": 4,
+      "failed_test_methods": [
+        "__main__.SoftFoodIndependentTests.test_native_scripted_fixture_plan",
+        "__main__.SoftFoodIndependentTests.test_unknown_and_outing_policy"
+      ],
+      "failure_records": 5,
+      "error_records": 0,
+      "skipped": 0,
+      "source_unchanged": true,
+      "network_attempts": [],
+      "qualified": false
+    }
+  }
+]

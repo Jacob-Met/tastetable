@@ -1,0 +1,45 @@
+from pathlib import Path
+from datetime import datetime, timezone
+import hashlib
+import json
+import os
+import subprocess
+import sys
+import time
+
+root = Path("/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb")
+phase = sys.argv[1]
+source = root / phase
+python = "/tmp/canvaspilot-receiving-cf5799f6d38b-9VQmAF/venv/bin/python3"
+receiver = root / "independent_soft_food_v1.py"
+env = os.environ.copy()
+for key in list(env):
+    if key.startswith(("QLOO_", "TASTETABLE_LLM_")) or key in {
+        "TASTETABLE_LIVE", "PYTHONPATH", "PYTHONHOME", "PYTHONSTARTUP", "PYTHONOPTIMIZE",
+    }:
+        env.pop(key, None)
+env["PYTHONDONTWRITEBYTECODE"] = "1"
+rows = []
+for optimized in (False, True):
+    label = phase + ("-optimized" if optimized else "-normal")
+    output = root / label
+    command = [python, "-B"] + (["-O"] if optimized else []) + [str(receiver), str(source), str(output)]
+    started = datetime.now(timezone.utc).isoformat()
+    tick = time.monotonic()
+    with (root / (label + ".stdout.log")).open("xb") as stdout, (root / (label + ".stderr.log")).open("xb") as stderr:
+        result = subprocess.run(command, env=env, cwd=root, stdout=stdout, stderr=stderr, timeout=60, check=False)
+    row = {"phase": phase, "optimized": optimized, "command": command, "started_utc": started,
+           "finished_utc": datetime.now(timezone.utc).isoformat(), "seconds": time.monotonic() - tick,
+           "returncode": result.returncode,
+           "stdout": str(root / (label + ".stdout.log")), "stderr": str(root / (label + ".stderr.log"))}
+    receipt_file = output / "receipt.json"
+    if receipt_file.exists():
+        receipt = json.loads(receipt_file.read_text())
+        row["result"] = {key: receipt[key] for key in (
+            "test_methods", "passed_test_methods", "failed_test_methods", "failure_records", "error_records",
+            "skipped", "source_unchanged", "network_attempts", "qualified")}
+    rows.append(row)
+    print(json.dumps(row), flush=True)
+with (root / (phase + "-processes.json")).open("x") as handle:
+    json.dump(rows, handle, indent=2)
+    handle.write("\n")

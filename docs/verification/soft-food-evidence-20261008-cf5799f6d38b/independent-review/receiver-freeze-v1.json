@@ -1,0 +1,21 @@
+{
+  "frozen_utc": "2026-10-08T15:18:06.887674+00:00",
+  "candidate_implementation_unread": true,
+  "files": [
+    {
+      "path": "scope-v1.json",
+      "bytes": 3720,
+      "sha256": "6a2c7da6879c37927ca8a4953eb4f4611da403504c6d4662f6d4c495d0fbe408"
+    },
+    {
+      "path": "independent_soft_food_v1.py",
+      "bytes": 10222,
+      "sha256": "ae02c02ff98d1663038209bca33172e0834b94096a72f5cef314278a8b9b1fdf"
+    },
+    {
+      "path": "run_phase.py",
+      "bytes": 2096,
+      "sha256": "463e289d2d8474d9d2b58ee384e0fe2cc609fe6163dd18515dd8ecf2377b4dc8"
+    }
+  ]
+}

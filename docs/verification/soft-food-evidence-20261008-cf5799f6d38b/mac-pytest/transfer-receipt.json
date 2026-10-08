@@ -1,0 +1,69 @@
+{
+  "schema": "tastetable.mac-pytest-text-transfer.v1",
+  "source": "Mac.lan:/tmp/tastetable-soft-cue-review-cf5799f6d38b/qualification",
+  "files": [
+    {
+      "path": "receipt.json",
+      "bytes": 6788,
+      "sha256": "6eadb1e0685e70089b08cf81982d2f517cebd3b1da34c696fd70c244969e9f9c",
+      "git_blob": "965d6c68638ee5ea7df68ba393d54a33e9c98c9c",
+      "newlines_restored_to_match_native_pin": 1
+    },
+    {
+      "path": "baseline-normal.stdout",
+      "bytes": 7976,
+      "sha256": "f96386d8293049f4a83c7f0d4c593154936a27258cdea5c8036e580d92b8a479",
+      "git_blob": "e1e258122e406d3ccf438283ce70a14daec9fa29",
+      "newlines_restored_to_match_native_pin": 1
+    },
+    {
+      "path": "baseline-normal.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "newlines_restored_to_match_native_pin": 0
+    },
+    {
+      "path": "baseline-optimized.stdout",
+      "bytes": 8613,
+      "sha256": "283181eb04f5e5bc62c32b0ce6ca18b8d632d913bffb9a56bd63f099d2bb5ec5",
+      "git_blob": "568717811865d73738b0656a74c102ffd4682c81",
+      "newlines_restored_to_match_native_pin": 1
+    },
+    {
+      "path": "baseline-optimized.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "newlines_restored_to_match_native_pin": 0
+    },
+    {
+      "path": "candidate-normal.stdout",
+      "bytes": 370,
+      "sha256": "3d27fce6226d9a13417e6e431a03ec933557db767fb363f1b282667c828412ac",
+      "git_blob": "f582d793526bf3155218600496baf84ff4222897",
+      "newlines_restored_to_match_native_pin": 1
+    },
+    {
+      "path": "candidate-normal.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "newlines_restored_to_match_native_pin": 0
+    },
+    {
+      "path": "candidate-optimized.stdout",
+      "bytes": 1007,
+      "sha256": "d4d35db4861810fe0712ea1a8dbb2c9acb7b447fdf67716f8a25ca53ee747705",
+      "git_blob": "59e8e5b04443d9b2fc09ed30b1ff46fd264fc030",
+      "newlines_restored_to_match_native_pin": 1
+    },
+    {
+      "path": "candidate-optimized.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "newlines_restored_to_match_native_pin": 0
+    }
+  ]
+}

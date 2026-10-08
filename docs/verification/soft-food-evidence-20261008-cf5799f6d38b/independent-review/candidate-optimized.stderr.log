@@ -1,0 +1,67 @@
+test_coordinated_explicit_denial (__main__.SoftFoodIndependentTests.test_coordinated_explicit_denial) ... ok
+test_independent_affirmative_occurrences (__main__.SoftFoodIndependentTests.test_independent_affirmative_occurrences) ... ok
+test_multiword_local_denial (__main__.SoftFoodIndependentTests.test_multiword_local_denial) ... ok
+test_native_scripted_fixture_plan (__main__.SoftFoodIndependentTests.test_native_scripted_fixture_plan) ... 
+  test_native_scripted_fixture_plan (__main__.SoftFoodIndependentTests.test_native_scripted_fixture_plan) (field='identity_and_transport') ... FAIL
+  test_native_scripted_fixture_plan (__main__.SoftFoodIndependentTests.test_native_scripted_fixture_plan) (field='honest_unknown_and_positive_labels') ... FAIL
+  test_native_scripted_fixture_plan (__main__.SoftFoodIndependentTests.test_native_scripted_fixture_plan) (field='outing_and_actual_calls') ... FAIL
+test_non_denial_controls (__main__.SoftFoodIndependentTests.test_non_denial_controls) ... ok
+test_unknown_and_outing_policy (__main__.SoftFoodIndependentTests.test_unknown_and_outing_policy) ... 
+  test_unknown_and_outing_policy (__main__.SoftFoodIndependentTests.test_unknown_and_outing_policy) (group='unknown_and_outing_policy', index=0) ... FAIL
+test_unknown_and_outing_policy (__main__.SoftFoodIndependentTests.test_unknown_and_outing_policy) ... FAIL
+
+======================================================================
+FAIL: test_native_scripted_fixture_plan (__main__.SoftFoodIndependentTests.test_native_scripted_fixture_plan) (field='identity_and_transport')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/independent_soft_food_v1.py", line 175, in test_native_scripted_fixture_plan
+    self.assertEqual(set(meals), set(expected["expected_meals"]))
+AssertionError: Items in the second set but not the first:
+'PEER-UNKNOWN'
+
+======================================================================
+FAIL: test_native_scripted_fixture_plan (__main__.SoftFoodIndependentTests.test_native_scripted_fixture_plan) (field='honest_unknown_and_positive_labels')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/independent_soft_food_v1.py", line 178, in test_native_scripted_fixture_plan
+    self.assertIn("PEER-UNKNOWN", meals)
+AssertionError: 'PEER-UNKNOWN' not found in {'PEER-SAME': {'day': 'Monday', 'kind': 'restaurant', 'entity_id': 'PEER-SAME', 'name': 'Fictional PEER-SAME', 'affinity': 0.94, 'fallback': False, 'why': 'Qloo affinity 0.94 for audiences who like Synthetic Chamber Group (tag match: Diner). Checks: Soft foods: pass (soft options listed: no soup; soup available).'}, 'PEER-MIXED': {'day': 'Wednesday', 'kind': 'restaurant', 'entity_id': 'PEER-MIXED', 'name': 'Fictional PEER-MIXED', 'affinity': 0.9, 'fallback': False, 'why': 'Qloo affinity 0.90 for audiences who like Synthetic Chamber Group (tag match: Diner). Checks: Soft foods: pass (soft options listed: no soup; polenta).'}, 'PEER-PLAIN': {'day': 'Friday', 'kind': 'restaurant', 'entity_id': 'PEER-PLAIN', 'name': 'Fictional PEER-PLAIN', 'affinity': 0.8, 'fallback': False, 'why': 'Qloo affinity 0.80 for audiences who like Synthetic Chamber Group (tag match: Diner). Checks: Soft foods: unknown (no texture signal in Qloo keywords; ask the venue).'}}
+
+======================================================================
+FAIL: test_native_scripted_fixture_plan (__main__.SoftFoodIndependentTests.test_native_scripted_fixture_plan) (field='outing_and_actual_calls')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/independent_soft_food_v1.py", line 188, in test_native_scripted_fixture_plan
+    self.assertEqual(result["comparison"]["grounded"]["with_qloo_entity_id"], 5)
+AssertionError: 4 != 5
+
+======================================================================
+FAIL: test_unknown_and_outing_policy (__main__.SoftFoodIndependentTests.test_unknown_and_outing_policy) (group='unknown_and_outing_policy', index=0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/independent_soft_food_v1.py", line 113, in check_group
+    self.assertEqual(verdict.checks[0].status, case["status"])
+AssertionError: 'fail' != 'unknown'
+- fail
++ unknown
+
+
+======================================================================
+FAIL: test_unknown_and_outing_policy (__main__.SoftFoodIndependentTests.test_unknown_and_outing_policy)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/tastetable-soft-peer-cf5799f6d38b-zw1slszb/independent_soft_food_v1.py", line 134, in test_unknown_and_outing_policy
+    self.assertEqual([row.entity_id for row in kept], ["CHECK-UNKNOWN"])
+AssertionError: Lists differ: [] != ['CHECK-UNKNOWN']
+
+Second list contains 1 additional elements.
+First extra element 0:
+'CHECK-UNKNOWN'
+
+- []
++ ['CHECK-UNKNOWN']
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.004s
+
+FAILED (failures=5)
