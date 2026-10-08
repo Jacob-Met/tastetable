@@ -1,0 +1,233 @@
+﻿2026-10-08T13:46:09.8342228Z Current runner version: '2.337.0'
+2026-10-08T13:46:09.8359123Z ##[group]Runner Image Provisioner
+2026-10-08T13:46:09.8359642Z Hosted Compute Agent
+2026-10-08T13:46:09.8360086Z Version: 20261002.596
+2026-10-08T13:46:09.8360522Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-08T13:46:09.8361312Z Build Date: 2026-10-02T22:28:27Z
+2026-10-08T13:46:09.8361742Z Worker ID: {2c7d4a46-3c03-4b9a-b074-7d373dc8f779}
+2026-10-08T13:46:09.8362157Z Region: centralus
+2026-10-08T13:46:09.8362527Z Cloud: Azure
+2026-10-08T13:46:09.8362881Z ##[endgroup]
+2026-10-08T13:46:09.8363644Z ##[group]Operating System
+2026-10-08T13:46:09.8364084Z Ubuntu
+2026-10-08T13:46:09.8364400Z 24.04.5
+2026-10-08T13:46:09.8364730Z LTS
+2026-10-08T13:46:09.8365052Z ##[endgroup]
+2026-10-08T13:46:09.8365428Z ##[group]Runner Image
+2026-10-08T13:46:09.8365824Z Image: ubuntu-24.04
+2026-10-08T13:46:09.8366165Z Version: 20261004.327.1
+2026-10-08T13:46:09.8366933Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-08T13:46:09.8367810Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-08T13:46:09.8368422Z ##[endgroup]
+2026-10-08T13:46:09.8369050Z ##[group]GITHUB_TOKEN Permissions
+2026-10-08T13:46:09.8370234Z Contents: read
+2026-10-08T13:46:09.8370576Z Metadata: read
+2026-10-08T13:46:09.8371119Z ##[endgroup]
+2026-10-08T13:46:09.8372365Z Secret source: Actions
+2026-10-08T13:46:09.8372958Z Cache mode: write
+2026-10-08T13:46:09.8373419Z Prepare workflow directory
+2026-10-08T13:46:09.8603786Z Prepare all required actions
+2026-10-08T13:46:09.8636710Z Getting action download info
+2026-10-08T13:46:10.1116942Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-08T13:46:10.5414918Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-08T13:46:11.1279944Z Complete job name: receive-week
+2026-10-08T13:46:11.1962613Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-08T13:46:11.1963691Z with:
+2026-10-08T13:46:11.1964274Z   repository: Jacob-Met/tastetable
+2026-10-08T13:46:11.1969893Z   token: ***
+2026-10-08T13:46:11.1970496Z   ssh-strict: true
+2026-10-08T13:46:11.1971200Z   ssh-user: git
+2026-10-08T13:46:11.1971787Z   persist-credentials: true
+2026-10-08T13:46:11.1972423Z   clean: true
+2026-10-08T13:46:11.1973008Z   sparse-checkout-cone-mode: true
+2026-10-08T13:46:11.1973696Z   fetch-depth: 1
+2026-10-08T13:46:11.1974257Z   fetch-tags: false
+2026-10-08T13:46:11.1974835Z   show-progress: true
+2026-10-08T13:46:11.1975433Z   lfs: false
+2026-10-08T13:46:11.1975977Z   submodules: false
+2026-10-08T13:46:11.1976565Z   set-safe-directory: true
+2026-10-08T13:46:11.1977231Z   allow-unsafe-pr-checkout: false
+2026-10-08T13:46:11.1978027Z ##[endgroup]
+2026-10-08T13:46:11.2707584Z Syncing repository: Jacob-Met/tastetable
+2026-10-08T13:46:11.2709412Z ##[group]Getting Git version info
+2026-10-08T13:46:11.2710343Z Working directory is '/home/runner/work/tastetable/tastetable'
+2026-10-08T13:46:11.2711935Z [command]/usr/bin/git version
+2026-10-08T13:46:11.2962282Z git version 2.55.0
+2026-10-08T13:46:11.2977513Z ##[endgroup]
+2026-10-08T13:46:11.2986727Z Temporarily overriding HOME='/home/runner/work/_temp/8b9932a0-79ec-4af4-9a1b-8b2788d2ab4d' before making global git config changes
+2026-10-08T13:46:11.2988734Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T13:46:11.2992031Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tastetable/tastetable
+2026-10-08T13:46:11.3070067Z Deleting the contents of '/home/runner/work/tastetable/tastetable'
+2026-10-08T13:46:11.3072837Z ##[group]Determining repository object format
+2026-10-08T13:46:11.3074648Z ##[endgroup]
+2026-10-08T13:46:11.3076131Z ##[group]Initializing the repository
+2026-10-08T13:46:11.3077647Z [command]/usr/bin/git init /home/runner/work/tastetable/tastetable
+2026-10-08T13:46:11.3457840Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-08T13:46:11.3459672Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-08T13:46:11.3461515Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-08T13:46:11.3462886Z hint: call:
+2026-10-08T13:46:11.3463630Z hint:
+2026-10-08T13:46:11.3464572Z hint: 	git config --global init.defaultBranch <name>
+2026-10-08T13:46:11.3465697Z hint:
+2026-10-08T13:46:11.3466751Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-08T13:46:11.3468462Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-08T13:46:11.3469831Z hint:
+2026-10-08T13:46:11.3470595Z hint: 	git branch -m <name>
+2026-10-08T13:46:11.3471558Z hint:
+2026-10-08T13:46:11.3472712Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-08T13:46:11.3474645Z Initialized empty Git repository in /home/runner/work/tastetable/tastetable/.git/
+2026-10-08T13:46:11.3478041Z [command]/usr/bin/git remote add origin https://github.com/Jacob-Met/tastetable
+2026-10-08T13:46:11.4672413Z ##[endgroup]
+2026-10-08T13:46:11.4673485Z ##[group]Disabling automatic garbage collection
+2026-10-08T13:46:11.4674639Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-08T13:46:11.5271027Z ##[endgroup]
+2026-10-08T13:46:11.5272116Z ##[group]Setting up auth
+2026-10-08T13:46:11.5272868Z Removing SSH command configuration
+2026-10-08T13:46:11.5286131Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T13:46:11.5311887Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T13:46:11.6112366Z Removing HTTP extra header
+2026-10-08T13:46:11.6116961Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T13:46:11.6147853Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T13:46:11.6320326Z Removing includeIf entries pointing to credentials config files
+2026-10-08T13:46:11.6324650Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T13:46:11.6363344Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T13:46:11.6538806Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-b5aa570c-848c-4a30-be7b-6a27c8d11480.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-08T13:46:11.6669526Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/tastetable/tastetable/.git.path /home/runner/work/_temp/git-credentials-b5aa570c-848c-4a30-be7b-6a27c8d11480.config
+2026-10-08T13:46:11.6699134Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/tastetable/tastetable/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-b5aa570c-848c-4a30-be7b-6a27c8d11480.config
+2026-10-08T13:46:11.6872482Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-b5aa570c-848c-4a30-be7b-6a27c8d11480.config
+2026-10-08T13:46:11.6970449Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-b5aa570c-848c-4a30-be7b-6a27c8d11480.config
+2026-10-08T13:46:11.7069419Z ##[endgroup]
+2026-10-08T13:46:11.7071093Z ##[group]Fetching the repository
+2026-10-08T13:46:11.7080867Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +7bf9fe30167c393a111ee0fd51cdcd323ce9ddea:refs/remotes/pull/27/merge
+2026-10-08T13:46:13.2039996Z From https://github.com/Jacob-Met/tastetable
+2026-10-08T13:46:13.2040818Z  * [new ref]         7bf9fe30167c393a111ee0fd51cdcd323ce9ddea -> pull/27/merge
+2026-10-08T13:46:13.2044316Z ##[endgroup]
+2026-10-08T13:46:13.2044546Z ##[group]Determining the checkout info
+2026-10-08T13:46:13.2045105Z ##[endgroup]
+2026-10-08T13:46:13.2050100Z [command]/usr/bin/git sparse-checkout disable
+2026-10-08T13:46:13.2096962Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-08T13:46:13.2124433Z ##[group]Checking out the ref
+2026-10-08T13:46:13.2128813Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/27/merge
+2026-10-08T13:46:13.2424102Z Note: switching to 'refs/remotes/pull/27/merge'.
+2026-10-08T13:46:13.2424348Z 
+2026-10-08T13:46:13.2424515Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-08T13:46:13.2424919Z changes and commit them, and you can discard any commits you make in this
+2026-10-08T13:46:13.2425319Z state without impacting any branches by switching back to a branch.
+2026-10-08T13:46:13.2425534Z 
+2026-10-08T13:46:13.2425682Z If you want to create a new branch to retain commits you create, you may
+2026-10-08T13:46:13.2425930Z do so (now or later) by using -c with the switch command. Example:
+2026-10-08T13:46:13.2426077Z 
+2026-10-08T13:46:13.2426191Z   git switch -c <new-branch-name>
+2026-10-08T13:46:13.2426289Z 
+2026-10-08T13:46:13.2426354Z Or undo this operation with:
+2026-10-08T13:46:13.2426442Z 
+2026-10-08T13:46:13.2426495Z   git switch -
+2026-10-08T13:46:13.2426606Z 
+2026-10-08T13:46:13.2426825Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-08T13:46:13.2426992Z 
+2026-10-08T13:46:13.2427225Z HEAD is now at 7bf9fe3 Merge b9ac8ae18e76c635333056f3c9ff1c5caa1d43f5 into d66ab91d62ba243cef2ba387cea73a684fa3b04e
+2026-10-08T13:46:13.2435080Z ##[endgroup]
+2026-10-08T13:46:13.2474723Z [command]/usr/bin/git log -1 --format=%H
+2026-10-08T13:46:13.2497778Z 7bf9fe30167c393a111ee0fd51cdcd323ce9ddea
+2026-10-08T13:46:13.2665412Z ##[group]Run set -euo pipefail
+2026-10-08T13:46:13.2665667Z [36;1mset -euo pipefail[0m
+2026-10-08T13:46:13.2665812Z [36;1mNATIVE_WEEK_NODE=[0m
+2026-10-08T13:46:13.2666031Z [36;1mfor NATIVE_WEEK_NODE_DIR in "${RUNNER_TOOL_CACHE}/node"/22.*; do[0m
+2026-10-08T13:46:13.2666353Z [36;1m  if [[ -x "${NATIVE_WEEK_NODE_DIR}/x64/bin/node" && -f "${NATIVE_WEEK_NODE_DIR}/x64.complete" ]]; then[0m
+2026-10-08T13:46:13.2666643Z [36;1m    NATIVE_WEEK_NODE="${NATIVE_WEEK_NODE_DIR}/x64/bin/node"[0m
+2026-10-08T13:46:13.2666827Z [36;1m  fi[0m
+2026-10-08T13:46:13.2666965Z [36;1mdone[0m
+2026-10-08T13:46:13.2667171Z [36;1m[[ -n "${NATIVE_WEEK_NODE}" ]] || { echo "A complete cached Node 22 is required."; exit 1; }[0m
+2026-10-08T13:46:13.2667411Z [36;1mNATIVE_WEEK_BROWSER=[0m
+2026-10-08T13:46:13.2667735Z [36;1mfor NATIVE_WEEK_BROWSER_NAME in google-chrome google-chrome-stable chromium chromium-browser; do[0m
+2026-10-08T13:46:13.2668111Z [36;1m  if command -v "${NATIVE_WEEK_BROWSER_NAME}" >/dev/null 2>&1; then[0m
+2026-10-08T13:46:13.2668375Z [36;1m    NATIVE_WEEK_BROWSER="$(command -v "${NATIVE_WEEK_BROWSER_NAME}")"[0m
+2026-10-08T13:46:13.2668577Z [36;1m    break[0m
+2026-10-08T13:46:13.2668691Z [36;1m  fi[0m
+2026-10-08T13:46:13.2668798Z [36;1mdone[0m
+2026-10-08T13:46:13.2669038Z [36;1m[[ -n "${NATIVE_WEEK_BROWSER}" ]] || { echo "An installed Chrome/Chromium is required."; exit 1; }[0m
+2026-10-08T13:46:13.2669301Z [36;1mNATIVE_WEEK_PYTHON="$(command -v python3)"[0m
+2026-10-08T13:46:13.2669488Z [36;1m"${NATIVE_WEEK_NODE}" --version[0m
+2026-10-08T13:46:13.2669653Z [36;1m"${NATIVE_WEEK_BROWSER}" --version[0m
+2026-10-08T13:46:13.2669820Z [36;1m"${NATIVE_WEEK_PYTHON}" --version[0m
+2026-10-08T13:46:13.2670135Z [36;1mprintf 'node=%s\nbrowser=%s\npython=%s\n' "${NATIVE_WEEK_NODE}" "${NATIVE_WEEK_BROWSER}" "${NATIVE_WEEK_PYTHON}" >> "${GITHUB_OUTPUT}"[0m
+2026-10-08T13:46:13.2940153Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-08T13:46:13.2940403Z ##[endgroup]
+2026-10-08T13:46:13.3757724Z v22.23.3
+2026-10-08T13:46:13.5198128Z Google Chrome 154.0.8037.97 
+2026-10-08T13:46:13.5258014Z Python 3.12.3
+2026-10-08T13:46:13.5328901Z ##[group]Run "/opt/hostedtoolcache/node/22.23.3/x64/bin/node" tools/check_native_plan_week_browser.mjs --browser "/usr/bin/google-chrome" --output "${RUNNER_TEMP}/native-plan-week-receiving"
+2026-10-08T13:46:13.5329597Z [36;1m"/opt/hostedtoolcache/node/22.23.3/x64/bin/node" tools/check_native_plan_week_browser.mjs --browser "/usr/bin/google-chrome" --output "${RUNNER_TEMP}/native-plan-week-receiving"[0m
+2026-10-08T13:46:13.5384624Z shell: /usr/bin/bash -e {0}
+2026-10-08T13:46:13.5384767Z env:
+2026-10-08T13:46:13.5384891Z   NATIVE_WEEK_PYTHON: /usr/bin/python3
+2026-10-08T13:46:13.5385042Z ##[endgroup]
+2026-10-08T13:46:13.8831181Z PASS actual original Python producer and new converter preserve authored and empty native results
+2026-10-08T13:46:14.8053000Z PASS actual native file picker refuses the original raw result at the existing saved-week format boundary
+2026-10-08T13:46:15.0287722Z PASS converted native file opens with exact original inputs, picks, explanations and current calendar identity
+2026-10-08T13:46:15.0895668Z PASS actual keyboard selection moves and omits distinct occurrences without changing source evidence
+2026-10-08T13:46:15.3114329Z PASS real Save week and calendar downloads retain edited dates, complete source and occurrence IDs
+2026-10-08T13:46:15.4626221Z PASS existing Print week invokes native print with retained provenance and produces a bounded PDF
+2026-10-08T13:46:15.8402446Z PASS actual downloaded week reopens at 390px with the same assignments and byte-identical calendar
+2026-10-08T13:46:15.9903917Z PASS actual native no-match result opens and resaves an empty week without invented calendar events
+2026-10-08T13:46:15.9907241Z PASS conversion and browser handoff preserve original files without planner HTTP calls or runtime exceptions
+2026-10-08T13:46:16.3072446Z NATIVE_WEEK_BROWSER_RESULT PASSED checks=9 artifacts=15 source_unchanged=true
+2026-10-08T13:46:16.3122448Z NATIVE_WEEK_BROWSER_RECEIPT {"schema":"tastetable.native-plan-week-browser/1","status":"passed","project":"/home/runner/work/tastetable/tastetable","executable":"/usr/bin/google-chrome","node":"v22.23.3","checkout":"7bf9fe30167c393a111ee0fd51cdcd323ce9ddea","claim":"https://github.com/Jacob-Met/tastetable/issues/25","bootstrap":"Unchanged application files; authored GET-only /api/health mock and /api/personas empty responses. No FastAPI/deployment claim.","fileSelection":"Actual Open saved week keyboard control, Page.fileChooserOpened and DOM.setFileInputFiles; native File.text is unchanged.","checks":["actual original Python producer and new converter preserve authored and empty native results","actual native file picker refuses the original raw result at the existing saved-week format boundary","converted native file opens with exact original inputs, picks, explanations and current calendar identity","actual keyboard selection moves and omits distinct occurrences without changing source evidence","real Save week and calendar downloads retain edited dates, complete source and occurrence IDs","existing Print week invokes native print with retained provenance and produces a bounded PDF","actual downloaded week reopens at 390px with the same assignments and byte-identical calendar","actual native no-match result opens and resaves an empty week without invented calendar events","conversion and browser handoff preserve original files without planner HTTP calls or runtime exceptions"],"artifacts":[{"name":"authored-profile.json","bytes":197,"sha256":"344dddbf74cb2dac1a2b6958f55821ef78be440c2f807b8018788693c4c83065","kind":"authored native input"},{"name":"authored-native.json","bytes":9063,"sha256":"1d1d0d56c13796a229b13f5171b80c306a74cb998d5b7dc0f6d488d57f9ff48f","kind":"actual Python CLI stdout"},{"name":"authored-converted-week.json","bytes":9179,"sha256":"cd29f7755d3950a36a336d1756ea508c08d0c74c94fd3199c6f60a3780d49f1b","kind":"actual create-only converter output"},{"name":"empty-profile.json","bytes":213,"sha256":"70ec9404c123ad0018291e329e92f12e51fb591ea1b7828edd7d19dfe867fcc8","kind":"authored native input"},{"name":"empty-native.json","bytes":7154,"sha256":"7321a1a9e55deb6f715974549f359b8789e27b9e34e2c2cf447fad555effe3c3","kind":"actual Python CLI stdout"},{"name":"empty-converted-week.json","bytes":7131,"sha256":"f79eedec6fdd3dc8f4616e90b6cbf847e8d102b72f6167f061af46dc7cb4b5ff","kind":"actual create-only converter output"},{"name":"original-calendar.ics","bytes":4475,"sha256":"067f0faebbc914602b88f9841d44e3dc6ea20f50be6b9f3c08902abf59e4ae94","kind":"actual browser download","suggestedFilename":"tastetable-demo-2026-12-28.ics"},{"name":"edited-saved-week.json","bytes":9175,"sha256":"cdeadc3a9c05b5ccf67dd057966b9962ec3c7ee0e15ddb2bb9d580edb5125812","kind":"actual browser download","suggestedFilename":"tastetable-week-2026-12-28.json"},{"name":"edited-calendar.ics","bytes":3681,"sha256":"1eaaf36d74f9ae82601a12da488cd06bf5994ff7eadea373d3bc138bb7bdc819","kind":"actual browser download","suggestedFilename":"tastetable-demo-2026-12-28.ics"},{"name":"arranged-native-week.pdf","bytes":95224,"sha256":"c475164ab3519f6a293888292ec654b9acfe699482801a8cbd32b43945e71956","kind":"actual Chrome print PDF","pages":2,"boundary":"Generation and print DOM only; no PDF text extraction, physical printer or direct pixel claim."},{"name":"desktop-arranged-week.png","bytes":155122,"sha256":"90bdc67eece6802cb671868a476096924655b34ed38923baec6462fcadcf1250","kind":"actual Chrome screenshot"},{"name":"reopened-calendar.ics","bytes":3681,"sha256":"1eaaf36d74f9ae82601a12da488cd06bf5994ff7eadea373d3bc138bb7bdc819","kind":"actual browser download","suggestedFilename":"tastetable-demo-2026-12-28.ics"},{"name":"phone-reopened-week.png","bytes":74724,"sha256":"56332c95a73bd3d4db90966ecb39e1ff49c454f7d6ee33c7627155a6091fff67","kind":"actual Chrome screenshot"},{"name":"empty-resaved-week.json","bytes":7131,"sha256":"b3dafa52d8ce772b88d234346d92fdc6010fea9a192f58778df654938c4be842","kind":"actual browser download","suggestedFilename":"tastetable-week-2026-12-28.json"},{"name":"phone-empty-week.png","bytes":76484,"sha256":"b127a41daab01f74bea96d25014b168215250f1ef1baabd89e3448e522be0b86","kind":"actual Chrome screenshot"}],"programs":[{"label":"authored native producer","executable":"/usr/bin/python3","args":["/home/runner/work/tastetable/tastetable/tastetable_cli.py","--profile","/home/runner/work/_temp/native-plan-week-receiving/authored-profile.json"],"status":0,"signal":null,"stdoutSha256":"1d1d0d56c13796a229b13f5171b80c306a74cb998d5b7dc0f6d488d57f9ff48f","stderr":"","error":null},{"label":"authored actual converter","executable":"/opt/hostedtoolcache/node/22.23.3/x64/bin/node","args":["/home/runner/work/tastetable/tastetable/tools/native_plan_to_week.mjs","--input","/home/runner/work/_temp/native-plan-week-receiving/authored-native.json","--week","2026-12-30","--output","/home/runner/work/_temp/native-plan-week-receiving/authored-converted-week.json"],"status":0,"signal":null,"stdoutSha256":"af65199a3cb9e9c3bdcb4e75b70de57f703087312636a55667d8330f69d14990","stderr":"","error":null},{"label":"empty native producer","executable":"/usr/bin/python3","args":["/home/runner/work/tastetable/tastetable/tastetable_cli.py","--profile","/home/runner/work/_temp/native-plan-week-receiving/empty-profile.json"],"status":0,"signal":null,"stdoutSha256":"7321a1a9e55deb6f715974549f359b8789e27b9e34e2c2cf447fad555effe3c3","stderr":"","error":null},{"label":"empty actual converter","executable":"/opt/hostedtoolcache/node/22.23.3/x64/bin/node","args":["/home/runner/work/tastetable/tastetable/tools/native_plan_to_week.mjs","--input","/home/runner/work/_temp/native-plan-week-receiving/empty-native.json","--week","2026-12-30","--output","/home/runner/work/_temp/native-plan-week-receiving/empty-converted-week.json"],"status":0,"signal":null,"stdoutSha256":"d89d54dd2af3f015e59ea6544ef6e420fc9603aa45758fc027eee3c1aff15631","stderr":"","error":null}],"requests":[{"url":"http://127.0.0.1:45949/","method":"GET"},{"url":"http://127.0.0.1:45949/static/style.css","method":"GET"},{"url":"http://127.0.0.1:45949/static/calendar.css","method":"GET"},{"url":"http://127.0.0.1:45949/static/plan-request.js","method":"GET"},{"url":"http://127.0.0.1:45949/static/calendar.js","method":"GET"},{"url":"http://127.0.0.1:45949/static/app.js","method":"GET"},{"url":"http://127.0.0.1:45949/static/week_plan.mjs","method":"GET"},{"url":"http://127.0.0.1:45949/static/week_file.mjs","method":"GET"},{"url":"http://127.0.0.1:45949/api/health","method":"GET"},{"url":"http://127.0.0.1:45949/favicon.ico","method":"GET"},{"url":"http://127.0.0.1:45949/api/personas","method":"GET"},{"url":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=","method":"GET"},{"url":"http://127.0.0.1:45949/","method":"GET"},{"url":"http://127.0.0.1:45949/static/style.css","method":"GET"},{"url":"http://127.0.0.1:45949/static/calendar.css","method":"GET"},{"url":"http://127.0.0.1:45949/static/plan-request.js","method":"GET"},{"url":"http://127.0.0.1:45949/static/calendar.js","method":"GET"},{"url":"http://127.0.0.1:45949/static/app.js","method":"GET"},{"url":"http://127.0.0.1:45949/static/week_plan.mjs","method":"GET"},{"url":"http://127.0.0.1:45949/static/week_file.mjs","method":"GET"},{"url":"http://127.0.0.1:45949/api/health","method":"GET"},{"url":"http://127.0.0.1:45949/api/personas","method":"GET"},{"url":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=","method":"GET"}],"externalRequests":[],"serverRequests":[{"method":"GET","path":"/"},{"method":"GET","path":"/static/style.css"},{"method":"GET","path":"/static/calendar.css"},{"method":"GET","path":"/static/plan-request.js"},{"method":"GET","path":"/static/calendar.js"},{"method":"GET","path":"/static/app.js"},{"method":"GET","path":"/static/week_plan.mjs"},{"method":"GET","path":"/static/week_file.mjs"},{"method":"GET","path":"/api/health"},{"method":"GET","path":"/favicon.ico"},{"method":"GET","path":"/api/personas"},{"method":"GET","path":"/"},{"method":"GET","path":"/static/style.css"},{"method":"GET","path":"/static/calendar.css"},{"method":"GET","path":"/static/plan-request.js"},{"method":"GET","path":"/static/calendar.js"},{"method":"GET","path":"/static/app.js"},{"method":"GET","path":"/static/week_plan.mjs"},{"method":"GET","path":"/static/week_file.mjs"},{"method":"GET","path":"/api/health"},{"method":"GET","path":"/api/personas"}],"sourceSha256":{"tastetable_cli.py":"5244b5d5108eb60a5c79dbe76d5abc352a9145915a5851c2f69a57e90aa71e3f","agent.py":"fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3","constraints.py":"a7ad868ece3cb83b15b02f8f059a94da749059bb96a8c97f7fb207ccb85d604c","qloo_client.py":"88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b","personas.py":"caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2","fixtures/qloo_fixtures.json":"5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0","static/week_plan.mjs":"e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809","static/week_file.mjs":"914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614","static/calendar.js":"09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b","static/calendar.css":"36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733","static/app.js":"5bae509c7ba0287d3b7398cc05bce1e0d8429340413be14ac8a29ce4452ae578","static/index.html":"eab012a6c6e2c91c930b065c3010d3397d9dfa9cbe8283967fc183b3081bae57","static/style.css":"0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96","static/plan-request.js":"b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995","tools/native_plan_to_week.mjs":"bbdf06cf5f358ef5eb3d0875d6f2182382a625b246f0c39df159b6b15b025563","tests/test_native_plan_week.py":"dc1e65ff357672218799adf0152baf9d7041e2f15d74a1e9c9c614e3f87e964a","tools/check_native_plan_week_browser.mjs":"94fd51532bb24109af0b5406ea7de2ad6a8153f99a739625d3419e9cee70a08b",".github/workflows/native-plan-week-browser.yml":"b40992512e13d653c51fb8b4dfb0d15ad0a090ae4754c4082a18ab20ca62ace3"},"sourceUnchanged":true,"browser":{"protocolVersion":"1.3","product":"Chrome/154.0.8037.97","revision":"@b510e9d7cd3a2fbd78d0ddc42234103206c5f78d","userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36","jsVersion":"15.4.80.20"},"savedFile":{"name":"edited-saved-week.json","weekStart":"2026-12-28","calendarId":"a0c1a7294eb916145fe1a6bec7e049b7","assignments":{"pick-0":"Thursday","pick-1":"Wednesday","pick-2":"Friday","pick-3":"Sunday","pick-4":null},"sourceProfileUnchanged":true,"sourceResponseUnchanged":true},"narrowState":{"shown":true,"date":"2026-12-28","source":"Demo plan: fictional venues from a synthetic fixture.","saved":"Saved copy opened from “edited-saved-week.json” (saved 2026-10-08T13:46:15.092Z). Source labels and checks below are retained from the file; they have not been run again.","picks":[{"key":"pick-1","day":"Wednesday","name":"Osteria del Ponte","why":"Qloo affinity 0.80 for audiences who like Roman Holiday (tag match: Italian). Checks: Soft foods: pass (soft options listed: gnocchi, soups).","identity":"Qloo id: FIX-P-13"},{"key":"pick-0","day":"Thursday","name":"Trattoria Nonna Lucia","why":"Qloo affinity 0.92 for audiences who like Roman Holiday (tag match: Italian). Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto).","identity":"Qloo id: FIX-P-11"},{"key":"pick-2","day":"Friday","name":"Ramen Tatsu","why":"Qloo affinity 0.31 for audiences who like Roman Holiday (tag match: Japanese). Weak taste signal: chosen mainly because it passes the care constraints. Checks: Soft foods: unknown (no texture signal in Qloo keywords; ask the venue).","identity":"Qloo id: FIX-P-10"},{"key":"pick-3","day":"Sunday","name":"Kotobuki Tofu House","why":"Qloo affinity 0.22 for audiences who like Roman Holiday (tag match: Japanese). Weak taste signal: chosen mainly because it passes the care constraints. Checks: Soft foods: pass (soft options listed: chawanmushi, steamed fish, tofu).","identity":"Qloo id: FIX-P-09"},{"key":"pick-4","day":null,"name":"Rialto Revival Cinema (fictional)","why":"Qloo affinity 0.95 for audiences who like Roman Holiday (tag match: Movie Theater).","identity":"Qloo id: FIX-V-02"}],"openDays":3,"calendarDisabled":false,"saveDisabled":false,"overflow":false,"injected":false,"inputs":{"cuisines":"Japanese, Italian","music":"海 <keys> Björk","films":"Roman Holiday","city":"Pasadena"}},"pageErrors":[],"nativeFileChooserEvents":4,"totalArtifactBytes":462634}
+2026-10-08T13:46:16.3203375Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+2026-10-08T13:46:16.3203605Z with:
+2026-10-08T13:46:16.3203747Z   name: native-plan-week-receiving-37786977019
+2026-10-08T13:46:16.3203953Z   path: /home/runner/work/_temp/native-plan-week-receiving
+2026-10-08T13:46:16.3204138Z   if-no-files-found: warn
+2026-10-08T13:46:16.3204267Z   retention-days: 14
+2026-10-08T13:46:16.3204402Z   compression-level: 6
+2026-10-08T13:46:16.3204522Z   overwrite: false
+2026-10-08T13:46:16.3204643Z   include-hidden-files: false
+2026-10-08T13:46:16.3204792Z ##[endgroup]
+2026-10-08T13:46:16.4252527Z (node:2289) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-08T13:46:16.4253189Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-08T13:46:16.4303069Z With the provided path, there will be 16 files uploaded
+2026-10-08T13:46:16.4307278Z Artifact name is valid!
+2026-10-08T13:46:16.4308210Z Root directory input is valid!
+2026-10-08T13:46:16.7022686Z Beginning upload of artifact content to blob storage
+2026-10-08T13:46:16.7336261Z (node:2289) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-08T13:46:16.9877910Z Uploaded bytes 387186
+2026-10-08T13:46:17.0277040Z Finished uploading artifact content to blob storage!
+2026-10-08T13:46:17.0278063Z SHA256 digest of uploaded artifact zip is 1da42c5cc9029dd80b9a29ac9a3e210fc83cfc8a0d7c7285df0b547a96a6da09
+2026-10-08T13:46:17.0280001Z Finalizing artifact upload
+2026-10-08T13:46:17.2592822Z Artifact native-plan-week-receiving-37786977019.zip successfully finalized. Artifact ID 11555150706
+2026-10-08T13:46:17.2593601Z Artifact native-plan-week-receiving-37786977019 has been successfully uploaded! Final size is 387186 bytes. Artifact ID is 11555150706
+2026-10-08T13:46:17.2598574Z Artifact download URL: https://github.com/Jacob-Met/tastetable/actions/runs/37786977019/artifacts/11555150706
+2026-10-08T13:46:17.2754676Z Post job cleanup.
+2026-10-08T13:46:17.3300533Z [command]/usr/bin/git version
+2026-10-08T13:46:17.3341246Z git version 2.55.0
+2026-10-08T13:46:17.3365197Z Temporarily overriding HOME='/home/runner/work/_temp/12c5b4dc-5f8d-4e7d-aad8-0ff1df802b44' before making global git config changes
+2026-10-08T13:46:17.3365876Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T13:46:17.3370264Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tastetable/tastetable
+2026-10-08T13:46:17.3401256Z Removing SSH command configuration
+2026-10-08T13:46:17.3406512Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T13:46:17.3452697Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T13:46:17.3635000Z Removing HTTP extra header
+2026-10-08T13:46:17.3648864Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T13:46:17.3682271Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T13:46:17.3878889Z Removing includeIf entries pointing to credentials config files
+2026-10-08T13:46:17.3884903Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T13:46:17.3913307Z includeif.gitdir:/home/runner/work/tastetable/tastetable/.git.path
+2026-10-08T13:46:17.3913756Z includeif.gitdir:/home/runner/work/tastetable/tastetable/.git/worktrees/*.path
+2026-10-08T13:46:17.3914038Z includeif.gitdir:/github/workspace/.git.path
+2026-10-08T13:46:17.3914248Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-08T13:46:17.3920489Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/tastetable/tastetable/.git.path
+2026-10-08T13:46:17.3942509Z /home/runner/work/_temp/git-credentials-b5aa570c-848c-4a30-be7b-6a27c8d11480.config
+2026-10-08T13:46:17.3949931Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/tastetable/tastetable/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-b5aa570c\-848c\-4a30\-be7b\-6a27c8d11480\.config
+2026-10-08T13:46:17.3981768Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/tastetable/tastetable/.git/worktrees/*.path
+2026-10-08T13:46:17.4003472Z /home/runner/work/_temp/git-credentials-b5aa570c-848c-4a30-be7b-6a27c8d11480.config
+2026-10-08T13:46:17.4014757Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/tastetable/tastetable/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-b5aa570c\-848c\-4a30\-be7b\-6a27c8d11480\.config
+2026-10-08T13:46:17.4046590Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-08T13:46:17.4067440Z /github/runner_temp/git-credentials-b5aa570c-848c-4a30-be7b-6a27c8d11480.config
+2026-10-08T13:46:17.4072715Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-b5aa570c\-848c\-4a30\-be7b\-6a27c8d11480\.config
+2026-10-08T13:46:17.4101084Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-08T13:46:17.4122486Z /github/runner_temp/git-credentials-b5aa570c-848c-4a30-be7b-6a27c8d11480.config
+2026-10-08T13:46:17.4126128Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-b5aa570c\-848c\-4a30\-be7b\-6a27c8d11480\.config
+2026-10-08T13:46:17.4155443Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T13:46:17.4329760Z Removing credentials config '/home/runner/work/_temp/git-credentials-b5aa570c-848c-4a30-be7b-6a27c8d11480.config'
+2026-10-08T13:46:17.4449633Z Cleaning up orphan processes
+2026-10-08T13:46:17.4686192Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

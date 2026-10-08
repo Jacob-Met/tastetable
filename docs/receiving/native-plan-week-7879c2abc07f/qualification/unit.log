@@ -1,0 +1,281 @@
+﻿2026-10-08T13:46:10.3033265Z Current runner version: '2.337.0'
+2026-10-08T13:46:10.3053238Z ##[group]Runner Image Provisioner
+2026-10-08T13:46:10.3053808Z Hosted Compute Agent
+2026-10-08T13:46:10.3054278Z Version: 20261002.596
+2026-10-08T13:46:10.3054664Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-08T13:46:10.3055157Z Build Date: 2026-10-02T22:28:27Z
+2026-10-08T13:46:10.3055583Z Worker ID: {b79eb6e9-499c-4e53-8418-30922b015c60}
+2026-10-08T13:46:10.3056145Z Region: centralus
+2026-10-08T13:46:10.3056555Z Cloud: Azure
+2026-10-08T13:46:10.3056889Z ##[endgroup]
+2026-10-08T13:46:10.3057781Z ##[group]Operating System
+2026-10-08T13:46:10.3058206Z Ubuntu
+2026-10-08T13:46:10.3058531Z 24.04.5
+2026-10-08T13:46:10.3058912Z LTS
+2026-10-08T13:46:10.3059243Z ##[endgroup]
+2026-10-08T13:46:10.3059591Z ##[group]Runner Image
+2026-10-08T13:46:10.3060036Z Image: ubuntu-24.04
+2026-10-08T13:46:10.3060393Z Version: 20261004.327.1
+2026-10-08T13:46:10.3061245Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-08T13:46:10.3062137Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-08T13:46:10.3062752Z ##[endgroup]
+2026-10-08T13:46:10.3063453Z ##[group]GITHUB_TOKEN Permissions
+2026-10-08T13:46:10.3064939Z Contents: read
+2026-10-08T13:46:10.3065304Z Metadata: read
+2026-10-08T13:46:10.3065853Z ##[endgroup]
+2026-10-08T13:46:10.3067345Z Secret source: Actions
+2026-10-08T13:46:10.3067991Z Cache mode: write
+2026-10-08T13:46:10.3068446Z Prepare workflow directory
+2026-10-08T13:46:10.3296933Z Prepare all required actions
+2026-10-08T13:46:10.3332003Z Getting action download info
+2026-10-08T13:46:10.5798565Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-08T13:46:10.7791303Z Download action repository 'actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97' (SHA:5fda3b95a4ea91299a34e894583c3862153e4b97)
+2026-10-08T13:46:11.2448878Z Complete job name: test
+2026-10-08T13:46:11.3194442Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-08T13:46:11.3195050Z with:
+2026-10-08T13:46:11.3195346Z   repository: Jacob-Met/tastetable
+2026-10-08T13:46:11.3197997Z   token: ***
+2026-10-08T13:46:11.3198266Z   ssh-strict: true
+2026-10-08T13:46:11.3198542Z   ssh-user: git
+2026-10-08T13:46:11.3198825Z   persist-credentials: true
+2026-10-08T13:46:11.3199131Z   clean: true
+2026-10-08T13:46:11.3199412Z   sparse-checkout-cone-mode: true
+2026-10-08T13:46:11.3199750Z   fetch-depth: 1
+2026-10-08T13:46:11.3200022Z   fetch-tags: false
+2026-10-08T13:46:11.3200309Z   show-progress: true
+2026-10-08T13:46:11.3200590Z   lfs: false
+2026-10-08T13:46:11.3200864Z   submodules: false
+2026-10-08T13:46:11.3201164Z   set-safe-directory: true
+2026-10-08T13:46:11.3201485Z   allow-unsafe-pr-checkout: false
+2026-10-08T13:46:11.3201908Z ##[endgroup]
+2026-10-08T13:46:11.4086048Z Syncing repository: Jacob-Met/tastetable
+2026-10-08T13:46:11.4088249Z ##[group]Getting Git version info
+2026-10-08T13:46:11.4088903Z Working directory is '/home/runner/work/tastetable/tastetable'
+2026-10-08T13:46:11.4089565Z [command]/usr/bin/git version
+2026-10-08T13:46:11.4291742Z git version 2.55.0
+2026-10-08T13:46:11.4314103Z ##[endgroup]
+2026-10-08T13:46:11.4326184Z Temporarily overriding HOME='/home/runner/work/_temp/09849d4e-1b9a-4d63-91cb-e8f9eae2fa52' before making global git config changes
+2026-10-08T13:46:11.4327819Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T13:46:11.4332058Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tastetable/tastetable
+2026-10-08T13:46:11.4920333Z Deleting the contents of '/home/runner/work/tastetable/tastetable'
+2026-10-08T13:46:11.4923448Z ##[group]Determining repository object format
+2026-10-08T13:46:11.4924836Z ##[endgroup]
+2026-10-08T13:46:11.4925574Z ##[group]Initializing the repository
+2026-10-08T13:46:11.4929379Z [command]/usr/bin/git init /home/runner/work/tastetable/tastetable
+2026-10-08T13:46:11.5125025Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-08T13:46:11.5126328Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-08T13:46:11.5127307Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-08T13:46:11.5128052Z hint: call:
+2026-10-08T13:46:11.5128425Z hint:
+2026-10-08T13:46:11.5128806Z hint: 	git config --global init.defaultBranch <name>
+2026-10-08T13:46:11.5129233Z hint:
+2026-10-08T13:46:11.5129639Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-08T13:46:11.5130267Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-08T13:46:11.5130935Z hint:
+2026-10-08T13:46:11.5131234Z hint: 	git branch -m <name>
+2026-10-08T13:46:11.5131556Z hint:
+2026-10-08T13:46:11.5131968Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-08T13:46:11.5132686Z Initialized empty Git repository in /home/runner/work/tastetable/tastetable/.git/
+2026-10-08T13:46:11.5136046Z [command]/usr/bin/git remote add origin https://github.com/Jacob-Met/tastetable
+2026-10-08T13:46:11.5236286Z ##[endgroup]
+2026-10-08T13:46:11.5236916Z ##[group]Disabling automatic garbage collection
+2026-10-08T13:46:11.5238710Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-08T13:46:11.5332437Z ##[endgroup]
+2026-10-08T13:46:11.5333171Z ##[group]Setting up auth
+2026-10-08T13:46:11.5333746Z Removing SSH command configuration
+2026-10-08T13:46:11.5338116Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T13:46:11.5371909Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T13:46:11.5727200Z Removing HTTP extra header
+2026-10-08T13:46:11.5732363Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T13:46:11.5765129Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T13:46:11.5965248Z Removing includeIf entries pointing to credentials config files
+2026-10-08T13:46:11.5971015Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T13:46:11.6009631Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T13:46:11.6204714Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-6501fb87-0a17-4fae-9ae6-d37f84048d99.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-08T13:46:11.6261406Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/tastetable/tastetable/.git.path /home/runner/work/_temp/git-credentials-6501fb87-0a17-4fae-9ae6-d37f84048d99.config
+2026-10-08T13:46:11.6309698Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/tastetable/tastetable/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-6501fb87-0a17-4fae-9ae6-d37f84048d99.config
+2026-10-08T13:46:11.6488258Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-6501fb87-0a17-4fae-9ae6-d37f84048d99.config
+2026-10-08T13:46:11.6589139Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-6501fb87-0a17-4fae-9ae6-d37f84048d99.config
+2026-10-08T13:46:11.6682466Z ##[endgroup]
+2026-10-08T13:46:11.6682972Z ##[group]Fetching the repository
+2026-10-08T13:46:11.6690362Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +7bf9fe30167c393a111ee0fd51cdcd323ce9ddea:refs/remotes/pull/27/merge
+2026-10-08T13:46:13.0769308Z From https://github.com/Jacob-Met/tastetable
+2026-10-08T13:46:13.0771367Z  * [new ref]         7bf9fe30167c393a111ee0fd51cdcd323ce9ddea -> pull/27/merge
+2026-10-08T13:46:13.0777879Z ##[endgroup]
+2026-10-08T13:46:13.0778831Z ##[group]Determining the checkout info
+2026-10-08T13:46:13.0779880Z ##[endgroup]
+2026-10-08T13:46:13.0789241Z [command]/usr/bin/git sparse-checkout disable
+2026-10-08T13:46:13.1518220Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-08T13:46:13.1963543Z ##[group]Checking out the ref
+2026-10-08T13:46:13.1964965Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/27/merge
+2026-10-08T13:46:13.3098345Z Note: switching to 'refs/remotes/pull/27/merge'.
+2026-10-08T13:46:13.3098990Z 
+2026-10-08T13:46:13.3099630Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-08T13:46:13.3100138Z changes and commit them, and you can discard any commits you make in this
+2026-10-08T13:46:13.3100636Z state without impacting any branches by switching back to a branch.
+2026-10-08T13:46:13.3100996Z 
+2026-10-08T13:46:13.3101225Z If you want to create a new branch to retain commits you create, you may
+2026-10-08T13:46:13.3101638Z do so (now or later) by using -c with the switch command. Example:
+2026-10-08T13:46:13.3101874Z 
+2026-10-08T13:46:13.3101994Z   git switch -c <new-branch-name>
+2026-10-08T13:46:13.3102155Z 
+2026-10-08T13:46:13.3102310Z Or undo this operation with:
+2026-10-08T13:46:13.3102459Z 
+2026-10-08T13:46:13.3102559Z   git switch -
+2026-10-08T13:46:13.3102828Z 
+2026-10-08T13:46:13.3103040Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-08T13:46:13.3103346Z 
+2026-10-08T13:46:13.3103669Z HEAD is now at 7bf9fe3 Merge b9ac8ae18e76c635333056f3c9ff1c5caa1d43f5 into d66ab91d62ba243cef2ba387cea73a684fa3b04e
+2026-10-08T13:46:13.3112711Z ##[endgroup]
+2026-10-08T13:46:13.3624405Z [command]/usr/bin/git log -1 --format=%H
+2026-10-08T13:46:13.3654572Z 7bf9fe30167c393a111ee0fd51cdcd323ce9ddea
+2026-10-08T13:46:13.4423599Z ##[group]Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+2026-10-08T13:46:13.4423901Z with:
+2026-10-08T13:46:13.4424071Z   python-version: 3.12
+2026-10-08T13:46:13.4424233Z   check-latest: false
+2026-10-08T13:46:13.4425806Z   token: ***
+2026-10-08T13:46:13.4425955Z   update-environment: true
+2026-10-08T13:46:13.4426126Z   allow-prereleases: false
+2026-10-08T13:46:13.4426320Z   freethreaded: false
+2026-10-08T13:46:13.4426475Z ##[endgroup]
+2026-10-08T13:46:13.5300638Z ##[group]Installed versions
+2026-10-08T13:46:13.5540186Z Successfully set up CPython (3.12.15)
+2026-10-08T13:46:13.5540724Z ##[endgroup]
+2026-10-08T13:46:13.5689853Z ##[group]Run pip install -r requirements.txt
+2026-10-08T13:46:13.5690304Z [36;1mpip install -r requirements.txt[0m
+2026-10-08T13:46:13.5957376Z shell: /usr/bin/bash -e {0}
+2026-10-08T13:46:13.5957644Z env:
+2026-10-08T13:46:13.5957863Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T13:46:13.5958158Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-08T13:46:13.5958446Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T13:46:13.5958693Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T13:46:13.5958945Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T13:46:13.5959192Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-08T13:46:13.5959403Z ##[endgroup]
+2026-10-08T13:46:14.3942060Z Collecting fastapi>=0.110 (from -r requirements.txt (line 1))
+2026-10-08T13:46:14.4685802Z   Downloading fastapi-0.143.0-py3-none-any.whl.metadata (26 kB)
+2026-10-08T13:46:14.5028694Z Collecting uvicorn>=0.29 (from -r requirements.txt (line 2))
+2026-10-08T13:46:14.5133419Z   Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+2026-10-08T13:46:14.5330413Z Collecting httpx>=0.27 (from -r requirements.txt (line 3))
+2026-10-08T13:46:14.5432253Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+2026-10-08T13:46:14.5681932Z Collecting pytest>=8 (from -r requirements.txt (line 4))
+2026-10-08T13:46:14.5781799Z   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+2026-10-08T13:46:14.6150640Z Collecting starlette>=0.46.0 (from fastapi>=0.110->-r requirements.txt (line 1))
+2026-10-08T13:46:14.6248112Z   Downloading starlette-1.7.0-py3-none-any.whl.metadata (6.6 kB)
+2026-10-08T13:46:14.7075226Z Collecting pydantic>=2.9.0 (from fastapi>=0.110->-r requirements.txt (line 1))
+2026-10-08T13:46:14.7176189Z   Downloading pydantic-2.13.5-py3-none-any.whl.metadata (110 kB)
+2026-10-08T13:46:14.7616436Z Collecting typing-extensions>=4.8.0 (from fastapi>=0.110->-r requirements.txt (line 1))
+2026-10-08T13:46:14.7716025Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-10-08T13:46:14.7872392Z Collecting typing-inspection>=0.4.2 (from fastapi>=0.110->-r requirements.txt (line 1))
+2026-10-08T13:46:14.7971493Z   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+2026-10-08T13:46:14.8127621Z Collecting annotated-doc>=0.0.2 (from fastapi>=0.110->-r requirements.txt (line 1))
+2026-10-08T13:46:14.8227002Z   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+2026-10-08T13:46:14.8421126Z Collecting opentelemetry-api>=1.44.0 (from fastapi>=0.110->-r requirements.txt (line 1))
+2026-10-08T13:46:14.8531150Z   Downloading opentelemetry_api-1.45.1-py3-none-any.whl.metadata (1.4 kB)
+2026-10-08T13:46:14.8723664Z Collecting click>=7.0 (from uvicorn>=0.29->-r requirements.txt (line 2))
+2026-10-08T13:46:14.8823171Z   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+2026-10-08T13:46:14.9033117Z Collecting h11>=0.8 (from uvicorn>=0.29->-r requirements.txt (line 2))
+2026-10-08T13:46:14.9135911Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-10-08T13:46:14.9334391Z Collecting anyio (from httpx>=0.27->-r requirements.txt (line 3))
+2026-10-08T13:46:14.9439032Z   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+2026-10-08T13:46:14.9640524Z Collecting certifi (from httpx>=0.27->-r requirements.txt (line 3))
+2026-10-08T13:46:14.9735795Z   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+2026-10-08T13:46:15.0059004Z Collecting httpcore==1.* (from httpx>=0.27->-r requirements.txt (line 3))
+2026-10-08T13:46:15.0156734Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+2026-10-08T13:46:15.0339514Z Collecting idna (from httpx>=0.27->-r requirements.txt (line 3))
+2026-10-08T13:46:15.0437585Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+2026-10-08T13:46:15.0614056Z Collecting iniconfig>=1.0.1 (from pytest>=8->-r requirements.txt (line 4))
+2026-10-08T13:46:15.0710852Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+2026-10-08T13:46:15.0883548Z Collecting packaging>=22 (from pytest>=8->-r requirements.txt (line 4))
+2026-10-08T13:46:15.0982901Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-10-08T13:46:15.1147159Z Collecting pluggy<2,>=1.5 (from pytest>=8->-r requirements.txt (line 4))
+2026-10-08T13:46:15.1247825Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2026-10-08T13:46:15.1607850Z Collecting pygments>=2.7.2 (from pytest>=8->-r requirements.txt (line 4))
+2026-10-08T13:46:15.1706252Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-10-08T13:46:15.1885144Z Collecting annotated-types>=0.6.0 (from pydantic>=2.9.0->fastapi>=0.110->-r requirements.txt (line 1))
+2026-10-08T13:46:15.1981605Z   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+2026-10-08T13:46:15.6166967Z Collecting pydantic-core==2.46.5 (from pydantic>=2.9.0->fastapi>=0.110->-r requirements.txt (line 1))
+2026-10-08T13:46:15.6267137Z   Downloading pydantic_core-2.46.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+2026-10-08T13:46:15.6450465Z Downloading fastapi-0.143.0-py3-none-any.whl (144 kB)
+2026-10-08T13:46:15.6652449Z Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+2026-10-08T13:46:15.6772459Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+2026-10-08T13:46:15.6894938Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+2026-10-08T13:46:15.7017099Z Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+2026-10-08T13:46:15.7245400Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2026-10-08T13:46:15.7358770Z Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+2026-10-08T13:46:15.7470502Z Downloading click-8.5.0-py3-none-any.whl (125 kB)
+2026-10-08T13:46:15.7586424Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-10-08T13:46:15.7700622Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+2026-10-08T13:46:15.7812948Z Downloading opentelemetry_api-1.45.1-py3-none-any.whl (60 kB)
+2026-10-08T13:46:15.7927413Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+2026-10-08T13:46:15.8045765Z Downloading pydantic-2.13.5-py3-none-any.whl (472 kB)
+2026-10-08T13:46:15.8198761Z Downloading pydantic_core-2.46.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+2026-10-08T13:46:15.8565240Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 52.7 MB/s  0:00:00
+2026-10-08T13:46:15.8666647Z Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+2026-10-08T13:46:15.8786551Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-10-08T13:46:15.9026101Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 44.6 MB/s  0:00:00
+2026-10-08T13:46:15.9126500Z Downloading starlette-1.7.0-py3-none-any.whl (78 kB)
+2026-10-08T13:46:15.9250775Z Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+2026-10-08T13:46:15.9386144Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+2026-10-08T13:46:15.9505177Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-08T13:46:15.9619533Z Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+2026-10-08T13:46:15.9732343Z Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+2026-10-08T13:46:16.0527597Z Installing collected packages: typing-extensions, pygments, pluggy, packaging, iniconfig, idna, h11, click, certifi, annotated-types, annotated-doc, uvicorn, typing-inspection, pytest, pydantic-core, opentelemetry-api, httpcore, anyio, starlette, pydantic, httpx, fastapi
+2026-10-08T13:46:17.6755518Z 
+2026-10-08T13:46:17.6771204Z Successfully installed annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 certifi-2026.7.22 click-8.5.0 fastapi-0.143.0 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.20 iniconfig-2.3.1 opentelemetry-api-1.45.1 packaging-26.3 pluggy-1.6.0 pydantic-2.13.5 pydantic-core-2.46.5 pygments-2.21.0 pytest-9.1.1 starlette-1.7.0 typing-extensions-4.16.0 typing-inspection-0.4.4 uvicorn-0.54.0
+2026-10-08T13:46:17.7826394Z ##[group]Run python -m pytest -q
+2026-10-08T13:46:17.7826604Z [36;1mpython -m pytest -q[0m
+2026-10-08T13:46:17.7880162Z shell: /usr/bin/bash -e {0}
+2026-10-08T13:46:17.7880306Z env:
+2026-10-08T13:46:17.7880460Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T13:46:17.7880701Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-08T13:46:17.7880938Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T13:46:17.7881152Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T13:46:17.7881378Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T13:46:17.7881587Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-08T13:46:17.7881769Z ##[endgroup]
+2026-10-08T13:46:18.7715858Z ............................................. [ 29%]
+2026-10-08T13:46:27.4352791Z ................................................. [ 61%]
+2026-10-08T13:46:27.5523056Z ............................................ [ 90%]
+2026-10-08T13:46:27.6475946Z ...............                                                          [100%]
+2026-10-08T13:46:27.6476333Z =============================== warnings summary ===============================
+2026-10-08T13:46:27.6476756Z ../../../../../opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/fastapi/testclient.py:1
+2026-10-08T13:46:27.6477555Z   /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+2026-10-08T13:46:27.6478781Z     from starlette.testclient import TestClient as TestClient  # noqa
+2026-10-08T13:46:27.6478997Z 
+2026-10-08T13:46:27.6479182Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2026-10-08T13:46:27.6479534Z 153 passed, 1 warning, 150 subtests passed in 9.38s
+2026-10-08T13:46:27.7930102Z Post job cleanup.
+2026-10-08T13:46:27.8952351Z Post job cleanup.
+2026-10-08T13:46:27.9576699Z [command]/usr/bin/git version
+2026-10-08T13:46:27.9625035Z git version 2.55.0
+2026-10-08T13:46:27.9650806Z Temporarily overriding HOME='/home/runner/work/_temp/6f745710-11e4-4d4f-bb48-4d8a155782ea' before making global git config changes
+2026-10-08T13:46:27.9651557Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T13:46:27.9656232Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tastetable/tastetable
+2026-10-08T13:46:27.9689548Z Removing SSH command configuration
+2026-10-08T13:46:27.9697863Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T13:46:27.9739739Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T13:46:27.9971192Z Removing HTTP extra header
+2026-10-08T13:46:27.9977871Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T13:46:28.0021828Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T13:46:28.0240422Z Removing includeIf entries pointing to credentials config files
+2026-10-08T13:46:28.0246230Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T13:46:28.0278578Z includeif.gitdir:/home/runner/work/tastetable/tastetable/.git.path
+2026-10-08T13:46:28.0279077Z includeif.gitdir:/home/runner/work/tastetable/tastetable/.git/worktrees/*.path
+2026-10-08T13:46:28.0279468Z includeif.gitdir:/github/workspace/.git.path
+2026-10-08T13:46:28.0279768Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-08T13:46:28.0287527Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/tastetable/tastetable/.git.path
+2026-10-08T13:46:28.0312369Z /home/runner/work/_temp/git-credentials-6501fb87-0a17-4fae-9ae6-d37f84048d99.config
+2026-10-08T13:46:28.0322274Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/tastetable/tastetable/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-6501fb87\-0a17\-4fae\-9ae6\-d37f84048d99\.config
+2026-10-08T13:46:28.0360520Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/tastetable/tastetable/.git/worktrees/*.path
+2026-10-08T13:46:28.0394249Z /home/runner/work/_temp/git-credentials-6501fb87-0a17-4fae-9ae6-d37f84048d99.config
+2026-10-08T13:46:28.0403182Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/tastetable/tastetable/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-6501fb87\-0a17\-4fae\-9ae6\-d37f84048d99\.config
+2026-10-08T13:46:28.0438544Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-08T13:46:28.0463850Z /github/runner_temp/git-credentials-6501fb87-0a17-4fae-9ae6-d37f84048d99.config
+2026-10-08T13:46:28.0470499Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-6501fb87\-0a17\-4fae\-9ae6\-d37f84048d99\.config
+2026-10-08T13:46:28.0506694Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-08T13:46:28.0531439Z /github/runner_temp/git-credentials-6501fb87-0a17-4fae-9ae6-d37f84048d99.config
+2026-10-08T13:46:28.0537947Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-6501fb87\-0a17\-4fae\-9ae6\-d37f84048d99\.config
+2026-10-08T13:46:28.0575740Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T13:46:28.0775550Z Removing credentials config '/home/runner/work/_temp/git-credentials-6501fb87-0a17-4fae-9ae6-d37f84048d99.config'
+2026-10-08T13:46:28.0936943Z Cleaning up orphan processes
