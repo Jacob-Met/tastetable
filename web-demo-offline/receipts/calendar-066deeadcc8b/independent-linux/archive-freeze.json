@@ -1,0 +1,23 @@
+{
+  "archive": {
+    "bytes": 484844,
+    "git_blob": "8fa0344752602f8e4cdbaacfd183625ec1d84bc0",
+    "path": "native-peer.tar.xz",
+    "sha256": "0bcc70dfd5ec03607ff42cc6aeb6f20f2e65459108931b4aa019e8e87b47d539"
+  },
+  "created_at": "2026-10-08T18:57:45Z",
+  "format": "tastetable-peer-archive-freeze-v1",
+  "input_bytes": 5128438,
+  "input_directory": "/home/jacob/hamon-root-066deeadcc8b/tastetable-calendar-review",
+  "input_unchanged": true,
+  "manifest": {
+    "bytes": 50042,
+    "git_blob": "8ae04a95e76184e4f9ba2ab5ce91b5af78fa49b0",
+    "path": "native-manifest.json",
+    "sha256": "d9a12005180db7fc498b422b24c2dfdb7558ec878df72184c26d693247b7fbd8"
+  },
+  "member_names": "Relative to immutable input, no leading directory and no injected member",
+  "ordinary_members": 201,
+  "output_directory": "/home/jacob/hamon-root-066deeadcc8b/tastetable-calendar-review-frozen",
+  "scope": "Mechanical custody only. Original independent semantic acceptance is unchanged."
+}

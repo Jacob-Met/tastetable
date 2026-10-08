@@ -1,0 +1,41 @@
+{
+  "actual_browser_groups": 11,
+  "actual_byte_equalities_recomputed": 9,
+  "actual_downloads": 22,
+  "actual_phone_width": 375,
+  "actual_pngs": 2,
+  "actual_run": {
+    "finished": "2026-10-08T18:42:05.900Z",
+    "started": "2026-10-08T18:41:35.444Z"
+  },
+  "actual_runtime": {
+    "browser": "154.0.8037.57",
+    "node": "v22.22.1"
+  },
+  "all_valid_calendars_recomputed": 65,
+  "all_valid_events_recomputed": 289,
+  "api_cohorts_recomputed": 48,
+  "archive": {
+    "bytes": 484844,
+    "git_blob": "8fa0344752602f8e4cdbaacfd183625ec1d84bc0",
+    "sha256": "0bcc70dfd5ec03607ff42cc6aeb6f20f2e65459108931b4aa019e8e87b47d539"
+  },
+  "attribution": "New Linux receiving only. Earlier Mac raw peer outputs remain on the offline Mac and are not recreated or counted here.",
+  "baseline_files": 48,
+  "browser_calendars_recomputed": 15,
+  "cold_product_or_browser_runs": 0,
+  "complete_source_files": 104,
+  "constructed_negative_calendars_rejected": 3,
+  "current_candidate_files": 56,
+  "identity_calendars_recomputed": 2,
+  "ordinary_members": 201,
+  "owned_before_pins": 10,
+  "publication_parent": "2b347cee4ff4e2b806362730a8520a3360b45f5a",
+  "publication_tree": "66d62a724c1667913cb581fb35e4b6db6111dae8",
+  "publication_unowned_sources": 46,
+  "recorded_refusals": 10,
+  "saved_weeks_recomputed": 7,
+  "schema": "tastetable.root.cold-peer-verification.v1",
+  "source_stable": true,
+  "status": "passed"
+}

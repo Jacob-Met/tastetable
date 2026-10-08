@@ -1,6 +1,6 @@
 # Offline calendar export: publication continuation
 
-This draft preserves the accepted calendar source and both complete author packets for [TasteTable issue 34](https://github.com/Jacob-Met/tastetable/issues/34). The independent receiver's complete raw packet has not yet been transferred and committed. Keep this pull request in draft until that evidence dependency and the normal exact-head receiving checks are resolved.
+This packet preserves the accepted calendar source, both complete author packets and the complete new Linux independent receiving for [TasteTable issue 34](https://github.com/Jacob-Met/tastetable/issues/34). Independent receiving qualifies the exact current source for integration. Earlier Mac peer raw files remain supplementary and unavailable; they are not represented as part of the new Linux run.
 
 ## What the feature does
 
@@ -14,7 +14,7 @@ The source was natively qualified in a partial runtime/test projection at `64171
 
 The publication parent is `2b347cee4ff4e2b806362730a8520a3360b45f5a`, tree `66d62a724c1667913cb581fb35e4b6db6111dae8`, which merges PR33's venue follow-up work. Direct complete Git-tree comparison finds 579 parent blob leaves, four changed existing paths and 145 added paths since the qualified parent. The four changed paths are the root README, `static/app.js`, `static/index.html` and `tools/check_native_plan_week_browser.mjs`. Every one of the 77 previously existing `web-demo-offline/` leaves is identical, including its modes. All 46 unowned files of the qualified source closure and all six existing scope beforeimages match this parent exactly. The static calendar writer remains Git blob `dbed22d2cb91090bccec9472fbffd2854eed2722`. No AGENTS.md exists in the complete publication tree.
 
-This is a source-composition check. The earlier Mac application runs remain attributed to their recorded parent; no new application run is claimed for PR33's separate venue follow-up changes. The overlay preserves the 32 frozen source/author paths unchanged and adds this continuation index. Its intended result is 33 scoped leaves plus all 573 unowned current-parent leaves, with the parent modes preserved.
+This is a source-composition check. The earlier Mac application runs remain attributed to their recorded parent; no new application run is claimed for PR33's separate venue follow-up changes. The final overlay preserves the 32 frozen source/author paths unchanged, adds the twelve unchanged Linux peer files and retains this continuation index. Its intended result is 45 scoped leaves plus all 573 unowned current-parent leaves (618 total), with the parent modes preserved.
 
 ## Preserved author evidence
 
@@ -26,17 +26,14 @@ This is a source-composition check. The earlier Mac application runs remain attr
 
 The downloadable ZIP has 42 members, 108,205 bytes and SHA256 `024f2787700897d7f96b9289390d054603b54edad42df6db2cd9284137852392`.
 
-## Independent receiving dependency
+## Complete independent receiving
 
-The independent receiver reported acceptance of the original source after 48 actual-record API cohorts, ten refusals, three deliberately wrong-calendar controls and eight browser groups with thirteen actual downloads. It separately reported acceptance of the unchanged current history composition after five browser groups and fifteen actual downloads, including exact Undo/Redo calendar bytes, omissions, changed-week identifiers, invalid-date restoration and pending import cancellation. The original API/browser suite was not repeated for that supplement.
+[The Linux peer packet](independent-linux/README.md) is preserved as twelve unchanged ordinary files. Its receipt SHA256 is `a9b5ecb116011cd3e81b302447e4a56fc6d57ba674b00cf1287808966558efb5`; its 484,844-byte raw archive has SHA256 `0bcc70dfd5ec03607ff42cc6aeb6f20f2e65459108931b4aa019e8e87b47d539` and exactly 201 ordinary relative members. The packet includes the complete independent source closure, actual raw inputs/results/downloads, two reviewed PNGs, the frozen receiver and the portable semantic verifier.
 
-These are reported execution results; this draft does **not** claim that the receiver's raw packet has been transferred, sealed or included here. Its Mac host became unavailable before that handoff completed. The initial no-request browser launch failure and later instant-scroll visual captures must remain separately attributed when the receiver's packet is available. A distinct second-platform receiving run may supplement the retained results, with its own source, runtime and raw evidence.
+The new run executed on ThinkPad between 18:41:35 and 18:42:05 UTC on 2026-10-08 with Node 22.22.1 and Chrome 154.0.8037.57. It passed 48 actual-record API cohorts, ten admission refusals and three constructed wrong-calendar controls. Eleven actual browser groups completed 22 downloads (15 ICS and seven JSON). All 104 source files (48 baseline and 56 current) stayed exact. The receiver directly reviewed the desktop and 375px images and checked absence of horizontal overflow.
 
-Before merge:
+The independent standard-library cold verifier reconstructs all 65 valid saved calendar files and 289 events exactly, verifies all 24 records, seven actual saved-week files, nine byte-equality transitions, both PNGs and current-primary source pins, and rejects all three saved wrong-calendar controls. Normal and optimized execution reproduced `verification.json` byte for byte (SHA256 `9e98d2c2508e824f8d0628043627e65204c5df53ad51c62df13b5baef135b19e`). Cold verification runs no product or browser code.
 
-1. Commit the complete immutable independent receiving packet or an explicitly qualified replacement/supplement with honest custody limits.
-2. Verify the final current-parent source composition, exact candidate tree and every unowned leaf.
-3. Inspect the actual hosted checks for the final head.
-4. Use the normal expected-head merge and preserve its exact parents, tree and final receipt.
+This is a newly authored, separately attributed Linux receiving run. Earlier Mac acceptance was reported for the original source and the history supplement, but those raw peer files remain on the offline Mac and are not included or reconstructed here. The new Linux receiver does not claim to replay the lost transient Mac driver. Its complete current-source evidence independently qualifies this integration; the old raw files remain optional supplementary evidence if recovered.
 
-No independent evidence file is represented by a placeholder.
+Final integration requires successful exact-head hosted checks and a normal expected-head merge. The integration receipt on issue 34 must bind the actual merge parents/tree and unowned-path preservation. No product deployment or calendar-service action is claimed.
