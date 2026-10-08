@@ -10,13 +10,15 @@ Notes stay in the current tab and planning visit. Source-input edits, replacemen
 
 ## Source and integration
 
+The latest composition and maintained browser correction are recorded in [integration-02](integration-02/README.md). The source and publication pins below describe the initial r4 packet; the latest publication manifest accounts for current-main README/index composition and the receiver's new asset entries.
+
 The seven final product/test files are pinned by [source-freeze-r4.json](source-freeze-r4.json). The native app adds six lines for import, mount, rendering, retirement, invalid-date handling and accepted results. Its index adds one section and stylesheet. The new module owns that section and its private in-memory records.
 
 Author receiving used native parent d66ab91d62ba243cef2ba387cea73a684fa3b04e. Its incoming constraints.py correction (Git blob cab2cecbe4c3a6112022d194a927b9025ec67ab6) remained unedited. Main a77175501199ace765cb7ca57742b267351d3e79 / tree 2031698fbc8fcf94ad9af06117c2d9858bc83190 has the same 16 relevant parent blobs; root independently verified them and the absence of all four new feature paths. [The composition record](current-main-composition.json) is byte-identity evidence, not another execution of the full newer checkout.
 
 Backend/provider code, constraints, calendar generation, the week model, saved-week admission/storage and the separate offline studio retain their existing source. Coordination: [saved-week owner](https://github.com/Jacob-Met/tastetable/issues/4#issuecomment-6059548484) and [HAMON topic](https://github.com/Jacob-Met/hamon/issues/140#issuecomment-6059565762). Every unowned path must be preserved against the actual integration parent.
 
-The final publication parent is 1a609bfdd77dc07222eb70f8a4a1f565a8bc8fa0 / tree ef80f9f0134d613571861278978477152548a5ed. Its #28 merge changed only the separate offline-studio files. Root verified all 16 native parent pins again; no native source or receiving dependency changed. The publication manifest records this later composition.
+The initial publication parent is 1a609bfdd77dc07222eb70f8a4a1f565a8bc8fa0 / tree ef80f9f0134d613571861278978477152548a5ed. Its #28 merge changed only the separate offline-studio files. Root verified all 16 native parent pins again; no native source or receiving dependency changed. The publication manifest records this later composition.
 
 ## Receiving results
 
@@ -49,7 +51,7 @@ The Python interpreter must supply the native dependencies; TASTETABLE_PYTHONPAT
 
 The older Python dependency path later lacked uvicorn. That failed peer startup is retained and made no product claim. The successful peer replay used an existing read-only dependency installation with declared mixed module origins. Matching version strings do not establish identical third-party bytes, and no replacement environment was installed.
 
-The existing hosted workflow runs pytest. Node/browser receiving here was executed explicitly; this contribution adds no hosted frontend gate. Hosted outcomes belong to the precise PR head that ran them.
+The initial venue Node/browser receiving was executed explicitly. PR33 subsequently exposed a dependency in the existing hosted native-week browser receiver; [integration-02](integration-02/README.md) retains the failed job, two-path correction and fresh composed receiving. Hosted outcomes belong to the precise PR head that ran them.
 
 [HISTORY.md](HISTORY.md) distinguishes real product failures, obsolete probe assumptions, startup failures and packaging limits. Raw observations remain unchanged. This selected text packet retains source, hashes, logs and literal downloads. Screenshots were inspected locally and remain ancillary; inventories can name their hashes without implying those PNGs are included.
 

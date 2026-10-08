@@ -1,0 +1,881 @@
+{
+  "schema": "tastetable.venue-followup.publication/2",
+  "base": "34afd379c1a7032b3025079b5fe6ccc9cd47c637",
+  "tree": "9d049bb54e7de594d69e7b3e1149af4fe546f5f6",
+  "historical_feature_head": "9e3b074abfebfd63a4d9563088ab16c39df17f00",
+  "historical_manifest_sha256": "6668e6128aa8a2de63cac52e207e1d92c94b546ac48e062a86f29ae786b4d123",
+  "excludes_only_self": true,
+  "files": [
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/before-native-result.json",
+      "mode": "100644",
+      "bytes": 19807,
+      "sha256": "471a525bfc8571f0e8dac39ad839d2f0bf26b6c2b8f48bde13857a92724d80a4",
+      "git_blob": "ff65b6ad841113af734321713db8413e05731863"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/final/authored-duplicate-call-sheet.txt",
+      "mode": "100644",
+      "bytes": 2005,
+      "sha256": "d00edc49fbfd5d9ee88fcd5ba7cb9faf3cd9819448e86d3c7596db1658b977d7",
+      "git_blob": "2307345fb8e3ea05a5204e7df11217df3c287c62"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/final/ephemeral-export.json",
+      "mode": "100644",
+      "bytes": 3304,
+      "sha256": "ead25dac5360f3a876a728d498a7af6cd02d89f53d779181ed974ee6e403a0d9",
+      "git_blob": "4792e67e1ade9a7a816d176b875d010c49660547"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/final/leading-newline-call-sheet.txt",
+      "mode": "100644",
+      "bytes": 4046,
+      "sha256": "09f291c056abd3c9fb0d7e7b3fb8b441eb453016a6b63300ea2cc4c9ee489cdb",
+      "git_blob": "16706e846c0f00f85d213ecf300979df24363fca"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/final/native-current-call-sheet.txt",
+      "mode": "100644",
+      "bytes": 5035,
+      "sha256": "9d45740af07fcd0cc6f7baead51b431a1c03ddb06a4f1a742634f1ff89c80519",
+      "git_blob": "ce81c2421456ea41630e32cd687117e70217be73"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/final/native-omitted-call-sheet.txt",
+      "mode": "100644",
+      "bytes": 4053,
+      "sha256": "e4ce5bb57b13c7fcedb30fc10de2f1966faca848bd62e44523ef86a751262c72",
+      "git_blob": "a74cf8af20b98bd9f5315e7a5666cb27d1da4fbd"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/final/native-server.log",
+      "mode": "100644",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/final/native-unknown-call-sheet.txt",
+      "mode": "100644",
+      "bytes": 3419,
+      "sha256": "2cc4abb0c60d7302f51db37b5e23532ed8aaaca79737a3f0f6defc9d6a9758d7",
+      "git_blob": "cfbd302e239baa1e3cb51122d9faab69c0bb85b9"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/final/question-composition-week.json",
+      "mode": "100644",
+      "bytes": 14602,
+      "sha256": "906f544336a463675fda211c3338773f8ffa1afe7d1ca48f48f16688a370d32d",
+      "git_blob": "a8e46e0abb083db5a493625bcbaad92c4a2de2ae"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/final/result.json",
+      "mode": "100644",
+      "bytes": 70918,
+      "sha256": "a7dac59d09d75f4b7d85f5d677057501458046fd0f27cf070f669e9af826eecf",
+      "git_blob": "9558c945b40c67dc95778aec49fb6823d5edabbb"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/final/revised-question-call-sheet.txt",
+      "mode": "100644",
+      "bytes": 4254,
+      "sha256": "3cbfb31e6e7640fe1beaaa2dea2910cd04ecbb5b0c333220ff659cceb848f3c8",
+      "git_blob": "29f8cca77c786423b7ba2b3e95d138e4e6ee7d03"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/final/runner.stderr.txt",
+      "mode": "100644",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/final/runner.stdout.txt",
+      "mode": "100644",
+      "bytes": 1112,
+      "sha256": "566ea6f3bf93789886ce07516d42b5835e5c2b5ba67b0b13aaa9b2fb981aedd2",
+      "git_blob": "4c42ea5e730ad3fabc7dd377fd87ff67851b4587"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/final/saved-composition-after.ics",
+      "mode": "100644",
+      "bytes": 4328,
+      "sha256": "2b870742efb6358c13a03b475719e3f7a69c4ecd0ead7b620a475e1b6ccf474c",
+      "git_blob": "4a1aef3ebe8c267c57d8a0f56ce3cf479c850fb3"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/final/saved-composition-before.ics",
+      "mode": "100644",
+      "bytes": 4328,
+      "sha256": "2b870742efb6358c13a03b475719e3f7a69c4ecd0ead7b620a475e1b6ccf474c",
+      "git_blob": "4a1aef3ebe8c267c57d8a0f56ce3cf479c850fb3"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/final/saved-composition-week.json",
+      "mode": "100644",
+      "bytes": 14602,
+      "sha256": "55dfb9c7e50b2aff749dbb33835dcc5cf89c7d7f0eaf4e2b68dd957cb319a824",
+      "git_blob": "8b14090030201d6e8d69cd5bca380a9a71a4da0d"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/final/saved-source-call-sheet.txt",
+      "mode": "100644",
+      "bytes": 4229,
+      "sha256": "7b97cf80ddaff18c3ba52fe165534336fdd55a8e7c2a95853e3d414f62c83675",
+      "git_blob": "ae911a54b77b93f13539545b531f140a9a8c3b81"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/history/author-r3-result.json",
+      "mode": "100644",
+      "bytes": 70891,
+      "sha256": "951b5da80db47fac090d574d64cb42366c9f40de798c9086a3d2828325b6f0c5",
+      "git_blob": "84b2779fb1ddc2ddbd96dba26de173d874773931"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/history/baseline-browser.cjs",
+      "mode": "100644",
+      "bytes": 14655,
+      "sha256": "25e5bacf2550dea348eb541acecfa8dc8395f5ee7234b6fe2bdbf460a8923b5f",
+      "git_blob": "e9738cb39b2f4c860a69871d3707a4564325ed96"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/history/baseline-source-manifest.json",
+      "mode": "100644",
+      "bytes": 5152,
+      "sha256": "b43d5bc21f24ef2f299654a44a9fd2c421bd5a5e9d16416798248f9cdc5e9966",
+      "git_blob": "63e0d3956bfd68bde4edd9fd126d59211d971070"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/history/display-before/manifest.json",
+      "mode": "100644",
+      "bytes": 714,
+      "sha256": "8a7d93b47709392d213460305fc38b299bfebbeb6fa3939164ea622b37ac6d21",
+      "git_blob": "d41a8e4f3c224313a224042a9cd3d21f00b40be4"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/history/display-before/static/venue_followup.css",
+      "mode": "100644",
+      "bytes": 1687,
+      "sha256": "2b9d89abfc17cfadf9a15d92e3b52034dc77470c3e9a3dd238b10fc7c03e7782",
+      "git_blob": "4f26203b66d75f91e8b02766899f1a58bcd030ac"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/history/display-before/static/venue_followup.mjs",
+      "mode": "100644",
+      "bytes": 14372,
+      "sha256": "32d8a6d04169667ce84fed5d67b4e9b32321fb63d0072609cc0eb7db9414da1d",
+      "git_blob": "40e45ec8316dc8774d5dfb2afc4731adcda94ff1"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/history/display-before/tests/venue_followup.browser.cjs",
+      "mode": "100644",
+      "bytes": 21256,
+      "sha256": "f6dac2edb6adfe8516aaac730fe488eae48104c58dbb0a48a9e87cd3ad1f3365",
+      "git_blob": "e504812f9722e6d0b4bf9e08d7908437c353a781"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/history/phone-overflow-result.json",
+      "mode": "100644",
+      "bytes": 57916,
+      "sha256": "6036fd7224186e81ca8e60a1b5010715ff1e9b6f30cfb0ce61d36f98bbfae082",
+      "git_blob": "b772c211eb39acf9fff35485ce47730c166b2416"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/history/pre-disclosure-browser.cjs",
+      "mode": "100644",
+      "bytes": 22841,
+      "sha256": "6af15654fc9b04901e12991430c0a5febce42f46d09f8c15700754c4b33f64df",
+      "git_blob": "1ebd005a36f88a07adf97bd1ff9df1d842137455"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/history/pre-disclosure-result.json",
+      "mode": "100644",
+      "bytes": 60279,
+      "sha256": "263a79a050f4f20f9c8e21792c87a137f68c02356ab51eac7705bb69e4af60a6",
+      "git_blob": "1585c6e5390485f0a4379c85d27d2eecab645086"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/history/print-oracle-result.json",
+      "mode": "100644",
+      "bytes": 32581,
+      "sha256": "7a0c6b56925249373bf785b846b765d0279f3760bee24a9fb683e99b6fb14e9b",
+      "git_blob": "139f4c6a5616f7afcdea88326ad42733711a90db"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/history/r2/venue_followup.css",
+      "mode": "100644",
+      "bytes": 1419,
+      "sha256": "7072279d37557c04fc9af740595ce12afadd33973e6722d0a41332a73171df61",
+      "git_blob": "975b225b2a24ff7503ac695e944c4f6683f54cfe"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/history/r2/venue_followup.mjs",
+      "mode": "100644",
+      "bytes": 10972,
+      "sha256": "305152f119771b16a336ce4627b2b8be1df7e8a5ec2f421bbaff8707678d320a",
+      "git_blob": "a0c669626c7be48392b0c0547020ac3ba947b479"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/history/r3/venue_followup.mjs",
+      "mode": "100644",
+      "bytes": 14742,
+      "sha256": "0573f3c9b60f33f105c64bd61d86cbdcc66664f8f47ae06b998c00bc988fa832",
+      "git_blob": "03335a3a4f4da7f7b602a425c490b4876439542d"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/history/receipt-r3.json",
+      "mode": "100644",
+      "bytes": 9629,
+      "sha256": "f72161b9526881297e35fe9e52a3e9b99a95bf1bf2e0dd076b997b482ed23181",
+      "git_blob": "129262629fa4c66dba055f92a5af1d3ca7e3ae2e"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/history/resource-startup-probe.cjs",
+      "mode": "100644",
+      "bytes": 8398,
+      "sha256": "7dadcf8104e7075c00dba669ce62dcd0a3315c3c46526d58ba5514fd9fd35a9d",
+      "git_blob": "f9fcb294ac921724655f0ba1808e24f6f5efdaf7"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/history/resource-startup-result.json",
+      "mode": "100644",
+      "bytes": 3630,
+      "sha256": "bb8db5cdcc6e3c6ede3db22e8b8af6b072dec2c78939f4aa1d0a0acc56f0ec43",
+      "git_blob": "a9e88d18ebc022d0dde815bcb135883c8c1f873c"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/model-tests.stdout.txt",
+      "mode": "100644",
+      "bytes": 1650,
+      "sha256": "a8d36e28f42146371c610107ec6b9fb54cf05cd129d31db372d5e9649abeecc1",
+      "git_blob": "98907fff1e07b7946576ee8d03a5a4e03703d286"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/package-write-failure.txt",
+      "mode": "100644",
+      "bytes": 876,
+      "sha256": "1cd34d3c9c82d5537ab15bc5a192ece4402f5a2e05972bf84b10b3e2cbb8e90e",
+      "git_blob": "9e175bf29672d0de775f1d4896d0949f3857e74d"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/receipt-r4.json",
+      "mode": "100644",
+      "bytes": 10137,
+      "sha256": "c789ae6db0383e75f59aca4ebe6dd1d4e318c72bab03e21eae438da49fc40b4c",
+      "git_blob": "6f3ebedb1bc5c534c112cbb0b973a2511e0ff634"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/transport/run_with_ephemeral_profile.cjs",
+      "mode": "100644",
+      "bytes": 2273,
+      "sha256": "db25012862c2f5511db40ecbd0e750911c1b67e442f40854104d705f10c7ed81",
+      "git_blob": "d21b246caa98e6735ce6333e88f19061f3ece040"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/current-main-composition.json",
+      "mode": "100644",
+      "bytes": 2598,
+      "sha256": "58d68c61a741131c56c04572166b39becee59d10227bcdb8b389e429151fa3c0",
+      "git_blob": "10c7d5e9df2b8b700d94f16775a4a897288af469"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/HISTORY.md",
+      "mode": "100644",
+      "bytes": 4629,
+      "sha256": "3e902f7f75edd7a3f1a46be55fcb5d1ecde25d583e57f204a53d5d27b7921640",
+      "git_blob": "3ecc278ffc5315938ee12b3f017cd0b593eb669b"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r2.stderr.txt",
+      "mode": "100644",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r2.stdout.json",
+      "mode": "100644",
+      "bytes": 188,
+      "sha256": "baaea107a54b1bd26028b4f3a5fcb248746c792652dafae5f3ad0c94c8a89c04",
+      "git_blob": "64f9679f59d85ef9ae70727e768abbeb729886cb"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r2/authored-duplicate-week.json",
+      "mode": "100644",
+      "bytes": 14606,
+      "sha256": "4806893cfdded695f5b1c94b3523b41f68859ae8534a36f904dbd61af60c4df4",
+      "git_blob": "c8d47b3f63d73a15f8f9c530357e7c2bffb7486b"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r2/duplicate-call-sheet.txt",
+      "mode": "100644",
+      "bytes": 5141,
+      "sha256": "1ffc9404b64dcdc431834b910609556b98b75cb1f7112d73c7360c906e744660",
+      "git_blob": "f0d83b55af85c0eaeba239b2c427c72a739aaaef"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r2/independent-saved-week.json",
+      "mode": "100644",
+      "bytes": 14607,
+      "sha256": "5359230824843e914e8c61ada8a920f99675c6cae4db133215d8af9c9d2cf0cf",
+      "git_blob": "bc61af2ec4a886c501e4a7ed69574e2e55dbed9a"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r2/literal-call-sheet.txt",
+      "mode": "100644",
+      "bytes": 5014,
+      "sha256": "182d2a0c562c3ac9e77d5b769f97af284289bd7ebe92d57483b7864a8e15b4df",
+      "git_blob": "fdb76ec21f9addbfccf0204c9eb4323273249b65"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r2/native-plan-1.json",
+      "mode": "100644",
+      "bytes": 8609,
+      "sha256": "ebd767d10908b1712c5249464254d985cb3b7e7db69d223db5ff71316da5666e",
+      "git_blob": "5a3dca0e23f509d91972f9da0f7a17f023a1f97e"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r2/native-plan-2.json",
+      "mode": "100644",
+      "bytes": 8609,
+      "sha256": "ebd767d10908b1712c5249464254d985cb3b7e7db69d223db5ff71316da5666e",
+      "git_blob": "5a3dca0e23f509d91972f9da0f7a17f023a1f97e"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r2/omitted-call-sheet.txt",
+      "mode": "100644",
+      "bytes": 4053,
+      "sha256": "e4ce5bb57b13c7fcedb30fc10de2f1966faca848bd62e44523ef86a751262c72",
+      "git_blob": "a74cf8af20b98bd9f5315e7a5666cb27d1da4fbd"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r2/result.json",
+      "mode": "100644",
+      "bytes": 8066,
+      "sha256": "ed996851aa9e49076118e9bb798e6aff1f1dda442ffce0ab92d804c2d275e75e",
+      "git_blob": "d3f8beeec64b8b8a6485edd9e3b63951466a9498"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r2/server.log",
+      "mode": "100644",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r3-disclosure.stderr.txt",
+      "mode": "100644",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r3-disclosure.stdout.json",
+      "mode": "100644",
+      "bytes": 175,
+      "sha256": "c4f2ca505bdaf970ea4a45a4680c834b50f966afa489534ae25343cd1322f8ed",
+      "git_blob": "e7d0e7a2f39d9d8422fe6662842f565dd45c3dee"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r3-disclosure/native-plan.json",
+      "mode": "100644",
+      "bytes": 8609,
+      "sha256": "ebd767d10908b1712c5249464254d985cb3b7e7db69d223db5ff71316da5666e",
+      "git_blob": "5a3dca0e23f509d91972f9da0f7a17f023a1f97e"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r3-disclosure/result.json",
+      "mode": "100644",
+      "bytes": 4226,
+      "sha256": "f637d2651e3c3623c6f329127be19c272561a9800a762bb53325c7b652fdd50d",
+      "git_blob": "16444fef7b474a01eb113a8af14c9df831665876"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r3-disclosure/server.log",
+      "mode": "100644",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r3-execution.json",
+      "mode": "100644",
+      "bytes": 15877,
+      "sha256": "73f4fc48c4b28da9bff1dea5306a8d953c5b1977113bd0e586377510449d7c70",
+      "git_blob": "09a4098dec871db5cd1ed6c16051cec66bfff89f"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r3.stderr.txt",
+      "mode": "100644",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r3.stdout.json",
+      "mode": "100644",
+      "bytes": 184,
+      "sha256": "85aca317f9882f5bb3814da7d03826d94afdf953750a4439b0907c0e9cd21833",
+      "git_blob": "cf035e389c3d424c6dd8892d7c92e4afcd2ec856"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r3/authored-duplicate-week.json",
+      "mode": "100644",
+      "bytes": 14606,
+      "sha256": "b5ee17654303eb4f58eaab8b2a52a5b9b92e4876688c69ff38bee639f027531f",
+      "git_blob": "5b12849a9eabd8850b7e1a5da63969f0033187a1"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r3/duplicate-call-sheet.txt",
+      "mode": "100644",
+      "bytes": 5141,
+      "sha256": "00f040f56ba3c4b84e605c056ac3983a559dfca1643ad16b43dfb9f9de299f4d",
+      "git_blob": "a7a47a5e452c022f6e7f01a089e1ceff4e790dae"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r3/independent-saved-week.json",
+      "mode": "100644",
+      "bytes": 14607,
+      "sha256": "e67c2753a41050ed54656ad5b4d44b8c6451912dc027faa7a640b2360e939374",
+      "git_blob": "c565f0da6da9d03bc08b99e866aeb8978b6d6af0"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r3/literal-call-sheet.txt",
+      "mode": "100644",
+      "bytes": 5014,
+      "sha256": "182d2a0c562c3ac9e77d5b769f97af284289bd7ebe92d57483b7864a8e15b4df",
+      "git_blob": "fdb76ec21f9addbfccf0204c9eb4323273249b65"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r3/native-plan-1.json",
+      "mode": "100644",
+      "bytes": 8609,
+      "sha256": "ebd767d10908b1712c5249464254d985cb3b7e7db69d223db5ff71316da5666e",
+      "git_blob": "5a3dca0e23f509d91972f9da0f7a17f023a1f97e"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r3/native-plan-2.json",
+      "mode": "100644",
+      "bytes": 8609,
+      "sha256": "ebd767d10908b1712c5249464254d985cb3b7e7db69d223db5ff71316da5666e",
+      "git_blob": "5a3dca0e23f509d91972f9da0f7a17f023a1f97e"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r3/omitted-call-sheet.txt",
+      "mode": "100644",
+      "bytes": 4053,
+      "sha256": "e4ce5bb57b13c7fcedb30fc10de2f1966faca848bd62e44523ef86a751262c72",
+      "git_blob": "a74cf8af20b98bd9f5315e7a5666cb27d1da4fbd"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r3/result.json",
+      "mode": "100644",
+      "bytes": 7532,
+      "sha256": "822ad2dff02a0368f96e52e128b05c9b94e519ffe10c23103542dff7fd7edc78",
+      "git_blob": "ce14e844b0c6714cc2eadbb30b0106fbc948aa35"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r3/server.log",
+      "mode": "100644",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/export-r3-first-attempt.stderr.txt",
+      "mode": "100644",
+      "bytes": 154,
+      "sha256": "54cb8536e22d4257f751f05f48cd46bf1ec833166342dc5feaf0593a009e8914",
+      "git_blob": "313b4030a3ebc223e08c95772776b00486181110"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/frozen-r2-pins.json",
+      "mode": "100644",
+      "bytes": 4829,
+      "sha256": "640b853f74d50a96611f1bda18a61b44cf48a902a6cd139d2749e6f7067e8e1b",
+      "git_blob": "cbefe62d70afb93ae9d624fb0c51cba6e0ac2f19"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/owner-freeze-r2.json",
+      "mode": "100644",
+      "bytes": 2489,
+      "sha256": "d26c0342eba86d47d153a92e676666bfe7564a292918f6f07641ae2db181e9e5",
+      "git_blob": "dde6b8555239a07167176f4a96b68c08bf0c3c89"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/owner-freeze-r3-final.json",
+      "mode": "100644",
+      "bytes": 1866,
+      "sha256": "0043a7c3172a2d149e3f6fc17998829346401377244eb25464179b7750d83cd7",
+      "git_blob": "1902074b831fc5dcaa3b8d828643141f0e1c74c6"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/owner-freeze-r3-original.json",
+      "mode": "100644",
+      "bytes": 1506,
+      "sha256": "35086b3dd4cccfbdca171df8ba802321c1630671c1f602b2e146dd289b12ebc7",
+      "git_blob": "becc0fb7db86687472ec0c1d15bcb84ef6572ef9"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/preflight-r3-superseded-freeze.stderr.txt",
+      "mode": "100644",
+      "bytes": 166,
+      "sha256": "dab8a53e428e9eab98302b98181034c755e65aaea90d9ad4f45b1f82bec32c75",
+      "git_blob": "e8ef97c1120a29746361e8b8c8f8e492af450f05"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/probe_browser.cjs",
+      "mode": "100644",
+      "bytes": 17043,
+      "sha256": "b5f6a6649bc93ec50fb1e2d5857e6a87259a923ee3c6c867493b670c01c827db",
+      "git_blob": "63e9ab4d743139c4e07f4a735f4a42cba35025bc"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/probe_question_disclosure.cjs",
+      "mode": "100644",
+      "bytes": 9248,
+      "sha256": "4c173ace20bdbc775577ade4d85af7560d77cea23beb2c98c477daca32edfd15",
+      "git_blob": "e07bf92ac26786332e8b4526f6f747868dd6d831"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/probe_question_receipt.mjs",
+      "mode": "100644",
+      "bytes": 5361,
+      "sha256": "854274153b1cc5e71dfa301aafbd4f44ae62e8b9438e5536f0b4bfecf5b2e2fd",
+      "git_blob": "8cea4fb81b5aab6776faeaccd1b527dd8496c1a4"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/probe_status_refusal.mjs",
+      "mode": "100644",
+      "bytes": 3122,
+      "sha256": "ce922de7661e0ffe8d4b721de57bb4e8366e9fe52b46d5757f05dcf6227712ab",
+      "git_blob": "ec15a442749633a0dde6563ade1446d2f32d0feb"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/publication-manifest.json",
+      "mode": "100644",
+      "bytes": 16340,
+      "sha256": "550d661f2d86488c12130e4a191b2122bd4fe632e90e4c28a624151b133d05c2",
+      "git_blob": "59d21c7d95192a44f0bf0c511cd85fd726074fa0"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/question-r2.stderr.txt",
+      "mode": "100644",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/question-r2.stdout.json",
+      "mode": "100644",
+      "bytes": 3172,
+      "sha256": "c9dc1b3b35269aaac334d6659cd176c22e00956a459e3d6b5c2cc74830c9d1a7",
+      "git_blob": "668654ed6b126d1d5b18ce0624d56d2bf1347edf"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/question-r3.stderr.txt",
+      "mode": "100644",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/question-r3.stdout.json",
+      "mode": "100644",
+      "bytes": 1940,
+      "sha256": "30039aa97cc409f8b2111bbff9882e488b306320fdb04e4d401169edb38c5699",
+      "git_blob": "b96c2a2558f8ff53e48c4f5021ccdf2186a43c8e"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/r4-startup-blocked/browser-r4-disclosure.stderr.txt",
+      "mode": "100644",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/r4-startup-blocked/browser-r4-disclosure.stdout.json",
+      "mode": "100644",
+      "bytes": 175,
+      "sha256": "3e3a586baa11e07b42bb60439d863c2863e934eaa9afe148b8fcbe6a9ba09b99",
+      "git_blob": "29ad60695cede243dd9b0ae12f070947da29a418"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/r4-startup-blocked/browser-r4-disclosure/result.json",
+      "mode": "100644",
+      "bytes": 3942,
+      "sha256": "58196332a9728c1ccbafae46fc2a447bbae032589b20f4f1431b30fc03b42d0c",
+      "git_blob": "b1e8a84a6a22bfa4cb539a1edbfbb45b4492221e"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/r4-startup-blocked/browser-r4-disclosure/server.log",
+      "mode": "100644",
+      "bytes": 99,
+      "sha256": "2d3dfde305bdf02f23b1853e0d6e7ab511227def88dbd41da637554388af0823",
+      "git_blob": "b4a337a1b1eab988c10dd7895e4c590777d7dd42"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/r4-startup-blocked/execution.json",
+      "mode": "100644",
+      "bytes": 6219,
+      "sha256": "c4025917c56df50e071dcbfdbda2c936b7c3a02d30215317a5089a8bbc43b6c0",
+      "git_blob": "2f01f590fcc0d228a6383a41b0298c92734d0b6b"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/r4-startup-blocked/owner-freeze-r4.json",
+      "mode": "100644",
+      "bytes": 1800,
+      "sha256": "fdfe69fec71f308e77ee9410c3af24ae5025426f7460ccf9a320b8d143796834",
+      "git_blob": "57194ad248c43a6c62c2c25c6e986102c3ce3c91"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/r4/browser-r4-disclosure.stderr.txt",
+      "mode": "100644",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/r4/browser-r4-disclosure.stdout.json",
+      "mode": "100644",
+      "bytes": 175,
+      "sha256": "9fe6be88e552684778d66922c2abc97901b3580704383fb6aa7f286bebd04fd6",
+      "git_blob": "8898c974a56c745660992df32f302b6b39f4a960"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/r4/browser-r4-disclosure/native-plan.json",
+      "mode": "100644",
+      "bytes": 8609,
+      "sha256": "ebd767d10908b1712c5249464254d985cb3b7e7db69d223db5ff71316da5666e",
+      "git_blob": "5a3dca0e23f509d91972f9da0f7a17f023a1f97e"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/r4/browser-r4-disclosure/question-change.txt",
+      "mode": "100644",
+      "bytes": 4950,
+      "sha256": "76ec579aa3a02c34daa47acfbb50626b86a5511e740d666aa4b09af683195ec5",
+      "git_blob": "324e6b74ded96f933facc00691accb4e1c1166a2"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/r4/browser-r4-disclosure/result.json",
+      "mode": "100644",
+      "bytes": 4486,
+      "sha256": "d4d373a66c1a7cbb963c8941621fa86fd69536ddcd53e32099ac656cfbea8f47",
+      "git_blob": "82055c35e6ebf1b4289d55c9e3141c5413ced53e"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/r4/browser-r4-disclosure/server.log",
+      "mode": "100644",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/r4/execution.json",
+      "mode": "100644",
+      "bytes": 8309,
+      "sha256": "937ca64cd23ece32b89166d2f0ccaa8df695860e7c0b221b8b260a9e96da39ff",
+      "git_blob": "3d311439d7bfeeb8be2b837ff1ed00e94dd8eaa0"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/r4/owner-freeze-r4.json",
+      "mode": "100644",
+      "bytes": 1800,
+      "sha256": "fdfe69fec71f308e77ee9410c3af24ae5025426f7460ccf9a320b8d143796834",
+      "git_blob": "57194ad248c43a6c62c2c25c6e986102c3ce3c91"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/r4/preflight-helper-revision.stderr.txt",
+      "mode": "100644",
+      "bytes": 1244,
+      "sha256": "f40a8ee7f1d64ecdcf34ec9e62d79c317a4ebb2c9e0ef9b2a182cffc9b8566d3",
+      "git_blob": "4961dc8e0a6f9eb9aad59648469e6146416face8"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/r4/preflight-origin-guard.stderr.txt",
+      "mode": "100644",
+      "bytes": 93,
+      "sha256": "b3dd7a596433fb8429e9273f96f9b3e3c68aa25dcd997b50b4cc073afb9e2d7f",
+      "git_blob": "be4385ecc60a811fc8aeeccca983a5fc62d5c071"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/README.md",
+      "mode": "100644",
+      "bytes": 7164,
+      "sha256": "628ef6634529d6e95cd1e77aedf0c587f76c7fd77da6b3855e09b9bbd3e84802",
+      "git_blob": "7d0c38d50160d89d24def5f5fd40426bda96a0e2"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/retained-file-map.json",
+      "mode": "100644",
+      "bytes": 11650,
+      "sha256": "c154b345f0d390b5e639648d5dd40e8658b5f16b84beebb06a2237ece983aecf",
+      "git_blob": "2b3adc8bbb59875321070060e1b4f77535713008"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/review-final-receipt.json",
+      "mode": "100644",
+      "bytes": 6675,
+      "sha256": "a80ff87ceeaa9253f9a2cf3209dd8e3339184eb07b351c8bf4c86005080eb208",
+      "git_blob": "3705e06326918c363ea2de71aa0511c1d769ec2d"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/review-r2-receipt.json",
+      "mode": "100644",
+      "bytes": 5762,
+      "sha256": "31c7572d8591e8ff6d2bf95a63e79c8afbcd55452ba4c1dd4d9455a192678d01",
+      "git_blob": "6f947ef5876cde8ad256501608f238f55ac70c49"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/status-refusal-r3.stderr.txt",
+      "mode": "100644",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/status-refusal-r3.stdout.json",
+      "mode": "100644",
+      "bytes": 953,
+      "sha256": "9bc28d3e9aa2f1ce50ab0cdeda4a64270e4a329018860410c939765eba517b92",
+      "git_blob": "2722951360a09b4a7ae0a2a5322671fd8da06513"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/integration-02/composition.json",
+      "mode": "100644",
+      "bytes": 11885,
+      "sha256": "d989f33991d084a11ddf91fb5b73812072f02fe460f95e18a6337b56e1d7c1e7",
+      "git_blob": "1836a09dee759de56a4aed5505a98506125f05fa"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/integration-02/later-parent.json",
+      "mode": "100644",
+      "bytes": 3121,
+      "sha256": "03d04c362ecc29a83ec9dafba799132ff5e1ecbc3d10c2004d3b3378c16ff18b",
+      "git_blob": "1844b56331c812a5c29ac8df65f512800b2b3f53"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/integration-02/native-week-receiving.json",
+      "mode": "100644",
+      "bytes": 111531,
+      "sha256": "fad077af313e49b6960a8de83a2189883d64b80f0f00df294b125d7f75a90342",
+      "git_blob": "092409fa5dc12a63cd88e7c075e0235d28459ba7"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/integration-02/original-hosted-job-113396902773.log",
+      "mode": "100644",
+      "bytes": 33113,
+      "sha256": "68c4b1614b70ce0224e64a23fdfc63bba36a7195604ad576d4d544b0e51ecd73",
+      "git_blob": "03a1277bf84b328fbb2686a83653a73fff8bf92e"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/integration-02/README.md",
+      "mode": "100644",
+      "bytes": 3912,
+      "sha256": "abd6c15ebdcb4969a90d06d9f07b78d5a27a58b7b2a478410fc4e1514b980974",
+      "git_blob": "a9fd8c5016b6d8bb00f441a9859f67ee4820f472"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/integration-02/receive-composed-source.py",
+      "mode": "100644",
+      "bytes": 3044,
+      "sha256": "64de9f8b9497844ea75430708a3dc74da7bf95e40f4321380faad82d84c1aa1f",
+      "git_blob": "ffcd506fa089d581c90d45813ae62d473064b08c"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/native-parent-0758.json",
+      "mode": "100644",
+      "bytes": 4996,
+      "sha256": "8c0a20f8c9652529f72f72658f0bb1f2798491ab1c12d26b7f03743d7db028a3",
+      "git_blob": "a8a1bb2f067de860861fb8be06acf833ad110ce8"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/native-parent-d66.json",
+      "mode": "100644",
+      "bytes": 778,
+      "sha256": "e701b2ae6cdaaa91b68857c6d86e5bee2d3f2d539107b71b0532a861b521ed03",
+      "git_blob": "e44ae760d5bee26b3c1fe209cc39b5e8a2100ea8"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/publication-manifest.json",
+      "mode": "100644",
+      "bytes": 36415,
+      "sha256": "6668e6128aa8a2de63cac52e207e1d92c94b546ac48e062a86f29ae786b4d123",
+      "git_blob": "d6ec4a6db8fe0755b827e70c4349915da5f4a103"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/README.md",
+      "mode": "100644",
+      "bytes": 8071,
+      "sha256": "d5a3521fc05522d3a9aa01ca14d9b60d568024f36e56dae52b24eee883a37fd1",
+      "git_blob": "559eb9685f147901f39a9d69eae27a33fa5ee447"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/source-freeze-r4.json",
+      "mode": "100644",
+      "bytes": 1800,
+      "sha256": "fdfe69fec71f308e77ee9410c3af24ae5025426f7460ccf9a320b8d143796834",
+      "git_blob": "57194ad248c43a6c62c2c25c6e986102c3ce3c91"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "bytes": 16575,
+      "sha256": "0584f8a18cf4e8bedbfa6d71d8c77cb017f571381a3d0342eeda8699011150af",
+      "git_blob": "4200b7f3b1ddea34493e1d740ea91bd2e8f304de"
+    },
+    {
+      "path": "static/app.js",
+      "mode": "100644",
+      "bytes": 19168,
+      "sha256": "d6c742457a4824acaad929d3db37f8d4c30a26e2ae326cac3ad41e30c4a3941d",
+      "git_blob": "c49c8c042fac52fee6d4ca5c71f55a0490909564"
+    },
+    {
+      "path": "static/index.html",
+      "mode": "100644",
+      "bytes": 7568,
+      "sha256": "70219c0e195cd75b8f4688aa30418bdf0cffe28792c13d543838b76fde8d10cb",
+      "git_blob": "37f233293683df8535fc0845c6feeb586a3b962b"
+    },
+    {
+      "path": "static/venue_followup.css",
+      "mode": "100644",
+      "bytes": 1711,
+      "sha256": "d2ef0569debf8ed7f94b2df64d9d819da58df72460809cb81ef848124a187d3b",
+      "git_blob": "2a8e084a566e763323f03bf712b8615452d657ea"
+    },
+    {
+      "path": "static/venue_followup.mjs",
+      "mode": "100644",
+      "bytes": 14920,
+      "sha256": "1635bc5f1e4377325528214af071bc1242be65eeaa57ed4e5ac41a350a1cd077",
+      "git_blob": "ebf93dcc10628c6362f9f337269413e50ff8bf28"
+    },
+    {
+      "path": "tests/venue_followup.browser.cjs",
+      "mode": "100644",
+      "bytes": 23149,
+      "sha256": "aa01091e81ea1664f9e39de711161573883c1b5e2d80ea60358197d1a7d7aedd",
+      "git_blob": "7f20e02fefce2e0f78c683a34951499b3f5ecd2d"
+    },
+    {
+      "path": "tests/venue_followup.test.mjs",
+      "mode": "100644",
+      "bytes": 11405,
+      "sha256": "a53284b48da8375d7f6cf26b1d4e5943dfd203e60ff1ef44780f9a02f299479f",
+      "git_blob": "515fe959d7217b10b325cab368eb92a6d33b8e6d"
+    },
+    {
+      "path": "tools/check_native_plan_week_browser.mjs",
+      "mode": "100644",
+      "bytes": 28641,
+      "sha256": "d8d5aabd44aa8b1e54b26f0e76a8b40a19b324e8262a5c6c716c9655469c0ff6",
+      "git_blob": "cf8447be076efd547fa2f750834ad18ee48c925d"
+    }
+  ],
+  "preservation": "Original raw author/independent artifacts retain exact blobs. Only README/index compose incoming comparison content, the root guide points here, and the maintained receiver gains two asset entries. All unowned current-main leaves must match actual merge parent.",
+  "received_base": "689ddc9a6a4f5f12068e1e99127cc77482c53924",
+  "later_composition": "docs/venue-followup-6c20bb4b010e/integration-02/later-parent.json"
+}

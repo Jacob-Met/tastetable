@@ -1,0 +1,82 @@
+{
+  "format": "tastetable-arrangement-history-product-inputs/1",
+  "parent_commit": "1a609bfdd77dc07222eb70f8a4a1f565a8bc8fa0",
+  "parent_tree": "ef80f9f0134d613571861278978477152548a5ed",
+  "files": [
+    {
+      "path": "web-demo-offline/README.md",
+      "mode": "100644",
+      "before_git_blob": "6e4ee013ce657e8f074e06ecce4faafa8c29e17c",
+      "bytes": 11854,
+      "sha256": "758c0b3534f81688bd265a8b481859a7df4673d896b29b3156683d73c73a9dae",
+      "git_blob": "131d160589f62efe6dab338849932320dccdc9e9"
+    },
+    {
+      "path": "web-demo-offline/app.mjs",
+      "mode": "100644",
+      "before_git_blob": "90907fc9081fa7d679a024ec33a68a31415d54a5",
+      "bytes": 19152,
+      "sha256": "b6d50e559c4cc7a667910ebf86966f91711734c4c4de22d89da262dc192b6812",
+      "git_blob": "d974e65009c89b0a90ebb516bcac361ca169842a"
+    },
+    {
+      "path": "web-demo-offline/arrangement_history.mjs",
+      "mode": "100644",
+      "before_git_blob": null,
+      "bytes": 3645,
+      "sha256": "afc3612b48d3e2e18921da4f9439a6ee7f165bc0a109c8fa9057e80b5482a3b3",
+      "git_blob": "ef1e8643370045c021e820cc7919a5692ede44bc"
+    },
+    {
+      "path": "web-demo-offline/dist/tastetable-offline-studio.zip",
+      "mode": "100644",
+      "before_git_blob": "2743449261da7f61a18bac12337b0f6e1582f388",
+      "bytes": 98872,
+      "sha256": "911a41c71e19855a9759c2a9fceca17ba5e0ce59ed7cde3c7fd23c8b9f9ec979",
+      "git_blob": "6a8affc08decdc9510b00410e94efa1495520bd6"
+    },
+    {
+      "path": "web-demo-offline/index.html",
+      "mode": "100644",
+      "before_git_blob": "fc4c48306a8c59d8d169e3b399616c567431f8e1",
+      "bytes": 8585,
+      "sha256": "2487fd3483d048ffcd62f79198ce9a40a06f7fab886dfb969d1aa05a079c3358",
+      "git_blob": "60a20e68ef6deaaea535a6d51c589c8dfd948c21"
+    },
+    {
+      "path": "web-demo-offline/offline.css",
+      "mode": "100644",
+      "before_git_blob": "ef4573507c5e5971f0ef7a6c1a840bc95b50586f",
+      "bytes": 8402,
+      "sha256": "1f806ccae652fdb9e4b3822ab42a57b7280c3d4bd0d57938e905b4ecb5dc0830",
+      "git_blob": "26271eaf29ded4ec07dbff7d8e0bc6ab42d5f482"
+    },
+    {
+      "path": "web-demo-offline/tests/arrangement_history.test.mjs",
+      "mode": "100644",
+      "before_git_blob": null,
+      "bytes": 11397,
+      "sha256": "0c1ad20b5ae1661dfb7e3ef24fa6f34c4b2be24812f071af09173658b456af0a",
+      "git_blob": "5e5f7d8bacf09b4c194ca70967568d8cd55742de"
+    },
+    {
+      "path": "web-demo-offline/tools/check_arrangement_history_browser.mjs",
+      "mode": "100644",
+      "before_git_blob": null,
+      "bytes": 21214,
+      "sha256": "4c0c1db3a8d3f44678401cbc384bd4f16cb2d03336413615a023fade1d8440b1",
+      "git_blob": "c98d0cc222bcca28e0beb35f66fe94ee3fd28acd"
+    },
+    {
+      "path": "web-demo-offline/tools/receive_static.py",
+      "mode": "100644",
+      "before_git_blob": "9ed247baef6d304b44296a3f3d445f8b221b86f7",
+      "bytes": 4598,
+      "sha256": "65c00086427f26007adfaee9a81b783121f29b5e803dbdedbc2cc42a82a68ada",
+      "git_blob": "b4137bcbe2d558bacc917e34191a670353378984"
+    }
+  ],
+  "only_declared_paths_changed": true,
+  "native_qualification": "36/36 including 8 new and 28 unchanged; original actual browser control passes 3/3; focused portable browser passes 7 groups.",
+  "not_claimed": "Hosted CI, repository integration or public deployment are not executed by this packet."
+}

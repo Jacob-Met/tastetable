@@ -1,0 +1,31 @@
+{
+  "browser": "154.0.8037.57",
+  "groups": [
+    "matching source: exact movement, omission, dates and provenance",
+    "year-boundary chosen week compares actual dates",
+    "different source stays separate",
+    "repeated venues retain distinct original occurrences",
+    "Unicode, markup-like filenames/names/explanations render literally",
+    "malformed, invalid UTF-8 and oversized replacement refuse with recovery",
+    "clear and newer file selection retire old asynchronous reads",
+    "all omitted and empty original plans remain readable",
+    "phone, keyboard table scrolling and no storage/API/external requests"
+  ],
+  "pass": 9,
+  "inputPins": {
+    "earlier.json": "7a13e62a2b9d7761d22c3eb32760d9ce4544d640846453fe239ac1665d2ab85c",
+    "revised.json": "8af6894c241e2e076077f012f9f6b5a22851f9ebbe749c8f6bff93dbe143ddf6"
+  },
+  "requests": [
+    "/static/compare-weeks.html",
+    "/static/style.css",
+    "/static/week_compare.css",
+    "/static/week_compare_ui.mjs",
+    "/static/week_file.mjs",
+    "/static/week_plan.mjs",
+    "/static/week_compare.mjs"
+  ],
+  "external": [],
+  "errors": [],
+  "boundary": "Existing repository response fixture; native unchanged codec makes input files. Held File.arrayBuffer is an explicit asynchronous browser seam."
+}

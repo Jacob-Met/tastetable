@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compare saved weeks · TasteTable</title>
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./week_compare.css">
+</head>
+<body>
+<header>
+  <a href="/" class="back">TasteTable planner</a>
+  <h1>Compare saved weeks</h1>
+  <p class="tag">See how your dates and visits changed before choosing a saved week to reopen.</p>
+  <p>Choose two files made by <strong>Save week (.json)</strong>. They are read only in this tab.
+    Your open planner and the files stay unchanged.</p>
+</header>
+<main>
+  <div class="file-grid">
+    <section class="card" aria-labelledby="beforeTitle">
+      <h2 id="beforeTitle">Earlier arrangement</h2>
+      <label for="beforeFile">Choose earlier saved week</label>
+      <input id="beforeFile" type="file" accept=".json,application/json">
+      <button id="beforeClear" type="button" disabled>Clear earlier file</button>
+      <p id="beforeStatus" class="file-status" role="status" aria-live="polite">No file selected.</p>
+      <div id="beforeSource"></div>
+    </section>
+    <section class="card" aria-labelledby="afterTitle">
+      <h2 id="afterTitle">Revised arrangement</h2>
+      <label for="afterFile">Choose revised saved week</label>
+      <input id="afterFile" type="file" accept=".json,application/json">
+      <button id="afterClear" type="button" disabled>Clear revised file</button>
+      <p id="afterStatus" class="file-status" role="status" aria-live="polite">No file selected.</p>
+      <div id="afterSource"></div>
+    </section>
+  </div>
+  <p id="comparisonStatus" role="status" aria-live="polite">Choose both saved weeks to compare them.</p>
+  <section id="comparison" class="card" aria-labelledby="comparisonTitle" hidden>
+    <h2 id="comparisonTitle">Arrangement changes</h2>
+    <div id="comparisonBody"></div>
+  </section>
+  <section class="card" aria-labelledby="sourceTitle">
+    <h2 id="sourceTitle">About these saved copies</h2>
+    <p>Original suggestions and check explanations come from the files. No source checks are rerun.
+      A saved copy is editable planning information. Confirm dates, availability and care needs with the venue and care team.</p>
+    <p>Comparison does not choose or apply a week. Return to the planner and use <strong>Open saved week</strong>
+      with the copy you want to continue. Visit-only venue worksheet notes are not included in this saved-week format.</p>
+  </section>
+</main>
+<script type="module" src="./week_compare_ui.mjs"></script>
+</body>
+</html>

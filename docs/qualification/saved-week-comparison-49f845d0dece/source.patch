@@ -1,0 +1,661 @@
+diff --git a/.github/workflows/week-compare.yml b/.github/workflows/week-compare.yml
+new file mode 100644
+index 0000000000000000000000000000000000000000..e591fca2db970460611269ad7d1c53a6bc70f028
+--- /dev/null
++++ b/.github/workflows/week-compare.yml
+@@ -0,0 +1,41 @@
++name: saved-week-comparison
++
++on:
++  pull_request:
++    paths:
++      - 'static/**'
++      - 'tests/*.mjs'
++      - 'tests/*.cjs'
++      - 'tests/fixtures/**'
++      - '.github/workflows/week-compare.yml'
++  push:
++    branches: [main]
++    paths:
++      - 'static/**'
++      - 'tests/*.mjs'
++      - 'tests/*.cjs'
++      - 'tests/fixtures/**'
++      - '.github/workflows/week-compare.yml'
++
++permissions:
++  contents: read
++
++jobs:
++  compare-week:
++    runs-on: ubuntu-latest
++    timeout-minutes: 3
++    steps:
++      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # Existing maintained pin.
++      - name: Test comparison and existing browser domain modules on cached Node 22
++        shell: bash
++        run: |
++          set -euo pipefail
++          COMPARE_WEEK_NODE=
++          for COMPARE_WEEK_NODE_DIR in "${RUNNER_TOOL_CACHE}/node"/22.*; do
++            if [[ -x "${COMPARE_WEEK_NODE_DIR}/x64/bin/node" && -f "${COMPARE_WEEK_NODE_DIR}/x64.complete" ]]; then
++              COMPARE_WEEK_NODE="${COMPARE_WEEK_NODE_DIR}/x64/bin/node"
++            fi
++          done
++          [[ -n "${COMPARE_WEEK_NODE}" ]] || { echo "A complete cached Node 22 is required."; exit 1; }
++          "${COMPARE_WEEK_NODE}" --version
++          "${COMPARE_WEEK_NODE}" --test tests/*.mjs tests/*.cjs
+diff --git a/README.md b/README.md
+index 8ff6de7f3bd91f0ff130775631dd0fe2dc98791c..7385a42bc9e0e4ab3aeecc90ee7510034248b41d 100644
+--- a/README.md
++++ b/README.md
+@@ -133,6 +133,25 @@ plan. Stopping the browser's wait is not proof that a server or provider stopped
+ If a replacement fails or cannot render, the old handoff remains retired and you can retry
+ from the preserved inputs.
+ 
++### Compare saved arrangements
++
++Use **Compare saved weeks (new tab)** beside Open saved week to review two copies before
++choosing which one to reopen. Choose an earlier and a revised saved-week JSON file. The page
++shows their exact week dates, source labels, saved/source timestamps, inputs and original
++explanations. Matching saved sources identify moved visits, newly scheduled visits and
++omissions by original occurrence, so repeated venues remain distinct. Changing the chosen
++week compares the actual dates across that change.
++
++If the complete original response, inputs or source identity differ, the page shows the two
++arrangements separately and does not infer visit changes. Comparison reads files locally,
++does not request a plan, and does not replace the planner or modify either file. File admission
++uses the existing saved-week-v1 codec with a 2 MiB UTF-8 limit. A refused replacement leaves
++the prior loaded copy visible; clearing a slot retires an unfinished read.
++
++To continue with a chosen copy, return to the planner and use Open saved week. Original
++checks are retained from the files without rerunning them. Visit-only venue worksheet notes
++are outside this saved-week format and comparison.
++
+ ### Save and reopen an editable week
+ 
+ **Save week (.json)** downloads the current week as a local file. It includes the original
+diff --git a/static/compare-weeks.html b/static/compare-weeks.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..0e314d8f054d565706b4a0cf8905abeec6aaac77
+--- /dev/null
++++ b/static/compare-weeks.html
+@@ -0,0 +1,52 @@
++<!doctype html>
++<html lang="en">
++<head>
++<meta charset="utf-8">
++<meta name="viewport" content="width=device-width, initial-scale=1">
++<title>Compare saved weeks · TasteTable</title>
++<link rel="stylesheet" href="./style.css">
++<link rel="stylesheet" href="./week_compare.css">
++</head>
++<body>
++<header>
++  <a href="/" class="back">TasteTable planner</a>
++  <h1>Compare saved weeks</h1>
++  <p class="tag">See how your dates and visits changed before choosing a saved week to reopen.</p>
++  <p>Choose two files made by <strong>Save week (.json)</strong>. They are read only in this tab.
++    Your open planner and the files stay unchanged.</p>
++</header>
++<main>
++  <div class="file-grid">
++    <section class="card" aria-labelledby="beforeTitle">
++      <h2 id="beforeTitle">Earlier arrangement</h2>
++      <label for="beforeFile">Choose earlier saved week</label>
++      <input id="beforeFile" type="file" accept=".json,application/json">
++      <button id="beforeClear" type="button" disabled>Clear earlier file</button>
++      <p id="beforeStatus" class="file-status" role="status" aria-live="polite">No file selected.</p>
++      <div id="beforeSource"></div>
++    </section>
++    <section class="card" aria-labelledby="afterTitle">
++      <h2 id="afterTitle">Revised arrangement</h2>
++      <label for="afterFile">Choose revised saved week</label>
++      <input id="afterFile" type="file" accept=".json,application/json">
++      <button id="afterClear" type="button" disabled>Clear revised file</button>
++      <p id="afterStatus" class="file-status" role="status" aria-live="polite">No file selected.</p>
++      <div id="afterSource"></div>
++    </section>
++  </div>
++  <p id="comparisonStatus" role="status" aria-live="polite">Choose both saved weeks to compare them.</p>
++  <section id="comparison" class="card" aria-labelledby="comparisonTitle" hidden>
++    <h2 id="comparisonTitle">Arrangement changes</h2>
++    <div id="comparisonBody"></div>
++  </section>
++  <section class="card" aria-labelledby="sourceTitle">
++    <h2 id="sourceTitle">About these saved copies</h2>
++    <p>Original suggestions and check explanations come from the files. No source checks are rerun.
++      A saved copy is editable planning information. Confirm dates, availability and care needs with the venue and care team.</p>
++    <p>Comparison does not choose or apply a week. Return to the planner and use <strong>Open saved week</strong>
++      with the copy you want to continue. Visit-only venue worksheet notes are not included in this saved-week format.</p>
++  </section>
++</main>
++<script type="module" src="./week_compare_ui.mjs"></script>
++</body>
++</html>
+diff --git a/static/index.html b/static/index.html
+index fd568ddd57c183725f0f8f76493160d66c36c7bb..179a26e7affeea13850a545efac29aed90a98351 100644
+--- a/static/index.html
++++ b/static/index.html
+@@ -24,6 +24,7 @@
+     <h2>1. Tastes &amp; constraints</h2>
+     <div class="sample">
+       <button id="openWeek" type="button">Open saved week</button>
++      <a href="/static/compare-weeks.html" target="_blank" rel="noopener">Compare saved weeks (new tab)</a>
+       <input id="weekFile" type="file" accept=".json,application/json" aria-label="Choose a saved TasteTable week" hidden>
+     </div>
+     <div class="sample">
+diff --git a/static/week_compare.css b/static/week_compare.css
+new file mode 100644
+index 0000000000000000000000000000000000000000..7ee8e8add97261965fcdcbf5612fb0ec126eda89
+--- /dev/null
++++ b/static/week_compare.css
+@@ -0,0 +1,27 @@
++.file-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
++.file-grid .card { min-width:0; margin-bottom:0; }
++.file-status { min-height:3em; }
++.file-grid input { margin-bottom:.75rem; }
++.file-grid button:disabled { opacity:.55; cursor:default; }
++#beforeSource, #afterSource, #comparisonBody { overflow-wrap:anywhere; }
++.source-data { margin:.5rem 0; }
++.source-data dt { font-weight:650; margin-top:.5rem; }
++.source-data dd { margin:0; white-space:pre-wrap; }
++.file-name { font-weight:650; }
++.comparison-summary { font-size:1.1rem; }
++.change-table { width:100%; border-collapse:collapse; min-width:42rem; }
++.change-table th, .change-table td { text-align:left; vertical-align:top; border-bottom:1px solid #dfe1e6; padding:.7rem; }
++.change-table th { background:#f2effa; }
++.table-scroll { overflow-x:auto; }
++.visit-details { margin:.6rem 0; }
++.visit-details p { white-space:pre-wrap; }
++.change-label { font-weight:650; }
++.separate-weeks { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.5rem; }
++.separate-weeks > section { min-width:0; }
++:focus-visible { outline:3px solid #5525bd; outline-offset:3px; }
++.back { display:inline-block; margin-bottom:.5rem; }
++@media (max-width:760px) {
++  .file-grid, .separate-weeks { grid-template-columns:1fr; }
++  h1 { font-size:1.75rem; }
++  .card { padding:1rem; }
++}
+diff --git a/static/week_compare.mjs b/static/week_compare.mjs
+new file mode 100644
+index 0000000000000000000000000000000000000000..2dfc4fb5e9c30481a4bd4276bc4ed6ff3bb114b8
+--- /dev/null
++++ b/static/week_compare.mjs
+@@ -0,0 +1,36 @@
++/** Read-only arrangement comparison over snapshots admitted by the existing codec. */
++import { calendarWeek } from "./week_plan.mjs";
++
++/** JSON object member order is immaterial; array order remains source identity. */
++function equal(a, b) {
++  if (a === b) return true;
++  if (!a || !b || typeof a !== "object" || typeof b !== "object") return false;
++  if (Array.isArray(a) !== Array.isArray(b)) return false;
++  const ak = Object.keys(a).sort(), bk = Object.keys(b).sort();
++  return ak.length === bk.length && ak.every((key, i) => key === bk[i] && equal(a[key], b[key]));
++}
++
++export function savedWeekVisits(snapshot) {
++  const dates = Object.fromEntries(calendarWeek(snapshot.state.weekStart).map(({ day, date }) => [day, date]));
++  return snapshot.state.picks.map(({ key, originalDay, pick }) => {
++    const day = snapshot.state.assignments[key];
++    return { key, originalDay, pick, day, date: day === null ? null : dates[day] };
++  });
++}
++
++export function compareSavedWeeks(before, after) {
++  const left = savedWeekVisits(before), right = savedWeekVisits(after);
++  const paired = before.receivedAt === after.receivedAt
++    && before.calendarId === after.calendarId
++    && equal(before.inputs, after.inputs) && equal(before.response, after.response);
++  if (!paired) return { paired: false, left, right, changes: [], counts: null };
++  const counts = { unchanged: 0, moved: 0, scheduled: 0, omitted: 0 };
++  const changes = left.map((visit, index) => {
++    const next = right[index];
++    const status = visit.date === next.date ? "unchanged"
++      : visit.date === null ? "scheduled" : next.date === null ? "omitted" : "moved";
++    counts[status]++;
++    return { key: visit.key, pick: visit.pick, originalDay: visit.originalDay, before: visit, after: next, status };
++  });
++  return { paired: true, left, right, changes, counts };
++}
+diff --git a/static/week_compare_ui.mjs b/static/week_compare_ui.mjs
+new file mode 100644
+index 0000000000000000000000000000000000000000..ad3ebd39e21becf0ada3cc86ba965756fe8df83d
+--- /dev/null
++++ b/static/week_compare_ui.mjs
+@@ -0,0 +1,138 @@
++import { readWeekFile } from "./week_file.mjs";
++import { calendarWeek } from "./week_plan.mjs";
++import { compareSavedWeeks } from "./week_compare.mjs";
++
++const MAX_BYTES = 2 * 1024 * 1024;
++const slots = Object.fromEntries(["before", "after"].map((key) => [key, { generation: 0, pending: false, value: null }]));
++const byId = (id) => document.getElementById(id);
++const labels = { unchanged: "Unchanged", moved: "Moved", scheduled: "Newly scheduled", omitted: "Kept off the week" };
++function element(tag, text, className) {
++  const node = document.createElement(tag);
++  if (text !== undefined) node.textContent = text;
++  if (className) node.className = className;
++  return node;
++}
++function addField(list, name, value) {
++  list.append(element("dt", name), element("dd", value));
++}
++function sourceMode(snapshot) {
++  return snapshot.state.sourceMode === "mock" ? "Demo / synthetic source"
++    : snapshot.state.sourceMode === "live" ? "Saved live-source label" : "Source mode unknown";
++}
++function dateLabel(visit) { return visit.date === null ? "Not scheduled" : visit.day + " · " + visit.date; }
++function details(visit) {
++  const node = element("details", undefined, "visit-details");
++  node.append(element("summary", "Original suggestion and explanation"));
++  const data = element("dl", undefined, "source-data");
++  addField(data, "Original day", visit.originalDay);
++  addField(data, "Kind", visit.pick.kind);
++  addField(data, "Source entity ID", visit.pick.entity_id);
++  addField(data, "Affinity", visit.pick.affinity == null ? "Not recorded" : String(visit.pick.affinity));
++  addField(data, "Explanation from file", visit.pick.why);
++  node.append(data);
++  return node;
++}
++function renderSource(key) {
++  const slot = slots[key], node = byId(key + "Source");
++  node.replaceChildren();
++  byId(key + "Clear").disabled = !slot.value && !slot.pending;
++  if (!slot.value) return;
++  const { name, snapshot } = slot.value;
++  const dates = calendarWeek(snapshot.state.weekStart);
++  node.append(element("p", name, "file-name"));
++  const data = element("dl", undefined, "source-data");
++  addField(data, "Week", dates[0].date + " to " + dates[6].date);
++  addField(data, "Source", sourceMode(snapshot));
++  addField(data, "Saved at", snapshot.savedAt);
++  addField(data, "Source received at", snapshot.receivedAt);
++  for (const [field, label] of [["city", "City"], ["cuisines", "Cuisines"], ["music", "Music"], ["films", "Films"], ["constraints", "Constraints"]]) {
++    const value = snapshot.inputs[field];
++    addField(data, label, Array.isArray(value) ? value.join(" · ") || "None recorded" : value || "Not recorded");
++  }
++  node.append(data);
++  if (snapshot.response.plan.notes.length) {
++    const notes = element("details");
++    notes.append(element("summary", "Original plan notes"));
++    snapshot.response.plan.notes.forEach((note) => notes.append(element("p", note)));
++    node.append(notes);
++  }
++}
++function separateList(title, visits) {
++  const section = element("section"); section.append(element("h3", title));
++  if (!visits.length) { section.append(element("p", "No original visits in this saved source.")); return section; }
++  const list = element("ol");
++  for (const visit of visits) {
++    const li = element("li");
++    li.append(element("strong", visit.pick.name), element("p", dateLabel(visit)), details(visit));
++    list.append(li);
++  }
++  section.append(list); return section;
++}
++function renderComparison() {
++  const output = byId("comparison"), body = byId("comparisonBody"), status = byId("comparisonStatus");
++  body.replaceChildren(); output.hidden = true;
++  if (Object.values(slots).some((s) => s.pending)) { status.textContent = "Reading a selected file. Comparison will return when the read finishes."; return; }
++  if (!slots.before.value || !slots.after.value) { status.textContent = "Choose both saved weeks to compare them."; return; }
++  const before = slots.before.value.snapshot, after = slots.after.value.snapshot;
++  const result = compareSavedWeeks(before, after);
++  output.hidden = false;
++  if (!result.paired) {
++    byId("comparisonTitle").textContent = "Separate saved arrangements";
++    status.textContent = "Different saved source or source identity. Visits are shown separately; no moved, added or omitted visit is inferred between these files.";
++    const grid = element("div", undefined, "separate-weeks");
++    grid.append(separateList("Earlier file", result.left), separateList("Revised file", result.right));
++    body.append(grid); return;
++  }
++  byId("comparisonTitle").textContent = "Arrangement changes";
++  status.textContent = "Matching saved source and identity. Visits are compared by their original occurrence, including repeated venues.";
++  const c = result.counts;
++  body.append(element("p", c.moved + " moved · " + c.scheduled + " newly scheduled · " + c.omitted + " kept off · " + c.unchanged + " unchanged", "comparison-summary"));
++  if (before.state.weekStart !== after.state.weekStart) body.append(element("p", "Week changed from " + before.state.weekStart + " to " + after.state.weekStart + ". Exact dates below include that change."));
++  if (!result.changes.length) { body.append(element("p", "No original visits in these saved copies.")); return; }
++  const scroll = element("div", undefined, "table-scroll");
++  scroll.tabIndex = 0; scroll.setAttribute("role", "region"); scroll.setAttribute("aria-label", "Visit comparison table; scroll horizontally on a narrow screen");
++  const table = element("table", undefined, "change-table"), head = element("thead"), header = element("tr");
++  ["Visit", "Earlier date", "Revised date", "Change"].forEach((text) => { const th = element("th", text); th.scope = "col"; header.append(th); });
++  head.append(header); table.append(head);
++  const rows = element("tbody");
++  for (const change of result.changes) {
++    const row = element("tr"); row.dataset.occurrence = change.key;
++    const name = element("th"); name.scope = "row";
++    name.append(element("span", change.pick.name), details(change));
++    row.append(name, element("td", dateLabel(change.before)), element("td", dateLabel(change.after)), element("td", labels[change.status], "change-label"));
++    rows.append(row);
++  }
++  table.append(rows); scroll.append(table); body.append(scroll);
++}
++async function selectFile(key, file) {
++  if (!file) return;
++  const slot = slots[key], generation = ++slot.generation;
++  slot.pending = true;
++  byId(key + "Status").textContent = "Reading " + file.name + "…";
++  renderSource(key); renderComparison();
++  try {
++    if (file.size > MAX_BYTES) throw new Error("Choose a saved-week file no larger than 2 MiB.");
++    const bytes = await file.arrayBuffer();
++    if (slot.generation !== generation) return;
++    if (bytes.byteLength > MAX_BYTES) throw new Error("Choose a saved-week file no larger than 2 MiB.");
++    const snapshot = readWeekFile(new TextDecoder("utf-8", { fatal: true }).decode(bytes));
++    slot.value = { name: file.name, snapshot };
++    byId(key + "Status").textContent = "Loaded " + file.name + ".";
++  } catch (error) {
++    if (slot.generation !== generation) return;
++    byId(key + "Status").textContent = "Could not open " + file.name + ": " + error.message
++      + (slot.value ? " The previously loaded file remains shown." : " Choose a valid saved-week file.");
++  } finally {
++    if (slot.generation === generation) { slot.pending = false; renderSource(key); renderComparison(); }
++  }
++}
++for (const key of Object.keys(slots)) {
++  byId(key + "File").addEventListener("change", (event) => {
++    const file = event.target.files[0]; event.target.value = ""; selectFile(key, file);
++  });
++  byId(key + "Clear").addEventListener("click", () => {
++    const slot = slots[key]; slot.generation++; slot.pending = false; slot.value = null;
++    byId(key + "File").value = ""; byId(key + "Status").textContent = "No file selected.";
++    renderSource(key); renderComparison();
++  });
++}
+diff --git a/tests/test_week_compare.mjs b/tests/test_week_compare.mjs
+new file mode 100644
+index 0000000000000000000000000000000000000000..82f424b7237d5be463772e883b7a094d17f106d1
+--- /dev/null
++++ b/tests/test_week_compare.mjs
+@@ -0,0 +1,104 @@
++import test from "node:test";
++import assert from "node:assert/strict";
++import { readFileSync } from "node:fs";
++import { createWeekPlan, setPickDay, setWeek } from "../static/week_plan.mjs";
++import { makeWeekFile, readWeekFile } from "../static/week_file.mjs";
++import { compareSavedWeeks } from "../static/week_compare.mjs";
++
++const response = JSON.parse(readFileSync(new URL("./fixtures/saved-week-response.json", import.meta.url)));
++const inputs = { cuisines: ["Cuban"], music: ["Celia Cruz"], films: [], city: "Pasadena", constraints: response.comparison.constraints };
++function snapshot(source = response) {
++  const value = { response: source, inputs, state: createWeekPlan(source, "2026-12-28"),
++    receivedAt: "2026-10-08T10:00:00.000Z", calendarId: "e9a27c3786b649e483a42cc1a0096fb0" };
++  return readWeekFile(makeWeekFile(value, new Date("2026-10-08T10:05:00.000Z")).text);
++}
++function resave(value) {
++  return readWeekFile(makeWeekFile(value, new Date("2026-10-09T10:05:00.000Z")).text);
++}
++
++test("codec-created copies compare exact moves, omissions and inclusion without mutating inputs", () => {
++  const before = snapshot();
++  before.state = setPickDay(before.state, "pick-2", null);
++  const after = resave(before);
++  after.state = setPickDay(setPickDay(setPickDay(after.state, "pick-0", "Tuesday"), "pick-1", null), "pick-2", "Sunday");
++  const original = structuredClone({ before, after });
++  const result = compareSavedWeeks(before, after);
++  assert.equal(result.paired, true);
++  assert.deepEqual(result.counts, { unchanged: 2, moved: 1, scheduled: 1, omitted: 1 });
++  assert.deepEqual(result.changes.map(x => x.status), ["moved", "omitted", "scheduled", "unchanged", "unchanged"]);
++  assert.equal(result.changes[0].before.date, "2026-12-28");
++  assert.equal(result.changes[0].after.date, "2026-12-29");
++  assert.deepEqual({ before, after }, original);
++});
++
++test("different chosen weeks compare actual dates through the year boundary", () => {
++  const before = snapshot(), after = resave(before);
++  after.state = setWeek(after.state, "2027-01-04");
++  const result = compareSavedWeeks(before, after);
++  assert.equal(result.counts.moved, 5);
++  assert.equal(result.changes[3].before.date, "2027-01-03");
++  assert.equal(result.changes[3].after.date, "2027-01-10");
++});
++
++test("repeated venue identities retain original occurrence mapping", () => {
++  const source = structuredClone(response);
++  source.plan.meals[1] = { ...source.plan.meals[0], day: "Wednesday" };
++  const before = snapshot(source), after = resave(before);
++  after.state = setPickDay(after.state, "pick-1", null);
++  const result = compareSavedWeeks(before, after);
++  assert.equal(result.changes[0].pick.entity_id, result.changes[1].pick.entity_id);
++  assert.equal(result.changes[0].status, "unchanged");
++  assert.equal(result.changes[1].status, "omitted");
++  assert.equal(result.changes[0].key, "pick-0");
++  assert.equal(result.changes[1].key, "pick-1");
++});
++
++test("changed response, profile, timestamp or calendar identity prevents inferred movement", () => {
++  const before = snapshot();
++  for (const edit of [
++    v => { v.response.plan.meals[0].why += " Changed source"; },
++    v => { v.inputs.city = "Another city"; },
++    v => { v.receivedAt = "2026-10-08T10:00:01.000Z"; },
++    v => { v.calendarId = null; },
++  ]) {
++    const after = resave(before); edit(after);
++    const result = compareSavedWeeks(before, after);
++    assert.equal(result.paired, false);
++    assert.deepEqual(result.changes, []);
++    assert.equal(result.counts, null);
++    assert.equal(result.left.length, 5);
++    assert.equal(result.right.length, 5);
++  }
++});
++
++test("JSON property order is immaterial, source array order is not", () => {
++  const before = snapshot(), after = resave(before);
++  const reverse = value => Array.isArray(value) ? value.map(reverse)
++    : value && typeof value === "object" ? Object.fromEntries(Object.entries(value).reverse().map(([k,v]) => [k,reverse(v)])) : value;
++  after.response = reverse(after.response);
++  after.inputs = reverse(after.inputs);
++  assert.equal(compareSavedWeeks(before, after).paired, true);
++  after.response.plan.meals.reverse();
++  assert.equal(compareSavedWeeks(before, after).paired, false);
++});
++
++test("all-omitted arrangements and empty original plans have honest counts", () => {
++  const before = snapshot(), after = resave(before);
++  for (const { key } of after.state.picks) after.state = setPickDay(after.state, key, null);
++  assert.deepEqual(compareSavedWeeks(before, after).counts, { unchanged: 0, moved: 0, scheduled: 0, omitted: 5 });
++  const next = resave(after);
++  next.state = setWeek(next.state, "2027-01-04");
++  assert.deepEqual(compareSavedWeeks(after, next).counts, { unchanged: 5, moved: 0, scheduled: 0, omitted: 0 });
++  const empty = structuredClone(response); empty.plan.meals = []; empty.plan.outing = null;
++  const a = snapshot(empty);
++  assert.deepEqual(compareSavedWeeks(a, resave(a)).counts, { unchanged: 0, moved: 0, scheduled: 0, omitted: 0 });
++});
++
++test("unknown source and legacy null calendar IDs remain explicitly saved-source comparisons", () => {
++  const source = structuredClone(response); delete source.mock;
++  const before = snapshot(source); before.calendarId = null;
++  const after = resave(before);
++  assert.equal(before.state.sourceMode, "unknown");
++  assert.equal(compareSavedWeeks(before, after).paired, true);
++  assert.equal(compareSavedWeeks(before, after).counts.unchanged, 5);
++});
+diff --git a/tools/check_week_compare_browser.mjs b/tools/check_week_compare_browser.mjs
+new file mode 100644
+index 0000000000000000000000000000000000000000..d50c8226196d66f403ac1d556abe860ef3b93614
+--- /dev/null
++++ b/tools/check_week_compare_browser.mjs
+@@ -0,0 +1,179 @@
++/** Browser checks use codec-created local files; no planner/provider request is made. */
++import assert from "node:assert/strict";
++import { createServer } from "node:http";
++import { readFile, writeFile, mkdir } from "node:fs/promises";
++import { resolve, extname, dirname } from "node:path";
++import { fileURLToPath } from "node:url";
++import { createHash } from "node:crypto";
++import { chromium } from "playwright";
++import { createWeekPlan, setPickDay, setWeek } from "../static/week_plan.mjs";
++import { makeWeekFile } from "../static/week_file.mjs";
++
++const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
++const out = resolve(process.argv[2] || "/tmp/tastetable-week-compare-browser");
++await mkdir(out, { recursive: true });
++const response = JSON.parse(await readFile(resolve(root, "tests/fixtures/saved-week-response.json"), "utf8"));
++const inputs = { cuisines: ["Cuban"], music: ["Celia Cruz"], films: [], city: "Pasadena", constraints: response.comparison.constraints };
++function snapshot(source = structuredClone(response)) {
++  return { response: source, inputs: structuredClone(inputs), state: createWeekPlan(source, "2026-12-28"),
++    receivedAt: "2026-10-08T10:00:00.000Z", calendarId: "e9a27c3786b649e483a42cc1a0096fb0" };
++}
++function encoded(value, name = "week.json") {
++  return { name, mimeType: "application/json", buffer: Buffer.from(makeWeekFile(value, new Date("2026-10-08T11:00:00.000Z")).text) };
++}
++const before = snapshot(), after = snapshot();
++after.state = setPickDay(setPickDay(after.state, "pick-0", "Tuesday"), "pick-1", null);
++const earlier = encoded(before, "earlier.json"), revised = encoded(after, "revised.json");
++const inputPins = {};
++for (const item of [earlier, revised]) {
++  await writeFile(resolve(out, item.name), item.buffer);
++  inputPins[item.name] = createHash("sha256").update(item.buffer).digest("hex");
++}
++const requests = [], external = [], errors = [], groups = [];
++const server = createServer(async (req, res) => {
++  requests.push(req.url);
++  const path = resolve(root, "." + new URL(req.url, "http://local").pathname);
++  if (!path.startsWith(root + "/static/")) { res.writeHead(404); res.end(); return; }
++  try {
++    const data = await readFile(path);
++    res.setHeader("Content-Type", ({ ".html": "text/html", ".js": "text/javascript", ".mjs": "text/javascript", ".css": "text/css" })[extname(path)] || "application/octet-stream");
++    res.end(data);
++  } catch { res.writeHead(404); res.end(); }
++});
++await new Promise(done => server.listen(0, "127.0.0.1", done));
++const origin = "http://127.0.0.1:" + server.address().port;
++let browser;
++try {
++  browser = await chromium.launch({ headless: true, executablePath: process.env.TASTETABLE_CHROME_PATH,
++    args: ["--no-sandbox", "--disable-dev-shm-usage"] });
++  const context = await browser.newContext();
++  await context.route("**/*", route => {
++    if (route.request().url().startsWith(origin + "/")) return route.continue();
++    external.push(route.request().url()); return route.abort();
++  });
++  const page = await context.newPage();
++  page.on("pageerror", error => errors.push(error.message));
++  const text = id => page.locator("#" + id).innerText();
++  async function wait(check, label) {
++    const until = Date.now() + 6000;
++    while (!await check()) { if (Date.now() > until) throw new Error(label); await new Promise(r => setTimeout(r, 30)); }
++  }
++  async function load(key, file) {
++    await page.locator("#" + key + "File").setInputFiles(file);
++    await wait(async () => !(await text(key + "Status")).startsWith("Reading "), "file read did not finish");
++  }
++  await page.goto(origin + "/static/compare-weeks.html");
++  await load("before", earlier); await load("after", revised);
++  assert.match(await text("comparisonBody"), /1 moved · 0 newly scheduled · 1 kept off · 3 unchanged/);
++  assert.match(await page.locator('[data-occurrence="pick-0"]').innerText(), /Monday · 2026-12-28.*Tuesday · 2026-12-29/s);
++  assert.match(await text("beforeSource"), /Demo \/ synthetic source/);
++  groups.push("matching source: exact movement, omission, dates and provenance");
++  await page.screenshot({ path: resolve(out, "desktop.png"), fullPage: true });
++
++  const anotherWeek = snapshot(); anotherWeek.state = setWeek(anotherWeek.state, "2027-01-04");
++  await load("after", encoded(anotherWeek));
++  assert.match(await text("comparisonBody"), /5 moved/);
++  assert.match(await text("comparisonBody"), /Week changed from 2026-12-28 to 2027-01-04/);
++  groups.push("year-boundary chosen week compares actual dates");
++
++  const different = snapshot(); different.response.plan.meals[0].why += " Changed source";
++  different.state = createWeekPlan(different.response, "2026-12-28");
++  await load("after", encoded(different));
++  assert.equal(await text("comparisonTitle"), "Separate saved arrangements");
++  assert.equal(await page.locator(".change-table").count(), 0);
++  assert.match(await text("comparisonStatus"), /no moved, added or omitted visit is inferred/);
++  groups.push("different source stays separate");
++
++  const repeatedSource = structuredClone(response);
++  repeatedSource.plan.meals[1] = { ...repeatedSource.plan.meals[0], day: "Wednesday" };
++  const repeated = snapshot(repeatedSource), repeatAfter = structuredClone(repeated);
++  repeatAfter.state = setPickDay(repeatAfter.state, "pick-1", null);
++  await load("before", encoded(repeated)); await load("after", encoded(repeatAfter));
++  assert.match(await page.locator('[data-occurrence="pick-0"]').innerText(), /Unchanged/);
++  assert.match(await page.locator('[data-occurrence="pick-1"]').innerText(), /Kept off the week/);
++  groups.push("repeated venues retain distinct original occurrences");
++
++  const literalSource = structuredClone(response);
++  literalSource.plan.meals[0].name = '<img src=x onerror="window.injected=true"> café 老朋友';
++  literalSource.plan.meals[0].why = "Literal <script>window.injected=true</script> & exact explanation";
++  const literal = snapshot(literalSource);
++  await load("before", encoded(literal, '<img onerror="oops">.json'));
++  await load("after", encoded(literal));
++  await page.locator(".visit-details summary").first().click();
++  assert.match(await text("comparisonBody"), /<img src=x onerror=/);
++  assert.match(await text("comparisonBody"), /Literal <script>/);
++  assert.equal(await page.locator("#comparisonBody img, #comparisonBody script").count(), 0);
++  assert.equal(await page.evaluate(() => window.injected), undefined);
++  groups.push("Unicode, markup-like filenames/names/explanations render literally");
++
++  await load("before", earlier); await load("after", revised);
++  for (const file of [
++    { name: "broken.json", mimeType: "application/json", buffer: Buffer.from("{bad") },
++    { name: "not-utf8.json", mimeType: "application/json", buffer: Buffer.from([0xff, 0xfe, 0xff]) },
++    { name: "large.json", mimeType: "application/json", buffer: Buffer.alloc(2 * 1024 * 1024 + 1, 32) },
++  ]) {
++    await load("after", file);
++    assert.match(await text("afterStatus"), /Could not open/);
++    assert.match(await text("afterStatus"), /previously loaded file remains shown/);
++    assert.match(await text("afterSource"), /revised.json/);
++    assert.match(await text("comparisonBody"), /1 moved/);
++  }
++  await load("after", revised);
++  groups.push("malformed, invalid UTF-8 and oversized replacement refuse with recovery");
++
++  async function holdNext() {
++    await page.evaluate(() => {
++      delete window.releaseHeldFile;
++      const original = File.prototype.arrayBuffer;
++      File.prototype.arrayBuffer = function () {
++        File.prototype.arrayBuffer = original;
++        return original.call(this).then(bytes => new Promise(resolve => { window.releaseHeldFile = () => resolve(bytes); }));
++      };
++    });
++  }
++  await holdNext();
++  await page.locator("#afterFile").setInputFiles(earlier);
++  await wait(async () => await page.evaluate(() => typeof window.releaseHeldFile === "function"), "held read seam");
++  await page.locator("#afterClear").click();
++  await page.evaluate(() => window.releaseHeldFile());
++  await page.waitForTimeout(100);
++  assert.equal(await text("afterStatus"), "No file selected.");
++  assert.equal(await page.locator("#comparison").isHidden(), true);
++  await load("after", revised);
++  await holdNext();
++  await page.locator("#afterFile").setInputFiles(earlier);
++  await wait(async () => (await text("afterStatus")).startsWith("Reading "), "older read pending");
++  await load("after", revised);
++  await page.evaluate(() => window.releaseHeldFile());
++  await page.waitForTimeout(100);
++  assert.match(await text("afterSource"), /revised.json/);
++  assert.match(await text("comparisonBody"), /1 moved/);
++  groups.push("clear and newer file selection retire old asynchronous reads");
++
++  const allOff = snapshot();
++  for (const { key } of allOff.state.picks) allOff.state = setPickDay(allOff.state, key, null);
++  await load("after", encoded(allOff));
++  assert.match(await text("comparisonBody"), /5 kept off/);
++  const emptySource = structuredClone(response); emptySource.plan.meals = []; emptySource.plan.outing = null;
++  await load("before", encoded(snapshot(emptySource))); await load("after", encoded(snapshot(emptySource)));
++  assert.match(await text("comparisonBody"), /No original visits/);
++  groups.push("all omitted and empty original plans remain readable");
++
++  await load("before", earlier); await load("after", revised);
++  await page.setViewportSize({ width: 390, height: 844 });
++  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
++  const scroll = page.locator(".table-scroll"); await scroll.focus();
++  await page.keyboard.press("ArrowRight"); await page.waitForTimeout(100);
++  assert(await scroll.evaluate(node => node.scrollLeft) > 0);
++  await page.screenshot({ path: resolve(out, "phone.png"), fullPage: true });
++  assert.deepEqual(await page.evaluate(() => [localStorage.length, sessionStorage.length]), [0, 0]);
++  assert.equal(requests.some(x => x.startsWith("/api/")), false);
++  assert.deepEqual(external, []); assert.deepEqual(errors, []);
++  groups.push("phone, keyboard table scrolling and no storage/API/external requests");
++  await writeFile(resolve(out, "receipt.json"), JSON.stringify({ browser: await browser.version(), groups, pass: groups.length,
++    inputPins, requests, external, errors, boundary: "Existing repository response fixture; native unchanged codec makes input files. Held File.arrayBuffer is an explicit asynchronous browser seam." }, null, 2) + "\n");
++  console.log(JSON.stringify({ pass: groups.length, groups, output: out }));
++} finally {
++  if (browser) await browser.close();
++  await new Promise(done => server.close(done));
++}

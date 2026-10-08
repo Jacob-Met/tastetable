@@ -1,0 +1,3 @@
+Initial git fetch --depth 1 origin main retained a shallow boundary. git merge --no-ff --no-edit 1a609bfdd77dc07222eb70f8a4a1f565a8bc8fa0 refused before mutation:
+fatal: refusing to merge unrelated histories
+Resolution: fetch the documented parent ancestry with --deepen=3, preserving both exact commits. No unrelated-history override.

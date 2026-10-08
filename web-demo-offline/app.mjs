@@ -2,6 +2,7 @@ import { DAYS, createWeekPlan, localDate, offWeekPicks, resetDays, setPickDay, s
 
 import { CONSTRAINTS, chooseRecord, validateCatalogue } from "./catalogue.mjs";
 import { readOfflineWeekFile, saveOfflineWeek } from "./saved_week.mjs";
+import { canRedoArrangement, canUndoArrangement, createArrangementHistory, recordArrangement, redoArrangement, undoArrangement } from "./arrangement_history.mjs";
 
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -16,6 +17,7 @@ let openedSavedAt = null;
 let openingVersion = 0;
 let pendingWeek = null;
 let downloadUrl = null;
+let arrangementHistory = null;
 
 function retireOpening(message = "") {
   openingVersion += 1;
@@ -49,6 +51,58 @@ function pickCard({ key, pick }, day) {
   </article>`;
 }
 
+
+function renderHistoryControls() {
+  const previous = arrangementHistory?.past.at(-1);
+  const next = arrangementHistory?.future.at(-1);
+  $("#undoWeek").disabled = !previous;
+  $("#redoWeek").disabled = !next;
+  $("#undoWeek").setAttribute("aria-label", previous ? `Undo change: ${previous.label}` : "Undo change");
+  $("#redoWeek").setAttribute("aria-label", next ? `Redo change: ${next.label}` : "Redo change");
+  $("#historyStatus").textContent = [
+    previous ? `Undo available: ${previous.label}.` : "No earlier arrangement to undo.",
+    next ? `Redo available: ${next.label}.` : "",
+  ].filter(Boolean).join(" ");
+}
+
+function startArrangementHistory() {
+  let date = weekState.weekStart;
+  try {
+    if (setWeek(weekState, $("#weekDate").value).weekStart === weekState.weekStart) {
+      date = $("#weekDate").value;
+    }
+  } catch { /* An invalid date draft remains invalid; history starts at the valid shown week. */ }
+  arrangementHistory = createArrangementHistory(weekState, date);
+  renderHistoryControls();
+}
+
+function rememberArrangement(state, label, date = arrangementHistory?.present.date ?? state.weekStart) {
+  if (arrangementHistory) {
+    arrangementHistory = recordArrangement(arrangementHistory, state, date, label);
+    weekState = arrangementHistory.present.state;
+  } else {
+    weekState = state;
+  }
+}
+
+function recoverArrangement(direction) {
+  const undo = direction === "undo";
+  if (!(undo ? canUndoArrangement(arrangementHistory) : canRedoArrangement(arrangementHistory))) return;
+  const label = (undo ? arrangementHistory.past : arrangementHistory.future).at(-1).label;
+  retireOpening();
+  arrangementHistory = undo ? undoArrangement(arrangementHistory) : redoArrangement(arrangementHistory);
+  weekState = arrangementHistory.present.state;
+  $("#weekDate").value = arrangementHistory.present.date;
+  $("#weekDate").removeAttribute("aria-invalid");
+  $("#weekError").textContent = "";
+  $("#printWeek").disabled = false;
+  $("#saveWeek").disabled = !currentRecord;
+  renderWeek(`${undo ? "Undid" : "Redid"}: ${label}.`);
+  const preferred = undo ? "#undoWeek" : "#redoWeek";
+  const alternate = undo ? "#redoWeek" : "#undoWeek";
+  ($(preferred).disabled ? $(alternate) : $(preferred)).focus({preventScroll: true});
+}
+
 function renderWeek(message = "") {
   const rows = weekRows(weekState);
   const omitted = offWeekPicks(weekState);
@@ -77,12 +131,15 @@ function renderWeek(message = "") {
   $("#openedCopy").textContent = openedSavedAt
     ? `Opened a saved copy dated ${new Date(openedSavedAt).toLocaleString()}. Its recommendations are the original finite recording; any further arrangement changes need another Save week.`
     : "";
+  renderHistoryControls();
 }
 
 function applyWeekDate() {
   if (!weekState) return false;
   try {
-    weekState = setWeek(weekState, $("#weekDate").value);
+    const date = $("#weekDate").value;
+    const nextWeek = setWeek(weekState, date);
+    rememberArrangement(nextWeek, `Change week to ${dateLabel(nextWeek.weekStart)}`, date);
     $("#weekDate").removeAttribute("aria-invalid");
     $("#weekError").textContent = "";
     $("#printWeek").disabled = false;
@@ -153,6 +210,8 @@ function selectedConstraints() {
 
 function invalidateSelection(message) {
   retireOpening();
+  arrangementHistory = null;
+  renderHistoryControls();
   $("#results").hidden = true;
   $("#saveWeek").disabled = true;
   receivedAt = null;
@@ -166,6 +225,7 @@ function invalidateSelection(message) {
 
 function acceptRecord(record, {scroll = true, state = null, originalReceivedAt = new Date().toISOString(),
   savedAt = null, originalCalendarId = null} = {}) {
+  arrangementHistory = null;
   currentRecord = record;
   receivedAt = originalReceivedAt;
   calendarId = originalCalendarId;
@@ -186,6 +246,7 @@ function acceptRecord(record, {scroll = true, state = null, originalReceivedAt =
   $("#downloadRecord").href = `./data/records/${record.key}.json`;
   $("#downloadRecord").download = `tastetable-${record.key}-source.json`;
   $("#requestStatus").textContent = `Loaded native record ${record.key}. Arrange its checked suggestions below.`;
+  startArrangementHistory();
 }
 
 function showRecord(scroll = true) {
@@ -314,16 +375,19 @@ $("#weekOrganizer").addEventListener("change", (event) => {
   retireOpening();
   const key = select.dataset.pickKey;
   const pick = weekState.picks.find((item) => item.key === key);
-  weekState = setPickDay(weekState, key, select.value || null);
+  rememberArrangement(setPickDay(weekState, key, select.value || null),
+    select.value ? `Move ${pick.pick.name} to ${select.value}` : `Keep ${pick.pick.name} off this week`);
   renderWeek(select.value ? `${pick.pick.name} scheduled for ${select.value}.` : `${pick.pick.name} kept off this week. You can put it back below.`);
   $(`#weekOrganizer select[data-pick-key="${key}"]`).focus();
 });
 $("#resetWeek").addEventListener("click", () => {
   if (!weekState) return;
   retireOpening();
-  weekState = resetDays(weekState);
+  rememberArrangement(resetDays(weekState), "Restore suggested days");
   renderWeek("All picks restored to their suggested days.");
 });
+$("#undoWeek").addEventListener("click", () => recoverArrangement("undo"));
+$("#redoWeek").addEventListener("click", () => recoverArrangement("redo"));
 $("#printWeek").addEventListener("click", () => {
   if (applyWeekDate()) window.print();
 });
