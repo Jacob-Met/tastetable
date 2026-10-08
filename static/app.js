@@ -1,5 +1,6 @@
 import { DAYS, createWeekPlan, localDate, offWeekPicks, resetDays, setPickDay, setWeek, weekRows } from "./week_plan.mjs";
 import { makeWeekFile, readWeekFile } from "./week_file.mjs";
+import { mountVenueFollowup } from "./venue_followup.mjs";
 
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -13,6 +14,7 @@ let calendarSession = null;
 let acceptedPlan = null;
 let requestKind = "plan";
 const OPEN_SAVED_WEEK = Symbol("open saved week");
+const venueFollowup = mountVenueFollowup($("#venueFollowup"), () => ({ state: weekState, date: $("#weekDate").value }));
 
 function newCalendarId() {
   try {
@@ -90,6 +92,7 @@ function renderWeek(message = "") {
   commitWeekView(prepareWeekView(weekState, message));
   refreshCalendar();
   refreshWeekSave();
+  venueFollowup.sync();
 }
 
 function refreshWeekSave() {
@@ -157,6 +160,7 @@ function acceptCalendar() {
 
 function retirePlan() {
   weekState = null;
+  venueFollowup.retire();
   acceptedPlan = null;
   clearCalendar();
   $("#results").hidden = true;
@@ -184,6 +188,7 @@ function applyWeekDate() {
     $("#printWeek").disabled = true;
     refreshCalendar();
     refreshWeekSave();
+    venueFollowup.sync();
     return false;
   }
 }
@@ -297,6 +302,7 @@ const planRequests = TasteTablePlanRequests.create({
     }
     acceptCalendar();
     refreshWeekSave();
+    venueFollowup.accept(weekState, $("#savedWeekSource").hidden ? "" : $("#savedWeekSource").textContent);
     $("#requestStatus").textContent = result.state
       ? "Saved week opened. Its original inputs and your arrangement are restored."
       : "Plan ready for the current inputs.";

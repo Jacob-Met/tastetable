@@ -1,0 +1,159 @@
+{
+  "schema": "tastetable.owner-two-fix-publication.v1",
+  "repository": "Jacob-Met/tastetable",
+  "runtimeTarget": "static/venue_followup.mjs",
+  "suggestedEvidencePrefix": "docs/receiving/venue-followup-6c20bb4b010e/pr38-adoption",
+  "nativeParent": "e0f6fbaf1f81fbb1e9926948294549c744228def",
+  "frontendParent": "f3e72efb13844b7cd8e5cdd5d14c6a21941351c4",
+  "externalPR": 38,
+  "externalPatchSHA256": "aab21c0bf6cf20058c432c64b5aac5c797d064eb6d4045234b9a50fca28e2c4d",
+  "files": [
+    {
+      "path": "focused-packet.json.gz",
+      "sourcePath": "/dev/shm/hamon-tastetable-followup-owner-6c20bb4b010e-8ff8E9/focused-packet.json.gz",
+      "bytes": 15751,
+      "sha256": "db5c4b0f8e154963362a1726000c3df0590d3caae4765aabdfae82f7d4414e71",
+      "gitBlob": "6f833a96e6ffb6a3fefb5a607da0e901e4769e7d",
+      "mode": "100644"
+    },
+    {
+      "path": "focused-packet.json",
+      "sourcePath": "/dev/shm/hamon-tastetable-followup-owner-6c20bb4b010e-8ff8E9/focused-packet.json",
+      "bytes": 111457,
+      "sha256": "590b6d2ccf2d05e82049239be604f888d035df0870c64a716a2e55fba3ba345a",
+      "gitBlob": "f4220783e05ee7f27de52d2e47426cfeddeff101",
+      "mode": "100644"
+    },
+    {
+      "path": "before/blank-reply.txt",
+      "sourcePath": "/dev/shm/hamon-tastetable-followup-owner-6c20bb4b010e-8ff8E9/before/blank-reply.txt",
+      "bytes": 4948,
+      "sha256": "e0cafd57e05f7b70bc0f6279f5fca0c026cf4830fed27381f17b147f786f3681",
+      "gitBlob": "01786d953da7fba56262713c263639bf00a5f68f",
+      "mode": "100644"
+    },
+    {
+      "path": "before/native-plan-1.json",
+      "sourcePath": "/dev/shm/hamon-tastetable-followup-owner-6c20bb4b010e-8ff8E9/before/native-plan-1.json",
+      "bytes": 8609,
+      "sha256": "ebd767d10908b1712c5249464254d985cb3b7e7db69d223db5ff71316da5666e",
+      "gitBlob": "5a3dca0e23f509d91972f9da0f7a17f023a1f97e",
+      "mode": "100644"
+    },
+    {
+      "path": "before/native-plan-2.json",
+      "sourcePath": "/dev/shm/hamon-tastetable-followup-owner-6c20bb4b010e-8ff8E9/before/native-plan-2.json",
+      "bytes": 8609,
+      "sha256": "ebd767d10908b1712c5249464254d985cb3b7e7db69d223db5ff71316da5666e",
+      "gitBlob": "5a3dca0e23f509d91972f9da0f7a17f023a1f97e",
+      "mode": "100644"
+    },
+    {
+      "path": "before/result.json",
+      "sourcePath": "/dev/shm/hamon-tastetable-followup-owner-6c20bb4b010e-8ff8E9/before/result.json",
+      "bytes": 10421,
+      "sha256": "a3bbf8af7e92f0600be9d782f49aa396c977596672df2ac3f39df67e1546ad47",
+      "gitBlob": "77bd12e7f5cce68249ffffd8732e3e27c0b9fbcc",
+      "mode": "100644"
+    },
+    {
+      "path": "before/server.log",
+      "sourcePath": "/dev/shm/hamon-tastetable-followup-owner-6c20bb4b010e-8ff8E9/before/server.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "after/blank-reply.txt",
+      "sourcePath": "/dev/shm/hamon-tastetable-followup-owner-6c20bb4b010e-8ff8E9/after/blank-reply.txt",
+      "bytes": 4983,
+      "sha256": "fc1be95dddae2d73b29b7e8523cc865203d87f29569953dfdcd977f1dabe3be8",
+      "gitBlob": "d76924e1141f171b8e5e07d0ce1b0e8e4ae8df6a",
+      "mode": "100644"
+    },
+    {
+      "path": "after/native-plan-1.json",
+      "sourcePath": "/dev/shm/hamon-tastetable-followup-owner-6c20bb4b010e-8ff8E9/after/native-plan-1.json",
+      "bytes": 8609,
+      "sha256": "ebd767d10908b1712c5249464254d985cb3b7e7db69d223db5ff71316da5666e",
+      "gitBlob": "5a3dca0e23f509d91972f9da0f7a17f023a1f97e",
+      "mode": "100644"
+    },
+    {
+      "path": "after/native-plan-2.json",
+      "sourcePath": "/dev/shm/hamon-tastetable-followup-owner-6c20bb4b010e-8ff8E9/after/native-plan-2.json",
+      "bytes": 8609,
+      "sha256": "ebd767d10908b1712c5249464254d985cb3b7e7db69d223db5ff71316da5666e",
+      "gitBlob": "5a3dca0e23f509d91972f9da0f7a17f023a1f97e",
+      "mode": "100644"
+    },
+    {
+      "path": "after/result.json",
+      "sourcePath": "/dev/shm/hamon-tastetable-followup-owner-6c20bb4b010e-8ff8E9/after/result.json",
+      "bytes": 9689,
+      "sha256": "ca853a071b83c119fe643b084c9674aaa17a5c6faa322bfe94babe8921f85d6d",
+      "gitBlob": "a32b5d92667974048c7f43732bc00678c1cd4f0e",
+      "mode": "100644"
+    },
+    {
+      "path": "after/retry-call-sheet.txt",
+      "sourcePath": "/dev/shm/hamon-tastetable-followup-owner-6c20bb4b010e-8ff8E9/after/retry-call-sheet.txt",
+      "bytes": 5033,
+      "sha256": "ff3f83d6ad624be2e3ed8167c1111a08c9d7c7edab14852229b7d65ee9bad8a4",
+      "gitBlob": "6d75c145dbaf30fc00209bfbe84efdca66a5aeef",
+      "mode": "100644"
+    },
+    {
+      "path": "after/server.log",
+      "sourcePath": "/dev/shm/hamon-tastetable-followup-owner-6c20bb4b010e-8ff8E9/after/server.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "owner-two-fix-probe.cjs",
+      "sourcePath": "/dev/shm/hamon-tastetable-followup-owner-6c20bb4b010e-8ff8E9/owner-two-fix-probe.cjs",
+      "bytes": 10670,
+      "sha256": "8bb20ab73e651f64867eb8e66e1d465dfb21e7502afddf62b898fc8ea0669203",
+      "gitBlob": "14735a93ebcaf31947b12e62224ae1e65f6111b3",
+      "mode": "100644"
+    },
+    {
+      "path": "candidate/static/venue_followup.mjs",
+      "sourcePath": "/dev/shm/hamon-tastetable-followup-owner-6c20bb4b010e-8ff8E9/candidate/static/venue_followup.mjs",
+      "bytes": 15053,
+      "sha256": "b27315a0bc526f44863a9b8b39c0a217208edbd722a25cba72419f6d34456835",
+      "gitBlob": "fa8575ab921070fd008c1e2b45705bf3d4a09d75",
+      "mode": "100644"
+    },
+    {
+      "path": "two-fix-proposal.patch",
+      "sourcePath": "/dev/shm/hamon-tastetable-followup-owner-6c20bb4b010e-8ff8E9/two-fix-proposal.patch",
+      "bytes": 2612,
+      "sha256": "aab21c0bf6cf20058c432c64b5aac5c797d064eb6d4045234b9a50fca28e2c4d",
+      "gitBlob": "6142eca78706cfd9f24cb18edd75feefe214ff4a",
+      "mode": "100644"
+    },
+    {
+      "path": "owner-acceptance.json",
+      "sourcePath": "/dev/shm/hamon-tastetable-followup-owner-6c20bb4b010e-8ff8E9/owner-acceptance.json",
+      "bytes": 1136,
+      "sha256": "dc0e3b245bd9832e1e59fccf5c0684ba49381def54ddf7c8c95583e2adacf9bb",
+      "gitBlob": "e17c55c133a49e77b12f91398fad32911ebffc03",
+      "mode": "100644"
+    },
+    {
+      "path": "README.md",
+      "sourcePath": "/dev/shm/hamon-tastetable-followup-owner-6c20bb4b010e-8ff8E9/README.md",
+      "bytes": 4990,
+      "sha256": "50cfe6e2f24f0e2347b1474a5bd1a0acd18e0cf9c793d01f4a6b2f175675f362",
+      "gitBlob": "c9c588eff43e693de5e991785f9c6ed0bc2bbb78",
+      "mode": "100644"
+    }
+  ],
+  "manifestExcludedFromFiles": true,
+  "fileCount": 18,
+  "totalBytes": 231179
+}

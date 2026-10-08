@@ -1,0 +1,68 @@
+{
+  "schema": "tastetable-venue-followup-source-freeze-v2",
+  "repository": "Jacob-Met/tastetable",
+  "base_commit": "0758d2cca881fb5b5041f80bae2174cf485f4bdd",
+  "original_baseline_commit": "f04353ffe4de808543031f56a2a59fac589cb0ab",
+  "ownership_issue": "https://github.com/Jacob-Met/tastetable/issues/16",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 14883,
+      "sha256": "741ec9e55aeefe59ddc73945edcd5dd52c56e4b0ab3301484b03f13e3bed72a2",
+      "git_blob": "e24a179620dade3fc87e196b3dc8c87c03c6943e"
+    },
+    {
+      "path": "static/app.js",
+      "bytes": 19168,
+      "sha256": "d6c742457a4824acaad929d3db37f8d4c30a26e2ae326cac3ad41e30c4a3941d",
+      "git_blob": "c49c8c042fac52fee6d4ca5c71f55a0490909564"
+    },
+    {
+      "path": "static/index.html",
+      "bytes": 7460,
+      "sha256": "57d222afffc0fa36f50bf542e8e032134b449adf840aa546b804cf6fe5ae1a1e",
+      "git_blob": "7a5c551b259f32bb9784f7b5fec67fdeb9683b4b"
+    },
+    {
+      "path": "static/venue_followup.mjs",
+      "bytes": 10972,
+      "sha256": "305152f119771b16a336ce4627b2b8be1df7e8a5ec2f421bbaff8707678d320a",
+      "git_blob": "a0c669626c7be48392b0c0547020ac3ba947b479"
+    },
+    {
+      "path": "static/venue_followup.css",
+      "bytes": 1419,
+      "sha256": "7072279d37557c04fc9af740595ce12afadd33973e6722d0a41332a73171df61",
+      "git_blob": "975b225b2a24ff7503ac695e944c4f6683f54cfe"
+    },
+    {
+      "path": "tests/venue_followup.test.mjs",
+      "bytes": 7876,
+      "sha256": "229762b6666f7d5e82077792313c47c0e8378c865692363660cf17531787ac09",
+      "git_blob": "42202abc4f2e3018db1e362fbc57b0f01358ec72"
+    },
+    {
+      "path": "tests/venue_followup.browser.cjs",
+      "bytes": 17870,
+      "sha256": "cc6db1c104c7b40e9fb4bbbd358f9d067ad729f7f8e57ec8fb42273cb7fe5469",
+      "git_blob": "39300175bff653fb7d68b880487bd417721cb23b"
+    }
+  ],
+  "qualification": {
+    "authored_node_methods": 12,
+    "node_passed": 12,
+    "node_failed": 0,
+    "node_skipped": 0,
+    "browser_groups": 8,
+    "browser_passed": true,
+    "source_before_after_equal": true,
+    "native_http_responses": 4,
+    "authored_duplicate_response_count": 1,
+    "download_count": 8,
+    "external_browser_requests": 0,
+    "page_errors": 0,
+    "baseline_browser_positive_control": true,
+    "baseline_missing_worksheet": true
+  },
+  "boundary": "Isolated native FastAPI mock-mode app and Chromium; no live provider, real venue contact, deployment, third-party import or care suitability claim."
+}

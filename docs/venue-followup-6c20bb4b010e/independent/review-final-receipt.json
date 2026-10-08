@@ -1,0 +1,163 @@
+{
+  "schema": "independent-tastetable-venue-followup-final-review-v1",
+  "reviewer": "/root/memory_receiving",
+  "status": "accepted within the bounded receiving scope",
+  "created_at": "2026-10-08T14:52:24.028240+00:00",
+  "repository": "Jacob-Met/tastetable",
+  "issue": 16,
+  "remaining_blockers_in_reviewed_scope": [],
+  "source_versions": {
+    "r2": {
+      "parent": "0758d2cca881fb5b5041f80bae2174cf485f4bdd",
+      "owner_freeze_sha256": "d26c0342eba86d47d153a92e676666bfe7564a292918f6f07641ae2db181e9e5",
+      "module_sha256": "305152f119771b16a336ce4627b2b8be1df7e8a5ec2f421bbaff8707678d320a"
+    },
+    "r3": {
+      "parent": "0758d2cca881fb5b5041f80bae2174cf485f4bdd",
+      "original_freeze_sha256": "35086b3dd4cccfbdca171df8ba802321c1630671c1f602b2e146dd289b12ebc7",
+      "final_freeze_sha256": "0043a7c3172a2d149e3f6fc17998829346401377244eb25464179b7750d83cd7",
+      "module_sha256": "0573f3c9b60f33f105c64bd61d86cbdcc66664f8f47ae06b998c00bc988fa832"
+    },
+    "r4": {
+      "parent": "d66ab91d62ba243cef2ba387cea73a684fa3b04e",
+      "owner_freeze_sha256": "fdfe69fec71f308e77ee9410c3af24ae5025426f7460ccf9a320b8d143796834",
+      "module_sha256": "1635bc5f1e4377325528214af071bc1242be65eeaa57ed4e5ac41a350a1cd077",
+      "constraints_sha256": "a7ad868ece3cb83b15b02f8f059a94da749059bb96a8c97f7fb207ccb85d604c"
+    }
+  },
+  "retained_results": [
+    {
+      "run": "r2 original model",
+      "passed": 1,
+      "failed": 3,
+      "meaning": "one missing editable-question capability"
+    },
+    {
+      "run": "r2 original actual browser",
+      "passed": 5,
+      "failed": 2,
+      "meaning": "missing editor and leading-LF loss"
+    },
+    {
+      "run": "r3 unchanged original model",
+      "passed": 3,
+      "failed": 1,
+      "meaning": "original assumption permits the now-refused unsafe status write"
+    },
+    {
+      "run": "r3 status-refusal model supplement",
+      "passed": 1,
+      "failed": 0
+    },
+    {
+      "run": "r3 unchanged original actual browser",
+      "passed": 6,
+      "failed": 1,
+      "meaning": "closed-disclosure exposure assumption"
+    },
+    {
+      "run": "r3 actual-disclosure supplement",
+      "passed": 0,
+      "failed": 1,
+      "meaning": "real overwritten rejection notice; later checks not reached"
+    },
+    {
+      "run": "r4 unchanged actual-disclosure supplement",
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "meaning": "notice and complete downstream handoff pass"
+    }
+  ],
+  "r4_probe_sha256": "4c173ace20bdbc775577ade4d85af7560d77cea23beb2c98c477daca32edfd15",
+  "r4_source_unchanged": true,
+  "runtime_delta_from_r3": [
+    {
+      "path": "constraints.py",
+      "r3_sha256": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e",
+      "r4_sha256": "a7ad868ece3cb83b15b02f8f059a94da749059bb96a8c97f7fb207ccb85d604c"
+    },
+    {
+      "path": "static/venue_followup.mjs",
+      "r3_sha256": "0573f3c9b60f33f105c64bd61d86cbdcc66664f8f47ae06b998c00bc988fa832",
+      "r4_sha256": "1635bc5f1e4377325528214af071bc1242be65eeaa57ed4e5ac41a350a1cd077"
+    }
+  ],
+  "six_unaffected_browser_groups_rerun_on_r4": false,
+  "all_45_original_r3_export_files_byte_identical": true,
+  "r4_native_response": {
+    "status": 200,
+    "bytes": 8609,
+    "sha256": "ebd767d10908b1712c5249464254d985cb3b7e7db69d223db5ff71316da5666e",
+    "meals": 4
+  },
+  "r4_download": {
+    "file": "question-change.txt",
+    "bytes": 4950,
+    "sha256": "76ec579aa3a02c34daa47acfbb50626b86a5511e740d666aa4b09af683195ec5",
+    "suggestedFilename": "tastetable-venue-contacts-2026-12-28.txt"
+  },
+  "r4_observed": {
+    "namedDisclosureOpened": true,
+    "questionEditable": true,
+    "earlierQuestionAndReplyRetained": true,
+    "falseReplyRecordedRefused": true,
+    "nextStepCannotRebindReply": true,
+    "explicitReplyEditRebindsCurrentQuestion": true
+  },
+  "dependency_preflight": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "versions": {
+      "uvicorn": "0.54.0",
+      "fastapi": "0.142.4",
+      "pydantic": "2.13.5",
+      "starlette": "1.7.0"
+    },
+    "entry_points": {
+      "uvicorn": {
+        "path": "/workspace/scratch/60b2c08feb01/suite-venv/lib/python3.12/site-packages/uvicorn/__init__.py",
+        "sha256": "c2aaed31a2528ef6b35eddd90482cd8840acd7cfb0a95e504f20f6eab0187026"
+      },
+      "fastapi": {
+        "path": "/workspace/scratch/60b2c08feb01/suite-venv/lib/python3.12/site-packages/fastapi/__init__.py",
+        "sha256": "d652be251557d4e331c6af5b3610f5719a069e37808ced073db42939d7c2db2a"
+      },
+      "pydantic": {
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pydantic/__init__.py",
+        "sha256": "e62127278c07bf5384cdd2903f368a69929f3b8a524000bae4e0eb608ebf4bc6"
+      },
+      "starlette": {
+        "path": "/workspace/scratch/60b2c08feb01/suite-venv/lib/python3.12/site-packages/starlette/__init__.py",
+        "sha256": "944131e65c229d46f2f98365ef0f9514651c8dc89bb09f44bb3809d96ee872b5"
+      }
+    }
+  },
+  "dependency_limit": "Read-only installation at a different path with matching reported versions; not a claim of a byte-identical third-party closure. The earlier missing-uvicorn startup is retained separately.",
+  "receiving_limits": [
+    "Actual isolated local Chromium/native FastAPI mock app; the duplicate saved file and intercepted replacement failure are authored controls.",
+    "Actual print-media CSS/DOM and TXT download; no physical printer or PDF.",
+    "No live venue/provider calls, shared-browser use, deployed-account changes or task-benefit/medical-suitability claim.",
+    "Historical phases retain their source pins; only the focused r4 control qualifies the declared current native parent.",
+    "Missing-uvicorn and wrapper preflights are retained separately. The first r3 export-size failure lost its inner results; no result is claimed for that attempt."
+  ],
+  "raw_export_archives": [
+    {
+      "phase": "retained r3",
+      "bytes": 63979,
+      "sha256": "4f5b4e4c4ab672e4a6ca1cb289ef1fac7220530d277fa961c8026e8d61814de0",
+      "raw_sha256": "68d01aae4be701b8ad6d216f108c90d3f96b25058912ba602ede16ddb16263c8"
+    },
+    {
+      "phase": "r4 startup blocked",
+      "bytes": 6143,
+      "sha256": "aa688f64d3336004ac83389dccac1e82d0382bec587441ff1f8a733eab9210fa"
+    },
+    {
+      "phase": "r4 final",
+      "bytes": 14533,
+      "sha256": "b8d50d10caeb5d20dcf8ca51bb0e0c5a0be37738ba01f6d8dc8d9336927ff4a3",
+      "raw_sha256": "e1ab8a7d6f1146c36633a1e6165223465058c920254e49b25159a25406df329b"
+    }
+  ]
+}

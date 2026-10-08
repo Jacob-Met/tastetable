@@ -184,6 +184,45 @@ The state, calendar writer and request controller checks use Node.js 18+ with no
 node --test tests/test_week_plan.mjs tests/test_week_file.mjs tests/calendar.test.cjs tests/calendar-week.test.cjs tests/plan-request.test.cjs
 ```
 
+### Prepare venue calls and a caregiver handoff
+
+After arranging a plan, **Prepare your venue calls** shows questions for every scheduled
+visit, alongside its original explanation and source ID. The questions cover the visit date
+and the requested food or access needs; outings keep their applicable access questions.
+Open **Edit questions for this visit** to adapt that visit's questions. The original
+recommendation and check explanation remain unchanged.
+Choose **Not contacted**, **Awaiting reply**, **Reply recorded** or **Needs follow-up**, then
+record the venue's reply and the next step. These are caregiver-entered notes; they do not
+change the original heuristic checks or establish safety, a reservation or verified access.
+Changing questions after entering a reply or note keeps that earlier text with its original
+questions and marks the visit for follow-up. Updating only the next step or contact status
+does not erase that distinction. Edit the reply for the revised questions before marking
+it **Reply recorded** again; this remains your own planning record.
+
+**Print week** includes this worksheet. **Download call sheet (.txt)** creates a readable
+handoff containing the current visits, questions, explanations, contact states and notes.
+The copy retains demo/live/unknown source labels. When you open a saved week, it also retains
+the existing filename, saved timestamp and notice that the file's checks have not been run
+again. Later edits do not update a downloaded or printed copy.
+
+Each note belongs to one suggested visit and its exact date. Moving that visit or choosing
+another week starts a separate note; returning to its previous date restores that note for
+this page visit. Repeated suggestions for the same venue remain separate. Omitted picks stay
+out of the current worksheet and download. An empty or invalid displayed date keeps the
+worksheet unavailable until corrected.
+
+Notes remain in this tab for the current accepted plan. Replacing the plan, editing its
+inputs, opening a saved week or leaving the page clears them. Print or download the call
+sheet first if you need to keep it. **Save week** and calendar files retain their existing
+formats and do not include contact notes. No venue is contacted and no note is sent to a
+provider or stored automatically. Do not enter names or private health information.
+
+The worksheet state tests use the same dependency-free Node runner:
+
+~~~bash
+node --test tests/venue_followup.test.mjs
+~~~
+
 ### Going live with Qloo
 
 ```bash

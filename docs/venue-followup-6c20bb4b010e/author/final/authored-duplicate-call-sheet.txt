@@ -1,0 +1,36 @@
+TasteTable — venue call sheet
+Week beginning 2026-12-28
+Demo plan: fictional venues and synthetic source data. Use this sheet to practise the workflow.
+Caregiver-entered notes. A recorded reply is not a safety check, reservation or confirmation by TasteTable.
+Confirm venue details and care needs before going. Do not include names or private health information.
+Notes apply to the pick occurrence and date shown. Later edits do not update this copy.
+
+Monday 2026-12-28 — Casa Habana Kitchen
+Suggested visit 1; Qloo entity: FIX-P-01
+Original plan explanation (heuristic):
+  Qloo affinity 0.91 for audiences who like Celia Cruz, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').
+Questions to ask:
+  • Will you be open on 2026-12-28, and do we need to book?
+  • Which soft-food options could you prepare? Confirm the required texture with the care team.
+  • Can the kitchen prepare a lower-salt option, and how would it be prepared?
+  • Is there step-free access to the entrance, seating and facilities needed for this visit?
+Caregiver contact status: Not contacted
+Venue reply / your notes:
+  First visit's reply.
+Next step:
+  No next step recorded.
+
+Monday 2026-12-28 — Casa Habana Kitchen
+Suggested visit 2; Qloo entity: FIX-P-01
+Original plan explanation (heuristic):
+  Authored second occurrence for identity receiving.
+Questions to ask:
+  • Will you be open on 2026-12-28, and do we need to book?
+  • Which soft-food options could you prepare? Confirm the required texture with the care team.
+  • Can the kitchen prepare a lower-salt option, and how would it be prepared?
+  • Is there step-free access to the entrance, seating and facilities needed for this visit?
+Caregiver contact status: Not contacted
+Venue reply / your notes:
+  Second visit's reply.
+Next step:
+  No next step recorded.

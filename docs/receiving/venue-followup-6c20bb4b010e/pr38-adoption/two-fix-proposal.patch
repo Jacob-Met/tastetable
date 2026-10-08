@@ -1,0 +1,42 @@
+--- a/static/venue_followup.mjs
++++ b/static/venue_followup.mjs
+@@ -94,7 +94,7 @@
+           "Questions changed after these notes were entered. Follow up on the revised questions.",
+           "Questions for the earlier reply / notes:", indent(entry.note.replyQuestions),
+           "Earlier reply / notes (for the previous questions):",
+-        ] : ["Venue reply / your notes:"]), indent(entry.note.reply || "No reply recorded."),
++        ] : ["Venue reply / your notes:"]), indent(entry.note.reply || "No reply details entered."),
+         "Next step:", indent(entry.note.nextStep || "No next step recorded."), "");
+     }
+     return lines.join("\n");
+@@ -130,7 +130,7 @@
+   function notePrint({ note, questionsChangedAfterReply }) {
+     return `<dl class="contact-print-note">
+       <dt>Caregiver contact status</dt><dd data-contact-print="status">${esc(CONTACT_STATES[note.status])}</dd>
+-      <dt data-contact-reply-label>${questionsChangedAfterReply ? "Earlier reply / notes (for the previous questions)" : "Venue reply / your notes"}</dt><dd data-contact-print="reply">${esc(note.reply || "No reply recorded.")}</dd>
++      <dt data-contact-reply-label>${questionsChangedAfterReply ? "Earlier reply / notes (for the previous questions)" : "Venue reply / your notes"}</dt><dd data-contact-print="reply">${esc(note.reply || "No reply details entered.")}</dd>
+       <dt>Next step</dt><dd data-contact-print="nextStep">${esc(note.nextStep || "No next step recorded.")}</dd>
+     </dl>`;
+   }
+@@ -211,7 +211,7 @@
+       for (const output of visit.querySelectorAll("[data-contact-print]")) {
+         const field = output.dataset.contactPrint;
+         output.textContent = field === "status" ? CONTACT_STATES[note.status]
+-          : note[field] || (field === "reply" ? "No reply recorded." : "No next step recorded.");
++          : note[field] || (field === "reply" ? "No reply details entered." : "No next step recorded.");
+       }
+       updateSummary(state);
+       status.textContent = "Your note is available for this visit in this tab. Print the week or download the call sheet to keep a copy.";
+@@ -241,7 +241,11 @@
+       link.click();
+       status.textContent = "Call sheet prepared. This copy contains your notes and the visit dates shown; later edits do not update it.";
+     } catch (error) {
+-      download.disabled = true;
++      try {
++        download.disabled = session.entries(currentState()).length === 0;
++      } catch {
++        download.disabled = true;
++      }
+       status.textContent = `Call sheet unavailable: ${error.message}`;
+     } finally {
+       link?.remove();

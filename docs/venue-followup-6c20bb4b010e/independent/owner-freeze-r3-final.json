@@ -1,0 +1,47 @@
+{
+  "repository": "Jacob-Met/tastetable",
+  "issue": 16,
+  "parentCommit": "0758d2cca881fb5b5041f80bae2174cf485f4bdd",
+  "sourceRoot": "/dev/shm/hamon-tastetable-6c20bb4b010e/candidate-r3",
+  "scope": "Editable per-occurrence/date venue worksheet; original checks, backend, provider, calendar, saved-week envelope, model and storage unchanged.",
+  "frozenAt": "2026-10-08T13:56:18.129Z",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 15363,
+      "sha256": "b15d725db2d510cc1e0104e9b1e6544b450307e1392f02ea460198d84126d492"
+    },
+    {
+      "path": "static/app.js",
+      "bytes": 19168,
+      "sha256": "d6c742457a4824acaad929d3db37f8d4c30a26e2ae326cac3ad41e30c4a3941d"
+    },
+    {
+      "path": "static/index.html",
+      "bytes": 7460,
+      "sha256": "57d222afffc0fa36f50bf542e8e032134b449adf840aa546b804cf6fe5ae1a1e"
+    },
+    {
+      "path": "static/venue_followup.mjs",
+      "bytes": 14742,
+      "sha256": "0573f3c9b60f33f105c64bd61d86cbdcc66664f8f47ae06b998c00bc988fa832"
+    },
+    {
+      "path": "static/venue_followup.css",
+      "bytes": 1711,
+      "sha256": "d2ef0569debf8ed7f94b2df64d9d819da58df72460809cb81ef848124a187d3b"
+    },
+    {
+      "path": "tests/venue_followup.test.mjs",
+      "bytes": 11405,
+      "sha256": "a53284b48da8375d7f6cf26b1d4e5943dfd203e60ff1ef44780f9a02f299479f"
+    },
+    {
+      "path": "tests/venue_followup.browser.cjs",
+      "bytes": 23034,
+      "sha256": "134b8e5b787b814b70d7d349c296d55e770ea45da6f71f08b781dc8466738641"
+    }
+  ],
+  "previousFreezeSha256": "35086b3dd4cccfbdca171df8ba802321c1630671c1f602b2e146dd289b12ebc7",
+  "revisionNote": "All production runtime/README/model cases remain unchanged. The author browser case explicitly opens the native question disclosure after Save week legitimately re-renders it closed. The exact prior driver and raw receiving result are retained."
+}

@@ -1,0 +1,909 @@
+{
+  "schema": "tastetable.venue-followup.integration-03.v1",
+  "repository": "Jacob-Met/tastetable",
+  "baseCommit": "e0f6fbaf1f81fbb1e9926948294549c744228def",
+  "baseTree": "57b0980e39489d48a9bea5c89ae4d463c97944b8",
+  "previousFeature": "f3e72efb13844b7cd8e5cdd5d14c6a21941351c4",
+  "incomingDelta": [
+    {
+      "path": "constraints.py",
+      "before": {
+        "sha": "cab2cecbe4c3a6112022d194a927b9025ec67ab6",
+        "mode": "100644"
+      },
+      "after": {
+        "sha": "e9d5cd1575df72b089273740e4b6a444d0cd21a8",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/receiving/venue-followup-db371a37f4c8/r3/RECEIVING.md",
+      "before": null,
+      "after": {
+        "sha": "a652b9249e97b6f84e2b92e48937526dc757d7cc",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/receiving/venue-followup-db371a37f4c8/r3/current-head-applicability.json",
+      "before": null,
+      "after": {
+        "sha": "e16a00a0001e5e9302ae6503c0b92d4ddf43713a",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/receiving/venue-followup-db371a37f4c8/r3/packet-manifest.json",
+      "before": null,
+      "after": {
+        "sha": "eca51f711212902bff18d06ae77fe1387aa1f576",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/receiving/venue-followup-db371a37f4c8/r3/two-fix-proposal.patch",
+      "before": null,
+      "after": {
+        "sha": "6142eca78706cfd9f24cb18edd75feefe214ff4a",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/receiving/venue-followup-db371a37f4c8/r3/venue-followup-r3-qualification.tar.gz",
+      "before": null,
+      "after": {
+        "sha": "2725c8a455d7c7c7d0d79ce233853c0cd05bde77",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/README.md",
+      "before": null,
+      "after": {
+        "sha": "5185f7d15b59f9742639c553c39e79ae883ba042",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/baseline-agent.json",
+      "before": null,
+      "after": {
+        "sha": "d0859cb6c74951ab6603cfa237a5d74db5d4ea68",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/baseline-freeze.json",
+      "before": null,
+      "after": {
+        "sha": "2cdc9d7b7925c9822c758f53267df9d7ba30ab35",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/baseline-original.json",
+      "before": null,
+      "after": {
+        "sha": "2426ca9989f44d14bc16da9a4c19207e6b1b8f2d",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/coordination-claim.json",
+      "before": null,
+      "after": {
+        "sha": "8f02c430bd21b8df15f1fceda8ad4fe09e15f51b",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/README.md",
+      "before": null,
+      "after": {
+        "sha": "b7e2f8d4b2965a7570d4ecdcfb6a7182dc400b14",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-normal.stderr.log",
+      "before": null,
+      "after": {
+        "sha": "7957de90889da3562ba016594c30ba9c31168779",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-normal.stdout.log",
+      "before": null,
+      "after": {
+        "sha": "9a6f4d5ef8ee7f0caa2d5ba1e085952501b0d6b7",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-normal/independent-fixture.json",
+      "before": null,
+      "after": {
+        "sha": "05b1a7efa7c5b9e9c4ae5ef8a41d3e6a32029846",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-normal/native-agent-result.json",
+      "before": null,
+      "after": {
+        "sha": "e97b1f100a4767fe26c7886a5e4bcc45a318347c",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-normal/receipt.json",
+      "before": null,
+      "after": {
+        "sha": "e577a30fc056d444dd8df715b1cf2dd477835192",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-optimized.stderr.log",
+      "before": null,
+      "after": {
+        "sha": "7957de90889da3562ba016594c30ba9c31168779",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-optimized.stdout.log",
+      "before": null,
+      "after": {
+        "sha": "9a6f4d5ef8ee7f0caa2d5ba1e085952501b0d6b7",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-optimized/independent-fixture.json",
+      "before": null,
+      "after": {
+        "sha": "05b1a7efa7c5b9e9c4ae5ef8a41d3e6a32029846",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-optimized/native-agent-result.json",
+      "before": null,
+      "after": {
+        "sha": "e97b1f100a4767fe26c7886a5e4bcc45a318347c",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-optimized/receipt.json",
+      "before": null,
+      "after": {
+        "sha": "501c73a80f8dac9258cb5aadbb87c7691ac056b4",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-processes.json",
+      "before": null,
+      "after": {
+        "sha": "0644c8d2dfe1fcb8d5421fd3e5f0d95461318dbc",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-v2-normal.stderr.log",
+      "before": null,
+      "after": {
+        "sha": "37985e53c68bb1f38fc77b71a4bd6bd976c1414c",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-v2-normal.stdout.log",
+      "before": null,
+      "after": {
+        "sha": "9a6f4d5ef8ee7f0caa2d5ba1e085952501b0d6b7",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-v2-normal/independent-fixture.json",
+      "before": null,
+      "after": {
+        "sha": "6b22147e0dfae0056676a7bdaeae59f0855db469",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-v2-normal/native-agent-result.json",
+      "before": null,
+      "after": {
+        "sha": "bfa382533d96733eba60382754687bee6971a7cc",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-v2-normal/receipt.json",
+      "before": null,
+      "after": {
+        "sha": "2eb48b4189f2de96e688e08afcc3bf8777a827bf",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-v2-optimized.stderr.log",
+      "before": null,
+      "after": {
+        "sha": "37985e53c68bb1f38fc77b71a4bd6bd976c1414c",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-v2-optimized.stdout.log",
+      "before": null,
+      "after": {
+        "sha": "9a6f4d5ef8ee7f0caa2d5ba1e085952501b0d6b7",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-v2-optimized/independent-fixture.json",
+      "before": null,
+      "after": {
+        "sha": "6b22147e0dfae0056676a7bdaeae59f0855db469",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-v2-optimized/native-agent-result.json",
+      "before": null,
+      "after": {
+        "sha": "bfa382533d96733eba60382754687bee6971a7cc",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-v2-optimized/receipt.json",
+      "before": null,
+      "after": {
+        "sha": "a81f5835465ae8cdbaca91e18463704ccff2a03c",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-v2-processes.json",
+      "before": null,
+      "after": {
+        "sha": "dd425eaff18ccd0bba2b297e2ef94cbee0435a4d",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-normal.stderr.log",
+      "before": null,
+      "after": {
+        "sha": "30f5c3e92b753881a27fd1a91ce3bc2d36746dab",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-normal.stdout.log",
+      "before": null,
+      "after": {
+        "sha": "9557d15d30e48609c23bc02aedb9c9cea437c4b1",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-normal/independent-fixture.json",
+      "before": null,
+      "after": {
+        "sha": "05b1a7efa7c5b9e9c4ae5ef8a41d3e6a32029846",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-normal/native-agent-result.json",
+      "before": null,
+      "after": {
+        "sha": "d6d1bf18436d9baeacc391f83be1853a785c87ed",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-normal/receipt.json",
+      "before": null,
+      "after": {
+        "sha": "e3e67139d5cedf204c2459814920d62d168baccf",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-optimized.stderr.log",
+      "before": null,
+      "after": {
+        "sha": "ccf8a504545b364cedcc76c0b3f8812ddaeb2db3",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-optimized.stdout.log",
+      "before": null,
+      "after": {
+        "sha": "9557d15d30e48609c23bc02aedb9c9cea437c4b1",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-optimized/independent-fixture.json",
+      "before": null,
+      "after": {
+        "sha": "05b1a7efa7c5b9e9c4ae5ef8a41d3e6a32029846",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-optimized/native-agent-result.json",
+      "before": null,
+      "after": {
+        "sha": "d6d1bf18436d9baeacc391f83be1853a785c87ed",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-optimized/receipt.json",
+      "before": null,
+      "after": {
+        "sha": "5b2c2b64f43bd9d0e09af94f3fdfe07c72535cd3",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-processes.json",
+      "before": null,
+      "after": {
+        "sha": "e285058b9b54e6aacd5dfd2fc0996f1057259570",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-source.diff",
+      "before": null,
+      "after": {
+        "sha": "61b84bbd563d1aa939e209273619a40f8bc0649e",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-v2-normal.stderr.log",
+      "before": null,
+      "after": {
+        "sha": "6bf623b211a33c4b2b123cba434a2a572e8169b4",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-v2-normal.stdout.log",
+      "before": null,
+      "after": {
+        "sha": "2f2a17f1717dbeddcb166bbe8fe7bb33e8f9618a",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-v2-normal/independent-fixture.json",
+      "before": null,
+      "after": {
+        "sha": "6b22147e0dfae0056676a7bdaeae59f0855db469",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-v2-normal/native-agent-result.json",
+      "before": null,
+      "after": {
+        "sha": "61f1041c98f0bf8e4b6947beda4cb7d1cff25a96",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-v2-normal/receipt.json",
+      "before": null,
+      "after": {
+        "sha": "c30ff6d5db22e3c651c8d3a1ebafab4d5a774263",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-v2-optimized.stderr.log",
+      "before": null,
+      "after": {
+        "sha": "779a4cfe7268974517a660711224fbb729ee5a75",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-v2-optimized.stdout.log",
+      "before": null,
+      "after": {
+        "sha": "2f2a17f1717dbeddcb166bbe8fe7bb33e8f9618a",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-v2-optimized/independent-fixture.json",
+      "before": null,
+      "after": {
+        "sha": "6b22147e0dfae0056676a7bdaeae59f0855db469",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-v2-optimized/native-agent-result.json",
+      "before": null,
+      "after": {
+        "sha": "61f1041c98f0bf8e4b6947beda4cb7d1cff25a96",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-v2-optimized/receipt.json",
+      "before": null,
+      "after": {
+        "sha": "88df7348e7f0aef7832961bb280f6933a53a8a04",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-v2-processes.json",
+      "before": null,
+      "after": {
+        "sha": "4e2c023f426e5e9ec76278765fdad141335ece69",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/final-qualification.json",
+      "before": null,
+      "after": {
+        "sha": "a04083fcdbd0e77635400b3da4226d1bf4db5ea5",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/independent_soft_food_v1.py.txt",
+      "before": null,
+      "after": {
+        "sha": "a1ac0353165b37866b457a98f19d8b0d3d338229",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/independent_soft_food_v2.py.txt",
+      "before": null,
+      "after": {
+        "sha": "3a3026083bbc4236bf4915d5995dfed87c2fe1c5",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/owner-review-freeze-v2.json",
+      "before": null,
+      "after": {
+        "sha": "d7a4a68950417f4548efeb81ba509dfc4819c5fe",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/owner-source-final-readback.json",
+      "before": null,
+      "after": {
+        "sha": "cae0a6701e1530fee04e67100cb74bf8b0f7cbcd",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/receiver-freeze-v1.json",
+      "before": null,
+      "after": {
+        "sha": "8fff0280360348ab5b3670a2efdbb11ecd6c8014",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/receiver-freeze-v2.json",
+      "before": null,
+      "after": {
+        "sha": "b2eb2894c53df3d771036ab761a44c5a7750d802",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/run_phase.py.txt",
+      "before": null,
+      "after": {
+        "sha": "01bda21c9a35b453e8cbc53b7421623294484cae",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/run_phase_v2.py.txt",
+      "before": null,
+      "after": {
+        "sha": "f1da6dff1b9558f56018cd200a2ab25830a97da0",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/scope-freeze.json",
+      "before": null,
+      "after": {
+        "sha": "0ebf9dca45db6f27ea777a106bfdf262de610aa4",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/scope-v1.json",
+      "before": null,
+      "after": {
+        "sha": "2e5e06b4ece84e366b337d1fb0703c33129e5df6",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/scope-v2.json",
+      "before": null,
+      "after": {
+        "sha": "8382ad7db6a2e0fb285a7d37f401b593122a6a79",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/source-transfer-receipt.json",
+      "before": null,
+      "after": {
+        "sha": "f313efae78e550129928bb697d6cf1a4b0be25d5",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/source/baseline-constraints.py.txt",
+      "before": null,
+      "after": {
+        "sha": "cab2cecbe4c3a6112022d194a927b9025ec67ab6",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/source/candidate-constraints.py.txt",
+      "before": null,
+      "after": {
+        "sha": "e9d5cd1575df72b089273740e4b6a444d0cd21a8",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/static-scopes-v2.json",
+      "before": null,
+      "after": {
+        "sha": "9f4549a963d5a37da71f50208d25e31f4a2373d3",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/initial-author-records.json",
+      "before": null,
+      "after": {
+        "sha": "78fe0ad4eb9261e563620a5e96256d13c78ea8df",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/local-qualification-records.json",
+      "before": null,
+      "after": {
+        "sha": "5510c3cb88410a68701cbc9992bc7cff7e5d62bf",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/mac-pytest/baseline-normal.stderr",
+      "before": null,
+      "after": {
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/mac-pytest/baseline-normal.stdout",
+      "before": null,
+      "after": {
+        "sha": "e1e258122e406d3ccf438283ce70a14daec9fa29",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/mac-pytest/baseline-optimized.stderr",
+      "before": null,
+      "after": {
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/mac-pytest/baseline-optimized.stdout",
+      "before": null,
+      "after": {
+        "sha": "568717811865d73738b0656a74c102ffd4682c81",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/mac-pytest/candidate-normal.stderr",
+      "before": null,
+      "after": {
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/mac-pytest/candidate-normal.stdout",
+      "before": null,
+      "after": {
+        "sha": "f582d793526bf3155218600496baf84ff4222897",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/mac-pytest/candidate-optimized.stderr",
+      "before": null,
+      "after": {
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/mac-pytest/candidate-optimized.stdout",
+      "before": null,
+      "after": {
+        "sha": "59e8e5b04443d9b2fc09ed30b1ff46fd264fc030",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/mac-pytest/receipt.json",
+      "before": null,
+      "after": {
+        "sha": "965d6c68638ee5ea7df68ba393d54a33e9c98c9c",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/mac-pytest/transfer-receipt.json",
+      "before": null,
+      "after": {
+        "sha": "20efbe8e2adb1984a11f276eef93534b9399928c",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/mac_qualification_original.py",
+      "before": null,
+      "after": {
+        "sha": "d970b41b54138d775600be1ff6ec79881c1bed76",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/native-cli-records.json",
+      "before": null,
+      "after": {
+        "sha": "83fc75ab5e9e5bb7f8dbf258cb90f6cddf3876b8",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/ownership-discovery.json",
+      "before": null,
+      "after": {
+        "sha": "230034ec56e54346817c76f674e37b7ed173dbfb",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/parent-tree.json",
+      "before": null,
+      "after": {
+        "sha": "2e12539ec26ecd61c88d69b3bff5bce9ab1b6514",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/peer-transfer-receipt.json",
+      "before": null,
+      "after": {
+        "sha": "be9df6a885ca39d583cf351db39c13444326f09d",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/positive-corpus-records.json",
+      "before": null,
+      "after": {
+        "sha": "aa21e83907abfea98293e5eb7dd3f3ffb58831cc",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/publication-base.json",
+      "before": null,
+      "after": {
+        "sha": "dbe36a40bc22d25da475b57ee96b6a41ff22a863",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/qualify_local.py",
+      "before": null,
+      "after": {
+        "sha": "8ea95147f85cbba84b74095eb514363c96d68cb9",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/receive_local_cues.py",
+      "before": null,
+      "after": {
+        "sha": "bcfcd6c889cb96822545f4396b356068e52e7efe",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/receive_native_cli.py",
+      "before": null,
+      "after": {
+        "sha": "c3e9a6acb7fd70fe29f9d5cf1d7073d6142caa86",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/receive_original.py",
+      "before": null,
+      "after": {
+        "sha": "5a3341673a63604c92e92c8730a1e0c951c4744e",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/receive_preserved_personas.py",
+      "before": null,
+      "after": {
+        "sha": "03bf1c962b6b15ee07cf3b880bc0613940e1b3c7",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/rejected-first-candidate.py.txt",
+      "before": null,
+      "after": {
+        "sha": "f6d11bb6fcae4f685e1dbd3231eb89387f9c1b46",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/review-freeze-v2.json",
+      "before": null,
+      "after": {
+        "sha": "d7a4a68950417f4548efeb81ba509dfc4819c5fe",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/review-manifest.json",
+      "before": null,
+      "after": {
+        "sha": "43bf3fb0969a0bb9285786bf00c7ecaa1b16e2d5",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/root-publication-intake.json",
+      "before": null,
+      "after": {
+        "sha": "de7a8967b18bc93bdfad2172c4ec1a356fc8441d",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/source-delta.patch",
+      "before": null,
+      "after": {
+        "sha": "7f1f59519fcbd948522453174e499788159f43f3",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/source-scope-proof.json",
+      "before": null,
+      "after": {
+        "sha": "e125ecc39dba1637c4a65d96f728de83021230bf",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/test_soft_food_evidence_original.py.txt",
+      "before": null,
+      "after": {
+        "sha": "8396b2bf68b563d5f4dc89b775c3659108184982",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "tests/test_soft_food_evidence.py",
+      "before": null,
+      "after": {
+        "sha": "ca77fabe3d44d8f807c05b52b87a7f713ae9c92d",
+        "mode": "100644"
+      }
+    }
+  ],
+  "runtimeFix": {
+    "sourceSHA256": "b27315a0bc526f44863a9b8b39c0a217208edbd722a25cba72419f6d34456835",
+    "gitBlob": "fa8575ab921070fd008c1e2b45705bf3d4a09d75",
+    "externalPR": 38,
+    "patchSHA256": "aab21c0bf6cf20058c432c64b5aac5c797d064eb6d4045234b9a50fca28e2c4d",
+    "receiving": {
+      "probe": "8bb20ab73e651f64867eb8e66e1d465dfb21e7502afddf62b898fc8ea0669203",
+      "before": {
+        "passed": 0,
+        "failed": 2,
+        "skipped": 0
+      },
+      "after": {
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0
+      },
+      "sourceFiles": 16,
+      "sourceUnchanged": true,
+      "onlyVariantDelta": [
+        "static/venue_followup.mjs"
+      ]
+    }
+  },
+  "cliRelocation": {
+    "from": "tests/venue_followup.browser.cjs",
+    "to": "tools/venue_followup.browser.cjs",
+    "bytes": 23149,
+    "sha256": "aa01091e81ea1664f9e39de711161573883c1b5e2d80ea60358197d1a7d7aedd",
+    "gitBlob": "7f20e02fefce2e0f78c683a34951499b3f5ecd2d",
+    "unchangedBytes": true,
+    "pathDependentReferencesAbsent": true,
+    "reason": "Existing node --test tests/*.mjs tests/*.cjs discovers the argument-driven CLI without its required APP_ROOT/OUTPUT arguments. Keep the unit-test glob and relocate this explicitly invoked tool."
+  },
+  "hostedHead": "f3e72efb13844b7cd8e5cdd5d14c6a21941351c4",
+  "hostedResults": {
+    "test": {
+      "job": 113416096665,
+      "result": "success"
+    },
+    "compareWeek": {
+      "job": 113416096837,
+      "result": "failure",
+      "tests": 75,
+      "passed": 74,
+      "failed": 1,
+      "cause": "Browser CLI was included by tests/*.cjs and threw its required-arguments Usage error."
+    },
+    "receiveWeek": {
+      "job": 113416097322,
+      "result": "failure",
+      "completedGroups": 1,
+      "cause": "Installed Chrome startup did not create DevToolsActivePort within the existing wait; no page or chooser receiving ran.",
+      "sourceUnchanged": true
+    }
+  },
+  "scope": "Two changed worksheet behaviors received against actual e0 native FastAPI with f3 frontend. Prior broad suites and current maintained receiver receipts remain tied to their recorded source revisions. The CLI move has identical bytes and needs the subsequent hosted glob result; no identical full browser suite was repeated."
+}

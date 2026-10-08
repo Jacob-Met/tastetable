@@ -1,0 +1,902 @@
+{
+  "appRoot": "/dev/shm/hamon-tastetable-6c20bb4b010e/candidate-r3",
+  "started": "2026-10-08T12:54:25.712Z",
+  "sourceBefore": {
+    "app.py": "6179e3953e9e6aed009695b9528c8de8622246ab2a1fd5676f18b8b66fa9152c",
+    "agent.py": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+    "qloo_client.py": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+    "constraints.py": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e",
+    "personas.py": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+    "fixtures/qloo_fixtures.json": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+    "static/app.js": "d6c742457a4824acaad929d3db37f8d4c30a26e2ae326cac3ad41e30c4a3941d",
+    "static/index.html": "57d222afffc0fa36f50bf542e8e032134b449adf840aa546b804cf6fe5ae1a1e",
+    "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+    "static/plan-request.js": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+    "static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+    "static/style.css": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+    "static/calendar.css": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+    "static/venue_followup.mjs": "32d8a6d04169667ce84fed5d67b4e9b32321fb63d0072609cc0eb7db9414da1d",
+    "static/venue_followup.css": "2b9d89abfc17cfadf9a15d92e3b52034dc77470c3e9a3dd238b10fc7c03e7782",
+    "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+  },
+  "groups": [
+    {
+      "name": "unchanged native planner and existing arranged-week positive control",
+      "passed": true
+    },
+    {
+      "name": "caregiver can prepare questions for every actual native scheduled pick",
+      "passed": true
+    },
+    {
+      "name": "reply editing, move, return, omission and export preserve exact visit/date custody",
+      "passed": true
+    },
+    {
+      "name": "invalid dates and different weeks do not relabel an existing reply",
+      "passed": true
+    },
+    {
+      "name": "native dietary unknown remains visible on screen and printed caregiver handoff",
+      "passed": false,
+      "error": "locator.isVisible: Error: strict mode violation: locator('[data-contact-key=\"pick-3\"]').locator('.contact-edit') resolved to 2 elements:\n    1) <details class=\"contact-edit contact-question-editor\">…</details> aka getByText('Edit questions for this visit Questions for Ramen Tatsu on 2027-01-03 Will you')\n    2) <div class=\"contact-edit\">…</div> aka locator('div').filter({ hasText: 'Contact status for Ramen' })\n\nCall log:\n\u001b[2m    - checking visibility of locator('[data-contact-key=\"pick-3\"]').locator('.contact-edit')\u001b[22m\n\n    at /dev/shm/hamon-tastetable-6c20bb4b010e/candidate-r3/tests/venue_followup.browser.cjs:174:59\n    at async group (/dev/shm/hamon-tastetable-6c20bb4b010e/candidate-r3/tests/venue_followup.browser.cjs:30:9)\n    at async /dev/shm/hamon-tastetable-6c20bb4b010e/candidate-r3/tests/venue_followup.browser.cjs:164:3"
+    }
+  ],
+  "nativeResponses": [
+    {
+      "id": "rosa",
+      "body": {
+        "plan": {
+          "meals": [
+            {
+              "day": "Monday",
+              "kind": "restaurant",
+              "entity_id": "FIX-P-01",
+              "name": "Casa Habana Kitchen",
+              "affinity": 0.91,
+              "fallback": false,
+              "why": "Qloo affinity 0.91 for audiences who like Celia Cruz, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+            },
+            {
+              "day": "Wednesday",
+              "kind": "restaurant",
+              "entity_id": "FIX-P-03",
+              "name": "Abuela's Table",
+              "affinity": 0.83,
+              "fallback": false,
+              "why": "Qloo affinity 0.83 for audiences who like Celia Cruz, West Side Story (tag match: Mexican). Checks: Soft foods: pass (soft options listed: caldo de pollo, refried beans); Low sodium: pass (lower-sodium signals: low sodium options); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+            },
+            {
+              "day": "Friday",
+              "kind": "restaurant",
+              "entity_id": "FIX-P-07",
+              "name": "Blue Plate Diner",
+              "affinity": 0.262,
+              "fallback": true,
+              "why": "Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Diner). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, mashed potatoes, soups); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+            },
+            {
+              "day": "Sunday",
+              "kind": "restaurant",
+              "entity_id": "FIX-P-11",
+              "name": "Trattoria Nonna Lucia",
+              "affinity": 0.256,
+              "fallback": true,
+              "why": "Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Italian). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+            }
+          ],
+          "outing": {
+            "day": "Saturday",
+            "kind": "outing",
+            "entity_id": "FIX-V-03",
+            "name": "Arroyo Museum of Latin Music (fictional)",
+            "affinity": 0.96,
+            "why": "Qloo affinity 0.96 for audiences who like Celia Cruz, West Side Story (tag match: Museum). Checks: Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+          },
+          "rejected": [
+            {
+              "name": "Malecon Sandwich Shop",
+              "entity_id": "FIX-P-04",
+              "failed": [
+                {
+                  "constraint": "soft_foods",
+                  "status": "fail",
+                  "reason": "menu signals are mostly firm: cuban sandwich, cured ham, pressed bread"
+                },
+                {
+                  "constraint": "low_sodium",
+                  "status": "fail",
+                  "reason": "high-sodium signals: cuban sandwich, cured ham, pickles"
+                },
+                {
+                  "constraint": "wheelchair",
+                  "status": "unknown",
+                  "reason": "no accessibility tag in Qloo data"
+                }
+              ]
+            },
+            {
+              "name": "La Paloma Cantina",
+              "entity_id": "FIX-P-02",
+              "failed": [
+                {
+                  "constraint": "low_sodium",
+                  "status": "unknown",
+                  "reason": "no sodium signal; ask for low-salt preparation"
+                },
+                {
+                  "constraint": "wheelchair",
+                  "status": "fail",
+                  "reason": "tagged 'steps at entrance'"
+                }
+              ]
+            },
+            {
+              "name": "Ramen Tatsu",
+              "entity_id": "FIX-P-10",
+              "failed": [
+                {
+                  "constraint": "soft_foods",
+                  "status": "unknown",
+                  "reason": "no texture signal in Qloo keywords; ask the venue"
+                },
+                {
+                  "constraint": "low_sodium",
+                  "status": "fail",
+                  "reason": "high-sodium signals: pickled vegetables, rich broth, tonkotsu ramen"
+                }
+              ]
+            },
+            {
+              "name": "Starlight Grill",
+              "entity_id": "FIX-P-08",
+              "failed": [
+                {
+                  "constraint": "soft_foods",
+                  "status": "fail",
+                  "reason": "menu signals are mostly firm: burgers, fried chicken"
+                },
+                {
+                  "constraint": "low_sodium",
+                  "status": "unknown",
+                  "reason": "no sodium signal; ask for low-salt preparation"
+                },
+                {
+                  "constraint": "wheelchair",
+                  "status": "fail",
+                  "reason": "tagged 'steps at entrance'"
+                }
+              ]
+            },
+            {
+              "name": "Salumeria Roma",
+              "entity_id": "FIX-P-12",
+              "failed": [
+                {
+                  "constraint": "soft_foods",
+                  "status": "fail",
+                  "reason": "menu signals are mostly firm: crusty bread, cured meats"
+                },
+                {
+                  "constraint": "low_sodium",
+                  "status": "fail",
+                  "reason": "high-sodium signals: cured meats, olives"
+                },
+                {
+                  "constraint": "wheelchair",
+                  "status": "unknown",
+                  "reason": "no accessibility tag in Qloo data"
+                }
+              ]
+            },
+            {
+              "name": "Osteria del Ponte",
+              "entity_id": "FIX-P-13",
+              "failed": [
+                {
+                  "constraint": "low_sodium",
+                  "status": "unknown",
+                  "reason": "no sodium signal; ask for low-salt preparation"
+                },
+                {
+                  "constraint": "wheelchair",
+                  "status": "fail",
+                  "reason": "tagged 'steps at entrance'"
+                }
+              ]
+            },
+            {
+              "name": "Colorado Street Concert Hall (fictional)",
+              "entity_id": "FIX-V-04",
+              "failed": [
+                {
+                  "constraint": "wheelchair",
+                  "status": "fail",
+                  "reason": "tagged 'steps at entrance'"
+                }
+              ]
+            }
+          ],
+          "notes": []
+        },
+        "llm_only": {
+          "meals": [
+            {
+              "day": "Monday",
+              "name": "A well-reviewed Cuban restaurant nearby",
+              "why": "They enjoy Cuban food.",
+              "verified": {
+                "exists": false,
+                "entity_id": null,
+                "constraints_checked": false
+              }
+            },
+            {
+              "day": "Wednesday",
+              "name": "A well-reviewed Mexican restaurant nearby",
+              "why": "They enjoy Mexican food.",
+              "verified": {
+                "exists": false,
+                "entity_id": null,
+                "constraints_checked": false
+              }
+            },
+            {
+              "day": "Friday",
+              "name": "A well-reviewed Cuban restaurant nearby",
+              "why": "They enjoy Cuban food.",
+              "verified": {
+                "exists": false,
+                "entity_id": null,
+                "constraints_checked": false
+              }
+            },
+            {
+              "day": "Sunday",
+              "name": "A well-reviewed Mexican restaurant nearby",
+              "why": "They enjoy Mexican food.",
+              "verified": {
+                "exists": false,
+                "entity_id": null,
+                "constraints_checked": false
+              }
+            }
+          ],
+          "outing": {
+            "day": "Saturday",
+            "name": "A concert or show featuring music like Celia Cruz",
+            "why": "Matches their music taste.",
+            "verified": {
+              "exists": false,
+              "entity_id": null,
+              "constraints_checked": false
+            }
+          },
+          "source": "template (ungrounded baseline)"
+        },
+        "comparison": {
+          "grounded": {
+            "picks": 5,
+            "with_qloo_entity_id": 5,
+            "with_affinity_evidence": 5,
+            "constraint_checked": 5,
+            "unsafe_candidates_rejected": 7
+          },
+          "llm_only": {
+            "picks": 5,
+            "with_qloo_entity_id": 0,
+            "with_affinity_evidence": 0,
+            "constraint_checked": 0,
+            "unsafe_candidates_rejected": 0
+          },
+          "constraints": [
+            "soft_foods",
+            "low_sodium",
+            "wheelchair"
+          ]
+        },
+        "trace": [
+          {
+            "step": 0,
+            "tool": "qloo_search",
+            "args": {
+              "query": "Celia Cruz",
+              "kind": "entity",
+              "types": "urn:entity:artist"
+            },
+            "result_summary": "Celia Cruz"
+          },
+          {
+            "step": 0,
+            "tool": "qloo_search",
+            "args": {
+              "query": "West Side Story",
+              "kind": "entity",
+              "types": "urn:entity:movie"
+            },
+            "result_summary": "West Side Story"
+          },
+          {
+            "step": 0,
+            "tool": "qloo_search",
+            "args": {
+              "query": "Cuban",
+              "kind": "tag"
+            },
+            "result_summary": "Cuban"
+          },
+          {
+            "step": 0,
+            "tool": "qloo_search",
+            "args": {
+              "query": "Mexican",
+              "kind": "tag"
+            },
+            "result_summary": "Mexican"
+          },
+          {
+            "step": 1,
+            "tool": "qloo_recs",
+            "args": {
+              "filter_type": "urn:entity:place",
+              "purpose": "restaurant",
+              "tag_ids": [
+                "urn:tag:genre:restaurant:Cuban",
+                "urn:tag:genre:restaurant:Mexican"
+              ],
+              "signal_entity_ids": [
+                "FIX-A-celia",
+                "FIX-M-wss"
+              ],
+              "location": "Pasadena",
+              "take": 10
+            },
+            "result_summary": "4 candidates"
+          },
+          {
+            "step": 2,
+            "tool": "constraint_check",
+            "args": {
+              "entity_ids": [
+                "FIX-P-01",
+                "FIX-P-04",
+                "FIX-P-02",
+                "FIX-P-03"
+              ],
+              "constraints": [
+                "soft_foods",
+                "low_sodium",
+                "wheelchair"
+              ],
+              "kind": "restaurant"
+            },
+            "result_summary": "2/4 passed"
+          },
+          {
+            "step": 3,
+            "tool": "qloo_search",
+            "args": {
+              "query": "Diner",
+              "kind": "tag"
+            },
+            "result_summary": "Diner"
+          },
+          {
+            "step": 3,
+            "tool": "qloo_search",
+            "args": {
+              "query": "Italian",
+              "kind": "tag"
+            },
+            "result_summary": "Italian"
+          },
+          {
+            "step": 3,
+            "tool": "qloo_search",
+            "args": {
+              "query": "Japanese",
+              "kind": "tag"
+            },
+            "result_summary": "Japanese"
+          },
+          {
+            "step": 4,
+            "tool": "qloo_recs",
+            "args": {
+              "filter_type": "urn:entity:place",
+              "purpose": "restaurant",
+              "tag_ids": [
+                "urn:tag:genre:restaurant:Diner",
+                "urn:tag:genre:restaurant:Italian",
+                "urn:tag:genre:restaurant:Japanese"
+              ],
+              "signal_entity_ids": [
+                "FIX-A-celia",
+                "FIX-M-wss"
+              ],
+              "location": "Pasadena",
+              "take": 10
+            },
+            "result_summary": "7 candidates"
+          },
+          {
+            "step": 5,
+            "tool": "constraint_check",
+            "args": {
+              "entity_ids": [
+                "FIX-P-10",
+                "FIX-P-08",
+                "FIX-P-07",
+                "FIX-P-11",
+                "FIX-P-12",
+                "FIX-P-13",
+                "FIX-P-09"
+              ],
+              "constraints": [
+                "soft_foods",
+                "low_sodium",
+                "wheelchair"
+              ],
+              "kind": "restaurant"
+            },
+            "result_summary": "3/7 passed"
+          },
+          {
+            "step": 6,
+            "tool": "qloo_search",
+            "args": {
+              "query": "jazz",
+              "kind": "tag"
+            },
+            "result_summary": "Jazz Club"
+          },
+          {
+            "step": 6,
+            "tool": "qloo_search",
+            "args": {
+              "query": "cinema",
+              "kind": "tag"
+            },
+            "result_summary": "Movie Theater"
+          },
+          {
+            "step": 6,
+            "tool": "qloo_search",
+            "args": {
+              "query": "museum",
+              "kind": "tag"
+            },
+            "result_summary": "Museum"
+          },
+          {
+            "step": 6,
+            "tool": "qloo_search",
+            "args": {
+              "query": "concert hall",
+              "kind": "tag"
+            },
+            "result_summary": "Concert Hall"
+          },
+          {
+            "step": 7,
+            "tool": "qloo_recs",
+            "args": {
+              "filter_type": "urn:entity:place",
+              "purpose": "outing",
+              "tag_ids": [
+                "urn:tag:category:place:jazz_club",
+                "urn:tag:category:place:movie_theater",
+                "urn:tag:category:place:museum",
+                "urn:tag:category:place:concert_hall"
+              ],
+              "signal_entity_ids": [
+                "FIX-A-celia",
+                "FIX-M-wss"
+              ],
+              "location": "Pasadena",
+              "take": 5
+            },
+            "result_summary": "5 candidates"
+          },
+          {
+            "step": 8,
+            "tool": "constraint_check",
+            "args": {
+              "entity_ids": [
+                "FIX-V-03",
+                "FIX-V-02",
+                "FIX-V-01",
+                "FIX-V-04",
+                "FIX-V-05"
+              ],
+              "constraints": [
+                "soft_foods",
+                "low_sodium",
+                "wheelchair"
+              ],
+              "kind": "outing"
+            },
+            "result_summary": "4/5 passed"
+          }
+        ],
+        "model_message": "Plan inputs gathered; assembling weekly plan from tool results.",
+        "mock": true
+      },
+      "sha256": "ebd767d10908b1712c5249464254d985cb3b7e7db69d223db5ff71316da5666e"
+    },
+    {
+      "id": "mei",
+      "body": {
+        "plan": {
+          "meals": [
+            {
+              "day": "Monday",
+              "kind": "restaurant",
+              "entity_id": "FIX-P-11",
+              "name": "Trattoria Nonna Lucia",
+              "affinity": 0.92,
+              "fallback": false,
+              "why": "Qloo affinity 0.92 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Italian). Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto)."
+            },
+            {
+              "day": "Wednesday",
+              "kind": "restaurant",
+              "entity_id": "FIX-P-09",
+              "name": "Kotobuki Tofu House",
+              "affinity": 0.82,
+              "fallback": false,
+              "why": "Qloo affinity 0.82 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Japanese). Checks: Soft foods: pass (soft options listed: chawanmushi, steamed fish, tofu)."
+            },
+            {
+              "day": "Friday",
+              "kind": "restaurant",
+              "entity_id": "FIX-P-13",
+              "name": "Osteria del Ponte",
+              "affinity": 0.8,
+              "fallback": false,
+              "why": "Qloo affinity 0.80 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Italian). Checks: Soft foods: pass (soft options listed: gnocchi, soups)."
+            },
+            {
+              "day": "Sunday",
+              "kind": "restaurant",
+              "entity_id": "FIX-P-10",
+              "name": "Ramen Tatsu",
+              "affinity": 0.79,
+              "fallback": false,
+              "why": "Qloo affinity 0.79 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Japanese). Checks: Soft foods: unknown (no texture signal in Qloo keywords; ask the venue)."
+            }
+          ],
+          "outing": {
+            "day": "Saturday",
+            "kind": "outing",
+            "entity_id": "FIX-V-02",
+            "name": "Rialto Revival Cinema (fictional)",
+            "affinity": 0.95,
+            "why": "Qloo affinity 0.95 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Movie Theater)."
+          },
+          "rejected": [
+            {
+              "name": "Salumeria Roma",
+              "entity_id": "FIX-P-12",
+              "failed": [
+                {
+                  "constraint": "soft_foods",
+                  "status": "fail",
+                  "reason": "menu signals are mostly firm: crusty bread, cured meats"
+                }
+              ]
+            }
+          ],
+          "notes": []
+        },
+        "llm_only": {
+          "meals": [
+            {
+              "day": "Monday",
+              "name": "A well-reviewed Japanese restaurant nearby",
+              "why": "They enjoy Japanese food.",
+              "verified": {
+                "exists": false,
+                "entity_id": null,
+                "constraints_checked": false
+              }
+            },
+            {
+              "day": "Wednesday",
+              "name": "A well-reviewed Italian restaurant nearby",
+              "why": "They enjoy Italian food.",
+              "verified": {
+                "exists": false,
+                "entity_id": null,
+                "constraints_checked": false
+              }
+            },
+            {
+              "day": "Friday",
+              "name": "A well-reviewed Japanese restaurant nearby",
+              "why": "They enjoy Japanese food.",
+              "verified": {
+                "exists": false,
+                "entity_id": null,
+                "constraints_checked": false
+              }
+            },
+            {
+              "day": "Sunday",
+              "name": "A well-reviewed Italian restaurant nearby",
+              "why": "They enjoy Italian food.",
+              "verified": {
+                "exists": false,
+                "entity_id": null,
+                "constraints_checked": false
+              }
+            }
+          ],
+          "outing": {
+            "day": "Saturday",
+            "name": "A concert or show featuring music like The Beatles",
+            "why": "Matches their music taste.",
+            "verified": {
+              "exists": false,
+              "entity_id": null,
+              "constraints_checked": false
+            }
+          },
+          "source": "template (ungrounded baseline)"
+        },
+        "comparison": {
+          "grounded": {
+            "picks": 5,
+            "with_qloo_entity_id": 5,
+            "with_affinity_evidence": 5,
+            "constraint_checked": 5,
+            "unsafe_candidates_rejected": 1
+          },
+          "llm_only": {
+            "picks": 5,
+            "with_qloo_entity_id": 0,
+            "with_affinity_evidence": 0,
+            "constraint_checked": 0,
+            "unsafe_candidates_rejected": 0
+          },
+          "constraints": [
+            "soft_foods"
+          ]
+        },
+        "trace": [
+          {
+            "step": 0,
+            "tool": "qloo_search",
+            "args": {
+              "query": "The Beatles",
+              "kind": "entity",
+              "types": "urn:entity:artist"
+            },
+            "result_summary": "The Beatles"
+          },
+          {
+            "step": 0,
+            "tool": "qloo_search",
+            "args": {
+              "query": "Roman Holiday",
+              "kind": "entity",
+              "types": "urn:entity:movie"
+            },
+            "result_summary": "Roman Holiday"
+          },
+          {
+            "step": 0,
+            "tool": "qloo_search",
+            "args": {
+              "query": "Singin' in the Rain",
+              "kind": "entity",
+              "types": "urn:entity:movie"
+            },
+            "result_summary": "Singin' in the Rain"
+          },
+          {
+            "step": 0,
+            "tool": "qloo_search",
+            "args": {
+              "query": "Japanese",
+              "kind": "tag"
+            },
+            "result_summary": "Japanese"
+          },
+          {
+            "step": 0,
+            "tool": "qloo_search",
+            "args": {
+              "query": "Italian",
+              "kind": "tag"
+            },
+            "result_summary": "Italian"
+          },
+          {
+            "step": 1,
+            "tool": "qloo_recs",
+            "args": {
+              "filter_type": "urn:entity:place",
+              "purpose": "restaurant",
+              "tag_ids": [
+                "urn:tag:genre:restaurant:Japanese",
+                "urn:tag:genre:restaurant:Italian"
+              ],
+              "signal_entity_ids": [
+                "FIX-A-beatles",
+                "FIX-M-roman",
+                "FIX-M-singin"
+              ],
+              "location": "Pasadena",
+              "take": 10
+            },
+            "result_summary": "5 candidates"
+          },
+          {
+            "step": 2,
+            "tool": "constraint_check",
+            "args": {
+              "entity_ids": [
+                "FIX-P-11",
+                "FIX-P-12",
+                "FIX-P-09",
+                "FIX-P-13",
+                "FIX-P-10"
+              ],
+              "constraints": [
+                "soft_foods"
+              ],
+              "kind": "restaurant"
+            },
+            "result_summary": "4/5 passed"
+          },
+          {
+            "step": 3,
+            "tool": "qloo_search",
+            "args": {
+              "query": "",
+              "kind": "tag"
+            },
+            "result_summary": "no match"
+          },
+          {
+            "step": 4,
+            "tool": "qloo_search",
+            "args": {
+              "query": "",
+              "kind": "tag"
+            },
+            "result_summary": "no match"
+          },
+          {
+            "step": 5,
+            "tool": "qloo_search",
+            "args": {
+              "query": "",
+              "kind": "tag"
+            },
+            "result_summary": "no match"
+          },
+          {
+            "step": 6,
+            "tool": "qloo_search",
+            "args": {
+              "query": "jazz",
+              "kind": "tag"
+            },
+            "result_summary": "Jazz Club"
+          },
+          {
+            "step": 6,
+            "tool": "qloo_search",
+            "args": {
+              "query": "cinema",
+              "kind": "tag"
+            },
+            "result_summary": "Movie Theater"
+          },
+          {
+            "step": 6,
+            "tool": "qloo_search",
+            "args": {
+              "query": "museum",
+              "kind": "tag"
+            },
+            "result_summary": "Museum"
+          },
+          {
+            "step": 6,
+            "tool": "qloo_search",
+            "args": {
+              "query": "concert hall",
+              "kind": "tag"
+            },
+            "result_summary": "Concert Hall"
+          },
+          {
+            "step": 7,
+            "tool": "qloo_recs",
+            "args": {
+              "filter_type": "urn:entity:place",
+              "purpose": "outing",
+              "tag_ids": [
+                "urn:tag:category:place:jazz_club",
+                "urn:tag:category:place:movie_theater",
+                "urn:tag:category:place:museum",
+                "urn:tag:category:place:concert_hall"
+              ],
+              "signal_entity_ids": [
+                "FIX-A-beatles",
+                "FIX-M-roman",
+                "FIX-M-singin"
+              ],
+              "location": "Pasadena",
+              "take": 5
+            },
+            "result_summary": "5 candidates"
+          },
+          {
+            "step": 8,
+            "tool": "constraint_check",
+            "args": {
+              "entity_ids": [
+                "FIX-V-02",
+                "FIX-V-04",
+                "FIX-V-05",
+                "FIX-V-01",
+                "FIX-V-03"
+              ],
+              "constraints": [
+                "soft_foods"
+              ],
+              "kind": "outing"
+            },
+            "result_summary": "5/5 passed"
+          }
+        ],
+        "model_message": "Plan inputs gathered; assembling weekly plan from tool results.",
+        "mock": true
+      },
+      "sha256": "90867d7d18ccfe7b0039811a8c61206d5ef85aa40d54e11a0d93d612ba8193bc"
+    }
+  ],
+  "pageErrors": [],
+  "externalRequests": [],
+  "downloads": [
+    {
+      "file": "native-current-call-sheet.txt",
+      "suggestedFilename": "tastetable-venue-contacts-2026-12-28.txt",
+      "bytes": 5035,
+      "sha256": "9d45740af07fcd0cc6f7baead51b431a1c03ddb06a4f1a742634f1ff89c80519"
+    },
+    {
+      "file": "native-omitted-call-sheet.txt",
+      "suggestedFilename": "tastetable-venue-contacts-2026-12-28.txt",
+      "bytes": 4053,
+      "sha256": "e4ce5bb57b13c7fcedb30fc10de2f1966faca848bd62e44523ef86a751262c72"
+    }
+  ],
+  "browser": "153.0.8010.0",
+  "passed": false,
+  "error": "locator.isVisible: Error: strict mode violation: locator('[data-contact-key=\"pick-3\"]').locator('.contact-edit') resolved to 2 elements:\n    1) <details class=\"contact-edit contact-question-editor\">…</details> aka getByText('Edit questions for this visit Questions for Ramen Tatsu on 2027-01-03 Will you')\n    2) <div class=\"contact-edit\">…</div> aka locator('div').filter({ hasText: 'Contact status for Ramen' })\n\nCall log:\n\u001b[2m    - checking visibility of locator('[data-contact-key=\"pick-3\"]').locator('.contact-edit')\u001b[22m\n\n    at /dev/shm/hamon-tastetable-6c20bb4b010e/candidate-r3/tests/venue_followup.browser.cjs:174:59\n    at async group (/dev/shm/hamon-tastetable-6c20bb4b010e/candidate-r3/tests/venue_followup.browser.cjs:30:9)\n    at async /dev/shm/hamon-tastetable-6c20bb4b010e/candidate-r3/tests/venue_followup.browser.cjs:164:3",
+  "sourceAfter": {
+    "app.py": "6179e3953e9e6aed009695b9528c8de8622246ab2a1fd5676f18b8b66fa9152c",
+    "agent.py": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+    "qloo_client.py": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+    "constraints.py": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e",
+    "personas.py": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+    "fixtures/qloo_fixtures.json": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+    "static/app.js": "d6c742457a4824acaad929d3db37f8d4c30a26e2ae326cac3ad41e30c4a3941d",
+    "static/index.html": "57d222afffc0fa36f50bf542e8e032134b449adf840aa546b804cf6fe5ae1a1e",
+    "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+    "static/plan-request.js": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+    "static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+    "static/style.css": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+    "static/calendar.css": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+    "static/venue_followup.mjs": "32d8a6d04169667ce84fed5d67b4e9b32321fb63d0072609cc0eb7db9414da1d",
+    "static/venue_followup.css": "2b9d89abfc17cfadf9a15d92e3b52034dc77470c3e9a3dd238b10fc7c03e7782",
+    "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+  },
+  "sourceUnchanged": true,
+  "finished": "2026-10-08T12:54:27.637Z"
+}

@@ -1,0 +1,12 @@
+Final publication-document preparation failed before any product or evidence mutation.
+Tool: exec_command, Node v24.19.0; process exit 1.
+Intended new destination: /dev/shm/hamon-tastetable-6c20bb4b010e/publication-r4/RECEIVING.md
+Observed afterward: path exists, size 0 bytes. This unqualified file is excluded from publication.
+
+Exact error excerpt from the retained tool result:
+Error: ENOSPC: no space left on device, write
+    at Object.writeSync (node:fs:978:3)
+    at Object.writeFileSync (node:fs:2503:26)
+    at [stdin]:13:4
+
+The error arose while writing a new document derived from existing RECEIVING.md. Frozen r4 source, all earlier receiving files and peer files were untouched. Final document text and exact existing-artifact mappings were handed directly to the root publisher. This documentation failure did not trigger another product test or source change.

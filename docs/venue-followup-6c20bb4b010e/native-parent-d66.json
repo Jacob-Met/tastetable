@@ -1,0 +1,14 @@
+{
+  "sourceRoot": "/dev/shm/hamon-tastetable-6c20bb4b010e/candidate-current-d66",
+  "repository": "Jacob-Met/tastetable",
+  "parent": "d66ab91d62ba243cef2ba387cea73a684fa3b04e",
+  "featureFreeze": "source-freeze-r3.json",
+  "featureFilesUnchanged": true,
+  "changeFromPriorNativeParent": {
+    "path": "constraints.py",
+    "gitBlob": "cab2cecbe4c3a6112022d194a927b9025ec67ab6",
+    "sha256": "a7ad868ece3cb83b15b02f8f059a94da749059bb96a8c97f7fb207ccb85d604c",
+    "bytes": 6754
+  },
+  "scope": "Exact incoming native low-sodium fix, not edited by the worksheet owner. App/index/README/week/calendar/provider/fixture parent blobs are unchanged from0758. This separate receiving source does not modify the frozen r3 peer source or propose a constraints.py publication change."
+}

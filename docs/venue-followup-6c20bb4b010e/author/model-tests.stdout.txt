@@ -1,0 +1,23 @@
+✔ questions use the native purpose and constraints; original unknown explanation survives (3.11713ms)
+✔ a different date starts a separate note; returning restores only that occurrence's note (0.760634ms)
+✔ two occurrences sharing an entity and date retain distinct caregiver notes (1.108107ms)
+✔ omitted picks have no active contact card or exported note, and restore retains its date (0.964521ms)
+✔ another week has separate notes even when weekday and occurrence are unchanged (0.399611ms)
+✔ an identical newly accepted response cannot inherit or access the prior worksheet (0.325139ms)
+✔ source provenance cannot be relabeled while borrowing the original source objects (0.208965ms)
+✔ an event still carrying the old date cannot update the newly scheduled visit (1.002428ms)
+✔ the printable export carries exact source, dates and labeled multiline caregiver notes (1.161197ms)
+✔ empty scheduled weeks cannot create an apparently populated call sheet (0.325369ms)
+✔ unknown fields, status values and oversized notes do not modify a retained note (0.417529ms)
+✔ a reopened source retains its filename, age and unchanged-check label in the call sheet (0.308825ms)
+✔ editable questions remain literal, occurrence/date-bound text alongside unchanged source checks (0.429646ms)
+✔ revising questions retains the earlier reply with its actual question context and a follow-up hold (0.859023ms)
+✔ unchanged questions preserve status; returning to the earlier questions removes only the mismatch (1.099724ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 146.666261

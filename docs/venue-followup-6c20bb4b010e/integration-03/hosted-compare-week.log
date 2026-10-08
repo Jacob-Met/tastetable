@@ -1,0 +1,657 @@
+﻿2026-10-08T16:17:55.9597285Z Current runner version: '2.337.0'
+2026-10-08T16:17:55.9624631Z ##[group]Runner Image Provisioner
+2026-10-08T16:17:55.9625503Z Hosted Compute Agent
+2026-10-08T16:17:55.9626284Z Version: 20261002.596
+2026-10-08T16:17:55.9627260Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-08T16:17:55.9628044Z Build Date: 2026-10-02T22:28:27Z
+2026-10-08T16:17:55.9628807Z Worker ID: {f2cda72c-d555-4a39-8eaf-65a51679ed15}
+2026-10-08T16:17:55.9629596Z Region: westus2
+2026-10-08T16:17:55.9630265Z Cloud: Azure
+2026-10-08T16:17:55.9630828Z ##[endgroup]
+2026-10-08T16:17:55.9632344Z ##[group]Operating System
+2026-10-08T16:17:55.9633020Z Ubuntu
+2026-10-08T16:17:55.9633566Z 24.04.5
+2026-10-08T16:17:55.9634187Z LTS
+2026-10-08T16:17:55.9634735Z ##[endgroup]
+2026-10-08T16:17:55.9635339Z ##[group]Runner Image
+2026-10-08T16:17:55.9636092Z Image: ubuntu-24.04
+2026-10-08T16:17:55.9637048Z Version: 20261004.327.1
+2026-10-08T16:17:55.9638586Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-08T16:17:55.9640166Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-08T16:17:55.9641170Z ##[endgroup]
+2026-10-08T16:17:55.9642274Z ##[group]GITHUB_TOKEN Permissions
+2026-10-08T16:17:55.9644446Z Contents: read
+2026-10-08T16:17:55.9645059Z Metadata: read
+2026-10-08T16:17:55.9645743Z ##[endgroup]
+2026-10-08T16:17:55.9648320Z Secret source: Actions
+2026-10-08T16:17:55.9649497Z Cache mode: write
+2026-10-08T16:17:55.9650223Z Prepare workflow directory
+2026-10-08T16:17:56.0004290Z Prepare all required actions
+2026-10-08T16:17:56.0073998Z Getting action download info
+2026-10-08T16:17:56.3485377Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-08T16:17:56.5506204Z Complete job name: compare-week
+2026-10-08T16:17:56.6268903Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-08T16:17:56.6269919Z with:
+2026-10-08T16:17:56.6270405Z   repository: Jacob-Met/tastetable
+2026-10-08T16:17:56.6274345Z   token: ***
+2026-10-08T16:17:56.6274798Z   ssh-strict: true
+2026-10-08T16:17:56.6275251Z   ssh-user: git
+2026-10-08T16:17:56.6275717Z   persist-credentials: true
+2026-10-08T16:17:56.6276216Z   clean: true
+2026-10-08T16:17:56.6276855Z   sparse-checkout-cone-mode: true
+2026-10-08T16:17:56.6277386Z   fetch-depth: 1
+2026-10-08T16:17:56.6277840Z   fetch-tags: false
+2026-10-08T16:17:56.6278301Z   show-progress: true
+2026-10-08T16:17:56.6278757Z   lfs: false
+2026-10-08T16:17:56.6279178Z   submodules: false
+2026-10-08T16:17:56.6279629Z   set-safe-directory: true
+2026-10-08T16:17:56.6280140Z   allow-unsafe-pr-checkout: false
+2026-10-08T16:17:56.6280939Z ##[endgroup]
+2026-10-08T16:17:56.7374152Z Syncing repository: Jacob-Met/tastetable
+2026-10-08T16:17:56.7377344Z ##[group]Getting Git version info
+2026-10-08T16:17:56.7378690Z Working directory is '/home/runner/work/tastetable/tastetable'
+2026-10-08T16:17:56.7380608Z [command]/usr/bin/git version
+2026-10-08T16:17:56.7408276Z git version 2.55.0
+2026-10-08T16:17:56.7429112Z ##[endgroup]
+2026-10-08T16:17:56.7441288Z Temporarily overriding HOME='/home/runner/work/_temp/0f0d93c8-62df-44f6-8e90-eafdea367743' before making global git config changes
+2026-10-08T16:17:56.7443660Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T16:17:56.7447734Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tastetable/tastetable
+2026-10-08T16:17:56.7500733Z Deleting the contents of '/home/runner/work/tastetable/tastetable'
+2026-10-08T16:17:56.7512572Z ##[group]Determining repository object format
+2026-10-08T16:17:56.7513988Z ##[endgroup]
+2026-10-08T16:17:56.7514815Z ##[group]Initializing the repository
+2026-10-08T16:17:56.7517617Z [command]/usr/bin/git init /home/runner/work/tastetable/tastetable
+2026-10-08T16:17:56.7605608Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-08T16:17:56.7607500Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-08T16:17:56.7609791Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-08T16:17:56.7611090Z hint: call:
+2026-10-08T16:17:56.7611931Z hint:
+2026-10-08T16:17:56.7612751Z hint: 	git config --global init.defaultBranch <name>
+2026-10-08T16:17:56.7613710Z hint:
+2026-10-08T16:17:56.7614589Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-08T16:17:56.7616009Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-08T16:17:56.7617124Z hint:
+2026-10-08T16:17:56.7617736Z hint: 	git branch -m <name>
+2026-10-08T16:17:56.7618481Z hint:
+2026-10-08T16:17:56.7619775Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-08T16:17:56.7621429Z Initialized empty Git repository in /home/runner/work/tastetable/tastetable/.git/
+2026-10-08T16:17:56.7623581Z [command]/usr/bin/git remote add origin https://github.com/Jacob-Met/tastetable
+2026-10-08T16:17:56.7669344Z ##[endgroup]
+2026-10-08T16:17:56.7670170Z ##[group]Disabling automatic garbage collection
+2026-10-08T16:17:56.7674095Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-08T16:17:56.7712567Z ##[endgroup]
+2026-10-08T16:17:56.7713645Z ##[group]Setting up auth
+2026-10-08T16:17:56.7714634Z Removing SSH command configuration
+2026-10-08T16:17:56.7719836Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T16:17:56.7757610Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T16:17:56.8101896Z Removing HTTP extra header
+2026-10-08T16:17:56.8109549Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T16:17:56.8161792Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T16:17:56.8426059Z Removing includeIf entries pointing to credentials config files
+2026-10-08T16:17:56.8432493Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T16:17:56.8472054Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T16:17:56.8722003Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-26be13c7-3dca-4d71-b331-a186772eab94.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-08T16:17:56.8768168Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/tastetable/tastetable/.git.path /home/runner/work/_temp/git-credentials-26be13c7-3dca-4d71-b331-a186772eab94.config
+2026-10-08T16:17:56.8806305Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/tastetable/tastetable/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-26be13c7-3dca-4d71-b331-a186772eab94.config
+2026-10-08T16:17:56.8846915Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-26be13c7-3dca-4d71-b331-a186772eab94.config
+2026-10-08T16:17:56.8887108Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-26be13c7-3dca-4d71-b331-a186772eab94.config
+2026-10-08T16:17:56.8920914Z ##[endgroup]
+2026-10-08T16:17:56.8922041Z ##[group]Fetching the repository
+2026-10-08T16:17:56.8929177Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +22d7a35d7d359ec315c6390657be2939aa2682d0:refs/remotes/pull/33/merge
+2026-10-08T16:17:58.0012108Z From https://github.com/Jacob-Met/tastetable
+2026-10-08T16:17:58.0014873Z  * [new ref]         22d7a35d7d359ec315c6390657be2939aa2682d0 -> pull/33/merge
+2026-10-08T16:17:58.0020791Z ##[endgroup]
+2026-10-08T16:17:58.0022910Z ##[group]Determining the checkout info
+2026-10-08T16:17:58.0024872Z ##[endgroup]
+2026-10-08T16:17:58.0025707Z [command]/usr/bin/git sparse-checkout disable
+2026-10-08T16:17:58.0078045Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-08T16:17:58.0114714Z ##[group]Checking out the ref
+2026-10-08T16:17:58.0118890Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/33/merge
+2026-10-08T16:17:58.0744114Z Note: switching to 'refs/remotes/pull/33/merge'.
+2026-10-08T16:17:58.0745050Z 
+2026-10-08T16:17:58.0745776Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-08T16:17:58.0748164Z changes and commit them, and you can discard any commits you make in this
+2026-10-08T16:17:58.0750169Z state without impacting any branches by switching back to a branch.
+2026-10-08T16:17:58.0751413Z 
+2026-10-08T16:17:58.0752445Z If you want to create a new branch to retain commits you create, you may
+2026-10-08T16:17:58.0754745Z do so (now or later) by using -c with the switch command. Example:
+2026-10-08T16:17:58.0756034Z 
+2026-10-08T16:17:58.0756777Z   git switch -c <new-branch-name>
+2026-10-08T16:17:58.0757625Z 
+2026-10-08T16:17:58.0758352Z Or undo this operation with:
+2026-10-08T16:17:58.0759649Z 
+2026-10-08T16:17:58.0760625Z   git switch -
+2026-10-08T16:17:58.0761530Z 
+2026-10-08T16:17:58.0762959Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-08T16:17:58.0764934Z 
+2026-10-08T16:17:58.0767507Z HEAD is now at 22d7a35 Merge f3e72efb13844b7cd8e5cdd5d14c6a21941351c4 into 7ff625da5df02b64e8141ce2c16150c6169fdada
+2026-10-08T16:17:58.0774112Z ##[endgroup]
+2026-10-08T16:17:58.0815241Z [command]/usr/bin/git log -1 --format=%H
+2026-10-08T16:17:58.0847602Z 22d7a35d7d359ec315c6390657be2939aa2682d0
+2026-10-08T16:17:58.1133054Z ##[group]Run set -euo pipefail
+2026-10-08T16:17:58.1134449Z [36;1mset -euo pipefail[0m
+2026-10-08T16:17:58.1135653Z [36;1mCOMPARE_WEEK_NODE=[0m
+2026-10-08T16:17:58.1137471Z [36;1mfor COMPARE_WEEK_NODE_DIR in "${RUNNER_TOOL_CACHE}/node"/22.*; do[0m
+2026-10-08T16:17:58.1140078Z [36;1m  if [[ -x "${COMPARE_WEEK_NODE_DIR}/x64/bin/node" && -f "${COMPARE_WEEK_NODE_DIR}/x64.complete" ]]; then[0m
+2026-10-08T16:17:58.1142590Z [36;1m    COMPARE_WEEK_NODE="${COMPARE_WEEK_NODE_DIR}/x64/bin/node"[0m
+2026-10-08T16:17:58.1144250Z [36;1m  fi[0m
+2026-10-08T16:17:58.1145240Z [36;1mdone[0m
+2026-10-08T16:17:58.1147091Z [36;1m[[ -n "${COMPARE_WEEK_NODE}" ]] || { echo "A complete cached Node 22 is required."; exit 1; }[0m
+2026-10-08T16:17:58.1149197Z [36;1m"${COMPARE_WEEK_NODE}" --version[0m
+2026-10-08T16:17:58.1150804Z [36;1m"${COMPARE_WEEK_NODE}" --test tests/*.mjs tests/*.cjs[0m
+2026-10-08T16:17:58.1383785Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-08T16:17:58.1385482Z ##[endgroup]
+2026-10-08T16:17:58.1922019Z v22.23.3
+2026-10-08T16:17:58.3004859Z TAP version 13
+2026-10-08T16:17:58.4139855Z # Subtest: the writer receives the existing week and preserves checked source details
+2026-10-08T16:17:58.4168549Z ok 1 - the writer receives the existing week and preserves checked source details
+2026-10-08T16:17:58.4198439Z   ---
+2026-10-08T16:17:58.4200325Z   duration_ms: 17.548305
+2026-10-08T16:17:58.4201900Z   type: 'test'
+2026-10-08T16:17:58.4203423Z   ...
+2026-10-08T16:17:58.4205371Z # Subtest: moved picks share a day without collisions and keep their original explanations
+2026-10-08T16:17:58.4208175Z ok 2 - moved picks share a day without collisions and keep their original explanations
+2026-10-08T16:17:58.4210304Z   ---
+2026-10-08T16:17:58.4211834Z   duration_ms: 5.767531
+2026-10-08T16:17:58.4213455Z   type: 'test'
+2026-10-08T16:17:58.4215019Z   ...
+2026-10-08T16:17:58.4217364Z # Subtest: off-week picks are absent, and reset restores byte-identical content and identities
+2026-10-08T16:17:58.4220194Z ok 3 - off-week picks are absent, and reset restores byte-identical content and identities
+2026-10-08T16:17:58.4222152Z   ---
+2026-10-08T16:17:58.4223532Z   duration_ms: 10.600723
+2026-10-08T16:17:58.4225558Z   type: 'test'
+2026-10-08T16:17:58.4227159Z   ...
+2026-10-08T16:17:58.4229205Z # Subtest: moves preserve a weekly pick's UID, while other weeks and new plans get distinct identities
+2026-10-08T16:17:58.4231763Z ok 4 - moves preserve a weekly pick's UID, while other weeks and new plans get distinct identities
+2026-10-08T16:17:58.4233772Z   ---
+2026-10-08T16:17:58.4235183Z   duration_ms: 14.67313
+2026-10-08T16:17:58.4236820Z   type: 'test'
+2026-10-08T16:17:58.4238191Z   ...
+2026-10-08T16:17:58.4239740Z # Subtest: repeated source entities remain separate stable picks when arranged together
+2026-10-08T16:17:58.4241261Z ok 5 - repeated source entities remain separate stable picks when arranged together
+2026-10-08T16:17:58.4242733Z   ---
+2026-10-08T16:17:58.4243737Z   duration_ms: 3.148092
+2026-10-08T16:17:58.4244895Z   type: 'test'
+2026-10-08T16:17:58.4246352Z   ...
+2026-10-08T16:17:58.4248268Z # Subtest: partial and empty checked source plans remain partial and empty
+2026-10-08T16:17:58.4250211Z ok 6 - partial and empty checked source plans remain partial and empty
+2026-10-08T16:17:58.4251781Z   ---
+2026-10-08T16:17:58.4253071Z   duration_ms: 1.057863
+2026-10-08T16:17:58.4254463Z   type: 'test'
+2026-10-08T16:17:58.4255754Z   ...
+2026-10-08T16:17:58.4257483Z # Subtest: stale, missing, repeated or altered rows refuse the whole export
+2026-10-08T16:17:58.4259447Z ok 7 - stale, missing, repeated or altered rows refuse the whole export
+2026-10-08T16:17:58.4261104Z   ---
+2026-10-08T16:17:58.4262420Z   duration_ms: 2.238679
+2026-10-08T16:17:58.4263767Z   type: 'test'
+2026-10-08T16:17:58.4265149Z   ...
+2026-10-08T16:17:58.4267013Z # Subtest: malformed assignments, source identity, provenance and picker dates refuse export
+2026-10-08T16:17:58.4269708Z ok 8 - malformed assignments, source identity, provenance and picker dates refuse export
+2026-10-08T16:17:58.4271654Z   ---
+2026-10-08T16:17:58.4272940Z   duration_ms: 1.307344
+2026-10-08T16:17:58.4274399Z   type: 'test'
+2026-10-08T16:17:58.4275839Z   ...
+2026-10-08T16:17:58.4277996Z # Subtest: source and preview mutations cannot silently change an existing session
+2026-10-08T16:17:58.4280236Z ok 9 - source and preview mutations cannot silently change an existing session
+2026-10-08T16:17:58.4282153Z   ---
+2026-10-08T16:17:58.4283637Z   duration_ms: 4.587892
+2026-10-08T16:17:58.4285069Z   type: 'test'
+2026-10-08T16:17:58.4286617Z   ...
+2026-10-08T16:17:58.4288294Z # Subtest: live source and UTF-8 descriptions keep provenance, escaping and byte limits
+2026-10-08T16:17:58.4290518Z ok 10 - live source and UTF-8 descriptions keep provenance, escaping and byte limits
+2026-10-08T16:17:58.4292250Z   ---
+2026-10-08T16:17:58.4293813Z   duration_ms: 6.35515
+2026-10-08T16:17:58.4295238Z   type: 'test'
+2026-10-08T16:17:58.4296691Z   ...
+2026-10-08T16:17:58.5611707Z # Subtest: the native weekday layout becomes five dated all-day suggestions
+2026-10-08T16:17:58.5627746Z ok 11 - the native weekday layout becomes five dated all-day suggestions
+2026-10-08T16:17:58.5653274Z   ---
+2026-10-08T16:17:58.5654075Z   duration_ms: 12.5147
+2026-10-08T16:17:58.5654738Z   type: 'test'
+2026-10-08T16:17:58.5655460Z   ...
+2026-10-08T16:17:58.5656348Z # Subtest: each description preserves the selected source and notes, excluding other columns
+2026-10-08T16:17:58.5657960Z ok 12 - each description preserves the selected source and notes, excluding other columns
+2026-10-08T16:17:58.5658994Z   ---
+2026-10-08T16:17:58.5659643Z   duration_ms: 6.671772
+2026-10-08T16:17:58.5660281Z   type: 'test'
+2026-10-08T16:17:58.5660892Z   ...
+2026-10-08T16:17:58.5661728Z # Subtest: partial plans keep missing slots absent and retain the partial-plan note
+2026-10-08T16:17:58.5662900Z ok 13 - partial plans keep missing slots absent and retain the partial-plan note
+2026-10-08T16:17:58.5663842Z   ---
+2026-10-08T16:17:58.5664456Z   duration_ms: 1.463796
+2026-10-08T16:17:58.5665088Z   type: 'test'
+2026-10-08T16:17:58.5665715Z   ...
+2026-10-08T16:17:58.5666746Z # Subtest: an empty checked plan is a readable preview but never a calendar download
+2026-10-08T16:17:58.5668382Z ok 14 - an empty checked plan is a readable preview but never a calendar download
+2026-10-08T16:17:58.5669298Z   ---
+2026-10-08T16:17:58.5669899Z   duration_ms: 0.846598
+2026-10-08T16:17:58.5670542Z   type: 'test'
+2026-10-08T16:17:58.5671118Z   ...
+2026-10-08T16:17:58.5672145Z # Subtest: mock provenance comes from the actual response, and live suggestions remain tentative
+2026-10-08T16:17:58.5673497Z ok 15 - mock provenance comes from the actual response, and live suggestions remain tentative
+2026-10-08T16:17:58.5674486Z   ---
+2026-10-08T16:17:58.5675047Z   duration_ms: 2.812703
+2026-10-08T16:17:58.5675652Z   type: 'test'
+2026-10-08T16:17:58.5676223Z   ...
+2026-10-08T16:17:58.5677295Z # Subtest: dates require an explicit valid Monday and reject normalization or injected syntax
+2026-10-08T16:17:58.5678621Z ok 16 - dates require an explicit valid Monday and reject normalization or injected syntax
+2026-10-08T16:17:58.5679628Z   ---
+2026-10-08T16:17:58.5680203Z   duration_ms: 0.668183
+2026-10-08T16:17:58.5680817Z   type: 'test'
+2026-10-08T16:17:58.5681408Z   ...
+2026-10-08T16:17:58.5682187Z # Subtest: leap days, year changes, and DST weeks retain calendar dates
+2026-10-08T16:17:58.5683268Z ok 17 - leap days, year changes, and DST weeks retain calendar dates
+2026-10-08T16:17:58.5684119Z   ---
+2026-10-08T16:17:58.5684733Z   duration_ms: 8.85614
+2026-10-08T16:17:58.5685391Z   type: 'test'
+2026-10-08T16:17:58.5784443Z   ...
+2026-10-08T16:17:58.5787738Z # Subtest: calendar bytes do not depend on the host timezone
+2026-10-08T16:17:58.5810035Z ok 18 - calendar bytes do not depend on the host timezone
+2026-10-08T16:17:58.5811058Z   ---
+2026-10-08T16:17:58.5811697Z   duration_ms: 160.013448
+2026-10-08T16:17:58.5812398Z   type: 'test'
+2026-10-08T16:17:58.5813368Z   ...
+2026-10-08T16:17:58.5814247Z # Subtest: source text cannot inject events or calendar properties
+2026-10-08T16:17:58.5815355Z ok 19 - source text cannot inject events or calendar properties
+2026-10-08T16:17:58.5816231Z   ---
+2026-10-08T16:17:58.5817050Z   duration_ms: 5.217239
+2026-10-08T16:17:58.5817693Z   type: 'test'
+2026-10-08T16:17:58.5818287Z   ...
+2026-10-08T16:17:58.5819247Z # Subtest: UTF-8 folding keeps every physical line at most 75 bytes and every code point intact
+2026-10-08T16:17:58.5820693Z ok 20 - UTF-8 folding keeps every physical line at most 75 bytes and every code point intact
+2026-10-08T16:17:58.5821649Z   ---
+2026-10-08T16:17:58.5822242Z   duration_ms: 5.48715
+2026-10-08T16:17:58.5822884Z   type: 'test'
+2026-10-08T16:17:58.5823476Z   ...
+2026-10-08T16:17:58.5824279Z # Subtest: a displayed plan is immutable and same-week re-exports are byte-stable
+2026-10-08T16:17:58.5825220Z ok 21 - a displayed plan is immutable and same-week re-exports are byte-stable
+2026-10-08T16:17:58.5825924Z   ---
+2026-10-08T16:17:58.5826635Z   duration_ms: 10.25153
+2026-10-08T16:17:58.5827073Z   type: 'test'
+2026-10-08T16:17:58.5827438Z   ...
+2026-10-08T16:17:58.5828036Z # Subtest: malformed result envelopes and missing provenance refuse the whole export
+2026-10-08T16:17:58.5828942Z ok 22 - malformed result envelopes and missing provenance refuse the whole export
+2026-10-08T16:17:58.5829556Z   ---
+2026-10-08T16:17:58.5829941Z   duration_ms: 0.866799
+2026-10-08T16:17:58.5830365Z   type: 'test'
+2026-10-08T16:17:58.5830744Z   ...
+2026-10-08T16:17:58.5831403Z # Subtest: unsupported text, excessive fields, and metadata injection refuse before output
+2026-10-08T16:17:58.5832498Z ok 23 - unsupported text, excessive fields, and metadata injection refuse before output
+2026-10-08T16:17:58.5833242Z   ---
+2026-10-08T16:17:58.5833680Z   duration_ms: 0.514605
+2026-10-08T16:17:58.5834162Z   type: 'test'
+2026-10-08T16:17:58.5834548Z   ...
+2026-10-08T16:17:58.5867832Z # Subtest: only newest result commits when earlier transport ignores abort
+2026-10-08T16:17:58.5884021Z ok 24 - only newest result commits when earlier transport ignores abort
+2026-10-08T16:17:58.5885083Z   ---
+2026-10-08T16:17:58.5885769Z   duration_ms: 2.693416
+2026-10-08T16:17:58.5887146Z   type: 'test'
+2026-10-08T16:17:58.5887737Z   ...
+2026-10-08T16:17:58.5888532Z # Subtest: stale errors cannot clear newer loading state or replace its result
+2026-10-08T16:17:58.5889645Z ok 25 - stale errors cannot clear newer loading state or replace its result
+2026-10-08T16:17:58.5890585Z   ---
+2026-10-08T16:17:58.5891207Z   duration_ms: 0.523769
+2026-10-08T16:17:58.5891913Z   type: 'test'
+2026-10-08T16:17:58.5892748Z   ...
+2026-10-08T16:17:58.5893974Z # Subtest: input invalidation suppresses a response already being read
+2026-10-08T16:17:58.5895116Z ok 26 - input invalidation suppresses a response already being read
+2026-10-08T16:17:58.5896124Z   ---
+2026-10-08T16:17:58.5896915Z   duration_ms: 0.335219
+2026-10-08T16:17:58.5897561Z   type: 'test'
+2026-10-08T16:17:58.5898180Z   ...
+2026-10-08T16:17:58.5898964Z # Subtest: invalidated failure remains silent and a later request can succeed
+2026-10-08T16:17:58.5900020Z ok 27 - invalidated failure remains silent and a later request can succeed
+2026-10-08T16:17:58.5900909Z   ---
+2026-10-08T16:17:58.5901490Z   duration_ms: 0.306166
+2026-10-08T16:17:58.5902120Z   type: 'test'
+2026-10-08T16:17:58.5902700Z   ...
+2026-10-08T16:17:58.5903505Z # Subtest: disposal blocks new work and suppresses all pending completion callbacks
+2026-10-08T16:17:58.5904668Z ok 28 - disposal blocks new work and suppresses all pending completion callbacks
+2026-10-08T16:17:58.5905622Z   ---
+2026-10-08T16:17:58.5906234Z   duration_ms: 3.356632
+2026-10-08T16:17:58.5907092Z   type: 'test'
+2026-10-08T16:17:58.5907700Z   ...
+2026-10-08T16:17:58.5908468Z # Subtest: current transport error is reported once and returns to idle
+2026-10-08T16:17:58.5909528Z ok 29 - current transport error is reported once and returns to idle
+2026-10-08T16:17:58.5910367Z   ---
+2026-10-08T16:17:58.5911178Z   duration_ms: 0.309841
+2026-10-08T16:17:58.5911813Z   type: 'test'
+2026-10-08T16:17:58.5912397Z   ...
+2026-10-08T16:17:58.5913113Z # Subtest: a malformed current result cannot leave the request busy
+2026-10-08T16:17:58.5914129Z ok 30 - a malformed current result cannot leave the request busy
+2026-10-08T16:17:58.5914942Z   ---
+2026-10-08T16:17:58.5915499Z   duration_ms: 0.398873
+2026-10-08T16:17:58.5916109Z   type: 'test'
+2026-10-08T16:17:58.5916928Z   ...
+2026-10-08T16:17:58.5917744Z # Subtest: actual AbortSignal rejection from supersession is not a user error
+2026-10-08T16:17:58.5918856Z ok 31 - actual AbortSignal rejection from supersession is not a user error
+2026-10-08T16:17:58.5919763Z   ---
+2026-10-08T16:17:58.5920325Z   duration_ms: 0.555255
+2026-10-08T16:17:58.5920947Z   type: 'test'
+2026-10-08T16:17:58.5921513Z   ...
+2026-10-08T16:17:58.5922531Z # Subtest: codec-created copies compare exact moves, omissions and inclusion without mutating inputs
+2026-10-08T16:17:58.5923927Z ok 32 - codec-created copies compare exact moves, omissions and inclusion without mutating inputs
+2026-10-08T16:17:58.5924945Z   ---
+2026-10-08T16:17:58.5925509Z   duration_ms: 9.319669
+2026-10-08T16:17:58.5926117Z   type: 'test'
+2026-10-08T16:17:58.5926916Z   ...
+2026-10-08T16:17:58.5927720Z # Subtest: different chosen weeks compare actual dates through the year boundary
+2026-10-08T16:17:58.5928875Z ok 33 - different chosen weeks compare actual dates through the year boundary
+2026-10-08T16:17:58.5929764Z   ---
+2026-10-08T16:17:58.5930323Z   duration_ms: 3.435148
+2026-10-08T16:17:58.5930951Z   type: 'test'
+2026-10-08T16:17:58.5931537Z   ...
+2026-10-08T16:17:58.5932289Z # Subtest: repeated venue identities retain original occurrence mapping
+2026-10-08T16:17:58.5933348Z ok 34 - repeated venue identities retain original occurrence mapping
+2026-10-08T16:17:58.5934183Z   ---
+2026-10-08T16:17:58.5934741Z   duration_ms: 3.138607
+2026-10-08T16:17:58.5935359Z   type: 'test'
+2026-10-08T16:17:58.5935934Z   ...
+2026-10-08T16:17:58.5936968Z # Subtest: changed response, profile, timestamp or calendar identity prevents inferred movement
+2026-10-08T16:17:58.5938287Z ok 35 - changed response, profile, timestamp or calendar identity prevents inferred movement
+2026-10-08T16:17:58.5939660Z   ---
+2026-10-08T16:17:58.5940315Z   duration_ms: 5.889198
+2026-10-08T16:17:58.5940923Z   type: 'test'
+2026-10-08T16:17:58.5941490Z   ...
+2026-10-08T16:17:58.5942244Z # Subtest: JSON property order is immaterial, source array order is not
+2026-10-08T16:17:58.5943277Z ok 36 - JSON property order is immaterial, source array order is not
+2026-10-08T16:17:58.5944105Z   ---
+2026-10-08T16:17:58.5944665Z   duration_ms: 2.316465
+2026-10-08T16:17:58.5945283Z   type: 'test'
+2026-10-08T16:17:58.5945845Z   ...
+2026-10-08T16:17:58.5946773Z # Subtest: all-omitted arrangements and empty original plans have honest counts
+2026-10-08T16:17:58.5947914Z ok 37 - all-omitted arrangements and empty original plans have honest counts
+2026-10-08T16:17:58.5948803Z   ---
+2026-10-08T16:17:58.5949365Z   duration_ms: 6.030437
+2026-10-08T16:17:58.5949992Z   type: 'test'
+2026-10-08T16:17:58.5950569Z   ...
+2026-10-08T16:17:58.5951454Z # Subtest: unknown source and legacy null calendar IDs remain explicitly saved-source comparisons
+2026-10-08T16:17:58.5952776Z ok 38 - unknown source and legacy null calendar IDs remain explicitly saved-source comparisons
+2026-10-08T16:17:58.5953833Z   ---
+2026-10-08T16:17:58.5954385Z   duration_ms: 5.486679
+2026-10-08T16:17:58.5954995Z   type: 'test'
+2026-10-08T16:17:58.5955575Z   ...
+2026-10-08T16:17:58.5956636Z # Subtest: native response and edited occurrences round-trip across a new state
+2026-10-08T16:17:58.5957798Z ok 39 - native response and edited occurrences round-trip across a new state
+2026-10-08T16:17:58.5958681Z   ---
+2026-10-08T16:17:58.5959262Z   duration_ms: 5.575341
+2026-10-08T16:17:58.5959886Z   type: 'test'
+2026-10-08T16:17:58.5960453Z   ...
+2026-10-08T16:17:58.5975585Z # Subtest: resaving preserves the accepted source and new local arrangement
+2026-10-08T16:17:58.5977315Z ok 40 - resaving preserves the accepted source and new local arrangement
+2026-10-08T16:17:58.5978533Z   ---
+2026-10-08T16:17:58.5979269Z   duration_ms: 4.003754
+2026-10-08T16:17:58.5979949Z   type: 'test'
+2026-10-08T16:17:58.5980559Z   ...
+2026-10-08T16:17:58.5999011Z # Subtest: occurrence keys keep repeated entity IDs distinct after reopening
+2026-10-08T16:17:58.6000261Z ok 41 - occurrence keys keep repeated entity IDs distinct after reopening
+2026-10-08T16:17:58.6001257Z   ---
+2026-10-08T16:17:58.6001956Z   duration_ms: 1.625477
+2026-10-08T16:17:58.6002622Z   type: 'test'
+2026-10-08T16:17:58.6003215Z   ...
+2026-10-08T16:17:58.6004104Z # Subtest: UTF-8 JSON with BOM or different indentation preserves source values
+2026-10-08T16:17:58.6005252Z ok 42 - UTF-8 JSON with BOM or different indentation preserves source values
+2026-10-08T16:17:58.6006250Z   ---
+2026-10-08T16:17:58.6007050Z   duration_ms: 5.115757
+2026-10-08T16:17:58.6007688Z   type: 'test'
+2026-10-08T16:17:58.6008280Z   ...
+2026-10-08T16:17:58.6009079Z # Subtest: empty arrangements and unknown source remain usable snapshots
+2026-10-08T16:17:58.6010160Z ok 43 - empty arrangements and unknown source remain usable snapshots
+2026-10-08T16:17:58.6011031Z   ---
+2026-10-08T16:17:58.6011619Z   duration_ms: 2.947623
+2026-10-08T16:17:58.6012250Z   type: 'test'
+2026-10-08T16:17:58.6012838Z   ...
+2026-10-08T16:17:58.6013652Z # Subtest: save refuses a derived week whose original evidence has changed
+2026-10-08T16:17:58.6014736Z ok 44 - save refuses a derived week whose original evidence has changed
+2026-10-08T16:17:58.6015596Z   ---
+2026-10-08T16:17:58.6016184Z   duration_ms: 2.7233
+2026-10-08T16:17:58.6017516Z   type: 'test'
+2026-10-08T16:17:58.6018339Z   ...
+2026-10-08T16:17:58.6019187Z # Subtest: malformed format, dates, timestamps and inconsistent source inputs fail
+2026-10-08T16:17:58.6020380Z ok 45 - malformed format, dates, timestamps and inconsistent source inputs fail
+2026-10-08T16:17:58.6021295Z   ---
+2026-10-08T16:17:58.6021904Z   duration_ms: 10.689976
+2026-10-08T16:17:58.6022552Z   type: 'test'
+2026-10-08T16:17:58.6023139Z   ...
+2026-10-08T16:17:58.6024004Z # Subtest: missing, additional or invalid occurrence assignments cannot silently drop picks
+2026-10-08T16:17:58.6025664Z ok 46 - missing, additional or invalid occurrence assignments cannot silently drop picks
+2026-10-08T16:17:58.6026843Z   ---
+2026-10-08T16:17:58.6027462Z   duration_ms: 8.577676
+2026-10-08T16:17:58.6028093Z   type: 'test'
+2026-10-08T16:17:58.6028697Z   ...
+2026-10-08T16:17:58.6029610Z # Subtest: saved files validate native response types before reaching HTML or late render fields
+2026-10-08T16:17:58.6030954Z ok 47 - saved files validate native response types before reaching HTML or late render fields
+2026-10-08T16:17:58.6031951Z   ---
+2026-10-08T16:17:58.6032537Z   duration_ms: 10.945897
+2026-10-08T16:17:58.6033164Z   type: 'test'
+2026-10-08T16:17:58.6033746Z   ...
+2026-10-08T16:17:58.6034656Z # Subtest: current native recovery traces retain null and list args with the checked partial plan
+2026-10-08T16:17:58.6035979Z ok 48 - current native recovery traces retain null and list args with the checked partial plan
+2026-10-08T16:17:58.6037166Z   ---
+2026-10-08T16:17:58.6037755Z   duration_ms: 2.175906
+2026-10-08T16:17:58.6038359Z   type: 'test'
+2026-10-08T16:17:58.6038930Z   ...
+2026-10-08T16:17:58.6444286Z # Subtest: initial week retains every suggestion and exposes all seven dates
+2026-10-08T16:17:58.6471807Z ok 49 - initial week retains every suggestion and exposes all seven dates
+2026-10-08T16:17:58.6472562Z   ---
+2026-10-08T16:17:58.6473045Z   duration_ms: 4.907438
+2026-10-08T16:17:58.6473576Z   type: 'test'
+2026-10-08T16:17:58.6474038Z   ...
+2026-10-08T16:17:58.6474696Z # Subtest: move, omit and restore preserve source evidence and unrelated picks
+2026-10-08T16:17:58.6475495Z ok 50 - move, omit and restore preserve source evidence and unrelated picks
+2026-10-08T16:17:58.6476086Z   ---
+2026-10-08T16:17:58.6477190Z   duration_ms: 1.061359
+2026-10-08T16:17:58.6478045Z   type: 'test'
+2026-10-08T16:17:58.6478331Z   ...
+2026-10-08T16:17:58.6478733Z # Subtest: reset restores original assignments while keeping the chosen week
+2026-10-08T16:17:58.6479332Z ok 51 - reset restores original assignments while keeping the chosen week
+2026-10-08T16:17:58.6479961Z   ---
+2026-10-08T16:17:58.6480423Z   duration_ms: 0.553984
+2026-10-08T16:17:58.6480910Z   type: 'test'
+2026-10-08T16:17:58.6481362Z   ...
+2026-10-08T16:17:58.6481924Z # Subtest: calendar weeks handle leap days and year boundaries
+2026-10-08T16:17:58.6482616Z ok 52 - calendar weeks handle leap days and year boundaries
+2026-10-08T16:17:58.6483172Z   ---
+2026-10-08T16:17:58.6483623Z   duration_ms: 0.402018
+2026-10-08T16:17:58.6484110Z   type: 'test'
+2026-10-08T16:17:58.6484573Z   ...
+2026-10-08T16:17:58.6485227Z # Subtest: invalid dates and unknown transitions refuse without changing the plan
+2026-10-08T16:17:58.6486040Z ok 53 - invalid dates and unknown transitions refuse without changing the plan
+2026-10-08T16:17:58.6486805Z   ---
+2026-10-08T16:17:58.6487193Z   duration_ms: 1.308465
+2026-10-08T16:17:58.6487601Z   type: 'test'
+2026-10-08T16:17:58.6487960Z   ...
+2026-10-08T16:17:58.6488344Z # Subtest: source plan is a detached immutable snapshot
+2026-10-08T16:17:58.6488777Z ok 54 - source plan is a detached immutable snapshot
+2026-10-08T16:17:58.6489120Z   ---
+2026-10-08T16:17:58.6489366Z   duration_ms: 0.465492
+2026-10-08T16:17:58.6489736Z   type: 'test'
+2026-10-08T16:17:58.6490106Z   ...
+2026-10-08T16:17:58.6505142Z # Subtest: empty and partial plans remain honest and rejected candidates cannot be scheduled
+2026-10-08T16:17:58.6506713Z ok 55 - empty and partial plans remain honest and rejected candidates cannot be scheduled
+2026-10-08T16:17:58.6507719Z   ---
+2026-10-08T16:17:58.6508294Z   duration_ms: 0.455998
+2026-10-08T16:17:58.6508721Z   type: 'test'
+2026-10-08T16:17:58.6509089Z   ...
+2026-10-08T16:17:58.6521039Z # Subtest: duplicate source IDs remain distinct suggestions through scheduling
+2026-10-08T16:17:58.6522505Z ok 56 - duplicate source IDs remain distinct suggestions through scheduling
+2026-10-08T16:17:58.6547217Z   ---
+2026-10-08T16:17:58.6555081Z   duration_ms: 0.368357
+2026-10-08T16:17:58.6555820Z   type: 'test'
+2026-10-08T16:17:58.6557070Z   ...
+2026-10-08T16:17:58.6557924Z # Subtest: mode is retained explicitly and absence is never labeled live
+2026-10-08T16:17:58.6558967Z ok 57 - mode is retained explicitly and absence is never labeled live
+2026-10-08T16:17:58.6559792Z   ---
+2026-10-08T16:17:58.6560438Z   duration_ms: 0.859698
+2026-10-08T16:17:58.6561143Z   type: 'test'
+2026-10-08T16:17:58.6561770Z   ...
+2026-10-08T16:17:58.6562560Z # Subtest: missing source identity cannot create a local suggestion
+2026-10-08T16:17:58.6563658Z ok 58 - missing source identity cannot create a local suggestion
+2026-10-08T16:17:58.6564546Z   ---
+2026-10-08T16:17:58.6565181Z   duration_ms: 0.660782
+2026-10-08T16:17:58.6565834Z   type: 'test'
+2026-10-08T16:17:58.6566686Z   ...
+2026-10-08T16:17:58.6567753Z # Subtest: calendar arithmetic stays stable across time zones and daylight-saving boundaries
+2026-10-08T16:17:58.6569204Z ok 59 - calendar arithmetic stays stable across time zones and daylight-saving boundaries
+2026-10-08T16:17:58.6570270Z   ---
+2026-10-08T16:17:58.6570915Z   duration_ms: 91.080456
+2026-10-08T16:17:58.6571652Z   type: 'test'
+2026-10-08T16:17:58.6572321Z   ...
+2026-10-08T16:17:58.6659291Z # /home/runner/work/tastetable/tastetable/tests/venue_followup.browser.cjs:10
+2026-10-08T16:17:58.6660944Z # if (!appArgument || !outputArgument) throw new Error("Usage: node venue_followup.browser.cjs APP_ROOT NEW_OUTPUT_DIRECTORY");
+2026-10-08T16:17:58.6662411Z #                                      ^
+2026-10-08T16:17:58.6663397Z # Error: Usage: node venue_followup.browser.cjs APP_ROOT NEW_OUTPUT_DIRECTORY
+2026-10-08T16:17:58.6664953Z #     at Object.<anonymous> (/home/runner/work/tastetable/tastetable/tests/venue_followup.browser.cjs:10:44)
+2026-10-08T16:17:58.6666363Z #     at Module._compile (node:internal/modules/cjs/loader:1781:14)
+2026-10-08T16:17:58.6667787Z #     at Object..js (node:internal/modules/cjs/loader:1913:10)
+2026-10-08T16:17:58.6668828Z #     at Module.load (node:internal/modules/cjs/loader:1505:32)
+2026-10-08T16:17:58.6669831Z #     at Function._load (node:internal/modules/cjs/loader:1309:12)
+2026-10-08T16:17:58.6670866Z #     at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)
+2026-10-08T16:17:58.6671919Z #     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+2026-10-08T16:17:58.6672681Z #     at node:internal/main/run_main_module:36:49
+2026-10-08T16:17:58.6673218Z # Node.js v22.23.3
+2026-10-08T16:17:58.6673702Z # Subtest: tests/venue_followup.browser.cjs
+2026-10-08T16:17:58.6674279Z not ok 7 - tests/venue_followup.browser.cjs
+2026-10-08T16:17:58.6674826Z   ---
+2026-10-08T16:17:58.6675252Z   duration_ms: 56.189857
+2026-10-08T16:17:58.6675713Z   type: 'test'
+2026-10-08T16:17:58.6676345Z   location: '/home/runner/work/tastetable/tastetable/tests/venue_followup.browser.cjs:1:1'
+2026-10-08T16:17:58.6677552Z   failureType: 'testCodeFailure'
+2026-10-08T16:17:58.6678062Z   exitCode: 1
+2026-10-08T16:17:58.6678441Z   signal: ~
+2026-10-08T16:17:58.6678781Z   error: 'test failed'
+2026-10-08T16:17:58.6679080Z   code: 'ERR_TEST_FAILURE'
+2026-10-08T16:17:58.6679364Z   ...
+2026-10-08T16:17:58.6702084Z # Subtest: questions use the native purpose and constraints; original unknown explanation survives
+2026-10-08T16:17:58.6703225Z ok 61 - questions use the native purpose and constraints; original unknown explanation survives
+2026-10-08T16:17:58.6703759Z   ---
+2026-10-08T16:17:58.6704029Z   duration_ms: 2.329404
+2026-10-08T16:17:58.6704322Z   type: 'test'
+2026-10-08T16:17:58.6704578Z   ...
+2026-10-08T16:17:58.6717685Z # Subtest: a different date starts a separate note; returning restores only that occurrence's note
+2026-10-08T16:17:58.6727260Z ok 62 - a different date starts a separate note; returning restores only that occurrence's note
+2026-10-08T16:17:58.6737471Z   ---
+2026-10-08T16:17:58.6737923Z   duration_ms: 0.849293
+2026-10-08T16:17:58.6738406Z   type: 'test'
+2026-10-08T16:17:58.6738806Z   ...
+2026-10-08T16:17:58.6739307Z # Subtest: two occurrences sharing an entity and date retain distinct caregiver notes
+2026-10-08T16:17:58.6740300Z ok 63 - two occurrences sharing an entity and date retain distinct caregiver notes
+2026-10-08T16:17:58.6740761Z   ---
+2026-10-08T16:17:58.6741042Z   duration_ms: 1.012436
+2026-10-08T16:17:58.6741347Z   type: 'test'
+2026-10-08T16:17:58.6741599Z   ...
+2026-10-08T16:17:58.6742063Z # Subtest: omitted picks have no active contact card or exported note, and restore retains its date
+2026-10-08T16:17:58.6742769Z ok 64 - omitted picks have no active contact card or exported note, and restore retains its date
+2026-10-08T16:17:58.6743480Z   ---
+2026-10-08T16:17:58.6743859Z   duration_ms: 0.902973
+2026-10-08T16:17:58.6744161Z   type: 'test'
+2026-10-08T16:17:58.6744413Z   ...
+2026-10-08T16:17:58.6744979Z # Subtest: another week has separate notes even when weekday and occurrence are unchanged
+2026-10-08T16:17:58.6745698Z ok 65 - another week has separate notes even when weekday and occurrence are unchanged
+2026-10-08T16:17:58.6746292Z   ---
+2026-10-08T16:17:58.6746809Z   duration_ms: 0.409509
+2026-10-08T16:17:58.6747099Z   type: 'test'
+2026-10-08T16:17:58.6747360Z   ...
+2026-10-08T16:17:58.6747786Z # Subtest: an identical newly accepted response cannot inherit or access the prior worksheet
+2026-10-08T16:17:58.6748431Z ok 66 - an identical newly accepted response cannot inherit or access the prior worksheet
+2026-10-08T16:17:58.6748898Z   ---
+2026-10-08T16:17:58.6749153Z   duration_ms: 1.373442
+2026-10-08T16:17:58.6749438Z   type: 'test'
+2026-10-08T16:17:58.6749688Z   ...
+2026-10-08T16:17:58.6750107Z # Subtest: source provenance cannot be relabeled while borrowing the original source objects
+2026-10-08T16:17:58.6750748Z ok 67 - source provenance cannot be relabeled while borrowing the original source objects
+2026-10-08T16:17:58.6751204Z   ---
+2026-10-08T16:17:58.6751647Z   duration_ms: 0.3498
+2026-10-08T16:17:58.6751929Z   type: 'test'
+2026-10-08T16:17:58.6752185Z   ...
+2026-10-08T16:17:58.6752605Z # Subtest: an event still carrying the old date cannot update the newly scheduled visit
+2026-10-08T16:17:58.6753215Z ok 68 - an event still carrying the old date cannot update the newly scheduled visit
+2026-10-08T16:17:58.6753655Z   ---
+2026-10-08T16:17:58.6753969Z   duration_ms: 0.319966
+2026-10-08T16:17:58.6754237Z   type: 'test'
+2026-10-08T16:17:58.6754486Z   ...
+2026-10-08T16:17:58.6754920Z # Subtest: the printable export carries exact source, dates and labeled multiline caregiver notes
+2026-10-08T16:17:58.6755591Z ok 69 - the printable export carries exact source, dates and labeled multiline caregiver notes
+2026-10-08T16:17:58.6756070Z   ---
+2026-10-08T16:17:58.6756314Z   duration_ms: 0.896193
+2026-10-08T16:17:58.6756800Z   type: 'test'
+2026-10-08T16:17:58.6757051Z   ...
+2026-10-08T16:17:58.6757442Z # Subtest: empty scheduled weeks cannot create an apparently populated call sheet
+2026-10-08T16:17:58.6758047Z ok 70 - empty scheduled weeks cannot create an apparently populated call sheet
+2026-10-08T16:17:58.6758481Z   ---
+2026-10-08T16:17:58.6758727Z   duration_ms: 0.689906
+2026-10-08T16:17:58.6759006Z   type: 'test'
+2026-10-08T16:17:58.6759252Z   ...
+2026-10-08T16:17:58.6759666Z # Subtest: unknown fields, status values and oversized notes do not modify a retained note
+2026-10-08T16:17:58.6760301Z ok 71 - unknown fields, status values and oversized notes do not modify a retained note
+2026-10-08T16:17:58.6760759Z   ---
+2026-10-08T16:17:58.6761002Z   duration_ms: 0.917505
+2026-10-08T16:17:58.6761277Z   type: 'test'
+2026-10-08T16:17:58.6761534Z   ...
+2026-10-08T16:17:58.6761983Z # Subtest: a reopened source retains its filename, age and unchanged-check label in the call sheet
+2026-10-08T16:17:58.6762669Z ok 72 - a reopened source retains its filename, age and unchanged-check label in the call sheet
+2026-10-08T16:17:58.6763146Z   ---
+2026-10-08T16:17:58.6763397Z   duration_ms: 0.627643
+2026-10-08T16:17:58.6763674Z   type: 'test'
+2026-10-08T16:17:58.6763920Z   ...
+2026-10-08T16:17:58.6764405Z # Subtest: editable questions remain literal, occurrence/date-bound text alongside unchanged source checks
+2026-10-08T16:17:58.6765319Z ok 73 - editable questions remain literal, occurrence/date-bound text alongside unchanged source checks
+2026-10-08T16:17:58.6765890Z   ---
+2026-10-08T16:17:58.6766145Z   duration_ms: 0.63166
+2026-10-08T16:17:58.6766586Z   type: 'test'
+2026-10-08T16:17:58.6766839Z   ...
+2026-10-08T16:17:58.6767319Z # Subtest: revising questions retains the earlier reply with its actual question context and a follow-up hold
+2026-10-08T16:17:58.6768107Z ok 74 - revising questions retains the earlier reply with its actual question context and a follow-up hold
+2026-10-08T16:17:58.6768642Z   ---
+2026-10-08T16:17:58.6768886Z   duration_ms: 1.100186
+2026-10-08T16:17:58.6769188Z   type: 'test'
+2026-10-08T16:17:58.6769440Z   ...
+2026-10-08T16:17:58.6769955Z # Subtest: unchanged questions preserve status; returning to the earlier questions removes only the mismatch
+2026-10-08T16:17:58.6770845Z ok 75 - unchanged questions preserve status; returning to the earlier questions removes only the mismatch
+2026-10-08T16:17:58.6771389Z   ---
+2026-10-08T16:17:58.6771642Z   duration_ms: 1.232052
+2026-10-08T16:17:58.6771920Z   type: 'test'
+2026-10-08T16:17:58.6772167Z   ...
+2026-10-08T16:17:58.6772397Z 1..75
+2026-10-08T16:17:58.6772629Z # tests 75
+2026-10-08T16:17:58.6772893Z # suites 0
+2026-10-08T16:17:58.6773138Z # pass 74
+2026-10-08T16:17:58.6773435Z # fail 1
+2026-10-08T16:17:58.6773787Z # cancelled 0
+2026-10-08T16:17:58.6774165Z # skipped 0
+2026-10-08T16:17:58.6774535Z # todo 0
+2026-10-08T16:17:58.6774910Z # duration_ms 398.059544
+2026-10-08T16:17:58.6789284Z ##[error]Process completed with exit code 1.
+2026-10-08T16:17:58.6999691Z Post job cleanup.
+2026-10-08T16:17:58.7842932Z [command]/usr/bin/git version
+2026-10-08T16:17:58.7896937Z git version 2.55.0
+2026-10-08T16:17:58.7931803Z Temporarily overriding HOME='/home/runner/work/_temp/c893a0b7-02eb-4e97-bf11-e9b13bc90966' before making global git config changes
+2026-10-08T16:17:58.7933282Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T16:17:58.7937482Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tastetable/tastetable
+2026-10-08T16:17:58.7972860Z Removing SSH command configuration
+2026-10-08T16:17:58.7980181Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T16:17:58.8017502Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T16:17:58.8279071Z Removing HTTP extra header
+2026-10-08T16:17:58.8283661Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T16:17:58.8324711Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T16:17:58.8583780Z Removing includeIf entries pointing to credentials config files
+2026-10-08T16:17:58.8607940Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T16:17:58.8624301Z includeif.gitdir:/home/runner/work/tastetable/tastetable/.git.path
+2026-10-08T16:17:58.8625519Z includeif.gitdir:/home/runner/work/tastetable/tastetable/.git/worktrees/*.path
+2026-10-08T16:17:58.8626773Z includeif.gitdir:/github/workspace/.git.path
+2026-10-08T16:17:58.8627955Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-08T16:17:58.8634749Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/tastetable/tastetable/.git.path
+2026-10-08T16:17:58.8665614Z /home/runner/work/_temp/git-credentials-26be13c7-3dca-4d71-b331-a186772eab94.config
+2026-10-08T16:17:58.8681212Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/tastetable/tastetable/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-26be13c7\-3dca\-4d71\-b331\-a186772eab94\.config
+2026-10-08T16:17:58.8729340Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/tastetable/tastetable/.git/worktrees/*.path
+2026-10-08T16:17:58.8756951Z /home/runner/work/_temp/git-credentials-26be13c7-3dca-4d71-b331-a186772eab94.config
+2026-10-08T16:17:58.8778247Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/tastetable/tastetable/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-26be13c7\-3dca\-4d71\-b331\-a186772eab94\.config
+2026-10-08T16:17:58.8823936Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-08T16:17:58.8854007Z /github/runner_temp/git-credentials-26be13c7-3dca-4d71-b331-a186772eab94.config
+2026-10-08T16:17:58.8863730Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-26be13c7\-3dca\-4d71\-b331\-a186772eab94\.config
+2026-10-08T16:17:58.8909205Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-08T16:17:58.8947534Z /github/runner_temp/git-credentials-26be13c7-3dca-4d71-b331-a186772eab94.config
+2026-10-08T16:17:58.8962125Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-26be13c7\-3dca\-4d71\-b331\-a186772eab94\.config
+2026-10-08T16:17:58.9011032Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T16:17:58.9251589Z Removing credentials config '/home/runner/work/_temp/git-credentials-26be13c7-3dca-4d71-b331-a186772eab94.config'
+2026-10-08T16:17:58.9399732Z Cleaning up orphan processes

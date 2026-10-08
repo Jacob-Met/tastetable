@@ -40,6 +40,7 @@ const sourcePaths = [
   "tastetable_cli.py", "agent.py", "constraints.py", "qloo_client.py", "personas.py",
   "fixtures/qloo_fixtures.json", "static/week_plan.mjs", "static/week_file.mjs",
   "static/calendar.js", "static/calendar.css", "static/app.js", "static/index.html",
+  "static/venue_followup.mjs", "static/venue_followup.css",
   "static/style.css", "static/plan-request.js", "tools/native_plan_to_week.mjs",
   "tests/test_native_plan_week.py", "tools/check_native_plan_week_browser.mjs",
   ".github/workflows/native-plan-week-browser.yml",

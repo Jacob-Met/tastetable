@@ -1,0 +1,24 @@
+{
+  "schema": "independent-tastetable-status-refusal-v1",
+  "sourceRoot": "/dev/shm/hamon-tastetable-6c20bb4b010e/candidate-r3",
+  "sourceBefore": {
+    "static/venue_followup.mjs": "0573f3c9b60f33f105c64bd61d86cbdcc66664f8f47ae06b998c00bc988fa832",
+    "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+  },
+  "node": "v24.19.0",
+  "browserExecuted": false,
+  "serverExecuted": false,
+  "liveVenueOrProviderCalls": 0,
+  "refusal": {
+    "name": "Error",
+    "message": "Update the reply for the revised questions before marking a reply recorded."
+  },
+  "status": "passed",
+  "refusalAtomic": true,
+  "earlierQuestionAndReplyRetained": true,
+  "explicitNewReplyBindsCurrentQuestion": true,
+  "sourceAfter": {
+    "static/venue_followup.mjs": "0573f3c9b60f33f105c64bd61d86cbdcc66664f8f47ae06b998c00bc988fa832",
+    "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+  }
+}

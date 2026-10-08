@@ -1,0 +1,90 @@
+{
+  "schema": "tastetable.venue-followup.later-parent/1",
+  "received_base": "689ddc9a6a4f5f12068e1e99127cc77482c53924",
+  "integration_base": "34afd379c1a7032b3025079b5fe6ccc9cd47c637",
+  "integration_tree": "9d049bb54e7de594d69e7b3e1149af4fe546f5f6",
+  "delta": [
+    {
+      "path": "web-demo-offline/README.md",
+      "status": "modified",
+      "git_blob": "131d160589f62efe6dab338849932320dccdc9e9"
+    },
+    {
+      "path": "web-demo-offline/app.mjs",
+      "status": "modified",
+      "git_blob": "d974e65009c89b0a90ebb516bcac361ca169842a"
+    },
+    {
+      "path": "web-demo-offline/arrangement_history.mjs",
+      "status": "added",
+      "git_blob": "ef1e8643370045c021e820cc7919a5692ede44bc"
+    },
+    {
+      "path": "web-demo-offline/dist/tastetable-offline-studio.zip",
+      "status": "modified",
+      "git_blob": "6a8affc08decdc9510b00410e94efa1495520bd6"
+    },
+    {
+      "path": "web-demo-offline/index.html",
+      "status": "modified",
+      "git_blob": "60a20e68ef6deaaea535a6d51c589c8dfd948c21"
+    },
+    {
+      "path": "web-demo-offline/offline.css",
+      "status": "modified",
+      "git_blob": "26271eaf29ded4ec07dbff7d8e0bc6ab42d5f482"
+    },
+    {
+      "path": "web-demo-offline/receipts/arrangement-history-68094585a1c2/README.md",
+      "status": "added",
+      "git_blob": "656dade980db15aa0621af8d0363b7f9a426bb91"
+    },
+    {
+      "path": "web-demo-offline/receipts/arrangement-history-68094585a1c2/native-evidence.tar.gz",
+      "status": "added",
+      "git_blob": "68023818cc0908479b789ff97eec97ce23b6c533"
+    },
+    {
+      "path": "web-demo-offline/receipts/arrangement-history-68094585a1c2/source-manifest.json",
+      "status": "added",
+      "git_blob": "7a5dc9467e22696d01f68a8a78be4cdddbb41204"
+    },
+    {
+      "path": "web-demo-offline/tests/arrangement_history.test.mjs",
+      "status": "added",
+      "git_blob": "5e5f7d8bacf09b4c194ca70967568d8cd55742de"
+    },
+    {
+      "path": "web-demo-offline/tools/check_arrangement_history_browser.mjs",
+      "status": "added",
+      "git_blob": "c98d0cc222bcca28e0beb35f66fe94ee3fd28acd"
+    },
+    {
+      "path": "web-demo-offline/tools/receive_static.py",
+      "status": "modified",
+      "git_blob": "b4137bcbe2d558bacc917e34191a670353378984"
+    }
+  ],
+  "all_existing_native_receiver_parent_paths_unchanged": [
+    "agent.py",
+    "constraints.py",
+    "fixtures/qloo_fixtures.json",
+    "personas.py",
+    "qloo_client.py",
+    "static/calendar.css",
+    "static/calendar.js",
+    "static/plan-request.js",
+    "static/style.css",
+    "static/week_file.mjs",
+    "static/week_plan.mjs",
+    "tastetable_cli.py",
+    "tools/native_plan_to_week.mjs",
+    "tests/test_native_plan_week.py",
+    ".github/workflows/native-plan-week-browser.yml",
+    "static/app.js",
+    "static/index.html",
+    "tools/check_native_plan_week_browser.mjs"
+  ],
+  "owned_readme_and_index_parent_unchanged": true,
+  "qualification": "Incoming#35 affects only the separate offline studio; no native receiver dependency changed. Preserve its portable ZIP and all current unowned leaves. No identical receiving replay performed."
+}

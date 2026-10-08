@@ -1,0 +1,139 @@
+{
+  "actual_browser_probe": {
+    "actual_native_mock_plan_responses": 2,
+    "authored_fixtures": [
+      {
+        "file": "authored-duplicate-week.json",
+        "kind": "duplicate saved week derived from the original native mock response",
+        "sha256": "4806893cfdded695f5b1c94b3523b41f68859ae8534a36f904dbd61af60c4df4"
+      },
+      {
+        "kind": "browser-intercepted HTTP 500 replacement control",
+        "nativeBackendResponse": false
+      }
+    ],
+    "chromium": "153.0.8010.0",
+    "external_requests": [],
+    "failed": 2,
+    "harness_error": null,
+    "page_errors": [],
+    "passed": 5,
+    "print_boundary": "Actual Chromium print-media CSS and DOM; no physical printer or PDF.",
+    "skipped": 0
+  },
+  "bounds": [
+    "No owner source modified, no authored full suite rerun, no GitHub mutation, no shared browser changes.",
+    "Actual browser has a fresh private profile; all HTTP planning was explicit native mock mode.",
+    "Duplicate saved week and HTTP500 are authored controls; no real venue contact, live provider, care suitability or physical printer claim.",
+    "Supplementary status-refusal probe is prepared but not executed in this r2 receipt. It distinguishes the owner's planned stricter refusal from the frozen original probe's assumption that the status write is accepted."
+  ],
+  "files": {
+    "browser-r2.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "browser-r2.stdout.json": {
+      "bytes": 188,
+      "sha256": "baaea107a54b1bd26028b4f3a5fcb248746c792652dafae5f3ad0c94c8a89c04"
+    },
+    "browser-r2/authored-duplicate-week.json": {
+      "bytes": 14606,
+      "sha256": "4806893cfdded695f5b1c94b3523b41f68859ae8534a36f904dbd61af60c4df4"
+    },
+    "browser-r2/duplicate-call-sheet.txt": {
+      "bytes": 5141,
+      "sha256": "1ffc9404b64dcdc431834b910609556b98b75cb1f7112d73c7360c906e744660"
+    },
+    "browser-r2/independent-saved-week.json": {
+      "bytes": 14607,
+      "sha256": "5359230824843e914e8c61ada8a920f99675c6cae4db133215d8af9c9d2cf0cf"
+    },
+    "browser-r2/literal-call-sheet.txt": {
+      "bytes": 5014,
+      "sha256": "182d2a0c562c3ac9e77d5b769f97af284289bd7ebe92d57483b7864a8e15b4df"
+    },
+    "browser-r2/native-plan-1.json": {
+      "bytes": 8609,
+      "sha256": "ebd767d10908b1712c5249464254d985cb3b7e7db69d223db5ff71316da5666e"
+    },
+    "browser-r2/native-plan-2.json": {
+      "bytes": 8609,
+      "sha256": "ebd767d10908b1712c5249464254d985cb3b7e7db69d223db5ff71316da5666e"
+    },
+    "browser-r2/omitted-call-sheet.txt": {
+      "bytes": 4053,
+      "sha256": "e4ce5bb57b13c7fcedb30fc10de2f1966faca848bd62e44523ef86a751262c72"
+    },
+    "browser-r2/result.json": {
+      "bytes": 8066,
+      "sha256": "ed996851aa9e49076118e9bb798e6aff1f1dda442ffce0ab92d804c2d275e75e"
+    },
+    "browser-r2/server.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "frozen-r2-pins.json": {
+      "bytes": 4829,
+      "sha256": "640b853f74d50a96611f1bda18a61b44cf48a902a6cd139d2749e6f7067e8e1b"
+    },
+    "owner-freeze-r2.json": {
+      "bytes": 2489,
+      "sha256": "d26c0342eba86d47d153a92e676666bfe7564a292918f6f07641ae2db181e9e5"
+    },
+    "probe_browser.cjs": {
+      "bytes": 17043,
+      "sha256": "b5f6a6649bc93ec50fb1e2d5857e6a87259a923ee3c6c867493b670c01c827db"
+    },
+    "probe_question_receipt.mjs": {
+      "bytes": 5361,
+      "sha256": "854274153b1cc5e71dfa301aafbd4f44ae62e8b9438e5536f0b4bfecf5b2e2fd"
+    },
+    "probe_status_refusal.mjs": {
+      "bytes": 3122,
+      "sha256": "ce922de7661e0ffe8d4b721de57bb4e8366e9fe52b46d5757f05dcf6227712ab"
+    },
+    "question-r2.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "question-r2.stdout.json": {
+      "bytes": 3172,
+      "sha256": "c9dc1b3b35269aaac334d6659cd176c22e00956a459e3d6b5c2cc74830c9d1a7"
+    }
+  },
+  "findings": [
+    {
+      "actual_browser_editable_question_count": 0,
+      "api_error": "RangeError: The venue note field is unknown or too long.",
+      "consequence": "The caregiver cannot edit a visit question; question/reply temporal binding cannot be exercised.",
+      "id": "R2-QUESTION-EDITOR",
+      "requirement": "TasteTable issue16 editable visit question",
+      "status": "reproduced"
+    },
+    {
+      "consequence": "A schedule re-render drops the initial newline from the editable reply; the next edit permanently removes it from recorded/printed data.",
+      "id": "R2-LEADING-LINEBREAK",
+      "observed": {
+        "before": "\nA literal first-line break belongs to this reply.",
+        "entered": "\nA literal first-line break belongs to this reply.",
+        "printedAfterEdit": "A literal first-line break belongs to this reply. [continued]",
+        "printedBeforeEdit": "\nA literal first-line break belongs to this reply.",
+        "redisplayed": "A literal first-line break belongs to this reply."
+      },
+      "source_boundary": "static/venue_followup.mjs sync() inserts note text directly after the textarea start tag.",
+      "status": "reproduced"
+    }
+  ],
+  "native_esm_probe": {
+    "browser_executed": false,
+    "failed": 3,
+    "passed": 1,
+    "skipped": 0,
+    "underlying_issue": "One missing editable-question capability causes all three question/temporal failures; independent occurrence/date/source positive control passes."
+  },
+  "owner_freeze_sha256": "d26c0342eba86d47d153a92e676666bfe7564a292918f6f07641ae2db181e9e5",
+  "schema": "independent-tastetable-r2-receiving-review-v1",
+  "source_base": "0758d2cca881fb5b5041f80bae2174cf485f4bdd",
+  "source_before_after_unchanged": true,
+  "source_files_copied_exact": 22
+}
