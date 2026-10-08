@@ -133,6 +133,25 @@ plan. Stopping the browser's wait is not proof that a server or provider stopped
 If a replacement fails or cannot render, the old handoff remains retired and you can retry
 from the preserved inputs.
 
+### Compare saved arrangements
+
+Use **Compare saved weeks (new tab)** beside Open saved week to review two copies before
+choosing which one to reopen. Choose an earlier and a revised saved-week JSON file. The page
+shows their exact week dates, source labels, saved/source timestamps, inputs and original
+explanations. Matching saved sources identify moved visits, newly scheduled visits and
+omissions by original occurrence, so repeated venues remain distinct. Changing the chosen
+week compares the actual dates across that change.
+
+If the complete original response, inputs or source identity differ, the page shows the two
+arrangements separately and does not infer visit changes. Comparison reads files locally,
+does not request a plan, and does not replace the planner or modify either file. File admission
+uses the existing saved-week-v1 codec with a 2 MiB UTF-8 limit. A refused replacement leaves
+the prior loaded copy visible; clearing a slot retires an unfinished read.
+
+To continue with a chosen copy, return to the planner and use Open saved week. Original
+checks are retained from the files without rerunning them. Visit-only venue worksheet notes
+are outside this saved-week format and comparison.
+
 ### Save and reopen an editable week
 
 **Save week (.json)** downloads the current week as a local file. It includes the original

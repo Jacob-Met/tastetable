@@ -1,0 +1,178 @@
+TAP version 13
+# Subtest: codec-created copies compare exact moves, omissions and inclusion without mutating inputs
+ok 1 - codec-created copies compare exact moves, omissions and inclusion without mutating inputs
+  ---
+  duration_ms: 34.278328
+  type: 'test'
+  ...
+# Subtest: different chosen weeks compare actual dates through the year boundary
+ok 2 - different chosen weeks compare actual dates through the year boundary
+  ---
+  duration_ms: 21.034976
+  type: 'test'
+  ...
+# Subtest: repeated venue identities retain original occurrence mapping
+ok 3 - repeated venue identities retain original occurrence mapping
+  ---
+  duration_ms: 15.837223
+  type: 'test'
+  ...
+# Subtest: changed response, profile, timestamp or calendar identity prevents inferred movement
+ok 4 - changed response, profile, timestamp or calendar identity prevents inferred movement
+  ---
+  duration_ms: 32.522846
+  type: 'test'
+  ...
+# Subtest: JSON property order is immaterial, source array order is not
+ok 5 - JSON property order is immaterial, source array order is not
+  ---
+  duration_ms: 12.193296
+  type: 'test'
+  ...
+# Subtest: all-omitted arrangements and empty original plans have honest counts
+ok 6 - all-omitted arrangements and empty original plans have honest counts
+  ---
+  duration_ms: 24.983562
+  type: 'test'
+  ...
+# Subtest: unknown source and legacy null calendar IDs remain explicitly saved-source comparisons
+ok 7 - unknown source and legacy null calendar IDs remain explicitly saved-source comparisons
+  ---
+  duration_ms: 26.197222
+  type: 'test'
+  ...
+# Subtest: native response and edited occurrences round-trip across a new state
+ok 8 - native response and edited occurrences round-trip across a new state
+  ---
+  duration_ms: 30.423048
+  type: 'test'
+  ...
+# Subtest: resaving preserves the accepted source and new local arrangement
+ok 9 - resaving preserves the accepted source and new local arrangement
+  ---
+  duration_ms: 17.807604
+  type: 'test'
+  ...
+# Subtest: occurrence keys keep repeated entity IDs distinct after reopening
+ok 10 - occurrence keys keep repeated entity IDs distinct after reopening
+  ---
+  duration_ms: 9.794702
+  type: 'test'
+  ...
+# Subtest: UTF-8 JSON with BOM or different indentation preserves source values
+ok 11 - UTF-8 JSON with BOM or different indentation preserves source values
+  ---
+  duration_ms: 10.966728
+  type: 'test'
+  ...
+# Subtest: empty arrangements and unknown source remain usable snapshots
+ok 12 - empty arrangements and unknown source remain usable snapshots
+  ---
+  duration_ms: 14.277211
+  type: 'test'
+  ...
+# Subtest: save refuses a derived week whose original evidence has changed
+ok 13 - save refuses a derived week whose original evidence has changed
+  ---
+  duration_ms: 9.71228
+  type: 'test'
+  ...
+# Subtest: malformed format, dates, timestamps and inconsistent source inputs fail
+ok 14 - malformed format, dates, timestamps and inconsistent source inputs fail
+  ---
+  duration_ms: 49.012034
+  type: 'test'
+  ...
+# Subtest: missing, additional or invalid occurrence assignments cannot silently drop picks
+ok 15 - missing, additional or invalid occurrence assignments cannot silently drop picks
+  ---
+  duration_ms: 29.57024
+  type: 'test'
+  ...
+# Subtest: saved files validate native response types before reaching HTML or late render fields
+ok 16 - saved files validate native response types before reaching HTML or late render fields
+  ---
+  duration_ms: 61.461548
+  type: 'test'
+  ...
+# Subtest: current native recovery traces retain null and list args with the checked partial plan
+ok 17 - current native recovery traces retain null and list args with the checked partial plan
+  ---
+  duration_ms: 17.113229
+  type: 'test'
+  ...
+# Subtest: initial week retains every suggestion and exposes all seven dates
+ok 18 - initial week retains every suggestion and exposes all seven dates
+  ---
+  duration_ms: 19.202101
+  type: 'test'
+  ...
+# Subtest: move, omit and restore preserve source evidence and unrelated picks
+ok 19 - move, omit and restore preserve source evidence and unrelated picks
+  ---
+  duration_ms: 3.902369
+  type: 'test'
+  ...
+# Subtest: reset restores original assignments while keeping the chosen week
+ok 20 - reset restores original assignments while keeping the chosen week
+  ---
+  duration_ms: 2.477259
+  type: 'test'
+  ...
+# Subtest: calendar weeks handle leap days and year boundaries
+ok 21 - calendar weeks handle leap days and year boundaries
+  ---
+  duration_ms: 1.107376
+  type: 'test'
+  ...
+# Subtest: invalid dates and unknown transitions refuse without changing the plan
+ok 22 - invalid dates and unknown transitions refuse without changing the plan
+  ---
+  duration_ms: 4.239204
+  type: 'test'
+  ...
+# Subtest: source plan is a detached immutable snapshot
+ok 23 - source plan is a detached immutable snapshot
+  ---
+  duration_ms: 7.67502
+  type: 'test'
+  ...
+# Subtest: empty and partial plans remain honest and rejected candidates cannot be scheduled
+ok 24 - empty and partial plans remain honest and rejected candidates cannot be scheduled
+  ---
+  duration_ms: 9.794145
+  type: 'test'
+  ...
+# Subtest: duplicate source IDs remain distinct suggestions through scheduling
+ok 25 - duplicate source IDs remain distinct suggestions through scheduling
+  ---
+  duration_ms: 1.481576
+  type: 'test'
+  ...
+# Subtest: mode is retained explicitly and absence is never labeled live
+ok 26 - mode is retained explicitly and absence is never labeled live
+  ---
+  duration_ms: 3.297494
+  type: 'test'
+  ...
+# Subtest: missing source identity cannot create a local suggestion
+ok 27 - missing source identity cannot create a local suggestion
+  ---
+  duration_ms: 2.46173
+  type: 'test'
+  ...
+# Subtest: calendar arithmetic stays stable across time zones and daylight-saving boundaries
+ok 28 - calendar arithmetic stays stable across time zones and daylight-saving boundaries
+  ---
+  duration_ms: 892.975631
+  type: 'test'
+  ...
+1..28
+# tests 28
+# suites 0
+# pass 28
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1722.102812

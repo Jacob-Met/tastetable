@@ -1,0 +1,41 @@
+name: saved-week-comparison
+
+on:
+  pull_request:
+    paths:
+      - 'static/**'
+      - 'tests/*.mjs'
+      - 'tests/*.cjs'
+      - 'tests/fixtures/**'
+      - '.github/workflows/week-compare.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'static/**'
+      - 'tests/*.mjs'
+      - 'tests/*.cjs'
+      - 'tests/fixtures/**'
+      - '.github/workflows/week-compare.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  compare-week:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # Existing maintained pin.
+      - name: Test comparison and existing browser domain modules on cached Node 22
+        shell: bash
+        run: |
+          set -euo pipefail
+          COMPARE_WEEK_NODE=
+          for COMPARE_WEEK_NODE_DIR in "${RUNNER_TOOL_CACHE}/node"/22.*; do
+            if [[ -x "${COMPARE_WEEK_NODE_DIR}/x64/bin/node" && -f "${COMPARE_WEEK_NODE_DIR}/x64.complete" ]]; then
+              COMPARE_WEEK_NODE="${COMPARE_WEEK_NODE_DIR}/x64/bin/node"
+            fi
+          done
+          [[ -n "${COMPARE_WEEK_NODE}" ]] || { echo "A complete cached Node 22 is required."; exit 1; }
+          "${COMPARE_WEEK_NODE}" --version
+          "${COMPARE_WEEK_NODE}" --test tests/*.mjs tests/*.cjs
