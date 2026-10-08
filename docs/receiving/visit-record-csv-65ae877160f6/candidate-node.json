@@ -1,0 +1,52 @@
+{
+  "schema": "tastetable.visit_csv.author_receiving.v1",
+  "at": "2026-10-08T20:50:06.075975+00:00",
+  "argv": [
+    "node",
+    "--test",
+    "tests/test_saved_week_to_html.mjs",
+    "tests/test_visit_record.mjs",
+    "tests/test_visit_record_csv.mjs",
+    "tests/test_visit_record_to_csv.mjs",
+    "tests/test_week_change_brief.mjs",
+    "tests/test_week_compare.mjs",
+    "tests/test_week_file.mjs",
+    "tests/test_week_plan.mjs",
+    "tests/test_week_report.mjs",
+    "tests/venue_followup.test.mjs",
+    "tests/venue_note_file.test.mjs",
+    "tests/calendar-week.test.cjs",
+    "tests/calendar.test.cjs",
+    "tests/plan-request.test.cjs"
+  ],
+  "returncode": 0,
+  "node": "v22.22.1",
+  "log_sha256": "34077a3e7fb066ab0c0b95404f79bd479558e168a182295e5f8de6124b94e5b9",
+  "base_api_preserved": {
+    "static/visit_record.mjs": true,
+    "static/week_file.mjs": true,
+    "static/week_plan.mjs": true,
+    "tests/test_visit_record.mjs": true
+  },
+  "source": {
+    "static/visit_record_csv.mjs": "a233a983918291ef93577f91eb64c56adb4644c10cd8f4046e875d4536cc970c",
+    "tools/visit_record_to_csv.mjs": "1fcd19846156b108e7bcf225ff18f1bc19a637944d55bf64871b182f955ef7ec",
+    "tests/test_visit_record_csv.mjs": "915468d8f80fcb5e98dffa5f7155d7392e906ed344a158c31b28b397a5d07d74",
+    "tests/test_visit_record_to_csv.mjs": "043126cb6fab9a438f02e4d7ee359ffa01968a99221925e1db71b2618f24c71a",
+    "tests/fixtures/visit-record-csv.json": "ee45bdd3fb7dd31d48094a9752e88be7fc15331cad4e702e29b0eb5626df0624"
+  },
+  "output_summary": [
+    "  duration_ms: 21.789331",
+    "  type: 'test'",
+    "  ...",
+    "1..137",
+    "# tests 137",
+    "# suites 0",
+    "# pass 137",
+    "# fail 0",
+    "# cancelled 0",
+    "# skipped 0",
+    "# todo 0",
+    "# duration_ms 20815.573362"
+  ]
+}

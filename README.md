@@ -307,3 +307,7 @@ the plain-text download so embedded line breaks cannot become report headings.
 ## Keep a visit record
 
 Open **Visit record (new tab)** in the planner to record what happened beside the original saved suggestions. Open a JSON saved week from the planner or offline studio, review it, and choose **Use this file**. Each original occurrence has its own explicit outcome, optional actual date and note, including repeated venues and omitted picks. Download the separate visit-record JSON to reopen it later, or print a readable copy. Original dates, explanations and source text remain preserved; checks are not rerun and notes do not change future recommendations. Nothing is uploaded or stored automatically. [Usage, file contract and native checks](docs/visit-record/README.md).
+
+### Visit records as CSV
+
+Export an explicitly selected saved visit record with `node tools/visit_record_to_csv.mjs --input visits.json --output visits.csv` (Node.js 22+). The create-only CSV retains every original occurrence, including omitted and unrecorded picks, with separate planned and actual dates, outcomes and literal notes. Keep the JSON for reopening the record. See [CSV columns, text import and file delivery](docs/VISIT_RECORD_CSV.md).
