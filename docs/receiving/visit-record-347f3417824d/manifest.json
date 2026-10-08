@@ -1,0 +1,114 @@
+{
+  "schema": "tastetable.visit_record.publication.v1",
+  "repository": "Jacob-Met/tastetable",
+  "parent": "7a0c55c4e608ae4e910745a97270fde966575cd0",
+  "parent_tree": "d98738c38c4bc5ea31ce246a9e2aefcf16b3eb15",
+  "parent_leaves": 627,
+  "original_producer_base": "2b347cee4ff4e2b806362730a8520a3360b45f5a",
+  "final_source_manifest_sha256": "c1a0b544c69fa27a43d123cd19db44faea6ff0df877a050ca93ecf130295a07c",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 18510,
+      "sha256": "61f3633fd6afbad04b89ce3bef61af261559b3238c4bf7bbd1941b4e6a64502a",
+      "git_blob": "e85da11062dbbc2f41362fceffe7db9b0779e305"
+    },
+    {
+      "path": "static/index.html",
+      "bytes": 7668,
+      "sha256": "6a29aa8d42ae010ecc70f08d685bdec595a0c15f67175623ae22e3789817721e",
+      "git_blob": "029b6b00925b3fac39ee440725b75d265bb6dcff"
+    },
+    {
+      "path": "static/visit_record.mjs",
+      "bytes": 7525,
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f",
+      "git_blob": "2b5b37e3d4a227e00a5b0052a962d13512b53e48"
+    },
+    {
+      "path": "static/visit_record_ui.mjs",
+      "bytes": 9376,
+      "sha256": "bec91c2dc84902f8c948bce7a87cf87b19fdabf2a1bde17e94cf2fd0b324a64a",
+      "git_blob": "b136fa1a9f688d8a27db7d96668ace0895e547ee"
+    },
+    {
+      "path": "static/visit_record.css",
+      "bytes": 4621,
+      "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403",
+      "git_blob": "cf2ed8fc0871196a55ceef4e0aa0cab09d1fcfeb"
+    },
+    {
+      "path": "static/visit-record.html",
+      "bytes": 4010,
+      "sha256": "6a26be64a58a36a6c7102fcb3c1b6ea29a05a4f3842ed40609cabb0425cb0c24",
+      "git_blob": "22b5069faebfffd979aad3a089c656e585007f61"
+    },
+    {
+      "path": "tests/test_visit_record.mjs",
+      "bytes": 8011,
+      "sha256": "c228ef3d8481afb1b9944e662a5388f04fbed74ff2ecc9bf434faa73436a0fcb",
+      "git_blob": "3250402051342a873994e7d84ff2c5612c67a804"
+    },
+    {
+      "path": "tools/check_visit_record_browser.mjs",
+      "bytes": 13613,
+      "sha256": "88655e1b65c69b039f0934bf54c3b8a7caadde441287e91693012971e1f13b2b",
+      "git_blob": "6e97e39f2e32a807f2a7b31650f8148e8ab77059"
+    },
+    {
+      "path": "docs/visit-record/README.md",
+      "bytes": 6037,
+      "sha256": "8116b7c190f67a32908986f7675f62f86501cdce6e2c483ce0157b00a15b4cf5",
+      "git_blob": "3930b065fe72265c6a0fac28c7624546e72f77d2"
+    },
+    {
+      "path": "docs/receiving/visit-record-347f3417824d/author-native-v3.tar.gz",
+      "bytes": 636236,
+      "sha256": "a8e483fb3642fd46f8cb99aed84f1c995da8886a85ceca87ac846005a353040c",
+      "git_blob": "803ffdd311521244d54a96d08de4bb8a159ab422"
+    },
+    {
+      "path": "docs/receiving/visit-record-347f3417824d/independent-api-v1.tar.gz",
+      "bytes": 23249,
+      "sha256": "3ce280b7edf31e2670bf96d9c415e76c946375ec79f742f85aa405ee35c7bbb5",
+      "git_blob": "d47895f60bba2008e29edfe59470cf5cfd772697"
+    },
+    {
+      "path": "docs/receiving/visit-record-347f3417824d/independent-browser-v1.tar.gz",
+      "bytes": 430355,
+      "sha256": "d02ad18fd26807084667c777ecf197f595e667e44ff8ad1d49932a7aa6a24f3b",
+      "git_blob": "404cc159465334cb000a46f3b17e89878df3ed30"
+    },
+    {
+      "path": "docs/receiving/visit-record-347f3417824d/README.md",
+      "bytes": 5907,
+      "sha256": "ea3ea8b2dfb6dfdd7271cdc3c8511246cfd072fe3f0c86b23da8165e8576c32d",
+      "git_blob": "43dba4414495b1aaabb7c5af7d0529f4fea16eb4"
+    }
+  ],
+  "unchanged_helpers": [
+    {
+      "path": "static/week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "git_blob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "role": "unchanged helper"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "role": "unchanged helper"
+    }
+  ],
+  "manifest_self": "This manifest is included in the overlay; its own hash is bound by the Git tree and external publication receipt.",
+  "independent_api_source_review": "1869d67a17856fa122bf5d9e3bb8cf83b5c2510365d5dad3567d5f89f5eb2852",
+  "independent_browser_receipt": "13e49350154f608f230834ee97d6d1ec59624ffaa7bf898a09fa7fc52251707f",
+  "independent_browser_visual_source_review": "e2b46d9f43a26805fb45af021378cbfadd141d438c85382336ae01a0758285a8",
+  "post_receiving_deltas": [
+    "guide exact field-set/object-key prose correction",
+    "current7a README plus unchanged700-byte additive pointer"
+  ],
+  "hosted_ci": "Not inferred from native receiving. Check actual published commit separately."
+}
