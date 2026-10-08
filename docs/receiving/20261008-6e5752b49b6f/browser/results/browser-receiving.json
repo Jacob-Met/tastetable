@@ -1,0 +1,1237 @@
+{
+  "started_at": "2026-10-08T08:29:43.794Z",
+  "source_commit": "2ab4bc187f47acbf4ec193be33f57163c67a9e0c",
+  "source_tree": "e54fd1389040be1f8a7d321b8583283976910a9f",
+  "browser": {
+    "executable": "/tmp/hamon-project-browser-ce7eb129730f/portable-153/chromium",
+    "executable_sha256": "53a15d6c3a3d27dfb54c4ba60278b1683136f70cf1e67e989da7dfbd3d451ef0",
+    "playwright": "1.62.1",
+    "version": "153.0.8010.0"
+  },
+  "source_assets": {
+    "/": {
+      "file": "static/index.html",
+      "sha256": "645bec7968070fe369cca24f7b2dfe65c5e6c97ee940ae52b84ed11525edefeb",
+      "bytes": 2806,
+      "git_blob": "08451f60a6ae9b5a00353ef7b5f1f3fa016bda0f"
+    },
+    "/static/app.js": {
+      "file": "static/app.js",
+      "sha256": "eb928ab2d2c4e9b7e16b32a132b237fb6b96d399cd5b961389bb47d89f309081",
+      "bytes": 4012,
+      "git_blob": "2e6aa8b39d300c3d7dbd5f5bf7d9d819d835f132"
+    },
+    "/static/style.css": {
+      "file": "static/style.css",
+      "sha256": "b6d02475b444667386dca7fc1587afadc361071283a96fd75fd30b48ef7178e6",
+      "bytes": 2083,
+      "git_blob": "e45dd6186df8e513aabecadd88c55b3e6f58d0cc"
+    }
+  },
+  "cases": [
+    {
+      "name": "01-complete-persona",
+      "mode": "healthy",
+      "status": 200,
+      "request_route": "/api/plan/sample/rosa",
+      "request_body": null,
+      "grounded_items": [
+        {
+          "day": "Monday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-01",
+          "name": "Casa Habana Kitchen",
+          "affinity": 0.91,
+          "fallback": false,
+          "why": "Qloo affinity 0.91 for audiences who like Celia Cruz, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        },
+        {
+          "day": "Wednesday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-03",
+          "name": "Abuela's Table",
+          "affinity": 0.83,
+          "fallback": false,
+          "why": "Qloo affinity 0.83 for audiences who like Celia Cruz, West Side Story (tag match: Mexican). Checks: Soft foods: pass (soft options listed: caldo de pollo, refried beans); Low sodium: pass (lower-sodium signals: low sodium options); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        },
+        {
+          "day": "Friday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-07",
+          "name": "Blue Plate Diner",
+          "affinity": 0.262,
+          "fallback": true,
+          "why": "Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Diner). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, mashed potatoes, soups); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        },
+        {
+          "day": "Saturday",
+          "kind": "outing",
+          "entity_id": "FIX-V-03",
+          "name": "Arroyo Museum of Latin Music (fictional)",
+          "affinity": 0.96,
+          "why": "Qloo affinity 0.96 for audiences who like Celia Cruz, West Side Story (tag match: Museum). Checks: Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        },
+        {
+          "day": "Sunday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-11",
+          "name": "Trattoria Nonna Lucia",
+          "affinity": 0.256,
+          "fallback": true,
+          "why": "Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Italian). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        }
+      ],
+      "displayed_grounded_items": [
+        "Monday · Casa Habana Kitchen restaurant affinity 0.91 Qloo affinity 0.91 for audiences who like Celia Cruz, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').Qloo id: FIX-P-01",
+        "Wednesday · Abuela's Table restaurant affinity 0.83 Qloo affinity 0.83 for audiences who like Celia Cruz, West Side Story (tag match: Mexican). Checks: Soft foods: pass (soft options listed: caldo de pollo, refried beans); Low sodium: pass (lower-sodium signals: low sodium options); Wheelchair: pass (tagged 'wheelchair accessible entrance').Qloo id: FIX-P-03",
+        "Friday · Blue Plate Diner restaurantwidened affinity 0.26 Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Diner). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, mashed potatoes, soups); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').Qloo id: FIX-P-07",
+        "Saturday · Arroyo Museum of Latin Music (fictional) outing affinity 0.96 Qloo affinity 0.96 for audiences who like Celia Cruz, West Side Story (tag match: Museum). Checks: Wheelchair: pass (tagged 'wheelchair accessible entrance').Qloo id: FIX-V-03",
+        "Sunday · Trattoria Nonna Lucia restaurantwidened affinity 0.26 Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Italian). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').Qloo id: FIX-P-11"
+      ],
+      "grounded_picks_table": 5,
+      "baseline_items": [
+        "Monday · A well-reviewed Cuban restaurant nearby unverifiedThey enjoy Cuban food.",
+        "Wednesday · A well-reviewed Mexican restaurant nearby unverifiedThey enjoy Mexican food.",
+        "Friday · A well-reviewed Cuban restaurant nearby unverifiedThey enjoy Cuban food.",
+        "Saturday · A concert or show featuring music like Celia Cruz unverifiedMatches their music taste.",
+        "Sunday · A well-reviewed Mexican restaurant nearby unverifiedThey enjoy Mexican food."
+      ],
+      "baseline_label": "LLM-only (no Qloo)",
+      "notes": "",
+      "error_trace": [],
+      "trace_open_initially": false,
+      "error_rows_initially_visible": [],
+      "visible_error_message": false,
+      "form": {
+        "cuisines": "Cuban, Mexican",
+        "music": "Celia Cruz",
+        "films": "West Side Story",
+        "city": "Pasadena",
+        "constraints": [
+          "soft_foods",
+          "low_sodium",
+          "wheelchair"
+        ],
+        "top": 414.78125,
+        "disabled": false
+      },
+      "controls_enabled": true
+    },
+    {
+      "name": "02-outing-refusal",
+      "mode": "outing_fail",
+      "status": 200,
+      "request_route": "/api/plan/sample/rosa",
+      "request_body": null,
+      "grounded_items": [
+        {
+          "day": "Monday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-01",
+          "name": "Casa Habana Kitchen",
+          "affinity": 0.91,
+          "fallback": false,
+          "why": "Qloo affinity 0.91 for audiences who like Celia Cruz, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        },
+        {
+          "day": "Wednesday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-03",
+          "name": "Abuela's Table",
+          "affinity": 0.83,
+          "fallback": false,
+          "why": "Qloo affinity 0.83 for audiences who like Celia Cruz, West Side Story (tag match: Mexican). Checks: Soft foods: pass (soft options listed: caldo de pollo, refried beans); Low sodium: pass (lower-sodium signals: low sodium options); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        },
+        {
+          "day": "Friday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-07",
+          "name": "Blue Plate Diner",
+          "affinity": 0.262,
+          "fallback": true,
+          "why": "Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Diner). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, mashed potatoes, soups); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        },
+        {
+          "day": "Sunday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-11",
+          "name": "Trattoria Nonna Lucia",
+          "affinity": 0.256,
+          "fallback": true,
+          "why": "Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Italian). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        }
+      ],
+      "displayed_grounded_items": [
+        "Monday · Casa Habana Kitchen restaurant affinity 0.91 Qloo affinity 0.91 for audiences who like Celia Cruz, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').Qloo id: FIX-P-01",
+        "Wednesday · Abuela's Table restaurant affinity 0.83 Qloo affinity 0.83 for audiences who like Celia Cruz, West Side Story (tag match: Mexican). Checks: Soft foods: pass (soft options listed: caldo de pollo, refried beans); Low sodium: pass (lower-sodium signals: low sodium options); Wheelchair: pass (tagged 'wheelchair accessible entrance').Qloo id: FIX-P-03",
+        "Friday · Blue Plate Diner restaurantwidened affinity 0.26 Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Diner). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, mashed potatoes, soups); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').Qloo id: FIX-P-07",
+        "Sunday · Trattoria Nonna Lucia restaurantwidened affinity 0.26 Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Italian). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').Qloo id: FIX-P-11"
+      ],
+      "grounded_picks_table": 4,
+      "baseline_items": [
+        "Monday · A well-reviewed Cuban restaurant nearby unverifiedThey enjoy Cuban food.",
+        "Wednesday · A well-reviewed Mexican restaurant nearby unverifiedThey enjoy Mexican food.",
+        "Friday · A well-reviewed Cuban restaurant nearby unverifiedThey enjoy Cuban food.",
+        "Saturday · A concert or show featuring music like Celia Cruz unverifiedMatches their music taste.",
+        "Sunday · A well-reviewed Mexican restaurant nearby unverifiedThey enjoy Mexican food."
+      ],
+      "baseline_label": "LLM-only (no Qloo)",
+      "notes": "",
+      "error_trace": [
+        {
+          "step": 7,
+          "tool": "qloo_recs",
+          "args": {
+            "filter_type": "urn:entity:place",
+            "purpose": "outing",
+            "tag_ids": [
+              "urn:tag:category:place:jazz_club",
+              "urn:tag:category:place:movie_theater",
+              "urn:tag:category:place:museum",
+              "urn:tag:category:place:concert_hall"
+            ],
+            "signal_entity_ids": [
+              "FIX-A-celia",
+              "FIX-M-wss"
+            ],
+            "location": "Pasadena",
+            "take": 5
+          },
+          "result_summary": "QlooError: Qloo HTTP 503: authored receiving refusal"
+        }
+      ],
+      "trace_open_initially": false,
+      "error_rows_initially_visible": [
+        false
+      ],
+      "visible_error_message": false,
+      "form": {
+        "cuisines": "Cuban, Mexican",
+        "music": "Celia Cruz",
+        "films": "West Side Story",
+        "city": "Pasadena",
+        "constraints": [
+          "soft_foods",
+          "low_sodium",
+          "wheelchair"
+        ],
+        "top": 414.78125,
+        "disabled": false
+      },
+      "controls_enabled": true,
+      "error_visible_after_opening_trace": true,
+      "open_trace_text": "Agent tool trace\nqloo_search({\"query\":\"Celia Cruz\",\"kind\":\"entity\",\"types\":\"urn:entity:artist\"}) → Celia Cruz\nqloo_search({\"query\":\"West Side Story\",\"kind\":\"entity\",\"types\":\"urn:entity:movie\"}) → West Side Story\nqloo_search({\"query\":\"Cuban\",\"kind\":\"tag\"}) → Cuban\nqloo_search({\"query\":\"Mexican\",\"kind\":\"tag\"}) → Mexican\nqloo_recs({\"filter_type\":\"urn:entity:place\",\"purpose\":\"restaurant\",\"tag_ids\":[\"urn:tag:genre:restaurant:Cuban\",\"urn:tag:genre:restaurant:Mexican\"],\"signal_entity_ids\":[\"FIX-A-celia\",\"FIX-M-wss\"],\"location\":\"Pasadena\",\"take\":10}) → 4 candidates\nconstraint_check({\"entity_ids\":[\"FIX-P-01\",\"FIX-P-04\",\"FIX-P-02\",\"FIX-P-03\"],\"constraints\":[\"soft_foods\",\"low_sodium\",\"wheelchair\"],\"kind\":\"restaurant\"}) → 2/4 passed\nqloo_search({\"query\":\"Diner\",\"kind\":\"tag\"}) → Diner\nqloo_search({\"query\":\"Italian\",\"kind\":\"tag\"}) → Italian\nqloo_search({\"query\":\"Japanese\",\"kind\":\"tag\"}) → Japanese\nqloo_recs({\"filter_type\":\"urn:entity:place\",\"purpose\":\"restaurant\",\"tag_ids\":[\"urn:tag:genre:restaurant:Diner\",\"urn:tag:genre:restaurant:Italian\",\"urn:tag:genre:restaurant:Japanese\"],\"signal_entity_ids\":[\"FIX-A-celia\",\"FIX-M-wss\"],\"location\":\"Pasadena\",\"take\":10}) → 7 candidates\nconstraint_check({\"entity_ids\":[\"FIX-P-10\",\"FIX-P-08\",\"FIX-P-07\",\"FIX-P-11\",\"FIX-P-12\",\"FIX-P-13\",\"FIX-P-09\"],\"constraints\":[\"soft_foods\",\"low_sodium\",\"wheelchair\"],\"kind\":\"restaurant\"}) → 3/7 passed\nqloo_search({\"query\":\"jazz\",\"kind\":\"tag\"}) → Jazz Club\nqloo_search({\"query\":\"cinema\",\"kind\":\"tag\"}) → Movie Theater\nqloo_search({\"query\":\"museum\",\"kind\":\"tag\"}) → Museum\nqloo_search({\"query\":\"concert hall\",\"kind\":\"tag\"}) → Concert Hall\nqloo_recs({\"filter_type\":\"urn:entity:place\",\"purpose\":\"outing\",\"tag_ids\":[\"urn:tag:category:place:jazz_club\",\"urn:tag:category:place:movie_theater\",\"urn:tag:category:place:museum\",\"urn:tag:category:place:concert_hall\"],\"signal_entity_ids\":[\"FIX-A-celia\",\"FIX-M-wss\"],\"location\":\"Pasadena\",\"take\":5}) → QlooError: Qloo HTTP 503: authored receiving refusal\nconstraint_check({\"entity_ids\":[],\"constraints\":[\"soft_foods\",\"low_sodium\",\"wheelchair\"],\"kind\":\"outing\"}) → 0/0 passed"
+    },
+    {
+      "name": "03-all-recommendations-refused",
+      "mode": "all_fail",
+      "status": 200,
+      "request_route": "/api/plan/sample/rosa",
+      "request_body": null,
+      "grounded_items": [],
+      "displayed_grounded_items": [],
+      "grounded_picks_table": 0,
+      "baseline_items": [
+        "Monday · A well-reviewed Cuban restaurant nearby unverifiedThey enjoy Cuban food.",
+        "Wednesday · A well-reviewed Mexican restaurant nearby unverifiedThey enjoy Mexican food.",
+        "Friday · A well-reviewed Cuban restaurant nearby unverifiedThey enjoy Cuban food.",
+        "Saturday · A concert or show featuring music like Celia Cruz unverifiedMatches their music taste.",
+        "Sunday · A well-reviewed Mexican restaurant nearby unverifiedThey enjoy Mexican food."
+      ],
+      "baseline_label": "LLM-only (no Qloo)",
+      "notes": "Only 0 restaurants passed every constraint; remaining days left open rather than suggesting an unsafe pick.",
+      "error_trace": [
+        {
+          "step": 1,
+          "tool": "qloo_recs",
+          "args": {
+            "filter_type": "urn:entity:place",
+            "purpose": "restaurant",
+            "tag_ids": [
+              "urn:tag:genre:restaurant:Cuban",
+              "urn:tag:genre:restaurant:Mexican"
+            ],
+            "signal_entity_ids": [
+              "FIX-A-celia",
+              "FIX-M-wss"
+            ],
+            "location": "Pasadena",
+            "take": 10
+          },
+          "result_summary": "QlooError: Qloo HTTP 503: authored receiving refusal"
+        },
+        {
+          "step": 4,
+          "tool": "qloo_recs",
+          "args": {
+            "filter_type": "urn:entity:place",
+            "purpose": "restaurant",
+            "tag_ids": [
+              "urn:tag:genre:restaurant:Diner",
+              "urn:tag:genre:restaurant:Italian",
+              "urn:tag:genre:restaurant:Japanese"
+            ],
+            "signal_entity_ids": [
+              "FIX-A-celia",
+              "FIX-M-wss"
+            ],
+            "location": "Pasadena",
+            "take": 10
+          },
+          "result_summary": "QlooError: Qloo HTTP 503: authored receiving refusal"
+        },
+        {
+          "step": 7,
+          "tool": "qloo_recs",
+          "args": {
+            "filter_type": "urn:entity:place",
+            "purpose": "outing",
+            "tag_ids": [
+              "urn:tag:category:place:jazz_club",
+              "urn:tag:category:place:movie_theater",
+              "urn:tag:category:place:museum",
+              "urn:tag:category:place:concert_hall"
+            ],
+            "signal_entity_ids": [
+              "FIX-A-celia",
+              "FIX-M-wss"
+            ],
+            "location": "Pasadena",
+            "take": 5
+          },
+          "result_summary": "QlooError: Qloo HTTP 503: authored receiving refusal"
+        }
+      ],
+      "trace_open_initially": false,
+      "error_rows_initially_visible": [
+        false,
+        false,
+        false
+      ],
+      "visible_error_message": false,
+      "form": {
+        "cuisines": "Cuban, Mexican",
+        "music": "Celia Cruz",
+        "films": "West Side Story",
+        "city": "Pasadena",
+        "constraints": [
+          "soft_foods",
+          "low_sodium",
+          "wheelchair"
+        ],
+        "top": 414.78125,
+        "disabled": false
+      },
+      "controls_enabled": true,
+      "error_visible_after_opening_trace": true,
+      "open_trace_text": "Agent tool trace\nqloo_search({\"query\":\"Celia Cruz\",\"kind\":\"entity\",\"types\":\"urn:entity:artist\"}) → Celia Cruz\nqloo_search({\"query\":\"West Side Story\",\"kind\":\"entity\",\"types\":\"urn:entity:movie\"}) → West Side Story\nqloo_search({\"query\":\"Cuban\",\"kind\":\"tag\"}) → Cuban\nqloo_search({\"query\":\"Mexican\",\"kind\":\"tag\"}) → Mexican\nqloo_recs({\"filter_type\":\"urn:entity:place\",\"purpose\":\"restaurant\",\"tag_ids\":[\"urn:tag:genre:restaurant:Cuban\",\"urn:tag:genre:restaurant:Mexican\"],\"signal_entity_ids\":[\"FIX-A-celia\",\"FIX-M-wss\"],\"location\":\"Pasadena\",\"take\":10}) → QlooError: Qloo HTTP 503: authored receiving refusal\nconstraint_check({\"entity_ids\":[],\"constraints\":[\"soft_foods\",\"low_sodium\",\"wheelchair\"],\"kind\":\"restaurant\"}) → 0/0 passed\nqloo_search({\"query\":\"Diner\",\"kind\":\"tag\"}) → Diner\nqloo_search({\"query\":\"Italian\",\"kind\":\"tag\"}) → Italian\nqloo_search({\"query\":\"Japanese\",\"kind\":\"tag\"}) → Japanese\nqloo_recs({\"filter_type\":\"urn:entity:place\",\"purpose\":\"restaurant\",\"tag_ids\":[\"urn:tag:genre:restaurant:Diner\",\"urn:tag:genre:restaurant:Italian\",\"urn:tag:genre:restaurant:Japanese\"],\"signal_entity_ids\":[\"FIX-A-celia\",\"FIX-M-wss\"],\"location\":\"Pasadena\",\"take\":10}) → QlooError: Qloo HTTP 503: authored receiving refusal\nqloo_search({\"query\":\"\",\"kind\":\"tag\"}) → no match\nqloo_search({\"query\":\"jazz\",\"kind\":\"tag\"}) → Jazz Club\nqloo_search({\"query\":\"cinema\",\"kind\":\"tag\"}) → Movie Theater\nqloo_search({\"query\":\"museum\",\"kind\":\"tag\"}) → Museum\nqloo_search({\"query\":\"concert hall\",\"kind\":\"tag\"}) → Concert Hall\nqloo_recs({\"filter_type\":\"urn:entity:place\",\"purpose\":\"outing\",\"tag_ids\":[\"urn:tag:category:place:jazz_club\",\"urn:tag:category:place:movie_theater\",\"urn:tag:category:place:museum\",\"urn:tag:category:place:concert_hall\"],\"signal_entity_ids\":[\"FIX-A-celia\",\"FIX-M-wss\"],\"location\":\"Pasadena\",\"take\":5}) → QlooError: Qloo HTTP 503: authored receiving refusal\nconstraint_check({\"entity_ids\":[],\"constraints\":[\"soft_foods\",\"low_sodium\",\"wheelchair\"],\"kind\":\"outing\"}) → 0/0 passed"
+    },
+    {
+      "name": "05-edited-form-recovery",
+      "mode": "healthy",
+      "status": 200,
+      "request_route": "/api/plan",
+      "request_body": {
+        "cuisines": [
+          "Cuban",
+          "Mexican"
+        ],
+        "music": [
+          "Celia Cruz",
+          "Frank Sinatra"
+        ],
+        "films": [
+          "West Side Story"
+        ],
+        "city": "Pasadena",
+        "constraints": [
+          "soft_foods",
+          "low_sodium",
+          "wheelchair"
+        ]
+      },
+      "grounded_items": [
+        {
+          "day": "Monday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-01",
+          "name": "Casa Habana Kitchen",
+          "affinity": 0.91,
+          "fallback": false,
+          "why": "Qloo affinity 0.91 for audiences who like Celia Cruz, Frank Sinatra, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        },
+        {
+          "day": "Wednesday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-03",
+          "name": "Abuela's Table",
+          "affinity": 0.83,
+          "fallback": false,
+          "why": "Qloo affinity 0.83 for audiences who like Celia Cruz, Frank Sinatra, West Side Story (tag match: Mexican). Checks: Soft foods: pass (soft options listed: caldo de pollo, refried beans); Low sodium: pass (lower-sodium signals: low sodium options); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        },
+        {
+          "day": "Friday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-11",
+          "name": "Trattoria Nonna Lucia",
+          "affinity": 0.9,
+          "fallback": true,
+          "why": "Qloo affinity 0.90 for audiences who like Celia Cruz, Frank Sinatra, West Side Story (tag match: Italian). Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        },
+        {
+          "day": "Saturday",
+          "kind": "outing",
+          "entity_id": "FIX-V-03",
+          "name": "Arroyo Museum of Latin Music (fictional)",
+          "affinity": 0.96,
+          "why": "Qloo affinity 0.96 for audiences who like Celia Cruz, Frank Sinatra, West Side Story (tag match: Museum). Checks: Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        },
+        {
+          "day": "Sunday",
+          "kind": "restaurant",
+          "entity_id": "FIX-P-07",
+          "name": "Blue Plate Diner",
+          "affinity": 0.87,
+          "fallback": true,
+          "why": "Qloo affinity 0.87 for audiences who like Celia Cruz, Frank Sinatra, West Side Story (tag match: Diner). Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, mashed potatoes, soups); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+        }
+      ],
+      "displayed_grounded_items": [
+        "Monday · Casa Habana Kitchen restaurant affinity 0.91 Qloo affinity 0.91 for audiences who like Celia Cruz, Frank Sinatra, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').Qloo id: FIX-P-01",
+        "Wednesday · Abuela's Table restaurant affinity 0.83 Qloo affinity 0.83 for audiences who like Celia Cruz, Frank Sinatra, West Side Story (tag match: Mexican). Checks: Soft foods: pass (soft options listed: caldo de pollo, refried beans); Low sodium: pass (lower-sodium signals: low sodium options); Wheelchair: pass (tagged 'wheelchair accessible entrance').Qloo id: FIX-P-03",
+        "Friday · Trattoria Nonna Lucia restaurantwidened affinity 0.90 Qloo affinity 0.90 for audiences who like Celia Cruz, Frank Sinatra, West Side Story (tag match: Italian). Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').Qloo id: FIX-P-11",
+        "Saturday · Arroyo Museum of Latin Music (fictional) outing affinity 0.96 Qloo affinity 0.96 for audiences who like Celia Cruz, Frank Sinatra, West Side Story (tag match: Museum). Checks: Wheelchair: pass (tagged 'wheelchair accessible entrance').Qloo id: FIX-V-03",
+        "Sunday · Blue Plate Diner restaurantwidened affinity 0.87 Qloo affinity 0.87 for audiences who like Celia Cruz, Frank Sinatra, West Side Story (tag match: Diner). Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, mashed potatoes, soups); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').Qloo id: FIX-P-07"
+      ],
+      "grounded_picks_table": 5,
+      "baseline_items": [
+        "Monday · A well-reviewed Cuban restaurant nearby unverifiedThey enjoy Cuban food.",
+        "Wednesday · A well-reviewed Mexican restaurant nearby unverifiedThey enjoy Mexican food.",
+        "Friday · A well-reviewed Cuban restaurant nearby unverifiedThey enjoy Cuban food.",
+        "Saturday · A concert or show featuring music like Celia Cruz unverifiedMatches their music taste.",
+        "Sunday · A well-reviewed Mexican restaurant nearby unverifiedThey enjoy Mexican food."
+      ],
+      "baseline_label": "LLM-only (no Qloo)",
+      "notes": "",
+      "error_trace": [],
+      "trace_open_initially": false,
+      "error_rows_initially_visible": [],
+      "visible_error_message": false,
+      "form": {
+        "cuisines": "Cuban, Mexican",
+        "music": "Celia Cruz, Frank Sinatra",
+        "films": "West Side Story",
+        "city": "Pasadena",
+        "constraints": [
+          "soft_foods",
+          "low_sodium",
+          "wheelchair"
+        ],
+        "top": 410.78125,
+        "disabled": false
+      },
+      "controls_enabled": true
+    }
+  ],
+  "page_errors": [],
+  "console_errors": [],
+  "dialogs": [],
+  "blocked_requests": [],
+  "server": {
+    "source": "/workspace/scratch/6e5752b49b6f/agents/github_integration/tastetable-candidate",
+    "commit": "2ab4bc187f47acbf4ec193be33f57163c67a9e0c",
+    "app_module": "/workspace/scratch/6e5752b49b6f/agents/github_integration/tastetable-candidate/app.py",
+    "agent_module": "/workspace/scratch/6e5752b49b6f/agents/github_integration/tastetable-candidate/agent.py",
+    "environment": "cleared before application import",
+    "outbound_provider_transport": "urllib.request.urlopen rejects every call",
+    "fixture_factory": "new recorded synthetic FixtureTransport per request, authored refusal injection",
+    "app_sha256": "6179e3953e9e6aed009695b9528c8de8622246ab2a1fd5676f18b8b66fa9152c",
+    "agent_sha256": "3d12eb0f275516cd8d1b4044d010a8ed914629f427b1cc1490958f865fe31da8",
+    "port": 39515
+  },
+  "recovery": {
+    "edited_field": "music",
+    "before": "Celia Cruz",
+    "after": "Celia Cruz, Frank Sinatra",
+    "route": "/api/plan",
+    "status": 200,
+    "grounded_picks": 5,
+    "mechanism": "Scroll back to the still-present form, edit an input, click Plan my week"
+  },
+  "qualification": {
+    "exact_served_assets": true,
+    "default_persona_complete": true,
+    "partial_meals_preserved": true,
+    "missing_outing_not_invented": true,
+    "all_error_plan_empty_without_stale_items": true,
+    "comparison_labels_unverified_items": true,
+    "error_evidence_available_in_collapsed_trace": true,
+    "errors_visible_without_expanding_trace": false,
+    "form_recovery_verified": true,
+    "docker": "unavailable; no container execution claimed"
+  },
+  "completed_at": "2026-10-08T08:29:48.166Z",
+  "status": "completed_with_display_finding",
+  "transport_events": [
+    {
+      "event": "factory",
+      "fixture_id": 1,
+      "mode": "healthy"
+    },
+    {
+      "event": "factory",
+      "fixture_id": 2,
+      "mode": "healthy"
+    },
+    {
+      "event": "factory",
+      "fixture_id": 3,
+      "mode": "healthy"
+    },
+    {
+      "event": "transport",
+      "fixture_id": 3,
+      "insights_count": 0,
+      "mode": "healthy",
+      "params": {
+        "query": "Celia Cruz",
+        "take": 3,
+        "types": "urn:entity:artist"
+      },
+      "path": "/search",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 3,
+      "insights_count": 0,
+      "mode": "healthy",
+      "params": {
+        "query": "West Side Story",
+        "take": 3,
+        "types": "urn:entity:movie"
+      },
+      "path": "/search",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 3,
+      "insights_count": 0,
+      "mode": "healthy",
+      "params": {
+        "filter.query": "Cuban",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 3,
+      "insights_count": 0,
+      "mode": "healthy",
+      "params": {
+        "filter.query": "Mexican",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 3,
+      "insights_count": 1,
+      "mode": "healthy",
+      "params": {
+        "filter.location.query": "Pasadena",
+        "filter.tags": "urn:tag:genre:restaurant:Cuban,urn:tag:genre:restaurant:Mexican",
+        "filter.type": "urn:entity:place",
+        "signal.interests.entities": "FIX-A-celia,FIX-M-wss",
+        "take": 10
+      },
+      "path": "/v2/insights",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 3,
+      "insights_count": 1,
+      "mode": "healthy",
+      "params": {
+        "filter.query": "Diner",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 3,
+      "insights_count": 1,
+      "mode": "healthy",
+      "params": {
+        "filter.query": "Italian",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 3,
+      "insights_count": 1,
+      "mode": "healthy",
+      "params": {
+        "filter.query": "Japanese",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 3,
+      "insights_count": 2,
+      "mode": "healthy",
+      "params": {
+        "filter.location.query": "Pasadena",
+        "filter.tags": "urn:tag:genre:restaurant:Diner,urn:tag:genre:restaurant:Italian,urn:tag:genre:restaurant:Japanese",
+        "filter.type": "urn:entity:place",
+        "signal.interests.entities": "FIX-A-celia,FIX-M-wss",
+        "take": 10
+      },
+      "path": "/v2/insights",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 3,
+      "insights_count": 2,
+      "mode": "healthy",
+      "params": {
+        "filter.query": "jazz",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 3,
+      "insights_count": 2,
+      "mode": "healthy",
+      "params": {
+        "filter.query": "cinema",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 3,
+      "insights_count": 2,
+      "mode": "healthy",
+      "params": {
+        "filter.query": "museum",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 3,
+      "insights_count": 2,
+      "mode": "healthy",
+      "params": {
+        "filter.query": "concert hall",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 3,
+      "insights_count": 3,
+      "mode": "healthy",
+      "params": {
+        "filter.location.query": "Pasadena",
+        "filter.tags": "urn:tag:category:place:jazz_club,urn:tag:category:place:movie_theater,urn:tag:category:place:museum,urn:tag:category:place:concert_hall",
+        "filter.type": "urn:entity:place",
+        "signal.interests.entities": "FIX-A-celia,FIX-M-wss",
+        "take": 5
+      },
+      "path": "/v2/insights",
+      "refused": false
+    },
+    {
+      "event": "factory",
+      "fixture_id": 4,
+      "mode": "outing_fail"
+    },
+    {
+      "event": "transport",
+      "fixture_id": 4,
+      "insights_count": 0,
+      "mode": "outing_fail",
+      "params": {
+        "query": "Celia Cruz",
+        "take": 3,
+        "types": "urn:entity:artist"
+      },
+      "path": "/search",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 4,
+      "insights_count": 0,
+      "mode": "outing_fail",
+      "params": {
+        "query": "West Side Story",
+        "take": 3,
+        "types": "urn:entity:movie"
+      },
+      "path": "/search",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 4,
+      "insights_count": 0,
+      "mode": "outing_fail",
+      "params": {
+        "filter.query": "Cuban",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 4,
+      "insights_count": 0,
+      "mode": "outing_fail",
+      "params": {
+        "filter.query": "Mexican",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 4,
+      "insights_count": 1,
+      "mode": "outing_fail",
+      "params": {
+        "filter.location.query": "Pasadena",
+        "filter.tags": "urn:tag:genre:restaurant:Cuban,urn:tag:genre:restaurant:Mexican",
+        "filter.type": "urn:entity:place",
+        "signal.interests.entities": "FIX-A-celia,FIX-M-wss",
+        "take": 10
+      },
+      "path": "/v2/insights",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 4,
+      "insights_count": 1,
+      "mode": "outing_fail",
+      "params": {
+        "filter.query": "Diner",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 4,
+      "insights_count": 1,
+      "mode": "outing_fail",
+      "params": {
+        "filter.query": "Italian",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 4,
+      "insights_count": 1,
+      "mode": "outing_fail",
+      "params": {
+        "filter.query": "Japanese",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 4,
+      "insights_count": 2,
+      "mode": "outing_fail",
+      "params": {
+        "filter.location.query": "Pasadena",
+        "filter.tags": "urn:tag:genre:restaurant:Diner,urn:tag:genre:restaurant:Italian,urn:tag:genre:restaurant:Japanese",
+        "filter.type": "urn:entity:place",
+        "signal.interests.entities": "FIX-A-celia,FIX-M-wss",
+        "take": 10
+      },
+      "path": "/v2/insights",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 4,
+      "insights_count": 2,
+      "mode": "outing_fail",
+      "params": {
+        "filter.query": "jazz",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 4,
+      "insights_count": 2,
+      "mode": "outing_fail",
+      "params": {
+        "filter.query": "cinema",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 4,
+      "insights_count": 2,
+      "mode": "outing_fail",
+      "params": {
+        "filter.query": "museum",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 4,
+      "insights_count": 2,
+      "mode": "outing_fail",
+      "params": {
+        "filter.query": "concert hall",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 4,
+      "insights_count": 3,
+      "mode": "outing_fail",
+      "params": {
+        "filter.location.query": "Pasadena",
+        "filter.tags": "urn:tag:category:place:jazz_club,urn:tag:category:place:movie_theater,urn:tag:category:place:museum,urn:tag:category:place:concert_hall",
+        "filter.type": "urn:entity:place",
+        "signal.interests.entities": "FIX-A-celia,FIX-M-wss",
+        "take": 5
+      },
+      "path": "/v2/insights",
+      "refused": true
+    },
+    {
+      "event": "factory",
+      "fixture_id": 5,
+      "mode": "all_fail"
+    },
+    {
+      "event": "transport",
+      "fixture_id": 5,
+      "insights_count": 0,
+      "mode": "all_fail",
+      "params": {
+        "query": "Celia Cruz",
+        "take": 3,
+        "types": "urn:entity:artist"
+      },
+      "path": "/search",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 5,
+      "insights_count": 0,
+      "mode": "all_fail",
+      "params": {
+        "query": "West Side Story",
+        "take": 3,
+        "types": "urn:entity:movie"
+      },
+      "path": "/search",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 5,
+      "insights_count": 0,
+      "mode": "all_fail",
+      "params": {
+        "filter.query": "Cuban",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 5,
+      "insights_count": 0,
+      "mode": "all_fail",
+      "params": {
+        "filter.query": "Mexican",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 5,
+      "insights_count": 1,
+      "mode": "all_fail",
+      "params": {
+        "filter.location.query": "Pasadena",
+        "filter.tags": "urn:tag:genre:restaurant:Cuban,urn:tag:genre:restaurant:Mexican",
+        "filter.type": "urn:entity:place",
+        "signal.interests.entities": "FIX-A-celia,FIX-M-wss",
+        "take": 10
+      },
+      "path": "/v2/insights",
+      "refused": true
+    },
+    {
+      "event": "transport",
+      "fixture_id": 5,
+      "insights_count": 1,
+      "mode": "all_fail",
+      "params": {
+        "filter.query": "Diner",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 5,
+      "insights_count": 1,
+      "mode": "all_fail",
+      "params": {
+        "filter.query": "Italian",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 5,
+      "insights_count": 1,
+      "mode": "all_fail",
+      "params": {
+        "filter.query": "Japanese",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 5,
+      "insights_count": 2,
+      "mode": "all_fail",
+      "params": {
+        "filter.location.query": "Pasadena",
+        "filter.tags": "urn:tag:genre:restaurant:Diner,urn:tag:genre:restaurant:Italian,urn:tag:genre:restaurant:Japanese",
+        "filter.type": "urn:entity:place",
+        "signal.interests.entities": "FIX-A-celia,FIX-M-wss",
+        "take": 10
+      },
+      "path": "/v2/insights",
+      "refused": true
+    },
+    {
+      "event": "transport",
+      "fixture_id": 5,
+      "insights_count": 2,
+      "mode": "all_fail",
+      "params": {
+        "filter.query": "jazz",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 5,
+      "insights_count": 2,
+      "mode": "all_fail",
+      "params": {
+        "filter.query": "cinema",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 5,
+      "insights_count": 2,
+      "mode": "all_fail",
+      "params": {
+        "filter.query": "museum",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 5,
+      "insights_count": 2,
+      "mode": "all_fail",
+      "params": {
+        "filter.query": "concert hall",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 5,
+      "insights_count": 3,
+      "mode": "all_fail",
+      "params": {
+        "filter.location.query": "Pasadena",
+        "filter.tags": "urn:tag:category:place:jazz_club,urn:tag:category:place:movie_theater,urn:tag:category:place:museum,urn:tag:category:place:concert_hall",
+        "filter.type": "urn:entity:place",
+        "signal.interests.entities": "FIX-A-celia,FIX-M-wss",
+        "take": 5
+      },
+      "path": "/v2/insights",
+      "refused": true
+    },
+    {
+      "event": "factory",
+      "fixture_id": 6,
+      "mode": "healthy"
+    },
+    {
+      "event": "transport",
+      "fixture_id": 6,
+      "insights_count": 0,
+      "mode": "healthy",
+      "params": {
+        "query": "Celia Cruz",
+        "take": 3,
+        "types": "urn:entity:artist"
+      },
+      "path": "/search",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 6,
+      "insights_count": 0,
+      "mode": "healthy",
+      "params": {
+        "query": "Frank Sinatra",
+        "take": 3,
+        "types": "urn:entity:artist"
+      },
+      "path": "/search",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 6,
+      "insights_count": 0,
+      "mode": "healthy",
+      "params": {
+        "query": "West Side Story",
+        "take": 3,
+        "types": "urn:entity:movie"
+      },
+      "path": "/search",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 6,
+      "insights_count": 0,
+      "mode": "healthy",
+      "params": {
+        "filter.query": "Cuban",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 6,
+      "insights_count": 0,
+      "mode": "healthy",
+      "params": {
+        "filter.query": "Mexican",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 6,
+      "insights_count": 1,
+      "mode": "healthy",
+      "params": {
+        "filter.location.query": "Pasadena",
+        "filter.tags": "urn:tag:genre:restaurant:Cuban,urn:tag:genre:restaurant:Mexican",
+        "filter.type": "urn:entity:place",
+        "signal.interests.entities": "FIX-A-celia,FIX-A-frank,FIX-M-wss",
+        "take": 10
+      },
+      "path": "/v2/insights",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 6,
+      "insights_count": 1,
+      "mode": "healthy",
+      "params": {
+        "filter.query": "Diner",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 6,
+      "insights_count": 1,
+      "mode": "healthy",
+      "params": {
+        "filter.query": "Italian",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 6,
+      "insights_count": 1,
+      "mode": "healthy",
+      "params": {
+        "filter.query": "Japanese",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 6,
+      "insights_count": 2,
+      "mode": "healthy",
+      "params": {
+        "filter.location.query": "Pasadena",
+        "filter.tags": "urn:tag:genre:restaurant:Diner,urn:tag:genre:restaurant:Italian,urn:tag:genre:restaurant:Japanese",
+        "filter.type": "urn:entity:place",
+        "signal.interests.entities": "FIX-A-celia,FIX-A-frank,FIX-M-wss",
+        "take": 10
+      },
+      "path": "/v2/insights",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 6,
+      "insights_count": 2,
+      "mode": "healthy",
+      "params": {
+        "filter.query": "jazz",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 6,
+      "insights_count": 2,
+      "mode": "healthy",
+      "params": {
+        "filter.query": "cinema",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 6,
+      "insights_count": 2,
+      "mode": "healthy",
+      "params": {
+        "filter.query": "museum",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 6,
+      "insights_count": 2,
+      "mode": "healthy",
+      "params": {
+        "filter.query": "concert hall",
+        "take": 3
+      },
+      "path": "/v2/tags",
+      "refused": false
+    },
+    {
+      "event": "transport",
+      "fixture_id": 6,
+      "insights_count": 3,
+      "mode": "healthy",
+      "params": {
+        "filter.location.query": "Pasadena",
+        "filter.tags": "urn:tag:category:place:jazz_club,urn:tag:category:place:movie_theater,urn:tag:category:place:museum,urn:tag:category:place:concert_hall",
+        "filter.type": "urn:entity:place",
+        "signal.interests.entities": "FIX-A-celia,FIX-A-frank,FIX-M-wss",
+        "take": 5
+      },
+      "path": "/v2/insights",
+      "refused": false
+    }
+  ],
+  "production_sources_unchanged": true
+}

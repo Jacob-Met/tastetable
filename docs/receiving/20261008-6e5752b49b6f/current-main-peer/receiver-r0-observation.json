@@ -1,0 +1,7 @@
+{
+  "status": "receiver-corrected",
+  "test_sha256": "7148ffed21a7ea32fc6803e800f6b90b9b45d83820405b6ecaac8d19cc9e8220",
+  "actual": "The first run observed two provider calls rather than the authored expected three on both routes.",
+  "cause": "The outing request had identical Qloo parameters to the successful restaurant request; qloo_client._get correctly reused its request cache. Purpose is agent metadata, not a Qloo query parameter.",
+  "correction": "Use the existing movie_theater tag for the outing refusal so it is a distinct provider query. Retain first harness and failure receipt; no production changes."
+}

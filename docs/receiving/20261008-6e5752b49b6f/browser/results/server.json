@@ -1,0 +1,12 @@
+{
+  "source": "/workspace/scratch/6e5752b49b6f/agents/github_integration/tastetable-candidate",
+  "commit": "2ab4bc187f47acbf4ec193be33f57163c67a9e0c",
+  "app_module": "/workspace/scratch/6e5752b49b6f/agents/github_integration/tastetable-candidate/app.py",
+  "agent_module": "/workspace/scratch/6e5752b49b6f/agents/github_integration/tastetable-candidate/agent.py",
+  "environment": "cleared before application import",
+  "outbound_provider_transport": "urllib.request.urlopen rejects every call",
+  "fixture_factory": "new recorded synthetic FixtureTransport per request, authored refusal injection",
+  "app_sha256": "6179e3953e9e6aed009695b9528c8de8622246ab2a1fd5676f18b8b66fa9152c",
+  "agent_sha256": "3d12eb0f275516cd8d1b4044d010a8ed914629f427b1cc1490958f865fe31da8",
+  "port": 39515
+}

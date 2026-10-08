@@ -1,0 +1,20 @@
+{
+  "schema": "tastetable-composed-browser-input-pin.v1",
+  "source_sha256": {
+    "static/app.js": "faa47a7c5b71a5c12f004868e68b71df33d4486002b983943185c3d9928dd5e1",
+    "static/calendar.css": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+    "static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+    "static/index.html": "2e9a8ab6a77355acc6276fc584269cadce29499ec25666b7bda6b16c56705ea1",
+    "static/plan-request.js": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+    "static/style.css": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+    "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+    "agent.py": "b301247b8e9459327afa19964d02a9647c0d39f36e55c380115af3b30d538817",
+    "constraints.py": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e",
+    "personas.py": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+    "qloo_client.py": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+    "fixtures/qloo_fixtures.json": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0"
+  },
+  "fixture_bundle_sha256": "b3907f9924267e9e386c9054daf7ac486fc3a8f38ad87e1756b9af52b46d7ce7",
+  "config_sha256": "8e17dd6584b65d21e61a9a3d97574149a0014888f87f21deb29e9ee90ad913f9",
+  "harness_sha256": "d9db7574071ab3c3b5570c44b492492b37c399c8a7457ec7da0812129d48fc09"
+}

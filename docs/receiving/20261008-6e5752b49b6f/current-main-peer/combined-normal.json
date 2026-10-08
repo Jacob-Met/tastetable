@@ -1,0 +1,466 @@
+{
+  "source": "/workspace/scratch/6e5752b49b6f/agents/github_integration/tastetable-current-main-review/candidate",
+  "status": "pass",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "optimized": 0,
+  "routes": [
+    {
+      "sample_route": false,
+      "status_code": 200,
+      "model_names": [
+        "current-composition-authored-model",
+        "current-composition-authored-model",
+        "current-composition-authored-model",
+        "current-composition-authored-model",
+        "current-composition-authored-model",
+        "current-composition-authored-model",
+        "current-composition-authored-model",
+        "current-composition-authored-model"
+      ],
+      "insights_attempts": [
+        {
+          "filter.type": "urn:entity:place",
+          "take": 50
+        },
+        {
+          "filter.type": "urn:entity:place",
+          "take": 50
+        },
+        {
+          "filter.type": "urn:entity:place",
+          "take": 50,
+          "filter.tags": "urn:tag:category:place:movie_theater"
+        }
+      ],
+      "result": {
+        "plan": {
+          "meals": [
+            {
+              "day": "Monday",
+              "kind": "restaurant",
+              "entity_id": "FIX-P-01",
+              "name": "Casa Habana Kitchen",
+              "affinity": 0.248,
+              "fallback": false,
+              "why": "Qloo affinity 0.25. Weak taste signal: chosen mainly because it passes the care constraints. Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+            }
+          ],
+          "outing": null,
+          "rejected": [
+            {
+              "name": "Malecon Sandwich Shop",
+              "entity_id": "FIX-P-04",
+              "failed": [
+                {
+                  "constraint": "soft_foods",
+                  "status": "fail",
+                  "reason": "menu signals are mostly firm: cuban sandwich, cured ham, pressed bread"
+                },
+                {
+                  "constraint": "low_sodium",
+                  "status": "fail",
+                  "reason": "high-sodium signals: cuban sandwich, cured ham, pickles"
+                },
+                {
+                  "constraint": "wheelchair",
+                  "status": "unknown",
+                  "reason": "no accessibility tag in Qloo data"
+                }
+              ]
+            }
+          ],
+          "notes": [
+            "Only 1 restaurants passed every constraint; remaining days left open rather than suggesting an unsafe pick."
+          ]
+        },
+        "llm_only": {
+          "meals": [
+            {
+              "day": "Monday",
+              "name": "A well-reviewed Cuban restaurant nearby",
+              "why": "They enjoy Cuban food.",
+              "verified": {
+                "exists": false,
+                "entity_id": null,
+                "constraints_checked": false
+              }
+            },
+            {
+              "day": "Wednesday",
+              "name": "A well-reviewed Mexican restaurant nearby",
+              "why": "They enjoy Mexican food.",
+              "verified": {
+                "exists": false,
+                "entity_id": null,
+                "constraints_checked": false
+              }
+            },
+            {
+              "day": "Friday",
+              "name": "A well-reviewed Cuban restaurant nearby",
+              "why": "They enjoy Cuban food.",
+              "verified": {
+                "exists": false,
+                "entity_id": null,
+                "constraints_checked": false
+              }
+            },
+            {
+              "day": "Sunday",
+              "name": "A well-reviewed Mexican restaurant nearby",
+              "why": "They enjoy Mexican food.",
+              "verified": {
+                "exists": false,
+                "entity_id": null,
+                "constraints_checked": false
+              }
+            }
+          ],
+          "outing": {
+            "day": "Saturday",
+            "name": "A concert or show featuring music like Celia Cruz",
+            "why": "Matches their music taste.",
+            "verified": {
+              "exists": false,
+              "entity_id": null,
+              "constraints_checked": false
+            }
+          },
+          "source": "template (ungrounded baseline)"
+        },
+        "comparison": {
+          "grounded": {
+            "picks": 1,
+            "with_qloo_entity_id": 1,
+            "with_affinity_evidence": 1,
+            "constraint_checked": 1,
+            "unsafe_candidates_rejected": 1
+          },
+          "llm_only": {
+            "picks": 5,
+            "with_qloo_entity_id": 0,
+            "with_affinity_evidence": 0,
+            "constraint_checked": 0,
+            "unsafe_candidates_rejected": 0
+          },
+          "constraints": [
+            "soft_foods",
+            "low_sodium",
+            "wheelchair"
+          ]
+        },
+        "trace": [
+          {
+            "step": 0,
+            "tool": "qloo_recs",
+            "args": {
+              "filter_type": "urn:entity:place",
+              "take": 50,
+              "purpose": null
+            },
+            "result_summary": "ValueError: purpose must be restaurant or outing"
+          },
+          {
+            "step": 1,
+            "tool": "qloo_recs",
+            "args": {
+              "filter_type": "urn:entity:place",
+              "take": 50,
+              "purpose": "restaurant"
+            },
+            "result_summary": "QlooError: Qloo HTTP 503: independent authored composition refusal"
+          },
+          {
+            "step": 2,
+            "tool": "qloo_recs",
+            "args": {
+              "filter_type": "urn:entity:place",
+              "take": 50,
+              "purpose": "restaurant"
+            },
+            "result_summary": "18 candidates"
+          },
+          {
+            "step": 3,
+            "tool": "constraint_check",
+            "args": {
+              "entity_ids": [
+                "FIX-P-01",
+                "FIX-P-04"
+              ],
+              "constraints": [],
+              "kind": "outing"
+            },
+            "result_summary": "1/2 passed"
+          },
+          {
+            "step": 4,
+            "tool": "qloo_recs",
+            "args": {
+              "filter_type": "urn:entity:place",
+              "take": 50,
+              "purpose": ""
+            },
+            "result_summary": "ValueError: purpose must be restaurant or outing"
+          },
+          {
+            "step": 5,
+            "tool": "constraint_check",
+            "args": {
+              "entity_ids": [
+                "FIX-P-04"
+              ],
+              "constraints": [],
+              "kind": "restaurant"
+            },
+            "result_summary": "0/1 passed"
+          },
+          {
+            "step": 6,
+            "tool": "qloo_recs",
+            "args": {
+              "filter_type": "urn:entity:place",
+              "take": 50,
+              "purpose": "outing",
+              "tag_ids": [
+                "urn:tag:category:place:movie_theater"
+              ]
+            },
+            "result_summary": "QlooError: Qloo HTTP 503: independent authored composition refusal"
+          }
+        ],
+        "model_message": "authored combined receiving complete",
+        "mock": true
+      }
+    },
+    {
+      "sample_route": true,
+      "status_code": 200,
+      "model_names": [
+        "current-composition-authored-model",
+        "current-composition-authored-model",
+        "current-composition-authored-model",
+        "current-composition-authored-model",
+        "current-composition-authored-model",
+        "current-composition-authored-model",
+        "current-composition-authored-model",
+        "current-composition-authored-model"
+      ],
+      "insights_attempts": [
+        {
+          "filter.type": "urn:entity:place",
+          "take": 50
+        },
+        {
+          "filter.type": "urn:entity:place",
+          "take": 50
+        },
+        {
+          "filter.type": "urn:entity:place",
+          "take": 50,
+          "filter.tags": "urn:tag:category:place:movie_theater"
+        }
+      ],
+      "result": {
+        "plan": {
+          "meals": [
+            {
+              "day": "Monday",
+              "kind": "restaurant",
+              "entity_id": "FIX-P-01",
+              "name": "Casa Habana Kitchen",
+              "affinity": 0.248,
+              "fallback": false,
+              "why": "Qloo affinity 0.25. Weak taste signal: chosen mainly because it passes the care constraints. Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+            }
+          ],
+          "outing": null,
+          "rejected": [
+            {
+              "name": "Malecon Sandwich Shop",
+              "entity_id": "FIX-P-04",
+              "failed": [
+                {
+                  "constraint": "soft_foods",
+                  "status": "fail",
+                  "reason": "menu signals are mostly firm: cuban sandwich, cured ham, pressed bread"
+                },
+                {
+                  "constraint": "low_sodium",
+                  "status": "fail",
+                  "reason": "high-sodium signals: cuban sandwich, cured ham, pickles"
+                },
+                {
+                  "constraint": "wheelchair",
+                  "status": "unknown",
+                  "reason": "no accessibility tag in Qloo data"
+                }
+              ]
+            }
+          ],
+          "notes": [
+            "Only 1 restaurants passed every constraint; remaining days left open rather than suggesting an unsafe pick."
+          ]
+        },
+        "llm_only": {
+          "meals": [
+            {
+              "day": "Monday",
+              "name": "A well-reviewed Cuban restaurant nearby",
+              "why": "They enjoy Cuban food.",
+              "verified": {
+                "exists": false,
+                "entity_id": null,
+                "constraints_checked": false
+              }
+            },
+            {
+              "day": "Wednesday",
+              "name": "A well-reviewed Mexican restaurant nearby",
+              "why": "They enjoy Mexican food.",
+              "verified": {
+                "exists": false,
+                "entity_id": null,
+                "constraints_checked": false
+              }
+            },
+            {
+              "day": "Friday",
+              "name": "A well-reviewed Cuban restaurant nearby",
+              "why": "They enjoy Cuban food.",
+              "verified": {
+                "exists": false,
+                "entity_id": null,
+                "constraints_checked": false
+              }
+            },
+            {
+              "day": "Sunday",
+              "name": "A well-reviewed Mexican restaurant nearby",
+              "why": "They enjoy Mexican food.",
+              "verified": {
+                "exists": false,
+                "entity_id": null,
+                "constraints_checked": false
+              }
+            }
+          ],
+          "outing": {
+            "day": "Saturday",
+            "name": "A concert or show featuring music like Celia Cruz",
+            "why": "Matches their music taste.",
+            "verified": {
+              "exists": false,
+              "entity_id": null,
+              "constraints_checked": false
+            }
+          },
+          "source": "template (ungrounded baseline)"
+        },
+        "comparison": {
+          "grounded": {
+            "picks": 1,
+            "with_qloo_entity_id": 1,
+            "with_affinity_evidence": 1,
+            "constraint_checked": 1,
+            "unsafe_candidates_rejected": 1
+          },
+          "llm_only": {
+            "picks": 5,
+            "with_qloo_entity_id": 0,
+            "with_affinity_evidence": 0,
+            "constraint_checked": 0,
+            "unsafe_candidates_rejected": 0
+          },
+          "constraints": [
+            "soft_foods",
+            "low_sodium",
+            "wheelchair"
+          ]
+        },
+        "trace": [
+          {
+            "step": 0,
+            "tool": "qloo_recs",
+            "args": {
+              "filter_type": "urn:entity:place",
+              "take": 50,
+              "purpose": null
+            },
+            "result_summary": "ValueError: purpose must be restaurant or outing"
+          },
+          {
+            "step": 1,
+            "tool": "qloo_recs",
+            "args": {
+              "filter_type": "urn:entity:place",
+              "take": 50,
+              "purpose": "restaurant"
+            },
+            "result_summary": "QlooError: Qloo HTTP 503: independent authored composition refusal"
+          },
+          {
+            "step": 2,
+            "tool": "qloo_recs",
+            "args": {
+              "filter_type": "urn:entity:place",
+              "take": 50,
+              "purpose": "restaurant"
+            },
+            "result_summary": "18 candidates"
+          },
+          {
+            "step": 3,
+            "tool": "constraint_check",
+            "args": {
+              "entity_ids": [
+                "FIX-P-01",
+                "FIX-P-04"
+              ],
+              "constraints": [],
+              "kind": "outing"
+            },
+            "result_summary": "1/2 passed"
+          },
+          {
+            "step": 4,
+            "tool": "qloo_recs",
+            "args": {
+              "filter_type": "urn:entity:place",
+              "take": 50,
+              "purpose": ""
+            },
+            "result_summary": "ValueError: purpose must be restaurant or outing"
+          },
+          {
+            "step": 5,
+            "tool": "constraint_check",
+            "args": {
+              "entity_ids": [
+                "FIX-P-04"
+              ],
+              "constraints": [],
+              "kind": "restaurant"
+            },
+            "result_summary": "0/1 passed"
+          },
+          {
+            "step": 6,
+            "tool": "qloo_recs",
+            "args": {
+              "filter_type": "urn:entity:place",
+              "take": 50,
+              "purpose": "outing",
+              "tag_ids": [
+                "urn:tag:category:place:movie_theater"
+              ]
+            },
+            "result_summary": "QlooError: Qloo HTTP 503: independent authored composition refusal"
+          }
+        ],
+        "model_message": "authored combined receiving complete",
+        "mock": true
+      }
+    }
+  ]
+}

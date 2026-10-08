@@ -1,0 +1,97 @@
+[
+  {
+    "path": ".dockerignore",
+    "mode": "100644",
+    "sha": "7bd83dbf601064e93411e55fa40047a7faa62e76"
+  },
+  {
+    "path": ".gitignore",
+    "mode": "100644",
+    "sha": "abec94fd25b2bf8bf714b7ea3b37ae36cf5b6891"
+  },
+  {
+    "path": "Dockerfile",
+    "mode": "100644",
+    "sha": "14ab720a3983cb3664df31002e9147394a50c5e3"
+  },
+  {
+    "path": "LICENSE",
+    "mode": "100644",
+    "sha": "3757eabcdbaee0b03b44aad0a7c01ff8c5ada81b"
+  },
+  {
+    "path": "README.md",
+    "mode": "100644",
+    "sha": "a4360f45ef27a56efa01f07c87aa664fd537625a"
+  },
+  {
+    "path": "agent.py",
+    "mode": "100644",
+    "sha": "fcf867e844835a08496a0fdf8132c69990ccfffc"
+  },
+  {
+    "path": "app.py",
+    "mode": "100644",
+    "sha": "2c2f1524e62c74db21fdbcc69faec643903c23b8"
+  },
+  {
+    "path": "constraints.py",
+    "mode": "100644",
+    "sha": "53138a106455cc3fa40d812d1ade3c60fcbbb916"
+  },
+  {
+    "path": "fixtures/qloo_fixtures.json",
+    "mode": "100644",
+    "sha": "60c5d92f905755454bb280b8181f8836a74bd955"
+  },
+  {
+    "path": "personas.py",
+    "mode": "100644",
+    "sha": "1eb6768780cafaf9b1666e39b7fc17aa21204f16"
+  },
+  {
+    "path": "qloo_client.py",
+    "mode": "100644",
+    "sha": "cca322e0c9af96c481ba8f7ef286e85d3b90cfd2"
+  },
+  {
+    "path": "requirements.txt",
+    "mode": "100644",
+    "sha": "d2fa2b085ecd75cc196fa8a02ddb54e1728c0b23"
+  },
+  {
+    "path": "scripts/build_fixtures.py",
+    "mode": "100644",
+    "sha": "bb06538576362d80ca67bedc33c73a92379533b1"
+  },
+  {
+    "path": "static/app.js",
+    "mode": "100644",
+    "sha": "2e6aa8b39d300c3d7dbd5f5bf7d9d819d835f132"
+  },
+  {
+    "path": "static/index.html",
+    "mode": "100644",
+    "sha": "08451f60a6ae9b5a00353ef7b5f1f3fa016bda0f"
+  },
+  {
+    "path": "static/style.css",
+    "mode": "100644",
+    "sha": "e45dd6186df8e513aabecadd88c55b3e6f58d0cc"
+  },
+  {
+    "path": "tests/test_model_selection.py",
+    "mode": "100644",
+    "sha": "a98c1a173ff9026716be973aa3efa2dc8f3e0d42"
+  },
+  {
+    "path": "tests/test_tastetable.py",
+    "mode": "100644",
+    "sha": "e6731e2c560a921074f034057404ce9bdd81e6ac"
+  },
+  {
+    "path": "tests/test_tool_error_continuation.py",
+    "mode": "100644",
+    "sha": "65401ab730cd3a604c2deafc7fed17a8e85aa70d"
+  }
+]
