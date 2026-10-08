@@ -1,0 +1,7 @@
+{
+  "cuisines": ["Japanese", "Italian"],
+  "music": ["The Beatles"],
+  "films": ["Roman Holiday"],
+  "constraints": ["soft_foods"],
+  "city": "Pasadena"
+}
