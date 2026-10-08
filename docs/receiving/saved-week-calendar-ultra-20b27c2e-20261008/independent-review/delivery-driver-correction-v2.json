@@ -1,0 +1,90 @@
+{
+  "schema": "tastetable.independent-delivery-driver-correction.v1",
+  "repository": "Jacob-Met/tastetable",
+  "reviewer": "ultra-20b27c2e-20261008/runtime_integration",
+  "original_receiver": {
+    "bytes": 26002,
+    "sha256": "e10e10e1fd68c5169372597d5be4b91c07a0ee1a8b884f98fd80fcce78f91122",
+    "git_blob_sha": "96b47c48de1a6feb3cf3084463b216ae4987e1e5",
+    "tests": [
+      "test_native_codec_writer_controls_and_manual_occurrences",
+      "test_public_api_preserves_exact_native_bytes_and_frozen_receipt_fields",
+      "test_actual_cli_exact_file_receipt_and_repeat_identity",
+      "test_null_identity_requires_explicit_api_choice_and_retains_timestamps",
+      "test_existing_identity_refuses_even_equal_api_override",
+      "test_new_api_identity_must_be_explicit_native_identifier",
+      "test_actual_cli_explicit_new_calendar_repeated_creations_are_distinct",
+      "test_original_native_rejects_whole_invalid_arrangement_control",
+      "test_public_api_and_cli_refuse_whole_native_invalid_input",
+      "test_actual_cli_strict_bytes_and_size_are_atomic",
+      "test_exact_four_mib_valid_input_is_accepted_without_rewrite",
+      "test_occupied_output_and_input_aliases_never_replace",
+      "test_nonregular_or_missing_input_is_bounded_refusal",
+      "test_actual_argument_refusals_leave_no_output",
+      "test_help_is_standalone_and_creates_nothing",
+      "test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic"
+    ]
+  },
+  "successor_receiver": {
+    "bytes": 26815,
+    "sha256": "905c14980b60c6975c4e830347b17f29bf8d0de53df8c40838951be4303ae6ff",
+    "git_blob_sha": "2d022f47add184d49c31d0e7bf325b219d13a47c",
+    "changed_functions": [
+      "test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic"
+    ],
+    "unchanged_functions": 29
+  },
+  "production": {
+    "bytes": 10400,
+    "sha256": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80",
+    "git_blob_sha": "d8d910eb315c4ffc58a3e37d58cbe4de6be84b4d"
+  },
+  "observed": {
+    "first_candidate_head": "06225ea1e650fa43d9a4847f069dbf83bb58468f",
+    "tree": "0e935a89a1e956d7dd777a335acbf436e0566cbf",
+    "checkout": "2bdc6005bd8e95c87858d945e8bc01c3b24f801c",
+    "run": 37832815710,
+    "job": 113502211039,
+    "raw_log_blob": "b683f3765d99b125d22d724bef6a83aa8335357a",
+    "raw_log_bytes": 95521,
+    "result": "5 failed, 245 passed, 1 warning, 247 subtests passed in 19.39s",
+    "independent": "62 passed; all five delivery cases stopped at the same stagedFile.parent == output.parent assertion."
+  },
+  "classification": "Receiver implementation-style assumption. Native publication uses a newly created private directory beside the destination and a completed regular file inside it. This is a same-parent staging container. Exact file layout was not a user-facing output requirement. The original assertion prevented delivery-phase outcome assertions from running.",
+  "source_verified_reachability": [
+    "Candidate uses fs.mkdtemp next to destination, writes completed.ics and awaits fs.writeFile before fs.link.",
+    "Candidate removes the private directory via fs.rm, not the staged file path. Original cleanup hook would not inject there.",
+    "Candidate delivers receipt via fs.writeSync(1), not process.stdout.write. Original stdout hook would not inject there."
+  ],
+  "changes": [
+    "Admit a new temporary file or private directory directly beside the destination, require the container name absent from pre-execution directory entries, require a regular staged file and no open stage descriptors.",
+    "Intercept cleanup of either the acquired staged file or its single-level same-parent container; do not affect unrelated paths.",
+    "Intercept fs.writeSync for fd1 after successful link in addition to process.stdout.write; stderr is untouched.",
+    "Expose the five successful delivery traces in captured hosted output; no invented measurements.",
+    "All other 29 Python functions, including 62 ordinary/native cases, remain AST-identical. The 67-case count and all calendar/receipt/status/preservation assertions remain unchanged."
+  ],
+  "preserved_contract": [
+    "Exact native calendar bytes and SHA",
+    "Original input inode/mtime/bytes preservation",
+    "Closed unique same-parent stage and real create-only hard link",
+    "Competing destination preserved and exit2",
+    "EXDEV exit1 without publication or leftover stage",
+    "Published calendar retained on cleanup/receipt failure with exact created-file diagnostic and exit1"
+  ],
+  "baseline": {
+    "run": 37832294755,
+    "job": 113500432534,
+    "checkout": "f5b5792901ec3fe4daeacd98d247a39f322499fa",
+    "raw_log_blob": "0b205c735934209c06a6ccf660a7b748adad163f",
+    "failed": 55,
+    "passed": 175,
+    "subtests": 202,
+    "inherited_warning": 1,
+    "independent_positive": 12,
+    "independent_missing_consumer": 55,
+    "custody_traces": 67,
+    "unchanged": true,
+    "candidate_source_absent": true
+  },
+  "next_gate": "Run successor receiver against unchanged production d8d910eb in the existing hosted workflow. A successful result is not claimed by this correction receipt."
+}

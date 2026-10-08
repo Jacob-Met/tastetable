@@ -1,0 +1,200 @@
+{
+  "schema": "tastetable.independent-calendar-receiver-freeze.v1",
+  "reviewer": "ultra-20b27c2e-20261008/runtime_integration",
+  "claim": "https://github.com/Jacob-Met/tastetable/issues/42",
+  "repository": "Jacob-Met/tastetable",
+  "before_candidate_exposure": true,
+  "baseline": {
+    "commit": "2b347cee4ff4e2b806362730a8520a3360b45f5a",
+    "tree": "66d62a724c1667913cb581fb35e4b6db6111dae8",
+    "leaves": 579,
+    "truncated": false,
+    "inspected": [
+      {
+        "path": "static/week_plan.mjs",
+        "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+      },
+      {
+        "path": "static/week_file.mjs",
+        "git_blob": "420ddb8f63fca264dcf97be7147801105696155d"
+      },
+      {
+        "path": "static/calendar.js",
+        "git_blob": "dbed22d2cb91090bccec9472fbffd2854eed2722"
+      },
+      {
+        "path": "tests/fixtures/saved-week-response.json",
+        "git_blob": "eca4eee4d93d0046833fc798e6c34bf87879c858"
+      },
+      {
+        "path": ".github/workflows/ci.yml",
+        "git_blob": "0e6273139a9bf417a4ee42f4501d067b1c9d95a0"
+      }
+    ]
+  },
+  "receiver": {
+    "path": "tests/test_saved_week_calendar_receiving_ultra.py",
+    "bytes": 26002,
+    "sha256": "e10e10e1fd68c5169372597d5be4b91c07a0ee1a8b884f98fd80fcce78f91122",
+    "git_blob_sha": "96b47c48de1a6feb3cf3084463b216ae4987e1e5",
+    "tests": [
+      "test_native_codec_writer_controls_and_manual_occurrences",
+      "test_public_api_preserves_exact_native_bytes_and_frozen_receipt_fields",
+      "test_actual_cli_exact_file_receipt_and_repeat_identity",
+      "test_null_identity_requires_explicit_api_choice_and_retains_timestamps",
+      "test_existing_identity_refuses_even_equal_api_override",
+      "test_new_api_identity_must_be_explicit_native_identifier",
+      "test_actual_cli_explicit_new_calendar_repeated_creations_are_distinct",
+      "test_original_native_rejects_whole_invalid_arrangement_control",
+      "test_public_api_and_cli_refuse_whole_native_invalid_input",
+      "test_actual_cli_strict_bytes_and_size_are_atomic",
+      "test_exact_four_mib_valid_input_is_accepted_without_rewrite",
+      "test_occupied_output_and_input_aliases_never_replace",
+      "test_nonregular_or_missing_input_is_bounded_refusal",
+      "test_actual_argument_refusals_leave_no_output",
+      "test_help_is_standalone_and_creates_nothing",
+      "test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic"
+    ],
+    "static_case_count": {
+      "tests": [
+        {
+          "test": "test_native_codec_writer_controls_and_manual_occurrences",
+          "cases": 2
+        },
+        {
+          "test": "test_public_api_preserves_exact_native_bytes_and_frozen_receipt_fields",
+          "cases": 3
+        },
+        {
+          "test": "test_actual_cli_exact_file_receipt_and_repeat_identity",
+          "cases": 2
+        },
+        {
+          "test": "test_null_identity_requires_explicit_api_choice_and_retains_timestamps",
+          "cases": 1
+        },
+        {
+          "test": "test_existing_identity_refuses_even_equal_api_override",
+          "cases": 2
+        },
+        {
+          "test": "test_new_api_identity_must_be_explicit_native_identifier",
+          "cases": 5
+        },
+        {
+          "test": "test_actual_cli_explicit_new_calendar_repeated_creations_are_distinct",
+          "cases": 1
+        },
+        {
+          "test": "test_original_native_rejects_whole_invalid_arrangement_control",
+          "cases": 10
+        },
+        {
+          "test": "test_public_api_and_cli_refuse_whole_native_invalid_input",
+          "cases": 10
+        },
+        {
+          "test": "test_actual_cli_strict_bytes_and_size_are_atomic",
+          "cases": 6
+        },
+        {
+          "test": "test_exact_four_mib_valid_input_is_accepted_without_rewrite",
+          "cases": 1
+        },
+        {
+          "test": "test_occupied_output_and_input_aliases_never_replace",
+          "cases": 6
+        },
+        {
+          "test": "test_nonregular_or_missing_input_is_bounded_refusal",
+          "cases": 3
+        },
+        {
+          "test": "test_actual_argument_refusals_leave_no_output",
+          "cases": 9
+        },
+        {
+          "test": "test_help_is_standalone_and_creates_nothing",
+          "cases": 1
+        },
+        {
+          "test": "test_explicit_delivery_fault_boundaries_and_completed_file_diagnostic",
+          "cases": 5
+        }
+      ],
+      "total": 67
+    },
+    "expected_before": {
+      "native_controls": 12,
+      "consumer_absence_failures": 55,
+      "observed": false
+    }
+  },
+  "public_contract": {
+    "cli": "node tools/saved_week_to_calendar.mjs --input WEEK.json --output WEEK.ics [--new-calendar]",
+    "api": "prepareSavedWeekCalendar(savedText, {newCalendarId} = {})",
+    "native_chain": "readWeekFile -> weekRows -> createWeekExport with original receivedAt and retained/explicit identity",
+    "identity": [
+      "Non-null existing calendarId reused; any explicit replacement (even equal) refused.",
+      "Null ID refuses by default; explicit API32lowerhex or CLI --new-calendar generates new identity.",
+      "Input and original timestamps never rewritten; repeated explicit new identity may differ."
+    ],
+    "pure_result": "Frozen result, calendar and preview array/records. calendar is exact native filename/text/count; preview is exact full native record sequence; weekStart,calendarId,identitySource,source,receivedAt,savedAt,inputBytes,inputSha256,outputBytes,outputSha256 preserve native/input/output semantics.",
+    "success_receipt": {
+      "schema": "tastetable.saved-week-calendar-receipt.v1",
+      "fields": [
+        "schema",
+        "input",
+        "inputBytes",
+        "inputSha256",
+        "output",
+        "outputBytes",
+        "outputSha256",
+        "suggestedFilename",
+        "weekStart",
+        "count",
+        "calendarId",
+        "identitySource",
+        "receivedAt",
+        "savedAt",
+        "source",
+        "preview"
+      ],
+      "paths": "Absolute lexically resolved supplied paths; one JSON object plus LF, no ICS body on stdout."
+    },
+    "publication": [
+      "Strict UTF-8 regular input <=4MiB; at most one initial BOM, included in input hash/bytes.",
+      "Whole native validation before output; omitted picks still retain native source validity requirements.",
+      "Closed unique same-parent stage and create-only hard link; no overwrite fallback.",
+      "Occupied file, directory, dangling/ordinary symlink and input aliases remain unchanged.",
+      "Exit0 complete file+receipt or standalone help; exit2 argument/input/native/occupied refusal; exit1 runtime/delivery.",
+      "After completed publication, cleanup/receipt failure uses exact distinguishing created-file diagnostic and does not remove the complete calendar."
+    ],
+    "postpublication_prefix": "tastetable-calendar: Calendar was created, but final cleanup or receipt delivery failed: "
+  },
+  "independent_oracle": {
+    "arrangement": "Leap week 2028-02-28: pick-1 and pick-4 on Monday; pick-0 Thursday; pick-2/pick-3 omitted. Original identities and days retained. Native output order pick-1,pick-4,pick-0.",
+    "manual_assertions": [
+      "Distinct UID per original pick despite same-day placement",
+      "All three DTSTAMP20271231T235959Z from original timestamp, not execution date",
+      "Monday exclusive end2028-02-29 and Thursday exclusive end2028-03-03",
+      "CRLF, <=75 UTF-8 bytes per physical line, actual folding and literal escaped text",
+      "Omitted entries absent, tentative/transparent events and native caution retained"
+    ],
+    "native_control_preparation": {
+      "status": "all independent native memory controls and manual assertions pass",
+      "ordinary_output_sha256": "900f8707627e600907928f515217ac36519e3aac0045fa0f3c32870438250d18",
+      "bom_output_sha256": "900f8707627e600907928f515217ac36519e3aac0045fa0f3c32870438250d18",
+      "cases": 12,
+      "native_fixture_only": true
+    }
+  },
+  "delivery_fault_scope": "Five child processes: observation-only, competing create-only destination, EXDEV link refusal, post-link stage cleanup refusal and post-link stdout write exception. The unchanged real fs link remains the publication action. Hooks cover callback/sync/promises styles, capture stage SHA, same parent and open-file-descriptor state. These injected outcomes are separate from ordinary native CLI tests.",
+  "gate": "Existing .github/workflows/ci.yml pytest only. Author first runs exact receiver against unchanged primary consumer absence, retains raw result, then composes frozen candidate without changing this oracle. No new workflow, install, shared disk writes, provider or calendar action.",
+  "limits": [
+    "Local preparation used exact primary source strings in existing Node24.19 VM module context without filesystem writes; it is not hosted CLI/filesystem qualification.",
+    "Hosted baseline/candidate behavior is pending at freeze.",
+    "No production source or authored tests were seen before freeze.",
+    "All observed baseline and driver failures must remain distinct from product findings."
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "schema": "tastetable.saved-week-calendar-final-publication.v1",
+  "worker": "ultra-20b27c2e-20261008 / memory_improvement",
+  "receivingParent": "0f1316eed24611345e722a9938db8ce03c181404",
+  "receivingParentTree": "d9a2cc503ac66d195f93a239ec7eeb1e9f56b955",
+  "qualifiedCodeHead": "5f7b6ff109a92f6caf9f665165a305248e667354",
+  "qualifiedCodeTree": "658688113a15d2a0a9b3b8d06c26bf4356feb5b8",
+  "qualifiedCheckout": "fd3fb0898bacac858105d3ec86926957f464fdc8",
+  "expectedCompleteLeaves": 775,
+  "expectedUnownedLeavesPreserved": 742,
+  "expectedContributionFilesIncludingManifest": 33,
+  "manifestSelfExcluded": true,
+  "files": [
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/before/native-receiver.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75712606b81062a5b22cf48223e5e4d41c388116"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/before/primary-source-packet.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "393dbe029bdf5c2f9dc17b6d7a9e8f50c20f23e9"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/before/source-scope.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bad2aa89d161ba6b88b587cfd420f66847083bdf"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/ci-first/CORRECTION.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca456938e2726f1abfbfb261f4d28d90ea6bb603"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/ci-first/job-113490870711.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4fdcab44010082dd62ff8db5678feedc55d1b03"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/ci-first/receiving-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ebc387f6643dac77913c22bbb81a25436267553"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/ci-first/run.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb5860772c2626b9ebe1459dd3ccaae0ebba0dbf"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/ci-second/job-113494823006.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67dd351e3907fda02e5a66e0dd8316dea94ee070"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/ci-second/receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cfbffd89623bfcc7c40413c056b0d6a95493ce3"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/custody.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "353cea9070ea3fedc8cbd975c26462529a660d13"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/independent-review/acceptance.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6bf1999423a38a8bd094b19532c21a322c19c39"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/independent-review/baseline-job-113500432534.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b205c735934209c06a6ccf660a7b748adad163f"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/independent-review/baseline-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cecda44d0fb3f7b079c30955d012442eca7aa7b4"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/independent-review/delivery-driver-correction-v2.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ad4b1fa153a05e5f63d040eebbff6d601de7359"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/independent-review/first-candidate-job-113502211039.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b683f3765d99b125d22d724bef6a83aa8335357a"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/independent-review/first-candidate-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31ea901c4f79933e7e72631892d869528cb15a96"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/independent-review/frozen-contract.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "256174c9deba1a1b11af690fe705201b5a781414"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/independent-review/native-oracle-preparation.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e80b4436d07ad96256531197feeac81d7e606f1"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/independent-review/qualified-job-113504162241.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec5c01f79d6e423512144c22b8c03455670bc0bb"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/independent-review/qualified-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff1bdd08c8a8d639ac10c5eefd1e88908c0461a2"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/PUBLIC_CONTRACT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab2040bd5ed8147d3dbe8d0067fe51d6ada5a6a3"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/PUBLIC_RESULT_SHAPE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ed7f2fc62be91dbf150a346ea1aba5d6e5963b1"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/QUALIFICATION.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd7a2d0f3e2c359b3880e32953cff2559cb1dae4"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d11033c8b21735e42d9ceab214488f1558ad81ae"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/runtime-syntax.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "903bdb9acc4dfa7dfaf9a660e7f0c295c747a6f1"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/source-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "302a95ee6a6b6351784d9093c5aaefddd1a2ed8d"
+    },
+    {
+      "path": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/test-syntax.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1458aaa2eee0e0105b5ca3f3c413f98a3ee0ce9"
+    },
+    {
+      "path": "docs/SAVED_WEEK_CALENDAR.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f79ae537601c64ae04b91e2112c7a566ca63808"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be9416c35653e11502b511ae4e1fae22c6e96b36"
+    },
+    {
+      "path": "tests/test_saved_week_calendar_receiving_ultra.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d022f47add184d49c31d0e7bf325b219d13a47c"
+    },
+    {
+      "path": "tests/test_saved_week_calendar.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a32b329bb59084cb0aa62e235a731a9449ae2972"
+    },
+    {
+      "path": "tools/saved_week_to_calendar.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8d910eb315c4ffc58a3e37d58cbe4de6be84b4d"
+    }
+  ],
+  "sourcePins": {
+    "runtimeGit": "d8d910eb315c4ffc58a3e37d58cbe4de6be84b4d",
+    "runtimeSha256": "a1e5bd2283db04629249b80aec9d21ff3c08a1a4b848bde23b0872f6a387da80",
+    "authorTestGit": "a32b329bb59084cb0aa62e235a731a9449ae2972",
+    "independentTestGit": "2d022f47add184d49c31d0e7bf325b219d13a47c"
+  },
+  "nativeDependencies": [
+    {
+      "path": "static/week_file.mjs",
+      "gitBlob": "420ddb8f63fca264dcf97be7147801105696155d"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "gitBlob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+    },
+    {
+      "path": "static/calendar.js",
+      "gitBlob": "dbed22d2cb91090bccec9472fbffd2854eed2722"
+    },
+    {
+      "path": "tests/fixtures/saved-week-response.json",
+      "gitBlob": "eca4eee4d93d0046833fc798e6c34bf87879c858"
+    },
+    {
+      "path": "tools/native_plan_to_week.mjs",
+      "gitBlob": "cf9fc5e0ecde5a839e6e6a577039b88bcc31f302"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "gitBlob": "0e6273139a9bf417a4ee42f4501d067b1c9d95a0"
+    }
+  ],
+  "qualifiedResult": {
+    "tests": 250,
+    "subtests": 247,
+    "authoredMethods": 20,
+    "independentCases": 67
+  },
+  "scopeLimit": "Final publication adds evidence only after the qualified source/test tree. Final-ref hosted checks and merge remain with normal project gates/root; no live account or deployment."
+}

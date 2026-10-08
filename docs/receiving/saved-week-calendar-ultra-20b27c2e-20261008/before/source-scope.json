@@ -1,0 +1,51 @@
+{
+  "schema": "tastetable-saved-week-calendar-source-scope.v1",
+  "repository": "Jacob-Met/tastetable",
+  "baseline": "2b347cee4ff4e2b806362730a8520a3360b45f5a",
+  "tree": "66d62a724c1667913cb581fb35e4b6db6111dae8",
+  "runtime_scope": [
+    "tools/saved_week_to_calendar.mjs"
+  ],
+  "test_scope": [
+    "tests/test_saved_week_calendar.py"
+  ],
+  "documentation": [
+    "docs/SAVED_WEEK_CALENDAR.md",
+    "README.md (additive pointer only)"
+  ],
+  "evidence_prefix": "docs/receiving/saved-week-calendar-ultra-20b27c2e-20261008/",
+  "unchanged": [
+    "static/week_plan.mjs",
+    "static/week_file.mjs",
+    "static/calendar.js",
+    "tools/native_plan_to_week.mjs",
+    "tastetable_cli.py",
+    "static/app.js",
+    "static/index.html",
+    "web-demo-offline/",
+    "docs/NATIVE_PLAN_CLI.md",
+    ".github/workflows/"
+  ],
+  "ownership_review": {
+    "project_open": [
+      30,
+      34,
+      36,
+      39,
+      40
+    ],
+    "current_tree_complete": true,
+    "instructions_found": [],
+    "new_path_absent": true,
+    "root_scope_message_sent": true,
+    "claim_not_yet_posted_by_this_worker": true
+  },
+  "constraints": {
+    "no_github_writes": true,
+    "no_local_file_writes": true,
+    "no_mac_calls": true,
+    "no_browser": true,
+    "no_installs": true,
+    "all_data_fictional_or_primary_fixture": true
+  }
+}
