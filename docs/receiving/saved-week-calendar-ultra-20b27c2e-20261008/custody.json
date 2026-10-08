@@ -1,0 +1,75 @@
+{
+  "schema": "tastetable-calendar-custody.v1",
+  "historical_before_packet": {
+    "bytes": 115744,
+    "sha256": "7dbc3ed6a2523cb124c89d8f3aa9ad788ea2aea5a277ca04acb311bff1ca7c39",
+    "status": "The original five-file packet was frozen in code-mode memory before implementation. A later tool-state reset lost that memory. Three files below were recovered with exact old hashes; two actual output bodies remain unavailable and are not regenerated or included under the old run identity."
+  },
+  "recovered": [
+    {
+      "path": "before/native-receiver.cjs",
+      "bytes": 4690,
+      "sha256": "41b32935463836d111d67e3c5687e4a71847b8393cc89771047231b98a0a8dd3",
+      "git_blob": "75712606b81062a5b22cf48223e5e4d41c388116"
+    },
+    {
+      "path": "before/primary-source-packet.json",
+      "bytes": 50897,
+      "sha256": "a41689fa1a791ad8a77ad131c0c2c93cfa931db7b534467e1c915014b3b5fce7",
+      "git_blob": "393dbe029bdf5c2f9dc17b6d7a9e8f50c20f23e9"
+    },
+    {
+      "path": "before/source-scope.json",
+      "bytes": 1322,
+      "sha256": "71b6f3b39addb89be81ddb18d345001d4a6ad4ead7d1b74109eceb7eff4dee34",
+      "git_blob": "bad2aa89d161ba6b88b587cfd420f66847083bdf"
+    }
+  ],
+  "held": [
+    {
+      "path": "before/native-output.txt",
+      "bytes": 23367,
+      "sha256": "087da7bc9b8754d5a48bc124e2de2c0f08647299f2c04420bb864e82a385e29f",
+      "git_blob": "a3b9d37232b6ba89e63aa009ccc9f34beab40356"
+    },
+    {
+      "path": "before/native-receipt.json",
+      "bytes": 23143,
+      "sha256": "72e86beca9975407b4455a81747fb5ba4b64c1a3a9fe223c6b861615e5ca4378",
+      "git_blob": "c84d917bec66b41a288ca793f3772b4a434fc7e3"
+    }
+  ],
+  "historical_observation": {
+    "native_runtime": "Node v24.19.0",
+    "shell_exit": 0,
+    "qualification": "VM/API/argument checks on exact source bodies; not actual filesystem CLI/browser receiving.",
+    "ordinary_events": 5,
+    "arranged_events": 4,
+    "two_occurrences_same_day": true,
+    "one_omission": true,
+    "calendar_bytes": 4162,
+    "calendar_sha256": "d5b87c5089c7602922359aa477776a05af83d85fc01e030b650cab6bacbe655f",
+    "note": "This is a summary of the original tool transcript and prior claim, not a replacement raw run receipt."
+  },
+  "pre_execution_setup_failure": {
+    "phase": "candidate API probe setup",
+    "error": "TypeError: Cannot read properties of undefined (reading 'files')",
+    "cause": "Earlier primary-packet memory key no longer resolved after a tool-state reset.",
+    "product_execution": false,
+    "rerun": false
+  },
+  "receiving_status": {
+    "author_source_syntax": "passed",
+    "authored_process_tests": "not yet executed; await existing hosted pytest",
+    "independent_receiver": "contract only, candidate withheld until independent probe freeze",
+    "filesystem_cli": "pending",
+    "browser": "no new browser consumer in this lane"
+  },
+  "packaging_setup_failure": {
+    "phase": "single-command packet hashing",
+    "error": "Argument list too long (os error 7)",
+    "process_started": false,
+    "product_execution": false,
+    "resolution": "Hash the identical contents in two bounded stdin batches; no source or test change."
+  }
+}

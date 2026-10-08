@@ -265,3 +265,13 @@ the same way with the included `Dockerfile`.
 ## License
 
 MIT © 2026 Jacob Scott-Metoyer. See [LICENSE](LICENSE).
+
+## Export a saved week from the terminal
+
+Use `node tools/saved_week_to_calendar.mjs --input "my week.json" --output "my week.ics"`
+to prepare the existing calendar writer's exact all-day suggestions from an
+arranged saved-week file. The command preserves a stored calendar identity and
+original received timestamp, refuses occupied output names, and makes no provider
+or calendar-account call. A file without an identity needs an explicit
+`--new-calendar` request. See [the saved-week calendar guide](docs/SAVED_WEEK_CALENDAR.md)
+for identity, preview receipts, file limits and delivery behavior.
