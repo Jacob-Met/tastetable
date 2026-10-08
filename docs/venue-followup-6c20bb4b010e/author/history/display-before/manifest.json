@@ -1,0 +1,17 @@
+{
+  "description": "Unqualified r3 before leading-newline redisplay and edited-question phone overflow fixes. Historical source retained for the receiving-question-r3-final failure; independent newline failure is retained on frozen r2 separately.",
+  "files": {
+    "static/venue_followup.mjs": {
+      "sha256": "32d8a6d04169667ce84fed5d67b4e9b32321fb63d0072609cc0eb7db9414da1d",
+      "bytes": 14372
+    },
+    "static/venue_followup.css": {
+      "sha256": "2b9d89abfc17cfadf9a15d92e3b52034dc77470c3e9a3dd238b10fc7c03e7782",
+      "bytes": 1687
+    },
+    "tests/venue_followup.browser.cjs": {
+      "sha256": "f6dac2edb6adfe8516aaac730fe488eae48104c58dbb0a48a9e87cd3ad1f3365",
+      "bytes": 21256
+    }
+  }
+}

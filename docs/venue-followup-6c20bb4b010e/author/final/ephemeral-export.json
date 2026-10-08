@@ -1,0 +1,96 @@
+{
+  "scope": "The unchanged native browser driver ran in a fresh exclusive regular directory on ephemeral /dev tmpfs; only final flat evidence files were copied to persistent scratch before this exec ended. No device nodes or services were changed.",
+  "source": "/workspace/scratch/6c20bb4b010e/optimizer-capability/tastetable-release-r3/candidate-r4",
+  "temporaryOutput": "/dev/hamon-tastetable-6c20bb4b010e-2/receiving",
+  "evidence": "/workspace/scratch/6c20bb4b010e/optimizer-capability/tastetable-release-r3/receiving-r4",
+  "exitCode": 0,
+  "signal": null,
+  "error": null,
+  "files": [
+    {
+      "path": "authored-duplicate-call-sheet.txt",
+      "bytes": 2005,
+      "sha256": "d00edc49fbfd5d9ee88fcd5ba7cb9faf3cd9819448e86d3c7596db1658b977d7"
+    },
+    {
+      "path": "desktop.png",
+      "bytes": 134478,
+      "sha256": "5cae360d0e87cfeefca5dfb5f669f67d2625bd245c67f6cfa52970396487807c"
+    },
+    {
+      "path": "leading-newline-call-sheet.txt",
+      "bytes": 4046,
+      "sha256": "09f291c056abd3c9fb0d7e7b3fb8b441eb453016a6b63300ea2cc4c9ee489cdb"
+    },
+    {
+      "path": "native-current-call-sheet.txt",
+      "bytes": 5035,
+      "sha256": "9d45740af07fcd0cc6f7baead51b431a1c03ddb06a4f1a742634f1ff89c80519"
+    },
+    {
+      "path": "native-omitted-call-sheet.txt",
+      "bytes": 4053,
+      "sha256": "e4ce5bb57b13c7fcedb30fc10de2f1966faca848bd62e44523ef86a751262c72"
+    },
+    {
+      "path": "native-server.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "native-unknown-call-sheet.txt",
+      "bytes": 3419,
+      "sha256": "2cc4abb0c60d7302f51db37b5e23532ed8aaaca79737a3f0f6defc9d6a9758d7"
+    },
+    {
+      "path": "phone.png",
+      "bytes": 82433,
+      "sha256": "ecd6b33aa2f4c2feeffafd597cc79060369510d07db230b1a782d412bd18891c"
+    },
+    {
+      "path": "print.png",
+      "bytes": 106296,
+      "sha256": "a736935ff8697a6a7ae30b8da42cfe047d58524be9696f8d004638b163bc8d70"
+    },
+    {
+      "path": "question-composition-week.json",
+      "bytes": 14602,
+      "sha256": "906f544336a463675fda211c3338773f8ffa1afe7d1ca48f48f16688a370d32d"
+    },
+    {
+      "path": "result.json",
+      "bytes": 70918,
+      "sha256": "a7dac59d09d75f4b7d85f5d677057501458046fd0f27cf070f669e9af826eecf"
+    },
+    {
+      "path": "revised-question-call-sheet.txt",
+      "bytes": 4254,
+      "sha256": "3cbfb31e6e7640fe1beaaa2dea2910cd04ecbb5b0c333220ff659cceb848f3c8"
+    },
+    {
+      "path": "revised-question-print.png",
+      "bytes": 87110,
+      "sha256": "cc262b239ccc455a15d0772398f8633d5a7bc48b5496dc954bea122f8835162c"
+    },
+    {
+      "path": "saved-composition-after.ics",
+      "bytes": 4328,
+      "sha256": "2b870742efb6358c13a03b475719e3f7a69c4ecd0ead7b620a475e1b6ccf474c"
+    },
+    {
+      "path": "saved-composition-before.ics",
+      "bytes": 4328,
+      "sha256": "2b870742efb6358c13a03b475719e3f7a69c4ecd0ead7b620a475e1b6ccf474c"
+    },
+    {
+      "path": "saved-composition-week.json",
+      "bytes": 14602,
+      "sha256": "55dfb9c7e50b2aff749dbb33835dcc5cf89c7d7f0eaf4e2b68dd957cb319a824"
+    },
+    {
+      "path": "saved-source-call-sheet.txt",
+      "bytes": 4229,
+      "sha256": "7b97cf80ddaff18c3ba52fe165534336fdd55a8e7c2a95853e3d414f62c83675"
+    }
+  ]
+}

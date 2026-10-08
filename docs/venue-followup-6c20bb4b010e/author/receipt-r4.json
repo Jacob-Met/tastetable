@@ -1,0 +1,234 @@
+{
+  "schema": "tastetable.venue-followup.author-native-receiving.r4",
+  "owner": "estate-6c20bb4b010e/optimizer-capability",
+  "state": "AUTHOR_NATIVE_RECEIVING_PASSED",
+  "scopeIssue": "https://github.com/Jacob-Met/tastetable/issues/16",
+  "source": {
+    "manifest": {
+      "bytes": 1800,
+      "sha256": "fdfe69fec71f308e77ee9410c3af24ae5025426f7460ccf9a320b8d143796834"
+    },
+    "originalNativeParent": "0758d2cca881fb5b5041f80bae2174cf485f4bdd",
+    "finalNativeParent": "d66ab91d62ba243cef2ba387cea73a684fa3b04e",
+    "incomingUnmodifiedDependency": {
+      "path": "constraints.py",
+      "gitBlob": "cab2cecbe4c3a6112022d194a927b9025ec67ab6",
+      "sha256": "a7ad868ece3cb83b15b02f8f059a94da749059bb96a8c97f7fb207ccb85d604c",
+      "bytes": 6754
+    },
+    "publicationChanges": [
+      "README.md",
+      "static/app.js",
+      "static/index.html",
+      "static/venue_followup.mjs",
+      "static/venue_followup.css",
+      "tests/venue_followup.test.mjs",
+      "tests/venue_followup.browser.cjs"
+    ]
+  },
+  "model": {
+    "cases": 15,
+    "passed": 15,
+    "failed": 0,
+    "skipped": 0,
+    "output": {
+      "bytes": 1650,
+      "sha256": "a8d36e28f42146371c610107ec6b9fb54cf05cd129d31db372d5e9649abeecc1"
+    },
+    "command": "node --test tests/venue_followup.test.mjs"
+  },
+  "browser": {
+    "result": {
+      "bytes": 70918,
+      "sha256": "a7dac59d09d75f4b7d85f5d677057501458046fd0f27cf070f669e9af826eecf"
+    },
+    "started": "2026-10-08T14:24:39.194Z",
+    "finished": "2026-10-08T14:24:44.942Z",
+    "groups": [
+      {
+        "name": "unchanged native planner and existing arranged-week positive control",
+        "passed": true
+      },
+      {
+        "name": "caregiver can prepare questions for every actual native scheduled pick",
+        "passed": true
+      },
+      {
+        "name": "reply editing, move, return, omission and export preserve exact visit/date custody",
+        "passed": true
+      },
+      {
+        "name": "invalid dates and different weeks do not relabel an existing reply",
+        "passed": true
+      },
+      {
+        "name": "native dietary unknown remains visible on screen and printed caregiver handoff",
+        "passed": true
+      },
+      {
+        "name": "source invalidation and replacement retire notes; an empty native plan stays empty",
+        "passed": true
+      },
+      {
+        "name": "saved-week composition preserves the envelope and calendar while opening a fresh labeled worksheet",
+        "passed": true
+      },
+      {
+        "name": "edited questions retain earlier reply context until the caregiver updates the reply",
+        "passed": true
+      },
+      {
+        "name": "all worksheet textareas preserve leading newlines through redisplay and subsequent editing",
+        "passed": true
+      },
+      {
+        "name": "authored duplicate-entity occurrences retain distinct notes and downloadable identity",
+        "passed": true
+      }
+    ],
+    "passed": 10,
+    "failed": 0,
+    "pageErrors": [],
+    "externalRequests": [],
+    "sourceFiles": 16,
+    "sourceBeforeAfterUnchanged": true,
+    "planPosts": 5,
+    "nativeResponses": [
+      {
+        "id": "rosa",
+        "sha256": "ebd767d10908b1712c5249464254d985cb3b7e7db69d223db5ff71316da5666e",
+        "unchangedFromPriorNativeParent": true
+      },
+      {
+        "id": "mei",
+        "sha256": "90867d7d18ccfe7b0039811a8c61206d5ef85aa40d54e11a0d93d612ba8193bc",
+        "unchangedFromPriorNativeParent": true
+      },
+      {
+        "id": "empty-city",
+        "sha256": "d49c1f3b75d2a63c1efa3dee92b0a620b529d731ad853d9b9f2ac85599ea58b1",
+        "unchangedFromPriorNativeParent": true
+      },
+      {
+        "id": "rosa",
+        "sha256": "ebd767d10908b1712c5249464254d985cb3b7e7db69d223db5ff71316da5666e",
+        "unchangedFromPriorNativeParent": true
+      }
+    ],
+    "authoredFixture": "Two authored occurrences derived from the native Rosa response; not a fresh planner result.",
+    "downloads": [
+      {
+        "file": "native-current-call-sheet.txt",
+        "suggestedFilename": "tastetable-venue-contacts-2026-12-28.txt",
+        "bytes": 5035,
+        "sha256": "9d45740af07fcd0cc6f7baead51b431a1c03ddb06a4f1a742634f1ff89c80519"
+      },
+      {
+        "file": "native-omitted-call-sheet.txt",
+        "suggestedFilename": "tastetable-venue-contacts-2026-12-28.txt",
+        "bytes": 4053,
+        "sha256": "e4ce5bb57b13c7fcedb30fc10de2f1966faca848bd62e44523ef86a751262c72"
+      },
+      {
+        "file": "native-unknown-call-sheet.txt",
+        "suggestedFilename": "tastetable-venue-contacts-2026-12-28.txt",
+        "bytes": 3419,
+        "sha256": "2cc4abb0c60d7302f51db37b5e23532ed8aaaca79737a3f0f6defc9d6a9758d7"
+      },
+      {
+        "file": "saved-composition-before.ics",
+        "suggestedFilename": "tastetable-demo-2026-12-28.ics",
+        "bytes": 4328,
+        "sha256": "2b870742efb6358c13a03b475719e3f7a69c4ecd0ead7b620a475e1b6ccf474c"
+      },
+      {
+        "file": "saved-composition-week.json",
+        "suggestedFilename": "tastetable-week-2026-12-28.json",
+        "bytes": 14602,
+        "sha256": "55dfb9c7e50b2aff749dbb33835dcc5cf89c7d7f0eaf4e2b68dd957cb319a824"
+      },
+      {
+        "file": "saved-source-call-sheet.txt",
+        "suggestedFilename": "tastetable-venue-contacts-2026-12-28.txt",
+        "bytes": 4229,
+        "sha256": "7b97cf80ddaff18c3ba52fe165534336fdd55a8e7c2a95853e3d414f62c83675"
+      },
+      {
+        "file": "saved-composition-after.ics",
+        "suggestedFilename": "tastetable-demo-2026-12-28.ics",
+        "bytes": 4328,
+        "sha256": "2b870742efb6358c13a03b475719e3f7a69c4ecd0ead7b620a475e1b6ccf474c"
+      },
+      {
+        "file": "revised-question-call-sheet.txt",
+        "suggestedFilename": "tastetable-venue-contacts-2026-12-28.txt",
+        "bytes": 4254,
+        "sha256": "3cbfb31e6e7640fe1beaaa2dea2910cd04ecbb5b0c333220ff659cceb848f3c8"
+      },
+      {
+        "file": "question-composition-week.json",
+        "suggestedFilename": "tastetable-week-2026-12-28.json",
+        "bytes": 14602,
+        "sha256": "906f544336a463675fda211c3338773f8ffa1afe7d1ca48f48f16688a370d32d"
+      },
+      {
+        "file": "leading-newline-call-sheet.txt",
+        "suggestedFilename": "tastetable-venue-contacts-2026-12-28.txt",
+        "bytes": 4046,
+        "sha256": "09f291c056abd3c9fb0d7e7b3fb8b441eb453016a6b63300ea2cc4c9ee489cdb"
+      },
+      {
+        "file": "authored-duplicate-call-sheet.txt",
+        "suggestedFilename": "tastetable-venue-contacts-2026-12-28.txt",
+        "bytes": 2005,
+        "sha256": "d00edc49fbfd5d9ee88fcd5ba7cb9faf3cd9819448e86d3c7596db1658b977d7"
+      }
+    ],
+    "calendarBeforeAfterIdentical": true
+  },
+  "beforeCapability": {
+    "parent": "f04353ffe4de808543031f56a2a59fac589cb0ab",
+    "result": {
+      "bytes": 19807,
+      "sha256": "471a525bfc8571f0e8dac39ad839d2f0bf26b6c2b8f48bde13857a92724d80a4"
+    },
+    "positiveControl": {
+      "name": "unchanged native planner and existing arranged-week positive control",
+      "passed": true
+    },
+    "missingCapability": {
+      "name": "caregiver can prepare questions for every actual native scheduled pick",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: The native plan has no venue-call worksheet\n\n0 !== 1\n\n    at /dev/shm/hamon-tastetable-6c20bb4b010e/candidate/tests/venue_followup.browser.cjs:106:12\n    at async group (/dev/shm/hamon-tastetable-6c20bb4b010e/candidate/tests/venue_followup.browser.cjs:30:9)\n    at async /dev/shm/hamon-tastetable-6c20bb4b010e/candidate/tests/venue_followup.browser.cjs:105:3"
+    },
+    "sourceBeforeAfterUnchanged": true
+  },
+  "runtime": {
+    "node": "24.19.0",
+    "playwright": "1.62.1",
+    "chromium": "153.0.8010.0",
+    "python": "3.12.14",
+    "fastapi": "0.142.4",
+    "uvicorn": "0.54.0",
+    "pydantic": "2.13.5"
+  },
+  "historicalInterpretation": [
+    "Original r2 supplied generated questions but missed the required editor; independent model and browser cases reproduced that one missing capability.",
+    "Independent r2 browser also reproduced leading-LF loss after textarea redisplay and subsequent edit. R3 assigns all three textarea values through DOM properties.",
+    "Author caught edited-question long-token overflow on the phone; r3 wraps question tokens. The original unqualified source and failure remain retained.",
+    "The earlier r3 authored print oracle assumed only one contact-edit block; later authored newline setup assumed the question disclosure remained open after Save week. Those fixture assumptions were corrected explicitly without production changes, and the exact prior driver/raw result are retained.",
+    "Storage-related pre-page startup failures did not qualify any product behavior. Final browser execution used an exclusive regular directory on ephemeral /dev tmpfs and exported exact small evidence before exec ended.",
+    "Independent r3 actual-disclosure probe reproduced a rejection notice overwritten by the paired native input/change events, while the earlier-question/reply binding remained intact. R4 handles each control once and the final author flow explicitly asserts the visible refusal before continuing the temporal handoff. The exact independent probe is replayed separately."
+  ],
+  "limits": [
+    "Independent review is a separate receipt; its counts are not included in these author totals.",
+    "Actual local FastAPI/native mock transport and Chromium only; no live provider, venue contact, account, service, deployment or designated-hub adoption.",
+    "Print-media CSS/DOM checked; no physical printer or calendar-service import.",
+    "Contact notes are session-local and intentionally absent from saved-week/calendar formats. Opening a saved file starts a new worksheet while retaining its source label.",
+    "Original heuristic explanations remain unchanged; caregiver-entered replies and status do not verify nutrition, accessibility, availability, safety or reservations."
+  ],
+  "previousAuthorReceipt": {
+    "bytes": 9629,
+    "sha256": "f72161b9526881297e35fe9e52a3e9b99a95bf1bf2e0dd076b997b482ed23181"
+  }
+}

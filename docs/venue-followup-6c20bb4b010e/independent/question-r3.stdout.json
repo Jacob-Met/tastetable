@@ -1,0 +1,39 @@
+{
+  "schema": "independent-tastetable-question-receipt-v1",
+  "source_root": "/dev/shm/hamon-tastetable-6c20bb4b010e/candidate-r3",
+  "source_before": {
+    "static/venue_followup.mjs": "0573f3c9b60f33f105c64bd61d86cbdcc66664f8f47ae06b998c00bc988fa832",
+    "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+  },
+  "source_after": {
+    "static/venue_followup.mjs": "0573f3c9b60f33f105c64bd61d86cbdcc66664f8f47ae06b998c00bc988fa832",
+    "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+  },
+  "node": "v24.19.0",
+  "fixture": "Two explicitly authored occurrences at one fictional venue; native ESM functions only.",
+  "cases": [
+    {
+      "name": "user can edit a visit question without changing the original source explanation",
+      "passed": true
+    },
+    {
+      "name": "a revised question retains the earlier reply with its earlier question and requests follow-up",
+      "passed": true
+    },
+    {
+      "name": "status and next-step edits cannot rebind an old reply; a new reply edit can",
+      "passed": false,
+      "error": "Error: Update the reply for the revised questions before marking a reply recorded.\n    at Object.setField (file:///dev/shm/hamon-tastetable-6c20bb4b010e/candidate-r3/static/venue_followup.mjs:63:15)\n    at file:///dev/shm/hamon-tastetable-independent-6c20bb4b010e/probe_question_receipt.mjs:62:11\n    at check (file:///dev/shm/hamon-tastetable-independent-6c20bb4b010e/probe_question_receipt.mjs:25:15)\n    at file:///dev/shm/hamon-tastetable-independent-6c20bb4b010e/probe_question_receipt.mjs:59:7"
+    },
+    {
+      "name": "positive control: occurrence/date/source identity isolates replies and preserves an original-date return",
+      "passed": true
+    }
+  ],
+  "passed": 3,
+  "failed": 1,
+  "skipped": 0,
+  "browser_executed": false,
+  "server_executed": false,
+  "live_venue_or_provider_calls": 0
+}

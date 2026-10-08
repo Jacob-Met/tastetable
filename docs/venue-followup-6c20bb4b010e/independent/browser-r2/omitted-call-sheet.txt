@@ -1,0 +1,64 @@
+TasteTable — venue call sheet
+Week beginning 2026-12-28
+Demo plan: fictional venues and synthetic source data. Use this sheet to practise the workflow.
+Caregiver-entered notes. A recorded reply is not a safety check, reservation or confirmation by TasteTable.
+Confirm venue details and care needs before going. Do not include names or private health information.
+Notes apply to the pick occurrence and date shown. Later edits do not update this copy.
+
+Wednesday 2026-12-30 — Abuela's Table
+Suggested visit 2; Qloo entity: FIX-P-03
+Original plan explanation (heuristic):
+  Qloo affinity 0.83 for audiences who like Celia Cruz, West Side Story (tag match: Mexican). Checks: Soft foods: pass (soft options listed: caldo de pollo, refried beans); Low sodium: pass (lower-sodium signals: low sodium options); Wheelchair: pass (tagged 'wheelchair accessible entrance').
+Questions to ask:
+  • Will you be open on 2026-12-30, and do we need to book?
+  • Which soft-food options could you prepare? Confirm the required texture with the care team.
+  • Can the kitchen prepare a lower-salt option, and how would it be prepared?
+  • Is there step-free access to the entrance, seating and facilities needed for this visit?
+Caregiver contact status: Not contacted
+Venue reply / your notes:
+  No reply recorded.
+Next step:
+  No next step recorded.
+
+Friday 2027-01-01 — Blue Plate Diner
+Suggested visit 3; Qloo entity: FIX-P-07
+Original plan explanation (heuristic):
+  Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Diner). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, mashed potatoes, soups); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').
+Questions to ask:
+  • Will you be open on 2027-01-01, and do we need to book?
+  • Which soft-food options could you prepare? Confirm the required texture with the care team.
+  • Can the kitchen prepare a lower-salt option, and how would it be prepared?
+  • Is there step-free access to the entrance, seating and facilities needed for this visit?
+Caregiver contact status: Not contacted
+Venue reply / your notes:
+  No reply recorded.
+Next step:
+  No next step recorded.
+
+Saturday 2027-01-02 — Arroyo Museum of Latin Music (fictional)
+Suggested visit 5; Qloo entity: FIX-V-03
+Original plan explanation (heuristic):
+  Qloo affinity 0.96 for audiences who like Celia Cruz, West Side Story (tag match: Museum). Checks: Wheelchair: pass (tagged 'wheelchair accessible entrance').
+Questions to ask:
+  • Will you be open on 2027-01-02, and do we need to book?
+  • Is there step-free access to the entrance, seating and facilities needed for this visit?
+Caregiver contact status: Not contacted
+Venue reply / your notes:
+  No reply recorded.
+Next step:
+  No next step recorded.
+
+Sunday 2027-01-03 — Trattoria Nonna Lucia
+Suggested visit 4; Qloo entity: FIX-P-11
+Original plan explanation (heuristic):
+  Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Italian). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').
+Questions to ask:
+  • Will you be open on 2027-01-03, and do we need to book?
+  • Which soft-food options could you prepare? Confirm the required texture with the care team.
+  • Can the kitchen prepare a lower-salt option, and how would it be prepared?
+  • Is there step-free access to the entrance, seating and facilities needed for this visit?
+Caregiver contact status: Not contacted
+Venue reply / your notes:
+  No reply recorded.
+Next step:
+  No next step recorded.

@@ -1,0 +1,71 @@
+TasteTable — venue call sheet
+Week beginning 2026-12-28
+Demo plan: fictional venues and synthetic source data. Use this sheet to practise the workflow.
+Caregiver-entered notes. A recorded reply is not a safety check, reservation or confirmation by TasteTable.
+Confirm venue details and care needs before going. Do not include names or private health information.
+Notes apply to the pick occurrence and date shown. Later edits do not update this copy.
+
+Monday 2026-12-28 — Trattoria Nonna Lucia
+Suggested visit 1; Qloo entity: FIX-P-11
+Original plan explanation (heuristic):
+  Qloo affinity 0.92 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Italian). Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto).
+Questions to ask:
+  • Will you be open on 2026-12-28, and do we need to book?
+  • Which soft-food options could you prepare? Confirm the required texture with the care team.
+Caregiver contact status: Not contacted
+Venue reply / your notes:
+  No reply recorded.
+Next step:
+  No next step recorded.
+
+Wednesday 2026-12-30 — Kotobuki Tofu House
+Suggested visit 2; Qloo entity: FIX-P-09
+Original plan explanation (heuristic):
+  Qloo affinity 0.82 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Japanese). Checks: Soft foods: pass (soft options listed: chawanmushi, steamed fish, tofu).
+Questions to ask:
+  • Will you be open on 2026-12-30, and do we need to book?
+  • Which soft-food options could you prepare? Confirm the required texture with the care team.
+Caregiver contact status: Not contacted
+Venue reply / your notes:
+  No reply recorded.
+Next step:
+  No next step recorded.
+
+Friday 2027-01-01 — Osteria del Ponte
+Suggested visit 3; Qloo entity: FIX-P-13
+Original plan explanation (heuristic):
+  Qloo affinity 0.80 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Italian). Checks: Soft foods: pass (soft options listed: gnocchi, soups).
+Questions to ask:
+  • Will you be open on 2027-01-01, and do we need to book?
+  • Which soft-food options could you prepare? Confirm the required texture with the care team.
+Caregiver contact status: Not contacted
+Venue reply / your notes:
+  No reply recorded.
+Next step:
+  No next step recorded.
+
+Saturday 2027-01-02 — Rialto Revival Cinema (fictional)
+Suggested visit 5; Qloo entity: FIX-V-02
+Original plan explanation (heuristic):
+  Qloo affinity 0.95 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Movie Theater).
+Questions to ask:
+  • Will you be open on 2027-01-02, and do we need to book?
+Caregiver contact status: Not contacted
+Venue reply / your notes:
+  No reply recorded.
+Next step:
+  No next step recorded.
+
+Sunday 2027-01-03 — Ramen Tatsu
+Suggested visit 4; Qloo entity: FIX-P-10
+Original plan explanation (heuristic):
+  Qloo affinity 0.79 for audiences who like The Beatles, Roman Holiday, Singin' in the Rain (tag match: Japanese). Checks: Soft foods: unknown (no texture signal in Qloo keywords; ask the venue).
+Questions to ask:
+  • Will you be open on 2027-01-03, and do we need to book?
+  • Which soft-food options could you prepare? Confirm the required texture with the care team.
+Caregiver contact status: Awaiting reply
+Venue reply / your notes:
+  No texture details received yet.
+  Ask the venue before deciding.
+Next step:
+  No next step recorded.

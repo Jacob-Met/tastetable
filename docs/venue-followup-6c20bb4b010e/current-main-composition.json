@@ -1,0 +1,82 @@
+{
+  "repository": "Jacob-Met/tastetable",
+  "nativeReceivingParent": "d66ab91d62ba243cef2ba387cea73a684fa3b04e",
+  "currentMain": "a77175501199ace765cb7ca57742b267351d3e79",
+  "actualCurrentTree": "2031698fbc8fcf94ad9af06117c2d9858bc83190",
+  "recursiveTreeTruncated": false,
+  "allRelevantParentBlobsIdentical": true,
+  "newFeaturePathsAbsent": true,
+  "relevantParentBlobs": [
+    {
+      "path": "README.md",
+      "gitBlob": "8ff6de7f3bd91f0ff130775631dd0fe2dc98791c"
+    },
+    {
+      "path": "agent.py",
+      "gitBlob": "883aff984464f2d43cda18f8e60b81240d6c3fb3"
+    },
+    {
+      "path": "app.py",
+      "gitBlob": "2c2f1524e62c74db21fdbcc69faec643903c23b8"
+    },
+    {
+      "path": "constraints.py",
+      "gitBlob": "cab2cecbe4c3a6112022d194a927b9025ec67ab6"
+    },
+    {
+      "path": "fixtures/qloo_fixtures.json",
+      "gitBlob": "60c5d92f905755454bb280b8181f8836a74bd955"
+    },
+    {
+      "path": "personas.py",
+      "gitBlob": "1eb6768780cafaf9b1666e39b7fc17aa21204f16"
+    },
+    {
+      "path": "qloo_client.py",
+      "gitBlob": "cca322e0c9af96c481ba8f7ef286e85d3b90cfd2"
+    },
+    {
+      "path": "requirements.txt",
+      "gitBlob": "d2fa2b085ecd75cc196fa8a02ddb54e1728c0b23"
+    },
+    {
+      "path": "static/app.js",
+      "gitBlob": "9903d257f9d60d8b216ba01c4d795e4aa199f629"
+    },
+    {
+      "path": "static/calendar.css",
+      "gitBlob": "9e53b951316d841b86f0256cd2444a3ce547269f"
+    },
+    {
+      "path": "static/calendar.js",
+      "gitBlob": "dbed22d2cb91090bccec9472fbffd2854eed2722"
+    },
+    {
+      "path": "static/index.html",
+      "gitBlob": "fd568ddd57c183725f0f8f76493160d66c36c7bb"
+    },
+    {
+      "path": "static/plan-request.js",
+      "gitBlob": "b21276dda840fe6dd96a3bf3258a851970ff5e4d"
+    },
+    {
+      "path": "static/style.css",
+      "gitBlob": "28df6c5229b6b592db33e929ae058fe514304af4"
+    },
+    {
+      "path": "static/week_file.mjs",
+      "gitBlob": "420ddb8f63fca264dcf97be7147801105696155d"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "gitBlob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+    }
+  ],
+  "newFeaturePaths": [
+    "static/venue_followup.mjs",
+    "static/venue_followup.css",
+    "tests/venue_followup.test.mjs",
+    "tests/venue_followup.browser.cjs"
+  ],
+  "scope": "Source composition check after r4 receiving. Current main's offline saved-week bridge changes no receiving dependency or existing feature hook path. This is byte-identity evidence, not another execution against a full current checkout. Publisher must preserve every unowned path from a fresh parent and recheck if it moves."
+}

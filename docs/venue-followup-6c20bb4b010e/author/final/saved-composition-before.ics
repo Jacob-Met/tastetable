@@ -1,0 +1,88 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TasteTable//Suggested weekly plan//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:9b02f87c8801522febe5df15c99e033a-20261228-pick-0@tastetable.invalid
+DTSTAMP:20261008T142441Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:[DEMO] TasteTable suggestion: Casa Habana Kitchen
+DESCRIPTION:DEMO: synthetic Qloo fixture\; these venues are fictional.\n\nS
+ uggested outing only\; no booking or opening hours confirmed. Not medical 
+ or dietary advice. Confirm accessibility\, texture and sodium needs with t
+ he venue and the person's care team.\n\nQloo entity ID: FIX-P-01\n\nOrigin
+ ally suggested for: Monday. Arranged for: Thursday 2026-12-31.\n\nWhy this
+  suggestion: Qloo affinity 0.91 for audiences who like Celia Cruz\, West S
+ ide Story (tag match: Cuban). Checks: Soft foods: pass (soft options liste
+ d: black bean soup\, flan\, made to order)\; Low sodium: pass (lower-sodiu
+ m signals: made to order)\; Wheelchair: pass (tagged 'wheelchair accessibl
+ e entrance').
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CLASS:PRIVATE
+END:VEVENT
+BEGIN:VEVENT
+UID:9b02f87c8801522febe5df15c99e033a-20261228-pick-2@tastetable.invalid
+DTSTAMP:20261008T142441Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:[DEMO] TasteTable suggestion: Blue Plate Diner
+DESCRIPTION:DEMO: synthetic Qloo fixture\; these venues are fictional.\n\nS
+ uggested outing only\; no booking or opening hours confirmed. Not medical 
+ or dietary advice. Confirm accessibility\, texture and sodium needs with t
+ he venue and the person's care team.\n\nQloo entity ID: FIX-P-07\n\nOrigin
+ ally suggested for: Friday. Arranged for: Friday 2027-01-01.\n\nWhy this s
+ uggestion: Qloo affinity 0.26 for audiences who like Celia Cruz\, West Sid
+ e Story (tag match: Diner). Weak taste signal: chosen mainly because it pa
+ sses the care constraints. Widened pick: outside the stated cuisines becau
+ se too few matches passed constraints. Checks: Soft foods: pass (soft opti
+ ons listed: made to order\, mashed potatoes\, soups)\; Low sodium: pass (l
+ ower-sodium signals: made to order)\; Wheelchair: pass (tagged 'wheelchair
+  accessible entrance').
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CLASS:PRIVATE
+END:VEVENT
+BEGIN:VEVENT
+UID:9b02f87c8801522febe5df15c99e033a-20261228-pick-4@tastetable.invalid
+DTSTAMP:20261008T142441Z
+DTSTART;VALUE=DATE:20270102
+DTEND;VALUE=DATE:20270103
+SUMMARY:[DEMO] TasteTable suggestion: Arroyo Museum of Latin Music (fiction
+ al)
+DESCRIPTION:DEMO: synthetic Qloo fixture\; these venues are fictional.\n\nS
+ uggested outing only\; no booking or opening hours confirmed. Not medical 
+ or dietary advice. Confirm accessibility\, texture and sodium needs with t
+ he venue and the person's care team.\n\nQloo entity ID: FIX-V-03\n\nOrigin
+ ally suggested for: Saturday. Arranged for: Saturday 2027-01-02.\n\nWhy th
+ is suggestion: Qloo affinity 0.96 for audiences who like Celia Cruz\, West
+  Side Story (tag match: Museum). Checks: Wheelchair: pass (tagged 'wheelch
+ air accessible entrance').
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CLASS:PRIVATE
+END:VEVENT
+BEGIN:VEVENT
+UID:9b02f87c8801522febe5df15c99e033a-20261228-pick-3@tastetable.invalid
+DTSTAMP:20261008T142441Z
+DTSTART;VALUE=DATE:20270103
+DTEND;VALUE=DATE:20270104
+SUMMARY:[DEMO] TasteTable suggestion: Trattoria Nonna Lucia
+DESCRIPTION:DEMO: synthetic Qloo fixture\; these venues are fictional.\n\nS
+ uggested outing only\; no booking or opening hours confirmed. Not medical 
+ or dietary advice. Confirm accessibility\, texture and sodium needs with t
+ he venue and the person's care team.\n\nQloo entity ID: FIX-P-11\n\nOrigin
+ ally suggested for: Sunday. Arranged for: Sunday 2027-01-03.\n\nWhy this s
+ uggestion: Qloo affinity 0.26 for audiences who like Celia Cruz\, West Sid
+ e Story (tag match: Italian). Weak taste signal: chosen mainly because it 
+ passes the care constraints. Widened pick: outside the stated cuisines bec
+ ause too few matches passed constraints. Checks: Soft foods: pass (soft op
+ tions listed: made to order\, polenta\, risotto)\; Low sodium: pass (lower
+ -sodium signals: made to order)\; Wheelchair: pass (tagged 'wheelchair acc
+ essible entrance').
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CLASS:PRIVATE
+END:VEVENT
+END:VCALENDAR

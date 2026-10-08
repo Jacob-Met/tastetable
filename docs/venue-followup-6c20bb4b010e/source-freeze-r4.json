@@ -1,0 +1,50 @@
+{
+  "repository": "Jacob-Met/tastetable",
+  "issue": 16,
+  "version": "r4",
+  "parentCommit": "d66ab91d62ba243cef2ba387cea73a684fa3b04e",
+  "sourceRoot": "/workspace/scratch/6c20bb4b010e/optimizer-capability/tastetable-release-r3/candidate-r4",
+  "previousSourceFreeze": {
+    "bytes": 1866,
+    "sha256": "0043a7c3172a2d149e3f6fc17998829346401377244eb25464179b7750d83cd7"
+  },
+  "change": "Each native control commits once: select on change, textareas on input. This preserves the rejection notice after a refused status change. The authored browser flow now asserts that notice. Other production files and model cases remain unchanged.",
+  "frozenAt": "2026-10-08T14:26:08.981Z",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 15363,
+      "sha256": "b15d725db2d510cc1e0104e9b1e6544b450307e1392f02ea460198d84126d492"
+    },
+    {
+      "path": "static/app.js",
+      "bytes": 19168,
+      "sha256": "d6c742457a4824acaad929d3db37f8d4c30a26e2ae326cac3ad41e30c4a3941d"
+    },
+    {
+      "path": "static/index.html",
+      "bytes": 7460,
+      "sha256": "57d222afffc0fa36f50bf542e8e032134b449adf840aa546b804cf6fe5ae1a1e"
+    },
+    {
+      "path": "static/venue_followup.mjs",
+      "bytes": 14920,
+      "sha256": "1635bc5f1e4377325528214af071bc1242be65eeaa57ed4e5ac41a350a1cd077"
+    },
+    {
+      "path": "static/venue_followup.css",
+      "bytes": 1711,
+      "sha256": "d2ef0569debf8ed7f94b2df64d9d819da58df72460809cb81ef848124a187d3b"
+    },
+    {
+      "path": "tests/venue_followup.test.mjs",
+      "bytes": 11405,
+      "sha256": "a53284b48da8375d7f6cf26b1d4e5943dfd203e60ff1ef44780f9a02f299479f"
+    },
+    {
+      "path": "tests/venue_followup.browser.cjs",
+      "bytes": 23149,
+      "sha256": "aa01091e81ea1664f9e39de711161573883c1b5e2d80ea60358197d1a7d7aedd"
+    }
+  ]
+}
