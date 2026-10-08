@@ -19,7 +19,7 @@
 </header>
 
 <main>
-  <section class="card">
+  <section class="card taste-form">
     <h2>1. Tastes &amp; constraints</h2>
     <div class="sample">
       <button id="sampleBtn" class="primary">Try a sample persona</button>
@@ -38,9 +38,36 @@
       </fieldset>
       <button type="submit">Plan my week</button>
     </form>
+    <p id="requestStatus" class="why" role="status" aria-live="polite"></p>
   </section>
 
   <section id="results" hidden>
+    <section id="weekOrganizer" class="card grounded" aria-labelledby="weekTitle">
+      <h2 id="weekTitle">Your week</h2>
+      <p id="weekRange" class="week-range"></p>
+      <p id="weekSource" class="mode"></p>
+      <p id="weekConstraints" class="why"></p>
+      <div class="week-controls">
+        <label>A date in your week
+          <input id="weekDate" type="date" aria-describedby="weekHelp weekError">
+        </label>
+        <button id="resetWeek" type="button">Restore suggested days</button>
+        <button id="printWeek" type="button" class="primary">Print week</button>
+      </div>
+      <p id="weekHelp" class="why organizer-help">Choose any date to show its Monday–Sunday week. Move checked picks to the days that suit you, or keep a pick off this week. Several picks can share a day. Changes last for this page visit.</p>
+      <p id="weekError" class="error" role="alert"></p>
+      <p id="weekSummary"></p>
+      <p id="weekStatus" class="why organizer-help" role="status" aria-live="polite"></p>
+      <ol id="weekDays" class="week-days"></ol>
+      <section id="omittedSection" hidden aria-labelledby="omittedTitle">
+        <h3 id="omittedTitle">Not scheduled this week</h3>
+        <ul id="omittedPicks" class="omitted-picks"></ul>
+      </section>
+      <div id="weekNotes"></div>
+      <p class="handoff-note">Planning draft. Dates are your choices, not reservations or confirmed opening hours. Confirm the venue, accessibility and food needs with the venue and care team before going.</p>
+    </section>
+    <details class="original-evidence">
+      <summary>Original suggestions and comparison</summary>
     <div class="cols">
       <div class="card grounded">
         <h2>Qloo-grounded plan</h2>
@@ -58,9 +85,10 @@
     </div>
     <details class="card"><summary>Rejected by constraint check</summary><ul id="rejected"></ul></details>
     <details class="card"><summary>Agent tool trace</summary><ol id="trace" class="mono"></ol></details>
+    </details>
   </section>
 </main>
 <footer>MIT licensed &middot; Uses Qloo's Taste AI insights. Qloo results describe aggregate affinities, not facts about any individual.</footer>
-<script src="/static/app.js"></script>
+<script type="module" src="/static/app.js"></script>
 </body>
 </html>

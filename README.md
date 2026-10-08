@@ -92,6 +92,32 @@ pytest -q                                # run the test suite
 
 By default the app runs in **mock mode** (it uses the fixture and makes no network calls).
 
+### Arrange and print your week
+
+After generating a plan, choose any date to display its Monday–Sunday week. Each checked pick
+has a day selector: move it to another day, combine several picks on the same day, or choose
+**Keep off this week**. Omitted picks remain available below the calendar so you can put them
+back. **Restore suggested days** restores the original assignments while keeping your chosen
+week. Open days are shown explicitly, including when too few recommendations pass the checks.
+
+**Print week** opens the browser's print dialog for a dated caregiver handoff. It includes the
+scheduled picks, their original Qloo IDs, affinity and check explanations, the requested
+constraints, any omitted picks, and the response's demo/live/unknown source label. The original
+suggestions, comparison, rejected candidates and tool trace remain in a collapsible panel;
+their counts describe the original recommendation, even after you rearrange your week.
+
+Scheduling runs in the browser and uses only the returned suggestions. It does not make another
+Qloo/model request, alter the checks, or send the chosen dates to the server. Edits last for
+the current page visit; generating a new plan starts fresh assignments. Dates are planning
+choices, not reservations or verified venue availability. Printed copies retain the existing
+care and synthetic-fixture caveats.
+
+The calendar/state checks use Node.js 18+ with no npm dependencies:
+
+```bash
+node --test tests/test_week_plan.mjs
+```
+
 ### Going live with Qloo
 
 ```bash

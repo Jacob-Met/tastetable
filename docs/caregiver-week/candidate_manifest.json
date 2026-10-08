@@ -1,0 +1,39 @@
+{
+  "receiving_repository": "Jacob-Met/tastetable",
+  "receiving_base": "d1c7a4e39cfdc0bb5b9fe026bc9660b75b456e81",
+  "local_baseline": "5a813d7a8bf34e98e1705b983d73de3f3623c3f4",
+  "local_candidate": "02c5e91f2c3e7220162b651ba3c1ec589ac2eea2",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "36518c8efd77143fe4186a53057b9ca806a7b5fb62530c5325b79f628e2c4794",
+      "git_blob": "4927123d731b742094c08b2a90ad66188bbaadaf"
+    },
+    {
+      "path": "static/app.js",
+      "sha256": "cb666959df8a4921987e67b98efbeca0f0399502184f3743e732c7c295cfd395",
+      "git_blob": "fab0cb5398d3e6553373a99d9d56afa92f2bfcbb"
+    },
+    {
+      "path": "static/index.html",
+      "sha256": "ddd912eb1af81611551c2ddb10f6f1fbd9fceb9e2a691b7ba35746ba08f9404d",
+      "git_blob": "1350d9500b0d5d90ac0e040885de5c4f0d4b497d"
+    },
+    {
+      "path": "static/style.css",
+      "sha256": "0d58ae4d0fef286374808eda0dc90b5e8249432a248b8332441738eb04dc0840",
+      "git_blob": "b47c49cc6b502a8e6dedc8d02fa1cadb1241dc1d"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+    },
+    {
+      "path": "tests/test_week_plan.mjs",
+      "sha256": "ecec21f1d5992b7d8e174e6bacd357846ee3eb8318492d2c8391a2425fcaf636",
+      "git_blob": "5808a2279c5ad23fd0aac2308f9e546fa03ca6a9"
+    }
+  ],
+  "patch_sha256": "9945e9b13eb5fa9327eb0bf89d2cd636f235d993d7fb125cd71bc648ac158821"
+}

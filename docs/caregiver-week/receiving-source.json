@@ -1,0 +1,251 @@
+{
+  "schema": "tastetable.caregiver-week.receiving-source.v2",
+  "repository_full_name": "Jacob-Met/tastetable",
+  "branch": "main",
+  "commit": "8fdd78dbd1bd7e72385b2f5bd684e02b0971fa14",
+  "tree": "e1bf3ec58b743e2b43d52ff79d52daf0116ef264",
+  "url": "https://github.com/Jacob-Met/tastetable/commit/8fdd78dbd1bd7e72385b2f5bd684e02b0971fa14",
+  "message": "Merge pull request #3 from Jacob-Met/fix/recommendation-error-continuation-20261008\n\nPreserve checked plans after recommendation tool errors",
+  "local_baseline_commit": "5a813d7a8bf34e98e1705b983d73de3f3623c3f4",
+  "local_candidate_commit": "02c5e91f2c3e7220162b651ba3c1ec589ac2eea2",
+  "local_snapshot_ancestry_is_separate_from_upstream": true,
+  "original_browser_and_independent_base": "d1c7a4e39cfdc0bb5b9fe026bc9660b75b456e81",
+  "original_evidence_keeps_its_source_pins": true,
+  "source_catalogue_has_agents_file": false,
+  "week_before_images_match_original_base": true,
+  "frozen_source_paths": [
+    {
+      "path": "README.md",
+      "expected_base_blob": "a4360f45ef27a56efa01f07c87aa664fd537625a",
+      "sha256": "36518c8efd77143fe4186a53057b9ca806a7b5fb62530c5325b79f628e2c4794",
+      "git_blob": "4927123d731b742094c08b2a90ad66188bbaadaf",
+      "bytes": 9463,
+      "crlf_sequences": 0,
+      "lf_bytes": 162,
+      "exact_frozen_candidate_bytes": true
+    },
+    {
+      "path": "static/app.js",
+      "expected_base_blob": "2e6aa8b39d300c3d7dbd5f5bf7d9d819d835f132",
+      "sha256": "cb666959df8a4921987e67b98efbeca0f0399502184f3743e732c7c295cfd395",
+      "git_blob": "fab0cb5398d3e6553373a99d9d56afa92f2bfcbb",
+      "bytes": 9250,
+      "crlf_sequences": 0,
+      "lf_bytes": 179,
+      "exact_frozen_candidate_bytes": true
+    },
+    {
+      "path": "static/index.html",
+      "expected_base_blob": "08451f60a6ae9b5a00353ef7b5f1f3fa016bda0f",
+      "sha256": "ddd912eb1af81611551c2ddb10f6f1fbd9fceb9e2a691b7ba35746ba08f9404d",
+      "git_blob": "1350d9500b0d5d90ac0e040885de5c4f0d4b497d",
+      "bytes": 4559,
+      "crlf_sequences": 0,
+      "lf_bytes": 94,
+      "exact_frozen_candidate_bytes": true
+    },
+    {
+      "path": "static/style.css",
+      "expected_base_blob": "e45dd6186df8e513aabecadd88c55b3e6f58d0cc",
+      "sha256": "0d58ae4d0fef286374808eda0dc90b5e8249432a248b8332441738eb04dc0840",
+      "git_blob": "b47c49cc6b502a8e6dedc8d02fa1cadb1241dc1d",
+      "bytes": 5046,
+      "crlf_sequences": 0,
+      "lf_bytes": 75,
+      "exact_frozen_candidate_bytes": true
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "expected_base_blob": null,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "bytes": 3913,
+      "crlf_sequences": 0,
+      "lf_bytes": 99,
+      "exact_frozen_candidate_bytes": true
+    },
+    {
+      "path": "tests/test_week_plan.mjs",
+      "expected_base_blob": null,
+      "sha256": "ecec21f1d5992b7d8e174e6bacd357846ee3eb8318492d2c8391a2425fcaf636",
+      "git_blob": "5808a2279c5ad23fd0aac2308f9e546fa03ca6a9",
+      "bytes": 7606,
+      "crlf_sequences": 0,
+      "lf_bytes": 139,
+      "exact_frozen_candidate_bytes": true
+    }
+  ],
+  "receiving_base_files": [
+    {
+      "path": ".dockerignore",
+      "git_blob": "7bd83dbf601064e93411e55fa40047a7faa62e76",
+      "retained": true
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "git_blob": "0e6273139a9bf417a4ee42f4501d067b1c9d95a0",
+      "retained": true
+    },
+    {
+      "path": ".gitignore",
+      "git_blob": "abec94fd25b2bf8bf714b7ea3b37ae36cf5b6891",
+      "retained": true
+    },
+    {
+      "path": "Dockerfile",
+      "git_blob": "79cad53cfa5f3d02abf7717773dd8ddbe1e1c6a4",
+      "retained": true
+    },
+    {
+      "path": "LICENSE",
+      "git_blob": "3757eabcdbaee0b03b44aad0a7c01ff8c5ada81b",
+      "retained": true
+    },
+    {
+      "path": "README.md",
+      "git_blob": "a4360f45ef27a56efa01f07c87aa664fd537625a",
+      "retained": false
+    },
+    {
+      "path": "agent.py",
+      "git_blob": "15ae2c26dd14a8eec43dc328e87d6f12c8d460d2",
+      "retained": true
+    },
+    {
+      "path": "app.py",
+      "git_blob": "2c2f1524e62c74db21fdbcc69faec643903c23b8",
+      "retained": true
+    },
+    {
+      "path": "constraints.py",
+      "git_blob": "53138a106455cc3fa40d812d1ade3c60fcbbb916",
+      "retained": true
+    },
+    {
+      "path": "docs/verification/constraint-binding-20261008.md",
+      "git_blob": "0b0f2877d7a22d655d4e3a4b5194c5054535c6bf",
+      "retained": true
+    },
+    {
+      "path": "fixtures/qloo_fixtures.json",
+      "git_blob": "60c5d92f905755454bb280b8181f8836a74bd955",
+      "retained": true
+    },
+    {
+      "path": "personas.py",
+      "git_blob": "1eb6768780cafaf9b1666e39b7fc17aa21204f16",
+      "retained": true
+    },
+    {
+      "path": "qloo_client.py",
+      "git_blob": "cca322e0c9af96c481ba8f7ef286e85d3b90cfd2",
+      "retained": true
+    },
+    {
+      "path": "requirements.txt",
+      "git_blob": "d2fa2b085ecd75cc196fa8a02ddb54e1728c0b23",
+      "retained": true
+    },
+    {
+      "path": "scripts/build_fixtures.py",
+      "git_blob": "bb06538576362d80ca67bedc33c73a92379533b1",
+      "retained": true
+    },
+    {
+      "path": "static/app.js",
+      "git_blob": "2e6aa8b39d300c3d7dbd5f5bf7d9d819d835f132",
+      "retained": false
+    },
+    {
+      "path": "static/index.html",
+      "git_blob": "08451f60a6ae9b5a00353ef7b5f1f3fa016bda0f",
+      "retained": false
+    },
+    {
+      "path": "static/style.css",
+      "git_blob": "e45dd6186df8e513aabecadd88c55b3e6f58d0cc",
+      "retained": false
+    },
+    {
+      "path": "tests/test_constraint_binding.py",
+      "git_blob": "ee385279cd2f803f92bcfe251741aa491c84afa3",
+      "retained": true
+    },
+    {
+      "path": "tests/test_model_selection.py",
+      "git_blob": "a98c1a173ff9026716be973aa3efa2dc8f3e0d42",
+      "retained": true
+    },
+    {
+      "path": "tests/test_recommendation_purpose.py",
+      "git_blob": "4425c22e8213a1816d6580093f9c04048caa23b0",
+      "retained": true
+    },
+    {
+      "path": "tests/test_tastetable.py",
+      "git_blob": "e6731e2c560a921074f034057404ce9bdd81e6ac",
+      "retained": true
+    },
+    {
+      "path": "tests/test_tool_error_continuation.py",
+      "git_blob": "65401ab730cd3a604c2deafc7fed17a8e85aa70d",
+      "retained": true
+    }
+  ],
+  "retained_current_receiving_files": 19,
+  "original_source_snapshot_archive_files": 19,
+  "six_frozen_sources_and_all_original_raw_evidence_unchanged": true,
+  "native_receiving_files": [
+    {
+      "path": "agent.py",
+      "sha256": "b301247b8e9459327afa19964d02a9647c0d39f36e55c380115af3b30d538817",
+      "git_blob": "15ae2c26dd14a8eec43dc328e87d6f12c8d460d2",
+      "bytes": 23754
+    },
+    {
+      "path": "constraints.py",
+      "sha256": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e",
+      "git_blob": "53138a106455cc3fa40d812d1ade3c60fcbbb916",
+      "bytes": 4451
+    },
+    {
+      "path": "qloo_client.py",
+      "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+      "git_blob": "cca322e0c9af96c481ba8f7ef286e85d3b90cfd2",
+      "bytes": 12206
+    },
+    {
+      "path": "personas.py",
+      "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+      "git_blob": "1eb6768780cafaf9b1666e39b7fc17aa21204f16",
+      "bytes": 1247
+    },
+    {
+      "path": "app.py",
+      "sha256": "6179e3953e9e6aed009695b9528c8de8622246ab2a1fd5676f18b8b66fa9152c",
+      "git_blob": "2c2f1524e62c74db21fdbcc69faec643903c23b8",
+      "bytes": 2343
+    },
+    {
+      "path": "fixtures/qloo_fixtures.json",
+      "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+      "git_blob": "60c5d92f905755454bb280b8181f8836a74bd955",
+      "bytes": 21190
+    }
+  ],
+  "current_native_fixture_comparison": {
+    "response_artifact": "docs/caregiver-week/receiving-native-fixtures.json",
+    "response_artifact_sha256": "bd5b6d23b79962d7c1ac5eec4b90a8bd115997530594582755eff2ee5bf653fb",
+    "all_three_complete_responses_match_frozen_browser_inputs": true
+  },
+  "packaging": {
+    "source_or_test_edits": 0,
+    "new_test_suites": 0,
+    "native_honest_persona_replays": 3,
+    "browser_replays": 0,
+    "node_replays": 0,
+    "independent_review_replays": 0,
+    "github_writes": 0
+  },
+  "downstream_calendar_work": "Separate ownership; no calendar export code or calendar-evidence artifacts included."
+}

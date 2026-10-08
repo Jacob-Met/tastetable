@@ -1,0 +1,172 @@
+{
+  "status": "passed",
+  "baseline": false,
+  "project": "/home/jacob/tastetable-week-0df473646168-n3c18e6j/candidate",
+  "executable": "/snap/bin/chromium",
+  "checks": [
+    "actual native response becomes seven days with all five original source identities",
+    "native keyboard day change updates the calendar and retains focus",
+    "move/omit/restore permits shared days, preserves all evidence and makes no API requests",
+    "leap/year transitions and an empty date retain a valid week and hold the print button",
+    "print handoff contains dates, source and care limits while hiding controls and original comparison",
+    "390px mobile calendar has no horizontal overflow",
+    "late older responses cannot replace a newer plan or overwrite its local edits",
+    "an unavailable new response preserves the current edited week",
+    "hostile source strings remain literal in screen/print and missing source stays unknown",
+    "a native zero-pick plan keeps seven open days and its original constraint-shortage note",
+    "tested browser paths have no JavaScript errors and no external page requests"
+  ],
+  "screenshots": [
+    "week-desktop.png",
+    "week-mobile.png"
+  ],
+  "sourceSha256": {
+    "static/index.html": "ddd912eb1af81611551c2ddb10f6f1fbd9fceb9e2a691b7ba35746ba08f9404d",
+    "static/app.js": "cb666959df8a4921987e67b98efbeca0f0399502184f3743e732c7c295cfd395",
+    "static/style.css": "0d58ae4d0fef286374808eda0dc90b5e8249432a248b8332441738eb04dc0840",
+    "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+  },
+  "apiRequests": [
+    {
+      "path": "/api/health",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/api/personas",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/api/plan/sample/rosa",
+      "method": "POST",
+      "body": null
+    },
+    {
+      "path": "/api/plan/sample/rosa",
+      "method": "POST",
+      "body": null
+    },
+    {
+      "path": "/api/plan/sample/harold",
+      "method": "POST",
+      "body": null
+    },
+    {
+      "path": "/api/plan/sample/harold",
+      "method": "POST",
+      "body": null
+    },
+    {
+      "path": "/api/plan/sample/harold",
+      "method": "POST",
+      "body": null
+    },
+    {
+      "path": "/api/plan/sample/harold",
+      "method": "POST",
+      "body": null
+    }
+  ],
+  "fixtureSha256": "66b0f5725773deb5d402b7aaac7880ceda679e6cea39a3a128090a03511c0d22",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/153.0.8010.47",
+    "revision": "@73934a44f61e6b3878d1943064c141a5a820f5f7",
+    "userAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+    "jsVersion": "15.3.76.12"
+  },
+  "initial": {
+    "title": "Week of Oct 5, 2026",
+    "summary": "5 of 5 suggested picks scheduled. 2 open days.",
+    "source": "Demo plan: fictional venues from a synthetic fixture.",
+    "dates": [
+      "2026-10-05",
+      "2026-10-06",
+      "2026-10-07",
+      "2026-10-08",
+      "2026-10-09",
+      "2026-10-10",
+      "2026-10-11"
+    ],
+    "assignments": [
+      {
+        "key": "pick-0",
+        "value": "Monday"
+      },
+      {
+        "key": "pick-1",
+        "value": "Wednesday"
+      },
+      {
+        "key": "pick-2",
+        "value": "Friday"
+      },
+      {
+        "key": "pick-3",
+        "value": "Sunday"
+      },
+      {
+        "key": "pick-4",
+        "value": "Saturday"
+      }
+    ],
+    "evidence": [
+      {
+        "name": "Casa Habana Kitchen",
+        "why": "Qloo affinity 0.91 for audiences who like Celia Cruz, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+        "id": "Qloo id: FIX-P-01"
+      },
+      {
+        "name": "Abuela's Table",
+        "why": "Qloo affinity 0.83 for audiences who like Celia Cruz, West Side Story (tag match: Mexican). Checks: Soft foods: pass (soft options listed: caldo de pollo, refried beans); Low sodium: pass (lower-sodium signals: low sodium options); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+        "id": "Qloo id: FIX-P-03"
+      },
+      {
+        "name": "Blue Plate Diner",
+        "why": "Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Diner). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, mashed potatoes, soups); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+        "id": "Qloo id: FIX-P-07"
+      },
+      {
+        "name": "Trattoria Nonna Lucia",
+        "why": "Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Italian). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+        "id": "Qloo id: FIX-P-11"
+      },
+      {
+        "name": "Arroyo Museum of Latin Music (fictional)",
+        "why": "Qloo affinity 0.96 for audiences who like Celia Cruz, West Side Story (tag match: Museum). Checks: Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+        "id": "Qloo id: FIX-V-03"
+      }
+    ],
+    "open": 2,
+    "omitted": 0,
+    "original": "Monday · Casa Habana Kitchen\n      restaurant\n      affinity 0.91\n      Qloo affinity 0.91 for audiences who like Celia Cruz, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').Qloo id: FIX-P-01Wednesday · Abuela's Table\n      restaurant\n      affinity 0.83\n      Qloo affinity 0.83 for audiences who like Celia Cruz, West Side Story (tag match: Mexican). Checks: Soft foods: pass (soft options listed: caldo de pollo, refried beans); Low sodium: pass (lower-sodium signals: low sodium options); Wheelchair: pass (tagged 'wheelchair accessible entrance').Qloo id: FIX-P-03Friday · Blue Plate Diner\n      restaurantwidened\n      affinity 0.26\n      Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Diner). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, mashed potatoes, soups); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').Qloo id: FIX-P-07Saturday · Arroyo Museum of Latin Music (fictional)\n      outing\n      affinity 0.96\n      Qloo affinity 0.96 for audiences who like Celia Cruz, West Side Story (tag match: Museum). Checks: Wheelchair: pass (tagged 'wheelchair accessible entrance').Qloo id: FIX-V-03Sunday · Trattoria Nonna Lucia\n      restaurantwidened\n      affinity 0.26\n      Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Italian). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').Qloo id: FIX-P-11",
+    "comparison": "Qloo-groundedLLM-onlyPicks55Tied to a Qloo entity ID5—Has affinity evidence5—Constraint-checked5—Unsafe candidates caught7—",
+    "overflow": false
+  },
+  "print": {
+    "source": "Demo plan: fictional venues from a synthetic fixture.",
+    "title": "Week of Oct 5, 2026",
+    "care": "Planning draft. Dates are your choices, not reservations or confirmed opening hours. Confirm the venue, accessibility and food needs with the venue and care team before going.",
+    "form": "none",
+    "controls": "none",
+    "original": "none",
+    "disclaimer": "block"
+  },
+  "pageRequests": [
+    "http://127.0.0.1:40649/",
+    "http://127.0.0.1:40649/static/style.css",
+    "http://127.0.0.1:40649/static/app.js",
+    "http://127.0.0.1:40649/static/week_plan.mjs",
+    "http://127.0.0.1:40649/api/health",
+    "http://127.0.0.1:40649/api/personas",
+    "http://127.0.0.1:40649/favicon.ico",
+    "http://127.0.0.1:40649/api/plan/sample/rosa",
+    "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "http://127.0.0.1:40649/api/plan/sample/rosa",
+    "http://127.0.0.1:40649/api/plan/sample/harold",
+    "http://127.0.0.1:40649/api/plan/sample/harold",
+    "http://127.0.0.1:40649/api/plan/sample/harold",
+    "http://127.0.0.1:40649/api/plan/sample/harold"
+  ]
+}

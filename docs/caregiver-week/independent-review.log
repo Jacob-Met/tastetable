@@ -1,0 +1,19 @@
+(node:13) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 159 independent Python date vectors agree with calendar weeks, including century exceptions and bounds (6.740345ms)
+✔ all native persona plans conserve source identities and evidence through 900 deterministic operations (79.057644ms)
+✔ actual page handlers move, omit, restore and reset without rewriting original suggestions or issuing a request (28.912933ms)
+✔ invalid actual date input blocks the print handler while retaining assignments and recovers on valid input (11.290918ms)
+✔ printed source label follows each received response, including absent and nonboolean mode, despite live health (17.708417ms)
+✔ a new actual form request sends tastes and constraints, keeps the chosen week, and resets assignments (11.753612ms)
+✔ out-of-order request completion cannot replace the newest plan or its user edits (7.9003ms)
+✔ print markup preserves escaped source details and explicit empty days without manufacturing a pick (6.103728ms)
+✔ print stylesheet retains response provenance and care caveats while hiding editing controls and original comparison (0.333201ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 288.342208

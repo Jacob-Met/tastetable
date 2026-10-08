@@ -1,0 +1,242 @@
+{
+  "schema": "tastetable.caregiver-week.publication-files.v2",
+  "repository_full_name": "Jacob-Met/tastetable",
+  "base_branch": "main",
+  "base_commit": "8fdd78dbd1bd7e72385b2f5bd684e02b0971fa14",
+  "base_tree": "e1bf3ec58b743e2b43d52ff79d52daf0116ef264",
+  "original_six_file_candidate_commit": "02c5e91f2c3e7220162b651ba3c1ec589ac2eea2",
+  "original_evidence_base": "d1c7a4e39cfdc0bb5b9fe026bc9660b75b456e81",
+  "active_source_paths": [
+    "README.md",
+    "static/app.js",
+    "static/index.html",
+    "static/style.css",
+    "static/week_plan.mjs",
+    "tests/test_week_plan.mjs"
+  ],
+  "additive_evidence_prefix": "docs/caregiver-week/",
+  "self_exclusion": "This file excludes itself from the internal hash list. The outer GitData publication allowlist includes and hashes this manifest.",
+  "encoding_policy": "Text content is UTF-8 decoded from exact bytes without newline normalization. The original single .tar.gz blob uses base64 transport; all hashes identify decoded raw bytes.",
+  "files": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "operation": "update",
+      "expected_base_blob": "a4360f45ef27a56efa01f07c87aa664fd537625a",
+      "encoding": "utf-8",
+      "sha256": "36518c8efd77143fe4186a53057b9ca806a7b5fb62530c5325b79f628e2c4794",
+      "git_blob": "4927123d731b742094c08b2a90ad66188bbaadaf",
+      "bytes": 9463
+    },
+    {
+      "path": "docs/caregiver-week/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "operation": "add",
+      "expected_base_blob": null,
+      "encoding": "utf-8",
+      "sha256": "bd46274841e78cf86d70e9cb0fd1854f6aec8b07953a0bdfe2407f9e339d1712",
+      "git_blob": "0560361c7745ff81be5aef07994023105268c1a4",
+      "bytes": 8015
+    },
+    {
+      "path": "docs/caregiver-week/REPLAY.md",
+      "mode": "100644",
+      "type": "blob",
+      "operation": "add",
+      "expected_base_blob": null,
+      "encoding": "utf-8",
+      "sha256": "9381e39b6237aa2f91854efa36d70d9bbdae71b07118f281c7bb43af730a193c",
+      "git_blob": "6658d6f9240ef9840a177738d639f98868a4820d",
+      "bytes": 5684
+    },
+    {
+      "path": "docs/caregiver-week/author-node-tests.log",
+      "mode": "100644",
+      "type": "blob",
+      "operation": "add",
+      "expected_base_blob": null,
+      "encoding": "utf-8",
+      "sha256": "d323178465d0d5c5800f9b2a4af96153e208853bc34e2075a977c337123d1cc2",
+      "git_blob": "427435e7c292a7121c2b1fe21cba1ba3105b0ef3",
+      "bytes": 1024
+    },
+    {
+      "path": "docs/caregiver-week/author-python-regression.log",
+      "mode": "100644",
+      "type": "blob",
+      "operation": "add",
+      "expected_base_blob": null,
+      "encoding": "utf-8",
+      "sha256": "45fe7e0c2dd74e9d1de2f69a2cee2a2c925084a47bbd5351635a2a873188d310",
+      "git_blob": "66b1c135223604ec794149fc8f4f271767bfbd0a",
+      "bytes": 113
+    },
+    {
+      "path": "docs/caregiver-week/browser-final.json",
+      "mode": "100644",
+      "type": "blob",
+      "operation": "add",
+      "expected_base_blob": null,
+      "encoding": "utf-8",
+      "sha256": "ae0ebaa5abddd04945de2ace7d0c08b5ba85cf108a1620dea72285ab7b375147",
+      "git_blob": "9c52f5d884678a8b5e7450b7278486d56134f2ad",
+      "bytes": 9503
+    },
+    {
+      "path": "docs/caregiver-week/candidate_manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "operation": "add",
+      "expected_base_blob": null,
+      "encoding": "utf-8",
+      "sha256": "8161a155a16a4d9fda3302b0a4996607297021e440da4a41b3f159aea7a14cbf",
+      "git_blob": "6c644110c11ca43c56942af3b00896a797ef3476",
+      "bytes": 1504
+    },
+    {
+      "path": "docs/caregiver-week/composition-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "operation": "add",
+      "expected_base_blob": null,
+      "encoding": "utf-8",
+      "sha256": "ed979f46bd64bc9047bb050be93b93c6e6e464cc88ea397199b09d82c88df43c",
+      "git_blob": "51b553207affd33a569679a2abbe832a4e8b9164",
+      "bytes": 9626
+    },
+    {
+      "path": "docs/caregiver-week/evidence/archive-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "operation": "add",
+      "expected_base_blob": null,
+      "encoding": "utf-8",
+      "sha256": "14ee56a0e4c56ffb932eb6e2a56a409c7caa71d6beb3c177b113817d53f203f2",
+      "git_blob": "854e399612430dd795ec884b62ed2a934106f4c9",
+      "bytes": 9219
+    },
+    {
+      "path": "docs/caregiver-week/evidence/raw-reviews.tar.gz",
+      "mode": "100644",
+      "type": "blob",
+      "operation": "add",
+      "expected_base_blob": null,
+      "encoding": "base64",
+      "sha256": "1c3d99c81641fbb7966c2e50932e169f489f6c0b99881e34c75c5b09630113c9",
+      "git_blob": "149cd4c4690518c133b66704adc8a2feda07ff03",
+      "bytes": 366051
+    },
+    {
+      "path": "docs/caregiver-week/independent-REVIEW.md",
+      "mode": "100644",
+      "type": "blob",
+      "operation": "add",
+      "expected_base_blob": null,
+      "encoding": "utf-8",
+      "sha256": "2c2d266501945230aa44b4ddad0e9b961a5effc9ad9250d8ba23979355166137",
+      "git_blob": "5725d2a859e44ccfe1ef487fa89b0a96352b8a08",
+      "bytes": 6183
+    },
+    {
+      "path": "docs/caregiver-week/independent-review-run.json",
+      "mode": "100644",
+      "type": "blob",
+      "operation": "add",
+      "expected_base_blob": null,
+      "encoding": "utf-8",
+      "sha256": "25aa28fa634821e2239770d3a9788cb036cab37aa595f99b0ab60855c2a6ca4e",
+      "git_blob": "6acdf0a4ff660f600a6c5bcb0bd5cc2d42bfd187",
+      "bytes": 352
+    },
+    {
+      "path": "docs/caregiver-week/independent-review.log",
+      "mode": "100644",
+      "type": "blob",
+      "operation": "add",
+      "expected_base_blob": null,
+      "encoding": "utf-8",
+      "sha256": "b5fbaab1b9adad1d48425c81c83b1fc4dadfdffd92090f8974fb5abbafa3133a",
+      "git_blob": "f39b2ed1aba4dc44fdb1bd020c2d132b6d3665c1",
+      "bytes": 1373
+    },
+    {
+      "path": "docs/caregiver-week/receiving-native-fixtures.json",
+      "mode": "100644",
+      "type": "blob",
+      "operation": "add",
+      "expected_base_blob": null,
+      "encoding": "utf-8",
+      "sha256": "bd5b6d23b79962d7c1ac5eec4b90a8bd115997530594582755eff2ee5bf653fb",
+      "git_blob": "40963b45b99517218f11f118a521ef8408dac404",
+      "bytes": 38964
+    },
+    {
+      "path": "docs/caregiver-week/receiving-source.json",
+      "mode": "100644",
+      "type": "blob",
+      "operation": "add",
+      "expected_base_blob": null,
+      "encoding": "utf-8",
+      "sha256": "5b926d5ef4b6357ad286acdc57c18c6e9c1774d3acdf909e39ec380e584f27da",
+      "git_blob": "b718a30a4089fdf677f2b31f15ca2a13925ed905",
+      "bytes": 8418
+    },
+    {
+      "path": "static/app.js",
+      "mode": "100644",
+      "type": "blob",
+      "operation": "update",
+      "expected_base_blob": "2e6aa8b39d300c3d7dbd5f5bf7d9d819d835f132",
+      "encoding": "utf-8",
+      "sha256": "cb666959df8a4921987e67b98efbeca0f0399502184f3743e732c7c295cfd395",
+      "git_blob": "fab0cb5398d3e6553373a99d9d56afa92f2bfcbb",
+      "bytes": 9250
+    },
+    {
+      "path": "static/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "operation": "update",
+      "expected_base_blob": "08451f60a6ae9b5a00353ef7b5f1f3fa016bda0f",
+      "encoding": "utf-8",
+      "sha256": "ddd912eb1af81611551c2ddb10f6f1fbd9fceb9e2a691b7ba35746ba08f9404d",
+      "git_blob": "1350d9500b0d5d90ac0e040885de5c4f0d4b497d",
+      "bytes": 4559
+    },
+    {
+      "path": "static/style.css",
+      "mode": "100644",
+      "type": "blob",
+      "operation": "update",
+      "expected_base_blob": "e45dd6186df8e513aabecadd88c55b3e6f58d0cc",
+      "encoding": "utf-8",
+      "sha256": "0d58ae4d0fef286374808eda0dc90b5e8249432a248b8332441738eb04dc0840",
+      "git_blob": "b47c49cc6b502a8e6dedc8d02fa1cadb1241dc1d",
+      "bytes": 5046
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "operation": "add",
+      "expected_base_blob": null,
+      "encoding": "utf-8",
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "bytes": 3913
+    },
+    {
+      "path": "tests/test_week_plan.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "operation": "add",
+      "expected_base_blob": null,
+      "encoding": "utf-8",
+      "sha256": "ecec21f1d5992b7d8e174e6bacd357846ee3eb8318492d2c8391a2425fcaf636",
+      "git_blob": "5808a2279c5ad23fd0aac2308f9e546fa03ca6a9",
+      "bytes": 7606
+    }
+  ]
+}

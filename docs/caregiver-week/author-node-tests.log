@@ -1,0 +1,19 @@
+✔ initial week retains every suggestion and exposes all seven dates (3.248024ms)
+✔ move, omit and restore preserve source evidence and unrelated picks (0.755656ms)
+✔ reset restores original assignments while keeping the chosen week (0.396937ms)
+✔ calendar weeks handle leap days and year boundaries (0.245349ms)
+✔ invalid dates and unknown transitions refuse without changing the plan (0.939603ms)
+✔ source plan is a detached immutable snapshot (0.344898ms)
+✔ empty and partial plans remain honest and rejected candidates cannot be scheduled (0.31275ms)
+✔ duplicate source IDs remain distinct suggestions through scheduling (0.348554ms)
+✔ mode is retained explicitly and absence is never labeled live (0.620793ms)
+✔ missing source identity cannot create a local suggestion (0.427092ms)
+✔ calendar arithmetic stays stable across time zones and daylight-saving boundaries (131.457053ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 231.802127
