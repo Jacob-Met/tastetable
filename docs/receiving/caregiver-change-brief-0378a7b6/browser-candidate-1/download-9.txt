@@ -1,0 +1,33 @@
+TasteTable — caregiver revision brief
+Prepared at: 2026-10-08T17:48:10.374Z
+Earlier file: "first \"<script>\".json"
+Revised file: "week.json"
+Earlier week: 2026-12-28 to 2027-01-03
+Revised week: 2026-12-28 to 2027-01-03
+Earlier copy saved at: 2026-10-08T11:00:00.000Z
+Revised copy saved at: 2026-10-08T11:00:00.000Z
+Shared source received at: 2026-10-08T10:00:00.000Z
+Shared source label: Demo / synthetic source: fictional venues.
+Matching original response, inputs and source identity. Original pick occurrences are compared, including repeated venues.
+
+Arrangement changes
+1 moved; 0 newly scheduled; 0 kept off the revised week.
+4 unchanged (4 still scheduled; 0 still off the week).
+5 scheduled in the earlier copy; 5 scheduled in the revised copy.
+
+Moved visits (1)
+Original pick 1 (pick-0): "<img src=x onerror=\"window.injected=true\"> Café 老朋友\nMoved visits (999)"
+  Kind: "restaurant"
+  Source entity ID: "FIX-P-01"
+  Earlier: Monday 2026-12-28
+  Revised: Tuesday 2026-12-29
+  Original explanation from the saved file: "Literal <script>window.injected=true</script>\nnext line\u2028end"
+
+Using this copy
+Unchanged visits are counted above. This brief is not the complete revised week.
+The earlier and revised roles come from the files you chose; timestamps do not establish which arrangement is current.
+Saved files are editable planning information, not authenticated venue records. No source or care checks were rerun.
+Dates are planning suggestions, not reservations or confirmed opening hours. Confirm details and care needs with the venue and care team.
+Venue worksheet notes are not included in these saved-week files.
+This download does not apply a week, contact a venue or update or cancel calendar imports. Later edits do not update this copy.
+File-supplied text is quoted; backslash escapes preserve embedded line breaks and control characters.

@@ -1,0 +1,49 @@
+TasteTable — caregiver revision brief
+Prepared at: 2026-10-08T17:48:10.850Z
+Earlier file: "earlier.json"
+Revised file: "revised.json"
+Earlier week: 2026-12-28 to 2027-01-03
+Revised week: 2026-12-28 to 2027-01-03
+Earlier copy saved at: 2026-10-08T11:00:00.000Z
+Revised copy saved at: 2026-10-08T11:00:00.000Z
+Shared source received at: 2026-10-08T10:00:00.000Z
+Shared source label: Demo / synthetic source: fictional venues.
+Matching original response, inputs and source identity. Original pick occurrences are compared, including repeated venues.
+
+Arrangement changes
+1 moved; 1 newly scheduled; 1 kept off the revised week.
+2 unchanged (2 still scheduled; 0 still off the week).
+4 scheduled in the earlier copy; 4 scheduled in the revised copy.
+
+Moved visits (1)
+Original pick 1 (pick-0): "Casa Habana Kitchen"
+  Kind: "restaurant"
+  Source entity ID: "FIX-P-01"
+  Earlier: Monday 2026-12-28
+  Revised: Tuesday 2026-12-29
+  Original explanation from the saved file: "Qloo affinity 0.91 for audiences who like Celia Cruz, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+
+Newly scheduled visits (1)
+Original pick 3 (pick-2): "Blue Plate Diner"
+  Kind: "restaurant"
+  Source entity ID: "FIX-P-07"
+  Earlier: Not scheduled
+  Revised: Sunday 2027-01-03
+  Original explanation from the saved file: "Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Diner). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, mashed potatoes, soups); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+
+Visits kept off the revised week (1)
+Original pick 2 (pick-1): "Abuela's Table"
+  Kind: "restaurant"
+  Source entity ID: "FIX-P-03"
+  Earlier: Wednesday 2026-12-30
+  Revised: Not scheduled
+  Original explanation from the saved file: "Qloo affinity 0.83 for audiences who like Celia Cruz, West Side Story (tag match: Mexican). Checks: Soft foods: pass (soft options listed: caldo de pollo, refried beans); Low sodium: pass (lower-sodium signals: low sodium options); Wheelchair: pass (tagged 'wheelchair accessible entrance')."
+
+Using this copy
+Unchanged visits are counted above. This brief is not the complete revised week.
+The earlier and revised roles come from the files you chose; timestamps do not establish which arrangement is current.
+Saved files are editable planning information, not authenticated venue records. No source or care checks were rerun.
+Dates are planning suggestions, not reservations or confirmed opening hours. Confirm details and care needs with the venue and care team.
+Venue worksheet notes are not included in these saved-week files.
+This download does not apply a week, contact a venue or update or cancel calendar imports. Later edits do not update this copy.
+File-supplied text is quoted; backslash escapes preserve embedded line breaks and control characters.

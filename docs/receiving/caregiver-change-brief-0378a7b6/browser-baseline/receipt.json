@@ -1,0 +1,39 @@
+{
+  "baseline": true,
+  "sourceRoot": "/home/jacob/tastetable-change-brief-baseline-0378a7b6",
+  "head": "2b347cee4ff4e2b806362730a8520a3360b45f5a",
+  "browser": "153.0.8010.47",
+  "node": "v22.22.1",
+  "groups": [
+    "canonical baseline compares native planner files but has no revision-brief download"
+  ],
+  "pass": 1,
+  "downloads": [],
+  "inputPins": {
+    "earlier.json": "707bc803293f046213703ae6d4053e0adc95ce37f22c46d585d8a4ac8d9e7828",
+    "revised.json": "d2eb4c1982a68a94ae71450f220d71ab3d3bdb34e99d821bd1ebb9d3b1c93cf1"
+  },
+  "sourcePins": {
+    "static/compare-weeks.html": "d61682a7ff59b04a7c9c20876943f5a2860071f2e61c6c8c7ff36a6f2b553fca",
+    "static/week_compare_ui.mjs": "09e739215125b2db9db19c9328ce50a40c5119c7135baac101c2011f637eea47",
+    "static/week_change_brief.mjs": null,
+    "static/week_compare.mjs": "5bc64a317f28cfccffb844f3c74ebb7b1312034996137891ec5161e0bc0953b7",
+    "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+    "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+    "static/week_compare.css": "c37b5b5cade22b7982511e4341f9ec83b9571daae9e1a31ea8e41c1c08d4f236",
+    "static/style.css": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96"
+  },
+  "requests": [
+    "/static/compare-weeks.html",
+    "/static/style.css",
+    "/static/week_compare.css",
+    "/static/week_compare_ui.mjs",
+    "/static/week_file.mjs",
+    "/static/week_plan.mjs",
+    "/static/week_compare.mjs"
+  ],
+  "external": [],
+  "errors": [],
+  "failure": null,
+  "boundary": "Actual native fictional-fixture planner processes produce complete sources; unchanged codec creates chosen arrangements. Selected repeated/literal cases are explicit edits of synthetic source. Held File.arrayBuffer is an authored asynchronous browser seam. Loopback serves exact static files, with no FastAPI deployment, live provider, venue communication or calendar-account execution."
+}
