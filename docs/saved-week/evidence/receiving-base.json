@@ -1,0 +1,87 @@
+{
+  "schema": "tastetable.saved-week.receiving-composition.v1",
+  "recorded_at": "2026-10-08T10:34:17.308773+00:00",
+  "base_commit": "614aa0a98429ba52182376e38a57e32d01b461b9",
+  "base_tree": "299cabf86343faab77b78bd1cd9e9f8847c7b81d",
+  "base_branch": "work/edited-week-calendar-0df473646168",
+  "base_leaves": 61,
+  "source_paths": [
+    {
+      "path": "README.md",
+      "bytes": 12889,
+      "sha256": "6deaf38706959c75e6beff6aeed0b3dfb521b1ce0efe48cffdb8ec52585b383d",
+      "git_blob": "8ff6de7f3bd91f0ff130775631dd0fe2dc98791c",
+      "before_git_blob": "0dff0227e176963c119e9eb968226da14f518d44"
+    },
+    {
+      "path": "static/app.js",
+      "bytes": 18804,
+      "sha256": "5bae509c7ba0287d3b7398cc05bce1e0d8429340413be14ac8a29ce4452ae578",
+      "git_blob": "9903d257f9d60d8b216ba01c4d795e4aa199f629",
+      "before_git_blob": "1709ed872442b10e17f8a85491cc92526db361a0"
+    },
+    {
+      "path": "static/index.html",
+      "bytes": 6104,
+      "sha256": "eab012a6c6e2c91c930b065c3010d3397d9dfa9cbe8283967fc183b3081bae57",
+      "git_blob": "fd568ddd57c183725f0f8f76493160d66c36c7bb",
+      "before_git_blob": "a65d926fb044732d4c29517a6dba8b3dfcbda2c0"
+    },
+    {
+      "path": "static/week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "git_blob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "before_git_blob": null
+    },
+    {
+      "path": "tests/test_week_file.mjs",
+      "bytes": 8639,
+      "sha256": "c3db4871054f7739e0377726a1a992e533a4edfc5b1b564c56cd6cfdc8765b38",
+      "git_blob": "98c7fa65f00c08042f842012aa600096f9f238a3",
+      "before_git_blob": null
+    },
+    {
+      "path": "tests/fixtures/saved-week-response.json",
+      "bytes": 12983,
+      "sha256": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f",
+      "git_blob": "eca4eee4d93d0046833fc798e6c34bf87879c858",
+      "before_git_blob": null
+    },
+    {
+      "path": "tests/fixtures/saved-week-recovery.json",
+      "bytes": 11163,
+      "sha256": "1b38b7449a3e6ca6111d36c9523262d715294f1e2aa397920659cf94b0c823f6",
+      "git_blob": "1d2086d31d8d832aa578bc6ef75fd75b3bc0fbff",
+      "before_git_blob": null
+    }
+  ],
+  "all_12_local_before_files_match_actual_base_git_blobs": true,
+  "unchanged_receiving_companions": 9,
+  "patch_replay": [
+    {
+      "argv": [
+        "git",
+        "apply",
+        "--check",
+        "/dev/shm/universal-0df473646168/memory-week-file/saved-week-v3.patch"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "apply",
+        "/dev/shm/universal-0df473646168/memory-week-file/saved-week-v3.patch"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "replayed_sources_equal_frozen_sources": true,
+  "source_patch_sha256": "4ef01b722405a840feb4cc2a7e47648f57e3d9d169e295bcc789a5faebc55d5d",
+  "unowned_source_policy": "Root builds the tree on this exact full base; no native backend or unrelated leaf belongs to this allowlist."
+}

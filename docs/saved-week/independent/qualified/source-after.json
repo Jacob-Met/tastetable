@@ -1,0 +1,98 @@
+[
+  {
+    "path": "README.md",
+    "bytes": 12889,
+    "sha256": "6deaf38706959c75e6beff6aeed0b3dfb521b1ce0efe48cffdb8ec52585b383d",
+    "git_blob": "8ff6de7f3bd91f0ff130775631dd0fe2dc98791c"
+  },
+  {
+    "path": "static/app.js",
+    "bytes": 18804,
+    "sha256": "5bae509c7ba0287d3b7398cc05bce1e0d8429340413be14ac8a29ce4452ae578",
+    "git_blob": "9903d257f9d60d8b216ba01c4d795e4aa199f629"
+  },
+  {
+    "path": "static/index.html",
+    "bytes": 6104,
+    "sha256": "eab012a6c6e2c91c930b065c3010d3397d9dfa9cbe8283967fc183b3081bae57",
+    "git_blob": "fd568ddd57c183725f0f8f76493160d66c36c7bb"
+  },
+  {
+    "path": "static/week_file.mjs",
+    "bytes": 6642,
+    "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+    "git_blob": "420ddb8f63fca264dcf97be7147801105696155d"
+  },
+  {
+    "path": "tests/test_week_file.mjs",
+    "bytes": 8639,
+    "sha256": "c3db4871054f7739e0377726a1a992e533a4edfc5b1b564c56cd6cfdc8765b38",
+    "git_blob": "98c7fa65f00c08042f842012aa600096f9f238a3"
+  },
+  {
+    "path": "tests/fixtures/saved-week-response.json",
+    "bytes": 12983,
+    "sha256": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f",
+    "git_blob": "eca4eee4d93d0046833fc798e6c34bf87879c858"
+  },
+  {
+    "path": "tests/fixtures/saved-week-recovery.json",
+    "bytes": 11163,
+    "sha256": "1b38b7449a3e6ca6111d36c9523262d715294f1e2aa397920659cf94b0c823f6",
+    "git_blob": "1d2086d31d8d832aa578bc6ef75fd75b3bc0fbff"
+  },
+  {
+    "path": "static/calendar.css",
+    "bytes": 708,
+    "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+    "git_blob": "9e53b951316d841b86f0256cd2444a3ce547269f"
+  },
+  {
+    "path": "static/calendar.js",
+    "bytes": 15169,
+    "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+    "git_blob": "dbed22d2cb91090bccec9472fbffd2854eed2722"
+  },
+  {
+    "path": "static/plan-request.js",
+    "bytes": 1420,
+    "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+    "git_blob": "b21276dda840fe6dd96a3bf3258a851970ff5e4d"
+  },
+  {
+    "path": "static/style.css",
+    "bytes": 5064,
+    "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+    "git_blob": "28df6c5229b6b592db33e929ae058fe514304af4"
+  },
+  {
+    "path": "static/week_plan.mjs",
+    "bytes": 3913,
+    "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+    "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+  },
+  {
+    "path": "tests/calendar-week.test.cjs",
+    "bytes": 12876,
+    "sha256": "0169b753f81431545669cd97a0765ee469b36112c06c93e6285f92869f334adf",
+    "git_blob": "49bc39f7665683696708692989f1d5921c8ed587"
+  },
+  {
+    "path": "tests/calendar.test.cjs",
+    "bytes": 11714,
+    "sha256": "901a483387ddb260ee0d6b00b7c12f6374d4e423980e7ba58eb1117f0bda30d1",
+    "git_blob": "4fb00c14c7b61639f8122bc5b0c655944c97cde3"
+  },
+  {
+    "path": "tests/plan-request.test.cjs",
+    "bytes": 4648,
+    "sha256": "b8926affe4690e29429e4ef73e3187fe8c24d00a39deb8d08a56e554258f5eab",
+    "git_blob": "d2d60519b5cd3d3679449f941e795e32ba14634d"
+  },
+  {
+    "path": "tests/test_week_plan.mjs",
+    "bytes": 7606,
+    "sha256": "ecec21f1d5992b7d8e174e6bacd357846ee3eb8318492d2c8391a2425fcaf636",
+    "git_blob": "5808a2279c5ad23fd0aac2308f9e546fa03ca6a9"
+  }
+]

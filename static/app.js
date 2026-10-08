@@ -1,4 +1,5 @@
 import { DAYS, createWeekPlan, localDate, offWeekPicks, resetDays, setPickDay, setWeek, weekRows } from "./week_plan.mjs";
+import { makeWeekFile, readWeekFile } from "./week_file.mjs";
 
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -9,6 +10,17 @@ let weekState = null;
 let preferredWeekStart = null;
 let weekDateInitialized = false;
 let calendarSession = null;
+let acceptedPlan = null;
+let requestKind = "plan";
+const OPEN_SAVED_WEEK = Symbol("open saved week");
+
+function newCalendarId() {
+  try {
+    const bytes = new Uint8Array(16);
+    crypto.getRandomValues(bytes);
+    return Array.from(bytes, (value) => value.toString(16).padStart(2, "0")).join("");
+  } catch { return null; } // Calendar support is optional; the week can still be saved.
+}
 
 const dateLabel = (date) => new Intl.DateTimeFormat(undefined, {
   year: "numeric", month: "short", day: "numeric", timeZone: "UTC",
@@ -77,6 +89,16 @@ function commitWeekView(view) {
 function renderWeek(message = "") {
   commitWeekView(prepareWeekView(weekState, message));
   refreshCalendar();
+  refreshWeekSave();
+}
+
+function refreshWeekSave() {
+  $("#saveWeek").disabled = true;
+  if (!acceptedPlan || !weekState) return;
+  try {
+    const shown = setWeek(weekState, $("#weekDate").value);
+    $("#saveWeek").disabled = !$("#weekDate").checkValidity() || shown.weekStart !== weekState.weekStart;
+  } catch { /* The existing week-date message explains the invalid date. */ }
 }
 
 function clearCalendar() {
@@ -123,7 +145,9 @@ function acceptCalendar() {
   clearCalendar();
   try {
     if (weekState.sourceMode === "unknown") throw new Error("The response did not specify its data source.");
-    calendarSession = TasteTableCalendar.createWeekExport(weekState);
+    const options = acceptedPlan?.calendarId
+      ? { id: acceptedPlan.calendarId, createdAt: new Date(acceptedPlan.receivedAt) } : {};
+    calendarSession = TasteTableCalendar.createWeekExport(weekState, options);
     $("#calendarSource").textContent = calendarSession.source;
     refreshCalendar();
   } catch (error) {
@@ -133,10 +157,15 @@ function acceptCalendar() {
 
 function retirePlan() {
   weekState = null;
+  acceptedPlan = null;
   clearCalendar();
   $("#results").hidden = true;
   $("#printWeek").disabled = true;
   $("#resetWeek").disabled = true;
+  $("#saveWeek").disabled = true;
+  $("#savedWeekSource").textContent = "";
+  $("#savedWeekSource").hidden = true;
+  $("#weekFileStatus").textContent = "";
 }
 
 function applyWeekDate() {
@@ -154,6 +183,7 @@ function applyWeekDate() {
     $("#weekError").textContent = error.message;
     $("#printWeek").disabled = true;
     refreshCalendar();
+    refreshWeekSave();
     return false;
   }
 }
@@ -188,8 +218,8 @@ async function post(url, body, signal) {
   return j;
 }
 
-function render(res) {
-  const nextWeek = createWeekPlan(res, preferredWeekStart || localDate());
+function render(res, restoredWeek = null) {
+  const nextWeek = restoredWeek || createWeekPlan(res, preferredWeekStart || localDate());
   const fragments = {};
   const p = res.plan;
   const items = [...p.meals, ...(p.outing ? [p.outing] : [])].sort(byDay);
@@ -213,7 +243,7 @@ function render(res) {
 
   for (const [selector, value] of Object.entries(fragments)) $(selector).innerHTML = value;
   weekState = nextWeek;
-  if (!weekDateInitialized) {
+  if (restoredWeek || !weekDateInitialized) {
     $("#weekDate").value = nextWeek.weekStart;
     weekDateInitialized = true;
   }
@@ -225,21 +255,57 @@ function render(res) {
 }
 
 const planRequests = TasteTablePlanRequests.create({
-  send: post,
+  async send(url, payload, signal) {
+    if (url === OPEN_SAVED_WEEK) {
+      try {
+        const opened = readWeekFile(await payload.text());
+        const supported = [...$("#form").querySelectorAll("[name=constraints]")].map((field) => field.value);
+        if (opened.inputs.constraints.some((value) => !supported.includes(value))) {
+          throw new Error("This saved week uses a constraint that this page cannot display.");
+        }
+        return { ...opened, openedFrom: payload.name };
+      } catch (error) {
+        error.userMessage = error.message;
+        throw error;
+      }
+    }
+    return {
+      response: await post(url, payload.body, signal),
+      inputs: structuredClone(payload.inputs),
+      receivedAt: new Date().toISOString(),
+    };
+  },
   onStart() {
     retirePlan();
     $("#form").setAttribute("aria-busy", "true");
     $("#cancelPlan").hidden = false;
-    $("#requestStatus").textContent = "Planning with the current tastes and constraints…";
+    $("#requestStatus").textContent = requestKind === "file"
+      ? "Opening the saved week…" : "Planning with the current tastes and constraints…";
   },
-  onResult(res) {
-    render(res);
+  onResult(result) {
+    render(result.response, result.state);
+    if (result.state) fillForm(result.inputs);
+    acceptedPlan = {
+      response: structuredClone(result.response),
+      inputs: structuredClone(result.inputs),
+      receivedAt: result.receivedAt,
+      calendarId: result.calendarId || newCalendarId(),
+    };
+    if (result.openedFrom) {
+      $("#savedWeekSource").textContent = `Saved copy opened from “${result.openedFrom}” (saved ${result.savedAt}). Source labels and checks below are retained from the file; they have not been run again.`;
+      $("#savedWeekSource").hidden = false;
+    }
     acceptCalendar();
-    $("#requestStatus").textContent = "Plan ready for the current inputs.";
+    refreshWeekSave();
+    $("#requestStatus").textContent = result.state
+      ? "Saved week opened. Its original inputs and your arrangement are restored."
+      : "Plan ready for the current inputs.";
   },
   onError(error) {
     retirePlan();
-    $("#requestStatus").textContent = error?.userMessage
+    $("#requestStatus").textContent = requestKind === "file"
+      ? `We could not open this saved week${error?.userMessage ? ": " + error.userMessage : ". Choose a valid TasteTable week file."} Your inputs are still here.`
+      : error?.userMessage
       ? `We could not prepare this plan: ${error.userMessage}. Your inputs are still here.`
       : "We could not prepare this plan. Please try again. Your inputs are still here.";
   },
@@ -263,7 +329,10 @@ $("#sampleBtn").addEventListener("click", () => {
     return;
   }
   fillForm(persona);
-  void planRequests.run(`/api/plan/sample/${encodeURIComponent(id)}`);
+  const inputs = Object.fromEntries(["cuisines", "music", "films", "city", "constraints"]
+    .map((key) => [key, structuredClone(persona[key])]));
+  requestKind = "plan";
+  void planRequests.run(`/api/plan/sample/${encodeURIComponent(id)}`, { inputs });
 });
 
 $("#form").addEventListener("submit", (ev) => {
@@ -271,7 +340,19 @@ $("#form").addEventListener("submit", (ev) => {
   const f = ev.target;
   const body = { cuisines: split(f.cuisines.value), music: split(f.music.value), films: split(f.films.value),
     city: f.city.value, constraints: [...f.querySelectorAll("[name=constraints]:checked")].map((c) => c.value) };
-  void planRequests.run("/api/plan", body);
+  requestKind = "plan";
+  void planRequests.run("/api/plan", { body, inputs: body });
+});
+
+$("#openWeek").addEventListener("click", () => {
+  $("#weekFile").value = "";
+  $("#weekFile").click();
+});
+$("#weekFile").addEventListener("change", () => {
+  const file = $("#weekFile").files[0];
+  if (!file) return;
+  requestKind = "file";
+  void planRequests.run(OPEN_SAVED_WEEK, file);
 });
 
 $("#form").addEventListener("input", () => {
@@ -305,6 +386,26 @@ $("#resetWeek").addEventListener("click", () => {
 });
 $("#printWeek").addEventListener("click", () => {
   if (applyWeekDate()) window.print();
+});
+
+$("#saveWeek").addEventListener("click", () => {
+  if (!acceptedPlan || !applyWeekDate()) return;
+  let url, link;
+  try {
+    const output = makeWeekFile({ ...acceptedPlan, state: weekState });
+    url = URL.createObjectURL(new Blob([output.text], { type: "application/json;charset=utf-8" }));
+    link = document.createElement("a");
+    link.href = url;
+    link.download = output.filename;
+    document.body.append(link);
+    link.click();
+    $("#weekFileStatus").textContent = "Week file prepared. Keep it and use Open saved week to continue editing later. It includes the original inputs and response.";
+  } catch (error) {
+    $("#weekFileStatus").textContent = "The week file could not be prepared: " + error.message;
+  } finally {
+    link?.remove();
+    if (url) setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
 });
 
 $("#calendarDownload").addEventListener("click", () => {

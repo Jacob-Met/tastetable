@@ -1,0 +1,181 @@
+{
+  "schema": "tastetable.saved-week.browser.v1",
+  "recordedAt": "2026-10-08T10:37:24.880Z",
+  "run": "saved-file HTML boundary",
+  "source": "/dev/shm/universal-0df473646168/memory-week-file/candidate-v3",
+  "node": "v24.19.0",
+  "browser": "153.0.8010.0",
+  "sourcesBefore": {
+    "static/app.js": "5bae509c7ba0287d3b7398cc05bce1e0d8429340413be14ac8a29ce4452ae578",
+    "static/calendar.css": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+    "static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+    "static/index.html": "eab012a6c6e2c91c930b065c3010d3397d9dfa9cbe8283967fc183b3081bae57",
+    "static/plan-request.js": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+    "static/style.css": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+    "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+    "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+  },
+  "sourcesAfter": {
+    "static/app.js": "5bae509c7ba0287d3b7398cc05bce1e0d8429340413be14ac8a29ce4452ae578",
+    "static/calendar.css": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+    "static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+    "static/index.html": "eab012a6c6e2c91c930b065c3010d3397d9dfa9cbe8283967fc183b3081bae57",
+    "static/plan-request.js": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+    "static/style.css": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+    "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+    "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+  },
+  "sourcesUnchanged": true,
+  "nativeFixtureSHA256": "c8933cfdc2072901c57e92c124c8cae430859b21233e51b512255987ad99e071",
+  "groups": [
+    {
+      "name": "file comparison-count admission and literal source-text rendering",
+      "passed": true
+    }
+  ],
+  "failure": null,
+  "requests": [
+    {
+      "path": "/api/plan/sample/rosa",
+      "body": null
+    }
+  ],
+  "externalRequests": [],
+  "pageErrors": [],
+  "served": {
+    "static/index.html": "eab012a6c6e2c91c930b065c3010d3397d9dfa9cbe8283967fc183b3081bae57",
+    "static/style.css": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+    "static/calendar.css": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+    "static/app.js": "5bae509c7ba0287d3b7398cc05bce1e0d8429340413be14ac8a29ce4452ae578",
+    "static/plan-request.js": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+    "static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+    "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+    "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+  },
+  "files": {
+    "html-control-week.json": {
+      "filename": "tastetable-week-2026-12-28.json",
+      "bytes": 14604,
+      "sha256": "978b9c72f96a39d430fd7b5b5bf4275ad6698bc63f672584ae997d4ba4919630"
+    }
+  },
+  "snapshots": {
+    "arranged": {
+      "hidden": false,
+      "date": "2026-12-31",
+      "source": "Demo plan: fictional venues from a synthetic fixture.",
+      "savedSource": null,
+      "savedSourceHidden": true,
+      "printDisabled": false,
+      "saveDisabled": false,
+      "calendarDisabled": false,
+      "input": {
+        "cuisines": "Cuban, Mexican",
+        "music": "Celia Cruz",
+        "films": "West Side Story",
+        "city": "Pasadena"
+      },
+      "constraints": [
+        "soft_foods",
+        "low_sodium",
+        "wheelchair"
+      ],
+      "assignments": {
+        "pick-0": "Saturday",
+        "pick-1": "Saturday",
+        "pick-4": "Saturday",
+        "pick-3": "Sunday",
+        "pick-2": null
+      },
+      "original": {
+        "plan": "<li><strong>Monday</strong> · Casa Habana Kitchen\n      <span class=\"badge\">restaurant</span>\n      <span class=\"badge ok\">affinity 0.91</span>\n      <div class=\"why\">Qloo affinity 0.91 for audiences who like Celia Cruz, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').</div><div class=\"why mono\">Qloo id: FIX-P-01</div></li><li><strong>Wednesday</strong> · Abuela's Table\n      <span class=\"badge\">restaurant</span>\n      <span class=\"badge ok\">affinity 0.83</span>\n      <div class=\"why\">Qloo affinity 0.83 for audiences who like Celia Cruz, West Side Story (tag match: Mexican). Checks: Soft foods: pass (soft options listed: caldo de pollo, refried beans); Low sodium: pass (lower-sodium signals: low sodium options); Wheelchair: pass (tagged 'wheelchair accessible entrance').</div><div class=\"why mono\">Qloo id: FIX-P-03</div></li><li><strong>Friday</strong> · Blue Plate Diner\n      <span class=\"badge\">restaurant</span><span class=\"badge\">widened</span>\n      <span class=\"badge ok\">affinity 0.26</span>\n      <div class=\"why\">Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Diner). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, mashed potatoes, soups); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').</div><div class=\"why mono\">Qloo id: FIX-P-07</div></li><li><strong>Saturday</strong> · Arroyo Museum of Latin Music (fictional)\n      <span class=\"badge\">outing</span>\n      <span class=\"badge ok\">affinity 0.96</span>\n      <div class=\"why\">Qloo affinity 0.96 for audiences who like Celia Cruz, West Side Story (tag match: Museum). Checks: Wheelchair: pass (tagged 'wheelchair accessible entrance').</div><div class=\"why mono\">Qloo id: FIX-V-03</div></li><li><strong>Sunday</strong> · Trattoria Nonna Lucia\n      <span class=\"badge\">restaurant</span><span class=\"badge\">widened</span>\n      <span class=\"badge ok\">affinity 0.26</span>\n      <div class=\"why\">Qloo affinity 0.26 for audiences who like Celia Cruz, West Side Story (tag match: Italian). Weak taste signal: chosen mainly because it passes the care constraints. Widened pick: outside the stated cuisines because too few matches passed constraints. Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').</div><div class=\"why mono\">Qloo id: FIX-P-11</div></li>",
+        "notes": "",
+        "baseline": "<li><strong>Monday</strong> · A well-reviewed Cuban restaurant nearby\n      <span class=\"badge bad\">unverified</span><div class=\"why\">They enjoy Cuban food.</div></li><li><strong>Wednesday</strong> · A well-reviewed Mexican restaurant nearby\n      <span class=\"badge bad\">unverified</span><div class=\"why\">They enjoy Mexican food.</div></li><li><strong>Friday</strong> · A well-reviewed Cuban restaurant nearby\n      <span class=\"badge bad\">unverified</span><div class=\"why\">They enjoy Cuban food.</div></li><li><strong>Saturday</strong> · A concert or show featuring music like Celia Cruz\n      <span class=\"badge bad\">unverified</span><div class=\"why\">Matches their music taste.</div></li><li><strong>Sunday</strong> · A well-reviewed Mexican restaurant nearby\n      <span class=\"badge bad\">unverified</span><div class=\"why\">They enjoy Mexican food.</div></li>",
+        "compare": "<tbody><tr><th></th><th>Qloo-grounded</th><th>LLM-only</th></tr><tr><td>Picks</td><td>5</td><td>5</td></tr><tr><td>Tied to a Qloo entity ID</td><td>5</td><td>—</td></tr><tr><td>Has affinity evidence</td><td>5</td><td>—</td></tr><tr><td>Constraint-checked</td><td>5</td><td>—</td></tr><tr><td>Unsafe candidates caught</td><td>7</td><td>—</td></tr></tbody>",
+        "rejected": "<li>Malecon Sandwich Shop: soft_foods fail - menu signals are mostly firm: cuban sandwich, cured ham, pressed bread; low_sodium fail - high-sodium signals: cuban sandwich, cured ham, pickles; wheelchair unknown - no accessibility tag in Qloo data</li><li>La Paloma Cantina: low_sodium unknown - no sodium signal; ask for low-salt preparation; wheelchair fail - tagged 'steps at entrance'</li><li>Ramen Tatsu: soft_foods unknown - no texture signal in Qloo keywords; ask the venue; low_sodium fail - high-sodium signals: pickled vegetables, rich broth, tonkotsu ramen</li><li>Starlight Grill: soft_foods fail - menu signals are mostly firm: burgers, fried chicken; low_sodium unknown - no sodium signal; ask for low-salt preparation; wheelchair fail - tagged 'steps at entrance'</li><li>Salumeria Roma: soft_foods fail - menu signals are mostly firm: crusty bread, cured meats; low_sodium fail - high-sodium signals: cured meats, olives; wheelchair unknown - no accessibility tag in Qloo data</li><li>Osteria del Ponte: low_sodium unknown - no sodium signal; ask for low-salt preparation; wheelchair fail - tagged 'steps at entrance'</li><li>Colorado Street Concert Hall (fictional): wheelchair fail - tagged 'steps at entrance'</li>",
+        "trace": "<li>qloo_search({\"kind\":\"entity\",\"query\":\"Celia Cruz\",\"types\":\"urn:entity:artist\"}) → Celia Cruz</li><li>qloo_search({\"kind\":\"entity\",\"query\":\"West Side Story\",\"types\":\"urn:entity:movie\"}) → West Side Story</li><li>qloo_search({\"kind\":\"tag\",\"query\":\"Cuban\"}) → Cuban</li><li>qloo_search({\"kind\":\"tag\",\"query\":\"Mexican\"}) → Mexican</li><li>qloo_recs({\"filter_type\":\"urn:entity:place\",\"location\":\"Pasadena\",\"purpose\":\"restaurant\",\"signal_entity_ids\":[\"FIX-A-celia\",\"FIX-M-wss\"],\"tag_ids\":[\"urn:tag:genre:restaurant:Cuban\",\"urn:tag:genre:restaurant:Mexican\"],\"take\":10}) → 4 candidates</li><li>constraint_check({\"constraints\":[\"soft_foods\",\"low_sodium\",\"wheelchair\"],\"entity_ids\":[\"FIX-P-01\",\"FIX-P-04\",\"FIX-P-02\",\"FIX-P-03\"],\"kind\":\"restaurant\"}) → 2/4 passed</li><li>qloo_search({\"kind\":\"tag\",\"query\":\"Diner\"}) → Diner</li><li>qloo_search({\"kind\":\"tag\",\"query\":\"Italian\"}) → Italian</li><li>qloo_search({\"kind\":\"tag\",\"query\":\"Japanese\"}) → Japanese</li><li>qloo_recs({\"filter_type\":\"urn:entity:place\",\"location\":\"Pasadena\",\"purpose\":\"restaurant\",\"signal_entity_ids\":[\"FIX-A-celia\",\"FIX-M-wss\"],\"tag_ids\":[\"urn:tag:genre:restaurant:Diner\",\"urn:tag:genre:restaurant:Italian\",\"urn:tag:genre:restaurant:Japanese\"],\"take\":10}) → 7 candidates</li><li>constraint_check({\"constraints\":[\"soft_foods\",\"low_sodium\",\"wheelchair\"],\"entity_ids\":[\"FIX-P-10\",\"FIX-P-08\",\"FIX-P-07\",\"FIX-P-11\",\"FIX-P-12\",\"FIX-P-13\",\"FIX-P-09\"],\"kind\":\"restaurant\"}) → 3/7 passed</li><li>qloo_search({\"kind\":\"tag\",\"query\":\"jazz\"}) → Jazz Club</li><li>qloo_search({\"kind\":\"tag\",\"query\":\"cinema\"}) → Movie Theater</li><li>qloo_search({\"kind\":\"tag\",\"query\":\"museum\"}) → Museum</li><li>qloo_search({\"kind\":\"tag\",\"query\":\"concert hall\"}) → Concert Hall</li><li>qloo_recs({\"filter_type\":\"urn:entity:place\",\"location\":\"Pasadena\",\"purpose\":\"outing\",\"signal_entity_ids\":[\"FIX-A-celia\",\"FIX-M-wss\"],\"tag_ids\":[\"urn:tag:category:place:jazz_club\",\"urn:tag:category:place:movie_theater\",\"urn:tag:category:place:museum\",\"urn:tag:category:place:concert_hall\"],\"take\":5}) → 5 candidates</li><li>constraint_check({\"constraints\":[\"soft_foods\",\"low_sodium\",\"wheelchair\"],\"entity_ids\":[\"FIX-V-03\",\"FIX-V-02\",\"FIX-V-01\",\"FIX-V-04\",\"FIX-V-05\"],\"kind\":\"outing\"}) → 4/5 passed</li>"
+      },
+      "week": [
+        {
+          "day": "Monday",
+          "date": "2026-12-28",
+          "keys": []
+        },
+        {
+          "day": "Tuesday",
+          "date": "2026-12-29",
+          "keys": []
+        },
+        {
+          "day": "Wednesday",
+          "date": "2026-12-30",
+          "keys": []
+        },
+        {
+          "day": "Thursday",
+          "date": "2026-12-31",
+          "keys": []
+        },
+        {
+          "day": "Friday",
+          "date": "2027-01-01",
+          "keys": []
+        },
+        {
+          "day": "Saturday",
+          "date": "2027-01-02",
+          "keys": [
+            "pick-0",
+            "pick-1",
+            "pick-4"
+          ]
+        },
+        {
+          "day": "Sunday",
+          "date": "2027-01-03",
+          "keys": [
+            "pick-3"
+          ]
+        }
+      ],
+      "status": "Plan ready for the current inputs.",
+      "storage": {
+        "local": 0,
+        "session": 0
+      }
+    },
+    "htmlBoundary": [
+      {
+        "family": "grounded",
+        "metric": "picks",
+        "hidden": true,
+        "comparisonImages": 0,
+        "markerExecuted": false,
+        "originalUnchanged": true,
+        "saveDisabled": true,
+        "status": "We could not open this saved week: The saved response has invalid comparison counts. Your inputs are still here."
+      },
+      {
+        "family": "llm_only",
+        "metric": "with_affinity_evidence",
+        "hidden": true,
+        "comparisonImages": 0,
+        "markerExecuted": false,
+        "originalUnchanged": true,
+        "saveDisabled": true,
+        "status": "We could not open this saved week: The saved response has invalid comparison counts. Your inputs are still here."
+      }
+    ],
+    "literalSource": {
+      "noteText": "<img src=\"/literal-fixture.png\" onerror=\"window.savedFileHTMLExecuted=true\">",
+      "noteImages": 0,
+      "planImages": 0,
+      "markerExecuted": false
+    }
+  },
+  "limits": [
+    "Actual Chromium over unchanged synthetic native response fixtures; no live provider call.",
+    "Calendar-app import/update behavior and deployment are unmeasured.",
+    "File.prototype.text is delayed only in the explicit ignored-abort receiving control."
+  ]
+}

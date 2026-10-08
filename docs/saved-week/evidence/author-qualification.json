@@ -1,0 +1,89 @@
+{
+  "schema": "tastetable.saved-week.author-qualification.v3",
+  "recorded_at": "2026-10-08T10:38:02.310526+00:00",
+  "source_freeze_sha256": "e846337117171e02b21788bff561f1f9648b6d8ae5763d57992e0d01cf84bd67",
+  "source_unchanged_since_freeze": true,
+  "native_methods": 10,
+  "browser_workflow_groups": 7,
+  "html_boundary_group": 1,
+  "native_recovery_browser_groups": 2,
+  "native_recovery_module_cases": 2,
+  "runs": [
+    {
+      "path": "evidence/native-week-file-v3.log",
+      "bytes": 1006,
+      "sha256": "ee4631eb27afbac8f73c793db0dee6e087ad8ce6d96dd6cada86df94c9fa55f2"
+    },
+    {
+      "path": "evidence/browser-v3/receipt.json",
+      "bytes": 151160,
+      "sha256": "f4011b701acb36faee7b2a0bb190b958df247e95e3ee0545b0b233e745356d61",
+      "groups": 7,
+      "source": {
+        "static/app.js": "5bae509c7ba0287d3b7398cc05bce1e0d8429340413be14ac8a29ce4452ae578",
+        "static/calendar.css": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+        "static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+        "static/index.html": "eab012a6c6e2c91c930b065c3010d3397d9dfa9cbe8283967fc183b3081bae57",
+        "static/plan-request.js": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+        "static/style.css": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+        "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+        "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+      }
+    },
+    {
+      "path": "evidence/html-v3-capacity/receipt.json",
+      "bytes": 14242,
+      "sha256": "4d11dcfc5683eb8de809171bcccb2f585a7fe6097141c143bd27de001d520f61",
+      "groups": 1,
+      "source": {
+        "static/app.js": "5bae509c7ba0287d3b7398cc05bce1e0d8429340413be14ac8a29ce4452ae578",
+        "static/calendar.css": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+        "static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+        "static/index.html": "eab012a6c6e2c91c930b065c3010d3397d9dfa9cbe8283967fc183b3081bae57",
+        "static/plan-request.js": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+        "static/style.css": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+        "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+        "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+      }
+    },
+    {
+      "path": "evidence/native-browser-v3-capacity/receipt.json",
+      "bytes": 23128,
+      "sha256": "87db110b04f456c48001cd5b049f40642cfa89d6b816123ece6806e748149719",
+      "groups": 2,
+      "source": {
+        "static/app.js": "5bae509c7ba0287d3b7398cc05bce1e0d8429340413be14ac8a29ce4452ae578",
+        "static/calendar.css": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+        "static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+        "static/index.html": "eab012a6c6e2c91c930b065c3010d3397d9dfa9cbe8283967fc183b3081bae57",
+        "static/plan-request.js": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+        "static/style.css": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+        "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+        "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+      }
+    },
+    {
+      "path": "evidence/native-recovery-v3-pass.json",
+      "bytes": 848,
+      "sha256": "3cc89abf47ba432fdb70c48955d6e7673b42f0f4d2a99f0ab7dd1c7fb7690d6f"
+    },
+    {
+      "path": "evidence/native-b8-recovery.json",
+      "bytes": 31255,
+      "sha256": "bf7deb561e44545b39fa82878a8e2f2d1baab41ab4a2d3ecdbf1e99741753ad9"
+    }
+  ],
+  "earlier_failures_preserved": [
+    "browser-original",
+    "html-original",
+    "native-recovery-v2-refusal.json",
+    "v3-inherited-null-fixture-failure.log",
+    "html-v3",
+    "native-browser-v3",
+    "html-v3-serial",
+    "native-browser-v3-serial",
+    "packaging-space-failure.json"
+  ],
+  "runtime_disposition": "Ordinary capacity became available; unchanged final source and driver completed the two previously blocked browser modes without permission/runtime changes.",
+  "independent_review": "root pending; no independent review attributed to the author runs"
+}

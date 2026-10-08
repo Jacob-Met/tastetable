@@ -1,0 +1,385 @@
+{
+  "schema": "tastetable.saved-week.independent-raw-manifest.v1",
+  "files": [
+    {
+      "path": "qualified/complete-week/arranged-calendar.ics",
+      "bytes": 4326,
+      "sha256": "2b777db09068e93f678135a34260c5d3d8a71db2e408151dfd1248cb7918b653",
+      "git_blob": "a61693b3742b1e97891b8066b8a628e28fe3b091"
+    },
+    {
+      "path": "qualified/complete-week/arranged-state.json",
+      "bytes": 9610,
+      "sha256": "6c375ee83a469b02a90904ecfe1cca065b1034961a9b561ef08c9725e5ff5728",
+      "git_blob": "d4079cf07819ebae422e7ea821a91bcff88e39ad"
+    },
+    {
+      "path": "qualified/complete-week/edited-calendar.ics",
+      "bytes": 5322,
+      "sha256": "30dba69b064bc59222a6d69c436864a17d20e2bdce45586876335960ef3c077b",
+      "git_blob": "4504c94bc792a80c8aef82f46b5de0443c663152"
+    },
+    {
+      "path": "qualified/complete-week/opened-week.json",
+      "bytes": 24492,
+      "sha256": "f30ecea8ee1d309fc8edefbb48e2ec4832c7f6cd41701a54fd7bb7b6702b025c",
+      "git_blob": "399145ad5a68d40f4d657446dc93189022881646"
+    },
+    {
+      "path": "qualified/complete-week/ordinary-rewritten-week.json",
+      "bytes": 12762,
+      "sha256": "b972c516d3c17d9d4f620d8cb37050bb55ca843893eecfe92521ef37709a7820",
+      "git_blob": "c4b1b1bb82b0e2566c64011b4e97f7e41a16dfb1"
+    },
+    {
+      "path": "qualified/complete-week/original-calendar.ics",
+      "bytes": 5326,
+      "sha256": "29e975f1213a590a51c00b50912c58038bd992f34bb22af10e39fec3b687f9c4",
+      "git_blob": "2425f1808b731a16bffa4e6025e9431bc1397dd2"
+    },
+    {
+      "path": "qualified/complete-week/produce.json",
+      "bytes": 892,
+      "sha256": "cc2d7a07e2d9b063712be677b77647de0d915f147dcd565e031482c46488449f",
+      "git_blob": "f1ce1ebc55f01dca90df29fe49233d50d188635c"
+    },
+    {
+      "path": "qualified/complete-week/produce.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "qualified/complete-week/produce.stdout.log",
+      "bytes": 71,
+      "sha256": "4584d4641227f82532c6b6e1d9ad5cb840a4ecd382709592f2f0941f38b89e67",
+      "git_blob": "f55157ab8d129540dc188c82f681223bb697e372"
+    },
+    {
+      "path": "qualified/complete-week/reopen.json",
+      "bytes": 842,
+      "sha256": "9c4664d46359280788f5c824e6d00184884c528358e65506c30086c7a855c87f",
+      "git_blob": "bd27c352f2590bdeecb8e501937098a464554ae2"
+    },
+    {
+      "path": "qualified/complete-week/reopen.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "qualified/complete-week/reopen.stdout.log",
+      "bytes": 70,
+      "sha256": "d036800039af8a33c7b33d660bb46985d1ecc278e4d014a61a41ce18438175cd",
+      "git_blob": "17983153578a976b166abac2ff72fb714f56b7bd"
+    },
+    {
+      "path": "qualified/complete-week/reopened-calendar.ics",
+      "bytes": 5322,
+      "sha256": "30dba69b064bc59222a6d69c436864a17d20e2bdce45586876335960ef3c077b",
+      "git_blob": "4504c94bc792a80c8aef82f46b5de0443c663152"
+    },
+    {
+      "path": "qualified/complete-week/reopened-week.json",
+      "bytes": 24495,
+      "sha256": "f8d8a0e749906a619fb7ff9dd743cecd1dbee17eca38c8517c1a89226f82cb4d",
+      "git_blob": "ad35af9572d6dcda359541822326dc51deae8fcd"
+    },
+    {
+      "path": "qualified/complete-week/resaved-week.json",
+      "bytes": 14603,
+      "sha256": "dd41b3489a9cfb90fc4edf9ceb6589f707e5cd6c8e32d7fc9015388315189513",
+      "git_blob": "3ecc81c4fae01d3342de58c49ffecdda334b2d9f"
+    },
+    {
+      "path": "qualified/complete-week/restore-edit.json",
+      "bytes": 897,
+      "sha256": "ab9f95abf77a93e909fef8ee04b781943510e372210f8d645c03bcd0e5b65a34",
+      "git_blob": "fd14a1c46b2de123815938cc96b4acd8fb3dfc2e"
+    },
+    {
+      "path": "qualified/complete-week/restore-edit.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "qualified/complete-week/restore-edit.stdout.log",
+      "bytes": 76,
+      "sha256": "6497053b7149f7462b90395eb0d84128fba6bd0606eae516eaf3268aa89de8a9",
+      "git_blob": "101564b99698517fd96cb8e7a7625df0563a732d"
+    },
+    {
+      "path": "qualified/complete-week/restored-calendar.ics",
+      "bytes": 4326,
+      "sha256": "2b777db09068e93f678135a34260c5d3d8a71db2e408151dfd1248cb7918b653",
+      "git_blob": "a61693b3742b1e97891b8066b8a628e28fe3b091"
+    },
+    {
+      "path": "qualified/complete-week/saved-week.json",
+      "bytes": 14600,
+      "sha256": "219012924dc2d3e0bb86bc09fe85f2f2f8a5bded01ca7f7efab6cbcab60f33f2",
+      "git_blob": "34b2a4e0299290e71b3dd1490726a724b7674df2"
+    },
+    {
+      "path": "qualified/decoded_list/arranged-calendar.ics",
+      "bytes": 1265,
+      "sha256": "205456c8bb2db04584ec3dfe79efd9b7d177877e38a71afee10b6bb540bda27c",
+      "git_blob": "53a7b16a36502e94aba2798d0ddc0b5744bbd30a"
+    },
+    {
+      "path": "qualified/decoded_list/arranged-state.json",
+      "bytes": 2196,
+      "sha256": "7ef8b5192f7bcff125d9f609993ab901add3c31a83b28510e5f418e8c500100d",
+      "git_blob": "5131bbea2002d75bbfdfa9d76a67d7a12d17aa12"
+    },
+    {
+      "path": "qualified/decoded_list/edited-calendar.ics",
+      "bytes": 1264,
+      "sha256": "fec1c2db633407c2c2916505c72f2c5b42c8119579b90fff0c43b5328bf39c2e",
+      "git_blob": "dd4ad6daf1fa6decedea0540545f1ae5befbe9e6"
+    },
+    {
+      "path": "qualified/decoded_list/opened-week.json",
+      "bytes": 7272,
+      "sha256": "aecde1858515c0e779144c96b87a359defc868919a67b62685641d592ef25816",
+      "git_blob": "91b437b0e88c50b6e45c5200ddc95d0a135f5a5c"
+    },
+    {
+      "path": "qualified/decoded_list/ordinary-rewritten-week.json",
+      "bytes": 4507,
+      "sha256": "029d9a5cb1917c2a9f1cadc767f1cce5a0400e21ca58aefab3aceaf6e281c4b2",
+      "git_blob": "d1c9086befe723aa731555afad51497f21d321f3"
+    },
+    {
+      "path": "qualified/decoded_list/original-calendar.ics",
+      "bytes": 1264,
+      "sha256": "fe5f5dbd89ee237ad7a8adade6e95de14190527bd7d10dcd679f2e7cd1c007af",
+      "git_blob": "5c8793e048d1455866678c24649a07b167dd80b0"
+    },
+    {
+      "path": "qualified/decoded_list/produce.json",
+      "bytes": 891,
+      "sha256": "3114f6f4fee515a2d4fad6bb41670d59956f5c36935f3ab94f7cd87426ebd082",
+      "git_blob": "ac8a538c9ca85d6a2df6da10810899ca20dcc485"
+    },
+    {
+      "path": "qualified/decoded_list/produce.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "qualified/decoded_list/produce.stdout.log",
+      "bytes": 70,
+      "sha256": "f9409511de3a9f50e7f540b5541d24899762ebf796ed96c475fc10c50a4b54e0",
+      "git_blob": "de35954de47bcbcc71cfa58344b760fd4c51c037"
+    },
+    {
+      "path": "qualified/decoded_list/reopen.json",
+      "bytes": 841,
+      "sha256": "1e2bc4bbc965941baa1c195fe88abe0b82472d2fbf43a4643e54bd18d47832fb",
+      "git_blob": "437b7268b609dcc3b6a9a12e16d2d727f795f2d1"
+    },
+    {
+      "path": "qualified/decoded_list/reopen.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "qualified/decoded_list/reopen.stdout.log",
+      "bytes": 69,
+      "sha256": "2dacfc0a6058666f2a4cf8377ceca563d9e5a547938fef88437943a98f9e677d",
+      "git_blob": "dd5b8090d4bff512852b8ed9c0be86a4973ea068"
+    },
+    {
+      "path": "qualified/decoded_list/reopened-calendar.ics",
+      "bytes": 1264,
+      "sha256": "fec1c2db633407c2c2916505c72f2c5b42c8119579b90fff0c43b5328bf39c2e",
+      "git_blob": "dd4ad6daf1fa6decedea0540545f1ae5befbe9e6"
+    },
+    {
+      "path": "qualified/decoded_list/reopened-week.json",
+      "bytes": 7271,
+      "sha256": "5bdd0aad03b4d95a96e9a32d5143015e2883e24e513053d8d898b06e6a6f0224",
+      "git_blob": "cd9daf74ca1fe280b1d938e3fa30e8866ad907bb"
+    },
+    {
+      "path": "qualified/decoded_list/resaved-week.json",
+      "bytes": 5068,
+      "sha256": "768764d5b7e1ca7019f6c21b1d85a6d83515275dac4a024c7318d89c4bb1433e",
+      "git_blob": "1037119b8dcd7f5736657d73b66aefa73b6378af"
+    },
+    {
+      "path": "qualified/decoded_list/restore-edit.json",
+      "bytes": 896,
+      "sha256": "0cf7ccc1a746a1d0a212d7b4bc032df406655b66bb083f48452634180c51e34e",
+      "git_blob": "6bc71206edd13596347c4699cba18254940551b8"
+    },
+    {
+      "path": "qualified/decoded_list/restore-edit.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "qualified/decoded_list/restore-edit.stdout.log",
+      "bytes": 75,
+      "sha256": "5dd2e7f355bab688ba79b968949f34916192afe69dc2d5605d547633a46b978d",
+      "git_blob": "b0ae22c4dd32303aa9fba0d658673ca5c806b4fe"
+    },
+    {
+      "path": "qualified/decoded_list/restored-calendar.ics",
+      "bytes": 1265,
+      "sha256": "205456c8bb2db04584ec3dfe79efd9b7d177877e38a71afee10b6bb540bda27c",
+      "git_blob": "53a7b16a36502e94aba2798d0ddc0b5744bbd30a"
+    },
+    {
+      "path": "qualified/decoded_list/saved-week.json",
+      "bytes": 5069,
+      "sha256": "1b04e9f8b2f82b5697ec67cf2ca4d9eaf6fa78a06934bed607b7ad0390097c9b",
+      "git_blob": "2981a35f426176fc373110b581380a6e1d9a6423"
+    },
+    {
+      "path": "qualified/invalid_json/arranged-calendar.ics",
+      "bytes": 1265,
+      "sha256": "f83fc98add483796a6d2c2516fb86e7374db133b6686ec47b75b823d260c588e",
+      "git_blob": "e3787d1e00aa31c81429e745d96acebafb24a31b"
+    },
+    {
+      "path": "qualified/invalid_json/arranged-state.json",
+      "bytes": 2196,
+      "sha256": "7ef8b5192f7bcff125d9f609993ab901add3c31a83b28510e5f418e8c500100d",
+      "git_blob": "5131bbea2002d75bbfdfa9d76a67d7a12d17aa12"
+    },
+    {
+      "path": "qualified/invalid_json/edited-calendar.ics",
+      "bytes": 1264,
+      "sha256": "760484f2746b508fe260361a8d417198ad74090f3615af25a76b4fdb99578635",
+      "git_blob": "d10345873eb7498b65d0990f6b0261c59d7438ee"
+    },
+    {
+      "path": "qualified/invalid_json/opened-week.json",
+      "bytes": 7284,
+      "sha256": "07ce4c6b6c9431144349d43a8b08d55920683b7a913d1386995e92515b1d8aa5",
+      "git_blob": "961339b788c1063340667b6a10fea3af419a8706"
+    },
+    {
+      "path": "qualified/invalid_json/ordinary-rewritten-week.json",
+      "bytes": 4519,
+      "sha256": "4d8d7db4b380e2a4f092b8735d5406f5083b592517fcc3d87e0dbb05c600d4e5",
+      "git_blob": "bf787dcc471d08e81167ba6eb70b30d22f5177bf"
+    },
+    {
+      "path": "qualified/invalid_json/original-calendar.ics",
+      "bytes": 1264,
+      "sha256": "9475b663d6452715fdb16af43759e13d2baa130c9180b9b23dad9fb4f734340a",
+      "git_blob": "5811494905e7a85e51c0994dd775ddc5f57c3891"
+    },
+    {
+      "path": "qualified/invalid_json/produce.json",
+      "bytes": 891,
+      "sha256": "36da732780d7b252aad50b5b6415b47996f272ff33ddd989b73c37193af0c75a",
+      "git_blob": "3b88b8032d6142b6032e614efdf8854dcbe5dc25"
+    },
+    {
+      "path": "qualified/invalid_json/produce.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "qualified/invalid_json/produce.stdout.log",
+      "bytes": 70,
+      "sha256": "62e7fc9213a0f27de09855b2678464d980f9c72dffd27e1e757a14f1541118d4",
+      "git_blob": "e3c26082c4b9a60240d5e6274c4268e965befb89"
+    },
+    {
+      "path": "qualified/invalid_json/reopen.json",
+      "bytes": 841,
+      "sha256": "e6c8334550ef1f49591ab815fab44626273b29c7970a81d3ff8b36dc6902be97",
+      "git_blob": "10122678aa1889e2f125e134de94fa9f6df1aa68"
+    },
+    {
+      "path": "qualified/invalid_json/reopen.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "qualified/invalid_json/reopen.stdout.log",
+      "bytes": 69,
+      "sha256": "7c2b0341338edd83291f2925dd048186204fe85670a6232e9be8850030ebffe1",
+      "git_blob": "04a081434546177f18ec6145d7cc8409d84c4b2a"
+    },
+    {
+      "path": "qualified/invalid_json/reopened-calendar.ics",
+      "bytes": 1264,
+      "sha256": "760484f2746b508fe260361a8d417198ad74090f3615af25a76b4fdb99578635",
+      "git_blob": "d10345873eb7498b65d0990f6b0261c59d7438ee"
+    },
+    {
+      "path": "qualified/invalid_json/reopened-week.json",
+      "bytes": 7283,
+      "sha256": "9129e976ccb81f9ea0d2e0f20efb7d2650a976e5157da1d8f59399fe707dc2e1",
+      "git_blob": "067c16c2438b10e19b77e25aa76c85fd4bc9022f"
+    },
+    {
+      "path": "qualified/invalid_json/resaved-week.json",
+      "bytes": 5080,
+      "sha256": "f1e82594aa65596dd181b11ebb0eeb32a05905e21ae5af14daba2285a65319f1",
+      "git_blob": "8e0d07a94ba60d0da5f1f7e37fd67f70bd03f8bf"
+    },
+    {
+      "path": "qualified/invalid_json/restore-edit.json",
+      "bytes": 896,
+      "sha256": "57acdd6a4a238d2fc59ff1667ecd6ed5498ebfce09a550022ac16e11011a4adf",
+      "git_blob": "a1eee440f759f0d19cc43ad510b88d2cc9facaa3"
+    },
+    {
+      "path": "qualified/invalid_json/restore-edit.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "qualified/invalid_json/restore-edit.stdout.log",
+      "bytes": 75,
+      "sha256": "ac8583be9322073368f36512505cd29eb675a3d5101427fad0ed26ef4e58bde7",
+      "git_blob": "98fab150418c633c7348a4f956aeec53357247c9"
+    },
+    {
+      "path": "qualified/invalid_json/restored-calendar.ics",
+      "bytes": 1265,
+      "sha256": "f83fc98add483796a6d2c2516fb86e7374db133b6686ec47b75b823d260c588e",
+      "git_blob": "e3787d1e00aa31c81429e745d96acebafb24a31b"
+    },
+    {
+      "path": "qualified/invalid_json/saved-week.json",
+      "bytes": 5081,
+      "sha256": "3291b034b38fabc0551ba3efc2f4eed4da5162071b329871fd657b94c672cd84",
+      "git_blob": "4b20a8892dcc235520309b9fdbcba4baa3e1528e"
+    },
+    {
+      "path": "qualified/receipt.json",
+      "bytes": 4058,
+      "sha256": "1f5e1bced898afc650e93d3c6a652b8e0c090bcd0803dc89a8b31194a1b8043e",
+      "git_blob": "a290d3f91360976c1721883462eae60af0523583"
+    },
+    {
+      "path": "qualified/source-after.json",
+      "bytes": 3327,
+      "sha256": "260b2d6bea84ee8c27e1f505606232c3bd9f0c62b63f590747bfe47fbba3c1e0",
+      "git_blob": "8528a15d0a90c15f958d25d37781e3a798db2bda"
+    },
+    {
+      "path": "qualified/source-before.json",
+      "bytes": 3327,
+      "sha256": "260b2d6bea84ee8c27e1f505606232c3bd9f0c62b63f590747bfe47fbba3c1e0",
+      "git_blob": "8528a15d0a90c15f958d25d37781e3a798db2bda"
+    }
+  ],
+  "file_count": 63,
+  "bytes": 219898
+}

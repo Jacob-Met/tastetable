@@ -107,8 +107,8 @@ suggestions, comparison, rejected candidates and tool trace remain in a collapsi
 their counts describe the original recommendation, even after you rearrange your week.
 
 Scheduling runs in the browser and uses only the returned suggestions. It does not make another
-Qloo/model request, alter the checks, or send the chosen dates to the server. Edits last for
-the current page visit; an accepted new plan starts fresh assignments. Dates are planning
+Qloo/model request, alter the checks, or send the chosen dates to the server. Edits stay on
+the current page unless you save a week file; an accepted new plan starts fresh assignments. Dates are planning
 choices, not reservations or verified venue availability. Printed copies retain the existing
 care and synthetic-fixture caveats.
 
@@ -120,9 +120,10 @@ file retains original explanations, entity IDs, source notes and demo/live prove
 An invalid date, an unknown source or no scheduled picks keeps download unavailable.
 
 The existing week picker controls both printing and export. Moves, omissions and restores
-within a week retain calendar event identities for this page's current plan; another week or
-a newly accepted plan receives separate event identities. Downloading a file does not update
-or cancel earlier imports. Calendar-app import behavior is outside TasteTable's control.
+within a week retain calendar event identities for the current plan, including after reopening
+its saved week file. Another week or a newly generated plan receives separate event identities.
+Downloading a file does not update or cancel earlier imports. Calendar-app import behavior
+is outside TasteTable's control.
 
 Changing tastes or constraints, choosing another sample, starting a replacement request,
 or selecting **Stop waiting** retires the old result and its print/export state. Editable
@@ -132,10 +133,36 @@ plan. Stopping the browser's wait is not proof that a server or provider stopped
 If a replacement fails or cannot render, the old handoff remains retired and you can retry
 from the preserved inputs.
 
+### Save and reopen an editable week
+
+**Save week (.json)** downloads the current week as a local file. It includes the original
+response, inputs, source explanations, comparison and tool trace, plus your chosen week and
+each pick's assignment. Picks kept off the week are retained so you can restore them later.
+Use **Open saved week** on a later visit and choose that file to continue arranging it. Saving
+or opening does not request another plan or send the file to the server. Nothing is saved
+automatically in browser storage.
+
+A reopened week restores its own inputs and date, and the page and printed handoff identify
+the filename and saved-copy status. Its original source labels and checks are retained from
+the file; they are not rerun. A week file is an editable snapshot, not an authenticated provider
+receipt or a fresh venue check. Keep the file if you want to resume later. It contains the
+tastes and constraints you entered as well as the complete returned response.
+
+Opening is a replacement through the same request lifecycle as planning. An input edit,
+another request, **Stop waiting**, or page departure retires a pending open. A malformed or
+unsupported file leaves the old result retired and preserves editable inputs. An invalid week
+date keeps saving unavailable until corrected. Empty and fully omitted weeks can still be
+saved; calendar export retains its existing requirements.
+
+The versioned JSON format is described in [the saved-week receiving notes](docs/saved-week/README.md).
+Where a calendar identity was available, it is retained in the week file: an unchanged week
+produces the same calendar file after reopening. This preserves event IDs and does not claim
+that a calendar app will update or deduplicate an earlier import.
+
 The state, calendar writer and request controller checks use Node.js 18+ with no npm dependencies:
 
 ```bash
-node --test tests/test_week_plan.mjs tests/calendar.test.cjs tests/calendar-week.test.cjs tests/plan-request.test.cjs
+node --test tests/test_week_plan.mjs tests/test_week_file.mjs tests/calendar.test.cjs tests/calendar-week.test.cjs tests/plan-request.test.cjs
 ```
 
 ### Going live with Qloo

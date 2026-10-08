@@ -1,0 +1,18 @@
+✔ native response and edited occurrences round-trip across a new state (6.363578ms)
+✔ resaving preserves the accepted source and new local arrangement (4.165749ms)
+✔ occurrence keys keep repeated entity IDs distinct after reopening (1.42314ms)
+✔ UTF-8 JSON with BOM or different indentation preserves source values (2.078145ms)
+✔ empty arrangements and unknown source remain usable snapshots (4.005733ms)
+✔ save refuses a derived week whose original evidence has changed (2.52041ms)
+✔ malformed format, dates, timestamps and inconsistent source inputs fail (7.786263ms)
+✔ missing, additional or invalid occurrence assignments cannot silently drop picks (5.974703ms)
+✔ saved files validate native response types before reaching HTML or late render fields (8.982928ms)
+✔ current native recovery traces retain null and list args with the checked partial plan (1.850111ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 176.272087
