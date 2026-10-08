@@ -1,0 +1,176 @@
+{
+  "schema": "tastetable.independent-native-oracle-preparation.v1",
+  "purpose": "Validate independent fixture and manual native oracle before candidate exposure; not CLI delivery qualification.",
+  "runtime": "Existing Node v24.19.0, in-memory vm.SourceTextModule with exact fetched primary module strings",
+  "primary": [
+    {
+      "path": "static/week_plan.mjs",
+      "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+    },
+    {
+      "path": "static/week_file.mjs",
+      "git_blob": "420ddb8f63fca264dcf97be7147801105696155d"
+    },
+    {
+      "path": "static/calendar.js",
+      "git_blob": "dbed22d2cb91090bccec9472fbffd2854eed2722"
+    },
+    {
+      "path": "tests/fixtures/saved-week-response.json",
+      "git_blob": "eca4eee4d93d0046833fc798e6c34bf87879c858"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "git_blob": "0e6273139a9bf417a4ee42f4501d067b1c9d95a0"
+    }
+  ],
+  "runner": "import fs from \"node:fs\"; import vm from \"node:vm\"; import crypto from \"node:crypto\";\nconst input=JSON.parse(fs.readFileSync(0,\"utf8\"));\nconst ctx=vm.createContext({TextEncoder,structuredClone,crypto:crypto.webcrypto});\nnew vm.Script(input.sources[\"static/calendar.js\"]).runInContext(ctx);\nconst mods={}; for(const name of [\"static/week_plan.mjs\",\"static/week_file.mjs\"]) mods[name]=new vm.SourceTextModule(input.sources[name],{context:ctx,identifier:name});\nawait mods[\"static/week_plan.mjs\"].link(()=>{throw Error(\"unexpected import\")});\nawait mods[\"static/week_file.mjs\"].link(name=>{if(name!==\"./week_plan.mjs\")throw Error(name);return mods[\"static/week_plan.mjs\"]});\nawait mods[\"static/week_file.mjs\"].evaluate();\nconst read=mods[\"static/week_file.mjs\"].namespace.readWeekFile, rows=mods[\"static/week_plan.mjs\"].namespace.weekRows;\nconst date=vm.runInContext(\"(s)=>new Date(s)\",ctx), output={};\nfor(const [name,text] of Object.entries(input.cases)){\n try{const r=read(text), writer=ctx.TasteTableCalendar.createWeekExport(r.state,{id:r.calendarId,createdAt:date(r.receivedAt)});\n output[name]={ok:true,calendar:writer.download(r.state,rows(r.state)),preview:writer.preview(r.state,rows(r.state)),source:writer.source,calendarId:r.calendarId};}\n catch(e){output[name]={ok:false,error:String(e.message)};}\n}\nconsole.log(JSON.stringify(output));",
+  "results": {
+    "ordinary": {
+      "ok": true,
+      "calendar": {
+        "filename": "tastetable-demo-2028-02-28.ics",
+        "text": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//TasteTable//Suggested weekly plan//EN\r\nCALSCALE:GREGORIAN\r\nBEGIN:VEVENT\r\nUID:0123456789abcdef0123456789abcdef-20280228-pick-1@tastetable.invalid\r\nDTSTAMP:20271231T235959Z\r\nDTSTART;VALUE=DATE:20280228\r\nDTEND;VALUE=DATE:20280229\r\nSUMMARY:[DEMO] TasteTable suggestion: Abuela's Table\r\nDESCRIPTION:DEMO: synthetic Qloo fixture\\; these venues are fictional.\\n\\nS\r\n uggested outing only\\; no booking or opening hours confirmed. Not medical \r\n or dietary advice. Confirm accessibility\\, texture and sodium needs with t\r\n he venue and the person's care team.\\n\\nQloo entity ID: FIX-P-03\\n\\nOrigin\r\n ally suggested for: Wednesday. Arranged for: Monday 2028-02-28.\\n\\nWhy thi\r\n s suggestion: Literal comma\\, semicolon\\; slash\\\\ and line\\nSecond line.\\n\r\n \\nPlan note: Independent local review\\; no booking.\\n\\nPlan note: <markup \r\n stays text>\r\nSTATUS:TENTATIVE\r\nTRANSP:TRANSPARENT\r\nCLASS:PRIVATE\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\nUID:0123456789abcdef0123456789abcdef-20280228-pick-4@tastetable.invalid\r\nDTSTAMP:20271231T235959Z\r\nDTSTART;VALUE=DATE:20280228\r\nDTEND;VALUE=DATE:20280229\r\nSUMMARY:[DEMO] TasteTable suggestion: Arroyo Museum of Latin Music (fiction\r\n al)\r\nDESCRIPTION:DEMO: synthetic Qloo fixture\\; these venues are fictional.\\n\\nS\r\n uggested outing only\\; no booking or opening hours confirmed. Not medical \r\n or dietary advice. Confirm accessibility\\, texture and sodium needs with t\r\n he venue and the person's care team.\\n\\nQloo entity ID: FIX-V-03\\n\\nOrigin\r\n ally suggested for: Saturday. Arranged for: Monday 2028-02-28.\\n\\nWhy this\r\n  suggestion: Qloo affinity 0.96 for audiences who like Celia Cruz\\, West S\r\n ide Story (tag match: Museum). Checks: Wheelchair: pass (tagged 'wheelchai\r\n r accessible entrance').\\n\\nPlan note: Independent local review\\; no booki\r\n ng.\\n\\nPlan note: <markup stays text>\r\nSTATUS:TENTATIVE\r\nTRANSP:TRANSPARENT\r\nCLASS:PRIVATE\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\nUID:0123456789abcdef0123456789abcdef-20280228-pick-0@tastetable.invalid\r\nDTSTAMP:20271231T235959Z\r\nDTSTART;VALUE=DATE:20280302\r\nDTEND;VALUE=DATE:20280303\r\nSUMMARY:[DEMO] TasteTable suggestion: Independent café\\, bowl\\; 🦉 界\r\n 界界界界界界界界界界界界界界界界界界界界界界界界\r\n 界界界\r\nDESCRIPTION:DEMO: synthetic Qloo fixture\\; these venues are fictional.\\n\\nS\r\n uggested outing only\\; no booking or opening hours confirmed. Not medical \r\n or dietary advice. Confirm accessibility\\, texture and sodium needs with t\r\n he venue and the person's care team.\\n\\nQloo entity ID: FIX-P-01\\n\\nOrigin\r\n ally suggested for: Monday. Arranged for: Thursday 2028-03-02.\\n\\nWhy this\r\n  suggestion: Qloo affinity 0.91 for audiences who like Celia Cruz\\, West S\r\n ide Story (tag match: Cuban). Checks: Soft foods: pass (soft options liste\r\n d: black bean soup\\, flan\\, made to order)\\; Low sodium: pass (lower-sodiu\r\n m signals: made to order)\\; Wheelchair: pass (tagged 'wheelchair accessibl\r\n e entrance').\\n\\nPlan note: Independent local review\\; no booking.\\n\\nPlan\r\n  note: <markup stays text>\r\nSTATUS:TENTATIVE\r\nTRANSP:TRANSPARENT\r\nCLASS:PRIVATE\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "count": 3
+      },
+      "preview": [
+        {
+          "key": "pick-1",
+          "originalDay": "Wednesday",
+          "day": "Monday",
+          "kind": "restaurant",
+          "entityId": "FIX-P-03",
+          "name": "Abuela's Table",
+          "why": "Literal comma, semicolon; slash\\ and line\r\nSecond line.",
+          "date": "2028-02-28",
+          "endDate": "2028-02-29",
+          "summary": "[DEMO] TasteTable suggestion: Abuela's Table"
+        },
+        {
+          "key": "pick-4",
+          "originalDay": "Saturday",
+          "day": "Monday",
+          "kind": "outing",
+          "entityId": "FIX-V-03",
+          "name": "Arroyo Museum of Latin Music (fictional)",
+          "why": "Qloo affinity 0.96 for audiences who like Celia Cruz, West Side Story (tag match: Museum). Checks: Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "date": "2028-02-28",
+          "endDate": "2028-02-29",
+          "summary": "[DEMO] TasteTable suggestion: Arroyo Museum of Latin Music (fictional)"
+        },
+        {
+          "key": "pick-0",
+          "originalDay": "Monday",
+          "day": "Thursday",
+          "kind": "restaurant",
+          "entityId": "FIX-P-01",
+          "name": "Independent café, bowl; 🦉 界界界界界界界界界界界界界界界界界界界界界界界界界界界界",
+          "why": "Qloo affinity 0.91 for audiences who like Celia Cruz, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "date": "2028-03-02",
+          "endDate": "2028-03-03",
+          "summary": "[DEMO] TasteTable suggestion: Independent café, bowl; 🦉 界界界界界界界界界界界界界界界界界界界界界界界界界界界界"
+        }
+      ],
+      "source": "DEMO: synthetic Qloo fixture; these venues are fictional.",
+      "calendarId": "0123456789abcdef0123456789abcdef"
+    },
+    "bom": {
+      "ok": true,
+      "calendar": {
+        "filename": "tastetable-demo-2028-02-28.ics",
+        "text": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//TasteTable//Suggested weekly plan//EN\r\nCALSCALE:GREGORIAN\r\nBEGIN:VEVENT\r\nUID:0123456789abcdef0123456789abcdef-20280228-pick-1@tastetable.invalid\r\nDTSTAMP:20271231T235959Z\r\nDTSTART;VALUE=DATE:20280228\r\nDTEND;VALUE=DATE:20280229\r\nSUMMARY:[DEMO] TasteTable suggestion: Abuela's Table\r\nDESCRIPTION:DEMO: synthetic Qloo fixture\\; these venues are fictional.\\n\\nS\r\n uggested outing only\\; no booking or opening hours confirmed. Not medical \r\n or dietary advice. Confirm accessibility\\, texture and sodium needs with t\r\n he venue and the person's care team.\\n\\nQloo entity ID: FIX-P-03\\n\\nOrigin\r\n ally suggested for: Wednesday. Arranged for: Monday 2028-02-28.\\n\\nWhy thi\r\n s suggestion: Literal comma\\, semicolon\\; slash\\\\ and line\\nSecond line.\\n\r\n \\nPlan note: Independent local review\\; no booking.\\n\\nPlan note: <markup \r\n stays text>\r\nSTATUS:TENTATIVE\r\nTRANSP:TRANSPARENT\r\nCLASS:PRIVATE\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\nUID:0123456789abcdef0123456789abcdef-20280228-pick-4@tastetable.invalid\r\nDTSTAMP:20271231T235959Z\r\nDTSTART;VALUE=DATE:20280228\r\nDTEND;VALUE=DATE:20280229\r\nSUMMARY:[DEMO] TasteTable suggestion: Arroyo Museum of Latin Music (fiction\r\n al)\r\nDESCRIPTION:DEMO: synthetic Qloo fixture\\; these venues are fictional.\\n\\nS\r\n uggested outing only\\; no booking or opening hours confirmed. Not medical \r\n or dietary advice. Confirm accessibility\\, texture and sodium needs with t\r\n he venue and the person's care team.\\n\\nQloo entity ID: FIX-V-03\\n\\nOrigin\r\n ally suggested for: Saturday. Arranged for: Monday 2028-02-28.\\n\\nWhy this\r\n  suggestion: Qloo affinity 0.96 for audiences who like Celia Cruz\\, West S\r\n ide Story (tag match: Museum). Checks: Wheelchair: pass (tagged 'wheelchai\r\n r accessible entrance').\\n\\nPlan note: Independent local review\\; no booki\r\n ng.\\n\\nPlan note: <markup stays text>\r\nSTATUS:TENTATIVE\r\nTRANSP:TRANSPARENT\r\nCLASS:PRIVATE\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\nUID:0123456789abcdef0123456789abcdef-20280228-pick-0@tastetable.invalid\r\nDTSTAMP:20271231T235959Z\r\nDTSTART;VALUE=DATE:20280302\r\nDTEND;VALUE=DATE:20280303\r\nSUMMARY:[DEMO] TasteTable suggestion: Independent café\\, bowl\\; 🦉 界\r\n 界界界界界界界界界界界界界界界界界界界界界界界界\r\n 界界界\r\nDESCRIPTION:DEMO: synthetic Qloo fixture\\; these venues are fictional.\\n\\nS\r\n uggested outing only\\; no booking or opening hours confirmed. Not medical \r\n or dietary advice. Confirm accessibility\\, texture and sodium needs with t\r\n he venue and the person's care team.\\n\\nQloo entity ID: FIX-P-01\\n\\nOrigin\r\n ally suggested for: Monday. Arranged for: Thursday 2028-03-02.\\n\\nWhy this\r\n  suggestion: Qloo affinity 0.91 for audiences who like Celia Cruz\\, West S\r\n ide Story (tag match: Cuban). Checks: Soft foods: pass (soft options liste\r\n d: black bean soup\\, flan\\, made to order)\\; Low sodium: pass (lower-sodiu\r\n m signals: made to order)\\; Wheelchair: pass (tagged 'wheelchair accessibl\r\n e entrance').\\n\\nPlan note: Independent local review\\; no booking.\\n\\nPlan\r\n  note: <markup stays text>\r\nSTATUS:TENTATIVE\r\nTRANSP:TRANSPARENT\r\nCLASS:PRIVATE\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "count": 3
+      },
+      "preview": [
+        {
+          "key": "pick-1",
+          "originalDay": "Wednesday",
+          "day": "Monday",
+          "kind": "restaurant",
+          "entityId": "FIX-P-03",
+          "name": "Abuela's Table",
+          "why": "Literal comma, semicolon; slash\\ and line\r\nSecond line.",
+          "date": "2028-02-28",
+          "endDate": "2028-02-29",
+          "summary": "[DEMO] TasteTable suggestion: Abuela's Table"
+        },
+        {
+          "key": "pick-4",
+          "originalDay": "Saturday",
+          "day": "Monday",
+          "kind": "outing",
+          "entityId": "FIX-V-03",
+          "name": "Arroyo Museum of Latin Music (fictional)",
+          "why": "Qloo affinity 0.96 for audiences who like Celia Cruz, West Side Story (tag match: Museum). Checks: Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "date": "2028-02-28",
+          "endDate": "2028-02-29",
+          "summary": "[DEMO] TasteTable suggestion: Arroyo Museum of Latin Music (fictional)"
+        },
+        {
+          "key": "pick-0",
+          "originalDay": "Monday",
+          "day": "Thursday",
+          "kind": "restaurant",
+          "entityId": "FIX-P-01",
+          "name": "Independent café, bowl; 🦉 界界界界界界界界界界界界界界界界界界界界界界界界界界界界",
+          "why": "Qloo affinity 0.91 for audiences who like Celia Cruz, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+          "date": "2028-03-02",
+          "endDate": "2028-03-03",
+          "summary": "[DEMO] TasteTable suggestion: Independent café, bowl; 🦉 界界界界界界界界界界界界界界界界界界界界界界界界界界界界"
+        }
+      ],
+      "source": "DEMO: synthetic Qloo fixture; these venues are fictional.",
+      "calendarId": "0123456789abcdef0123456789abcdef"
+    },
+    "unknown-source": {
+      "ok": false,
+      "error": "The arranged week does not match its checked suggestions. Review the week before exporting."
+    },
+    "all-omitted": {
+      "ok": false,
+      "error": "There are no checked suggestions to export. Unavailable days stay open."
+    },
+    "invalid-date": {
+      "ok": false,
+      "error": "Choose a valid calendar date for your week."
+    },
+    "extra-assignment": {
+      "ok": false,
+      "error": "The saved arrangement must include every original pick exactly once."
+    },
+    "missing-calendar-id": {
+      "ok": false,
+      "error": "The saved week has an invalid calendar identity."
+    },
+    "mismatched-constraints": {
+      "ok": false,
+      "error": "The saved inputs and the original response have different constraints."
+    },
+    "control-in-omitted-pick": {
+      "ok": false,
+      "error": "The plan contains unsupported characters in explanation. Generate a new plan before exporting."
+    },
+    "surrogate-in-source": {
+      "ok": false,
+      "error": "The plan contains unsupported characters in venue name. Generate a new plan before exporting."
+    },
+    "duplicate-original-slot": {
+      "ok": false,
+      "error": "The plan repeats a day and type. Generate a new plan before exporting."
+    },
+    "empty-plan": {
+      "ok": false,
+      "error": "There are no checked suggestions to export. Unavailable days stay open."
+    }
+  },
+  "validation": {
+    "status": "all independent native memory controls and manual assertions pass",
+    "ordinary_output_sha256": "900f8707627e600907928f515217ac36519e3aac0045fa0f3c32870438250d18",
+    "bom_output_sha256": "900f8707627e600907928f515217ac36519e3aac0045fa0f3c32870438250d18",
+    "cases": 12,
+    "native_fixture_only": true
+  },
+  "stderr": "ExperimentalWarning: VM Modules is an experimental feature and might change at any time",
+  "writes": "none",
+  "candidate_seen": false
+}
