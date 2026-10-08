@@ -387,9 +387,10 @@ SYSTEM = ("You are TasteTable, a caregiver's planning assistant. Use qloo_search
 
 
 def run_agent(persona: dict, qloo: Optional[QlooClient] = None, model=None,
-              model_name: str = "scripted-stub") -> dict:
+              model_name: Optional[str] = None) -> dict:
     qloo = qloo or QlooClient.from_env()
     model = model or ScriptedModel()
+    model_name = model_name if model_name is not None else getattr(model, "model", "scripted-stub")
     taste_only = {k: persona[k] for k in ("cuisines", "music", "films", "constraints", "city")
                   if k in persona}  # no label/name leaves the server
     state = AgentState(persona=taste_only)
