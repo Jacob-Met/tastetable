@@ -1,0 +1,11 @@
+{
+  "path": "/workspace/scratch/31a349052b90/product-execution/taste-consumer-v1-review/consumer-v1-receiving.tar.gz",
+  "bytes": 95149,
+  "members": 80,
+  "sha256": "0a6c4cfff3b1207f5cdd6524f2a0ee633328bf2d1bf84baf4e683aa525d0907f",
+  "git_blob": "db6945ae9442dd8562010c84961554bbd06408b7",
+  "manifestSha256": "f2b4ed17ae1ba1936bff9bb3071e1f68abbd30977be94d6e547b36e075b28bd2",
+  "allMembersVerified": true,
+  "ownerFreeze": "consumer-v1",
+  "sourceCommit": null
+}
