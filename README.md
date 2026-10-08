@@ -311,3 +311,13 @@ Open **Visit record (new tab)** in the planner to record what happened beside th
 ### Visit records as CSV
 
 Export an explicitly selected saved visit record with `node tools/visit_record_to_csv.mjs --input visits.json --output visits.csv` (Node.js 22+). The create-only CSV retains every original occurrence, including omitted and unrecorded picks, with separate planned and actual dates, outcomes and literal notes. Keep the JSON for reopening the record. See [CSV columns, text import and file delivery](docs/VISIT_RECORD_CSV.md).
+
+## Offline report of recorded visits
+
+A saved visit-record JSON can also become a standalone, printable HTML handoff:
+
+```sh
+node tools/visit_record_to_html.mjs --input "visits.json" --output "visits.html"
+```
+
+Open the HTML offline or use the browser's Print command. It includes every original occurrence, the saved planned schedule, separately recorded outcomes and actual dates, literal notes, original explanations and source timestamps. It contains no scripts or external assets and makes no new recommendations or interpretations. The command requires Node.js 22+, preserves its input and refuses an existing output. Keep the original JSON for editing and complete source/trace. See the [visit-record HTML guide](docs/visit-record-html/README.md) for limits, provenance, refusal behavior and checks.
