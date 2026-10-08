@@ -1,0 +1,106 @@
+{
+  "at": "2026-10-08T11:14:26.101765+00:00",
+  "base": "b8d384e5522e17cf15d73e8b06adbe6665e4bdcc",
+  "tree": "06409d6f67d0c99ee99305fe4f745963ec2da2a2",
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "commands": [
+    {
+      "name": "independent_namespace_regressions_on_v2",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "tests/test_wheelchair_evidence.py",
+        "-k",
+        "unqualified_accessibility_namespace"
+      ],
+      "cwd": "/home/jacob/tastetable-accessibility-3dcb83a1/namespace-v2-control",
+      "returncode": 1,
+      "expected_returncode": 1,
+      "stdout": "FFF                                                                      [100%]\n=================================== FAILURES ===================================\n_ test_unqualified_accessibility_namespace_note_stays_unknown_in_actual_planner[prohibited] _\n\nlabel = 'Wheelchair users prohibited'\n\n    @pytest.mark.parametrize(\"label\", [\n        \"Wheelchair users prohibited\",\n        \"Wheelchair information pending\",\n        \"Wheelchair users ask staff\",\n    ], ids=[\"prohibited\", \"pending-information\", \"staff-query\"])\n    def test_unqualified_accessibility_namespace_note_stays_unknown_in_actual_planner(label):\n        note = {\"tag_id\": \"urn:tag:accessibility:place:entrance_note\", \"name\": label}\n        entity = venue([{\"tag_id\": ACCESS_ID, \"name\": \"Wheelchair accessible entrance\"}, note])\n>       assert check_wheelchair(entity).status == \"unknown\"\nE       AssertionError: assert 'pass' == 'unknown'\nE         \nE         - unknown\nE         + pass\n\ntests/test_wheelchair_evidence.py:160: AssertionError\n_ test_unqualified_accessibility_namespace_note_stays_unknown_in_actual_planner[pending-information] _\n\nlabel = 'Wheelchair information pending'\n\n    @pytest.mark.parametrize(\"label\", [\n        \"Wheelchair users prohibited\",\n        \"Wheelchair information pending\",\n        \"Wheelchair users ask staff\",\n    ], ids=[\"prohibited\", \"pending-information\", \"staff-query\"])\n    def test_unqualified_accessibility_namespace_note_stays_unknown_in_actual_planner(label):\n        note = {\"tag_id\": \"urn:tag:accessibility:place:entrance_note\", \"name\": label}\n        entity = venue([{\"tag_id\": ACCESS_ID, \"name\": \"Wheelchair accessible entrance\"}, note])\n>       assert check_wheelchair(entity).status == \"unknown\"\nE       AssertionError: assert 'pass' == 'unknown'\nE         \nE         - unknown\nE         + pass\n\ntests/test_wheelchair_evidence.py:160: AssertionError\n_ test_unqualified_accessibility_namespace_note_stays_unknown_in_actual_planner[staff-query] _\n\nlabel = 'Wheelchair users ask staff'\n\n    @pytest.mark.parametrize(\"label\", [\n        \"Wheelchair users prohibited\",\n        \"Wheelchair information pending\",\n        \"Wheelchair users ask staff\",\n    ], ids=[\"prohibited\", \"pending-information\", \"staff-query\"])\n    def test_unqualified_accessibility_namespace_note_stays_unknown_in_actual_planner(label):\n        note = {\"tag_id\": \"urn:tag:accessibility:place:entrance_note\", \"name\": label}\n        entity = venue([{\"tag_id\": ACCESS_ID, \"name\": \"Wheelchair accessible entrance\"}, note])\n>       assert check_wheelchair(entity).status == \"unknown\"\nE       AssertionError: assert 'pass' == 'unknown'\nE         \nE         - unknown\nE         + pass\n\ntests/test_wheelchair_evidence.py:160: AssertionError\n=========================== short test summary info ============================\nFAILED tests/test_wheelchair_evidence.py::test_unqualified_accessibility_namespace_note_stays_unknown_in_actual_planner[prohibited]\nFAILED tests/test_wheelchair_evidence.py::test_unqualified_accessibility_namespace_note_stays_unknown_in_actual_planner[pending-information]\nFAILED tests/test_wheelchair_evidence.py::test_unqualified_accessibility_namespace_note_stays_unknown_in_actual_planner[staff-query]\n3 failed, 27 deselected in 0.07s\n",
+      "stderr": "",
+      "stdout_sha256": "ff29985b3600b488d72b19164678657239d4a3065dc12b22c988b0c26939eaff",
+      "before": {
+        "free_bytes": 3015110656,
+        "own_bytes": 1375580
+      },
+      "after": {
+        "free_bytes": 3013107712,
+        "own_bytes": 1375580
+      }
+    },
+    {
+      "name": "v3_planner_and_constraint_tests",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "tests/test_tastetable.py",
+        "tests/test_constraint_binding.py",
+        "tests/test_wheelchair_evidence.py",
+        "-k",
+        "not web_endpoints"
+      ],
+      "cwd": "/home/jacob/tastetable-accessibility-3dcb83a1/source",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "stdout": "......................................................... [ 83%]\n...........                                                              [100%]\n68 passed, 1 deselected, 15 subtests passed in 0.20s\n",
+      "stderr": "",
+      "stdout_sha256": "90602f21e086f12fda0587d4f0223d22835fa2f2d393dc637db70894f59e70de",
+      "before": {
+        "free_bytes": 3013107712,
+        "own_bytes": 1375580
+      },
+      "after": {
+        "free_bytes": 3015102464,
+        "own_bytes": 1375580
+      }
+    },
+    {
+      "name": "v3_complete_persona_output_matches_retained_original",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/jacob/tastetable-accessibility-3dcb83a1/healthy.py",
+        "/home/jacob/tastetable-accessibility-3dcb83a1/source"
+      ],
+      "cwd": "/home/jacob/tastetable-accessibility-3dcb83a1",
+      "returncode": 0,
+      "stdout_sha256": "3e662d7214c8bb2b946fa335b3680cf5824858c265c4c95edbb481bf92d63a77",
+      "expected_sha256": "3e662d7214c8bb2b946fa335b3680cf5824858c265c4c95edbb481bf92d63a77",
+      "byte_identical": true,
+      "stdout_bytes": 23132,
+      "stderr": "",
+      "before": {
+        "free_bytes": 3015102464,
+        "own_bytes": 1375580
+      },
+      "after": {
+        "free_bytes": 3015102464,
+        "own_bytes": 1375580
+      }
+    }
+  ],
+  "guards": {
+    "minimum_free_bytes": 536870912,
+    "maximum_own_bytes": 16777216,
+    "command_timeout_seconds": 45
+  },
+  "runner_sha256": "b11758320d72523bcf4747657a280979e9528b9db4d1a19fbb3294cb49a64b46",
+  "finding": "Independent actual planner receiver found an unqualified wheelchair prohibition under a generic accessibility entrance_note identifier did not cancel separate affirmative evidence.",
+  "previous_candidate_source": {
+    "path": "constraints.py",
+    "git_blob": "986df2d77f26025308517bf27fda8af8fab07e23",
+    "sha256": "9883a07655fc55fd5ade264756501bc2cf374ae5429fab1dda6641f1aa88bb26",
+    "bytes": 5640
+  },
+  "scope": "Existing accessibility namespace: any otherwise unrecognized wheelchair identifier or label is unresolved evidence. Known affirmative signals, unrelated amenity rental and steps precedence remain. Prior original/v1/v2 receipts are preserved."
+}

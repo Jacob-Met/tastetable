@@ -96,7 +96,7 @@ def check_wheelchair(e: Entity) -> Check:
                {"access", "accessible", "accessibility", "inaccessible", "entrance"})):
             unclear = True
         if (tag_id.startswith("urn:tag:accessibility:place:") and
-                ("wheelchair" in tag_id or "wheelchair" in label) and tag_id != access_id):
+                "wheelchair" in tag_id and tag_id != access_id):
             unclear = True
     if affirmative and not unclear:
         return Check("wheelchair", "pass", "tagged 'wheelchair accessible entrance'")

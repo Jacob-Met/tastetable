@@ -1,0 +1,441 @@
+{
+  "at": "2026-10-08T11:49:26.087196+00:00",
+  "current_base": "f04353ffe4de808543031f56a2a59fac589cb0ab",
+  "current_tree": "54925099a2014aa43c79092f3b692060cf6216d4",
+  "source": "/home/jacob/tastetable-accessibility-3dcb83a1/current-composed",
+  "source_files": {
+    "agent.py": {
+      "sha256": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+      "git_blob": "883aff984464f2d43cda18f8e60b81240d6c3fb3",
+      "bytes": 28440
+    },
+    "qloo_client.py": {
+      "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+      "git_blob": "cca322e0c9af96c481ba8f7ef286e85d3b90cfd2",
+      "bytes": 12206
+    },
+    "constraints.py": {
+      "sha256": "248789e3a4a31b7dcab499d8e3d445f566e26927c5fc4706c6a76a0e7ac6069f",
+      "git_blob": "941ccc6f21c72d9563388301609ef978894336ca",
+      "bytes": 5667
+    },
+    "requirements.txt": {
+      "sha256": "80f580784e41edbf585cdc133c99d6e52ad9fae5876459c74ba6cbb4ed6b0602",
+      "git_blob": "d2fa2b085ecd75cc196fa8a02ddb54e1728c0b23",
+      "bytes": 74
+    },
+    "personas.py": {
+      "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+      "git_blob": "1eb6768780cafaf9b1666e39b7fc17aa21204f16",
+      "bytes": 1247
+    },
+    "fixtures/qloo_fixtures.json": {
+      "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+      "git_blob": "60c5d92f905755454bb280b8181f8836a74bd955",
+      "bytes": 21190
+    },
+    "tests/test_tastetable.py": {
+      "sha256": "7ace6361e9baf4a1e1a4ccfa528df1a4d2165b99bacb0423a572ac78bf3e9c5b",
+      "git_blob": "e6731e2c560a921074f034057404ce9bdd81e6ac",
+      "bytes": 8240
+    },
+    "tests/test_constraint_binding.py": {
+      "sha256": "fd12768b12765f333f1e95f571105eb02fe252f91b3c61168c6fba6f18691692",
+      "git_blob": "ee385279cd2f803f92bcfe251741aa491c84afa3",
+      "bytes": 12500
+    },
+    "tests/test_recommendation_notes.py": {
+      "sha256": "14d33c42bec3694215b9fdb3118cd1e200a8192f462b4c72ae2d8f1487a4b48b",
+      "git_blob": "56647ab5191456c196fbf5584c30d56174c52c49",
+      "bytes": 14234
+    },
+    "tests/test_wheelchair_evidence.py": {
+      "sha256": "f3c8675177b51d508e7d297a3ff07da64fc7b73c03d5b7405493ec3099f3f252",
+      "git_blob": "96a8202b1016688405783033b19a50f98ff69649",
+      "bytes": 8030
+    },
+    ".github/workflows/ci.yml": {
+      "sha256": "2f83a6f17995602ec28e9f0dacc901511bae2dd3e348e2dfc9190494830da876",
+      "git_blob": "0e6273139a9bf417a4ee42f4501d067b1c9d95a0",
+      "bytes": 652
+    }
+  },
+  "commands": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "tests/test_recommendation_notes.py"
+      ],
+      "cwd": "/home/jacob/tastetable-accessibility-3dcb83a1/current-composed",
+      "returncode": 0,
+      "stdout": ".............                                           [100%]\n13 passed, 17 subtests passed in 0.13s\n",
+      "stderr": "",
+      "before": {
+        "free_bytes": 1392562176,
+        "own_bytes": 1645620
+      },
+      "after": {
+        "free_bytes": 1392558080,
+        "own_bytes": 1645620
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/jacob/tastetable-accessibility-3dcb83a1/independent/receive-final.py",
+        "/home/jacob/tastetable-accessibility-3dcb83a1/current-composed",
+        "/home/jacob/tastetable-accessibility-3dcb83a1/current-planner-receiving.json",
+        "248789e3a4a31b7dcab499d8e3d445f566e26927c5fc4706c6a76a0e7ac6069f"
+      ],
+      "cwd": "/home/jacob/tastetable-accessibility-3dcb83a1/current-composed",
+      "returncode": 0,
+      "stdout": "{\"receipt\": \"/home/jacob/tastetable-accessibility-3dcb83a1/current-planner-receiving.json\", \"passed\": 8, \"total\": 8, \"source_unchanged\": true, \"external_attempts\": 0, \"cases\": [{\"case\": \"mixed_period_denial\", \"actual_status\": \"unknown\", \"actual_picks\": 0, \"passed\": true}, {\"case\": \"mixed_colon_uncertainty\", \"actual_status\": \"unknown\", \"actual_picks\": 0, \"passed\": true}, {\"case\": \"unlabelled_positive_mixed_denial\", \"actual_status\": \"unknown\", \"actual_picks\": 0, \"passed\": true}, {\"case\": \"qualified_entrance_only\", \"actual_status\": \"unknown\", \"actual_picks\": 0, \"passed\": true}, {\"case\": \"affirmative_and_unrelated_service\", \"actual_status\": \"pass\", \"actual_picks\": 5, \"passed\": true}, {\"case\": \"established_id_without_label\", \"actual_status\": \"pass\", \"actual_picks\": 5, \"passed\": true}, {\"case\": \"steps_take_precedence\", \"actual_status\": \"fail\", \"actual_picks\": 0, \"passed\": true}, {\"case\": \"mixed_accessibility_namespace_denial\", \"actual_status\": \"unknown\", \"actual_picks\": 0, \"passed\": true}]}\n",
+      "stderr": "",
+      "before": {
+        "free_bytes": 1392558080,
+        "own_bytes": 1645620
+      },
+      "after": {
+        "free_bytes": 1392545792,
+        "own_bytes": 1655463
+      }
+    }
+  ],
+  "before": {
+    "free_bytes": 1392721920,
+    "own_bytes": 1533140
+  },
+  "after": {
+    "free_bytes": 1392541696,
+    "own_bytes": 1655463
+  },
+  "guards": {
+    "minimum_free_bytes": 536870912,
+    "maximum_own_bytes": 16777216,
+    "command_timeout_seconds": 45
+  },
+  "runner_sha256": "d8c324974e7f0ac7ccfc057a169600123b83bab07daaed785f9fe57f440b5d36",
+  "execution_by": "production_scope author; unchanged independently authored eight-case planner receiver replayed for new current planner-note composition",
+  "boundary": "Original root independent acceptance remains at b8d384; this is additional author current-source compatibility receiving, not another independent review. Current planner code is byte-preserved, and no external provider/browser/install outcome is implied.",
+  "planner_receipt_sha256": "ef7e1d5e5e5b2d533ceb9ee005ff7c09981f5bc5da33cd81e19034e0a84d0112",
+  "planner_receiving": {
+    "source": "/home/jacob/tastetable-accessibility-3dcb83a1/current-composed",
+    "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+    "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+    "elapsed_seconds": 0.04737773700617254,
+    "cases": [
+      {
+        "case": "mixed_period_denial",
+        "tags": [
+          {
+            "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance",
+            "name": "Wheelchair accessible entrance"
+          },
+          {
+            "tag_id": "urn:tag:accessibility:place:entrance_note",
+            "name": "Not wheelchair accessible."
+          }
+        ],
+        "expected_status": "unknown",
+        "actual_verdict": {
+          "entity_id": "INDEPENDENT-FIXTURE",
+          "name": "Independent fictional venue",
+          "ok": false,
+          "checks": [
+            {
+              "constraint": "wheelchair",
+              "status": "unknown",
+              "reason": "no unambiguous affirmative entrance evidence; ask the venue"
+            }
+          ]
+        },
+        "expected_picks": 0,
+        "actual_picks": 0,
+        "first_pick_why": null,
+        "rejected": 16,
+        "fixture_requests": 14,
+        "mock": true,
+        "passed": true
+      },
+      {
+        "case": "mixed_colon_uncertainty",
+        "tags": [
+          {
+            "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance",
+            "name": "Wheelchair accessible entrance"
+          },
+          {
+            "tag_id": "urn:tag:accessibility:place:entrance_note",
+            "name": "Wheelchair accessibility: unconfirmed"
+          }
+        ],
+        "expected_status": "unknown",
+        "actual_verdict": {
+          "entity_id": "INDEPENDENT-FIXTURE",
+          "name": "Independent fictional venue",
+          "ok": false,
+          "checks": [
+            {
+              "constraint": "wheelchair",
+              "status": "unknown",
+              "reason": "no unambiguous affirmative entrance evidence; ask the venue"
+            }
+          ]
+        },
+        "expected_picks": 0,
+        "actual_picks": 0,
+        "first_pick_why": null,
+        "rejected": 16,
+        "fixture_requests": 14,
+        "mock": true,
+        "passed": true
+      },
+      {
+        "case": "unlabelled_positive_mixed_denial",
+        "tags": [
+          {
+            "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance"
+          },
+          {
+            "tag_id": "urn:tag:accessibility:place:entrance_note",
+            "name": "No wheelchair access."
+          }
+        ],
+        "expected_status": "unknown",
+        "actual_verdict": {
+          "entity_id": "INDEPENDENT-FIXTURE",
+          "name": "Independent fictional venue",
+          "ok": false,
+          "checks": [
+            {
+              "constraint": "wheelchair",
+              "status": "unknown",
+              "reason": "no unambiguous affirmative entrance evidence; ask the venue"
+            }
+          ]
+        },
+        "expected_picks": 0,
+        "actual_picks": 0,
+        "first_pick_why": null,
+        "rejected": 16,
+        "fixture_requests": 14,
+        "mock": true,
+        "passed": true
+      },
+      {
+        "case": "qualified_entrance_only",
+        "tags": [
+          {
+            "tag_id": "urn:tag:accessibility:place:entrance_note",
+            "name": "Wheelchair accessible entrance (advance arrangement required)"
+          }
+        ],
+        "expected_status": "unknown",
+        "actual_verdict": {
+          "entity_id": "INDEPENDENT-FIXTURE",
+          "name": "Independent fictional venue",
+          "ok": false,
+          "checks": [
+            {
+              "constraint": "wheelchair",
+              "status": "unknown",
+              "reason": "no unambiguous affirmative entrance evidence; ask the venue"
+            }
+          ]
+        },
+        "expected_picks": 0,
+        "actual_picks": 0,
+        "first_pick_why": null,
+        "rejected": 16,
+        "fixture_requests": 14,
+        "mock": true,
+        "passed": true
+      },
+      {
+        "case": "affirmative_and_unrelated_service",
+        "tags": [
+          {
+            "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance",
+            "name": "Wheelchair accessible entrance"
+          },
+          {
+            "tag_id": "urn:tag:amenity:place:wheelchair_rental",
+            "name": "Wheelchair rental"
+          }
+        ],
+        "expected_status": "pass",
+        "actual_verdict": {
+          "entity_id": "INDEPENDENT-FIXTURE",
+          "name": "Independent fictional venue",
+          "ok": true,
+          "checks": [
+            {
+              "constraint": "wheelchair",
+              "status": "pass",
+              "reason": "tagged 'wheelchair accessible entrance'"
+            }
+          ]
+        },
+        "expected_picks": 5,
+        "actual_picks": 5,
+        "first_pick_why": "Qloo affinity 0.91 for audiences who like Celia Cruz, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+        "rejected": 4,
+        "fixture_requests": 14,
+        "mock": true,
+        "passed": true
+      },
+      {
+        "case": "established_id_without_label",
+        "tags": [
+          {
+            "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance"
+          }
+        ],
+        "expected_status": "pass",
+        "actual_verdict": {
+          "entity_id": "INDEPENDENT-FIXTURE",
+          "name": "Independent fictional venue",
+          "ok": true,
+          "checks": [
+            {
+              "constraint": "wheelchair",
+              "status": "pass",
+              "reason": "tagged 'wheelchair accessible entrance'"
+            }
+          ]
+        },
+        "expected_picks": 5,
+        "actual_picks": 5,
+        "first_pick_why": "Qloo affinity 0.91 for audiences who like Celia Cruz, West Side Story (tag match: Cuban). Checks: Soft foods: pass (soft options listed: black bean soup, flan, made to order); Low sodium: pass (lower-sodium signals: made to order); Wheelchair: pass (tagged 'wheelchair accessible entrance').",
+        "rejected": 4,
+        "fixture_requests": 14,
+        "mock": true,
+        "passed": true
+      },
+      {
+        "case": "steps_take_precedence",
+        "tags": [
+          {
+            "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance",
+            "name": "Wheelchair accessible entrance"
+          },
+          {
+            "tag_id": "urn:tag:accessibility:place:steps_at_entrance",
+            "name": "Steps at entrance"
+          }
+        ],
+        "expected_status": "fail",
+        "actual_verdict": {
+          "entity_id": "INDEPENDENT-FIXTURE",
+          "name": "Independent fictional venue",
+          "ok": false,
+          "checks": [
+            {
+              "constraint": "wheelchair",
+              "status": "fail",
+              "reason": "tagged 'steps at entrance'"
+            }
+          ]
+        },
+        "expected_picks": 0,
+        "actual_picks": 0,
+        "first_pick_why": null,
+        "rejected": 16,
+        "fixture_requests": 14,
+        "mock": true,
+        "passed": true
+      },
+      {
+        "case": "mixed_accessibility_namespace_denial",
+        "tags": [
+          {
+            "tag_id": "urn:tag:accessibility:place:wheelchair_accessible_entrance",
+            "name": "Wheelchair accessible entrance"
+          },
+          {
+            "tag_id": "urn:tag:accessibility:place:entrance_note",
+            "name": "Wheelchair users prohibited"
+          }
+        ],
+        "expected_status": "unknown",
+        "actual_verdict": {
+          "entity_id": "INDEPENDENT-FIXTURE",
+          "name": "Independent fictional venue",
+          "ok": false,
+          "checks": [
+            {
+              "constraint": "wheelchair",
+              "status": "unknown",
+              "reason": "no unambiguous affirmative entrance evidence; ask the venue"
+            }
+          ]
+        },
+        "expected_picks": 0,
+        "actual_picks": 0,
+        "first_pick_why": null,
+        "rejected": 16,
+        "fixture_requests": 14,
+        "mock": true,
+        "passed": true
+      }
+    ],
+    "passed": 8,
+    "total": 8,
+    "source_unchanged": true,
+    "external_attempts": 0,
+    "source_pins": {
+      "agent.py": {
+        "bytes": 28440,
+        "sha256": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+        "git_blob": "883aff984464f2d43cda18f8e60b81240d6c3fb3"
+      },
+      "constraints.py": {
+        "bytes": 5667,
+        "sha256": "248789e3a4a31b7dcab499d8e3d445f566e26927c5fc4706c6a76a0e7ac6069f",
+        "git_blob": "941ccc6f21c72d9563388301609ef978894336ca"
+      },
+      "fixtures/qloo_fixtures.json": {
+        "bytes": 21190,
+        "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+        "git_blob": "60c5d92f905755454bb280b8181f8836a74bd955"
+      },
+      "personas.py": {
+        "bytes": 1247,
+        "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+        "git_blob": "1eb6768780cafaf9b1666e39b7fc17aa21204f16"
+      },
+      "qloo_client.py": {
+        "bytes": 12206,
+        "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+        "git_blob": "cca322e0c9af96c481ba8f7ef286e85d3b90cfd2"
+      },
+      "tests/test_constraint_binding.py": {
+        "bytes": 12500,
+        "sha256": "fd12768b12765f333f1e95f571105eb02fe252f91b3c61168c6fba6f18691692",
+        "git_blob": "ee385279cd2f803f92bcfe251741aa491c84afa3"
+      },
+      "tests/test_recommendation_notes.py": {
+        "bytes": 14234,
+        "sha256": "14d33c42bec3694215b9fdb3118cd1e200a8192f462b4c72ae2d8f1487a4b48b",
+        "git_blob": "56647ab5191456c196fbf5584c30d56174c52c49"
+      },
+      "tests/test_tastetable.py": {
+        "bytes": 8240,
+        "sha256": "7ace6361e9baf4a1e1a4ccfa528df1a4d2165b99bacb0423a572ac78bf3e9c5b",
+        "git_blob": "e6731e2c560a921074f034057404ce9bdd81e6ac"
+      },
+      "tests/test_wheelchair_evidence.py": {
+        "bytes": 8030,
+        "sha256": "f3c8675177b51d508e7d297a3ff07da64fc7b73c03d5b7405493ec3099f3f252",
+        "git_blob": "96a8202b1016688405783033b19a50f98ff69649"
+      }
+    }
+  }
+}

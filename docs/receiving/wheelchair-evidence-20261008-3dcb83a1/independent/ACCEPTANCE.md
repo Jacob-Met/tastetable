@@ -1,0 +1,13 @@
+# Independent native receiving: accessibility evidence
+
+Accepted source: constraints.py SHA-256 `248789e3a4a31b7dcab499d8e3d445f566e26927c5fc4706c6a76a0e7ac6069f`, Git blob `941ccc6f21c72d9563388301609ef978894336ca`, from base `b8d384e5522e17cf15d73e8b06adbe6665e4bdcc`. Root independently read the checker and real entity parser, then exercised the actual ScriptedModel → run_agent → QlooClient → FixtureTransport path.
+
+The final unchanged receiver passes **8/8 cases**, with unchanged source/test/fixture bytes and zero external connection attempts. Conflicting or qualified access tags produce UNKNOWN and zero checked picks. Established affirmative entrance evidence keeps five picks, including with an unrelated amenity rental tag; the current unlabelled synthetic fixture ID remains supported. Steps retain their existing failure precedence. These are local tag-contract results, not verified real-world venue access or medical/dietary findings.
+
+Receiving exposed two corrections before acceptance. The first candidate missed punctuation in contradictory labels: an affirmative entrance plus `Not wheelchair accessible.` or `Wheelchair accessibility: unconfirmed` still produced five accepted picks. V2 fixed those cases, but an accessibility-namespace note `Wheelchair users prohibited` still passed. V3 conservatively leaves that unknown accessibility evidence unresolved instead of depending solely on a list of denial words.
+
+The canonical-fixture baseline passed **3/7**, with four false affirmative results. The separate V2 namespace challenge failed **0/1**, retaining its five-pick result. Do not combine those into an unexecuted baseline eight-case claim. Final V3 passes all eight combined controls.
+
+An initial receiver used `id` aliases in three raw fixture tag entries. The actual fixture transport requires `tag_id`; those malformed-fixture plan outcomes are excluded from acceptance evidence. The original script and raw results remain retained. The corrected receiver uses canonical fixture keys. Its source correction does not change the first two genuine punctuation counterexamples, which already used the required key.
+
+Publication inputs: `receive-final.py`, `candidate-v3.json`, this note. Earlier native evidence: `baseline-valid-fixture.json`, `candidate-v1.json`, `candidate-v2.json`, `candidate-v2-policy.json`; all remain under `/home/jacob/tastetable-accessibility-independent-3dcb83a1`. The author independently retains the superseded product versions and new regression results. No additional tests are requested absent a concrete source/gate change. Git publication and hosted integration remain pending the shared GitHub content-write block.

@@ -1,0 +1,28 @@
+{
+  "base": "b8d384e5522e17cf15d73e8b06adbe6665e4bdcc",
+  "tree": "06409d6f67d0c99ee99305fe4f745963ec2da2a2",
+  "product_files": [
+    {
+      "path": "constraints.py",
+      "git_blob": "2ae4c3fd580f6a1c9eb943bc57801c43ddd9cf21",
+      "sha256": "43b190472229b560d7090c4d01a90dc8f30d14d7a9e95f485aacfe8cf32e4644",
+      "bytes": 5615
+    },
+    {
+      "path": "tests/test_wheelchair_evidence.py",
+      "git_blob": "7ebfb2280237b5fa9fe273a46916b3553d5ce1ed",
+      "sha256": "20bd9efad3e369aad7518ec74d9b7b628f585bcf814bd6f96dc26c7884c2f2f1",
+      "bytes": 5323
+    }
+  ],
+  "diff_sha256": "9a4985254709db8b8135a4fdfe924c45fe10368a280b0d049f8d18efbc257bae",
+  "unchanged_selected_files": 8,
+  "healthy_complete_results_byte_identical": true,
+  "healthy_sha256": "3e662d7214c8bb2b946fa335b3680cf5824858c265c4c95edbb481bf92d63a77",
+  "healthy_bytes": 23132,
+  "source_pins_unchanged": true,
+  "resource": {
+    "free_bytes": 2498015232,
+    "own_bytes": 459501
+  }
+}
