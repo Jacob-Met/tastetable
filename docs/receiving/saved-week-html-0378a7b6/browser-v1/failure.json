@@ -1,0 +1,66 @@
+{
+  "when": "2026-10-08T17:21:45.230Z",
+  "message": "Expected values to be strictly equal:\n\nfalse !== true\n",
+  "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n\n    at open (file:///C:/Users/minec/hamon-0378a7b6-tastetable/docs/receiving/saved-week-html-0378a7b6/receive_browser.mjs:48:10)\n    at async file:///C:/Users/minec/hamon-0378a7b6-tastetable/docs/receiving/saved-week-html-0378a7b6/receive_browser.mjs:93:3",
+  "groups": [
+    {
+      "label": "actual native producer -> saved-week converter -> new CLI -> offline browser",
+      "pass": true,
+      "picks": 5
+    },
+    {
+      "label": "cross-year arrangement and repeated venues retain distinct literal occurrences",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "unexpectedRequests": [],
+  "sourceHashes": {
+    "static/week_report.mjs": "38d83fdc35218f34a632fef964fbb231f1377cc2d4890b00cb0541ff38e4e05a",
+    "tools/saved_week_to_html.mjs": "1bda236e85c515d3680bbf6c56d6e49bb156a8840635de1571307d131de148d7",
+    "static/week_file.mjs": "8e49cbe39cf7157fe8d7884b52fbd93c2835e4a2a8d91e884736c3c535d755d9",
+    "static/week_plan.mjs": "bcf24640beb171c6962a2a5eeb2d2a9113c3883c61c1477cddd2c76ff65a96a5"
+  },
+  "inputs": {
+    "native-mei": {
+      "sha256": "006b8be543c60a0b645326fc6d6a54bc30809ef8ec46dc76a24e4f5d3e793160",
+      "bytes": 9581,
+      "receipt": {
+        "format": "tastetable.week-report.v1",
+        "input": "C:\\Users\\minec\\hamon-0378a7b6-tastetable\\docs\\receiving\\saved-week-html-0378a7b6\\browser-v1\\native-mei.json",
+        "inputSha256": "006b8be543c60a0b645326fc6d6a54bc30809ef8ec46dc76a24e4f5d3e793160",
+        "output": "C:\\Users\\minec\\hamon-0378a7b6-tastetable\\docs\\receiving\\saved-week-html-0378a7b6\\browser-v1\\native-mei.html",
+        "weekStart": "2026-10-05",
+        "sourceMode": "mock",
+        "picks": 5,
+        "scheduled": 5,
+        "omitted": 0
+      }
+    },
+    "edited-literal-duplicates": {
+      "sha256": "71963bc5d8cfcc09cad226692b53642259a969556c2138a7c5d69eea5c019106",
+      "bytes": 9737,
+      "receipt": {
+        "format": "tastetable.week-report.v1",
+        "input": "C:\\Users\\minec\\hamon-0378a7b6-tastetable\\docs\\receiving\\saved-week-html-0378a7b6\\browser-v1\\edited-literal-duplicates.json",
+        "inputSha256": "71963bc5d8cfcc09cad226692b53642259a969556c2138a7c5d69eea5c019106",
+        "output": "C:\\Users\\minec\\hamon-0378a7b6-tastetable\\docs\\receiving\\saved-week-html-0378a7b6\\browser-v1\\edited-literal-duplicates.html",
+        "weekStart": "2026-12-28",
+        "sourceMode": "mock",
+        "picks": 5,
+        "scheduled": 4,
+        "omitted": 1
+      }
+    }
+  },
+  "reports": {
+    "native-mei": {
+      "sha256": "d416bbcf68bf9bbec664415ff86bd4ccb8919c8bdbf4e357a20b0226d4706408",
+      "path": "C:\\Users\\minec\\hamon-0378a7b6-tastetable\\docs\\receiving\\saved-week-html-0378a7b6\\browser-v1\\native-mei.html"
+    },
+    "edited-literal-duplicates": {
+      "sha256": "074308107fac6e41aabf82f027f58281750450a12b7b123a32a598e657bf46c4",
+      "path": "C:\\Users\\minec\\hamon-0378a7b6-tastetable\\docs\\receiving\\saved-week-html-0378a7b6\\browser-v1\\edited-literal-duplicates.html"
+    }
+  }
+}

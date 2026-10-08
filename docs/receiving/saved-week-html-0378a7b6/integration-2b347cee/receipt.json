@@ -1,0 +1,23 @@
+{
+  "at": "2026-10-08T18:43:24.168Z",
+  "base": "e0f6fbaf1f81fbb1e9926948294549c744228def",
+  "accepted": "9d296340272ff6860da94290986bc8d5cc655bca",
+  "current": "2b347cee4ff4e2b806362730a8520a3360b45f5a",
+  "composedTree": "d24d9c1eaea9db42e288fa1411283684ecadf040",
+  "acceptedPathsPreserved": 68,
+  "currentUnownedLeavesPreserved": 578,
+  "node": "v24.21.0",
+  "testFiles": [
+    "tests/calendar-week.test.cjs",
+    "tests/calendar.test.cjs",
+    "tests/plan-request.test.cjs",
+    "tests/test_saved_week_to_html.mjs",
+    "tests/test_week_compare.mjs",
+    "tests/test_week_file.mjs",
+    "tests/test_week_plan.mjs",
+    "tests/test_week_report.mjs",
+    "tests/venue_followup.test.mjs"
+  ],
+  "testExit": 0,
+  "passed": true
+}

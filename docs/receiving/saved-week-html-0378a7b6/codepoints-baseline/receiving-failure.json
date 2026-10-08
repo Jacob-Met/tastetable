@@ -1,0 +1,4 @@
+{
+  "message": "The first codepoint receiver used nul.html as a case filename. Chromium refused the Windows reserved DOS name with net::ERR_FILE_NOT_FOUND. Product source remained unchanged. The receiver was corrected to nul-character; all three baseline mismatches were then observed in codepoints-baseline-v2. Original bytes renamed to portable reserved-nul-name-input.json and reserved-nul-name-output.html.",
+  "phase": "receiver setup failure; not a product-fidelity result"
+}

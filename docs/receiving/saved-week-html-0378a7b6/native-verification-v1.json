@@ -1,0 +1,20 @@
+{
+  "when": "2026-10-08T17:23:25.665Z",
+  "node": "v24.21.0",
+  "platform": "win32",
+  "sourceBase": "e0f6fbaf1f81fbb1e9926948294549c744228def",
+  "exit": 0,
+  "testLogSha256": "66cd0b07fedd926d6591a32593a4ab5e30cb70c686dd24dbeb36bb52e774c656",
+  "changedOriginalPaths": [
+    "docs/NATIVE_PLAN_CLI.md"
+  ],
+  "unchangedOriginalFiles": 433,
+  "ownedHashes": {
+    "static/week_report.mjs": "83f4e984da53412203d6b7c130da047dd04b4ce1602e520cb431db6434bbf88f",
+    "tools/saved_week_to_html.mjs": "1bda236e85c515d3680bbf6c56d6e49bb156a8840635de1571307d131de148d7",
+    "tests/test_week_report.mjs": "dbf5976b9fd661ead5cd896a8bfb4540a766b6542c7df650d8ecb238297de7d2",
+    "tests/test_saved_week_to_html.mjs": "a019e54d73e927d22215a8df756e4db2da11a4400bb710e1eb51b37a8bd0f095",
+    "docs/NATIVE_PLAN_CLI.md": "323432fe054f0875ccc89df02e9de0b88cd6b2fa02532a591fe28a39e6e5e647"
+  },
+  "status": " M docs/NATIVE_PLAN_CLI.md\n?? CLAIM-0378a7b6.md\n?? docs/receiving/saved-week-html-0378a7b6/\n?? static/week_report.mjs\n?? tests/test_saved_week_to_html.mjs\n?? tests/test_week_report.mjs\n?? tools/saved_week_to_html.mjs\n"
+}

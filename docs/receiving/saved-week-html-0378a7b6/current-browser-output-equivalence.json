@@ -1,0 +1,30 @@
+{
+  "when": "2026-10-08T17:28:10.225Z",
+  "moduleSha256": "6fa8de588fbce5d3dce39826feb7ff06e7430fd2006c34b68d570b314a240210",
+  "currentReportOutputsEqual": [
+    {
+      "name": "native-mei",
+      "unchangedHtmlSha256": "c13722d1e244f71cb2dd0f64937ee81dc29c7a4df4d877311ab9e6cb9a354e7a"
+    },
+    {
+      "name": "edited-literal-duplicates",
+      "unchangedHtmlSha256": "2751a0273bcf6d77e6a83211b75cce16020cd89aaabcf1446ec2b396fb2ae135"
+    },
+    {
+      "name": "authored-label-live",
+      "unchangedHtmlSha256": "a32bf15d9b149906e228deb683d23a732eadaa2de7216bddda7fe4fcbbf85fec"
+    },
+    {
+      "name": "authored-label-unknown",
+      "unchangedHtmlSha256": "08f1af78c102898319420220dff57c409dab1192e062372d22c83d66439dccb3"
+    },
+    {
+      "name": "all-off",
+      "unchangedHtmlSha256": "5e808e830c533164920e000f3a48ce6b112ebdcc6b96ba572df94808c4bbcee6"
+    },
+    {
+      "name": "empty",
+      "unchangedHtmlSha256": "a5763408a2d164e65f7ba78bada53e2ebca779d88166282e3d1a7e34d6584038"
+    }
+  ]
+}

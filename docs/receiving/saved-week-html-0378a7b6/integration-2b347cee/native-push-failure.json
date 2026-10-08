@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-08T18:44:00Z",
+  "command": "git push -u origin estate/saved-week-html-integrate-0378a7b6",
+  "nativeHead": "0a23dcc6689bef90df9009b26ea5fa495937454b",
+  "outcome": "No source branch published; failed before authentication.",
+  "errors": [
+    "Cannot prompt because user interactivity has been disabled.",
+    "could not read Username for 'https://github.com': terminal prompts disabled"
+  ],
+  "credentialInspectionOrRepair": false,
+  "publication": "Existing connected GitHub source tools publish exact native tree; no credential retrieval or auth repair."
+}

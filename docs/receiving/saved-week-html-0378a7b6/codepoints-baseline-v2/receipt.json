@@ -1,0 +1,123 @@
+{
+  "phase": "baseline",
+  "sourceHashes": {
+    "static/week_report.mjs": "83f4e984da53412203d6b7c130da047dd04b4ce1602e520cb431db6434bbf88f",
+    "tools/saved_week_to_html.mjs": "1bda236e85c515d3680bbf6c56d6e49bb156a8840635de1571307d131de148d7",
+    "static/week_file.mjs": "8e49cbe39cf7157fe8d7884b52fbd93c2835e4a2a8d91e884736c3c535d755d9",
+    "static/week_plan.mjs": "bcf24640beb171c6962a2a5eeb2d2a9113c3883c61c1477cddd2c76ff65a96a5"
+  },
+  "cases": [
+    {
+      "name": "carriage-return",
+      "codecAdmitted": true,
+      "sourceUnits": [
+        102,
+        105,
+        114,
+        115,
+        116,
+        13,
+        115,
+        101,
+        99,
+        111,
+        110,
+        100
+      ],
+      "exit": 0,
+      "stderr": "",
+      "inputSha256": "a84669a9b01b2ac3c4d8f0cb8e66089aca99abd3caffec10bb9fce66b5cdae3a",
+      "receivedUnits": [
+        102,
+        105,
+        114,
+        115,
+        116,
+        10,
+        115,
+        101,
+        99,
+        111,
+        110,
+        100
+      ],
+      "exact": false,
+      "htmlSha256": "bec4e0299a54ffa65359706796e3991c77d7bfb3879ca3abbeb3436bf3362c0b"
+    },
+    {
+      "name": "nul-character",
+      "codecAdmitted": true,
+      "sourceUnits": [
+        102,
+        105,
+        114,
+        115,
+        116,
+        0,
+        115,
+        101,
+        99,
+        111,
+        110,
+        100
+      ],
+      "exit": 0,
+      "stderr": "",
+      "inputSha256": "654dab936a3716f91b81f0cbd6a8e6233b0d12af871f3026fdf10da6bc3abf5d",
+      "receivedUnits": [
+        102,
+        105,
+        114,
+        115,
+        116,
+        115,
+        101,
+        99,
+        111,
+        110,
+        100
+      ],
+      "exact": false,
+      "htmlSha256": "78775ebbfcb6196e137cc62f142947035014bda814bc3fd7528bba51fb05111a"
+    },
+    {
+      "name": "lone-surrogate",
+      "codecAdmitted": true,
+      "sourceUnits": [
+        102,
+        105,
+        114,
+        115,
+        116,
+        55296,
+        115,
+        101,
+        99,
+        111,
+        110,
+        100
+      ],
+      "exit": 0,
+      "stderr": "",
+      "inputSha256": "a7f7d5593bc619ec70a178e3ab7998fe354c71db5076b9640f5fc3dd54ce0fe5",
+      "receivedUnits": [
+        102,
+        105,
+        114,
+        115,
+        116,
+        65533,
+        115,
+        101,
+        99,
+        111,
+        110,
+        100
+      ],
+      "exact": false,
+      "htmlSha256": "d53ac7b1e5245905bbf7d90a483bda6cb0ddf39342062208887e5213d50bf094"
+    }
+  ],
+  "chrome": "154.0.8037.98",
+  "status": "passed"
+}

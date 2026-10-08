@@ -1,0 +1,230 @@
+{
+  "status": "passed",
+  "when": "2026-10-08T17:22:28.875Z",
+  "node": "v24.21.0",
+  "chrome": "154.0.8037.98",
+  "offline": true,
+  "groups": [
+    {
+      "label": "actual native producer -> saved-week converter -> new CLI -> offline browser",
+      "pass": true,
+      "picks": 5
+    },
+    {
+      "label": "cross-year arrangement and repeated venues retain distinct literal occurrences",
+      "pass": true
+    },
+    {
+      "label": "390px reader fits the viewport and keeps source text",
+      "pass": true
+    },
+    {
+      "label": "print media retains seven dates and omitted occurrences in an actual PDF",
+      "pass": true
+    },
+    {
+      "label": "authored live marker stays a saved-source label",
+      "pass": true
+    },
+    {
+      "label": "authored unknown marker stays a saved-source label",
+      "pass": true
+    },
+    {
+      "label": "all-omitted arrangement has seven open days and complete omitted source",
+      "pass": true
+    },
+    {
+      "label": "empty native-shape response stays empty and keeps its original note",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "unexpectedRequests": [],
+  "sourceHashes": {
+    "static/week_report.mjs": "83f4e984da53412203d6b7c130da047dd04b4ce1602e520cb431db6434bbf88f",
+    "tools/saved_week_to_html.mjs": "1bda236e85c515d3680bbf6c56d6e49bb156a8840635de1571307d131de148d7",
+    "static/week_file.mjs": "8e49cbe39cf7157fe8d7884b52fbd93c2835e4a2a8d91e884736c3c535d755d9",
+    "static/week_plan.mjs": "bcf24640beb171c6962a2a5eeb2d2a9113c3883c61c1477cddd2c76ff65a96a5"
+  },
+  "inputs": {
+    "native-mei": {
+      "sha256": "006b8be543c60a0b645326fc6d6a54bc30809ef8ec46dc76a24e4f5d3e793160",
+      "bytes": 9581,
+      "receipt": {
+        "format": "tastetable.week-report.v1",
+        "input": "C:\\Users\\minec\\hamon-0378a7b6-tastetable\\docs\\receiving\\saved-week-html-0378a7b6\\browser-v2\\native-mei.json",
+        "inputSha256": "006b8be543c60a0b645326fc6d6a54bc30809ef8ec46dc76a24e4f5d3e793160",
+        "output": "C:\\Users\\minec\\hamon-0378a7b6-tastetable\\docs\\receiving\\saved-week-html-0378a7b6\\browser-v2\\native-mei.html",
+        "weekStart": "2026-10-05",
+        "sourceMode": "mock",
+        "picks": 5,
+        "scheduled": 5,
+        "omitted": 0
+      }
+    },
+    "edited-literal-duplicates": {
+      "sha256": "71963bc5d8cfcc09cad226692b53642259a969556c2138a7c5d69eea5c019106",
+      "bytes": 9737,
+      "receipt": {
+        "format": "tastetable.week-report.v1",
+        "input": "C:\\Users\\minec\\hamon-0378a7b6-tastetable\\docs\\receiving\\saved-week-html-0378a7b6\\browser-v2\\edited-literal-duplicates.json",
+        "inputSha256": "71963bc5d8cfcc09cad226692b53642259a969556c2138a7c5d69eea5c019106",
+        "output": "C:\\Users\\minec\\hamon-0378a7b6-tastetable\\docs\\receiving\\saved-week-html-0378a7b6\\browser-v2\\edited-literal-duplicates.html",
+        "weekStart": "2026-12-28",
+        "sourceMode": "mock",
+        "picks": 5,
+        "scheduled": 4,
+        "omitted": 1
+      }
+    },
+    "authored-label-live": {
+      "sha256": "7337e6bba8177cc091d33a5f77cc62349dd4858377b2fd980cbcdab84e2c1ebd",
+      "bytes": 9582,
+      "receipt": {
+        "format": "tastetable.week-report.v1",
+        "input": "C:\\Users\\minec\\hamon-0378a7b6-tastetable\\docs\\receiving\\saved-week-html-0378a7b6\\browser-v2\\authored-label-live.json",
+        "inputSha256": "7337e6bba8177cc091d33a5f77cc62349dd4858377b2fd980cbcdab84e2c1ebd",
+        "output": "C:\\Users\\minec\\hamon-0378a7b6-tastetable\\docs\\receiving\\saved-week-html-0378a7b6\\browser-v2\\authored-label-live.html",
+        "weekStart": "2026-10-05",
+        "sourceMode": "live",
+        "picks": 5,
+        "scheduled": 5,
+        "omitted": 0
+      }
+    },
+    "authored-label-unknown": {
+      "sha256": "8676014c8f077f3ec0ebc8e3471c168c00b51e04c6f15fc74af96d5fb34aae35",
+      "bytes": 9563,
+      "receipt": {
+        "format": "tastetable.week-report.v1",
+        "input": "C:\\Users\\minec\\hamon-0378a7b6-tastetable\\docs\\receiving\\saved-week-html-0378a7b6\\browser-v2\\authored-label-unknown.json",
+        "inputSha256": "8676014c8f077f3ec0ebc8e3471c168c00b51e04c6f15fc74af96d5fb34aae35",
+        "output": "C:\\Users\\minec\\hamon-0378a7b6-tastetable\\docs\\receiving\\saved-week-html-0378a7b6\\browser-v2\\authored-label-unknown.html",
+        "weekStart": "2026-10-05",
+        "sourceMode": "unknown",
+        "picks": 5,
+        "scheduled": 5,
+        "omitted": 0
+      }
+    },
+    "all-off": {
+      "sha256": "9a84c4c4c053a5953dfff6593a9567f015e185a68b4a835e12b85d79f608c7d8",
+      "bytes": 9556,
+      "receipt": {
+        "format": "tastetable.week-report.v1",
+        "input": "C:\\Users\\minec\\hamon-0378a7b6-tastetable\\docs\\receiving\\saved-week-html-0378a7b6\\browser-v2\\all-off.json",
+        "inputSha256": "9a84c4c4c053a5953dfff6593a9567f015e185a68b4a835e12b85d79f608c7d8",
+        "output": "C:\\Users\\minec\\hamon-0378a7b6-tastetable\\docs\\receiving\\saved-week-html-0378a7b6\\browser-v2\\all-off.html",
+        "weekStart": "2026-10-05",
+        "sourceMode": "mock",
+        "picks": 5,
+        "scheduled": 0,
+        "omitted": 5
+      }
+    },
+    "empty": {
+      "sha256": "08df55a03f3245a6263e0b1ce2dd2a29aad76814bf93dfb2f76f4f0bf0a5e553",
+      "bytes": 7514,
+      "receipt": {
+        "format": "tastetable.week-report.v1",
+        "input": "C:\\Users\\minec\\hamon-0378a7b6-tastetable\\docs\\receiving\\saved-week-html-0378a7b6\\browser-v2\\empty.json",
+        "inputSha256": "08df55a03f3245a6263e0b1ce2dd2a29aad76814bf93dfb2f76f4f0bf0a5e553",
+        "output": "C:\\Users\\minec\\hamon-0378a7b6-tastetable\\docs\\receiving\\saved-week-html-0378a7b6\\browser-v2\\empty.html",
+        "weekStart": "2026-10-05",
+        "sourceMode": "mock",
+        "picks": 0,
+        "scheduled": 0,
+        "omitted": 0
+      }
+    }
+  },
+  "reports": {
+    "native-mei": {
+      "sha256": "c13722d1e244f71cb2dd0f64937ee81dc29c7a4df4d877311ab9e6cb9a354e7a",
+      "path": "C:\\Users\\minec\\hamon-0378a7b6-tastetable\\docs\\receiving\\saved-week-html-0378a7b6\\browser-v2\\native-mei.html"
+    },
+    "edited-literal-duplicates": {
+      "sha256": "2751a0273bcf6d77e6a83211b75cce16020cd89aaabcf1446ec2b396fb2ae135",
+      "path": "C:\\Users\\minec\\hamon-0378a7b6-tastetable\\docs\\receiving\\saved-week-html-0378a7b6\\browser-v2\\edited-literal-duplicates.html"
+    },
+    "authored-label-live": {
+      "sha256": "a32bf15d9b149906e228deb683d23a732eadaa2de7216bddda7fe4fcbbf85fec",
+      "path": "C:\\Users\\minec\\hamon-0378a7b6-tastetable\\docs\\receiving\\saved-week-html-0378a7b6\\browser-v2\\authored-label-live.html"
+    },
+    "authored-label-unknown": {
+      "sha256": "08f1af78c102898319420220dff57c409dab1192e062372d22c83d66439dccb3",
+      "path": "C:\\Users\\minec\\hamon-0378a7b6-tastetable\\docs\\receiving\\saved-week-html-0378a7b6\\browser-v2\\authored-label-unknown.html"
+    },
+    "all-off": {
+      "sha256": "5e808e830c533164920e000f3a48ce6b112ebdcc6b96ba572df94808c4bbcee6",
+      "path": "C:\\Users\\minec\\hamon-0378a7b6-tastetable\\docs\\receiving\\saved-week-html-0378a7b6\\browser-v2\\all-off.html"
+    },
+    "empty": {
+      "sha256": "a5763408a2d164e65f7ba78bada53e2ebca779d88166282e3d1a7e34d6584038",
+      "path": "C:\\Users\\minec\\hamon-0378a7b6-tastetable\\docs\\receiving\\saved-week-html-0378a7b6\\browser-v2\\empty.html"
+    }
+  },
+  "artifacts": {
+    "all-off.html": {
+      "bytes": 9143,
+      "sha256": "5e808e830c533164920e000f3a48ce6b112ebdcc6b96ba572df94808c4bbcee6"
+    },
+    "all-off.json": {
+      "bytes": 9556,
+      "sha256": "9a84c4c4c053a5953dfff6593a9567f015e185a68b4a835e12b85d79f608c7d8"
+    },
+    "authored-label-live.html": {
+      "bytes": 9051,
+      "sha256": "a32bf15d9b149906e228deb683d23a732eadaa2de7216bddda7fe4fcbbf85fec"
+    },
+    "authored-label-live.json": {
+      "bytes": 9582,
+      "sha256": "7337e6bba8177cc091d33a5f77cc62349dd4858377b2fd980cbcdab84e2c1ebd"
+    },
+    "authored-label-unknown.html": {
+      "bytes": 9012,
+      "sha256": "08f1af78c102898319420220dff57c409dab1192e062372d22c83d66439dccb3"
+    },
+    "authored-label-unknown.json": {
+      "bytes": 9563,
+      "sha256": "8676014c8f077f3ec0ebc8e3471c168c00b51e04c6f15fc74af96d5fb34aae35"
+    },
+    "desktop.png": {
+      "bytes": 211687,
+      "sha256": "bb759b2be4afa012de72d474f6af22035664ad8a3a64996f4a505ee9681f12d0"
+    },
+    "edited-literal-duplicates.html": {
+      "bytes": 9313,
+      "sha256": "2751a0273bcf6d77e6a83211b75cce16020cd89aaabcf1446ec2b396fb2ae135"
+    },
+    "edited-literal-duplicates.json": {
+      "bytes": 9737,
+      "sha256": "71963bc5d8cfcc09cad226692b53642259a969556c2138a7c5d69eea5c019106"
+    },
+    "empty.html": {
+      "bytes": 6523,
+      "sha256": "a5763408a2d164e65f7ba78bada53e2ebca779d88166282e3d1a7e34d6584038"
+    },
+    "empty.json": {
+      "bytes": 7514,
+      "sha256": "08df55a03f3245a6263e0b1ce2dd2a29aad76814bf93dfb2f76f4f0bf0a5e553"
+    },
+    "handoff.pdf": {
+      "bytes": 101407,
+      "sha256": "1a9f5a6c77f8b85fd07c4c9678d4bf007cc87c78ac949d433a65393b079392ae"
+    },
+    "native-mei.html": {
+      "bytes": 9004,
+      "sha256": "c13722d1e244f71cb2dd0f64937ee81dc29c7a4df4d877311ab9e6cb9a354e7a"
+    },
+    "native-mei.json": {
+      "bytes": 9581,
+      "sha256": "006b8be543c60a0b645326fc6d6a54bc30809ef8ec46dc76a24e4f5d3e793160"
+    },
+    "phone.png": {
+      "bytes": 209659,
+      "sha256": "b986009432abbf973082d026e2a6faaf9ace69c65edeba4e52a6a55b5e4e8351"
+    }
+  }
+}

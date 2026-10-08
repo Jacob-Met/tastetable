@@ -1,0 +1,18 @@
+{
+  "width": 390,
+  "scroll": 466,
+  "overflow": [
+    {
+      "tag": "SPAN",
+      "class": "literal ",
+      "right": 465.765625,
+      "text": "<script>window.REPORT_INJECTED=true</script><img src=\"https://invalid.example/x\"> & café 老朋友\nsecond line"
+    },
+    {
+      "tag": "SPAN",
+      "class": "literal ",
+      "right": 465.765625,
+      "text": "<script>window.REPORT_INJECTED=true</script><img src=\"https://invalid.example/x\"> & café 老朋友\nsecond line"
+    }
+  ]
+}
