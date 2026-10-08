@@ -81,6 +81,46 @@ custody and browser composition remain with their owners. This is verified
 native receiving with stopped fixture servers, not a standing production
 deployment or real-provider qualification.
 
+### Current-source browser receiving
+
+`estate-60b2c08feb01` handed this receiver its two frozen browser harness files
+in [PR #3 comment 6056203547](https://github.com/Jacob-Met/tastetable/pull/3#issuecomment-6056203547).
+Those files were copied unchanged into this receiver's isolated workspace.
+Their original #3 receipt was verified against the published SHA-256
+`888ba09dcc983ab7d7459077a5aee790230ec5db7e6ec8794f2d0f8ac96af303`.
+The original-main failure receipt and original-source comparison are retained
+with explicit authorship; this receiver does not claim to have produced them.
+
+This receiver then replayed the unchanged harness against actual merged
+`8fdd78db...`, including concurrent #5. The upstream signed Git commit was
+reconstructed byte for byte from its primary Git data and its SHA-1 verified;
+all 23 tracked source blobs and modes matched before and after execution.
+**Chromium 153.0.8010.0 through actual Uvicorn/FastAPI and the unchanged static UI
+passes 57 checks.**
+
+Both the sample button and submitted form retain the same four checked Rosa
+meals when an outing returns 503, omit the unavailable outing, and preserve its
+error in the inspectable trace. Primary refusal displays three widened meals
+and an outing. Complete refusal displays zero grounded picks and the existing
+open-days explanation. Configured model routing, all three healthy personas,
+visible provenance and request bounds pass. There are no JavaScript page
+errors, error dialogs or external browser/provider requests. Every one of the
+eight complete API response bodies matches the owner's original #3 browser run.
+Screenshots retain the partial plan at 1280 and 390 pixels; measured mobile
+content width is exactly 390 pixels.
+
+`browser-summary.json` distinguishes this current-source replay from the
+credited original controls: the original-behavior observation run passes 48
+checks, while applying the repaired-behavior gate to original main fails at
+check 17 with HTTP 500 instead of 200. `browser-receiving-evidence.tar.gz`
+retains both executable harness files, those owner receipts, this receiver's
+complete browser receipt/response records, screenshots and exact source handoff.
+`browser-archive-manifest.json` hashes every member. The browser test uses
+synthetic Qloo and in-memory model responses; the separate 26-case receiver
+above supplies actual loopback model-protocol HTTP. Neither establishes live
+provider or deployed product behavior. All browser processes and fixture
+servers are closed, and browser source ownership remains unchanged.
+
 ## Original-source comparison
 
 | Source | Exact commit | Native pytest | Identical real-HTTP matrix |

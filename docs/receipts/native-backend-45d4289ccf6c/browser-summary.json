@@ -1,0 +1,146 @@
+{
+  "source_commit": "8fdd78dbd1bd7e72385b2f5bd684e02b0971fa14",
+  "source_tree": "e1bf3ec58b743e2b43d52ff79d52daf0116ef264",
+  "all_23_source_leaves_exact_after_browser": true,
+  "browser": "153.0.8010.0",
+  "native_app": "actual Uvicorn/FastAPI and unchanged static UI",
+  "checks": 57,
+  "passed": true,
+  "scenarios": [
+    {
+      "scenario": "healthy",
+      "action": "sample",
+      "persona": "rosa",
+      "status": 200,
+      "meals": 4,
+      "outing": "FIX-V-03",
+      "errors": [],
+      "viewport": null
+    },
+    {
+      "scenario": "healthy",
+      "action": "sample",
+      "persona": "harold",
+      "status": 200,
+      "meals": 4,
+      "outing": "FIX-V-02",
+      "errors": [],
+      "viewport": null
+    },
+    {
+      "scenario": "healthy",
+      "action": "sample",
+      "persona": "mei",
+      "status": 200,
+      "meals": 4,
+      "outing": "FIX-V-02",
+      "errors": [],
+      "viewport": null
+    },
+    {
+      "scenario": "outing_503",
+      "action": "sample",
+      "persona": "rosa",
+      "status": 200,
+      "meals": 4,
+      "outing": null,
+      "errors": [
+        "QlooError: Qloo HTTP 503: receiving fixture refusal"
+      ],
+      "viewport": {
+        "width": 1280,
+        "height": 900,
+        "content": 1280
+      }
+    },
+    {
+      "scenario": "outing_503",
+      "action": "form",
+      "persona": "rosa",
+      "status": 200,
+      "meals": 4,
+      "outing": null,
+      "errors": [
+        "QlooError: Qloo HTTP 503: receiving fixture refusal"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "content": 390
+      }
+    },
+    {
+      "scenario": "primary_429",
+      "action": "sample",
+      "persona": "rosa",
+      "status": 200,
+      "meals": 3,
+      "outing": "FIX-V-03",
+      "errors": [
+        "QlooError: Qloo HTTP 429: receiving fixture refusal"
+      ],
+      "viewport": null
+    },
+    {
+      "scenario": "all_429",
+      "action": "sample",
+      "persona": "rosa",
+      "status": 200,
+      "meals": 0,
+      "outing": null,
+      "errors": [
+        "QlooError: Qloo HTTP 429: receiving fixture refusal",
+        "QlooError: Qloo HTTP 429: receiving fixture refusal",
+        "QlooError: Qloo HTTP 429: receiving fixture refusal"
+      ],
+      "viewport": null
+    },
+    {
+      "scenario": "configured",
+      "action": "sample",
+      "persona": "rosa",
+      "status": 200,
+      "meals": 4,
+      "outing": "FIX-V-03",
+      "errors": [],
+      "viewport": null
+    }
+  ],
+  "no_page_errors_dialogs_or_external_requests": true,
+  "harness_owner": "estate-60b2c08feb01",
+  "unchanged_harness_replayed_by": "estate-45d4289ccf6c/github_receiving",
+  "preserved_owner_receipts": [
+    {
+      "source": "/workspace/scratch/60b2c08feb01/tastetable-evidence/candidate-browser/receipt.json",
+      "sha256": "888ba09dcc983ab7d7459077a5aee790230ec5db7e6ec8794f2d0f8ac96af303",
+      "commit": "7002a16a3b46c7318826ce9975fd812096925f42",
+      "expected": "fixed",
+      "passed": true,
+      "checks": 57,
+      "failure": null
+    },
+    {
+      "source": "/workspace/scratch/60b2c08feb01/tastetable-evidence/original-browser/receipt.json",
+      "sha256": "f25fdd6b652ffa2a0c2b45ee73f48275bf0aa4cd55800a2c9e7b407c6f6b7625",
+      "commit": "d1c7a4e39cfdc0bb5b9fe026bc9660b75b456e81",
+      "expected": "original",
+      "passed": true,
+      "checks": 48,
+      "failure": null
+    },
+    {
+      "source": "/workspace/scratch/60b2c08feb01/tastetable-evidence/original-fixed-counterfactual/receipt.json",
+      "sha256": "abdd6a6861274d63f2aafa046376817c38f9bdb3676b0b8178d66b9428f6f6b2",
+      "commit": "d1c7a4e39cfdc0bb5b9fe026bc9660b75b456e81",
+      "expected": "fixed",
+      "passed": false,
+      "checks": 17,
+      "failure": "Expected values to be strictly equal:\n\n500 !== 200\n"
+    }
+  ],
+  "limits": [
+    "Fixture provider and in-memory model responses, not live providers.",
+    "Current merged source replay is ours; original negative and original PR3 browser receipts were produced by the credited owner.",
+    "No browser source edit or persistent service."
+  ]
+}
