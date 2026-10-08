@@ -1,0 +1,85 @@
+{
+  "schema": "tastetable.actual-output-envelope.v1",
+  "receipt": {
+    "schema": "tastetable.offline-week-finite-qualification.v1",
+    "started_at": "2026-10-08T14:24:27.856027+00:00",
+    "head": "a87380052b8dd815707e63f809f954876fdfb482",
+    "commands": [
+      {
+        "command": [
+          "/opt/homebrew/bin/node",
+          "--test",
+          "web-demo-offline/tests/catalogue.test.mjs",
+          "web-demo-offline/tests/saved_week.test.mjs"
+        ],
+        "exit_code": 0,
+        "log": "/tmp/tastetable-offline-81ba1ed0179c/weekly-files-finite-qualification/command-0.log",
+        "log_sha256": "c50e456f292cdd6fa452837a1dbae993caf24e95e30569b24f6b95c0c55741bd"
+      },
+      {
+        "command": [
+          "python3",
+          "web-demo-offline/tools/receive_static.py",
+          "web-demo-offline",
+          "/tmp/tastetable-offline-81ba1ed0179c/weekly-files-installed-finite",
+          "/tmp/tastetable-offline-81ba1ed0179c/weekly-files-static-finite"
+        ],
+        "exit_code": 0,
+        "log": "/tmp/tastetable-offline-81ba1ed0179c/weekly-files-finite-qualification/command-1.log",
+        "log_sha256": "cdb43836985bf34d6259c02d89f282eb4741e868b6911aa5915bc3e88588d95e"
+      },
+      {
+        "command": [
+          "/opt/homebrew/bin/node",
+          "web-demo-offline/tools/check_saved_week_browser.mjs",
+          "/tmp/tastetable-offline-81ba1ed0179c/weekly-files-installed-finite",
+          "/tmp/tastetable-offline-81ba1ed0179c/weekly-files-browser-finite"
+        ],
+        "exit_code": 0,
+        "log": "/tmp/tastetable-offline-81ba1ed0179c/weekly-files-finite-qualification/command-2.log",
+        "log_sha256": "20d997b34ef45c52026d03a7f832dd5caf081002c4857edea43ba71e20ddb52f"
+      }
+    ],
+    "files": {
+      "web-demo-offline/saved_week.mjs": "52530c5ee1913c297382283bc600a0e548c0c839bffd06d7c6807a2a1cc3fda1",
+      "web-demo-offline/tools/check_saved_week_browser.mjs": "0dbcba16e6a848ee81e278d9c4df0845bf150dbe18edbd0419e94b16eb092ce1",
+      "web-demo-offline/README.md": "790dfdd53e74ae3c2c6d3ea56281e814d155f7aa3fb8837b1f859d8ceafce563"
+    },
+    "test_sha256": "5a088391340992f4a41e8a813294d321d1e8c585cdc1b0bb2c087131c371781a",
+    "complete": true,
+    "finished_at": "2026-10-08T14:24:35.254690+00:00"
+  },
+  "outputs": [
+    {
+      "command": [
+        "/opt/homebrew/bin/node",
+        "--test",
+        "web-demo-offline/tests/catalogue.test.mjs",
+        "web-demo-offline/tests/saved_week.test.mjs"
+      ],
+      "sha256": "c50e456f292cdd6fa452837a1dbae993caf24e95e30569b24f6b95c0c55741bd",
+      "text": "\u2714 all 24 supported selections retain the exact native response and download (10.29125ms)\n\u2714 constraint order is canonical; duplicate, foreign and malformed choices are refused (0.275208ms)\n\u2714 loaded records are immutable and weekly edits cannot change source responses (1.208542ms)\n\u2714 catalogue refuses wrong schema before rendering (1.770125ms)\n\u2714 catalogue refuses wrong source before rendering (1.42ms)\n\u2714 catalogue refuses missing record before rendering (2.445916ms)\n\u2714 catalogue refuses duplicate record before rendering (2.109416ms)\n\u2714 catalogue refuses wrong profile before rendering (1.563917ms)\n\u2714 catalogue refuses false live source before rendering (1.802167ms)\n\u2714 catalogue refuses stale constraints before rendering (1.609375ms)\n\u2714 catalogue refuses malformed pick before rendering (1.748625ms)\n\u2714 catalogue refuses missing native trace before rendering (1.770541ms)\n\u2714 the strict Mei recording keeps its actual missing meal and explicit note (0.320042ms)\n\u2714 calendar year/leap boundaries preserve the selected recorded identities (0.273042ms)\n\u2714 shared saved-week codec and organizer retain their exact upstream Git blobs (1.173833ms)\n\u2714 all 24 native records round-trip with date, co-located days, omissions and complete source (76.081667ms)\n\u2714 all omitted weeks and leap/year boundaries retain the accepted organizer semantics (10.204209ms)\n\u2714 shared-codec files are admitted with canonical complete inputs and a retained calendar identity (2.879833ms)\n\u2714 reordered JSON object keys open and can be saved again without weakening array/field identity (3.497542ms)\n\u2714 any changed explanation, trace, model/source flag, comparison, or extra response field is refused (20.603458ms)\n\u2714 profile, city, taste ordering, selected constraints and extra input fields remain bound (13.086916ms)\n\u2714 a missing or ambiguous catalogue identity cannot become an accepted saved week (3.338291ms)\n\u2714 unknown format, invalid dates/timestamps, incomplete or invented assignments are refused by the original codec (3.511333ms)\n\u2714 unsafe numeric/markup substitutions never reach the renderer (2.961083ms)\n\u2714 UTF-8 and BOM files open while malformed UTF-8 is refused before JSON (8.419792ms)\n\u2714 advertised and actual 128 KiB limits both apply; an exact-boundary JSON file is readable (3.074875ms)\n\u2714 read rejection propagates without changing the previously accepted immutable state or catalogue (0.375042ms)\n\u2714 nonfinite JSON numbers cannot compare equal to actual recorded nullable fields (4.16575ms)\n\u2139 tests 28\n\u2139 suites 0\n\u2139 pass 28\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 258.024625\n"
+    },
+    {
+      "command": [
+        "python3",
+        "web-demo-offline/tools/receive_static.py",
+        "web-demo-offline",
+        "/tmp/tastetable-offline-81ba1ed0179c/weekly-files-installed-finite",
+        "/tmp/tastetable-offline-81ba1ed0179c/weekly-files-static-finite"
+      ],
+      "sha256": "cdb43836985bf34d6259c02d89f282eb4741e868b6911aa5915bc3e88588d95e",
+      "text": "{\"complete\": true, \"files\": 38, \"http_readbacks\": 76, \"rollback_http_status\": 404, \"target\": \"/private/tmp/tastetable-offline-81ba1ed0179c/weekly-files-installed-finite\"}\n"
+    },
+    {
+      "command": [
+        "/opt/homebrew/bin/node",
+        "web-demo-offline/tools/check_saved_week_browser.mjs",
+        "/tmp/tastetable-offline-81ba1ed0179c/weekly-files-installed-finite",
+        "/tmp/tastetable-offline-81ba1ed0179c/weekly-files-browser-finite"
+      ],
+      "sha256": "20d997b34ef45c52026d03a7f832dd5caf081002c4857edea43ba71e20ddb52f",
+      "text": "{\"complete\":true,\"checks\":32,\"downloads\":6,\"page_errors\":0,\"external_requests\":0,\"receipt\":\"/tmp/tastetable-offline-81ba1ed0179c/weekly-files-browser-finite/receipt.json\"}\n"
+    }
+  ]
+}

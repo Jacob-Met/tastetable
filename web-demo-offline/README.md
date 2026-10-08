@@ -1,8 +1,8 @@
 # TasteTable Offline Studio
 
-A portable static version of the current TasteTable organizer, driven by **24 finite native recordings**: three existing fictional taste profiles × all eight combinations of the existing soft-food, low-sodium and wheelchair flags.
+A portable static version of the TasteTable organizer, driven by **24 finite native recordings**: three existing fictional taste profiles × all eight combinations of the existing soft-food, low-sodium and wheelchair flags.
 
-Open a profile and constraint combination, inspect its recorded recommendation and explanations, and arrange the suggested picks into a dated week. Move or omit a pick, restore its suggested day, and print your current arrangement. **Download source record** saves the exact original native scenario, response, verdicts and fixture transport trace; schedule edits belong to the printed arrangement.
+Open a profile and constraint combination, inspect its recorded recommendation and explanations, and arrange the suggested picks into a dated week. Move or omit a pick, restore its suggested day, and print your current arrangement. Use **Save week** to keep that arrangement in a file, then **Open saved week** to preview and restore it. **Download source record** saves the exact original native scenario, response, verdicts and fixture transport trace; schedule edits belong to the printed arrangement and your separate saved-week file.
 
 This page selects previously recorded outputs. It does **not** run fresh backend planning, query Qloo, call a model, use account credentials or send form information to a server. The only requests are static files. Tastes are fixed to the chosen fictional profile; the interface accepts no personal details.
 
@@ -86,3 +86,25 @@ python3 web-demo-offline/tools/receive_static.py \
 The receiver refuses pre-existing target, `.rolled-back` or receipt paths. It copies only the explicit static runtime and data files, verifies each through HTTP, moves its own target to `.rolled-back`, verifies HTTP 404, restores exactly the same bytes and verifies them again. It leaves both owned copies for inspection and closes its server. To use the final artifact, serve `/tmp/tastetable-installed-new` with the run command above. A later manual rollback can move that owned installation aside; it has no shared service or configuration to undo.
 
 Source, native recordings, receiving logs and independent review are retained in this contribution's evidence packet. Repository integration and a native static installation do not imply a public deployment.
+
+## Save and reopen an arranged week
+
+Use **Save week** after choosing a date and scheduled days. The browser prepares an explicit JSON file in the existing `tastetable.saved-week.v1` format. The file includes the full original response and taste inputs, the Monday of the arranged week, every scheduled or omitted pick, and the original accepted/saved timestamps. The unchanged **Download source record** still returns the native record without your arrangement.
+
+Use **Open saved week** to choose that file. The studio validates it and shows its profile, constraints, saved time, scheduled days and omitted picks before **Replace displayed week** changes anything. Cancelled, unreadable, oversized or nonmatching files leave the displayed draft in place. A new file, cancellation or a profile, constraint, date, day or reset edit retires an unfinished read and any previous preview. There is no automatic browser storage, upload or new backend planning.
+
+The existing shared `static/week_file.mjs` is copied unchanged. [week-file-source.json](week-file-source.json) records its separate current-source provenance; the original recordings retain their earlier source pin. The offline admission module requires the complete saved response and original inputs to match exactly one of the 24 bundled records. Object key order can vary; array order, values and all fields must match. Overflowing JSON numbers are refused before comparison can normalize them to null. Files from other recorded versions or live responses are refused without replacing the draft. State is rebuilt from the canonical record before applying saved day choices, so reopening and saving again preserves source identity. Existing valid calendar identities are retained, but the offline studio does not create one or offer a calendar action.
+
+Only UTF-8 JSON up to 128 KiB is read; both the advertised and actual byte counts are checked. A saved copy keeps its fictional-recording label and original venue-confirmation reasons on screen and in print. Saving or reopening a week does not confirm current accessibility, dietary suitability or opening hours.
+
+Run the additional native contract and actual-file browser checks:
+
+```sh
+node --test web-demo-offline/tests/saved_week.test.mjs
+TASTETABLE_PLAYWRIGHT_MODULE=/absolute/path/to/playwright/index.mjs \
+TASTETABLE_BROWSER_EXECUTABLE=/absolute/path/to/chrome \
+node web-demo-offline/tools/check_saved_week_browser.mjs \
+  web-demo-offline /tmp/tastetable-saved-week-browser-new
+```
+
+The original backend capture and its 24 raw JSON recordings are not regenerated by this increment.

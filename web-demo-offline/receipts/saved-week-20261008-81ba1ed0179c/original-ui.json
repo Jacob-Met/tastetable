@@ -1,0 +1,48 @@
+{
+  "schema": "tastetable.offline-week-baseline.v1",
+  "started_at": "2026-10-08T13:37:37.356Z",
+  "source": "/tmp/tastetable-offline-81ba1ed0179c/source/web-demo-offline",
+  "source_sha256": {
+    "index.html": "feea13a997cf9e0b48885df934f5657034e7645b0bc5d9854d0ddfa866dbe898",
+    "app.mjs": "e1c8976816be2fcb4ccacbf914bfabb8ca384f88ac1255d2b74a57c2649cd046",
+    "week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+    "data/catalogue.json": "94be521e658225ff9a23b31834d03d620143943da2329bebefa0397cfa92b2f4"
+  },
+  "checks": [
+    {
+      "name": "Actual arranged date/day/omission is lost after reload",
+      "pass": true,
+      "original": {
+        "date": "2026-10-05",
+        "record": "rosa-7",
+        "day0": "Monday",
+        "day1": "Wednesday"
+      },
+      "reloaded": {
+        "date": "2026-10-05",
+        "day0": "Monday",
+        "day1": "Wednesday"
+      }
+    },
+    {
+      "name": "Actual existing download is exact original record without arrangement",
+      "pass": true
+    },
+    {
+      "name": "No saved-week open/save control exists",
+      "pass": true
+    }
+  ],
+  "downloads": [
+    {
+      "filename": "tastetable-rosa-7-source.json",
+      "bytes": 19223,
+      "sha256": "82a455386cca210d6824620893c0bffb8740b501f444004d7cadc3d8f2e00cfa",
+      "original_record_only": true
+    }
+  ],
+  "external_requests": [],
+  "errors": [],
+  "complete": true,
+  "finished_at": "2026-10-08T13:37:40.139Z"
+}

@@ -1,6 +1,7 @@
 import { DAYS, createWeekPlan, localDate, offWeekPicks, resetDays, setPickDay, setWeek, weekRows } from "./week_plan.mjs";
 
 import { CONSTRAINTS, chooseRecord, validateCatalogue } from "./catalogue.mjs";
+import { readOfflineWeekFile, saveOfflineWeek } from "./saved_week.mjs";
 
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -9,6 +10,24 @@ let personas = [];
 let catalogue = null;
 let currentRecord = null;
 let weekState = null;
+let receivedAt = null;
+let calendarId = null;
+let openedSavedAt = null;
+let openingVersion = 0;
+let pendingWeek = null;
+let downloadUrl = null;
+
+function retireOpening(message = "") {
+  openingVersion += 1;
+  pendingWeek = null;
+  $("#weekPreview").hidden = true;
+  $("#replaceWeek").disabled = true;
+  $("#cancelWeek").hidden = true;
+  $("#weekFile").value = "";
+  $("#fileStatus").textContent = message;
+  $("#fileError").textContent = "";
+  return openingVersion;
+}
 
 const dateLabel = (date) => new Intl.DateTimeFormat(undefined, {
   year: "numeric", month: "short", day: "numeric", timeZone: "UTC",
@@ -54,6 +73,10 @@ function renderWeek(message = "") {
   $("#omittedSection").hidden = !omitted.length;
   $("#weekNotes").innerHTML = (weekState.sourcePlan.notes || []).map((note) => `<p class="why">Original recommendation note: ${esc(note)}</p>`).join("");
   $("#weekStatus").textContent = message;
+  $("#openedCopy").hidden = !openedSavedAt;
+  $("#openedCopy").textContent = openedSavedAt
+    ? `Opened a saved copy dated ${new Date(openedSavedAt).toLocaleString()}. Its recommendations are the original finite recording; any further arrangement changes need another Save week.`
+    : "";
 }
 
 function applyWeekDate() {
@@ -63,12 +86,14 @@ function applyWeekDate() {
     $("#weekDate").removeAttribute("aria-invalid");
     $("#weekError").textContent = "";
     $("#printWeek").disabled = false;
+    $("#saveWeek").disabled = !currentRecord;
     renderWeek();
     return true;
   } catch (error) {
     $("#weekDate").setAttribute("aria-invalid", "true");
     $("#weekError").textContent = error.message;
     $("#printWeek").disabled = true;
+    $("#saveWeek").disabled = true;
     return false;
   }
 }
@@ -80,7 +105,7 @@ async function init() {
   personas = catalogue.profiles;
   $("#mode").textContent = "Offline recording: 3 fictional profiles × 8 constraint combinations. No fresh backend planning or external requests.";
   $("#personaSel").innerHTML = personas.map((p) => `<option value="${esc(p.id)}">${esc(p.label)}</option>`).join("");
-  ["#personaSel", "#sampleBtn", "#constraintGroup", "#showPlan"].forEach((selector) => { $(selector).disabled = false; });
+  ["#personaSel", "#sampleBtn", "#constraintGroup", "#showPlan", "#openWeek"].forEach((selector) => { $(selector).disabled = false; });
   fillForm(personas[0]);
   showRecord(false);
 }
@@ -127,30 +152,134 @@ function selectedConstraints() {
 }
 
 function invalidateSelection(message) {
+  retireOpening();
   $("#results").hidden = true;
+  $("#saveWeek").disabled = true;
+  receivedAt = null;
+  calendarId = null;
+  openedSavedAt = null;
   currentRecord = null;
   weekState = null;
   $("#downloadRecord").removeAttribute("href");
   $("#requestStatus").textContent = message;
 }
 
+function acceptRecord(record, {scroll = true, state = null, originalReceivedAt = new Date().toISOString(),
+  savedAt = null, originalCalendarId = null} = {}) {
+  currentRecord = record;
+  receivedAt = originalReceivedAt;
+  calendarId = originalCalendarId;
+  openedSavedAt = savedAt;
+  if (state) {
+    weekState = state;
+    $("#weekDate").value = state.weekStart;
+  }
+  render(record.response, scroll);
+  if (state) {
+    weekState = state;
+    renderWeek("Saved date, scheduled days and off-week picks restored.");
+  }
+  const profile = personas.find((p) => p.id === record.profile_id);
+  const labels = {soft_foods: "soft foods", low_sodium: "low sodium", wheelchair: "wheelchair access"};
+  $("#recordSummary").textContent = `${profile.label.split(" (fictional)")[0]} · ${record.constraints.length ? record.constraints.map((c) => labels[c]).join(", ") : "no requested constraints"}`;
+  $("#results").dataset.recordKey = record.key;
+  $("#downloadRecord").href = `./data/records/${record.key}.json`;
+  $("#downloadRecord").download = `tastetable-${record.key}-source.json`;
+  $("#requestStatus").textContent = `Loaded native record ${record.key}. Arrange its checked suggestions below.`;
+}
+
 function showRecord(scroll = true) {
+  retireOpening();
   try {
     if (!catalogue) throw new Error("The recorded catalogue has not loaded.");
-    const record = chooseRecord(catalogue, $("#personaSel").value, selectedConstraints());
-    render(record.response, scroll);
-    currentRecord = record;
-    const profile = personas.find((p) => p.id === record.profile_id);
-    const labels = { soft_foods: "soft foods", low_sodium: "low sodium", wheelchair: "wheelchair access" };
-    $("#recordSummary").textContent = `${profile.label.split(" (fictional)")[0]} · ${record.constraints.length ? record.constraints.map((c) => labels[c]).join(", ") : "no requested constraints"}`;
-    $("#results").dataset.recordKey = record.key;
-    $("#downloadRecord").href = `./data/records/${record.key}.json`;
-    $("#downloadRecord").download = `tastetable-${record.key}-source.json`;
-    $("#requestStatus").textContent = `Loaded native record ${record.key}. Arrange its checked suggestions below.`;
+    acceptRecord(chooseRecord(catalogue, $("#personaSel").value, selectedConstraints()), {scroll});
   } catch (error) {
     invalidateSelection(`Could not show a recording: ${error.message}`);
   }
 }
+
+function showWeekPreview(saved) {
+  const profile = personas.find((p) => p.id === saved.record.profile_id);
+  const omitted = offWeekPicks(saved.state);
+  const labels = {soft_foods: "soft foods", low_sodium: "low sodium", wheelchair: "wheelchair access"};
+  $("#previewSummary").textContent = `${profile.label} · ${saved.record.constraints.length ? saved.record.constraints.map((value) => labels[value]).join(", ") : "no requested constraints"}.`;
+  $("#previewWhen").textContent = `Saved ${new Date(saved.savedAt).toLocaleString()}. Week of ${dateLabel(saved.state.weekStart)}: ${saved.state.picks.length - omitted.length} scheduled, ${omitted.length} kept off this week.`;
+  $("#previewDays").innerHTML = weekRows(saved.state).map((row) =>
+    `<li><strong>${row.day}</strong><span>${row.picks.length ? row.picks.map(({pick}) => esc(pick.name)).join(" · ") : "Open day"}</span></li>`).join("");
+  $("#previewOmitted").textContent = omitted.length
+    ? "Kept off this week: " + omitted.map(({pick}) => pick.name).join(" · ") : "No off-week picks.";
+  $("#weekPreview").hidden = false;
+  $("#replaceWeek").disabled = false;
+  $("#cancelWeek").hidden = false;
+  $("#fileStatus").textContent = "The file matches a recording in this catalogue. Review it before replacing your displayed week.";
+  $("#weekPreviewTitle").focus({preventScroll: true});
+  $("#weekPreview").scrollIntoView({block: "nearest", behavior: "auto"});
+}
+
+$("#openWeek").addEventListener("click", () => {
+  retireOpening();
+  $("#weekFile").click();
+});
+$("#weekFile").addEventListener("cancel", () => retireOpening("No saved week was opened."));
+$("#weekFile").addEventListener("change", async () => {
+  const file = $("#weekFile").files[0];
+  const version = retireOpening();
+  if (!file) return;
+  $("#cancelWeek").hidden = false;
+  $("#fileStatus").textContent = "Reading saved week… Your displayed week stays in place.";
+  try {
+    const saved = await readOfflineWeekFile(file, catalogue);
+    if (version !== openingVersion) return;
+    pendingWeek = saved;
+    showWeekPreview(saved);
+  } catch (error) {
+    if (version !== openingVersion) return;
+    $("#cancelWeek").hidden = true;
+    $("#fileStatus").textContent = "";
+    $("#fileError").textContent = "Could not open this week: " + error.message;
+  }
+});
+$("#cancelWeek").addEventListener("click", () => {
+  retireOpening("Opening cancelled. Your displayed week has not changed.");
+  $("#openWeek").focus();
+});
+$("#replaceWeek").addEventListener("click", () => {
+  if (!pendingWeek) return;
+  const saved = pendingWeek;
+  retireOpening();
+  $("#personaSel").value = saved.record.profile_id;
+  fillForm(personas.find((p) => p.id === saved.record.profile_id));
+  $("#form").querySelectorAll("[name=constraints]").forEach((input) => {
+    input.checked = saved.record.constraints.includes(input.value);
+  });
+  acceptRecord(saved.record, {scroll: false, state: saved.state,
+    originalReceivedAt: saved.receivedAt, savedAt: saved.savedAt, originalCalendarId: saved.calendarId});
+  $("#fileStatus").textContent = "Saved week opened. The original recorded recommendation and source download are retained.";
+  $("#weekTitle").focus({preventScroll: true});
+  $("#weekOrganizer").scrollIntoView({block: "start", behavior: "auto"});
+});
+$("#saveWeek").addEventListener("click", () => {
+  retireOpening();
+  if (!currentRecord || !applyWeekDate()) return;
+  try {
+    const saved = saveOfflineWeek(catalogue, currentRecord, weekState, receivedAt, calendarId);
+    if (downloadUrl) URL.revokeObjectURL(downloadUrl);
+    downloadUrl = URL.createObjectURL(new Blob([saved.text], {type: "application/json;charset=utf-8"}));
+    const link = document.createElement("a");
+    link.href = downloadUrl;
+    link.download = saved.filename;
+    link.hidden = true;
+    document.body.append(link);
+    link.click();
+    link.remove();
+    $("#fileStatus").textContent = "Saved-week download ready. Keep the file to reopen this arrangement; further changes need another Save week.";
+  } catch (error) {
+    $("#fileError").textContent = "Could not save this week: " + error.message;
+  }
+});
+window.addEventListener("pagehide", () => {
+  if (downloadUrl) URL.revokeObjectURL(downloadUrl);
+});
 
 $("#sampleBtn").addEventListener("click", () => {
   const persona = personas.find((p) => p.id === $("#personaSel").value);
@@ -176,11 +305,13 @@ $("#form").addEventListener("submit", (event) => {
   showRecord();
 });
 
-$("#weekDate").addEventListener("input", applyWeekDate);
-$("#weekDate").addEventListener("change", applyWeekDate);
+const editWeekDate = () => { retireOpening(); applyWeekDate(); };
+$("#weekDate").addEventListener("input", editWeekDate);
+$("#weekDate").addEventListener("change", editWeekDate);
 $("#weekOrganizer").addEventListener("change", (event) => {
   const select = event.target.closest("select[data-pick-key]");
   if (!select || !weekState) return;
+  retireOpening();
   const key = select.dataset.pickKey;
   const pick = weekState.picks.find((item) => item.key === key);
   weekState = setPickDay(weekState, key, select.value || null);
@@ -189,6 +320,7 @@ $("#weekOrganizer").addEventListener("change", (event) => {
 });
 $("#resetWeek").addEventListener("click", () => {
   if (!weekState) return;
+  retireOpening();
   weekState = resetDays(weekState);
   renderWeek("All picks restored to their suggested days.");
 });

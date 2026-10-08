@@ -48,6 +48,27 @@
     <p id="requestStatus" class="why" role="status" aria-live="polite"></p>
   </section>
 
+  <div class="studio-workspace">
+  <section class="card week-files" aria-labelledby="fileTitle">
+    <div class="week-file-actions">
+      <div><p class="eyebrow">Keep your arrangement</p><h2 id="fileTitle">Saved weeks</h2></div>
+      <button id="openWeek" type="button" aria-describedby="fileHelp" disabled>Open saved week</button>
+      <input id="weekFile" type="file" accept=".json,application/json" aria-label="Choose a saved TasteTable week" hidden>
+    </div>
+    <p id="fileHelp" class="why">Save the displayed week below to keep its date, scheduled days and off-week picks. Reopen that file here and review it before replacing your draft. Files must match one of these 24 recordings; nothing is uploaded or saved automatically.</p>
+    <p id="fileStatus" class="why" role="status" aria-live="polite"></p>
+    <p id="fileError" class="error" role="alert"></p>
+    <section id="weekPreview" class="week-preview" aria-labelledby="weekPreviewTitle" hidden>
+      <h3 id="weekPreviewTitle" tabindex="-1">Preview saved week</h3>
+      <p id="previewSummary"></p>
+      <p id="previewWhen" class="why"></p>
+      <ul id="previewDays" class="preview-days"></ul>
+      <p id="previewOmitted" class="why"></p>
+      <p class="why">This is a saved arrangement of a fictional, recorded recommendation. Replacing the displayed week does not make a new recommendation or confirm venues, food needs or opening hours.</p>
+      <button id="replaceWeek" type="button" class="primary" disabled>Replace displayed week</button>
+    </section>
+    <button id="cancelWeek" type="button" hidden>Cancel opening</button>
+  </section>
   <section id="results" hidden>
     <div class="record-note" aria-labelledby="recordLabel">
       <div><p class="eyebrow" id="recordLabel">02 / Recorded result</p><p id="recordSummary"></p>
@@ -55,18 +76,20 @@
       <a id="downloadRecord" class="button-link" download>Download source record</a>
     </div>
     <section id="weekOrganizer" class="card grounded" aria-labelledby="weekTitle">
-      <h2 id="weekTitle">Your week</h2>
+      <h2 id="weekTitle" tabindex="-1">Your week</h2>
       <p id="weekRange" class="week-range"></p>
       <p id="weekSource" class="mode"></p>
+      <p id="openedCopy" class="why opened-copy" hidden></p>
       <p id="weekConstraints" class="why"></p>
       <div class="week-controls">
         <label>A date in your week
           <input id="weekDate" type="date" aria-describedby="weekHelp weekError">
         </label>
         <button id="resetWeek" type="button">Restore suggested days</button>
+        <button id="saveWeek" type="button" disabled>Save week</button>
         <button id="printWeek" type="button" class="primary">Print week</button>
       </div>
-      <p id="weekHelp" class="why organizer-help">Choose any date to show its Monday–Sunday week. Move checked picks to the days that suit you, or keep a pick off this week. Several picks can share a day. Changes last for this page visit.</p>
+      <p id="weekHelp" class="why organizer-help">Choose any date to show its Monday–Sunday week. Move checked picks to the days that suit you, or keep a pick off this week. Several picks can share a day. Use Save week to keep the arrangement in a file. Page changes are not saved automatically.</p>
       <p id="weekError" class="error" role="alert"></p>
       <p id="weekSummary"></p>
       <p id="weekStatus" class="why organizer-help" role="status" aria-live="polite"></p>
@@ -99,8 +122,9 @@
     <details class="card"><summary>Recorded native tool trace</summary><ol id="trace" class="mono"></ol></details>
     </details>
   </section>
+  </div>
 </main>
-<footer><strong>TasteTable · Offline studio</strong><p>Finite recordings from the existing ScriptedModel and synthetic Qloo fixture. The source record includes its original native response and transport trace; schedule edits appear in Print week. No live recommendation, reservation or model call is made.</p><p>MIT licensed · <a href="./README.md">Run and recapture</a> · <a href="./source-pin.json">Pinned source</a></p></footer>
+<footer><strong>TasteTable · Offline studio</strong><p>Finite recordings from the existing ScriptedModel and synthetic Qloo fixture. The source record includes its original native response and transport trace; schedule edits appear in Print week and your explicit saved-week file. No live recommendation, reservation or model call is made.</p><p>MIT licensed · <a href="./README.md">Run and recapture</a> · <a href="./source-pin.json">Pinned source</a></p></footer>
 <script type="module" src="./app.mjs"></script>
 </body>
 </html>

@@ -1,0 +1,146 @@
+{
+  "schema": "tastetable.offline-week-qualification.v1",
+  "created_at": "2026-10-08T14:34:36.233656+00:00",
+  "source_issue": "https://github.com/Jacob-Met/tastetable/issues/26",
+  "reviewed_native_source": {
+    "head": "a87380052b8dd815707e63f809f954876fdfb482",
+    "tree": "dab9a9d3a454de21f9d68b8429f89d84f4c4d6a4",
+    "files": 10,
+    "native_base": "0d34015db22507b595c1979aeb54209c90ba4741",
+    "manifest_sha256": "ed2b72e85cc54427d2d3e1de65ddac5d9d9bf3ab0c281bcd7f7f136b250e302e"
+  },
+  "recording_source_pin": "59a5b23cedbd758945a1c80bcc9d83a6f564b819",
+  "shared_codec": {
+    "source_commit": "9930c0a18f339ca00bb7c43b4defd5b0d61ae56c",
+    "blob": "420ddb8f63fca264dcf97be7147801105696155d",
+    "copied_unchanged": true,
+    "current_main_a771755_retains_same_blob": true
+  },
+  "current_catalogue_sha256": "94be521e658225ff9a23b31834d03d620143943da2329bebefa0397cfa92b2f4",
+  "native_contract": {
+    "tests": 28,
+    "pass": 28,
+    "fail": 0,
+    "all_24_records_round_trip": true,
+    "actual_log_sha256": "c50e456f292cdd6fa452837a1dbae993caf24e95e30569b24f6b95c0c55741bd"
+  },
+  "saved_file_browser": {
+    "groups": 32,
+    "downloads": 6,
+    "saved_week_downloads": 5,
+    "original_source_downloads": 1,
+    "page_errors": 0,
+    "external_requests": 0,
+    "receipt_sha256": "c89e89fd4736d58342ab725de6a538b8836b4ad0078a09dc2b283929911750d4",
+    "installed_root": "/private/tmp/tastetable-offline-81ba1ed0179c/weekly-files-installed-finite",
+    "browser": "154.0.8037.98"
+  },
+  "static_receiving": {
+    "files": 38,
+    "http_readbacks": 76,
+    "rollback_http_status": 404,
+    "receipt_sha256": "1468136a8a82bb0501fde74d45dc47f0809d3b8d257d1ceb9d6c7bdc249d9a0f",
+    "restored_bytes_match_current_source": true,
+    "server_stopped": true
+  },
+  "existing_ui_regression": {
+    "groups": 52,
+    "original_source_downloads": 6,
+    "receipt_sha256": "98a4f91e4ce333bb3d5a2c91249eab3db4fdc2775293ff5f6ec15bffbd06a9de",
+    "performed_before_finite_number_guard": true,
+    "display_application_assets_unchanged": true,
+    "all_remaining_runtime_differences": [
+      "README.md",
+      "saved_week.mjs"
+    ],
+    "final_saved_file_browser_exercises_changed_admission_module": true
+  },
+  "original_behavior": {
+    "actual_browser_groups": 3,
+    "source_downloads": 1,
+    "receipt_sha256": "69fb2e0b91f314eda3ecdc319edca2b1dbdbc98fa80e028c04cca0b7965edf9f",
+    "observation": "Date/day/omission arrangement disappears after reload; original source download has no arrangement."
+  },
+  "independent_review": {
+    "reviewer_lane": "estate-81ba1ed0179c/estate_production",
+    "source_review_reported_no_remaining_blocker": true,
+    "initial_counterexample": "Five actual rosa-0 nullable verified entity IDs accepted JSON 1e400 because stringify mapped Infinity to null; rendered recommendations remained canonical.",
+    "probe_sha256": "ebd47f6c74e287a3d398b9e7b5bef42179719f5c182868ab1b3d282b100a22fd",
+    "original_observation_sha256": "d6877d249ad015298120156c81e4ee8c8c1b00f547af186a05136bdf91c97862",
+    "unchanged_probe_after_fix_sha256": "d26b595ca88b582101bfdb3992f13976e8c70af6e4c914eb5e0a8bcbce47a65e",
+    "original_cases_now_refused": 5
+  },
+  "retained_negative": {
+    "head": "e994fc5de903edf4468c2c4249fc2d550f3764a2",
+    "exit_code": 1,
+    "signed_overflow_cases_accepted_before_fix": 10,
+    "actual_null_fields": 5,
+    "test_sha256": "5a088391340992f4a41e8a813294d321d1e8c585cdc1b0bb2c087131c371781a",
+    "same_test_passes_after_fix": true
+  },
+  "download_environment_observation": {
+    "initial_saved_file_receiver_complete": false,
+    "initial_download_failure": "canceled",
+    "initial_receipt_sha256": "744f8dab3757651fd9ec14a079bd8da198ca8f3fb72dd92a54081a71be0c364a",
+    "diagnostic_receipt_sha256": "199d3cdf57de73e41413e20757a1e0205174438af3fc9f29ae6feca85e3daf80",
+    "diagnostic_app_and_control_downloads_completed": true,
+    "final_receiver_uses_owned_downloads_directory": true,
+    "initial_cause_established": false,
+    "note": "The initial cancellation is preserved without attributing it to disk space or ObjectURL lifetime. Both diagnostic downloads and all final receiving downloads completed. Pagehide/revoke events are retained in the diagnostic; their event records do not include phase timestamps."
+  },
+  "scope": {
+    "paths": "web-demo-offline/ only",
+    "shared_schema_modified": false,
+    "backend_recapture_performed": false,
+    "automatic_storage_added": false,
+    "external_upload_or_planning": false,
+    "native_goal_or_lease_changed": false,
+    "public_deployment_claimed": false
+  },
+  "published_receipt_files": {
+    "admission-negative.json": {
+      "bytes": 3237,
+      "sha256": "fafce4ad88cea6db9cb1daa49d5092a0953dab88b4ba3fe75e255814a940547e"
+    },
+    "browser-receiving.json": {
+      "bytes": 14598,
+      "sha256": "c89e89fd4736d58342ab725de6a538b8836b4ad0078a09dc2b283929911750d4"
+    },
+    "desktop-preview.png": {
+      "bytes": 84693,
+      "sha256": "fe57f6a108461994d301cb8c0c6dd6998d1812faa6a8041e0c6e9fc375e88b78"
+    },
+    "independent-after.json": {
+      "bytes": 1838,
+      "sha256": "d26b595ca88b582101bfdb3992f13976e8c70af6e4c914eb5e0a8bcbce47a65e"
+    },
+    "independent-before.json": {
+      "bytes": 1575,
+      "sha256": "d6877d249ad015298120156c81e4ee8c8c1b00f547af186a05136bdf91c97862"
+    },
+    "independent-probe.mjs": {
+      "bytes": 1310,
+      "sha256": "ebd47f6c74e287a3d398b9e7b5bef42179719f5c182868ab1b3d282b100a22fd"
+    },
+    "native-commands.json": {
+      "bytes": 6541,
+      "sha256": "55f401c045108a23a9898eba4f2dbe69339bb0e367a33e5ce41f3c71e36c4002"
+    },
+    "original-ui.json": {
+      "bytes": 1469,
+      "sha256": "69fb2e0b91f314eda3ecdc319edca2b1dbdbc98fa80e028c04cca0b7965edf9f"
+    },
+    "phone-preview.png": {
+      "bytes": 82444,
+      "sha256": "629547468c50788c78e094bbc464d8b9505a5f39728d41a226bf0500da63d489"
+    },
+    "source-manifest.json": {
+      "bytes": 2898,
+      "sha256": "ed2b72e85cc54427d2d3e1de65ddac5d9d9bf3ab0c281bcd7f7f136b250e302e"
+    },
+    "static-receiving.json": {
+      "bytes": 18070,
+      "sha256": "1468136a8a82bb0501fde74d45dc47f0809d3b8d257d1ceb9d6c7bdc249d9a0f"
+    }
+  }
+}
