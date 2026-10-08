@@ -1,0 +1,63 @@
+{
+  "kind": "evidence-only source handoff",
+  "repository": "Jacob-Met/tastetable",
+  "branch": "evidence/tastetable-atomic-render-31a349052b90",
+  "directory": "docs/receiving/atomic-render-20261008-31a349052b90",
+  "parentMain": "9f9105c29ab1a68a501b5f4c0b7180f0db968d38",
+  "parentTree": "778b466e70b3d69f28dc49f574cb7002adf45c29",
+  "allExistingApplicationSourceUnchanged": true,
+  "archiveMembers": 43,
+  "archiveAllMembersVerified": true,
+  "ownerAdoption": "https://github.com/Jacob-Met/tastetable/issues/4#issuecomment-6056696310",
+  "prepublicationBranchMatches": [],
+  "prepublicationTargetPaths": [],
+  "prepublicationOpenPRs": [
+    7,
+    8
+  ],
+  "prepublicationLatestIssueComment": 6056817650,
+  "files": [
+    {
+      "path": "README.md",
+      "local": "PUBLICATION_README.md",
+      "bytes": 4713,
+      "sha256": "b8c58a8e80a9c511e400b295c01b2306328add7dbd236236b03ea87c8213c44c",
+      "gitBlob": "00b666f1ac23ff12f926e708816ab881913d6421"
+    },
+    {
+      "path": "receiver-packet.tar.gz",
+      "local": "receiver-packet.tar.gz",
+      "bytes": 118908,
+      "sha256": "d4d02a047912358ccd76001d85969e495d9535ecbe6196b618efef07e153152b",
+      "gitBlob": "a0e0a0b5186c67da058122e68c22e6579013e15f"
+    },
+    {
+      "path": "manifest.json",
+      "local": "packet/manifest.json",
+      "bytes": 10353,
+      "sha256": "6ba71a6dd386b4f913991b8b964725c523f4b47c79985798884139cc23a03117",
+      "gitBlob": "04df5e3630998c0cf6fde3ed06e9b732047e5de6"
+    },
+    {
+      "path": "patches/atomic-render.patch",
+      "local": "packet/patches/atomic-render.patch",
+      "bytes": 6914,
+      "sha256": "972478ac8e4204391540d4c1e1d770924703d05f1f9884461dcaafc08afb49e4",
+      "gitBlob": "f4f4ac843f80840065d0cb4388f7ad1b618f3146"
+    },
+    {
+      "path": "harness/review-week-browser.cjs",
+      "local": "packet/harness/review-week-browser.cjs",
+      "bytes": 17224,
+      "sha256": "105b33bf6142af7cc1d3100d0f3c93d592861a9aabb12a14f0380afc2821c12e",
+      "gitBlob": "efcb7c61b2f5a25d1f74464fcd43feecec2a4500"
+    },
+    {
+      "path": "harness/review-week-late-render.cjs",
+      "local": "packet/harness/review-week-late-render.cjs",
+      "bytes": 16106,
+      "sha256": "a5b7cd6bf6840a7b17215fd52e404650cc91db7c907e48ed9987b5f397b5b5f3",
+      "gitBlob": "099c46dfae20106491d7c9c2e9d3dd848db57ceb"
+    }
+  ]
+}
