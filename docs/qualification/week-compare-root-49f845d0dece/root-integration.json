@@ -1,0 +1,274 @@
+{
+  "owner": "estate-49f845d0dece/root",
+  "observed_at": "2026-10-08 15:41:31 UTC",
+  "repository": "Jacob-Met/tastetable",
+  "issue": 29,
+  "pull_request": 31,
+  "actual_merge": "689ddc9a6a4f5f12068e1e99127cc77482c53924",
+  "actual_tree": "25b453e345bedd3f280e3d555df12561ef084cc6",
+  "actual_parents": [
+    "1a609bfdd77dc07222eb70f8a4a1f565a8bc8fa0",
+    "771b2ebfa41aef093e58b4801aae93ef24a152ce"
+  ],
+  "expected_tree": "25b453e345bedd3f280e3d555df12561ef084cc6",
+  "expected_parents": [
+    "1a609bfdd77dc07222eb70f8a4a1f565a8bc8fa0",
+    "771b2ebfa41aef093e58b4801aae93ef24a152ce"
+  ],
+  "same_qualified_tree": true,
+  "same_qualified_parents": true,
+  "native_source": {
+    "original": "789d17b7c456581e09bed64a6b7aa84376dc84db",
+    "composed": "c924cda40d0960d40f723a35ef84037110f06efc",
+    "packaging": "88ce578d3de2a6e61f112ba459383bb7e8621ab1"
+  },
+  "hosted_tested_merge": "3638b00f6d44d67e0c5c470bf55158b69cbabd7d",
+  "native_authored_gate": {
+    "node_passed": 59,
+    "node_failed": 0,
+    "browser_groups_passed": 9
+  },
+  "hosted_checks": [
+    {
+      "id": 113379297818,
+      "name": "test",
+      "status": "completed",
+      "conclusion": "success",
+      "head": "771b2ebfa41aef093e58b4801aae93ef24a152ce",
+      "url": "https://github.com/Jacob-Met/tastetable/actions/runs/37797099246/job/113379297818"
+    },
+    {
+      "id": 113379296073,
+      "name": "receive-week",
+      "status": "completed",
+      "conclusion": "success",
+      "head": "771b2ebfa41aef093e58b4801aae93ef24a152ce",
+      "url": "https://github.com/Jacob-Met/tastetable/actions/runs/37797099234/job/113379296073"
+    },
+    {
+      "id": 113379293081,
+      "name": "compare-week",
+      "status": "completed",
+      "conclusion": "success",
+      "head": "771b2ebfa41aef093e58b4801aae93ef24a152ce",
+      "url": "https://github.com/Jacob-Met/tastetable/actions/runs/37797099386/job/113379293081"
+    }
+  ],
+  "preservation": {
+    "observed_at": "2026-10-08 15:35:16 UTC",
+    "base": "1a609bfdd77dc07222eb70f8a4a1f565a8bc8fa0",
+    "head": "771b2ebfa41aef093e58b4801aae93ef24a152ce",
+    "base_tree": "ef80f9f0134d613571861278978477152548a5ed",
+    "head_tree": "25b453e345bedd3f280e3d555df12561ef084cc6",
+    "base_leaves": 302,
+    "head_leaves": 324,
+    "preserved_base_leaves": 300,
+    "source_manifest_count": 9,
+    "changed_paths": [
+      {
+        "path": ".github/workflows/week-compare.yml",
+        "sha": "e591fca2db970460611269ad7d1c53a6bc70f028",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "README.md",
+        "sha": "7385a42bc9e0e4ab3aeecc90ee7510034248b41d",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "docs/qualification/saved-week-comparison-49f845d0dece/README.md",
+        "sha": "7c7ebfbb42ccd7ee274e1614784adad1b4214097",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "docs/qualification/saved-week-comparison-49f845d0dece/browser-first.log",
+        "sha": "a9a3da4f183b3115943bf83e38efbf985b356e96",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "docs/qualification/saved-week-comparison-49f845d0dece/browser/desktop.png",
+        "sha": "5e2882e8d1a0ba8aba1e09cc3b45372011e54da9",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "docs/qualification/saved-week-comparison-49f845d0dece/browser/earlier.json",
+        "sha": "697288a61d95aa2f61272d2c43df08aecc9ce4bf",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "docs/qualification/saved-week-comparison-49f845d0dece/browser/phone.png",
+        "sha": "11834f404987faddc40dc91ea7076d1554667085",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "docs/qualification/saved-week-comparison-49f845d0dece/browser/receipt.json",
+        "sha": "52735db1613fd7b710fb68b71b8b26851a00fb4b",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "docs/qualification/saved-week-comparison-49f845d0dece/browser/revised.json",
+        "sha": "0d2ccf038f77db57c724ef512b523e602218c9b0",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "docs/qualification/saved-week-comparison-49f845d0dece/composition-shallow-history.txt",
+        "sha": "43f464808146702feb1c92a615a34f1761ff0be2",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "docs/qualification/saved-week-comparison-49f845d0dece/manifest.json",
+        "sha": "394b9d39ea37c5dc5b9313aec5a99ee204b04ed9",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "docs/qualification/saved-week-comparison-49f845d0dece/native-provenance.json",
+        "sha": "009c46ce92916d096bc5cddacf7c20cddabf4df0",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "docs/qualification/saved-week-comparison-49f845d0dece/node-all.log",
+        "sha": "49243d7d435a0bc558217d9f8665d7a07d2b491f",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "docs/qualification/saved-week-comparison-49f845d0dece/node-first.log",
+        "sha": "e9ad6b1a391faf5aee0b26c0d7530ffddc0bcf5f",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "docs/qualification/saved-week-comparison-49f845d0dece/source-composed.json",
+        "sha": "77fa5d66b5d94a85783008807a16da84f52af983",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "docs/qualification/saved-week-comparison-49f845d0dece/source-freeze.json",
+        "sha": "b84c500e6ec70ec1c7851f69fae12a6d5b509bab",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "docs/qualification/saved-week-comparison-49f845d0dece/source.patch",
+        "sha": "64ff0cc35a7d299479bb4fdf7d3eb778c4591920",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "static/compare-weeks.html",
+        "sha": "0e314d8f054d565706b4a0cf8905abeec6aaac77",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "static/index.html",
+        "sha": "179a26e7affeea13850a545efac29aed90a98351",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "static/week_compare.css",
+        "sha": "7ee8e8add97261965fcdcbf5612fb0ec126eda89",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "static/week_compare.mjs",
+        "sha": "2dfc4fb5e9c30481a4bd4276bc4ed6ff3bb114b8",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "static/week_compare_ui.mjs",
+        "sha": "ad3ebd39e21becf0ada3cc86ba965756fe8df83d",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "tests/test_week_compare.mjs",
+        "sha": "82f424b7237d5be463772e883b7a094d17f106d1",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "tools/check_week_compare_browser.mjs",
+        "sha": "d50c8226196d66f403ac1d556abe860ef3b93614",
+        "mode": "100644",
+        "status": "added"
+      }
+    ],
+    "removed": [],
+    "errors": [],
+    "accepted": true
+  },
+  "independent": {
+    "packet": "cb03ad54167803ee56a68ff6fa62910d345773da",
+    "packet_tree": "faaeabb609ff11c9010f53f97e6c0856e51ede63",
+    "contract": "7eb3f5098c8cd5510a68da5299859e0f0543721e",
+    "groups_passed": 11,
+    "native_source_files_verified": 32,
+    "candidate_runtime_files": 12,
+    "native_producer_sha256": "4d6ee08feea84dfb877e673844ad6f481f13449b661b153219d32ee31d7f7f76",
+    "input_seal_sha256": "6a4d90b0748e3825d8fff65cd8a645d98bc7a077ee70b4701bb545b2f5876c39",
+    "receiver_sha256": "2b7374da6d96c7477993e871c192ca56ac3e43d03eea77d4dfcc1f050f22a8de",
+    "receipt_sha256": "1693a85aa586dcb2c763a4375064b95f0b190d471bfdec881a653a061f22bc93",
+    "archive_sha256": "6aacdaf244734192b3788c356299a0b366e49718e8968c71e2234ad017b482d7",
+    "archive_bytes": 488057,
+    "actual_arrangement_downloads": 8,
+    "actual_before_after_planner_downloads": 2,
+    "storage_writes": 0,
+    "provider_requests": 0,
+    "page_errors": 0,
+    "executed_on": "macOS arm64; Chrome 154.0.8037.98; Node 26.3.0; Python 3.13.7",
+    "started_at": "2026-10-08T15:23:29.426Z",
+    "finished_at": "2026-10-08T15:23:34.770Z",
+    "acceptance_comment": 6063374497
+  },
+  "root_source_review": {
+    "files": [
+      "static/week_compare.mjs",
+      "static/week_compare_ui.mjs",
+      "static/week_file.mjs",
+      "static/compare-weeks.html",
+      "static/week_compare.css",
+      ".github/workflows/week-compare.yml",
+      "static/index.html patch"
+    ],
+    "findings": "Accepted. Same-source admission compares complete response/inputs plus receivedAt/calendarId; original array occurrence identifies repeated venues; absolute dates include chosen-week changes. Literal text nodes, strict bounded UTF-8 admission, generation fencing, and separate-tab entry preserve file/planner state."
+  },
+  "root_visual_review": {
+    "accepted": true,
+    "scope": "Actual independent comparison desktop and 390px phone captures",
+    "files": [
+      "comparison-desktop.png",
+      "comparison-phone.png"
+    ],
+    "packet": "cb03ad54167803ee56a68ff6fa62910d345773da",
+    "findings": "All five desktop occurrence rows show readable names, exact earlier/revised dates and statuses. Phone capture shows the contained horizontal table and visible keyboard focus; page width stays bounded in the independent native geometry/keyboard check."
+  },
+  "explicit_contract_adjustment": {
+    "original": "Preinspection contract section8 expected retirement after refused replacement.",
+    "accepted": "Keep the prior accepted file and comparison when a replacement is refused, with the old filename visible and an explicit retention message. Conceal comparison during pending reads; superseded and cleared reads remain fenced.",
+    "basis": "Root independently reviewed the actual UI and accepted deliberate state preservation. Independent native receiving proved these conditions. Original contract and all date/identity/nonmutation oracles remain preserved."
+  },
+  "limits": {
+    "integration": "Repository source integrated; no FastAPI/live-provider deployment or installed runtime adoption is claimed.",
+    "data": "Actual deterministic native planner and browser outputs use the project's synthetic fixture mode. Structural file controls are distinguished.",
+    "native_interruption": "The initial ThinkPad browser run remains inconclusive/unrecovered after route loss. Fresh accepted Mac run has separate authentic producer/browser custody; it does not relabel the lost run.",
+    "other_owners": "#16 venue worksheets and the landed #28 offline Save/Open implementation are preserved."
+  },
+  "continuation": "This source/receiving scope is released. Team proceeds to current Echo narrative/gameplay work; ReturnBy prospective adoption remains with its established owner."
+}
