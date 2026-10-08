@@ -1,0 +1,20 @@
+{
+  "production_equivalent_to_published_commit": "1b8e07856b48318974fc20621975536424113cbe",
+  "source": "/workspace/scratch/6e5752b49b6f/agents/github_integration/tastetable-candidate",
+  "source_sha256": {
+    "agent.py": "3d12eb0f275516cd8d1b4044d010a8ed914629f427b1cc1490958f865fe31da8",
+    "app.py": "6179e3953e9e6aed009695b9528c8de8622246ab2a1fd5676f18b8b66fa9152c",
+    "qloo_client.py": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+    "constraints.py": "51f65f490fc628f23a545fd98148b57ae02ec4490f159cef571e225d43ebe46e",
+    "personas.py": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+    "fixtures/qloo_fixtures.json": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0"
+  },
+  "command": [
+    "/workspace/scratch/6e5752b49b6f/agents/github_integration/venv/bin/python",
+    "-B",
+    "/workspace/scratch/6e5752b49b6f/agents/github_integration/tastetable-current-main-review/test_current_composition.py"
+  ],
+  "exit_code": 1,
+  "expected": "fails without current-main purpose/constraint protection",
+  "test_sha256": "58ad8ed07235e111e438027b5737bed8a5f11a564bc121db6071bc842606112e"
+}

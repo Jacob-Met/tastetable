@@ -1,0 +1,43 @@
+TasteTable
+
+A weekly plan of restaurants + one cultural outing, grounded in Qloo taste data and checked against care constraints.
+
+Not medical or dietary advice. Constraint checks are heuristics over public venue tags and menu keywords. Always confirm accessibility, texture and sodium needs with the venue and the person's care team. Sample personas are fictional; do not enter real health information.
+Demo mode: Qloo responses come from a recorded synthetic fixture (fictional venues).
+1. Tastes & constraints
+Try a sample persona
+Rosa, 82 (fictional) - salsa & Cuban home cooking
+Harold, 88 (fictional) - crooners & Southern supper clubs
+Mei, 79 (fictional) - Beatles, Audrey Hepburn & tofu
+Favourite cuisines 
+Music they love (artists / era) 
+Favourite films 
+City 
+Constraints
+ Soft foods  Low sodium  Wheelchair access
+Plan my week
+Qloo-grounded plan
+
+Only 0 restaurants passed every constraint; remaining days left open rather than suggesting an unsafe pick.
+
+LLM-only (no Qloo)
+Monday · A well-reviewed Cuban restaurant nearby unverified
+They enjoy Cuban food.
+Wednesday · A well-reviewed Mexican restaurant nearby unverified
+They enjoy Mexican food.
+Friday · A well-reviewed Cuban restaurant nearby unverified
+They enjoy Cuban food.
+Saturday · A concert or show featuring music like Celia Cruz unverified
+Matches their music taste.
+Sunday · A well-reviewed Mexican restaurant nearby unverified
+They enjoy Mexican food.
+Side-by-side
+	Qloo-grounded	LLM-only
+Picks	0	5
+Tied to a Qloo entity ID	0	—
+Has affinity evidence	0	—
+Constraint-checked	0	—
+Unsafe candidates caught	0	—
+Rejected by constraint check
+Agent tool trace
+MIT licensed · Uses Qloo's Taste AI insights. Qloo results describe aggregate affinities, not facts about any individual.

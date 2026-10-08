@@ -1,0 +1,32 @@
+/workspace/scratch/6e5752b49b6f/agents/github_integration/venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+test_configured_model_repairs_invalid_purpose_and_refusal_without_weakening_care (__main__.CurrentComposition.test_configured_model_repairs_invalid_purpose_and_refusal_without_weakening_care) ... 
+  test_configured_model_repairs_invalid_purpose_and_refusal_without_weakening_care (__main__.CurrentComposition.test_configured_model_repairs_invalid_purpose_and_refusal_without_weakening_care) (sample=False) ... FAIL
+  test_configured_model_repairs_invalid_purpose_and_refusal_without_weakening_care (__main__.CurrentComposition.test_configured_model_repairs_invalid_purpose_and_refusal_without_weakening_care) (sample=True) ... FAIL
+
+======================================================================
+FAIL: test_configured_model_repairs_invalid_purpose_and_refusal_without_weakening_care (__main__.CurrentComposition.test_configured_model_repairs_invalid_purpose_and_refusal_without_weakening_care) (sample=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6e5752b49b6f/agents/github_integration/tastetable-current-main-review/test_current_composition.py", line 100, in test_configured_model_repairs_invalid_purpose_and_refusal_without_weakening_care
+    self.assertEqual(trace[index]["result_summary"],
+AssertionError: 'QlooError: Qloo HTTP 503: independent authored composition refusal' != 'ValueError: purpose must be restaurant or outing'
+- QlooError: Qloo HTTP 503: independent authored composition refusal
++ ValueError: purpose must be restaurant or outing
+
+
+======================================================================
+FAIL: test_configured_model_repairs_invalid_purpose_and_refusal_without_weakening_care (__main__.CurrentComposition.test_configured_model_repairs_invalid_purpose_and_refusal_without_weakening_care) (sample=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6e5752b49b6f/agents/github_integration/tastetable-current-main-review/test_current_composition.py", line 100, in test_configured_model_repairs_invalid_purpose_and_refusal_without_weakening_care
+    self.assertEqual(trace[index]["result_summary"],
+AssertionError: 'QlooError: Qloo HTTP 503: independent authored composition refusal' != 'ValueError: purpose must be restaurant or outing'
+- QlooError: Qloo HTTP 503: independent authored composition refusal
++ ValueError: purpose must be restaurant or outing
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.045s
+
+FAILED (failures=2)

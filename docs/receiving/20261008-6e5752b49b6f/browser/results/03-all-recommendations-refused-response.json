@@ -1,0 +1,288 @@
+{
+  "plan": {
+    "meals": [],
+    "outing": null,
+    "rejected": [],
+    "notes": [
+      "Only 0 restaurants passed every constraint; remaining days left open rather than suggesting an unsafe pick."
+    ]
+  },
+  "llm_only": {
+    "meals": [
+      {
+        "day": "Monday",
+        "name": "A well-reviewed Cuban restaurant nearby",
+        "why": "They enjoy Cuban food.",
+        "verified": {
+          "exists": false,
+          "entity_id": null,
+          "constraints_checked": false
+        }
+      },
+      {
+        "day": "Wednesday",
+        "name": "A well-reviewed Mexican restaurant nearby",
+        "why": "They enjoy Mexican food.",
+        "verified": {
+          "exists": false,
+          "entity_id": null,
+          "constraints_checked": false
+        }
+      },
+      {
+        "day": "Friday",
+        "name": "A well-reviewed Cuban restaurant nearby",
+        "why": "They enjoy Cuban food.",
+        "verified": {
+          "exists": false,
+          "entity_id": null,
+          "constraints_checked": false
+        }
+      },
+      {
+        "day": "Sunday",
+        "name": "A well-reviewed Mexican restaurant nearby",
+        "why": "They enjoy Mexican food.",
+        "verified": {
+          "exists": false,
+          "entity_id": null,
+          "constraints_checked": false
+        }
+      }
+    ],
+    "outing": {
+      "day": "Saturday",
+      "name": "A concert or show featuring music like Celia Cruz",
+      "why": "Matches their music taste.",
+      "verified": {
+        "exists": false,
+        "entity_id": null,
+        "constraints_checked": false
+      }
+    },
+    "source": "template (ungrounded baseline)"
+  },
+  "comparison": {
+    "grounded": {
+      "picks": 0,
+      "with_qloo_entity_id": 0,
+      "with_affinity_evidence": 0,
+      "constraint_checked": 0,
+      "unsafe_candidates_rejected": 0
+    },
+    "llm_only": {
+      "picks": 5,
+      "with_qloo_entity_id": 0,
+      "with_affinity_evidence": 0,
+      "constraint_checked": 0,
+      "unsafe_candidates_rejected": 0
+    },
+    "constraints": [
+      "soft_foods",
+      "low_sodium",
+      "wheelchair"
+    ]
+  },
+  "trace": [
+    {
+      "step": 0,
+      "tool": "qloo_search",
+      "args": {
+        "query": "Celia Cruz",
+        "kind": "entity",
+        "types": "urn:entity:artist"
+      },
+      "result_summary": "Celia Cruz"
+    },
+    {
+      "step": 0,
+      "tool": "qloo_search",
+      "args": {
+        "query": "West Side Story",
+        "kind": "entity",
+        "types": "urn:entity:movie"
+      },
+      "result_summary": "West Side Story"
+    },
+    {
+      "step": 0,
+      "tool": "qloo_search",
+      "args": {
+        "query": "Cuban",
+        "kind": "tag"
+      },
+      "result_summary": "Cuban"
+    },
+    {
+      "step": 0,
+      "tool": "qloo_search",
+      "args": {
+        "query": "Mexican",
+        "kind": "tag"
+      },
+      "result_summary": "Mexican"
+    },
+    {
+      "step": 1,
+      "tool": "qloo_recs",
+      "args": {
+        "filter_type": "urn:entity:place",
+        "purpose": "restaurant",
+        "tag_ids": [
+          "urn:tag:genre:restaurant:Cuban",
+          "urn:tag:genre:restaurant:Mexican"
+        ],
+        "signal_entity_ids": [
+          "FIX-A-celia",
+          "FIX-M-wss"
+        ],
+        "location": "Pasadena",
+        "take": 10
+      },
+      "result_summary": "QlooError: Qloo HTTP 503: authored receiving refusal"
+    },
+    {
+      "step": 2,
+      "tool": "constraint_check",
+      "args": {
+        "entity_ids": [],
+        "constraints": [
+          "soft_foods",
+          "low_sodium",
+          "wheelchair"
+        ],
+        "kind": "restaurant"
+      },
+      "result_summary": "0/0 passed"
+    },
+    {
+      "step": 3,
+      "tool": "qloo_search",
+      "args": {
+        "query": "Diner",
+        "kind": "tag"
+      },
+      "result_summary": "Diner"
+    },
+    {
+      "step": 3,
+      "tool": "qloo_search",
+      "args": {
+        "query": "Italian",
+        "kind": "tag"
+      },
+      "result_summary": "Italian"
+    },
+    {
+      "step": 3,
+      "tool": "qloo_search",
+      "args": {
+        "query": "Japanese",
+        "kind": "tag"
+      },
+      "result_summary": "Japanese"
+    },
+    {
+      "step": 4,
+      "tool": "qloo_recs",
+      "args": {
+        "filter_type": "urn:entity:place",
+        "purpose": "restaurant",
+        "tag_ids": [
+          "urn:tag:genre:restaurant:Diner",
+          "urn:tag:genre:restaurant:Italian",
+          "urn:tag:genre:restaurant:Japanese"
+        ],
+        "signal_entity_ids": [
+          "FIX-A-celia",
+          "FIX-M-wss"
+        ],
+        "location": "Pasadena",
+        "take": 10
+      },
+      "result_summary": "QlooError: Qloo HTTP 503: authored receiving refusal"
+    },
+    {
+      "step": 5,
+      "tool": "qloo_search",
+      "args": {
+        "query": "",
+        "kind": "tag"
+      },
+      "result_summary": "no match"
+    },
+    {
+      "step": 6,
+      "tool": "qloo_search",
+      "args": {
+        "query": "jazz",
+        "kind": "tag"
+      },
+      "result_summary": "Jazz Club"
+    },
+    {
+      "step": 6,
+      "tool": "qloo_search",
+      "args": {
+        "query": "cinema",
+        "kind": "tag"
+      },
+      "result_summary": "Movie Theater"
+    },
+    {
+      "step": 6,
+      "tool": "qloo_search",
+      "args": {
+        "query": "museum",
+        "kind": "tag"
+      },
+      "result_summary": "Museum"
+    },
+    {
+      "step": 6,
+      "tool": "qloo_search",
+      "args": {
+        "query": "concert hall",
+        "kind": "tag"
+      },
+      "result_summary": "Concert Hall"
+    },
+    {
+      "step": 7,
+      "tool": "qloo_recs",
+      "args": {
+        "filter_type": "urn:entity:place",
+        "purpose": "outing",
+        "tag_ids": [
+          "urn:tag:category:place:jazz_club",
+          "urn:tag:category:place:movie_theater",
+          "urn:tag:category:place:museum",
+          "urn:tag:category:place:concert_hall"
+        ],
+        "signal_entity_ids": [
+          "FIX-A-celia",
+          "FIX-M-wss"
+        ],
+        "location": "Pasadena",
+        "take": 5
+      },
+      "result_summary": "QlooError: Qloo HTTP 503: authored receiving refusal"
+    },
+    {
+      "step": 8,
+      "tool": "constraint_check",
+      "args": {
+        "entity_ids": [],
+        "constraints": [
+          "soft_foods",
+          "low_sodium",
+          "wheelchair"
+        ],
+        "kind": "outing"
+      },
+      "result_summary": "0/0 passed"
+    }
+  ],
+  "model_message": "Plan inputs gathered; assembling weekly plan from tool results.",
+  "mock": true
+}

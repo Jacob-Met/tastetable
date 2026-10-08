@@ -1,0 +1,46 @@
+[
+  {
+    "label": "baseline-api",
+    "source_root": "/workspace/scratch/6e5752b49b6f/agents/github_integration/tastetable",
+    "command": [
+      "/workspace/scratch/6e5752b49b6f/agents/github_integration/venv/bin/python",
+      "/workspace/scratch/6e5752b49b6f/agents/github_integration/tastetable-candidate/tests/test_api_receiving.py"
+    ],
+    "exit_code": 1,
+    "output": "baseline-api.json"
+  },
+  {
+    "label": "candidate-api",
+    "source_root": "/workspace/scratch/6e5752b49b6f/agents/github_integration/tastetable-candidate",
+    "command": [
+      "/workspace/scratch/6e5752b49b6f/agents/github_integration/venv/bin/python",
+      "/workspace/scratch/6e5752b49b6f/agents/github_integration/tastetable-candidate/tests/test_api_receiving.py"
+    ],
+    "exit_code": 0,
+    "output": "candidate-api.txt"
+  },
+  {
+    "label": "composed-full-pytest",
+    "source_root": "/workspace/scratch/6e5752b49b6f/agents/github_integration/tastetable-candidate",
+    "command": [
+      "/workspace/scratch/6e5752b49b6f/agents/github_integration/venv/bin/python",
+      "-m",
+      "pytest",
+      "-q"
+    ],
+    "exit_code": 0,
+    "output": "composed-full-pytest.txt"
+  },
+  {
+    "label": "dependencies",
+    "source_root": "/workspace/scratch/6e5752b49b6f/agents/github_integration/tastetable-candidate",
+    "command": [
+      "/workspace/scratch/6e5752b49b6f/agents/github_integration/venv/bin/python",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "exit_code": 0,
+    "output": "dependencies.txt"
+  }
+]
