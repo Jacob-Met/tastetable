@@ -1,0 +1,31 @@
+{
+  "status": "qualified frozen consumer-v1; root owns publication and merge",
+  "source_root": "/dev/shm/universal-0df473646168/product/week-calendar-integration/candidate",
+  "source_app_sha256": "faa47a7c5b71a5c12f004868e68b71df33d4486002b983943185c3d9928dd5e1",
+  "base_commit": "69a8098292da12d4d960118cae072a5885ff5171",
+  "base_tree": "778b466e70b3d69f28dc49f574cb7002adf45c29",
+  "publication_manifest": "/dev/shm/universal-0df473646168/product/week-calendar-integration/publication-manifest.json",
+  "publication_manifest_sha256": "2fde99eb662f1f080b27db68fdf005d3b65f2caa6f40e3412a6fa6b8961bca7e",
+  "production_paths": 10,
+  "archive": {
+    "path": "/dev/shm/universal-0df473646168/product/week-calendar-integration/tastetable-week-calendar-consumer.tar.gz",
+    "bytes": 1486669,
+    "sha256": "6479c93ff3d353906693be5796e9c5be7b8b75298f606edc43d81575fa180b03",
+    "file_count": 55,
+    "all_member_bytes_equal_raw_evidence": true
+  },
+  "handoff": "/dev/shm/universal-0df473646168/product/week-calendar-integration/HANDOFF.md",
+  "independent_archive_sha256": "24cafa57af059c1439929cfc790d7a357b9ee3e2228ebdfbca2572ef66ad2529",
+  "validation": {
+    "native_component_tests": 31,
+    "author_browser_scenarios": 9,
+    "author_actual_calendar_downloads": 10,
+    "request_owner_authored_browser_checks": 19,
+    "request_owner_actual_calendar_downloads": 3,
+    "independent_methods": 4,
+    "independently_parsed_calendar_files": 14,
+    "actual_print_pdf_text_and_visuals": true,
+    "source_unchanged_during_all_checks": true,
+    "no_external_provider_or_service_calls": true
+  }
+}
