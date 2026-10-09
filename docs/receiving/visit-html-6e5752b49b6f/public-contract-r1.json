@@ -1,0 +1,66 @@
+{
+  "format": "tastetable.visit-html.consumer-contract/1",
+  "owner": "estate-6e5752b49b6f / production_slice",
+  "repository": "https://github.com/Jacob-Met/tastetable",
+  "baseline": {
+    "commit": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+    "tree": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6"
+  },
+  "beneficiary": "A caregiver or recipient who needs to open or print one saved visit record offline without the editable studio, a server or spreadsheet.",
+  "fence": [
+    "static/visit_record_report.mjs",
+    "tools/visit_record_to_html.mjs",
+    "tests/test_visit_record_report.mjs",
+    "tests/test_visit_record_to_html.mjs",
+    "docs/visit-record-html/README.md",
+    "README.md additive discovery only",
+    "docs/receiving/visit-html-6e5752b49b6f/*"
+  ],
+  "exclusions": "No changes to existing codecs, visit studio/UI, history62, record comparison63, batch64, CSV tools, provider logic, packaging or workflows.",
+  "model": {
+    "export": "renderVisitRecordReport(text, {recordName = 'Saved visit record', recordSha256 = null} = {})",
+    "returns": "Frozen {html,rowCount,weekStart,sourceMode,savedAt}; deterministic UTF-8 HTML text ends in LF.",
+    "admission": "Use unchanged readVisitRecord(text), readWeekFile(record.source.weekText), visitRecordRows(record). Preserve native 8 MiB visit/2 MiB source/100 occurrence/4000 code-point note bounds and strict schema. A single initial BOM is accepted. recordName must be nonblank well-formed text of <=512 code points without controls; recordSha256 null or exactly 64 lowercase hex. Any displayed string containing NUL or unpaired UTF-16 is refused, never repaired.",
+    "content": "One article per original occurrence, in original pick order, including omitted/unrecorded picks and repeated venue IDs. Each article contains occurrence key, literal venue name/entity ID/kind, original day, planned day/date (or explicit kept-off-week), recorded outcome (raw native code plus Went/Did not go/Not recorded label), actual date (or Not recorded), exact note (empty says No note recorded), original explanation. No implicit actual date or inferred outcome. No recommendation, verification or interpretation of outcomes. Distinct sourceMode mock/live/unknown labels explicitly describe saved provenance only.",
+    "provenance": "Show recordName, optional supplied record SHA256, original saved-week source.name, exact week start, source receivedAt/source savedAt/record savedAt. Keep original JSON for editable backup and complete original source/trace; HTML is a report, not full-fidelity backup.",
+    "literal": "All input text rendered as text, not markup/URLs/attributes/styles. HTML escaping preserves CR via character reference (including original CRLF) and LF/TAB, Unicode and multiple spaces in DOM text with pre-wrap. No script, inline handler, forms, iframe, link/image/font/network reference or externally loaded dependency. Fixed inline stylesheet and restrictive CSP. No embedded raw JSON/source script.",
+    "document": "Standalone offline file, semantic headings/articles/definition lists, responsive 390px without page overflow, visible complete content. Print stylesheet permits long notes/articles across pages, no hidden content/fixed heights; standard browser Print is sufficient."
+  },
+  "cli": {
+    "invocation": "node tools/visit_record_to_html.mjs --input VISITS.json --output REPORT.html",
+    "help": "--help alone prints usage and exits0 without reading/writing. Flags may be in either order; both required once. Unknown/repeated flags, positional arguments, missing values and '-' streams refuse; no implicit input, stdin or network.",
+    "input": "Explicit acquired regular file only, bounded read8MiB+1 with nonblocking flag where supported, fatal UTF-8 decoding, raw byte hash counts BOM. Input bytes never modified. File symlinks may be read only when acquired target is regular; no arbitrary special streams.",
+    "output": "UTF-8 standalone HTML without BOM, at most32MiB, explicit unused destination with existing parent. Write/sync in owned same-parent temporary directory then create-only hard link; never overwrite existing file/directory/symlink/input/hardlink alias. Concurrent same-output commands have at most one successful publisher; loser preserves winner bytes. Remove only own staging directory. Invalid input/options and ordinary prepublication failures leave existing output unchanged/no new final output. Filesystem refusal fails closed.",
+    "receipt": "On success stdout is one JSON line {format:'tastetable.visit-html.v1',input:absolutePath,inputSha256,output:absolutePath,outputSha256,outputBytes,rows,weekStart,sourceMode,recordSavedAt}. Record name passed to model is input basename; hash is raw acquired bytes. Stderr empty.",
+    "errors": "Exit0 success/help; exit2 usage/admission/existing-output refusal; exit1 other filesystem/output failure. Nonzero errors have stderr diagnostic (unless stderr itself unavailable). If final cleanup/receipt delivery fails after publication, preserve completed output and explicitly report it as created when stderr is available; never report success.",
+    "runtime": "Node22+ standard library only; no install, npm, service, provider call."
+  },
+  "baselineFiles": [
+    {
+      "path": "static/visit_record.mjs",
+      "bytes": 7525,
+      "gitBlob": "2b5b37e3d4a227e00a5b0052a962d13512b53e48"
+    },
+    {
+      "path": "static/week_file.mjs",
+      "bytes": 6642,
+      "gitBlob": "420ddb8f63fca264dcf97be7147801105696155d"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "bytes": 3913,
+      "gitBlob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+    },
+    {
+      "path": "static/visit_record_csv.mjs",
+      "bytes": 1646,
+      "gitBlob": "b001286f411bec6a9088b1902e9455f2fc3540c2"
+    },
+    {
+      "path": "tests/fixtures/visit-record-csv.json",
+      "bytes": 1934,
+      "gitBlob": "69d1c226ab9b7ed25a08f9372a0534d2be00d27f"
+    }
+  ],
+  "acceptance": "Independent model/CLI and real offline opening/physical print receiving must remain distinct. Original absent-command/codec baseline is a capability-gap observation, not a product failure. No full inherited suite claim."
+}

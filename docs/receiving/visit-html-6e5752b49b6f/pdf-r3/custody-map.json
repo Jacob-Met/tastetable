@@ -1,0 +1,178 @@
+{
+  "schema": "tastetable65-independent-corrected-original-pdf-custody/1",
+  "worker": "estate-6e5752b49b6f/native_runtime",
+  "repository": "Jacob-Met/TasteTable",
+  "state": "Native accounting, visible-page receiving and quantization correction executed; submitted for final root/source-peer review",
+  "scope": "Independent decoding of the three exact ORIGINAL corrected R3 PDFs. No product source change, report/HTML generation, browser run, reprint or repeated rasterization.",
+  "originalPDFs": [
+    {
+      "pdf": 0,
+      "bytes": 111620,
+      "sha256": "3bfb91bf804b35a3aae6c713a35e8f11cec0931cba116a8c9acd847c159aac7d",
+      "git": "02d83282b87203547430abda9bb676f23f61e239",
+      "mirror": "4a8848364622221468378e764fd6f76bd65c0f06"
+    },
+    {
+      "pdf": 1,
+      "bytes": 138007,
+      "sha256": "cd0668ec9febc67e2235d8cc8ada95b58e5280e4e59e38cc898f70f12aa613d2",
+      "git": "a119af45af2a19278eb394ac2881d3dbadba2682",
+      "mirror": "1079b2e6e8c17db0e47c38aed67b690665769536"
+    },
+    {
+      "pdf": 2,
+      "bytes": 60299,
+      "sha256": "581ad80dae27e0f56e71c4cecb7d3fddb78d21565c64bf7dda9cbefa192aeb99",
+      "git": "8a43a9961fdad463783af306162e0079075af624",
+      "mirror": "298ca0b07390cad17399aaab9f49440498cfc66e"
+    }
+  ],
+  "rootBrowserReceipt": "86b50249c4d9c6747e06b0c65e41411a411a687a",
+  "packets": [
+    {
+      "kind": "Installed pypdf origin collector qualification",
+      "git": "d4fec47854326c0c03269cbc5154cfce98adb5b6",
+      "bytes": 40396,
+      "sha256": "357b48ad2eb8281f514af85e1bc079a8741f249fb462333fb0d6df0cd3ef2216",
+      "members": 34,
+      "manifestSha256": "99a1b58e3a6f0bb42353e8f0b264f1f2510ac6a456ddd5679854b553132dfff4",
+      "mirror": "7346cf0c5d7fbc832a460ca308ad44edd12337bb",
+      "receipt": "6c943b8ad9ab39c1971c37c91bc145a9016753fa",
+      "summary": "5f23e578b14199f1e14e8dae71a35243e97a42c7"
+    },
+    {
+      "kind": "MSI original failures, exact raw origins/CMaps and receiving-only quantization correction",
+      "git": "b3e2ede3ee5d6b0c8c4504e83792954190c0d1d5",
+      "bytes": 45556,
+      "sha256": "e62932ad375242dcb13635b65ce7d24c27b29ee13fda67d08b73790e22bd4ef3",
+      "members": 22,
+      "manifestSha256": "efd7c960cb4b2db3571fca47d82fc542e57fe2fd39fe7030053b6e4eb72ca409",
+      "mirror": "2219df20e819f44fe338306407ea6db9326fb00b",
+      "readme": "f7930be4f3b5b6211135a1975976e6bdc77ad52a"
+    },
+    {
+      "kind": "ThinkPad original thirteen page rasters, raw Poppler results and unchanged accounting",
+      "git": "77e7be67ee8e97f6ad6af13f078932589a184da1",
+      "bytes": 1018179,
+      "sha256": "25b751a7754bace10a51c2a16b3e6c75bceb56ff38ebbafe510159a5917b51ee",
+      "members": 49,
+      "manifestSha256": "012433fa924e5ee1d874b1320da40563426e1fca0a50eaefcac0db8c34ae1b7b",
+      "manifestGit": "e230c8c417e9cb30db56dfd38a43ba8115fde172",
+      "readme": "2342793c949f447684bf08dc91504e1d3d78f14c",
+      "receipt": "107f57756cd3db383b0c4ab208727eb7f81658ed",
+      "base64Parts": [
+        {
+          "offsetCharacters": 0,
+          "base64Characters": 400000,
+          "git": "fc5ddc113e8ed50a935d3c23739279ca2bfb827b"
+        },
+        {
+          "offsetCharacters": 400000,
+          "base64Characters": 400000,
+          "git": "034fd27e17117a018e653b1a5a120e8f99fc0cb1"
+        },
+        {
+          "offsetCharacters": 800000,
+          "base64Characters": 400000,
+          "git": "7e110d83a81c6a03b61ba49d5552513b2e0b3447"
+        },
+        {
+          "offsetCharacters": 1200000,
+          "base64Characters": 157572,
+          "git": "574305d7aad0f3c7140c498fe274e54a90c9e788"
+        }
+      ],
+      "reconstruct": "Fetch supported UTF-8 parts in listed offset order; remove ASCII whitespace, concatenate Base64, decode, then verify whole archive size/SHA and every manifest member."
+    }
+  ],
+  "transport": "All three archives were read from ordinary owned native directories, independently decoded in memory, and every transported archive member hash/length verified. Binary Git create_blob results matched independently computed Git blob IDs. Every supported Base64 mirror/part and standalone README/receipt was fetched and compared byte-for-byte after creation. No cloud overlay file or Library copy is required for Git-backed evidence.",
+  "executions": [
+    {
+      "host": "MSI edc358ed-5ad6-4036-b7aa-8667bf0e14e0, ordinary jacob",
+      "pid": 74508,
+      "operation": "Collector controls and original R1 negative parsing",
+      "observedExit": 0,
+      "rdcSeconds": 1.49,
+      "innerSeconds": 1.1318368911743164
+    },
+    {
+      "host": "MSI",
+      "pid": 58352,
+      "operation": "First corrected original accounting",
+      "observedExit": 1,
+      "rdcSeconds": 0.78,
+      "disposition": "Preserved failure on three pypdf Unicode fields; no expectation change."
+    },
+    {
+      "host": "MSI",
+      "pid": 47472,
+      "operation": "Original PDF content/ActualText/CMap inspection",
+      "observedExit": 0,
+      "rdcSeconds": 0.48
+    },
+    {
+      "host": "MSI",
+      "pid": 81508,
+      "operation": "Pure shared-phase correction and sensitivity checks on retained origins",
+      "observedExit": 0,
+      "rdcSeconds": 0.32,
+      "actualCases": 3,
+      "oldCollapsedRefusals": 3,
+      "controlledPositives": 15,
+      "controlledRefusals": 39
+    },
+    {
+      "host": "hamon-thinkpad cadafaf3-4d0b-4c4f-a0d3-34a95d2cec90, UID1000",
+      "pid": 3602827,
+      "operation": "12 Poppler decode/raster processes",
+      "observedExit": 0,
+      "rdcSeconds": 2.97,
+      "innerSeconds": 2.819708824157715,
+      "childExitCodes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "childStderr": "All empty"
+    }
+  ],
+  "historicalAndUncertain": [
+    "Original R1 visually joined-line product finding140ba170 and its accepted historical records remain unchanged; the new PDFs are new root originals, not regenerated old output.",
+    "The old independent R1 PDF full archive SHA325f5364f50f28fec8715db6b8585fc117049558bf972fe06c16c6b8a372c5d7 remains native/offline LA7 with incomplete transfer. It is not claimed created in Git.",
+    "R0 collector-seal PID28400, saved-origin inspection PID78132 and empty/admission supplement PID49588 had complete admitted output files, but their later RDC session reads returned No session found. No exit code is invented and no process was replayed; complete bytes were reconciled by archive/member verification. Final independent Poppler covers all three original PDFs with actual exit0.",
+    "Actual raw geometry preserves original 0.25pt predicate failure. The separate correction is a scoped receiver correction; product/PDF bytes and Unicode accounting remain unchanged."
+  ],
+  "receiving": {
+    "frozenAccounting": "d2933d18b0e38569768b5136b073ad213342d50d",
+    "frozenLedger": "f4af9e1197ded2ee1b732ad21265786122b7bb41",
+    "originalGeometry": "2b60e392c939621c4220fe1e8255ead36a93eab3",
+    "collector": "e90f1463c4c296db7ac4e8d85b2dd770ef5494a5",
+    "initialFailure": "c1793856e90880fde758ff4ff243fc7561921615",
+    "rawOriginInspection": "1c436dd53672be4951b2eb68ad049f6467d31067",
+    "unicodeContentEvidence": "e16d2b0fac9b616fd11ae6369df646e657b0124c",
+    "quantizationHelper": "a7e6e981164f012ddb9d518aa96a7b6d689275b1",
+    "quantizationTests": "188b05943d62cd268733c046c1be4a61dfbaeaaa",
+    "quantizationReceipt": "54d8dfbddf21d449f8a3f97c4a7427061df03c71",
+    "accountedFields": 80,
+    "originalOccurrenceKeys": 6,
+    "stressNumberedLines": 108,
+    "pdfPageCounts": [
+      4,
+      7,
+      2
+    ],
+    "outOfPageWordBoxes": 0,
+    "visual": "All thirteen original Poppler PNGs inspected; no missing/clipped required content. Three separator sequences visibly advance on separate lines. Both accent forms and emoji render. Unbroken V/W text wraps and continues. Split cards and the empty report's second footer page are pagination observations.",
+    "unicode": "Exact decomposed text remains in PDF /ActualText and Poppler extraction; pypdf glyph extraction alone maps to precomposed é. No Unicode normalization was applied.",
+    "quantization": "Fixed source pitch1.55×12pt and one actual PDF text-grid quantum~0.75pt; all residuals must share one phase. Exact marker/order/page/finite/font/grid/raw-callback checks retained; corrected residual ranges0.30/0.60/0.60pt; collapsed/double/drift controls refuse."
+  }
+}

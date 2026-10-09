@@ -1,0 +1,118 @@
+{
+  "format": "tastetable-visit-html-source-r1/1",
+  "base": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+  "tree": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6",
+  "contractSHA256": "137629ad8e711adf55b1b491b1a546bd8a3be9a84573af1c1ae59da09dc35f6c",
+  "files": [
+    {
+      "path": "static/visit_record.mjs",
+      "bytes": 7525,
+      "gitBlob": "2b5b37e3d4a227e00a5b0052a962d13512b53e48",
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f",
+      "owned": false
+    },
+    {
+      "path": "static/week_file.mjs",
+      "bytes": 6642,
+      "gitBlob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "owned": false
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "bytes": 3913,
+      "gitBlob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "owned": false
+    },
+    {
+      "path": "static/visit_record_csv.mjs",
+      "bytes": 1646,
+      "gitBlob": "b001286f411bec6a9088b1902e9455f2fc3540c2",
+      "sha256": "a233a983918291ef93577f91eb64c56adb4644c10cd8f4046e875d4536cc970c",
+      "owned": false
+    },
+    {
+      "path": "tests/fixtures/visit-record-csv.json",
+      "bytes": 1934,
+      "gitBlob": "69d1c226ab9b7ed25a08f9372a0534d2be00d27f",
+      "sha256": "ee45bdd3fb7dd31d48094a9752e88be7fc15331cad4e702e29b0eb5626df0624",
+      "owned": false
+    },
+    {
+      "path": "static/visit_record_report.mjs",
+      "bytes": 8807,
+      "sha256": "37319b6fd150143e4a1e53eedfd26c649364f8d8fdc2a66f3a85ec9053843b27",
+      "gitBlob": "ffda6e3b7ac5278e82a9d7617061e6e11d3862e1",
+      "owned": true
+    },
+    {
+      "path": "tools/visit_record_to_html.mjs",
+      "bytes": 6062,
+      "sha256": "1ca419d6faa34c9c11a80ae18113f1058ba1bd2447f8fd69547a19d044410e02",
+      "gitBlob": "5da2eac3dd7a8aeb3c1deef981245155b39aa3e4",
+      "owned": true
+    },
+    {
+      "path": "tests/test_visit_record_report.mjs",
+      "bytes": 6669,
+      "sha256": "7db2e4a5dd3e4b44711f7e857af7bd5ffbadc3bbbfb00acce225bf2987489f77",
+      "gitBlob": "98844bc0d78fa0f0ce5a33d164c7a45a40a35dbc",
+      "owned": true
+    },
+    {
+      "path": "tests/test_visit_record_to_html.mjs",
+      "bytes": 7522,
+      "sha256": "7361101622a9ff6c79abbf65995b106886f460bdd588bc511ba4bfdf4bb37e95",
+      "gitBlob": "07f4a9b0a41f25976e83a0c2fb6e204794d964f6",
+      "owned": true
+    },
+    {
+      "path": "docs/visit-record-html/README.md",
+      "bytes": 3612,
+      "sha256": "46cf2e6fb09b51e0607115c3418bb1ef39b1e5996f2dc01917827adae1c41d64",
+      "gitBlob": "c59fe76e6e57ecb87cf6045d01ed1d67e1802f44",
+      "owned": true
+    }
+  ],
+  "syntax": [
+    {
+      "path": "static/visit_record_report.mjs",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "tools/visit_record_to_html.mjs",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "tests/test_visit_record_report.mjs",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "tests/test_visit_record_to_html.mjs",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "tests": {
+    "path": "native-tests-r1.json",
+    "sha256": "6f0d4a3929350ab45d277cf0365680ca9daacf562d222070b9499ddedbd82144",
+    "status": 0
+  },
+  "sourceUnchanged": true
+}

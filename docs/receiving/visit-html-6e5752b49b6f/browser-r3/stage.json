@@ -1,0 +1,325 @@
+{
+  "format": "taste65-r3-native-browser-staging/1",
+  "at": "2026-10-09T01:46:21.000Z",
+  "accepted": true,
+  "identity": {
+    "pid": 32856,
+    "node": "v24.14.0",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "user": "jacob",
+    "hostname": "MSI",
+    "root": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3"
+  },
+  "capacity": {
+    "at": "2026-10-09T01:46:21.007Z",
+    "freeRAM": 10231656448,
+    "diskFree": 202838847488
+  },
+  "controllersBefore": [
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\stage.cjs",
+      "bytes": 10752,
+      "sha256": "7171b672e17eeccd90366d257f2cf706212a580adebe0681fc16923bcdba4b39",
+      "gitBlob": "54127247b8f0c1289ff5b1e7a5a9e6686aa1db3d",
+      "mtimeMs": 1791510377444.427
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\run.cjs",
+      "bytes": 4330,
+      "sha256": "82f878870268beffdc626902d8e118a0ca97fc796aa85149f77dc0cb630466a1",
+      "gitBlob": "0d2893259abb2de794a24c8432c676d94986438e",
+      "mtimeMs": 1791510379212.1174
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\stage-payload.json",
+      "bytes": 236709,
+      "sha256": "42b0e86489a7799736419558ff73c78e920e385671662e66bc937c2102cc8a82",
+      "gitBlob": "ca166da9cebdbb2565ab80694b4c6b00bdee68f2",
+      "mtimeMs": 1791510375630.2615
+    }
+  ],
+  "runtimeBefore": [
+    {
+      "path": "C:\\Program Files\\nodejs\\node.exe",
+      "bytes": 91380224,
+      "sha256": "63c259c81e5d472b5f11c8d506070130cb04a1ecf84b80377a34ed6ec9048088",
+      "gitBlob": "74ad4dd60ef9b1c1ad2b52e2c62efd94c719ce49",
+      "mtimeMs": 1771925664000
+    },
+    {
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "bytes": 4496024,
+      "sha256": "977d6483df6c457eab24a3241b44645c66067f52b73bc2c8dbd7e6469bf15d1f",
+      "gitBlob": "d33a320be8e4f063c70e4ddb822827edaba6117a",
+      "mtimeMs": 1790821002884.604
+    },
+    {
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\154.0.8037.97\\chrome.dll",
+      "bytes": 302382744,
+      "sha256": "01cfba363a06b5aee6ccb9a2691062b506bac411e3b80cca54246c691784c241",
+      "gitBlob": "2bab286459a940d010655e34cc03ed4ea4e15378",
+      "mtimeMs": 1790821012354.261
+    },
+    {
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\154.0.8037.98\\chrome.dll",
+      "bytes": 302382744,
+      "sha256": "ee522fdc3adafa17c48d351e4613d40b61fe98ddbd7de57b3f20a36b43561c5d",
+      "gitBlob": "5eca2c17a9a1f3d304102a2c85fc5fcaa0ef6cdc",
+      "mtimeMs": 1790825278849.054
+    },
+    {
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "bytes": 495616,
+      "sha256": "8bb6fa8c283b4d92120b1ef249a9b311b0f804d4cabbe9981159976c8be76a5e",
+      "gitBlob": "2cc69402150b24c5b08500625dfb3bc1c5cccb41",
+      "mtimeMs": 1788916607449.4038
+    }
+  ],
+  "written": [
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\candidate-r2\\static\\visit_record.mjs",
+      "bytes": 7525,
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f",
+      "gitBlob": "2b5b37e3d4a227e00a5b0052a962d13512b53e48",
+      "mtimeMs": 1791510381700.7256
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\candidate-r2\\static\\week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "gitBlob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "mtimeMs": 1791510381702.8162
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\candidate-r2\\static\\week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "gitBlob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "mtimeMs": 1791510381704.3127
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\candidate-r2\\static\\visit_record_csv.mjs",
+      "bytes": 1646,
+      "sha256": "a233a983918291ef93577f91eb64c56adb4644c10cd8f4046e875d4536cc970c",
+      "gitBlob": "b001286f411bec6a9088b1902e9455f2fc3540c2",
+      "mtimeMs": 1791510381705.5342
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\candidate-r2\\tests\\fixtures\\visit-record-csv.json",
+      "bytes": 1934,
+      "sha256": "ee45bdd3fb7dd31d48094a9752e88be7fc15331cad4e702e29b0eb5626df0624",
+      "gitBlob": "69d1c226ab9b7ed25a08f9372a0534d2be00d27f",
+      "mtimeMs": 1791510381707.6946
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\candidate-r2\\docs\\visit-record-html\\README.md",
+      "bytes": 3612,
+      "sha256": "46cf2e6fb09b51e0607115c3418bb1ef39b1e5996f2dc01917827adae1c41d64",
+      "gitBlob": "c59fe76e6e57ecb87cf6045d01ed1d67e1802f44",
+      "mtimeMs": 1791510381709.3828
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\candidate-r2\\static\\visit_record_report.mjs",
+      "bytes": 8975,
+      "sha256": "228f65b99c6826753e12d79c504bcd8c8d91915b2d4bbc6c78e0881b00cd5e55",
+      "gitBlob": "2ccb10513cf9df1461e16f56c22cbbba55c6966a",
+      "mtimeMs": 1791510381710.5122
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\candidate-r2\\tools\\visit_record_to_html.mjs",
+      "bytes": 6062,
+      "sha256": "1ca419d6faa34c9c11a80ae18113f1058ba1bd2447f8fd69547a19d044410e02",
+      "gitBlob": "5da2eac3dd7a8aeb3c1deef981245155b39aa3e4",
+      "mtimeMs": 1791510381712.37
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\candidate-r2\\tests\\test_visit_record_report.mjs",
+      "bytes": 7747,
+      "sha256": "7a3f23995147d1c537a105ee66f939ed9e4759bdf688d83a55263bbe49340b95",
+      "gitBlob": "42a899322e7bc12e1d9c8cc2234e2057648d4577",
+      "mtimeMs": 1791510381714.021
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\candidate-r2\\tests\\test_visit_record_to_html.mjs",
+      "bytes": 7522,
+      "sha256": "7361101622a9ff6c79abbf65995b106886f460bdd588bc511ba4bfdf4bb37e95",
+      "gitBlob": "07f4a9b0a41f25976e83a0c2fb6e204794d964f6",
+      "mtimeMs": 1791510381715.2847
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\reference-baseline-receiving.json",
+      "bytes": 11004,
+      "sha256": "6e8279aca4de0aa15a66ae93384aa9566d895cd2dd8815ba05a59864fb16aea0",
+      "gitBlob": "95dcc475abb03b37121a64806e225c2c4c04f622",
+      "mtimeMs": 1791510381716.296
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\original-baseline-receipt.json",
+      "bytes": 3391,
+      "sha256": "518fe0362ae745ca4853ad76593b9774f2b5126e162b7480ac781873e7cf29c0",
+      "gitBlob": "c82ad45f7ef4596f9c754c81301e27c26e99a924",
+      "mtimeMs": 1791510381718.303
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\public-contract-r1.json",
+      "bytes": 6164,
+      "sha256": "137629ad8e711adf55b1b491b1a546bd8a3be9a84573af1c1ae59da09dc35f6c",
+      "gitBlob": "86c9c81101df9799065416640cbcd883f0beb43f",
+      "mtimeMs": 1791510381719.2961
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\blind-reference.json",
+      "bytes": 22917,
+      "sha256": "5add127a6a05851626b5b7e69604c9390f055d8f0bb1ba1f8712c33f92c6f5d6",
+      "gitBlob": "d39576d94d9199fc3868fa89e362c17bbabdac02",
+      "mtimeMs": 1791510381720.798
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\baseline\\static\\visit_record.mjs",
+      "bytes": 7525,
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f",
+      "gitBlob": "2b5b37e3d4a227e00a5b0052a962d13512b53e48",
+      "mtimeMs": 1791510381722.817
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\baseline\\static\\week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "gitBlob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "mtimeMs": 1791510381723.8054
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\baseline\\static\\week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "gitBlob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "mtimeMs": 1791510381725.8142
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\fixtures\\original-record.json",
+      "bytes": 1934,
+      "sha256": "ee45bdd3fb7dd31d48094a9752e88be7fc15331cad4e702e29b0eb5626df0624",
+      "gitBlob": "69d1c226ab9b7ed25a08f9372a0534d2be00d27f",
+      "mtimeMs": 1791510381726.812
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\fixtures\\literal-notes-世界.json",
+      "bytes": 6744,
+      "sha256": "ff26f0b6f09f949279ec2a998a4f66a4bfb8c27d6aaa34fe011e4e9bd13bf900",
+      "gitBlob": "93ae95559a4ce38134dd6ae541e7b8828a10b226",
+      "mtimeMs": 1791510381728.8042
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\fixtures\\unknown-empty-BOM.json",
+      "bytes": 1409,
+      "sha256": "00bed0e900bd5287615469d81a8f52da2a588bd2a3798315391d183460fe0e2d",
+      "gitBlob": "958dea692c5fc289cb26a76f2300cfe8a628b877",
+      "mtimeMs": 1791510381730.3203
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\candidate-manifest-r2.json",
+      "bytes": 3656,
+      "sha256": "00edfeee6dbda6772a317f62faada8f2a611a55cc54a2659bf1d2c26d7e4ddca",
+      "gitBlob": "d9aa51725caaf6a3a13200722f079df251a342aa",
+      "mtimeMs": 1791510381731.342
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\visible-separators.mjs",
+      "bytes": 7637,
+      "sha256": "c5e0de3aa61d98dac205011ac62139512bbb184d23d2bcc91e26e67dc233852c",
+      "gitBlob": "34f1db68f56859c4084a39bdc4c54d672a55e6ae",
+      "mtimeMs": 1791510381732.8557
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\receive-browser-r3.mjs",
+      "bytes": 31668,
+      "sha256": "12034dec1bf1661241b86b6fb8c244bb099eb9a4b61f7b0c3ec25d9a886e78d6",
+      "gitBlob": "701612d5ff86435f81140d6974378ae93ebbd59b",
+      "mtimeMs": 1791510381733.8567
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\original-receive-browser-r1.mjs",
+      "bytes": 22451,
+      "sha256": "adebc3cfdd98571fb14c4354763c0c8248d5bdc0689900b19da2681be019026d",
+      "gitBlob": "f5782867fab8132c3d81bd0a9b83ac155ed5b9ac",
+      "mtimeMs": 1791510381735.8564
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\native-receiving-r2.json",
+      "bytes": 18807,
+      "sha256": "c45b60447992b75d9f1f7d8ca6004985b808d8ae8457ef95cc888b402332e8a7",
+      "gitBlob": "bd3ca497076e7a1981e7e1e97ec3a3317cd1b538",
+      "mtimeMs": 1791510381736.8562
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\owned-chrome-observer.mjs",
+      "bytes": 9286,
+      "sha256": "42ee5938f9eaea96b8f494e71c21f624a936b315580a15b33d14bfe19c1bdb8e",
+      "gitBlob": "5ca69ca68cde91c2439f3b795f280cbc5e552793",
+      "mtimeMs": 1791510381738.3604
+    }
+  ],
+  "controllersAfter": [
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\stage.cjs",
+      "bytes": 10752,
+      "sha256": "7171b672e17eeccd90366d257f2cf706212a580adebe0681fc16923bcdba4b39",
+      "gitBlob": "54127247b8f0c1289ff5b1e7a5a9e6686aa1db3d",
+      "mtimeMs": 1791510377444.427
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\run.cjs",
+      "bytes": 4330,
+      "sha256": "82f878870268beffdc626902d8e118a0ca97fc796aa85149f77dc0cb630466a1",
+      "gitBlob": "0d2893259abb2de794a24c8432c676d94986438e",
+      "mtimeMs": 1791510379212.1174
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\stage-payload.json",
+      "bytes": 236709,
+      "sha256": "42b0e86489a7799736419558ff73c78e920e385671662e66bc937c2102cc8a82",
+      "gitBlob": "ca166da9cebdbb2565ab80694b4c6b00bdee68f2",
+      "mtimeMs": 1791510375630.2615
+    }
+  ],
+  "runtimeAfter": [
+    {
+      "path": "C:\\Program Files\\nodejs\\node.exe",
+      "bytes": 91380224,
+      "sha256": "63c259c81e5d472b5f11c8d506070130cb04a1ecf84b80377a34ed6ec9048088",
+      "gitBlob": "74ad4dd60ef9b1c1ad2b52e2c62efd94c719ce49",
+      "mtimeMs": 1771925664000
+    },
+    {
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "bytes": 4496024,
+      "sha256": "977d6483df6c457eab24a3241b44645c66067f52b73bc2c8dbd7e6469bf15d1f",
+      "gitBlob": "d33a320be8e4f063c70e4ddb822827edaba6117a",
+      "mtimeMs": 1790821002884.604
+    },
+    {
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\154.0.8037.97\\chrome.dll",
+      "bytes": 302382744,
+      "sha256": "01cfba363a06b5aee6ccb9a2691062b506bac411e3b80cca54246c691784c241",
+      "gitBlob": "2bab286459a940d010655e34cc03ed4ea4e15378",
+      "mtimeMs": 1790821012354.261
+    },
+    {
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\154.0.8037.98\\chrome.dll",
+      "bytes": 302382744,
+      "sha256": "ee522fdc3adafa17c48d351e4613d40b61fe98ddbd7de57b3f20a36b43561c5d",
+      "gitBlob": "5eca2c17a9a1f3d304102a2c85fc5fcaa0ef6cdc",
+      "mtimeMs": 1790825278849.054
+    },
+    {
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "bytes": 495616,
+      "sha256": "8bb6fa8c283b4d92120b1ef249a9b311b0f804d4cabbe9981159976c8be76a5e",
+      "gitBlob": "2cc69402150b24c5b08500625dfb3bc1c5cccb41",
+      "mtimeMs": 1788916607449.4038
+    }
+  ],
+  "productExecution": false,
+  "elapsedMs": 1395.5973,
+  "ended": "2026-10-09T01:46:22.397Z"
+}

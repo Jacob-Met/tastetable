@@ -1,0 +1,695 @@
+{
+  "geometry": [
+    {
+      "case": "original-record pick-1 note",
+      "pass": true,
+      "result": {
+        "field": "original-record pick-1 note",
+        "markers": [
+          "A",
+          "B",
+          "C"
+        ],
+        "separators": [
+          "CR",
+          "CRLF"
+        ],
+        "page": 3,
+        "stepsPt": [
+          18.74999921875019,
+          18.749999218749963
+        ],
+        "referencePt": 18.749999218749963,
+        "tolerancePt": 0.25,
+        "selectedLines": [
+          {
+            "page": 3,
+            "order": 73,
+            "text": "A",
+            "baseline": 393.7499835937498,
+            "fontSize": 11.9999995
+          },
+          {
+            "page": 3,
+            "order": 74,
+            "text": "B",
+            "baseline": 412.4999828125,
+            "fontSize": 11.9999995
+          },
+          {
+            "page": 3,
+            "order": 75,
+            "text": "C",
+            "baseline": 431.24998203124994,
+            "fontSize": 11.9999995
+          }
+        ]
+      }
+    },
+    {
+      "case": "literal-notes pick-0 explanation",
+      "pass": false,
+      "error": "literal-notes pick-0 explanation: CR/CRLF/LF do not each make one equal positive line advance"
+    },
+    {
+      "case": "literal-notes pick-1 note",
+      "pass": false,
+      "error": "literal-notes pick-1 note: CR/CRLF/LF do not each make one equal positive line advance"
+    }
+  ],
+  "rawSelected": [
+    {
+      "folder": "collector-qualification-r0",
+      "pdf": 0,
+      "marker": "A",
+      "rows": [
+        {
+          "raw": "A",
+          "page": 3,
+          "tm": [
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            46.765625,
+            2488.0
+          ],
+          "cm": [
+            0.74999996875,
+            0.0,
+            0.0,
+            -0.74999996875,
+            42.74999821875,
+            2314.16991865625
+          ]
+        }
+      ]
+    },
+    {
+      "folder": "collector-qualification-r0",
+      "pdf": 0,
+      "marker": "B",
+      "rows": [
+        {
+          "raw": "B",
+          "page": 3,
+          "tm": [
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            57.09375,
+            2488.0
+          ],
+          "cm": [
+            0.74999996875,
+            0.0,
+            0.0,
+            -0.74999996875,
+            42.74999821875,
+            2314.16991865625
+          ]
+        }
+      ]
+    },
+    {
+      "folder": "collector-qualification-r0",
+      "pdf": 0,
+      "marker": "C",
+      "rows": [
+        {
+          "raw": "C",
+          "page": 3,
+          "tm": [
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            38.0,
+            2513.0
+          ],
+          "cm": [
+            0.74999996875,
+            0.0,
+            0.0,
+            -0.74999996875,
+            42.74999821875,
+            2314.16991865625
+          ]
+        }
+      ]
+    },
+    {
+      "folder": "collector-qualification-r0",
+      "pdf": 1,
+      "marker": "WHY_BEGIN",
+      "rows": [
+        {
+          "raw": "WHY_BEGIN",
+          "page": 5,
+          "tm": [
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            23.0,
+            4695.0
+          ],
+          "cm": [
+            0.74999996875,
+            0.0,
+            0.0,
+            -0.74999996875,
+            42.74999821875,
+            3829.16985553125
+          ]
+        }
+      ]
+    },
+    {
+      "folder": "collector-qualification-r0",
+      "pdf": 1,
+      "marker": "CR_ONLY",
+      "rows": [
+        {
+          "raw": "CR_ONLY",
+          "page": 5,
+          "tm": [
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            109.265625,
+            4695.0
+          ],
+          "cm": [
+            0.74999996875,
+            0.0,
+            0.0,
+            -0.74999996875,
+            42.74999821875,
+            3829.16985553125
+          ]
+        }
+      ]
+    },
+    {
+      "folder": "collector-qualification-r0",
+      "pdf": 1,
+      "marker": "CRLF_PAIR",
+      "rows": [
+        {
+          "raw": "CRLF_PAIR",
+          "page": 5,
+          "tm": [
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            23.0,
+            4720.0
+          ],
+          "cm": [
+            0.74999996875,
+            0.0,
+            0.0,
+            -0.74999996875,
+            42.74999821875,
+            3829.16985553125
+          ]
+        }
+      ]
+    },
+    {
+      "folder": "collector-qualification-r0",
+      "pdf": 1,
+      "marker": "LF_LINE",
+      "rows": [
+        {
+          "raw": "LF_LINE",
+          "page": 5,
+          "tm": [
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            23.0,
+            4745.0
+          ],
+          "cm": [
+            0.74999996875,
+            0.0,
+            0.0,
+            -0.74999996875,
+            42.74999821875,
+            3829.16985553125
+          ]
+        }
+      ]
+    },
+    {
+      "folder": "collector-qualification-r0",
+      "pdf": 1,
+      "marker": "NOTE2_BEGIN",
+      "rows": [
+        {
+          "raw": "NOTE2_BEGIN",
+          "page": 6,
+          "tm": [
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            46.765625,
+            5692.0
+          ],
+          "cm": [
+            0.74999996875,
+            0.0,
+            0.0,
+            -0.74999996875,
+            42.74999821875,
+            4586.66982396875
+          ]
+        }
+      ]
+    },
+    {
+      "folder": "collector-qualification-r0",
+      "pdf": 1,
+      "marker": "CR",
+      "rows": [
+        {
+          "raw": "CR",
+          "page": 6,
+          "tm": [
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            146.296875,
+            5692.0
+          ],
+          "cm": [
+            0.74999996875,
+            0.0,
+            0.0,
+            -0.74999996875,
+            42.74999821875,
+            4586.66982396875
+          ]
+        }
+      ]
+    },
+    {
+      "folder": "collector-qualification-r0",
+      "pdf": 1,
+      "marker": "CRLF",
+      "rows": [
+        {
+          "raw": "CRLF",
+          "page": 6,
+          "tm": [
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            38.0,
+            5717.0
+          ],
+          "cm": [
+            0.74999996875,
+            0.0,
+            0.0,
+            -0.74999996875,
+            42.74999821875,
+            4586.66982396875
+          ]
+        }
+      ]
+    },
+    {
+      "folder": "collector-qualification-r0",
+      "pdf": 1,
+      "marker": "LF",
+      "rows": [
+        {
+          "raw": "LF",
+          "page": 6,
+          "tm": [
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            38.0,
+            5742.0
+          ],
+          "cm": [
+            0.74999996875,
+            0.0,
+            0.0,
+            -0.74999996875,
+            42.74999821875,
+            4586.66982396875
+          ]
+        }
+      ]
+    },
+    {
+      "folder": "corrected-originals-r3",
+      "pdf": 0,
+      "marker": "A",
+      "rows": [
+        {
+          "raw": "A",
+          "page": 3,
+          "tm": [
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            46.765625,
+            2488.0
+          ],
+          "cm": [
+            0.74999996875,
+            0.0,
+            0.0,
+            -0.74999996875,
+            42.74999821875,
+            2314.16991865625
+          ]
+        }
+      ]
+    },
+    {
+      "folder": "corrected-originals-r3",
+      "pdf": 0,
+      "marker": "B",
+      "rows": [
+        {
+          "raw": "B",
+          "page": 3,
+          "tm": [
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            38.0,
+            2513.0
+          ],
+          "cm": [
+            0.74999996875,
+            0.0,
+            0.0,
+            -0.74999996875,
+            42.74999821875,
+            2314.16991865625
+          ]
+        }
+      ]
+    },
+    {
+      "folder": "corrected-originals-r3",
+      "pdf": 0,
+      "marker": "C",
+      "rows": [
+        {
+          "raw": "C",
+          "page": 3,
+          "tm": [
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            38.0,
+            2538.0
+          ],
+          "cm": [
+            0.74999996875,
+            0.0,
+            0.0,
+            -0.74999996875,
+            42.74999821875,
+            2314.16991865625
+          ]
+        }
+      ]
+    },
+    {
+      "folder": "corrected-originals-r3",
+      "pdf": 1,
+      "marker": "WHY_BEGIN",
+      "rows": [
+        {
+          "raw": "WHY_BEGIN",
+          "page": 5,
+          "tm": [
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            23.0,
+            4695.0
+          ],
+          "cm": [
+            0.74999996875,
+            0.0,
+            0.0,
+            -0.74999996875,
+            42.74999821875,
+            3829.16985553125
+          ]
+        }
+      ]
+    },
+    {
+      "folder": "corrected-originals-r3",
+      "pdf": 1,
+      "marker": "CR_ONLY",
+      "rows": [
+        {
+          "raw": "CR_ONLY",
+          "page": 5,
+          "tm": [
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            23.0,
+            4720.0
+          ],
+          "cm": [
+            0.74999996875,
+            0.0,
+            0.0,
+            -0.74999996875,
+            42.74999821875,
+            3829.16985553125
+          ]
+        }
+      ]
+    },
+    {
+      "folder": "corrected-originals-r3",
+      "pdf": 1,
+      "marker": "CRLF_PAIR",
+      "rows": [
+        {
+          "raw": "CRLF_PAIR",
+          "page": 5,
+          "tm": [
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            23.0,
+            4745.0
+          ],
+          "cm": [
+            0.74999996875,
+            0.0,
+            0.0,
+            -0.74999996875,
+            42.74999821875,
+            3829.16985553125
+          ]
+        }
+      ]
+    },
+    {
+      "folder": "corrected-originals-r3",
+      "pdf": 1,
+      "marker": "LF_LINE",
+      "rows": [
+        {
+          "raw": "LF_LINE",
+          "page": 5,
+          "tm": [
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            23.0,
+            4769.0
+          ],
+          "cm": [
+            0.74999996875,
+            0.0,
+            0.0,
+            -0.74999996875,
+            42.74999821875,
+            3829.16985553125
+          ]
+        }
+      ]
+    },
+    {
+      "folder": "corrected-originals-r3",
+      "pdf": 1,
+      "marker": "NOTE2_BEGIN",
+      "rows": [
+        {
+          "raw": "NOTE2_BEGIN",
+          "page": 6,
+          "tm": [
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            46.765625,
+            5727.0
+          ],
+          "cm": [
+            0.74999996875,
+            0.0,
+            0.0,
+            -0.74999996875,
+            42.74999821875,
+            4586.66982396875
+          ]
+        }
+      ]
+    },
+    {
+      "folder": "corrected-originals-r3",
+      "pdf": 1,
+      "marker": "CR",
+      "rows": [
+        {
+          "raw": "CR",
+          "page": 6,
+          "tm": [
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            38.0,
+            5751.0
+          ],
+          "cm": [
+            0.74999996875,
+            0.0,
+            0.0,
+            -0.74999996875,
+            42.74999821875,
+            4586.66982396875
+          ]
+        }
+      ]
+    },
+    {
+      "folder": "corrected-originals-r3",
+      "pdf": 1,
+      "marker": "CRLF",
+      "rows": [
+        {
+          "raw": "CRLF",
+          "page": 6,
+          "tm": [
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            38.0,
+            5776.0
+          ],
+          "cm": [
+            0.74999996875,
+            0.0,
+            0.0,
+            -0.74999996875,
+            42.74999821875,
+            4586.66982396875
+          ]
+        }
+      ]
+    },
+    {
+      "folder": "corrected-originals-r3",
+      "pdf": 1,
+      "marker": "LF",
+      "rows": [
+        {
+          "raw": "LF",
+          "page": 6,
+          "tm": [
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            38.0,
+            5801.0
+          ],
+          "cm": [
+            0.74999996875,
+            0.0,
+            0.0,
+            -0.74999996875,
+            42.74999821875,
+            4586.66982396875
+          ]
+        }
+      ]
+    }
+  ],
+  "unicodeContext": [
+    {
+      "page": 6,
+      "needle": "Earlier explanation",
+      "text": "ag> & \"literal\" NOTE2_END  \nOriginal suggestion explanation\nEarlier explanation with \u00e9 and \u00e9.\nOriginal occurrence 3 \u00b7 pick-2"
+    },
+    {
+      "page": 6,
+      "needle": "NOTE2_BEGIN",
+      "text": " outcome codeunrecorded\nActual date 2025-01-01\nVisit note\n  NOTE2_BEGIN\nCR\nCRLF\nLF TAB  \u00e9 \u00e9 \ud83d\ude42  <tag> & \"literal\" NOTE2_END  \nOriginal suggestion explanation\nEarlier explanation with \u00e9 and \u00e9.\nOriginal occurrence 3 \u00b7 pick-2"
+    },
+    {
+      "page": 7,
+      "needle": "ORIGINAL_ORDER_END",
+      "text": "Caf\u00e9 and Caf\u00e9 \u2014 ORIGINAL_ORDER_END\nOriginal venue ID third-id\nOriginal kind restaurant\nOriginal suggested day Friday\nSaved planned day Friday\nSaved planned date 2024-03-01\nRecorded visit\nDid not go\nRecorded outcome c"
+    }
+  ],
+  "inputPins": [
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\HAMON\\estate-6e5752b49b6f\\taste65-original-pdf-receiving-native-r2\\collector-qualification-r0\\original-0-origins.json",
+      "sha256": "559fbd7616bbc8616f68af95a936504b38ba044b10a2bf60991c23bec984479e",
+      "bytes": 71641
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\HAMON\\estate-6e5752b49b6f\\taste65-original-pdf-receiving-native-r2\\collector-qualification-r0\\original-1-origins.json",
+      "sha256": "f2a8dcf68c25c46a7fc9f69d8a60c3371c6521ccbb6d1841bfee268210939f74",
+      "bytes": 170148
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\HAMON\\estate-6e5752b49b6f\\taste65-original-pdf-receiving-native-r2\\corrected-originals-r3\\original-0-origins.json",
+      "sha256": "f3ac117538dd54dd07561f47518a420c72942f63fe3e00bd982aefd9d3212222",
+      "bytes": 71641
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\HAMON\\estate-6e5752b49b6f\\taste65-original-pdf-receiving-native-r2\\corrected-originals-r3\\original-1-origins.json",
+      "sha256": "fa55a50ba0187f929e105e98406cf87a5feaa5bcfc78867872faf74b5bec1a13",
+      "bytes": 170129
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "format": "tastetable-visit-html-source-r2/1",
+  "base": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+  "tree": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6",
+  "sourceCommit": "0c7a99ada6c0b53e69d2049e9d2fe823d8f26317",
+  "sourceTree": "70fd963f09a20a00889b87cb008e204b6464857e",
+  "parentSourceCommit": "b734d5f880a0199259435f8de8dafb71115c8530",
+  "contractSHA256": "137629ad8e711adf55b1b491b1a546bd8a3be9a84573af1c1ae59da09dc35f6c",
+  "files": [
+    {
+      "path": "static/visit_record.mjs",
+      "bytes": 7525,
+      "gitBlob": "2b5b37e3d4a227e00a5b0052a962d13512b53e48",
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f",
+      "owned": false
+    },
+    {
+      "path": "static/week_file.mjs",
+      "bytes": 6642,
+      "gitBlob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "owned": false
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "bytes": 3913,
+      "gitBlob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "owned": false
+    },
+    {
+      "path": "static/visit_record_csv.mjs",
+      "bytes": 1646,
+      "gitBlob": "b001286f411bec6a9088b1902e9455f2fc3540c2",
+      "sha256": "a233a983918291ef93577f91eb64c56adb4644c10cd8f4046e875d4536cc970c",
+      "owned": false
+    },
+    {
+      "path": "tests/fixtures/visit-record-csv.json",
+      "bytes": 1934,
+      "gitBlob": "69d1c226ab9b7ed25a08f9372a0534d2be00d27f",
+      "sha256": "ee45bdd3fb7dd31d48094a9752e88be7fc15331cad4e702e29b0eb5626df0624",
+      "owned": false
+    },
+    {
+      "path": "static/visit_record_report.mjs",
+      "bytes": 8975,
+      "sha256": "228f65b99c6826753e12d79c504bcd8c8d91915b2d4bbc6c78e0881b00cd5e55",
+      "gitBlob": "2ccb10513cf9df1461e16f56c22cbbba55c6966a",
+      "owned": true
+    },
+    {
+      "path": "tools/visit_record_to_html.mjs",
+      "bytes": 6062,
+      "sha256": "1ca419d6faa34c9c11a80ae18113f1058ba1bd2447f8fd69547a19d044410e02",
+      "gitBlob": "5da2eac3dd7a8aeb3c1deef981245155b39aa3e4",
+      "owned": true
+    },
+    {
+      "path": "tests/test_visit_record_report.mjs",
+      "bytes": 7747,
+      "sha256": "7a3f23995147d1c537a105ee66f939ed9e4759bdf688d83a55263bbe49340b95",
+      "gitBlob": "42a899322e7bc12e1d9c8cc2234e2057648d4577",
+      "owned": true
+    },
+    {
+      "path": "tests/test_visit_record_to_html.mjs",
+      "bytes": 7522,
+      "sha256": "7361101622a9ff6c79abbf65995b106886f460bdd588bc511ba4bfdf4bb37e95",
+      "gitBlob": "07f4a9b0a41f25976e83a0c2fb6e204794d964f6",
+      "owned": true
+    },
+    {
+      "path": "docs/visit-record-html/README.md",
+      "bytes": 3612,
+      "sha256": "46cf2e6fb09b51e0607115c3418bb1ef39b1e5996f2dc01917827adae1c41d64",
+      "gitBlob": "c59fe76e6e57ecb87cf6045d01ed1d67e1802f44",
+      "owned": true
+    }
+  ],
+  "qualification": {
+    "nativeReceiptGit": "bd3ca497076e7a1981e7e1e97ec3a3317cd1b538",
+    "runtime": "v22.22.1",
+    "host": "hamon-thinkpad",
+    "baseline": {
+      "pid": 3108083,
+      "status": 1,
+      "tests": 1,
+      "fail": 1,
+      "expected": true
+    },
+    "candidate": {
+      "pid": 3108128,
+      "status": 0,
+      "tests": 14,
+      "pass": 14,
+      "fail": 0,
+      "skip": 0
+    },
+    "meaning": "Native model/CLI tests; corrected browser/PDF receiving is separate and pending."
+  },
+  "correction": {
+    "findingGit": "140ba170b01d716d0cc880556d40f55c896bf644",
+    "changedPaths": [
+      "static/visit_record_report.mjs",
+      "tests/test_visit_record_report.mjs"
+    ],
+    "otherLeavesUnchanged": 821
+  }
+}

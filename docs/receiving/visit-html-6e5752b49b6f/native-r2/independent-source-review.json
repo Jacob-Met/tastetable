@@ -1,0 +1,72 @@
+{
+  "schema": "taste65-r2-independent-source-review/1",
+  "accepted": true,
+  "commit": "0c7a99ada6c0b53e69d2049e9d2fe823d8f26317",
+  "tree": "70fd963f09a20a00889b87cb008e204b6464857e",
+  "parent": "b734d5f880a0199259435f8de8dafb71115c8530",
+  "parentTree": "bcdb055b6fcd7547ee6349323b31277a79da5338",
+  "leafCount": 823,
+  "preservedLeaves": 821,
+  "delta": [
+    {
+      "path": "static/visit_record_report.mjs",
+      "before": {
+        "path": "static/visit_record_report.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ffda6e3b7ac5278e82a9d7617061e6e11d3862e1",
+        "size": 8807,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/ffda6e3b7ac5278e82a9d7617061e6e11d3862e1"
+      },
+      "after": {
+        "path": "static/visit_record_report.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2ccb10513cf9df1461e16f56c22cbbba55c6966a",
+        "size": 8975,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/2ccb10513cf9df1461e16f56c22cbbba55c6966a"
+      }
+    },
+    {
+      "path": "tests/test_visit_record_report.mjs",
+      "before": {
+        "path": "tests/test_visit_record_report.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "98844bc0d78fa0f0ce5a33d164c7a45a40a35dbc",
+        "size": 6669,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/98844bc0d78fa0f0ce5a33d164c7a45a40a35dbc"
+      },
+      "after": {
+        "path": "tests/test_visit_record_report.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "42a899322e7bc12e1d9c8cc2234e2057648d4577",
+        "size": 7747,
+        "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/42a899322e7bc12e1d9c8cc2234e2057648d4577"
+      }
+    }
+  ],
+  "fullTreesNotTruncated": true,
+  "rendererAfterEscapeExact": true,
+  "testPrefixExact": true,
+  "observations": [
+    "Only escapeText's comment/callback changes in runtime. All bytes beginning with CSS and all remaining renderer logic are preserved.",
+    "CR is encoded as the original character reference. A following LF suppresses the added br; a lone CR receives one br with no additional text node. Ampersand/angle/quote/apostrophe escaping and malformed-Unicode refusal are unchanged.",
+    "Arbitrary literal values are rendered as body text. The attribute use of escapeText is only the codec-generated pick-N key, whose vocabulary cannot contain CR; the new br cannot be inserted into an arbitrary-value attribute.",
+    "The existing model test changes one expected lone-CR HTML sequence. Its other original bytes remain exact. The appended five cases cover ordinary CR, CRLF, leading/trailing/consecutive CR, literal br/closing-tag text, and CRLF followed by CR across four displayed field types.",
+    "These authored tests prove markup strings, not visual browser line layout. The frozen independent DOM geometry and PDF span gates remain separate required evidence."
+  ],
+  "independentOracle": {
+    "helperGit": "34f1db68f56859c4084a39bdc4c54d672a55e6ae",
+    "sha256": "c5e0de3aa61d98dac205011ac62139512bbb184d23d2bcc91e26e67dc233852c",
+    "contractGit": "08fd46cdf437f5ab501b4db320e050c1050b5ab3",
+    "frozenBeforeR2Exposure": true
+  },
+  "findings": [],
+  "limits": [
+    "No native source/CLI test replay performed by this review.",
+    "R1 nine-group/22-process receiving remains bound to original b734 source; this source review does not relabel it R2.",
+    "Corrected actual browser/PDF acceptance is pending separate root and native-runtime receivers at this review boundary."
+  ]
+}

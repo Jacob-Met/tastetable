@@ -1,0 +1,33 @@
+{
+  "schema": "tastetable65-independent-original-pdf-final-disposition/1",
+  "worker": "estate-6e5752b49b6f/native_runtime",
+  "state": "ACCEPTED within the exact original corrected R3 PDF receiving scope",
+  "repository": "Jacob-Met/TasteTable",
+  "custodyMap": "6b165a63e35b3e09be7816cf654f82b1bc9dae10",
+  "independentSourceAcceptance": {
+    "git": "fa728f8a8a716fcd6563f17cd076fe3e72eeae9d",
+    "bytes": 13560,
+    "sha256": "6b1e88f2d6963588e00801ed08767b3ce335a45ce958679b5c238ca05b8d040c",
+    "worker": "estate-6e5752b49b6f/production_slice",
+    "scope": "Contract/source/mathematical and evidence readback review; no duplicate native PDF or raster run."
+  },
+  "acceptance": [
+    "All three exact ORIGINAL corrected PDFs admitted and preserved unchanged; page counts4/7/2.",
+    "Installed pypdf origin collector qualified on known-coordinate manual PDF controls and all original visibly collapsed R1 cases, with the frozen predicate unchanged.",
+    "Unchanged Poppler accounting passes all80 fields, six occurrence keys,108 numbered note lines,600-character V run and280-character W run with no Unicode normalization.",
+    "All thirteen original Poppler page PNGs visually inspected; no missing or clipped required content. Corrected CR, CRLF and LF marker sequences are visibly separate.",
+    "Exact /ActualText FEFF00650301 spans preserve the decomposed source in all three challenged fields. Initial pypdf glyph-only failures remain; independent Poppler extracts the exact decomposed strings.",
+    "Original0.25pt geometry predicate and stress-case failures remain. Separate receiving-only shared-phase correction admits known16CSSpx/12pt font,1.55 line-height and0.75 point transform; actual corrected residual ranges0.30/0.60/0.60pt fit one quantum.",
+    "Three actual corrected cases, fifteen controlled quantization phases, thirty-nine refusal controls and all three old collapsed product refusals are recorded; no repeated PDF decode/raster was used to qualify the correction.",
+    "All three receiving packets were independently transported and every archive member verified; all supported Git mirrors/parts and readable receipts were fetched and matched after creation."
+  ],
+  "limits": [
+    "Acceptance applies to the exact three root-produced R3 PDFs and pinned source/renderer/browser evidence, not arbitrary PDFs or all browser/font/platform output.",
+    "The receiver does not change product source, report/HTML generation, printing, original PDF bytes or Unicode expectations.",
+    "Split occurrence cards and the empty report's two-page footer are documented pagination observations.",
+    "Native tmpfs and native device presence are not durability claims; actual immutable custody is enumerated in the map.",
+    "Old offline-LA7 R1 full independent archive325f remains an explicit historical transport hold and is not falsely claimed available.",
+    "Source integration, ref movement, Actions and deployment are outside this receiving verdict."
+  ],
+  "rootHandoff": "The exact immutable packet map and independent acceptance are available for root's final composition/readback. No further native replay or output generation is required by this lane."
+}

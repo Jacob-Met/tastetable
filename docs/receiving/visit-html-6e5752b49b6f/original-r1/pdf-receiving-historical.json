@@ -1,0 +1,319 @@
+{
+  "schema": "taste65-independent-original-pdf-receiving/1",
+  "worker": "estate-6e5752b49b6f/native_runtime",
+  "accepted": true,
+  "scope": "Independent original-PDF custody, extraction, field/order accounting, full-page raster decoding and visual inspection. No product/HTML/browser/print regeneration.",
+  "contract": {
+    "git": "74ad8a364f5e4da2809dcfd7615397b7b1b87a2b",
+    "sha256": "69a84ec2e182b70e7bbd3894122085777e4f8caa2784404f0f4a05c2aacdba57"
+  },
+  "ledger": {
+    "git": "f4af9e1197ded2ee1b732ad21265786122b7bb41",
+    "sha256": "9691a748b354cd08d24194784c8ca804b9ae41d6d91d9a79809f05a3be5face7"
+  },
+  "inputTransfer": {
+    "path": "C:\\Users\\minec\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-report-pdf-receiving-native-r0\\original-print-input-r0.json.gz",
+    "bytes": 271046,
+    "sha256": "9f848779dfde7946b1a04b21d2058a183b13935b71d5c5df5c76cf3d0083c371",
+    "gitBlob": "e7c59802615fa40470e6591aaccefe38badb005a",
+    "files": 10,
+    "base64Characters": 361396,
+    "base64Lines": 23,
+    "originalPdfs": [
+      {
+        "name": "original-0.pdf",
+        "bytes": 94824,
+        "sha256": "c4cc774c9fb5c7fb049279ad9fdce7920a32e25b21cea5f8139e5c9b6db46b34",
+        "gitBlob": "cc092ab5ddba81b4366b4123a0f6e39c84176517"
+      },
+      {
+        "name": "original-1.pdf",
+        "bytes": 120987,
+        "sha256": "fa75132474be12d4dcf3c5107b976a42a5e03114ca83c7d93ef441e5aac7f8f6",
+        "gitBlob": "cdff28a3ce91ad6225f7a14c59ad32db4bd3bfff"
+      },
+      {
+        "name": "original-2.pdf",
+        "bytes": 60296,
+        "sha256": "8c28b58debf13651dc2b50e8d99c7841aacf2ce442ebd10422761cc5461683be",
+        "gitBlob": "a04976afe0731e1ae1749cddba4ee729fcec7e03"
+      }
+    ],
+    "report": {
+      "bytes": 181496,
+      "sha256": "0447e5035c85bb102f3b20750ecf5cbf06cc080d7b890c6a2388fd01ca1c2713",
+      "gitBlob": "59c6807f98f7648608e0178ad050617fb6e2d90d"
+    },
+    "receipt": {
+      "bytes": 3758,
+      "sha256": "c28ca5d5f1ffb3aa562420404502936407ce45157dab32f260bb8edf226a581c",
+      "gitBlob": "215828260d14948ba08aa3e18b7adf55c50a9238"
+    }
+  },
+  "accounting": {
+    "schema": "taste65-original-pdf-accounting-r1/1",
+    "scope": "Only accounting rerun on the unchanged already-decoded original PDF pages; no PDF decoding, raster or browser regeneration.",
+    "accepted": true,
+    "helperSha256": "10cbf7ad88d20efb5153fc2121e81a5a8924a997e0825d6feaebad3afc0d6980",
+    "ledgerSha256": "9691a748b354cd08d24194784c8ca804b9ae41d6d91d9a79809f05a3be5face7",
+    "pdfs": [
+      {
+        "pdf": "original-0.pdf",
+        "sha256": "c4cc774c9fb5c7fb049279ad9fdce7920a32e25b21cea5f8139e5c9b6db46b34",
+        "pages": 4,
+        "result": {
+          "passed": true,
+          "violations": [],
+          "actualOccurrenceKeys": [
+            "pick-0",
+            "pick-1",
+            "pick-2"
+          ],
+          "requiredFieldCount": 37,
+          "textCharacters": 2345,
+          "whitespacePolicy": "ASCII whitespace only is compacted for text accounting. No Unicode normalization; exact DOM CR/TAB/space identity is not inferred. Visual page inspection remains mandatory."
+        }
+      },
+      {
+        "pdf": "original-1.pdf",
+        "sha256": "fa75132474be12d4dcf3c5107b976a42a5e03114ca83c7d93ef441e5aac7f8f6",
+        "pages": 7,
+        "result": {
+          "passed": true,
+          "violations": [],
+          "actualOccurrenceKeys": [
+            "pick-0",
+            "pick-1",
+            "pick-2"
+          ],
+          "requiredFieldCount": 36,
+          "textCharacters": 6243,
+          "whitespacePolicy": "ASCII whitespace only is compacted for text accounting. No Unicode normalization; exact DOM CR/TAB/space identity is not inferred. Visual page inspection remains mandatory."
+        }
+      },
+      {
+        "pdf": "original-2.pdf",
+        "sha256": "8c28b58debf13651dc2b50e8d99c7841aacf2ce442ebd10422761cc5461683be",
+        "pages": 2,
+        "result": {
+          "passed": true,
+          "violations": [],
+          "actualOccurrenceKeys": [],
+          "requiredFieldCount": 7,
+          "textCharacters": 1374,
+          "whitespacePolicy": "ASCII whitespace only is compacted for text accounting. No Unicode normalization; exact DOM CR/TAB/space identity is not inferred. Visual page inspection remains mandatory."
+        }
+      }
+    ],
+    "preservedOriginalNegativeControls": [
+      "missing middle long-note line",
+      "missing occurrence key",
+      "reordered occurrence keys",
+      "missing planned leap date",
+      "missing source timestamp",
+      "599-character note run",
+      "missing literal markup",
+      "missing final note marker",
+      "wrong 320-character venue assumption"
+    ],
+    "extraOffWeekChecks": {
+      "accepted": [
+        "Kept off week",
+        "Kept off this week"
+      ],
+      "refused": [
+        "absent",
+        "Kept on this week"
+      ]
+    },
+    "preservedOriginalDiagnostic": "R0 failed only its narrow kept-off-week phrase matcher in both nonempty reports; R0 source/receipt remains unchanged."
+  },
+  "runtimeAfter": {
+    "event": "finished",
+    "runtimePinsUnchanged": true,
+    "rendered": [
+      {
+        "bytes": 111687,
+        "sha256": "14e4d692e823bcf35f643c652b2e4dadce13ec55a274ced256e7b4fe21ec2e9d",
+        "gitBlob": "e81845532761393ca5266c8be95938184c78ff95",
+        "pdf": 0,
+        "page": 1,
+        "dpi": 110,
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "bytes": 56227,
+        "sha256": "9aebe59fe1da5f13511b8693aa94f13232af6ee34e8ec335bb312eb4afa377a2",
+        "gitBlob": "d82ad87dd1d654eca567a9864767319b5f8d11c6",
+        "pdf": 0,
+        "page": 2,
+        "dpi": 110,
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "bytes": 58795,
+        "sha256": "2610be9cdb5c92e3fc3fb7824c269906dacacbbc5fceb765b53ee738efacce9d",
+        "gitBlob": "76214112a6c06b47cc30503b1dbff08f375a0910",
+        "pdf": 0,
+        "page": 3,
+        "dpi": 110,
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "bytes": 85272,
+        "sha256": "1218e9f62fe3916b1a692361e885c2f236859fc74efc460cb3750b11d82e1568",
+        "gitBlob": "e958d51169f374934068955ceb7fa4ce55abedb2",
+        "pdf": 0,
+        "page": 4,
+        "dpi": 110,
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "bytes": 113358,
+        "sha256": "d1857c65f6e0f90e22a8ed285dd3a129b25cfabe69077cd0230fe8b13100e264",
+        "gitBlob": "26e7fe5e69aba713eebc4fbc686bffa4ec0e4779",
+        "pdf": 1,
+        "page": 1,
+        "dpi": 110,
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "bytes": 108992,
+        "sha256": "18fb1e40d912b617638248c9c3176a0baee16722f6695ee74c1bcdbc2c9e0332",
+        "gitBlob": "d7bb57058d6d6fc7c8a998baf3aec845b0749d5d",
+        "pdf": 1,
+        "page": 2,
+        "dpi": 110,
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "bytes": 97954,
+        "sha256": "68bfd9393d6c492f9763639d0a9edcbbc870cb97d8af5d405f5f5b67f929167a",
+        "gitBlob": "a69071dd97f76ab6693c33a739b04d2209ca4b80",
+        "pdf": 1,
+        "page": 3,
+        "dpi": 110,
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "bytes": 100395,
+        "sha256": "1e7527e7a219fb0cb1652324c0fe24e917abd48e6f20d6468ba9401bf15ae688",
+        "gitBlob": "f3b036d4dfb882aab9e648d79d06d7d8a34ec9ea",
+        "pdf": 1,
+        "page": 4,
+        "dpi": 110,
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "bytes": 80773,
+        "sha256": "0e3336e87f3a2c907988500e8f7b04c29ea545beb1e38e2c1ee018c11eb60fd8",
+        "gitBlob": "0b0303c9873b777b510732662d91bbb10ca04b13",
+        "pdf": 1,
+        "page": 5,
+        "dpi": 110,
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "bytes": 91534,
+        "sha256": "60f79d9584c8f759bd83d875d60522c38fb2fc7f8719f979e76eafcda37069ea",
+        "gitBlob": "a5be46844ac2a4ba8217ec5e68fcbc1dc0510993",
+        "pdf": 1,
+        "page": 6,
+        "dpi": 110,
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "bytes": 81255,
+        "sha256": "0c9372aa392be4efd3ecd138814f71af3075aee26970a96d0e656e379463f3ca",
+        "gitBlob": "359a72cc3290dd9aaf005d638e7f11dd0bfaf627",
+        "pdf": 1,
+        "page": 7,
+        "dpi": 110,
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "bytes": 126961,
+        "sha256": "d2c1e9c1784c2b5813176aca957002747c3da6661801d5bc7923259545a03035",
+        "gitBlob": "1e446295fa478c7b6bb9a0f76d95289e6aa5b4a9",
+        "pdf": 2,
+        "page": 1,
+        "dpi": 110,
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "bytes": 25249,
+        "sha256": "e69c22e9244009f9089ab95bd49fac2a451b000404eb90d03e19177218e662e9",
+        "gitBlob": "7c44b6e66ee36a474e8b5083ad003b816090bc36",
+        "pdf": 2,
+        "page": 2,
+        "dpi": 110,
+        "exit": 0,
+        "stderr": ""
+      }
+    ],
+    "originalPdfs": [
+      {
+        "name": "original-0.pdf",
+        "sha256": "c4cc774c9fb5c7fb049279ad9fdce7920a32e25b21cea5f8139e5c9b6db46b34"
+      },
+      {
+        "name": "original-1.pdf",
+        "sha256": "fa75132474be12d4dcf3c5107b976a42a5e03114ca83c7d93ef441e5aac7f8f6"
+      },
+      {
+        "name": "original-2.pdf",
+        "sha256": "8c28b58debf13651dc2b50e8d99c7841aacf2ce442ebd10422761cc5461683be"
+      }
+    ]
+  },
+  "visual": {
+    "pagesInspected": 13,
+    "renderDpi": 110,
+    "missingOrClippedContentObserved": false,
+    "pageCounts": [
+      4,
+      7,
+      2
+    ],
+    "observations": [
+      "All original occurrence keys and repeated venues appear in original source order.",
+      "All 108 long-note markers,600-character V note run and 280-character W venue run remain visible across page breaks.",
+      "Japanese, accented and combining-accent text, emoji and markup-like text are visibly rendered.",
+      "Recorded outcomes remain separate from actual dates; unrecorded can retain an actual date and null dates show Not recorded.",
+      "Mock/live/unknown provenance descriptions, raw record SHA, source timestamps and backup limitation are visible.",
+      "Pagination is verbose: occurrence-key labels can be on the prior page before the venue heading, and the empty report's second page contains only backup/print guidance. These are recorded separately from missing/clipped-content acceptance."
+    ]
+  },
+  "limitations": [
+    "PDF text extraction and printed rendering do not prove exact DOM CR/LF/TAB/multiple-space identity. The original DOM receiver separately bound those strings. Printed lone CR can join adjacent visible words; that is retained as a rendering limitation, not an editable-backup guarantee.",
+    "Text accounting removes only ASCII whitespace and performs no Unicode normalization. All other frozen required field strings passed; visual inspection supplements extraction.",
+    "The original R0 helper's off-week phrase mismatch remains a failed receiver diagnostic. R1 makes one authorized phrase-match expansion; absent/incorrect labels and all 9 existing sensitivity controls remain checked.",
+    "This receiving does not establish universal layout for all allowed input sizes, new product semantics, full inherited tests, deployment or source integration."
+  ],
+  "retainedStops": [
+    {
+      "phase": "functions source assembly",
+      "error": "ReferenceError: TextEncoder is not defined",
+      "beforeAccountingProcessStart": true,
+      "originalPdfDecodeSessionFinishedWithExit0": true,
+      "productOrPdfReplay": false,
+      "correction": "Compute UTF-8 byte length from JavaScript code points; accounting successor still only the one authorized phrase regex change."
+    }
+  ],
+  "originalPdfsUnchanged": true,
+  "allSelectedRuntimePinsUnchanged": true,
+  "selectedRuntimeFileCount": 30,
+  "rootBrowserRunSeparate": true
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "taste65-r2-native-capsule-receiving/1",
+  "accepted": true,
+  "original": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f",
+  "uid": 1000,
+  "node": "v22.22.1",
+  "capacity": {
+    "at": "2026-10-09T01:06:47.398Z",
+    "availableRAM": 3353534464,
+    "diskFree": 54829056
+  },
+  "trackedInputs": 21,
+  "originalFiles": 30,
+  "originalDirectories": 16,
+  "originalUnchanged": true,
+  "recordedRuntime": [
+    {
+      "path": "/usr/bin/node",
+      "bytes": 26856,
+      "sha256": "d0efb6fcb9d023ba4e2b160ec2384dc28fe4f17732141ef47f676828fa960505",
+      "mtimeNs": "1773302731000000000"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnode.so.127",
+      "bytes": 70228184,
+      "sha256": "ab75d3a6c0a6ea5c0e2ea1ae983621fbcb392a6b4a85067cb83e5b77c2b223e2",
+      "mtimeNs": "1773302731000000000"
+    }
+  ],
+  "nativeReceipt": {
+    "bytes": 18807,
+    "sha256": "c45b60447992b75d9f1f7d8ca6004985b808d8ae8457ef95cc888b402332e8a7",
+    "gitBlob": "bd3ca497076e7a1981e7e1e97ec3a3317cd1b538"
+  },
+  "runs": [
+    {
+      "label": "baseline-lone-cr",
+      "status": 1,
+      "signal": null,
+      "pid": 3108083
+    },
+    {
+      "label": "candidate-authored",
+      "status": 0,
+      "signal": null,
+      "pid": 3108128
+    }
+  ],
+  "independentProductExecution": false,
+  "sourceReviewAccepted": true,
+  "correctedBrowserPDFClaim": false
+}

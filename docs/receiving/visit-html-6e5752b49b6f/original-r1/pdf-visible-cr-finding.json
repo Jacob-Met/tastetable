@@ -1,0 +1,139 @@
+{
+  "schema": "taste65-original-pdf-visible-cr-finding/1",
+  "worker": "estate-6e5752b49b6f/native_runtime",
+  "disposition": "Material presentation finding; literal-separator acceptance held pending owner correction and receiving",
+  "historicalReceipt": {
+    "gitBlob": "0988a91290f9933ce107875768df82607eb14811",
+    "sha256": "6a221af96ad4a247b7af8cc087bf5118f06bd7910cf5ca22f36b7adedc8bd213",
+    "retainedUnchanged": true,
+    "clarification": "Its accepted=true records historical field-accounting/page inspection with lone CR classified as a general rendering limitation. That classification was too broad: the observed visual loss of a separator is material to the frozen literal field-fidelity contract."
+  },
+  "ledger": {
+    "gitBlob": "f4af9e1197ded2ee1b732ad21265786122b7bb41",
+    "sha256": "9691a748b354cd08d24194784c8ca804b9ae41d6d91d9a79809f05a3be5face7",
+    "unchanged": true
+  },
+  "method": "Re-viewed three existing original PDF page rasters already decoded at110dpi and their retained raw text/spans; no PDF/browser/print or raster regeneration, no source edits.",
+  "cases": [
+    {
+      "pdf": 0,
+      "page": 3,
+      "fixture": "original-record.json",
+      "occurrence": "pick-1",
+      "field": "note",
+      "source": "  A\rB\r\nC\n🙂\t ",
+      "visibleFirstLine": "AB",
+      "selectedSpan": "  AB",
+      "pdfIdentity": "c4cc774c9fb5c7fb049279ad9fdce7920a32e25b21cea5f8139e5c9b6db46b34",
+      "raster": {
+        "bytes": 58795,
+        "sha256": "2610be9cdb5c92e3fc3fb7824c269906dacacbbc5fceb765b53ee738efacce9d",
+        "gitBlob": "76214112a6c06b47cc30503b1dbff08f375a0910",
+        "pdf": 0,
+        "page": 3,
+        "dpi": 110,
+        "exit": 0,
+        "stderr": ""
+      },
+      "corroboratingSpans": [
+        {
+          "text": "  AB",
+          "bbox": [
+            71.25,
+            380.80078125,
+            92.4463119506836,
+            396.76171875
+          ],
+          "font": "SegoeUI",
+          "size": 12
+        }
+      ]
+    },
+    {
+      "pdf": 1,
+      "page": 5,
+      "fixture": "literal-notes-世界.json",
+      "occurrence": "pick-0",
+      "field": "explanation",
+      "source": "WHY_BEGIN\rCR_ONLY\r\nCRLF_PAIR\nLF_LINE\tTAB  TWO_SPACES <why> & WHY_END",
+      "visibleFirstLine": "WHY_BEGINCR_ONLY",
+      "selectedSpan": "WHY_BEGINCR_ONLY",
+      "pdfIdentity": "fa75132474be12d4dcf3c5107b976a42a5e03114ca83c7d93ef441e5aac7f8f6",
+      "raster": {
+        "bytes": 80773,
+        "sha256": "0e3336e87f3a2c907988500e8f7b04c29ea545beb1e38e2c1ee018c11eb60fd8",
+        "gitBlob": "0b0303c9873b777b510732662d91bbb10ca04b13",
+        "pdf": 1,
+        "page": 5,
+        "dpi": 110,
+        "exit": 0,
+        "stderr": ""
+      },
+      "corroboratingSpans": [
+        {
+          "text": "WHY_BEGINCR_ONLY",
+          "bbox": [
+            60,
+            521.05078125,
+            173.89186096191406,
+            537.01171875
+          ],
+          "font": "SegoeUI",
+          "size": 12
+        }
+      ]
+    },
+    {
+      "pdf": 1,
+      "page": 6,
+      "fixture": "literal-notes-世界.json",
+      "occurrence": "pick-1",
+      "field": "note",
+      "source": "  NOTE2_BEGIN\rCR\r\nCRLF\nLF\tTAB  é é 🙂 <tag> & \"literal\" NOTE2_END  ",
+      "visibleFirstLine": "NOTE2_BEGINCR",
+      "selectedSpan": "  NOTE2_BEGINCR",
+      "pdfIdentity": "fa75132474be12d4dcf3c5107b976a42a5e03114ca83c7d93ef441e5aac7f8f6",
+      "raster": {
+        "bytes": 91534,
+        "sha256": "60f79d9584c8f759bd83d875d60522c38fb2fc7f8719f979e76eafcda37069ea",
+        "gitBlob": "a5be46844ac2a4ba8217ec5e68fcbc1dc0510993",
+        "pdf": 1,
+        "page": 6,
+        "dpi": 110,
+        "exit": 0,
+        "stderr": ""
+      },
+      "corroboratingSpans": [
+        {
+          "text": "  NOTE2_BEGINCR",
+          "bbox": [
+            71.25,
+            511.30078125,
+            167.07666015625,
+            527.26171875
+          ],
+          "font": "SegoeUI",
+          "size": 12
+        }
+      ]
+    }
+  ],
+  "finding": "Each original raster visibly joins the tokens on either side of U+000D into one word on one line. CRLF and LF still produce line separation in the same fields. This is not merely PyMuPDF extraction normalization.",
+  "impact": "A lone CR used to separate lines or words in a saved note/explanation loses that visual boundary in the printable report. Exact DOM textContent, saved record bytes and overall word accounting do not qualify faithful visible separation.",
+  "preservedSuccesses": [
+    "All13 original pages inspected; no other missing/clipped content observed.",
+    "All6 occurrence keys/order and 80 required field-accounting checks pass under the recorded ASCII-whitespace accounting.",
+    "All108 note lines, 600V note run, 280W venue run, Unicode/literal markup/provenance and backup guidance accounted.",
+    "R0 phrase mismatch and authorized one-regex R1 correction plus all9 original negative controls remain unchanged."
+  ],
+  "separatePaginationObservations": [
+    "Occurrence key labels can appear on the previous page before venue headings.",
+    "Empty report has two pages; second holds backup/print guidance. Neither observation alone is reported as missing/clipped content."
+  ],
+  "nextAcceptance": "Owner should preserve the stored/DOM source string and make its lone-CR separators visible. Receive a bounded corrected original print using the same frozen fixtures, and independently inspect corresponding page bytes plus retained ordering/completeness; no alternative whitespace-erasing oracle.",
+  "archiveState": {
+    "nativeArchiveSha256": "325f5364f50f28fec8715db6b8585fc117049558bf972fe06c16c6b8a372c5d7",
+    "archivePreserved": true,
+    "transportPending": true
+  }
+}

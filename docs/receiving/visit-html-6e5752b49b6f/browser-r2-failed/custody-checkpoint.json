@@ -1,0 +1,97 @@
+{
+  "format": "taste65-msi-startup-capsules-github-custody/1",
+  "repository": "Jacob-Met/tastetable",
+  "nativeRoot": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-msi-startup-custody-github-r0",
+  "archive": {
+    "bytes": 166825,
+    "sha256": "db73bf6fe54aa49e9befa30255278b7b83981e8a85a3bcf618608cab491bda60",
+    "gitBlob": "df6166d452d9a1068ad2bd68363acb3122f2c9e5",
+    "nativeMembers": 79,
+    "nativeMembersVerified": true,
+    "gitCreationMatchesNativeGit": true
+  },
+  "base64": {
+    "bytes": 222437,
+    "sha256": "7e0c7da44476fbb6aa90a92871b01afee26077f500756a765075e2a566f742ad",
+    "gitBlob": "ed3f4ff72e4d9bdc79b92f85c690d769b1f926cf",
+    "fullSupportedUtf8GitReadbackExact": true
+  },
+  "readable": [
+    {
+      "path": "receiving.json",
+      "gitBlob": "126bcfbc8b3137c83bb4c2319fe9f676fd26168f",
+      "rawReadbackExact": true,
+      "bytes": 2446,
+      "sha256": "c7630e34998327d9af757ceb48311017e9a2f4e0ec7c424b7fb73616299022eb",
+      "computedGit": "126bcfbc8b3137c83bb4c2319fe9f676fd26168f"
+    },
+    {
+      "path": "manifest.json",
+      "gitBlob": "b5b08a84d4424d21071eb64b75b6db47210aed37",
+      "rawReadbackExact": true,
+      "bytes": 19063,
+      "sha256": "3bf3f4c9d97b4a901d47254cbfb2c3deba333441f31c568558aa0db9faacc0df",
+      "computedGit": "b5b08a84d4424d21071eb64b75b6db47210aed37"
+    },
+    {
+      "path": "README.md",
+      "gitBlob": "f6e365afe554f67d03c87fa4705e146849bc55ea",
+      "rawReadbackExact": true,
+      "bytes": 1917,
+      "sha256": "f52b166dad092a4a91e5fe9591584879b71729b13c0b82a3b80431daf84d636d",
+      "computedGit": "f6e365afe554f67d03c87fa4705e146849bc55ea"
+    },
+    {
+      "path": "pack.cjs",
+      "gitBlob": "f85444899ce212e33748b49a4160539f42c0b062",
+      "rawReadbackExact": true,
+      "bytes": 10984,
+      "sha256": "12024a3ce398c767f9417b0c0c412b1c9306def5619b7d0fd7b82ca7a3d3a682",
+      "computedGit": "f85444899ce212e33748b49a4160539f42c0b062"
+    },
+    {
+      "path": "seal.json",
+      "gitBlob": "b494cbad1a4fbbd6ddbec61ac9d0140b201bdb86",
+      "rawReadbackExact": true,
+      "bytes": 1763,
+      "sha256": "92e30148681525e517a1775cc5af6d246b77eebbfc77c6d64ffdd1696abe5581",
+      "computedGit": "b494cbad1a4fbbd6ddbec61ac9d0140b201bdb86"
+    },
+    {
+      "path": "native-execution.json",
+      "gitBlob": "c1fbb74df90f58d39268dc567e70bcddbe819a59",
+      "rawReadbackExact": true,
+      "bytes": 4291,
+      "sha256": "04342ffb664f64c1a7b182c6abd566574d5808bded00190e7176423d7b8fc2b0",
+      "computedGit": "c1fbb74df90f58d39268dc567e70bcddbe819a59"
+    }
+  ],
+  "originals": {
+    "failedFiles": 48,
+    "failedDirectories": 19,
+    "cleanupFiles": 4,
+    "cleanupDirectories": 1,
+    "wholeBeforeAfterUnchanged": true,
+    "originalPinnedLocalFilesVerified": 45,
+    "readAccessTimesExcluded": true
+  },
+  "execution": {
+    "shellPid": 73480,
+    "exitCode": 0,
+    "runtimeSeconds": 0.71,
+    "rawGit": "c1fbb74df90f58d39268dc567e70bcddbe819a59"
+  },
+  "scope": {
+    "failedBrowserAccepted": false,
+    "failedCLI": 3,
+    "failedBrowserGroups": 0,
+    "failedPDFs": 0,
+    "cleanupOnlyAccepted": true,
+    "noProductReplay": true,
+    "noBrowserAction": true,
+    "newR3RootUntouched": true,
+    "noRefOrActions": true
+  },
+  "transportLimit": "Archive identity is verified by native full member checks and native-computed binary Git SHA matching creation; complete supported Base64 raw Git readback is exact. No unsupported raw binary-fetch claim.",
+  "checkpointOutsideFrozenArchive": true
+}

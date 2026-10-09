@@ -1,0 +1,327 @@
+{
+  "format": "tastetable65-root-final-receiving/1",
+  "worker": "estate-6e5752b49b6f/root",
+  "at": "2026-10-09T02:16:24.633Z",
+  "repository": "Jacob-Met/tastetable",
+  "disposition": "ACCEPT corrected product source R2 on the exact qualified native, browser and original-PDF evidence. Source publication and main adoption are separate states.",
+  "source": {
+    "baseline": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+    "originalR1": "b734d5f880a0199259435f8de8dafb71115c8530",
+    "correctedR2": "0c7a99ada6c0b53e69d2049e9d2fe823d8f26317",
+    "tree": "70fd963f09a20a00889b87cb008e204b6464857e",
+    "leafCount": 823,
+    "changedFromR1": [
+      "static/visit_record_report.mjs",
+      "tests/test_visit_record_report.mjs"
+    ],
+    "otherR1LeavesUnchanged": 821,
+    "independentSourceReview": "1046c1ef83135412500732325ccfdb57c5b74bce",
+    "correction": "Keep original CR in DOM through its character reference; add a br only for a CR not followed by LF. Original JSON, codecs, CLI, styles and other owners remain exact."
+  },
+  "contract": {
+    "git": "86c9c81101df9799065416640cbcd883f0beb43f",
+    "bytes": 6164,
+    "sha256": "137629ad8e711adf55b1b491b1a546bd8a3be9a84573af1c1ae59da09dc35f6c",
+    "fullRootRead": true,
+    "archivalRecovery": "The exact original member was recovered from the frozen R1 browser archive; its formerly computed-only Git identity was then actually created and fully read back without changing its bytes."
+  },
+  "nativeModelCLI": {
+    "receiptGit": "bd3ca497076e7a1981e7e1e97ec3a3317cd1b538",
+    "host": "hamon-thinkpad",
+    "user": "UID1000",
+    "node": "v22.22.1",
+    "originalBaseline": {
+      "pid": 3108083,
+      "exit": 1,
+      "tests": 1,
+      "expectedRegressionFailure": true
+    },
+    "corrected": {
+      "pid": 3108128,
+      "exit": 0,
+      "tests": 14,
+      "passed": 14,
+      "failed": 0,
+      "skipped": 0
+    },
+    "sourceInputsUnchanged": 21,
+    "selectedRuntimeFilesUnchanged": 2,
+    "limits": "These 14 tests are authored native model/CLI tests. The separate original R1 independent nine-group/22-process receipt stays bound to R1; no relabeling or inherited-suite claim."
+  },
+  "originalBrowserR3": {
+    "receiptGit": "86b50249c4d9c6747e06b0c65e41411a411a687a",
+    "receiptBytes": 229512,
+    "receiptSha256": "ab81901725fc80ea6e6e3bf5e16b690fe9d75a6e6a9d893b4193914678b74587",
+    "fullRawGitReadbackMatchesNative": true,
+    "executionGit": "8b3d3061ddc3870222260801b7c9435ab7ef8ba8",
+    "stageGit": "ffc574cbbf526310fef05e9f85d6778d1f338787",
+    "device": "edc358ed-5ad6-4036-b7aa-8667bf0e14e0",
+    "identity": {
+      "node": "v24.14.0",
+      "execPath": "C:\\Program Files\\nodejs\\node.exe",
+      "user": "jacob",
+      "hostname": "MSI"
+    },
+    "controllerPid": 3912,
+    "receiverPid": 44540,
+    "outerShellPid": 44292,
+    "receiverExit": 0,
+    "receiverSignal": null,
+    "outerExit": 0,
+    "outerRuntimeSeconds": 6.78,
+    "receiverElapsedMs": 6435.2672,
+    "cliProcesses": 3,
+    "browserGroups": 3,
+    "artifacts": 22,
+    "inputsUnchanged": 39,
+    "browserVersion": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/154.0.8037.97",
+      "revision": "@b510e9d7cd3a2fbd78d0ddc42234103206c5f78d",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+      "jsVersion": "15.4.80.20"
+    },
+    "selectedInstalledDLL": {
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\154.0.8037.97\\chrome.dll",
+      "bytes": 302382744,
+      "sha256": "01cfba363a06b5aee6ccb9a2691062b506bac411e3b80cca54246c691784c241"
+    },
+    "launcherPid": 22828,
+    "actualBrowserPid": 67704,
+    "launchRelation": "single-handoff",
+    "observerPid": 90076,
+    "closeRequestSent": {
+      "id": 87,
+      "at": "2026-10-09T01:48:10.826Z"
+    },
+    "closeResponse": "confirmed",
+    "browserClose": {
+      "observed": true,
+      "code": 0,
+      "observerExitCode": 0,
+      "observerSignal": null,
+      "method": "retained Windows process handle"
+    },
+    "launcherClose": {
+      "observed": true,
+      "code": 0,
+      "signal": null
+    },
+    "profileRemoved": true,
+    "finalEventsAccepted": true,
+    "requests": [
+      {
+        "url": "file:///C:/Users/jacob/AppData/Local/Hamon/estate-6e5752b49b6f/taste-visit-html-receiving-root-r3/outputs-r3/original-record.html",
+        "method": "GET"
+      },
+      {
+        "url": "file:///C:/Users/jacob/AppData/Local/Hamon/estate-6e5752b49b6f/taste-visit-html-receiving-root-r3/outputs-r3/literal-notes-%E4%B8%96%E7%95%8C.html",
+        "method": "GET"
+      },
+      {
+        "url": "file:///C:/Users/jacob/AppData/Local/Hamon/estate-6e5752b49b6f/taste-visit-html-receiving-root-r3/outputs-r3/unknown-empty-BOM.html",
+        "method": "GET"
+      }
+    ],
+    "errorCount": 0,
+    "geometry": {
+      "fieldObservations": 9,
+      "steps": 24,
+      "allDeltasCSSpx": 24.796875,
+      "sourceLineHeightCSSpx": 24.8,
+      "exactFieldText": true,
+      "sensitivity": {
+        "syntheticDOMControls": true,
+        "productClaim": false,
+        "results": [
+          {
+            "name": "single-line steps with astral UTF-16 prefix",
+            "expectedCode": null,
+            "accepted": true,
+            "failure": null
+          },
+          {
+            "name": "collapsed lone CR rejected",
+            "expectedCode": "SEPARATOR_LINE_STEP",
+            "accepted": false,
+            "failure": {
+              "code": "SEPARATOR_LINE_STEP",
+              "message": "collapsed lone CR rejected: \"\\r\" must advance one line; observed 0 for line-height 24"
+            }
+          },
+          {
+            "name": "double CRLF break rejected",
+            "expectedCode": "SEPARATOR_LINE_STEP",
+            "accepted": false,
+            "failure": {
+              "code": "SEPARATOR_LINE_STEP",
+              "message": "double CRLF break rejected: \"\\r\\n\" must advance one line; observed 48 for line-height 24"
+            }
+          },
+          {
+            "name": "changed original text rejected",
+            "expectedCode": "SEPARATOR_TEXT",
+            "accepted": false,
+            "failure": {
+              "code": "SEPARATOR_TEXT",
+              "message": "changed original text rejected: original textContent changed"
+            }
+          },
+          {
+            "name": "missing visible marker rejected",
+            "expectedCode": "SEPARATOR_VISIBILITY",
+            "accepted": false,
+            "failure": {
+              "code": "SEPARATOR_VISIBILITY",
+              "message": "missing visible marker rejected: marker must have exactly one visible glyph box: B0"
+            }
+          }
+        ],
+        "passed": true
+      }
+    },
+    "postShutdownGit": "b6f95a9e104f4c223868ae6b74af893f6fe16cf3",
+    "runtimeLimit": "Selected Node, Chrome launcher, two installed versioned DLLs and PowerShell files are pinned before/after. Observed Chrome154.0.8037.97 matches the installed DLL version; kernel-loaded-DLL provenance is not asserted. Chrome itself appended do-not-de-elevate during launcher handoff; this worker did not set that flag or change identity/security configuration."
+  },
+  "visualReview": {
+    "rootBrowserPNGs": [
+      "view-0-1280.png",
+      "view-0-390.png",
+      "view-1-1280.png",
+      "view-1-390.png",
+      "view-1-390-tail.png",
+      "view-2-1280.png",
+      "view-2-390.png"
+    ],
+    "browserObservation": "All seven exact original captures were viewed. Required visible text is readable, literal markup remains text, Japanese/accent glyphs render, and narrow layout wraps without clipping. The first phone viewport is dominated by header/provenance; offscreen completeness is established separately by DOM and full PDF receiving.",
+    "rootOriginalPDFPages": [
+      "pdf0-page-3.png",
+      "pdf1-page-5.png",
+      "pdf1-page-6.png",
+      "pdf1-page-7.png",
+      "pdf2-page-2.png"
+    ],
+    "pdfObservation": "Root directly viewed original Poppler0p3,1p5,1p6,1p7,2p2: A/B/C, WHY/CR_ONLY/CRLF_PAIR/LF_LINE and NOTE2/CR/CRLF/LF appear on separate lines; long V/W tails continue, composed/decomposed accent glyphs and emoji are visible. Card sections may split and the empty report footer occupies a second page. Root does not claim an independent all13-page raster run.",
+    "peerAllPageInspection": "native_runtime viewed all13 exact original Poppler PNGs; final disposition2cdd0e2e265d39c761c150726a142da2d2bb197c."
+  },
+  "originalPDFs": [
+    {
+      "index": 0,
+      "bytes": 111620,
+      "sha256": "3bfb91bf804b35a3aae6c713a35e8f11cec0931cba116a8c9acd847c159aac7d",
+      "pages": 4,
+      "accountedFields": 37,
+      "passed": true,
+      "outOfPageWordBoxes": 0
+    },
+    {
+      "index": 1,
+      "bytes": 138007,
+      "sha256": "cd0668ec9febc67e2235d8cc8ada95b58e5280e4e59e38cc898f70f12aa613d2",
+      "pages": 7,
+      "accountedFields": 36,
+      "passed": true,
+      "outOfPageWordBoxes": 0
+    },
+    {
+      "index": 2,
+      "bytes": 60299,
+      "sha256": "581ad80dae27e0f56e71c4cecb7d3fddb78d21565c64bf7dda9cbefa192aeb99",
+      "pages": 2,
+      "accountedFields": 7,
+      "passed": true,
+      "outOfPageWordBoxes": 0
+    }
+  ],
+  "pdfReceiving": {
+    "custody": "6b165a63e35b3e09be7816cf654f82b1bc9dae10",
+    "finalDisposition": "2cdd0e2e265d39c761c150726a142da2d2bb197c",
+    "peerContractReview": "fa728f8a8a716fcd6563f17cd076fe3e72eeae9d",
+    "popplerReceipt": "107f57756cd3db383b0c4ab208727eb7f81658ed",
+    "popplerVersion": "26.01.0",
+    "popplerCommands": 12,
+    "allExit0": true,
+    "allStderrEmpty": true,
+    "sourceInputsUnchanged": 72,
+    "accountedFields": 80,
+    "pages": 13,
+    "occurrenceKeys": 6,
+    "numberedLongNoteLines": 108,
+    "unbrokenNoteCharacters": 600,
+    "unbrokenVenueCharacters": 280,
+    "unicode": {
+      "originalFailure": "c1793856e90880fde758ff4ff243fc7561921615",
+      "originalByteEvidence": "e16d2b0fac9b616fd11ae6369df646e657b0124c",
+      "decision": "No Unicode normalization or accounting relaxation. Original stress PDF contains three ActualText FEFF00650301 spans while glyph0070 maps to00E9. pypdf6.14.2 glyph extraction omitted the replacement semantics; unchanged Poppler text accounting preserves exact decomposed e+U0301."
+    },
+    "geometry": {
+      "originalPredicate": "2b60e392c939621c4220fe1e8255ead36a93eab3",
+      "oldPredicateFailureRetained": true,
+      "successor": "a7e6e981164f012ddb9d518aa96a7b6d689275b1",
+      "tests": "188b05943d62cd268733c046c1be4a61dfbaeaaa",
+      "actualReceipt": "54d8dfbddf21d449f8a3f97c4a7427061df03c71",
+      "rationale": "The old0.25pt step-to-last-step comparison rejects actual integer-grid18.0/18.75pt movement. The source requires visible original line breaks and exact DOM text, not uniform subpixel PDF baselines. The successor admits only the exact upright16CSSpx/12pt font, fixed1.55 pitch and observed0.75-point grid. Baseline residuals must fit one common rounding phase within one grid quantum plus1e-5pt, with unique ordered same-page markers, finite positive advances and unstripped single-line callbacks.",
+      "actual": [
+        {
+          "field": "original-record pick-1 note",
+          "page": 3,
+          "stepsPt": [
+            18.74999921875019,
+            18.749999218749963
+          ],
+          "residualRangePt": 0.29999998750015067,
+          "quantumPt": 0.74999996875
+        },
+        {
+          "field": "literal-notes pick-0 explanation",
+          "page": 5,
+          "stepsPt": [
+            18.749999218749963,
+            18.749999218750418,
+            17.999999249999746
+          ],
+          "residualRangePt": 0.5999999750002516,
+          "quantumPt": 0.74999996875
+        },
+        {
+          "field": "literal-notes pick-1 note",
+          "page": 6,
+          "stepsPt": [
+            17.999999249999746,
+            18.749999218750418,
+            18.749999218750418
+          ],
+          "residualRangePt": 0.5999999750002551,
+          "quantumPt": 0.74999996875
+        }
+      ],
+      "oldCollapsedRefusals": 3,
+      "positivePhaseControls": 15,
+      "negativeControls": 39,
+      "rootSourceAndMathematicalReviewAccepted": true,
+      "limit": "This is a receiving-only correction on hash-pinned original collector records, not a general arbitrary-PDF validator or a changed product requirement."
+    }
+  },
+  "failuresAndContinuity": {
+    "r1MaterialFinding": "140ba170b01d716d0cc880556d40f55c896bf644",
+    "r1SupersededPresentationAcceptance": true,
+    "r2BrowserFailure": {
+      "custody": "43c29e8f1644df017b29b54328a397d18cc8ec2e",
+      "accepted": false,
+      "cli": 3,
+      "browserGroups": 0,
+      "pdfs": 0,
+      "cause": "Windows launcher exited0 after handing off to a separate actual browser. R2 wrongly treated that as startup failure and removed a still-active owned profile.",
+      "cleanup": "Separate exact PID/start-time/executable/profile-bound retained-process observer and confirmed Browser.close recovered the actual own browser with exit0, then removed the profile. The R2 failed browser receipt is not relabeled successful."
+    },
+    "transportLimits": "Every included new archive has native or independent full member verification and complete supported UTF-8 Base64 readback. No unsupported raw-binary Git fetch is claimed.",
+    "historicalHold": "The old independent R1 full PDF archive SHA325f5364f50f28fec8715db6b8585fc117049558bf972fe06c16c6b8a372c5d7 remains incompletely transferred on offline LA7. Its original PDFs are durable in the separately complete R1 browser archive; selected old rasters, historical analysis, finding and custody status are included. No further LA7 access or reconstructed whole archive is claimed.",
+    "expiredSessions": "The native PDF custody map preserves selected completed-output/session-expiry cases without inventing exit codes or replaying them."
+  },
+  "finalLimits": [
+    "Acceptance covers the exact corrected source and three original R3 PDF fixtures with the recorded native runtimes, not all browsers, fonts, platforms or arbitrary PDFs.",
+    "No full inherited repository suite, hosted CI, physical printer device, provider call, production usage or demonstrated caregiver benefit is claimed.",
+    "This review performs no new browser, source test, PDF generation, decode or rasterization.",
+    "Source/tree integration and publication are qualified separately; no PR/main merge, Actions execution, deployment or owner adoption is asserted here."
+  ]
+}

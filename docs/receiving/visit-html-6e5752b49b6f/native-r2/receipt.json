@@ -1,0 +1,457 @@
+{
+  "schema": "taste65-visible-cr-native-r2/1",
+  "at": "2026-10-09T00:45:20.123Z",
+  "accepted": true,
+  "sourceR1": "b734d5f880a0199259435f8de8dafb71115c8530",
+  "findingGit": "140ba170b01d716d0cc880556d40f55c896bf644",
+  "uid": 1000,
+  "node": "v22.22.1",
+  "sourceBefore": [
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/original-r1/static/visit_record.mjs",
+      "bytes": 7525,
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f",
+      "gitBlob": "2b5b37e3d4a227e00a5b0052a962d13512b53e48",
+      "mtimeNs": "1791506720344206095"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/original-r1/static/week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "gitBlob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "mtimeNs": "1791506720345338557"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/original-r1/static/week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "gitBlob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "mtimeNs": "1791506720345692800"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/original-r1/static/visit_record_csv.mjs",
+      "bytes": 1646,
+      "sha256": "a233a983918291ef93577f91eb64c56adb4644c10cd8f4046e875d4536cc970c",
+      "gitBlob": "b001286f411bec6a9088b1902e9455f2fc3540c2",
+      "mtimeNs": "1791506720345962533"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/original-r1/tests/fixtures/visit-record-csv.json",
+      "bytes": 1934,
+      "sha256": "ee45bdd3fb7dd31d48094a9752e88be7fc15331cad4e702e29b0eb5626df0624",
+      "gitBlob": "69d1c226ab9b7ed25a08f9372a0534d2be00d27f",
+      "mtimeNs": "1791506720345962533"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/original-r1/docs/visit-record-html/README.md",
+      "bytes": 3612,
+      "sha256": "46cf2e6fb09b51e0607115c3418bb1ef39b1e5996f2dc01917827adae1c41d64",
+      "gitBlob": "c59fe76e6e57ecb87cf6045d01ed1d67e1802f44",
+      "mtimeNs": "1791506720346206086"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/original-r1/static/visit_record_report.mjs",
+      "bytes": 8807,
+      "sha256": "37319b6fd150143e4a1e53eedfd26c649364f8d8fdc2a66f3a85ec9053843b27",
+      "gitBlob": "ffda6e3b7ac5278e82a9d7617061e6e11d3862e1",
+      "mtimeNs": "1791506720346206086"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/original-r1/tools/visit_record_to_html.mjs",
+      "bytes": 6062,
+      "sha256": "1ca419d6faa34c9c11a80ae18113f1058ba1bd2447f8fd69547a19d044410e02",
+      "gitBlob": "5da2eac3dd7a8aeb3c1deef981245155b39aa3e4",
+      "mtimeNs": "1791506720346206086"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/original-r1/tests/test_visit_record_report.mjs",
+      "bytes": 6669,
+      "sha256": "7db2e4a5dd3e4b44711f7e857af7bd5ffbadc3bbbfb00acce225bf2987489f77",
+      "gitBlob": "98844bc0d78fa0f0ce5a33d164c7a45a40a35dbc",
+      "mtimeNs": "1791506720346206086"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/original-r1/tests/test_visit_record_to_html.mjs",
+      "bytes": 7522,
+      "sha256": "7361101622a9ff6c79abbf65995b106886f460bdd588bc511ba4bfdf4bb37e95",
+      "gitBlob": "07f4a9b0a41f25976e83a0c2fb6e204794d964f6",
+      "mtimeNs": "1791506720347439693"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/candidate-r2/static/visit_record.mjs",
+      "bytes": 7525,
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f",
+      "gitBlob": "2b5b37e3d4a227e00a5b0052a962d13512b53e48",
+      "mtimeNs": "1791506720347439693"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/candidate-r2/static/week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "gitBlob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "mtimeNs": "1791506720347854257"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/candidate-r2/static/week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "gitBlob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "mtimeNs": "1791506720347989142"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/candidate-r2/static/visit_record_csv.mjs",
+      "bytes": 1646,
+      "sha256": "a233a983918291ef93577f91eb64c56adb4644c10cd8f4046e875d4536cc970c",
+      "gitBlob": "b001286f411bec6a9088b1902e9455f2fc3540c2",
+      "mtimeNs": "1791506720348087822"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/candidate-r2/tests/fixtures/visit-record-csv.json",
+      "bytes": 1934,
+      "sha256": "ee45bdd3fb7dd31d48094a9752e88be7fc15331cad4e702e29b0eb5626df0624",
+      "gitBlob": "69d1c226ab9b7ed25a08f9372a0534d2be00d27f",
+      "mtimeNs": "1791506720348087822"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/candidate-r2/docs/visit-record-html/README.md",
+      "bytes": 3612,
+      "sha256": "46cf2e6fb09b51e0607115c3418bb1ef39b1e5996f2dc01917827adae1c41d64",
+      "gitBlob": "c59fe76e6e57ecb87cf6045d01ed1d67e1802f44",
+      "mtimeNs": "1791506720348087822"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/candidate-r2/static/visit_record_report.mjs",
+      "bytes": 8975,
+      "sha256": "228f65b99c6826753e12d79c504bcd8c8d91915b2d4bbc6c78e0881b00cd5e55",
+      "gitBlob": "2ccb10513cf9df1461e16f56c22cbbba55c6966a",
+      "mtimeNs": "1791506720348412873"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/candidate-r2/tools/visit_record_to_html.mjs",
+      "bytes": 6062,
+      "sha256": "1ca419d6faa34c9c11a80ae18113f1058ba1bd2447f8fd69547a19d044410e02",
+      "gitBlob": "5da2eac3dd7a8aeb3c1deef981245155b39aa3e4",
+      "mtimeNs": "1791506720348412873"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/candidate-r2/tests/test_visit_record_report.mjs",
+      "bytes": 7747,
+      "sha256": "7a3f23995147d1c537a105ee66f939ed9e4759bdf688d83a55263bbe49340b95",
+      "gitBlob": "42a899322e7bc12e1d9c8cc2234e2057648d4577",
+      "mtimeNs": "1791506720348412873"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/candidate-r2/tests/test_visit_record_to_html.mjs",
+      "bytes": 7522,
+      "sha256": "7361101622a9ff6c79abbf65995b106886f460bdd588bc511ba4bfdf4bb37e95",
+      "gitBlob": "07f4a9b0a41f25976e83a0c2fb6e204794d964f6",
+      "mtimeNs": "1791506720349130119"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/baseline-visible-cr.test.mjs",
+      "bytes": 1903,
+      "sha256": "7e7c5d891387c39eb7668e235801b52762b252a3916f3a0d7e9116d29181ce87",
+      "gitBlob": "1a8b42ea2e2e103f90b272851167ef282eb21478",
+      "mtimeNs": "1791506720349130119"
+    }
+  ],
+  "sourceAfter": [
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/original-r1/static/visit_record.mjs",
+      "bytes": 7525,
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f",
+      "gitBlob": "2b5b37e3d4a227e00a5b0052a962d13512b53e48",
+      "mtimeNs": "1791506720344206095"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/original-r1/static/week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "gitBlob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "mtimeNs": "1791506720345338557"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/original-r1/static/week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "gitBlob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "mtimeNs": "1791506720345692800"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/original-r1/static/visit_record_csv.mjs",
+      "bytes": 1646,
+      "sha256": "a233a983918291ef93577f91eb64c56adb4644c10cd8f4046e875d4536cc970c",
+      "gitBlob": "b001286f411bec6a9088b1902e9455f2fc3540c2",
+      "mtimeNs": "1791506720345962533"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/original-r1/tests/fixtures/visit-record-csv.json",
+      "bytes": 1934,
+      "sha256": "ee45bdd3fb7dd31d48094a9752e88be7fc15331cad4e702e29b0eb5626df0624",
+      "gitBlob": "69d1c226ab9b7ed25a08f9372a0534d2be00d27f",
+      "mtimeNs": "1791506720345962533"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/original-r1/docs/visit-record-html/README.md",
+      "bytes": 3612,
+      "sha256": "46cf2e6fb09b51e0607115c3418bb1ef39b1e5996f2dc01917827adae1c41d64",
+      "gitBlob": "c59fe76e6e57ecb87cf6045d01ed1d67e1802f44",
+      "mtimeNs": "1791506720346206086"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/original-r1/static/visit_record_report.mjs",
+      "bytes": 8807,
+      "sha256": "37319b6fd150143e4a1e53eedfd26c649364f8d8fdc2a66f3a85ec9053843b27",
+      "gitBlob": "ffda6e3b7ac5278e82a9d7617061e6e11d3862e1",
+      "mtimeNs": "1791506720346206086"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/original-r1/tools/visit_record_to_html.mjs",
+      "bytes": 6062,
+      "sha256": "1ca419d6faa34c9c11a80ae18113f1058ba1bd2447f8fd69547a19d044410e02",
+      "gitBlob": "5da2eac3dd7a8aeb3c1deef981245155b39aa3e4",
+      "mtimeNs": "1791506720346206086"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/original-r1/tests/test_visit_record_report.mjs",
+      "bytes": 6669,
+      "sha256": "7db2e4a5dd3e4b44711f7e857af7bd5ffbadc3bbbfb00acce225bf2987489f77",
+      "gitBlob": "98844bc0d78fa0f0ce5a33d164c7a45a40a35dbc",
+      "mtimeNs": "1791506720346206086"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/original-r1/tests/test_visit_record_to_html.mjs",
+      "bytes": 7522,
+      "sha256": "7361101622a9ff6c79abbf65995b106886f460bdd588bc511ba4bfdf4bb37e95",
+      "gitBlob": "07f4a9b0a41f25976e83a0c2fb6e204794d964f6",
+      "mtimeNs": "1791506720347439693"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/candidate-r2/static/visit_record.mjs",
+      "bytes": 7525,
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f",
+      "gitBlob": "2b5b37e3d4a227e00a5b0052a962d13512b53e48",
+      "mtimeNs": "1791506720347439693"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/candidate-r2/static/week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "gitBlob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "mtimeNs": "1791506720347854257"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/candidate-r2/static/week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "gitBlob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "mtimeNs": "1791506720347989142"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/candidate-r2/static/visit_record_csv.mjs",
+      "bytes": 1646,
+      "sha256": "a233a983918291ef93577f91eb64c56adb4644c10cd8f4046e875d4536cc970c",
+      "gitBlob": "b001286f411bec6a9088b1902e9455f2fc3540c2",
+      "mtimeNs": "1791506720348087822"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/candidate-r2/tests/fixtures/visit-record-csv.json",
+      "bytes": 1934,
+      "sha256": "ee45bdd3fb7dd31d48094a9752e88be7fc15331cad4e702e29b0eb5626df0624",
+      "gitBlob": "69d1c226ab9b7ed25a08f9372a0534d2be00d27f",
+      "mtimeNs": "1791506720348087822"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/candidate-r2/docs/visit-record-html/README.md",
+      "bytes": 3612,
+      "sha256": "46cf2e6fb09b51e0607115c3418bb1ef39b1e5996f2dc01917827adae1c41d64",
+      "gitBlob": "c59fe76e6e57ecb87cf6045d01ed1d67e1802f44",
+      "mtimeNs": "1791506720348087822"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/candidate-r2/static/visit_record_report.mjs",
+      "bytes": 8975,
+      "sha256": "228f65b99c6826753e12d79c504bcd8c8d91915b2d4bbc6c78e0881b00cd5e55",
+      "gitBlob": "2ccb10513cf9df1461e16f56c22cbbba55c6966a",
+      "mtimeNs": "1791506720348412873"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/candidate-r2/tools/visit_record_to_html.mjs",
+      "bytes": 6062,
+      "sha256": "1ca419d6faa34c9c11a80ae18113f1058ba1bd2447f8fd69547a19d044410e02",
+      "gitBlob": "5da2eac3dd7a8aeb3c1deef981245155b39aa3e4",
+      "mtimeNs": "1791506720348412873"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/candidate-r2/tests/test_visit_record_report.mjs",
+      "bytes": 7747,
+      "sha256": "7a3f23995147d1c537a105ee66f939ed9e4759bdf688d83a55263bbe49340b95",
+      "gitBlob": "42a899322e7bc12e1d9c8cc2234e2057648d4577",
+      "mtimeNs": "1791506720348412873"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/candidate-r2/tests/test_visit_record_to_html.mjs",
+      "bytes": 7522,
+      "sha256": "7361101622a9ff6c79abbf65995b106886f460bdd588bc511ba4bfdf4bb37e95",
+      "gitBlob": "07f4a9b0a41f25976e83a0c2fb6e204794d964f6",
+      "mtimeNs": "1791506720349130119"
+    },
+    {
+      "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/baseline-visible-cr.test.mjs",
+      "bytes": 1903,
+      "sha256": "7e7c5d891387c39eb7668e235801b52762b252a3916f3a0d7e9116d29181ce87",
+      "gitBlob": "1a8b42ea2e2e103f90b272851167ef282eb21478",
+      "mtimeNs": "1791506720349130119"
+    }
+  ],
+  "runs": [
+    {
+      "label": "baseline-lone-cr",
+      "capacity": {
+        "at": "2026-10-09T00:45:20.350Z",
+        "availableRAM": 2650468352,
+        "freeRAM": 2650468352,
+        "diskFree": 100323328
+      },
+      "pid": 3108083,
+      "args": [
+        "--max-old-space-size=96",
+        "--test",
+        "--test-concurrency=1",
+        "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/baseline-visible-cr.test.mjs"
+      ],
+      "cwd": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f",
+      "status": 1,
+      "signal": null,
+      "error": null,
+      "elapsedMs": 329.00856899999997,
+      "stdout": {
+        "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/baseline-lone-cr.stdout",
+        "bytes": 1139,
+        "sha256": "47bfa4acd6464a875cf10f019766b2c45b2033a0d3fe5024d5e132c1e7f9ab78",
+        "gitBlob": "a5b3df905cd6eb4bee932de00ed189da335bdae8",
+        "mtimeNs": "1791506720679204640"
+      },
+      "stderr": {
+        "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/baseline-lone-cr.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "gitBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "mtimeNs": "1791506720679204640"
+      }
+    },
+    {
+      "label": "candidate-authored",
+      "capacity": {
+        "at": "2026-10-09T00:45:20.680Z",
+        "availableRAM": 2617720832,
+        "freeRAM": 2617720832,
+        "diskFree": 100319232
+      },
+      "pid": 3108128,
+      "args": [
+        "--max-old-space-size=96",
+        "--test",
+        "--test-concurrency=1",
+        "tests/test_visit_record_report.mjs",
+        "tests/test_visit_record_to_html.mjs"
+      ],
+      "cwd": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/candidate-r2",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "elapsedMs": 6269.685504,
+      "stdout": {
+        "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/candidate-authored.stdout",
+        "bytes": 3429,
+        "sha256": "d40f0c0d46f1b0a9a07f35886aa40b563a9321d586abca42d6c0bd74c40e1d6f",
+        "gitBlob": "d0034e34e5a2c290f385d729f2b04a302c734a46",
+        "mtimeNs": "1791506726949177399"
+      },
+      "stderr": {
+        "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/candidate-authored.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "gitBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "mtimeNs": "1791506726949177399"
+      }
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "Author source/CLI regression tests only; actual corrected browser/PDF receiving remains pending.",
+    "One original-renderer focused regression is intentionally red; historical R1 source and artifacts are unchanged.",
+    "No Actions, network service, account, privileged identity or installed product mutation."
+  ],
+  "entryCapacity": {
+    "at": "2026-10-09T00:45:20.127Z",
+    "availableRAM": 2686812160,
+    "freeRAM": 2686812160,
+    "diskFree": 100470784
+  },
+  "runtimePins": [
+    {
+      "path": "/usr/bin/node",
+      "bytes": 26856,
+      "sha256": "d0efb6fcb9d023ba4e2b160ec2384dc28fe4f17732141ef47f676828fa960505",
+      "gitBlob": "2b3baba30cacfd7c3d46d8654af3cdf1b540c213",
+      "mtimeNs": "1773302731000000000"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnode.so.127",
+      "bytes": 70228184,
+      "sha256": "ab75d3a6c0a6ea5c0e2ea1ae983621fbcb392a6b4a85067cb83e5b77c2b223e2",
+      "gitBlob": "55e8f903a39b4cba7e003c2548111ba8e3614c87",
+      "mtimeNs": "1773302731000000000"
+    }
+  ],
+  "payloadPin": {
+    "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/payload.json",
+    "bytes": 84580,
+    "sha256": "8365b6da1e57fa90e0771a2b1a1c0c573b510ebf8dd399f912e47c18b1fdbb63",
+    "gitBlob": "7ca0eab7479fe9525075283124b80a3ebd86f9a9",
+    "mtimeNs": "1791506719985207655"
+  },
+  "controllerPin": {
+    "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/run.cjs",
+    "bytes": 6130,
+    "sha256": "44e29e75e2646fa465133bdab6eef423b8f572a66dee5ba6d65766e8c88ec7fa",
+    "gitBlob": "79ddb987dcab3e38ffe83afbb29be282af963374",
+    "mtimeNs": "1791506719985207655"
+  },
+  "bootstrapPin": {
+    "path": "/tmp/hamon-taste65-cr-r2-6e5752b49b6f/bootstrap.cjs",
+    "bytes": 91038,
+    "sha256": "72547168328a6483587dc25c696571bb10762fefb3aae5d53243808137fe99cd",
+    "gitBlob": "c9b5f1ee0860f6f21237803d0aec77638c1a389f",
+    "mtimeNs": "1791506719985207655"
+  },
+  "baselineExpectedFailure": true,
+  "candidateTestsPassed": true,
+  "sourceUnchanged": true,
+  "finalCapacity": {
+    "at": "2026-10-09T00:45:26.951Z",
+    "availableRAM": 2641698816,
+    "freeRAM": 2641698816,
+    "diskFree": 102547456
+  },
+  "runtimeAfter": [
+    {
+      "path": "/usr/bin/node",
+      "bytes": 26856,
+      "sha256": "d0efb6fcb9d023ba4e2b160ec2384dc28fe4f17732141ef47f676828fa960505",
+      "gitBlob": "2b3baba30cacfd7c3d46d8654af3cdf1b540c213",
+      "mtimeNs": "1773302731000000000"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnode.so.127",
+      "bytes": 70228184,
+      "sha256": "ab75d3a6c0a6ea5c0e2ea1ae983621fbcb392a6b4a85067cb83e5b77c2b223e2",
+      "gitBlob": "55e8f903a39b4cba7e003c2548111ba8e3614c87",
+      "mtimeNs": "1773302731000000000"
+    }
+  ],
+  "runtimeUnchanged": true,
+  "elapsedMs": 7042.920225,
+  "ended": "2026-10-09T00:45:27.166Z"
+}

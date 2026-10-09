@@ -1,0 +1,4437 @@
+{
+  "schema": "taste65-original-pdf-decode-r0/1",
+  "scope": "Original root-produced PDF decoding only, unchanged frozen accounting helper. Visual page receiving remains separately pending.",
+  "archiveSha256": "9f848779dfde7946b1a04b21d2058a183b13935b71d5c5df5c76cf3d0083c371",
+  "inputFiles": 10,
+  "runtimePinsUnchanged": true,
+  "pdfs": [
+    {
+      "fixture": "original-record.json",
+      "pdf": "original-0.pdf",
+      "bytes": 94824,
+      "sha256": "c4cc774c9fb5c7fb049279ad9fdce7920a32e25b21cea5f8139e5c9b6db46b34",
+      "gitBlob": "cc092ab5ddba81b4366b4123a0f6e39c84176517",
+      "pdfinfo": {
+        "exit": 0,
+        "stdout": "Title:           TasteTable visit record · 2024-02-26\nCreator:         Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36\nProducer:        Skia/PDF m154\nCreationDate:    Fri Oct  9 09:00:22 2026 KST\nModDate:         Fri Oct  9 09:00:22 2026 KST\nCustom Metadata: no\nMetadata Stream: no\nTagged:          yes\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           4\nEncrypted:       no\nPage size:       595.92 x 841.92 pts (A4)\nPage rot:        0\nFile size:       0 bytes\nOptimized:       no\nPDF version:     1.4\n",
+        "stderr": ""
+      },
+      "pageCount": 4,
+      "pages": [
+        {
+          "page": 1,
+          "widthPt": 595.9199829101562,
+          "heightPt": 841.9199829101562,
+          "text": "TASTETABLE · RECORDED VISITS\nSaved visit record\noriginal-record.json\nWeek starting 2024-02-26 · 3 original occurrences\nSaved fictional demo\nThe original file labels its source mock. Its venue suggestions are demo data; this report\ndoes not verify visits.\nPlanned dates and recorded visits are separate. An unrecorded outcome does not mean a\nvisit did or did not happen. An omitted plan can still have a recorded outcome.\nDates, outcomes and notes below are saved entries, not verified observations or new\nrecommendations.\nSaved provenance\nOriginal saved-week\nfilename\n original,week.json \nSaved source mode\nmock\nOriginal response\nreceived\n2024-02-01T00:00:00.000Z\nOriginal week saved\n2024-02-25T18:00:00.000Z\nVisit record saved\n2024-03-03T12:00:00.000Z\nVisit JSON SHA-256\nee45bdd3fb7dd31d48094a9752e88be7fc15331cad4e702e29b0eb562\n6df0624\nOriginal occurrence 1 · pick-0\n",
+          "spans": [
+            {
+              "text": "TASTETABLE · RECORDED VISITS",
+              "bbox": [
+                42.75,
+                49.38164138793945,
+                204.9354248046875,
+                62.469608306884766
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 9.84000015258789
+            },
+            {
+              "text": "Saved visit record",
+              "bbox": [
+                42.75,
+                69.3515625,
+                242.4692840576172,
+                101.2734375
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 24
+            },
+            {
+              "text": "original-record.json",
+              "bbox": [
+                42.75,
+                107.80078125,
+                146.13002014160156,
+                123.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Week starting 2024-02-26 · 3 original occurrences",
+              "bbox": [
+                42.75,
+                133.30078125,
+                305.5512390136719,
+                149.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Saved fictional demo",
+              "bbox": [
+                57.75,
+                218.87109375,
+                223.8905029296875,
+                241.21640014648438
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "The original file labels its source mock. Its venue suggestions are demo data; this report",
+              "bbox": [
+                57.75,
+                252.55078125,
+                520.0020141601562,
+                268.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "does not verify visits.",
+              "bbox": [
+                57.75,
+                270.55078125,
+                168.0419921875,
+                286.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Planned dates and recorded visits are separate. An unrecorded outcome does not mean a",
+              "bbox": [
+                57.75,
+                296.80078125,
+                531.2459106445312,
+                312.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "visit did or did not happen. An omitted plan can still have a recorded outcome.",
+              "bbox": [
+                57.75,
+                315.55078125,
+                474.1382141113281,
+                331.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Dates, outcomes and notes below are saved entries, not verified observations or new",
+              "bbox": [
+                57.75,
+                341.05078125,
+                505.4460754394531,
+                357.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "recommendations.",
+              "bbox": [
+                57.75,
+                359.80078125,
+                156.17401123046875,
+                375.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Saved provenance",
+              "bbox": [
+                60,
+                444.62109375,
+                203.3821258544922,
+                466.9664001464844
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "Original saved-week",
+              "bbox": [
+                60,
+                479.05078125,
+                174.7076416015625,
+                495.01171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "filename",
+              "bbox": [
+                60,
+                497.80078125,
+                109.10399627685547,
+                513.76171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": " original,week.json ",
+              "bbox": [
+                214.5,
+                479.05078125,
+                315.18499755859375,
+                495.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Saved source mode",
+              "bbox": [
+                60,
+                522.55078125,
+                169.21426391601562,
+                538.51171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "mock",
+              "bbox": [
+                214.5,
+                522.55078125,
+                243.37200927734375,
+                538.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original response",
+              "bbox": [
+                60,
+                546.55078125,
+                158.91387939453125,
+                562.51171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "received",
+              "bbox": [
+                60,
+                565.30078125,
+                107.18952941894531,
+                581.26171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "2024-02-01T00:00:00.000Z",
+              "bbox": [
+                214.5,
+                546.55078125,
+                354.9958801269531,
+                562.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original week saved",
+              "bbox": [
+                60,
+                590.05078125,
+                173.1660919189453,
+                606.01171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "2024-02-25T18:00:00.000Z",
+              "bbox": [
+                214.5,
+                590.05078125,
+                354.9958801269531,
+                606.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Visit record saved",
+              "bbox": [
+                60,
+                614.80078125,
+                159.9121856689453,
+                630.76171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "2024-03-03T12:00:00.000Z",
+              "bbox": [
+                214.5,
+                614.80078125,
+                354.9958801269531,
+                630.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Visit JSON SHA-256",
+              "bbox": [
+                60,
+                639.55078125,
+                171.947998046875,
+                655.51171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "ee45bdd3fb7dd31d48094a9752e88be7fc15331cad4e702e29b0eb562",
+              "bbox": [
+                214.5,
+                640.8668212890625,
+                534.158447265625,
+                652.8099365234375
+              ],
+              "font": "Consolas",
+              "size": 10.200000762939453
+            },
+            {
+              "text": "6df0624",
+              "bbox": [
+                214.5,
+                656.6168212890625,
+                253.758056640625,
+                668.5599365234375
+              ],
+              "font": "Consolas",
+              "size": 10.200000762939453
+            },
+            {
+              "text": "Original occurrence 1 · pick-0",
+              "bbox": [
+                60,
+                729.3668212890625,
+                228.2515869140625,
+                741.3099365234375
+              ],
+              "font": "Consolas",
+              "size": 10.200000762939453
+            }
+          ],
+          "outsidePageSpans": [],
+          "links": []
+        },
+        {
+          "page": 2,
+          "widthPt": 595.9199829101562,
+          "heightPt": 841.9199829101562,
+          "text": "Café, \"Same\"\nOriginal venue ID\nsame-id\nOriginal kind\nrestaurant\nOriginal suggested day\nMonday\nSaved planned day\nThursday\nSaved planned date\n2024-02-29\nRecorded visit\nWent\nRecorded outcome code\nwent\nActual date\n2024-03-01\nVisit note\nHe said \"yes\", then went.\nOriginal suggestion explanation\n  First\nreason  \nOriginal occurrence 2 · pick-1\n",
+          "spans": [
+            {
+              "text": "Café, \"Same\"",
+              "bbox": [
+                60,
+                44.12109375,
+                163.0694580078125,
+                66.4664077758789
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "Original venue ID",
+              "bbox": [
+                60,
+                78.55078125,
+                158.4600830078125,
+                94.51171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "same-id",
+              "bbox": [
+                214.5,
+                78.55078125,
+                257.07598876953125,
+                94.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original kind",
+              "bbox": [
+                60,
+                103.30078125,
+                133.40586853027344,
+                119.26171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "restaurant",
+              "bbox": [
+                214.5,
+                103.30078125,
+                268.1519775390625,
+                119.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original suggested day",
+              "bbox": [
+                60,
+                127.30078125,
+                189.97434997558594,
+                143.26171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "Monday",
+              "bbox": [
+                214.5,
+                127.30078125,
+                258.08404541015625,
+                143.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Saved planned day",
+              "bbox": [
+                60,
+                152.05078125,
+                166.1983184814453,
+                168.01171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "Thursday",
+              "bbox": [
+                214.5,
+                152.05078125,
+                262.6200256347656,
+                168.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Saved planned date",
+              "bbox": [
+                60,
+                176.80078125,
+                170.86505126953125,
+                192.76171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "2024-02-29",
+              "bbox": [
+                214.5,
+                176.80078125,
+                275.84393310546875,
+                192.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Recorded visit",
+              "bbox": [
+                60,
+                216.1083984375,
+                151.75289916992188,
+                234.46347045898438
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 13.799999237060547
+            },
+            {
+              "text": "Went",
+              "bbox": [
+                68.25,
+                255.55078125,
+                98.40632629394531,
+                271.51171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "Recorded outcome code",
+              "bbox": [
+                60,
+                293.05078125,
+                196.6324462890625,
+                309.01171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "went",
+              "bbox": [
+                214.5,
+                293.05078125,
+                240.31199645996094,
+                309.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Actual date",
+              "bbox": [
+                60,
+                317.80078125,
+                124.30644989013672,
+                333.76171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "2024-03-01",
+              "bbox": [
+                214.5,
+                317.80078125,
+                275.84393310546875,
+                333.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Visit note",
+              "bbox": [
+                60,
+                345.8583984375,
+                121.8638916015625,
+                364.2134704589844
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 13.799999237060547
+            },
+            {
+              "text": "He said \"yes\", then went.",
+              "bbox": [
+                71.25,
+                380.80078125,
+                201.89401245117188,
+                396.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original suggestion explanation",
+              "bbox": [
+                60,
+                420.1083984375,
+                267.6739196777344,
+                438.4634704589844
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 13.799999237060547
+            },
+            {
+              "text": "  First",
+              "bbox": [
+                60,
+                449.80078125,
+                88.66622161865234,
+                465.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "reason  ",
+              "bbox": [
+                60,
+                468.55078125,
+                102.04801177978516,
+                484.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original occurrence 2 · pick-1",
+              "bbox": [
+                60,
+                543.3668212890625,
+                228.2515869140625,
+                555.3099365234375
+              ],
+              "font": "Consolas",
+              "size": 10.200000762939453
+            }
+          ],
+          "outsidePageSpans": [],
+          "links": []
+        },
+        {
+          "page": 3,
+          "widthPt": 595.9199829101562,
+          "heightPt": 841.9199829101562,
+          "text": "Café, \"Same\"\nOriginal venue ID\nsame-id\nOriginal kind\nrestaurant\nOriginal suggested day\nTuesday\nSaved planned day\nKept off this week\nSaved planned date\nKept off this week\nRecorded visit\nDid not go\nRecorded outcome code\ndid_not_go\nActual date\n2024-03-02\nVisit note\n  AB\nC\n🙂\n \nOriginal suggestion explanation\nSecond reason\nOriginal occurrence 3 · pick-2\n",
+          "spans": [
+            {
+              "text": "Café, \"Same\"",
+              "bbox": [
+                60,
+                44.12109375,
+                163.0694580078125,
+                66.4664077758789
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "Original venue ID",
+              "bbox": [
+                60,
+                78.55078125,
+                158.4600830078125,
+                94.51171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "same-id",
+              "bbox": [
+                214.5,
+                78.55078125,
+                257.07598876953125,
+                94.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original kind",
+              "bbox": [
+                60,
+                103.30078125,
+                133.40586853027344,
+                119.26171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "restaurant",
+              "bbox": [
+                214.5,
+                103.30078125,
+                268.1519775390625,
+                119.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original suggested day",
+              "bbox": [
+                60,
+                127.30078125,
+                189.97434997558594,
+                143.26171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "Tuesday",
+              "bbox": [
+                214.5,
+                127.30078125,
+                257.92803955078125,
+                143.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Saved planned day",
+              "bbox": [
+                60,
+                152.05078125,
+                166.1983184814453,
+                168.01171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "Kept off this week",
+              "bbox": [
+                214.5,
+                152.05078125,
+                309.1547546386719,
+                168.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Saved planned date",
+              "bbox": [
+                60,
+                176.80078125,
+                170.86505126953125,
+                192.76171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "Kept off this week",
+              "bbox": [
+                214.5,
+                176.80078125,
+                309.1547546386719,
+                192.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Recorded visit",
+              "bbox": [
+                60,
+                216.1083984375,
+                151.75289916992188,
+                234.46347045898438
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 13.799999237060547
+            },
+            {
+              "text": "Did not go",
+              "bbox": [
+                68.25,
+                255.55078125,
+                128.57398986816406,
+                271.51171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "Recorded outcome code",
+              "bbox": [
+                60,
+                293.05078125,
+                196.6324462890625,
+                309.01171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "did_not_go",
+              "bbox": [
+                214.5,
+                293.05078125,
+                273.4920349121094,
+                309.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Actual date",
+              "bbox": [
+                60,
+                317.80078125,
+                124.30644989013672,
+                333.76171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "2024-03-02",
+              "bbox": [
+                214.5,
+                317.80078125,
+                275.84393310546875,
+                333.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Visit note",
+              "bbox": [
+                60,
+                345.8583984375,
+                121.8638916015625,
+                364.2134704589844
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 13.799999237060547
+            },
+            {
+              "text": "  AB",
+              "bbox": [
+                71.25,
+                380.80078125,
+                92.4463119506836,
+                396.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "C",
+              "bbox": [
+                71.25,
+                399.55078125,
+                78.6780014038086,
+                415.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "🙂",
+              "bbox": [
+                71.25,
+                420.298828125,
+                87.72599792480469,
+                433.775390625
+              ],
+              "font": "Unnamed-T3",
+              "size": 12
+            },
+            {
+              "text": " ",
+              "bbox": [
+                97.546875,
+                418.30078125,
+                100.83487701416016,
+                434.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original suggestion explanation",
+              "bbox": [
+                60,
+                457.6083984375,
+                267.6739196777344,
+                475.9634704589844
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 13.799999237060547
+            },
+            {
+              "text": "Second reason",
+              "bbox": [
+                60,
+                487.30078125,
+                137.84400939941406,
+                503.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original occurrence 3 · pick-2",
+              "bbox": [
+                60,
+                562.1168212890625,
+                228.2515869140625,
+                574.0599365234375
+              ],
+              "font": "Consolas",
+              "size": 10.200000762939453
+            }
+          ],
+          "outsidePageSpans": [],
+          "links": []
+        },
+        {
+          "page": 4,
+          "widthPt": 595.9199829101562,
+          "heightPt": 841.9199829101562,
+          "text": "Third café\nOriginal venue ID\nthird-id\nOriginal kind\nrestaurant\nOriginal suggested day\nFriday\nSaved planned day\nFriday\nSaved planned date\n2024-03-01\nRecorded visit\nNot recorded\nRecorded outcome code\nunrecorded\nActual date\nNot recorded\nVisit note\nNo note recorded.\nOriginal suggestion explanation\nThird reason\nThis report includes the recorded dates, outcomes and notes for every original occurrence, including picks kept\noff the saved week. Original suggestions remain in their original order.\nKeep the original visit-record JSON to reopen or edit it and retain its complete original source and tool trace. This\nHTML report is not a backup format.\nOpen this file offline in a browser. Use the browser's Print command to print or save a PDF. No service, script or\nconnection is needed.\n",
+          "spans": [
+            {
+              "text": "Third café",
+              "bbox": [
+                60,
+                44.12109375,
+                139.015380859375,
+                66.4664077758789
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "Original venue ID",
+              "bbox": [
+                60,
+                78.55078125,
+                158.4600830078125,
+                94.51171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "third-id",
+              "bbox": [
+                214.5,
+                78.55078125,
+                254.27999877929688,
+                94.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original kind",
+              "bbox": [
+                60,
+                103.30078125,
+                133.40586853027344,
+                119.26171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "restaurant",
+              "bbox": [
+                214.5,
+                103.30078125,
+                268.1519775390625,
+                119.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original suggested day",
+              "bbox": [
+                60,
+                127.30078125,
+                189.97434997558594,
+                143.26171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "Friday",
+              "bbox": [
+                214.5,
+                127.30078125,
+                246.41998291015625,
+                143.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Saved planned day",
+              "bbox": [
+                60,
+                152.05078125,
+                166.1983184814453,
+                168.01171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "Friday",
+              "bbox": [
+                214.5,
+                152.05078125,
+                246.41998291015625,
+                168.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Saved planned date",
+              "bbox": [
+                60,
+                176.80078125,
+                170.86505126953125,
+                192.76171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "2024-03-01",
+              "bbox": [
+                214.5,
+                176.80078125,
+                275.84393310546875,
+                192.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Recorded visit",
+              "bbox": [
+                60,
+                216.1083984375,
+                151.75289916992188,
+                234.46347045898438
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 13.799999237060547
+            },
+            {
+              "text": "Not recorded",
+              "bbox": [
+                68.25,
+                255.55078125,
+                143.43978881835938,
+                271.51171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "Recorded outcome code",
+              "bbox": [
+                60,
+                293.05078125,
+                196.6324462890625,
+                309.01171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "unrecorded",
+              "bbox": [
+                214.5,
+                293.05078125,
+                275.70001220703125,
+                309.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Actual date",
+              "bbox": [
+                60,
+                317.80078125,
+                124.30644989013672,
+                333.76171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "Not recorded",
+              "bbox": [
+                214.5,
+                317.80078125,
+                285.4800109863281,
+                333.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Visit note",
+              "bbox": [
+                60,
+                345.8583984375,
+                121.8638916015625,
+                364.2134704589844
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 13.799999237060547
+            },
+            {
+              "text": "No note recorded.",
+              "bbox": [
+                60,
+                374.80078125,
+                156.97201538085938,
+                390.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original suggestion explanation",
+              "bbox": [
+                60,
+                401.3583984375,
+                267.6739196777344,
+                419.7134704589844
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 13.799999237060547
+            },
+            {
+              "text": "Third reason",
+              "bbox": [
+                60,
+                430.30078125,
+                125.98799896240234,
+                446.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "This report includes the recorded dates, outcomes and notes for every original occurrence, including picks kept",
+              "bbox": [
+                42.75,
+                510.9931640625,
+                541.1912231445312,
+                524.5599365234375
+              ],
+              "font": "SegoeUI",
+              "size": 10.200000762939453
+            },
+            {
+              "text": "off the saved week. Original suggestions remain in their original order.",
+              "bbox": [
+                42.75,
+                526.7431640625,
+                358.5184631347656,
+                540.3099365234375
+              ],
+              "font": "SegoeUI",
+              "size": 10.200000762939453
+            },
+            {
+              "text": "Keep the original visit-record JSON to reopen or edit it and retain its complete original source and tool trace. This",
+              "bbox": [
+                42.75,
+                548.4931640625,
+                551.8847045898438,
+                562.0599365234375
+              ],
+              "font": "SegoeUI",
+              "size": 10.200000762939453
+            },
+            {
+              "text": "HTML report is not a backup format.",
+              "bbox": [
+                42.75,
+                564.2431640625,
+                206.2058868408203,
+                577.8099365234375
+              ],
+              "font": "SegoeUI",
+              "size": 10.200000762939453
+            },
+            {
+              "text": "Open this file offline in a browser. Use the browser's Print command to print or save a PDF. No service, script or",
+              "bbox": [
+                42.75,
+                585.9931640625,
+                541.6970825195312,
+                599.5599365234375
+              ],
+              "font": "SegoeUI",
+              "size": 10.200000762939453
+            },
+            {
+              "text": "connection is needed.",
+              "bbox": [
+                42.75,
+                601.7431640625,
+                141.09133911132812,
+                615.3099365234375
+              ],
+              "font": "SegoeUI",
+              "size": 10.200000762939453
+            }
+          ],
+          "outsidePageSpans": [],
+          "links": []
+        }
+      ],
+      "frozenAccounting": {
+        "passed": false,
+        "violations": [
+          {
+            "kind": "missing explicit kept-off-week label"
+          }
+        ],
+        "actualOccurrenceKeys": [
+          "pick-0",
+          "pick-1",
+          "pick-2"
+        ],
+        "requiredFieldCount": 37,
+        "textCharacters": 2345,
+        "whitespacePolicy": "ASCII whitespace only is compacted for text accounting. No Unicode normalization; exact DOM CR/TAB/space identity is not inferred. Visual page inspection remains mandatory."
+      }
+    },
+    {
+      "fixture": "literal-notes-世界.json",
+      "pdf": "original-1.pdf",
+      "bytes": 120987,
+      "sha256": "fa75132474be12d4dcf3c5107b976a42a5e03114ca83c7d93ef441e5aac7f8f6",
+      "gitBlob": "cdff28a3ce91ad6225f7a14c59ad32db4bd3bfff",
+      "pdfinfo": {
+        "exit": 0,
+        "stdout": "Title:           TasteTable visit record · 2024-02-26\nCreator:         Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36\nProducer:        Skia/PDF m154\nCreationDate:    Fri Oct  9 09:00:22 2026 KST\nModDate:         Fri Oct  9 09:00:22 2026 KST\nCustom Metadata: no\nMetadata Stream: no\nTagged:          yes\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           7\nEncrypted:       no\nPage size:       595.92 x 841.92 pts (A4)\nPage rot:        0\nFile size:       0 bytes\nOptimized:       no\nPDF version:     1.4\n",
+        "stderr": ""
+      },
+      "pageCount": 7,
+      "pages": [
+        {
+          "page": 1,
+          "widthPt": 595.9199829101562,
+          "heightPt": 841.9199829101562,
+          "text": "TASTETABLE · RECORDED VISITS\nSaved visit record\nliteral-notes-世界.json\nWeek starting 2024-02-26 · 3 original occurrences\nSaved live-source label\nThe original file labels its source live. This report does not authenticate that label or refresh\nprovider data.\nPlanned dates and recorded visits are separate. An unrecorded outcome does not mean a\nvisit did or did not happen. An omitted plan can still have a recorded outcome.\nDates, outcomes and notes below are saved entries, not verified observations or new\nrecommendations.\nSaved provenance\nOriginal saved-week\nfilename\n  Source <week> & \"quoted\" — 日本語.json  \nSaved source mode\nlive\nOriginal response\nreceived\n2026-10-01T02:03:04.000Z\nOriginal week saved\n2026-10-02T04:05:06.000Z\nVisit record saved\n2026-10-04T07:08:09.000Z\nVisit JSON SHA-256\nff26f0b6f09f949279ec2a998a4f66a4bfb8c27d6aaa34fe011e4e9bd\n13bf900\nOriginal occurrence 1 · pick-0\n",
+          "spans": [
+            {
+              "text": "TASTETABLE · RECORDED VISITS",
+              "bbox": [
+                42.75,
+                49.38164138793945,
+                204.9354248046875,
+                62.469608306884766
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 9.84000015258789
+            },
+            {
+              "text": "Saved visit record",
+              "bbox": [
+                42.75,
+                69.3515625,
+                242.4692840576172,
+                101.2734375
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 24
+            },
+            {
+              "text": "literal-notes-",
+              "bbox": [
+                42.75,
+                107.80078125,
+                110.94599914550781,
+                123.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "世界",
+              "bbox": [
+                110.94140625,
+                108.052734375,
+                134.94140625,
+                123.890625
+              ],
+              "font": "MicrosoftYaHei",
+              "size": 12
+            },
+            {
+              "text": ".json",
+              "bbox": [
+                134.94140625,
+                107.80078125,
+                159.3614044189453,
+                123.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Week starting 2024-02-26 · 3 original occurrences",
+              "bbox": [
+                42.75,
+                133.30078125,
+                305.5512390136719,
+                149.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Saved live-source label",
+              "bbox": [
+                57.75,
+                218.87109375,
+                237.96954345703125,
+                241.21640014648438
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "The original file labels its source live. This report does not authenticate that label or refresh",
+              "bbox": [
+                57.75,
+                252.55078125,
+                536.9340209960938,
+                268.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "provider data.",
+              "bbox": [
+                57.75,
+                270.55078125,
+                131.43002319335938,
+                286.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Planned dates and recorded visits are separate. An unrecorded outcome does not mean a",
+              "bbox": [
+                57.75,
+                296.80078125,
+                531.2459106445312,
+                312.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "visit did or did not happen. An omitted plan can still have a recorded outcome.",
+              "bbox": [
+                57.75,
+                315.55078125,
+                474.1382141113281,
+                331.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Dates, outcomes and notes below are saved entries, not verified observations or new",
+              "bbox": [
+                57.75,
+                341.05078125,
+                505.4460754394531,
+                357.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "recommendations.",
+              "bbox": [
+                57.75,
+                359.80078125,
+                156.17401123046875,
+                375.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Saved provenance",
+              "bbox": [
+                60,
+                444.62109375,
+                203.3821258544922,
+                466.9664001464844
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "Original saved-week",
+              "bbox": [
+                60,
+                479.05078125,
+                174.7076416015625,
+                495.01171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "filename",
+              "bbox": [
+                60,
+                497.80078125,
+                109.10399627685547,
+                513.76171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "  Source <week> & \"quoted\" — ",
+              "bbox": [
+                214.5,
+                479.05078125,
+                386.62628173828125,
+                495.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "日本語",
+              "bbox": [
+                386.61328125,
+                479.302734375,
+                422.61328125,
+                495.140625
+              ],
+              "font": "MicrosoftYaHei",
+              "size": 12
+            },
+            {
+              "text": ".json  ",
+              "bbox": [
+                422.61328125,
+                479.05078125,
+                453.6092529296875,
+                495.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Saved source mode",
+              "bbox": [
+                60,
+                522.55078125,
+                169.21426391601562,
+                538.51171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "live",
+              "bbox": [
+                214.5,
+                522.55078125,
+                232.33200073242188,
+                538.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original response",
+              "bbox": [
+                60,
+                546.55078125,
+                158.91387939453125,
+                562.51171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "received",
+              "bbox": [
+                60,
+                565.30078125,
+                107.18952941894531,
+                581.26171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "2026-10-01T02:03:04.000Z",
+              "bbox": [
+                214.5,
+                546.55078125,
+                354.9958801269531,
+                562.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original week saved",
+              "bbox": [
+                60,
+                590.05078125,
+                173.1660919189453,
+                606.01171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "2026-10-02T04:05:06.000Z",
+              "bbox": [
+                214.5,
+                590.05078125,
+                354.9958801269531,
+                606.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Visit record saved",
+              "bbox": [
+                60,
+                614.80078125,
+                159.9121856689453,
+                630.76171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "2026-10-04T07:08:09.000Z",
+              "bbox": [
+                214.5,
+                614.80078125,
+                354.9958801269531,
+                630.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Visit JSON SHA-256",
+              "bbox": [
+                60,
+                639.55078125,
+                171.947998046875,
+                655.51171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "ff26f0b6f09f949279ec2a998a4f66a4bfb8c27d6aaa34fe011e4e9bd",
+              "bbox": [
+                214.5,
+                640.8668212890625,
+                534.158447265625,
+                652.8099365234375
+              ],
+              "font": "Consolas",
+              "size": 10.200000762939453
+            },
+            {
+              "text": "13bf900",
+              "bbox": [
+                214.5,
+                656.6168212890625,
+                253.758056640625,
+                668.5599365234375
+              ],
+              "font": "Consolas",
+              "size": 10.200000762939453
+            },
+            {
+              "text": "Original occurrence 1 · pick-0",
+              "bbox": [
+                60,
+                729.3668212890625,
+                228.2515869140625,
+                741.3099365234375
+              ],
+              "font": "Consolas",
+              "size": 10.200000762939453
+            }
+          ],
+          "outsidePageSpans": [],
+          "links": []
+        },
+        {
+          "page": 2,
+          "widthPt": 595.9199829101562,
+          "heightPt": 841.9199829101562,
+          "text": "  Literal 日本語 & \"quoted\" <img \nsrc=\"https://invalid.example/taste-test\" \nonerror=\"globalThis.__tasteInjected=true\"> \n<script>globalThis.__tasteInjected=true</script>  \nOriginal venue ID\n repeated  id <literal> & \nOriginal kind\nrestaurant\nOriginal suggested day\nMonday\nSaved planned day\nThursday\nSaved planned date\n2024-02-29\nRecorded visit\nWent\nRecorded outcome code\nwent\nActual date\nNot recorded\nVisit note\nNOTE_BEGIN\nN001  full literal line\nN002  full literal line\nN003  full literal line\nN004  full literal line\nN005  full literal line\nN006  full literal line\nN007  full literal line\nN008  full literal line\nN009  full literal line\nN010  full literal line\nN011  full literal line\nN012  full literal line\nN013  full literal line\nN014  full literal line\nN015  full literal line\nN016  full literal line\nN017  full literal line\n",
+          "spans": [
+            {
+              "text": "  Literal ",
+              "bbox": [
+                60,
+                44.12109375,
+                123.33013153076172,
+                66.4664077758789
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "日本語",
+              "bbox": [
+                123.32809448242188,
+                44.47383117675781,
+                173.72808837890625,
+                66.6468734741211
+              ],
+              "font": "MicrosoftYaHei-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": " & \"quoted\" <img ",
+              "bbox": [
+                173.7280731201172,
+                44.12109375,
+                322.3555603027344,
+                66.4664077758789
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "src=\"https://invalid.example/taste-test\" ",
+              "bbox": [
+                60,
+                70.37109375,
+                382.2852478027344,
+                92.7164077758789
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "onerror=\"globalThis.__tasteInjected=true\"> ",
+              "bbox": [
+                60,
+                95.87109375,
+                410.5274353027344,
+                118.2164077758789
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "<script>globalThis.__tasteInjected=true</script>  ",
+              "bbox": [
+                60,
+                122.12109375,
+                458.5526428222656,
+                144.46640014648438
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "Original venue ID",
+              "bbox": [
+                60,
+                156.55078125,
+                158.4600830078125,
+                172.51171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": " repeated  id <literal> & ",
+              "bbox": [
+                214.5,
+                156.55078125,
+                346.86505126953125,
+                172.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original kind",
+              "bbox": [
+                60,
+                181.30078125,
+                133.40586853027344,
+                197.26171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "restaurant",
+              "bbox": [
+                214.5,
+                181.30078125,
+                268.1519775390625,
+                197.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original suggested day",
+              "bbox": [
+                60,
+                205.30078125,
+                189.97434997558594,
+                221.26171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "Monday",
+              "bbox": [
+                214.5,
+                205.30078125,
+                258.08404541015625,
+                221.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Saved planned day",
+              "bbox": [
+                60,
+                230.05078125,
+                166.1983184814453,
+                246.01171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "Thursday",
+              "bbox": [
+                214.5,
+                230.05078125,
+                262.6200256347656,
+                246.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Saved planned date",
+              "bbox": [
+                60,
+                254.80078125,
+                170.86505126953125,
+                270.76171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "2024-02-29",
+              "bbox": [
+                214.5,
+                254.80078125,
+                275.84393310546875,
+                270.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Recorded visit",
+              "bbox": [
+                60,
+                294.1083984375,
+                151.75289916992188,
+                312.4634704589844
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 13.799999237060547
+            },
+            {
+              "text": "Went",
+              "bbox": [
+                68.25,
+                333.55078125,
+                98.40632629394531,
+                349.51171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "Recorded outcome code",
+              "bbox": [
+                60,
+                371.05078125,
+                196.6324462890625,
+                387.01171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "went",
+              "bbox": [
+                214.5,
+                371.05078125,
+                240.31199645996094,
+                387.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Actual date",
+              "bbox": [
+                60,
+                395.80078125,
+                124.30644989013672,
+                411.76171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "Not recorded",
+              "bbox": [
+                214.5,
+                395.80078125,
+                285.4800109863281,
+                411.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Visit note",
+              "bbox": [
+                60,
+                423.8583984375,
+                121.8638916015625,
+                442.2134704589844
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 13.799999237060547
+            },
+            {
+              "text": "NOTE_BEGIN",
+              "bbox": [
+                71.25,
+                459.55078125,
+                139.42237854003906,
+                475.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N001  full literal line",
+              "bbox": [
+                71.25,
+                477.55078125,
+                177.35400390625,
+                493.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N002  full literal line",
+              "bbox": [
+                71.25,
+                496.30078125,
+                177.35400390625,
+                512.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N003  full literal line",
+              "bbox": [
+                71.25,
+                515.05078125,
+                177.35400390625,
+                531.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N004  full literal line",
+              "bbox": [
+                71.25,
+                533.80078125,
+                177.35400390625,
+                549.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N005  full literal line",
+              "bbox": [
+                71.25,
+                552.55078125,
+                177.35400390625,
+                568.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N006  full literal line",
+              "bbox": [
+                71.25,
+                570.55078125,
+                177.35400390625,
+                586.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N007  full literal line",
+              "bbox": [
+                71.25,
+                589.30078125,
+                177.35400390625,
+                605.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N008  full literal line",
+              "bbox": [
+                71.25,
+                608.05078125,
+                177.35400390625,
+                624.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N009  full literal line",
+              "bbox": [
+                71.25,
+                626.80078125,
+                177.35400390625,
+                642.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N010  full literal line",
+              "bbox": [
+                71.25,
+                645.55078125,
+                177.35400390625,
+                661.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N011  full literal line",
+              "bbox": [
+                71.25,
+                663.55078125,
+                177.35400390625,
+                679.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N012  full literal line",
+              "bbox": [
+                71.25,
+                682.30078125,
+                177.35400390625,
+                698.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N013  full literal line",
+              "bbox": [
+                71.25,
+                701.05078125,
+                177.35400390625,
+                717.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N014  full literal line",
+              "bbox": [
+                71.25,
+                719.80078125,
+                177.35400390625,
+                735.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N015  full literal line",
+              "bbox": [
+                71.25,
+                737.80078125,
+                177.35400390625,
+                753.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N016  full literal line",
+              "bbox": [
+                71.25,
+                756.55078125,
+                177.35400390625,
+                772.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N017  full literal line",
+              "bbox": [
+                71.25,
+                775.30078125,
+                177.35400390625,
+                791.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            }
+          ],
+          "outsidePageSpans": [],
+          "links": []
+        },
+        {
+          "page": 3,
+          "widthPt": 595.9199829101562,
+          "heightPt": 841.9199829101562,
+          "text": "N018  full literal line\nN019  full literal line\nN020  full literal line\nN021  full literal line\nN022  full literal line\nN023  full literal line\nN024  full literal line\nN025  full literal line\nN026  full literal line\nN027  full literal line\nN028  full literal line\nN029  full literal line\nN030  full literal line\nN031  full literal line\nN032  full literal line\nN033  full literal line\nN034  full literal line\nN035  full literal line\nN036  full literal line\nN037  full literal line\nN038  full literal line\nN039  full literal line\nN040  full literal line\nN041  full literal line\nN042  full literal line\nN043  full literal line\nN044  full literal line\nN045  full literal line\nN046  full literal line\nN047  full literal line\nN048  full literal line\nN049  full literal line\nN050  full literal line\nN051  full literal line\nN052  full literal line\nN053  full literal line\nN054  full literal line\nN055  full literal line\nN056  full literal line\nN057  full literal line\n",
+          "spans": [
+            {
+              "text": "N018  full literal line",
+              "bbox": [
+                71.25,
+                43.30078125,
+                177.35400390625,
+                59.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N019  full literal line",
+              "bbox": [
+                71.25,
+                62.05078125,
+                177.35400390625,
+                78.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N020  full literal line",
+              "bbox": [
+                71.25,
+                80.80078125,
+                177.35400390625,
+                96.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N021  full literal line",
+              "bbox": [
+                71.25,
+                98.80078125,
+                177.35400390625,
+                114.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N022  full literal line",
+              "bbox": [
+                71.25,
+                117.55078125,
+                177.35400390625,
+                133.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N023  full literal line",
+              "bbox": [
+                71.25,
+                136.30078125,
+                177.35400390625,
+                152.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N024  full literal line",
+              "bbox": [
+                71.25,
+                155.05078125,
+                177.35400390625,
+                171.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N025  full literal line",
+              "bbox": [
+                71.25,
+                173.80078125,
+                177.35400390625,
+                189.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N026  full literal line",
+              "bbox": [
+                71.25,
+                191.80078125,
+                177.35400390625,
+                207.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N027  full literal line",
+              "bbox": [
+                71.25,
+                210.55078125,
+                177.35400390625,
+                226.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N028  full literal line",
+              "bbox": [
+                71.25,
+                229.30078125,
+                177.35400390625,
+                245.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N029  full literal line",
+              "bbox": [
+                71.25,
+                248.05078125,
+                177.35400390625,
+                264.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N030  full literal line",
+              "bbox": [
+                71.25,
+                266.80078125,
+                177.35400390625,
+                282.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N031  full literal line",
+              "bbox": [
+                71.25,
+                284.80078125,
+                177.35400390625,
+                300.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N032  full literal line",
+              "bbox": [
+                71.25,
+                303.55078125,
+                177.35400390625,
+                319.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N033  full literal line",
+              "bbox": [
+                71.25,
+                322.30078125,
+                177.35400390625,
+                338.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N034  full literal line",
+              "bbox": [
+                71.25,
+                341.05078125,
+                177.35400390625,
+                357.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N035  full literal line",
+              "bbox": [
+                71.25,
+                359.80078125,
+                177.35400390625,
+                375.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N036  full literal line",
+              "bbox": [
+                71.25,
+                377.80078125,
+                177.35400390625,
+                393.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N037  full literal line",
+              "bbox": [
+                71.25,
+                396.55078125,
+                177.35400390625,
+                412.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N038  full literal line",
+              "bbox": [
+                71.25,
+                415.30078125,
+                177.35400390625,
+                431.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N039  full literal line",
+              "bbox": [
+                71.25,
+                434.05078125,
+                177.35400390625,
+                450.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N040  full literal line",
+              "bbox": [
+                71.25,
+                452.80078125,
+                177.35400390625,
+                468.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N041  full literal line",
+              "bbox": [
+                71.25,
+                470.80078125,
+                177.35400390625,
+                486.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N042  full literal line",
+              "bbox": [
+                71.25,
+                489.55078125,
+                177.35400390625,
+                505.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N043  full literal line",
+              "bbox": [
+                71.25,
+                508.30078125,
+                177.35400390625,
+                524.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N044  full literal line",
+              "bbox": [
+                71.25,
+                527.05078125,
+                177.35400390625,
+                543.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N045  full literal line",
+              "bbox": [
+                71.25,
+                545.80078125,
+                177.35400390625,
+                561.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N046  full literal line",
+              "bbox": [
+                71.25,
+                563.80078125,
+                177.35400390625,
+                579.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N047  full literal line",
+              "bbox": [
+                71.25,
+                582.55078125,
+                177.35400390625,
+                598.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N048  full literal line",
+              "bbox": [
+                71.25,
+                601.30078125,
+                177.35400390625,
+                617.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N049  full literal line",
+              "bbox": [
+                71.25,
+                620.05078125,
+                177.35400390625,
+                636.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N050  full literal line",
+              "bbox": [
+                71.25,
+                638.80078125,
+                177.35400390625,
+                654.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N051  full literal line",
+              "bbox": [
+                71.25,
+                656.80078125,
+                177.35400390625,
+                672.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N052  full literal line",
+              "bbox": [
+                71.25,
+                675.55078125,
+                177.35400390625,
+                691.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N053  full literal line",
+              "bbox": [
+                71.25,
+                694.30078125,
+                177.35400390625,
+                710.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N054  full literal line",
+              "bbox": [
+                71.25,
+                713.05078125,
+                177.35400390625,
+                729.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N055  full literal line",
+              "bbox": [
+                71.25,
+                731.05078125,
+                177.35400390625,
+                747.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N056  full literal line",
+              "bbox": [
+                71.25,
+                749.80078125,
+                177.35400390625,
+                765.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N057  full literal line",
+              "bbox": [
+                71.25,
+                768.55078125,
+                177.35400390625,
+                784.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            }
+          ],
+          "outsidePageSpans": [],
+          "links": []
+        },
+        {
+          "page": 4,
+          "widthPt": 595.9199829101562,
+          "heightPt": 841.9199829101562,
+          "text": "N058  full literal line\nN059  full literal line\nN060  full literal line\nN061  full literal line\nN062  full literal line\nN063  full literal line\nN064  full literal line\nN065  full literal line\nN066  full literal line\nN067  full literal line\nN068  full literal line\nN069  full literal line\nN070  full literal line\nN071  full literal line\nN072  full literal line\nN073  full literal line\nN074  full literal line\nN075  full literal line\nN076  full literal line\nN077  full literal line\nN078  full literal line\nN079  full literal line\nN080  full literal line\nN081  full literal line\nN082  full literal line\nN083  full literal line\nN084  full literal line\nN085  full literal line\nN086  full literal line\nN087  full literal line\nN088  full literal line\nN089  full literal line\nN090  full literal line\nN091  full literal line\nN092  full literal line\nN093  full literal line\nN094  full literal line\nN095  full literal line\nN096  full literal line\nN097  full literal line\n",
+          "spans": [
+            {
+              "text": "N058  full literal line",
+              "bbox": [
+                71.25,
+                43.30078125,
+                177.35400390625,
+                59.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N059  full literal line",
+              "bbox": [
+                71.25,
+                62.05078125,
+                177.35400390625,
+                78.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N060  full literal line",
+              "bbox": [
+                71.25,
+                80.80078125,
+                177.35400390625,
+                96.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N061  full literal line",
+              "bbox": [
+                71.25,
+                98.80078125,
+                177.35400390625,
+                114.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N062  full literal line",
+              "bbox": [
+                71.25,
+                117.55078125,
+                177.35400390625,
+                133.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N063  full literal line",
+              "bbox": [
+                71.25,
+                136.30078125,
+                177.35400390625,
+                152.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N064  full literal line",
+              "bbox": [
+                71.25,
+                155.05078125,
+                177.35400390625,
+                171.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N065  full literal line",
+              "bbox": [
+                71.25,
+                173.80078125,
+                177.35400390625,
+                189.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N066  full literal line",
+              "bbox": [
+                71.25,
+                191.80078125,
+                177.35400390625,
+                207.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N067  full literal line",
+              "bbox": [
+                71.25,
+                210.55078125,
+                177.35400390625,
+                226.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N068  full literal line",
+              "bbox": [
+                71.25,
+                229.30078125,
+                177.35400390625,
+                245.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N069  full literal line",
+              "bbox": [
+                71.25,
+                248.05078125,
+                177.35400390625,
+                264.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N070  full literal line",
+              "bbox": [
+                71.25,
+                266.80078125,
+                177.35400390625,
+                282.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N071  full literal line",
+              "bbox": [
+                71.25,
+                284.80078125,
+                177.35400390625,
+                300.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N072  full literal line",
+              "bbox": [
+                71.25,
+                303.55078125,
+                177.35400390625,
+                319.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N073  full literal line",
+              "bbox": [
+                71.25,
+                322.30078125,
+                177.35400390625,
+                338.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N074  full literal line",
+              "bbox": [
+                71.25,
+                341.05078125,
+                177.35400390625,
+                357.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N075  full literal line",
+              "bbox": [
+                71.25,
+                359.80078125,
+                177.35400390625,
+                375.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N076  full literal line",
+              "bbox": [
+                71.25,
+                377.80078125,
+                177.35400390625,
+                393.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N077  full literal line",
+              "bbox": [
+                71.25,
+                396.55078125,
+                177.35400390625,
+                412.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N078  full literal line",
+              "bbox": [
+                71.25,
+                415.30078125,
+                177.35400390625,
+                431.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N079  full literal line",
+              "bbox": [
+                71.25,
+                434.05078125,
+                177.35400390625,
+                450.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N080  full literal line",
+              "bbox": [
+                71.25,
+                452.80078125,
+                177.35400390625,
+                468.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N081  full literal line",
+              "bbox": [
+                71.25,
+                470.80078125,
+                177.35400390625,
+                486.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N082  full literal line",
+              "bbox": [
+                71.25,
+                489.55078125,
+                177.35400390625,
+                505.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N083  full literal line",
+              "bbox": [
+                71.25,
+                508.30078125,
+                177.35400390625,
+                524.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N084  full literal line",
+              "bbox": [
+                71.25,
+                527.05078125,
+                177.35400390625,
+                543.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N085  full literal line",
+              "bbox": [
+                71.25,
+                545.80078125,
+                177.35400390625,
+                561.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N086  full literal line",
+              "bbox": [
+                71.25,
+                563.80078125,
+                177.35400390625,
+                579.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N087  full literal line",
+              "bbox": [
+                71.25,
+                582.55078125,
+                177.35400390625,
+                598.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N088  full literal line",
+              "bbox": [
+                71.25,
+                601.30078125,
+                177.35400390625,
+                617.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N089  full literal line",
+              "bbox": [
+                71.25,
+                620.05078125,
+                177.35400390625,
+                636.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N090  full literal line",
+              "bbox": [
+                71.25,
+                638.80078125,
+                177.35400390625,
+                654.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N091  full literal line",
+              "bbox": [
+                71.25,
+                656.80078125,
+                177.35400390625,
+                672.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N092  full literal line",
+              "bbox": [
+                71.25,
+                675.55078125,
+                177.35400390625,
+                691.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N093  full literal line",
+              "bbox": [
+                71.25,
+                694.30078125,
+                177.35400390625,
+                710.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N094  full literal line",
+              "bbox": [
+                71.25,
+                713.05078125,
+                177.35400390625,
+                729.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N095  full literal line",
+              "bbox": [
+                71.25,
+                731.05078125,
+                177.35400390625,
+                747.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N096  full literal line",
+              "bbox": [
+                71.25,
+                749.80078125,
+                177.35400390625,
+                765.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N097  full literal line",
+              "bbox": [
+                71.25,
+                768.55078125,
+                177.35400390625,
+                784.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            }
+          ],
+          "outsidePageSpans": [],
+          "links": []
+        },
+        {
+          "page": 5,
+          "widthPt": 595.9199829101562,
+          "heightPt": 841.9199829101562,
+          "text": "N098  full literal line\nN099  full literal line\nN100  full literal line\nN101  full literal line\nN102  full literal line\nN103  full literal line\nN104  full literal line\nN105  full literal line\nN106  full literal line\nN107  full literal line\nN108  full literal line\nUNBROKEN_VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV\nVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV\nVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV\nVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV\nVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV\nVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV\nVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV\nVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV\nVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV\nVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV_\nEND\nNOTE_END\nOriginal suggestion explanation\nWHY_BEGINCR_ONLY\nCRLF_PAIR\nLF_LINE\nTAB  TWO_SPACES <why> & WHY_END\nOriginal occurrence 2 · pick-1\nUnbroken_WWWWWWWWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWWWWWWWWWWWWW\n",
+          "spans": [
+            {
+              "text": "N098  full literal line",
+              "bbox": [
+                71.25,
+                43.30078125,
+                177.35400390625,
+                59.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N099  full literal line",
+              "bbox": [
+                71.25,
+                62.05078125,
+                177.35400390625,
+                78.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N100  full literal line",
+              "bbox": [
+                71.25,
+                80.80078125,
+                177.35400390625,
+                96.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N101  full literal line",
+              "bbox": [
+                71.25,
+                98.80078125,
+                177.35400390625,
+                114.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N102  full literal line",
+              "bbox": [
+                71.25,
+                117.55078125,
+                177.35400390625,
+                133.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N103  full literal line",
+              "bbox": [
+                71.25,
+                136.30078125,
+                177.35400390625,
+                152.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N104  full literal line",
+              "bbox": [
+                71.25,
+                155.05078125,
+                177.35400390625,
+                171.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N105  full literal line",
+              "bbox": [
+                71.25,
+                173.80078125,
+                177.35400390625,
+                189.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N106  full literal line",
+              "bbox": [
+                71.25,
+                191.80078125,
+                177.35400390625,
+                207.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N107  full literal line",
+              "bbox": [
+                71.25,
+                210.55078125,
+                177.35400390625,
+                226.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "N108  full literal line",
+              "bbox": [
+                71.25,
+                229.30078125,
+                177.35400390625,
+                245.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "UNBROKEN_VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV",
+              "bbox": [
+                71.25,
+                248.05078125,
+                525.9500732421875,
+                264.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV",
+              "bbox": [
+                71.25,
+                266.80078125,
+                525.8218994140625,
+                282.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV",
+              "bbox": [
+                71.25,
+                284.80078125,
+                525.8218994140625,
+                300.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV",
+              "bbox": [
+                71.25,
+                303.55078125,
+                525.8218994140625,
+                319.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV",
+              "bbox": [
+                71.25,
+                322.30078125,
+                525.8218994140625,
+                338.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV",
+              "bbox": [
+                71.25,
+                341.05078125,
+                525.8218994140625,
+                357.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV",
+              "bbox": [
+                71.25,
+                359.80078125,
+                525.8218994140625,
+                375.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV",
+              "bbox": [
+                71.25,
+                377.80078125,
+                525.8218994140625,
+                393.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV",
+              "bbox": [
+                71.25,
+                396.55078125,
+                525.8218994140625,
+                412.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV_",
+              "bbox": [
+                71.25,
+                415.30078125,
+                523.349853515625,
+                431.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "END",
+              "bbox": [
+                71.25,
+                434.05078125,
+                94.71000671386719,
+                450.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "NOTE_END",
+              "bbox": [
+                71.25,
+                452.80078125,
+                129.5343780517578,
+                468.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original suggestion explanation",
+              "bbox": [
+                60,
+                492.1083984375,
+                267.6739196777344,
+                510.4634704589844
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 13.799999237060547
+            },
+            {
+              "text": "WHY_BEGINCR_ONLY",
+              "bbox": [
+                60,
+                521.05078125,
+                173.89186096191406,
+                537.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "CRLF_PAIR",
+              "bbox": [
+                60,
+                539.80078125,
+                115.10409545898438,
+                555.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "LF_LINE",
+              "bbox": [
+                60,
+                558.55078125,
+                100.37999725341797,
+                574.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "TAB  TWO_SPACES <why> & WHY_END",
+              "bbox": [
+                112.59375,
+                558.55078125,
+                322.64251708984375,
+                574.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original occurrence 2 · pick-1",
+              "bbox": [
+                60,
+                633.3668212890625,
+                228.2515869140625,
+                645.3099365234375
+              ],
+              "font": "Consolas",
+              "size": 10.200000762939453
+            },
+            {
+              "text": "Unbroken_WWWWWWWWWWWWWWWWWWWWWWW",
+              "bbox": [
+                60,
+                670.37109375,
+                533.2893676757812,
+                692.7164306640625
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "WWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+              "bbox": [
+                60,
+                696.62109375,
+                532.6986694335938,
+                718.9664306640625
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "WWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+              "bbox": [
+                60,
+                722.87109375,
+                532.6986694335938,
+                745.2164306640625
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "WWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+              "bbox": [
+                60,
+                749.12109375,
+                532.6986694335938,
+                771.4664306640625
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "WWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+              "bbox": [
+                60,
+                774.62109375,
+                532.6986694335938,
+                796.9664306640625
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            }
+          ],
+          "outsidePageSpans": [],
+          "links": []
+        },
+        {
+          "page": 6,
+          "widthPt": 595.9199829101562,
+          "heightPt": 841.9199829101562,
+          "text": "WWWWWWWWWWWWWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWWWWWWWWWWWWW\nWWWWW_NAME_END\nOriginal venue ID\n repeated  id <literal> & \nOriginal kind\nrestaurant\nOriginal suggested day\nTuesday\nSaved planned day\nKept off this week\nSaved planned date\nKept off this week\nRecorded visit\nNot recorded\nRecorded outcome code\nunrecorded\nActual date\n2025-01-01\nVisit note\n  NOTE2_BEGINCR\nCRLF\nLF\nTAB  é é 🙂 <tag> & \"literal\" NOTE2_END  \nOriginal suggestion explanation\nEarlier explanation with é and é.\nOriginal occurrence 3 · pick-2\nCafé and Café — ORIGINAL_ORDER_END\nOriginal venue ID\nthird-id\n",
+          "spans": [
+            {
+              "text": "WWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+              "bbox": [
+                60,
+                44.12109375,
+                532.6986694335938,
+                66.4664077758789
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "WWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+              "bbox": [
+                60,
+                70.37109375,
+                532.6986694335938,
+                92.7164077758789
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "WWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+              "bbox": [
+                60,
+                95.87109375,
+                532.6986694335938,
+                118.2164077758789
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "WWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+              "bbox": [
+                60,
+                122.12109375,
+                532.6986694335938,
+                144.46640014648438
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "WWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+              "bbox": [
+                60,
+                148.37109375,
+                532.6986694335938,
+                170.71640014648438
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "WWWWW_NAME_END",
+              "bbox": [
+                60,
+                174.62109375,
+                243.05580139160156,
+                196.96640014648438
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "Original venue ID",
+              "bbox": [
+                60,
+                208.30078125,
+                158.4600830078125,
+                224.26171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": " repeated  id <literal> & ",
+              "bbox": [
+                214.5,
+                208.30078125,
+                346.86505126953125,
+                224.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original kind",
+              "bbox": [
+                60,
+                233.05078125,
+                133.40586853027344,
+                249.01171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "restaurant",
+              "bbox": [
+                214.5,
+                233.05078125,
+                268.1519775390625,
+                249.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original suggested day",
+              "bbox": [
+                60,
+                257.80078125,
+                189.97434997558594,
+                273.76171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "Tuesday",
+              "bbox": [
+                214.5,
+                257.80078125,
+                257.92803955078125,
+                273.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Saved planned day",
+              "bbox": [
+                60,
+                282.55078125,
+                166.1983184814453,
+                298.51171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "Kept off this week",
+              "bbox": [
+                214.5,
+                282.55078125,
+                309.1547546386719,
+                298.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Saved planned date",
+              "bbox": [
+                60,
+                307.30078125,
+                170.86505126953125,
+                323.26171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "Kept off this week",
+              "bbox": [
+                214.5,
+                307.30078125,
+                309.1547546386719,
+                323.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Recorded visit",
+              "bbox": [
+                60,
+                345.8583984375,
+                151.75289916992188,
+                364.2134704589844
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 13.799999237060547
+            },
+            {
+              "text": "Not recorded",
+              "bbox": [
+                68.25,
+                385.30078125,
+                143.43978881835938,
+                401.26171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "Recorded outcome code",
+              "bbox": [
+                60,
+                423.55078125,
+                196.6324462890625,
+                439.51171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "unrecorded",
+              "bbox": [
+                214.5,
+                423.55078125,
+                275.70001220703125,
+                439.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Actual date",
+              "bbox": [
+                60,
+                448.30078125,
+                124.30644989013672,
+                464.26171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "2025-01-01",
+              "bbox": [
+                214.5,
+                448.30078125,
+                275.84393310546875,
+                464.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Visit note",
+              "bbox": [
+                60,
+                475.6083984375,
+                121.8638916015625,
+                493.9634704589844
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 13.799999237060547
+            },
+            {
+              "text": "  NOTE2_BEGINCR",
+              "bbox": [
+                71.25,
+                511.30078125,
+                167.07666015625,
+                527.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "CRLF",
+              "bbox": [
+                71.25,
+                530.05078125,
+                97.36200714111328,
+                546.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "LF",
+              "bbox": [
+                71.25,
+                548.80078125,
+                82.75800323486328,
+                564.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "TAB  é é ",
+              "bbox": [
+                97.546875,
+                548.80078125,
+                143.33367919921875,
+                564.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "🙂",
+              "bbox": [
+                143.33203125,
+                550.798828125,
+                159.8080291748047,
+                564.275390625
+              ],
+              "font": "Unnamed-T3",
+              "size": 12
+            },
+            {
+              "text": " <tag> & \"literal\" NOTE2_END  ",
+              "bbox": [
+                159.80859375,
+                548.80078125,
+                326.2932434082031,
+                564.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original suggestion explanation",
+              "bbox": [
+                60,
+                588.1083984375,
+                267.6739196777344,
+                606.4635009765625
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 13.799999237060547
+            },
+            {
+              "text": "Earlier explanation with é and é.",
+              "bbox": [
+                60,
+                617.05078125,
+                228.16799926757812,
+                633.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original occurrence 3 · pick-2",
+              "bbox": [
+                60,
+                692.6168212890625,
+                228.2515869140625,
+                704.5599365234375
+              ],
+              "font": "Consolas",
+              "size": 10.200000762939453
+            },
+            {
+              "text": "Café and Café — ORIGINAL_ORDER_END",
+              "bbox": [
+                60,
+                729.62109375,
+                379.56390380859375,
+                751.9664306640625
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "Original venue ID",
+              "bbox": [
+                60,
+                764.05078125,
+                158.4600830078125,
+                780.01171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "third-id",
+              "bbox": [
+                214.5,
+                764.05078125,
+                254.27999877929688,
+                780.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            }
+          ],
+          "outsidePageSpans": [],
+          "links": []
+        },
+        {
+          "page": 7,
+          "widthPt": 595.9199829101562,
+          "heightPt": 841.9199829101562,
+          "text": "Original kind\nrestaurant\nOriginal suggested day\nFriday\nSaved planned day\nFriday\nSaved planned date\n2024-03-01\nRecorded visit\nDid not go\nRecorded outcome code\ndid_not_go\nActual date\nNot recorded\nVisit note\nNo note recorded.\nOriginal suggestion explanation\nUNCHANGED_ORIGINAL_EXPLANATION_END\nThis report includes the recorded dates, outcomes and notes for every original occurrence, including picks kept\noff the saved week. Original suggestions remain in their original order.\nKeep the original visit-record JSON to reopen or edit it and retain its complete original source and tool trace. This\nHTML report is not a backup format.\nOpen this file offline in a browser. Use the browser's Print command to print or save a PDF. No service, script or\nconnection is needed.\n",
+          "spans": [
+            {
+              "text": "Original kind",
+              "bbox": [
+                60,
+                43.30078125,
+                133.40586853027344,
+                59.26171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "restaurant",
+              "bbox": [
+                214.5,
+                43.30078125,
+                268.1519775390625,
+                59.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original suggested day",
+              "bbox": [
+                60,
+                68.05078125,
+                189.97434997558594,
+                84.01171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "Friday",
+              "bbox": [
+                214.5,
+                68.05078125,
+                246.41998291015625,
+                84.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Saved planned day",
+              "bbox": [
+                60,
+                92.80078125,
+                166.1983184814453,
+                108.76171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "Friday",
+              "bbox": [
+                214.5,
+                92.80078125,
+                246.41998291015625,
+                108.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Saved planned date",
+              "bbox": [
+                60,
+                116.80078125,
+                170.86505126953125,
+                132.76171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "2024-03-01",
+              "bbox": [
+                214.5,
+                116.80078125,
+                275.84393310546875,
+                132.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Recorded visit",
+              "bbox": [
+                60,
+                156.1083984375,
+                151.75289916992188,
+                174.46347045898438
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 13.799999237060547
+            },
+            {
+              "text": "Did not go",
+              "bbox": [
+                68.25,
+                195.55078125,
+                128.57398986816406,
+                211.51171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "Recorded outcome code",
+              "bbox": [
+                60,
+                233.80078125,
+                196.6324462890625,
+                249.76171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "did_not_go",
+              "bbox": [
+                214.5,
+                233.80078125,
+                273.4920349121094,
+                249.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Actual date",
+              "bbox": [
+                60,
+                258.55078125,
+                124.30644989013672,
+                274.51171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "Not recorded",
+              "bbox": [
+                214.5,
+                258.55078125,
+                285.4800109863281,
+                274.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Visit note",
+              "bbox": [
+                60,
+                285.8583984375,
+                121.8638916015625,
+                304.2134704589844
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 13.799999237060547
+            },
+            {
+              "text": "No note recorded.",
+              "bbox": [
+                60,
+                315.55078125,
+                156.97201538085938,
+                331.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original suggestion explanation",
+              "bbox": [
+                60,
+                341.3583984375,
+                267.6739196777344,
+                359.7134704589844
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 13.799999237060547
+            },
+            {
+              "text": "UNCHANGED_ORIGINAL_EXPLANATION_END",
+              "bbox": [
+                60,
+                371.05078125,
+                301.1822814941406,
+                387.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "This report includes the recorded dates, outcomes and notes for every original occurrence, including picks kept",
+              "bbox": [
+                42.75,
+                450.9931640625,
+                541.1912231445312,
+                464.5599670410156
+              ],
+              "font": "SegoeUI",
+              "size": 10.200000762939453
+            },
+            {
+              "text": "off the saved week. Original suggestions remain in their original order.",
+              "bbox": [
+                42.75,
+                466.7431640625,
+                358.5184631347656,
+                480.3099670410156
+              ],
+              "font": "SegoeUI",
+              "size": 10.200000762939453
+            },
+            {
+              "text": "Keep the original visit-record JSON to reopen or edit it and retain its complete original source and tool trace. This",
+              "bbox": [
+                42.75,
+                489.2431640625,
+                551.8847045898438,
+                502.8099670410156
+              ],
+              "font": "SegoeUI",
+              "size": 10.200000762939453
+            },
+            {
+              "text": "HTML report is not a backup format.",
+              "bbox": [
+                42.75,
+                504.9931640625,
+                206.2058868408203,
+                518.5599365234375
+              ],
+              "font": "SegoeUI",
+              "size": 10.200000762939453
+            },
+            {
+              "text": "Open this file offline in a browser. Use the browser's Print command to print or save a PDF. No service, script or",
+              "bbox": [
+                42.75,
+                526.7431640625,
+                541.6970825195312,
+                540.3099365234375
+              ],
+              "font": "SegoeUI",
+              "size": 10.200000762939453
+            },
+            {
+              "text": "connection is needed.",
+              "bbox": [
+                42.75,
+                542.4931640625,
+                141.09133911132812,
+                556.0599365234375
+              ],
+              "font": "SegoeUI",
+              "size": 10.200000762939453
+            }
+          ],
+          "outsidePageSpans": [],
+          "links": []
+        }
+      ],
+      "frozenAccounting": {
+        "passed": false,
+        "violations": [
+          {
+            "kind": "missing explicit kept-off-week label"
+          }
+        ],
+        "actualOccurrenceKeys": [
+          "pick-0",
+          "pick-1",
+          "pick-2"
+        ],
+        "requiredFieldCount": 36,
+        "textCharacters": 6243,
+        "whitespacePolicy": "ASCII whitespace only is compacted for text accounting. No Unicode normalization; exact DOM CR/TAB/space identity is not inferred. Visual page inspection remains mandatory."
+      }
+    },
+    {
+      "fixture": "unknown-empty-BOM.json",
+      "pdf": "original-2.pdf",
+      "bytes": 60296,
+      "sha256": "8c28b58debf13651dc2b50e8d99c7841aacf2ce442ebd10422761cc5461683be",
+      "gitBlob": "a04976afe0731e1ae1749cddba4ee729fcec7e03",
+      "pdfinfo": {
+        "exit": 0,
+        "stdout": "Title:           TasteTable visit record · 2024-02-26\nCreator:         Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36\nProducer:        Skia/PDF m154\nCreationDate:    Fri Oct  9 09:00:23 2026 KST\nModDate:         Fri Oct  9 09:00:23 2026 KST\nCustom Metadata: no\nMetadata Stream: no\nTagged:          yes\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           2\nEncrypted:       no\nPage size:       595.92 x 841.92 pts (A4)\nPage rot:        0\nFile size:       0 bytes\nOptimized:       no\nPDF version:     1.4\n",
+        "stderr": ""
+      },
+      "pageCount": 2,
+      "pages": [
+        {
+          "page": 1,
+          "widthPt": 595.9199829101562,
+          "heightPt": 841.9199829101562,
+          "text": "TASTETABLE · RECORDED VISITS\nSaved visit record\nunknown-empty-BOM.json\nWeek starting 2024-02-26 · 0 original occurrences\nSaved source unknown\nThe original file does not establish whether its source was mock or live. This report does\nnot verify visits.\nPlanned dates and recorded visits are separate. An unrecorded outcome does not mean a\nvisit did or did not happen. An omitted plan can still have a recorded outcome.\nDates, outcomes and notes below are saved entries, not verified observations or new\nrecommendations.\nSaved provenance\nOriginal saved-week\nfilename\nEmpty source — unknown provenance.json\nSaved source mode\nunknown\nOriginal response\nreceived\n2024-02-01T00:00:00.000Z\nOriginal week saved\n2024-02-25T18:00:00.000Z\nVisit record saved\n2024-03-03T12:00:00.000Z\nVisit JSON SHA-256\n00bed0e900bd5287615469d81a8f52da2a588bd2a3798315391d18346\n0fe0e2d\nThis record has no original occurrences.\nThis report includes the recorded dates, outcomes and notes for every original occurrence, including picks kept\noff the saved week. Original suggestions remain in their original order.\n",
+          "spans": [
+            {
+              "text": "TASTETABLE · RECORDED VISITS",
+              "bbox": [
+                42.75,
+                49.38164138793945,
+                204.9354248046875,
+                62.469608306884766
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 9.84000015258789
+            },
+            {
+              "text": "Saved visit record",
+              "bbox": [
+                42.75,
+                69.3515625,
+                242.4692840576172,
+                101.2734375
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 24
+            },
+            {
+              "text": "unknown-empty-BOM.json",
+              "bbox": [
+                42.75,
+                107.80078125,
+                185.85000610351562,
+                123.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Week starting 2024-02-26 · 0 original occurrences",
+              "bbox": [
+                42.75,
+                133.30078125,
+                305.5512390136719,
+                149.26171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Saved source unknown",
+              "bbox": [
+                57.75,
+                218.87109375,
+                239.2198028564453,
+                241.21640014648438
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "The original file does not establish whether its source was mock or live. This report does",
+              "bbox": [
+                57.75,
+                252.55078125,
+                521.5259399414062,
+                268.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "not verify visits.",
+              "bbox": [
+                57.75,
+                270.55078125,
+                139.29000854492188,
+                286.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Planned dates and recorded visits are separate. An unrecorded outcome does not mean a",
+              "bbox": [
+                57.75,
+                296.80078125,
+                531.2459106445312,
+                312.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "visit did or did not happen. An omitted plan can still have a recorded outcome.",
+              "bbox": [
+                57.75,
+                315.55078125,
+                474.1382141113281,
+                331.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Dates, outcomes and notes below are saved entries, not verified observations or new",
+              "bbox": [
+                57.75,
+                341.05078125,
+                505.4460754394531,
+                357.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "recommendations.",
+              "bbox": [
+                57.75,
+                359.80078125,
+                156.17401123046875,
+                375.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Saved provenance",
+              "bbox": [
+                60,
+                444.62109375,
+                203.3821258544922,
+                466.9664001464844
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 16.799999237060547
+            },
+            {
+              "text": "Original saved-week",
+              "bbox": [
+                60,
+                479.05078125,
+                174.7076416015625,
+                495.01171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "filename",
+              "bbox": [
+                60,
+                497.80078125,
+                109.10399627685547,
+                513.76171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "Empty source — unknown provenance.json",
+              "bbox": [
+                214.5,
+                479.05078125,
+                442.95599365234375,
+                495.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Saved source mode",
+              "bbox": [
+                60,
+                522.55078125,
+                169.21426391601562,
+                538.51171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "unknown",
+              "bbox": [
+                214.5,
+                522.55078125,
+                263.3399963378906,
+                538.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original response",
+              "bbox": [
+                60,
+                546.55078125,
+                158.91387939453125,
+                562.51171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "received",
+              "bbox": [
+                60,
+                565.30078125,
+                107.18952941894531,
+                581.26171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "2024-02-01T00:00:00.000Z",
+              "bbox": [
+                214.5,
+                546.55078125,
+                354.9958801269531,
+                562.51171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Original week saved",
+              "bbox": [
+                60,
+                590.05078125,
+                173.1660919189453,
+                606.01171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "2024-02-25T18:00:00.000Z",
+              "bbox": [
+                214.5,
+                590.05078125,
+                354.9958801269531,
+                606.01171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Visit record saved",
+              "bbox": [
+                60,
+                614.80078125,
+                159.9121856689453,
+                630.76171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "2024-03-03T12:00:00.000Z",
+              "bbox": [
+                214.5,
+                614.80078125,
+                354.9958801269531,
+                630.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "Visit JSON SHA-256",
+              "bbox": [
+                60,
+                639.55078125,
+                171.947998046875,
+                655.51171875
+              ],
+              "font": "SegoeUI-Bold",
+              "size": 12
+            },
+            {
+              "text": "00bed0e900bd5287615469d81a8f52da2a588bd2a3798315391d18346",
+              "bbox": [
+                214.5,
+                640.8668212890625,
+                534.158447265625,
+                652.8099365234375
+              ],
+              "font": "Consolas",
+              "size": 10.200000762939453
+            },
+            {
+              "text": "0fe0e2d",
+              "bbox": [
+                214.5,
+                656.6168212890625,
+                253.758056640625,
+                668.5599365234375
+              ],
+              "font": "Consolas",
+              "size": 10.200000762939453
+            },
+            {
+              "text": "This record has no original occurrences.",
+              "bbox": [
+                42.75,
+                707.80078125,
+                252.0780029296875,
+                723.76171875
+              ],
+              "font": "SegoeUI",
+              "size": 12
+            },
+            {
+              "text": "This report includes the recorded dates, outcomes and notes for every original occurrence, including picks kept",
+              "bbox": [
+                42.75,
+                766.7431640625,
+                541.1912231445312,
+                780.3099365234375
+              ],
+              "font": "SegoeUI",
+              "size": 10.200000762939453
+            },
+            {
+              "text": "off the saved week. Original suggestions remain in their original order.",
+              "bbox": [
+                42.75,
+                782.4931640625,
+                358.5184631347656,
+                796.0599365234375
+              ],
+              "font": "SegoeUI",
+              "size": 10.200000762939453
+            }
+          ],
+          "outsidePageSpans": [],
+          "links": []
+        },
+        {
+          "page": 2,
+          "widthPt": 595.9199829101562,
+          "heightPt": 841.9199829101562,
+          "text": "Keep the original visit-record JSON to reopen or edit it and retain its complete original source and tool trace. This\nHTML report is not a backup format.\nOpen this file offline in a browser. Use the browser's Print command to print or save a PDF. No service, script or\nconnection is needed.\n",
+          "spans": [
+            {
+              "text": "Keep the original visit-record JSON to reopen or edit it and retain its complete original source and tool trace. This",
+              "bbox": [
+                42.75,
+                43.7431640625,
+                551.8847045898438,
+                57.309959411621094
+              ],
+              "font": "SegoeUI",
+              "size": 10.200000762939453
+            },
+            {
+              "text": "HTML report is not a backup format.",
+              "bbox": [
+                42.75,
+                59.4931640625,
+                206.2058868408203,
+                73.0599594116211
+              ],
+              "font": "SegoeUI",
+              "size": 10.200000762939453
+            },
+            {
+              "text": "Open this file offline in a browser. Use the browser's Print command to print or save a PDF. No service, script or",
+              "bbox": [
+                42.75,
+                81.2431640625,
+                541.6970825195312,
+                94.8099594116211
+              ],
+              "font": "SegoeUI",
+              "size": 10.200000762939453
+            },
+            {
+              "text": "connection is needed.",
+              "bbox": [
+                42.75,
+                96.9931640625,
+                141.09133911132812,
+                110.5599594116211
+              ],
+              "font": "SegoeUI",
+              "size": 10.200000762939453
+            }
+          ],
+          "outsidePageSpans": [],
+          "links": []
+        }
+      ],
+      "frozenAccounting": {
+        "passed": true,
+        "violations": [],
+        "actualOccurrenceKeys": [],
+        "requiredFieldCount": 7,
+        "textCharacters": 1374,
+        "whitespacePolicy": "ASCII whitespace only is compacted for text accounting. No Unicode normalization; exact DOM CR/TAB/space identity is not inferred. Visual page inspection remains mandatory."
+      }
+    }
+  ]
+}

@@ -1,0 +1,505 @@
+{
+  "scope": "Original corrected PDF decoding and page accounting; actual visual acceptance recorded separately",
+  "completed": true,
+  "capacity": {
+    "hostAvailableMemory": 3739009024,
+    "ownFilesystemFree": 1402245120,
+    "memoryFloor": 268435456,
+    "filesystemFloor": 67108864
+  },
+  "started": 1791511049.492703,
+  "commands": [
+    {
+      "label": "pdf0-info",
+      "args": [
+        "/usr/bin/pdfinfo",
+        "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/original-0.pdf"
+      ],
+      "exit": 0,
+      "elapsedSeconds": 0.01331472396850586,
+      "stdout": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf0-info.stdout",
+        "bytes": 629,
+        "sha256": "5378cdb28a2467031777dadbb9be786745b3e4ce5594de1e86d96a1064d90db3"
+      },
+      "stderr": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf0-info.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "pdf0-text",
+      "args": [
+        "/usr/bin/pdftotext",
+        "-enc",
+        "UTF-8",
+        "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/original-0.pdf",
+        "-"
+      ],
+      "exit": 0,
+      "elapsedSeconds": 0.01761770248413086,
+      "stdout": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf0-text.stdout",
+        "bytes": 2415,
+        "sha256": "2995c541f52f7f54ad4392d2b73b9294ebd135f0ce12c2c84849c1e6b0f8119e"
+      },
+      "stderr": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf0-text.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "pdf0-bbox",
+      "args": [
+        "/usr/bin/pdftotext",
+        "-bbox-layout",
+        "-enc",
+        "UTF-8",
+        "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/original-0.pdf",
+        "-"
+      ],
+      "exit": 0,
+      "elapsedSeconds": 0.018843412399291992,
+      "stdout": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf0-bbox.stdout",
+        "bytes": 57252,
+        "sha256": "94e0105ae32c00b47b0b2fe7de2a7ba0b98c912b81e76a08f992e8327b7e6bbb"
+      },
+      "stderr": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf0-bbox.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "pdf0-raster",
+      "args": [
+        "/usr/bin/pdftoppm",
+        "-r",
+        "110",
+        "-png",
+        "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/original-0.pdf",
+        "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf0-page"
+      ],
+      "exit": 0,
+      "elapsedSeconds": 0.6942007541656494,
+      "stdout": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf0-raster.stdout",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf0-raster.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "pdf1-info",
+      "args": [
+        "/usr/bin/pdfinfo",
+        "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/original-1.pdf"
+      ],
+      "exit": 0,
+      "elapsedSeconds": 0.01056814193725586,
+      "stdout": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf1-info.stdout",
+        "bytes": 629,
+        "sha256": "12f3ef0910d7eeaa4126dd89460e4cd664dca8ce62a06c4449d5ba13e6ac44b7"
+      },
+      "stderr": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf1-info.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "pdf1-text",
+      "args": [
+        "/usr/bin/pdftotext",
+        "-enc",
+        "UTF-8",
+        "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/original-1.pdf",
+        "-"
+      ],
+      "exit": 0,
+      "elapsedSeconds": 0.020459651947021484,
+      "stdout": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf1-text.stdout",
+        "bytes": 6221,
+        "sha256": "db29baa1515f99cca589ec7c1aee1f4b5d89c5fa0f4287b4a536631ba35b505f"
+      },
+      "stderr": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf1-text.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "pdf1-bbox",
+      "args": [
+        "/usr/bin/pdftotext",
+        "-bbox-layout",
+        "-enc",
+        "UTF-8",
+        "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/original-1.pdf",
+        "-"
+      ],
+      "exit": 0,
+      "elapsedSeconds": 0.02245926856994629,
+      "stdout": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf1-bbox.stdout",
+        "bytes": 133716,
+        "sha256": "245b67a9c0dc53f0053c993ca0fb489148a9c36e972efb7f87a7f9414524d744"
+      },
+      "stderr": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf1-bbox.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "pdf1-raster",
+      "args": [
+        "/usr/bin/pdftoppm",
+        "-r",
+        "110",
+        "-png",
+        "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/original-1.pdf",
+        "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf1-page"
+      ],
+      "exit": 0,
+      "elapsedSeconds": 1.3857777118682861,
+      "stdout": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf1-raster.stdout",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf1-raster.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "pdf2-info",
+      "args": [
+        "/usr/bin/pdfinfo",
+        "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/original-2.pdf"
+      ],
+      "exit": 0,
+      "elapsedSeconds": 0.011252880096435547,
+      "stdout": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf2-info.stdout",
+        "bytes": 628,
+        "sha256": "e7b93ab8365585f4a61b732215ae32d49ebea054f19d3ebf05dc520592cfbc54"
+      },
+      "stderr": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf2-info.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "pdf2-text",
+      "args": [
+        "/usr/bin/pdftotext",
+        "-enc",
+        "UTF-8",
+        "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/original-2.pdf",
+        "-"
+      ],
+      "exit": 0,
+      "elapsedSeconds": 0.014040231704711914,
+      "stdout": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf2-text.stdout",
+        "bytes": 1397,
+        "sha256": "5fd59e4490ea93511c5ee5d3c68207a070b825089c61ae46d13935526f96f958"
+      },
+      "stderr": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf2-text.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "pdf2-bbox",
+      "args": [
+        "/usr/bin/pdftotext",
+        "-bbox-layout",
+        "-enc",
+        "UTF-8",
+        "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/original-2.pdf",
+        "-"
+      ],
+      "exit": 0,
+      "elapsedSeconds": 0.01759171485900879,
+      "stdout": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf2-bbox.stdout",
+        "bytes": 27698,
+        "sha256": "4d3ee4fb2a54f702917dfe14b21d268cbc0b4efc09e761d2aa39a4399a8e1fb4"
+      },
+      "stderr": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf2-bbox.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "pdf2-raster",
+      "args": [
+        "/usr/bin/pdftoppm",
+        "-r",
+        "110",
+        "-png",
+        "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/original-2.pdf",
+        "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf2-page"
+      ],
+      "exit": 0,
+      "elapsedSeconds": 0.32709813117980957,
+      "stdout": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf2-raster.stdout",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf2-raster.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "pdfs": [
+    {
+      "pdf": 0,
+      "original": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/original-0.pdf",
+        "bytes": 111620,
+        "sha256": "3bfb91bf804b35a3aae6c713a35e8f11cec0931cba116a8c9acd847c159aac7d"
+      },
+      "pageCount": 4,
+      "accounting": {
+        "passed": true,
+        "violations": [],
+        "actualOccurrenceKeys": [
+          "pick-0",
+          "pick-1",
+          "pick-2"
+        ],
+        "requiredFieldCount": 37,
+        "textCharacters": 2403,
+        "whitespacePolicy": "ASCII whitespace only is compacted for text accounting. No Unicode normalization; exact DOM CR/TAB/space identity is not inferred. Visual page inspection remains mandatory."
+      },
+      "outOfPageWordBoxes": [],
+      "selectedWordBoxes": [
+        {
+          "page": 3,
+          "text": "A",
+          "xMin": 77.824216,
+          "yMin": 380.800765,
+          "xMax": 85.56445,
+          "yMax": 396.761702
+        },
+        {
+          "page": 3,
+          "text": "B",
+          "xMin": 71.249997,
+          "yMin": 399.550765,
+          "xMax": 78.128903,
+          "yMax": 415.511701
+        },
+        {
+          "page": 3,
+          "text": "C",
+          "xMin": 71.249997,
+          "yMin": 418.300764,
+          "xMax": 78.679684,
+          "yMax": 434.261701
+        }
+      ],
+      "images": [
+        {
+          "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf0-page-1.png",
+          "bytes": 111687,
+          "sha256": "14e4d692e823bcf35f643c652b2e4dadce13ec55a274ced256e7b4fe21ec2e9d"
+        },
+        {
+          "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf0-page-2.png",
+          "bytes": 56227,
+          "sha256": "9aebe59fe1da5f13511b8693aa94f13232af6ee34e8ec335bb312eb4afa377a2"
+        },
+        {
+          "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf0-page-3.png",
+          "bytes": 59026,
+          "sha256": "691df13a88000f2cbd41e389a893dbae9c6ae7e352999d2656870e42883ca2cc"
+        },
+        {
+          "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf0-page-4.png",
+          "bytes": 85272,
+          "sha256": "1218e9f62fe3916b1a692361e885c2f236859fc74efc460cb3750b11d82e1568"
+        }
+      ]
+    },
+    {
+      "pdf": 1,
+      "original": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/original-1.pdf",
+        "bytes": 138007,
+        "sha256": "cd0668ec9febc67e2235d8cc8ada95b58e5280e4e59e38cc898f70f12aa613d2"
+      },
+      "pageCount": 7,
+      "accounting": {
+        "passed": true,
+        "violations": [],
+        "actualOccurrenceKeys": [
+          "pick-0",
+          "pick-1",
+          "pick-2"
+        ],
+        "requiredFieldCount": 36,
+        "textCharacters": 6186,
+        "whitespacePolicy": "ASCII whitespace only is compacted for text accounting. No Unicode normalization; exact DOM CR/TAB/space identity is not inferred. Visual page inspection remains mandatory."
+      },
+      "outOfPageWordBoxes": [],
+      "selectedWordBoxes": [
+        {
+          "page": 5,
+          "text": "WHY_BEGIN",
+          "xMin": 59.999998,
+          "yMin": 521.05076,
+          "xMax": 124.693354,
+          "yMax": 537.011696
+        },
+        {
+          "page": 5,
+          "text": "CR_ONLY",
+          "xMin": 59.999998,
+          "yMin": 539.800759,
+          "xMax": 109.189449,
+          "yMax": 555.761696
+        },
+        {
+          "page": 5,
+          "text": "CRLF_PAIR",
+          "xMin": 59.999998,
+          "yMin": 558.550758,
+          "xMax": 115.107417,
+          "yMax": 574.511695
+        },
+        {
+          "page": 5,
+          "text": "LF_LINE",
+          "xMin": 59.999998,
+          "yMin": 576.550757,
+          "xMax": 100.376949,
+          "yMax": 592.511694
+        },
+        {
+          "page": 6,
+          "text": "NOTE2_BEGIN",
+          "xMin": 77.824216,
+          "yMin": 537.550759,
+          "xMax": 152.466791,
+          "yMax": 553.511696
+        },
+        {
+          "page": 6,
+          "text": "CR",
+          "xMin": 71.249997,
+          "yMin": 555.550758,
+          "xMax": 85.857418,
+          "yMax": 571.511695
+        },
+        {
+          "page": 6,
+          "text": "CRLF",
+          "xMin": 71.249997,
+          "yMin": 574.300757,
+          "xMax": 97.36523,
+          "yMax": 590.261694
+        },
+        {
+          "page": 6,
+          "text": "LF",
+          "xMin": 71.249997,
+          "yMin": 593.050757,
+          "xMax": 82.757809,
+          "yMax": 609.011693
+        }
+      ],
+      "images": [
+        {
+          "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf1-page-1.png",
+          "bytes": 113358,
+          "sha256": "d1857c65f6e0f90e22a8ed285dd3a129b25cfabe69077cd0230fe8b13100e264"
+        },
+        {
+          "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf1-page-2.png",
+          "bytes": 108992,
+          "sha256": "18fb1e40d912b617638248c9c3176a0baee16722f6695ee74c1bcdbc2c9e0332"
+        },
+        {
+          "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf1-page-3.png",
+          "bytes": 97954,
+          "sha256": "68bfd9393d6c492f9763639d0a9edcbbc870cb97d8af5d405f5f5b67f929167a"
+        },
+        {
+          "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf1-page-4.png",
+          "bytes": 100395,
+          "sha256": "1e7527e7a219fb0cb1652324c0fe24e917abd48e6f20d6468ba9401bf15ae688"
+        },
+        {
+          "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf1-page-5.png",
+          "bytes": 78571,
+          "sha256": "22573ff5e735ae15281956246e9c86e9eac6df7749f50fb8668370ae8a374e79"
+        },
+        {
+          "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf1-page-6.png",
+          "bytes": 84951,
+          "sha256": "1b9fb9c4899580847cfa3da6c937bce8822c88c134210d1f5d8f8e465eeecaac"
+        },
+        {
+          "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf1-page-7.png",
+          "bytes": 90701,
+          "sha256": "902c67f4ebcdbd4f05de68832d013527288990d40dc054340c2c66f973afb9b4"
+        }
+      ]
+    },
+    {
+      "pdf": 2,
+      "original": {
+        "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/original-2.pdf",
+        "bytes": 60299,
+        "sha256": "581ad80dae27e0f56e71c4cecb7d3fddb78d21565c64bf7dda9cbefa192aeb99"
+      },
+      "pageCount": 2,
+      "accounting": {
+        "passed": true,
+        "violations": [],
+        "actualOccurrenceKeys": [],
+        "requiredFieldCount": 7,
+        "textCharacters": 1392,
+        "whitespacePolicy": "ASCII whitespace only is compacted for text accounting. No Unicode normalization; exact DOM CR/TAB/space identity is not inferred. Visual page inspection remains mandatory."
+      },
+      "outOfPageWordBoxes": [],
+      "selectedWordBoxes": [],
+      "images": [
+        {
+          "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf2-page-1.png",
+          "bytes": 126961,
+          "sha256": "d2c1e9c1784c2b5813176aca957002747c3da6661801d5bc7923259545a03035"
+        },
+        {
+          "path": "/run/user/1000/taste65-original-pdf-receiving-6e5752b49b6f-native-r2/poppler-corrected-r3/pdf2-page-2.png",
+          "bytes": 25249,
+          "sha256": "e69c22e9244009f9089ab95bd49fac2a451b000404eb90d03e19177218e662e9"
+        }
+      ]
+    }
+  ],
+  "inputCount": 72,
+  "inputsUnchanged": true,
+  "elapsedSeconds": 2.819708824157715
+}

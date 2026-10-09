@@ -1,0 +1,68 @@
+{
+  "schema": "tastetable65-independent-original-pdf-receiving-contract/1",
+  "worker": "estate-6e5752b49b6f/native_runtime",
+  "state": "Frozen from public contract only before original fixture/PDF or candidate implementation intake",
+  "contract": {
+    "bytes": 6164,
+    "sha256": "137629ad8e711adf55b1b491b1a546bd8a3be9a84573af1c1ae59da09dc35f6c",
+    "gitBlob": "86c9c81101df9799065416640cbcd883f0beb43f"
+  },
+  "baseline": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+  "scope": "Independent receiving of original PDFs produced by root's actual TasteTable CLI/offline Chrome print flow. No candidate-source review, report generation, browser replay, comparator or print-output regeneration.",
+  "ownership": {
+    "production": "production_slice",
+    "native_cli_and_actual_browser": "root",
+    "original_pdf_accounting": "native_runtime"
+  },
+  "prerequisites": [
+    "Receive frozen root fixtures before original PDFs where possible; independently derive literal occurrence, note and provenance expectations from original source records and the public contract.",
+    "Admit exact original input/HTML/PDF bytes and root process/browser print record. A transport copy remains original only when byte-identical to its pinned PDF.",
+    "Reuse only the already qualified Poppler route after exact executable identity/hash and current capacity admission. No install, policy, identity or source changes.",
+    "All decoding/rasterization writes remain in a new own receiving directory. Preserve the original PDFs and rehash them after inspection."
+  ],
+  "checks": [
+    {
+      "name": "original_custody",
+      "expect": "Every supplied original input, generated HTML and original PDF matches the offered manifest before and after independent reading. Retain raw pdfinfo, pdftotext and raster tool stdout/stderr/exit records."
+    },
+    {
+      "name": "occurrence_completeness",
+      "expect": "Every original pick has one visible occurrence section in source order, including repeated venue IDs, omitted/unrecorded visits and any kept-off-week occurrence. Account for occurrence keys independently of duplicated venue names."
+    },
+    {
+      "name": "field_fidelity",
+      "expect": "Visible occurrence text accounts for literal venue/entity/kind, original/planned day/date or explicit kept-off-week, raw outcome plus correct label, actual date or Not recorded, full exact note content or No note recorded, and original explanation. Do not infer absent dates/outcomes."
+    },
+    {
+      "name": "provenance",
+      "expect": "Record filename, raw-record SHA when supplied, source filename, week start, source receivedAt/source savedAt/record savedAt and mock/live/unknown saved-provenance label remain visible with backup/report limitation."
+    },
+    {
+      "name": "long_content",
+      "expect": "Long notes may span pages without missing start/interior/end text. Count independently selected unique tokens and repeated-token multiplicities, and inspect each original page raster so extraction alone cannot certify visible unclipped content."
+    },
+    {
+      "name": "geometry",
+      "expect": "Decode original page count/sizes, receive bounding boxes from original PDF text, identify clipped/out-of-page content or blank/missing sections, and inspect page images at declared resolution. A raster is a decode of the original PDF, not a new print."
+    },
+    {
+      "name": "literal_content",
+      "expect": "Treat hostile-looking markup/URLs as literal source strings; check visible literal content rather than interpreting it. Root owns actual HTML/network/CSP checks; no duplicate browser gate is inferred from PDF."
+    }
+  ],
+  "limits": [
+    "PDF extraction can reorder text or normalize CR, LF, TAB, multiple spaces and page-break whitespace. It cannot alone prove exact DOM whitespace identity, even when all visible words are preserved.",
+    "Do not apply Unicode compatibility normalization or fuzzy matching that erases distinct literal IDs. Record any extraction limitation explicitly and consult original page images and root DOM evidence.",
+    "Visible glyph rendering and complete word accounting are distinct from lossless editable backup. The PDF/report is not the original saved visit record.",
+    "This receiver does not qualify model/CLI refusal races, full inherited suites, source integration or deployment.",
+    "Any missing runtime/fixture/actual-print evidence leaves the corresponding receiving gate pending rather than inventing a pass."
+  ],
+  "sensitivity": "Where suitable, challenge the independent accounting against in-memory removed or reordered expected content; do not mutate original PDFs or product outputs.",
+  "outputs": [
+    "Exact original artifact intake",
+    "Raw Poppler results",
+    "Decoded original-page images",
+    "Per-fixture/page text and occurrence ledger",
+    "Scope-limited receipt and immutable custody"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "schema": "taste65-original-pdf-accounting-r1/1",
+  "scope": "Only accounting rerun on the unchanged already-decoded original PDF pages; no PDF decoding, raster or browser regeneration.",
+  "accepted": true,
+  "helperSha256": "10cbf7ad88d20efb5153fc2121e81a5a8924a997e0825d6feaebad3afc0d6980",
+  "ledgerSha256": "9691a748b354cd08d24194784c8ca804b9ae41d6d91d9a79809f05a3be5face7",
+  "pdfs": [
+    {
+      "pdf": "original-0.pdf",
+      "sha256": "c4cc774c9fb5c7fb049279ad9fdce7920a32e25b21cea5f8139e5c9b6db46b34",
+      "pages": 4,
+      "result": {
+        "passed": true,
+        "violations": [],
+        "actualOccurrenceKeys": [
+          "pick-0",
+          "pick-1",
+          "pick-2"
+        ],
+        "requiredFieldCount": 37,
+        "textCharacters": 2345,
+        "whitespacePolicy": "ASCII whitespace only is compacted for text accounting. No Unicode normalization; exact DOM CR/TAB/space identity is not inferred. Visual page inspection remains mandatory."
+      }
+    },
+    {
+      "pdf": "original-1.pdf",
+      "sha256": "fa75132474be12d4dcf3c5107b976a42a5e03114ca83c7d93ef441e5aac7f8f6",
+      "pages": 7,
+      "result": {
+        "passed": true,
+        "violations": [],
+        "actualOccurrenceKeys": [
+          "pick-0",
+          "pick-1",
+          "pick-2"
+        ],
+        "requiredFieldCount": 36,
+        "textCharacters": 6243,
+        "whitespacePolicy": "ASCII whitespace only is compacted for text accounting. No Unicode normalization; exact DOM CR/TAB/space identity is not inferred. Visual page inspection remains mandatory."
+      }
+    },
+    {
+      "pdf": "original-2.pdf",
+      "sha256": "8c28b58debf13651dc2b50e8d99c7841aacf2ce442ebd10422761cc5461683be",
+      "pages": 2,
+      "result": {
+        "passed": true,
+        "violations": [],
+        "actualOccurrenceKeys": [],
+        "requiredFieldCount": 7,
+        "textCharacters": 1374,
+        "whitespacePolicy": "ASCII whitespace only is compacted for text accounting. No Unicode normalization; exact DOM CR/TAB/space identity is not inferred. Visual page inspection remains mandatory."
+      }
+    }
+  ],
+  "preservedOriginalNegativeControls": [
+    "missing middle long-note line",
+    "missing occurrence key",
+    "reordered occurrence keys",
+    "missing planned leap date",
+    "missing source timestamp",
+    "599-character note run",
+    "missing literal markup",
+    "missing final note marker",
+    "wrong 320-character venue assumption"
+  ],
+  "extraOffWeekChecks": {
+    "accepted": [
+      "Kept off week",
+      "Kept off this week"
+    ],
+    "refused": [
+      "absent",
+      "Kept on this week"
+    ]
+  },
+  "preservedOriginalDiagnostic": "R0 failed only its narrow kept-off-week phrase matcher in both nonempty reports; R0 source/receipt remains unchanged."
+}

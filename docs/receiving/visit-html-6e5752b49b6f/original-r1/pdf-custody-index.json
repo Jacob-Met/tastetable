@@ -1,0 +1,76 @@
+{
+  "schema": "taste65-pdf-publication-custody-status/1",
+  "worker": "estate-6e5752b49b6f/native_runtime",
+  "currentPresentationDisposition": "needs-correction; visible lone-CR separator loss confirmed in original rasters; corrected original-PDF receiving pending",
+  "historicalNativeArchive": {
+    "path": "C:\\Users\\minec\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-report-pdf-receiving-native-r0\\independent-original-pdf-receiving.tar.gz",
+    "bytes": 1293911,
+    "sha256": "325f5364f50f28fec8715db6b8585fc117049558bf972fe06c16c6b8a372c5d7",
+    "members": 51,
+    "manifestSha256": "d19a73ddcc03f5a9dd1818965b2467773c556133ea801a1ddb3bc8950185ec0b",
+    "computedGitBlobOnly": "b1218a519198fb72386932603b2e04973e0da068",
+    "createdAsGitBlob": false,
+    "nativeMemberDiskReadbackPassed": true,
+    "originalRootFilesUnchanged": true,
+    "archiveRecreated": false
+  },
+  "transfer": {
+    "state": "incomplete; no further LA7 attempt while route offline",
+    "admittedBeforeStoreLoss": {
+      "base64Characters": 768000,
+      "lineOffsets": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        36,
+        40,
+        44
+      ]
+    },
+    "expectedBase64Characters": 1725216,
+    "failures": [
+      {
+        "phase": "cell78 read-only batch48/52/56/60",
+        "outcome": "rejected promise; reason serialized as {}; no admitted bytes; no permission-denial evidence"
+      },
+      {
+        "phase": "small existing metadata reconciliation",
+        "outcome": "-32603 MCP request timed out; no permission-denial evidence"
+      },
+      {
+        "phase": "sole missing-range retry offset48 length4",
+        "outcome": "yielded without data; wait explicitly terminated; underlying read completion unknown; no bytes admitted and no repeated request"
+      }
+    ],
+    "subsequentMemoryBoundary": "Previous ephemeral store keys were unavailable at later task resume; preserved analysis was recovered from its already-created Git blob. No archive was reconstructed from inputs or partial chunks.",
+    "noPolicyIdentityPermissionOrArchiveMutation": true
+  },
+  "actualCreatedGitBlobs": {
+    "historicalReceiving": "0988a91290f9933ce107875768df82607eb14811",
+    "historicalReadme": "eef1db658b83b7502cab99cd52d3696593794581",
+    "accountingR1": "d2933d18b0e38569768b5136b073ad213342d50d",
+    "accountingCorrection": "9e223154435b7b27ec0bdd5bb2d672b1dc0f779a",
+    "accountingR1Receipt": "db53ff8116577e0a3e2b987d269fe64570439047",
+    "rootReceiverReview": "f44e8c6e032b383f52e39db02458c0b1b23ecde5",
+    "originalAccountingHelper": "b62751e7f08f5c32abe294e3d41afcfdcf362a5e",
+    "originalAnalysis": "8c2a2c702b0fb6ecfd15609305a5bfc96612a7d6",
+    "visibleCrFinding": "140ba170b01d716d0cc880556d40f55c896bf644",
+    "threeOriginalRasterReadableMirror": "79c3713748f58f65751008b93b2fceb81bea93f0",
+    "originalRaster0p3": "76214112a6c06b47cc30503b1dbff08f375a0910",
+    "originalRaster1p5": "0b0303c9873b777b510732662d91bbb10ca04b13",
+    "originalRaster1p6": "a5be46844ac2a4ba8217ec5e68fcbc1dc0510993",
+    "frozenCorrectedPdfHelper": "2b60e392c939621c4220fe1e8255ead36a93eab3",
+    "frozenCorrectedPdfContract": "1cba8b6461279a2fd166a5d8dc2db99c09365bf7",
+    "isolatedGeometryReceipt": "82b21a817c22eb98c9561d37417a861eb5797b19",
+    "isolatedOriginalStdout": "4843ac5c5c293e57dc16a748c3b211ffa3dbc413",
+    "isolatedExecutedSource": "ee7567eedf834902a33c0d9893f27f9f1c922263"
+  },
+  "readback": "All named UTF8 artifacts except original helper were compared against exact in-memory publication bytes. Original helper was fetched successfully after store loss; its original archived SHA256 remains88949519eaf21dcb10461d0d218495d5664d8dc7e622c1ed21a2a08ac39ede37. Binary PNG creation returned exact expected Git IDs; their readable Base64 mirror fetched byte-exact. Full archive Git availability is not claimed.",
+  "unchangedEvidence": "Original R1 outputs, accounting/visual historical receipts and native51-member archive remain frozen. New finding and corrected-PDF contract are append-only; no corrected renderer source or outputs have been read in this lane."
+}

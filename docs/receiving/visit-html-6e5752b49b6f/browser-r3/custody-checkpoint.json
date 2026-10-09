@@ -1,0 +1,167 @@
+{
+  "format": "taste65-r3-browser-capsule-github-custody/1",
+  "repository": "Jacob-Met/tastetable",
+  "nativeRoot": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-r3-custody-github-r0",
+  "originalRoot": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3",
+  "archive": {
+    "bytes": 975192,
+    "sha256": "32fb928bfb0028bd0b90b3ad5edf1d624b900498749d24abb572e2542bcdf2c9",
+    "gitBlob": "6887cde0e69fdb40fd95ef3239515cfaaa9f71a7",
+    "nativeMembers": 100,
+    "nativeFullMemberVerification": true,
+    "gitCreationMatchesNativeComputedBinaryGit": true
+  },
+  "mirror": {
+    "bytes": 1300574,
+    "sha256": "25f8d5a34935f32df39bdb921d58a9f5f78af16f2b671f7f9b0f691c6fa60e12",
+    "gitBlob": "a5e9ad87ae2647a83116c95a86beab1e434b75d1",
+    "fullSupportedUtf8GitReadbackExact": true
+  },
+  "readable": [
+    {
+      "path": "receiving.json",
+      "gitBlob": "f055f75b72f3d7da3ebdc9d4a7792473ee5766a3",
+      "rawReadbackExact": true,
+      "bytes": 1970,
+      "sha256": "29e8c92a1db2b8efc39190a164396bc6bdcd6722b7025b42828d624faf797084",
+      "computedGit": "f055f75b72f3d7da3ebdc9d4a7792473ee5766a3"
+    },
+    {
+      "path": "manifest.json",
+      "gitBlob": "3577bb345df8239fdf9615f91a0360b1bd70d232",
+      "rawReadbackExact": true,
+      "bytes": 24414,
+      "sha256": "3a1cac0911e14fe6db51a8dab636e0dc5bb6262a63bf606669c6591b27172f02",
+      "computedGit": "3577bb345df8239fdf9615f91a0360b1bd70d232"
+    },
+    {
+      "path": "README.md",
+      "gitBlob": "e88564cc8f5b5780cf6a2b3e1d01584038a6b58e",
+      "rawReadbackExact": true,
+      "bytes": 2207,
+      "sha256": "5e379a9e779ce0685ea208d578f34618be3a1bf7546126b913e6f5eb88feb968",
+      "computedGit": "e88564cc8f5b5780cf6a2b3e1d01584038a6b58e"
+    },
+    {
+      "path": "pack.cjs",
+      "gitBlob": "15bd1978d7a79d1ef90e7a4888e80b2f840cc3db",
+      "rawReadbackExact": true,
+      "bytes": 12443,
+      "sha256": "4fe1cc31149acc49f778f341530381153913f26d1f0fd54ae7042708545c76ae",
+      "computedGit": "15bd1978d7a79d1ef90e7a4888e80b2f840cc3db"
+    },
+    {
+      "path": "seal.json",
+      "gitBlob": "7b5a6ab29a9a0d78407e45ff58ad647d243e7be7",
+      "rawReadbackExact": true,
+      "bytes": 1759,
+      "sha256": "5d2cd57db18d9126bbb3ab6f116b154184514020c93e81816beb3f67b239360d",
+      "computedGit": "7b5a6ab29a9a0d78407e45ff58ad647d243e7be7"
+    },
+    {
+      "path": "native-packaging-execution.json",
+      "gitBlob": "c47a23167c239f18e2ec2980ebfeb27e0673107d",
+      "rawReadbackExact": true,
+      "bytes": 2975,
+      "sha256": "e532811bfb79ec16035bf2a16466330932400a47e4c02c354334eb8ac8206e1e",
+      "computedGit": "c47a23167c239f18e2ec2980ebfeb27e0673107d"
+    },
+    {
+      "path": "pdf-github-custody.json",
+      "gitBlob": "18acab6d4225fd672da7eaad2c47fd3d555ccf71",
+      "rawReadbackExact": true,
+      "bytes": 3108,
+      "sha256": "3917576d776858f796c7bf34e37b644be92409d8677ff5e90fe8cb959aa40800",
+      "computedGit": "18acab6d4225fd672da7eaad2c47fd3d555ccf71"
+    }
+  ],
+  "originals": {
+    "files": 68,
+    "directories": 19,
+    "wholeBeforeAfterUnchanged": true,
+    "pinnedLocalFilesVerified": 64,
+    "readAccessTimesExcluded": true
+  },
+  "pdfs": [
+    {
+      "index": 0,
+      "pdf": {
+        "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\outputs-r3\\original-0.pdf",
+        "bytes": 111620,
+        "sha256": "3bfb91bf804b35a3aae6c713a35e8f11cec0931cba116a8c9acd847c159aac7d",
+        "gitBlob": "02d83282b87203547430abda9bb676f23f61e239",
+        "mtimeNs": "1791510489647621900",
+        "ctimeNs": "1791510489647621900",
+        "birthtimeNs": "1791510489647621900",
+        "mode": 33206
+      },
+      "mirror": {
+        "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-r3-custody-github-r0\\original-0.pdf.b64",
+        "bytes": 148865,
+        "sha256": "570c84b3f461e0baf3a36f4e0de480d964e2e0131d77dae3300be131081c6715",
+        "gitBlob": "4a8848364622221468378e764fd6f76bd65c0f06"
+      },
+      "fullMirrorReadbackExact": true
+    },
+    {
+      "index": 1,
+      "pdf": {
+        "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\outputs-r3\\original-1.pdf",
+        "bytes": 138007,
+        "sha256": "cd0668ec9febc67e2235d8cc8ada95b58e5280e4e59e38cc898f70f12aa613d2",
+        "gitBlob": "a119af45af2a19278eb394ac2881d3dbadba2682",
+        "mtimeNs": "1791510490416145700",
+        "ctimeNs": "1791510490416145700",
+        "birthtimeNs": "1791510490416145700",
+        "mode": 33206
+      },
+      "mirror": {
+        "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-r3-custody-github-r0\\original-1.pdf.b64",
+        "bytes": 184057,
+        "sha256": "23c354af1ff96a95dc16fcb4c74fcec68ad33983c401fc016ed91c7e4283d2c0",
+        "gitBlob": "1079b2e6e8c17db0e47c38aed67b690665769536"
+      },
+      "fullMirrorReadbackExact": true
+    },
+    {
+      "index": 2,
+      "pdf": {
+        "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\outputs-r3\\original-2.pdf",
+        "bytes": 60299,
+        "sha256": "581ad80dae27e0f56e71c4cecb7d3fddb78d21565c64bf7dda9cbefa192aeb99",
+        "gitBlob": "8a43a9961fdad463783af306162e0079075af624",
+        "mtimeNs": "1791510490798187300",
+        "ctimeNs": "1791510490798187300",
+        "birthtimeNs": "1791510490798187300",
+        "mode": 33206
+      },
+      "mirror": {
+        "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-r3-custody-github-r0\\original-2.pdf.b64",
+        "bytes": 80420,
+        "sha256": "22b30d8decf1d7c148b7786a4383cf0bbfffe84fec64ea01eaa6b768c3ede92d",
+        "gitBlob": "298ca0b07390cad17399aaab9f49440498cfc66e"
+      },
+      "fullMirrorReadbackExact": true
+    }
+  ],
+  "pdfTransferReceiptGit": "79f25fabafc9d9bfba512bba2f6c089a5335a610",
+  "packaging": {
+    "nodePid": 51880,
+    "shellPid": 54068,
+    "exitCode": 0,
+    "runtimeSeconds": 0.71,
+    "rawExecutionGit": "c47a23167c239f18e2ec2980ebfeb27e0673107d"
+  },
+  "boundaries": {
+    "actualR3BrowserAccepted": true,
+    "physicalPDFQualificationSeparate": true,
+    "priorR2FailureUnchanged": true,
+    "productReplay": false,
+    "browserAction": false,
+    "pdfRegeneration": false,
+    "sourceOrOriginalRootMutation": false,
+    "refOrActionsMutation": false
+  },
+  "transportLimit": "Original archive is native-reopened and all members byte-verified; its computed binary Git hash matches immutable blob creation. The full supported UTF-8 Base64 mirror was read back exactly. No unsupported raw-binary-fetch claim.",
+  "checkpointOutsideFrozenArchive": true
+}

@@ -1,0 +1,324 @@
+{
+  "pdfSha256": "cd0668ec9febc67e2235d8cc8ada95b58e5280e4e59e38cc898f70f12aa613d2",
+  "pages": [
+    {
+      "page": 6,
+      "actualText": [
+        {
+          "operationIndex": 1080,
+          "font": "/F6",
+          "operation": [
+            {
+              "text": "/Span"
+            },
+            {
+              "/ActualText": {
+                "text": "e\u0301",
+                "originalBytesHex": "feff00650301"
+              }
+            }
+          ],
+          "nearby": [
+            {
+              "op": "Td",
+              "args": [
+                "7.2890625",
+                "0"
+              ]
+            },
+            {
+              "op": "Tj",
+              "args": [
+                {
+                  "text": "$%\u0003\u0003p\u0003",
+                  "originalBytesHex": "002400250003000300700003"
+                }
+              ]
+            },
+            {
+              "op": "BDC",
+              "args": [
+                {
+                  "text": "/Span"
+                },
+                {
+                  "/ActualText": {
+                    "text": "e\u0301",
+                    "originalBytesHex": "feff00650301"
+                  }
+                }
+              ]
+            },
+            {
+              "op": "Tj",
+              "args": [
+                {
+                  "text": "p",
+                  "originalBytesHex": "0070"
+                }
+              ]
+            },
+            {
+              "op": "EMC",
+              "args": []
+            },
+            {
+              "op": "Tj",
+              "args": [
+                {
+                  "text": "\u0003",
+                  "originalBytesHex": "0003"
+                }
+              ]
+            },
+            {
+              "op": "ET",
+              "args": []
+            },
+            {
+              "op": "BT",
+              "args": []
+            }
+          ]
+        },
+        {
+          "operationIndex": 1166,
+          "font": "/F6",
+          "operation": [
+            {
+              "text": "/Span"
+            },
+            {
+              "/ActualText": {
+                "text": "e\u0301",
+                "originalBytesHex": "feff00650301"
+              }
+            }
+          ],
+          "nearby": [
+            {
+              "op": "Tm",
+              "args": [
+                "1",
+                "0",
+                "0",
+                "-1",
+                "23",
+                "5893"
+              ]
+            },
+            {
+              "op": "Tj",
+              "args": [
+                {
+                  "text": "(DUOLHU\u0003H[SODQDWLRQ\u0003ZLWK\u0003p\u0003DQG\u0003",
+                  "originalBytesHex": "002800440055004f004c0048005500030048005b0053004f0044005100440057004c005200510003005a004c0057004b0003007000030044005100470003"
+                }
+              ]
+            },
+            {
+              "op": "BDC",
+              "args": [
+                {
+                  "text": "/Span"
+                },
+                {
+                  "/ActualText": {
+                    "text": "e\u0301",
+                    "originalBytesHex": "feff00650301"
+                  }
+                }
+              ]
+            },
+            {
+              "op": "Tj",
+              "args": [
+                {
+                  "text": "p",
+                  "originalBytesHex": "0070"
+                }
+              ]
+            },
+            {
+              "op": "EMC",
+              "args": []
+            },
+            {
+              "op": "Tj",
+              "args": [
+                {
+                  "text": "\u0011",
+                  "originalBytesHex": "0011"
+                }
+              ]
+            },
+            {
+              "op": "ET",
+              "args": []
+            },
+            {
+              "op": "RG",
+              "args": [
+                "0.2",
+                "0.2",
+                "0.2"
+              ]
+            }
+          ]
+        }
+      ],
+      "fonts": {
+        "/F5": {
+          "BaseFont": "/AAAAAA+SegoeUI-Bold",
+          "bytes": 631,
+          "sha256": "3081aaaa0987ce4abcce0efffaeddc986805c6f2002a44c7d1c4c83394ab7ecf",
+          "cmap": "/CIDInit /ProcSet findresource begin\n12 dict begin\nbegincmap\n/CIDSystemInfo\n<<  /Registry (Adobe)\n/Ordering (UCS)\n/Supplement 0\n>> def\n/CMapName /Adobe-Identity-UCS def\n/CMapType 2 def\n1 begincodespacerange\n<0000> <FFFF>\nendcodespacerange\n11 beginbfchar\n<0003> <0020>\n<0005> <0022>\n<0009> <0026>\n<001D> <003A>\n<002A> <0047>\n<002C> <0049>\n<0042> <005F>\n<005B> <0078>\n<0070> <00E9>\n<00B3> <2014>\n<00C3> <00B7>\nendbfchar\n6 beginbfrange\n<0010> <0012> <002D>\n<001F> <0021> <003C>\n<0024> <0028> <0041>\n<002F> <0032> <004C>\n<0035> <003A> <0052>\n<0044> <0059> <0061>\nendbfrange\nendcmap\nCMapName currentdict /CMap defineresource pop\nend\nend"
+        },
+        "/F6": {
+          "BaseFont": "/BAAAAA+SegoeUI",
+          "bytes": 588,
+          "sha256": "22ac853d8daa0d0b9562ba3c465e5ff7754a769ea310e9d72a0ce3142bef456f",
+          "cmap": "/CIDInit /ProcSet findresource begin\n12 dict begin\nbegincmap\n/CIDSystemInfo\n<<  /Registry (Adobe)\n/Ordering (UCS)\n/Supplement 0\n>> def\n/CMapName /Adobe-Identity-UCS def\n/CMapType 2 def\n1 begincodespacerange\n<0000> <FFFF>\nendcodespacerange\n8 beginbfchar\n<0003> <0020>\n<0005> <0022>\n<001F> <003C>\n<0021> <003E>\n<0042> <005F>\n<0070> <00E9>\n<00B3> <2014>\n<00C3> <00B7>\nendbfchar\n6 beginbfrange\n<0009> <000A> <0026>\n<000F> <0011> <002C>\n<0013> <001D> <0030>\n<0024> <0033> <0041>\n<0035> <003D> <0052>\n<0044> <005C> <0061>\nendbfrange\nendcmap\nCMapName currentdict /CMap defineresource pop\nend\nend"
+        },
+        "/F8": {
+          "BaseFont": "/DAAAAA+SegoeUI-Bold",
+          "bytes": 630,
+          "sha256": "9131fbe49815286d20d69c1e2c9007eff33af6838d9b449ba374d23c2cd1a0f1",
+          "cmap": "/CIDInit /ProcSet findresource begin\n12 dict begin\nbegincmap\n/CIDSystemInfo\n<<  /Registry (Adobe)\n/Ordering (UCS)\n/Supplement 0\n>> def\n/CMapName /Adobe-Identity-UCS def\n/CMapType 2 def\n1 begincodespacerange\n<0000> <FFFF>\nendcodespacerange\n8 beginbfchar\n<0003> <0020>\n<0010> <002D>\n<0015> <0032>\n<0024> <0041>\n<0027> <0044>\n<0044> <0061>\n<004C> <0069>\n<005C> <0079>\nendbfchar\n8 beginbfrange\n<0018> <0019> <0035>\n<002B> <002D> <0048>\n<0031> <0032> <004E>\n<0035> <0036> <0052>\n<0039> <003A> <0056>\n<0046> <004A> <0063>\n<004E> <0053> <006B>\n<0055> <005A> <0072>\nendbfrange\nendcmap\nCMapName currentdict /CMap defineresource pop\nend\nend"
+        },
+        "/F9": {
+          "BaseFont": "/EAAAAA+Consolas",
+          "bytes": 567,
+          "sha256": "7a038f3a8fc151e52ce64f0d3fd5df61ee0ab844a12ba0ff81b66858b1948719",
+          "cmap": "/CIDInit /ProcSet findresource begin\n12 dict begin\nbegincmap\n/CIDSystemInfo\n<<  /Registry (Adobe)\n/Ordering (UCS)\n/Supplement 0\n>> def\n/CMapName /Adobe-Identity-UCS def\n/CMapType 2 def\n1 begincodespacerange\n<0000> <FFFF>\nendcodespacerange\n8 beginbfchar\n<0003> <0020>\n<0012> <004F>\n<008B> <0069>\n<0094> <0072>\n<0097> <0075>\n<015E> <002D>\n<017D> <00B7>\n<0265> <0030>\nendbfchar\n5 beginbfrange\n<0083> <0089> <0061>\n<008D> <008E> <006B>\n<0090> <0092> <006E>\n<0268> <026B> <0031>\n<026D> <0270> <0036>\nendbfrange\nendcmap\nCMapName currentdict /CMap defineresource pop\nend\nend"
+        },
+        "/F21": {
+          "BaseFont": "None",
+          "bytes": 336,
+          "sha256": "5843a893e713c84e787d91c461cace1efcbae76b60afdd2571819ba99027285f",
+          "cmap": "/CIDInit /ProcSet findresource begin\n12 dict begin\nbegincmap\n/CIDSystemInfo\n<<  /Registry (Adobe)\n/Ordering (UCS)\n/Supplement 0\n>> def\n/CMapName /Adobe-Identity-UCS def\n/CMapType 2 def\n1 begincodespacerange\n<00> <FF>\nendcodespacerange\n1 beginbfchar\n<5B> <D83DDE42>\nendbfchar\nendcmap\nCMapName currentdict /CMap defineresource pop\nend\nend"
+        }
+      }
+    },
+    {
+      "page": 7,
+      "actualText": [
+        {
+          "operationIndex": 246,
+          "font": "/F5",
+          "operation": [
+            {
+              "text": "/Span"
+            },
+            {
+              "/ActualText": {
+                "text": "e\u0301",
+                "originalBytesHex": "feff00650301"
+              }
+            }
+          ],
+          "nearby": [
+            {
+              "op": "Td",
+              "args": [
+                "12.0531158",
+                "0"
+              ]
+            },
+            {
+              "op": "Tj",
+              "args": [
+                {
+                  "text": "I",
+                  "originalBytesHex": "0049"
+                }
+              ]
+            },
+            {
+              "op": "BDC",
+              "args": [
+                {
+                  "text": "/Span"
+                },
+                {
+                  "/ActualText": {
+                    "text": "e\u0301",
+                    "originalBytesHex": "feff00650301"
+                  }
+                }
+              ]
+            },
+            {
+              "op": "Tj",
+              "args": [
+                {
+                  "text": "p",
+                  "originalBytesHex": "0070"
+                }
+              ]
+            },
+            {
+              "op": "EMC",
+              "args": []
+            },
+            {
+              "op": "Td",
+              "args": [
+                "20.704681",
+                "0"
+              ]
+            },
+            {
+              "op": "Tj",
+              "args": [
+                {
+                  "text": "\u0003D",
+                  "originalBytesHex": "00030044"
+                }
+              ]
+            },
+            {
+              "op": "Td",
+              "args": [
+                "18.232803",
+                "0"
+              ]
+            }
+          ]
+        }
+      ],
+      "fonts": {
+        "/F5": {
+          "BaseFont": "/AAAAAA+SegoeUI-Bold",
+          "bytes": 631,
+          "sha256": "3081aaaa0987ce4abcce0efffaeddc986805c6f2002a44c7d1c4c83394ab7ecf",
+          "cmap": "/CIDInit /ProcSet findresource begin\n12 dict begin\nbegincmap\n/CIDSystemInfo\n<<  /Registry (Adobe)\n/Ordering (UCS)\n/Supplement 0\n>> def\n/CMapName /Adobe-Identity-UCS def\n/CMapType 2 def\n1 begincodespacerange\n<0000> <FFFF>\nendcodespacerange\n11 beginbfchar\n<0003> <0020>\n<0005> <0022>\n<0009> <0026>\n<001D> <003A>\n<002A> <0047>\n<002C> <0049>\n<0042> <005F>\n<005B> <0078>\n<0070> <00E9>\n<00B3> <2014>\n<00C3> <00B7>\nendbfchar\n6 beginbfrange\n<0010> <0012> <002D>\n<001F> <0021> <003C>\n<0024> <0028> <0041>\n<002F> <0032> <004C>\n<0035> <003A> <0052>\n<0044> <0059> <0061>\nendbfrange\nendcmap\nCMapName currentdict /CMap defineresource pop\nend\nend"
+        },
+        "/F6": {
+          "BaseFont": "/BAAAAA+SegoeUI",
+          "bytes": 588,
+          "sha256": "22ac853d8daa0d0b9562ba3c465e5ff7754a769ea310e9d72a0ce3142bef456f",
+          "cmap": "/CIDInit /ProcSet findresource begin\n12 dict begin\nbegincmap\n/CIDSystemInfo\n<<  /Registry (Adobe)\n/Ordering (UCS)\n/Supplement 0\n>> def\n/CMapName /Adobe-Identity-UCS def\n/CMapType 2 def\n1 begincodespacerange\n<0000> <FFFF>\nendcodespacerange\n8 beginbfchar\n<0003> <0020>\n<0005> <0022>\n<001F> <003C>\n<0021> <003E>\n<0042> <005F>\n<0070> <00E9>\n<00B3> <2014>\n<00C3> <00B7>\nendbfchar\n6 beginbfrange\n<0009> <000A> <0026>\n<000F> <0011> <002C>\n<0013> <001D> <0030>\n<0024> <0033> <0041>\n<0035> <003D> <0052>\n<0044> <005C> <0061>\nendbfrange\nendcmap\nCMapName currentdict /CMap defineresource pop\nend\nend"
+        },
+        "/F8": {
+          "BaseFont": "/DAAAAA+SegoeUI-Bold",
+          "bytes": 630,
+          "sha256": "9131fbe49815286d20d69c1e2c9007eff33af6838d9b449ba374d23c2cd1a0f1",
+          "cmap": "/CIDInit /ProcSet findresource begin\n12 dict begin\nbegincmap\n/CIDSystemInfo\n<<  /Registry (Adobe)\n/Ordering (UCS)\n/Supplement 0\n>> def\n/CMapName /Adobe-Identity-UCS def\n/CMapType 2 def\n1 begincodespacerange\n<0000> <FFFF>\nendcodespacerange\n8 beginbfchar\n<0003> <0020>\n<0010> <002D>\n<0015> <0032>\n<0024> <0041>\n<0027> <0044>\n<0044> <0061>\n<004C> <0069>\n<005C> <0079>\nendbfchar\n8 beginbfrange\n<0018> <0019> <0035>\n<002B> <002D> <0048>\n<0031> <0032> <004E>\n<0035> <0036> <0052>\n<0039> <003A> <0056>\n<0046> <004A> <0063>\n<004E> <0053> <006B>\n<0055> <005A> <0072>\nendbfrange\nendcmap\nCMapName currentdict /CMap defineresource pop\nend\nend"
+        }
+      }
+    }
+  ],
+  "installedNormalizationReferences": [
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Roaming\\Python\\Python314\\site-packages\\pypdf\\_encryption.py",
+      "sha256": "c39c927e0c1d9faace5c06f244603027421c50787db847535f780090eb01e0a7",
+      "hits": [
+        {
+          "line": 819,
+          "text": "    password = unicodedata.normalize(\"NFKC\", password)"
+        }
+      ]
+    }
+  ]
+}

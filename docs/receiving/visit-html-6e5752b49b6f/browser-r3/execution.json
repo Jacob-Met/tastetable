@@ -1,0 +1,153 @@
+{
+  "format": "taste65-r3-native-browser-execution/1",
+  "at": "2026-10-09T01:48:05.249Z",
+  "accepted": true,
+  "identity": {
+    "pid": 3912,
+    "node": "v24.14.0",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "user": "jacob",
+    "hostname": "MSI",
+    "root": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3"
+  },
+  "capacity": {
+    "at": "2026-10-09T01:48:05.257Z",
+    "freeRAM": 8999698432,
+    "diskFree": 202834763776
+  },
+  "before": [
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\run.cjs",
+      "bytes": 4330,
+      "sha256": "82f878870268beffdc626902d8e118a0ca97fc796aa85149f77dc0cb630466a1",
+      "gitBlob": "0d2893259abb2de794a24c8432c676d94986438e",
+      "mtimeMs": 1791510379212.1174
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\stage.cjs",
+      "bytes": 10752,
+      "sha256": "7171b672e17eeccd90366d257f2cf706212a580adebe0681fc16923bcdba4b39",
+      "gitBlob": "54127247b8f0c1289ff5b1e7a5a9e6686aa1db3d",
+      "mtimeMs": 1791510377444.427
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\stage-payload.json",
+      "bytes": 236709,
+      "sha256": "42b0e86489a7799736419558ff73c78e920e385671662e66bc937c2102cc8a82",
+      "gitBlob": "ca166da9cebdbb2565ab80694b4c6b00bdee68f2",
+      "mtimeMs": 1791510375630.2615
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\stage-receiving-r3.json",
+      "bytes": 15220,
+      "sha256": "6c5e1f8dd987a1f15e21cda06edcc77116cfae60b1727a845a19ba44a3b2f237",
+      "gitBlob": "ffc574cbbf526310fef05e9f85d6778d1f338787",
+      "mtimeMs": 1791510382398.7043
+    }
+  ],
+  "argv": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--max-old-space-size=256",
+    "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\receive-browser-r3.mjs"
+  ],
+  "child": {
+    "pid": 44540,
+    "status": 0,
+    "signal": null,
+    "error": null,
+    "elapsedMs": 6514.5455999999995,
+    "stdout": "{\"accepted\":true,\"cli\":3,\"groups\":3,\"pdfs\":3,\"artifacts\":22,\"elapsedMs\":6435.2672,\"browserClose\":{\"observed\":true,\"code\":0,\"observerExitCode\":0,\"observerSignal\":null,\"method\":\"retained Windows process handle\"},\"launcherClose\":{\"observed\":true,\"code\":0,\"signal\":null}}\n",
+    "stderr": ""
+  },
+  "logPins": [
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\receiver-r3.stdout",
+      "bytes": 268,
+      "sha256": "a4314655539a8b78f87f2ac3fa115f6aa0c3646d7a3a37910d126aac4e7f4908",
+      "gitBlob": "cd54f4047bdd668b4f43eac4d89ee601f77f0a5d",
+      "mtimeMs": 1791510491801.7056
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\receiver-r3.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mtimeMs": 1791510491801.7056
+    }
+  ],
+  "browserReceipt": {
+    "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\browser-receiving-r3.json",
+    "bytes": 229512,
+    "sha256": "ab81901725fc80ea6e6e3bf5e16b690fe9d75a6e6a9d893b4193914678b74587",
+    "gitBlob": "86b50249c4d9c6747e06b0c65e41411a411a687a",
+    "mtimeMs": 1791510491791.4478
+  },
+  "browser": {
+    "pid": 67704,
+    "version": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/154.0.8037.97",
+      "revision": "@b510e9d7cd3a2fbd78d0ddc42234103206c5f78d",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+      "jsVersion": "15.4.80.20"
+    },
+    "close": {
+      "observed": true,
+      "code": 0,
+      "observerExitCode": 0,
+      "observerSignal": null,
+      "method": "retained Windows process handle"
+    },
+    "groups": 3,
+    "artifacts": 22,
+    "requests": [
+      {
+        "url": "file:///C:/Users/jacob/AppData/Local/Hamon/estate-6e5752b49b6f/taste-visit-html-receiving-root-r3/outputs-r3/original-record.html",
+        "method": "GET"
+      },
+      {
+        "url": "file:///C:/Users/jacob/AppData/Local/Hamon/estate-6e5752b49b6f/taste-visit-html-receiving-root-r3/outputs-r3/literal-notes-%E4%B8%96%E7%95%8C.html",
+        "method": "GET"
+      },
+      {
+        "url": "file:///C:/Users/jacob/AppData/Local/Hamon/estate-6e5752b49b6f/taste-visit-html-receiving-root-r3/outputs-r3/unknown-empty-BOM.html",
+        "method": "GET"
+      }
+    ],
+    "errors": [],
+    "separatorControls": true,
+    "inputsUnchanged": true
+  },
+  "after": [
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\run.cjs",
+      "bytes": 4330,
+      "sha256": "82f878870268beffdc626902d8e118a0ca97fc796aa85149f77dc0cb630466a1",
+      "gitBlob": "0d2893259abb2de794a24c8432c676d94986438e",
+      "mtimeMs": 1791510379212.1174
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\stage.cjs",
+      "bytes": 10752,
+      "sha256": "7171b672e17eeccd90366d257f2cf706212a580adebe0681fc16923bcdba4b39",
+      "gitBlob": "54127247b8f0c1289ff5b1e7a5a9e6686aa1db3d",
+      "mtimeMs": 1791510377444.427
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\stage-payload.json",
+      "bytes": 236709,
+      "sha256": "42b0e86489a7799736419558ff73c78e920e385671662e66bc937c2102cc8a82",
+      "gitBlob": "ca166da9cebdbb2565ab80694b4c6b00bdee68f2",
+      "mtimeMs": 1791510375630.2615
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\stage-receiving-r3.json",
+      "bytes": 15220,
+      "sha256": "6c5e1f8dd987a1f15e21cda06edcc77116cfae60b1727a845a19ba44a3b2f237",
+      "gitBlob": "ffc574cbbf526310fef05e9f85d6778d1f338787",
+      "mtimeMs": 1791510382398.7043
+    }
+  ],
+  "elapsedMs": 6559.045300000001,
+  "ended": "2026-10-09T01:48:11.810Z"
+}

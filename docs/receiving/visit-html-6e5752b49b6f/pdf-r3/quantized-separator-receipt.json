@@ -1,0 +1,1270 @@
+{
+  "passed": true,
+  "scope": "Pure record quantization correction; original frozen failures retained",
+  "actualCorrected": [
+    {
+      "field": "original-record pick-1 note",
+      "page": 3,
+      "markers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "stepsPt": [
+        18.74999921875019,
+        18.749999218749963
+      ],
+      "sourcePitchPt": 18.599999225,
+      "quantumPt": 0.74999996875,
+      "residualsPt": [
+        0.0,
+        0.14999999375018902,
+        0.29999998750015067
+      ],
+      "residualRangePt": 0.29999998750015067,
+      "numericEpsilonPt": 1e-05,
+      "selectedLines": [
+        {
+          "page": 3,
+          "order": 73,
+          "text": "A",
+          "baseline": 393.7499835937498,
+          "fontSize": 11.9999995
+        },
+        {
+          "page": 3,
+          "order": 74,
+          "text": "B",
+          "baseline": 412.4999828125,
+          "fontSize": 11.9999995
+        },
+        {
+          "page": 3,
+          "order": 75,
+          "text": "C",
+          "baseline": 431.24998203124994,
+          "fontSize": 11.9999995
+        }
+      ]
+    },
+    {
+      "field": "literal-notes pick-0 explanation",
+      "page": 5,
+      "markers": [
+        "WHY_BEGIN",
+        "CR_ONLY",
+        "CRLF_PAIR",
+        "LF_LINE"
+      ],
+      "stepsPt": [
+        18.749999218749963,
+        18.749999218750418,
+        17.999999249999746
+      ],
+      "sourcePitchPt": 18.599999225,
+      "quantumPt": 0.74999996875,
+      "residualsPt": [
+        0.0,
+        0.14999999374996165,
+        0.29999998750037804,
+        -0.29999998749987355
+      ],
+      "residualRangePt": 0.5999999750002516,
+      "numericEpsilonPt": 1e-05,
+      "selectedLines": [
+        {
+          "page": 5,
+          "order": 180,
+          "text": "WHY_BEGIN",
+          "baseline": 533.9999777499996,
+          "fontSize": 11.9999995
+        },
+        {
+          "page": 5,
+          "order": 181,
+          "text": "CR_ONLY",
+          "baseline": 552.7499769687496,
+          "fontSize": 11.9999995
+        },
+        {
+          "page": 5,
+          "order": 182,
+          "text": "CRLF_PAIR",
+          "baseline": 571.4999761875,
+          "fontSize": 11.9999995
+        },
+        {
+          "page": 5,
+          "order": 183,
+          "text": "LF_LINE",
+          "baseline": 589.4999754374998,
+          "fontSize": 11.9999995
+        }
+      ]
+    },
+    {
+      "field": "literal-notes pick-1 note",
+      "page": 6,
+      "markers": [
+        "NOTE2_BEGIN",
+        "CR",
+        "CRLF",
+        "LF"
+      ],
+      "stepsPt": [
+        17.999999249999746,
+        18.749999218750418,
+        18.749999218750418
+      ],
+      "sourcePitchPt": 18.599999225,
+      "quantumPt": 0.74999996875,
+      "residualsPt": [
+        0.0,
+        -0.5999999750002551,
+        -0.44999998124983875,
+        -0.2999999874994188
+      ],
+      "residualRangePt": 0.5999999750002551,
+      "numericEpsilonPt": 1e-05,
+      "selectedLines": [
+        {
+          "page": 6,
+          "order": 215,
+          "text": "NOTE2_BEGIN",
+          "baseline": 550.4999770624994,
+          "fontSize": 11.9999995
+        },
+        {
+          "page": 6,
+          "order": 216,
+          "text": "CR",
+          "baseline": 568.4999763124991,
+          "fontSize": 11.9999995
+        },
+        {
+          "page": 6,
+          "order": 217,
+          "text": "CRLF",
+          "baseline": 587.2499755312496,
+          "fontSize": 11.9999995
+        },
+        {
+          "page": 6,
+          "order": 218,
+          "text": "LF",
+          "baseline": 605.99997475,
+          "fontSize": 11.9999995
+        }
+      ]
+    }
+  ],
+  "oldCollapsedRefusals": [
+    {
+      "field": "original-record pick-1 note",
+      "error": "Collapsed/reversed separator"
+    },
+    {
+      "field": "literal-notes pick-0 explanation",
+      "error": "Collapsed/reversed separator"
+    },
+    {
+      "field": "literal-notes pick-1 note",
+      "error": "Collapsed/reversed separator"
+    }
+  ],
+  "controlledPositives": [
+    {
+      "field": "original-record pick-1 note",
+      "phase": 0,
+      "result": {
+        "field": "original-record pick-1 note",
+        "page": 1,
+        "markers": [
+          "A",
+          "B",
+          "C"
+        ],
+        "stepsPt": [
+          18.0,
+          18.75
+        ],
+        "sourcePitchPt": 18.6,
+        "quantumPt": 0.75,
+        "residualsPt": [
+          0.0,
+          -0.6000000000000014,
+          -0.45000000000000284
+        ],
+        "residualRangePt": 0.6000000000000014,
+        "numericEpsilonPt": 1e-05,
+        "selectedLines": [
+          {
+            "page": 1,
+            "order": 0,
+            "text": "A",
+            "baseline": 750.0,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 1,
+            "text": "B",
+            "baseline": 768.0,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 2,
+            "text": "C",
+            "baseline": 786.75,
+            "fontSize": 12.0
+          }
+        ]
+      }
+    },
+    {
+      "field": "original-record pick-1 note",
+      "phase": 0.2,
+      "result": {
+        "field": "original-record pick-1 note",
+        "page": 1,
+        "markers": [
+          "A",
+          "B",
+          "C"
+        ],
+        "stepsPt": [
+          18.75,
+          18.0
+        ],
+        "sourcePitchPt": 18.6,
+        "quantumPt": 0.75,
+        "residualsPt": [
+          0.0,
+          0.14999999999999858,
+          -0.45000000000000284
+        ],
+        "residualRangePt": 0.6000000000000014,
+        "numericEpsilonPt": 1e-05,
+        "selectedLines": [
+          {
+            "page": 1,
+            "order": 0,
+            "text": "A",
+            "baseline": 750.0,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 1,
+            "text": "B",
+            "baseline": 768.75,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 2,
+            "text": "C",
+            "baseline": 786.75,
+            "fontSize": 12.0
+          }
+        ]
+      }
+    },
+    {
+      "field": "original-record pick-1 note",
+      "phase": 0.4,
+      "result": {
+        "field": "original-record pick-1 note",
+        "page": 1,
+        "markers": [
+          "A",
+          "B",
+          "C"
+        ],
+        "stepsPt": [
+          18.75,
+          18.75
+        ],
+        "sourcePitchPt": 18.6,
+        "quantumPt": 0.75,
+        "residualsPt": [
+          0.0,
+          0.14999999999999858,
+          0.29999999999999716
+        ],
+        "residualRangePt": 0.29999999999999716,
+        "numericEpsilonPt": 1e-05,
+        "selectedLines": [
+          {
+            "page": 1,
+            "order": 0,
+            "text": "A",
+            "baseline": 750.0,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 1,
+            "text": "B",
+            "baseline": 768.75,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 2,
+            "text": "C",
+            "baseline": 787.5,
+            "fontSize": 12.0
+          }
+        ]
+      }
+    },
+    {
+      "field": "original-record pick-1 note",
+      "phase": 0.6,
+      "result": {
+        "field": "original-record pick-1 note",
+        "page": 1,
+        "markers": [
+          "A",
+          "B",
+          "C"
+        ],
+        "stepsPt": [
+          18.75,
+          18.75
+        ],
+        "sourcePitchPt": 18.6,
+        "quantumPt": 0.75,
+        "residualsPt": [
+          0.0,
+          0.14999999999999858,
+          0.29999999999999716
+        ],
+        "residualRangePt": 0.29999999999999716,
+        "numericEpsilonPt": 1e-05,
+        "selectedLines": [
+          {
+            "page": 1,
+            "order": 0,
+            "text": "A",
+            "baseline": 750.0,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 1,
+            "text": "B",
+            "baseline": 768.75,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 2,
+            "text": "C",
+            "baseline": 787.5,
+            "fontSize": 12.0
+          }
+        ]
+      }
+    },
+    {
+      "field": "original-record pick-1 note",
+      "phase": 0.8,
+      "result": {
+        "field": "original-record pick-1 note",
+        "page": 1,
+        "markers": [
+          "A",
+          "B",
+          "C"
+        ],
+        "stepsPt": [
+          18.75,
+          18.75
+        ],
+        "sourcePitchPt": 18.6,
+        "quantumPt": 0.75,
+        "residualsPt": [
+          0.0,
+          0.14999999999999858,
+          0.29999999999999716
+        ],
+        "residualRangePt": 0.29999999999999716,
+        "numericEpsilonPt": 1e-05,
+        "selectedLines": [
+          {
+            "page": 1,
+            "order": 0,
+            "text": "A",
+            "baseline": 750.0,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 1,
+            "text": "B",
+            "baseline": 768.75,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 2,
+            "text": "C",
+            "baseline": 787.5,
+            "fontSize": 12.0
+          }
+        ]
+      }
+    },
+    {
+      "field": "literal-notes pick-0 explanation",
+      "phase": 0,
+      "result": {
+        "field": "literal-notes pick-0 explanation",
+        "page": 1,
+        "markers": [
+          "WHY_BEGIN",
+          "CR_ONLY",
+          "CRLF_PAIR",
+          "LF_LINE"
+        ],
+        "stepsPt": [
+          18.0,
+          18.75,
+          18.75
+        ],
+        "sourcePitchPt": 18.6,
+        "quantumPt": 0.75,
+        "residualsPt": [
+          0.0,
+          -0.6000000000000014,
+          -0.45000000000000284,
+          -0.30000000000000426
+        ],
+        "residualRangePt": 0.6000000000000014,
+        "numericEpsilonPt": 1e-05,
+        "selectedLines": [
+          {
+            "page": 1,
+            "order": 0,
+            "text": "WHY_BEGIN",
+            "baseline": 750.0,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 1,
+            "text": "CR_ONLY",
+            "baseline": 768.0,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 2,
+            "text": "CRLF_PAIR",
+            "baseline": 786.75,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 3,
+            "text": "LF_LINE",
+            "baseline": 805.5,
+            "fontSize": 12.0
+          }
+        ]
+      }
+    },
+    {
+      "field": "literal-notes pick-0 explanation",
+      "phase": 0.2,
+      "result": {
+        "field": "literal-notes pick-0 explanation",
+        "page": 1,
+        "markers": [
+          "WHY_BEGIN",
+          "CR_ONLY",
+          "CRLF_PAIR",
+          "LF_LINE"
+        ],
+        "stepsPt": [
+          18.75,
+          18.0,
+          18.75
+        ],
+        "sourcePitchPt": 18.6,
+        "quantumPt": 0.75,
+        "residualsPt": [
+          0.0,
+          0.14999999999999858,
+          -0.45000000000000284,
+          -0.30000000000000426
+        ],
+        "residualRangePt": 0.6000000000000014,
+        "numericEpsilonPt": 1e-05,
+        "selectedLines": [
+          {
+            "page": 1,
+            "order": 0,
+            "text": "WHY_BEGIN",
+            "baseline": 750.0,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 1,
+            "text": "CR_ONLY",
+            "baseline": 768.75,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 2,
+            "text": "CRLF_PAIR",
+            "baseline": 786.75,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 3,
+            "text": "LF_LINE",
+            "baseline": 805.5,
+            "fontSize": 12.0
+          }
+        ]
+      }
+    },
+    {
+      "field": "literal-notes pick-0 explanation",
+      "phase": 0.4,
+      "result": {
+        "field": "literal-notes pick-0 explanation",
+        "page": 1,
+        "markers": [
+          "WHY_BEGIN",
+          "CR_ONLY",
+          "CRLF_PAIR",
+          "LF_LINE"
+        ],
+        "stepsPt": [
+          18.75,
+          18.75,
+          18.0
+        ],
+        "sourcePitchPt": 18.6,
+        "quantumPt": 0.75,
+        "residualsPt": [
+          0.0,
+          0.14999999999999858,
+          0.29999999999999716,
+          -0.30000000000000426
+        ],
+        "residualRangePt": 0.6000000000000014,
+        "numericEpsilonPt": 1e-05,
+        "selectedLines": [
+          {
+            "page": 1,
+            "order": 0,
+            "text": "WHY_BEGIN",
+            "baseline": 750.0,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 1,
+            "text": "CR_ONLY",
+            "baseline": 768.75,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 2,
+            "text": "CRLF_PAIR",
+            "baseline": 787.5,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 3,
+            "text": "LF_LINE",
+            "baseline": 805.5,
+            "fontSize": 12.0
+          }
+        ]
+      }
+    },
+    {
+      "field": "literal-notes pick-0 explanation",
+      "phase": 0.6,
+      "result": {
+        "field": "literal-notes pick-0 explanation",
+        "page": 1,
+        "markers": [
+          "WHY_BEGIN",
+          "CR_ONLY",
+          "CRLF_PAIR",
+          "LF_LINE"
+        ],
+        "stepsPt": [
+          18.75,
+          18.75,
+          18.75
+        ],
+        "sourcePitchPt": 18.6,
+        "quantumPt": 0.75,
+        "residualsPt": [
+          0.0,
+          0.14999999999999858,
+          0.29999999999999716,
+          0.44999999999999574
+        ],
+        "residualRangePt": 0.44999999999999574,
+        "numericEpsilonPt": 1e-05,
+        "selectedLines": [
+          {
+            "page": 1,
+            "order": 0,
+            "text": "WHY_BEGIN",
+            "baseline": 750.0,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 1,
+            "text": "CR_ONLY",
+            "baseline": 768.75,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 2,
+            "text": "CRLF_PAIR",
+            "baseline": 787.5,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 3,
+            "text": "LF_LINE",
+            "baseline": 806.25,
+            "fontSize": 12.0
+          }
+        ]
+      }
+    },
+    {
+      "field": "literal-notes pick-0 explanation",
+      "phase": 0.8,
+      "result": {
+        "field": "literal-notes pick-0 explanation",
+        "page": 1,
+        "markers": [
+          "WHY_BEGIN",
+          "CR_ONLY",
+          "CRLF_PAIR",
+          "LF_LINE"
+        ],
+        "stepsPt": [
+          18.75,
+          18.75,
+          18.75
+        ],
+        "sourcePitchPt": 18.6,
+        "quantumPt": 0.75,
+        "residualsPt": [
+          0.0,
+          0.14999999999999858,
+          0.29999999999999716,
+          0.44999999999999574
+        ],
+        "residualRangePt": 0.44999999999999574,
+        "numericEpsilonPt": 1e-05,
+        "selectedLines": [
+          {
+            "page": 1,
+            "order": 0,
+            "text": "WHY_BEGIN",
+            "baseline": 750.0,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 1,
+            "text": "CR_ONLY",
+            "baseline": 768.75,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 2,
+            "text": "CRLF_PAIR",
+            "baseline": 787.5,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 3,
+            "text": "LF_LINE",
+            "baseline": 806.25,
+            "fontSize": 12.0
+          }
+        ]
+      }
+    },
+    {
+      "field": "literal-notes pick-1 note",
+      "phase": 0,
+      "result": {
+        "field": "literal-notes pick-1 note",
+        "page": 1,
+        "markers": [
+          "NOTE2_BEGIN",
+          "CR",
+          "CRLF",
+          "LF"
+        ],
+        "stepsPt": [
+          18.0,
+          18.75,
+          18.75
+        ],
+        "sourcePitchPt": 18.6,
+        "quantumPt": 0.75,
+        "residualsPt": [
+          0.0,
+          -0.6000000000000014,
+          -0.45000000000000284,
+          -0.30000000000000426
+        ],
+        "residualRangePt": 0.6000000000000014,
+        "numericEpsilonPt": 1e-05,
+        "selectedLines": [
+          {
+            "page": 1,
+            "order": 0,
+            "text": "NOTE2_BEGIN",
+            "baseline": 750.0,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 1,
+            "text": "CR",
+            "baseline": 768.0,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 2,
+            "text": "CRLF",
+            "baseline": 786.75,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 3,
+            "text": "LF",
+            "baseline": 805.5,
+            "fontSize": 12.0
+          }
+        ]
+      }
+    },
+    {
+      "field": "literal-notes pick-1 note",
+      "phase": 0.2,
+      "result": {
+        "field": "literal-notes pick-1 note",
+        "page": 1,
+        "markers": [
+          "NOTE2_BEGIN",
+          "CR",
+          "CRLF",
+          "LF"
+        ],
+        "stepsPt": [
+          18.75,
+          18.0,
+          18.75
+        ],
+        "sourcePitchPt": 18.6,
+        "quantumPt": 0.75,
+        "residualsPt": [
+          0.0,
+          0.14999999999999858,
+          -0.45000000000000284,
+          -0.30000000000000426
+        ],
+        "residualRangePt": 0.6000000000000014,
+        "numericEpsilonPt": 1e-05,
+        "selectedLines": [
+          {
+            "page": 1,
+            "order": 0,
+            "text": "NOTE2_BEGIN",
+            "baseline": 750.0,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 1,
+            "text": "CR",
+            "baseline": 768.75,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 2,
+            "text": "CRLF",
+            "baseline": 786.75,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 3,
+            "text": "LF",
+            "baseline": 805.5,
+            "fontSize": 12.0
+          }
+        ]
+      }
+    },
+    {
+      "field": "literal-notes pick-1 note",
+      "phase": 0.4,
+      "result": {
+        "field": "literal-notes pick-1 note",
+        "page": 1,
+        "markers": [
+          "NOTE2_BEGIN",
+          "CR",
+          "CRLF",
+          "LF"
+        ],
+        "stepsPt": [
+          18.75,
+          18.75,
+          18.0
+        ],
+        "sourcePitchPt": 18.6,
+        "quantumPt": 0.75,
+        "residualsPt": [
+          0.0,
+          0.14999999999999858,
+          0.29999999999999716,
+          -0.30000000000000426
+        ],
+        "residualRangePt": 0.6000000000000014,
+        "numericEpsilonPt": 1e-05,
+        "selectedLines": [
+          {
+            "page": 1,
+            "order": 0,
+            "text": "NOTE2_BEGIN",
+            "baseline": 750.0,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 1,
+            "text": "CR",
+            "baseline": 768.75,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 2,
+            "text": "CRLF",
+            "baseline": 787.5,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 3,
+            "text": "LF",
+            "baseline": 805.5,
+            "fontSize": 12.0
+          }
+        ]
+      }
+    },
+    {
+      "field": "literal-notes pick-1 note",
+      "phase": 0.6,
+      "result": {
+        "field": "literal-notes pick-1 note",
+        "page": 1,
+        "markers": [
+          "NOTE2_BEGIN",
+          "CR",
+          "CRLF",
+          "LF"
+        ],
+        "stepsPt": [
+          18.75,
+          18.75,
+          18.75
+        ],
+        "sourcePitchPt": 18.6,
+        "quantumPt": 0.75,
+        "residualsPt": [
+          0.0,
+          0.14999999999999858,
+          0.29999999999999716,
+          0.44999999999999574
+        ],
+        "residualRangePt": 0.44999999999999574,
+        "numericEpsilonPt": 1e-05,
+        "selectedLines": [
+          {
+            "page": 1,
+            "order": 0,
+            "text": "NOTE2_BEGIN",
+            "baseline": 750.0,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 1,
+            "text": "CR",
+            "baseline": 768.75,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 2,
+            "text": "CRLF",
+            "baseline": 787.5,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 3,
+            "text": "LF",
+            "baseline": 806.25,
+            "fontSize": 12.0
+          }
+        ]
+      }
+    },
+    {
+      "field": "literal-notes pick-1 note",
+      "phase": 0.8,
+      "result": {
+        "field": "literal-notes pick-1 note",
+        "page": 1,
+        "markers": [
+          "NOTE2_BEGIN",
+          "CR",
+          "CRLF",
+          "LF"
+        ],
+        "stepsPt": [
+          18.75,
+          18.75,
+          18.75
+        ],
+        "sourcePitchPt": 18.6,
+        "quantumPt": 0.75,
+        "residualsPt": [
+          0.0,
+          0.14999999999999858,
+          0.29999999999999716,
+          0.44999999999999574
+        ],
+        "residualRangePt": 0.44999999999999574,
+        "numericEpsilonPt": 1e-05,
+        "selectedLines": [
+          {
+            "page": 1,
+            "order": 0,
+            "text": "NOTE2_BEGIN",
+            "baseline": 750.0,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 1,
+            "text": "CR",
+            "baseline": 768.75,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 2,
+            "text": "CRLF",
+            "baseline": 787.5,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 3,
+            "text": "LF",
+            "baseline": 806.25,
+            "fontSize": 12.0
+          }
+        ]
+      }
+    }
+  ],
+  "controlledRefusals": [
+    {
+      "label": "collapsed-first",
+      "case": "original-record pick-1 note",
+      "error": "Collapsed/reversed separator"
+    },
+    {
+      "label": "double-first",
+      "case": "original-record pick-1 note",
+      "error": "Baselines cannot share one quantization phase at the fixed source pitch"
+    },
+    {
+      "label": "all-double",
+      "case": "original-record pick-1 note",
+      "error": "Baselines cannot share one quantization phase at the fixed source pitch"
+    },
+    {
+      "label": "cumulative-drift",
+      "case": "original-record pick-1 note",
+      "error": "Baselines cannot share one quantization phase at the fixed source pitch"
+    },
+    {
+      "label": "reversed",
+      "case": "original-record pick-1 note",
+      "error": "Collapsed/reversed separator"
+    },
+    {
+      "label": "missing",
+      "case": "original-record pick-1 note",
+      "error": "Require unique separate marker B"
+    },
+    {
+      "label": "duplicate",
+      "case": "original-record pick-1 note",
+      "error": "Require unique separate marker A"
+    },
+    {
+      "label": "cross-page",
+      "case": "original-record pick-1 note",
+      "error": "Cross-page sequence needs explicit inspection"
+    },
+    {
+      "label": "order",
+      "case": "original-record pick-1 note",
+      "error": "Marker order differs"
+    },
+    {
+      "label": "nonfinite",
+      "case": "original-record pick-1 note",
+      "error": "Nonfinite original geometry"
+    },
+    {
+      "label": "raw-leading-newline",
+      "case": "original-record pick-1 note",
+      "error": "Selected callback contains stripped or multiple line boundaries"
+    },
+    {
+      "label": "raw-two-trailing-newlines",
+      "case": "original-record pick-1 note",
+      "error": "Selected callback contains stripped or multiple line boundaries"
+    },
+    {
+      "label": "wrong-grid",
+      "case": "original-record pick-1 note",
+      "error": "Unqualified report text transform"
+    },
+    {
+      "label": "collapsed-first",
+      "case": "literal-notes pick-0 explanation",
+      "error": "Collapsed/reversed separator"
+    },
+    {
+      "label": "double-first",
+      "case": "literal-notes pick-0 explanation",
+      "error": "Baselines cannot share one quantization phase at the fixed source pitch"
+    },
+    {
+      "label": "all-double",
+      "case": "literal-notes pick-0 explanation",
+      "error": "Baselines cannot share one quantization phase at the fixed source pitch"
+    },
+    {
+      "label": "cumulative-drift",
+      "case": "literal-notes pick-0 explanation",
+      "error": "Baselines cannot share one quantization phase at the fixed source pitch"
+    },
+    {
+      "label": "reversed",
+      "case": "literal-notes pick-0 explanation",
+      "error": "Collapsed/reversed separator"
+    },
+    {
+      "label": "missing",
+      "case": "literal-notes pick-0 explanation",
+      "error": "Require unique separate marker CR_ONLY"
+    },
+    {
+      "label": "duplicate",
+      "case": "literal-notes pick-0 explanation",
+      "error": "Require unique separate marker WHY_BEGIN"
+    },
+    {
+      "label": "cross-page",
+      "case": "literal-notes pick-0 explanation",
+      "error": "Cross-page sequence needs explicit inspection"
+    },
+    {
+      "label": "order",
+      "case": "literal-notes pick-0 explanation",
+      "error": "Marker order differs"
+    },
+    {
+      "label": "nonfinite",
+      "case": "literal-notes pick-0 explanation",
+      "error": "Nonfinite original geometry"
+    },
+    {
+      "label": "raw-leading-newline",
+      "case": "literal-notes pick-0 explanation",
+      "error": "Selected callback contains stripped or multiple line boundaries"
+    },
+    {
+      "label": "raw-two-trailing-newlines",
+      "case": "literal-notes pick-0 explanation",
+      "error": "Selected callback contains stripped or multiple line boundaries"
+    },
+    {
+      "label": "wrong-grid",
+      "case": "literal-notes pick-0 explanation",
+      "error": "Unqualified report text transform"
+    },
+    {
+      "label": "collapsed-first",
+      "case": "literal-notes pick-1 note",
+      "error": "Collapsed/reversed separator"
+    },
+    {
+      "label": "double-first",
+      "case": "literal-notes pick-1 note",
+      "error": "Baselines cannot share one quantization phase at the fixed source pitch"
+    },
+    {
+      "label": "all-double",
+      "case": "literal-notes pick-1 note",
+      "error": "Baselines cannot share one quantization phase at the fixed source pitch"
+    },
+    {
+      "label": "cumulative-drift",
+      "case": "literal-notes pick-1 note",
+      "error": "Baselines cannot share one quantization phase at the fixed source pitch"
+    },
+    {
+      "label": "reversed",
+      "case": "literal-notes pick-1 note",
+      "error": "Collapsed/reversed separator"
+    },
+    {
+      "label": "missing",
+      "case": "literal-notes pick-1 note",
+      "error": "Require unique separate marker CR"
+    },
+    {
+      "label": "duplicate",
+      "case": "literal-notes pick-1 note",
+      "error": "Require unique separate marker NOTE2_BEGIN"
+    },
+    {
+      "label": "cross-page",
+      "case": "literal-notes pick-1 note",
+      "error": "Cross-page sequence needs explicit inspection"
+    },
+    {
+      "label": "order",
+      "case": "literal-notes pick-1 note",
+      "error": "Marker order differs"
+    },
+    {
+      "label": "nonfinite",
+      "case": "literal-notes pick-1 note",
+      "error": "Nonfinite original geometry"
+    },
+    {
+      "label": "raw-leading-newline",
+      "case": "literal-notes pick-1 note",
+      "error": "Selected callback contains stripped or multiple line boundaries"
+    },
+    {
+      "label": "raw-two-trailing-newlines",
+      "case": "literal-notes pick-1 note",
+      "error": "Selected callback contains stripped or multiple line boundaries"
+    },
+    {
+      "label": "wrong-grid",
+      "case": "literal-notes pick-1 note",
+      "error": "Unqualified report text transform"
+    }
+  ],
+  "inputBefore": [
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\HAMON\\estate-6e5752b49b6f\\taste65-original-pdf-receiving-native-r2\\collector-qualification-r0\\original-0-origins.json",
+      "sha256": "559fbd7616bbc8616f68af95a936504b38ba044b10a2bf60991c23bec984479e"
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\HAMON\\estate-6e5752b49b6f\\taste65-original-pdf-receiving-native-r2\\collector-qualification-r0\\original-1-origins.json",
+      "sha256": "f2a8dcf68c25c46a7fc9f69d8a60c3371c6521ccbb6d1841bfee268210939f74"
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\HAMON\\estate-6e5752b49b6f\\taste65-original-pdf-receiving-native-r2\\corrected-originals-r3\\original-0-origins.json",
+      "sha256": "f3ac117538dd54dd07561f47518a420c72942f63fe3e00bd982aefd9d3212222"
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\HAMON\\estate-6e5752b49b6f\\taste65-original-pdf-receiving-native-r2\\corrected-originals-r3\\original-1-origins.json",
+      "sha256": "fa55a50ba0187f929e105e98406cf87a5feaa5bcfc78867872faf74b5bec1a13"
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\HAMON\\estate-6e5752b49b6f\\taste65-original-pdf-receiving-native-r2\\pdf-visible-separators-quantized-r1.py",
+      "sha256": "3be00171bce4b783d4ac19b031bb1355ac6a9852a6e353a021c7ae59fa8a4c8e"
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\HAMON\\estate-6e5752b49b6f\\taste65-original-pdf-receiving-native-r2\\pdf-visible-separators-r0.py",
+      "sha256": "a730f9f470ab0f770f6e24198b90eabffce07a4c31d41de188c365e0b5fb461d"
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\HAMON\\estate-6e5752b49b6f\\taste65-original-pdf-receiving-native-r2\\qualify-quantized-separators-r1.py",
+      "sha256": "d2aaff9cac32ec57493c2184f1796c1a82e848f267181aa23cc3fb4bef5febd5"
+    }
+  ],
+  "inputAfter": [
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\HAMON\\estate-6e5752b49b6f\\taste65-original-pdf-receiving-native-r2\\collector-qualification-r0\\original-0-origins.json",
+      "sha256": "559fbd7616bbc8616f68af95a936504b38ba044b10a2bf60991c23bec984479e"
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\HAMON\\estate-6e5752b49b6f\\taste65-original-pdf-receiving-native-r2\\collector-qualification-r0\\original-1-origins.json",
+      "sha256": "f2a8dcf68c25c46a7fc9f69d8a60c3371c6521ccbb6d1841bfee268210939f74"
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\HAMON\\estate-6e5752b49b6f\\taste65-original-pdf-receiving-native-r2\\corrected-originals-r3\\original-0-origins.json",
+      "sha256": "f3ac117538dd54dd07561f47518a420c72942f63fe3e00bd982aefd9d3212222"
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\HAMON\\estate-6e5752b49b6f\\taste65-original-pdf-receiving-native-r2\\corrected-originals-r3\\original-1-origins.json",
+      "sha256": "fa55a50ba0187f929e105e98406cf87a5feaa5bcfc78867872faf74b5bec1a13"
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\HAMON\\estate-6e5752b49b6f\\taste65-original-pdf-receiving-native-r2\\pdf-visible-separators-quantized-r1.py",
+      "sha256": "3be00171bce4b783d4ac19b031bb1355ac6a9852a6e353a021c7ae59fa8a4c8e"
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\HAMON\\estate-6e5752b49b6f\\taste65-original-pdf-receiving-native-r2\\pdf-visible-separators-r0.py",
+      "sha256": "a730f9f470ab0f770f6e24198b90eabffce07a4c31d41de188c365e0b5fb461d"
+    },
+    {
+      "path": "C:\\Users\\jacob\\AppData\\Local\\HAMON\\estate-6e5752b49b6f\\taste65-original-pdf-receiving-native-r2\\qualify-quantized-separators-r1.py",
+      "sha256": "d2aaff9cac32ec57493c2184f1796c1a82e848f267181aa23cc3fb4bef5febd5"
+    }
+  ],
+  "inputsUnchanged": true
+}

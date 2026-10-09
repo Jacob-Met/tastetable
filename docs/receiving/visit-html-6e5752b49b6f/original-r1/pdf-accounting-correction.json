@@ -1,0 +1,24 @@
+{
+  "schema": "taste65-original-pdf-accounting-correction/1",
+  "reason": "The public contract requires explicit kept-off-week meaning; actual original PDFs say 'Kept off this week'. R0 matched only the earlier phrase without 'this'.",
+  "rootAuthorized": true,
+  "sourceOnly": true,
+  "oldSha256": "88949519eaf21dcb10461d0d218495d5664d8dc7e622c1ed21a2a08ac39ede37",
+  "newSha256": "10cbf7ad88d20efb5153fc2121e81a5a8924a997e0825d6feaebad3afc0d6980",
+  "before": "r\"kept[\\s-]+off[\\s-]+week\"",
+  "after": "r\"kept[\\s-]+off[\\s-]+(?:this[\\s-]+)?week\"",
+  "uniqueReplacement": true,
+  "originalHelperAndDiagnosticsRetained": true,
+  "ledgerUnchanged": true,
+  "noPdfDecodePrintOrRasterRegeneration": true,
+  "nineOriginalSensitivityControlsRetained": true,
+  "additionalChecks": "Both permitted phrasings pass; absent and 'Kept on this week' refuse.",
+  "preExecutionStop": {
+    "phase": "functions source assembly",
+    "error": "ReferenceError: TextEncoder is not defined",
+    "beforeAccountingProcessStart": true,
+    "originalPdfDecodeSessionFinishedWithExit0": true,
+    "productOrPdfReplay": false,
+    "correction": "Compute UTF-8 byte length from JavaScript code points; accounting successor still only the one authorized phrase regex change."
+  }
+}

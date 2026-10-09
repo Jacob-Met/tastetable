@@ -1,0 +1,104 @@
+{
+  "format": "taste65-r3-browser-receiver-delta-review/1",
+  "source": {
+    "git_blob": "701612d5ff86435f81140d6974378ae93ebbd59b",
+    "bytes": 31668,
+    "sha256": "12034dec1bf1661241b86b6fb8c244bb099eb9a4b61f7b0c3ec25d9a886e78d6"
+  },
+  "parentReceiver": {
+    "git_blob": "1d1efb71a96887ee406b48171f4830937abec62c",
+    "bytes": 25931,
+    "sha256": "eb78a9afac17b81741897a89cc4cd3a79abe56dd6fab41fa0d646acdcbaa7995"
+  },
+  "observer": {
+    "git_blob": "5ca69ca68cde91c2439f3b795f280cbc5e552793",
+    "bytes": 9286,
+    "sha256": "42ee5938f9eaea96b8f494e71c21f624a936b315580a15b33d14bfe19c1bdb8e"
+  },
+  "scope": "Metadata and process-lifecycle changes only. Prepared for root's separate fresh native R3 receiving folder. No product source edit or native browser action by this worker.",
+  "sourceOnlyChecks": {
+    "syntaxExit": 0,
+    "exactRegionAudit": {
+      "format": "taste65-r3-receiver-source-preservation/1",
+      "passed": true,
+      "originalSha256": "eb78a9afac17b81741897a89cc4cd3a79abe56dd6fab41fa0d646acdcbaa7995",
+      "candidateSha256": "12034dec1bf1661241b86b6fb8c244bb099eb9a4b61f7b0c3ec25d9a886e78d6",
+      "exactRegions": {
+        "inspector": {
+          "equal": true,
+          "bytes": 2547,
+          "sha256": "eaa993b190e9270ad444be56c9c06e5db7b19118eb15be31bc51764de951854c"
+        },
+        "verifyDOM": {
+          "equal": true,
+          "bytes": 2217,
+          "sha256": "0847da04185c4540822f9bf1818be3404c0273d3b4154fc24c68e2af4bfefdfc"
+        },
+        "separatorObservation": {
+          "equal": true,
+          "bytes": 892,
+          "sha256": "1137bbe27fda824a467e7d23e536b3856b094eef5fe2552764b5d887e947c828"
+        },
+        "allThreeFixtureLoop": {
+          "equal": true,
+          "bytes": 3706,
+          "sha256": "81a08522408cfaddcc4c2fb8287640cf2a81915de372d243a0f64e8919223edb"
+        },
+        "allCLIReceipts": {
+          "equal": true,
+          "bytes": 1404,
+          "sha256": "cf58144ee1245f384ee46e5538078449035ca076c01c6d5fffbe65c931f02a52"
+        },
+        "chromeLaunchFlags": {
+          "equal": true,
+          "bytes": 311,
+          "sha256": "d1e0571eb8e161a92bd14a099fa65a4590be06efc713b9030f18f36ff92f3e1f"
+        },
+        "manifestReferenceAndClosureConstants": {
+          "equal": true,
+          "bytes": 509,
+          "sha256": "a8267adb837dbf706690348caeebbc2852c10a3505664bce808cd14c50ea926f"
+        },
+        "finalEventGate": {
+          "equal": true,
+          "bytes": 456,
+          "sha256": "7cfa3440f37dda1a3681ff0514f9befe1d1b0dcad680bbed2ae5df604aed49cb"
+        },
+        "inputPreservationGate": {
+          "equal": true,
+          "bytes": 252,
+          "sha256": "763d53dfea0e784f9a7b6bcc65287f20aaf720878f819a8178ad59b99354a34d"
+        },
+        "capacityFunction": {
+          "equal": true,
+          "bytes": 279,
+          "sha256": "d9e29cb8daeb2e4bfe583418403b580dfe331fb5942d48915564b0b281c4e969"
+        }
+      },
+      "productExecution": false,
+      "browserExecution": false
+    }
+  },
+  "changes": [
+    "Fresh r3 output, copied-source, profile, Chrome log and receiving receipt names; candidate-r2, candidate-manifest-r2 and original references unchanged.",
+    "Add exact ordinary PowerShell executable and observer-module pins to before/after preservation. No new Chrome flags, execution-policy flags, elevation, de-elevation override or account change.",
+    "Original 20-second port deadline now permits only null or zero launcher exit and no signal, supporting the observed ordinary handoff without treating it as browser completion.",
+    "Before all page/DOM evaluation, ask CDP SystemInfo.getProcessInfo for exactly one browser PID. A bounded ordinary PowerShell read captures a held-process start ticks string, executable and fresh CIM PID/parent/creation/command-line identity. Direct launch requires browser PID equal launcher and parent equal Node PID; a handoff requires browser parent equal launcher.",
+    "Await the frozen observer's READY, with its exact profile/executable/start-time/CIM checks, before product page evaluation. Its wait is 90 seconds. The identity-capture and READY command lines and creation times must match.",
+    "Keep Browser.close transmission and response accounting. A clean socket close after a recorded successful send remains the original permitted response case. There is no new relaxation for protocol, timeout or send failure.",
+    "Actual browser completion comes only from observer.closed and its retained Windows handle exit code. Launcher close is separately recorded and must also be observed zero/no signal; it cannot substitute for browser exit.",
+    "Profile deletion requires admitted READY, successful close transmission and actual browser zero exit with observer exit zero/null signal. Failed identity or unconfirmed close holds the profile. Automatic taskkill of the launcher's process tree is removed.",
+    "Original preservation and final network/error event checks still run after shutdown. Exact unchanged product criteria plus confirmed lifecycle and removed profile are all required for accepted=true."
+  ],
+  "historicalPreparation": {
+    "supersededUnexecutedR3": "1ec7a5276263bcb3aeac6f5817a7571e5dab1e81",
+    "correction": "Moved only the launcher PID assertion after registering child close/error listeners, so a failed spawn remains observed and receipted.",
+    "priorFailedR2": "The earlier native R2 received three CLI outputs but zero browser groups because it treated launcher exit as browser exit. It remains a failed run; no R3 result is imputed to it.",
+    "observerNativeEvidence": "Root separately reports successful owned-browser graceful recovery with exact frozen observer, actual exit zero and subsequent absent profile/process. That execution is separate from this source-only R3 preparation."
+  },
+  "limits": [
+    "No actual R3 browser, corrected product DOM geometry, screenshot or PDF acceptance is claimed here.",
+    "Root owns staging, capacity admission, runtime execution and final receipt; peer source review remains independent.",
+    "No original failed root/profile/source was edited, no account or security setting was changed, and no ref, PR or Actions operation occurred."
+  ]
+}

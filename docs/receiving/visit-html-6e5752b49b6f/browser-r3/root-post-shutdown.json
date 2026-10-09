@@ -1,0 +1,48 @@
+{
+  "format": "taste65-root-post-browser-custody-check/1",
+  "worker": "estate-6e5752b49b6f/root",
+  "scope": "Read-only post-shutdown own-profile and Chrome-process reconciliation; original browser run is not replayed",
+  "deviceId": "edc358ed-5ad6-4036-b7aa-8667bf0e14e0",
+  "observation": {
+    "at": "2026-10-09T02:06:30.3745902Z",
+    "profilePath": "C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\owned-profile-r3",
+    "profileExists": false,
+    "ownedChromeProcesses": []
+  },
+  "shellPid": 41288,
+  "completion": {
+    "exitCode": 0,
+    "runtimeSeconds": 0.99
+  },
+  "rawStart": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Process started with PID 41288 (shell: powershell.exe)\nInitial output:\n{\"at\":\"2026-10-09T02:06:30.3745902Z\",\"profilePath\":\"C:\\\\Users\\\\jacob\\\\AppData\\\\Local\\\\Hamon\\\\estate-6e5752b49b6f\\\\taste-visit-html-receiving-root-r3\\\\owned-profile-r3\",\"profileExists\":false,\"ownedChromeProcesses\":[]}\r\n"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: MSI (edc358ed-5ad6-4036-b7aa-8667bf0e14e0)]"
+      }
+    ],
+    "isError": false
+  },
+  "rawCompletion": {
+    "content": [
+      {
+        "type": "text",
+        "text": "[Reading 2 new lines (total: 2 lines)]\n\n{\"at\":\"2026-10-09T02:06:30.3745902Z\",\"profilePath\":\"C:\\\\Users\\\\jacob\\\\AppData\\\\Local\\\\Hamon\\\\estate-6e5752b49b6f\\\\taste-visit-html-receiving-root-r3\\\\owned-profile-r3\",\"profileExists\":false,\"ownedChromeProcesses\":[]}\r\n\n✅ Process completed with exit code 0 (runtime: 0.99s)"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: MSI (edc358ed-5ad6-4036-b7aa-8667bf0e14e0)]"
+      }
+    ],
+    "isError": false
+  },
+  "limits": [
+    "Query targets only Chrome processes whose command line contains the exact owned R3 profile path.",
+    "The actual retained Windows process-handle exit and confirmed Browser.close are established by original R3 receipt86b50249, not inferred from this later absence check.",
+    "No files or processes were changed by this reconciliation."
+  ]
+}

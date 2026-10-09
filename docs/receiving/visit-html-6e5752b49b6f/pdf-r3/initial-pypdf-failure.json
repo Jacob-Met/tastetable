@@ -1,0 +1,86 @@
+{
+  "textAndGeometryPassed": false,
+  "wholePresentationAcceptance": "pending native raster/page inspection",
+  "scope": "Original corrected R3 PDFs only, exact frozen accounting and geometry predicates",
+  "capacity": {
+    "freeMemory": 8789864448,
+    "freeDisk": 202941833216,
+    "memoryFloor": 268435456,
+    "diskFloor": 67108864
+  },
+  "sourceRendererGit": "0c7a99 (full root source receipt binds exact pin)",
+  "started": 1791510753.2130575,
+  "fixtures": [
+    {
+      "pdf": 0,
+      "source": "C:\\Users\\jacob\\AppData\\Local\\HAMON\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\outputs-r3\\original-0.pdf",
+      "copy": {
+        "path": "C:\\Users\\jacob\\AppData\\Local\\HAMON\\estate-6e5752b49b6f\\taste65-original-pdf-receiving-native-r2\\corrected-originals-r3\\original-0.pdf",
+        "bytes": 111620,
+        "sha256": "3bfb91bf804b35a3aae6c713a35e8f11cec0931cba116a8c9acd847c159aac7d",
+        "git": "02d83282b87203547430abda9bb676f23f61e239"
+      },
+      "pageCount": 4,
+      "accounting": {
+        "passed": true,
+        "violations": [],
+        "actualOccurrenceKeys": [
+          "pick-0",
+          "pick-1",
+          "pick-2"
+        ],
+        "requiredFieldCount": 37,
+        "textCharacters": 2338,
+        "whitespacePolicy": "ASCII whitespace only is compacted for text accounting. No Unicode normalization; exact DOM CR/TAB/space identity is not inferred. Visual page inspection remains mandatory."
+      }
+    },
+    {
+      "pdf": 1,
+      "source": "C:\\Users\\jacob\\AppData\\Local\\HAMON\\estate-6e5752b49b6f\\taste-visit-html-receiving-root-r3\\outputs-r3\\original-1.pdf",
+      "copy": {
+        "path": "C:\\Users\\jacob\\AppData\\Local\\HAMON\\estate-6e5752b49b6f\\taste65-original-pdf-receiving-native-r2\\corrected-originals-r3\\original-1.pdf",
+        "bytes": 138007,
+        "sha256": "cd0668ec9febc67e2235d8cc8ada95b58e5280e4e59e38cc898f70f12aa613d2",
+        "git": "a119af45af2a19278eb394ac2881d3dbadba2682"
+      },
+      "pageCount": 7,
+      "accounting": {
+        "passed": false,
+        "violations": [
+          {
+            "kind": "missing field",
+            "field": "pick-1: explanation",
+            "expected": "Earlier explanation with \u00e9 and e\u0301."
+          },
+          {
+            "kind": "missing field",
+            "field": "pick-1: note",
+            "expected": "  NOTE2_BEGIN\rCR\r\nCRLF\nLF\tTAB  \u00e9 e\u0301 \ud83d\ude42 <tag> & \"literal\" NOTE2_END  "
+          },
+          {
+            "kind": "missing field",
+            "field": "pick-2: name",
+            "expected": "Cafe\u0301 and Caf\u00e9 \u2014 ORIGINAL_ORDER_END"
+          }
+        ],
+        "actualOccurrenceKeys": [
+          "pick-0",
+          "pick-1",
+          "pick-2"
+        ],
+        "requiredFieldCount": 36,
+        "textCharacters": 6236,
+        "whitespacePolicy": "ASCII whitespace only is compacted for text accounting. No Unicode normalization; exact DOM CR/TAB/space identity is not inferred. Visual page inspection remains mandatory."
+      }
+    }
+  ],
+  "geometry": [],
+  "failure": {
+    "type": "AssertionError",
+    "message": "{'passed': False, 'violations': [{'kind': 'missing field', 'field': 'pick-1: explanation', 'expected': 'Earlier explanation with \u00e9 and e\u0301.'}, {'kind': 'missing field', 'field': 'pick-1: note', 'expected': '  NOTE2_BEGIN\\rCR\\r\\nCRLF\\nLF\\tTAB  \u00e9 e\u0301 \ud83d\ude42 <tag> & \"literal\" NOTE2_END  '}, {'kind': 'missing field', 'field': 'pick-2: name', 'expected': 'Cafe\u0301 and Caf\u00e9 \u2014 ORIGINAL_ORDER_END'}], 'actualOccurrenceKeys': ['pick-0', 'pick-1', 'pick-2'], 'requiredFieldCount': 36, 'textCharacters': 6236, 'whitespacePolicy': 'ASCII whitespace only is compacted for text accounting. No Unicode normalization; exact DOM CR/TAB/space identity is not inferred. Visual page inspection remains mandatory.'}",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\jacob\\AppData\\Local\\Hamon\\estate-6e5752b49b6f\\taste65-original-pdf-receiving-native-r2\\receive-corrected-originals-r3.py\", line 56, in <module>\n    assert report[\"passed\"],report\n           ~~~~~~^^^^^^^^^^\nAssertionError: {'passed': False, 'violations': [{'kind': 'missing field', 'field': 'pick-1: explanation', 'expected': 'Earlier explanation with \u00e9 and e\u0301.'}, {'kind': 'missing field', 'field': 'pick-1: note', 'expected': '  NOTE2_BEGIN\\rCR\\r\\nCRLF\\nLF\\tTAB  \u00e9 e\u0301 \ud83d\ude42 <tag> & \"literal\" NOTE2_END  '}, {'kind': 'missing field', 'field': 'pick-2: name', 'expected': 'Cafe\u0301 and Caf\u00e9 \u2014 ORIGINAL_ORDER_END'}], 'actualOccurrenceKeys': ['pick-0', 'pick-1', 'pick-2'], 'requiredFieldCount': 36, 'textCharacters': 6236, 'whitespacePolicy': 'ASCII whitespace only is compacted for text accounting. No Unicode normalization; exact DOM CR/TAB/space identity is not inferred. Visual page inspection remains mandatory.'}\n"
+  },
+  "inputCount": 66,
+  "inputsUnchanged": true,
+  "elapsedSeconds": 0.460054874420166
+}

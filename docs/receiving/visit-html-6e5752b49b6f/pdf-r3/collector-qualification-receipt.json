@@ -1,0 +1,262 @@
+{
+  "passed": true,
+  "scope": "Qualification of PDF origin collector, not corrected product acceptance",
+  "capacity": {
+    "freeMemory": 9024245760,
+    "freeDisk": 202830561280,
+    "memoryFloor": 268435456,
+    "diskFloor": 67108864
+  },
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Python314\\python.exe",
+  "started": 1791510536.0540977,
+  "positive": [
+    {
+      "case": "original-record pick-1 note",
+      "sha256": "01899c8907e7feb35c91a57453b97319563dd4f79c42a3e1ec4cccdfb3161d14",
+      "expectedBaselines": [
+        100.0,
+        118.75,
+        137.5
+      ],
+      "measured": {
+        "field": "original-record pick-1 note",
+        "markers": [
+          "A",
+          "B",
+          "C"
+        ],
+        "separators": [
+          "CR",
+          "CRLF"
+        ],
+        "page": 1,
+        "stepsPt": [
+          18.75,
+          18.75
+        ],
+        "referencePt": 18.75,
+        "tolerancePt": 0.25,
+        "selectedLines": [
+          {
+            "page": 1,
+            "order": 0,
+            "text": "A",
+            "baseline": 100.0,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 1,
+            "text": "B",
+            "baseline": 118.75,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 2,
+            "text": "C",
+            "baseline": 137.5,
+            "fontSize": 12.0
+          }
+        ]
+      }
+    },
+    {
+      "case": "literal-notes pick-0 explanation",
+      "sha256": "16b837002351079c8f4fa5fe8b6bd3f371f0367b4ac4929408c948400df5e565",
+      "expectedBaselines": [
+        100.0,
+        118.75,
+        137.5,
+        156.25
+      ],
+      "measured": {
+        "field": "literal-notes pick-0 explanation",
+        "markers": [
+          "WHY_BEGIN",
+          "CR_ONLY",
+          "CRLF_PAIR",
+          "LF_LINE"
+        ],
+        "separators": [
+          "CR",
+          "CRLF",
+          "LF"
+        ],
+        "page": 1,
+        "stepsPt": [
+          18.75,
+          18.75,
+          18.75
+        ],
+        "referencePt": 18.75,
+        "tolerancePt": 0.25,
+        "selectedLines": [
+          {
+            "page": 1,
+            "order": 0,
+            "text": "WHY_BEGIN",
+            "baseline": 100.0,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 1,
+            "text": "CR_ONLY",
+            "baseline": 118.75,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 2,
+            "text": "CRLF_PAIR",
+            "baseline": 137.5,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 3,
+            "text": "LF_LINE",
+            "baseline": 156.25,
+            "fontSize": 12.0
+          }
+        ]
+      }
+    },
+    {
+      "case": "literal-notes pick-1 note",
+      "sha256": "1b8cd3f80ee90f585484c861d629b51c64eb1a846a8e5fc07587a4b4f9117886",
+      "expectedBaselines": [
+        100.0,
+        118.75,
+        137.5,
+        156.25
+      ],
+      "measured": {
+        "field": "literal-notes pick-1 note",
+        "markers": [
+          "NOTE2_BEGIN",
+          "CR",
+          "CRLF",
+          "LF"
+        ],
+        "separators": [
+          "CR",
+          "CRLF",
+          "LF"
+        ],
+        "page": 1,
+        "stepsPt": [
+          18.75,
+          18.75,
+          18.75
+        ],
+        "referencePt": 18.75,
+        "tolerancePt": 0.25,
+        "selectedLines": [
+          {
+            "page": 1,
+            "order": 0,
+            "text": "NOTE2_BEGIN",
+            "baseline": 100.0,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 1,
+            "text": "CR",
+            "baseline": 118.75,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 2,
+            "text": "CRLF",
+            "baseline": 137.5,
+            "fontSize": 12.0
+          },
+          {
+            "page": 1,
+            "order": 3,
+            "text": "LF",
+            "baseline": 156.25,
+            "fontSize": 12.0
+          }
+        ]
+      }
+    }
+  ],
+  "negative": [
+    {
+      "label": "collapsed-0",
+      "sha256": "57eb6d91e5e51338263049320422281d6518f56dfe59cf22e0f1fb70f43a7b2e",
+      "exception": "original-record pick-1 note: expected one separate line for 'A', got 0"
+    },
+    {
+      "label": "double-first-break-0",
+      "sha256": "bb9ba98d800a0b37633a736569db072339d9e647ea180c2ed8ee878dd9d75b98",
+      "exception": "original-record pick-1 note: CR/CRLF/LF do not each make one equal positive line advance"
+    },
+    {
+      "label": "collapsed-1",
+      "sha256": "08aefd9ecb9b42fe41088470e69b9d45e1637ac12d842ac1bfde4e86666252d9",
+      "exception": "literal-notes pick-0 explanation: expected one separate line for 'WHY_BEGIN', got 0"
+    },
+    {
+      "label": "double-first-break-1",
+      "sha256": "967d5c3479fb3ec88547fdef2b8b7b1c92cbf70633fad194c2f585b83cba7975",
+      "exception": "literal-notes pick-0 explanation: CR/CRLF/LF do not each make one equal positive line advance"
+    },
+    {
+      "label": "collapsed-2",
+      "sha256": "a2c7c185a4d322b55ffef5aa563ce5a7d7750203f26d2c022c15cd2298717104",
+      "exception": "literal-notes pick-1 note: expected one separate line for 'NOTE2_BEGIN', got 0"
+    },
+    {
+      "label": "double-first-break-2",
+      "sha256": "b854e9614b7df35269aa5903f60c68338cdbfcde53559277a044e929c4373a5f",
+      "exception": "literal-notes pick-1 note: CR/CRLF/LF do not each make one equal positive line advance"
+    },
+    {
+      "label": "skewed-selected-text",
+      "sha256": "f43d64c851b2b5d9acb98f2feaa29488595b5734aaaea81e2ae021f77d8abc89",
+      "exception": "Non-upright selected text outside admitted collector"
+    }
+  ],
+  "original": [
+    {
+      "pdf": 0,
+      "field": "original-record pick-1 note",
+      "expectedRefusal": "original-record pick-1 note: CR/CRLF/LF do not each make one equal positive line advance",
+      "collectorReturned": true
+    },
+    {
+      "pdf": 1,
+      "field": "literal-notes pick-0 explanation",
+      "expectedRefusal": "literal-notes pick-0 explanation: CR/CRLF/LF do not each make one equal positive line advance",
+      "collectorReturned": true
+    },
+    {
+      "pdf": 1,
+      "field": "literal-notes pick-1 note",
+      "expectedRefusal": "literal-notes pick-1 note: CR/CRLF/LF do not each make one equal positive line advance",
+      "collectorReturned": true
+    },
+    {
+      "pdf": 2,
+      "collectorReturned": true,
+      "noSeparatorCase": true,
+      "pageCount": 2
+    }
+  ],
+  "originalArchive": {
+    "bytes": 628636,
+    "sha256": "c194ea6190b3962dbec829e5e4c15724a3639ccc76ef7bbc74d86f598cbfe944",
+    "members": 61,
+    "git": "821366ae605e6a5f42723a515b4282f4e3e498ec",
+    "mirrorGit": "65423c728363abe5785731648f488c6bd5b5e5ff"
+  },
+  "inputsUnchanged": true,
+  "elapsedSeconds": 1.1318368911743164
+}

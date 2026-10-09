@@ -1,0 +1,164 @@
+{
+  "format": "tastetable-visit-html-root-blind-reference/1",
+  "worker": "estate-6e5752b49b6f/root",
+  "contractSha256": "137629ad8e711adf55b1b491b1a546bd8a3be9a84573af1c1ae59da09dc35f6c",
+  "sourceBase": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+  "candidateExposure": false,
+  "provenance": "Read only the frozen public contract and four exact original baseline codec/fixture Git blobs. No candidate renderer, CLI, tests or authored report inspected.",
+  "fixtures": [
+    {
+      "name": "original-record.json",
+      "text": "{\n  \"format\": \"tastetable.visit-record.v1\",\n  \"savedAt\": \"2024-03-03T12:00:00.000Z\",\n  \"source\": {\n    \"name\": \" original,week.json \",\n    \"weekText\": \"{\\\"format\\\": \\\"tastetable.saved-week.v1\\\", \\\"receivedAt\\\": \\\"2024-02-01T00:00:00.000Z\\\", \\\"savedAt\\\": \\\"2024-02-25T18:00:00.000Z\\\", \\\"calendarId\\\": null, \\\"inputs\\\": {\\\"city\\\": \\\"Example\\\", \\\"cuisines\\\": [], \\\"music\\\": [], \\\"films\\\": [], \\\"constraints\\\": []}, \\\"response\\\": {\\\"mock\\\": true, \\\"plan\\\": {\\\"meals\\\": [{\\\"name\\\": \\\"Café, \\\\\\\"Same\\\\\\\"\\\", \\\"entity_id\\\": \\\"same-id\\\", \\\"kind\\\": \\\"restaurant\\\", \\\"day\\\": \\\"Monday\\\", \\\"why\\\": \\\"  First\\\\r\\\\nreason  \\\"}, {\\\"name\\\": \\\"Café, \\\\\\\"Same\\\\\\\"\\\", \\\"entity_id\\\": \\\"same-id\\\", \\\"kind\\\": \\\"restaurant\\\", \\\"day\\\": \\\"Tuesday\\\", \\\"why\\\": \\\"Second reason\\\"}, {\\\"name\\\": \\\"Third café\\\", \\\"entity_id\\\": \\\"third-id\\\", \\\"kind\\\": \\\"restaurant\\\", \\\"day\\\": \\\"Friday\\\", \\\"why\\\": \\\"Third reason\\\"}], \\\"outing\\\": null, \\\"notes\\\": [], \\\"rejected\\\": []}, \\\"llm_only\\\": {\\\"meals\\\": [], \\\"outing\\\": {\\\"name\\\": \\\"Comparison\\\", \\\"why\\\": \\\"Original\\\", \\\"day\\\": \\\"Saturday\\\"}}, \\\"comparison\\\": {\\\"constraints\\\": [], \\\"grounded\\\": {\\\"picks\\\": 0, \\\"with_qloo_entity_id\\\": 0, \\\"with_affinity_evidence\\\": 0, \\\"constraint_checked\\\": 0, \\\"unsafe_candidates_rejected\\\": 0}, \\\"llm_only\\\": {\\\"picks\\\": 0, \\\"with_qloo_entity_id\\\": 0, \\\"with_affinity_evidence\\\": 0, \\\"constraint_checked\\\": 0, \\\"unsafe_candidates_rejected\\\": 0}}, \\\"trace\\\": []}, \\\"week\\\": {\\\"start\\\": \\\"2024-02-26\\\", \\\"assignments\\\": {\\\"pick-0\\\": \\\"Thursday\\\", \\\"pick-1\\\": null, \\\"pick-2\\\": \\\"Friday\\\"}}}\"\n  },\n  \"visits\": [\n    {\n      \"key\": \"pick-2\",\n      \"outcome\": \"unrecorded\",\n      \"date\": null,\n      \"note\": \"\"\n    },\n    {\n      \"key\": \"pick-1\",\n      \"outcome\": \"did_not_go\",\n      \"date\": \"2024-03-02\",\n      \"note\": \"  A\\rB\\r\\nC\\n🙂\\t \"\n    },\n    {\n      \"key\": \"pick-0\",\n      \"outcome\": \"went\",\n      \"date\": \"2024-03-01\",\n      \"note\": \"He said \\\"yes\\\", then went.\"\n    }\n  ]\n}\n",
+      "mode": "mock",
+      "expected": {
+        "name": "original-record.json",
+        "sourceMode": "mock",
+        "weekStart": "2024-02-26",
+        "savedAt": "2024-03-03T12:00:00.000Z",
+        "sourceName": " original,week.json ",
+        "sourceReceivedAt": "2024-02-01T00:00:00.000Z",
+        "sourceSavedAt": "2024-02-25T18:00:00.000Z",
+        "rows": [
+          {
+            "key": "pick-0",
+            "name": "Café, \"Same\"",
+            "entityId": "same-id",
+            "kind": "restaurant",
+            "originalDay": "Monday",
+            "plannedDay": "Thursday",
+            "plannedDate": "2024-02-29",
+            "outcome": "went",
+            "outcomeLabel": "Went",
+            "actualDate": "2024-03-01",
+            "note": "He said \"yes\", then went.",
+            "why": "  First\r\nreason  "
+          },
+          {
+            "key": "pick-1",
+            "name": "Café, \"Same\"",
+            "entityId": "same-id",
+            "kind": "restaurant",
+            "originalDay": "Tuesday",
+            "plannedDay": null,
+            "plannedDate": null,
+            "outcome": "did_not_go",
+            "outcomeLabel": "Did not go",
+            "actualDate": "2024-03-02",
+            "note": "  A\rB\r\nC\n🙂\t ",
+            "why": "Second reason"
+          },
+          {
+            "key": "pick-2",
+            "name": "Third café",
+            "entityId": "third-id",
+            "kind": "restaurant",
+            "originalDay": "Friday",
+            "plannedDay": "Friday",
+            "plannedDate": "2024-03-01",
+            "outcome": "unrecorded",
+            "outcomeLabel": "Not recorded",
+            "actualDate": null,
+            "note": "",
+            "why": "Third reason"
+          }
+        ]
+      }
+    },
+    {
+      "name": "literal-notes-世界.json",
+      "text": "{\n  \"format\": \"tastetable.visit-record.v1\",\n  \"savedAt\": \"2026-10-04T07:08:09.000Z\",\n  \"source\": {\n    \"name\": \"  Source <week> & \\\"quoted\\\" — 日本語.json  \",\n    \"weekText\": \"{\\n  \\\"format\\\": \\\"tastetable.saved-week.v1\\\",\\n  \\\"receivedAt\\\": \\\"2026-10-01T02:03:04.000Z\\\",\\n  \\\"savedAt\\\": \\\"2026-10-02T04:05:06.000Z\\\",\\n  \\\"calendarId\\\": null,\\n  \\\"inputs\\\": {\\n    \\\"city\\\": \\\"Example\\\",\\n    \\\"cuisines\\\": [],\\n    \\\"music\\\": [],\\n    \\\"films\\\": [],\\n    \\\"constraints\\\": []\\n  },\\n  \\\"response\\\": {\\n    \\\"mock\\\": false,\\n    \\\"plan\\\": {\\n      \\\"meals\\\": [\\n        {\\n          \\\"name\\\": \\\"  Literal 日本語 & \\\\\\\"quoted\\\\\\\" <img src=\\\\\\\"https://invalid.example/taste-test\\\\\\\" onerror=\\\\\\\"globalThis.__tasteInjected=true\\\\\\\"> <script>globalThis.__tasteInjected=true</script>  \\\",\\n          \\\"entity_id\\\": \\\" repeated  id <literal> & \\\",\\n          \\\"kind\\\": \\\"restaurant\\\",\\n          \\\"day\\\": \\\"Monday\\\",\\n          \\\"why\\\": \\\"WHY_BEGIN\\\\rCR_ONLY\\\\r\\\\nCRLF_PAIR\\\\nLF_LINE\\\\tTAB  TWO_SPACES <why> & WHY_END\\\"\\n        },\\n        {\\n          \\\"name\\\": \\\"Unbroken_WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW_NAME_END\\\",\\n          \\\"entity_id\\\": \\\" repeated  id <literal> & \\\",\\n          \\\"kind\\\": \\\"restaurant\\\",\\n          \\\"day\\\": \\\"Tuesday\\\",\\n          \\\"why\\\": \\\"Earlier explanation with é and é.\\\"\\n        },\\n        {\\n          \\\"name\\\": \\\"Café and Café — ORIGINAL_ORDER_END\\\",\\n          \\\"entity_id\\\": \\\"third-id\\\",\\n          \\\"kind\\\": \\\"restaurant\\\",\\n          \\\"day\\\": \\\"Friday\\\",\\n          \\\"why\\\": \\\"UNCHANGED_ORIGINAL_EXPLANATION_END\\\"\\n        }\\n      ],\\n      \\\"outing\\\": null,\\n      \\\"notes\\\": [],\\n      \\\"rejected\\\": []\\n    },\\n    \\\"llm_only\\\": {\\n      \\\"meals\\\": [],\\n      \\\"outing\\\": {\\n        \\\"name\\\": \\\"Comparison\\\",\\n        \\\"why\\\": \\\"Original\\\",\\n        \\\"day\\\": \\\"Saturday\\\"\\n      }\\n    },\\n    \\\"comparison\\\": {\\n      \\\"constraints\\\": [],\\n      \\\"grounded\\\": {\\n        \\\"picks\\\": 0,\\n        \\\"with_qloo_entity_id\\\": 0,\\n        \\\"with_affinity_evidence\\\": 0,\\n        \\\"constraint_checked\\\": 0,\\n        \\\"unsafe_candidates_rejected\\\": 0\\n      },\\n      \\\"llm_only\\\": {\\n        \\\"picks\\\": 0,\\n        \\\"with_qloo_entity_id\\\": 0,\\n        \\\"with_affinity_evidence\\\": 0,\\n        \\\"constraint_checked\\\": 0,\\n        \\\"unsafe_candidates_rejected\\\": 0\\n      }\\n    },\\n    \\\"trace\\\": []\\n  },\\n  \\\"week\\\": {\\n    \\\"start\\\": \\\"2024-02-26\\\",\\n    \\\"assignments\\\": {\\n      \\\"pick-0\\\": \\\"Thursday\\\",\\n      \\\"pick-1\\\": null,\\n      \\\"pick-2\\\": \\\"Friday\\\"\\n    }\\n  }\\n}\\n\"\n  },\n  \"visits\": [\n    {\n      \"key\": \"pick-2\",\n      \"outcome\": \"did_not_go\",\n      \"date\": null,\n      \"note\": \"\"\n    },\n    {\n      \"key\": \"pick-0\",\n      \"outcome\": \"went\",\n      \"date\": null,\n      \"note\": \"NOTE_BEGIN\\nN001  full literal line\\r\\nN002  full literal line\\r\\nN003  full literal line\\r\\nN004  full literal line\\r\\nN005  full literal line\\r\\nN006  full literal line\\r\\nN007  full literal line\\r\\nN008  full literal line\\r\\nN009  full literal line\\r\\nN010  full literal line\\r\\nN011  full literal line\\r\\nN012  full literal line\\r\\nN013  full literal line\\r\\nN014  full literal line\\r\\nN015  full literal line\\r\\nN016  full literal line\\r\\nN017  full literal line\\r\\nN018  full literal line\\r\\nN019  full literal line\\r\\nN020  full literal line\\r\\nN021  full literal line\\r\\nN022  full literal line\\r\\nN023  full literal line\\r\\nN024  full literal line\\r\\nN025  full literal line\\r\\nN026  full literal line\\r\\nN027  full literal line\\r\\nN028  full literal line\\r\\nN029  full literal line\\r\\nN030  full literal line\\r\\nN031  full literal line\\r\\nN032  full literal line\\r\\nN033  full literal line\\r\\nN034  full literal line\\r\\nN035  full literal line\\r\\nN036  full literal line\\r\\nN037  full literal line\\r\\nN038  full literal line\\r\\nN039  full literal line\\r\\nN040  full literal line\\r\\nN041  full literal line\\r\\nN042  full literal line\\r\\nN043  full literal line\\r\\nN044  full literal line\\r\\nN045  full literal line\\r\\nN046  full literal line\\r\\nN047  full literal line\\r\\nN048  full literal line\\r\\nN049  full literal line\\r\\nN050  full literal line\\r\\nN051  full literal line\\r\\nN052  full literal line\\r\\nN053  full literal line\\r\\nN054  full literal line\\r\\nN055  full literal line\\r\\nN056  full literal line\\r\\nN057  full literal line\\r\\nN058  full literal line\\r\\nN059  full literal line\\r\\nN060  full literal line\\r\\nN061  full literal line\\r\\nN062  full literal line\\r\\nN063  full literal line\\r\\nN064  full literal line\\r\\nN065  full literal line\\r\\nN066  full literal line\\r\\nN067  full literal line\\r\\nN068  full literal line\\r\\nN069  full literal line\\r\\nN070  full literal line\\r\\nN071  full literal line\\r\\nN072  full literal line\\r\\nN073  full literal line\\r\\nN074  full literal line\\r\\nN075  full literal line\\r\\nN076  full literal line\\r\\nN077  full literal line\\r\\nN078  full literal line\\r\\nN079  full literal line\\r\\nN080  full literal line\\r\\nN081  full literal line\\r\\nN082  full literal line\\r\\nN083  full literal line\\r\\nN084  full literal line\\r\\nN085  full literal line\\r\\nN086  full literal line\\r\\nN087  full literal line\\r\\nN088  full literal line\\r\\nN089  full literal line\\r\\nN090  full literal line\\r\\nN091  full literal line\\r\\nN092  full literal line\\r\\nN093  full literal line\\r\\nN094  full literal line\\r\\nN095  full literal line\\r\\nN096  full literal line\\r\\nN097  full literal line\\r\\nN098  full literal line\\r\\nN099  full literal line\\r\\nN100  full literal line\\r\\nN101  full literal line\\r\\nN102  full literal line\\r\\nN103  full literal line\\r\\nN104  full literal line\\r\\nN105  full literal line\\r\\nN106  full literal line\\r\\nN107  full literal line\\r\\nN108  full literal line\\nUNBROKEN_VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV_END\\nNOTE_END\"\n    },\n    {\n      \"key\": \"pick-1\",\n      \"outcome\": \"unrecorded\",\n      \"date\": \"2025-01-01\",\n      \"note\": \"  NOTE2_BEGIN\\rCR\\r\\nCRLF\\nLF\\tTAB  é é 🙂 <tag> & \\\"literal\\\" NOTE2_END  \"\n    }\n  ]\n}\n",
+      "mode": "live",
+      "expected": {
+        "name": "literal-notes-世界.json",
+        "sourceMode": "live",
+        "weekStart": "2024-02-26",
+        "savedAt": "2026-10-04T07:08:09.000Z",
+        "sourceName": "  Source <week> & \"quoted\" — 日本語.json  ",
+        "sourceReceivedAt": "2026-10-01T02:03:04.000Z",
+        "sourceSavedAt": "2026-10-02T04:05:06.000Z",
+        "rows": [
+          {
+            "key": "pick-0",
+            "name": "  Literal 日本語 & \"quoted\" <img src=\"https://invalid.example/taste-test\" onerror=\"globalThis.__tasteInjected=true\"> <script>globalThis.__tasteInjected=true</script>  ",
+            "entityId": " repeated  id <literal> & ",
+            "kind": "restaurant",
+            "originalDay": "Monday",
+            "plannedDay": "Thursday",
+            "plannedDate": "2024-02-29",
+            "outcome": "went",
+            "outcomeLabel": "Went",
+            "actualDate": null,
+            "note": "NOTE_BEGIN\nN001  full literal line\r\nN002  full literal line\r\nN003  full literal line\r\nN004  full literal line\r\nN005  full literal line\r\nN006  full literal line\r\nN007  full literal line\r\nN008  full literal line\r\nN009  full literal line\r\nN010  full literal line\r\nN011  full literal line\r\nN012  full literal line\r\nN013  full literal line\r\nN014  full literal line\r\nN015  full literal line\r\nN016  full literal line\r\nN017  full literal line\r\nN018  full literal line\r\nN019  full literal line\r\nN020  full literal line\r\nN021  full literal line\r\nN022  full literal line\r\nN023  full literal line\r\nN024  full literal line\r\nN025  full literal line\r\nN026  full literal line\r\nN027  full literal line\r\nN028  full literal line\r\nN029  full literal line\r\nN030  full literal line\r\nN031  full literal line\r\nN032  full literal line\r\nN033  full literal line\r\nN034  full literal line\r\nN035  full literal line\r\nN036  full literal line\r\nN037  full literal line\r\nN038  full literal line\r\nN039  full literal line\r\nN040  full literal line\r\nN041  full literal line\r\nN042  full literal line\r\nN043  full literal line\r\nN044  full literal line\r\nN045  full literal line\r\nN046  full literal line\r\nN047  full literal line\r\nN048  full literal line\r\nN049  full literal line\r\nN050  full literal line\r\nN051  full literal line\r\nN052  full literal line\r\nN053  full literal line\r\nN054  full literal line\r\nN055  full literal line\r\nN056  full literal line\r\nN057  full literal line\r\nN058  full literal line\r\nN059  full literal line\r\nN060  full literal line\r\nN061  full literal line\r\nN062  full literal line\r\nN063  full literal line\r\nN064  full literal line\r\nN065  full literal line\r\nN066  full literal line\r\nN067  full literal line\r\nN068  full literal line\r\nN069  full literal line\r\nN070  full literal line\r\nN071  full literal line\r\nN072  full literal line\r\nN073  full literal line\r\nN074  full literal line\r\nN075  full literal line\r\nN076  full literal line\r\nN077  full literal line\r\nN078  full literal line\r\nN079  full literal line\r\nN080  full literal line\r\nN081  full literal line\r\nN082  full literal line\r\nN083  full literal line\r\nN084  full literal line\r\nN085  full literal line\r\nN086  full literal line\r\nN087  full literal line\r\nN088  full literal line\r\nN089  full literal line\r\nN090  full literal line\r\nN091  full literal line\r\nN092  full literal line\r\nN093  full literal line\r\nN094  full literal line\r\nN095  full literal line\r\nN096  full literal line\r\nN097  full literal line\r\nN098  full literal line\r\nN099  full literal line\r\nN100  full literal line\r\nN101  full literal line\r\nN102  full literal line\r\nN103  full literal line\r\nN104  full literal line\r\nN105  full literal line\r\nN106  full literal line\r\nN107  full literal line\r\nN108  full literal line\nUNBROKEN_VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV_END\nNOTE_END",
+            "why": "WHY_BEGIN\rCR_ONLY\r\nCRLF_PAIR\nLF_LINE\tTAB  TWO_SPACES <why> & WHY_END"
+          },
+          {
+            "key": "pick-1",
+            "name": "Unbroken_WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW_NAME_END",
+            "entityId": " repeated  id <literal> & ",
+            "kind": "restaurant",
+            "originalDay": "Tuesday",
+            "plannedDay": null,
+            "plannedDate": null,
+            "outcome": "unrecorded",
+            "outcomeLabel": "Not recorded",
+            "actualDate": "2025-01-01",
+            "note": "  NOTE2_BEGIN\rCR\r\nCRLF\nLF\tTAB  é é 🙂 <tag> & \"literal\" NOTE2_END  ",
+            "why": "Earlier explanation with é and é."
+          },
+          {
+            "key": "pick-2",
+            "name": "Café and Café — ORIGINAL_ORDER_END",
+            "entityId": "third-id",
+            "kind": "restaurant",
+            "originalDay": "Friday",
+            "plannedDay": "Friday",
+            "plannedDate": "2024-03-01",
+            "outcome": "did_not_go",
+            "outcomeLabel": "Did not go",
+            "actualDate": null,
+            "note": "",
+            "why": "UNCHANGED_ORIGINAL_EXPLANATION_END"
+          }
+        ]
+      }
+    },
+    {
+      "name": "unknown-empty-BOM.json",
+      "text": "﻿{\n  \"format\": \"tastetable.visit-record.v1\",\n  \"savedAt\": \"2024-03-03T12:00:00.000Z\",\n  \"source\": {\n    \"name\": \"Empty source — unknown provenance.json\",\n    \"weekText\": \"{\\n  \\\"format\\\": \\\"tastetable.saved-week.v1\\\",\\n  \\\"receivedAt\\\": \\\"2024-02-01T00:00:00.000Z\\\",\\n  \\\"savedAt\\\": \\\"2024-02-25T18:00:00.000Z\\\",\\n  \\\"calendarId\\\": null,\\n  \\\"inputs\\\": {\\n    \\\"city\\\": \\\"Example\\\",\\n    \\\"cuisines\\\": [],\\n    \\\"music\\\": [],\\n    \\\"films\\\": [],\\n    \\\"constraints\\\": []\\n  },\\n  \\\"response\\\": {\\n    \\\"plan\\\": {\\n      \\\"meals\\\": [],\\n      \\\"outing\\\": null,\\n      \\\"notes\\\": [],\\n      \\\"rejected\\\": []\\n    },\\n    \\\"llm_only\\\": {\\n      \\\"meals\\\": [],\\n      \\\"outing\\\": {\\n        \\\"name\\\": \\\"Comparison\\\",\\n        \\\"why\\\": \\\"Original\\\",\\n        \\\"day\\\": \\\"Saturday\\\"\\n      }\\n    },\\n    \\\"comparison\\\": {\\n      \\\"constraints\\\": [],\\n      \\\"grounded\\\": {\\n        \\\"picks\\\": 0,\\n        \\\"with_qloo_entity_id\\\": 0,\\n        \\\"with_affinity_evidence\\\": 0,\\n        \\\"constraint_checked\\\": 0,\\n        \\\"unsafe_candidates_rejected\\\": 0\\n      },\\n      \\\"llm_only\\\": {\\n        \\\"picks\\\": 0,\\n        \\\"with_qloo_entity_id\\\": 0,\\n        \\\"with_affinity_evidence\\\": 0,\\n        \\\"constraint_checked\\\": 0,\\n        \\\"unsafe_candidates_rejected\\\": 0\\n      }\\n    },\\n    \\\"trace\\\": []\\n  },\\n  \\\"week\\\": {\\n    \\\"start\\\": \\\"2024-02-26\\\",\\n    \\\"assignments\\\": {}\\n  }\\n}\\n\"\n  },\n  \"visits\": []\n}\n",
+      "mode": "unknown",
+      "expected": {
+        "name": "unknown-empty-BOM.json",
+        "sourceMode": "unknown",
+        "weekStart": "2024-02-26",
+        "savedAt": "2024-03-03T12:00:00.000Z",
+        "sourceName": "Empty source — unknown provenance.json",
+        "sourceReceivedAt": "2024-02-01T00:00:00.000Z",
+        "sourceSavedAt": "2024-02-25T18:00:00.000Z",
+        "rows": []
+      }
+    }
+  ],
+  "groups": [
+    {
+      "name": "original saved occurrence order, omitted picks and three literal recorded outcomes",
+      "scope": "actual CLI output, original3articles, allprovenance, exactCR/CRLF/whitespace in DOM,1280and390, physicalPDF"
+    },
+    {
+      "name": "literal markup/Unicode, long notes and absent actual date without inference",
+      "scope": "actual CLI output,3articles inoriginalorder despitepermutedvisits, repeatedIDs, liveprovenance, strictnoactivecontent/network,108line+600unbrokencharacter note acrossprintpages,1280and390, physicalPDF"
+    },
+    {
+      "name": "unknown provenance and empty original pick list with raw BOM custody",
+      "scope": "actual CLI output0articles,unknownprovenance,originaltimestamps/rawBOMhash,1280and390, physicalPDF"
+    }
+  ],
+  "receivingContract": {
+    "runtime": "Existing LA7 Node24.21.0 and Chrome154 exact qualified bytes/identity; fresh2GiBRAM/1GiBdisk at entry/immediateprelaunch; ownfreshprofile only; no installation/Actions/policy change.",
+    "cli": "Invoke exact offered CLI once per frozeninput with explicit ownoutput. Native exit0/nullsignal, one exactJSONreceipt andstderr empty, hash actualHTML/rawinput. Peer owns broader negative/atomicity/CLI tests.",
+    "dom": "Only semantic HTML assertions from public contract: one article peroriginaloccurrence and record values inthatarticle, ordered; h1/headings/definitionlists; all literaltext exact including CR references; complete optionaldate/empty-note/kept-off-weeklabels; no active/network nodes/attributes; CSPdefault-srcnone; no pageerrors/externalrequests.",
+    "layout": "At1280and390 no documenthorizontaloverflow; every displayed article/note has visible geometric area and no clipping/overflowhidden/fixedheight. Exacttext should remain readable withpre-wrap; do not infer wholepage fromcroppedPNG.",
+    "print": "Physical original A4 PDFs fromactualChrome, printBackgroundtrue/displayHeaderFooterfalse. Native_runtime independently renders/reads those originals; rootmust not regenerate afterreceipt.",
+    "termination": "Explicitly record successful Browser.close request transmission, tolerate only recorded normal socket-close response after sentrequest, actualobserved childclose0/nullsignal, noforcedfallback foracceptance, ownprofile removed only afterconfirmedclose.",
+    "preservation": "Exactbefore/after source/input/runtime records and originalHTML/PDF/PNG hashes. No substitution/comparator/source/UIchanges."
+  }
+}

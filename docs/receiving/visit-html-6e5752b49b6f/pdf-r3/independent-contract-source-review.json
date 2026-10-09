@@ -1,0 +1,288 @@
+{
+  "format": "tastetable65-independent-pdf-contract-review/1",
+  "reviewer": "estate-6e5752b49b6f/production_slice",
+  "repository": "https://github.com/Jacob-Met/tastetable",
+  "decision": "ACCEPT the bounded receiving-only quantization correction on the exact retained records. No product or Unicode-accounting correction is warranted by the two reviewed discrepancies.",
+  "scope": "Independent read of the original public contract, actual renderer/guide, root's exact browser receipt, original-PDF source operators/CMaps and native decoding/receiving records; numerical review of the proposed grid proof. No product, fixture or PDF edits; no browser, reprint, rasterization or test-suite replay.",
+  "originalContract": {
+    "git": "86c9c81101df9799065416640cbcd883f0beb43f",
+    "bytes": 6164,
+    "sha256": "137629ad8e711adf55b1b491b1a546bd8a3be9a84573af1c1ae59da09dc35f6c",
+    "read": "Full original JSON read after root created/read back exact recovered archive member; the prior computed-object GET404 remains a prior retrieval result."
+  },
+  "contractObligations": [
+    "The model.content contract requires exact recorded notes and original explanation, literal names/IDs and independent dates/outcomes; it does not authorize inferred or normalized values.",
+    "The model.literal contract expressly requires CR/CRLF/LF/TAB, Unicode and multiple spaces to remain in DOM text with pre-wrap.",
+    "The document contract requires visible complete content, ordinary offline printing and no clipping/hidden fixed-height content. It specifies no subpixel PDF-baseline uniformity threshold.",
+    "HTML/PDF is a readable report rather than the editable original JSON/complete source backup. This distinction does not excuse missing visible separators or erased literal identifiers.",
+    "The separately frozen PDF contract forbids Unicode compatibility normalization and requires original-byte custody, field/occurrence/provenance accounting plus visual page inspection; extracted ASCII whitespace handling is not proof of DOM identity."
+  ],
+  "source": {
+    "rendererGit": "2ccb10513cf9df1461e16f56c22cbbba55c6966a",
+    "rendererBytes": 8975,
+    "rendererSha256": "228f65b99c6826753e12d79c504bcd8c8d91915b2d4bbc6c78e0881b00cd5e55",
+    "guideGit": "c59fe76e6e57ecb87cf6045d01ed1d67e1802f44",
+    "inspection": "The corrected escapeText keeps CR as a character reference; only a lone CR receives a following br. CRLF already obtains one line break from LF. No Unicode normalization call or replacement is introduced. CSS source uses line-height1.55 and the actual DOM reports16px/24.8px."
+  },
+  "evidence": {
+    "browserReceipt": {
+      "git": "86b50249c4d9c6747e06b0c65e41411a411a687a",
+      "bytes": 229512,
+      "sha256": "ab81901725fc80ea6e6e3bf5e16b690fe9d75a6e6a9d893b4193914678b74587",
+      "reviewed": "All three original records, exact literal DOM text, screen/print geometry and actual exit/custody records read. Three fields at desktop,narrow,print supply24 exact positive24.796875CSS-pixel separator advances."
+    },
+    "pdfContractGit": "74ad8a364f5e4da2809dcfd7615397b7b1b87a2b",
+    "fixtureLedgerGit": "f4af9e1197ded2ee1b732ad21265786122b7bb41",
+    "originalPredicateGit": "2b60e392c939621c4220fe1e8255ead36a93eab3",
+    "originCollectorGit": "e90f1463c4c296db7ac4e8d85b2dd770ef5494a5",
+    "initialFailureGit": "c1793856e90880fde758ff4ff243fc7561921615",
+    "rawOriginInspectionGit": "1c436dd53672be4951b2eb68ad049f6467d31067",
+    "unicodeOperatorsAndCMapsGit": "e16d2b0fac9b616fd11ae6369df646e657b0124c",
+    "popplerReceiptGit": "107f57756cd3db383b0c4ab208727eb7f81658ed",
+    "quantizationHelperGit": "a7e6e981164f012ddb9d518aa96a7b6d689275b1",
+    "quantizationTestsGit": "188b05943d62cd268733c046c1be4a61dfbaeaaa",
+    "quantizationReceiptGit": "54d8dfbddf21d449f8a3f97c4a7427061df03c71",
+    "originalPdfSha256": [
+      "3bfb91bf804b35a3aae6c713a35e8f11cec0931cba116a8c9acd847c159aac7d",
+      "cd0668ec9febc67e2235d8cc8ada95b58e5280e4e59e38cc898f70f12aa613d2",
+      "581ad80dae27e0f56e71c4cecb7d3fddb78d21565c64bf7dda9cbefa192aeb99"
+    ]
+  },
+  "unicodeDecision": {
+    "finding": "The three apparent missing fields in pypdf plain-text accounting are an extraction-path limitation on these exact PDFs, not evidence that the product normalized or lost the source characters.",
+    "sourceProof": "In the original stress PDF, three Span BDC sequences carry ActualText FEFF00650301 (UTF-16BE BOM then U+0065,U+0301), around glyph0070. Both F5 andF6 ToUnicode CMaps map glyph0070 to U+00E9. The source replacement text preserves the decomposed sequence while the visual glyph mapping is composed.",
+    "independentReviewAssertions": "All three JSON operator records decode to code points101,769; both relevant CMap entries explicitly map0070→00E9. The bound original PDF SHA matches root's actual PDF1.",
+    "nativeEvidence": "Unchanged Poppler26.01.0 accounting passes37+36+7=80 fields, with zero Unicode normalization, on all three original PDFs. Native_runtime's record shows12 actual decoding/raster commands exit0,72 admitted inputs unchanged, and no out-of-page word boxes.",
+    "disposition": "Do not normalize expected source strings or weaken the80-field oracle. Preserve pypdf's original failure and account using the original PDF's ActualText plus the unchanged exact Poppler result. No claim that every PDF extractor will return identical text."
+  },
+  "geometryDecision": {
+    "originalFailure": "The original predicate requires each step to equal the final authored step within max(0.25pt,1%). It therefore rejects two correctly separated fields with18.0/18.75pt advances. That0.25pt uniformity threshold is receiver-authored, not in the public contract.",
+    "rawEvidence": {
+      "oldCollapsed": "Original R1 A/B, WHY_BEGIN/CR_ONLY and NOTE2_BEGIN/CR share an identical Tm y. This remains a real product defect and must continue to fail.",
+      "correctedTmY": {
+        "ABC": [
+          2488,
+          2513,
+          2538
+        ],
+        "WHY": [
+          4695,
+          4720,
+          4745,
+          4769
+        ],
+        "NOTE2": [
+          5727,
+          5751,
+          5776,
+          5801
+        ]
+      },
+      "scale": 0.74999996875,
+      "actualStepsPt": {
+        "ABC": [
+          18.74999921875019,
+          18.749999218749963
+        ],
+        "WHY": [
+          18.749999218749963,
+          18.749999218750418,
+          17.999999249999746
+        ],
+        "NOTE2": [
+          17.999999249999746,
+          18.749999218750418,
+          18.749999218750418
+        ]
+      }
+    },
+    "acceptedProof": "For the exact admitted16CSS-pixel/12-point text and integer Tm grid, bind the physical pitch to1.55×fontSize. Require exact unique markers, order, same page, finite unskewed admitted transform/font and unstripped single-line raw callbacks. Each transition remains positive. The residuals baseline_i−baseline_0−i×pitch must fit one shared grid quantum, max−min≤q+1e−5pt. This is a phase-consistency proof, not arbitrary tolerance growth or calibration from the last potentially faulty separator.",
+    "executionReceipt": "The preserved-origin-only native successor passes all3 corrected fields, rejects all3 old collapsed fields, accepts15 quantization-phase positives and rejects39 negative controls. Inputs remain hash-exact. It does not reparse/reprint/raster the PDFs.",
+    "reviewedResidualRangesPt": [
+      0.29999998750015067,
+      0.5999999750002516,
+      0.5999999750002551
+    ],
+    "quantumPt": 0.74999996875,
+    "sensitivity": "Source/test review confirms collapse, reversed order, doubled first CR, uniformly doubled lines, cumulative drift, missing/duplicate markers, cross-page ambiguity, nonfinite geometry, stripped callback newlines and wrong grid remain refusals.",
+    "limits": "This helper receives the pinned collector records and exact report typography; it is not a general validator for arbitrary caller-supplied PDF geometry. Different transforms/fonts/page boundaries require separate admission rather than silently widening this bound."
+  },
+  "ownNumericalReview": {
+    "scope": "Independent numeric review of reported raw Tm/CTM coordinates; not independent PDF decoding or product execution",
+    "reportedCoordinates": {
+      "WHY": [
+        4695,
+        4720,
+        4745,
+        4769
+      ],
+      "NOTE2": [
+        5727,
+        5751,
+        5776,
+        5801
+      ]
+    },
+    "positive": [
+      {
+        "rawY": [
+          4695,
+          4720,
+          4745,
+          4769
+        ],
+        "stepsPt": [
+          18.749999218749963,
+          18.749999218750418,
+          17.999999249999746
+        ],
+        "nominalPt": 18.599999225,
+        "quantumPt": 0.74999996875,
+        "residualRangePt": 0.5999999750002516,
+        "accepted": true
+      },
+      {
+        "rawY": [
+          5727,
+          5751,
+          5776,
+          5801
+        ],
+        "stepsPt": [
+          17.999999249999746,
+          18.749999218750418,
+          18.749999218750418
+        ],
+        "nominalPt": 18.599999225,
+        "quantumPt": 0.74999996875,
+        "residualRangePt": 0.5999999750002551,
+        "accepted": true
+      }
+    ],
+    "controls": {
+      "collapsed": {
+        "rawY": [
+          0,
+          0,
+          25,
+          50
+        ],
+        "stepsPt": [
+          0,
+          18.74999921875,
+          18.74999921875
+        ],
+        "nominalPt": 18.599999225,
+        "quantumPt": 0.74999996875,
+        "residualRangePt": 18.599999225,
+        "accepted": false
+      },
+      "doubledCR": {
+        "rawY": [
+          0,
+          50,
+          75,
+          99
+        ],
+        "stepsPt": [
+          37.4999984375,
+          18.74999921875,
+          17.999999249999995
+        ],
+        "nominalPt": 18.599999225,
+        "quantumPt": 0.74999996875,
+        "residualRangePt": 19.049999206249993,
+        "accepted": false
+      },
+      "allDoubled": {
+        "rawY": [
+          0,
+          50,
+          100,
+          149
+        ],
+        "stepsPt": [
+          37.4999984375,
+          37.4999984375,
+          36.74999846875001
+        ],
+        "nominalPt": 18.599999225,
+        "quantumPt": 0.74999996875,
+        "residualRangePt": 55.94999766875,
+        "accepted": false
+      },
+      "slowCumulativeDrift": {
+        "rawY": [
+          0,
+          24,
+          48,
+          72
+        ],
+        "stepsPt": [
+          17.99999925,
+          17.99999925,
+          17.999999250000002
+        ],
+        "nominalPt": 18.599999225,
+        "quantumPt": 0.74999996875,
+        "residualRangePt": 1.7999999250000016,
+        "accepted": false
+      },
+      "reversed": {
+        "rawY": [
+          0,
+          25,
+          24,
+          50
+        ],
+        "stepsPt": [
+          18.74999921875,
+          -0.7499999687500001,
+          19.4999991875
+        ],
+        "nominalPt": 18.599999225,
+        "quantumPt": 0.74999996875,
+        "residualRangePt": 19.34999919375,
+        "accepted": false
+      },
+      "ordinaryRounding": {
+        "rawY": [
+          0,
+          25,
+          50,
+          74
+        ],
+        "stepsPt": [
+          18.74999921875,
+          18.74999921875,
+          17.999999250000002
+        ],
+        "nominalPt": 18.599999225,
+        "quantumPt": 0.74999996875,
+        "residualRangePt": 0.5999999749999958,
+        "accepted": true
+      }
+    }
+  },
+  "provenanceAndLimits": [
+    "Original pypdf field failure and0.25pt predicate failures remain immutable and are not relabeled as passing executions.",
+    "The original R1 lone-CR presentation defect remains demonstrated by identical raw baselines; the corrected R2 renderer is a distinct source successor.",
+    "No product, expected record, Unicode comparison, PDF bytes or print job changed during this review.",
+    "I read the existing operator/decoder evidence; I did not independently extract or raster all13 pages. Native_runtime owns those actual commands and all-page visual inspection; root owns actual browser/print and its image review.",
+    "One attempted fileless raw-PDF probe received closed stdin and decoded0 bytes, producing no original-PDF observation. It is excluded from this review's positive evidence; the actual raw operators used here are the pinned native collector record.",
+    "The root report's exact-source, process-exit and DOM claims are reviewed evidence, not a fresh execution attributed to this reviewer.",
+    "Full archive transport/final tree integration remain the custody owner's gate. This receipt resolves only the consequential contract/quantization/Unicode acceptance question."
+  ],
+  "primaryTechnicalReferences": [
+    {
+      "url": "https://www.w3.org/TR/css-values-3/#absolute-lengths",
+      "use": "CSS fixed absolute-unit relation96px=72pt; nominal24.8px is18.6pt. This does not itself guarantee a renderer's quantization grid; that grid comes from the actual PDF operators."
+    },
+    {
+      "url": "https://pdf-issues.pdfa.org/32000-2-2020/clause14.html#1494-replacement-text",
+      "use": "PDF ActualText on a Span marked-content sequence supplies replacement character content. Actual relevant values are independently pinned in the source-operator evidence."
+    }
+  ],
+  "openFindings": [],
+  "finalBoundary": "No remaining source/contract blocker to accepting this exact product output with the receiving-only quantization successor and unchanged Unicode accounting. Root/native custody and visual gates retain their separate ownership."
+}
