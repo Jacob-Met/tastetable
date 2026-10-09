@@ -311,3 +311,7 @@ Open **Visit record (new tab)** in the planner to record what happened beside th
 ### Visit records as CSV
 
 Export an explicitly selected saved visit record with `node tools/visit_record_to_csv.mjs --input visits.json --output visits.csv` (Node.js 22+). The create-only CSV retains every original occurrence, including omitted and unrecorded picks, with separate planned and actual dates, outcomes and literal notes. Keep the JSON for reopening the record. See [CSV columns, text import and file delivery](docs/VISIT_RECORD_CSV.md).
+
+## Common saved suggestions
+
+Compare two to six explicitly chosen saved weeks in the separate [Common saved suggestions page](static/common-suggestions.html). It shows exact kind/ID identities present in every source, preserving all duplicate occurrences, explanations, arranged dates and source modes. This is read-only saved-plan review; it does not infer shared availability or rerun venue checks. See the [usage and limits guide](docs/COMMON_SUGGESTIONS.md).

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Common saved suggestions · TasteTable</title>
+<link rel="stylesheet" href="./common_suggestions.css">
+</head>
+<body>
+<header>
+  <p class="eyebrow">TasteTable · saved-plan review</p>
+  <h1>Common saved suggestions</h1>
+  <p class="lead">Find the recorded suggestions that appear in every chosen week, with each plan's own explanations kept beside them.</p>
+  <p id="limits" class="context">Choose 2–6 saved-week JSON files, up to 2 MiB and 500 original picks each. File positions are chosen plans, not verified people; loading the same file twice counts twice. Files stay in this page and are never uploaded or saved automatically.</p>
+  <aside class="notice" role="note">
+    These are unsigned saved suggestions. Original heuristic checks have not been rerun.
+    Matching IDs do not establish current suitability, shared availability or a reservation.
+    Dates remain each plan's own arrangement. Not medical or dietary advice; confirm needs with the venue and care team.
+  </aside>
+</header>
+<main>
+  <section id="input-panel" class="card" aria-labelledby="input-heading">
+    <h2 id="input-heading">1. Choose saved weeks</h2>
+    <p>Keep the original JSON files. A refused replacement keeps the previously accepted file in that position; compare again when the displayed inputs are the ones you want.</p>
+    <div id="source-slots" class="slots"></div>
+    <div class="actions">
+      <button id="add-source" type="button">Add source</button>
+      <button id="compare-sources" class="primary" type="button" disabled>Compare loaded weeks</button>
+    </div>
+    <p id="comparison-status" role="status" aria-live="polite">Choose a saved week for every source.</p>
+  </section>
+  <section id="comparison-result" aria-labelledby="result-heading" hidden>
+    <div class="result-heading">
+      <div><p class="eyebrow">Recorded agreement</p><h2 id="result-heading">Your comparison</h2></div>
+      <div class="actions result-actions">
+        <button id="download-comparison" type="button" disabled>Download comparison JSON</button>
+        <button id="print-comparison" type="button" disabled>Print comparison</button>
+      </div>
+    </div>
+    <p id="result-summary" class="summary"></p>
+    <p id="export-status" role="status" aria-live="polite"></p>
+    <p class="context">Groups follow the first file's original suggestion order. Every duplicate occurrence is retained, including picks kept off the week. No affinity ranking or common date is inferred. Mixed mock/live/unknown labels remain separate.</p>
+    <h3>Sources in this comparison</h3>
+    <div id="source-details" class="source-details"></div>
+    <h3>Common recorded identities</h3>
+    <div id="common-matches"></div>
+    <p class="report-note">The comparison JSON is an inspection report, not an editable saved week. It contains the full admitted snapshots, including their original response and trace. Keep the original files to reopen or rearrange each week. A downloaded or printed copy does not update when inputs change.</p>
+  </section>
+</main>
+<footer>Read-only saved-plan comparison · No provider request, booking or new venue check.</footer>
+<script type="module" src="./common_suggestions_ui.mjs"></script>
+</body>
+</html>
