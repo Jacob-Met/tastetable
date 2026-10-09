@@ -1,0 +1,127 @@
+{
+  "format": "tastetable-saved-week-call-sheet-proposal/1",
+  "frozen_at": "2026-10-09T00:47:46.257486+00:00",
+  "status": "Public contract frozen before candidate source; root ownership claim pending.",
+  "repository": "Jacob-Met/tastetable",
+  "base": {
+    "commit": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+    "tree": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6",
+    "leaves": 818
+  },
+  "beneficiary": "A caregiver who retains a saved arranged week and its matching venue-note file can prepare the existing readable plain-text call sheet directly, without reopening the planner, rerunning recommendations, contacting venues or changing either saved input.",
+  "fence": {
+    "new": [
+      "tools/saved_week_to_call_sheet.mjs",
+      "tests/test_saved_week_to_call_sheet.mjs",
+      "docs/SAVED_WEEK_CALL_SHEET.md"
+    ],
+    "root_only_addition": "README.md: one narrow command/guide pointer",
+    "evidence": "docs/receiving/saved-week-call-sheet-60b2c08feb01/",
+    "preserved": "All existing codecs, model/renderers, app/index, provider/scientific source, calendar, HTML converter, caregiver combined-file implementation, catalog, workflows and dependencies."
+  },
+  "cli": {
+    "command": "node tools/saved_week_to_call_sheet.mjs --input WEEK.json --venue-notes NOTES.json --output NEW.txt",
+    "runtime": "Existing Node.js 22+; no npm dependencies or installation.",
+    "options": "All three named options required exactly once, in any order. Each takes one nonempty value that does not begin with --. Standalone --help only; no short aliases, positional arguments, stdin, force, append or stdout-data mode. '-' is refused for every path.",
+    "argument_admission": "Unknown, duplicate, missing or extra options refuse before any source read or output staging.",
+    "api": "export async function main(argv = process.argv.slice(2)): Promise<number>; importing the module does not invoke main or perform file I/O."
+  },
+  "input": {
+    "week_max_bytes": 4194304,
+    "venue_notes_max_bytes": 2097152,
+    "read": "Bounded acquired regular-file reads, using node:fs open with O_RDONLY and O_NONBLOCK where supported followed by handle stat; source symlinks resolving to a regular file are allowed. Missing, unreadable, nonregular and over-limit inputs refuse. Bounds count raw bytes including any BOM.",
+    "encoding": "Strict UTF-8 via fatal TextDecoder with ignoreBOM:true, so the unchanged codec owns its one-leading-BOM admission. Invalid UTF-8 and a second leading BOM refuse. UTF-16 is not converted.",
+    "json": "Use unchanged native JSON.parse/codec semantics, including their duplicate-key behavior. No new duplicate-key scanner, schema normalization or arbitrary filtering.",
+    "stability": "After complete admission/rendering, re-read both inputs with the same bounds and compare exact bytes before output staging. A difference refuses. This is a bounded stability check, not a filesystem transaction or lock.",
+    "mutability": "No writes to either input. Reading does not recreate the recording, recommendations, source checks, calendar or notes."
+  },
+  "native": {
+    "closure": {
+      "static/week_file.mjs": {
+        "git": "420ddb8f63fca264dcf97be7147801105696155d",
+        "bytes": 6642,
+        "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+      },
+      "static/week_plan.mjs": {
+        "git": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+        "bytes": 3913,
+        "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+      },
+      "static/venue_note_file.mjs": {
+        "git": "f8406cb540d52222996c585666ae1a55a1030def",
+        "bytes": 10435,
+        "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1"
+      },
+      "static/venue_followup.mjs": {
+        "git": "0c1923ecdad8fe9b14f0193a6aba5f3a1e2b9d63",
+        "bytes": 18444,
+        "sha256": "61bb9cf497b5a37a32afd1b23729e128aed2631cf2c570a1485ca4f0ffbe632c"
+      },
+      "docs/receiving/venue-notes-3dcb83a1/independent/authored-saved-week.json": {
+        "git": "b95c3d3c41f42b4d96d6e64eed3a2dfa135dbd1e",
+        "bytes": 2525,
+        "sha256": "6d171b27e896bf42cc23099e6ba0712d71985affcd58975e1d7c2e7544b93eb8"
+      },
+      "docs/receiving/venue-notes-3dcb83a1/independent/authored-venue-notes.json": {
+        "git": "d7922a386503e8a1fbc8de964c20f1aba7bdaf04",
+        "bytes": 3908,
+        "sha256": "31e24b7f1ac39cd0bd180e6bcccd7413720ef6f56896f797eb6b3ffe77d3cbc4"
+      }
+    },
+    "chain": [
+      "readWeekFile(weekText)",
+      "createVenueFollowup(opened.state, savedSourceLabel)",
+      "readVenueNoteFile(notesText, {origin: opened, state: opened.state, model})",
+      "model.replaceRecords(checked.records)",
+      "model.text(opened.state)"
+    ],
+    "saved_source_label": "Saved copy opened from “${basename(inputPath)}” (saved ${opened.savedAt}). Source labels and checks below are retained from the file; they have not been run again.",
+    "source_label_origin": "Exact current static/app.js saved-copy wording, supplied through the existing createVenueFollowup savedSource argument.",
+    "notes_admission": "The unchanged note codec compares the complete original receivedAt, calendarId, inputs and response canonically. It validates the complete record set through prepareRecords: known original pick key, valid exact date, unique occurrence/date pair, exact fields, listed status, field bounds, and internally consistent current/earlier reply questions. Matching filename or week date alone is insufficient.",
+    "envelope": "Week format tastetable.saved-week.v1; notes format tastetable.venue-notes.v1 with exact own keys format,savedAt,origin,records; record exact keys key,date,note; note exact keys status,question,reply,replyQuestions,nextStep.",
+    "projection": "The unchanged model orders scheduled entries by displayed weekday then original pick order and distinguishes repeated name/entity occurrences by native pick key and original ordinal. Only notes matching each scheduled occurrence AND exact displayed date are shown. Other-date/omitted records must pass admission but are excluded from this native TXT, not relabeled or appended. Default suggested questions apply only where the native model selects them. Revised questions retain the earlier reply/question distinction.",
+    "empty": "A matching notes file with an empty records array is valid and yields native default statuses/questions for scheduled visits. A week with zero scheduled picks refuses using the native model rule before output.",
+    "no_interpretation": "Do not infer contact, availability, clinical safety, reservation or current confirmation. Retain native source labels and caregiver caveats exactly."
+  },
+  "output": {
+    "text": "Exactly Buffer.from(model.text(opened.state), 'utf8'): no wrapper header/footer, BOM, newline conversion, appended audit note or rewritten native labels. Native literal/control and Unicode serialization behavior is retained.",
+    "max_bytes": 33554432,
+    "publication": "Create-only explicit output. Parent must already exist. Any existing path, including regular files, input alias, hard link, symlink/dangling symlink or directory, refuses. After all admission and source-stability checks, create a private sibling stage, write/sync/close the complete UTF-8 bytes, then admit the final name via same-filesystem hard link without replacement. Remove only the owned stage.",
+    "existing_reuse": "The current native HTML and visit-CSV CLIs contain private, non-exported bounded readers/create-only writers. Reuse their node:fs conventions locally in the new CLI; do not edit them or extract a shared helper. The CSV writer's sync-before-link and checked writeSync receipt convention are applicable.",
+    "success_stdout": {
+      "format": "tastetable.venue-call-sheet.v1",
+      "input": "absolute input path",
+      "inputSha256": "SHA256 of exact original week bytes",
+      "venueNotes": "absolute notes path",
+      "venueNotesSha256": "SHA256 of exact original notes bytes",
+      "output": "absolute output path",
+      "outputSha256": "SHA256 of delivered TXT bytes",
+      "outputBytes": "integer",
+      "weekStart": "admitted weekStart",
+      "sourceMode": "native mock/live/unknown",
+      "savedWeekAt": "opened.savedAt",
+      "venueNotesSavedAt": "checked.savedAt",
+      "originalPicks": "all original pick occurrences",
+      "scheduledVisits": "scheduled entry count",
+      "omittedPicks": "originalPicks - scheduledVisits",
+      "retainedNoteRecords": "all admitted note records",
+      "currentNoteRecords": "records matching scheduled occurrence/date",
+      "excludedNoteRecords": "retainedNoteRecords - currentNoteRecords"
+    },
+    "receipt": "One JSON object plus final LF on stdout only after completed publication/cleanup. The TXT remains solely in the requested file. No success stdout on refusal. Record exclusion counts explicitly; keep the two original JSON files for retained history.",
+    "failure": "0 complete output and success-receipt delivery, or successful standalone --help; 2 usage, input/UTF-8/native admission, no scheduled picks, source-change or output-collision refusal; 1 unexpected processing, staging/output/cleanup or successful-path stdout/help delivery failure. A known primary refusal stays 2 if its best-effort diagnostic also fails.",
+    "diagnostic": "Checked synchronous byte writes. Error prefix tastetable-call-sheet:. If the final output was already admitted, explicitly say it was created but final cleanup or receipt delivery failed; do not claim rollback or delete the complete output.",
+    "publication_limits": "No overwrite, fsync-of-parent/durable-transaction guarantee, post-publication rollback promise or protection against changes after the final source recheck. A post-link failure may leave a complete newly created output."
+  },
+  "verification": {
+    "author": "Maintained actual Node process tests around unchanged native-byte parity, occurrence/date/history projection, empty/all-omitted, origin mismatch and malformed records, UTF-8/BOM/bounds/regular-file admission, no-clobber races and selected source/output/diagnostic failures.",
+    "independent": "Independent hand expectations and actual-process receiver frozen before candidate disclosure; root/estate_records owns it. No rerun solely to recreate the lost discovery receipt.",
+    "historical_discovery": "Original receipt03710382575f2269d3b06e2ed8df720a2a41a5c6, 4,417 bytes, SHA401d28b663cbe4d9409339f23d5ee7a28f083fdd03126ff50e92e93e879734fb is raw-lost. Retained root summary is historical only; current source recapture and later candidate qualification are new milestones."
+  },
+  "ownership": {
+    "issue54": "chatgpt:c77045b4:windows owns optional venue-note HTML handoff, its HTML appendix and existing native converter paths; no changes here.",
+    "issue55": "d98d06fbfc35 owns editable combined week/notes file and planner replacement/browser receiving; no use of its unmerged source.",
+    "other": "Preserve collection4, availability36, undo40/51, calendar42/46, comparison30, batch41/53 and all visit-record scopes."
+  },
+  "hold": "No Actions, source ref/PR/merge, provider/venue request, installation, hamon-ie or runtime/service mutation. Root must review the three exact current workflow bodies and claim the new fence before candidate code."
+}

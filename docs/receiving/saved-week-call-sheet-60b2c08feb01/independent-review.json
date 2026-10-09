@@ -1,0 +1,98 @@
+{
+  "schema": "tastetable-saved-call-sheet-independent-review/1",
+  "reviewer": "estate-60b2c08feb01/estate_records",
+  "claim": "https://github.com/Jacob-Met/tastetable/issues/67",
+  "decision": "APPROVE",
+  "base": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+  "candidate": {
+    "path": "tools/saved_week_to_call_sheet.mjs",
+    "git": "0e676fa055446136af1edf371587546eaeb8415d",
+    "bytes": 8291,
+    "sha256": "4752bc6f67928e79ec1dd1d03a792326fb9521be746d80ee78eab399a18766d4"
+  },
+  "guide": {
+    "path": "docs/SAVED_WEEK_CALL_SHEET.md",
+    "git": "48932d6929fd1b1416c68b78773b73bf9aec26a6",
+    "review": "Read complete canonical text. Native projection, occurrence/date identity, retained history exclusions, create-only delivery, source recheck limits, postpublication failure, 0/2/1 statuses and care/source caveats match source and receiving. No change requested.",
+    "bytes": 7585,
+    "sha256": "9d6d2ca97fdf72df17c9446386dd2a99f906625a9a3770461db767d6eefcb897"
+  },
+  "preCandidateCustody": {
+    "archiveGit": "78eaf6bf85de254d8320e7042b0b09cf6c2895b1",
+    "archiveSha256": "9a1ca5cc19897301f75a4491bf747f54e1edf4d58e2063c65fdeddec90cc5a5b",
+    "driverGit": "08b3c0a5f4dc4467a400c609dba3d2f1c87cae2e",
+    "oracleGit": "466b127bf8a9b86562b3c6a183e22927a6d4ba40",
+    "hookGit": "58d975a4c51de7e99dce35d8965d8591796ad96d",
+    "boundary": "Exact three executable receiver sources recovered against pre-candidate identities. Original e09 archive, 1125 freeze and raw calibration bodies were lost before upload; recovered historical observations are summaries, not raw records. Calibration was not repeated. The recovery capsule was canonical before first candidate read."
+  },
+  "execution": {
+    "node": "v24.19.0",
+    "platform": "Linux",
+    "attempt": 1,
+    "receiverChanged": false,
+    "productChanged": false,
+    "exit": 0,
+    "stderr": "",
+    "groupsPassed": 8,
+    "recordedSubprocesses": 29,
+    "additionalImportControl": 1,
+    "rawReceipt": {
+      "bytes": 31866,
+      "git": "13a1d8eb6697ce1112051e917d416d7190648bd3",
+      "sha256": "e4d6e4bad86ce6b6552ffbc2e9e562b16dab6c73067859b0fb5fa87e0bd9f19e"
+    },
+    "groups": [
+      {
+        "name": "exact-hand-and-native-text-receipt-and-input-custody",
+        "passed": true
+      },
+      {
+        "name": "native-origin-history-and-zero-schedule-refusals",
+        "passed": true
+      },
+      {
+        "name": "empty-notes-and-native-current-visit-projection",
+        "passed": true
+      },
+      {
+        "name": "raw-byte-bounds-native-bom-and-fatal-utf8",
+        "passed": true
+      },
+      {
+        "name": "existing-output-aliases-and-regular-input-symlink",
+        "passed": true
+      },
+      {
+        "name": "selected-input-change-and-publication-race-failures",
+        "passed": true
+      },
+      {
+        "name": "post-publication-cleanup-and-receipt-delivery-failures",
+        "passed": true
+      },
+      {
+        "name": "strict-grammar-help-import-and-source-boundary",
+        "passed": true
+      }
+    ]
+  },
+  "findings": [
+    "Ordinary physical TXT is 1539 bytes, SHA256 fab8e26d3a2809750c94f610bc10d39f53ce7be4ed9c8d407661511714f00f1f, equal both independent hand text and unchanged native model pipeline. All 18 receipt fields match exact raw inputs/delivery.",
+    "Fixture preserves two same-name/same-entity occurrences on one date, Unicode basename, explicit empty questions, revised-question/earlier-reply history and CRLF notes. Four admitted note records project to two current records; historical/omitted markers are excluded.",
+    "Full origin mismatch, inconsistent reply/question history, duplicate occurrence/date and no scheduled visit all refuse. Empty matching notes succeed with native defaults.",
+    "Inclusive 4 MiB week/2 MiB notes bounds pass; both overbounds, double BOM and malformed UTF-8 refuse; one BOM is admitted. Original native code and candidate hashes remain unchanged.",
+    "Existing regular, hardlink, symlink, dangling symlink and directory destinations preserve identity/content. Regular-file source symlink remains intact and produces native bytes.",
+    "Six selected fault modes actually fired only for owned disposable paths or selected standard output/error. Second input open detects exact-byte change; publication race preserves other destination; injected pre-link EIO returns 1 and cleans stage.",
+    "Actual successful publication followed by injected cleanup or receipt-delivery failure returns 1 with created-output warning, empty success stdout and complete exact TXT retained. Known primary refusal remains 2 when stderr delivery fails.",
+    "Strict usage/help and import control pass; static full source read confirms only built-in localfilesystem/path/crypto/URL and the three unchanged native module imports, with no network/provider/browser/service calls."
+  ],
+  "limits": [
+    "This independent runtime run is Linux Node 24.19.0; it is not a Windows or Node 22 execution claim.",
+    "Independent driver does not separately execute every author case: FIFO/unreadable input, standalone help-delivery failure, output-size ceiling and the entire inherited suite are outside its executed scope.",
+    "An import control checks clean output/exit; full source review supplements it. No process sandbox or proof against arbitrary future source was claimed.",
+    "Source reread is an exact-byte prepublication check, not a lock or transaction. Parent-directory durability, post-link rollback and later source changes remain explicitly outside the contract.",
+    "Original discovery and pre-candidate calibration raw loss remains explicit; this first candidate run has its own preserved raw receipt, process outputs, fixture files and actual hook observations.",
+    "No Actions, provider contact, install, live data or hamon-ie call occurred. Integration and current-base/event gates remain root-owned."
+  ],
+  "sealedAt": "2026-10-09T01:22:52.794532+00:00"
+}
