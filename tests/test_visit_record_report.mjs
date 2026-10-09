@@ -20,7 +20,7 @@ test("one report preserves original occurrences, distinct planned/actual values 
   assert.deepEqual(field(result.html, "source_name"), [" original,week.json "]);
   assert.deepEqual(field(result.html, "record_name"), [" visits &amp; notes.json "]);
   assert.deepEqual(field(result.html, "record_sha256"), ["a".repeat(64)]);
-  assert.deepEqual(field(result.html, "note"), ['He said &quot;yes&quot;, then went.', "  A&#13;B&#13;\nC\n🙂\t "]);
+  assert.deepEqual(field(result.html, "note"), ['He said &quot;yes&quot;, then went.', "  A&#13;<br>B&#13;\nC\n🙂\t "]);
   assert.match(result.html, /data-empty-note>No note recorded/);
   assert.equal(renderVisitRecordReport(original).html, renderVisitRecordReport(original).html);
   assert.ok(result.html.endsWith("\n"));
@@ -85,4 +85,27 @@ test("empty records and the full original-occurrence/note bound remain reportabl
   assert.equal(field(hundred.html,"note").length,100);assert.ok(field(hundred.html,"note").every(x=>x===note));
   assert.equal([...hundred.html.matchAll(/data-occurrence=/g)].length,100);
   assert.ok(Buffer.byteLength(hundred.html)<32*1024**2);
+});
+
+test("lone CR has a visible break while CRLF, literal markup and source characters stay distinct", () => {
+  const cases = [
+    ["first\rsecond", "first&#13;<br>second"],
+    ["first\r\nsecond", "first&#13;\nsecond"],
+    ["\rfirst\r\rsecond\r", "&#13;<br>first&#13;<br>&#13;<br>second&#13;<br>"],
+    ["<br>\r</p>", "&lt;br&gt;&#13;<br>&lt;/p&gt;"],
+    ["first\r\n\rsecond", "first&#13;\n&#13;<br>second"],
+  ];
+  for (const [literal, expected] of cases) {
+    const text = mutate((value, week) => {
+      week.response.plan.meals[0].name = literal;
+      week.response.plan.meals[0].why = literal;
+      week.response.plan.meals[0].entity_id = literal;
+      value.visits.find(visit => visit.key === "pick-0").note = literal;
+    });
+    const html = renderVisitRecordReport(text).html;
+    for (const name of ["venue_name", "entity_id", "original_explanation", "note"]) {
+      assert.equal(field(html, name)[0], expected, name + ": " + JSON.stringify(literal));
+    }
+    assert.equal(html.includes("\r"), false, "source CR stays encoded until DOM parsing");
+  }
 });

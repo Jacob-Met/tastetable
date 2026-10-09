@@ -7,10 +7,12 @@ function escapeText(value) {
   if (!text.isWellFormed() || text.includes("\0")) {
     throw new TypeError("A displayed field contains NUL or unpaired UTF-16, which cannot be preserved in HTML.");
   }
-  // Resolve CR after HTML input normalization so original CR/CRLF survives in DOM text.
-  return text.replace(/[&<>"'\r]/g, character => ({
-    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;", "\r": "&#13;",
-  })[character]);
+  // Character references keep original CR/CRLF in DOM text. A lone CR also needs
+  // a visible line break; a following LF already supplies that break with pre-wrap.
+  return text.replace(/[&<>"'\r]/g, (character, index) => {
+    if (character === "\r") return text[index + 1] === "\n" ? "&#13;" : "&#13;<br>";
+    return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[character];
+  });
 }
 
 const CSS = [
