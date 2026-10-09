@@ -311,3 +311,7 @@ Open **Visit record (new tab)** in the planner to record what happened beside th
 ### Visit records as CSV
 
 Export an explicitly selected saved visit record with `node tools/visit_record_to_csv.mjs --input visits.json --output visits.csv` (Node.js 22+). The create-only CSV retains every original occurrence, including omitted and unrecorded picks, with separate planned and actual dates, outcomes and literal notes. Keep the JSON for reopening the record. See [CSV columns, text import and file delivery](docs/VISIT_RECORD_CSV.md).
+
+## Review visit records across weeks
+
+Open **Visit history** from the planner to review several saved visit-record JSON files together. Preview a complete selection before adding it; exact byte duplicates are visibly skipped, while different snapshots and original occurrences stay separate. Filter explicit outcomes, entered actual/decision dates or literal text, then print the source-attributed view. Undated and omitted entries remain included by default. This read-only window does not infer attendance, merge versions, update venue checks or save a collection. Keep the original files for editing. See [the visit-history guide](docs/VISIT_HISTORY.md) for limits and native receiving.

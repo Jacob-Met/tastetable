@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visit history — TasteTable</title>
+<link rel="stylesheet" href="./visit_history.css">
+</head>
+<body>
+<header>
+  <a class="controls" href="/">Back to the planner</a>
+  <h1>Visit history</h1>
+  <p>Review saved visit-record files across weeks. Each file and original occurrence stays separate.</p>
+  <p class="notice">These are caregiver-recorded snapshots, not verified attendance or unique visit totals. Dates and notes never imply an outcome. Original venue checks are not refreshed.</p>
+</header>
+<main>
+<section class="card controls" aria-labelledby="loadTitle">
+  <h2 id="loadTitle">1. Add saved records</h2>
+  <p>Choose up to 20 visit-record JSON files. Review the selection, then add it. This window holds at most 32 MiB. Reloading clears the view; your files are unchanged.</p>
+  <div class="actions">
+    <button id="chooseFiles" type="button">Choose visit records</button>
+    <button id="clearFiles" type="button" disabled>Clear this view</button>
+  </div>
+  <input id="recordFiles" type="file" multiple accept=".json,application/json" aria-label="Choose saved visit-record files" hidden>
+  <p id="loadStatus" role="status" aria-live="polite"></p>
+  <p id="loadError" role="alert" hidden></p>
+  <section id="preview" aria-labelledby="previewTitle" hidden>
+    <h3 id="previewTitle">Review this selection</h3>
+    <p id="previewStatus"></p>
+    <ul id="previewFiles"></ul>
+    <div class="actions">
+      <button id="addFiles" type="button" disabled>Add reviewed files</button>
+      <button id="cancelFiles" type="button">Cancel selection</button>
+    </div>
+  </section>
+</section>
+<section class="card" aria-labelledby="filesTitle">
+  <h2 id="filesTitle">2. Files in this view</h2>
+  <p id="collectionSummary">No files added.</p>
+  <p id="overlapWarning" class="notice" hidden></p>
+  <div id="fileList"></div>
+</section>
+<section class="card controls" aria-labelledby="filtersTitle">
+  <h2 id="filtersTitle">3. Find recorded entries</h2>
+  <form id="filters">
+    <label>Search names, notes and sources <input id="query" type="search" maxlength="1024"></label>
+    <label>Recorded outcome
+      <select id="outcome"><option value="all">All outcomes</option><option value="went">Went</option><option value="did_not_go">Did not go</option><option value="unrecorded">Unrecorded</option></select>
+    </label>
+    <label>Entered actual / decision date
+      <select id="datePresence"><option value="all">All, including undated</option><option value="dated">Dated entries</option><option value="undated">Undated entries</option></select>
+    </label>
+    <label>From (inclusive) <input id="from" type="text" inputmode="numeric" placeholder="YYYY-MM-DD"></label>
+    <label>To (inclusive) <input id="to" type="text" inputmode="numeric" placeholder="YYYY-MM-DD"></label>
+    <label>Order
+      <select id="order"><option value="files">File selection and original occurrence</option><option value="date_asc">Entered date, oldest first</option><option value="date_desc">Entered date, newest first</option></select>
+    </label>
+    <div class="actions"><button type="submit">Apply filters</button><button id="resetFilters" type="button">Reset filters</button></div>
+  </form>
+  <p>Date ranges use the explicitly entered actual / decision date, not the planned date or file save time. A range excludes undated entries.</p>
+  <p id="filterError" role="alert" hidden></p>
+</section>
+<section class="card" aria-labelledby="entriesTitle">
+  <h2 id="entriesTitle">Recorded entries</h2>
+  <p id="filterSummary">All outcomes; all dates, including undated; file order.</p>
+  <p id="entrySummary" role="status" aria-live="polite">No entries to display.</p>
+  <button id="printView" class="controls" type="button" disabled>Print this filtered view</button>
+  <p id="printRefusal">Printing is unavailable while filter text is invalid. Correct it or reset filters.</p>
+  <div id="entries"></div>
+</section>
+</main>
+<footer>Read-only local review. Different snapshots may describe the same real visit. Keep the original JSON files for editing in Visit record; this view does not merge or save a collection.</footer>
+<script type="module" src="./visit_history_ui.mjs"></script>
+</body>
+</html>

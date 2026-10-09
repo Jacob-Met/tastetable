@@ -1,0 +1,35 @@
+:root { color-scheme: light; font: 17px/1.5 system-ui,sans-serif; color: #193b36; background: #f4f6f0; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+header, main, footer { max-width: 1080px; margin: auto; padding: 1rem; }
+h1 { font-size: 2.1rem; } h2 { margin-top: 0; } h3 { margin-bottom: .35rem; }
+a { color: #165c50; } button,input,select { font: inherit; }
+button { min-height: 44px; padding: .55rem .8rem; border: 1px solid #38665d; border-radius: .35rem; background: #e2eee8; color: #193b36; cursor: pointer; }
+button:disabled { cursor: default; opacity: .55; }
+:focus-visible { outline: 3px solid #b25700; outline-offset: 3px; }
+input,select { width: 100%; min-height: 44px; padding: .4rem; color: inherit; background: white; border: 1px solid #75938b; border-radius: .3rem; }
+.card { background: white; border: 1px solid #c1d0c7; border-radius: .55rem; padding: 1rem; margin-bottom: 1.2rem; overflow-wrap: anywhere; }
+.notice { border-left: 4px solid #a16b24; background: #fff4dc; padding: .65rem; }
+.actions { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: .7rem; }
+#filters { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .8rem; }
+label { display: block; min-width: 0; }
+[hidden] { display: none !important; }
+[role="alert"] { color: #862424; border-left: 4px solid #862424; padding: .65rem; }
+#preview { border: 2px solid #6e9689; margin-top: 1rem; padding: .8rem; }
+.file, .entry { border-top: 1px solid #bdcfc8; margin-top: 1rem; padding-top: .75rem; overflow-wrap: anywhere; }
+.file p,.entry p { margin: .4rem 0; }
+.literal { white-space: pre-wrap; overflow-wrap: anywhere; }
+.meta { font-size: .9rem; color: #425e56; }
+details { margin: .5rem 0; } summary { cursor: pointer; font-weight: 600; }
+#printRefusal { display: none; }
+@media (max-width: 550px) { #filters { grid-template-columns: 1fr; } h1 { font-size: 1.8rem; } }
+@media print {
+  :root { font-size: 10pt; color: black; background: white; }
+  header,main,footer { max-width: none; padding: 0; }
+  .controls { display: none !important; }
+  .card { border: none; padding: 0; }
+  .notice { border: 1px solid #777; background: white; }
+  .entry { break-inside: avoid; }
+  body.invalid-filters #entries { display: none; }
+  body.invalid-filters #printRefusal { display: block; }
+}
