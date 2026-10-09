@@ -1,0 +1,22 @@
+{
+  "format": "tastetable.visit-record.v1",
+  "savedAt": "2026-10-09T05:10:48.312Z",
+  "source": {
+    "name": "OPENCLI-E2E week — Ω.json",
+    "weekText": "﻿{\r\n  \"format\": \"tastetable.saved-week.v1\",\r\n  \"receivedAt\": \"2026-10-01T08:01:02.000Z\",\r\n  \"savedAt\": \"2026-10-02T09:02:03.000Z\",\r\n  \"calendarId\": null,\r\n  \"inputs\": {\r\n    \"city\": \"OPENCLI-E2E Harbor\",\r\n    \"cuisines\": [],\r\n    \"music\": [\r\n      \"quiet\"\r\n    ],\r\n    \"films\": [],\r\n    \"constraints\": []\r\n  },\r\n  \"response\": {\r\n    \"mock\": true,\r\n    \"plan\": {\r\n      \"meals\": [\r\n        {\r\n          \"name\": \"Harbor soup\",\r\n          \"why\": \"Independent first meal\",\r\n          \"entity_id\": \"OPENCLI-E2E-harbor\",\r\n          \"kind\": \"restaurant\",\r\n          \"day\": \"Monday\"\r\n        }\r\n      ],\r\n      \"outing\": {\r\n        \"name\": \"Glass Room\",\r\n        \"why\": \"Independent second outing\",\r\n        \"entity_id\": \"OPENCLI-E2E-glass\",\r\n        \"kind\": \"outing\",\r\n        \"day\": \"Saturday\"\r\n      },\r\n      \"notes\": [\r\n        \"Synthetic independent recipient fixture\"\r\n      ],\r\n      \"rejected\": []\r\n    },\r\n    \"llm_only\": {\r\n      \"meals\": [],\r\n      \"outing\": {\r\n        \"name\": \"Comparison outing\",\r\n        \"why\": \"Synthetic only\",\r\n        \"day\": \"Sunday\"\r\n      }\r\n    },\r\n    \"comparison\": {\r\n      \"constraints\": [],\r\n      \"grounded\": {\r\n        \"picks\": 2,\r\n        \"with_qloo_entity_id\": 2,\r\n        \"with_affinity_evidence\": 0,\r\n        \"constraint_checked\": 2,\r\n        \"unsafe_candidates_rejected\": 0\r\n      },\r\n      \"llm_only\": {\r\n        \"picks\": 1,\r\n        \"with_qloo_entity_id\": 0,\r\n        \"with_affinity_evidence\": 0,\r\n        \"constraint_checked\": 0,\r\n        \"unsafe_candidates_rejected\": 0\r\n      }\r\n    },\r\n    \"trace\": []\r\n  },\r\n  \"week\": {\r\n    \"start\": \"2026-10-05\",\r\n    \"assignments\": {\r\n      \"pick-0\": \"Thursday\",\r\n      \"pick-1\": null\r\n    }\r\n  }\r\n}\r\n"
+  },
+  "visits": [
+    {
+      "key": "pick-0",
+      "outcome": "did_not_go",
+      "date": "2028-01-02",
+      "note": "first\rsecond\r\nthird\t☕"
+    },
+    {
+      "key": "pick-1",
+      "outcome": "went",
+      "date": "2026-12-31",
+      "note": "Revised B"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "schema": "taste-author-qualification.v1",
+  "production_files": [
+    {
+      "path": "static/visit-record.html",
+      "bytes": 4734,
+      "sha256": "fb538ba2f96fb4c30ea5b53b4459d17c8d00fb0e23becf8046b27a80b8c726d2",
+      "git_blob": "a128989f95e7846d90bf6b3fd95815ac91dbd86c"
+    },
+    {
+      "path": "static/visit_record_ui.mjs",
+      "bytes": 11976,
+      "sha256": "de5b41ea4f6921ed63ff250397e8ed0adbaec1c1ea8e9b182a1414e523254b82",
+      "git_blob": "fb2ab7743e0369e76fd84ee3dfd023de708d4c47"
+    },
+    {
+      "path": "static/visit_edit_history.mjs",
+      "bytes": 2094,
+      "sha256": "eb4f3d9b101bfd8483dd43f5161d07b15a4fc7be05f922a29e0a826abf4c2fc2",
+      "git_blob": "4f7ad84daa26198dfb7e787def085d563af72119"
+    }
+  ],
+  "node": {
+    "methods": 12,
+    "passed": 12,
+    "invocations": 1,
+    "stdout": {
+      "bytes": 2465,
+      "sha256": "1a85403b73d1619c1fd30c78bee888c9cb3bb419e6cb21c5a093d75772df3673",
+      "git_blob": "0a2f28e8ecb14f0108ec68d6752223502c190d67"
+    }
+  },
+  "original_browser": {
+    "checks": 16,
+    "passed": 15,
+    "failed": 1
+  },
+  "candidate_browser": {
+    "checks": 24,
+    "passed": 23,
+    "failed": 1
+  },
+  "candidate_browser_failure": "Author oracle compared generated record_saved_at across distinct CSV exports; product behavior passed the other23 predicates.",
+  "corrected_offline_csv": {
+    "passed": true,
+    "invocations": 1,
+    "input_files": [
+      {
+        "label": "csv",
+        "bytes": 1090,
+        "sha256": "c47ff87ad3fc8484d447cec68225a8275f99daa23a17d9add43c277ce11e2d0b"
+      },
+      {
+        "label": "redone-csv",
+        "bytes": 1090,
+        "sha256": "af0bd36751024ac4c8bebba0a8406e4a4478081560167d8a27de2f3fb2a736d8"
+      }
+    ],
+    "time_bounds": {
+      "kind": "campaign; no per-export interval captured",
+      "start": "2026-10-09T05:01:58.457Z",
+      "end": "2026-10-09T05:02:15.695Z"
+    },
+    "receipt": {
+      "bytes": 1468,
+      "sha256": "f3672f4ae50be609356e789f64dcb319cbafcc03c9b3d977c769a96d2910d87a",
+      "git_blob": "dcdfc4b1ae175e0240b557c3469385033a79de19"
+    }
+  },
+  "browser_replayed": false,
+  "source_repaired_after_receiving": false,
+  "independent_receiving": "pending",
+  "unrun": [
+    "Corrected successor whole browser driver; only its changed pure CSV predicate and syntax were received.",
+    "Hosted Actions and canonical/native installation."
+  ]
+}

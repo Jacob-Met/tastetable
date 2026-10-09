@@ -1,0 +1,356 @@
+{
+  "checks": [
+    {
+      "name": "independent fixture decodes to manual S0",
+      "pass": true
+    },
+    {
+      "name": "S0 explicit Use",
+      "pass": true
+    },
+    {
+      "name": "planned occurrence context",
+      "pass": true
+    },
+    {
+      "name": "source name preserved",
+      "pass": true
+    },
+    {
+      "name": "initial history disabled",
+      "pass": true
+    },
+    {
+      "name": "partial date invalid",
+      "pass": true
+    },
+    {
+      "name": "S1 grouped date",
+      "pass": true
+    },
+    {
+      "name": "S2 grouped sibling note",
+      "pass": true
+    },
+    {
+      "name": "S3 outcome",
+      "pass": true
+    },
+    {
+      "name": "nonzero scroll prerequisite",
+      "pass": true
+    },
+    {
+      "name": "keyboard Undo S2",
+      "pass": true
+    },
+    {
+      "name": "restored focus",
+      "pass": true
+    },
+    {
+      "name": "scroll preserved",
+      "pass": true
+    },
+    {
+      "name": "Redo S3",
+      "pass": true
+    },
+    {
+      "name": "no-op preserves Redo",
+      "pass": true
+    },
+    {
+      "name": "Redo after no-op",
+      "pass": true
+    },
+    {
+      "name": "branch S4",
+      "pass": true
+    },
+    {
+      "name": "real edit discards Redo",
+      "pass": true
+    },
+    {
+      "name": "invalid draft blocks history and inherited downloads",
+      "pass": true
+    },
+    {
+      "name": "invalid field accessible",
+      "pass": true
+    },
+    {
+      "name": "correction no-op S4",
+      "pass": true
+    },
+    {
+      "name": "S5 note changed",
+      "pass": true
+    },
+    {
+      "name": "S4 restored exact imported note",
+      "pass": true
+    },
+    {
+      "name": "physical restored JSON exact",
+      "pass": true
+    },
+    {
+      "name": "CSV complete headers",
+      "pass": true
+    },
+    {
+      "name": "CSV two occurrences",
+      "pass": true
+    },
+    {
+      "name": "CSV all literal fields",
+      "pass": true
+    },
+    {
+      "name": "CSV own save timestamps canonical",
+      "pass": true
+    },
+    {
+      "name": "downloads preserve history",
+      "pass": true
+    },
+    {
+      "name": "pending-read Undo S2",
+      "pass": true
+    },
+    {
+      "name": "late read retired",
+      "pass": true
+    },
+    {
+      "name": "late read preserves S2",
+      "pass": true
+    },
+    {
+      "name": "failed open preserves S2",
+      "pass": true
+    },
+    {
+      "name": "failed open keeps history",
+      "pass": true
+    },
+    {
+      "name": "preview keeps history",
+      "pass": true
+    },
+    {
+      "name": "cancel keeps S2",
+      "pass": true
+    },
+    {
+      "name": "cancel keeps history",
+      "pass": true
+    },
+    {
+      "name": "equal record physical JSON",
+      "pass": true
+    },
+    {
+      "name": "equal preview keeps history",
+      "pass": true
+    },
+    {
+      "name": "explicit equal Use S2",
+      "pass": true
+    },
+    {
+      "name": "equal Use resets history",
+      "pass": true
+    },
+    {
+      "name": "20 Undo bound keeps first change",
+      "pass": true
+    },
+    {
+      "name": "bound disables Undo",
+      "pass": true
+    },
+    {
+      "name": "one bounded Redo",
+      "pass": true
+    },
+    {
+      "name": "reload leaves no restored record",
+      "pass": true
+    },
+    {
+      "name": "physical JSON reopen S4",
+      "pass": true
+    },
+    {
+      "name": "reopen history clear",
+      "pass": true
+    },
+    {
+      "name": "390px no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "history accessible native buttons",
+      "pass": true
+    },
+    {
+      "name": "storage remains empty",
+      "pass": true
+    },
+    {
+      "name": "observed storage write calls absent",
+      "pass": true
+    },
+    {
+      "name": "only owned static network",
+      "pass": true
+    },
+    {
+      "name": "no page exceptions",
+      "pass": true
+    },
+    {
+      "name": "browser clean exit",
+      "pass": true
+    },
+    {
+      "name": "source identities unchanged",
+      "pass": true
+    },
+    {
+      "name": "frozen original and expectations unchanged",
+      "pass": true
+    }
+  ],
+  "downloads": [
+    {
+      "bytes": 2422,
+      "git_blob": "e426e37ce43c6fab816007a93d24220c4c3abaeb",
+      "label": "S4 JSON",
+      "path": "received/restored-S4.json",
+      "sha256": "45399eefb49c60f08f1141f554054c529fa5700057b7981088e43d1ca456fb16"
+    },
+    {
+      "bytes": 807,
+      "git_blob": "104c4f6fe6ba3fed65a117126e5b1994f1a8f4e7",
+      "label": "S4 CSV",
+      "path": "received/restored-S4.csv",
+      "sha256": "c5deba620b99916e5d6d38c283e29d342cb3e9cdb3c9f71df9a7e231a8864ddb"
+    },
+    {
+      "bytes": 2422,
+      "git_blob": "767aac5e5178cd694950e5f7d67201a4ef2aef2f",
+      "label": "S2 equal reimport",
+      "path": "received/equal-reimport-S2.json",
+      "sha256": "e33d9d9d62c30276bb54c06bb74b07db1a9bc2904e0a9da126fb8c4563f6b5e3"
+    }
+  ],
+  "independent_freezes": {
+    "contract_sha256": "d83084df5f3070739bea22d75fe28813639647415ed8394eadeccb8aa7fc6861",
+    "driver_freeze_sha256": "bb897d428f9e531d3df26d46dcacf5613a4553b570ba5aec5f86e0f8060d8bd0",
+    "driver_sha256": "7557b764bf4fc7f2fd27566ca450193f28eff146ecd2b048eb396317f8867cda",
+    "expected_models_sha256": "0d6c9438d467cae23ac61b309c08359ae59043a2ad540f00f35331ea55f757b0",
+    "fixture_sha256": "e991ba3411f03951c1a231316e52f48e6725cfbf0a04000256a5d02878436fca",
+    "intake_sha256": "49794d1a8e36fee05ec99405d8708b5e3537c6a742ad48dc32eb5c248574e4bb",
+    "semantic_sha256": "2d0bb7e4b597d12697e6bef5755e0bfca4c2a134c4988ecf5df422b883a32373"
+  },
+  "label": "Public derivative of exact private native evidence; private roots/host identity omitted",
+  "limits": [
+    "One frozen actual journey, no author-browser replay.",
+    "Controlled single-file deferred read and observation-only Storage-method wrappers; not all interleavings/storage APIs.",
+    "Screenshot shows upper390px viewport, not history buttons; their semantics/layout were checked in live DOM.",
+    "Author original and CSV-timestamp-oracle evidence remains separate.",
+    "No installed adoption, provider operation, dependency installation, Actions or shared-profile changes."
+  ],
+  "native_versions": {
+    "browser": "HeadlessChrome/154.0.8037.57",
+    "browser_sha256": "60c03e8882f4bb47459a905ede1074e1e746c5b765e437c288e460320540a8a3",
+    "node": "v22.22.1"
+  },
+  "original_replay": false,
+  "private_custody": {
+    "archive_bytes": 120411,
+    "archive_sha256": "39ffccd66dc4f021d9cfeed8c201ba0ed778aa5ff19bdadef411a951e3612ee2",
+    "members": 32,
+    "packet_bytes": 170789,
+    "packet_sha256": "d4e45e6a2937e923fd9157d7ce9950b899a0178fc54bf20747674dfefb60972b"
+  },
+  "private_result": {
+    "bytes": 65723,
+    "sha256": "5d9d51025a5cf8b363b4aea3cc9c400d96e47f356ade3498419feacdee748a57"
+  },
+  "result": {
+    "actual_browser_journeys": 1,
+    "browser_exit": 0,
+    "browser_signal": null,
+    "checks": [
+      56,
+      56
+    ],
+    "containment": false,
+    "harness_errors": 0,
+    "page_exceptions": 0,
+    "receiver_exit": 0
+  },
+  "schema": "tastetable-visit-recovery-independent-public-receipt.v1",
+  "source": {
+    "all_original_leaves_unchanged": 7,
+    "all_runtime_leaves_unchanged": 8,
+    "files": [
+      {
+        "bytes": 11976,
+        "git_blob": "fb2ab7743e0369e76fd84ee3dfd023de708d4c47",
+        "path": "static/visit_record_ui.mjs",
+        "sha256": "de5b41ea4f6921ed63ff250397e8ed0adbaec1c1ea8e9b182a1414e523254b82"
+      },
+      {
+        "bytes": 4734,
+        "git_blob": "a128989f95e7846d90bf6b3fd95815ac91dbd86c",
+        "path": "static/visit-record.html",
+        "sha256": "fb538ba2f96fb4c30ea5b53b4459d17c8d00fb0e23becf8046b27a80b8c726d2"
+      },
+      {
+        "bytes": 7525,
+        "git_blob": "2b5b37e3d4a227e00a5b0052a962d13512b53e48",
+        "path": "static/visit_record.mjs",
+        "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f"
+      },
+      {
+        "bytes": 6642,
+        "git_blob": "420ddb8f63fca264dcf97be7147801105696155d",
+        "path": "static/week_file.mjs",
+        "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+      },
+      {
+        "bytes": 3913,
+        "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+        "path": "static/week_plan.mjs",
+        "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+      },
+      {
+        "bytes": 1646,
+        "git_blob": "b001286f411bec6a9088b1902e9455f2fc3540c2",
+        "path": "static/visit_record_csv.mjs",
+        "sha256": "a233a983918291ef93577f91eb64c56adb4644c10cd8f4046e875d4536cc970c"
+      },
+      {
+        "bytes": 4621,
+        "git_blob": "cf2ed8fc0871196a55ceef4e0aa0cab09d1fcfeb",
+        "path": "static/visit_record.css",
+        "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403"
+      },
+      {
+        "bytes": 2094,
+        "git_blob": "4f7ad84daa26198dfb7e787def085d563af72119",
+        "path": "static/visit_edit_history.mjs",
+        "sha256": "eb4f3d9b101bfd8483dd43f5161d07b15a4fc7be05f922a29e0a826abf4c2fc2"
+      }
+    ],
+    "main": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+    "pr61_prerequisite": "994c03aef94b711d6dcbbeb6bbbc6a4b85a6a3ad",
+    "tree": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6"
+  }
+}

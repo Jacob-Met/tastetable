@@ -1,0 +1,4 @@
+"source_name","week_start","source_mode","source_received_at","source_saved_at","record_saved_at","occurrence_key","venue_name","entity_id","kind","original_day","planned_day","planned_date","outcome","actual_date","note","original_explanation"
+"OPENCLI-E2E week — Ω.json","2026-10-05","mock","2026-10-01T08:01:02.000Z","2026-10-02T09:02:03.000Z","2026-10-09T05:10:48.354Z","pick-0","Harbor soup","OPENCLI-E2E-harbor","restaurant","Monday","Thursday","2026-10-08","did_not_go","2028-01-02","firstsecond
+third	☕","Independent first meal"
+"OPENCLI-E2E week — Ω.json","2026-10-05","mock","2026-10-01T08:01:02.000Z","2026-10-02T09:02:03.000Z","2026-10-09T05:10:48.354Z","pick-1","Glass Room","OPENCLI-E2E-glass","outing","Saturday","","","went","2026-12-31","Revised B","Independent second outing"

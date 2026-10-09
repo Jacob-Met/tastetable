@@ -1,0 +1,59 @@
+{
+  "entries": [
+    {
+      "bytes": 3641,
+      "encoding": "utf-8",
+      "git_blob": "f79d7dd5125b7849b36e9791c9d5f6249726157c",
+      "mode": "100644",
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/independent-recipient/README.md",
+      "sha256": "087fc579e9b3e1b8b8728c7fe8d6eaf36594c96394246c739e20549fe5ea81f1",
+      "type": "blob"
+    },
+    {
+      "bytes": 9269,
+      "encoding": "utf-8",
+      "git_blob": "108ebd1747175add5e03da29c9c44378d01a43f4",
+      "mode": "100644",
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/independent-recipient/qualification.json",
+      "sha256": "7a261a1f04fe2ecd330cdf29dcea8ded3b76a7804b28061999f453950894393f",
+      "type": "blob"
+    },
+    {
+      "bytes": 2422,
+      "encoding": "utf-8",
+      "git_blob": "e426e37ce43c6fab816007a93d24220c4c3abaeb",
+      "mode": "100644",
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/independent-recipient/received/restored-S4.json",
+      "sha256": "45399eefb49c60f08f1141f554054c529fa5700057b7981088e43d1ca456fb16",
+      "type": "blob"
+    },
+    {
+      "bytes": 807,
+      "encoding": "utf-8",
+      "git_blob": "104c4f6fe6ba3fed65a117126e5b1994f1a8f4e7",
+      "mode": "100644",
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/independent-recipient/received/restored-S4.csv",
+      "sha256": "c5deba620b99916e5d6d38c283e29d342cb3e9cdb3c9f71df9a7e231a8864ddb",
+      "type": "blob"
+    },
+    {
+      "bytes": 2422,
+      "encoding": "utf-8",
+      "git_blob": "767aac5e5178cd694950e5f7d67201a4ef2aef2f",
+      "mode": "100644",
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/independent-recipient/received/equal-reimport-S2.json",
+      "sha256": "e33d9d9d62c30276bb54c06bb74b07db1a9bc2904e0a9da126fb8c4563f6b5e3",
+      "type": "blob"
+    },
+    {
+      "bytes": 72833,
+      "encoding": "base64",
+      "git_blob": "58060748073a00c8d2454bab603bf017ddad08d5",
+      "mode": "100644",
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/independent-recipient/narrow-final.png",
+      "sha256": "b238969a7dd7cbce6b9dda1fa88e05852f5ae25f4d7c1c379a1c021b61668742",
+      "type": "blob"
+    }
+  ],
+  "schema": "tastetable-independent-public-member-manifest.v1"
+}

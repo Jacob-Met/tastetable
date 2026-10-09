@@ -1,0 +1,82 @@
+TAP version 13
+# Subtest: one text focus edit restores the complete literal imported record
+ok 1 - one text focus edit restores the complete literal imported record
+  ---
+  duration_ms: 3.880314
+  type: 'test'
+  ...
+# Subtest: twenty retained changes retain the boundary value, not an extra baseline
+ok 2 - twenty retained changes retain the boundary value, not an extra baseline
+  ---
+  duration_ms: 5.269797
+  type: 'test'
+  ...
+# Subtest: returning to the starting exact value is a no-op and preserves Redo
+ok 3 - returning to the starting exact value is a no-op and preserves Redo
+  ---
+  duration_ms: 0.765342
+  type: 'test'
+  ...
+# Subtest: an unchanged accepted patch does not consume history or discard Redo
+ok 4 - an unchanged accepted patch does not consume history or discard Redo
+  ---
+  duration_ms: 0.544652
+  type: 'test'
+  ...
+# Subtest: a committed new edit after Undo replaces only the future branch
+ok 5 - a committed new edit after Undo replaces only the future branch
+  ---
+  duration_ms: 0.679819
+  type: 'test'
+  ...
+# Subtest: different fields and repeated venue occurrences remain separate changes
+ok 6 - different fields and repeated venue occurrences remain separate changes
+  ---
+  duration_ms: 0.512194
+  type: 'test'
+  ...
+# Subtest: each outcome selection is an atomic change
+ok 7 - each outcome selection is an atomic change
+  ---
+  duration_ms: 0.589776
+  type: 'test'
+  ...
+# Subtest: invalid native model edits cannot replace accepted history
+ok 8 - invalid native model edits cannot replace accepted history
+  ---
+  duration_ms: 1.161547
+  type: 'test'
+  ...
+# Subtest: cleared date and empty note restore their exact prior values
+ok 9 - cleared date and empty note restore their exact prior values
+  ---
+  duration_ms: 1.280243
+  type: 'test'
+  ...
+# Subtest: source text, omitted and untouched siblings survive every recovery
+ok 10 - source text, omitted and untouched siblings survive every recovery
+  ---
+  duration_ms: 1.0269
+  type: 'test'
+  ...
+# Subtest: explicit Use resets history even when its accepted values match
+ok 11 - explicit Use resets history even when its accepted values match
+  ---
+  duration_ms: 0.555487
+  type: 'test'
+  ...
+# Subtest: an empty editor cannot expose a recovery operation
+ok 12 - an empty editor cannot expose a recovery operation
+  ---
+  duration_ms: 0.103822
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 147.398578

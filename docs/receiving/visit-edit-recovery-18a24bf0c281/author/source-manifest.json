@@ -1,0 +1,96 @@
+{
+  "schema": "taste-author-final-source-manifest.v1",
+  "main": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+  "main_tree": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6",
+  "prerequisite_head": "994c03aef94b711d6dcbbeb6bbbc6a4b85a6a3ad",
+  "source_installation": false,
+  "canonical_integration": false,
+  "files": [
+    {
+      "path": "static/visit_edit_history.mjs",
+      "bytes": 2094,
+      "sha256": "eb4f3d9b101bfd8483dd43f5161d07b15a4fc7be05f922a29e0a826abf4c2fc2",
+      "git_blob": "4f7ad84daa26198dfb7e787def085d563af72119"
+    },
+    {
+      "path": "static/visit_record_ui.mjs",
+      "bytes": 11976,
+      "sha256": "de5b41ea4f6921ed63ff250397e8ed0adbaec1c1ea8e9b182a1414e523254b82",
+      "git_blob": "fb2ab7743e0369e76fd84ee3dfd023de708d4c47"
+    },
+    {
+      "path": "static/visit-record.html",
+      "bytes": 4734,
+      "sha256": "fb538ba2f96fb4c30ea5b53b4459d17c8d00fb0e23becf8046b27a80b8c726d2",
+      "git_blob": "a128989f95e7846d90bf6b3fd95815ac91dbd86c"
+    },
+    {
+      "path": "tests/test_visit_edit_history.mjs",
+      "bytes": 6639,
+      "sha256": "0271fdb89efc5d513aaffe8538bffe7793840887880c2e513ef5ba37e735e59a",
+      "git_blob": "8e482f395d2c8d4d69bf75b55e270562a8f4bf48"
+    },
+    {
+      "path": "docs/VISIT_EDIT_RECOVERY.md",
+      "bytes": 2445,
+      "sha256": "4e1e9d9e5ac52fa7580f9c1b8ad322625f6ff35549b7eb4c55cb570cbf99f652",
+      "git_blob": "7f89202e224f5e06ebd4cac86e78344642b5bbed"
+    },
+    {
+      "path": "README.md",
+      "bytes": 20558,
+      "sha256": "db1a9d8d6ca2caed96d9eea4cc705457e9c9797ec93594a6419cccd977e71d1a",
+      "git_blob": "1691e9f6715c66cd0932815f258f3804cff1dd4c"
+    },
+    {
+      "path": "tools/check_visit_edit_history_browser.mjs",
+      "bytes": 19801,
+      "sha256": "2e83893a426999f4a4a197cccc6ade8400506f9ef362de9c71cb229a9e78e01b",
+      "git_blob": "9174430544287df0c969d21a00bf1f342ccf1ad6"
+    }
+  ],
+  "production_source_freeze": {
+    "bytes": 3917,
+    "sha256": "acbdf41780e6b27369b7dca374467b1237051699f7b5c309860889310a2de64f",
+    "git_blob": "052e118d9f29d4868f997d1fbac9cc4ddb7c7d76"
+  },
+  "shared_csv_fence": {
+    "import_exact": true,
+    "eligibility_assignment_exact": true,
+    "handler_exact": true,
+    "button_exact": true,
+    "help_paragraph_exact": true
+  },
+  "unchanged_runtime": [
+    {
+      "path": "static/visit_record.css",
+      "bytes": 4621,
+      "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403",
+      "git_blob": "cf2ed8fc0871196a55ceef4e0aa0cab09d1fcfeb"
+    },
+    {
+      "path": "static/visit_record.mjs",
+      "bytes": 7525,
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f",
+      "git_blob": "2b5b37e3d4a227e00a5b0052a962d13512b53e48"
+    },
+    {
+      "path": "static/visit_record_csv.mjs",
+      "bytes": 1646,
+      "sha256": "a233a983918291ef93577f91eb64c56adb4644c10cd8f4046e875d4536cc970c",
+      "git_blob": "b001286f411bec6a9088b1902e9455f2fc3540c2"
+    },
+    {
+      "path": "static/week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "git_blob": "420ddb8f63fca264dcf97be7147801105696155d"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+    }
+  ]
+}

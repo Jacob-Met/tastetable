@@ -1,0 +1,611 @@
+{
+  "schema": "tastetable-visit-edit-recovery-root-receiving.v1",
+  "worker": "estate-18a24bf0c281/root",
+  "issue": "https://github.com/Jacob-Met/tastetable/issues/70",
+  "decision": "Accepted qualified source and recorded native receiving; publication on a unique nonmain branch only. PR/main/installed adoption are separate held steps.",
+  "base": {
+    "main_commit": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+    "main_tree": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6",
+    "actual_parent": "994c03aef94b711d6dcbbeb6bbbc6a4b85a6a3ad",
+    "actual_parent_tree": "82a5b1f002284b34b2807ff965cfb736d02d1458",
+    "actual_parent_leaves": 850,
+    "pr61_state": "open and unmerged; qualified CSV contribution is an actual ancestor, not a claimed main merge"
+  },
+  "fence": {
+    "author_paths": 16,
+    "independent_recipient_paths": 7,
+    "independent_source_paths": 2,
+    "root_paths": 2,
+    "total_owned_paths": 27,
+    "replacements": [
+      "README.md",
+      "static/visit_record_ui.mjs",
+      "static/visit-record.html"
+    ],
+    "additions": 24,
+    "deletions": 0,
+    "inherited_exact": 847,
+    "expected_final_leaves": 874,
+    "source_only_25_path_tree_before_root_files": "e3f37c37109b21ae94cead9e2028e015029d51d2"
+  },
+  "behavior": [
+    "Undo and Redo restore complete accepted immutable model snapshots across up to20 committed visit edits.",
+    "Outcome selection is one step; accepted text in a single focused date/note field groups until blur or explicit action. Exact no-op keeps Redo; a real new edit clears it.",
+    "Invalid drafts remain visible and block history, JSON, CSV and Print until corrected. Invalid text is never admitted as a successful edit.",
+    "Recovery preserves sibling occurrences, source text, outcome/date/note values and literal CR/CRLF in the model. Null and empty distinctions are a model/JSON guarantee; the inherited CSV maps a null date to an empty field.",
+    "Use starts a new history even for an equal record; canceled, failed and unconfirmed opens preserve history. Recovery retires pending file generations.",
+    "JSON, CSV and Print use current restored data through unchanged retained handlers. Recovery restores field focus and scroll; native accessible buttons add no custom keyboard interception.",
+    "History is page-session state, cleared on pagehide; no schema/provider/dependency/persistence change."
+  ],
+  "original_contract": {
+    "bytes": 5810,
+    "sha256": "8a15ede5cb2dc7211d6a0f7f6eb7087092ee8bbbda7e31df00779c7b27ba80eb",
+    "frozen_before_candidate": true
+  },
+  "source_review": {
+    "production": [
+      {
+        "path": "static/visit_edit_history.mjs",
+        "bytes": 2094,
+        "sha256": "eb4f3d9b101bfd8483dd43f5161d07b15a4fc7be05f922a29e0a826abf4c2fc2",
+        "git_blob": "4f7ad84daa26198dfb7e787def085d563af72119"
+      },
+      {
+        "path": "static/visit_record_ui.mjs",
+        "bytes": 11976,
+        "sha256": "de5b41ea4f6921ed63ff250397e8ed0adbaec1c1ea8e9b182a1414e523254b82",
+        "git_blob": "fb2ab7743e0369e76fd84ee3dfd023de708d4c47"
+      },
+      {
+        "path": "static/visit-record.html",
+        "bytes": 4734,
+        "sha256": "fb538ba2f96fb4c30ea5b53b4459d17c8d00fb0e23becf8046b27a80b8c726d2",
+        "git_blob": "a128989f95e7846d90bf6b3fd95815ac91dbd86c"
+      }
+    ],
+    "retained_support": [
+      {
+        "path": "static/visit_record.mjs",
+        "git_blob": "2b5b37e3d4a227e00a5b0052a962d13512b53e48"
+      },
+      {
+        "path": "static/visit_record_csv.mjs",
+        "git_blob": "b001286f411bec6a9088b1902e9455f2fc3540c2"
+      },
+      {
+        "path": "static/week_file.mjs",
+        "git_blob": "420ddb8f63fca264dcf97be7147801105696155d"
+      },
+      {
+        "path": "static/week_plan.mjs",
+        "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+      },
+      {
+        "path": "static/visit_record.css",
+        "git_blob": "cf2ed8fc0871196a55ceef4e0aa0cab09d1fcfeb"
+      }
+    ],
+    "inverse": "nineUIspans reconstruct complete10229-byte PR61 UI; two buttons+help reconstruct complete4338-byte HTML;346-byte README append inverse exact",
+    "retained_handlers": "CSV import/eligibility/whole handler, JSON/Print, generation retirement and picker/cancel source remain exact",
+    "reviews": [
+      {
+        "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/independent-source/REVIEW.md",
+        "bytes": 8159,
+        "sha256": "e33869cdbb28a60eb3ae307b0835e99ad355f7c1a867fb3030dd7b8cb6a7d491",
+        "git_blob": "826fd4f694946456104470428b60b219894c9cd5"
+      },
+      {
+        "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/independent-source/source-review.json",
+        "bytes": 8039,
+        "sha256": "98d12e1e9abd54f8cd032f7e6aab05106fe2b9ec8f031930d9fc9a4520057355",
+        "git_blob": "344c12fb20e824110b5877122714828e556c859d"
+      }
+    ],
+    "root_review": "root read complete three production files and user guide; recomputed whole canonical parent and exact25-path overlay; read actual raw original/candidate/independent report predicates and both actual PNGs"
+  },
+  "receiving": {
+    "source_only_original": {
+      "reported_checks": [
+        16,
+        16
+      ],
+      "reported_receipt_bytes": 11762,
+      "reported_receipt_sha256": "70330de439a2211bdfcb465d3ebe15607d880c5f5533e68d1d2a5ee0b37e1f55",
+      "raw_status": "lost receiving memory; not received by root, reconstructed or replayed; preserved as historical report only"
+    },
+    "original_browser": {
+      "invocations": 1,
+      "checks": [
+        15,
+        16
+      ],
+      "receiver_exit": 1,
+      "browser_exit": {
+        "code": 0,
+        "signal": null
+      },
+      "raw_report": {
+        "bytes": 10154,
+        "sha256": "6f121df3872f21466b390a605ae778d48bc292f84c8750954a715a38f8eb564d",
+        "git_blob": "3b3b46dfab0b76383c51ca68e0982205923f0a80"
+      },
+      "failure": "application-edit-recovery-available: expected missing Undo/Redo on original",
+      "harness_error": null,
+      "resource_failure": null
+    },
+    "author_node": {
+      "invocations": 1,
+      "methods": 12,
+      "passed": 12,
+      "exit": 0,
+      "raw_stdout": {
+        "bytes": 2465,
+        "sha256": "1a85403b73d1619c1fd30c78bee888c9cb3bb419e6cb21c5a093d75772df3673",
+        "git_blob": "0a2f28e8ecb14f0108ec68d6752223502c190d67"
+      }
+    },
+    "author_browser": {
+      "invocations": 1,
+      "checks": [
+        23,
+        24
+      ],
+      "receiver_exit": 1,
+      "browser_exit": {
+        "code": 0,
+        "signal": null
+      },
+      "raw_report": {
+        "bytes": 18733,
+        "sha256": "3d724e3b1a2eb04427c5d905c6d867da9f78b3ee691d51532dcd4ac9827dc611",
+        "git_blob": "a5a13b0951fbe721a22bef61eb37fd7c6dc6cd22"
+      },
+      "failure": "redo-csv-entire-edited: generated record_saved_at legitimately differs between separate downloads",
+      "harness_error": null,
+      "resource_failure": null,
+      "product_repair": false,
+      "browser_replay": false
+    },
+    "offline_csv_correction": {
+      "invocations": 1,
+      "browser_invocations": 0,
+      "exit": 0,
+      "raw_receipt": {
+        "bytes": 1468,
+        "sha256": "f3672f4ae50be609356e789f64dcb319cbafcc03c9b3d977c769a96d2910d87a",
+        "git_blob": "dcdfc4b1ae175e0240b557c3469385033a79de19"
+      },
+      "method": "csv.reader(strict=True,newline=\"\") over the two retained physical CSV downloads; no browser replay",
+      "headers": 17,
+      "stable_columns": 16,
+      "records": 3,
+      "variable_column_only": "record_saved_at",
+      "timestamps": [
+        "2026-10-09T05:01:59.610Z",
+        "2026-10-09T05:02:00.411Z"
+      ],
+      "time_bounds": {
+        "kind": "whole recorded campaign, no per-export interval",
+        "start": "2026-10-09T05:01:58.457Z",
+        "end": "2026-10-09T05:02:15.695Z"
+      },
+      "receiver_inverse": "815-byte pureJS helper plus one separatorLF and one changed predicate inversely reconstruct executed18939-byte driver",
+      "corrected_successor_driver": {
+        "path": "tools/check_visit_edit_history_browser.mjs",
+        "bytes": 19801,
+        "sha256": "2e83893a426999f4a4a197cccc6ade8400506f9ef362de9c71cb229a9e78e01b",
+        "git_blob": "9174430544287df0c969d21a00bf1f342ccf1ad6",
+        "whole_browser_status": "UNRUN; only syntax and pure corrected predicate received"
+      }
+    },
+    "independent_browser": {
+      "invocations": 1,
+      "checks": [
+        56,
+        56
+      ],
+      "receiver_exit": 0,
+      "browser_exit": {
+        "code": 0,
+        "signal": null
+      },
+      "raw_report": {
+        "bytes": 65723,
+        "sha256": "5d9d51025a5cf8b363b4aea3cc9c400d96e47f356ade3498419feacdee748a57",
+        "git_blob": "0fdd5530431e64c410cd6ae7742f072118623121"
+      },
+      "harness_errors": 0,
+      "page_exceptions": 0,
+      "containment": false,
+      "original_replay": false,
+      "source_repair": false,
+      "frozen_driver_sha256": "7557b764bf4fc7f2fd27566ca450193f28eff146ecd2b048eb396317f8867cda",
+      "intake_sha256": "49794d1a8e36fee05ec99405d8708b5e3537c6a742ad48dc32eb5c248574e4bb",
+      "scope": "group/no-op/branch/invalid lifecycle; physicalJSON/CSV/reopen; pending read retirement; canceled/failed/equalUse;21edits and20Undo; native keyboard activation, focus/scroll and390px liveDOM"
+    },
+    "combination_rule": "These are separate gates. The author browser remains23/24; neither the offline correction nor separate56/56 is relabeled as a24/24 replay."
+  },
+  "custody": {
+    "private_repository": "Jacob-Met/hamon",
+    "commit": "84dcb1e25ca98d748fadec9a9313449d491782e8",
+    "index_url": "https://github.com/Jacob-Met/hamon/blob/84dcb1e25ca98d748fadec9a9313449d491782e8/docs/receiving/estate-18a24bf0c281/native-custody-20261009/README.md",
+    "packets": [
+      {
+        "key": "tt_original",
+        "path": "docs/receiving/estate-18a24bf0c281/native-custody-20261009/packets/tt_original.json",
+        "bytes": 190716,
+        "sha256": "547c0a3832e18d4a14c1479c68da6552676895cc3c715a7489886fcdf28f2edb",
+        "git_blob": "25113ea0e7fd3737f4283fb96e65579a7704308d"
+      },
+      {
+        "key": "tt_public",
+        "path": "docs/receiving/estate-18a24bf0c281/native-custody-20261009/packets/tt_public.json",
+        "bytes": 253825,
+        "sha256": "fec605baa1f6eb4ee8bada2dc80d4c2d26b0089813986447fe3c377e1f961fef",
+        "git_blob": "48cada9fcc74fb1978e7eeb7edfc7bf31e4aac89"
+      },
+      {
+        "key": "tt_private",
+        "path": "docs/receiving/estate-18a24bf0c281/native-custody-20261009/packets/tt_private.json",
+        "bytes": 567252,
+        "sha256": "3283355684260c87a6ebebc41daf1483ab9123b25218c7d89cc2047f6e468dc4",
+        "git_blob": "da775a5bc923aefe3367efeee269476ca38e071b"
+      },
+      {
+        "key": "tt_ind_public",
+        "path": "docs/receiving/estate-18a24bf0c281/native-custody-20261009/packets/tt_ind_public.json",
+        "bytes": 123163,
+        "sha256": "490f0c5fd810ec1344c9e6cfdeb839258ee0fdf1c9f5221b81d34b7cb9ec767a",
+        "git_blob": "0e56ecfe319454f6e4c7359083504ca64c64c130"
+      },
+      {
+        "key": "tt_ind_private",
+        "path": "docs/receiving/estate-18a24bf0c281/native-custody-20261009/packets/tt_ind_private.json",
+        "bytes": 170789,
+        "sha256": "d4e45e6a2937e923fd9157d7ce9950b899a0178fc54bf20747674dfefb60972b",
+        "git_blob": "09fd8d843f6a039a540694cc95fdee30250312d0"
+      }
+    ],
+    "root_archive_recheck": {
+      "tt_original": {
+        "members": 26,
+        "all_bytes_hashes_exact": true
+      },
+      "tt_private": {
+        "members": 84,
+        "all_bytes_hashes_exact": true
+      },
+      "tt_ind_private": {
+        "members": 32,
+        "all_bytes_hashes_exact": true
+      }
+    },
+    "author_original_modes": "84+26 regular0600 files;24shared original members and nested original packet exact",
+    "independent_archive": "32regular entries with recorded0600/0664 modes, all manifest bytes/hashes checked; no extraction to filesystem",
+    "readonly_audit": {
+      "bytes": 5291,
+      "sha256": "32a614fb5bcbbfaab3e1dd5c2e43eedbd441f4e763df7ad55f247c87b9a525e7",
+      "git_blob": "b3d46592827f78673ba43f7daa62425b19f88f1a"
+    },
+    "outer_publication_modes": "all27ownedfiles explicitly100644blob; author packet omits mode/type and independent packet declares100644blob",
+    "source_profiles": "retained in their original owned native locations, excluded from archives; no profile replay or owner change"
+  },
+  "visual_readback": {
+    "author_png": {
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/author/candidate-final.png",
+      "observed": "actual desktop screenshot shows Undo enabled/Redo disabled beside inherited JSON/CSV/Print, source/provenance and restored visit context"
+    },
+    "independent_png": {
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/independent-recipient/narrow-final.png",
+      "observed": "actual390px screenshot shows upper source/opening cards only; history button accessibility/layout is bound by liveDOM predicates, not this screenshot"
+    }
+  },
+  "workflows": {
+    "directive": "https://github.com/Jacob-Met/hamon/issues/143#issuecomment-6067592767",
+    "complete_files": [
+      {
+        "path": ".github/workflows/ci.yml",
+        "bytes": 652,
+        "sha256": "2f83a6f17995602ec28e9f0dacc901511bae2dd3e348e2dfc9190494830da876",
+        "git_blob": "0e6273139a9bf417a4ee42f4501d067b1c9d95a0",
+        "events": {
+          "push": {
+            "branches": [
+              "main"
+            ]
+          },
+          "pull_request": ""
+        }
+      },
+      {
+        "path": ".github/workflows/native-plan-week-browser.yml",
+        "bytes": 3299,
+        "sha256": "b40992512e13d653c51fb8b4dfb0d15ad0a090ae4754c4082a18ab20ca62ace3",
+        "git_blob": "d674f2698d1b048075a1c49c2035b1096be668f2",
+        "events": {
+          "pull_request": {
+            "paths": [
+              "tools/native_plan_to_week.mjs",
+              "tools/check_native_plan_week_browser.mjs",
+              "tests/test_native_plan_week.py",
+              "tastetable_cli.py",
+              "agent.py",
+              "constraints.py",
+              "qloo_client.py",
+              "personas.py",
+              "fixtures/qloo_fixtures.json",
+              "static/**",
+              ".github/workflows/native-plan-week-browser.yml"
+            ]
+          },
+          "push": {
+            "branches": [
+              "main"
+            ],
+            "paths": [
+              "tools/native_plan_to_week.mjs",
+              "tools/check_native_plan_week_browser.mjs",
+              "tests/test_native_plan_week.py",
+              "tastetable_cli.py",
+              "agent.py",
+              "constraints.py",
+              "qloo_client.py",
+              "personas.py",
+              "fixtures/qloo_fixtures.json",
+              "static/**",
+              ".github/workflows/native-plan-week-browser.yml"
+            ]
+          }
+        }
+      },
+      {
+        "path": ".github/workflows/week-compare.yml",
+        "bytes": 1269,
+        "sha256": "ea82ca88ff2fc05072503f3c124068ab2fc8cc689e7f22b9b850e07ba96393aa",
+        "git_blob": "e591fca2db970460611269ad7d1c53a6bc70f028",
+        "events": {
+          "pull_request": {
+            "paths": [
+              "static/**",
+              "tests/*.mjs",
+              "tests/*.cjs",
+              "tests/fixtures/**",
+              ".github/workflows/week-compare.yml"
+            ]
+          },
+          "push": {
+            "branches": [
+              "main"
+            ],
+            "paths": [
+              "static/**",
+              "tests/*.mjs",
+              "tests/*.cjs",
+              "tests/fixtures/**",
+              ".github/workflows/week-compare.yml"
+            ]
+          }
+        }
+      }
+    ],
+    "unchanged": true,
+    "branch": "work/visit-edit-recovery-18a24bf0c281-20261009",
+    "normal_event_assessment": "All3push events selectmain; onlyotherdeclared event ispull_request. Unique nonmainbranch with noassociatedPRmatchesnone. No skip-marker or token/disabled-workflow assumption.",
+    "held": [
+      "opening or updating aPR",
+      "main merge/push",
+      "Actions/installed adoption"
+    ],
+    "post_publication": "fulltree,exactcommit,parent,ref andall-event exact-headrunreadback recordedin acceptancecomment"
+  },
+  "owned_payloads": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 20558,
+      "sha256": "db1a9d8d6ca2caed96d9eea4cc705457e9c9797ec93594a6419cccd977e71d1a",
+      "git_blob": "1691e9f6715c66cd0932815f258f3804cff1dd4c"
+    },
+    {
+      "path": "docs/VISIT_EDIT_RECOVERY.md",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 2445,
+      "sha256": "4e1e9d9e5ac52fa7580f9c1b8ad322625f6ff35549b7eb4c55cb570cbf99f652",
+      "git_blob": "7f89202e224f5e06ebd4cac86e78344642b5bbed"
+    },
+    {
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/author/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 2981,
+      "sha256": "60046f47964014c12cbd12f1e1f2a55804f306d1e6829576bfd2a7c6e0ebc4d1",
+      "git_blob": "61ad444838c9ff269e2c05818f52d0333a44a377"
+    },
+    {
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/author/candidate-browser-summary.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 3939,
+      "sha256": "165de5813280511e055d68a3f9c74e926feddac5001eab4ab45e1b4b99922c62",
+      "git_blob": "fc775ad697d37bbf3f54a4ae8bda3595481427da"
+    },
+    {
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/author/candidate-final.png",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 117664,
+      "sha256": "4f0fa59c6219f396f14d1d4e92a7e522aca66df4080fc182eb76968fcf64dbf9",
+      "git_blob": "4d022e5fe8845d914806eeb27d0569305c7d2f1a"
+    },
+    {
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/author/corrected-offline-csv.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 1468,
+      "sha256": "f3672f4ae50be609356e789f64dcb319cbafcc03c9b3d977c769a96d2910d87a",
+      "git_blob": "dcdfc4b1ae175e0240b557c3469385033a79de19"
+    },
+    {
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/author/node.stdout.tap",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 2465,
+      "sha256": "1a85403b73d1619c1fd30c78bee888c9cb3bb419e6cb21c5a093d75772df3673",
+      "git_blob": "0a2f28e8ecb14f0108ec68d6752223502c190d67"
+    },
+    {
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/author/original-browser-summary.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 2682,
+      "sha256": "880d476386b125f808e77bf7bb3959bdd131b4acad9c3a92606631ed746c74b8",
+      "git_blob": "b64fab562c097933bce3cb577daf20369c349678"
+    },
+    {
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/author/qualification.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 2397,
+      "sha256": "f7fe4259418da7a8385105eb7c6e26c676e255bc4330dfba0ae90e3effae4a39",
+      "git_blob": "2366bfee80abc2e79969f1cc69c8fb926a030f1e"
+    },
+    {
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/author/receiver-only-inverse.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 1064,
+      "sha256": "bab9a19139193c3686aac500b05ef97bd6c11043d3fb433b00a86af95127a855",
+      "git_blob": "b45e4ea975c31e51774afd750315d4ed9870db9a"
+    },
+    {
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/author/source-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 3398,
+      "sha256": "3022a917d1c086ae70eb7e82dfc12faa88cd6082f6616d7c36b1cc904c053065",
+      "git_blob": "8ef183482f457d147a496a68fc9d8021e711757d"
+    },
+    {
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/independent-recipient/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 3641,
+      "sha256": "087fc579e9b3e1b8b8728c7fe8d6eaf36594c96394246c739e20549fe5ea81f1",
+      "git_blob": "f79d7dd5125b7849b36e9791c9d5f6249726157c"
+    },
+    {
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/independent-recipient/manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 2250,
+      "sha256": "7242a0c289196edf64862efc7a685073b6f4ef62d61832574d1f5bd5f2d517e2",
+      "git_blob": "6a2a0e4cdd9b33ee992ce21ceeb4d82ef6aa0656"
+    },
+    {
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/independent-recipient/narrow-final.png",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 72833,
+      "sha256": "b238969a7dd7cbce6b9dda1fa88e05852f5ae25f4d7c1c379a1c021b61668742",
+      "git_blob": "58060748073a00c8d2454bab603bf017ddad08d5"
+    },
+    {
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/independent-recipient/qualification.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 9269,
+      "sha256": "7a261a1f04fe2ecd330cdf29dcea8ded3b76a7804b28061999f453950894393f",
+      "git_blob": "108ebd1747175add5e03da29c9c44378d01a43f4"
+    },
+    {
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/independent-recipient/received/equal-reimport-S2.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 2422,
+      "sha256": "e33d9d9d62c30276bb54c06bb74b07db1a9bc2904e0a9da126fb8c4563f6b5e3",
+      "git_blob": "767aac5e5178cd694950e5f7d67201a4ef2aef2f"
+    },
+    {
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/independent-recipient/received/restored-S4.csv",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 807,
+      "sha256": "c5deba620b99916e5d6d38c283e29d342cb3e9cdb3c9f71df9a7e231a8864ddb",
+      "git_blob": "104c4f6fe6ba3fed65a117126e5b1994f1a8f4e7"
+    },
+    {
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/independent-recipient/received/restored-S4.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 2422,
+      "sha256": "45399eefb49c60f08f1141f554054c529fa5700057b7981088e43d1ca456fb16",
+      "git_blob": "e426e37ce43c6fab816007a93d24220c4c3abaeb"
+    },
+    {
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/independent-source/REVIEW.md",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 8159,
+      "sha256": "e33869cdbb28a60eb3ae307b0835e99ad355f7c1a867fb3030dd7b8cb6a7d491",
+      "git_blob": "826fd4f694946456104470428b60b219894c9cd5"
+    },
+    {
+      "path": "docs/receiving/visit-edit-recovery-18a24bf0c281/independent-source/source-review.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 8039,
+      "sha256": "98d12e1e9abd54f8cd032f7e6aab05106fe2b9ec8f031930d9fc9a4520057355",
+      "git_blob": "344c12fb20e824110b5877122714828e556c859d"
+    },
+    {
+      "path": "static/visit-record.html",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 4734,
+      "sha256": "fb538ba2f96fb4c30ea5b53b4459d17c8d00fb0e23becf8046b27a80b8c726d2",
+      "git_blob": "a128989f95e7846d90bf6b3fd95815ac91dbd86c"
+    },
+    {
+      "path": "static/visit_edit_history.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 2094,
+      "sha256": "eb4f3d9b101bfd8483dd43f5161d07b15a4fc7be05f922a29e0a826abf4c2fc2",
+      "git_blob": "4f7ad84daa26198dfb7e787def085d563af72119"
+    },
+    {
+      "path": "static/visit_record_ui.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 11976,
+      "sha256": "de5b41ea4f6921ed63ff250397e8ed0adbaec1c1ea8e9b182a1414e523254b82",
+      "git_blob": "fb2ab7743e0369e76fd84ee3dfd023de708d4c47"
+    },
+    {
+      "path": "tests/test_visit_edit_history.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 6639,
+      "sha256": "0271fdb89efc5d513aaffe8538bffe7793840887880c2e513ef5ba37e735e59a",
+      "git_blob": "8e482f395d2c8d4d69bf75b55e270562a8f4bf48"
+    },
+    {
+      "path": "tools/check_visit_edit_history_browser.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 19801,
+      "sha256": "2e83893a426999f4a4a197cccc6ade8400506f9ef362de9c71cb229a9e78e01b",
+      "git_blob": "9174430544287df0c969d21a00bf1f342ccf1ad6"
+    }
+  ],
+  "self_reference_policy": "owned_payloads lists25receivedfiles; rootREADME andthisrootrecord are the2additionalfiles. Final27file tree is independently computed/readback and recordedin acceptancecomment.",
+  "retained_limits": [
+    "Independent frozen deferred-file-read is one controlled interleaving, not every possible browser interleaving.",
+    "Observation-only storage wrappers do not cover all conceivable storage APIs.",
+    "No hostedActions, dependency installation, shared browser profile, production provider/caregiver operation or installed application adoption.",
+    "Original source-only lost receipt and reviewer extraction/schema mistakes remain documented; no manufactured raw evidence.",
+    "Immutable authorqualification retains its historical independent-pending field; this later rootrecord carries the completed separate56/56."
+  ]
+}

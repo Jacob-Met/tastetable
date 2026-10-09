@@ -1,0 +1,5 @@
+{
+  "old": "check('redo-csv-entire-edited',same(recoveredCsv,csv),recoveredCsv,csv);",
+  "neu": "check('redo-csv-entire-edited',sameCsvRecords(csv,recoveredCsv,Date.parse(report.start),Date.now()),recoveredCsv,csv);",
+  "helper": "function sameCsvRecords(first, second, earliest, latest) {\n  if (!same(first[0], second[0]) || first.length < 2 || first.length !== second.length) return false;\n  const index = first[0].indexOf('record_saved_at');\n  if (index < 0 || first[0].lastIndexOf('record_saved_at') !== index) return false;\n  function validTimestamp(rows) {\n    const value = rows[1][index], time = Date.parse(value);\n    return Number.isFinite(time) && new Date(time).toISOString() === value &&\n      time >= earliest && time <= latest && rows.slice(1).every(row => row[index] === value);\n  }\n  const stable = rows => rows.map(row => row.filter((_, i) => i !== index));\n  return validTimestamp(first) && validTimestamp(second) &&\n    Date.parse(second[1][index]) >= Date.parse(first[1][index]) &&\n    same(stable(first), stable(second));\n}\n"
+}

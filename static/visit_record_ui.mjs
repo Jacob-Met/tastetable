@@ -1,11 +1,13 @@
 import { createVisitRecord, updateVisitRecord, visitRecordRows, makeVisitRecordFile, readVisitRecord, VISIT_RECORD_LIMITS } from "./visit_record.mjs";
 import { readWeekFile } from "./week_file.mjs";
 import { renderVisitRecordCsv } from "./visit_record_csv.mjs";
+import { createVisitEditHistory } from "./visit_edit_history.mjs";
 
 const $ = selector => document.querySelector(selector);
 const labels = {unrecorded: "Unrecorded", went: "Went", did_not_go: "Did not go"};
 let current = null, pending = null, generation = 0, downloadUrl = null;
 const invalid = new Map();
+const editHistory = createVisitEditHistory();
 function text(tag, value, className) {
   const node = document.createElement(tag); node.textContent = value;
   if (className) node.className = className;
@@ -20,6 +22,9 @@ function controls() {
   const blocked = !current || invalid.size > 0;
   $("#saveRecord").disabled = blocked; $("#printRecord").disabled = blocked;
   $("#downloadCsv").disabled = blocked;
+  $("#undoChange").disabled = blocked || !editHistory.canUndo;
+  $("#redoChange").disabled = blocked || !editHistory.canRedo;
+  $("#historyHelp").textContent = invalid.size ? "Correct the marked fields before using Undo or Redo. Invalid text is not discarded." : "Undo or redo up to 20 visit edits in this tab. Using another file starts a new history.";
   document.body.classList.toggle("invalid-draft", invalid.size > 0);
   $("#draftError").textContent = invalid.size ? "Correct the marked fields before downloading or printing. Your earlier valid values remain in this tab." : "";
   if (current) {
@@ -66,6 +71,7 @@ function render() {
       label.append(input, error);
       if (field === "note") { const help = text("span", "Optional · up to 4,000 characters. Keep private health details out.", "note-help"); help.id = input.id + "-help"; label.append(help); }
       input.addEventListener(field === "outcome" ? "change" : "input", () => edit(row.key, field, input, error, card));
+      input.addEventListener("blur", () => { editHistory.close(); controls(); });
       fields.append(label);
     }
     card.append(fields, text("p", printText(row), "print-values")); $("#visits").append(card);
@@ -81,13 +87,27 @@ function edit(key, field, input, error, card) {
     // Read only this edited field. In particular, unrelated edits never normalize
     // an imported literal CR/CRLF note through textarea.value.
     const value = field === "date" && input.value === "" ? null : input.value;
-    current = updateVisitRecord(current, key, { [field]: value });
+    const next = updateVisitRecord(current, key, { [field]: value });
+    current = editHistory.record(next, input.id, field !== "outcome");
     invalid.delete(id); input.removeAttribute("aria-invalid"); error.textContent = "";
     card.querySelector(".print-values").textContent = printText(current.visits.find(v => v.key === key));
   } catch (e) { invalid.set(id, e.message); input.setAttribute("aria-invalid", "true"); error.textContent = e.message; }
   controls();
 }
+function recover(direction) {
+  if (!current || invalid.size) return;
+  const change = editHistory[direction]();
+  if (!change) return;
+  retire("File preview cleared because you recovered an edit.");
+  const position = {x: window.scrollX, y: window.scrollY};
+  current = change.record;
+  render();
+  document.getElementById(change.target)?.focus({preventScroll:true});
+  window.scrollTo(position.x, position.y);
+  $("#saveStatus").textContent = direction === "undo" ? "Undid the last visit edit." : "Redid the visit edit.";
+}
 async function open(file, kind) {
+  editHistory.close(); controls();
   retire(file ? "Reading file… The displayed record stays in place." : "");
   if (!file) return;
   const version = generation;
@@ -121,7 +141,7 @@ for (const [kind, button, picker] of [["week","#openWeek","#weekFile"],["record"
 $("#cancelOpen").addEventListener("click", () => retire("Opening cancelled. Your current record is unchanged."));
 $("#useRecord").addEventListener("click", () => {
   if (!pending) return;
-  const next = pending.record; retire(); current = next; invalid.clear();
+  const next = pending.record; retire(); current = next; editHistory.reset(current); invalid.clear();
   $("#saveStatus").textContent = ""; render(); $("#recordTitle").focus({preventScroll:true});
 });
 $("#saveRecord").addEventListener("click", () => {
@@ -150,3 +170,14 @@ $("#downloadCsv").addEventListener("click", () => {
 });
 $("#printRecord").addEventListener("click", () => { if (current && !invalid.size) { retire(); window.print(); } });
 window.addEventListener("pagehide", () => { if (downloadUrl) URL.revokeObjectURL(downloadUrl); });
+
+$("#undoChange").addEventListener("click", () => recover("undo"));
+$("#redoChange").addEventListener("click", () => recover("redo"));
+// Close an edit even for an explicit button action that does not move focus.
+// Keep the existing JSON, CSV and Print handlers unchanged.
+document.addEventListener("click", event => {
+  if (event.target instanceof Element && event.target.closest("button")) {
+    editHistory.close(); controls();
+  }
+}, true);
+window.addEventListener("pagehide", () => { editHistory.reset(current); controls(); });

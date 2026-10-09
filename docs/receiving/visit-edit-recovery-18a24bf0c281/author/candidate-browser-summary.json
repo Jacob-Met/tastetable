@@ -1,0 +1,162 @@
+{
+  "schema": "public-derived-browser-summary.v1",
+  "derivative": true,
+  "omitted": "Private native roots, device/process identities and raw request URLs; full raw bytes remain private.",
+  "raw_report": {
+    "bytes": 18733,
+    "sha256": "3d724e3b1a2eb04427c5d905c6d867da9f78b3ee691d51532dcd4ac9827dc611",
+    "git_blob": "a5a13b0951fbe721a22bef61eb37fd7c6dc6cd22"
+  },
+  "source": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+  "prerequisite": "994c03aef94b711d6dcbbeb6bbbc6a4b85a6a3ad",
+  "start": "2026-10-09T05:01:58.457Z",
+  "end": "2026-10-09T05:02:15.695Z",
+  "summary": {
+    "checks": 24,
+    "passed": 23,
+    "failed": 1
+  },
+  "checks": [
+    {
+      "name": "exact-candidate-composition",
+      "passed": true
+    },
+    {
+      "name": "preview-before-use",
+      "passed": true
+    },
+    {
+      "name": "original-occurrence-order",
+      "passed": true
+    },
+    {
+      "name": "literal-source-name",
+      "passed": true
+    },
+    {
+      "name": "physical-json-preserves-original-values",
+      "passed": true
+    },
+    {
+      "name": "physical-json-preserves-source",
+      "passed": true
+    },
+    {
+      "name": "actual-note-edit",
+      "passed": true
+    },
+    {
+      "name": "actual-outcome-edit",
+      "passed": true
+    },
+    {
+      "name": "application-edit-recovery-available",
+      "passed": true
+    },
+    {
+      "name": "physical-json-current-edits-only",
+      "passed": true
+    },
+    {
+      "name": "physical-json-source-still-exact",
+      "passed": true
+    },
+    {
+      "name": "retained-csv-current-edits",
+      "passed": true
+    },
+    {
+      "name": "undo-outcome",
+      "passed": true
+    },
+    {
+      "name": "outcome-focus-restored",
+      "passed": true
+    },
+    {
+      "name": "note-focus-restored",
+      "passed": true
+    },
+    {
+      "name": "undo-physical-json-entire-original",
+      "passed": true
+    },
+    {
+      "name": "undo-exhausted-redo-available",
+      "passed": true
+    },
+    {
+      "name": "redo-physical-json-entire-edited",
+      "passed": true
+    },
+    {
+      "name": "redo-exhausted-undo-available",
+      "passed": true
+    },
+    {
+      "name": "redo-csv-entire-edited",
+      "passed": false
+    },
+    {
+      "name": "no-original-input-write",
+      "passed": true
+    },
+    {
+      "name": "no-source-write",
+      "passed": true
+    },
+    {
+      "name": "no-provider-or-write-request",
+      "passed": true
+    },
+    {
+      "name": "no-browser-exception",
+      "passed": true
+    }
+  ],
+  "downloads": [
+    {
+      "label": "before",
+      "path": "downloads/before/tastetable-visits-2024-02-26.json",
+      "bytes": 1979,
+      "sha256": "58dedb8eb69eb4131f4e87917eef080558922d4967d780ee1bfa1b9db104c76b"
+    },
+    {
+      "label": "after",
+      "path": "downloads/after/tastetable-visits-2024-02-26.json",
+      "bytes": 1992,
+      "sha256": "f0665012dbb4730192099e26a43788974f19dfc18ee7f46c49a2cfb0b77d92d6"
+    },
+    {
+      "label": "csv",
+      "path": "downloads/csv/tastetable-visits-2024-02-26.csv",
+      "bytes": 1090,
+      "sha256": "c47ff87ad3fc8484d447cec68225a8275f99daa23a17d9add43c277ce11e2d0b"
+    },
+    {
+      "label": "restored",
+      "path": "downloads/restored/tastetable-visits-2024-02-26.json",
+      "bytes": 1979,
+      "sha256": "3b43824dbaaf1d894894c395f88f86d2e59f1184a1f97050189aaea285eb6542"
+    },
+    {
+      "label": "redone",
+      "path": "downloads/redone/tastetable-visits-2024-02-26.json",
+      "bytes": 1992,
+      "sha256": "2fc9cb02b09f4787b67319e3653a2808eb284aa5dc915aee84ec29b5b107d9fb"
+    },
+    {
+      "label": "redone-csv",
+      "path": "downloads/redone-csv/tastetable-visits-2024-02-26.csv",
+      "bytes": 1090,
+      "sha256": "af0bd36751024ac4c8bebba0a8406e4a4478081560167d8a27de2f3fb2a736d8"
+    }
+  ],
+  "browser_exit": {
+    "code": 0,
+    "signal": null
+  },
+  "browser_closure_known": true,
+  "harness_error": null,
+  "resource_failure": null
+}

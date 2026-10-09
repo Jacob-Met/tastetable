@@ -1,0 +1,112 @@
+{
+  "schema": "public-derived-browser-summary.v1",
+  "derivative": true,
+  "omitted": "Private native roots, device/process identities and raw request URLs; full raw bytes remain private.",
+  "raw_report": {
+    "bytes": 10154,
+    "sha256": "6f121df3872f21466b390a605ae778d48bc292f84c8750954a715a38f8eb564d",
+    "git_blob": "3b3b46dfab0b76383c51ca68e0982205923f0a80"
+  },
+  "source": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+  "prerequisite": "994c03aef94b711d6dcbbeb6bbbc6a4b85a6a3ad",
+  "start": "2026-10-09T04:24:03.814Z",
+  "end": "2026-10-09T04:24:05.344Z",
+  "summary": {
+    "checks": 16,
+    "passed": 15,
+    "failed": 1
+  },
+  "checks": [
+    {
+      "name": "exact-original-composition",
+      "passed": true
+    },
+    {
+      "name": "preview-before-use",
+      "passed": true
+    },
+    {
+      "name": "original-occurrence-order",
+      "passed": true
+    },
+    {
+      "name": "literal-source-name",
+      "passed": true
+    },
+    {
+      "name": "physical-json-preserves-original-values",
+      "passed": true
+    },
+    {
+      "name": "physical-json-preserves-source",
+      "passed": true
+    },
+    {
+      "name": "actual-note-edit",
+      "passed": true
+    },
+    {
+      "name": "actual-outcome-edit",
+      "passed": true
+    },
+    {
+      "name": "application-edit-recovery-available",
+      "passed": false
+    },
+    {
+      "name": "physical-json-current-edits-only",
+      "passed": true
+    },
+    {
+      "name": "physical-json-source-still-exact",
+      "passed": true
+    },
+    {
+      "name": "retained-csv-current-edits",
+      "passed": true
+    },
+    {
+      "name": "no-original-input-write",
+      "passed": true
+    },
+    {
+      "name": "no-source-write",
+      "passed": true
+    },
+    {
+      "name": "no-provider-or-write-request",
+      "passed": true
+    },
+    {
+      "name": "no-browser-exception",
+      "passed": true
+    }
+  ],
+  "downloads": [
+    {
+      "label": "before",
+      "path": "downloads/before/tastetable-visits-2024-02-26.json",
+      "bytes": 1979,
+      "sha256": "5e4b18595a18897dab25e5cdb59e4ed4c83e91a30d44b584ede55ede630de7c5"
+    },
+    {
+      "label": "after",
+      "path": "downloads/after/tastetable-visits-2024-02-26.json",
+      "bytes": 1992,
+      "sha256": "6a2fc0dcc55631be9333f201e4048788c0030cad7749def7cb790920f5a0de30"
+    },
+    {
+      "label": "csv",
+      "path": "downloads/csv/tastetable-visits-2024-02-26.csv",
+      "bytes": 1090,
+      "sha256": "b2cadf18572613dbe51ea6bd02d6a8c5ef535429b0124708fce311e9f5fdd8ee"
+    }
+  ],
+  "browser_exit": {
+    "code": 0,
+    "signal": null
+  },
+  "browser_closure_known": true,
+  "harness_error": null,
+  "resource_failure": null
+}
