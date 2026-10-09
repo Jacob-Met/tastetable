@@ -82,6 +82,8 @@ app.py (FastAPI) ──► agent.py  tool loop (OpenAI chat.completions shape)
 
 Create an ordered, create-only ZIP of native fixture plans and editable saved weeks from explicit profile files with [the native batch command](docs/NATIVE_PLAN_BATCH.md). Every requested profile receives a saved or failed entry; a partial bundle has a nonzero process exit.
 
+For an offline caregiver handoff, combine explicitly chosen saved-week files for the same Monday–Sunday week into a [printable day-by-day roster](docs/WEEK_ROSTER.md). Each source keeps its own constraints, omissions, timestamps and byte fingerprint; repeated inputs remain separate entries.
+
 ## Setup
 
 Requires Python 3.12.
