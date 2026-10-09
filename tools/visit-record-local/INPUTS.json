@@ -1,0 +1,131 @@
+{
+  "format": "tastetable.visit-record-local-inputs.v1",
+  "owner": "estate-c945953fdeb7/product_execution_next",
+  "repository": "Jacob-Met/tastetable",
+  "qualified_parent": "4b9fb4bdf00214d92b821d30200bcaa9dd0bfa32",
+  "qualified_tree": "744c3a97f7d6b0108b51313fd8a532a638047d20",
+  "original_offer": "https://github.com/Jacob-Met/tastetable/issues/70#issuecomment-6075750328",
+  "installation_reservation": "https://github.com/Jacob-Met/tastetable/issues/70#issuecomment-6077679283",
+  "original_capsule": {
+    "git_blob": "f5ceed23b810957cf8e4cb36083fd519f9f03a2d",
+    "bytes": 55094,
+    "sha256": "724be9c59600c28e0f6a69fefcbf635a321aade0ef5f84c5d402204285224344"
+  },
+  "original_files": [
+    {
+      "path": "static/visit-record.html",
+      "source_path": "static/visit-record.html",
+      "git_blob": "a128989f95e7846d90bf6b3fd95815ac91dbd86c",
+      "bytes": 4734,
+      "sha256": "fb538ba2f96fb4c30ea5b53b4459d17c8d00fb0e23becf8046b27a80b8c726d2"
+    },
+    {
+      "path": "static/visit_record.css",
+      "source_path": "static/visit_record.css",
+      "git_blob": "cf2ed8fc0871196a55ceef4e0aa0cab09d1fcfeb",
+      "bytes": 4621,
+      "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403"
+    },
+    {
+      "path": "static/visit_record_ui.mjs",
+      "source_path": "static/visit_record_ui.mjs",
+      "git_blob": "fb2ab7743e0369e76fd84ee3dfd023de708d4c47",
+      "bytes": 11976,
+      "sha256": "de5b41ea4f6921ed63ff250397e8ed0adbaec1c1ea8e9b182a1414e523254b82"
+    },
+    {
+      "path": "static/visit_record.mjs",
+      "source_path": "static/visit_record.mjs",
+      "git_blob": "2b5b37e3d4a227e00a5b0052a962d13512b53e48",
+      "bytes": 7525,
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f"
+    },
+    {
+      "path": "static/visit_record_csv.mjs",
+      "source_path": "static/visit_record_csv.mjs",
+      "git_blob": "b001286f411bec6a9088b1902e9455f2fc3540c2",
+      "bytes": 1646,
+      "sha256": "a233a983918291ef93577f91eb64c56adb4644c10cd8f4046e875d4536cc970c"
+    },
+    {
+      "path": "static/visit_edit_history.mjs",
+      "source_path": "static/visit_edit_history.mjs",
+      "git_blob": "4f7ad84daa26198dfb7e787def085d563af72119",
+      "bytes": 2094,
+      "sha256": "eb4f3d9b101bfd8483dd43f5161d07b15a4fc7be05f922a29e0a826abf4c2fc2"
+    },
+    {
+      "path": "static/week_file.mjs",
+      "source_path": "static/week_file.mjs",
+      "git_blob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "source_path": "static/week_plan.mjs",
+      "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+    },
+    {
+      "path": "LICENSE",
+      "source_path": "LICENSE",
+      "git_blob": "3757eabcdbaee0b03b44aad0a7c01ff8c5ada81b",
+      "bytes": 1076,
+      "sha256": "23882b44a5d39c220ecb4dccdbef766635e3b610d5ef87904fe4133c6b6439ed"
+    },
+    {
+      "path": "reference/saved-record.json",
+      "source_path": "docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-1.json",
+      "git_blob": "4b8eed772a811f5d7ef7da10e0106d9cb90b11fd",
+      "bytes": 2691,
+      "sha256": "89f03111e1eeffe3716055ff5f8e5d5bbd7b8a78ee5ba38b364a58f3e8e61e9d"
+    },
+    {
+      "path": "reference/original-statement.csv",
+      "source_path": "docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-2.csv",
+      "git_blob": "37d1c9c16f09a3ddf7e434665de9a07073dfa1b2",
+      "bytes": 1012,
+      "sha256": "9d60b0f2d92ae42166cda06553ecbe8aa3cfa63ce831e477253d6e375816b17d"
+    }
+  ],
+  "source_files": [
+    "install.py",
+    "server.py",
+    "launch.command.in",
+    "index.html",
+    "INPUTS.json",
+    "README.md"
+  ],
+  "target": "/Users/me/Applications/TasteTableVisitRecord-c945953fdeb7",
+  "entry": "Open TasteTable Visit Record.command",
+  "origin": "http://127.0.0.1:48661/",
+  "host": "127.0.0.1",
+  "port": 48661,
+  "runtime": {
+    "configured_path": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+    "resolved_path": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "version": "3.13.7",
+    "bytes": 119600,
+    "sha256": "406d73d07e33e164d986326fde00b85c2b8f4ed2c33278142c8431588fe2df14",
+    "git_blob": "6690f22e3a54a2af9c3b6c71f44c9099d6ccfa6b"
+  },
+  "navigation": {
+    "original_path": "static/visit-record.html",
+    "installed_path": "app/static/visit-record.html",
+    "original_span": "<a href=\"/\" class=\"back-link\">TasteTable planner</a>",
+    "installed_span": "<a href=\"/\" class=\"back-link\">Visit record home</a>",
+    "original_bytes": 4734,
+    "original_sha256": "fb538ba2f96fb4c30ea5b53b4459d17c8d00fb0e23becf8046b27a80b8c726d2",
+    "installed_bytes": 4733,
+    "installed_sha256": "ab33e270a69dcba0cd19303dc1ea1ae47b61621fa64d3af3870e6ecb21e4bec1",
+    "shared_repository_html_changed": false
+  },
+  "limits": {
+    "free_disk_floor": 268435456,
+    "conservative_memory_floor": 2147483648,
+    "installed_payload_cap": 1048576,
+    "author_and_install_cap": 2097152
+  }
+}

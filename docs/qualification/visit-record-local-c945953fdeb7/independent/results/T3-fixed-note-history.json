@@ -1,0 +1,42 @@
+{
+  "pass": true,
+  "note": "Receiver note: café, \"shared table\".\nPlease keep the saved week.",
+  "undo_count": 1,
+  "redo_count": 1,
+  "edited": {
+    "url": "http://127.0.0.1:48661/static/visit-record.html",
+    "title": "Visit record · TasteTable",
+    "recordHidden": false,
+    "sourceName": " original,week.json ",
+    "sourceFacts": "Demo plan: fictional venues from a synthetic fixture. 3 original picks.",
+    "summary": "1 went · 1 did not go · 1 unrecorded",
+    "undoDisabled": false,
+    "redoDisabled": true,
+    "rows": [
+      {
+        "key": "pick-0",
+        "name": "Café, \"Same\"",
+        "planned": "Planned: Thursday, 2024-02-29",
+        "outcome": "went",
+        "date": "2024-03-01",
+        "note": "Receiver note: café, \"shared table\".\nPlease keep the saved week."
+      },
+      {
+        "key": "pick-1",
+        "name": "Café, \"Same\"",
+        "planned": "Not scheduled in this saved week",
+        "outcome": "did_not_go",
+        "date": "2024-03-02",
+        "note": "  A\nB\nC\n🙂\t "
+      },
+      {
+        "key": "pick-2",
+        "name": "Third café",
+        "planned": "Planned: Friday, 2024-03-01",
+        "outcome": "unrecorded",
+        "date": "",
+        "note": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "format": "tastetable.receiver-original-capture-control.v1",
+  "source_git": "443347e8906b67b0904708a48a8e5fcfb4ebadbd",
+  "actual": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Process started with PID 29136 (shell: /bin/bash)\nInitial output:\nError while loading conda entry point: conda-libmamba-solver (dlopen(/opt/anaconda3/lib/python3.12/site-packages/libmambapy/bindings.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libarchive.20.dylib\n  Referenced from: <496442DC-0EDE-3705-A2B5-401A4FC0D733> /opt/anaconda3/lib/libmamba.2.0.0.dylib\n  Reason: tried: '/opt/anaconda3/lib/libarchive.20.dylib' (no such file), '/opt/anaconda3/lib/python3.12/site-packages/libmambapy/../../../libarchive.20.dylib' (no such file), '/opt/anaconda3/lib/python3.12/site-packages/libmambapy/../../../libarchive.20.dylib' (no such file), '/opt/anaconda3/bin/../lib/libarchive.20.dylib' (no such file), '/opt/anaconda3/bin/../lib/libarchive.20.dylib' (no such file), '/usr/local/lib/libarchive.20.dylib' (no such file), '/usr/lib/libarchive.20.dylib' (no such file, not in dyld cache))\n{\"completed\": true, \"controller_pid\": 29136, \"original_member_count\": 42, \"original_member_bytes\": 618839, \"native_map\": {\"bytes\": 18765, \"sha256\": \"27a627a56f91d15c40a54d209371a61d9c927e7ab6fc006bfe79d9dbc6f9774d\", \"git_blob\": \"7fe2f44c221da49a17cea91841c3422a7f4c4c1a\"}, \"carrier\": {\"bytes\": 529126, \"sha256\": \"a18fcb708c888476bab425d4b3f1b6c625377022f25e6e73a325c39f84e89186\", \"git_blob\": \"13df45b79cf4f98039755b69d69a6656dae4b987\"}, \"zip\": {\"bytes\": 396747, \"sha256\": \"e25b3ba47327922bf1cc5917463d602aa829b337a4df5a8662169540ff52aa4b\", \"git_blob\": \"94b8bb99ee5b65cd8b830b5f39ef717d734b3c6e\"}, \"carrier_lines\": 130, \"owned_evidence_bytes_after\": 1160214, \"original_members_unchanged\": true, \"application_or_browser_invocations\": 0, \"guard\": {\"utc\": \"2026-10-09T09:52:30.458556+00:00\", \"free_disk_bytes\": 4261617664, \"conservative_memory_bytes\": 11671355392, \"vm_stat_stdout\": \"Mach Virtual Memory Statistics: (page size of 16384 bytes)\\nPages free:                                    48872.\\nPages active:                                 651207.\\nPages inactive:                               651199.\\nPages speculative:                             12292.\\nPages throttled:                                   0.\\nPages wired down:                             412386.\\nPages purgeable:                               21991.\\n\\\"Translation faults\\\":                    15206388928.\\nPages copy-on-write:                      1105123868.\\nPages zero filled:                       12167058717.\\nPages reactivated:                        1568541759.\\nPages purged:                              549796979.\\nFile-backed pages:                            449537.\\nAnonymous pages:                              865161.\\nPages stored in compressor:                  1368670.\\nPages occupied by compressor:                 530082.\\nDecompressions:                           1352247679.\\nCompressions:                             1525562617.\\nPageins:                                   422610640.\\nPageouts:                                    3725478.\\nSwapins:                                     9520315.\\nSwapouts:                                   13785591.\\n\", \"memory_pages\": {\"Pages free\": 48872, \"Pages inactive\": 651199, \"Pages speculative\": 12292}, \"page_bytes\": 16384}, \"outer_exit_pending_until_tool_completion\": true}\n\n\n📊 Timing Information:\n  Exit Reason: process_exit\n  Total Duration: 724ms\n  Time to First Output: 622ms\n  Output Window: 98ms\n\n  Output Events (2 total):\n    [1] +622ms | stderr | 835b\n       \"Error while loading conda entry point: conda-libma\"\n    [2] +720ms | stdout | 2320b\n       \"{\"completed\": true, \"controller_pid\": 29136, \"orig\"\n"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: Mac.lan (0b4ac27b-8500-47d0-8f11-5a35402e9abc)]"
+      }
+    ],
+    "isError": false
+  },
+  "actual_closure": {
+    "content": [
+      {
+        "type": "text",
+        "text": "[Reading last 2 lines (total: 5 lines)]\n\n{\"completed\": true, \"controller_pid\": 29136, \"original_member_count\": 42, \"original_member_bytes\": 618839, \"native_map\": {\"bytes\": 18765, \"sha256\": \"27a627a56f91d15c40a54d209371a61d9c927e7ab6fc006bfe79d9dbc6f9774d\", \"git_blob\": \"7fe2f44c221da49a17cea91841c3422a7f4c4c1a\"}, \"carrier\": {\"bytes\": 529126, \"sha256\": \"a18fcb708c888476bab425d4b3f1b6c625377022f25e6e73a325c39f84e89186\", \"git_blob\": \"13df45b79cf4f98039755b69d69a6656dae4b987\"}, \"zip\": {\"bytes\": 396747, \"sha256\": \"e25b3ba47327922bf1cc5917463d602aa829b337a4df5a8662169540ff52aa4b\", \"git_blob\": \"94b8bb99ee5b65cd8b830b5f39ef717d734b3c6e\"}, \"carrier_lines\": 130, \"owned_evidence_bytes_after\": 1160214, \"original_members_unchanged\": true, \"application_or_browser_invocations\": 0, \"guard\": {\"utc\": \"2026-10-09T09:52:30.458556+00:00\", \"free_disk_bytes\": 4261617664, \"conservative_memory_bytes\": 11671355392, \"vm_stat_stdout\": \"Mach Virtual Memory Statistics: (page size of 16384 bytes)\\nPages free:                                    48872.\\nPages active:                                 651207.\\nPages inactive:                               651199.\\nPages speculative:                             12292.\\nPages throttled:                                   0.\\nPages wired down:                             412386.\\nPages purgeable:                               21991.\\n\\\"Translation faults\\\":                    15206388928.\\nPages copy-on-write:                      1105123868.\\nPages zero filled:                       12167058717.\\nPages reactivated:                        1568541759.\\nPages purged:                              549796979.\\nFile-backed pages:                            449537.\\nAnonymous pages:                              865161.\\nPages stored in compressor:                  1368670.\\nPages occupied by compressor:                 530082.\\nDecompressions:                           1352247679.\\nCompressions:                             1525562617.\\nPageins:                                   422610640.\\nPageouts:                                    3725478.\\nSwapins:                                     9520315.\\nSwapouts:                                   13785591.\\n\", \"memory_pages\": {\"Pages free\": 48872, \"Pages inactive\": 651199, \"Pages speculative\": 12292}, \"page_bytes\": 16384}, \"outer_exit_pending_until_tool_completion\": true}\n\n✅ Process completed with exit code 0 (runtime: 0.72s)"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: Mac.lan (0b4ac27b-8500-47d0-8f11-5a35402e9abc)]"
+      }
+    ],
+    "isError": false
+  },
+  "metadata": {
+    "completed": true,
+    "controller_pid": 29136,
+    "original_member_count": 42,
+    "original_member_bytes": 618839,
+    "native_map": {
+      "bytes": 18765,
+      "sha256": "27a627a56f91d15c40a54d209371a61d9c927e7ab6fc006bfe79d9dbc6f9774d",
+      "git_blob": "7fe2f44c221da49a17cea91841c3422a7f4c4c1a"
+    },
+    "carrier": {
+      "bytes": 529126,
+      "sha256": "a18fcb708c888476bab425d4b3f1b6c625377022f25e6e73a325c39f84e89186",
+      "git_blob": "13df45b79cf4f98039755b69d69a6656dae4b987"
+    },
+    "zip": {
+      "bytes": 396747,
+      "sha256": "e25b3ba47327922bf1cc5917463d602aa829b337a4df5a8662169540ff52aa4b",
+      "git_blob": "94b8bb99ee5b65cd8b830b5f39ef717d734b3c6e"
+    },
+    "carrier_lines": 130,
+    "owned_evidence_bytes_after": 1160214,
+    "original_members_unchanged": true,
+    "application_or_browser_invocations": 0,
+    "guard": {
+      "utc": "2026-10-09T09:52:30.458556+00:00",
+      "free_disk_bytes": 4261617664,
+      "conservative_memory_bytes": 11671355392,
+      "vm_stat_stdout": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    48872.\nPages active:                                 651207.\nPages inactive:                               651199.\nPages speculative:                             12292.\nPages throttled:                                   0.\nPages wired down:                             412386.\nPages purgeable:                               21991.\n\"Translation faults\":                    15206388928.\nPages copy-on-write:                      1105123868.\nPages zero filled:                       12167058717.\nPages reactivated:                        1568541759.\nPages purged:                              549796979.\nFile-backed pages:                            449537.\nAnonymous pages:                              865161.\nPages stored in compressor:                  1368670.\nPages occupied by compressor:                 530082.\nDecompressions:                           1352247679.\nCompressions:                             1525562617.\nPageins:                                   422610640.\nPageouts:                                    3725478.\nSwapins:                                     9520315.\nSwapouts:                                   13785591.\n",
+      "memory_pages": {
+        "Pages free": 48872,
+        "Pages inactive": 651199,
+        "Pages speculative": 12292
+      },
+      "page_bytes": 16384
+    },
+    "outer_exit_pending_until_tool_completion": true
+  }
+}

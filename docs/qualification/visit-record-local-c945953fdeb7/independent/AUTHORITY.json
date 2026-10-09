@@ -1,0 +1,91 @@
+{
+  "format": "tastetable.independent-installed-receiving-authority.v1",
+  "receiver": "estate-c945953fdeb7/research_execution_next",
+  "repository": "Jacob-Met/tastetable",
+  "contract": {
+    "git_blob": "e194d0bae55e9a1b3a2b97d4accd2c1b81a8ae0e",
+    "bytes": 16145,
+    "sha256": "5118c61a9573ce52b0f161a531ec6666dacfe8f1eec45f32696289bb0b5ea6e1"
+  },
+  "original_capsule": {
+    "git_blob": "f5ceed23b810957cf8e4cb36083fd519f9f03a2d",
+    "bytes": 55094,
+    "sha256": "724be9c59600c28e0f6a69fefcbf635a321aade0ef5f84c5d402204285224344"
+  },
+  "installed_marker": {
+    "git_blob": "b4b0dae20883c1da1ec3db74206ba57d0bb50aa1",
+    "bytes": 10395,
+    "sha256": "932a94f4b06f6d147a354abc0acd49619668748f038cfdce56dbac69c6b0cef4"
+  },
+  "author_preparation": "912665cb5cbf12c4535c587c27e97255a2a11bb6",
+  "author_receipt": "4b24ddde1c39a8ee6ad8663ef65969cacae52e7c",
+  "source_files": {
+    "INPUTS.json": {
+      "bytes": 5239,
+      "sha256": "235d59bc7bc2538f8974804ed92198046a990c26e52924c42e37d260c5a75192",
+      "git_blob": "934615a3add5b9846a78df078e807bd5889169f3"
+    },
+    "README.md": {
+      "bytes": 8606,
+      "sha256": "f3e09db6cf8ca4d1a38cd51a7bb12d1e3fadbb7724ff23e8504283bc009dc8b2",
+      "git_blob": "96d03babe53b40051208b6c9ae7ecf60340cbc47"
+    },
+    "index.html": {
+      "bytes": 3086,
+      "sha256": "a762857c80c3797d2ff262eedf470b1f8665254155452d5de2d978615733c155",
+      "git_blob": "e3e67742cdeeaae071366b575e578ad10cb9934a"
+    },
+    "install.py": {
+      "bytes": 11301,
+      "sha256": "c114405819e1eaf552aeb1c273ee6bb9cd4253bdbecc6c577e90b0de5a09106f",
+      "git_blob": "1555720bc047e0661e5fb1ba1c314c6c7914bb44"
+    },
+    "launch.command.in": {
+      "bytes": 44,
+      "sha256": "887939f8953ba9d1a752acb3ef9113ee37a65f9787fc612b43d8c03af5ca6abb",
+      "git_blob": "9042ec9df475a2d9987330578a8713b69c2c23b3"
+    },
+    "server.py": {
+      "bytes": 12689,
+      "sha256": "02072c2771005a732df21f20a0224feeead8aaaad7dff4f04d9f71375b1b8798",
+      "git_blob": "4ebc7798f970fdda832b76c048ed0301088556aa"
+    }
+  },
+  "receiver_source": {
+    "bytes": 37492,
+    "sha256": "c121d3dc282a6d218e3edf576a54c1ae245812f55d739e1cda10fcf7c845d3d0",
+    "git_blob": "7d4449a100cf0cfb2f18fcd19afebbfd512c03b1"
+  },
+  "comparator_source": {
+    "bytes": 7189,
+    "sha256": "d13a67d33337756265bd2e9c4d3f38810caf06f4ef6c63df6c6733c97f3a016c",
+    "git_blob": "e96a4c6f38cebb649696cb0afd3377272cf23415"
+  },
+  "outer_source": {
+    "bytes": 6324,
+    "sha256": "90f3c3fa9626a209f1b010b88774d974c1fddbb1b4cf3a104fa1b8b41b7dbff9",
+    "git_blob": "45c3ea9a5445d02c1e73812ceccd8b2bbe340913"
+  },
+  "preparation_source": {
+    "bytes": 4683,
+    "sha256": "2ab75039a530dd34d69f8138ab9f4ccaea2d6fde86896a3e0cad514ed3a84817",
+    "git_blob": "07612bb483d3a4f0214a7ce586e764179069c4cd"
+  },
+  "node_version": "v26.3.0",
+  "chrome_product": "Chrome/154.0.8037.99",
+  "python": {
+    "configured_path": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+    "resolved_path": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "version": "3.13.7",
+    "bytes": 119600,
+    "sha256": "406d73d07e33e164d986326fde00b85c2b8f4ed2c33278142c8431588fe2df14",
+    "git_blob": "6690f22e3a54a2af9c3b6c71f44c9099d6ccfa6b"
+  },
+  "qualified_browser_transport": {
+    "repository": "Jacob-Met/RecallWeave",
+    "source": "bab37b9983310d096313ca83f076734ac587ca27",
+    "receipt": "0ea6fd4dfaf05e803346645a03c66b10e442f888",
+    "used_for": "Existing headless Chrome inherited CDP pipe and ordinary trusted controls; no Recall application or old test scenario run"
+  },
+  "plan": "Two local browser/server sessions, one note edit, one Undo/Redo, three physical exports. Native preparation and execution pending."
+}

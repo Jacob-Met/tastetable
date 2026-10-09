@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visit record · TasteTable</title>
+<link rel="stylesheet" href="./visit_record.css">
+</head>
+<body>
+<header class="page-header">
+  <a href="/" class="back-link">Visit record home</a>
+  <p class="eyebrow">AFTER YOUR WEEK</p>
+  <h1>Your visit record</h1>
+  <p class="intro">Keep what happened beside the original suggestions, one visit at a time.</p>
+</header>
+<main>
+  <section class="card no-print" aria-labelledby="openTitle">
+    <h2 id="openTitle">Start with a saved week</h2>
+    <p>In the planner or offline studio, choose <strong>Save week</strong>. Open that JSON file here, or reopen a visit record you saved earlier.</p>
+    <div class="actions">
+      <button id="openWeek" type="button">Open saved week</button>
+      <button id="openRecord" type="button" class="secondary">Reopen visit record</button>
+    </div>
+    <input id="weekFile" type="file" accept=".json,application/json" hidden aria-label="Choose a saved TasteTable week">
+    <input id="recordFile" type="file" accept=".json,application/json" hidden aria-label="Choose a TasteTable visit record">
+    <p class="muted">Files are read in this tab. Nothing is uploaded or stored automatically. Download a copy before leaving; it can include your notes and the original saved week. Do not include private health information.</p>
+    <p id="fileStatus" role="status" aria-live="polite"></p>
+    <p id="fileError" class="error" role="alert"></p>
+    <button id="cancelOpen" type="button" class="secondary" hidden>Cancel opening</button>
+    <section id="preview" class="preview" hidden aria-labelledby="previewTitle">
+      <h3 id="previewTitle" tabindex="-1">Review this file</h3>
+      <p id="previewSummary"></p>
+      <p>Using this file replaces the record shown below. Your current edits stay in place until you choose Use.</p>
+      <button id="useRecord" type="button">Use this file</button>
+    </section>
+  </section>
+  <section id="emptyState" class="empty card">
+    <h2>A record of your choices</h2>
+    <p>Mark a visit as went, did not go, or leave it unrecorded. Add an optional date and what you would like to remember. Repeated suggestions remain separate visits.</p>
+  </section>
+  <section id="record" hidden aria-labelledby="recordTitle">
+    <div class="card source-card">
+      <p class="eyebrow">ORIGINAL SAVED COPY</p>
+      <h2 id="recordTitle" tabindex="-1">Your saved week</h2>
+      <p id="sourceName" class="source-name"></p>
+      <p id="sourceFacts"></p>
+      <p id="sourceProvenance" class="muted"></p>
+      <details id="sourceDetails">
+        <summary>Original inputs and notes</summary>
+        <dl id="sourceInputs"></dl>
+        <ul id="originalNotes"></ul>
+      </details>
+      <p class="notice">The original recommendations and checks have not been rerun. These are caregiver-entered outcomes, not reservations, venue verification, or medical or dietary advice.</p>
+    </div>
+    <div class="record-toolbar card">
+      <div><h2>What happened</h2><p id="recordSummary" role="status" aria-live="polite"></p></div>
+      <div class="actions no-print">
+        <button id="undoChange" type="button" class="secondary" disabled aria-describedby="historyHelp">Undo change</button>
+        <button id="redoChange" type="button" class="secondary" disabled aria-describedby="historyHelp">Redo change</button>
+        <button id="saveRecord" type="button" disabled>Download visit record</button>
+        <button id="downloadCsv" type="button" class="secondary" disabled>Download CSV</button>
+        <button id="printRecord" type="button" class="secondary" disabled>Print record</button>
+      </div>
+      <p class="field-help">Dates below are when the visit or decision happened. They may be outside the planned week. Notes and dates do not change the outcome.</p>
+      <p class="field-help no-print">CSV is a tabular report of every original pick, including omitted and unrecorded visits. Import spreadsheet columns as text to preserve literal values. Keep the JSON file to reopen and edit.</p>
+      <p id="historyHelp" class="field-help no-print">Undo or redo up to 20 visit edits in this tab. Using another file starts a new history.</p>
+      <p id="draftError" class="error" role="alert"></p>
+      <p id="saveStatus" role="status" aria-live="polite" class="no-print"></p>
+    </div>
+    <ol id="visits" class="visits"></ol>
+  </section>
+</main>
+<footer>Keep the saved JSON file to continue later. This record does not change the original week, venue call sheet, calendar or future recommendations.</footer>
+<script type="module" src="./visit_record_ui.mjs"></script>
+</body>
+</html>

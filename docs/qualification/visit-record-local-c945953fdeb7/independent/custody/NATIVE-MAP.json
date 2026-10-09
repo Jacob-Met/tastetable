@@ -1,0 +1,357 @@
+{
+  "format": "tastetable.original-receiving-capture-map.v1",
+  "root": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7",
+  "contract": "e194d0bae55e9a1b3a2b97d4accd2c1b81a8ae0e",
+  "files": {
+    "AUTHORITY.json": {
+      "bytes": 3754,
+      "sha256": "b4e2a5f7e578d196cb94cc27e2b1dd7c64e75894d8b4e4fda207616eacbad9c7",
+      "git_blob": "b736fbbbe274dd26a5a0663cb6229ea397c7a51e",
+      "mode": "0400",
+      "mtime_ns": "1791539025334661060",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/AUTHORITY.json"
+    },
+    "CONTRACT.md": {
+      "bytes": 16145,
+      "sha256": "5118c61a9573ce52b0f161a531ec6666dacfe8f1eec45f32696289bb0b5ea6e1",
+      "git_blob": "e194d0bae55e9a1b3a2b97d4accd2c1b81a8ae0e",
+      "mode": "0400",
+      "mtime_ns": "1791539029569301699",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/CONTRACT.md"
+    },
+    "ORIGINAL-CAPSULE.json": {
+      "bytes": 55094,
+      "sha256": "724be9c59600c28e0f6a69fefcbf635a321aade0ef5f84c5d402204285224344",
+      "git_blob": "f5ceed23b810957cf8e4cb36083fd519f9f03a2d",
+      "mode": "0400",
+      "mtime_ns": "1791539033925525134",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/ORIGINAL-CAPSULE.json"
+    },
+    "OUTER-RECEIPT.json": {
+      "bytes": 6277,
+      "sha256": "00a85f84091db06fce9d9adb5486661e88f5cbcdbe07f4d8ac16f640ca929ee2",
+      "git_blob": "a0d1dff92454757d55999a372a845af469c0f9b7",
+      "mode": "0600",
+      "mtime_ns": "1791539102903246179",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/OUTER-RECEIPT.json"
+    },
+    "SOURCE-PREPARATION.json": {
+      "bytes": 3919,
+      "sha256": "2b9e168cce0aa8bd94d44870cb286bd27320f8145baa5a17e05d8e7f761dc8dc",
+      "git_blob": "e849367d62aeb56ff99d1d4a8e0f3115801ead7b",
+      "mode": "0400",
+      "mtime_ns": "1791539078850867833",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/SOURCE-PREPARATION.json"
+    },
+    "browser/downloads-1/tastetable-visits-2024-02-26.csv": {
+      "bytes": 1052,
+      "sha256": "a49cde7d7cbe2568d67e5985e59373df02b14d62894dd7f9ae536b1c3e8ba68c",
+      "git_blob": "42bef4a2ac948e54257763df5b8563c121628e53",
+      "mode": "0644",
+      "mtime_ns": "1791539101110989323",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-1/tastetable-visits-2024-02-26.csv"
+    },
+    "browser/downloads-1/tastetable-visits-2024-02-26.json": {
+      "bytes": 2732,
+      "sha256": "780d9bff9d63458d824d20d4470362e926245b14320246f8cc1cad2eb17de719",
+      "git_blob": "e7a9e6543d42ba11eef13a89f578e748e3670914",
+      "mode": "0644",
+      "mtime_ns": "1791539101046514995",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-1/tastetable-visits-2024-02-26.json"
+    },
+    "browser/downloads-2/tastetable-visits-2024-02-26.json": {
+      "bytes": 2732,
+      "sha256": "e469145a0e07571bf82979d632a173d3784da07a99ae19ebf4f4dddd2e312f7a",
+      "git_blob": "bb10b5e5a92a4e699f110a67916940e585b634b6",
+      "mode": "0644",
+      "mtime_ns": "1791539102548550067",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-2/tastetable-visits-2024-02-26.json"
+    },
+    "compare.py": {
+      "bytes": 7189,
+      "sha256": "d13a67d33337756265bd2e9c4d3f38810caf06f4ef6c63df6c6733c97f3a016c",
+      "git_blob": "e96a4c6f38cebb649696cb0afd3377272cf23415",
+      "mode": "0400",
+      "mtime_ns": "1791538960107407681",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/compare.py"
+    },
+    "prepare.py": {
+      "bytes": 4683,
+      "sha256": "2ab75039a530dd34d69f8138ab9f4ccaea2d6fde86896a3e0cad514ed3a84817",
+      "git_blob": "07612bb483d3a4f0214a7ce586e764179069c4cd",
+      "mode": "0400",
+      "mtime_ns": "1791539021276042228",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/prepare.py"
+    },
+    "receive.mjs": {
+      "bytes": 37492,
+      "sha256": "c121d3dc282a6d218e3edf576a54c1ae245812f55d739e1cda10fcf7c845d3d0",
+      "git_blob": "7d4449a100cf0cfb2f18fcd19afebbfd512c03b1",
+      "mode": "0400",
+      "mtime_ns": "1791538870244920183",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/receive.mjs"
+    },
+    "results/01-installed-home.png": {
+      "bytes": 97054,
+      "sha256": "1d0141f05775b7c0284fe1c1d03fa14e9f73e15ef177f95eb450dca36f5f1bea",
+      "git_blob": "6ab3ae7181eaa2ee0112eb0ea1b622a51898cece",
+      "mode": "0600",
+      "mtime_ns": "1791539100649372220",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/01-installed-home.png"
+    },
+    "results/02-edited-record.png": {
+      "bytes": 112171,
+      "sha256": "26973b6b9ba5a5302cfa491f78134104568f19446cdf38a20a0d0c1bce2f0be9",
+      "git_blob": "a0e9e576040848b36d04a55a8500736d5207dba1",
+      "mode": "0600",
+      "mtime_ns": "1791539101025031289",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/02-edited-record.png"
+    },
+    "results/03-recovered-record.png": {
+      "bytes": 120451,
+      "sha256": "2da983144ec6b38e7baa4c3eba7280bb29b6fdd6611ceefdf488140444a3adf4",
+      "git_blob": "4ae7938732df6a39dc62347b0f33d79b02883833",
+      "mode": "0600",
+      "mtime_ns": "1791539102530968936",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/03-recovered-record.png"
+    },
+    "results/RECEIPT.json": {
+      "bytes": 85866,
+      "sha256": "8687b5dd7815225d2027ddfc7fa57060e23faa8c07e1cb6d370d1d02876bf629",
+      "git_blob": "95014d042e285512ab293304d91bf6e430ef4eae",
+      "mode": "0600",
+      "mtime_ns": "1791539102884701966",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/RECEIPT.json"
+    },
+    "results/T1-source-installation.json": {
+      "bytes": 337,
+      "sha256": "768d628e1f96787f8334e9781559581cecb5468063044cb84b4b7bdfc7290d4a",
+      "git_blob": "b70776c6626905dc1e068d2f949bbf593da9c938",
+      "mode": "0600",
+      "mtime_ns": "1791539099919924953",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/T1-source-installation.json"
+    },
+    "results/T2-navigation-original-file.json": {
+      "bytes": 2188,
+      "sha256": "57f7aaa60103ade6b6971598d4f434a0faa385a0fcdd8fa417f389d455da6b4f",
+      "git_blob": "843d00f2d746519726a0b6cd590242e2b505461f",
+      "mode": "0600",
+      "mtime_ns": "1791539100907955319",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/T2-navigation-original-file.json"
+    },
+    "results/T3-fixed-note-history.json": {
+      "bytes": 1255,
+      "sha256": "4cf1c37aadab21842a007e876c6483d125650ae927943258ed4bff5236895c6a",
+      "git_blob": "533abcb8afa5b8b663f5e24d83c0e50ecc08d3dc",
+      "mode": "0600",
+      "mtime_ns": "1791539101025283705",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/T3-fixed-note-history.json"
+    },
+    "results/T4-physical-exports.json": {
+      "bytes": 1983,
+      "sha256": "189d3a60da04fc90b53493e9e802f6c670604294674fd86434b16032a8df3db3",
+      "git_blob": "21d40e4c00c1e5789d7bc76d5ecd070e546eadae",
+      "mode": "0600",
+      "mtime_ns": "1791539101187580584",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/T4-physical-exports.json"
+    },
+    "results/T5-recovery-and-closure.json": {
+      "bytes": 3180,
+      "sha256": "6ed2b37c5dce2479044d3666f5114f6e8cd0381b67850f726da8ce6ea93195b6",
+      "git_blob": "f7cc433b6892eedca0e4e886f949e6447ff86b82",
+      "mode": "0600",
+      "mtime_ns": "1791539102881212265",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/T5-recovery-and-closure.json"
+    },
+    "results/compare-initial.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "0600",
+      "mtime_ns": "1791539101186732419",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/compare-initial.stderr.txt"
+    },
+    "results/compare-initial.stdout.json": {
+      "bytes": 1807,
+      "sha256": "2d8b99557c84f4204f51b31aec74563ecf0bd1db3f8f3ef42d4f769735711ae1",
+      "git_blob": "1d414ff81657e5a90abe1b0e5fa415ba36ab386e",
+      "mode": "0600",
+      "mtime_ns": "1791539101186631919",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/compare-initial.stdout.json"
+    },
+    "results/compare-recovery.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "0600",
+      "mtime_ns": "1791539102620852003",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/compare-recovery.stderr.txt"
+    },
+    "results/compare-recovery.stdout.json": {
+      "bytes": 1093,
+      "sha256": "f7d6f7f7ac2c12f1c276fa5cadaef8fcd8824e4c45489d0eb60eca44bd10488a",
+      "git_blob": "820fcb936a64bc4a7dd644d95563c7ff8800f535",
+      "mode": "0600",
+      "mtime_ns": "1791539102620757586",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/compare-recovery.stdout.json"
+    },
+    "results/downloads-initial.json": {
+      "bytes": 2925,
+      "sha256": "7bbd83b2ab28a9407257bdd2470fb5b66fb581513108ec1e1f5c4835b64dd0c1",
+      "git_blob": "5c67292936b8e73e87a034c88f4314a01022817b",
+      "mode": "0600",
+      "mtime_ns": "1791539101152869446",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/downloads-initial.json"
+    },
+    "results/downloads-recovery.json": {
+      "bytes": 1476,
+      "sha256": "c4615a93576d251e2c88ca549a60e981b66477e1f9d80bd2fafe6f5cb69e8589",
+      "git_blob": "5365ba4eba049317d63ca00f586a1fb4b0bed05c",
+      "mode": "0600",
+      "mtime_ns": "1791539102588509944",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/downloads-recovery.json"
+    },
+    "results/edited-record.json": {
+      "bytes": 1033,
+      "sha256": "a1f900cfa29cfa524f480dcf0cea225a83c11c12e233a7046b0b6362aa98afbf",
+      "git_blob": "c50e01af719e441e932f06e25f573fe1e28ce209",
+      "mode": "0600",
+      "mtime_ns": "1791539100946802407",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/edited-record.json"
+    },
+    "results/identity-after.json": {
+      "bytes": 14540,
+      "sha256": "0df45f8ef328556bf89fac45f936bbab644d6a6c737c877bfd681688aa483504",
+      "git_blob": "970da1370e33c1ebb1a8c6fe154b87355fbbd1ea",
+      "mode": "0600",
+      "mtime_ns": "1791539102850581161",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/identity-after.json"
+    },
+    "results/identity-before.json": {
+      "bytes": 14540,
+      "sha256": "0df45f8ef328556bf89fac45f936bbab644d6a6c737c877bfd681688aa483504",
+      "git_blob": "970da1370e33c1ebb1a8c6fe154b87355fbbd1ea",
+      "mode": "0600",
+      "mtime_ns": "1791539099919277704",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/identity-before.json"
+    },
+    "results/original-admitted.json": {
+      "bytes": 991,
+      "sha256": "ef248ee1d6879d9840acc62e4bb6ca6a5f8a8b754d97531c1cddaa23a3f4539e",
+      "git_blob": "710adc9c08456ca1707c9ba4aaa0c9afc0e06191",
+      "mode": "0600",
+      "mtime_ns": "1791539100907733361",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/original-admitted.json"
+    },
+    "results/original-preview.json": {
+      "bytes": 207,
+      "sha256": "aaf2657ba2ca4199ab02d7e005e70af7f34e46f4323dd7e97f8707a0f82f07e4",
+      "git_blob": "cb734c1c72be83c51668a78a257ec1adbb7c7054",
+      "mode": "0600",
+      "mtime_ns": "1791539100883735618",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/original-preview.json"
+    },
+    "results/recovered-admitted.json": {
+      "bytes": 1032,
+      "sha256": "f27cbbbc3fb6b67068d17d1cc8bfaa6c9ff74b95f96f21b57add9dad56924ec9",
+      "git_blob": "9dede70cb5f43932cfe2321ea45ddedee83fa8fa",
+      "mode": "0600",
+      "mtime_ns": "1791539102423470696",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/recovered-admitted.json"
+    },
+    "results/recovered-preview.json": {
+      "bytes": 207,
+      "sha256": "0ef14be767ec56ee007c2bd36780e4195a484540224b5ebd308578bbd7f8f3da",
+      "git_blob": "158ade36b4ad961ec065bf6c085722c1c5e43f9b",
+      "mode": "0600",
+      "mtime_ns": "1791539102407007938",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/recovered-preview.json"
+    },
+    "results/session-1-chrome.stderr.txt": {
+      "bytes": 2044,
+      "sha256": "e9c0d8f272905546a43629deb0e29a30020bd523ebb8fedcc19a31549a4b7126",
+      "git_blob": "73ccf72f64aca49914897ea245ae6a5431b27c56",
+      "mode": "0600",
+      "mtime_ns": "1791539101349551004",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/session-1-chrome.stderr.txt"
+    },
+    "results/session-1-chrome.stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "0600",
+      "mtime_ns": "1791539101349398296",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/session-1-chrome.stdout.txt"
+    },
+    "results/session-1-server.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "0600",
+      "mtime_ns": "1791539101564458984",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/session-1-server.stderr.txt"
+    },
+    "results/session-1-server.stdout.txt": {
+      "bytes": 1838,
+      "sha256": "8852152c96a23f02ba53b6ae151720b0a95f9cdaa592151f1f84dbb5a1f0ae4e",
+      "git_blob": "b592b6342e0af7904a3dfc65cee3c97a817b2311",
+      "mode": "0600",
+      "mtime_ns": "1791539101564382234",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/session-1-server.stdout.txt"
+    },
+    "results/session-2-chrome.stderr.txt": {
+      "bytes": 2044,
+      "sha256": "644ab7c2c12cc62292cd640ff76d63acb86af9378e07659d2709981326ebe44d",
+      "git_blob": "eb88c09052130fce63fe5b8a99295c4be6bc11fc",
+      "mode": "0600",
+      "mtime_ns": "1791539102783080548",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/session-2-chrome.stderr.txt"
+    },
+    "results/session-2-chrome.stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "0600",
+      "mtime_ns": "1791539102782919382",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/session-2-chrome.stdout.txt"
+    },
+    "results/session-2-server.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "0600",
+      "mtime_ns": "1791539102824964338",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/session-2-server.stderr.txt"
+    },
+    "results/session-2-server.stdout.txt": {
+      "bytes": 1184,
+      "sha256": "a5d5b3a1989cfb2a7748ea1659c1763c1c0ee7d47ccc4cd01ff61e469badfe4f",
+      "git_blob": "c68bf34005104511cfc9ee11a09ce5f40854e724",
+      "mode": "0600",
+      "mtime_ns": "1791539102824890130",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/results/session-2-server.stdout.txt"
+    },
+    "run.py": {
+      "bytes": 6324,
+      "sha256": "90f3c3fa9626a209f1b010b88774d974c1fddbb1b4cf3a104fa1b8b41b7dbff9",
+      "git_blob": "45c3ea9a5445d02c1e73812ceccd8b2bbe340913",
+      "mode": "0400",
+      "mtime_ns": "1791539016817629835",
+      "native_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/run.py"
+    }
+  },
+  "guard": {
+    "utc": "2026-10-09T09:52:30.458556+00:00",
+    "free_disk_bytes": 4261617664,
+    "conservative_memory_bytes": 11671355392,
+    "vm_stat_stdout": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    48872.\nPages active:                                 651207.\nPages inactive:                               651199.\nPages speculative:                             12292.\nPages throttled:                                   0.\nPages wired down:                             412386.\nPages purgeable:                               21991.\n\"Translation faults\":                    15206388928.\nPages copy-on-write:                      1105123868.\nPages zero filled:                       12167058717.\nPages reactivated:                        1568541759.\nPages purged:                              549796979.\nFile-backed pages:                            449537.\nAnonymous pages:                              865161.\nPages stored in compressor:                  1368670.\nPages occupied by compressor:                 530082.\nDecompressions:                           1352247679.\nCompressions:                             1525562617.\nPageins:                                   422610640.\nPageouts:                                    3725478.\nSwapins:                                     9520315.\nSwapouts:                                   13785591.\n",
+    "memory_pages": {
+      "Pages free": 48872,
+      "Pages inactive": 651199,
+      "Pages speculative": 12292
+    },
+    "page_bytes": 16384
+  },
+  "scope": "Exact completed source, receipts, screenshots and three physical exports; no profile/cache collection and no app/browser execution.",
+  "git_id_note": "Member Git IDs are computed identities until an explicit repository create/read acknowledgement is recorded."
+}

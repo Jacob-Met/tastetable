@@ -1,0 +1,28 @@
+{
+  "format": "tastetable.visit-record.v1",
+  "savedAt": "2026-10-09T09:45:01.045Z",
+  "source": {
+    "name": " original,week.json ",
+    "weekText": "﻿{\r\n  \"format\": \"tastetable.saved-week.v1\",\r\n  \"receivedAt\": \"2024-02-01T00:00:00.000Z\",\r\n  \"savedAt\": \"2024-02-25T18:00:00.000Z\",\r\n  \"calendarId\": null,\r\n  \"inputs\": {\r\n    \"city\": \"Fictional City\",\r\n    \"cuisines\": [],\r\n    \"music\": [],\r\n    \"films\": [],\r\n    \"constraints\": []\r\n  },\r\n  \"response\": {\r\n    \"mock\": true,\r\n    \"plan\": {\r\n      \"meals\": [\r\n        {\r\n          \"name\": \"Café, \\\"Same\\\"\",\r\n          \"entity_id\": \"same-id\",\r\n          \"kind\": \"restaurant\",\r\n          \"day\": \"Monday\",\r\n          \"why\": \"  First\\r\\nreason  \"\r\n        },\r\n        {\r\n          \"name\": \"Café, \\\"Same\\\"\",\r\n          \"entity_id\": \"same-id\",\r\n          \"kind\": \"restaurant\",\r\n          \"day\": \"Tuesday\",\r\n          \"why\": \"Second reason\"\r\n        },\r\n        {\r\n          \"name\": \"Third café\",\r\n          \"entity_id\": \"third-id\",\r\n          \"kind\": \"restaurant\",\r\n          \"day\": \"Friday\",\r\n          \"why\": \"Third reason\"\r\n        }\r\n      ],\r\n      \"outing\": null,\r\n      \"notes\": [],\r\n      \"rejected\": []\r\n    },\r\n    \"llm_only\": {\r\n      \"meals\": [],\r\n      \"outing\": {\r\n        \"name\": \"Comparison\",\r\n        \"day\": \"Saturday\",\r\n        \"why\": \"Original\"\r\n      }\r\n    },\r\n    \"comparison\": {\r\n      \"constraints\": [],\r\n      \"grounded\": {\r\n        \"picks\": 0,\r\n        \"with_qloo_entity_id\": 0,\r\n        \"with_affinity_evidence\": 0,\r\n        \"constraint_checked\": 0,\r\n        \"unsafe_candidates_rejected\": 0\r\n      },\r\n      \"llm_only\": {\r\n        \"picks\": 0,\r\n        \"with_qloo_entity_id\": 0,\r\n        \"with_affinity_evidence\": 0,\r\n        \"constraint_checked\": 0,\r\n        \"unsafe_candidates_rejected\": 0\r\n      }\r\n    },\r\n    \"trace\": []\r\n  },\r\n  \"week\": {\r\n    \"start\": \"2024-02-26\",\r\n    \"assignments\": {\r\n      \"pick-0\": \"Thursday\",\r\n      \"pick-1\": null,\r\n      \"pick-2\": \"Friday\"\r\n    }\r\n  }\r\n}\r\n"
+  },
+  "visits": [
+    {
+      "key": "pick-0",
+      "outcome": "went",
+      "date": "2024-03-01",
+      "note": "Receiver note: café, \"shared table\".\nPlease keep the saved week."
+    },
+    {
+      "key": "pick-1",
+      "outcome": "did_not_go",
+      "date": "2024-03-02",
+      "note": "  A\rB\r\nC\n🙂\t "
+    },
+    {
+      "key": "pick-2",
+      "outcome": "unrecorded",
+      "date": null,
+      "note": ""
+    }
+  ]
+}

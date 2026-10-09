@@ -1,0 +1,13 @@
+{"status": "serving", "pid": 25094, "origin": "http://127.0.0.1:48661/", "entry": "/Users/me/Applications/TasteTableVisitRecord-c945953fdeb7/Open TasteTable Visit Record.command", "no_open": true, "marker_sha256": "932a94f4b06f6d147a354abc0acd49619668748f038cfdce56dbac69c6b0cef4", "verified_files": 30, "admission": {"free_disk_bytes": 4317642752, "conservative_memory_bytes": 11824185344, "memory_basis": "vm_stat free + inactive + speculative pages", "vm_stat_exit": 0}}
+{"request": "\"GET / HTTP/1.1\" 200 -"}
+{"request": "\"GET /favicon.ico HTTP/1.1\" 204 -"}
+{"request": "\"GET /static/visit-record.html HTTP/1.1\" 200 -"}
+{"request": "\"GET /static/visit_record.css HTTP/1.1\" 200 -"}
+{"request": "\"GET /static/visit_record_ui.mjs HTTP/1.1\" 200 -"}
+{"request": "\"GET /static/visit_record.mjs HTTP/1.1\" 200 -"}
+{"request": "\"GET /static/week_file.mjs HTTP/1.1\" 200 -"}
+{"request": "\"GET /static/visit_record_csv.mjs HTTP/1.1\" 200 -"}
+{"request": "\"GET /static/visit_edit_history.mjs HTTP/1.1\" 200 -"}
+{"request": "\"GET /static/week_plan.mjs HTTP/1.1\" 200 -"}
+{"request": "\"GET /favicon.ico HTTP/1.1\" 204 -"}
+{"status": "closed", "pid": 25094, "signal": "SIGTERM"}

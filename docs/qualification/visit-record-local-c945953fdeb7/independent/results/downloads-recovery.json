@@ -1,0 +1,40 @@
+[
+  {
+    "kind": "recovered_json",
+    "path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-2/tastetable-visits-2024-02-26.json",
+    "pin": {
+      "bytes": 2732,
+      "sha256": "e469145a0e07571bf82979d632a173d3784da07a99ae19ebf4f4dddd2e312f7a",
+      "git_blob": "bb10b5e5a92a4e699f110a67916940e585b634b6"
+    },
+    "identity": {
+      "bytes": 2732,
+      "sha256": "e469145a0e07571bf82979d632a173d3784da07a99ae19ebf4f4dddd2e312f7a",
+      "git_blob": "bb10b5e5a92a4e699f110a67916940e585b634b6",
+      "mode": "0644",
+      "mtime_ns": "1791539102548550067"
+    },
+    "before_ms": 1791539102531,
+    "after_ms": 1791539102588,
+    "begin": {
+      "session": 2,
+      "method": "Browser.downloadWillBegin",
+      "observed_ms": 1791539102548,
+      "frameId": "646BA5E9DB773B98E4D310FB0A4F98EA",
+      "guid": "9aba1065-d9a4-42ea-b50f-1d5ccef6b9cc",
+      "url": "blob:http://127.0.0.1:48661/1bbd3143-fb1e-4a1e-aa9a-e4099716e959",
+      "suggestedFilename": "tastetable-visits-2024-02-26.json"
+    },
+    "completed": {
+      "session": 2,
+      "method": "Browser.downloadProgress",
+      "observed_ms": 1791539102553,
+      "guid": "9aba1065-d9a4-42ea-b50f-1d5ccef6b9cc",
+      "totalBytes": 2732,
+      "receivedBytes": 2732,
+      "state": "completed",
+      "filePath": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-2/tastetable-visits-2024-02-26.json"
+    },
+    "session": 2
+  }
+]

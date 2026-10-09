@@ -1,0 +1,66 @@
+{
+  "pass": true,
+  "home": {
+    "url": "http://127.0.0.1:48661/",
+    "title": "TasteTable · Visit record home",
+    "heading": "Visit record home",
+    "href": "http://127.0.0.1:48661/static/visit-record.html",
+    "text": "Open visit record"
+  },
+  "back": {
+    "url": "http://127.0.0.1:48661/static/visit-record.html",
+    "text": "Visit record home",
+    "href": "http://127.0.0.1:48661/"
+  },
+  "admission": {
+    "preview": {
+      "summary": " original,week.json  · week of 2024-02-26 · 3 original picks · visit record saved 2026-10-08T21:10:11.123Z.",
+      "recordHidden": true,
+      "status": "File checked. Review it before using."
+    },
+    "dom": {
+      "url": "http://127.0.0.1:48661/static/visit-record.html",
+      "title": "Visit record · TasteTable",
+      "recordHidden": false,
+      "sourceName": " original,week.json ",
+      "sourceFacts": "Demo plan: fictional venues from a synthetic fixture. 3 original picks.",
+      "summary": "1 went · 1 did not go · 1 unrecorded",
+      "undoDisabled": true,
+      "redoDisabled": true,
+      "rows": [
+        {
+          "key": "pick-0",
+          "name": "Café, \"Same\"",
+          "planned": "Planned: Thursday, 2024-02-29",
+          "outcome": "went",
+          "date": "2024-03-01",
+          "note": "He said \"yes\", then went."
+        },
+        {
+          "key": "pick-1",
+          "name": "Café, \"Same\"",
+          "planned": "Not scheduled in this saved week",
+          "outcome": "did_not_go",
+          "date": "2024-03-02",
+          "note": "  A\nB\nC\n🙂\t "
+        },
+        {
+          "key": "pick-2",
+          "name": "Third café",
+          "planned": "Planned: Friday, 2024-03-01",
+          "outcome": "unrecorded",
+          "date": "",
+          "note": ""
+        }
+      ]
+    },
+    "physical_path": "/Users/me/Applications/TasteTableVisitRecord-c945953fdeb7/original/reference/saved-record.json",
+    "physical_identity": {
+      "bytes": 2691,
+      "sha256": "89f03111e1eeffe3716055ff5f8e5d5bbd7b8a78ee5ba38b364a58f3e8e61e9d",
+      "git_blob": "4b8eed772a811f5d7ef7da10e0106d9cb90b11fd",
+      "mode": "0444",
+      "mtime_ns": "1791537302807551552"
+    }
+  }
+}

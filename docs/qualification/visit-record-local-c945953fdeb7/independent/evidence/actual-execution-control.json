@@ -1,0 +1,32 @@
+{
+  "format": "tastetable.receiver-actual-execution-control.v1",
+  "actual_start": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Process started with PID 24899 (shell: /bin/bash)\nInitial output:\nError while loading conda entry point: conda-libmamba-solver (dlopen(/opt/anaconda3/lib/python3.12/site-packages/libmambapy/bindings.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libarchive.20.dylib\n  Referenced from: <496442DC-0EDE-3705-A2B5-401A4FC0D733> /opt/anaconda3/lib/libmamba.2.0.0.dylib\n  Reason: tried: '/opt/anaconda3/lib/libarchive.20.dylib' (no such file), '/opt/anaconda3/lib/python3.12/site-packages/libmambapy/../../../libarchive.20.dylib' (no such file), '/opt/anaconda3/lib/python3.12/site-packages/libmambapy/../../../libarchive.20.dylib' (no such file), '/opt/anaconda3/bin/../lib/libarchive.20.dylib' (no such file), '/opt/anaconda3/bin/../lib/libarchive.20.dylib' (no such file), '/usr/local/lib/libarchive.20.dylib' (no such file), '/usr/lib/libarchive.20.dylib' (no such file, not in dyld cache))\n\n⏳ Process is running. Use read_process_output to get more output.\n\n📊 Timing Information:\n  Exit Reason: timeout\n  Total Duration: 3000ms\n  Time to First Output: 624ms\n  Output Window: 0ms\n\n  Output Events (1 total):\n    [1] +624ms | stderr | 835b\n       \"Error while loading conda entry point: conda-libma\"\n"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: Mac.lan (0b4ac27b-8500-47d0-8f11-5a35402e9abc)]"
+      }
+    ],
+    "isError": false
+  },
+  "actual_outer_closure": {
+    "content": [
+      {
+        "type": "text",
+        "text": "[Reading 5 new lines (total: 5 lines)]\n\nError while loading conda entry point: conda-libmamba-solver (dlopen(/opt/anaconda3/lib/python3.12/site-packages/libmambapy/bindings.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libarchive.20.dylib\n  Referenced from: <496442DC-0EDE-3705-A2B5-401A4FC0D733> /opt/anaconda3/lib/libmamba.2.0.0.dylib\n  Reason: tried: '/opt/anaconda3/lib/libarchive.20.dylib' (no such file), '/opt/anaconda3/lib/python3.12/site-packages/libmambapy/../../../libarchive.20.dylib' (no such file), '/opt/anaconda3/lib/python3.12/site-packages/libmambapy/../../../libarchive.20.dylib' (no such file), '/opt/anaconda3/bin/../lib/libarchive.20.dylib' (no such file), '/opt/anaconda3/bin/../lib/libarchive.20.dylib' (no such file), '/usr/local/lib/libarchive.20.dylib' (no such file), '/usr/lib/libarchive.20.dylib' (no such file, not in dyld cache))\n{\"outer_success\": true, \"node_exit\": 0, \"node_pid\": 25005, \"elapsed_seconds\": 3.089527750154957, \"receipt\": {\"bytes\": 6277, \"sha256\": \"00a85f84091db06fce9d9adb5486661e88f5cbcdbe07f4d8ac16f640ca929ee2\", \"git_blob\": \"a0d1dff92454757d55999a372a845af469c0f9b7\"}, \"receiver_bytes\": 612323, \"browser_bytes\": 17149292, \"boundary_failure\": null}\n\n✅ Process completed with exit code 0 (runtime: 3.79s)\n\n📊 Timing: 0ms"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: Mac.lan (0b4ac27b-8500-47d0-8f11-5a35402e9abc)]"
+      }
+    ],
+    "isError": false
+  },
+  "receipt": "../results/RECEIPT.json",
+  "outer_receipt": "../OUTER-RECEIPT.json",
+  "interpretation": "One receiving run, two predeclared server/browser sessions, outer and Node actual exit 0. Preserved conda/libarchive shell startup warning preceded pinned Python; it is separate from the application page event record."
+}

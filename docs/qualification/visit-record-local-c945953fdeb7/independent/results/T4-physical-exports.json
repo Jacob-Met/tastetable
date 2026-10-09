@@ -1,0 +1,59 @@
+{
+  "pass": true,
+  "comparison": {
+    "phase": "initial",
+    "pass": true,
+    "original_reference": {
+      "bytes": 2691,
+      "sha256": "89f03111e1eeffe3716055ff5f8e5d5bbd7b8a78ee5ba38b364a58f3e8e61e9d",
+      "git_blob": "4b8eed772a811f5d7ef7da10e0106d9cb90b11fd"
+    },
+    "application_imports": 0,
+    "results": [
+      {
+        "kind": "json",
+        "physical_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-1/tastetable-visits-2024-02-26.json",
+        "pin": {
+          "bytes": 2732,
+          "sha256": "780d9bff9d63458d824d20d4470362e926245b14320246f8cc1cad2eb17de719",
+          "git_blob": "e7a9e6543d42ba11eef13a89f578e748e3670914"
+        },
+        "pass": true,
+        "timestamp": {
+          "value": "2026-10-09T09:45:01.045Z",
+          "before_ms": 1791539101025,
+          "after_ms": 1791539101091,
+          "allowance_ms": 1000
+        },
+        "whole_envelope_equal": true,
+        "whole_serialization_equal": true,
+        "source_week_text_exact": true,
+        "untouched_mixed_note_exact": true,
+        "visits": 3
+      },
+      {
+        "kind": "csv",
+        "physical_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-1/tastetable-visits-2024-02-26.csv",
+        "pin": {
+          "bytes": 1052,
+          "sha256": "a49cde7d7cbe2568d67e5985e59373df02b14d62894dd7f9ae536b1c3e8ba68c",
+          "git_blob": "42bef4a2ac948e54257763df5b8563c121628e53"
+        },
+        "pass": true,
+        "timestamp": {
+          "value": "2026-10-09T09:45:01.109Z",
+          "before_ms": 1791539101092,
+          "after_ms": 1791539101152,
+          "allowance_ms": 1000
+        },
+        "whole_fields_equal": true,
+        "whole_serialization_equal": true,
+        "columns": 17,
+        "rows": 3,
+        "untouched_mixed_note_exact": true
+      }
+    ],
+    "completed_utc": "2026-10-09T09:45:01.182779+00:00"
+  },
+  "physical_download_count": 2
+}

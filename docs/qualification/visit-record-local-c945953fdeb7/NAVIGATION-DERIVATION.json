@@ -1,0 +1,28 @@
+{
+  "format": "tastetable.visit-record-local-navigation-derivation.v1",
+  "source_original": {
+    "path": "static/visit-record.html",
+    "git_blob": "a128989f95e7846d90bf6b3fd95815ac91dbd86c",
+    "bytes": 4734,
+    "sha256": "fb538ba2f96fb4c30ea5b53b4459d17c8d00fb0e23becf8046b27a80b8c726d2"
+  },
+  "installed": {
+    "path": "app/static/visit-record.html",
+    "bytes": 4733,
+    "sha256": "ab33e270a69dcba0cd19303dc1ea1ae47b61621fa64d3af3870e6ecb21e4bec1",
+    "git_blob": "7ad10a87011cecae37bcbb442f19e7b47f26a9b6",
+    "mode": "0444",
+    "mtime_ns": "1791537302806317766"
+  },
+  "replacement": {
+    "before": "<a href=\"/\" class=\"back-link\">TasteTable planner</a>",
+    "after": "<a href=\"/\" class=\"back-link\">Visit record home</a>",
+    "exact_occurrences": 1
+  },
+  "whole_file_inverse_exact": true,
+  "other_static_assets_unchanged": 7,
+  "repository_shared_html_changed": false,
+  "source_parent": "4b9fb4bdf00214d92b821d30200bcaa9dd0bfa32",
+  "observed_installation_receipt": "4b24ddde1c39a8ee6ad8663ef65969cacae52e7c",
+  "qualification_scope": "This exact one-anchor derivation composes the standalone installed consumer. It is not a rerun or replacement of the retained source owner's qualification."
+}

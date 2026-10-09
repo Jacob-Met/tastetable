@@ -1,0 +1,78 @@
+[
+  {
+    "kind": "json",
+    "path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-1/tastetable-visits-2024-02-26.json",
+    "pin": {
+      "bytes": 2732,
+      "sha256": "780d9bff9d63458d824d20d4470362e926245b14320246f8cc1cad2eb17de719",
+      "git_blob": "e7a9e6543d42ba11eef13a89f578e748e3670914"
+    },
+    "identity": {
+      "bytes": 2732,
+      "sha256": "780d9bff9d63458d824d20d4470362e926245b14320246f8cc1cad2eb17de719",
+      "git_blob": "e7a9e6543d42ba11eef13a89f578e748e3670914",
+      "mode": "0644",
+      "mtime_ns": "1791539101046514995"
+    },
+    "before_ms": 1791539101025,
+    "after_ms": 1791539101091,
+    "begin": {
+      "session": 1,
+      "method": "Browser.downloadWillBegin",
+      "observed_ms": 1791539101046,
+      "frameId": "1020EBC32670AD1A69E5ACE6027964A9",
+      "guid": "84646199-062f-44ef-bd66-47f71c7cc367",
+      "url": "blob:http://127.0.0.1:48661/f4162f74-e3a1-4985-91b3-c5672d5dc38b",
+      "suggestedFilename": "tastetable-visits-2024-02-26.json"
+    },
+    "completed": {
+      "session": 1,
+      "method": "Browser.downloadProgress",
+      "observed_ms": 1791539101055,
+      "guid": "84646199-062f-44ef-bd66-47f71c7cc367",
+      "totalBytes": 2732,
+      "receivedBytes": 2732,
+      "state": "completed",
+      "filePath": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-1/tastetable-visits-2024-02-26.json"
+    },
+    "session": 1
+  },
+  {
+    "kind": "csv",
+    "path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-1/tastetable-visits-2024-02-26.csv",
+    "pin": {
+      "bytes": 1052,
+      "sha256": "a49cde7d7cbe2568d67e5985e59373df02b14d62894dd7f9ae536b1c3e8ba68c",
+      "git_blob": "42bef4a2ac948e54257763df5b8563c121628e53"
+    },
+    "identity": {
+      "bytes": 1052,
+      "sha256": "a49cde7d7cbe2568d67e5985e59373df02b14d62894dd7f9ae536b1c3e8ba68c",
+      "git_blob": "42bef4a2ac948e54257763df5b8563c121628e53",
+      "mode": "0644",
+      "mtime_ns": "1791539101110989323"
+    },
+    "before_ms": 1791539101092,
+    "after_ms": 1791539101152,
+    "begin": {
+      "session": 1,
+      "method": "Browser.downloadWillBegin",
+      "observed_ms": 1791539101110,
+      "frameId": "1020EBC32670AD1A69E5ACE6027964A9",
+      "guid": "75aa2e8a-f643-454e-b6d9-9c7eeebb6ba8",
+      "url": "blob:http://127.0.0.1:48661/ff6db269-a5c4-4d04-b36f-33fe2a83d09b",
+      "suggestedFilename": "tastetable-visits-2024-02-26.csv"
+    },
+    "completed": {
+      "session": 1,
+      "method": "Browser.downloadProgress",
+      "observed_ms": 1791539101114,
+      "guid": "75aa2e8a-f643-454e-b6d9-9c7eeebb6ba8",
+      "totalBytes": 1052,
+      "receivedBytes": 1052,
+      "state": "completed",
+      "filePath": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-1/tastetable-visits-2024-02-26.csv"
+    },
+    "session": 1
+  }
+]

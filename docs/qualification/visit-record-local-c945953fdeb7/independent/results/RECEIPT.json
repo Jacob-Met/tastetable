@@ -1,0 +1,1930 @@
+{
+  "format": "tastetable.independent-installed-receiving.v1",
+  "receiver": "estate-c945953fdeb7/research_execution_next",
+  "contract": "e194d0bae55e9a1b3a2b97d4accd2c1b81a8ae0e",
+  "accepted": true,
+  "groups": {
+    "T1": {
+      "pass": true,
+      "installed_files": 30,
+      "original_members": 11,
+      "unchanged_static_assets": 7,
+      "license_exact": true,
+      "whole_navigation_inverse_exact": true,
+      "absolute_entry": "/Users/me/Applications/TasteTableVisitRecord-c945953fdeb7/Open TasteTable Visit Record.command",
+      "candidate_or_original_application_imports": 0
+    },
+    "T2": {
+      "pass": true,
+      "home": {
+        "url": "http://127.0.0.1:48661/",
+        "title": "TasteTable · Visit record home",
+        "heading": "Visit record home",
+        "href": "http://127.0.0.1:48661/static/visit-record.html",
+        "text": "Open visit record"
+      },
+      "back": {
+        "url": "http://127.0.0.1:48661/static/visit-record.html",
+        "text": "Visit record home",
+        "href": "http://127.0.0.1:48661/"
+      },
+      "admission": {
+        "preview": {
+          "summary": " original,week.json  · week of 2024-02-26 · 3 original picks · visit record saved 2026-10-08T21:10:11.123Z.",
+          "recordHidden": true,
+          "status": "File checked. Review it before using."
+        },
+        "dom": {
+          "url": "http://127.0.0.1:48661/static/visit-record.html",
+          "title": "Visit record · TasteTable",
+          "recordHidden": false,
+          "sourceName": " original,week.json ",
+          "sourceFacts": "Demo plan: fictional venues from a synthetic fixture. 3 original picks.",
+          "summary": "1 went · 1 did not go · 1 unrecorded",
+          "undoDisabled": true,
+          "redoDisabled": true,
+          "rows": [
+            {
+              "key": "pick-0",
+              "name": "Café, \"Same\"",
+              "planned": "Planned: Thursday, 2024-02-29",
+              "outcome": "went",
+              "date": "2024-03-01",
+              "note": "He said \"yes\", then went."
+            },
+            {
+              "key": "pick-1",
+              "name": "Café, \"Same\"",
+              "planned": "Not scheduled in this saved week",
+              "outcome": "did_not_go",
+              "date": "2024-03-02",
+              "note": "  A\nB\nC\n🙂\t "
+            },
+            {
+              "key": "pick-2",
+              "name": "Third café",
+              "planned": "Planned: Friday, 2024-03-01",
+              "outcome": "unrecorded",
+              "date": "",
+              "note": ""
+            }
+          ]
+        },
+        "physical_path": "/Users/me/Applications/TasteTableVisitRecord-c945953fdeb7/original/reference/saved-record.json",
+        "physical_identity": {
+          "bytes": 2691,
+          "sha256": "89f03111e1eeffe3716055ff5f8e5d5bbd7b8a78ee5ba38b364a58f3e8e61e9d",
+          "git_blob": "4b8eed772a811f5d7ef7da10e0106d9cb90b11fd",
+          "mode": "0444",
+          "mtime_ns": "1791537302807551552"
+        }
+      }
+    },
+    "T3": {
+      "pass": true,
+      "note": "Receiver note: café, \"shared table\".\nPlease keep the saved week.",
+      "undo_count": 1,
+      "redo_count": 1,
+      "edited": {
+        "url": "http://127.0.0.1:48661/static/visit-record.html",
+        "title": "Visit record · TasteTable",
+        "recordHidden": false,
+        "sourceName": " original,week.json ",
+        "sourceFacts": "Demo plan: fictional venues from a synthetic fixture. 3 original picks.",
+        "summary": "1 went · 1 did not go · 1 unrecorded",
+        "undoDisabled": false,
+        "redoDisabled": true,
+        "rows": [
+          {
+            "key": "pick-0",
+            "name": "Café, \"Same\"",
+            "planned": "Planned: Thursday, 2024-02-29",
+            "outcome": "went",
+            "date": "2024-03-01",
+            "note": "Receiver note: café, \"shared table\".\nPlease keep the saved week."
+          },
+          {
+            "key": "pick-1",
+            "name": "Café, \"Same\"",
+            "planned": "Not scheduled in this saved week",
+            "outcome": "did_not_go",
+            "date": "2024-03-02",
+            "note": "  A\nB\nC\n🙂\t "
+          },
+          {
+            "key": "pick-2",
+            "name": "Third café",
+            "planned": "Planned: Friday, 2024-03-01",
+            "outcome": "unrecorded",
+            "date": "",
+            "note": ""
+          }
+        ]
+      }
+    },
+    "T4": {
+      "pass": true,
+      "comparison": {
+        "phase": "initial",
+        "pass": true,
+        "original_reference": {
+          "bytes": 2691,
+          "sha256": "89f03111e1eeffe3716055ff5f8e5d5bbd7b8a78ee5ba38b364a58f3e8e61e9d",
+          "git_blob": "4b8eed772a811f5d7ef7da10e0106d9cb90b11fd"
+        },
+        "application_imports": 0,
+        "results": [
+          {
+            "kind": "json",
+            "physical_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-1/tastetable-visits-2024-02-26.json",
+            "pin": {
+              "bytes": 2732,
+              "sha256": "780d9bff9d63458d824d20d4470362e926245b14320246f8cc1cad2eb17de719",
+              "git_blob": "e7a9e6543d42ba11eef13a89f578e748e3670914"
+            },
+            "pass": true,
+            "timestamp": {
+              "value": "2026-10-09T09:45:01.045Z",
+              "before_ms": 1791539101025,
+              "after_ms": 1791539101091,
+              "allowance_ms": 1000
+            },
+            "whole_envelope_equal": true,
+            "whole_serialization_equal": true,
+            "source_week_text_exact": true,
+            "untouched_mixed_note_exact": true,
+            "visits": 3
+          },
+          {
+            "kind": "csv",
+            "physical_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-1/tastetable-visits-2024-02-26.csv",
+            "pin": {
+              "bytes": 1052,
+              "sha256": "a49cde7d7cbe2568d67e5985e59373df02b14d62894dd7f9ae536b1c3e8ba68c",
+              "git_blob": "42bef4a2ac948e54257763df5b8563c121628e53"
+            },
+            "pass": true,
+            "timestamp": {
+              "value": "2026-10-09T09:45:01.109Z",
+              "before_ms": 1791539101092,
+              "after_ms": 1791539101152,
+              "allowance_ms": 1000
+            },
+            "whole_fields_equal": true,
+            "whole_serialization_equal": true,
+            "columns": 17,
+            "rows": 3,
+            "untouched_mixed_note_exact": true
+          }
+        ],
+        "completed_utc": "2026-10-09T09:45:01.182779+00:00"
+      },
+      "physical_download_count": 2
+    },
+    "T5": {
+      "pass": true,
+      "recovered": {
+        "preview": {
+          "summary": " original,week.json  · week of 2024-02-26 · 3 original picks · visit record saved 2026-10-09T09:45:01.045Z.",
+          "recordHidden": true,
+          "status": "File checked. Review it before using."
+        },
+        "dom": {
+          "url": "http://127.0.0.1:48661/static/visit-record.html",
+          "title": "Visit record · TasteTable",
+          "recordHidden": false,
+          "sourceName": " original,week.json ",
+          "sourceFacts": "Demo plan: fictional venues from a synthetic fixture. 3 original picks.",
+          "summary": "1 went · 1 did not go · 1 unrecorded",
+          "undoDisabled": true,
+          "redoDisabled": true,
+          "rows": [
+            {
+              "key": "pick-0",
+              "name": "Café, \"Same\"",
+              "planned": "Planned: Thursday, 2024-02-29",
+              "outcome": "went",
+              "date": "2024-03-01",
+              "note": "Receiver note: café, \"shared table\".\nPlease keep the saved week."
+            },
+            {
+              "key": "pick-1",
+              "name": "Café, \"Same\"",
+              "planned": "Not scheduled in this saved week",
+              "outcome": "did_not_go",
+              "date": "2024-03-02",
+              "note": "  A\nB\nC\n🙂\t "
+            },
+            {
+              "key": "pick-2",
+              "name": "Third café",
+              "planned": "Planned: Friday, 2024-03-01",
+              "outcome": "unrecorded",
+              "date": "",
+              "note": ""
+            }
+          ]
+        },
+        "physical_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-1/tastetable-visits-2024-02-26.json",
+        "physical_identity": {
+          "bytes": 2732,
+          "sha256": "780d9bff9d63458d824d20d4470362e926245b14320246f8cc1cad2eb17de719",
+          "git_blob": "e7a9e6543d42ba11eef13a89f578e748e3670914",
+          "mode": "0644",
+          "mtime_ns": "1791539101046514995"
+        }
+      },
+      "comparison": {
+        "phase": "recovery",
+        "pass": true,
+        "original_reference": {
+          "bytes": 2691,
+          "sha256": "89f03111e1eeffe3716055ff5f8e5d5bbd7b8a78ee5ba38b364a58f3e8e61e9d",
+          "git_blob": "4b8eed772a811f5d7ef7da10e0106d9cb90b11fd"
+        },
+        "application_imports": 0,
+        "results": [
+          {
+            "kind": "recovered_json",
+            "physical_path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-2/tastetable-visits-2024-02-26.json",
+            "pin": {
+              "bytes": 2732,
+              "sha256": "e469145a0e07571bf82979d632a173d3784da07a99ae19ebf4f4dddd2e312f7a",
+              "git_blob": "bb10b5e5a92a4e699f110a67916940e585b634b6"
+            },
+            "pass": true,
+            "timestamp": {
+              "value": "2026-10-09T09:45:02.546Z",
+              "before_ms": 1791539102531,
+              "after_ms": 1791539102588,
+              "allowance_ms": 1000
+            },
+            "whole_envelope_equal": true,
+            "whole_serialization_equal": true,
+            "source_week_text_exact": true,
+            "untouched_mixed_note_exact": true,
+            "visits": 3
+          }
+        ],
+        "completed_utc": "2026-10-09T09:45:02.617224+00:00"
+      },
+      "installed_and_source_inventory_unchanged": true,
+      "actual_closed_sessions": 2,
+      "candidate_or_original_application_imports": 0
+    }
+  },
+  "failure": null,
+  "actions": [
+    {
+      "action": "ordinary_bind_only_port_admission",
+      "label": "before-session-1",
+      "pid": 25010,
+      "exit": 0,
+      "stdout": "{\"bind_only\": true, \"listen_created\": false, \"host\": \"127.0.0.1\", \"port\": 48661}\n",
+      "stderr": ""
+    },
+    {
+      "action": "trusted_mouse_click",
+      "selector": "#openVisitRecord",
+      "text": "Open visit record",
+      "session": 1,
+      "at": "2026-10-09T09:45:00.665Z"
+    },
+    {
+      "action": "trusted_mouse_click",
+      "selector": ".back-link",
+      "text": "Visit record home",
+      "session": 1,
+      "at": "2026-10-09T09:45:00.745Z"
+    },
+    {
+      "action": "trusted_mouse_click",
+      "selector": "#openVisitRecord",
+      "text": "Open visit record",
+      "session": 1,
+      "at": "2026-10-09T09:45:00.762Z"
+    },
+    {
+      "action": "trusted_mouse_click",
+      "selector": "#openRecord",
+      "text": "Reopen visit record",
+      "session": 1,
+      "at": "2026-10-09T09:45:00.825Z"
+    },
+    {
+      "action": "native_physical_file_input",
+      "selector": "#recordFile",
+      "path": "/Users/me/Applications/TasteTableVisitRecord-c945953fdeb7/original/reference/saved-record.json",
+      "pin": {
+        "bytes": 2691,
+        "sha256": "89f03111e1eeffe3716055ff5f8e5d5bbd7b8a78ee5ba38b364a58f3e8e61e9d",
+        "git_blob": "4b8eed772a811f5d7ef7da10e0106d9cb90b11fd",
+        "mode": "0444",
+        "mtime_ns": "1791537302807551552"
+      },
+      "session": 1
+    },
+    {
+      "action": "trusted_mouse_click",
+      "selector": "#useRecord",
+      "text": "Use this file",
+      "session": 1,
+      "at": "2026-10-09T09:45:00.904Z"
+    },
+    {
+      "action": "trusted_mouse_click",
+      "selector": "#pick-0-note",
+      "text": "",
+      "session": 1,
+      "at": "2026-10-09T09:45:00.912Z"
+    },
+    {
+      "action": "browser_selectAll_and_Input.insertText",
+      "selector": "#pick-0-note",
+      "text": "Receiver note: café, \"shared table\".\nPlease keep the saved week.",
+      "session": 1,
+      "at": "2026-10-09T09:45:00.915Z"
+    },
+    {
+      "action": "trusted_mouse_click",
+      "selector": "#undoChange",
+      "text": "Undo change",
+      "session": 1,
+      "at": "2026-10-09T09:45:00.927Z"
+    },
+    {
+      "action": "trusted_mouse_click",
+      "selector": "#redoChange",
+      "text": "Redo change",
+      "session": 1,
+      "at": "2026-10-09T09:45:00.946Z"
+    },
+    {
+      "action": "trusted_mouse_click",
+      "selector": "#saveRecord",
+      "text": "Download visit record",
+      "session": 1,
+      "at": "2026-10-09T09:45:01.050Z"
+    },
+    {
+      "action": "trusted_mouse_click",
+      "selector": "#downloadCsv",
+      "text": "Download CSV",
+      "session": 1,
+      "at": "2026-10-09T09:45:01.110Z"
+    },
+    {
+      "action": "ordinary_bind_only_port_admission",
+      "label": "after-session-1-closure",
+      "pid": 25088,
+      "exit": 0,
+      "stdout": "{\"bind_only\": true, \"listen_created\": false, \"host\": \"127.0.0.1\", \"port\": 48661}\n",
+      "stderr": ""
+    },
+    {
+      "action": "ordinary_bind_only_port_admission",
+      "label": "before-session-2",
+      "pid": 25093,
+      "exit": 0,
+      "stdout": "{\"bind_only\": true, \"listen_created\": false, \"host\": \"127.0.0.1\", \"port\": 48661}\n",
+      "stderr": ""
+    },
+    {
+      "action": "trusted_mouse_click",
+      "selector": "#openVisitRecord",
+      "text": "Open visit record",
+      "session": 2,
+      "at": "2026-10-09T09:45:02.268Z"
+    },
+    {
+      "action": "trusted_mouse_click",
+      "selector": "#openRecord",
+      "text": "Reopen visit record",
+      "session": 2,
+      "at": "2026-10-09T09:45:02.347Z"
+    },
+    {
+      "action": "native_physical_file_input",
+      "selector": "#recordFile",
+      "path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-1/tastetable-visits-2024-02-26.json",
+      "pin": {
+        "bytes": 2732,
+        "sha256": "780d9bff9d63458d824d20d4470362e926245b14320246f8cc1cad2eb17de719",
+        "git_blob": "e7a9e6543d42ba11eef13a89f578e748e3670914",
+        "mode": "0644",
+        "mtime_ns": "1791539101046514995"
+      },
+      "session": 2
+    },
+    {
+      "action": "trusted_mouse_click",
+      "selector": "#useRecord",
+      "text": "Use this file",
+      "session": 2,
+      "at": "2026-10-09T09:45:02.422Z"
+    },
+    {
+      "action": "trusted_mouse_click",
+      "selector": "#saveRecord",
+      "text": "Download visit record",
+      "session": 2,
+      "at": "2026-10-09T09:45:02.548Z"
+    },
+    {
+      "action": "ordinary_bind_only_port_admission",
+      "label": "after-session-2-closure",
+      "pid": 25148,
+      "exit": 0,
+      "stdout": "{\"bind_only\": true, \"listen_created\": false, \"host\": \"127.0.0.1\", \"port\": 48661}\n",
+      "stderr": ""
+    }
+  ],
+  "guards": [
+    {
+      "label": "before-receiver-output",
+      "utc": "2026-10-09T09:44:59.902829+00:00",
+      "free_disk_bytes": 4322840576,
+      "conservative_memory_bytes": 11604426752,
+      "page_bytes": 16384,
+      "memory_pages": {
+        "Pages free": 29688,
+        "Pages inactive": 659159,
+        "Pages speculative": 19431
+      },
+      "memory_basis": "free + inactive + speculative",
+      "vm_stat_stdout": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    29688.\nPages active:                                 679506.\nPages inactive:                               659159.\nPages speculative:                             19431.\nPages throttled:                                   0.\nPages wired down:                             389035.\nPages purgeable:                               29708.\n\"Translation faults\":                    15202213245.\nPages copy-on-write:                      1104642795.\nPages zero filled:                       12163807723.\nPages reactivated:                        1568536249.\nPages purged:                              549783332.\nFile-backed pages:                            445312.\nAnonymous pages:                              912784.\nPages stored in compressor:                  1365928.\nPages occupied by compressor:                 528903.\nDecompressions:                           1352246376.\nCompressions:                             1525558422.\nPageins:                                   422571858.\nPageouts:                                    3725432.\nSwapins:                                     9520307.\nSwapouts:                                   13785591.\n",
+      "vm_stat_stderr": "",
+      "vm_stat_exit": 0,
+      "receiver_bytes": 134600,
+      "browser_bytes": 0
+    },
+    {
+      "label": "before-session-1",
+      "utc": "2026-10-09T09:44:59.946507+00:00",
+      "free_disk_bytes": 4322799616,
+      "conservative_memory_bytes": 11611996160,
+      "page_bytes": 16384,
+      "memory_pages": {
+        "Pages free": 29905,
+        "Pages inactive": 659354,
+        "Pages speculative": 19481
+      },
+      "memory_basis": "free + inactive + speculative",
+      "vm_stat_stdout": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    29905.\nPages active:                                 679657.\nPages inactive:                               659354.\nPages speculative:                             19481.\nPages throttled:                                   0.\nPages wired down:                             388365.\nPages purgeable:                               29708.\n\"Translation faults\":                    15202216292.\nPages copy-on-write:                      1104643115.\nPages zero filled:                       12163808674.\nPages reactivated:                        1568536249.\nPages purged:                              549783332.\nFile-backed pages:                            445371.\nAnonymous pages:                              913121.\nPages stored in compressor:                  1365928.\nPages occupied by compressor:                 528903.\nDecompressions:                           1352246376.\nCompressions:                             1525558422.\nPageins:                                   422571861.\nPageouts:                                    3725432.\nSwapins:                                     9520307.\nSwapouts:                                   13785591.\n",
+      "vm_stat_stderr": "",
+      "vm_stat_exit": 0,
+      "receiver_bytes": 149477,
+      "browser_bytes": 0
+    },
+    {
+      "label": "before-browser-1",
+      "utc": "2026-10-09T09:45:00.063694+00:00",
+      "free_disk_bytes": 4322672640,
+      "conservative_memory_bytes": 11584241664,
+      "page_bytes": 16384,
+      "memory_pages": {
+        "Pages free": 31475,
+        "Pages inactive": 656091,
+        "Pages speculative": 19480
+      },
+      "memory_basis": "free + inactive + speculative",
+      "vm_stat_stdout": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    31475.\nPages active:                                 676252.\nPages inactive:                               656091.\nPages speculative:                             19480.\nPages throttled:                                   0.\nPages wired down:                             393252.\nPages purgeable:                               29706.\n\"Translation faults\":                    15202232551.\nPages copy-on-write:                      1104645116.\nPages zero filled:                       12163812897.\nPages reactivated:                        1568536249.\nPages purged:                              549783332.\nFile-backed pages:                            445487.\nAnonymous pages:                              906336.\nPages stored in compressor:                  1365928.\nPages occupied by compressor:                 528903.\nDecompressions:                           1352246376.\nCompressions:                             1525558422.\nPageins:                                   422571947.\nPageouts:                                    3725432.\nSwapins:                                     9520307.\nSwapouts:                                   13785591.\n",
+      "vm_stat_stderr": "",
+      "vm_stat_exit": 0,
+      "receiver_bytes": 149477,
+      "browser_bytes": 0
+    },
+    {
+      "label": "between-closed-sessions",
+      "utc": "2026-10-09T09:45:01.611931+00:00",
+      "free_disk_bytes": 4317745152,
+      "conservative_memory_bytes": 11823284224,
+      "page_bytes": 16384,
+      "memory_pages": {
+        "Pages free": 54337,
+        "Pages inactive": 664129,
+        "Pages speculative": 3170
+      },
+      "memory_basis": "free + inactive + speculative",
+      "vm_stat_stdout": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    54337.\nPages active:                                 667778.\nPages inactive:                               664129.\nPages speculative:                              3170.\nPages throttled:                                   0.\nPages wired down:                             387499.\nPages purgeable:                               31222.\n\"Translation faults\":                    15202400612.\nPages copy-on-write:                      1104661909.\nPages zero filled:                       12163873489.\nPages reactivated:                        1568536354.\nPages purged:                              549783341.\nFile-backed pages:                            429515.\nAnonymous pages:                              905562.\nPages stored in compressor:                  1365886.\nPages occupied by compressor:                 528892.\nDecompressions:                           1352246418.\nCompressions:                             1525558422.\nPageins:                                   422572295.\nPageouts:                                    3725437.\nSwapins:                                     9520307.\nSwapouts:                                   13785591.\n",
+      "vm_stat_stderr": "",
+      "vm_stat_exit": 0,
+      "receiver_bytes": 374973,
+      "browser_bytes": 8578831
+    },
+    {
+      "label": "before-session-2",
+      "utc": "2026-10-09T09:45:01.641114+00:00",
+      "free_disk_bytes": 4317749248,
+      "conservative_memory_bytes": 11826921472,
+      "page_bytes": 16384,
+      "memory_pages": {
+        "Pages free": 54558,
+        "Pages inactive": 664130,
+        "Pages speculative": 3170
+      },
+      "memory_basis": "free + inactive + speculative",
+      "vm_stat_stdout": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    54558.\nPages active:                                 667786.\nPages inactive:                               664130.\nPages speculative:                              3170.\nPages throttled:                                   0.\nPages wired down:                             387499.\nPages purgeable:                               31631.\n\"Translation faults\":                    15202403191.\nPages copy-on-write:                      1104662216.\nPages zero filled:                       12163874071.\nPages reactivated:                        1568536354.\nPages purged:                              549783341.\nFile-backed pages:                            429515.\nAnonymous pages:                              905571.\nPages stored in compressor:                  1365886.\nPages occupied by compressor:                 528892.\nDecompressions:                           1352246418.\nCompressions:                             1525558422.\nPageins:                                   422572296.\nPageouts:                                    3725437.\nSwapins:                                     9520307.\nSwapouts:                                   13785591.\n",
+      "vm_stat_stderr": "",
+      "vm_stat_exit": 0,
+      "receiver_bytes": 374973,
+      "browser_bytes": 8578831
+    },
+    {
+      "label": "before-browser-2",
+      "utc": "2026-10-09T09:45:01.756938+00:00",
+      "free_disk_bytes": 4317642752,
+      "conservative_memory_bytes": 11810471936,
+      "page_bytes": 16384,
+      "memory_pages": {
+        "Pages free": 53131,
+        "Pages inactive": 664548,
+        "Pages speculative": 3175
+      },
+      "memory_basis": "free + inactive + speculative",
+      "vm_stat_stdout": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    53131.\nPages active:                                 668346.\nPages inactive:                               664548.\nPages speculative:                              3175.\nPages throttled:                                   0.\nPages wired down:                             387522.\nPages purgeable:                               31651.\n\"Translation faults\":                    15202411611.\nPages copy-on-write:                      1104663122.\nPages zero filled:                       12163876418.\nPages reactivated:                        1568536354.\nPages purged:                              549783341.\nFile-backed pages:                            429523.\nAnonymous pages:                              906546.\nPages stored in compressor:                  1365886.\nPages occupied by compressor:                 528892.\nDecompressions:                           1352246418.\nCompressions:                             1525558422.\nPageins:                                   422572303.\nPageouts:                                    3725437.\nSwapins:                                     9520307.\nSwapouts:                                   13785591.\n",
+      "vm_stat_stderr": "",
+      "vm_stat_exit": 0,
+      "receiver_bytes": 374973,
+      "browser_bytes": 8578831
+    },
+    {
+      "label": "after-both-session-closures",
+      "utc": "2026-10-09T09:45:02.874488+00:00",
+      "free_disk_bytes": 4313743360,
+      "conservative_memory_bytes": 11797069824,
+      "page_bytes": 16384,
+      "memory_pages": {
+        "Pages free": 53103,
+        "Pages inactive": 663207,
+        "Pages speculative": 3726
+      },
+      "memory_basis": "free + inactive + speculative",
+      "vm_stat_stdout": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    53103.\nPages active:                                 666292.\nPages inactive:                               663207.\nPages speculative:                              3726.\nPages throttled:                                   0.\nPages wired down:                             390646.\nPages purgeable:                               25581.\n\"Translation faults\":                    15202558329.\nPages copy-on-write:                      1104677777.\nPages zero filled:                       12163927943.\nPages reactivated:                        1568536429.\nPages purged:                              549783341.\nFile-backed pages:                            430272.\nAnonymous pages:                              902953.\nPages stored in compressor:                  1365871.\nPages occupied by compressor:                 528891.\nDecompressions:                           1352246433.\nCompressions:                             1525558422.\nPageins:                                   422572473.\nPageouts:                                    3725437.\nSwapins:                                     9520307.\nSwapouts:                                   13785591.\n",
+      "vm_stat_stderr": "",
+      "vm_stat_exit": 0,
+      "receiver_bytes": 517000,
+      "browser_bytes": 17149292
+    }
+  ],
+  "servers": [
+    {
+      "session": 1,
+      "command": {
+        "executable": "/Users/me/Applications/TasteTableVisitRecord-c945953fdeb7/Open TasteTable Visit Record.command",
+        "args": [
+          "--no-open"
+        ],
+        "cwd": "/tmp"
+      },
+      "pid": 25011,
+      "started_utc": "2026-10-09T09:44:59.976Z",
+      "ready": {
+        "status": "serving",
+        "pid": 25011,
+        "origin": "http://127.0.0.1:48661/",
+        "entry": "/Users/me/Applications/TasteTableVisitRecord-c945953fdeb7/Open TasteTable Visit Record.command",
+        "no_open": true,
+        "marker_sha256": "932a94f4b06f6d147a354abc0acd49619668748f038cfdce56dbac69c6b0cef4",
+        "verified_files": 30,
+        "admission": {
+          "free_disk_bytes": 4322799616,
+          "conservative_memory_bytes": 11627823104,
+          "memory_basis": "vm_stat free + inactive + speculative pages",
+          "vm_stat_exit": 0
+        }
+      },
+      "owned_sigterm": true,
+      "actual_exit": {
+        "pid": 25011,
+        "code": 0,
+        "signal": null,
+        "at": "2026-10-09T09:45:01.535Z"
+      },
+      "stdout": {
+        "bytes": 1838,
+        "sha256": "8852152c96a23f02ba53b6ae151720b0a95f9cdaa592151f1f84dbb5a1f0ae4e",
+        "git_blob": "b592b6342e0af7904a3dfc65cee3c97a817b2311"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      },
+      "closed_record": {
+        "status": "closed",
+        "pid": 25011,
+        "signal": "SIGTERM"
+      }
+    },
+    {
+      "session": 2,
+      "command": {
+        "executable": "/Users/me/Applications/TasteTableVisitRecord-c945953fdeb7/Open TasteTable Visit Record.command",
+        "args": [
+          "--no-open"
+        ],
+        "cwd": "/tmp"
+      },
+      "pid": 25094,
+      "started_utc": "2026-10-09T09:45:01.669Z",
+      "ready": {
+        "status": "serving",
+        "pid": 25094,
+        "origin": "http://127.0.0.1:48661/",
+        "entry": "/Users/me/Applications/TasteTableVisitRecord-c945953fdeb7/Open TasteTable Visit Record.command",
+        "no_open": true,
+        "marker_sha256": "932a94f4b06f6d147a354abc0acd49619668748f038cfdce56dbac69c6b0cef4",
+        "verified_files": 30,
+        "admission": {
+          "free_disk_bytes": 4317642752,
+          "conservative_memory_bytes": 11824185344,
+          "memory_basis": "vm_stat free + inactive + speculative pages",
+          "vm_stat_exit": 0
+        }
+      },
+      "owned_sigterm": true,
+      "actual_exit": {
+        "pid": 25094,
+        "code": 0,
+        "signal": null,
+        "at": "2026-10-09T09:45:02.800Z"
+      },
+      "stdout": {
+        "bytes": 1184,
+        "sha256": "a5d5b3a1989cfb2a7748ea1659c1763c1c0ee7d47ccc4cd01ff61e469badfe4f",
+        "git_blob": "c68bf34005104511cfc9ee11a09ce5f40854e724"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      },
+      "closed_record": {
+        "status": "closed",
+        "pid": 25094,
+        "signal": "SIGTERM"
+      }
+    }
+  ],
+  "browsers": [
+    {
+      "session": 1,
+      "command": {
+        "executable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "args": [
+          "--headless=new",
+          "--remote-debugging-pipe",
+          "--user-data-dir=/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/profile-1",
+          "--no-first-run",
+          "--no-default-browser-check",
+          "--disable-background-networking",
+          "--disable-component-update",
+          "--disable-sync",
+          "--disable-extensions",
+          "--disable-default-apps",
+          "--metrics-recording-only",
+          "--password-store=basic",
+          "--use-mock-keychain",
+          "--disable-breakpad",
+          "--disable-crash-reporter",
+          "--disk-cache-size=1048576",
+          "--media-cache-size=1048576",
+          "about:blank"
+        ],
+        "cwd": "/tmp",
+        "control": "existing private inherited CDP pipe; headless browser"
+      },
+      "pid": 25020,
+      "profile": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/profile-1",
+      "downloads": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-1",
+      "started_utc": "2026-10-09T09:45:00.067Z",
+      "version": {
+        "protocolVersion": "1.3",
+        "product": "Chrome/154.0.8037.99",
+        "revision": "@45889d77830582727fe00dbfd614bcb7aac35caa",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "jsVersion": "15.4.80.20"
+      },
+      "tracked_processes": [
+        {
+          "pid": 25020,
+          "ppid": 25005,
+          "command": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome --headless=new --remote-debugging-pipe --user-data-dir=/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/profile-1 --no-first-run --no-default-browser-check --disable-background-networking --disable-component-update --disable-sync --disable-extensions --disable-default-apps --metrics-recording-only --password-store=basic --use-mock-keychain --disable-breakpad --disable-crash-reporter --disk-cache-size=1048576 --media-cache-size=1048576 about:blank"
+        },
+        {
+          "pid": 25061,
+          "ppid": 25020,
+          "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/154.0.8037.99/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=gpu-process --gpu-recent-crash-count=0 --disable-breakpad --headless=new --metrics-client-id=09e87971-7f46-458b-81a5-24139623e0a3 --noerrdialogs --user-data-dir=/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/profile-1 --gpu-preferences=WAAAAAAAAAAgAQAEAAAAAAAAAAAAAGAAQAAAAAAAAAADAAAAAAAAADgAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAoAAAAAAAAAAgAAAAAAAAADAAAAAEAAAAAAAAAAAAAAAgAAAAAAAAACAAAAAAAAAA= --shared-files --field-trial-handle=1718379636,r,13050266834748165753,14064223814505601645,262144 --disable-features=PaintHolding --variations-seed-version --pseudonymization-salt-handle=1935764596,r,16809064381496983776,12376794270765545085,4 --trace-process-track-uuid=3190708988185955192 --seatbelt-client=30"
+        },
+        {
+          "pid": 25062,
+          "ppid": 25020,
+          "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/154.0.8037.99/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=network --metrics-client-id=09e87971-7f46-458b-81a5-24139623e0a3 --noerrdialogs --user-data-dir=/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/profile-1 --shared-files --field-trial-handle=1718379636,r,13050266834748165753,14064223814505601645,262144 --disable-features=PaintHolding --variations-seed-version --pseudonymization-salt-handle=1935764596,r,16809064381496983776,12376794270765545085,4 --trace-process-track-uuid=3190708989122997041 --seatbelt-client=30"
+        },
+        {
+          "pid": 25068,
+          "ppid": 25020,
+          "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/154.0.8037.99/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=utility --utility-sub-type=storage.mojom.StorageService --lang=en-US --service-sandbox-type=service --metrics-client-id=09e87971-7f46-458b-81a5-24139623e0a3 --noerrdialogs --user-data-dir=/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/profile-1 --shared-files --field-trial-handle=1718379636,r,13050266834748165753,14064223814505601645,262144 --disable-features=PaintHolding --variations-seed-version --pseudonymization-salt-handle=1935764596,r,16809064381496983776,12376794270765545085,4 --trace-process-track-uuid=3190708990060038890 --seatbelt-client=56"
+        },
+        {
+          "pid": 25070,
+          "ppid": 25020,
+          "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/154.0.8037.99/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --top-chrome-webui --metrics-client-id=09e87971-7f46-458b-81a5-24139623e0a3 --noerrdialogs --user-data-dir=/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/profile-1 --disable-breakpad --remote-debugging-pipe --lang=en-US --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=6 --launch-time-ticks=1075598699031 --shared-files --field-trial-handle=1718379636,r,13050266834748165753,14064223814505601645,262144 --disable-features=PaintHolding --variations-seed-version --pseudonymization-salt-handle=1935764596,r,16809064381496983776,12376794270765545085,4 --trace-process-track-uuid=3190708991934122588 --seatbelt-client=73"
+        },
+        {
+          "pid": 25072,
+          "ppid": 25020,
+          "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/154.0.8037.99/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --metrics-client-id=09e87971-7f46-458b-81a5-24139623e0a3 --noerrdialogs --user-data-dir=/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/profile-1 --disable-breakpad --remote-debugging-pipe --lang=en-US --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=7 --launch-time-ticks=1075598738265 --shared-files --field-trial-handle=1718379636,r,13050266834748165753,14064223814505601645,262144 --disable-features=PaintHolding --variations-seed-version --pseudonymization-salt-handle=1935764596,r,16809064381496983776,12376794270765545085,4 --trace-process-track-uuid=3190708992871164437 --seatbelt-client=77"
+        },
+        {
+          "pid": 25073,
+          "ppid": 25020,
+          "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/154.0.8037.99/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --metrics-client-id=09e87971-7f46-458b-81a5-24139623e0a3 --noerrdialogs --user-data-dir=/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/profile-1 --disable-breakpad --remote-debugging-pipe --lang=en-US --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=9 --launch-time-ticks=1075598769318 --shared-files --field-trial-handle=1718379636,r,13050266834748165753,14064223814505601645,262144 --disable-features=PaintHolding --variations-seed-version --pseudonymization-salt-handle=1935764596,r,16809064381496983776,12376794270765545085,4 --trace-process-track-uuid=3190708994745248135 --seatbelt-client=88"
+        },
+        {
+          "pid": 25075,
+          "ppid": 25020,
+          "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/154.0.8037.99/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --metrics-client-id=09e87971-7f46-458b-81a5-24139623e0a3 --noerrdialogs --user-data-dir=/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/profile-1 --extension-process --disable-breakpad --remote-debugging-pipe --lang=en-US --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=10 --launch-time-ticks=1075598770784 --shared-files --field-trial-handle=1718379636,r,13050266834748165753,14064223814505601645,262144 --disable-features=PaintHolding --variations-seed-version --pseudonymization-salt-handle=1935764596,r,16809064381496983776,12376794270765545085,4 --trace-process-track-uuid=3190708995682289984 --seatbelt-client=87"
+        },
+        {
+          "pid": 25079,
+          "ppid": 25020,
+          "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/154.0.8037.99/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --metrics-client-id=09e87971-7f46-458b-81a5-24139623e0a3 --noerrdialogs --user-data-dir=/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/profile-1 --disable-breakpad --remote-debugging-pipe --lang=en-US --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=11 --launch-time-ticks=1075598839718 --shared-files --field-trial-handle=1718379636,r,13050266834748165753,14064223814505601645,262144 --disable-features=PaintHolding --variations-seed-version --pseudonymization-salt-handle=1935764596,r,16809064381496983776,12376794270765545085,4 --trace-process-track-uuid=3190708996619331833 --seatbelt-client=28"
+        },
+        {
+          "pid": 25080,
+          "ppid": 25020,
+          "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/154.0.8037.99/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --metrics-client-id=09e87971-7f46-458b-81a5-24139623e0a3 --noerrdialogs --user-data-dir=/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/profile-1 --extension-process --disable-breakpad --remote-debugging-pipe --lang=en-US --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=12 --launch-time-ticks=1075598889526 --shared-files --field-trial-handle=1718379636,r,13050266834748165753,14064223814505601645,262144 --disable-features=PaintHolding --variations-seed-version --pseudonymization-salt-handle=1935764596,r,16809064381496983776,12376794270765545085,4 --trace-process-track-uuid=3190708997556373682 --seatbelt-client=103"
+        }
+      ],
+      "close_requested": true,
+      "actual_exit": {
+        "pid": 25020,
+        "code": 0,
+        "signal": null,
+        "at": "2026-10-09T09:45:01.292Z"
+      },
+      "remaining_owned_processes": [],
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      },
+      "stderr": {
+        "bytes": 2044,
+        "sha256": "e9c0d8f272905546a43629deb0e29a30020bd523ebb8fedcc19a31549a4b7126",
+        "git_blob": "73ccf72f64aca49914897ea245ae6a5431b27c56"
+      }
+    },
+    {
+      "session": 2,
+      "command": {
+        "executable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "args": [
+          "--headless=new",
+          "--remote-debugging-pipe",
+          "--user-data-dir=/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/profile-2",
+          "--no-first-run",
+          "--no-default-browser-check",
+          "--disable-background-networking",
+          "--disable-component-update",
+          "--disable-sync",
+          "--disable-extensions",
+          "--disable-default-apps",
+          "--metrics-recording-only",
+          "--password-store=basic",
+          "--use-mock-keychain",
+          "--disable-breakpad",
+          "--disable-crash-reporter",
+          "--disk-cache-size=1048576",
+          "--media-cache-size=1048576",
+          "about:blank"
+        ],
+        "cwd": "/tmp",
+        "control": "existing private inherited CDP pipe; headless browser"
+      },
+      "pid": 25098,
+      "profile": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/profile-2",
+      "downloads": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-2",
+      "started_utc": "2026-10-09T09:45:01.762Z",
+      "version": {
+        "protocolVersion": "1.3",
+        "product": "Chrome/154.0.8037.99",
+        "revision": "@45889d77830582727fe00dbfd614bcb7aac35caa",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "jsVersion": "15.4.80.20"
+      },
+      "tracked_processes": [
+        {
+          "pid": 25098,
+          "ppid": 25005,
+          "command": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome --headless=new --remote-debugging-pipe --user-data-dir=/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/profile-2 --no-first-run --no-default-browser-check --disable-background-networking --disable-component-update --disable-sync --disable-extensions --disable-default-apps --metrics-recording-only --password-store=basic --use-mock-keychain --disable-breakpad --disable-crash-reporter --disk-cache-size=1048576 --media-cache-size=1048576 about:blank"
+        },
+        {
+          "pid": 25102,
+          "ppid": 25098,
+          "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/154.0.8037.99/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=gpu-process --gpu-recent-crash-count=0 --disable-breakpad --headless=new --metrics-client-id=09e87971-7f46-458b-81a5-24139623e0a3 --noerrdialogs --user-data-dir=/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/profile-2 --gpu-preferences=WAAAAAAAAAAgAQAEAAAAAAAAAAAAAGAAQAAAAAAAAAADAAAAAAAAADgAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAoAAAAAAAAAAgAAAAAAAAADAAAAAEAAAAAAAAAAAAAAAgAAAAAAAAACAAAAAAAAAA= --shared-files --field-trial-handle=1718379636,r,5794984374038505500,2974479022357209228,262144 --disable-features=PaintHolding --variations-seed-version --pseudonymization-salt-handle=1935764596,r,3393201517131415545,16878386641821304155,4 --trace-process-track-uuid=3190708988185955192 --seatbelt-client=22"
+        },
+        {
+          "pid": 25103,
+          "ppid": 25098,
+          "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/154.0.8037.99/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=network --metrics-client-id=09e87971-7f46-458b-81a5-24139623e0a3 --noerrdialogs --user-data-dir=/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/profile-2 --shared-files --field-trial-handle=1718379636,r,5794984374038505500,2974479022357209228,262144 --disable-features=PaintHolding --variations-seed-version --pseudonymization-salt-handle=1935764596,r,3393201517131415545,16878386641821304155,4 --trace-process-track-uuid=3190708989122997041 --seatbelt-client=22"
+        },
+        {
+          "pid": 25104,
+          "ppid": 25098,
+          "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/154.0.8037.99/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=utility --utility-sub-type=storage.mojom.StorageService --lang=en-US --service-sandbox-type=service --metrics-client-id=09e87971-7f46-458b-81a5-24139623e0a3 --noerrdialogs --user-data-dir=/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/profile-2 --shared-files --field-trial-handle=1718379636,r,5794984374038505500,2974479022357209228,262144 --disable-features=PaintHolding --variations-seed-version --pseudonymization-salt-handle=1935764596,r,3393201517131415545,16878386641821304155,4 --trace-process-track-uuid=3190708990060038890 --seatbelt-client=57"
+        },
+        {
+          "pid": 25107,
+          "ppid": 25098,
+          "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/154.0.8037.99/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --top-chrome-webui --metrics-client-id=09e87971-7f46-458b-81a5-24139623e0a3 --noerrdialogs --user-data-dir=/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/profile-2 --disable-breakpad --remote-debugging-pipe --lang=en-US --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=6 --launch-time-ticks=1075600327885 --shared-files --field-trial-handle=1718379636,r,5794984374038505500,2974479022357209228,262144 --disable-features=PaintHolding --variations-seed-version --pseudonymization-salt-handle=1935764596,r,3393201517131415545,16878386641821304155,4 --trace-process-track-uuid=3190708991934122588 --seatbelt-client=77"
+        },
+        {
+          "pid": 25109,
+          "ppid": 25098,
+          "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/154.0.8037.99/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --metrics-client-id=09e87971-7f46-458b-81a5-24139623e0a3 --noerrdialogs --user-data-dir=/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/profile-2 --disable-breakpad --remote-debugging-pipe --lang=en-US --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=7 --launch-time-ticks=1075600371563 --shared-files --field-trial-handle=1718379636,r,5794984374038505500,2974479022357209228,262144 --disable-features=PaintHolding --variations-seed-version --pseudonymization-salt-handle=1935764596,r,3393201517131415545,16878386641821304155,4 --trace-process-track-uuid=3190708992871164437 --seatbelt-client=77"
+        },
+        {
+          "pid": 25110,
+          "ppid": 25098,
+          "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/154.0.8037.99/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --metrics-client-id=09e87971-7f46-458b-81a5-24139623e0a3 --noerrdialogs --user-data-dir=/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/profile-2 --disable-breakpad --remote-debugging-pipe --lang=en-US --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=9 --launch-time-ticks=1075600427434 --shared-files --field-trial-handle=1718379636,r,5794984374038505500,2974479022357209228,262144 --disable-features=PaintHolding --variations-seed-version --pseudonymization-salt-handle=1935764596,r,3393201517131415545,16878386641821304155,4 --trace-process-track-uuid=3190708994745248135 --seatbelt-client=88"
+        },
+        {
+          "pid": 25111,
+          "ppid": 25098,
+          "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/154.0.8037.99/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --metrics-client-id=09e87971-7f46-458b-81a5-24139623e0a3 --noerrdialogs --user-data-dir=/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/profile-2 --extension-process --disable-breakpad --remote-debugging-pipe --lang=en-US --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=10 --launch-time-ticks=1075600428990 --shared-files --field-trial-handle=1718379636,r,5794984374038505500,2974479022357209228,262144 --disable-features=PaintHolding --variations-seed-version --pseudonymization-salt-handle=1935764596,r,3393201517131415545,16878386641821304155,4 --trace-process-track-uuid=3190708995682289984 --seatbelt-client=87"
+        },
+        {
+          "pid": 25113,
+          "ppid": 25098,
+          "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/154.0.8037.99/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --metrics-client-id=09e87971-7f46-458b-81a5-24139623e0a3 --noerrdialogs --user-data-dir=/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/profile-2 --disable-breakpad --remote-debugging-pipe --lang=en-US --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=11 --launch-time-ticks=1075600461392 --shared-files --field-trial-handle=1718379636,r,5794984374038505500,2974479022357209228,262144 --disable-features=PaintHolding --variations-seed-version --pseudonymization-salt-handle=1935764596,r,3393201517131415545,16878386641821304155,4 --trace-process-track-uuid=3190708996619331833 --seatbelt-client=96"
+        },
+        {
+          "pid": 25124,
+          "ppid": 25098,
+          "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/154.0.8037.99/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --metrics-client-id=09e87971-7f46-458b-81a5-24139623e0a3 --noerrdialogs --user-data-dir=/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/profile-2 --extension-process --disable-breakpad --remote-debugging-pipe --lang=en-US --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=12 --launch-time-ticks=1075600523522 --shared-files --field-trial-handle=1718379636,r,5794984374038505500,2974479022357209228,262144 --disable-features=PaintHolding --variations-seed-version --pseudonymization-salt-handle=1935764596,r,3393201517131415545,16878386641821304155,4 --trace-process-track-uuid=3190708997556373682 --seatbelt-client=103"
+        }
+      ],
+      "close_requested": true,
+      "actual_exit": {
+        "pid": 25098,
+        "code": 0,
+        "signal": null,
+        "at": "2026-10-09T09:45:02.724Z"
+      },
+      "remaining_owned_processes": [],
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      },
+      "stderr": {
+        "bytes": 2044,
+        "sha256": "644ab7c2c12cc62292cd640ff76d63acb86af9378e07659d2709981326ebe44d",
+        "git_blob": "eb88c09052130fce63fe5b8a99295c4be6bc11fc"
+      }
+    }
+  ],
+  "comparators": [
+    {
+      "phase": "initial",
+      "executable": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "args": [
+        "-I",
+        "-B",
+        "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/compare.py",
+        "--phase",
+        "initial"
+      ],
+      "cwd": "/tmp",
+      "pid": 25084,
+      "exit": 0,
+      "signal": null,
+      "elapsed_seconds": 0.033534250000000154,
+      "stdout": {
+        "bytes": 1807,
+        "sha256": "2d8b99557c84f4204f51b31aec74563ecf0bd1db3f8f3ef42d4f769735711ae1",
+        "git_blob": "1d414ff81657e5a90abe1b0e5fa415ba36ab386e"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      },
+      "error": null
+    },
+    {
+      "phase": "recovery",
+      "executable": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "args": [
+        "-I",
+        "-B",
+        "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/compare.py",
+        "--phase",
+        "recovery"
+      ],
+      "cwd": "/tmp",
+      "pid": 25145,
+      "exit": 0,
+      "signal": null,
+      "elapsed_seconds": 0.032028999999999995,
+      "stdout": {
+        "bytes": 1093,
+        "sha256": "f7d6f7f7ac2c12f1c276fa5cadaef8fcd8824e4c45489d0eb60eca44bd10488a",
+        "git_blob": "820fcb936a64bc4a7dd644d95563c7ff8800f535"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      },
+      "error": null
+    }
+  ],
+  "downloads": [
+    {
+      "kind": "json",
+      "path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-1/tastetable-visits-2024-02-26.json",
+      "pin": {
+        "bytes": 2732,
+        "sha256": "780d9bff9d63458d824d20d4470362e926245b14320246f8cc1cad2eb17de719",
+        "git_blob": "e7a9e6543d42ba11eef13a89f578e748e3670914"
+      },
+      "identity": {
+        "bytes": 2732,
+        "sha256": "780d9bff9d63458d824d20d4470362e926245b14320246f8cc1cad2eb17de719",
+        "git_blob": "e7a9e6543d42ba11eef13a89f578e748e3670914",
+        "mode": "0644",
+        "mtime_ns": "1791539101046514995"
+      },
+      "before_ms": 1791539101025,
+      "after_ms": 1791539101091,
+      "begin": {
+        "session": 1,
+        "method": "Browser.downloadWillBegin",
+        "observed_ms": 1791539101046,
+        "frameId": "1020EBC32670AD1A69E5ACE6027964A9",
+        "guid": "84646199-062f-44ef-bd66-47f71c7cc367",
+        "url": "blob:http://127.0.0.1:48661/f4162f74-e3a1-4985-91b3-c5672d5dc38b",
+        "suggestedFilename": "tastetable-visits-2024-02-26.json"
+      },
+      "completed": {
+        "session": 1,
+        "method": "Browser.downloadProgress",
+        "observed_ms": 1791539101055,
+        "guid": "84646199-062f-44ef-bd66-47f71c7cc367",
+        "totalBytes": 2732,
+        "receivedBytes": 2732,
+        "state": "completed",
+        "filePath": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-1/tastetable-visits-2024-02-26.json"
+      },
+      "session": 1
+    },
+    {
+      "kind": "csv",
+      "path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-1/tastetable-visits-2024-02-26.csv",
+      "pin": {
+        "bytes": 1052,
+        "sha256": "a49cde7d7cbe2568d67e5985e59373df02b14d62894dd7f9ae536b1c3e8ba68c",
+        "git_blob": "42bef4a2ac948e54257763df5b8563c121628e53"
+      },
+      "identity": {
+        "bytes": 1052,
+        "sha256": "a49cde7d7cbe2568d67e5985e59373df02b14d62894dd7f9ae536b1c3e8ba68c",
+        "git_blob": "42bef4a2ac948e54257763df5b8563c121628e53",
+        "mode": "0644",
+        "mtime_ns": "1791539101110989323"
+      },
+      "before_ms": 1791539101092,
+      "after_ms": 1791539101152,
+      "begin": {
+        "session": 1,
+        "method": "Browser.downloadWillBegin",
+        "observed_ms": 1791539101110,
+        "frameId": "1020EBC32670AD1A69E5ACE6027964A9",
+        "guid": "75aa2e8a-f643-454e-b6d9-9c7eeebb6ba8",
+        "url": "blob:http://127.0.0.1:48661/ff6db269-a5c4-4d04-b36f-33fe2a83d09b",
+        "suggestedFilename": "tastetable-visits-2024-02-26.csv"
+      },
+      "completed": {
+        "session": 1,
+        "method": "Browser.downloadProgress",
+        "observed_ms": 1791539101114,
+        "guid": "75aa2e8a-f643-454e-b6d9-9c7eeebb6ba8",
+        "totalBytes": 1052,
+        "receivedBytes": 1052,
+        "state": "completed",
+        "filePath": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-1/tastetable-visits-2024-02-26.csv"
+      },
+      "session": 1
+    },
+    {
+      "kind": "recovered_json",
+      "path": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-2/tastetable-visits-2024-02-26.json",
+      "pin": {
+        "bytes": 2732,
+        "sha256": "e469145a0e07571bf82979d632a173d3784da07a99ae19ebf4f4dddd2e312f7a",
+        "git_blob": "bb10b5e5a92a4e699f110a67916940e585b634b6"
+      },
+      "identity": {
+        "bytes": 2732,
+        "sha256": "e469145a0e07571bf82979d632a173d3784da07a99ae19ebf4f4dddd2e312f7a",
+        "git_blob": "bb10b5e5a92a4e699f110a67916940e585b634b6",
+        "mode": "0644",
+        "mtime_ns": "1791539102548550067"
+      },
+      "before_ms": 1791539102531,
+      "after_ms": 1791539102588,
+      "begin": {
+        "session": 2,
+        "method": "Browser.downloadWillBegin",
+        "observed_ms": 1791539102548,
+        "frameId": "646BA5E9DB773B98E4D310FB0A4F98EA",
+        "guid": "9aba1065-d9a4-42ea-b50f-1d5ccef6b9cc",
+        "url": "blob:http://127.0.0.1:48661/1bbd3143-fb1e-4a1e-aa9a-e4099716e959",
+        "suggestedFilename": "tastetable-visits-2024-02-26.json"
+      },
+      "completed": {
+        "session": 2,
+        "method": "Browser.downloadProgress",
+        "observed_ms": 1791539102553,
+        "guid": "9aba1065-d9a4-42ea-b50f-1d5ccef6b9cc",
+        "totalBytes": 2732,
+        "receivedBytes": 2732,
+        "state": "completed",
+        "filePath": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-2/tastetable-visits-2024-02-26.json"
+      },
+      "session": 2
+    }
+  ],
+  "observations": {
+    "exceptions": [],
+    "console": [],
+    "log": [],
+    "requests": [
+      {
+        "session": 1,
+        "requestId": "619AF1A3026D645F5B1A546BC9B2FCAE",
+        "url": "http://127.0.0.1:48661/",
+        "method": "GET",
+        "type": "Document"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.2",
+        "url": "http://127.0.0.1:48661/favicon.ico",
+        "method": "GET",
+        "type": "Other"
+      },
+      {
+        "session": 1,
+        "requestId": "9DFC5C82BA50FC63063C156979F0CCC8",
+        "url": "http://127.0.0.1:48661/static/visit-record.html",
+        "method": "GET",
+        "type": "Document"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.4",
+        "url": "http://127.0.0.1:48661/static/visit_record.css",
+        "method": "GET",
+        "type": "Stylesheet"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.5",
+        "url": "http://127.0.0.1:48661/static/visit_record_ui.mjs",
+        "method": "GET",
+        "type": "Script"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.8",
+        "url": "http://127.0.0.1:48661/static/visit_record.mjs",
+        "method": "GET",
+        "type": "Script"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.9",
+        "url": "http://127.0.0.1:48661/static/week_file.mjs",
+        "method": "GET",
+        "type": "Script"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.10",
+        "url": "http://127.0.0.1:48661/static/visit_record_csv.mjs",
+        "method": "GET",
+        "type": "Script"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.11",
+        "url": "http://127.0.0.1:48661/static/visit_edit_history.mjs",
+        "method": "GET",
+        "type": "Script"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.12",
+        "url": "http://127.0.0.1:48661/static/week_plan.mjs",
+        "method": "GET",
+        "type": "Script"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.13",
+        "url": "http://127.0.0.1:48661/favicon.ico",
+        "method": "GET",
+        "type": "Other"
+      },
+      {
+        "session": 1,
+        "requestId": "98953F436103197A322278C98DD1F582",
+        "url": "http://127.0.0.1:48661/",
+        "method": "GET",
+        "type": "Document"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.15",
+        "url": "http://127.0.0.1:48661/favicon.ico",
+        "method": "GET",
+        "type": "Other"
+      },
+      {
+        "session": 1,
+        "requestId": "E9CAC44154613B4D107E10CFDFE75498",
+        "url": "http://127.0.0.1:48661/static/visit-record.html",
+        "method": "GET",
+        "type": "Document"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.17",
+        "url": "http://127.0.0.1:48661/static/visit_record.css",
+        "method": "GET",
+        "type": "Stylesheet"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.18",
+        "url": "http://127.0.0.1:48661/static/visit_record_ui.mjs",
+        "method": "GET",
+        "type": "Script"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.21",
+        "url": "http://127.0.0.1:48661/static/visit_record.mjs",
+        "method": "GET",
+        "type": "Script"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.22",
+        "url": "http://127.0.0.1:48661/static/week_file.mjs",
+        "method": "GET",
+        "type": "Script"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.23",
+        "url": "http://127.0.0.1:48661/static/visit_record_csv.mjs",
+        "method": "GET",
+        "type": "Script"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.24",
+        "url": "http://127.0.0.1:48661/static/visit_edit_history.mjs",
+        "method": "GET",
+        "type": "Script"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.25",
+        "url": "http://127.0.0.1:48661/static/week_plan.mjs",
+        "method": "GET",
+        "type": "Script"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.26",
+        "url": "http://127.0.0.1:48661/favicon.ico",
+        "method": "GET",
+        "type": "Other"
+      },
+      {
+        "session": 2,
+        "requestId": "52B17BABF09D811D4966B141238F150B",
+        "url": "http://127.0.0.1:48661/",
+        "method": "GET",
+        "type": "Document"
+      },
+      {
+        "session": 2,
+        "requestId": "25110.2",
+        "url": "http://127.0.0.1:48661/favicon.ico",
+        "method": "GET",
+        "type": "Other"
+      },
+      {
+        "session": 2,
+        "requestId": "F42C32507743D9F088D27FCF6898AE30",
+        "url": "http://127.0.0.1:48661/static/visit-record.html",
+        "method": "GET",
+        "type": "Document"
+      },
+      {
+        "session": 2,
+        "requestId": "25110.4",
+        "url": "http://127.0.0.1:48661/static/visit_record.css",
+        "method": "GET",
+        "type": "Stylesheet"
+      },
+      {
+        "session": 2,
+        "requestId": "25110.5",
+        "url": "http://127.0.0.1:48661/static/visit_record_ui.mjs",
+        "method": "GET",
+        "type": "Script"
+      },
+      {
+        "session": 2,
+        "requestId": "25110.8",
+        "url": "http://127.0.0.1:48661/static/visit_record.mjs",
+        "method": "GET",
+        "type": "Script"
+      },
+      {
+        "session": 2,
+        "requestId": "25110.9",
+        "url": "http://127.0.0.1:48661/static/week_file.mjs",
+        "method": "GET",
+        "type": "Script"
+      },
+      {
+        "session": 2,
+        "requestId": "25110.10",
+        "url": "http://127.0.0.1:48661/static/visit_record_csv.mjs",
+        "method": "GET",
+        "type": "Script"
+      },
+      {
+        "session": 2,
+        "requestId": "25110.11",
+        "url": "http://127.0.0.1:48661/static/visit_edit_history.mjs",
+        "method": "GET",
+        "type": "Script"
+      },
+      {
+        "session": 2,
+        "requestId": "25110.12",
+        "url": "http://127.0.0.1:48661/static/week_plan.mjs",
+        "method": "GET",
+        "type": "Script"
+      },
+      {
+        "session": 2,
+        "requestId": "25110.13",
+        "url": "http://127.0.0.1:48661/favicon.ico",
+        "method": "GET",
+        "type": "Other"
+      }
+    ],
+    "responses": [
+      {
+        "session": 1,
+        "requestId": "619AF1A3026D645F5B1A546BC9B2FCAE",
+        "url": "http://127.0.0.1:48661/",
+        "status": 200,
+        "type": "Document"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.2",
+        "url": "http://127.0.0.1:48661/favicon.ico",
+        "status": 204,
+        "type": "Other"
+      },
+      {
+        "session": 1,
+        "requestId": "9DFC5C82BA50FC63063C156979F0CCC8",
+        "url": "http://127.0.0.1:48661/static/visit-record.html",
+        "status": 200,
+        "type": "Document"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.4",
+        "url": "http://127.0.0.1:48661/static/visit_record.css",
+        "status": 200,
+        "type": "Stylesheet"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.5",
+        "url": "http://127.0.0.1:48661/static/visit_record_ui.mjs",
+        "status": 200,
+        "type": "Script"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.8",
+        "url": "http://127.0.0.1:48661/static/visit_record.mjs",
+        "status": 200,
+        "type": "Script"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.9",
+        "url": "http://127.0.0.1:48661/static/week_file.mjs",
+        "status": 200,
+        "type": "Script"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.10",
+        "url": "http://127.0.0.1:48661/static/visit_record_csv.mjs",
+        "status": 200,
+        "type": "Script"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.11",
+        "url": "http://127.0.0.1:48661/static/visit_edit_history.mjs",
+        "status": 200,
+        "type": "Script"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.12",
+        "url": "http://127.0.0.1:48661/static/week_plan.mjs",
+        "status": 200,
+        "type": "Script"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.13",
+        "url": "http://127.0.0.1:48661/favicon.ico",
+        "status": 204,
+        "type": "Other"
+      },
+      {
+        "session": 1,
+        "requestId": "98953F436103197A322278C98DD1F582",
+        "url": "http://127.0.0.1:48661/",
+        "status": 200,
+        "type": "Document"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.15",
+        "url": "http://127.0.0.1:48661/favicon.ico",
+        "status": 204,
+        "type": "Other"
+      },
+      {
+        "session": 1,
+        "requestId": "E9CAC44154613B4D107E10CFDFE75498",
+        "url": "http://127.0.0.1:48661/static/visit-record.html",
+        "status": 200,
+        "type": "Document"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.17",
+        "url": "http://127.0.0.1:48661/static/visit_record.css",
+        "status": 200,
+        "type": "Stylesheet"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.18",
+        "url": "http://127.0.0.1:48661/static/visit_record_ui.mjs",
+        "status": 200,
+        "type": "Script"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.21",
+        "url": "http://127.0.0.1:48661/static/visit_record.mjs",
+        "status": 200,
+        "type": "Script"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.22",
+        "url": "http://127.0.0.1:48661/static/week_file.mjs",
+        "status": 200,
+        "type": "Script"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.23",
+        "url": "http://127.0.0.1:48661/static/visit_record_csv.mjs",
+        "status": 200,
+        "type": "Script"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.24",
+        "url": "http://127.0.0.1:48661/static/visit_edit_history.mjs",
+        "status": 200,
+        "type": "Script"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.25",
+        "url": "http://127.0.0.1:48661/static/week_plan.mjs",
+        "status": 200,
+        "type": "Script"
+      },
+      {
+        "session": 1,
+        "requestId": "25073.26",
+        "url": "http://127.0.0.1:48661/favicon.ico",
+        "status": 204,
+        "type": "Other"
+      },
+      {
+        "session": 2,
+        "requestId": "52B17BABF09D811D4966B141238F150B",
+        "url": "http://127.0.0.1:48661/",
+        "status": 200,
+        "type": "Document"
+      },
+      {
+        "session": 2,
+        "requestId": "25110.2",
+        "url": "http://127.0.0.1:48661/favicon.ico",
+        "status": 204,
+        "type": "Other"
+      },
+      {
+        "session": 2,
+        "requestId": "F42C32507743D9F088D27FCF6898AE30",
+        "url": "http://127.0.0.1:48661/static/visit-record.html",
+        "status": 200,
+        "type": "Document"
+      },
+      {
+        "session": 2,
+        "requestId": "25110.4",
+        "url": "http://127.0.0.1:48661/static/visit_record.css",
+        "status": 200,
+        "type": "Stylesheet"
+      },
+      {
+        "session": 2,
+        "requestId": "25110.5",
+        "url": "http://127.0.0.1:48661/static/visit_record_ui.mjs",
+        "status": 200,
+        "type": "Script"
+      },
+      {
+        "session": 2,
+        "requestId": "25110.8",
+        "url": "http://127.0.0.1:48661/static/visit_record.mjs",
+        "status": 200,
+        "type": "Script"
+      },
+      {
+        "session": 2,
+        "requestId": "25110.9",
+        "url": "http://127.0.0.1:48661/static/week_file.mjs",
+        "status": 200,
+        "type": "Script"
+      },
+      {
+        "session": 2,
+        "requestId": "25110.10",
+        "url": "http://127.0.0.1:48661/static/visit_record_csv.mjs",
+        "status": 200,
+        "type": "Script"
+      },
+      {
+        "session": 2,
+        "requestId": "25110.11",
+        "url": "http://127.0.0.1:48661/static/visit_edit_history.mjs",
+        "status": 200,
+        "type": "Script"
+      },
+      {
+        "session": 2,
+        "requestId": "25110.12",
+        "url": "http://127.0.0.1:48661/static/week_plan.mjs",
+        "status": 200,
+        "type": "Script"
+      },
+      {
+        "session": 2,
+        "requestId": "25110.13",
+        "url": "http://127.0.0.1:48661/favicon.ico",
+        "status": 204,
+        "type": "Other"
+      }
+    ],
+    "loading_failed": [],
+    "downloads": [
+      {
+        "session": 1,
+        "method": "Browser.downloadWillBegin",
+        "observed_ms": 1791539101046,
+        "frameId": "1020EBC32670AD1A69E5ACE6027964A9",
+        "guid": "84646199-062f-44ef-bd66-47f71c7cc367",
+        "url": "blob:http://127.0.0.1:48661/f4162f74-e3a1-4985-91b3-c5672d5dc38b",
+        "suggestedFilename": "tastetable-visits-2024-02-26.json"
+      },
+      {
+        "session": 1,
+        "method": "Browser.downloadProgress",
+        "observed_ms": 1791539101050,
+        "guid": "84646199-062f-44ef-bd66-47f71c7cc367",
+        "totalBytes": 2732,
+        "receivedBytes": 0,
+        "state": "inProgress"
+      },
+      {
+        "session": 1,
+        "method": "Browser.downloadProgress",
+        "observed_ms": 1791539101050,
+        "guid": "84646199-062f-44ef-bd66-47f71c7cc367",
+        "totalBytes": 2732,
+        "receivedBytes": 2732,
+        "state": "inProgress"
+      },
+      {
+        "session": 1,
+        "method": "Browser.downloadProgress",
+        "observed_ms": 1791539101050,
+        "guid": "84646199-062f-44ef-bd66-47f71c7cc367",
+        "totalBytes": 2732,
+        "receivedBytes": 2732,
+        "state": "inProgress"
+      },
+      {
+        "session": 1,
+        "method": "Browser.downloadProgress",
+        "observed_ms": 1791539101050,
+        "guid": "84646199-062f-44ef-bd66-47f71c7cc367",
+        "totalBytes": 2732,
+        "receivedBytes": 2732,
+        "state": "inProgress"
+      },
+      {
+        "session": 1,
+        "method": "Browser.downloadProgress",
+        "observed_ms": 1791539101055,
+        "guid": "84646199-062f-44ef-bd66-47f71c7cc367",
+        "totalBytes": 2732,
+        "receivedBytes": 2732,
+        "state": "inProgress"
+      },
+      {
+        "session": 1,
+        "method": "Browser.downloadProgress",
+        "observed_ms": 1791539101055,
+        "guid": "84646199-062f-44ef-bd66-47f71c7cc367",
+        "totalBytes": 2732,
+        "receivedBytes": 2732,
+        "state": "completed",
+        "filePath": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-1/tastetable-visits-2024-02-26.json"
+      },
+      {
+        "session": 1,
+        "method": "Browser.downloadWillBegin",
+        "observed_ms": 1791539101110,
+        "frameId": "1020EBC32670AD1A69E5ACE6027964A9",
+        "guid": "75aa2e8a-f643-454e-b6d9-9c7eeebb6ba8",
+        "url": "blob:http://127.0.0.1:48661/ff6db269-a5c4-4d04-b36f-33fe2a83d09b",
+        "suggestedFilename": "tastetable-visits-2024-02-26.csv"
+      },
+      {
+        "session": 1,
+        "method": "Browser.downloadProgress",
+        "observed_ms": 1791539101111,
+        "guid": "75aa2e8a-f643-454e-b6d9-9c7eeebb6ba8",
+        "totalBytes": 1052,
+        "receivedBytes": 0,
+        "state": "inProgress"
+      },
+      {
+        "session": 1,
+        "method": "Browser.downloadProgress",
+        "observed_ms": 1791539101111,
+        "guid": "75aa2e8a-f643-454e-b6d9-9c7eeebb6ba8",
+        "totalBytes": 1052,
+        "receivedBytes": 1052,
+        "state": "inProgress"
+      },
+      {
+        "session": 1,
+        "method": "Browser.downloadProgress",
+        "observed_ms": 1791539101111,
+        "guid": "75aa2e8a-f643-454e-b6d9-9c7eeebb6ba8",
+        "totalBytes": 1052,
+        "receivedBytes": 1052,
+        "state": "inProgress"
+      },
+      {
+        "session": 1,
+        "method": "Browser.downloadProgress",
+        "observed_ms": 1791539101111,
+        "guid": "75aa2e8a-f643-454e-b6d9-9c7eeebb6ba8",
+        "totalBytes": 1052,
+        "receivedBytes": 1052,
+        "state": "inProgress"
+      },
+      {
+        "session": 1,
+        "method": "Browser.downloadProgress",
+        "observed_ms": 1791539101113,
+        "guid": "75aa2e8a-f643-454e-b6d9-9c7eeebb6ba8",
+        "totalBytes": 1052,
+        "receivedBytes": 1052,
+        "state": "inProgress"
+      },
+      {
+        "session": 1,
+        "method": "Browser.downloadProgress",
+        "observed_ms": 1791539101114,
+        "guid": "75aa2e8a-f643-454e-b6d9-9c7eeebb6ba8",
+        "totalBytes": 1052,
+        "receivedBytes": 1052,
+        "state": "completed",
+        "filePath": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-1/tastetable-visits-2024-02-26.csv"
+      },
+      {
+        "session": 2,
+        "method": "Browser.downloadWillBegin",
+        "observed_ms": 1791539102548,
+        "frameId": "646BA5E9DB773B98E4D310FB0A4F98EA",
+        "guid": "9aba1065-d9a4-42ea-b50f-1d5ccef6b9cc",
+        "url": "blob:http://127.0.0.1:48661/1bbd3143-fb1e-4a1e-aa9a-e4099716e959",
+        "suggestedFilename": "tastetable-visits-2024-02-26.json"
+      },
+      {
+        "session": 2,
+        "method": "Browser.downloadProgress",
+        "observed_ms": 1791539102553,
+        "guid": "9aba1065-d9a4-42ea-b50f-1d5ccef6b9cc",
+        "totalBytes": 2732,
+        "receivedBytes": 0,
+        "state": "inProgress"
+      },
+      {
+        "session": 2,
+        "method": "Browser.downloadProgress",
+        "observed_ms": 1791539102553,
+        "guid": "9aba1065-d9a4-42ea-b50f-1d5ccef6b9cc",
+        "totalBytes": 2732,
+        "receivedBytes": 2732,
+        "state": "inProgress"
+      },
+      {
+        "session": 2,
+        "method": "Browser.downloadProgress",
+        "observed_ms": 1791539102553,
+        "guid": "9aba1065-d9a4-42ea-b50f-1d5ccef6b9cc",
+        "totalBytes": 2732,
+        "receivedBytes": 2732,
+        "state": "inProgress"
+      },
+      {
+        "session": 2,
+        "method": "Browser.downloadProgress",
+        "observed_ms": 1791539102553,
+        "guid": "9aba1065-d9a4-42ea-b50f-1d5ccef6b9cc",
+        "totalBytes": 2732,
+        "receivedBytes": 2732,
+        "state": "inProgress"
+      },
+      {
+        "session": 2,
+        "method": "Browser.downloadProgress",
+        "observed_ms": 1791539102553,
+        "guid": "9aba1065-d9a4-42ea-b50f-1d5ccef6b9cc",
+        "totalBytes": 2732,
+        "receivedBytes": 2732,
+        "state": "inProgress"
+      },
+      {
+        "session": 2,
+        "method": "Browser.downloadProgress",
+        "observed_ms": 1791539102553,
+        "guid": "9aba1065-d9a4-42ea-b50f-1d5ccef6b9cc",
+        "totalBytes": 2732,
+        "receivedBytes": 2732,
+        "state": "completed",
+        "filePath": "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/browser/downloads-2/tastetable-visits-2024-02-26.json"
+      }
+    ],
+    "input_events": [
+      {
+        "session": 1,
+        "label": "after-initial-exports",
+        "url": "http://127.0.0.1:48661/static/visit-record.html",
+        "events": [
+          {
+            "type": "click",
+            "isTrusted": true,
+            "id": "openRecord",
+            "value": null,
+            "fileCount": null
+          },
+          {
+            "type": "click",
+            "isTrusted": false,
+            "id": "recordFile",
+            "value": null,
+            "fileCount": 0
+          },
+          {
+            "type": "input",
+            "isTrusted": true,
+            "id": "recordFile",
+            "value": null,
+            "fileCount": 1
+          },
+          {
+            "type": "change",
+            "isTrusted": true,
+            "id": "recordFile",
+            "value": null,
+            "fileCount": 1
+          },
+          {
+            "type": "click",
+            "isTrusted": true,
+            "id": "useRecord",
+            "value": null,
+            "fileCount": null
+          },
+          {
+            "type": "click",
+            "isTrusted": true,
+            "id": "pick-0-note",
+            "value": "He said \"yes\", then went.",
+            "fileCount": null
+          },
+          {
+            "type": "input",
+            "isTrusted": true,
+            "id": "pick-0-note",
+            "value": "Receiver note: café, \"shared table\".\nPlease keep the saved week.",
+            "fileCount": null
+          },
+          {
+            "type": "input",
+            "isTrusted": true,
+            "id": "pick-0-note",
+            "value": "Receiver note: café, \"shared table\".\nPlease keep the saved week.",
+            "fileCount": null
+          },
+          {
+            "type": "input",
+            "isTrusted": true,
+            "id": "pick-0-note",
+            "value": "Receiver note: café, \"shared table\".\nPlease keep the saved week.",
+            "fileCount": null
+          },
+          {
+            "type": "change",
+            "isTrusted": true,
+            "id": "pick-0-note",
+            "value": "Receiver note: café, \"shared table\".\nPlease keep the saved week.",
+            "fileCount": null
+          },
+          {
+            "type": "click",
+            "isTrusted": true,
+            "id": "undoChange",
+            "value": null,
+            "fileCount": null
+          },
+          {
+            "type": "click",
+            "isTrusted": true,
+            "id": "redoChange",
+            "value": null,
+            "fileCount": null
+          },
+          {
+            "type": "click",
+            "isTrusted": true,
+            "id": "saveRecord",
+            "value": null,
+            "fileCount": null
+          },
+          {
+            "type": "click",
+            "isTrusted": false,
+            "id": null,
+            "value": null,
+            "fileCount": null
+          },
+          {
+            "type": "click",
+            "isTrusted": true,
+            "id": "downloadCsv",
+            "value": null,
+            "fileCount": null
+          },
+          {
+            "type": "click",
+            "isTrusted": false,
+            "id": null,
+            "value": null,
+            "fileCount": null
+          }
+        ]
+      },
+      {
+        "session": 2,
+        "label": "after-recovered-export",
+        "url": "http://127.0.0.1:48661/static/visit-record.html",
+        "events": [
+          {
+            "type": "click",
+            "isTrusted": true,
+            "id": "openRecord",
+            "value": null,
+            "fileCount": null
+          },
+          {
+            "type": "click",
+            "isTrusted": false,
+            "id": "recordFile",
+            "value": null,
+            "fileCount": 0
+          },
+          {
+            "type": "input",
+            "isTrusted": true,
+            "id": "recordFile",
+            "value": null,
+            "fileCount": 1
+          },
+          {
+            "type": "change",
+            "isTrusted": true,
+            "id": "recordFile",
+            "value": null,
+            "fileCount": 1
+          },
+          {
+            "type": "click",
+            "isTrusted": true,
+            "id": "useRecord",
+            "value": null,
+            "fileCount": null
+          },
+          {
+            "type": "click",
+            "isTrusted": true,
+            "id": "saveRecord",
+            "value": null,
+            "fileCount": null
+          },
+          {
+            "type": "click",
+            "isTrusted": false,
+            "id": null,
+            "value": null,
+            "fileCount": null
+          }
+        ]
+      }
+    ]
+  },
+  "scope": "one fixed note edit, one Undo/Redo, physical JSON and CSV, new browser/server session and physical JSON recovery; no original matrix or candidate module imports",
+  "home_screenshot": {
+    "bytes": 97054,
+    "sha256": "1d0141f05775b7c0284fe1c1d03fa14e9f73e15ef177f95eb450dca36f5f1bea",
+    "git_blob": "6ab3ae7181eaa2ee0112eb0ea1b622a51898cece"
+  },
+  "edited_screenshot": {
+    "bytes": 112171,
+    "sha256": "26973b6b9ba5a5302cfa491f78134104568f19446cdf38a20a0d0c1bce2f0be9",
+    "git_blob": "a0e9e576040848b36d04a55a8500736d5207dba1"
+  },
+  "recovered_screenshot": {
+    "bytes": 120451,
+    "sha256": "2da983144ec6b38e7baa4c3eba7280bb29b6fdd6611ceefdf488140444a3adf4",
+    "git_blob": "4ae7938732df6a39dc62347b0f33d79b02883833"
+  },
+  "total_seconds": 3.005065709,
+  "receiving_interval_seconds": 2.906599875,
+  "completed_utc": "2026-10-09T09:45:02.881Z",
+  "receiver_pid": 25005,
+  "receiver_exit_pending_until_outer_closure": true,
+  "owned_final": {
+    "source_evidence_bytes": 520180,
+    "browser_disk_bytes": 17149292
+  }
+}

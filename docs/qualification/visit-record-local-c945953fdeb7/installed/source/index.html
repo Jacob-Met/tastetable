@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TasteTable · Visit record home</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #243d32; background: #f6f4ec; }
+    * { box-sizing: border-box; }
+    body { margin: 0; line-height: 1.6; }
+    main { max-width: 880px; margin: 0 auto; padding: 52px 24px 36px; }
+    .brand { font-size: .9rem; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { font-size: clamp(2.2rem, 6vw, 3.7rem); line-height: 1.13; letter-spacing: -.04em; margin: 20px 0; max-width: 640px; }
+    .intro { font-size: 1.18rem; max-width: 650px; color: #46554b; }
+    .open { display: inline-block; margin: 12px 0 32px; padding: 13px 22px; border-radius: 8px; background: #285c44; color: white; font-weight: 700; text-decoration: none; }
+    a:focus-visible { outline: 3px solid #9f5a16; outline-offset: 4px; }
+    .steps { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    section { border: 1px solid #d7ddd1; border-radius: 12px; background: #fffef8; padding: 22px; }
+    h2 { margin: 0 0 10px; font-size: 1.12rem; }
+    p { margin: 0 0 14px; }
+    section p:last-child { margin-bottom: 0; }
+    .session { margin-top: 24px; max-width: 700px; }
+    footer { border-top: 1px solid #d7ddd1; margin-top: 32px; padding-top: 18px; font-size: .86rem; color: #58685d; }
+    footer a { color: inherit; }
+    @media (max-width: 560px) { main { padding-top: 28px; } .steps { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<main>
+  <div class="brand">TasteTable</div>
+  <h1>Visit record home</h1>
+  <p class="intro">Keep the details you want to remember about visits from a saved TasteTable week.</p>
+  <a class="open" id="openVisitRecord" href="/static/visit-record.html">Open visit record</a>
+  <div class="steps">
+    <section aria-labelledby="open-heading">
+      <h2 id="open-heading">Start with your saved file</h2>
+      <p>Open a visit-record JSON file or a saved TasteTable week. Review the preview, then choose <strong>Use this file</strong>.</p>
+      <p>Record an outcome, an optional date and a note. <strong>Undo change</strong> and <strong>Redo change</strong> help you recover an accepted edit.</p>
+    </section>
+    <section aria-labelledby="save-heading">
+      <h2 id="save-heading">Keep a copy for next time</h2>
+      <p>Download the <strong>JSON</strong> file to reopen and edit the record later. Download <strong>CSV</strong> when you want a tabular report.</p>
+      <p>CSV is a report; use the JSON file when you return to the editor.</p>
+    </section>
+  </div>
+  <p class="session">Your opened file stays in this browser tab. Nothing is uploaded or saved automatically. Download your JSON before leaving the editor: returning here or closing the tab ends its current edit history.</p>
+  <footer>This local entry opens the saved-file visit editor. <a href="/LICENSE">License</a></footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "format": "tastetable.receiver-source-syntax.v1",
+  "node_and_comparator": {
+    "source": "import sys,json,hashlib,pathlib,shutil,subprocess,os\nmem={p.split()[0].rstrip(':'):int(p.split()[1])*1024 for p in pathlib.Path('/proc/meminfo').read_text().splitlines() if p.startswith('MemAvailable:')}\nguard={'mem_available_bytes':mem['MemAvailable'],'private_free_bytes':shutil.disk_usage('/dev').free,'filesystem_writes':0,'application_imports':0}\nassert guard['mem_available_bytes']>=2*1024**3 and guard['private_free_bytes']>=128*1024**2,guard\nobj=json.loads(sys.argv[1])\ncompile(obj['python'],'compare.py','exec')\nnode=shutil.which('node')\nassert node,'Existing Node required for syntax only'\nr=subprocess.run([node,'--check','--input-type=module'],input=obj['node'],text=True,capture_output=True,timeout=10)\ndef pin(s):\n b=s.encode('utf-8');return {'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest(),'git_blob':hashlib.sha1(b'blob '+str(len(b)).encode()+b'\\0'+b).hexdigest()}\nprint(json.dumps({'guard':guard,'python_compile':'pass','node_syntax_exit':r.returncode,'node_syntax_stdout':r.stdout,'node_syntax_stderr':r.stderr,'node':node,'sources':{'receive.mjs':pin(obj['node']),'compare.py':pin(obj['python'])}},ensure_ascii=False))\nraise SystemExit(r.returncode)\n",
+    "actual": {
+      "chunk_id": "9d0f31",
+      "wall_time_seconds": 0.105995066,
+      "exit_code": 0,
+      "original_token_count": 165,
+      "output": "{\"guard\": {\"mem_available_bytes\": 2658009088, \"private_free_bytes\": 5225730048, \"filesystem_writes\": 0, \"application_imports\": 0}, \"python_compile\": \"pass\", \"node_syntax_exit\": 0, \"node_syntax_stdout\": \"\", \"node_syntax_stderr\": \"\", \"node\": \"/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node\", \"sources\": {\"receive.mjs\": {\"bytes\": 37492, \"sha256\": \"c121d3dc282a6d218e3edf576a54c1ae245812f55d739e1cda10fcf7c845d3d0\", \"git_blob\": \"7d4449a100cf0cfb2f18fcd19afebbfd512c03b1\"}, \"compare.py\": {\"bytes\": 7189, \"sha256\": \"d13a67d33337756265bd2e9c4d3f38810caf06f4ef6c63df6c6733c97f3a016c\", \"git_blob\": \"e96a4c6f38cebb649696cb0afd3377272cf23415\"}}}\n"
+    }
+  },
+  "outer_and_preparation": {
+    "source": "import sys,json,hashlib,pathlib,shutil\nmem={p.split()[0].rstrip(':'):int(p.split()[1])*1024 for p in pathlib.Path('/proc/meminfo').read_text().splitlines() if p.startswith('MemAvailable:')}\nguard={'mem_available_bytes':mem['MemAvailable'],'private_free_bytes':shutil.disk_usage('/dev').free,'filesystem_writes':0,'application_imports':0}\nassert guard['mem_available_bytes']>=2*1024**3 and guard['private_free_bytes']>=128*1024**2,guard\nobj=json.loads(sys.argv[1]);results={}\nfor name,source in obj.items():\n compile(source,name,'exec')\n b=source.encode('utf-8')\n results[name]={'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest(),'git_blob':hashlib.sha1(b'blob '+str(len(b)).encode()+b'\\0'+b).hexdigest()}\nprint(json.dumps({'compile':'pass','guard':guard,'sources':results}))\n",
+    "actual": {
+      "chunk_id": "167886",
+      "wall_time_seconds": 0.000032187,
+      "exit_code": 0,
+      "original_token_count": 123,
+      "output": "{\"compile\": \"pass\", \"guard\": {\"mem_available_bytes\": 2595692544, \"private_free_bytes\": 5225730048, \"filesystem_writes\": 0, \"application_imports\": 0}, \"sources\": {\"run.py\": {\"bytes\": 6324, \"sha256\": \"90f3c3fa9626a209f1b010b88774d974c1fddbb1b4cf3a104fa1b8b41b7dbff9\", \"git_blob\": \"45c3ea9a5445d02c1e73812ceccd8b2bbe340913\"}, \"prepare.py\": {\"bytes\": 4683, \"sha256\": \"2ab75039a530dd34d69f8138ab9f4ccaea2d6fde86896a3e0cad514ed3a84817\", \"git_blob\": \"07612bb483d3a4f0214a7ce586e764179069c4cd\"}}}\n"
+    }
+  },
+  "authority_hash": {
+    "chunk_id": "9aca46",
+    "wall_time_seconds": 0.000027871,
+    "exit_code": 0,
+    "original_token_count": 83,
+    "output": "{\"bytes\": 3754, \"sha256\": \"b4e2a5f7e578d196cb94cc27e2b1dd7c64e75894d8b4e4fda207616eacbad9c7\", \"git_blob\": \"b736fbbbe274dd26a5a0663cb6229ea397c7a51e\", \"guard\": {\"mem_available_bytes\": 2661224448, \"private_free_bytes\": 5225730048, \"filesystem_writes\": 0, \"purpose\": \"hash already-completed artifact only; no scientific computation\"}}\n"
+  },
+  "scope": "Source-only syntax and custody checks before receiving; zero application/browser calls."
+}

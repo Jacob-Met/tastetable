@@ -1,0 +1,612 @@
+{
+  "format": "tastetable.visit-record-local-source-admission.v1",
+  "owner": "estate-c945953fdeb7/product_execution_next",
+  "observed_at": "2026-10-09 08:52:28 UTC",
+  "qualified_parent": "4b9fb4bdf00214d92b821d30200bcaa9dd0bfa32",
+  "qualified_tree": "744c3a97f7d6b0108b51313fd8a532a638047d20",
+  "sole_parent": [
+    "994c03aef94b711d6dcbbeb6bbbc6a4b85a6a3ad"
+  ],
+  "qualified_leaf_count": 874,
+  "current_main_observed": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+  "source_fence": "tools/visit-record-local/**",
+  "evidence_fence": "docs/qualification/visit-record-local-c945953fdeb7/**",
+  "fence_matches_in_qualified_tree": [],
+  "applicable_instruction_paths": [],
+  "original_capsule": {
+    "git_blob": "f5ceed23b810957cf8e4cb36083fd519f9f03a2d",
+    "bytes": 55094,
+    "sha256": "724be9c59600c28e0f6a69fefcbf635a321aade0ef5f84c5d402204285224344",
+    "file_count": 11,
+    "payload_bytes": 47930
+  },
+  "all_original_leaf_pins_match_qualified_tree": true,
+  "originals": [
+    {
+      "path": "static/visit-record.html",
+      "source_path": "static/visit-record.html",
+      "git_blob": "a128989f95e7846d90bf6b3fd95815ac91dbd86c",
+      "bytes": 4734,
+      "sha256": "fb538ba2f96fb4c30ea5b53b4459d17c8d00fb0e23becf8046b27a80b8c726d2"
+    },
+    {
+      "path": "static/visit_record.css",
+      "source_path": "static/visit_record.css",
+      "git_blob": "cf2ed8fc0871196a55ceef4e0aa0cab09d1fcfeb",
+      "bytes": 4621,
+      "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403"
+    },
+    {
+      "path": "static/visit_record_ui.mjs",
+      "source_path": "static/visit_record_ui.mjs",
+      "git_blob": "fb2ab7743e0369e76fd84ee3dfd023de708d4c47",
+      "bytes": 11976,
+      "sha256": "de5b41ea4f6921ed63ff250397e8ed0adbaec1c1ea8e9b182a1414e523254b82"
+    },
+    {
+      "path": "static/visit_record.mjs",
+      "source_path": "static/visit_record.mjs",
+      "git_blob": "2b5b37e3d4a227e00a5b0052a962d13512b53e48",
+      "bytes": 7525,
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f"
+    },
+    {
+      "path": "static/visit_record_csv.mjs",
+      "source_path": "static/visit_record_csv.mjs",
+      "git_blob": "b001286f411bec6a9088b1902e9455f2fc3540c2",
+      "bytes": 1646,
+      "sha256": "a233a983918291ef93577f91eb64c56adb4644c10cd8f4046e875d4536cc970c"
+    },
+    {
+      "path": "static/visit_edit_history.mjs",
+      "source_path": "static/visit_edit_history.mjs",
+      "git_blob": "4f7ad84daa26198dfb7e787def085d563af72119",
+      "bytes": 2094,
+      "sha256": "eb4f3d9b101bfd8483dd43f5161d07b15a4fc7be05f922a29e0a826abf4c2fc2"
+    },
+    {
+      "path": "static/week_file.mjs",
+      "source_path": "static/week_file.mjs",
+      "git_blob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "source_path": "static/week_plan.mjs",
+      "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+    },
+    {
+      "path": "LICENSE",
+      "source_path": "LICENSE",
+      "git_blob": "3757eabcdbaee0b03b44aad0a7c01ff8c5ada81b",
+      "bytes": 1076,
+      "sha256": "23882b44a5d39c220ecb4dccdbef766635e3b610d5ef87904fe4133c6b6439ed"
+    },
+    {
+      "path": "reference/saved-record.json",
+      "source_path": "docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-1.json",
+      "git_blob": "4b8eed772a811f5d7ef7da10e0106d9cb90b11fd",
+      "bytes": 2691,
+      "sha256": "89f03111e1eeffe3716055ff5f8e5d5bbd7b8a78ee5ba38b364a58f3e8e61e9d"
+    },
+    {
+      "path": "reference/original-statement.csv",
+      "source_path": "docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-2.csv",
+      "git_blob": "37d1c9c16f09a3ddf7e434665de9a07073dfa1b2",
+      "bytes": 1012,
+      "sha256": "9d60b0f2d92ae42166cda06553ecbe8aa3cfa63ce831e477253d6e375816b17d"
+    }
+  ],
+  "original_qualified_offer": {
+    "url": "https://github.com/Jacob-Met/tastetable/issues/70#issuecomment-6075750328",
+    "updated_at": "2026-10-09T06:36:46Z",
+    "body": "### Qualified visit-edit recovery — root acceptance and exact source handoff\n\nPublished at [`4b9fb4bdf00214d92b821d30200bcaa9dd0bfa32`](https://github.com/Jacob-Met/tastetable/commit/4b9fb4bdf00214d92b821d30200bcaa9dd0bfa32), tree `744c3a97f7d6b0108b51313fd8a532a638047d20`, branch `work/visit-edit-recovery-18a24bf0c281-20261009`. Its sole parent is the actual **open, unmerged PR61 head** `994c03aef94b711d6dcbbeb6bbbc6a4b85a6a3ad`; main remains `145d27981b3c5fe6afa72e205b42582fd72c7734`.\n\n[Root receiving](https://github.com/Jacob-Met/tastetable/blob/4b9fb4bdf00214d92b821d30200bcaa9dd0bfa32/docs/receiving/visit-edit-recovery-18a24bf0c281/root/README.md) · [User guide](https://github.com/Jacob-Met/tastetable/blob/4b9fb4bdf00214d92b821d30200bcaa9dd0bfa32/docs/VISIT_EDIT_RECOVERY.md) · [Exact root record](https://github.com/Jacob-Met/tastetable/blob/4b9fb4bdf00214d92b821d30200bcaa9dd0bfa32/docs/receiving/visit-edit-recovery-18a24bf0c281/root/root-receiving.json)\n\n**Behavior received.** Undo and Redo restore complete accepted visit records across20 edits, including exact imported CR/CRLF notes and other occurrences. Date/note changes group for a focus visit; outcome selection is one step. An exact no-op preserves Redo; a real new edit clears it. Invalid drafts remain visible and block recovery until corrected. Successful Use clears history even for an equal file, while canceled/failed/unconfirmed opens preserve it; recovery retires late file generations. Current restored state reaches the unchanged JSON/CSV/Print handlers. Native buttons, field focus and scroll were received.\n\n| Actual gate | Preserved result |\n| --- | --- |\n| Original browser | **15/16**, once; missing Undo/Redo is the expected absent capability. |\n| Author native Node | **12/12 methods**, once. |\n| Author browser | **23/24**, once; sole failure was a whole-CSV oracle including a generated save timestamp. |\n| Offline CSV correction | **One successful retained-download check**, no browser replay:17headers,16stablecolumns,3records; only `record_saved_at` varies. |\n| Independent browser | **56/56**, one separately frozen journey; no harness/page errors, containment, repair or replay. |\n| Independent source review | Exact nine-span UI inverse, HTML controls/help inverse,346-byte README append inverse and unchanged retained source/handlers. |\n\nThe original and author browsers each exited0, with receiver1 for their respective failed predicate; the independent browser and receiver exited0. The two CSV timestamps are `2026-10-09T05:01:59.610Z` and `2026-10-09T05:02:00.411Z`, bounded by the recorded **whole campaign**, not separately captured per-export intervals. The author browser remains23/24. The corrected full browser driver is **unrun**; its syntax and changed pure predicate were received separately. The earlier source-only16/16VM claim remains historical: its11,762-byte raw receipt was lost, not reconstructed or replayed.\n\nIndependent receiving covers physical restored JSON/CSV and actual reopen; no-op/branch/invalid history; pending-file Undo; canceled/failed/equal Use;21edits/20Undo bound; native keyboard activation, focus and scroll;390px liveDOM; empty observed storage and owned static network only. The narrow screenshot shows the upper opening/source cards, **not visible history buttons**; those controls have liveDOM evidence. Model/JSON retain null/empty distinctions; the unchanged CSV intentionally represents null dates as empty fields.\n\n**Exact composition:**27owned paths, **24 additions and three replacements**, no deletions. All **847 inherited leaves** remain exact, giving **874 leaves**; root independently reconstructed and read back the entire canonical parent and final Merkle tree. Three production blobs:\n- `static/visit_edit_history.mjs` — `4f7ad84daa26198dfb7e787def085d563af72119`,2094B.\n- `static/visit_record_ui.mjs` — `fb2ab7743e0369e76fd84ee3dfd023de708d4c47`,11976B.\n- `static/visit-record.html` — `a128989f95e7846d90bf6b3fd95815ac91dbd86c`,4734B.\n\nThe retained model, CSV renderer, week codec/plan and stylesheet are exact. #60/PR61 CSV import, eligibility, complete handler and HTML control/help stay exact, as do JSON/Print and picker/generation functions. The source-only25path composition independently matched `e3f37c37109b21ae94cead9e2028e015029d51d2` before the two root files.\n\nRoot record: **24,979B**, SHA256 `70ab9b83272dcd247f3e6a9732d2edfe9469cf79c37c85372378b60226482059`, blob `81d9da986f2dbd8df625849b34dc8afaac37aa4e`. Exact private packets and all26/84/32archived members are anchored at [HAMON custody84dcb1e](https://github.com/Jacob-Met/hamon/issues/140#issuecomment-6075596314); root rechecked every member byte/hash and the complete56-row public projection. Historical author pending-independent fields remain immutable and are superseded by this separate root record.\n\n**No-Actions boundary:** all three complete workflows remain exact, with push restricted to main and otherwise pull_request. The fresh branch had no existing ref or associated PR. Exact commit/parent/ref, all874leaves and all seven changed production/guide/README/root bodies were read back; **all-event exact-head Actions query returned0**. No PR/main/merge/workflow/install/provider operation occurred. PR61 composition ownership, arrangement Undo#40 and read-only visit consumers remain with their existing owners."
+  },
+  "reservation": {
+    "url": "https://github.com/Jacob-Met/tastetable/issues/70#issuecomment-6077679283",
+    "created_at": "2026-10-09T08:52:56Z",
+    "body": "### Additive local visit-record installation reservation — estate-c945953fdeb7\n\nOwner: estate-c945953fdeb7 / product_execution_next. This is the narrow installed consumer of the qualified #70 source, with original source and CSV ownership retained. Root approved this additive installation under the standing direct-execution mandate; the independent installed-use contract will be frozen before native installation.\n\n**Concrete user operation.** Open a maintained Mac command from any working directory, reach a small local home, open the qualified visit-record editor, explicitly preview/use a saved record, make an ordinary recoverable note change, and download physical JSON and CSV. The installation uses existing Python and a fixed loopback origin, proposed `http://127.0.0.1:48661/`; native port/capacity admission remains pending. It adds no service, provider call, dependency installation or system registration.\n\n**Exact fence.** Only new `tools/visit-record-local/**` and `docs/qualification/visit-record-local-c945953fdeb7/**`. New exclusive native target `/Users/me/Applications/TasteTableVisitRecord-c945953fdeb7`, with owned preparation root `/Users/me/Developer/tastetable-visit-record-local-c945953fdeb7`. Intended entry: `Open TasteTable Visit Record.command`. The foreground loopback server has a fixed landing page and explicit `--no-open` receiving mode; default invocation opens the same local home through the existing system opener.\n\nThe original eight static app files and MIT license are pinned to qualified parent `4b9fb4bdf00214d92b821d30200bcaa9dd0bfa32`, tree `744c3a97f7d6b0108b51313fd8a532a638047d20`. This remains based on **open, unmerged PR61** `994c03aef94b711d6dcbbeb6bbbc6a4b85a6a3ad`. The installed copy alone changes exactly one label:\n`<a href=\"/\" class=\"back-link\">TasteTable planner</a>` → `<a href=\"/\" class=\"back-link\">Visit record home</a>`.\nThe link keeps the same root destination; the new local home honestly describes this standalone editor. Original HTML is retained for recovery and the other seven static assets remain exact. No shared `static/` path is edited. Original HTML is 4,734 B/SHA256 `fb538ba2f96fb4c30ea5b53b4459d17c8d00fb0e23becf8046b27a80b8c726d2`; proposed installed-only HTML is 4,733 B/SHA256 `ab33e270a69dcba0cd19303dc1ea1ae47b61621fa64d3af3870e6ecb21e4bec1`. Exact one-occurrence inverse restores the whole original file.\n\n**Original-only intake is concrete.** Eleven complete original files, 47,930 payload bytes, are sealed in Git blob `f5ceed23b810957cf8e4cb36083fd519f9f03a2d`, 55,094 B/SHA256 `724be9c59600c28e0f6a69fefcbf635a321aade0ef5f84c5d402204285224344`, uploaded and exactly read back without a ref. This capsule includes the nine originals and the actual original fictional saved-record/CSV downloads (`4b8eed772a811f5d7ef7da10e0106d9cb90b11fd`, 2,691 B; `37d1c9c16f09a3ddf7e434665de9a07073dfa1b2`, 1,012 B). It is an original-source capsule, **not a previously qualified ZIP** or a candidate installation.\n\n**Ownership and acceptance limits.** #70 history/source, #60/PR61 CSV, released #44 editor, #40 arrangement history, #14 offline studio, provider/planner, codec/model, read-only visit consumers and new venue-followup #73 routes stay with their existing owners. Current project issues/PR bodies (73 entries), #70/#60/#44 offers, central project mentions and the complete 874-leaf qualified tree showed no reservation of this exact installation namespace/target. This is bounded Git coordination coverage; the earlier unreadable unrelated native advisory remains untouched and no complete native claim census is asserted. Original browser/history/CSV campaigns, including the author 23/24 result and separately corrected timestamp oracle, are inherited without rerun.\n\n**No-Actions admission.** At 2026-10-09 08:52:28 UTC, the complete current three-workflow directory exactly matched the three full bodies already read: `ci.yml` `0e627313…`, `native-plan-week-browser.yml` `d674f269…`, `week-compare.yml` `e591fca2…`; all contain only main-push/pull_request events and no issue/comment trigger. #70 still had only its original qualified handoff. This reservation is comment-only. No native allocation or candidate source has been executed; no branch, PR, main, owner ref, workflow or Actions operation is made by this worker. Root retains any eventual independently admitted source-ref publication.\n"
+  },
+  "ownership_coverage": {
+    "project_all_state_issues_and_pr_bodies_count": 73,
+    "project_per_page": 100,
+    "project_response_complete_at_read": true,
+    "project_index": [
+      {
+        "number": 73,
+        "title": "Export an occurrence-preserving daily agenda from selected saved weeks",
+        "state": "open",
+        "updated_at": "2026-10-09T08:42:49Z"
+      },
+      {
+        "number": 72,
+        "title": "Compare common suggestion identities across explicitly selected saved weeks",
+        "state": "open",
+        "updated_at": "2026-10-09T08:29:06Z"
+      },
+      {
+        "number": 63,
+        "title": "Compare two saved visit-record copies without changing either record",
+        "state": "open",
+        "updated_at": "2026-10-09T08:19:49Z"
+      },
+      {
+        "number": 4,
+        "title": "Calendar handoff for checked weekly suggestions",
+        "state": "closed",
+        "updated_at": "2026-10-09T07:47:45Z"
+      },
+      {
+        "number": 60,
+        "title": "Download a CSV report directly from the visit record page",
+        "state": "open",
+        "updated_at": "2026-10-09T06:39:51Z"
+      },
+      {
+        "number": 70,
+        "title": "Undo and redo accepted visit outcome, date and note edits",
+        "state": "open",
+        "updated_at": "2026-10-09T06:36:46Z"
+      },
+      {
+        "number": 64,
+        "title": "Review an ordered native batch bundle and download one saved week without extraction",
+        "state": "open",
+        "updated_at": "2026-10-09T06:21:21Z"
+      },
+      {
+        "number": 71,
+        "title": "Show retained model completion status beside the accepted week",
+        "state": "open",
+        "updated_at": "2026-10-09T05:56:52Z"
+      },
+      {
+        "number": 55,
+        "title": "Save and reopen one caregiver handoff with the arranged week and venue notes",
+        "state": "open",
+        "updated_at": "2026-10-09T05:07:24Z"
+      },
+      {
+        "number": 66,
+        "title": "Preserve checked suggestions when model continuation fails",
+        "state": "open",
+        "updated_at": "2026-10-09T05:07:23Z"
+      },
+      {
+        "number": 69,
+        "title": "Preserve usable city input when caregivers paste surrounding spaces",
+        "state": "open",
+        "updated_at": "2026-10-09T05:03:25Z"
+      },
+      {
+        "number": 65,
+        "title": "Export one saved visit record as an offline printable HTML handoff",
+        "state": "open",
+        "updated_at": "2026-10-09T02:24:52Z"
+      },
+      {
+        "number": 67,
+        "title": "Export saved week and matching venue notes as the native call-sheet TXT",
+        "state": "open",
+        "updated_at": "2026-10-09T02:12:47Z"
+      },
+      {
+        "number": 68,
+        "title": "Review removed and changed venue notes before replacing a companion file",
+        "state": "open",
+        "updated_at": "2026-10-09T01:59:35Z"
+      },
+      {
+        "number": 62,
+        "title": "Review saved visit records across weeks without merging their outcomes",
+        "state": "open",
+        "updated_at": "2026-10-09T01:51:41Z"
+      },
+      {
+        "number": 54,
+        "title": "Include saved venue-note companions in portable caregiver handoffs",
+        "state": "open",
+        "updated_at": "2026-10-09T01:08:04Z"
+      },
+      {
+        "number": 61,
+        "title": "Download literal CSV reports from the visit record page",
+        "state": "open",
+        "updated_at": "2026-10-08T22:02:32Z"
+      },
+      {
+        "number": 57,
+        "title": "Preserve comma-bearing taste entries when reopening a saved week",
+        "state": "open",
+        "updated_at": "2026-10-08T21:52:18Z"
+      },
+      {
+        "number": 56,
+        "title": "Save and review planning inputs before reusing them for a new week",
+        "state": "open",
+        "updated_at": "2026-10-08T21:51:47Z"
+      },
+      {
+        "number": 51,
+        "title": "Recover regular week arrangements with Undo and Redo",
+        "state": "open",
+        "updated_at": "2026-10-08T21:29:18Z"
+      },
+      {
+        "number": 40,
+        "title": "Undo and redo arrangement changes in the regular planner",
+        "state": "open",
+        "updated_at": "2026-10-08T21:20:24Z"
+      },
+      {
+        "number": 58,
+        "title": "Export recorded visits to a local CSV without changing the saved week",
+        "state": "closed",
+        "updated_at": "2026-10-08T21:15:13Z"
+      },
+      {
+        "number": 59,
+        "title": "Export saved visit records as literal CSV reports",
+        "state": "closed",
+        "updated_at": "2026-10-08T21:15:12Z"
+      },
+      {
+        "number": 46,
+        "title": "Export saved weeks through the native calendar writer",
+        "state": "open",
+        "updated_at": "2026-10-08T20:44:42Z"
+      },
+      {
+        "number": 53,
+        "title": "Create ordered native week bundles for multiple profiles",
+        "state": "closed",
+        "updated_at": "2026-10-08T20:41:55Z"
+      },
+      {
+        "number": 41,
+        "title": "Create ordered native week bundles for several explicit profiles",
+        "state": "closed",
+        "updated_at": "2026-10-08T20:39:45Z"
+      },
+      {
+        "number": 49,
+        "title": "Save and reopen editable venue-contact notes",
+        "state": "closed",
+        "updated_at": "2026-10-08T20:12:30Z"
+      },
+      {
+        "number": 44,
+        "title": "Keep local visit outcomes and notes for each saved-week occurrence",
+        "state": "closed",
+        "updated_at": "2026-10-08T19:56:53Z"
+      },
+      {
+        "number": 52,
+        "title": "Record visit outcomes from saved TasteTable weeks",
+        "state": "closed",
+        "updated_at": "2026-10-08T19:53:25Z"
+      },
+      {
+        "number": 31,
+        "title": "Compare saved caregiver-week arrangements without replacing the planner",
+        "state": "closed",
+        "updated_at": "2026-10-08T19:49:35Z"
+      },
+      {
+        "number": 25,
+        "title": "Open native offline planner results as editable saved weeks",
+        "state": "closed",
+        "updated_at": "2026-10-08T19:48:38Z"
+      },
+      {
+        "number": 50,
+        "title": "[test-only, do not merge] Freeze saved-calendar independent baseline",
+        "state": "closed",
+        "updated_at": "2026-10-08T19:40:30Z"
+      },
+      {
+        "number": 48,
+        "title": "Export saved caregiver weeks as standalone printable HTML",
+        "state": "closed",
+        "updated_at": "2026-10-08T19:31:10Z"
+      },
+      {
+        "number": 39,
+        "title": "Read an arranged saved week as a standalone caregiver handoff",
+        "state": "closed",
+        "updated_at": "2026-10-08T19:25:32Z"
+      },
+      {
+        "number": 34,
+        "title": "Export the arranged offline week as a calendar file",
+        "state": "closed",
+        "updated_at": "2026-10-08T19:19:26Z"
+      },
+      {
+        "number": 45,
+        "title": "Export the arranged offline week as a calendar",
+        "state": "closed",
+        "updated_at": "2026-10-08T19:18:09Z"
+      },
+      {
+        "number": 43,
+        "title": "Caregiver revision brief from matching saved-week arrangements",
+        "state": "closed",
+        "updated_at": "2026-10-08T19:11:39Z"
+      },
+      {
+        "number": 47,
+        "title": "Add downloadable caregiver revision briefs for saved-week changes",
+        "state": "closed",
+        "updated_at": "2026-10-08T19:11:38Z"
+      },
+      {
+        "number": 30,
+        "title": "Compare two saved weeks in a separate offline page",
+        "state": "open",
+        "updated_at": "2026-10-08T18:42:38Z"
+      },
+      {
+        "number": 42,
+        "title": "Export an arranged saved week through the native calendar writer",
+        "state": "open",
+        "updated_at": "2026-10-08T18:40:39Z"
+      },
+      {
+        "number": 16,
+        "title": "Prepare venue questions and record replies in the caregiver week handoff",
+        "state": "closed",
+        "updated_at": "2026-10-08T17:51:13Z"
+      },
+      {
+        "number": 36,
+        "title": "Arrange the checked week around available days",
+        "state": "open",
+        "updated_at": "2026-10-08T17:51:04Z"
+      },
+      {
+        "number": 33,
+        "title": "Prepare venue questions and caregiver call sheets",
+        "state": "closed",
+        "updated_at": "2026-10-08T17:33:59Z"
+      },
+      {
+        "number": 38,
+        "title": "docs: preserve revised venue worksheet receiving and two-fix proposal",
+        "state": "closed",
+        "updated_at": "2026-10-08T17:52:18Z"
+      },
+      {
+        "number": 35,
+        "title": "Add Undo and Redo to the offline week organizer",
+        "state": "closed",
+        "updated_at": "2026-10-08T16:11:43Z"
+      },
+      {
+        "number": 37,
+        "title": "Stop crediting denied soft-food keywords",
+        "state": "closed",
+        "updated_at": "2026-10-08T16:08:49Z"
+      },
+      {
+        "number": 32,
+        "title": "Undo and redo unsaved arrangement changes in the offline studio",
+        "state": "closed",
+        "updated_at": "2026-10-08T15:59:43Z"
+      },
+      {
+        "number": 29,
+        "title": "Compare saved-week arrangements before choosing a caregiver handoff",
+        "state": "closed",
+        "updated_at": "2026-10-08T15:38:03Z"
+      },
+      {
+        "number": 26,
+        "title": "Save and reopen arranged weeks in the offline studio",
+        "state": "closed",
+        "updated_at": "2026-10-08T15:10:36Z"
+      },
+      {
+        "number": 28,
+        "title": "Save and reopen arranged weeks in the offline studio",
+        "state": "closed",
+        "updated_at": "2026-10-08T15:07:09Z"
+      },
+      {
+        "number": 27,
+        "title": "Open native offline planner results as editable saved weeks",
+        "state": "closed",
+        "updated_at": "2026-10-08T13:58:21Z"
+      },
+      {
+        "number": 24,
+        "title": "Do not label explicitly negated low-sodium keywords as positive",
+        "state": "closed",
+        "updated_at": "2026-10-08T13:21:28Z"
+      },
+      {
+        "number": 22,
+        "title": "Correct explicitly negated low-sodium evidence in native plans",
+        "state": "closed",
+        "updated_at": "2026-10-08T13:20:00Z"
+      },
+      {
+        "number": 20,
+        "title": "Require affirmative entrance evidence for wheelchair access",
+        "state": "closed",
+        "updated_at": "2026-10-08T13:03:55Z"
+      },
+      {
+        "number": 21,
+        "title": "Require affirmative wheelchair entrance evidence",
+        "state": "closed",
+        "updated_at": "2026-10-08T13:13:41Z"
+      },
+      {
+        "number": 23,
+        "title": "Add an explicit offline native planner CLI",
+        "state": "closed",
+        "updated_at": "2026-10-08T12:59:01Z"
+      },
+      {
+        "number": 19,
+        "title": "Generate offline native plans from authored local profiles",
+        "state": "closed",
+        "updated_at": "2026-10-08T12:58:05Z"
+      },
+      {
+        "number": 18,
+        "title": "Add a finite offline studio for native TasteTable plans",
+        "state": "closed",
+        "updated_at": "2026-10-08T12:32:42Z"
+      },
+      {
+        "number": 14,
+        "title": "Explore finite native TasteTable plans without an application backend",
+        "state": "closed",
+        "updated_at": "2026-10-08T12:24:41Z"
+      },
+      {
+        "number": 7,
+        "title": "Keep TasteTable plans tied to current inputs",
+        "state": "closed",
+        "updated_at": "2026-10-08T12:15:23Z"
+      },
+      {
+        "number": 17,
+        "title": "Withdrawn duplicate: caregiver venue follow-up (#16 owns worksheet)",
+        "state": "closed",
+        "updated_at": "2026-10-08T12:11:11Z"
+      },
+      {
+        "number": 15,
+        "title": "Save and reopen edited caregiver weeks with source evidence",
+        "state": "closed",
+        "updated_at": "2026-10-08T12:05:41Z"
+      },
+      {
+        "number": 13,
+        "title": "Keep edited caregiver weeks consistent across calendar, print and requests",
+        "state": "closed",
+        "updated_at": "2026-10-08T11:53:23Z"
+      },
+      {
+        "number": 10,
+        "title": "Add tested calendar writer for arranged weeks",
+        "state": "closed",
+        "updated_at": "2026-10-08T11:41:31Z"
+      },
+      {
+        "number": 12,
+        "title": "Explain incomplete recommendation lookups in checked plans",
+        "state": "closed",
+        "updated_at": "2026-10-08T11:11:37Z"
+      },
+      {
+        "number": 8,
+        "title": "Receive integrated caregiver constraints and provider recovery through both APIs",
+        "state": "closed",
+        "updated_at": "2026-10-08T10:39:18Z"
+      },
+      {
+        "number": 3,
+        "title": "Preserve checked plans after recommendation tool errors",
+        "state": "closed",
+        "updated_at": "2026-10-08T10:17:41Z"
+      },
+      {
+        "number": 11,
+        "title": "Keep checked plans when model arguments or diagnostic traces fail",
+        "state": "closed",
+        "updated_at": "2026-10-08T10:16:35Z"
+      },
+      {
+        "number": 9,
+        "title": "Organize checked picks into a dated caregiver week and print the handoff",
+        "state": "closed",
+        "updated_at": "2026-10-08T09:13:49Z"
+      },
+      {
+        "number": 2,
+        "title": "Preserve the configured model in TasteTable agent calls",
+        "state": "closed",
+        "updated_at": "2026-10-08T08:58:31Z"
+      },
+      {
+        "number": 6,
+        "title": "Qualify original backend stack with installed CI",
+        "state": "closed",
+        "updated_at": "2026-10-08T08:42:54Z"
+      },
+      {
+        "number": 5,
+        "title": "Keep caregiver requirements authoritative throughout weekly planning",
+        "state": "closed",
+        "updated_at": "2026-10-08T08:37:12Z"
+      },
+      {
+        "number": 1,
+        "title": "Add pytest smoke CI (SHA-pinned); align Dockerfile with requirements.txt",
+        "state": "closed",
+        "updated_at": "2026-10-08T08:26:10Z"
+      }
+    ],
+    "exact_installation_scope_match_before_reservation": false,
+    "existing_owners_retained": [
+      "#70 estate-18a24bf0c281/root source/history",
+      "#60/PR61 estate-65ae877160f6/project_execution CSV",
+      "#44 chatgpt-347f3417824d/event_delivery released editor source",
+      "#40 estate-3dab0b9d2ce9 arrangement history",
+      "#14 separate installed offline studio",
+      "read-only visit/history/comparison/HTML routes",
+      "estate-c36a60df2cc1 status-selected next-calls TXT/venue-followup route"
+    ],
+    "central_scope": "HAMON #140/#143 project mentions since 08:03; newer venue-followup comment6077478274 at08:39:06 is distinct",
+    "native_advisory_limit": "A prior broad native advisory content search reached EACCES on an unrelated owner's file and was not retried or bypassed. No complete native code-claims census is asserted."
+  },
+  "navigation": {
+    "original_git_blob": "a128989f95e7846d90bf6b3fd95815ac91dbd86c",
+    "original_bytes": 4734,
+    "original_sha256": "fb538ba2f96fb4c30ea5b53b4459d17c8d00fb0e23becf8046b27a80b8c726d2",
+    "proposed_bytes": 4733,
+    "proposed_sha256": "ab33e270a69dcba0cd19303dc1ea1ae47b61621fa64d3af3870e6ecb21e4bec1",
+    "original_span": "<a href=\"/\" class=\"back-link\">TasteTable planner</a>",
+    "proposed_span": "<a href=\"/\" class=\"back-link\">Visit record home</a>",
+    "exact_occurrences": 1,
+    "whole_file_inverse_exact": true,
+    "proposed_installed_only": true,
+    "repository_shared_html_edit": false,
+    "candidate_installer_authored": false,
+    "native_allocation_or_execution": false
+  },
+  "complete_current_workflow_directory": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "git_blob": "0e6273139a9bf417a4ee42f4501d067b1c9d95a0",
+      "bytes": 652,
+      "sha256": "2f83a6f17995602ec28e9f0dacc901511bae2dd3e348e2dfc9190494830da876",
+      "content": "name: ci\n\non:\n  push:\n    branches: [main]\n  pull_request:\n\nconcurrency:\n  group: ci-${{ github.ref }}\n  cancel-in-progress: true\n\npermissions:\n  contents: read\n\njobs:\n  test:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1\n      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0\n        with:\n          python-version: \"3.12\"\n      - name: Install dependencies\n        run: pip install -r requirements.txt\n      - name: Run tests\n        # FixtureTransport + mock-mode defaults keep this hermetic: no Qloo key needed.\n        run: python -m pytest -q\n"
+    },
+    {
+      "path": ".github/workflows/native-plan-week-browser.yml",
+      "git_blob": "d674f2698d1b048075a1c49c2035b1096be668f2",
+      "bytes": 3299,
+      "sha256": "b40992512e13d653c51fb8b4dfb0d15ad0a090ae4754c4082a18ab20ca62ace3",
+      "content": "name: native-plan-week-browser\n\non:\n  pull_request:\n    paths:\n      - 'tools/native_plan_to_week.mjs'\n      - 'tools/check_native_plan_week_browser.mjs'\n      - 'tests/test_native_plan_week.py'\n      - 'tastetable_cli.py'\n      - 'agent.py'\n      - 'constraints.py'\n      - 'qloo_client.py'\n      - 'personas.py'\n      - 'fixtures/qloo_fixtures.json'\n      - 'static/**'\n      - '.github/workflows/native-plan-week-browser.yml'\n  push:\n    branches: [main]\n    paths:\n      - 'tools/native_plan_to_week.mjs'\n      - 'tools/check_native_plan_week_browser.mjs'\n      - 'tests/test_native_plan_week.py'\n      - 'tastetable_cli.py'\n      - 'agent.py'\n      - 'constraints.py'\n      - 'qloo_client.py'\n      - 'personas.py'\n      - 'fixtures/qloo_fixtures.json'\n      - 'static/**'\n      - '.github/workflows/native-plan-week-browser.yml'\n\nconcurrency:\n  group: native-plan-week-browser-${{ github.ref }}\n  cancel-in-progress: true\n\npermissions:\n  contents: read\n\njobs:\n  receive-week:\n    runs-on: ubuntu-latest\n    timeout-minutes: 8\n    steps:\n      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # Existing maintained pin.\n      - name: Require cached Node 22, Python and installed system Chrome\n        id: runtime\n        shell: bash\n        run: |\n          set -euo pipefail\n          NATIVE_WEEK_NODE=\n          for NATIVE_WEEK_NODE_DIR in \"${RUNNER_TOOL_CACHE}/node\"/22.*; do\n            if [[ -x \"${NATIVE_WEEK_NODE_DIR}/x64/bin/node\" && -f \"${NATIVE_WEEK_NODE_DIR}/x64.complete\" ]]; then\n              NATIVE_WEEK_NODE=\"${NATIVE_WEEK_NODE_DIR}/x64/bin/node\"\n            fi\n          done\n          [[ -n \"${NATIVE_WEEK_NODE}\" ]] || { echo \"A complete cached Node 22 is required.\"; exit 1; }\n          NATIVE_WEEK_BROWSER=\n          for NATIVE_WEEK_BROWSER_NAME in google-chrome google-chrome-stable chromium chromium-browser; do\n            if command -v \"${NATIVE_WEEK_BROWSER_NAME}\" >/dev/null 2>&1; then\n              NATIVE_WEEK_BROWSER=\"$(command -v \"${NATIVE_WEEK_BROWSER_NAME}\")\"\n              break\n            fi\n          done\n          [[ -n \"${NATIVE_WEEK_BROWSER}\" ]] || { echo \"An installed Chrome/Chromium is required.\"; exit 1; }\n          NATIVE_WEEK_PYTHON=\"$(command -v python3)\"\n          \"${NATIVE_WEEK_NODE}\" --version\n          \"${NATIVE_WEEK_BROWSER}\" --version\n          \"${NATIVE_WEEK_PYTHON}\" --version\n          printf 'node=%s\\nbrowser=%s\\npython=%s\\n' \"${NATIVE_WEEK_NODE}\" \"${NATIVE_WEEK_BROWSER}\" \"${NATIVE_WEEK_PYTHON}\" >> \"${GITHUB_OUTPUT}\"\n      - name: Receive actual native result, saved file and unchanged browser consumer\n        env:\n          NATIVE_WEEK_PYTHON: ${{ steps.runtime.outputs.python }}\n        run: '\"${{ steps.runtime.outputs.node }}\" tools/check_native_plan_week_browser.mjs --browser \"${{ steps.runtime.outputs.browser }}\" --output \"${RUNNER_TEMP}/native-plan-week-receiving\"'\n      - name: Preserve bounded native inputs, actual downloads and browser artifacts\n        if: always()\n        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # Official v4 pin.\n        with:\n          name: native-plan-week-receiving-${{ github.run_id }}\n          path: ${{ runner.temp }}/native-plan-week-receiving\n          if-no-files-found: warn\n          retention-days: 14\n          compression-level: 6\n"
+    },
+    {
+      "path": ".github/workflows/week-compare.yml",
+      "git_blob": "e591fca2db970460611269ad7d1c53a6bc70f028",
+      "bytes": 1269,
+      "sha256": "ea82ca88ff2fc05072503f3c124068ab2fc8cc689e7f22b9b850e07ba96393aa",
+      "content": "name: saved-week-comparison\n\non:\n  pull_request:\n    paths:\n      - 'static/**'\n      - 'tests/*.mjs'\n      - 'tests/*.cjs'\n      - 'tests/fixtures/**'\n      - '.github/workflows/week-compare.yml'\n  push:\n    branches: [main]\n    paths:\n      - 'static/**'\n      - 'tests/*.mjs'\n      - 'tests/*.cjs'\n      - 'tests/fixtures/**'\n      - '.github/workflows/week-compare.yml'\n\npermissions:\n  contents: read\n\njobs:\n  compare-week:\n    runs-on: ubuntu-latest\n    timeout-minutes: 3\n    steps:\n      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # Existing maintained pin.\n      - name: Test comparison and existing browser domain modules on cached Node 22\n        shell: bash\n        run: |\n          set -euo pipefail\n          COMPARE_WEEK_NODE=\n          for COMPARE_WEEK_NODE_DIR in \"${RUNNER_TOOL_CACHE}/node\"/22.*; do\n            if [[ -x \"${COMPARE_WEEK_NODE_DIR}/x64/bin/node\" && -f \"${COMPARE_WEEK_NODE_DIR}/x64.complete\" ]]; then\n              COMPARE_WEEK_NODE=\"${COMPARE_WEEK_NODE_DIR}/x64/bin/node\"\n            fi\n          done\n          [[ -n \"${COMPARE_WEEK_NODE}\" ]] || { echo \"A complete cached Node 22 is required.\"; exit 1; }\n          \"${COMPARE_WEEK_NODE}\" --version\n          \"${COMPARE_WEEK_NODE}\" --test tests/*.mjs tests/*.cjs\n"
+    }
+  ],
+  "trigger_interpretation": "All three current full workflow bodies use push restricted to main and pull_request. None includes issues, issue_comment, create, workflow_run, schedule, dispatch or another comment event. This admitted the exact comment-only reservation. It is not approval of a future ref or PR mutation; root owns publication admission.",
+  "native_state_at_reservation": "No native allocation, candidate source execution, browser or product invocation.",
+  "private_draft_started_utc": "2026-10-09 08:56:30 UTC",
+  "no_actions_or_ref_mutation": true
+}

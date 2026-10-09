@@ -1,0 +1,139 @@
+{
+  "format": "tastetable.independent-outer-receiving.v1",
+  "controller_pid": 24899,
+  "started_guard": {
+    "utc": "2026-10-09T09:44:59.808096+00:00",
+    "free_disk_bytes": 4322840576,
+    "conservative_memory_bytes": 11639259136,
+    "page_bytes": 16384,
+    "memory_pages": {
+      "Pages free": 33228,
+      "Pages inactive": 657771,
+      "Pages speculative": 19405
+    },
+    "vm_stat_stdout": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    33228.\nPages active:                                 678115.\nPages inactive:                               657771.\nPages speculative:                             19405.\nPages throttled:                                   0.\nPages wired down:                             388300.\nPages purgeable:                               29682.\n\"Translation faults\":                    15202205074.\nPages copy-on-write:                      1104642288.\nPages zero filled:                       12163803874.\nPages reactivated:                        1568536249.\nPages purged:                              549783332.\nFile-backed pages:                            445232.\nAnonymous pages:                              910059.\nPages stored in compressor:                  1365928.\nPages occupied by compressor:                 528903.\nDecompressions:                           1352246376.\nCompressions:                             1525558422.\nPageins:                                   422571777.\nPageouts:                                    3725432.\nSwapins:                                     9520307.\nSwapouts:                                   13785591.\n",
+    "vm_stat_stderr": "",
+    "vm_stat_exit": 0,
+    "receiver_bytes": 134600,
+    "browser_bytes": 0
+  },
+  "executable": "/opt/homebrew/bin/node",
+  "args": [
+    "/Users/me/Developer/tastetable-visit-record-receiving-c945953fdeb7/receive.mjs"
+  ],
+  "cwd": "/tmp",
+  "node_pid": 25005,
+  "actual_node_exit": 0,
+  "elapsed_seconds": 3.089527750154957,
+  "boundary_failure": null,
+  "owned_signals": [],
+  "stdout": "{\"accepted\":true,\"groups\":{\"T1\":true,\"T2\":true,\"T3\":true,\"T4\":true,\"T5\":true},\"failure\":null,\"closure_failure\":null,\"receiver_pid\":25005,\"total_seconds\":3.0085744169999997,\"receiving_interval_seconds\":2.906599875,\"source_evidence_bytes\":606046,\"browser_disk_bytes\":17149292}\n",
+  "stderr": "",
+  "source_before": {
+    "receive.mjs": {
+      "bytes": 37492,
+      "sha256": "c121d3dc282a6d218e3edf576a54c1ae245812f55d739e1cda10fcf7c845d3d0",
+      "git_blob": "7d4449a100cf0cfb2f18fcd19afebbfd512c03b1",
+      "mode": "0400",
+      "mtime_ns": "1791538870244920183"
+    },
+    "compare.py": {
+      "bytes": 7189,
+      "sha256": "d13a67d33337756265bd2e9c4d3f38810caf06f4ef6c63df6c6733c97f3a016c",
+      "git_blob": "e96a4c6f38cebb649696cb0afd3377272cf23415",
+      "mode": "0400",
+      "mtime_ns": "1791538960107407681"
+    },
+    "run.py": {
+      "bytes": 6324,
+      "sha256": "90f3c3fa9626a209f1b010b88774d974c1fddbb1b4cf3a104fa1b8b41b7dbff9",
+      "git_blob": "45c3ea9a5445d02c1e73812ceccd8b2bbe340913",
+      "mode": "0400",
+      "mtime_ns": "1791539016817629835"
+    },
+    "prepare.py": {
+      "bytes": 4683,
+      "sha256": "2ab75039a530dd34d69f8138ab9f4ccaea2d6fde86896a3e0cad514ed3a84817",
+      "git_blob": "07612bb483d3a4f0214a7ce586e764179069c4cd",
+      "mode": "0400",
+      "mtime_ns": "1791539021276042228"
+    },
+    "AUTHORITY.json": {
+      "bytes": 3754,
+      "sha256": "b4e2a5f7e578d196cb94cc27e2b1dd7c64e75894d8b4e4fda207616eacbad9c7",
+      "git_blob": "b736fbbbe274dd26a5a0663cb6229ea397c7a51e",
+      "mode": "0400",
+      "mtime_ns": "1791539025334661060"
+    },
+    "CONTRACT.md": {
+      "bytes": 16145,
+      "sha256": "5118c61a9573ce52b0f161a531ec6666dacfe8f1eec45f32696289bb0b5ea6e1",
+      "git_blob": "e194d0bae55e9a1b3a2b97d4accd2c1b81a8ae0e",
+      "mode": "0400",
+      "mtime_ns": "1791539029569301699"
+    },
+    "ORIGINAL-CAPSULE.json": {
+      "bytes": 55094,
+      "sha256": "724be9c59600c28e0f6a69fefcbf635a321aade0ef5f84c5d402204285224344",
+      "git_blob": "f5ceed23b810957cf8e4cb36083fd519f9f03a2d",
+      "mode": "0400",
+      "mtime_ns": "1791539033925525134"
+    }
+  },
+  "source_after": {
+    "receive.mjs": {
+      "bytes": 37492,
+      "sha256": "c121d3dc282a6d218e3edf576a54c1ae245812f55d739e1cda10fcf7c845d3d0",
+      "git_blob": "7d4449a100cf0cfb2f18fcd19afebbfd512c03b1",
+      "mode": "0400",
+      "mtime_ns": "1791538870244920183"
+    },
+    "compare.py": {
+      "bytes": 7189,
+      "sha256": "d13a67d33337756265bd2e9c4d3f38810caf06f4ef6c63df6c6733c97f3a016c",
+      "git_blob": "e96a4c6f38cebb649696cb0afd3377272cf23415",
+      "mode": "0400",
+      "mtime_ns": "1791538960107407681"
+    },
+    "run.py": {
+      "bytes": 6324,
+      "sha256": "90f3c3fa9626a209f1b010b88774d974c1fddbb1b4cf3a104fa1b8b41b7dbff9",
+      "git_blob": "45c3ea9a5445d02c1e73812ceccd8b2bbe340913",
+      "mode": "0400",
+      "mtime_ns": "1791539016817629835"
+    },
+    "prepare.py": {
+      "bytes": 4683,
+      "sha256": "2ab75039a530dd34d69f8138ab9f4ccaea2d6fde86896a3e0cad514ed3a84817",
+      "git_blob": "07612bb483d3a4f0214a7ce586e764179069c4cd",
+      "mode": "0400",
+      "mtime_ns": "1791539021276042228"
+    },
+    "AUTHORITY.json": {
+      "bytes": 3754,
+      "sha256": "b4e2a5f7e578d196cb94cc27e2b1dd7c64e75894d8b4e4fda207616eacbad9c7",
+      "git_blob": "b736fbbbe274dd26a5a0663cb6229ea397c7a51e",
+      "mode": "0400",
+      "mtime_ns": "1791539025334661060"
+    },
+    "CONTRACT.md": {
+      "bytes": 16145,
+      "sha256": "5118c61a9573ce52b0f161a531ec6666dacfe8f1eec45f32696289bb0b5ea6e1",
+      "git_blob": "e194d0bae55e9a1b3a2b97d4accd2c1b81a8ae0e",
+      "mode": "0400",
+      "mtime_ns": "1791539029569301699"
+    },
+    "ORIGINAL-CAPSULE.json": {
+      "bytes": 55094,
+      "sha256": "724be9c59600c28e0f6a69fefcbf635a321aade0ef5f84c5d402204285224344",
+      "git_blob": "f5ceed23b810957cf8e4cb36083fd519f9f03a2d",
+      "mode": "0400",
+      "mtime_ns": "1791539033925525134"
+    }
+  },
+  "source_unchanged": true,
+  "receiver_bytes": 606046,
+  "browser_bytes": 17149292,
+  "finished_utc": "2026-10-09T09:45:02.902761+00:00",
+  "outer_exit_pending_until_tool_completion": true
+}
