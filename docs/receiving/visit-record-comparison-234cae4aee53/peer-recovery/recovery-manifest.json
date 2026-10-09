@@ -1,0 +1,143 @@
+{
+  "format": "tastetable-visit-comparison-peer-recovery/1",
+  "scope": "TasteTable #63; independent peer recovery after functions-state loss",
+  "recoveredFiles": [
+    {
+      "path": "model-oracle-v1.mjs",
+      "bytes": 14260,
+      "sha256": "d507a0e78b53019bbda10ecc55b51832eb9da4b173038879cdfc49f2b5e9190c",
+      "source": "Complete original functions.exec tool-call text in the visible conversation, copied without alteration and newly SHA256-verified. Not imported or executed during recovery."
+    }
+  ],
+  "productionCustody": {
+    "tree": "88577222cd9a3d6d94b497f74e78ad79bcb5923f",
+    "repository": "Jacob-Met/tastetable",
+    "status": "Author reports all eight bodies rehashed; production bytes unchanged.",
+    "modelBlob": "83de5285cfc48c77be44f24bea2729fefd591d7d",
+    "modelSha256": "3db538f048db2b7239b95c1e6e8d180701113a73fc77723e4cf68a85bc721275",
+    "cliBlob": "560bce0a3f61faec8d68d78686037616076e4184",
+    "cliSha256": "cb13f55d4ab3243afdbc527989850fc42f8a039aa258537746dc498f27664839",
+    "ordinaryFileTestBlob": "0275beaec2490dad52d83b7802a7299d7867b432",
+    "ordinaryFileTestSha256": "53701c592d60048882ed0c3e778ee94de720ac76d6f756ba37d427e9ecdb57f3"
+  },
+  "originalDependencies": {
+    "visit_record": {
+      "blob": "2b5b37e3d4a227e00a5b0052a962d13512b53e48",
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f"
+    },
+    "week_file": {
+      "blob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+    },
+    "week_plan": {
+      "blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+    }
+  },
+  "historicalObservedOutcomes": {
+    "provenance": "These facts remain visible in actual tool summaries and collaboration readbacks. Full old raw packets are unavailable; this is not a reconstructed raw result.",
+    "model": {
+      "node": "v24.19.0",
+      "platform": "linux",
+      "startedAt": "2026-10-08T22:27:07.204Z",
+      "completedAt": "2026-10-08T22:27:07.910Z",
+      "toolExit": 0,
+      "groups": 7,
+      "compareCalls": 60,
+      "renderCalls": 41,
+      "apiEvents": 101,
+      "uniqueArgumentResultSnapshots": 58,
+      "exactSourcePinsUnchanged": true,
+      "boundary": "Exact in-memory path ESM source loader, with no source import rewrite; no ordinary-file CLI qualification."
+    },
+    "cli": {
+      "node": "v24.19.0",
+      "platform": "linux",
+      "startedAt": "2026-10-08T22:29:04.022Z",
+      "completedAt": "2026-10-08T22:29:06.443Z",
+      "toolExit": 0,
+      "childProcesses": 34,
+      "boundary": "Actual child argv, held-open unused stdin, stdout/stderr and exit status; explicit in-memory acquired-handle open/stat/read adapter. No ordinary-file admission, native file-size/read-error or input-file preservation claim. Closed stdout was deliberately unreceived.",
+      "outcomes": [
+        "Grammar errors before any input open.",
+        "Accepted report exactly matched the public renderer.",
+        "Short writes completed; zero writes, injected EPIPE and a real closed stdout pipe returned exit1.",
+        "Valid first input plus invalid UTF8 in second input returned exit2 with zero success stdout.",
+        "All synthetic acquired handles were closed."
+      ]
+    },
+    "custodyReadback": "Before loss, separate native decompression verified all35 member bodies, both embedded raw packets, all captured child stream hashes and six fixture/report texts. This prior verification does not restore missing bytes."
+  },
+  "unavailableArtifacts": [
+    {
+      "path": "fixtures/before.json",
+      "sha256": "cf9cda6f70fcd5c9e459a9c4a2c748660f001a15aea5c6b7367d0c83dfbf0a2d",
+      "completeTextVisible": false
+    },
+    {
+      "path": "fixtures/after.json",
+      "sha256": "b0c4872787028688f75d3d6b0f779a3f484c7e03da5333f7dd39f48eb9faab0a",
+      "completeTextVisible": false
+    },
+    {
+      "path": "fixtures/original-week.json",
+      "bytes": 3456,
+      "sha256": "9e934e3d815f7c955b2142afef5d1a08b78eec4aa52ff42473e08e76d40f6544",
+      "completeTextVisible": false
+    },
+    {
+      "path": "fixtures/report.txt",
+      "bytes": 2779,
+      "sha256": "3f5fa3e6f5d1d3863be9f9e21b4478d5836aed3568f1b93f3115c7de9ddd7542",
+      "completeTextVisible": false
+    },
+    {
+      "path": "fixtures/unchanged-report.txt",
+      "sha256": null,
+      "completeTextVisible": false,
+      "note": "No standalone hash survived in the visible summaries."
+    },
+    {
+      "path": "fixtures/empty-report.txt",
+      "sha256": null,
+      "completeTextVisible": false,
+      "note": "No standalone hash survived in the visible summaries."
+    },
+    {
+      "kind": "full35-member gzip archive",
+      "bytes": 140841,
+      "sha256": "fa1ee24c2b2af83a0d9adf758b8819d3e64f03163c8dbed1567add09176aaef9"
+    },
+    {
+      "kind": "full35-member decompressed JSON",
+      "bytes": 446764,
+      "sha256": "d794e1190a5ea8bff3260aa28d6c5fe24dc412d96d32a106427cd4aa30abfdd5"
+    },
+    {
+      "kind": "model raw receiving packet",
+      "bytes": 633652,
+      "sha256": "9a9b19167342af1ddbad227cfa10a2b40c79acec91f7547b498d276f2ccc85f3"
+    },
+    {
+      "kind": "CLI raw receiving packet",
+      "bytes": 78053,
+      "sha256": "7e54585b9afb92c2a0773e0a33810ee418253e28f63c9aea09cfb297c1274dd7"
+    }
+  ],
+  "lossAndRecovery": {
+    "cause": "Functions state was cleared at capability refresh before the prepared peer archive was published.",
+    "directStateCheck": "Archive envelope/raw/member map/wrappers/readback/model packet/CLI packet all returned undefined.",
+    "existingSessionRecovery": {
+      "session": 31529,
+      "reads": 1,
+      "result": "write_stdin failed: Unknown process id 31529",
+      "recoveredBytes": 0,
+      "processRerun": false
+    },
+    "earlierArchiveTransportFailure": "Before successful stdin compression, a command-line transport was rejected before process launch: Argument list too long (os error7).",
+    "noGuessedSessionIds": true,
+    "noProductRerun": true,
+    "noRawResultReconstruction": true
+  },
+  "futureUse": "The recovered oracle contains complete independent literal expectations and a native-producer fixture builder. A separately authorized new receiving can execute it against exact source pins and retain new artifacts/timestamps. New output must not be represented as the lost original run."
+}

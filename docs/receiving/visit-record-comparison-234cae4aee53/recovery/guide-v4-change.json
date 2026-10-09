@@ -1,0 +1,20 @@
+{
+  "schema": "tastetable.guide-v4-update/1",
+  "originalGuide": {
+    "gitBlob": "6971fb9b328c4c42a5421dc9b98c2b261a5b703a",
+    "sha256": "1ede370a241c4a98d32686e59795b1e448d88a1dca5497ba7d25b07ab95d85a3",
+    "retainedAt": "recovery/original-guide-v3.md"
+  },
+  "changes": [
+    "Maintained command names the existing CLI test and NEW oracle adapter.",
+    "Replaces the stale statement that only the CLI test is supplied.",
+    "Explains that one native model test contains seven independent oracle groups; the expected60/41 calls are not reported as a new pass.",
+    "Separates pending root ordinary-import receiving from the external seven-group/42-child CLI gate.",
+    "Preserves the unavailable old authored test/raw evidence and historical source-loader/file-adapter limits."
+  ],
+  "productCodeEdited": false,
+  "oracleEdited": false,
+  "testFilesEdited": false,
+  "oldRecoveryRecordsEdited": false,
+  "executionStatusAtDraft": "Root ordinary model run pending; external ordinary CLI gate pending. No result inserted by this documentation work."
+}

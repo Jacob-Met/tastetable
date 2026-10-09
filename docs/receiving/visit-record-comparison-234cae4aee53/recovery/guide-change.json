@@ -1,0 +1,29 @@
+{
+  "schema": "tastetable.visit-record-comparison.guide-successor/1",
+  "original": {
+    "path": "docs/visit-record-comparison.md",
+    "gitBlob": "dfe50a890635a58d6b1393a09b908ad8db8f1d92",
+    "sha256": "619e41712807f030dcf7e79a178fc322c7f1e5ef5c8da577c9540e9b676f5148",
+    "retainedAt": "docs/receiving/visit-record-comparison-234cae4aee53/recovery/original-guide-v2.md"
+  },
+  "change": "The maintained command now names only the supplied CLI test file, with an explicit link explaining the unavailable authored model test and evidence. All user-facing comparison semantics remain unchanged.",
+  "beforeCommand": "node --test tests/test_visit_record_compare.mjs tests/test_visit_record_compare_cli.mjs",
+  "afterCommand": "node --test tests/test_visit_record_compare_cli.mjs",
+  "productionEdited": false,
+  "runtimeRepeated": false,
+  "qualification": "Guide-only repair; the seven supplied ordinary-file groups remain unexecuted.",
+  "firstRecoveryTree": "88577222cd9a3d6d94b497f74e78ad79bcb5923f",
+  "originalLossInventoryPreserved": true,
+  "newGuide": {
+    "bytes": 6316,
+    "sha256": "1ede370a241c4a98d32686e59795b1e448d88a1dca5497ba7d25b07ab95d85a3",
+    "gitBlob": "6971fb9b328c4c42a5421dc9b98c2b261a5b703a"
+  },
+  "unavailableModelTest": {
+    "path": "tests/test_visit_record_compare.mjs",
+    "bytes": 12814,
+    "sha256": "95bac26b926633a5dd9b4676a722990fa85b9d2f994d4f8fb7c66176e8fe2cc4",
+    "reconstructed": false,
+    "replaced": false
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "schema": "tastetable.visit-record-comparison.checkpoint-loss/1",
+  "issue": 63,
+  "purpose": "Object-only recovery snapshot. No commit, ref, PR, main integration or Actions trigger is created.",
+  "incident": "A capability refresh erased this author's and the independent receiver's functions memory before their prepared archives were durably saved.",
+  "recoveredSource": [
+    {
+      "path": "static/visit_record_compare.mjs",
+      "bytes": 5264,
+      "sha256": "3db538f048db2b7239b95c1e6e8d180701113a73fc77723e4cf68a85bc721275",
+      "gitBlob": "83de5285cfc48c77be44f24bea2729fefd591d7d"
+    },
+    {
+      "path": "tools/compare_visit_records.mjs",
+      "bytes": 4792,
+      "sha256": "cb13f55d4ab3243afdbc527989850fc42f8a039aa258537746dc498f27664839",
+      "gitBlob": "560bce0a3f61faec8d68d78686037616076e4184"
+    },
+    {
+      "path": "tests/test_visit_record_compare_cli.mjs",
+      "bytes": 10638,
+      "sha256": "53701c592d60048882ed0c3e778ee94de720ac76d6f756ba37d427e9ecdb57f3",
+      "gitBlob": "0275beaec2490dad52d83b7802a7299d7867b432"
+    },
+    {
+      "path": "docs/visit-record-comparison.md",
+      "bytes": 6030,
+      "sha256": "619e41712807f030dcf7e79a178fc322c7f1e5ef5c8da577c9540e9b676f5148",
+      "gitBlob": "dfe50a890635a58d6b1393a09b908ad8db8f1d92"
+    }
+  ],
+  "recoveryMethod": "Transcribed exact source from retained conversation tool/message text, then independently computed byte count, SHA-256 and Git blob hashes with native Node. Every value matched the pre-refresh source pins. No product test was rerun.",
+  "originalDependencyBase": {
+    "commit": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+    "tree": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6"
+  },
+  "unavailable": [
+    {
+      "name": "Complete 30-member author archive",
+      "rawBytes": 268080,
+      "rawSha256": "d4b54b9e296280b92913c65a2d861781152be9acb5e577b730e805e6df1ceebb",
+      "gzipBytes": 67914,
+      "gzipSha256": "be531ad715114bd87c62741aae201a79da65d634dc2fe0bbc3a6d70e917d8fd3"
+    },
+    {
+      "name": "Complete 35-member independent receiver archive",
+      "rawBytes": 446764,
+      "rawSha256": "d794e1190a5ea8bff3260aa28d6c5fe24dc412d96d32a106427cd4aa30abfdd5",
+      "gzipBytes": 140841,
+      "gzipSha256": "fa1ee24c2b2af83a0d9adf758b8819d3e64f03163c8dbed1567add09176aaef9"
+    },
+    {
+      "name": "Authored maintained model test",
+      "path": "tests/test_visit_record_compare.mjs",
+      "bytes": 12814,
+      "sha256": "95bac26b926633a5dd9b4676a722990fa85b9d2f994d4f8fb7c66176e8fe2cc4",
+      "gitBlob": "7cabdfd4e353354741888fd5445f01e730ea64c1"
+    },
+    {
+      "name": "Complete pre-code authored contract and some exact author driver/raw-receipt bodies",
+      "status": "Only retained excerpts, metadata and reported observations remain. Hashes alone do not recover missing bytes."
+    },
+    {
+      "name": "Full independent model and CLI raw result packets",
+      "status": "Receiver reported their bytes lost in the same refresh. Earlier passing messages are observations, not retained full packet custody."
+    }
+  ],
+  "historicalObservations": {
+    "baseline": "13 original maintained tests passed through an explicitly declared source loader before candidate implementation.",
+    "authoredModel": "12 authored model groups passed on v1 and v2 through the declared source loader. The full maintained test source is now unavailable.",
+    "independentModel": "Peer reported seven groups, 60 compare plus 41 render calls passing on the exact v2 model.",
+    "independentCli": "Peer reported 34 actual child-process controls passing on the exact CLI, using a declared source loader and in-memory acquired-handle adapter; a real closed stdout pipe was included.",
+    "ordinaryFileTests": "The supplied seven-group ordinary-file test source passed a syntax check only. It has never run.",
+    "staticReview": "A separate reviewer accepted final model, CLI, all three original codecs and guide; a guide-only omitted-to-off-week clarification was accepted."
+  },
+  "limits": [
+    "This snapshot does not contain either former complete archive and does not claim their raw outputs remain available.",
+    "No ordinary filesystem source/input receiving, full checkout, hosted gate, installed-client or main-integration acceptance is claimed.",
+    "The recovered original guide is preserved verbatim. Its maintained command names the now-unavailable model test; a disclosed successor guide is still required before treating that command as complete.",
+    "The six-file ordinary receiving closure totals 38,774 source bytes. Its seven groups require roughly 8.5 MiB temporary fixture capacity; prepared receiving requires at least 10 MiB free. No local staging or capacity probe was performed."
+  ]
+}

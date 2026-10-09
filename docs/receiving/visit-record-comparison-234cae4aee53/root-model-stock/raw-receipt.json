@@ -1,0 +1,360 @@
+{
+  "schema": "tastetable.root-ordinary-model-receiving/1",
+  "purpose": "New ordinary-file execution of the new maintained adapter; not recovery of lost historical raw packets.",
+  "root": "/dev/shm/tastetable-model-stock-234cae4aee53",
+  "startedAt": "2026-10-08T23:39:59.989Z",
+  "node": "v24.19.0",
+  "versions": {
+    "node": "24.19.0",
+    "acorn": "8.17.0",
+    "ada": "3.4.4",
+    "amaro": "1.1.10",
+    "ares": "1.34.6",
+    "brotli": "1.2.0",
+    "cldr": "48.0",
+    "icu": "78.3",
+    "llhttp": "9.4.3",
+    "merve": "1.2.2",
+    "modules": "137",
+    "napi": "10",
+    "nbytes": "0.1.4",
+    "ncrypto": "0.0.1",
+    "nghttp2": "1.69.0",
+    "nghttp3": "",
+    "ngtcp2": "",
+    "openssl": "3.5.7",
+    "simdjson": "4.6.4",
+    "simdutf": "6.4.0",
+    "sqlite": "3.53.3",
+    "tz": "2026b",
+    "undici": "7.29.0",
+    "unicode": "17.0",
+    "uv": "1.52.1",
+    "uvwasi": "0.0.23",
+    "v8": "13.6.233.17-node.51",
+    "zlib": "1.3.2.1-motley-3246f1b",
+    "zstd": "1.5.7"
+  },
+  "platform": "linux",
+  "arch": "x64",
+  "executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+  "collectorArgv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "/dev/shm/tastetable-model-stock-234cae4aee53/root-receiver.mjs",
+    "/dev/shm/tastetable-model-stock-234cae4aee53"
+  ],
+  "collectorCwd": "/dev/shm/tastetable-model-stock-234cae4aee53",
+  "collector": {
+    "bytes": 8362,
+    "sha256": "32bf968841b10bfdcf23d2af3635e40b6a32f2c7a02ca37391a77f6956f4179c",
+    "gitBlob": "da879d1036dfa2d36bb9101df86bba703b2b9dfc"
+  },
+  "sourceManifest": {
+    "bytes": 2032,
+    "sha256": "f4e0e110c4267f1214e473edae33850805804c7c6db1bdc5bf66b3e06b94c37e",
+    "value": {
+      "schema": "root.tastetable.ordinary-model-source/1",
+      "sourceRoot": "/dev/shm/tastetable-model-stock-234cae4aee53",
+      "sourceTree": "d6e0891b39e473f0ffa4690944a91d6f155c24ec",
+      "receivingFreezeTree": "7983de2a790c09c8e54a9dbac8449d4179d6044e",
+      "stagedAt": "2026-10-08T23:39:47.264Z",
+      "files": [
+        {
+          "path": "static/visit_record.mjs",
+          "bytes": 7525,
+          "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f",
+          "gitBlob": "2b5b37e3d4a227e00a5b0052a962d13512b53e48"
+        },
+        {
+          "path": "static/week_file.mjs",
+          "bytes": 6642,
+          "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+          "gitBlob": "420ddb8f63fca264dcf97be7147801105696155d"
+        },
+        {
+          "path": "static/week_plan.mjs",
+          "bytes": 3913,
+          "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+          "gitBlob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+        },
+        {
+          "path": "static/visit_record_compare.mjs",
+          "bytes": 5264,
+          "sha256": "3db538f048db2b7239b95c1e6e8d180701113a73fc77723e4cf68a85bc721275",
+          "gitBlob": "83de5285cfc48c77be44f24bea2729fefd591d7d"
+        },
+        {
+          "path": "docs/receiving/visit-record-comparison-234cae4aee53/peer-recovery/model-oracle-v1.mjs",
+          "bytes": 14260,
+          "sha256": "d507a0e78b53019bbda10ecc55b51832eb9da4b173038879cdfc49f2b5e9190c",
+          "gitBlob": "1dcf2b4e10b05560960063dec0d263a42c69cb4e"
+        },
+        {
+          "path": "tests/test_visit_record_compare_oracle.mjs",
+          "bytes": 2815,
+          "sha256": "cfd689bcf71e750d7a1268b229c3cfebdb716ae8d045420a0bd0484d7756d905",
+          "gitBlob": "829bc786ad5b375e7471261f5d74b273047cdcd6"
+        }
+      ],
+      "collector": {
+        "path": "root-receiver.mjs",
+        "bytes": 8362,
+        "sha256": "32bf968841b10bfdcf23d2af3635e40b6a32f2c7a02ca37391a77f6956f4179c",
+        "gitBlob": "da879d1036dfa2d36bb9101df86bba703b2b9dfc"
+      },
+      "relocation": {
+        "receiptPath": "/dev/shm/convex-hull-stock-234cae4aee53/PAYLOAD-RELOCATED.json",
+        "custodyCommit": "a9c36fed1a0b9ea53d47d916fb6c944b827b9360",
+        "sourceBytes": 80577,
+        "retiredFiles": 13,
+        "receiptSha256": "8030edbe692a3563b2985b5979fd0aaa9c8a92524008745f14b976ec5f895c28"
+      },
+      "qualification": "Source staging only. New maintained model run and external ordinary CLI gate are separate; old raw evidence remains unavailable."
+    }
+  },
+  "expected": [
+    {
+      "path": "static/visit_record.mjs",
+      "bytes": 7525,
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f",
+      "gitBlob": "2b5b37e3d4a227e00a5b0052a962d13512b53e48"
+    },
+    {
+      "path": "static/week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "gitBlob": "420ddb8f63fca264dcf97be7147801105696155d"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "gitBlob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+    },
+    {
+      "path": "static/visit_record_compare.mjs",
+      "bytes": 5264,
+      "sha256": "3db538f048db2b7239b95c1e6e8d180701113a73fc77723e4cf68a85bc721275",
+      "gitBlob": "83de5285cfc48c77be44f24bea2729fefd591d7d"
+    },
+    {
+      "path": "docs/receiving/visit-record-comparison-234cae4aee53/peer-recovery/model-oracle-v1.mjs",
+      "bytes": 14260,
+      "sha256": "d507a0e78b53019bbda10ecc55b51832eb9da4b173038879cdfc49f2b5e9190c",
+      "gitBlob": "1dcf2b4e10b05560960063dec0d263a42c69cb4e"
+    },
+    {
+      "path": "tests/test_visit_record_compare_oracle.mjs",
+      "bytes": 2815,
+      "sha256": "cfd689bcf71e750d7a1268b229c3cfebdb716ae8d045420a0bd0484d7756d905",
+      "gitBlob": "829bc786ad5b375e7471261f5d74b273047cdcd6"
+    }
+  ],
+  "before": [
+    {
+      "path": "static/visit_record.mjs",
+      "bytes": 7525,
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f",
+      "gitBlob": "2b5b37e3d4a227e00a5b0052a962d13512b53e48",
+      "mode": 420,
+      "regular": true,
+      "symbolic": false
+    },
+    {
+      "path": "static/week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "gitBlob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "mode": 420,
+      "regular": true,
+      "symbolic": false
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "gitBlob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "mode": 420,
+      "regular": true,
+      "symbolic": false
+    },
+    {
+      "path": "static/visit_record_compare.mjs",
+      "bytes": 5264,
+      "sha256": "3db538f048db2b7239b95c1e6e8d180701113a73fc77723e4cf68a85bc721275",
+      "gitBlob": "83de5285cfc48c77be44f24bea2729fefd591d7d",
+      "mode": 420,
+      "regular": true,
+      "symbolic": false
+    },
+    {
+      "path": "docs/receiving/visit-record-comparison-234cae4aee53/peer-recovery/model-oracle-v1.mjs",
+      "bytes": 14260,
+      "sha256": "d507a0e78b53019bbda10ecc55b51832eb9da4b173038879cdfc49f2b5e9190c",
+      "gitBlob": "1dcf2b4e10b05560960063dec0d263a42c69cb4e",
+      "mode": 420,
+      "regular": true,
+      "symbolic": false
+    },
+    {
+      "path": "tests/test_visit_record_compare_oracle.mjs",
+      "bytes": 2815,
+      "sha256": "cfd689bcf71e750d7a1268b229c3cfebdb716ae8d045420a0bd0484d7756d905",
+      "gitBlob": "829bc786ad5b375e7471261f5d74b273047cdcd6",
+      "mode": 420,
+      "regular": true,
+      "symbolic": false
+    }
+  ],
+  "after": [
+    {
+      "path": "static/visit_record.mjs",
+      "bytes": 7525,
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f",
+      "gitBlob": "2b5b37e3d4a227e00a5b0052a962d13512b53e48",
+      "mode": 420,
+      "regular": true,
+      "symbolic": false
+    },
+    {
+      "path": "static/week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "gitBlob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "mode": 420,
+      "regular": true,
+      "symbolic": false
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "gitBlob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "mode": 420,
+      "regular": true,
+      "symbolic": false
+    },
+    {
+      "path": "static/visit_record_compare.mjs",
+      "bytes": 5264,
+      "sha256": "3db538f048db2b7239b95c1e6e8d180701113a73fc77723e4cf68a85bc721275",
+      "gitBlob": "83de5285cfc48c77be44f24bea2729fefd591d7d",
+      "mode": 420,
+      "regular": true,
+      "symbolic": false
+    },
+    {
+      "path": "docs/receiving/visit-record-comparison-234cae4aee53/peer-recovery/model-oracle-v1.mjs",
+      "bytes": 14260,
+      "sha256": "d507a0e78b53019bbda10ecc55b51832eb9da4b173038879cdfc49f2b5e9190c",
+      "gitBlob": "1dcf2b4e10b05560960063dec0d263a42c69cb4e",
+      "mode": 420,
+      "regular": true,
+      "symbolic": false
+    },
+    {
+      "path": "tests/test_visit_record_compare_oracle.mjs",
+      "bytes": 2815,
+      "sha256": "cfd689bcf71e750d7a1268b229c3cfebdb716ae8d045420a0bd0484d7756d905",
+      "gitBlob": "829bc786ad5b375e7471261f5d74b273047cdcd6",
+      "mode": 420,
+      "regular": true,
+      "symbolic": false
+    }
+  ],
+  "process": {
+    "executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "argv": [
+      "--test",
+      "--test-reporter=tap",
+      "--test-concurrency=1",
+      "tests/test_visit_record_compare_oracle.mjs"
+    ],
+    "cwd": "/dev/shm/tastetable-model-stock-234cae4aee53",
+    "startedAt": "2026-10-08T23:39:59.991Z",
+    "finishedAt": "2026-10-08T23:40:00.751Z",
+    "pid": 12,
+    "timeoutMs": 60000,
+    "maxBufferBytes": 1048576,
+    "environment": {
+      "NO_COLOR": "1",
+      "NODE_OPTIONS": null,
+      "NODE_COMPILE_CACHE": null,
+      "NODE_V8_COVERAGE": null,
+      "FORCE_COLOR": null
+    },
+    "status": 0,
+    "signal": null,
+    "error": null,
+    "stdout": {
+      "bytes": 1788,
+      "sha256": "cbf920c37f26165f412fd8e8de32e8cbe673a1830ef325af89f396c4dcb08bc7",
+      "base64": "VEFQIHZlcnNpb24gMTMKIyBTdWJ0ZXN0OiB2aXNpdC1yZWNvcmQgY29tcGFyaXNvbiBzYXRpc2ZpZXMgdGhlIGZyb3plbiBpbmRlcGVuZGVudCBvcmFjbGUKb2sgMSAtIHZpc2l0LXJlY29yZCBjb21wYXJpc29uIHNhdGlzZmllcyB0aGUgZnJvemVuIGluZGVwZW5kZW50IG9yYWNsZQogIC0tLQogIGR1cmF0aW9uX21zOiA2MDYuMDIxMTI1CiAgdHlwZTogJ3Rlc3QnCiAgLi4uCiMgeyJhZGFwdGVyIjoibmV3IG1haW50YWluZWQgdGVzdCB1c2luZyBvcmRpbmFyeSBtb2R1bGUgaW1wb3J0cyIsIm9yYWNsZSI6eyJiZWZvcmUiOiJkNTA3YTBlNzhiNTMwMTliYmRhMTBlY2M1NWI1MTgzMmViOWRhNGIxNzMwMzg4NzljZGZjNDlmMmI1ZTkxOTBjIiwiYWZ0ZXIiOiJkNTA3YTBlNzhiNTMwMTliYmRhMTBlY2M1NWI1MTgzMmViOWRhNGIxNzMwMzg4NzljZGZjNDlmMmI1ZTkxOTBjIn0sImdyb3VwcyI6WyJsaXRlcmFsIGZpdmUtcm93IGNvbXBsZXRlIHJlc3VsdCwgZHVwbGljYXRlIG9jY3VycmVuY2VzLCBuYXRpdmUgc291cmNlIG9yZGVyIGFuZCByZWN1cnNpdmUgaW1tdXRhYmlsaXR5IiwiY2FsbGVyIHJldmVyc2FsLCBtZXRhZGF0YS1vbmx5IGRpZmZlcmVuY2VzIGFuZCBvdXRlci1lbnZlbG9wZSBCT00gd2l0aG91dCBjaHJvbm9sb2d5IHByb21vdGlvbiIsImluZGVwZW5kZW50IGZpZWxkIHRyYW5zaXRpb25zLCBjbGVhcnMsIGRhdGUgYm91bmRhcmllcyBhbmQgZXhhY3QgVW5pY29kZS9DUi9DUkxGL0xGIGNvbXBhcmlzb24iLCJlaWdodCBpbmRlcGVuZGVudGx5IGFkbWl0dGVkIGRpZmZlcmVudCBvcmlnaW5hbHMgcmVmdXNlZCBpbiBib3RoIGNhbGxlciBvcmRlcnMiLCJ6ZXJvIGFuZDEwMCBvcmlnaW5hbCBvY2N1cnJlbmNlcywgZXhwbGljaXQgdW5yZWNvcmRlZCB2YWx1ZXMgYW5kMTAxLXByb2R1Y2VyIHJlZnVzYWwiLCJmaWZ0ZWVuIGNvbXBsZXRlLXJlY29yZCByZWZ1c2FscyBwcmVzZXJ2ZSBuYXRpdmUgYWRtaXNzaW9uIG9uIGJvdGggQVBJIHNpZGVzIGFuZCByZW5kZXJlciIsImxpdGVyYWwgSlNPTi1xdW90ZWQgcmVwb3J0LCBzZXBhcmF0b3IvaW5qZWN0aW9uIGNvbnRyb2xzLCBjb21wbGV0ZSBjaGFuZ2VkIHRyaXBsZXMgYW5kIGV4cGxpY2l0IG5vIGNoYW5nZXMiXSwiY2FsbHMiOnsiY29tcGFyZSI6NjAsInJlbmRlciI6NDF9LCJjaGVja3MiOlt7ImxpdGVyYWxDb3VudHMiOnsidG90YWwiOjUsImNoYW5nZWQiOjQsInVuY2hhbmdlZCI6MSwib3V0Y29tZUNoYW5nZWQiOjIsImRhdGVDaGFuZ2VkIjoyLCJub3RlQ2hhbmdlZCI6Mn0sInNvdXJjZVBpbnMiOnsiYmVmb3JlIjoiY2Y5Y2RhNmY3MGZjZDVjOWU0NTlhOWM0YTJjNzQ4NjYwZjAwMWExNWFlYTVjNmI3MzY3ZDBjODNkZmJmMGEyZCIsImFmdGVyIjoiYjBjNDg3Mjc4NzAyODY4OGY3NWQzZDZiMGY3NzlhM2Y0ODRjN2UwM2RhNTMzM2Y3ZGQzOWY0OGViOWZhYWIwYSIsIndlZWsiOiI5ZTkzNGUzZDgxNWY3Yzk1NWIyMTQyYWZlZjVkMWEwOGI3OGVlYzRhYTUyZmY0MjQ3M2UwOGU3NmQ0MGY2NTQ0In0sInJlZnVzYWxzIjoxNSwiaWRlbnRpdHlWYXJpYW50cyI6OCwiZmllbGRQYWlycyI6NywibWF4aW11bVJvd3MiOjEwMCwicmVwb3J0Qnl0ZXMiOjI3NzksInJlcG9ydFNoYTI1NiI6IjNmNWZhM2U2ZjVkMWQzODYzYmU5ZjllMjFiNDQ3OGQ1ODM2YWVkMzU2OGYxYjkzZjMxMTVjN2RlOWRkZDc1NDIifV19CjEuLjEKIyB0ZXN0cyAxCiMgc3VpdGVzIDAKIyBwYXNzIDEKIyBmYWlsIDAKIyBjYW5jZWxsZWQgMAojIHNraXBwZWQgMAojIHRvZG8gMAojIGR1cmF0aW9uX21zIDY5Ni4zMDYyODIK",
+      "utf8": "TAP version 13\n# Subtest: visit-record comparison satisfies the frozen independent oracle\nok 1 - visit-record comparison satisfies the frozen independent oracle\n  ---\n  duration_ms: 606.021125\n  type: 'test'\n  ...\n# {\"adapter\":\"new maintained test using ordinary module imports\",\"oracle\":{\"before\":\"d507a0e78b53019bbda10ecc55b51832eb9da4b173038879cdfc49f2b5e9190c\",\"after\":\"d507a0e78b53019bbda10ecc55b51832eb9da4b173038879cdfc49f2b5e9190c\"},\"groups\":[\"literal five-row complete result, duplicate occurrences, native source order and recursive immutability\",\"caller reversal, metadata-only differences and outer-envelope BOM without chronology promotion\",\"independent field transitions, clears, date boundaries and exact Unicode/CR/CRLF/LF comparison\",\"eight independently admitted different originals refused in both caller orders\",\"zero and100 original occurrences, explicit unrecorded values and101-producer refusal\",\"fifteen complete-record refusals preserve native admission on both API sides and renderer\",\"literal JSON-quoted report, separator/injection controls, complete changed triples and explicit no changes\"],\"calls\":{\"compare\":60,\"render\":41},\"checks\":[{\"literalCounts\":{\"total\":5,\"changed\":4,\"unchanged\":1,\"outcomeChanged\":2,\"dateChanged\":2,\"noteChanged\":2},\"sourcePins\":{\"before\":\"cf9cda6f70fcd5c9e459a9c4a2c748660f001a15aea5c6b7367d0c83dfbf0a2d\",\"after\":\"b0c4872787028688f75d3d6b0f779a3f484c7e03da5333f7dd39f48eb9faab0a\",\"week\":\"9e934e3d815f7c955b2142afef5d1a08b78eec4aa52ff42473e08e76d40f6544\"},\"refusals\":15,\"identityVariants\":8,\"fieldPairs\":7,\"maximumRows\":100,\"reportBytes\":2779,\"reportSha256\":\"3f5fa3e6f5d1d3863be9f9e21b4478d5836aed3568f1b93f3115c7de9ddd7542\"}]}\n1..1\n# tests 1\n# suites 0\n# pass 1\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 696.306282\n"
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "utf8": ""
+    },
+    "rawStreamsComplete": true
+  },
+  "testCounts": {
+    "tests": 1,
+    "pass": 1,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "diagnostic": {
+    "adapter": "new maintained test using ordinary module imports",
+    "oracle": {
+      "before": "d507a0e78b53019bbda10ecc55b51832eb9da4b173038879cdfc49f2b5e9190c",
+      "after": "d507a0e78b53019bbda10ecc55b51832eb9da4b173038879cdfc49f2b5e9190c"
+    },
+    "groups": [
+      "literal five-row complete result, duplicate occurrences, native source order and recursive immutability",
+      "caller reversal, metadata-only differences and outer-envelope BOM without chronology promotion",
+      "independent field transitions, clears, date boundaries and exact Unicode/CR/CRLF/LF comparison",
+      "eight independently admitted different originals refused in both caller orders",
+      "zero and100 original occurrences, explicit unrecorded values and101-producer refusal",
+      "fifteen complete-record refusals preserve native admission on both API sides and renderer",
+      "literal JSON-quoted report, separator/injection controls, complete changed triples and explicit no changes"
+    ],
+    "calls": {
+      "compare": 60,
+      "render": 41
+    },
+    "checks": [
+      {
+        "literalCounts": {
+          "total": 5,
+          "changed": 4,
+          "unchanged": 1,
+          "outcomeChanged": 2,
+          "dateChanged": 2,
+          "noteChanged": 2
+        },
+        "sourcePins": {
+          "before": "cf9cda6f70fcd5c9e459a9c4a2c748660f001a15aea5c6b7367d0c83dfbf0a2d",
+          "after": "b0c4872787028688f75d3d6b0f779a3f484c7e03da5333f7dd39f48eb9faab0a",
+          "week": "9e934e3d815f7c955b2142afef5d1a08b78eec4aa52ff42473e08e76d40f6544"
+        },
+        "refusals": 15,
+        "identityVariants": 8,
+        "fieldPairs": 7,
+        "maximumRows": 100,
+        "reportBytes": 2779,
+        "reportSha256": "3f5fa3e6f5d1d3863be9f9e21b4478d5836aed3568f1b93f3115c7de9ddd7542"
+      }
+    ]
+  },
+  "sourceUnchanged": true,
+  "accepted": true,
+  "failure": null,
+  "boundary": "Six ordinary source files; no loader, filesystem adapter, large CLI input, browser, hosted workflow or installed-client run. Generated oracle fixture values are new values from this invocation, not recovered old physical files.",
+  "freeBytesBefore": 36864,
+  "finishedAt": "2026-10-08T23:40:00.752Z"
+}
