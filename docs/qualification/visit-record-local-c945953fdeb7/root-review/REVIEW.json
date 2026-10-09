@@ -1,0 +1,814 @@
+{
+  "format": "hamon.tastetable-visit-record-local.root-review.v1",
+  "reviewer": "estate-c945953fdeb7/root",
+  "recorded_at": "2026-10-09 10:40:17 UTC",
+  "decision": "Accept the exact installed T1–T5 result and additive source/evidence composition for a new nontriggering source branch, subject to exact final tree/commit/ref readback. No PR or main integration.",
+  "repository": "Jacob-Met/tastetable",
+  "source_branch_intended": "receiving/visit-record-local-c945953fdeb7",
+  "lineage": {
+    "qualified_parent": "4b9fb4bdf00214d92b821d30200bcaa9dd0bfa32",
+    "qualified_parent_tree": "744c3a97f7d6b0108b51313fd8a532a638047d20",
+    "producer_commit": "5bf4592cc085458c2f13705d157b60063718d297",
+    "producer_tree": "68f5d73a7defd40670c90fcb2779b6650b06f5a0",
+    "producer_sole_parent_confirmed": true,
+    "earlier_open_PR61_source": "994c03aef94b711d6dcbbeb6bbbc6a4b85a6a3ad",
+    "current_main_observed": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+    "main_tree": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6"
+  },
+  "tree_proof": {
+    "producer_commit": "5bf4592cc085458c2f13705d157b60063718d297",
+    "producer_tree": "68f5d73a7defd40670c90fcb2779b6650b06f5a0",
+    "parent": "744c3a97f7d6b0108b51313fd8a532a638047d20",
+    "inherited_leaves": 874,
+    "original_mismatches": [],
+    "addition_count": 127,
+    "unique_addition_paths": 127,
+    "addition_mismatches": [],
+    "collisions": [],
+    "outside_fence": [],
+    "actual_leaves": 1001,
+    "extras": [],
+    "truncated": false,
+    "independent": {
+      "tree": "e30ab8ac40c014dc6a8a49c9be2df2510f5d5989",
+      "expected": 55,
+      "leaves": 55,
+      "mismatches": [],
+      "truncated": false
+    }
+  },
+  "final_composition": {
+    "base_tree": "68f5d73a7defd40670c90fcb2779b6650b06f5a0",
+    "root_additions": [
+      "docs/qualification/visit-record-local-c945953fdeb7/root-review/README.md",
+      "docs/qualification/visit-record-local-c945953fdeb7/root-review/REVIEW.json"
+    ],
+    "root_paths_absent": true,
+    "intended_leaf_count": 1003,
+    "inherited_unchanged": 874,
+    "total_additions": 129,
+    "producer_additions": 127,
+    "root_additions_count": 2,
+    "shared_source_changes": 0,
+    "deleted_paths": 0,
+    "allowed_prefixes": [
+      "tools/visit-record-local/",
+      "docs/qualification/visit-record-local-c945953fdeb7/"
+    ],
+    "note": "Final tree/commit/ref identities are recorded after creation in the completed issue handoff. This prepublication decision record does not claim its own recursive hash."
+  },
+  "root_source_review": {
+    "full_maintained_source_read": [
+      {
+        "path": "tools/visit-record-local/install.py",
+        "mode": "100644",
+        "bytes": 11301,
+        "sha256": "c114405819e1eaf552aeb1c273ee6bb9cd4253bdbecc6c577e90b0de5a09106f",
+        "git_blob": "1555720bc047e0661e5fb1ba1c314c6c7914bb44",
+        "origin": "maintained source, uploaded and exact-read-back; same native prepared source bytes"
+      },
+      {
+        "path": "tools/visit-record-local/server.py",
+        "mode": "100644",
+        "bytes": 12689,
+        "sha256": "02072c2771005a732df21f20a0224feeead8aaaad7dff4f04d9f71375b1b8798",
+        "git_blob": "4ebc7798f970fdda832b76c048ed0301088556aa",
+        "origin": "maintained source, uploaded and exact-read-back; same native prepared source bytes"
+      },
+      {
+        "path": "tools/visit-record-local/launch.command.in",
+        "mode": "100644",
+        "bytes": 44,
+        "sha256": "887939f8953ba9d1a752acb3ef9113ee37a65f9787fc612b43d8c03af5ca6abb",
+        "git_blob": "9042ec9df475a2d9987330578a8713b69c2c23b3",
+        "origin": "maintained source, uploaded and exact-read-back; same native prepared source bytes"
+      },
+      {
+        "path": "tools/visit-record-local/index.html",
+        "mode": "100644",
+        "bytes": 3086,
+        "sha256": "a762857c80c3797d2ff262eedf470b1f8665254155452d5de2d978615733c155",
+        "git_blob": "e3e67742cdeeaae071366b575e578ad10cb9934a",
+        "origin": "maintained source, uploaded and exact-read-back; same native prepared source bytes"
+      },
+      {
+        "path": "tools/visit-record-local/INPUTS.json",
+        "mode": "100644",
+        "bytes": 5239,
+        "sha256": "235d59bc7bc2538f8974804ed92198046a990c26e52924c42e37d260c5a75192",
+        "git_blob": "934615a3add5b9846a78df078e807bd5889169f3",
+        "origin": "maintained source, uploaded and exact-read-back; same native prepared source bytes"
+      },
+      {
+        "path": "tools/visit-record-local/README.md",
+        "mode": "100644",
+        "bytes": 8606,
+        "sha256": "f3e09db6cf8ca4d1a38cd51a7bb12d1e3fadbb7724ff23e8504283bc009dc8b2",
+        "git_blob": "96d03babe53b40051208b6c9ae7ecf60340cbc47",
+        "origin": "maintained source, uploaded and exact-read-back; same native prepared source bytes"
+      }
+    ],
+    "full_original_only_contract_read": "e194d0bae55e9a1b3a2b97d4accd2c1b81a8ae0e",
+    "original_source_capsule": "f5ceed23b810957cf8e4cb36083fd519f9f03a2d",
+    "original_pins_compared_against_parent": 11,
+    "installer_and_server_review": "Exclusive fixed target and checked plain parents; bounded pinned input reads; exact six maintained sources and eleven originals; exclusive fsynced writes with marker last. Absolute pinned Python -I -B entry, full installed identity before binding, loopback 127.0.0.1:48661, exact Host and in-memory route allowlist.",
+    "installed_navigation": "Exactly one installed anchor label changes from TasteTable planner to Visit record home; inverse restores entire 4,734-byte original from 4,733-byte derivative. Seven sibling assets, original license and shared repository static HTML remain exact.",
+    "blocking_source_findings": [],
+    "root_native_or_browser_executions": 0
+  },
+  "native_installation": {
+    "path": "/Users/me/Applications/TasteTableVisitRecord-c945953fdeb7",
+    "entry": "Open TasteTable Visit Record.command",
+    "accepted_invocation": "Absolute installed entry from /tmp with --no-open",
+    "runtime": "Python 3.13.7 /Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+    "runtime_resolved_sha256": "406d73d07e33e164d986326fde00b85c2b8f4ed2c33278142c8431588fe2df14",
+    "files": 30,
+    "bytes": 201860,
+    "marker_blob": "b4b0dae20883c1da1ec3db74206ba57d0bb50aa1",
+    "marker_sha256": "932a94f4b06f6d147a354abc0acd49619668748f038cfdce56dbac69c6b0cef4",
+    "author_receipt": "4b24ddde1c39a8ee6ad8663ef65969cacae52e7c",
+    "installer": {
+      "pid": 9916,
+      "exit": 0
+    },
+    "existing_target_refusal": {
+      "pid": 9929,
+      "exit": 1
+    },
+    "controller": {
+      "pid": 9886,
+      "exit": 0
+    },
+    "preparation_inputs_unchanged": 21,
+    "installed_unchanged": true,
+    "author_server_or_browser_run": false,
+    "author_custody": "8befd05d038e812df41218258e4d528ff203e1bb",
+    "author_custody_files": 69
+  },
+  "independent": {
+    "contract": "e194d0bae55e9a1b3a2b97d4accd2c1b81a8ae0e",
+    "private_author_draft_started": "2026-10-09T08:56:30Z",
+    "contract_frozen": "2026-10-09T09:12:32Z",
+    "freeze_before_candidate_exposure_and_execution": true,
+    "not_blind_to_all_authorship": true,
+    "receiver": "7d4449a100cf0cfb2f18fcd19afebbfd512c03b1",
+    "comparator": "e96a4c6f38cebb649696cb0afd3377272cf23415",
+    "comparator_fully_read_by_root": true,
+    "receiver_full_line_audit_by_root": false,
+    "receipt": "95014d042e285512ab293304d91bf6e430ef4eae",
+    "outer_receipt": "a0d1dff92454757d55999a372a845af469c0f9b7",
+    "actual_external_closure": "d989e97c090c7085a0e894bb5dafea05fadfe771",
+    "final_map": "ecd88627acb905728ad96b550ad52a40ed5ea699",
+    "actual_objects": "e843f4013826792d853fe29efb7ee464a407bbb8",
+    "final_tree": "e30ab8ac40c014dc6a8a49c9be2df2510f5d5989",
+    "final_files": 55,
+    "tree_verified_by_root": true,
+    "groups": {
+      "T1": "PASS: complete installed/original identity and exact navigation inverse",
+      "T2": "PASS: real installed entry and home/editor/back/file selection/preview/use",
+      "T3": "PASS: fixed note, Undo, Redo and unchanged remaining state",
+      "T4": "PASS: physical JSON and all CSV bytes, separate export-time bounds",
+      "T5": "PASS: full closure, fresh session, exported JSON recovery, empty history, recovered JSON and final identity/closure"
+    },
+    "application_runs": 1,
+    "browser_sessions_in_that_run": 2,
+    "receiving_seconds": 2.906599875,
+    "outer_seconds": 3.089527750154957,
+    "node": {
+      "pid": 25005,
+      "exit": 0
+    },
+    "outer": {
+      "pid": 24899,
+      "exit": 0
+    },
+    "servers": [
+      {
+        "pid": 25011,
+        "exit": 0
+      },
+      {
+        "pid": 25094,
+        "exit": 0
+      }
+    ],
+    "chrome_parents": [
+      {
+        "pid": 25020,
+        "exit": 0
+      },
+      {
+        "pid": 25098,
+        "exit": 0
+      }
+    ],
+    "remaining_owned_descendants": [],
+    "port_released": true,
+    "installed_byte_mode_mtime_identity_unchanged": true,
+    "outer_seven_source_identity_unchanged": true,
+    "minimum_free_disk_bytes": 4313743360,
+    "minimum_conservative_memory_bytes": 11584241664
+  },
+  "physical_exports": {
+    "root_read_all_three_complete": true,
+    "note": "Receiver note: café, \"shared table\".\nPlease keep the saved week.",
+    "note_trailing_lf": false,
+    "files": [
+      {
+        "kind": "first-json",
+        "git_blob": "e7a9e6543d42ba11eef13a89f578e748e3670914",
+        "bytes": 2732,
+        "sha256": "780d9bff9d63458d824d20d4470362e926245b14320246f8cc1cad2eb17de719",
+        "saved_at": "2026-10-09T09:45:01.045Z",
+        "click_interval": [
+          "2026-10-09T09:45:01.025Z",
+          "2026-10-09T09:45:01.091Z"
+        ]
+      },
+      {
+        "kind": "csv",
+        "git_blob": "42bef4a2ac948e54257763df5b8563c121628e53",
+        "bytes": 1052,
+        "sha256": "a49cde7d7cbe2568d67e5985e59373df02b14d62894dd7f9ae536b1c3e8ba68c",
+        "saved_at": "2026-10-09T09:45:01.109Z",
+        "click_interval": [
+          "2026-10-09T09:45:01.092Z",
+          "2026-10-09T09:45:01.152Z"
+        ],
+        "columns": 17,
+        "rows": 3
+      },
+      {
+        "kind": "recovered-json",
+        "git_blob": "bb10b5e5a92a4e699f110a67916940e585b634b6",
+        "bytes": 2732,
+        "sha256": "e469145a0e07571bf82979d632a173d3784da07a99ae19ebf4f4dddd2e312f7a",
+        "saved_at": "2026-10-09T09:45:02.546Z",
+        "click_interval": [
+          "2026-10-09T09:45:02.531Z",
+          "2026-10-09T09:45:02.588Z"
+        ]
+      }
+    ],
+    "timestamp_oracle": "Each timestamp independently within its click/completion interval plus frozen ±1 second. All observed within unexpanded interval; no cross-export equality or inequality required.",
+    "preserved_fields": "Source-name leading/trailing spaces, embedded BOM/CRLF week text, untouched mixed-line-ending note and tab/emoji, null date, every other field and list occurrence; exact physical serialization except requested note and each bounded timestamp.",
+    "dom_line_endings": "Textarea DOM normalization is distinguished from untouched original physical-file line endings."
+  },
+  "retained_warnings_and_limits": {
+    "application_events": {
+      "runtime_exceptions": 0,
+      "console_events": 0,
+      "log_events": 0,
+      "failed_loads": 0,
+      "requests": 33,
+      "responses": 33,
+      "foreign_requests": 0,
+      "http_errors": 0
+    },
+    "server_and_comparator_stderr_bytes": 0,
+    "chrome_os_stderr": [
+      {
+        "bytes": 2044,
+        "git_blob": "73ccf72f64aca49914897ea245ae6a5431b27c56"
+      },
+      {
+        "bytes": 2044,
+        "git_blob": "eb88c09052130fce63fe5b8a99295c4be6bc11fc"
+      }
+    ],
+    "shell_warning": "Preexisting conda/libarchive diagnostic retained.",
+    "preparation_control": "Connector reported Regular expression too large after source write; existing PID22354 acknowledgement recovered without repeating write, exit0. No application at that stage.",
+    "screenshots": "Three originals displayed by independent receiver; root did not display them. Note textarea outside saved viewports; DOM and physical exports establish the note.",
+    "missing_mtime_observations": "Five newly written author evidence files have null native mtime observations; exact content retained.",
+    "untested": [
+      "Finder double click",
+      "default browser/profile/opener",
+      "shared planner/offline studio",
+      "provider/hosted behavior",
+      "old qualification matrices"
+    ],
+    "historical_failures": "Earlier original 23/24 timestamp-oracle failure and separate corrected CSV/56-case qualification retain their original owners and results; no old campaign rerun."
+  },
+  "publication_admission": {
+    "main_unchanged_at_read": true,
+    "complete_workflow_sets_identical_in_main_parent_producer": true,
+    "workflows": [
+      {
+        "path": ".github/workflows/ci.yml",
+        "mode": "100644",
+        "git_blob": "0e6273139a9bf417a4ee42f4501d067b1c9d95a0",
+        "bytes": 652
+      },
+      {
+        "path": ".github/workflows/native-plan-week-browser.yml",
+        "mode": "100644",
+        "git_blob": "d674f2698d1b048075a1c49c2035b1096be668f2",
+        "bytes": 3299
+      },
+      {
+        "path": ".github/workflows/week-compare.yml",
+        "mode": "100644",
+        "git_blob": "e591fca2db970460611269ad7d1c53a6bc70f028",
+        "bytes": 1269
+      }
+    ],
+    "full_bodies_previously_read": true,
+    "events": "Push is restricted to main. ci.yml has unfiltered pull_request. No create/issue/comment/workflow_run subscriber. This unique non-main source branch is nontriggering; PR/main writes are held.",
+    "new_branch_absent_via_get_404_and_full_refs": true,
+    "prior_refs": [
+      {
+        "ref": "refs/heads/agent/qloo-offline-contract-a770b527",
+        "sha": "bdfa9547f2f92a11525ce84170664724420c6dd2",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/agent/qloo-public-demo-20261005-a38c7da8",
+        "sha": "9dcc96e659850ae41960fc1c1e55e311990fb29c",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/autonomous-926c3dc2605e-tastetable-category-admission-20261009",
+        "sha": "ac7f33c1ac4b163be37d9e31e911e1db13adb229",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/chatgpt/venue-note-replacement-5f566b5ec8ef",
+        "sha": "975bf346cc300f50abfac3c3ebac2fc492077091",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/contrib/planning-input-files-8d5ac72a6fae",
+        "sha": "8ebb411ccb3ccdd62d49366710abe882af7106be",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/contribution/visit-record-report-6e5752b49b6f",
+        "sha": "8a8459b778724f15d961116ac0bb4ce0aadcbcb0",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/custody/taste-notes-c77045b4-20261008",
+        "sha": "8496b54bbd36eeee032599f0cc5d69f71106cecc",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/estate-81ba1ed0179c/tastetable-offline",
+        "sha": "8ee2dd171ef47a776f821777349f8376815261a7",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/estate-81ba1ed0179c/tastetable-offline-week",
+        "sha": "a7f6e1d412f694b04b95bbb10ddde2025982f844",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/estate/3dcb83a1-venue-note-files",
+        "sha": "a66eea6b37e7b3877d4380fcf4dc5a9a392e5a6f",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/estate/49f845d0dece-saved-week-comparison",
+        "sha": "771b2ebfa41aef093e58b4801aae93ef24a152ce",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/estate/60b2c08feb01-saved-week-call-sheet-custody",
+        "sha": "edbffa0126df35463b2387b4da1973d718861348",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/estate/6e5752b49b6f-tastetable-receiving",
+        "sha": "da76579382165b8a71017c996edc2d50bc1aef12",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/estate/a219f250962c-visit-history-no-actions",
+        "sha": "2271204ef42d63a4bc1c2918bc5679db981f79f1",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/estate/a2eaaec253d8-plan-request-lifecycle",
+        "sha": "981118bbc2c7a2173e56ac1c26da754803b40b22",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/estate/backend-ci-receiving-45d4289ccf6c",
+        "sha": "951a87cc5b98190cc89b50be04445cfe6f3b9d86",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/estate/ci-smoke",
+        "sha": "feeceefdbd29a61d1ce57aa029d65b0cb071432a",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/estate/de6263-tool-argument-recovery-20261008",
+        "sha": "754a958b5790c93e8bfa1478c0b1693eba5f275e",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/estate/e3a41d2b3368-native-profile-bundles",
+        "sha": "06f1871e831e0baf78c19f1c74b105c66b8219b9",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/estate/e82707f2bc62/low-sodium-evidence",
+        "sha": "93a5113ecdca863133b919dd4ecd731cca630846",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/estate/native-backend-receiving-45d4289ccf6c",
+        "sha": "6b68a322599ee4d93033f1f9eb3674a336edb804",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/estate/native-offline-plan-bd1abdb2f886-20261008",
+        "sha": "425bac7671f168b82e10a0a7f227acbd260d8e54",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/estate/regular-week-undo-3dab-20261008",
+        "sha": "d45da659d3e918829c12ec03c742aa81e29a02c9",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/estate/saved-week-html-0378a7b6",
+        "sha": "fa5e6bcb38f3fbdd5e5b68b3dc0bad0cfe8cbe0c",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/estate/tastetable-visit-record-347f3417824d",
+        "sha": "6e2ee0a3bb80994166b9958ad0ac437c58bc9be2",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/estate/venue-followup-r3-receiving-db371a37f4c8",
+        "sha": "53338903c53015bedaa99e2cdf49c44995e1e7ab",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/estate/visit-record-csv-ui-65ae877160f6",
+        "sha": "994c03aef94b711d6dcbbeb6bbbc6a4b85a6a3ad",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/estate/week-compare-receiving-49f845d0dece",
+        "sha": "cb03ad54167803ee56a68ff6fa62910d345773da",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/estate/wheelchair-evidence-3dcb83a1-20261008",
+        "sha": "4ba587e0ee5fa24558fa5dbc948cfedd26613c44",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/evidence/offline-arrangement-history-68094585a1c2",
+        "sha": "8b89cb41bc361a53264e4aad2030c94d29dadf66",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/evidence/tastetable-atomic-render-31a349052b90",
+        "sha": "e1994ba62621bd09fa50e576bf8d022ecec0c552",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/evidence/tastetable-consumer-v1-receiving-31a349052b90",
+        "sha": "ee4223dbf425a69eaa3cddec037ba8c445530a72",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/feat/offline-arrangement-history-68094585a1c2",
+        "sha": "cf00f460865b715f2199bd6031a1b0e63cddff6d",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/feat/offline-calendar-066deeadcc8b",
+        "sha": "ab9f8465f9dbc2187feffb567a0ce51132e8b246",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/fix/8304-caregiver-constraint-binding",
+        "sha": "ae63a6e65e63602cf0d1bfdd9881beba52062e9a",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/fix/configured-agent-model-20261008",
+        "sha": "cdd6475f5ad31bdb0deec2abe8bc7180ac1fc581",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/fix/recommendation-error-continuation-20261008",
+        "sha": "7002a16a3b46c7318826ce9975fd812096925f42",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/fix/soft-food-evidence-cf5799f6d38b",
+        "sha": "43f000145a1f2916ea0bf8cde3b5ca2db730f7cd",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/hamon/0378a7b6-caregiver-change-brief",
+        "sha": "b0e3db8bd91f181c2edfa2d71dffb0d2b3406eb1",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/main",
+        "sha": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/receiving/native-plan-week-7879c2abc07f-20261008",
+        "sha": "068c1869275d8225abde723bf960c36ac50964ae",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/receiving/saved-week-roster-3dc74ef3b04d",
+        "sha": "9b4cde0cb6e96fa113e7080b2e3a0dd028a7f8ec",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/receiving/venue-followup-20261008-6c20bb4b010e",
+        "sha": "01ce7d91af922f4c262e5007ae423c62e6539a82",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/receiving/venue-question-reuse-3dc74ef3b04d-20261009",
+        "sha": "261c277c9519c1c73555c0dc12fbd7a62f9bfb56",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/receiving/visit-record-csv-65ae877160f6",
+        "sha": "47653dac7efd86a702e618973faed32e70f5a856",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/receiving/week-comparison-root-49f845d0dece",
+        "sha": "1c4dc3177af3dd89b04e2a9cf42fcb72f0ce0db3",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/review/common-suggestions-2d2d276b",
+        "sha": "2655acd0b3258c1fdc47ce7fba9d556bf23698b4",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/source-custody/visit-record-comparison-234cae4aee53",
+        "sha": "7eb338184a1108d1a16a5680585ca2cf6eaf7700",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/ultra/20b27c2e-calendar-independent-baseline",
+        "sha": "d07dc6fda6b454f56903e7ca4b469e41aba9b782",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/ultra/20b27c2e-saved-week-calendar",
+        "sha": "fd6997b3c76f802dadaad94b6f33f72813aae4f4",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/work/astra-caregiver-handoff-custody-d98d06fb-20261008",
+        "sha": "e67e7d83efec9c09c5260e8c6165f7116519f599",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/work/calendar-writer-arranged-week-9e05-20261008",
+        "sha": "142f50493d627a9678a5dd7d9c9c4352a9a9f1dd",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/work/caregiver-week-0df473646168",
+        "sha": "69a8098292da12d4d960118cae072a5885ff5171",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/work/edited-week-calendar-0df473646168",
+        "sha": "614aa0a98429ba52182376e38a57e32d01b461b9",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/work/native-plan-week-7879c2abc07f-20261008",
+        "sha": "b9ac8ae18e76c635333056f3c9ff1c5caa1d43f5",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/work/recommendation-notes-9e05-20261008",
+        "sha": "08d2703f2928635a12f5956a2aaf3931d4f60bbb",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/work/saved-week-0df473646168",
+        "sha": "2007ecdb1f636e23cae08d83393a02fadd229e8f",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/heads/work/visit-edit-recovery-18a24bf0c281-20261009",
+        "sha": "4b9fb4bdf00214d92b821d30200bcaa9dd0bfa32",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/1/head",
+        "sha": "feeceefdbd29a61d1ce57aa029d65b0cb071432a",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/10/head",
+        "sha": "142f50493d627a9678a5dd7d9c9c4352a9a9f1dd",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/11/head",
+        "sha": "754a958b5790c93e8bfa1478c0b1693eba5f275e",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/12/head",
+        "sha": "08d2703f2928635a12f5956a2aaf3931d4f60bbb",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/13/head",
+        "sha": "614aa0a98429ba52182376e38a57e32d01b461b9",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/15/head",
+        "sha": "2007ecdb1f636e23cae08d83393a02fadd229e8f",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/18/head",
+        "sha": "8ee2dd171ef47a776f821777349f8376815261a7",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/2/head",
+        "sha": "cdd6475f5ad31bdb0deec2abe8bc7180ac1fc581",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/21/head",
+        "sha": "4ba587e0ee5fa24558fa5dbc948cfedd26613c44",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/23/head",
+        "sha": "425bac7671f168b82e10a0a7f227acbd260d8e54",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/24/head",
+        "sha": "93a5113ecdca863133b919dd4ecd731cca630846",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/27/head",
+        "sha": "b9ac8ae18e76c635333056f3c9ff1c5caa1d43f5",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/28/head",
+        "sha": "a7f6e1d412f694b04b95bbb10ddde2025982f844",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/3/head",
+        "sha": "7002a16a3b46c7318826ce9975fd812096925f42",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/31/head",
+        "sha": "771b2ebfa41aef093e58b4801aae93ef24a152ce",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/33/head",
+        "sha": "01ce7d91af922f4c262e5007ae423c62e6539a82",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/35/head",
+        "sha": "cf00f460865b715f2199bd6031a1b0e63cddff6d",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/37/head",
+        "sha": "43f000145a1f2916ea0bf8cde3b5ca2db730f7cd",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/38/head",
+        "sha": "53338903c53015bedaa99e2cdf49c44995e1e7ab",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/45/head",
+        "sha": "ab9f8465f9dbc2187feffb567a0ce51132e8b246",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/46/head",
+        "sha": "fd6997b3c76f802dadaad94b6f33f72813aae4f4",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/46/merge",
+        "sha": "1b2708863c180060b6e91873b87f440a8510926a",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/47/head",
+        "sha": "b0e3db8bd91f181c2edfa2d71dffb0d2b3406eb1",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/48/head",
+        "sha": "fa5e6bcb38f3fbdd5e5b68b3dc0bad0cfe8cbe0c",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/49/head",
+        "sha": "a66eea6b37e7b3877d4380fcf4dc5a9a392e5a6f",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/5/head",
+        "sha": "ae63a6e65e63602cf0d1bfdd9881beba52062e9a",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/50/head",
+        "sha": "d07dc6fda6b454f56903e7ca4b469e41aba9b782",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/51/head",
+        "sha": "d45da659d3e918829c12ec03c742aa81e29a02c9",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/51/merge",
+        "sha": "3d53aa43a9e9904b9744a0906217b7ac48e3f77b",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/52/head",
+        "sha": "6e2ee0a3bb80994166b9958ad0ac437c58bc9be2",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/53/head",
+        "sha": "06f1871e831e0baf78c19f1c74b105c66b8219b9",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/59/head",
+        "sha": "47653dac7efd86a702e618973faed32e70f5a856",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/6/head",
+        "sha": "951a87cc5b98190cc89b50be04445cfe6f3b9d86",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/61/head",
+        "sha": "994c03aef94b711d6dcbbeb6bbbc6a4b85a6a3ad",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/61/merge",
+        "sha": "e8affb72074f1c0beda4fe3e11300045006e731a",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/7/head",
+        "sha": "981118bbc2c7a2173e56ac1c26da754803b40b22",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/8/head",
+        "sha": "da76579382165b8a71017c996edc2d50bc1aef12",
+        "type": "commit"
+      },
+      {
+        "ref": "refs/pull/9/head",
+        "sha": "69a8098292da12d4d960118cae072a5885ff5171",
+        "type": "commit"
+      }
+    ],
+    "prior_ref_count": 96,
+    "actions_hold": "https://github.com/Jacob-Met/hamon/issues/143#issuecomment-6067592767",
+    "postwrite_verification": "Pending actual exact source tree/commit/ref, all prior refs, current main and all-event head-run inventory."
+  },
+  "ownership": {
+    "reservation": "https://github.com/Jacob-Met/tastetable/issues/70#issuecomment-6077679283",
+    "completed_author_handoff": "https://github.com/Jacob-Met/tastetable/issues/70#issuecomment-6079002421",
+    "retained": [
+      "estate-18a24bf0c281/root source/history",
+      "estate-65ae877160f6/project_execution CSV",
+      "all adjacent source/native consumer owners"
+    ],
+    "no_original_ref_move": true
+  }
+}
