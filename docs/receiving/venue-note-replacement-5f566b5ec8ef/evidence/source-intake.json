@@ -1,0 +1,114 @@
+{
+  "base": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+  "closure_only": true,
+  "files": [
+    {
+      "path": "static/app.js",
+      "blob": "aa2fa0ff7aa0a1dd370c4fa6fef4f4222792414b",
+      "sha256": "6e87cfbf89e37792d384795382059a5d2245312c1b4bf0038991a3af3ff8c327",
+      "bytes": 19190
+    },
+    {
+      "path": "static/venue_note_file.mjs",
+      "blob": "f8406cb540d52222996c585666ae1a55a1030def",
+      "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+      "bytes": 10435
+    },
+    {
+      "path": "static/venue_followup.mjs",
+      "blob": "0c1923ecdad8fe9b14f0193a6aba5f3a1e2b9d63",
+      "sha256": "61bb9cf497b5a37a32afd1b23729e128aed2631cf2c570a1485ca4f0ffbe632c",
+      "bytes": 18444
+    },
+    {
+      "path": "README.md",
+      "blob": "c0ebf40a3b97f3efedffbc85561a6af153cc97ef",
+      "sha256": "170bb5e83b2b6de85bb2d6e7f41d3b9eaee9e8a13a73aa74bdaf6a2ab9d8a580",
+      "bytes": 20212
+    },
+    {
+      "path": "static/index.html",
+      "blob": "d195d45b8f56a2dee25cf4740e679f80c0c8c547",
+      "sha256": "3472df790ad95b6a3e1edc59f5b4fb708d37063e5a74d0185c6fe67ff6b6c34c",
+      "bytes": 9243
+    },
+    {
+      "path": "static/venue_followup.css",
+      "blob": "dd88e221133be5281330cba11a6d141ae5e8d239",
+      "sha256": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+      "bytes": 2166
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "bytes": 3913
+    },
+    {
+      "path": "static/week_file.mjs",
+      "blob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "bytes": 6642
+    },
+    {
+      "path": "static/calendar.js",
+      "blob": "dbed22d2cb91090bccec9472fbffd2854eed2722",
+      "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+      "bytes": 15169
+    },
+    {
+      "path": "static/calendar.css",
+      "blob": "9e53b951316d841b86f0256cd2444a3ce547269f",
+      "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+      "bytes": 708
+    },
+    {
+      "path": "static/plan-request.js",
+      "blob": "b21276dda840fe6dd96a3bf3258a851970ff5e4d",
+      "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+      "bytes": 1420
+    },
+    {
+      "path": "static/style.css",
+      "blob": "28df6c5229b6b592db33e929ae058fe514304af4",
+      "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+      "bytes": 5064
+    },
+    {
+      "path": "tests/venue_note_file.test.mjs",
+      "blob": "a32d542a76779e8d820a9fc233b6e1a82d9aff2c",
+      "sha256": "8c1b12a02302e414346a04710d5efb14af45e0cb8994ba75135c9e1988252740",
+      "bytes": 10558
+    },
+    {
+      "path": "tests/venue_followup.test.mjs",
+      "blob": "515fe959d7217b10b325cab368eb92a6d33b8e6d",
+      "sha256": "a53284b48da8375d7f6cf26b1d4e5943dfd203e60ff1ef44780f9a02f299479f",
+      "bytes": 11405
+    },
+    {
+      "path": "tools/check_native_plan_week_browser.mjs",
+      "blob": "0eefbd2df795a9ced63a93738b069f8a4850ddb0",
+      "sha256": "815bc820434dfd242e0c37e450160371b4f6dafcee1d432d7d301970d9f32998",
+      "bytes": 28671
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "blob": "0e6273139a9bf417a4ee42f4501d067b1c9d95a0",
+      "sha256": "2f83a6f17995602ec28e9f0dacc901511bae2dd3e348e2dfc9190494830da876",
+      "bytes": 652
+    },
+    {
+      "path": ".github/workflows/native-plan-week-browser.yml",
+      "blob": "d674f2698d1b048075a1c49c2035b1096be668f2",
+      "sha256": "b40992512e13d653c51fb8b4dfb0d15ad0a090ae4754c4082a18ab20ca62ace3",
+      "bytes": 3299
+    },
+    {
+      "path": ".github/workflows/week-compare.yml",
+      "blob": "e591fca2db970460611269ad7d1c53a6bc70f028",
+      "sha256": "ea82ca88ff2fc05072503f3c124068ab2fc8cc689e7f22b9b850e07ba96393aa",
+      "bytes": 1269
+    }
+  ]
+}

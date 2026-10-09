@@ -1,0 +1,62 @@
+{
+  "base": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+  "files": [
+    {
+      "path": "static/venue_note_changes.mjs",
+      "bytes": 2303,
+      "sha256": "9299824e9bcd2b9b8fd63ed3efeaa9dbaefcc5c47e35e099c7b8bbd6d9fb3983",
+      "blob": "9d7153966d16d61a3089e1df2454a7d3b3806d96"
+    },
+    {
+      "path": "static/venue_note_file.mjs",
+      "bytes": 12501,
+      "sha256": "945a77b53b407a43f9eed930fb7c8e9946b5dd7af60a85919c4f50abbf2fa6c6",
+      "blob": "9945b942b25177483c6e99812a5500b362105a82"
+    },
+    {
+      "path": "static/index.html",
+      "bytes": 9254,
+      "sha256": "9d466a90bd151698acdb04744d8d3d56c864e3c654e130f369a7f7bb20268eff",
+      "blob": "73fe9d1458af4981f8bbd495bb9e3650178a854b"
+    },
+    {
+      "path": "static/venue_followup.css",
+      "bytes": 2598,
+      "sha256": "109d91056ae3cc95ec6b3082335b4008e31e34d9bcadf8d43764361eb8a35d5c",
+      "blob": "58b85d61d5cd637e04b49b3670ee8dc7a4f89c5a"
+    },
+    {
+      "path": "tools/check_native_plan_week_browser.mjs",
+      "bytes": 28704,
+      "sha256": "c096afcd2287a77bb96fab64109de8c0bf39f20ebca5ffc8aa1625eb2df93634",
+      "blob": "94d10ea7a2f1ab5682ecccb8b2a2e3a2b46922a7"
+    },
+    {
+      "path": "tests/venue_note_changes.test.mjs",
+      "bytes": 5208,
+      "sha256": "a7892fe45df72b80df46a05aeccdc012600ea35076cf254e9126aa01bf7f41af",
+      "blob": "18edc08c14e6591702a74ea71189c496c812cded"
+    },
+    {
+      "path": "tools/venue_note_changes_fixture.mjs",
+      "bytes": 3336,
+      "sha256": "d553b14c08a901d7a8700b2dedf8871c87a3a22a5ef893960e0f7b5a087e52af",
+      "blob": "43682f6e3e25c70ebc913702cb2d3cd6cb8ba792"
+    },
+    {
+      "path": "tools/check_venue_note_changes_browser.py",
+      "bytes": 10756,
+      "sha256": "7db336de0d54b3d48ccead01e1707387616a4a8f4f8c7dcb92377850db0a5108",
+      "blob": "da4cdac4ecaf0c78138d8697c1133f3ea03f9b68"
+    },
+    {
+      "path": "docs/VENUE_NOTE_REPLACEMENT.md",
+      "bytes": 3822,
+      "sha256": "84682ce66fe62b98f00ab3f23617b8130848d8e67b5c7ec63e4cbb8b8ce9ccce",
+      "blob": "14af507fa22e2bec1af047eefa7c91e209835f69"
+    }
+  ],
+  "source_closure_only": true,
+  "outside_showFile_and_import_exact": true,
+  "unchanged_original_files": 14
+}

@@ -1,0 +1,7 @@
+PASS real saved-week and current-note import preserves all four authored records
+PASS baseline shows incoming notes but omits current-only removal details
+PASS baseline omits the previous changed reply
+PASS baseline reading leaves current notes exact
+PASS no page exception or external network request
+PASS all served runtime source bytes remain exact
+{"status": "passed", "checks": 6, "error": null}

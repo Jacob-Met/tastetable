@@ -1,0 +1,213 @@
+{
+  "schema": "tastetable.venue-note-replacement.root-review.v1",
+  "reviewer": "chatgpt:5f566b5ec8ef:root",
+  "at": "2026-10-09T01:52:51.670Z",
+  "decision": "ACCEPT_NATIVE_SOURCE_AND_ACTUAL_BROWSER_VISUAL_REVIEW",
+  "scope": "Review all added, changed, removed and unchanged venue-note occurrence/date records before the existing explicit whole-file replacement.",
+  "repository": "Jacob-Met/tastetable",
+  "issue": 68,
+  "claim": 5220,
+  "authorCheckpoint": 5241,
+  "source": {
+    "canonicalMain": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+    "canonicalTree": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6",
+    "canonicalLeaves": 818,
+    "nativeHead": "9bbafdb633e5702b260316cdd679d8ab3c9ca039",
+    "productHead": "c06f1eb04cda90c4d7ff7df7dde698da559be087",
+    "ownedProductPins": [
+      {
+        "path": "static/venue_note_changes.mjs",
+        "bytes": 2303,
+        "sha256": "9299824e9bcd2b9b8fd63ed3efeaa9dbaefcc5c47e35e099c7b8bbd6d9fb3983",
+        "blob": "9d7153966d16d61a3089e1df2454a7d3b3806d96"
+      },
+      {
+        "path": "static/venue_note_file.mjs",
+        "bytes": 12501,
+        "sha256": "945a77b53b407a43f9eed930fb7c8e9946b5dd7af60a85919c4f50abbf2fa6c6",
+        "blob": "9945b942b25177483c6e99812a5500b362105a82"
+      },
+      {
+        "path": "static/index.html",
+        "bytes": 9254,
+        "sha256": "9d466a90bd151698acdb04744d8d3d56c864e3c654e130f369a7f7bb20268eff",
+        "blob": "73fe9d1458af4981f8bbd495bb9e3650178a854b"
+      },
+      {
+        "path": "static/venue_followup.css",
+        "bytes": 2598,
+        "sha256": "109d91056ae3cc95ec6b3082335b4008e31e34d9bcadf8d43764361eb8a35d5c",
+        "blob": "58b85d61d5cd637e04b49b3670ee8dc7a4f89c5a"
+      },
+      {
+        "path": "tools/check_native_plan_week_browser.mjs",
+        "bytes": 28704,
+        "sha256": "c096afcd2287a77bb96fab64109de8c0bf39f20ebca5ffc8aa1625eb2df93634",
+        "blob": "94d10ea7a2f1ab5682ecccb8b2a2e3a2b46922a7"
+      },
+      {
+        "path": "tests/venue_note_changes.test.mjs",
+        "bytes": 5208,
+        "sha256": "a7892fe45df72b80df46a05aeccdc012600ea35076cf254e9126aa01bf7f41af",
+        "blob": "18edc08c14e6591702a74ea71189c496c812cded"
+      },
+      {
+        "path": "tools/venue_note_changes_fixture.mjs",
+        "bytes": 3336,
+        "sha256": "d553b14c08a901d7a8700b2dedf8871c87a3a22a5ef893960e0f7b5a087e52af",
+        "blob": "43682f6e3e25c70ebc913702cb2d3cd6cb8ba792"
+      },
+      {
+        "path": "tools/check_venue_note_changes_browser.py",
+        "bytes": 10756,
+        "sha256": "7db336de0d54b3d48ccead01e1707387616a4a8f4f8c7dcb92377850db0a5108",
+        "blob": "da4cdac4ecaf0c78138d8697c1133f3ea03f9b68"
+      },
+      {
+        "path": "docs/VENUE_NOTE_REPLACEMENT.md",
+        "bytes": 3822,
+        "sha256": "84682ce66fe62b98f00ab3f23617b8130848d8e67b5c7ec63e4cbb8b8ce9ccce",
+        "blob": "14af507fa22e2bec1af047eefa7c91e209835f69"
+      }
+    ],
+    "authorPacketManifestSHA256": "8d132902e311c66cb841366fd5e21d33ea6f58b5661d7e1915681314f0a74fbb"
+  },
+  "contractSHA256": "f03cb385f8efaf5295da312168dd79abef84a12208429b1a847ab4e06787041f",
+  "directlyReviewed": [
+    "Complete frozen contract and recipient guide.",
+    "Complete40-line comparison helper,208-line companion file component and105-line change patch.",
+    "All76 lines of eight added model tests and maintained actual browser receiving source.",
+    "Original six-check browser gap witness, candidate24-check actual browser receipt and model output reporting30/30.",
+    "Four actual final selected-card/summary PNG captures at desktop and390px; visual-only capture receipt/source pins.",
+    "Full current818-leaf tree and all three workflow bodies from primary GitHub reads."
+  ],
+  "findings": [
+    "Comparison keys are exact JSON-encoded [occurrence key,date] pairs, so repeated venue names and old dates stay distinct. The union preserves current-record order, then appends genuinely new incoming identities in file order.",
+    "The helper consumes already-admitted same-origin records and creates detached frozen records/counts/field arrays. It compares exactly status, question, reply, replyQuestions and nextStep, retaining null/empty differences, spacing, Unicode and line endings.",
+    "The actual file review calls this helper on the current model snapshot and already-admitted incoming records. It names every current-only removal, including old dates and omitted visits; changed records show all five before/after values and explicitly identify changed fields.",
+    "The UI distinguishes a null original-question default from an explicit empty override and distinguishes missing earlier-question snapshots from explicit empty snapshots. This makes cleared fields visible before the existing Replace button.",
+    "User/file text reaches textContent on created DOM nodes. The retained authored markup and Unicode fixture remains literal in actual browser captures, with no injected image or execution.",
+    "Existing file admission, same-origin comparison, asynchronous read generation/context guards, save/download, Cancel, Apply, retirement and model replacement semantics remain unchanged. Only showFile plus one import differ in the companion module.",
+    "The HTML change is the existing disclosure label; CSS is appended for readable review rows. The native browser receiver's explicit source list gains one required helper filename and retains all other entries and assertions.",
+    "Actual browser receiving uses unchanged production modules and real chosen files/downloads against a private GET-only fixture server. It independently compares saved note/week JSON to authored expected values; the server does not execute the planner or contact a provider."
+  ],
+  "qualification": {
+    "baselineModel": {
+      "passed": 22,
+      "phase": "Original current source"
+    },
+    "candidateModel": {
+      "passed": 30,
+      "failed": 0,
+      "milliseconds": 153.476,
+      "scope": "The22 maintained original controls plus8 added comparison controls; not30 independent UI scenarios."
+    },
+    "baselineBrowser": {
+      "checks": 6,
+      "result": "Actual original source shows incoming notes while omitting current-only removal details and the former changed reply; reading remains inert."
+    },
+    "candidateBrowser": {
+      "checks": 24,
+      "browser": "154.0.8037.97",
+      "result": "Real file chooser and keyboard Cancel/Replace; exact downloads; six union records and all5 changed fields; literal text; invalid origin/malformed refusal; note/date/late-read retirement; empty replacement;390px record bounds; exact week/calendar preservation; zero page errors or external requests."
+    },
+    "rootExecution": "Source/receipt/capture review and content/Git composition verification only. Root performed no repeated model test or browser run."
+  },
+  "visualReview": {
+    "surface": "Actual Chrome154 on MSI using authored local fixtures and the exact production static modules; selected element captures, not generated images.",
+    "images": [
+      {
+        "path": "docs/receiving/venue-note-replacement-5f566b5ec8ef/evidence/visual-cards-final/desktop-changed-card.png",
+        "sha256": "d28409f3c0b310495fdb953353efdcef68677db9260aca2c21b5dd689b226163",
+        "bytes": 46985,
+        "observations": "Desktop changed card shows original status, questions, multiline reply, earlier question snapshot and next step above the exact incoming cleared values. Literal markup and Unicode are visible as text."
+      },
+      {
+        "path": "docs/receiving/venue-note-replacement-5f566b5ec8ef/evidence/visual-cards-final/desktop-removed-old-date.png",
+        "sha256": "b13ec508f2c14bbe60131d6660781a6c3c1d547c6cb9cf7b1e73ffd7adedbd4d",
+        "bytes": 25563,
+        "observations": "Desktop old-date removal identifies occurrence pick-3 on2027-01-04 and exposes the complete current note that is absent from the file."
+      },
+      {
+        "path": "docs/receiving/venue-note-replacement-5f566b5ec8ef/evidence/visual-cards-final/phone-changed-card.png",
+        "sha256": "2c6d6d679da3662af51bf6fba6f26ccf3ba603b579924b1b3fa4d75ea054595e",
+        "bytes": 42167,
+        "observations": "At the retained390px viewport the changed-card content wraps within its narrow column, including literal markup and full before/after descriptions, with no hidden cleared field."
+      },
+      {
+        "path": "docs/receiving/venue-note-replacement-5f566b5ec8ef/evidence/visual-cards-final/phone-replacement-summary.png",
+        "sha256": "caa0c6a5bea5ad6fa106f603978673da2bf4e30e17f60d775f130384f923d458",
+        "bytes": 11895,
+        "observations": "The narrow summary reads4 incoming records,3 currently scheduled and1 other-date/omitted, with2added/1changed/2removed/1unchanged and an explicit replace-all4-current-records question."
+      }
+    ],
+    "limits": [
+      "These four images cover the retained authored fixtures/widths, not every possible record/content length.",
+      "The separate final capture phase is visual-only; it does not add another24 executed controls.",
+      "No live planner, provider, real caregiver data, reservation, safety or deployed service outcome is claimed."
+    ]
+  },
+  "ownershipPreserved": [
+    "Combined editable handoff owner#55 and its app/worksheet hooks.",
+    "Companion HTML#54, native call-sheet#67 and offline bulk/readable-week owners.",
+    "All original codec, provider, plan, calendar, worksheet and workflow source outside the exact four existing-path hunks."
+  ],
+  "publication": {
+    "branch": "chatgpt/venue-note-replacement-5f566b5ec8ef",
+    "stage": "Prepared source-only handoff; no PR/main integration authorization from unrun gates.",
+    "rootReceiptPath": "docs/receiving/venue-note-replacement-5f566b5ec8ef.root-review.json",
+    "originalPacket": "Retain the frozen72-path author transfer byte-for-byte; append this adjacent root review."
+  },
+  "boundaries": [
+    "The helper is a read-only projection of admitted notes, not a new file schema or an alternate replacement engine.",
+    "Explicit Replace still replaces the complete retained note set; it does not merge records or remove visits from the plan.",
+    "Native intake is an18-file closure plus additions, not a full canonical clone.",
+    "Current no-Actions direction holds PR/main integration; source branch requires fresh unchanged workflow/main and absence guards."
+  ],
+  "openFindings": [],
+  "custodyVerifiedAt": "2026-10-09T01:54:55.967862+00:00",
+  "sourcePreservation": {
+    "nativeHead": "9bbafdb633e5702b260316cdd679d8ab3c9ca039",
+    "nativeTree": "4dc17490ebb2032631f4be0cad8831696c66ed20",
+    "nativeLeavesVerified": 86,
+    "ownedLeavesVerified": 72,
+    "unchangedNativeCanonicalLeaves": 14,
+    "baselineLeavesReconstructedAndVerified": 18,
+    "canonicalLeaves": 818,
+    "canonicalTreeRecomputed": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6",
+    "originalProposedLeaves": 886,
+    "originalProposedTreeRecomputed": "a226df422a5a4298cfe9fb6a8cab3b296e4a0e84",
+    "unownedCanonicalPreserved": 814,
+    "originalReceivingPacketLeaves": 63,
+    "companionOutsideShowFileAndImportByteExact": true,
+    "htmlOnlyDisclosureLabel": true,
+    "cssOriginalPrefixExact": true,
+    "nativeBrowserRunnerOnlySourceListEntry": true,
+    "sourceClean": true,
+    "deletedPaths": [],
+    "nativeModes": "Git tree modes verified; filesystem executable bits are not a separate Windows qualification."
+  },
+  "workflowGuard": {
+    "canonicalMain": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+    "canonicalTree": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6",
+    "completeCount": 3,
+    "workflows": [
+      {
+        "path": ".github/workflows/ci.yml",
+        "sha": "0e6273139a9bf417a4ee42f4501d067b1c9d95a0",
+        "content": "name: ci\n\non:\n  push:\n    branches: [main]\n  pull_request:\n\nconcurrency:\n  group: ci-${{ github.ref }}\n  cancel-in-progress: true\n\npermissions:\n  contents: read\n\njobs:\n  test:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1\n      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0\n        with:\n          python-version: \"3.12\"\n      - name: Install dependencies\n        run: pip install -r requirements.txt\n      - name: Run tests\n        # FixtureTransport + mock-mode defaults keep this hermetic: no Qloo key needed.\n        run: python -m pytest -q\n"
+      },
+      {
+        "path": ".github/workflows/native-plan-week-browser.yml",
+        "sha": "d674f2698d1b048075a1c49c2035b1096be668f2",
+        "content": "name: native-plan-week-browser\n\non:\n  pull_request:\n    paths:\n      - 'tools/native_plan_to_week.mjs'\n      - 'tools/check_native_plan_week_browser.mjs'\n      - 'tests/test_native_plan_week.py'\n      - 'tastetable_cli.py'\n      - 'agent.py'\n      - 'constraints.py'\n      - 'qloo_client.py'\n      - 'personas.py'\n      - 'fixtures/qloo_fixtures.json'\n      - 'static/**'\n      - '.github/workflows/native-plan-week-browser.yml'\n  push:\n    branches: [main]\n    paths:\n      - 'tools/native_plan_to_week.mjs'\n      - 'tools/check_native_plan_week_browser.mjs'\n      - 'tests/test_native_plan_week.py'\n      - 'tastetable_cli.py'\n      - 'agent.py'\n      - 'constraints.py'\n      - 'qloo_client.py'\n      - 'personas.py'\n      - 'fixtures/qloo_fixtures.json'\n      - 'static/**'\n      - '.github/workflows/native-plan-week-browser.yml'\n\nconcurrency:\n  group: native-plan-week-browser-${{ github.ref }}\n  cancel-in-progress: true\n\npermissions:\n  contents: read\n\njobs:\n  receive-week:\n    runs-on: ubuntu-latest\n    timeout-minutes: 8\n    steps:\n      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # Existing maintained pin.\n      - name: Require cached Node 22, Python and installed system Chrome\n        id: runtime\n        shell: bash\n        run: |\n          set -euo pipefail\n          NATIVE_WEEK_NODE=\n          for NATIVE_WEEK_NODE_DIR in \"${RUNNER_TOOL_CACHE}/node\"/22.*; do\n            if [[ -x \"${NATIVE_WEEK_NODE_DIR}/x64/bin/node\" && -f \"${NATIVE_WEEK_NODE_DIR}/x64.complete\" ]]; then\n              NATIVE_WEEK_NODE=\"${NATIVE_WEEK_NODE_DIR}/x64/bin/node\"\n            fi\n          done\n          [[ -n \"${NATIVE_WEEK_NODE}\" ]] || { echo \"A complete cached Node 22 is required.\"; exit 1; }\n          NATIVE_WEEK_BROWSER=\n          for NATIVE_WEEK_BROWSER_NAME in google-chrome google-chrome-stable chromium chromium-browser; do\n            if command -v \"${NATIVE_WEEK_BROWSER_NAME}\" >/dev/null 2>&1; then\n              NATIVE_WEEK_BROWSER=\"$(command -v \"${NATIVE_WEEK_BROWSER_NAME}\")\"\n              break\n            fi\n          done\n          [[ -n \"${NATIVE_WEEK_BROWSER}\" ]] || { echo \"An installed Chrome/Chromium is required.\"; exit 1; }\n          NATIVE_WEEK_PYTHON=\"$(command -v python3)\"\n          \"${NATIVE_WEEK_NODE}\" --version\n          \"${NATIVE_WEEK_BROWSER}\" --version\n          \"${NATIVE_WEEK_PYTHON}\" --version\n          printf 'node=%s\\nbrowser=%s\\npython=%s\\n' \"${NATIVE_WEEK_NODE}\" \"${NATIVE_WEEK_BROWSER}\" \"${NATIVE_WEEK_PYTHON}\" >> \"${GITHUB_OUTPUT}\"\n      - name: Receive actual native result, saved file and unchanged browser consumer\n        env:\n          NATIVE_WEEK_PYTHON: ${{ steps.runtime.outputs.python }}\n        run: '\"${{ steps.runtime.outputs.node }}\" tools/check_native_plan_week_browser.mjs --browser \"${{ steps.runtime.outputs.browser }}\" --output \"${RUNNER_TEMP}/native-plan-week-receiving\"'\n      - name: Preserve bounded native inputs, actual downloads and browser artifacts\n        if: always()\n        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # Official v4 pin.\n        with:\n          name: native-plan-week-receiving-${{ github.run_id }}\n          path: ${{ runner.temp }}/native-plan-week-receiving\n          if-no-files-found: warn\n          retention-days: 14\n          compression-level: 6\n"
+      },
+      {
+        "path": ".github/workflows/week-compare.yml",
+        "sha": "e591fca2db970460611269ad7d1c53a6bc70f028",
+        "content": "name: saved-week-comparison\n\non:\n  pull_request:\n    paths:\n      - 'static/**'\n      - 'tests/*.mjs'\n      - 'tests/*.cjs'\n      - 'tests/fixtures/**'\n      - '.github/workflows/week-compare.yml'\n  push:\n    branches: [main]\n    paths:\n      - 'static/**'\n      - 'tests/*.mjs'\n      - 'tests/*.cjs'\n      - 'tests/fixtures/**'\n      - '.github/workflows/week-compare.yml'\n\npermissions:\n  contents: read\n\njobs:\n  compare-week:\n    runs-on: ubuntu-latest\n    timeout-minutes: 3\n    steps:\n      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # Existing maintained pin.\n      - name: Test comparison and existing browser domain modules on cached Node 22\n        shell: bash\n        run: |\n          set -euo pipefail\n          COMPARE_WEEK_NODE=\n          for COMPARE_WEEK_NODE_DIR in \"${RUNNER_TOOL_CACHE}/node\"/22.*; do\n            if [[ -x \"${COMPARE_WEEK_NODE_DIR}/x64/bin/node\" && -f \"${COMPARE_WEEK_NODE_DIR}/x64.complete\" ]]; then\n              COMPARE_WEEK_NODE=\"${COMPARE_WEEK_NODE_DIR}/x64/bin/node\"\n            fi\n          done\n          [[ -n \"${COMPARE_WEEK_NODE}\" ]] || { echo \"A complete cached Node 22 is required.\"; exit 1; }\n          \"${COMPARE_WEEK_NODE}\" --version\n          \"${COMPARE_WEEK_NODE}\" --test tests/*.mjs tests/*.cjs\n"
+      }
+    ],
+    "decision": "All current push events restricted to main; PR events also exist. No create/issues/issue_comment event. Permit new non-main branch without PR after fresh branch/head/authority checks; hold PR/main integration."
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "command": [
+    "C:/Program Files/nodejs/node.EXE",
+    "--test",
+    "tests/venue_followup.test.mjs",
+    "tests/venue_note_file.test.mjs",
+    "tests/venue_note_changes.test.mjs"
+  ],
+  "exit": 0
+}

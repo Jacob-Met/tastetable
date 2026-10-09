@@ -1,0 +1,113 @@
+{
+  "format": "tastetable.saved-week.v1",
+  "receivedAt": "2026-10-08T17:00:00.000Z",
+  "savedAt": "2026-10-09T01:20:36.807Z",
+  "calendarId": "0123456789abcdef0123456789abcdef",
+  "inputs": {
+    "cuisines": [
+      "Authored fictional"
+    ],
+    "music": [],
+    "films": [],
+    "city": "Fixture only",
+    "constraints": [
+      "wheelchair"
+    ]
+  },
+  "response": {
+    "mock": true,
+    "plan": {
+      "meals": [
+        {
+          "day": "Monday",
+          "kind": "restaurant",
+          "entity_id": "SAME-FICTIONAL-ID",
+          "name": "Same café 海 <img src=x onerror=\"window.injected=1\">",
+          "why": "Authored occurrence 1; no real venue",
+          "affinity": null
+        },
+        {
+          "day": "Tuesday",
+          "kind": "restaurant",
+          "entity_id": "SAME-FICTIONAL-ID",
+          "name": "Same café 海 <img src=x onerror=\"window.injected=1\">",
+          "why": "Authored occurrence 2; no real venue",
+          "affinity": null
+        },
+        {
+          "day": "Wednesday",
+          "kind": "restaurant",
+          "entity_id": "SAME-FICTIONAL-ID",
+          "name": "Same café 海 <img src=x onerror=\"window.injected=1\">",
+          "why": "Authored occurrence 3; no real venue",
+          "affinity": null
+        },
+        {
+          "day": "Thursday",
+          "kind": "restaurant",
+          "entity_id": "SAME-FICTIONAL-ID",
+          "name": "Same café 海 <img src=x onerror=\"window.injected=1\">",
+          "why": "Authored occurrence 4; no real venue",
+          "affinity": null
+        },
+        {
+          "day": "Friday",
+          "kind": "restaurant",
+          "entity_id": "SAME-FICTIONAL-ID",
+          "name": "Same café 海 <img src=x onerror=\"window.injected=1\">",
+          "why": "Authored occurrence 5; no real venue",
+          "affinity": null
+        }
+      ],
+      "outing": null,
+      "notes": [
+        "Authored synthetic plan"
+      ],
+      "rejected": []
+    },
+    "comparison": {
+      "constraints": [
+        "wheelchair"
+      ],
+      "grounded": {
+        "picks": 5,
+        "with_qloo_entity_id": 5,
+        "with_affinity_evidence": 0,
+        "constraint_checked": 5,
+        "unsafe_candidates_rejected": 0
+      },
+      "llm_only": {
+        "picks": 5,
+        "with_qloo_entity_id": 5,
+        "with_affinity_evidence": 0,
+        "constraint_checked": 5,
+        "unsafe_candidates_rejected": 0
+      }
+    },
+    "llm_only": {
+      "meals": [],
+      "outing": {
+        "day": "Friday",
+        "name": "Synthetic comparison",
+        "why": "No recommendation"
+      }
+    },
+    "trace": [
+      {
+        "tool": "authored_fixture",
+        "args": {},
+        "result_summary": "No provider request"
+      }
+    ]
+  },
+  "week": {
+    "start": "2026-12-28",
+    "assignments": {
+      "pick-0": "Monday",
+      "pick-1": "Tuesday",
+      "pick-2": "Wednesday",
+      "pick-3": null,
+      "pick-4": "Friday"
+    }
+  }
+}

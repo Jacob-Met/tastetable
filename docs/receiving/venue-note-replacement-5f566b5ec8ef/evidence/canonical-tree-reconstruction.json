@@ -1,0 +1,554 @@
+{
+  "base": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+  "root_tree": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6",
+  "recursive_entries": 946,
+  "leaf_count": 818,
+  "verified_tree_objects": 129,
+  "trees": [
+    {
+      "path": "docs/receiving/venue-followup-6c20bb4b010e/pr38-adoption/candidate/static",
+      "tree": "885cb2951e738e0add3f3917554a0b2abaf9c2ec"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/history/display-before/static",
+      "tree": "e0cd05a34bf61518cf791de52d240e7d2d4be323"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/history/display-before/tests",
+      "tree": "19039527d0e7b98f874c57d0918adae7fe72e0bd"
+    },
+    {
+      "path": "docs/verification/calendar-writer-9e05-20261008/review/sibling-snapshot/static",
+      "tree": "1c32866142367e52046caef61076b285b887ac56"
+    },
+    {
+      "path": "docs/verification/calendar-writer-9e05-20261008/review/writer-snapshot-final/static",
+      "tree": "8b204d0f1688794cddd6d49a69d9d974d872aaef"
+    },
+    {
+      "path": "docs/receiving/20261008-6e5752b49b6f/browser/results",
+      "tree": "8a1fbedbea2208a4860d7274f53fd6440fcbccc4"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1/browser-downloads",
+      "tree": "94ef997ceb71e877c4211074047aa515b1269aa2"
+    },
+    {
+      "path": "docs/receiving/venue-followup-6c20bb4b010e/pr38-adoption/after",
+      "tree": "435dbb85b79439bf2ccc7df10e04ed3936829130"
+    },
+    {
+      "path": "docs/receiving/venue-followup-6c20bb4b010e/pr38-adoption/before",
+      "tree": "d4675ed9ccf07d14d7d5bf71391230ea48bba1d8"
+    },
+    {
+      "path": "docs/receiving/venue-followup-6c20bb4b010e/pr38-adoption/candidate",
+      "tree": "0ec0b53a411362eca031403bc572ef588dec6be8"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/history/display-before",
+      "tree": "05e17a492517cc4e7f735afda376c11e45e89f1c"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/history/r2",
+      "tree": "0809e092a74b8d25a081b438eb9e7071675dc5fe"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/history/r3",
+      "tree": "384b93da9ea0916cdb302473f6c00d6ec7cb25b6"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/r4-startup-blocked/browser-r4-disclosure",
+      "tree": "f756ad6bcee54ea2eda5be186e766e4dac0018ef"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/r4/browser-r4-disclosure",
+      "tree": "b2a320f8063d69ff5e714adc1916a20007cab785"
+    },
+    {
+      "path": "docs/verification/calendar-writer-9e05-20261008/current-main/evidence",
+      "tree": "338da3884608c160664099c4f39af8e1332d8fac"
+    },
+    {
+      "path": "docs/verification/calendar-writer-9e05-20261008/review/original-writer",
+      "tree": "cc6bafb4d8964f3a0ec90bee7ee666e76900400b"
+    },
+    {
+      "path": "docs/verification/calendar-writer-9e05-20261008/review/sibling-snapshot",
+      "tree": "d0bc0df4bfe26e5307360ee7f4ce964848fbd137"
+    },
+    {
+      "path": "docs/verification/calendar-writer-9e05-20261008/review/writer-snapshot-final",
+      "tree": "834d86ae98c32547b591a8cbbb86477df5d7cfc3"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-normal",
+      "tree": "7aadf8dce75c32a245eac9bb74788b7d86f0b6e7"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-optimized",
+      "tree": "dd7431968fbb27c5ce94fb6007adafd9454890dd"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-v2-normal",
+      "tree": "1650231feb34a856a7ae8e52c85ba5293452d72e"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/baseline-v2-optimized",
+      "tree": "077afbd50ba4db173bb5c52e682e965ebb7f3256"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-normal",
+      "tree": "3b55096341048a1a5a6d38b2f9469beab800511e"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-optimized",
+      "tree": "74faf8ba86fee75f3a7588fee4d1b49c23851af7"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-v2-normal",
+      "tree": "fb4228ea950f48131441aa0da57aa0b2d150a4ce"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/candidate-v2-optimized",
+      "tree": "f6fceb82448af07ebf60e46879af1b92ad95aac3"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review/source",
+      "tree": "e307a1315b702b091a0d32465afb651d07f202a2"
+    },
+    {
+      "path": "docs/qualification/saved-week-comparison-49f845d0dece/browser",
+      "tree": "d5a08dc5ca3c3d50346f09f4f7e59250245aed60"
+    },
+    {
+      "path": "docs/receiving/20261008-6e5752b49b6f/browser",
+      "tree": "34eac02c15e206082708cc9f13e7d72746d90e19"
+    },
+    {
+      "path": "docs/receiving/20261008-6e5752b49b6f/current-main-peer",
+      "tree": "f3731f3a5643e3e06b83c56f94af8402df4d64c0"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-baseline",
+      "tree": "e61b2ee3a7c7186fd9e81218edd47ae9eef820d8"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/browser-candidate-1",
+      "tree": "b08ccf18fb27089d47020c0fd66b879073700a8c"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6/independent-la7",
+      "tree": "8e98b6600e1ba7793532870f21ef50c8cabd8754"
+    },
+    {
+      "path": "docs/receiving/native-plan-batch-e3a41d2b3368/mixed-result-example",
+      "tree": "2b40e48a77c6753b0a0e233ea84ef18ce9aaefc4"
+    },
+    {
+      "path": "docs/receiving/native-plan-batch-e3a41d2b3368/root-output-receiving-20261008",
+      "tree": "26aed7f0c66eba67b82e4a51ea880e2e1bb6ea25"
+    },
+    {
+      "path": "docs/receiving/native-plan-batch-e3a41d2b3368/root-output-receiving-v2-20261008",
+      "tree": "c1f149d4f89b31850918d6fc201564b2bf17994b"
+    },
+    {
+      "path": "docs/receiving/saved-week-html-0378a7b6/browser-v1",
+      "tree": "007162ccef29ae582dadb44418c88d6592e9a194"
+    },
+    {
+      "path": "docs/receiving/saved-week-html-0378a7b6/browser-v2",
+      "tree": "b8877d52dd293d09d8dba84eb64728caebe9624b"
+    },
+    {
+      "path": "docs/receiving/saved-week-html-0378a7b6/codepoints-baseline-v2",
+      "tree": "b0fd23fb8f17a80d547c9e90d9c25020f1cba516"
+    },
+    {
+      "path": "docs/receiving/saved-week-html-0378a7b6/codepoints-baseline",
+      "tree": "8b1403689127813eb92969a6ddc6731bc1a34456"
+    },
+    {
+      "path": "docs/receiving/saved-week-html-0378a7b6/codepoints-fixed",
+      "tree": "7953b03b0eb0a92f54b70bec6eb602b34f322263"
+    },
+    {
+      "path": "docs/receiving/saved-week-html-0378a7b6/integration-2b347cee",
+      "tree": "ba300d9d849db438107c2eaedc005eb5b8c6cdeb"
+    },
+    {
+      "path": "docs/receiving/saved-week-html-0378a7b6/integration-7a0c55c",
+      "tree": "37df67031b5a1a90cbd08fdca577d2da38fd53de"
+    },
+    {
+      "path": "docs/receiving/venue-followup-6c20bb4b010e/pr38-adoption",
+      "tree": "3d46498c0414a8581a61ee41164f0eefbc4e26ed"
+    },
+    {
+      "path": "docs/receiving/venue-followup-db371a37f4c8/r3",
+      "tree": "434c70ae88b70bb875f624f6e29addc75538286b"
+    },
+    {
+      "path": "docs/receiving/venue-notes-3dcb83a1/author",
+      "tree": "490afbcaa41e0280e14436b86c60d68799ed14e3"
+    },
+    {
+      "path": "docs/receiving/venue-notes-3dcb83a1/independent",
+      "tree": "7f4507e35a52730e73f08eb91339cb9d683e1f70"
+    },
+    {
+      "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/candidate-v1",
+      "tree": "8d95ffadd108c2d31b42ce8d4ff6f48412dd0eda"
+    },
+    {
+      "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/candidate-v2",
+      "tree": "b35f24685e4365c01efc56b50c3877296397956d"
+    },
+    {
+      "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1/independent",
+      "tree": "5b1b2b7a97061cc24f237ceec0b28b81120c2a05"
+    },
+    {
+      "path": "docs/saved-week/independent/qualified",
+      "tree": "ed05457ae66298bd74461b7b69c4dbd32eb7500c"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/final",
+      "tree": "6ae5ef5a0262a2f78fa6520dca3423d4a75f551f"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/history",
+      "tree": "30811c1f5cba84db19e0a361236ddf3ccc3aa0a0"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author/transport",
+      "tree": "f91e6afe69f78dc0acfd81db8395fbb94e77631d"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r2",
+      "tree": "c75244b78cda0ab2a53b47e149ab9a14f01f29e8"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r3-disclosure",
+      "tree": "de2c0ae797f83dd012ebb836b3acfad0a95e794a"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/browser-r3",
+      "tree": "1d38b57ea6e093bab76051ab5f800377456c5ebd"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/r4-startup-blocked",
+      "tree": "07752d783883bb3441bafe497826b7f8c2669bcb"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent/r4",
+      "tree": "b3a66305b436523f0111ace05f4c9ed3db00cb34"
+    },
+    {
+      "path": "docs/verification/calendar-writer-9e05-20261008/composed-browser",
+      "tree": "a6fc161c1fb0b495303dbc95edda7c7df3cd9b1e"
+    },
+    {
+      "path": "docs/verification/calendar-writer-9e05-20261008/current-main",
+      "tree": "21ec178738fd34f50452053b545ceb8880207c4b"
+    },
+    {
+      "path": "docs/verification/calendar-writer-9e05-20261008/review",
+      "tree": "e7bdeb5db4b000868e8994bb21f928dec91dee1a"
+    },
+    {
+      "path": "docs/verification/low-sodium-evidence-e82707f2bc62/independent-peer",
+      "tree": "646e930f544f59a9075217a88445d4530681fcb4"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/independent-review",
+      "tree": "b63a346cee92a4b48113af5b343b998b60bc6ae5"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b/mac-pytest",
+      "tree": "4296a3a8766804052e79fab6d600792761fcf58b"
+    },
+    {
+      "path": "web-demo-offline/receipts/calendar-066deeadcc8b/current-author",
+      "tree": "e86b62d5bab0166f08e52195c8acffcb09837c8e"
+    },
+    {
+      "path": "web-demo-offline/receipts/calendar-066deeadcc8b/independent-linux",
+      "tree": "176d489024438e978276f05257d615d38fdc1ce5"
+    },
+    {
+      "path": "web-demo-offline/receipts/calendar-066deeadcc8b/original-author",
+      "tree": "0c16e7c8551dcf9ea4f964df8182d35c3ea80bc4"
+    },
+    {
+      "path": "docs/caregiver-week/evidence",
+      "tree": "75320e49b48f29550316bc9965d929a4b7efdd0f"
+    },
+    {
+      "path": "docs/qualification/native-plan-cli-bd1abdb2f886-20261008",
+      "tree": "028a5e3d692f9b264e48726e603069e78a510164"
+    },
+    {
+      "path": "docs/qualification/saved-week-comparison-49f845d0dece",
+      "tree": "cb117910bd84f7ee1dd1fd620a368518faf9dcbe"
+    },
+    {
+      "path": "docs/receipts/week-calendar-20261008-0df473646168",
+      "tree": "c7490acfceaab42de96e690626855ffb6e63fecd"
+    },
+    {
+      "path": "docs/receiving/20261008-6e5752b49b6f",
+      "tree": "ef9fd91d82d1f879135953e0a357a0f7bd113efb"
+    },
+    {
+      "path": "docs/receiving/caregiver-change-brief-0378a7b6",
+      "tree": "6c064e5ae55485d1fe7665ea5e40a5a0e2214e93"
+    },
+    {
+      "path": "docs/receiving/native-plan-batch-e3a41d2b3368",
+      "tree": "04ea707c44d9579fd794810c73307519e616a87e"
+    },
+    {
+      "path": "docs/receiving/native-plan-week-7879c2abc07f",
+      "tree": "d744214cbe990d888e968af7ae09dce592f09a38"
+    },
+    {
+      "path": "docs/receiving/saved-week-html-0378a7b6",
+      "tree": "214dabc82da1c195dcd5a36ddfba09a891c4cb3f"
+    },
+    {
+      "path": "docs/receiving/venue-followup-6c20bb4b010e",
+      "tree": "6af4004ffd9eea7745724528a7162a5b372bbbfd"
+    },
+    {
+      "path": "docs/receiving/venue-followup-db371a37f4c8",
+      "tree": "3c643dfe1d74cf1c1de65b2d8417a0e33ae470ba"
+    },
+    {
+      "path": "docs/receiving/venue-notes-3dcb83a1",
+      "tree": "61d8052e370001352664a975f985bca162c1ffbc"
+    },
+    {
+      "path": "docs/receiving/visit-record-347f3417824d",
+      "tree": "556f80d0a01dfed3e55de7a6f666f4e832ac92b9"
+    },
+    {
+      "path": "docs/receiving/visit-record-csv-65ae877160f6",
+      "tree": "f4ab298f0c15d45a5a49ccb8bceafdc9de76c033"
+    },
+    {
+      "path": "docs/receiving/wheelchair-evidence-20261008-3dcb83a1",
+      "tree": "c32c803165b2c621ad41c78099223d3fe4eb1bad"
+    },
+    {
+      "path": "docs/saved-week/evidence",
+      "tree": "89e369d4a545ffde4c25b6950d2b896d5064a594"
+    },
+    {
+      "path": "docs/saved-week/independent",
+      "tree": "55d2f360123481a5acf408d7e53b0c6f2540a1df"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/author",
+      "tree": "c6398c06ee2cde3db82481a555ac47d9ba427f52"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/independent",
+      "tree": "14f8869de38694734607d89b34276cd21f22eddd"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/integration-02",
+      "tree": "205f1f2e3b3e4c5555c32760134c1172b3170c58"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e/integration-03",
+      "tree": "839e99aa79798cedee6aeab1097ada5fbab3e11d"
+    },
+    {
+      "path": "docs/verification/calendar-writer-9e05-20261008",
+      "tree": "5d9e3c9b5d895e3d2ea7d30f785f3095f8048308"
+    },
+    {
+      "path": "docs/verification/low-sodium-evidence-20261008-e827",
+      "tree": "00a2edf7725c90565ccb098c5b68d14de39b2839"
+    },
+    {
+      "path": "docs/verification/low-sodium-evidence-e82707f2bc62",
+      "tree": "c038f06b8136ed697fd8a1fdb6606938e8baf6cf"
+    },
+    {
+      "path": "docs/verification/recommendation-notes-20261008-9e05c0",
+      "tree": "b7fbed80ea64dc5ececa6926150c21aba79dd83c"
+    },
+    {
+      "path": "docs/verification/soft-food-evidence-20261008-cf5799f6d38b",
+      "tree": "beedaabb82b1e79da28be2d011e152db8169cf2d"
+    },
+    {
+      "path": "docs/verification/tool-argument-recovery-20261008-de6263",
+      "tree": "1d3a9895bd71de132fc90863fec9233cc8b3a873"
+    },
+    {
+      "path": "web-demo-offline/data/records",
+      "tree": "c23f88cf98b127925764ee80c6b9f14c05845b86"
+    },
+    {
+      "path": "web-demo-offline/receipts/arrangement-history-68094585a1c2",
+      "tree": "556654ab8a189cffe2e1bea2da45a3587b9639a8"
+    },
+    {
+      "path": "web-demo-offline/receipts/browser",
+      "tree": "3ac2d7b7e1a1771bc067e32b77592022c6756347"
+    },
+    {
+      "path": "web-demo-offline/receipts/calendar-066deeadcc8b",
+      "tree": "6f11af2c85169efa39205b76565f8cdaefdb52bc"
+    },
+    {
+      "path": "web-demo-offline/receipts/capture-guards",
+      "tree": "7f4974c89048546da3697802160863ffd0f396d0"
+    },
+    {
+      "path": "web-demo-offline/receipts/independent",
+      "tree": "283b2ae17977ca238e079c3e8df1d232b8d91a5e"
+    },
+    {
+      "path": "web-demo-offline/receipts/saved-week-20261008-81ba1ed0179c",
+      "tree": "995ca1b668acf5be5036c2197c56fc53d2976584"
+    },
+    {
+      "path": ".github/workflows",
+      "tree": "d61f55c2f116eca448a1217a894ed65844b4e8bf"
+    },
+    {
+      "path": "docs/caregiver-week",
+      "tree": "0eb78e972ac61ea28473baa83ec95f409d2ecc14"
+    },
+    {
+      "path": "docs/qualification",
+      "tree": "43eab572a6b7e109c216e1cde4fa58e75a326883"
+    },
+    {
+      "path": "docs/receipts",
+      "tree": "44f692b7e9a928108873aa83017f01296b373e1f"
+    },
+    {
+      "path": "docs/receiving",
+      "tree": "0dbffd3b9ed573d74cca3e5462c3e2bf8230e5fc"
+    },
+    {
+      "path": "docs/saved-week",
+      "tree": "4b6cf826a0c0b2f7d1ccaf21ecb6f2babf5ae016"
+    },
+    {
+      "path": "docs/venue-followup-6c20bb4b010e",
+      "tree": "08253c3f03c7481f92e13eba2b90bba3aa296019"
+    },
+    {
+      "path": "docs/venue-notes",
+      "tree": "f91d846d9191c5356fb5cd811460e01e01f286ba"
+    },
+    {
+      "path": "docs/verification",
+      "tree": "c39d9943b0cdbb8509dfe84a3106d6af4a06f6cb"
+    },
+    {
+      "path": "docs/visit-record",
+      "tree": "784182f1a6cbb04a2b8f4a1caa389368c9448668"
+    },
+    {
+      "path": "tests/fixtures",
+      "tree": "4cf66c116e5a3c491eebd0e46cede1c2e5632517"
+    },
+    {
+      "path": "web-demo-offline/data",
+      "tree": "0f77bba5e1ff2c3219ee93e6d4b834aa6df45d2b"
+    },
+    {
+      "path": "web-demo-offline/dist",
+      "tree": "7ebcf2c6a394a7c32056f97e43882026efb1b4c6"
+    },
+    {
+      "path": "web-demo-offline/receipts",
+      "tree": "13c4b679390030d08a469b49442ec57bad54663d"
+    },
+    {
+      "path": "web-demo-offline/tests",
+      "tree": "52ba9bcf04f71030d2dfb23f4e61435dd12f0779"
+    },
+    {
+      "path": "web-demo-offline/tools",
+      "tree": "6d84ec4068b2116bf23862df228d97f1cf9f28c2"
+    },
+    {
+      "path": "",
+      "tree": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6"
+    },
+    {
+      "path": ".github",
+      "tree": "2380fed8125b787d9b1502bd63dd088b4ead8d69"
+    },
+    {
+      "path": "docs",
+      "tree": "98a9b9c31b10e3c12c64bebcc8a58f0ad150ce79"
+    },
+    {
+      "path": "examples",
+      "tree": "60c94611019f2d19a11dc84e17fe08a66ec1936d"
+    },
+    {
+      "path": "fixtures",
+      "tree": "da4035967ebf7172333e426fd8ddfaf77558cc11"
+    },
+    {
+      "path": "scripts",
+      "tree": "ea5d5c11a784a5bff639e28cb2d3188b33a336d0"
+    },
+    {
+      "path": "static",
+      "tree": "2f8c05d6489b2113582d65650370384d719d5746"
+    },
+    {
+      "path": "tests",
+      "tree": "46de8829578f970fb9a2c3216a88bcb3a7f7b84e"
+    },
+    {
+      "path": "tools",
+      "tree": "1f7b9f1c252866db7cab92eb2915a98d8bc4f5c5"
+    },
+    {
+      "path": "web-demo-offline",
+      "tree": "1abc3b8d941bd9ec749598701608ce4e02a56917"
+    }
+  ],
+  "instructions": [],
+  "workflows": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e6273139a9bf417a4ee42f4501d067b1c9d95a0",
+      "size": 652,
+      "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/0e6273139a9bf417a4ee42f4501d067b1c9d95a0"
+    },
+    {
+      "path": ".github/workflows/native-plan-week-browser.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d674f2698d1b048075a1c49c2035b1096be668f2",
+      "size": 3299,
+      "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/d674f2698d1b048075a1c49c2035b1096be668f2"
+    },
+    {
+      "path": ".github/workflows/week-compare.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e591fca2db970460611269ad7d1c53a6bc70f028",
+      "size": 1269,
+      "url": "https://api.github.com/repos/Jacob-Met/tastetable/git/blobs/e591fca2db970460611269ad7d1c53a6bc70f028"
+    }
+  ],
+  "remote_writes": false,
+  "limit": "Source-tree reconstruction only; source-only branch not yet published and PR/main held."
+}

@@ -1,0 +1,100 @@
+{
+  "current": [
+    {
+      "key": "pick-0",
+      "date": "2026-12-28",
+      "note": {
+        "status": "follow_up",
+        "question": "Question?\r\nKeep exact spacing  ",
+        "reply": "BEFORE_CHANGED </pre><img src=x onerror=\"window.injected=1\">\r\n海 🧭",
+        "replyQuestions": "Question?\r\nKeep exact spacing  ",
+        "nextStep": "Call before visiting"
+      }
+    },
+    {
+      "key": "pick-1",
+      "date": "2026-12-29",
+      "note": {
+        "status": "follow_up",
+        "question": "Question?\r\nKeep exact spacing  ",
+        "reply": "REMOVE_CURRENT_ONLY_SENTINEL",
+        "replyQuestions": "Question?\r\nKeep exact spacing  ",
+        "nextStep": "Keep until review"
+      }
+    },
+    {
+      "key": "pick-2",
+      "date": "2026-12-30",
+      "note": {
+        "status": "follow_up",
+        "question": "Question?\r\nKeep exact spacing  ",
+        "reply": "EXACT_UNCHANGED\r\n  keep  ",
+        "replyQuestions": "Question?\r\nKeep exact spacing  ",
+        "nextStep": "Wait"
+      }
+    },
+    {
+      "key": "pick-3",
+      "date": "2027-01-04",
+      "note": {
+        "status": "follow_up",
+        "question": "Question?\r\nKeep exact spacing  ",
+        "reply": "REMOVE_OLD_DATE_SENTINEL",
+        "replyQuestions": "Question?\r\nKeep exact spacing  ",
+        "nextStep": ""
+      }
+    }
+  ],
+  "incoming": [
+    {
+      "key": "pick-0",
+      "date": "2026-12-28",
+      "note": {
+        "status": "not_contacted",
+        "question": "",
+        "reply": "",
+        "replyQuestions": null,
+        "nextStep": ""
+      }
+    },
+    {
+      "key": "pick-2",
+      "date": "2026-12-30",
+      "note": {
+        "status": "follow_up",
+        "question": "Question?\r\nKeep exact spacing  ",
+        "reply": "EXACT_UNCHANGED\r\n  keep  ",
+        "replyQuestions": "Question?\r\nKeep exact spacing  ",
+        "nextStep": "Wait"
+      }
+    },
+    {
+      "key": "pick-4",
+      "date": "2027-01-01",
+      "note": {
+        "status": "not_contacted",
+        "question": null,
+        "reply": "",
+        "replyQuestions": null,
+        "nextStep": "New note <b>literal</b>"
+      }
+    },
+    {
+      "key": "pick-3",
+      "date": "2026-12-31",
+      "note": {
+        "status": "follow_up",
+        "question": "Question?\r\nKeep exact spacing  ",
+        "reply": "ADD_OMITTED_DATE_SENTINEL",
+        "replyQuestions": "Question?\r\nKeep exact spacing  ",
+        "nextStep": ""
+      }
+    }
+  ],
+  "counts": {
+    "added": 2,
+    "removed": 2,
+    "changed": 1,
+    "unchanged": 1
+  }
+}

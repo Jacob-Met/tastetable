@@ -1,0 +1,44 @@
+{
+  "phase": "baseline",
+  "source": "D:\\HAMON\\tastetable-note-replacement-5f566b5ec8ef\\baseline-browser-source",
+  "source_sha256": {
+    "static/app.js": "6e87cfbf89e37792d384795382059a5d2245312c1b4bf0038991a3af3ff8c327",
+    "static/calendar.css": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+    "static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+    "static/index.html": "3472df790ad95b6a3e1edc59f5b4fb708d37063e5a74d0185c6fe67ff6b6c34c",
+    "static/plan-request.js": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+    "static/style.css": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+    "static/venue_followup.css": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+    "static/venue_followup.mjs": "61bb9cf497b5a37a32afd1b23729e128aed2631cf2c570a1485ca4f0ffbe632c",
+    "static/venue_note_file.mjs": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+    "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+    "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+  },
+  "checks": [
+    "real saved-week and current-note import preserves all four authored records",
+    "baseline shows incoming notes but omits current-only removal details",
+    "baseline omits the previous changed reply",
+    "baseline reading leaves current notes exact",
+    "no page exception or external network request",
+    "all served runtime source bytes remain exact"
+  ],
+  "page_errors": [],
+  "external_requests": [],
+  "server_requests": [
+    "/",
+    "/static/style.css",
+    "/static/calendar.css",
+    "/static/venue_followup.css",
+    "/static/plan-request.js",
+    "/static/calendar.js",
+    "/static/app.js",
+    "/static/week_plan.mjs",
+    "/static/week_file.mjs",
+    "/static/venue_followup.mjs",
+    "/static/venue_note_file.mjs",
+    "/api/health",
+    "/api/personas"
+  ],
+  "status": "passed",
+  "browser": "154.0.8037.97"
+}

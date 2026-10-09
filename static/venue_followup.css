@@ -29,3 +29,9 @@
 .contact-file-preview p, .contact-file-preview h5, [data-contact-file-source] { overflow-wrap:anywhere; }
 .contact-file-preview pre { white-space:pre-wrap; overflow-wrap:anywhere; font:inherit; }
 @media print { .contact-file-preview, .contact-file-status { display:none !important; } }
+
+/* Separate companion replacement review, including records absent from the file. */
+[data-contact-file-records] { padding-left:1.4rem; }
+[data-contact-file-records] > li { border-top:1px solid #ccd; margin-top:1rem; padding-top:.5rem; min-width:0; }
+[data-contact-file-records] h6 { font:600 .95rem/1.4 system-ui,sans-serif; margin:.8rem 0 .3rem; overflow-wrap:anywhere; }
+[data-contact-file-records] pre { margin:.4rem 0 1rem; }

@@ -1,0 +1,42 @@
+{
+  "schema": "tastetable.venue-note-replacement-author.v1",
+  "time": "2026-10-09T01:28:21.150730+00:00",
+  "source_commit": "c06f1eb04cda90c4d7ff7df7dde698da559be087",
+  "base": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+  "base_tree": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6",
+  "scope": "18-file exact native closure +9 owned product/test/guide paths; not a full native clone",
+  "native_versions": {
+    "node": "v24.19.0",
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "browser": "Chrome154.0.8037.97"
+  },
+  "qualification": {
+    "original_model": 22,
+    "candidate_model": 30,
+    "baseline_browser": 6,
+    "candidate_browser": 24,
+    "visual_only_final": "3 setup/source assertions,4 selected-region screenshots; no product/suite replay"
+  },
+  "source_preservation": {
+    "outside_showFile_and_one_import": "exact",
+    "unmodified_original_closure_files": 14,
+    "index": "one disclosure label only",
+    "css": "appended review rules only",
+    "maintained_browser": "one helper filename added to explicit source closure; all assertions unchanged"
+  },
+  "failure_phases": [
+    "ThinkPad task mkdir ENOSPC before source; follow-up contract ENOENT.",
+    "First MSI inline Python preflight SyntaxError from shell quoting before task creation. Saved native script succeeded.",
+    "Initial local packet-script orchestration had a JavaScript template parse error before any tool call or native write; corrected quoting then used."
+  ],
+  "source_fence_addendum": [
+    "tools/check_native_plan_week_browser.mjs strict source list gains exactly one new module entry; required to serve the imported helper.",
+    "tools/venue_note_changes_fixture.mjs is an authored synthetic fixture producer only."
+  ],
+  "limits": [
+    "Independent acceptance pending.",
+    "No complete Python/backend or maintained producer-browser suite rerun claimed; unchanged backend outside contribution.",
+    "No hosted CI, canonical source merge, deployment, provider, account or real caregiver data.",
+    "No-Actions PR/main hold remains. Source branch publication requires fresh exact workflow/ref checks."
+  ]
+}

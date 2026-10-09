@@ -1,0 +1,39 @@
+{
+  "schema": "hamon.external_contribution.v1",
+  "worker_id": "chatgpt:5f566b5ec8ef:production",
+  "repository": "Jacob-Met/tastetable",
+  "base": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+  "base_tree": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6",
+  "state": "claimed_before_source_edits",
+  "root": "D:/HAMON/tastetable-note-replacement-5f566b5ec8ef",
+  "beneficiary": "A caregiver opening a compatible saved venue-note file needs to see exactly which current occurrence/date notes will disappear or change before explicit whole-file replacement.",
+  "paths": [
+    "static/venue_note_changes.mjs (new pure comparison of admitted records)",
+    "static/venue_note_file.mjs: import and showFile rendering only",
+    "static/index.html: existing venue-note preview disclosure label only",
+    "static/venue_followup.css: new review-card styles only if needed",
+    "tests/venue_note_changes.test.mjs (new)",
+    "tools/check_venue_note_changes_browser.py (new actual receiving)",
+    "docs/VENUE_NOTE_REPLACEMENT.md (new)",
+    "docs/receiving/venue-note-replacement-5f566b5ec8ef (new evidence)"
+  ],
+  "contract": [
+    "Use only exact key/date identity inside the already admitted same accepted origin; never match names or entity IDs.",
+    "Show every current/incoming union record as removed, changed, added or unchanged; changed fields compare all five stored note fields exactly, including null versus empty and line endings.",
+    "Review is read-only. Full literal before/after values and omitted/other-date records remain visible; no synthesized venue facts or merged records.",
+    "Existing file admission, stale revision/context guards, Cancel/Replace/save/download/retirement handlers and model replaceRecords stay byte-identical.",
+    "Only current explicit Replace applies exact admitted incoming records. A new read, note edit, arrangement/date/source change or retirement invalidates review using existing mechanisms.",
+    "Qualify native Node model and actual browser authored fixtures, real file selection, keyboard, mobile, cancellation, explicit Apply, empty deletion, stale retirement and literal user text. No providers, uploads, storage or real caregiver data."
+  ],
+  "owners_preserved": [
+    "#55 d98 combined editable envelope and app/worksheet hooks",
+    "#54 c770 optional companion HTML",
+    "#67 60b2 native call-sheet CLI",
+    "#40/#36/#56/#57 regular planner source; #62/#63/#64/#65 saved-visit readers",
+    "a0eb offline bulk and b47 offline readable-week; all web-demo-offline",
+    "original PR49 separate-note codec integrated; PR33 worksheet integrated"
+  ],
+  "ownership_coverage": "Fresh open issues through67, #55 full comments, closed integrated PR49/33/16, bounded matching Conscience through5208, readable native coord records;32 permission-denied files were not inferred abandoned. No matching replacement-diff scope found.",
+  "instructions": "Current README read; complete946-entry tree has no AGENTS.md. All3 workflow definitions read: pushes main and PR events only; no issue/comment event. No Actions or source publication in this phase.",
+  "resource": "ThinkPad root creation failed ENOSPC before any source; MSI D: has407868272640 bytes free and existing Python3.11.9, Node, Chrome and Playwright. Use only this private Windows source/profile/evidence root; no runtime/dependency installation."
+}

@@ -1,0 +1,16 @@
+{
+  "command": [
+    "C:\\Users\\Veria\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "D:\\HAMON\\tastetable-note-replacement-5f566b5ec8ef\\source\\tools\\check_venue_note_changes_browser.py",
+    "--root",
+    "D:\\HAMON\\tastetable-note-replacement-5f566b5ec8ef\\source",
+    "--fixtures",
+    "D:\\HAMON\\tastetable-note-replacement-5f566b5ec8ef\\evidence\\fixtures",
+    "--output",
+    "D:\\HAMON\\tastetable-note-replacement-5f566b5ec8ef\\evidence\\browser-candidate-v1"
+  ],
+  "exit": 0
+}

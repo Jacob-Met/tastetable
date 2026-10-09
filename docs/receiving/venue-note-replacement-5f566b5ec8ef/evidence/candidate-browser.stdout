@@ -1,0 +1,25 @@
+PASS real saved-week and current-note import preserves all four authored records
+PASS all added changed removed and unchanged counts are visible
+PASS all six distinct occurrence/date records are reviewed
+PASS both current-only removals remain readable
+PASS changed card exposes five exact field changes and clearing
+PASS literal names and notes do not create markup
+PASS review alone preserves every current record
+PASS keyboard Cancel preserves current records
+PASS wrong-origin.json refusal preserves current records
+PASS malformed.json refusal preserves current records
+PASS editing a note retires the replacement preview
+PASS the edit survives with no incoming replacement
+PASS changing the week retires the preview and retains old-date records
+PASS 390px review keeps all record cards within the viewport
+PASS explicit keyboard Replace applies exactly the incoming records
+PASS note replacement preserves complete saved week and calendar identity
+PASS empty file names every current record that will be removed
+PASS cancelling empty replacement retains all notes
+PASS only explicit Replace clears the complete note set
+PASS identical companion keeps every record unchanged
+PASS late deferred real-file read cannot restore retired review
+PASS late read leaves the exact current edit in place
+PASS no page exception or external network request
+PASS all served runtime source bytes remain exact
+{"status": "passed", "checks": 24, "error": null}

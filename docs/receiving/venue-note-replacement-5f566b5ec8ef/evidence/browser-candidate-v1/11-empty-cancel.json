@@ -1,0 +1,151 @@
+{
+  "format": "tastetable.venue-notes.v1",
+  "savedAt": "2026-10-09T01:20:55.117Z",
+  "origin": {
+    "receivedAt": "2026-10-08T17:00:00.000Z",
+    "calendarId": "0123456789abcdef0123456789abcdef",
+    "inputs": {
+      "cuisines": [
+        "Authored fictional"
+      ],
+      "music": [],
+      "films": [],
+      "city": "Fixture only",
+      "constraints": [
+        "wheelchair"
+      ]
+    },
+    "response": {
+      "mock": true,
+      "plan": {
+        "meals": [
+          {
+            "day": "Monday",
+            "kind": "restaurant",
+            "entity_id": "SAME-FICTIONAL-ID",
+            "name": "Same café 海 <img src=x onerror=\"window.injected=1\">",
+            "why": "Authored occurrence 1; no real venue",
+            "affinity": null
+          },
+          {
+            "day": "Tuesday",
+            "kind": "restaurant",
+            "entity_id": "SAME-FICTIONAL-ID",
+            "name": "Same café 海 <img src=x onerror=\"window.injected=1\">",
+            "why": "Authored occurrence 2; no real venue",
+            "affinity": null
+          },
+          {
+            "day": "Wednesday",
+            "kind": "restaurant",
+            "entity_id": "SAME-FICTIONAL-ID",
+            "name": "Same café 海 <img src=x onerror=\"window.injected=1\">",
+            "why": "Authored occurrence 3; no real venue",
+            "affinity": null
+          },
+          {
+            "day": "Thursday",
+            "kind": "restaurant",
+            "entity_id": "SAME-FICTIONAL-ID",
+            "name": "Same café 海 <img src=x onerror=\"window.injected=1\">",
+            "why": "Authored occurrence 4; no real venue",
+            "affinity": null
+          },
+          {
+            "day": "Friday",
+            "kind": "restaurant",
+            "entity_id": "SAME-FICTIONAL-ID",
+            "name": "Same café 海 <img src=x onerror=\"window.injected=1\">",
+            "why": "Authored occurrence 5; no real venue",
+            "affinity": null
+          }
+        ],
+        "outing": null,
+        "notes": [
+          "Authored synthetic plan"
+        ],
+        "rejected": []
+      },
+      "comparison": {
+        "constraints": [
+          "wheelchair"
+        ],
+        "grounded": {
+          "picks": 5,
+          "with_qloo_entity_id": 5,
+          "with_affinity_evidence": 0,
+          "constraint_checked": 5,
+          "unsafe_candidates_rejected": 0
+        },
+        "llm_only": {
+          "picks": 5,
+          "with_qloo_entity_id": 5,
+          "with_affinity_evidence": 0,
+          "constraint_checked": 5,
+          "unsafe_candidates_rejected": 0
+        }
+      },
+      "llm_only": {
+        "meals": [],
+        "outing": {
+          "day": "Friday",
+          "name": "Synthetic comparison",
+          "why": "No recommendation"
+        }
+      },
+      "trace": [
+        {
+          "tool": "authored_fixture",
+          "args": {},
+          "result_summary": "No provider request"
+        }
+      ]
+    }
+  },
+  "records": [
+    {
+      "key": "pick-0",
+      "date": "2026-12-28",
+      "note": {
+        "status": "not_contacted",
+        "question": "",
+        "reply": "",
+        "replyQuestions": null,
+        "nextStep": ""
+      }
+    },
+    {
+      "key": "pick-2",
+      "date": "2026-12-30",
+      "note": {
+        "status": "follow_up",
+        "question": "Question?\r\nKeep exact spacing  ",
+        "reply": "EXACT_UNCHANGED\r\n  keep  ",
+        "replyQuestions": "Question?\r\nKeep exact spacing  ",
+        "nextStep": "Wait"
+      }
+    },
+    {
+      "key": "pick-4",
+      "date": "2027-01-01",
+      "note": {
+        "status": "not_contacted",
+        "question": null,
+        "reply": "",
+        "replyQuestions": null,
+        "nextStep": "New note <b>literal</b>"
+      }
+    },
+    {
+      "key": "pick-3",
+      "date": "2026-12-31",
+      "note": {
+        "status": "follow_up",
+        "question": "Question?\r\nKeep exact spacing  ",
+        "reply": "ADD_OMITTED_DATE_SENTINEL",
+        "replyQuestions": "Question?\r\nKeep exact spacing  ",
+        "nextStep": ""
+      }
+    }
+  ]
+}

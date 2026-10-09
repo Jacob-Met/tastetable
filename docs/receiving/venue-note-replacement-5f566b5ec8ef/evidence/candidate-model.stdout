@@ -1,0 +1,38 @@
+✔ questions use the native purpose and constraints; original unknown explanation survives (3.1685ms)
+✔ a different date starts a separate note; returning restores only that occurrence's note (0.8771ms)
+✔ two occurrences sharing an entity and date retain distinct caregiver notes (1.0706ms)
+✔ omitted picks have no active contact card or exported note, and restore retains its date (1.8319ms)
+✔ another week has separate notes even when weekday and occurrence are unchanged (0.5028ms)
+✔ an identical newly accepted response cannot inherit or access the prior worksheet (0.4658ms)
+✔ source provenance cannot be relabeled while borrowing the original source objects (0.2664ms)
+✔ an event still carrying the old date cannot update the newly scheduled visit (0.4425ms)
+✔ the printable export carries exact source, dates and labeled multiline caregiver notes (0.9263ms)
+✔ empty scheduled weeks cannot create an apparently populated call sheet (0.44ms)
+✔ unknown fields, status values and oversized notes do not modify a retained note (0.7391ms)
+✔ a reopened source retains its filename, age and unchanged-check label in the call sheet (0.354ms)
+✔ editable questions remain literal, occurrence/date-bound text alongside unchanged source checks (0.4978ms)
+✔ revising questions retains the earlier reply with its actual question context and a follow-up hold (0.888ms)
+✔ unchanged questions preserve status; returning to the earlier questions removes only the mismatch (0.4925ms)
+✔ union classifies exact identities without dropping current-only records (2.1796ms)
+✔ empty replacement exposes every deletion; empty current exposes every addition (0.3174ms)
+✔ reordering alone never changes notes and retains stable current order (0.2472ms)
+✔ all five stored fields compare exactly, including null versus empty (0.3107ms)
+✔ literal Unicode, markup, spacing and CRLF are retained without normalization (0.2472ms)
+✔ projection is detached, deeply frozen and cannot mutate either input (0.9171ms)
+✔ unexpected missing fields and duplicate identities refuse instead of hiding records (0.3289ms)
+✔ actual native model records include omitted visits and old dates without mutation (2.961ms)
+✔ companion restores all exact records across reopening, omitted visits and other dates (10.5383ms)
+✔ same venue, day and visible name keep their separate original occurrence identities (2.3388ms)
+✔ late invalid or duplicate records cannot partially replace current notes (1.5266ms)
+✔ unsupported field types and inconsistent reply history are refused literally (6.6352ms)
+✔ full origin equality accepts reordered JSON keys but refuses another request or response (4.1714ms)
+✔ bounded v1 file admission and explicit empty replacement preserve the original week codec (7.0683ms)
+✔ source-bound model guard and exact existing field limits remain in the new file boundary (1.6361ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 153.476

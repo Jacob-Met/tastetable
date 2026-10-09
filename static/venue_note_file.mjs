@@ -1,5 +1,6 @@
 /** Explicit companion files for an existing accepted plan's editable venue notes. */
 import { makeWeekFile } from "./week_file.mjs";
+import { compareVenueNotes } from "./venue_note_changes.mjs";
 
 export const VENUE_NOTE_FORMAT = "tastetable.venue-notes.v1";
 export const VENUE_NOTE_BYTE_LIMIT = 2 * 1024 * 1024;
@@ -100,19 +101,42 @@ export function mountVenueNoteFiles(root, current, render, states) {
   function showFile(file, result, context, token) {
     const currentVisits = new Set(context.model.entries(context.state).map(({ key, date }) => JSON.stringify([key, date])));
     const visible = result.records.filter(({ key, date }) => currentVisits.has(JSON.stringify([key, date]))).length;
-    description.textContent = `“${file.name}” — saved ${result.savedAt}. ${result.records.length} recorded visit/date notes; ${visible} match visits currently scheduled, ${result.records.length - visible} are for other dates or omitted visits. Replace all ${context.model.snapshotRecords().length} current records with this file? The plan and its arrangement stay as they are.`;
-    for (const record of result.records) {
-      const pick = context.state.picks.find(({ key }) => key === record.key);
-      const item = document.createElement("li"), title = document.createElement("h5"), text = document.createElement("pre");
-      title.textContent = `${record.date} — suggested visit ${context.state.picks.indexOf(pick) + 1}: ${pick.pick.name}`;
+    const changes = compareVenueNotes(context.model.snapshotRecords(), result.records);
+    const labels = { status: "Contact status", question: "Questions", reply: "Reply / notes",
+      replyQuestions: "Questions associated with that reply", nextStep: "Next step" };
+    const names = { added: "Add", removed: "Remove", changed: "Change", unchanged: "Keep unchanged" };
+    description.textContent = `“${file.name}” — saved ${result.savedAt}. ${result.records.length} incoming visit/date records; ${visible} match visits currently scheduled, ${result.records.length - visible} are for other dates or omitted visits. Replacement: ${changes.counts.added} added, ${changes.counts.changed} changed, ${changes.counts.removed} removed, ${changes.counts.unchanged} unchanged. Replace all ${changes.currentCount} current records with this file? The plan and its arrangement stay as they are.`;
+    function noteView(note, heading) {
+      const section = document.createElement("section"), title = document.createElement("h6"), text = document.createElement("pre");
+      title.textContent = heading;
       text.textContent = [
-        `Contact status: ${states[record.note.status]}`,
-        "Questions: " + (record.note.question ?? "(Original suggested questions for this visit/date.)"),
-        "Reply / notes: " + (record.note.reply || "(No reply details entered.)"),
-        ...(record.note.replyQuestions !== null ? ["Questions associated with that reply: " + record.note.replyQuestions] : []),
-        "Next step: " + (record.note.nextStep || "(No next step recorded.)"),
+        `Contact status: ${states[note.status]}`,
+        "Questions: " + (note.question === null ? "(Original suggested questions for this visit/date; no override.)"
+          : note.question === "" ? "(No questions entered; explicit empty override.)" : note.question),
+        "Reply / notes: " + (note.reply === "" ? "(No reply details entered.)" : note.reply),
+        "Questions associated with that reply: " + (note.replyQuestions === null ? "(No earlier-question snapshot.)"
+          : note.replyQuestions === "" ? "(An explicitly empty question snapshot.)" : note.replyQuestions),
+        "Next step: " + (note.nextStep === "" ? "(No next step recorded.)" : note.nextStep),
       ].join("\n");
-      item.append(title, text); list.append(item);
+      section.append(title, text); return section;
+    }
+    for (const record of changes.records) {
+      const pick = context.state.picks.find(({ key }) => key === record.key);
+      const item = document.createElement("li"), title = document.createElement("h5"), detail = document.createElement("p");
+      item.dataset.noteChange = record.change;
+      title.textContent = `${names[record.change]} — ${record.date} — suggested visit ${context.state.picks.indexOf(pick) + 1}: ${pick.pick.name}`;
+      detail.textContent = `Occurrence ${record.key}; ${currentVisits.has(JSON.stringify([record.key, record.date])) ? "currently scheduled on this date" : "other date or omitted visit"}.`;
+      item.append(title, detail);
+      if (record.change === "changed") {
+        const fields = document.createElement("p");
+        fields.textContent = "Changed fields: " + record.changedFields.map((field) => labels[field]).join(", ") + ".";
+        item.append(fields, noteView(record.before, "Current notes — before replacement"), noteView(record.after, "Incoming notes — after replacement"));
+      } else if (record.change === "removed") {
+        item.append(noteView(record.before, "Current record will be removed; this file has no record for this occurrence/date."));
+      } else {
+        item.append(noteView(record.after, record.change === "added" ? "Incoming record will be added." : "Current and incoming notes are identical."));
+      }
+      list.append(item);
     }
     pending = { revision: token, context, result, filename: file.name };
     preview.hidden = false;

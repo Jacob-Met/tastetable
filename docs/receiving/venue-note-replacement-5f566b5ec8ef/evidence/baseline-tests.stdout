@@ -1,0 +1,30 @@
+✔ questions use the native purpose and constraints; original unknown explanation survives (3.353ms)
+✔ a different date starts a separate note; returning restores only that occurrence's note (0.9103ms)
+✔ two occurrences sharing an entity and date retain distinct caregiver notes (1.1748ms)
+✔ omitted picks have no active contact card or exported note, and restore retains its date (1.7294ms)
+✔ another week has separate notes even when weekday and occurrence are unchanged (0.402ms)
+✔ an identical newly accepted response cannot inherit or access the prior worksheet (0.3784ms)
+✔ source provenance cannot be relabeled while borrowing the original source objects (0.254ms)
+✔ an event still carrying the old date cannot update the newly scheduled visit (0.3992ms)
+✔ the printable export carries exact source, dates and labeled multiline caregiver notes (0.7305ms)
+✔ empty scheduled weeks cannot create an apparently populated call sheet (0.4206ms)
+✔ unknown fields, status values and oversized notes do not modify a retained note (0.575ms)
+✔ a reopened source retains its filename, age and unchanged-check label in the call sheet (0.3262ms)
+✔ editable questions remain literal, occurrence/date-bound text alongside unchanged source checks (0.4982ms)
+✔ revising questions retains the earlier reply with its actual question context and a follow-up hold (1.0673ms)
+✔ unchanged questions preserve status; returning to the earlier questions removes only the mismatch (0.5138ms)
+✔ companion restores all exact records across reopening, omitted visits and other dates (8.3661ms)
+✔ same venue, day and visible name keep their separate original occurrence identities (1.9753ms)
+✔ late invalid or duplicate records cannot partially replace current notes (0.836ms)
+✔ unsupported field types and inconsistent reply history are refused literally (6.2149ms)
+✔ full origin equality accepts reordered JSON keys but refuses another request or response (3.8714ms)
+✔ bounded v1 file admission and explicit empty replacement preserve the original week codec (6.2099ms)
+✔ source-bound model guard and exact existing field limits remain in the new file boundary (1.421ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 140.9473
