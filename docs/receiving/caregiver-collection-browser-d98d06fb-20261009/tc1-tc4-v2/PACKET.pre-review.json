@@ -1,0 +1,361 @@
+{
+  "schema": "tastetable.caregiver-collection.browser-tc1-tc4-amended-source-packet.v1",
+  "sealedAt": "2026-10-09 18:34:57 UTC",
+  "author": "HAMON d98 /root/taste_receiving",
+  "repository": "Jacob-Met/tastetable",
+  "status": "AMENDED SOURCE FROZEN; SYNTAX-ONLY PARSED; INDEPENDENT PEER REVIEW PENDING; NATIVE 14+6 UNEXECUTED",
+  "interface": "b914afe4284ad74a882979b73c774a52ba05f3d1",
+  "sourceProof": "85a00126ed5b739c79a3be927fd5dbe00038b2b7",
+  "syntaxCustody": "3ed59153b01bbc2eaf17028944d779256dfc49c9",
+  "original": {
+    "contract": "0057a67e91b542e78e057d73a044559057cf2537",
+    "packet": "3089c4a91e52ffa43b0d29634e97f6d5367b7c1c",
+    "driver": "8a41acb61b17ef2bad6e5a6dbc2113906db280d9",
+    "cases": "824354d7037146129d3f727d54da09d97f35ac34",
+    "v4": "da062ff20b6b5a621e7294c227a29ee24efd684d",
+    "peer": {
+      "repository": "Jacob-Met/hamon",
+      "review": "5cbfc7635b59dad028976ebe1cc312f0c02a3f38",
+      "addendum": "092137dba3330ba86379b3139a06a55ca97868f6"
+    },
+    "findingsRetained": "Original TC1-TC4 findings remain intact and were never browser defect reproductions or native acceptance. This source amendment does not rewrite them."
+  },
+  "files": [
+    {
+      "path": "tools/check_caregiver_collection_browser_v2.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "name": "amended-driver",
+      "git": "bab795b6f0e255a0c4695306c6cb2d87f30df539",
+      "bytes": 41624,
+      "sha256": "64a2747862999f7c427d678c182d27aa52fb738499cda0c3f46b2083882abcf0"
+    },
+    {
+      "path": "tools/caregiver_collection_browser_cases_v2.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "name": "amended-cases",
+      "git": "1ae59a9419f0f9c0ff2fd0b46cc9a6178ef8472b",
+      "bytes": 25984,
+      "sha256": "1eb37567fd108d5af466f7f36c067362ec69e85b7cce5bb4ea9e9c2fcf7611da"
+    }
+  ],
+  "exactPublishedProductBinding": {
+    "commit": "a8dae9841044d8475c7afc641b4704e77153350d",
+    "tree": "6c62db79b15e47cd656fce39ab84da3aae858901",
+    "originalCombinedCommit": "ee504914e14b2e4b0fe899f9393a00810aaf5faf",
+    "originalCombinedTree": "92e52941417d14bb9eaf80eb7293857dff884bc6",
+    "app": "1d5ac7bea1d7ee485ff5db20379d7c715c3df0d6",
+    "currentCommitAndFullTreeIndependentlyRead": true,
+    "currentTreeTruncated": false,
+    "currentTreeEntries": 1042,
+    "exactTwentyInheritedSources": [
+      {
+        "path": "static/index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c9058dae2b074078902be5badf7c5690293e3ee1",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/style.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "28df6c5229b6b592db33e929ae058fe514304af4",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/calendar.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dbed22d2cb91090bccec9472fbffd2854eed2722",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/calendar.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9e53b951316d841b86f0256cd2444a3ce547269f",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/venue_followup.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dd88e221133be5281330cba11a6d141ae5e8d239",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/plan-request.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b21276dda840fe6dd96a3bf3258a851970ff5e4d",
+        "publishedMainExact": true
+      },
+      {
+        "path": "tests/venue_followup.test.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "515fe959d7217b10b325cab368eb92a6d33b8e6d",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/venue_followup.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a3c4b8bd120149441d343cbda2d3c15f6d106ca2",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/week_plan.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/week_file.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "420ddb8f63fca264dcf97be7147801105696155d",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/app.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1d5ac7bea1d7ee485ff5db20379d7c715c3df0d6",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/venue_note_file.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f8406cb540d52222996c585666ae1a55a1030def",
+        "publishedMainExact": true
+      },
+      {
+        "path": "tests/venue_note_file.test.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a32d542a76779e8d820a9fc233b6e1a82d9aff2c",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/caregiver_handoff.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4286409b3fe932f61957ba72f5db918d18ff0751",
+        "publishedMainExact": true
+      },
+      {
+        "path": "tests/caregiver_handoff.test.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f9a0eb76eed9be3213de714c9ee00f444cee06c7",
+        "publishedMainExact": true
+      },
+      {
+        "path": "tools/check_caregiver_handoff_browser.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "da062ff20b6b5a621e7294c227a29ee24efd684d",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/saved_weeks.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0bb822cb6f75c376397c0f7d6d6de78035f865bc",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/saved_week_store.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c525467f00521d7f4182fd57ca9a91e48c6b9e09",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/saved_week_ui.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5a281492002b61222c70ed9b4268150504d20b15",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/saved_weeks.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c5b8a9f45a4f7e0ce93c46d7f814308cd1a99009",
+        "publishedMainExact": true
+      }
+    ],
+    "sourceAdmission": "The driver checks actual bytes against their initial fence and the 20 immutable Git blob pins inside its inherited try/finally before browser spawn. The new receiver pair remains external to main and requires exact owner source admission. Its own hash is not recursively embedded."
+  },
+  "scenarioPreservation": {
+    "originalCaregiverScenarioGroups": 14,
+    "combinedScenarioGroups": 6,
+    "totalProposedScenarioGroups": 20,
+    "scenarioGroupsExecutedByThisTask": 0,
+    "exactOriginalV4RecoveredByInverse": true,
+    "priorPacketInverseEdits": 5,
+    "newDriverEdits": 5,
+    "newCaseEdits": 14,
+    "exactOriginalCaseBodyRecoveredByInverse": true,
+    "original14PassedSitesUnchanged": true,
+    "combinedPassedLabelsUnchanged": [
+      "\"combined browser Save/reload/Preview/Open preserves the exact accepted week and calendar while creating empty venue notes\"",
+      "\"same-name library rows stay distinct; physical Preview/Rename/Remove preserves accepted caregiver data and its pending handoff preview\"",
+      "\"explicit caregiver Apply survives obsolete real collection Open \" + outcome + \" with exact origin and complete notes\"",
+      "\"current collection refusal and explicit Stop waiting keep old outputs retired, with exact input retention and later handoff recovery\"",
+      "\"actual collection Open retires a held handoff file read and exports only the accepted distinct source with empty notes\""
+    ],
+    "combinedSourcePassedSites": 5,
+    "sourceCardinalityMeaning": "The case helper has five unchanged C.passed sites. The unchanged success/removed-record loop reaches one site twice, yielding the original six proposed combined groups. The amended main driver retains all14 original passed sites. These are static preservation facts, not runtime passes.",
+    "fixedOriginalScenarioInputs": "Actual original downloaded A handoff plus original driver's authored B source remain the only A/B fixtures. No new provider, study, recommendation, producer or model-generated calendar oracle.",
+    "originalSix": [
+      {
+        "id": "collection-roundtrip-after-handoff",
+        "steps": "Physically restore the original actual downloaded handoff A, Save in this browser through keyboard, read stored canonical text through the unchanged public store, reload, Preview exact row ID, Open browser copy and physically download a new handoff.",
+        "expected": "Exact A saved-week origin/inputs/calendar/arrangement preserved; no notes in stored canonical saved-week text; reopened handoff has empty records, matching A origin. Repeated occurrences/assignments are compared structurally, not by display names."
+      },
+      {
+        "id": "metadata-preview-preserves-handoff",
+        "steps": "Save distinct original-driver B under the same display label, restore A with notes, preview a valid B handoff; Preview B library row, Rename it literally, then Remove it through actual controls.",
+        "expected": "A current UI and exact physical handoff remain unchanged through metadata operations, pending handoff stays available while actual source/state/model unchanged, stored IDs distinguish equal labels, removed row is absent and current accepted snapshot is retained."
+      },
+      {
+        "id": "delayed-open-late-success",
+        "steps": "Save a fresh B row, Preview it, begin a bounded native IndexedDB readwrite hold, activate Open and observe immediate plan/worksheet/export retirement. While its actual storage read is held, physically preview and explicitly Apply A. Release the hold so old B succeeds.",
+        "expected": "Open retires before IDB delivery, no old handoff preview remains. A accepted explicitly with exact original note history/omitted records/calendar; late B success cannot replace/clear A or publish B; actual after-race download equals A."
+      },
+      {
+        "id": "delayed-open-late-refusal",
+        "steps": "Preview a B row, hold the native store, Open B, explicitly Apply A, delete that B row within the same authored hold transaction before releasing it.",
+        "expected": "Actual pending get receives the unchanged store's removed-record refusal after release; obsolete failure does not clear A, notes, form, calendar or current output. Record storage deletion/transaction completion as an injected receiving stimulus, not a product-generated event."
+      },
+      {
+        "id": "current-open-refusal-and-cancel",
+        "steps": "In separate traces, hold an Open and remove its row before release while it remains current, then hold another Open and activate Stop waiting before release.",
+        "expected": "Current refusal/cancel retains form inputs but old week/notes/exports remain retired; late canceled completion cannot resurrect them. Later explicit A handoff restores complete data normally."
+      },
+      {
+        "id": "collection-open-retires-held-handoff",
+        "steps": "Start the existing held actual File.arrayBuffer read for A, then Open exact B row through actual controls; release old file read after B acceptance.",
+        "expected": "Late A read creates no current preview or Apply capability; B current output has B origin and empty notes. Exact physical handoff and calendar evidence bind B."
+      }
+    ]
+  },
+  "findingRepairs": [
+    {
+      "id": "TC1",
+      "change": "A common read-only form helper captures the ordered input/select/textarea index, tag, id, name, type, value and checked state. Current refusal and cancellation each have independent before/after snapshots, retained in trace and compared completely.",
+      "newCases": false
+    },
+    {
+      "id": "TC2",
+      "change": "One actual B calendar is downloaded while B is already explicitly accepted in the existing metadata scenario. Final accepted-B calendar must equal those physical baseline bytes and still differ from A. Existing per-artifact and aggregate limits remain unchanged.",
+      "newProducer": false
+    },
+    {
+      "id": "TC3",
+      "change": "Cleanup-required state is set before admission dispatch/await. Hold identity prevents clearing or aborting an unmatched state. Only actual tx.oncomplete/onabort write native closure booleans; admission failure, pending/blocked requests, abort requests/exceptions, expiry and connection-close requests stay distinct. A terminal no-created-transaction admission is labeled separately. Failed/unreturned admission enters bounded cleanup; unknown state stops later case work. Normal release requires actual clean completion and actual selected-row deletion witness when requested.",
+      "nativeClosureClaimedBySourceReview": false
+    },
+    {
+      "id": "TC4",
+      "change": "Both negative retirement sites require previewHidden===true and applyDisabled===true as independent assertions. All three positive visible-and-enabled metadata-preview checks remain.",
+      "originalPositiveChecksPreserved": true
+    }
+  ],
+  "holdStateContract": {
+    "cleanupMarkerMeaning": "A dispatch may have created owned native work; the marker is not a claim that admission or transaction creation succeeded.",
+    "identity": "Current local server base plus an increasing local sequence, inside the original driver-created fresh profile. Do not overwrite any previous state lacking native closure or touch mismatched hold identity.",
+    "closedCompletedAborted": "Only assigned by handlers installed directly on the owned native transaction. Request errors, blocked callbacks, timeouts and abort() exceptions never synthesize closure.",
+    "noTransaction": "Only recorded when native open handling or a synchronous refusal is terminal and no owned transaction was created. Cleanup can observe this without labeling it an abort or a passed case.",
+    "failedAdmission": "The outer finally observes the same attempted hold even when admission rejects or the response is unreturned. It requests cleanup only for matching owned state and retains the bounded probe result or unresolved state.",
+    "release": "Normal continuation requires admitted hold kind, actual tx.oncomplete, requested release, no expiry/error/abort request and an actual delete-request success for an injected removal.",
+    "upgrade": "Unexpected upgrade is refused; its owned upgrade transaction receives actual native event handlers before an abort request. No store/schema creation is authored.",
+    "originalDeadlineMs": 8000,
+    "deadlineLimit": "The in-page timer and existing wait/CDP limits remain; this is not an OS hard deadline or proof of browser/child closure.",
+    "record": "The existing combined-collection-traces.json artifact retains form before/after values, admission/control/native-state observations and both case and cleanup failures."
+  },
+  "sourceInspectionBeforePeer": {
+    "initialAmendedCases": "bfd92416597751880ae90e3e9e6067a3f958c38f",
+    "initialSyntaxChunk": "106018",
+    "initialSyntaxExit": 0,
+    "finding": {
+      "originalDraft": "bfd92416597751880ae90e3e9e6067a3f958c38f",
+      "originalSyntaxChunk": "106018",
+      "finding": "A cleanup cancellation before open success could leave admission pending while noOwnedTransaction cleared the deadline. The native open was terminal with no created transaction, but the admission promise and strict cleanup predicate stayed pending.",
+      "correction": "On the canceled/failed/expired open-success branch, explicitly reject a still-pending admission before recording no-owned-transaction termination.",
+      "kind": "source inspection only; no browser/IDB execution or reproduction",
+      "before": "          if (state.admission === \"failed\" || state.cancelAdmission || state.expired) {\n            noOwnedTransaction(); closeConnection(); return;\n          }",
+      "after": "          if (state.admission === \"failed\" || state.cancelAdmission || state.expired) {\n            if (state.admission === \"pending\") fail(\"Collection hold admission canceled before transaction creation\");\n            noOwnedTransaction(); closeConnection(); return;\n          }",
+      "originalDraftPreserved": true
+    },
+    "finalCases": "1ae59a9419f0f9c0ff2fd0b46cc9a6178ef8472b",
+    "finalChangedCaseSyntaxChunk": "64b7d1",
+    "finalChangedCaseSyntaxExit": 0,
+    "driverSyntaxRepeated": false,
+    "actualBehaviorOrNativeReproduction": false
+  },
+  "unchangedBoundaries": {
+    "originalSourcePathsOrderedPrefix": 16,
+    "sameCollectionAssets": 4,
+    "separatelyNamedV2Files": 2,
+    "totalSourcePaths": 22,
+    "GETOnlyExactStaticServer": true,
+    "receiverFilesUnservable": true,
+    "normalChromeSandbox": true,
+    "diskFloorMiB": 768,
+    "freeMemoryFloorMiB": 1536,
+    "startupPollingNominalSeconds": 12,
+    "cdpTimeoutSeconds": 15,
+    "ordinaryArtifactCapMiB": 2,
+    "originalOversizedFixtureException": "6 MiB + 1 byte",
+    "aggregateRecordedArtifactCapMiB": 8,
+    "original14ScreenshotPdfPhonePrintWork": "Preserved as exact source, not executed or reviewed as rendered artifacts here.",
+    "noNewResourceAllocationOrLifetimeCertification": true,
+    "existingOuterBrowserChildClosure": "Unchanged source and still requires current independent owner admission/closure evidence."
+  },
+  "syntaxOnly": {
+    "custody": "3ed59153b01bbc2eaf17028944d779256dfc49c9",
+    "runtime": "Node v24.19.0",
+    "processCount": 2,
+    "meaning": "First parser constructed unlinked SourceTextModule objects for the amended driver and first case draft. After source inspection, only the changed case was parsed again. Both exits were0. No linking/evaluation or candidate process/browser/server/CDP/IDB action occurred.",
+    "originalWarningsRetained": true,
+    "original14Or6CampaignsReplayed": false
+  },
+  "prospectiveInertEvidencePaths": {
+    "prefix": "docs/receiving/caregiver-collection-browser-d98d06fb-20261009/tc1-tc4-v2/",
+    "interface": "b914afe4284ad74a882979b73c774a52ba05f3d1",
+    "inverseProof": "85a00126ed5b739c79a3be927fd5dbe00038b2b7",
+    "syntaxCustody": "3ed59153b01bbc2eaf17028944d779256dfc49c9",
+    "note": "No tree or ref was created. Do not add this receiver pair or packet to the already published product source without separate coordination."
+  },
+  "review": {
+    "recipient": "/root/learner_adoption",
+    "interfaceAndOriginalPeerReadBeforeCorrectedBodies": true,
+    "pending": "Independent source-only review of this exact driver/cases/interface/proof. The current packet is not its own peer approval.",
+    "nativeOwner": "chatgpt:c77045b4:windows",
+    "nativeOwnerRoute": "Existing TasteTable #54/#55 only; no new lease or admission has been inferred.",
+    "unknownAttempts": "Original unknown/unreturned native attempts remain unknown and unreplayed.",
+    "noNativeRunOnThisPacketAlone": true
+  },
+  "effects": {
+    "productEdits": 0,
+    "ownerWorkspaceWrites": 0,
+    "sourceTreeChanges": 0,
+    "refs": 0,
+    "PRs": 0,
+    "merges": 0,
+    "Actions": 0,
+    "browserLaunches": 0,
+    "providerCalls": 0,
+    "newCaseCampaigns": 0,
+    "sourceOnlyParserProcesses": 2
+  },
+  "conclusion": "The exact TC1-TC4 source amendment is frozen for independent review. It preserves original source and findings, binds the published corrected product core, and does not establish browser or native qualification."
+}

@@ -1,0 +1,282 @@
+{
+  "schema": "tastetable.tc1-tc4.independent-data-verification.v1",
+  "status": "exact-source-custody-and-inverses-verified",
+  "method": "UTF-8 hashes, JSON parsing, string replacement and lexical comparisons only. No JavaScript parsing, importing, linking or evaluation; no browser/server/native commands.",
+  "input": {
+    "bytes": 403753,
+    "sha256": "8ea5443296dedef06337eb357256c371a8a1f98fba50ad5a5b2cf09676bbe30c"
+  },
+  "sourceDigests": [
+    {
+      "name": "original-v4",
+      "bytes": 37919,
+      "sha256": "3cba0ff3b2c36718f7a0f2e16244c211c05082dc810d0e55560c94ade5b14593",
+      "git": "da062ff20b6b5a621e7294c227a29ee24efd684d",
+      "exact": true
+    },
+    {
+      "name": "original-successor",
+      "bytes": 39247,
+      "sha256": "78e49c8e58854d48d46545fe90f53133c54b9d509f5839541c2d9db731bfeda0",
+      "git": "8a41acb61b17ef2bad6e5a6dbc2113906db280d9",
+      "exact": true
+    },
+    {
+      "name": "original-cases",
+      "bytes": 16730,
+      "sha256": "ce27aac3cd7783776c71f792dba1eb43898c53ba3fe75dc3ece0f5cad17569ad",
+      "git": "824354d7037146129d3f727d54da09d97f35ac34",
+      "exact": true
+    },
+    {
+      "name": "amended-driver",
+      "bytes": 41624,
+      "sha256": "64a2747862999f7c427d678c182d27aa52fb738499cda0c3f46b2083882abcf0",
+      "git": "bab795b6f0e255a0c4695306c6cb2d87f30df539",
+      "exact": true
+    },
+    {
+      "name": "first-case-draft",
+      "bytes": 25865,
+      "sha256": "04c00e7db4ae1603017900a82027df2e27623ed8df30a040d2f12fb64ae11a3d",
+      "git": "bfd92416597751880ae90e3e9e6067a3f958c38f",
+      "exact": true
+    },
+    {
+      "name": "amended-cases",
+      "bytes": 25984,
+      "sha256": "1eb37567fd108d5af466f7f36c067362ec69e85b7cce5bb4ea9e9c2fcf7611da",
+      "git": "1ae59a9419f0f9c0ff2fd0b46cc9a6178ef8472b",
+      "exact": true
+    },
+    {
+      "name": "proof",
+      "bytes": 36892,
+      "sha256": "3c171f3b369e5972b5b7f4900de3db16795f083cd0e088d2fe41851ccbc5bee6",
+      "git": "85a00126ed5b739c79a3be927fd5dbe00038b2b7",
+      "exact": true
+    },
+    {
+      "name": "packet",
+      "bytes": 19669,
+      "sha256": "49bc110edb9dc1d9983a51e06357a6d2dd17db13159bd8ea7a4bf23f718ed74d",
+      "git": "673c8e09bf83061dc5a658c1133a77dbb3ffd194",
+      "exact": true
+    },
+    {
+      "name": "originalPacket",
+      "bytes": 11634,
+      "sha256": "d1fe4756083e89f6497437f8a7aa127e82d995e2533c8cb725937d703ee0230e",
+      "git": "3089c4a91e52ffa43b0d29634e97f6d5367b7c1c",
+      "exact": true
+    },
+    {
+      "name": "syntax",
+      "bytes": 112419,
+      "sha256": "a225c79cdbc8a681db366096821662bba765c3df15dc543379c4055d7b253e62",
+      "git": "3ed59153b01bbc2eaf17028944d779256dfc49c9",
+      "exact": true
+    }
+  ],
+  "interface": {
+    "bytes": 11015,
+    "sha256": "d4781b43aa73ff0d9d822eb33d874d6439d5165853f2816a6861c9583a073274",
+    "git": "b914afe4284ad74a882979b73c774a52ba05f3d1"
+  },
+  "driver": {
+    "edits": 5,
+    "forwardExact": true,
+    "inverseExact": true,
+    "allForwardAndInverseOccurrencesOne": true,
+    "steps": [
+      {
+        "label": "separate v2 cases import",
+        "forwardOccurrences": 1
+      },
+      {
+        "label": "separate v2 receiver inventory names",
+        "forwardOccurrences": 1
+      },
+      {
+        "label": "v2 revision distinguishes the preserved source-blocked predecessor",
+        "forwardOccurrences": 1
+      },
+      {
+        "label": "corrected-core provenance and immutable source pins",
+        "forwardOccurrences": 1
+      },
+      {
+        "label": "admit pinned corrected core within inherited cleanup before browser spawn",
+        "forwardOccurrences": 1
+      }
+    ]
+  },
+  "cases": {
+    "edits": 14,
+    "forwardExact": true,
+    "inverseExact": true,
+    "allForwardAndInverseOccurrencesOne": true,
+    "steps": [
+      {
+        "label": "TC1 complete ordered form snapshot helper",
+        "forwardOccurrences": 1
+      },
+      {
+        "label": "TC3 cleanup marker and hold ownership before admission",
+        "forwardOccurrences": 1
+      },
+      {
+        "label": "TC4 independent hidden and disabled retirement helper",
+        "forwardOccurrences": 1
+      },
+      {
+        "label": "TC4 current retirement checks both properties",
+        "forwardOccurrences": 1
+      },
+      {
+        "label": "TC3 native event witnesses and failed-admission cleanup",
+        "forwardOccurrences": 1
+      },
+      {
+        "label": "TC2 earlier physical B calendar baseline",
+        "forwardOccurrences": 1
+      },
+      {
+        "label": "TC1 independent full refusal beforeimage",
+        "forwardOccurrences": 1
+      },
+      {
+        "label": "TC1 complete refusal comparison",
+        "forwardOccurrences": 1
+      },
+      {
+        "label": "TC1 separate cancellation beforeimage",
+        "forwardOccurrences": 1
+      },
+      {
+        "label": "TC1 complete cancellation comparison",
+        "forwardOccurrences": 1
+      },
+      {
+        "label": "TC4 held-file completion has neither preview nor Apply",
+        "forwardOccurrences": 1
+      },
+      {
+        "label": "TC2 final B equals earlier physical B baseline",
+        "forwardOccurrences": 1
+      },
+      {
+        "label": "TC3 finally probes every dispatched admission",
+        "forwardOccurrences": 1
+      },
+      {
+        "label": "TC3 pre-review closure of canceled pre-transaction admission",
+        "forwardOccurrences": 1
+      }
+    ]
+  },
+  "predecessorToV4": {
+    "edits": 5,
+    "forwardExact": true,
+    "inverseExact": true,
+    "allForwardAndInverseOccurrencesOne": true,
+    "steps": [
+      {
+        "label": "add inert combined cases import",
+        "forwardOccurrences": 1
+      },
+      {
+        "label": "append exact combined assets and separate receiver identities",
+        "forwardOccurrences": 1
+      },
+      {
+        "label": "explicit successor identity",
+        "forwardOccurrences": 1
+      },
+      {
+        "label": "separate exact source provenance",
+        "forwardOccurrences": 1
+      },
+      {
+        "label": "append physical combined histories and recheck global invariants",
+        "forwardOccurrences": 1
+      }
+    ]
+  },
+  "firstThirteenCaseEditsRecoverPreservedFirstDraft": true,
+  "inventory": {
+    "originalPrefix": 16,
+    "unchangedCollectionAssets": 4,
+    "separateV2": 2,
+    "total": 22,
+    "unique": true,
+    "corePins": 20,
+    "interfaceAndPacketPinsExact": true,
+    "coreGuardWithinTryBeforeBrowserSpawn": true
+  },
+  "scenarios": {
+    "originalFourteenPassedLabelsExact": true,
+    "combinedFivePassedSitesExact": true,
+    "unchangedTwoOutcomeLoop": true,
+    "proposedCombinedGroups": 6,
+    "executedGroups": 0
+  },
+  "callerMembersExact": [
+    "base",
+    "combined",
+    "second",
+    "secondFile",
+    "calendarBefore",
+    "evaluate",
+    "uiState",
+    "activate",
+    "textInput",
+    "waitFor",
+    "navigate",
+    "restoreHandoff",
+    "openHandoff",
+    "handoffPreview",
+    "savedHandoff",
+    "sameHandoff",
+    "downloaded",
+    "heldHandoff",
+    "releaseNotes",
+    "saveArtifact",
+    "passed"
+  ],
+  "sourcePredicateFacts": {
+    "positivePreviewChecks": 3,
+    "negativeIndependentSites": 2,
+    "nativeClosedTrueAssignmentSites": 2,
+    "completeTrueSites": 1,
+    "abortTrueSites": 1,
+    "originalEightSecondDeadlineSites": 1,
+    "cleanupMarkerBeforeAdmissionAwait": true
+  },
+  "originalSyntaxCustody": [
+    {
+      "section": "initialParse",
+      "originalToolChunk": "106018",
+      "exit": 0,
+      "exactCommandPayloadJoined": true,
+      "candidateEvaluated": false,
+      "reviewerReplay": false
+    },
+    {
+      "section": "finalChangedCaseParse",
+      "originalToolChunk": "64b7d1",
+      "exit": 0,
+      "exactCommandPayloadJoined": true,
+      "candidateEvaluated": false,
+      "reviewerReplay": false
+    }
+  ],
+  "effects": {
+    "candidateExecution": 0,
+    "syntaxReplay": 0,
+    "nativeCalls": 0,
+    "browserLaunches": 0,
+    "sourceEdits": 0,
+    "sourceRefs": 0
+  }
+}
