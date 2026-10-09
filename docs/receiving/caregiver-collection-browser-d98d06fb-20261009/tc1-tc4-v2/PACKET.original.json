@@ -1,0 +1,215 @@
+{
+  "schema": "tastetable.caregiver-collection.browser-successor-source-packet.v1",
+  "repository": "Jacob-Met/tastetable",
+  "status": "SOURCE_PREPARED_SYNTAX_PARSED_ORIGINAL_INVERSE_EXACT_BROWSER_UNEXECUTED",
+  "contract": "0057a67e91b542e78e057d73a044559057cf2537",
+  "originalProductCommit": "ee504914e14b2e4b0fe899f9393a00810aaf5faf",
+  "originalDriver": "da062ff20b6b5a621e7294c227a29ee24efd684d",
+  "recipientOwner": "chatgpt:c77045b4:windows",
+  "prospectiveArtifactPrefix": "docs/receiving/caregiver-collection-browser-d98d06fb-20261009/",
+  "files": [
+    {
+      "path": "tools/check_caregiver_collection_browser.mjs",
+      "bytes": 39247,
+      "sha256": "78e49c8e58854d48d46545fe90f53133c54b9d509f5839541c2d9db731bfeda0",
+      "blob": "8a41acb61b17ef2bad6e5a6dbc2113906db280d9"
+    },
+    {
+      "path": "tools/caregiver_collection_browser_cases.mjs",
+      "bytes": 16730,
+      "sha256": "ce27aac3cd7783776c71f792dba1eb43898c53ba3fe75dc3ece0f5cad17569ad",
+      "blob": "824354d7037146129d3f727d54da09d97f35ac34"
+    }
+  ],
+  "exactMergedSourceInventory": [
+    {
+      "path": "static/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9058dae2b074078902be5badf7c5690293e3ee1"
+    },
+    {
+      "path": "static/style.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28df6c5229b6b592db33e929ae058fe514304af4"
+    },
+    {
+      "path": "static/calendar.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbed22d2cb91090bccec9472fbffd2854eed2722"
+    },
+    {
+      "path": "static/calendar.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e53b951316d841b86f0256cd2444a3ce547269f"
+    },
+    {
+      "path": "static/venue_followup.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd88e221133be5281330cba11a6d141ae5e8d239"
+    },
+    {
+      "path": "static/plan-request.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b21276dda840fe6dd96a3bf3258a851970ff5e4d"
+    },
+    {
+      "path": "tests/venue_followup.test.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "515fe959d7217b10b325cab368eb92a6d33b8e6d"
+    },
+    {
+      "path": "static/venue_followup.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3c4b8bd120149441d343cbda2d3c15f6d106ca2"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+    },
+    {
+      "path": "static/week_file.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "420ddb8f63fca264dcf97be7147801105696155d"
+    },
+    {
+      "path": "static/app.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed40637354a456c03dfa32a2e4ec954f23110ffa"
+    },
+    {
+      "path": "static/venue_note_file.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8406cb540d52222996c585666ae1a55a1030def"
+    },
+    {
+      "path": "tests/venue_note_file.test.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a32d542a76779e8d820a9fc233b6e1a82d9aff2c"
+    },
+    {
+      "path": "static/caregiver_handoff.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4286409b3fe932f61957ba72f5db918d18ff0751"
+    },
+    {
+      "path": "tests/caregiver_handoff.test.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9a0eb76eed9be3213de714c9ee00f444cee06c7"
+    },
+    {
+      "path": "tools/check_caregiver_handoff_browser.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da062ff20b6b5a621e7294c227a29ee24efd684d"
+    },
+    {
+      "path": "static/saved_weeks.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bb822cb6f75c376397c0f7d6d6de78035f865bc"
+    },
+    {
+      "path": "static/saved_week_store.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c525467f00521d7f4182fd57ca9a91e48c6b9e09"
+    },
+    {
+      "path": "static/saved_week_ui.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a281492002b61222c70ed9b4268150504d20b15"
+    },
+    {
+      "path": "static/saved_weeks.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5b8a9f45a4f7e0ce93c46d7f814308cd1a99009"
+    },
+    {
+      "path": "tools/check_caregiver_collection_browser.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a41acb61b17ef2bad6e5a6dbc2113906db280d9"
+    },
+    {
+      "path": "tools/caregiver_collection_browser_cases.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "824354d7037146129d3f727d54da09d97f35ac34"
+    }
+  ],
+  "unchangedFixture": {
+    "path": "docs/venue-followup-6c20bb4b010e/author/final/saved-composition-week.json",
+    "blob": "8b14090030201d6e8d69cd5bca380a9a71a4da0d"
+  },
+  "chronologicalInverseEdits": [
+    {
+      "label": "add inert combined cases import",
+      "old": "import {fileURLToPath,pathToFileURL} from \"node:url\";",
+      "new": "import {fileURLToPath,pathToFileURL} from \"node:url\";\nimport {runCaregiverCollectionCases} from \"./caregiver_collection_browser_cases.mjs\";"
+    },
+    {
+      "label": "append exact combined assets and separate receiver identities",
+      "old": "const sourcePaths=[\"static/index.html\",\"static/style.css\",\"static/calendar.js\",\"static/calendar.css\",\"static/venue_followup.css\",\"static/plan-request.js\",\"tests/venue_followup.test.mjs\",\"static/venue_followup.mjs\",\"static/week_plan.mjs\",\"static/week_file.mjs\",\"static/app.js\",\"static/venue_note_file.mjs\",\"tests/venue_note_file.test.mjs\",\"static/caregiver_handoff.mjs\",\"tests/caregiver_handoff.test.mjs\",\"tools/check_caregiver_handoff_browser.mjs\"];",
+      "new": "const sourcePaths=[\"static/index.html\",\"static/style.css\",\"static/calendar.js\",\"static/calendar.css\",\"static/venue_followup.css\",\"static/plan-request.js\",\"tests/venue_followup.test.mjs\",\"static/venue_followup.mjs\",\"static/week_plan.mjs\",\"static/week_file.mjs\",\"static/app.js\",\"static/venue_note_file.mjs\",\"tests/venue_note_file.test.mjs\",\"static/caregiver_handoff.mjs\",\"tests/caregiver_handoff.test.mjs\",\"tools/check_caregiver_handoff_browser.mjs\",\"static/saved_weeks.mjs\",\"static/saved_week_store.mjs\",\"static/saved_week_ui.mjs\",\"static/saved_weeks.css\",\"tools/check_caregiver_collection_browser.mjs\",\"tools/caregiver_collection_browser_cases.mjs\"];"
+    },
+    {
+      "label": "explicit successor identity",
+      "old": "receiverRevision:\"v4\"",
+      "new": "receiverRevision:\"caregiver-collection-v1\""
+    },
+    {
+      "label": "separate exact source provenance",
+      "old": " checks:[],artifacts:[],requests:[],externalRequests:[],serverRequests:[],sourceSha256:{},sourceUnchanged:false};",
+      "new": " checks:[],artifacts:[],requests:[],externalRequests:[],serverRequests:[],sourceSha256:{},sourceUnchanged:false};\nreport.composition={commit:\"ee504914e14b2e4b0fe899f9393a00810aaf5faf\",tree:\"92e52941417d14bb9eaf80eb7293857dff884bc6\",contract:\"0057a67e91b542e78e057d73a044559057cf2537\",receiverPredecessor:\"da062ff20b6b5a621e7294c227a29ee24efd684d\",originalGroups:14,combinedRuntimeQualification:\"pending until this attempt completes\"};"
+    },
+    {
+      "label": "append physical combined histories and recheck global invariants",
+      "old": "  passed(\"complete receiving preserves exact source bytes, local GET-only traffic, empty automatic storage and literal text without page errors\");",
+      "new": "  passed(\"complete receiving preserves exact source bytes, local GET-only traffic, empty automatic storage and literal text without page errors\");\n  await runCaregiverCollectionCases({base,combined,second,secondFile,calendarBefore,\n    evaluate,uiState,activate,textInput,waitFor,navigate,restoreHandoff,openHandoff,handoffPreview,\n    savedHandoff,sameHandoff,downloaded,heldHandoff,releaseNotes,saveArtifact,passed});\n  assert.deepEqual(pageErrors,[]);assert.deepEqual(report.externalRequests,[]);\n  assert.ok(report.serverRequests.every(r=>r.method===\"GET\"));\n  assert.equal(await evaluate('localStorage.length+sessionStorage.length'),0);\n  assert.equal(await evaluate('window.__noteInjected===true'),false);\n  report.composition.combinedRuntimeQualification=\"case assertions completed; final source/output/closure receiving still required\";\n"
+    }
+  ],
+  "originalPreservation": {
+    "bytes": 37919,
+    "sha256": "3cba0ff3b2c36718f7a0f2e16244c211c05082dc810d0e55560c94ade5b14593",
+    "exactFullInverse": true,
+    "originalGroups": 14,
+    "allOriginalFunctionAndAssertionTextPreserved": true,
+    "normalSandboxLaunchAndOriginalLifecyclePreserved": true,
+    "startupResourceOutputNetworkGuardsPreserved": true,
+    "qualification": "Preservation is source data, not an independent certification of native lifecycle/closure."
+  },
+  "actualSyntaxOnlyResult": {
+    "chunk_id": "fc8bac",
+    "wall_time_seconds": 0.000029625,
+    "exit_code": 0,
+    "original_token_count": 264,
+    "output": "{\n  \"schema\": \"tastetable.caregiver-collection.browser-syntax-only.v1\",\n  \"runtime\": \"v24.19.0\",\n  \"files\": {\n    \"tools/check_caregiver_collection_browser.mjs\": {\n      \"bytes\": 39247,\n      \"sha256\": \"78e49c8e58854d48d46545fe90f53133c54b9d509f5839541c2d9db731bfeda0\",\n      \"blob\": \"8a41acb61b17ef2bad6e5a6dbc2113906db280d9\"\n    },\n    \"tools/caregiver_collection_browser_cases.mjs\": {\n      \"bytes\": 16730,\n      \"sha256\": \"ce27aac3cd7783776c71f792dba1eb43898c53ba3fe75dc3ece0f5cad17569ad\",\n      \"blob\": \"824354d7037146129d3f727d54da09d97f35ac34\"\n    }\n  },\n  \"originalInverse\": {\n    \"bytes\": 37919,\n    \"sha256\": \"3cba0ff3b2c36718f7a0f2e16244c211c05082dc810d0e55560c94ade5b14593\",\n    \"blob\": \"da062ff20b6b5a621e7294c227a29ee24efd684d\"\n  },\n  \"exactOriginalRecovered\": true,\n  \"originalPassedCalls\": 14,\n  \"linked\": false,\n  \"evaluated\": false,\n  \"browserOrNativeCalls\": false\n}\n(node:2) ExperimentalWarning: VM Modules is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+  },
+  "syntaxMethod": "Node24.19.0 constructs vm.SourceTextModule objects only. No linker/evaluate, browser, networking, filesystem source read or process launch by candidate. Standard-library byte hashes and exact inverse were checked.",
+  "newReceivingStimuli": {
+    "nativeIDBHold": "8 second bounded readwrite transaction on the already-owned browser profile's actual draft store. get keep-alives hold queued readonly Open. Explicit release commits; timeout aborts and fails receiving. Completion/abort state is recorded; no continuation without successful explicit closure.",
+    "lateRefusal": "Only a specifically selected authored row can be deleted inside the hold's active callback before transaction commit. An unchanged public get after release must produce the maintained removed-record diagnostic; no fabricated store result.",
+    "inheritedFileLatch": "Exact original caregiver held file-read helper, acknowledged authored stimulus.",
+    "failure": "No Apply bypass if actual handoff UI cannot preview during retirement. Original receiver fails and retains observed UI. Cases finally seeks bounded hold closure and writes compact stimuli/error receipt."
+  },
+  "noExecution": "Zero new browser/native attempts, probes, allocation requests, source refs, PRs, merges, Actions or service operations. Existing owner must review exact source/runtime/resource/lifetime/closure boundary before separately named adoption.",
+  "independentReview": "Pending source-only peer review when this packet was sealed."
+}

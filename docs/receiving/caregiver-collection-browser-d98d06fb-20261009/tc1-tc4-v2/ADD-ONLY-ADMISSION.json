@@ -1,0 +1,551 @@
+{
+  "schema": "tastetable.caregiver-collection.browser-tc1-tc4.additive-source-admission.v1",
+  "author": "HAMON d98 /root/taste_receiving",
+  "sealedAt": "2026-10-09 19:01:15 UTC",
+  "repository": "Jacob-Met/tastetable",
+  "status": "SOURCE-REVIEWED ADDITIVE RECIPE; NO SOURCE TREE OR REF CREATED; ORIGINAL 14+6 NATIVE SCENARIOS UNEXECUTED",
+  "scope": "Publish only the separately named, unexecuted v2 browser receiving source and its complete source/syntax/data custody. This does not admit native receiving or change product source.",
+  "base": {
+    "baseCommit": "a8dae9841044d8475c7afc641b4704e77153350d",
+    "baseTree": "6c62db79b15e47cd656fce39ab84da3aae858901",
+    "fullTreeTruncated": false,
+    "fullTreeEntries": 1042,
+    "baseLeafCount": 904,
+    "baseLeafInventorySHA256": "fdd8522cf8ff59d2b5688d186c1993a2838aa5707b387bce01bedb86d32132f3",
+    "inventoryEncoding": "Sort all leaf tuples by ascending path using JavaScript < and >. Each tuple has property order {\"path\",\"mode\",\"type\",\"sha\"}. Concatenate JSON.stringify(tuple) plus LF for every tuple, including final LF; SHA256 the UTF-8 bytes.",
+    "existingDirectoryEntries": 138,
+    "existingDirectoryObjectsRequiredExact": 135,
+    "existingAncestorDirectoriesAllowedToChange": [
+      "docs",
+      "docs/receiving",
+      "tools"
+    ],
+    "knownNewDirectoryPaths": [
+      "docs/receiving/caregiver-collection-browser-d98d06fb-20261009",
+      "docs/receiving/caregiver-collection-browser-d98d06fb-20261009/tc1-tc4-v2",
+      "docs/receiving/caregiver-collection-browser-d98d06fb-20261009/tc1-tc4-v2/original",
+      "docs/receiving/caregiver-collection-browser-d98d06fb-20261009/tc1-tc4-v2/history"
+    ],
+    "preservedOriginalV4": {
+      "path": "tools/check_caregiver_handoff_browser.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da062ff20b6b5a621e7294c227a29ee24efd684d"
+    },
+    "preservedCorrectedApp": {
+      "path": "static/app.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d5ac7bea1d7ee485ff5db20379d7c715c3df0d6"
+    },
+    "preservedWorkflows": [
+      {
+        "path": ".github/workflows/ci.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0e6273139a9bf417a4ee42f4501d067b1c9d95a0"
+      },
+      {
+        "path": ".github/workflows/native-plan-week-browser.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d674f2698d1b048075a1c49c2035b1096be668f2"
+      },
+      {
+        "path": ".github/workflows/week-compare.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e591fca2db970460611269ad7d1c53a6bc70f028"
+      }
+    ]
+  },
+  "freshMain": {
+    "sha": "a8dae9841044d8475c7afc641b4704e77153350d",
+    "observedAt": "2026-10-09 19:01:15 UTC",
+    "equalExpected": true
+  },
+  "treeRecipe": {
+    "base_tree": "6c62db79b15e47cd656fce39ab84da3aae858901",
+    "entries": [
+      {
+        "path": "docs/receiving/caregiver-collection-browser-d98d06fb-20261009/tc1-tc4-v2/CONTRACT.original.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0057a67e91b542e78e057d73a044559057cf2537"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-browser-d98d06fb-20261009/tc1-tc4-v2/INTERFACE.frozen.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b914afe4284ad74a882979b73c774a52ba05f3d1"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-browser-d98d06fb-20261009/tc1-tc4-v2/PACKET.original.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3089c4a91e52ffa43b0d29634e97f6d5367b7c1c"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-browser-d98d06fb-20261009/tc1-tc4-v2/PACKET.pre-review.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "673c8e09bf83061dc5a658c1133a77dbb3ffd194"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-browser-d98d06fb-20261009/tc1-tc4-v2/PEER.data-verification.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f68fa7b88d1e4e6ae249e840e8e2184a4b00834a"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-browser-d98d06fb-20261009/tc1-tc4-v2/PEER.original-invocation.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6a47f40927fceeedd04948083a58e3092b43cbf0"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-browser-d98d06fb-20261009/tc1-tc4-v2/PEER.original-tool-result.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f5c49c9cfa300aa1a7dee742f2508b1ec1fc02ae"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-browser-d98d06fb-20261009/tc1-tc4-v2/PEER.source-review.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a71383cf7dad8650d631ed88f1b957dba41c6564"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-browser-d98d06fb-20261009/tc1-tc4-v2/PEER.used-input.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c7c4451de903fe07ee9371b4073fa572b4b68ec2"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-browser-d98d06fb-20261009/tc1-tc4-v2/PEER.verifier.py.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a95a0cfaa426d70914c92ac5de5ce25606f90599"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-browser-d98d06fb-20261009/tc1-tc4-v2/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1dae27121c286daefec7f98afb2e7c99b2afc16d"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-browser-d98d06fb-20261009/tc1-tc4-v2/SOURCE.forward-inverse.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "85a00126ed5b739c79a3be927fd5dbe00038b2b7"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-browser-d98d06fb-20261009/tc1-tc4-v2/SYNTAX-ONLY.custody.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3ed59153b01bbc2eaf17028944d779256dfc49c9"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-browser-d98d06fb-20261009/tc1-tc4-v2/history/cases.initial-syntax-draft.mjs.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bfd92416597751880ae90e3e9e6067a3f958c38f"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-browser-d98d06fb-20261009/tc1-tc4-v2/original/caregiver_collection_browser_cases.mjs.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "824354d7037146129d3f727d54da09d97f35ac34"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-browser-d98d06fb-20261009/tc1-tc4-v2/original/check_caregiver_collection_browser.mjs.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8a41acb61b17ef2bad6e5a6dbc2113906db280d9"
+      },
+      {
+        "path": "tools/caregiver_collection_browser_cases_v2.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1ae59a9419f0f9c0ff2fd0b46cc9a6178ef8472b"
+      },
+      {
+        "path": "tools/check_caregiver_collection_browser_v2.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bab795b6f0e255a0c4695306c6cb2d87f30df539"
+      }
+    ],
+    "selfInclusion": {
+      "path": "docs/receiving/caregiver-collection-browser-d98d06fb-20261009/tc1-tc4-v2/ADD-ONLY-ADMISSION.json",
+      "mode": "100644",
+      "type": "blob",
+      "instruction": "Append the exact Git blob id returned for this complete manifest as the nineteenth addition. No self-referential SHA placeholder is part of entries."
+    },
+    "entriesExcludingSelf": 18,
+    "entriesIncludingSelf": 19,
+    "existingLeavesReplaced": 0,
+    "existingLeavesRemoved": 0,
+    "existingLeavesPreserved": 904,
+    "expectedLeafCountIncludingSelf": 923,
+    "expectedRecursiveEntryCountIncludingSelf": 1065,
+    "expectedNewDirectoryCount": 4,
+    "pathAdmission": "Every target path is absent from the full 1042-entry/904-leaf base. Every existing ancestor is a tree. All paths are unique and use mode100644; no deletion entry is present.",
+    "freshSourceRequirement": "Root must bracket actual tree/ref/publication operations with current main equality. If main moves, preserve every intervening owner change and re-establish this additive mapping before publication. Do not force or replace an owner path.",
+    "verification": "For the created full tree, require all904 base path/mode/type/sha tuples exact and exactly these19 added leaves. Require all135 non-ancestor existing directory objects exact. Only docs, docs/receiving and tools are permitted existing directory ancestors to change."
+  },
+  "exactPair": [
+    {
+      "path": "tools/check_caregiver_collection_browser_v2.mjs",
+      "sha": "bab795b6f0e255a0c4695306c6cb2d87f30df539",
+      "bytes": 41624,
+      "sha256": "64a2747862999f7c427d678c182d27aa52fb738499cda0c3f46b2083882abcf0"
+    },
+    {
+      "path": "tools/caregiver_collection_browser_cases_v2.mjs",
+      "sha": "1ae59a9419f0f9c0ff2fd0b46cc9a6178ef8472b",
+      "bytes": 25984,
+      "sha256": "1eb37567fd108d5af466f7f36c067362ec69e85b7cce5bb4ea9e9c2fcf7611da"
+    }
+  ],
+  "review": {
+    "reviewer": "HAMON d98 /root/learner_adoption",
+    "sourceAccepted": true,
+    "exactDisposition": "a71383cf7dad8650d631ed88f1b957dba41c6564",
+    "originalRepository": "Jacob-Met/hamon",
+    "exactArtifactCopiesAvailableInRecipeRepository": true,
+    "interfaceReadBeforeCorrectedBodies": true,
+    "interface": "b914afe4284ad74a882979b73c774a52ba05f3d1",
+    "originalPrivateFindingsRetainedAsReferences": {
+      "repository": "Jacob-Met/hamon",
+      "review": "5cbfc7635b59dad028976ebe1cc312f0c02a3f38",
+      "addendum": "092137dba3330ba86379b3139a06a55ca97868f6"
+    },
+    "dataOnly": {
+      "result": "f68fa7b88d1e4e6ae249e840e8e2184a4b00834a",
+      "verifier": "a95a0cfaa426d70914c92ac5de5ce25606f90599",
+      "usedInput": "c7c4451de903fe07ee9371b4073fa572b4b68ec2",
+      "originalInvocation": "6a47f40927fceeedd04948083a58e3092b43cbf0",
+      "originalToolResult": "f5c49c9cfa300aa1a7dee742f2508b1ec1fc02ae",
+      "originalToolChunk": "6fe9d7",
+      "actualExit": 0,
+      "usedInputBytes": 403753,
+      "usedInputSHA256": "8ea5443296dedef06337eb357256c371a8a1f98fba50ad5a5b2cf09676bbe30c",
+      "noVerifierOrSyntaxReplayForLaterCustody": true
+    },
+    "independentlyVerified": {
+      "driverEdits": 5,
+      "caseChronologicalEdits": 14,
+      "priorSuccessorEditsToV4": 5,
+      "allForwardAndInverseSpansUnique": true,
+      "fullPairBothDirections": true,
+      "fullOriginalV4Recovered": true,
+      "original14PassedSitesExact": true,
+      "combined5PassedSitesExact": true,
+      "unchangedTwoOutcomeLoop": true,
+      "originalScenarioGroups": 14,
+      "combinedScenarioGroups": 6,
+      "executedScenarioGroups": 0,
+      "callerInterfaceUnchanged": true,
+      "sourceInventoryPrefix16Exact": true,
+      "collectionAssetCount4Exact": true,
+      "v2ReceiverCount": 2,
+      "inventoryCount": 22,
+      "coreGitPins": 20
+    }
+  },
+  "findings": [
+    {
+      "id": "TC1",
+      "change": "A common read-only form helper captures the ordered input/select/textarea index, tag, id, name, type, value and checked state. Current refusal and cancellation each have independent before/after snapshots, retained in trace and compared completely.",
+      "newCases": false
+    },
+    {
+      "id": "TC2",
+      "change": "One actual B calendar is downloaded while B is already explicitly accepted in the existing metadata scenario. Final accepted-B calendar must equal those physical baseline bytes and still differ from A. Existing per-artifact and aggregate limits remain unchanged.",
+      "newProducer": false
+    },
+    {
+      "id": "TC3",
+      "change": "Cleanup-required state is set before admission dispatch/await. Hold identity prevents clearing or aborting an unmatched state. Only actual tx.oncomplete/onabort write native closure booleans; admission failure, pending/blocked requests, abort requests/exceptions, expiry and connection-close requests stay distinct. A terminal no-created-transaction admission is labeled separately. Failed/unreturned admission enters bounded cleanup; unknown state stops later case work. Normal release requires actual clean completion and actual selected-row deletion witness when requested.",
+      "nativeClosureClaimedBySourceReview": false
+    },
+    {
+      "id": "TC4",
+      "change": "Both negative retirement sites require previewHidden===true and applyDisabled===true as independent assertions. All three positive visible-and-enabled metadata-preview checks remain.",
+      "originalPositiveChecksPreserved": true
+    }
+  ],
+  "authorCustody": {
+    "originalContract": "0057a67e91b542e78e057d73a044559057cf2537",
+    "originalPacket": "3089c4a91e52ffa43b0d29634e97f6d5367b7c1c",
+    "sourceFreezeBeforePeer": "673c8e09bf83061dc5a658c1133a77dbb3ffd194",
+    "fullForwardInverse": "85a00126ed5b739c79a3be927fd5dbe00038b2b7",
+    "fullSyntaxCustody": "3ed59153b01bbc2eaf17028944d779256dfc49c9",
+    "originalCombinedDriver": "8a41acb61b17ef2bad6e5a6dbc2113906db280d9",
+    "originalCombinedCases": "824354d7037146129d3f727d54da09d97f35ac34",
+    "firstCaseDraft": "bfd92416597751880ae90e3e9e6067a3f958c38f",
+    "sourceCornerCorrection": "After the initial syntax-only parse, source inspection found pending admission after canceled-before-open-success. The exact final source adds pending-admission rejection before recording termination without an owned transaction. The first draft and original parse remain intact. No browser reproduction was attempted.",
+    "actualSyntaxParses": [
+      {
+        "chunk": "106018",
+        "exit": 0,
+        "bodies": [
+          "bab795b6f0e255a0c4695306c6cb2d87f30df539",
+          "bfd92416597751880ae90e3e9e6067a3f958c38f"
+        ]
+      },
+      {
+        "chunk": "64b7d1",
+        "exit": 0,
+        "bodies": [
+          "1ae59a9419f0f9c0ff2fd0b46cc9a6178ef8472b"
+        ]
+      }
+    ],
+    "syntaxMeaning": "Only unlinked vm.SourceTextModule construction in Node v24.19.0; no module linking/evaluation or browser/server/IDB operation. Original warnings retained.",
+    "preReviewPendingLabel": "The frozen packet is retained unchanged with its historical peer-pending label. The separate exact peer disposition and this admission record provide the later source acceptance."
+  },
+  "installedProductBinding": {
+    "commit": "a8dae9841044d8475c7afc641b4704e77153350d",
+    "tree": "6c62db79b15e47cd656fce39ab84da3aae858901",
+    "originalCombinedCommit": "ee504914e14b2e4b0fe899f9393a00810aaf5faf",
+    "originalCombinedTree": "92e52941417d14bb9eaf80eb7293857dff884bc6",
+    "app": "1d5ac7bea1d7ee485ff5db20379d7c715c3df0d6",
+    "currentCommitAndFullTreeIndependentlyRead": true,
+    "currentTreeTruncated": false,
+    "currentTreeEntries": 1042,
+    "exactTwentyInheritedSources": [
+      {
+        "path": "static/index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c9058dae2b074078902be5badf7c5690293e3ee1",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/style.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "28df6c5229b6b592db33e929ae058fe514304af4",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/calendar.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dbed22d2cb91090bccec9472fbffd2854eed2722",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/calendar.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9e53b951316d841b86f0256cd2444a3ce547269f",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/venue_followup.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dd88e221133be5281330cba11a6d141ae5e8d239",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/plan-request.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b21276dda840fe6dd96a3bf3258a851970ff5e4d",
+        "publishedMainExact": true
+      },
+      {
+        "path": "tests/venue_followup.test.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "515fe959d7217b10b325cab368eb92a6d33b8e6d",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/venue_followup.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a3c4b8bd120149441d343cbda2d3c15f6d106ca2",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/week_plan.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/week_file.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "420ddb8f63fca264dcf97be7147801105696155d",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/app.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1d5ac7bea1d7ee485ff5db20379d7c715c3df0d6",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/venue_note_file.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f8406cb540d52222996c585666ae1a55a1030def",
+        "publishedMainExact": true
+      },
+      {
+        "path": "tests/venue_note_file.test.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a32d542a76779e8d820a9fc233b6e1a82d9aff2c",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/caregiver_handoff.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4286409b3fe932f61957ba72f5db918d18ff0751",
+        "publishedMainExact": true
+      },
+      {
+        "path": "tests/caregiver_handoff.test.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f9a0eb76eed9be3213de714c9ee00f444cee06c7",
+        "publishedMainExact": true
+      },
+      {
+        "path": "tools/check_caregiver_handoff_browser.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "da062ff20b6b5a621e7294c227a29ee24efd684d",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/saved_weeks.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0bb822cb6f75c376397c0f7d6d6de78035f865bc",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/saved_week_store.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c525467f00521d7f4182fd57ca9a91e48c6b9e09",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/saved_week_ui.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5a281492002b61222c70ed9b4268150504d20b15",
+        "publishedMainExact": true
+      },
+      {
+        "path": "static/saved_weeks.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c5b8a9f45a4f7e0ce93c46d7f814308cd1a99009",
+        "publishedMainExact": true
+      }
+    ],
+    "sourceAdmission": "The driver checks actual bytes against their initial fence and the 20 immutable Git blob pins inside its inherited try/finally before browser spawn. The new receiver pair remains external to main and requires exact owner source admission. Its own hash is not recursively embedded."
+  },
+  "preservedBounds": {
+    "originalSourcePathsOrderedPrefix": 16,
+    "sameCollectionAssets": 4,
+    "separatelyNamedV2Files": 2,
+    "totalSourcePaths": 22,
+    "GETOnlyExactStaticServer": true,
+    "receiverFilesUnservable": true,
+    "normalChromeSandbox": true,
+    "diskFloorMiB": 768,
+    "freeMemoryFloorMiB": 1536,
+    "startupPollingNominalSeconds": 12,
+    "cdpTimeoutSeconds": 15,
+    "ordinaryArtifactCapMiB": 2,
+    "originalOversizedFixtureException": "6 MiB + 1 byte",
+    "aggregateRecordedArtifactCapMiB": 8,
+    "original14ScreenshotPdfPhonePrintWork": "Preserved as exact source, not executed or reviewed as rendered artifacts here.",
+    "noNewResourceAllocationOrLifetimeCertification": true,
+    "existingOuterBrowserChildClosure": "Unchanged source and still requires current independent owner admission/closure evidence."
+  },
+  "nativeClosureQualification": {
+    "transaction": "Only actual handlers attached to the owned transaction assign native completed/aborted closure.",
+    "request": "A witnessed transaction can close while its open request is still pending, especially in unexpected-upgrade failure. Request state and terminality are retained separately.",
+    "noTransaction": "A terminal failed open or synchronous refusal with no owned transaction may discharge that admission as noTransaction, never as an abort.",
+    "failure": "A failed or unreturned admission enters matched bounded cleanup. Unknown or mismatched state fails, cannot be overwritten/aborted as foreign work, and cannot authorize another case or replay.",
+    "outer": "A transaction event, abort request, connection-close request or in-page timeout cannot certify outer browser/child closure. Original owner lifecycle admission and original-effect reconciliation remain required.",
+    "clocks": "The inherited8000ms in-page and per-command wait/CDP bounds are not an OS hard deadline."
+  },
+  "existingOwnerHandoff": {
+    "owner": "chatgpt:c77045b4:windows",
+    "issue": "https://github.com/Jacob-Met/tastetable/issues/54",
+    "originalRequest": "https://github.com/Jacob-Met/tastetable/issues/54#issuecomment-6069388916",
+    "receivingCoordination": "https://github.com/Jacob-Met/tastetable/issues/55#issuecomment-6069385711",
+    "originalCombinedClaim": "https://github.com/Jacob-Met/tastetable/issues/55#issuecomment-6073681379",
+    "currentIssueRead": {
+      "updated_at": "2026-10-09T01:08:04Z",
+      "newAdmissionObserved": false
+    },
+    "earlierNamedRequest": "caregiver-e67e7d83-v4-windows-1",
+    "requirement": "First reconcile original requested effects and current process/artifact/lease facts for all prior unknown or unreturned attempts. Missing evidence stays unknown and does not authorize replay. Only the existing owner route may establish a later exact-source/resource/lifecycle admission.",
+    "sourceHandoffOnly": true,
+    "newExecutionRequested": false,
+    "newAllocationRequested": false,
+    "optionalReadOnlyHtmlCliScopePreserved": true
+  },
+  "publicationBoundary": {
+    "rootOwnsSeparatePublication": true,
+    "createdTreeOrRefByThisAuthor": false,
+    "workflowBodies": [
+      {
+        "path": ".github/workflows/ci.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0e6273139a9bf417a4ee42f4501d067b1c9d95a0"
+      },
+      {
+        "path": ".github/workflows/native-plan-week-browser.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d674f2698d1b048075a1c49c2035b1096be668f2"
+      },
+      {
+        "path": ".github/workflows/week-compare.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e591fca2db970460611269ad7d1c53a6bc70f028"
+      }
+    ],
+    "workflowOrSettingsMutationAllowedByRecipe": false,
+    "actionsRunsTriggeredByThisTask": 0,
+    "requirement": "Root retains its ordinary source-publication process and current no-Actions eligibility review. This recipe contains no workflow/gate/setting change and no permission to trigger Actions; source/ref events still require the root's fresh complete trigger/settings checks and exact supported skip-token conditions."
+  },
+  "effects": {
+    "productEdits": 0,
+    "existingReceiverEdits": 0,
+    "ownerWorkspaceWrites": 0,
+    "browserLaunches": 0,
+    "browserCDPOrIDBCalls": 0,
+    "nativeHostCalls": 0,
+    "newAdmissions": 0,
+    "originalCampaignReplays": 0,
+    "sourceTrees": 0,
+    "refs": 0,
+    "PRs": 0,
+    "merges": 0,
+    "Actions": 0,
+    "authorSourceOnlyParserProcesses": 2,
+    "independentDataOnlyVerifierProcesses": 1
+  },
+  "conclusion": "The exact independently reviewed v2 receiver and full evidence are ready for separate additive source publication against the pinned current base. Source readiness does not alter the original14+6 unexecuted browser status or any native unknown."
+}

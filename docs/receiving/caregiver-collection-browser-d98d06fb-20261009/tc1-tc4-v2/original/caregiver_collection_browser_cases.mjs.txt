@@ -1,0 +1,292 @@
+import assert from "node:assert/strict";
+
+/** Inert combined receiving cases. The existing owner supplies its admitted
+ * browser/CDP lifetime and exact caregiver v4 helpers. No launch or main here. */
+export async function runCaregiverCollectionCases(C) {
+  const trace = [];
+  const { combined, second, secondFile } = C;
+  const label = "Same literal <care> & 海";
+  const ev = (fn, value) => C.evaluate("(" + fn.toString() + ")(" + JSON.stringify(value) + ")");
+  const snapshot = () => C.uiState();
+  const previewVisible = () => C.evaluate('!document.querySelector("[data-handoff-preview]").hidden&&!document.querySelector("[data-handoff-apply]").disabled');
+  const record = (name, value) => { trace.push({ name, ...value }); };
+  let activeHold = false;
+
+  async function store(method, args = []) {
+    return ev(async ({ method, args }) => {
+      const { createSavedWeekStore } = await import("/static/saved_week_store.mjs");
+      const s = createSavedWeekStore();
+      try { return await s[method](...args); } finally { s.close(); }
+    }, { method, args });
+  }
+  function sameWeek(actual, expected) {
+    for (const key of ["receivedAt", "calendarId", "inputs", "response", "week"]) {
+      assert.deepEqual(actual[key], expected[key], "Exact accepted week field: " + key);
+    }
+  }
+  const emptyHandoff = value => {
+    const result = structuredClone(value); result.venueNotes.records = []; return result;
+  };
+  async function physicalCurrent(name, expected) {
+    const file = await C.savedHandoff("collection-" + name + ".json");
+    C.sameHandoff(file.value, expected);
+    return file;
+  }
+  async function saveBrowser(expected) {
+    const before = new Set((await store("list")).map(row => row.id));
+    await C.textInput("#savedWeekName", label);
+    await C.activate("#saveCurrentWeek");
+    await C.waitFor(() => C.evaluate('document.querySelector("#savedWeeksStatus").textContent.startsWith("Saved “")&&!document.querySelector("#saveCurrentWeek").disabled'), "committed browser Save");
+    const added = (await store("list")).filter(row => !before.has(row.id));
+    assert.equal(added.length, 1, "Exactly one new row identity");
+    assert.ok(added[0].draft);
+    const draft = added[0].draft;
+    assert.equal(draft.name, label);
+    const value = JSON.parse(draft.text);
+    sameWeek(value, expected.week);
+    assert.equal(Object.hasOwn(value, "venueNotes"), false);
+    assert.equal(Object.hasOwn(value, "records"), false);
+    record("physical browser Save", { id: draft.id, name: draft.name,
+      calendarId: value.calendarId, receivedAt: value.receivedAt,
+      assignedKeys: Object.keys(value.week.assignments), notesExcluded: true });
+    return draft;
+  }
+  async function preview(draft) {
+    await C.activate("#refreshSavedWeeks");
+    await C.waitFor(() => ev(id => !!document.querySelector('button[data-saved-week-id="' + id + '"]'), draft.id), "exact row ID present");
+    await C.activate('button[data-saved-week-id="' + draft.id + '"]');
+    await C.waitFor(() => C.evaluate('!document.querySelector("#savedWeekPreview").hidden&&!document.querySelector("#openSavedWeek").disabled'), "fresh row Preview");
+    assert.equal(await C.evaluate('document.querySelector("#renameSavedWeekName").value'), draft.name);
+  }
+  async function waitOpen(expected) {
+    await C.waitFor(() => ev(city => !document.querySelector("#results").hidden
+      && document.querySelector("#form").city.value === city
+      && document.querySelector("#savedWeeksStatus").textContent.startsWith("Opened the browser copy.")
+      && !document.querySelector("#openSavedWeek").disabled, expected.week.inputs.city), "current browser copy accepted");
+  }
+  async function currentRetired() {
+    assert.equal(await C.evaluate('document.querySelector("#results").hidden'), true);
+    assert.equal(await C.evaluate('document.querySelector("#venueFollowup").hidden'), true);
+    for (const selector of ["#saveCaregiverHandoff", "#saveWeek", "#calendarDownload", "#saveCurrentWeek"]) {
+      assert.equal(await ev(s => document.querySelector(s).disabled, selector), true, "Retired " + selector);
+    }
+    assert.equal(await previewVisible(), false);
+  }
+
+  // An owned readwrite transaction holds the real store's later readonly get.
+  // It performs only get keep-alives until an explicit release command. A row
+  // deletion, when requested, occurs in a native success callback before commit.
+  // Its 8 s deadline aborts/refuses; expiry cannot qualify a race as completed.
+  async function beginHold() {
+    assert.equal(activeHold, false);
+    const initial = await ev(() => new Promise((resolve, reject) => {
+      if (window.__caregiverCollectionHold && !window.__caregiverCollectionHold.closed) {
+        reject(new Error("Previous collection hold is not closed")); return;
+      }
+      const state = { closed: false, completed: false, aborted: false, expired: false,
+        reads: 0, requested: false, deleteId: null, deleted: false, error: null };
+      window.__caregiverCollectionHold = state;
+      const request = indexedDB.open("tastetable.saved-weeks", 1);
+      let db, tx, ready = false, timer;
+      const finish = (completed, error = null) => {
+        clearTimeout(timer); state.closed = true; state.completed = completed;
+        state.aborted = !completed; state.error = error; db?.close();
+        if (!ready) reject(new Error(error || "Collection hold closed before admission"));
+      };
+      timer = setTimeout(() => {
+        state.expired = true;
+        if (tx) { try { tx.abort(); } catch (error) { finish(false, String(error)); } }
+        else { finish(false, "Collection hold admission deadline"); }
+      }, 8000);
+      request.onerror = () => finish(false, request.error?.message || "Collection hold open refused");
+      request.onblocked = () => finish(false, "Collection hold open blocked");
+      request.onupgradeneeded = () => { request.transaction.abort(); };
+      request.onsuccess = () => {
+        db = request.result;
+        if (state.closed) { db.close(); return; }
+        try {
+          tx = db.transaction("drafts", "readwrite");
+          const objectStore = tx.objectStore("drafts");
+          tx.oncomplete = () => finish(true);
+          tx.onabort = () => finish(false, tx.error?.message || "Native hold transaction aborted");
+          tx.onerror = () => {};
+          const keep = () => {
+            const read = objectStore.get("__caregiver_collection_receiver_hold__");
+            read.onsuccess = () => {
+              state.reads++;
+              if (!ready) { ready = true; resolve({ ready: true, reads: state.reads, deadlineMs: 8000 }); }
+              if (state.requested) {
+                if (state.deleteId !== null) {
+                  const removed = objectStore.delete(state.deleteId);
+                  removed.onsuccess = () => { state.deleted = true; };
+                }
+                return;
+              }
+              keep();
+            };
+          };
+          keep();
+        } catch (error) {
+          try { tx?.abort(); } catch {}
+          finish(false, String(error));
+        }
+      };
+    }));
+    assert.equal(initial.ready, true);
+    activeHold = true;
+    record("authored native IDB hold admitted", initial);
+  }
+  async function endHold(deleteId = null, cleanup = false) {
+    if (!activeHold) return;
+    await ev(id => {
+      const state = window.__caregiverCollectionHold;
+      if (!state || state.closed) return;
+      state.deleteId = id; state.requested = true;
+    }, deleteId);
+    await C.waitFor(() => C.evaluate('Boolean(window.__caregiverCollectionHold?.closed)'), "native hold transaction closure");
+    const state = await C.evaluate('({...window.__caregiverCollectionHold})');
+    activeHold = false;
+    record(cleanup ? "hold cleanup closure" : "hold explicit closure", state);
+    assert.equal(state.expired, false, "Expired stimulus is a receiving failure");
+    assert.equal(state.completed, true, "Native hold transaction must complete");
+    assert.equal(state.aborted, false);
+    if (deleteId !== null) { assert.equal(state.deleted, true); assert.equal(state.deleteId, deleteId); }
+  }
+  async function heldOpen(draft) {
+    await preview(draft);
+    await beginHold();
+    await C.activate("#openSavedWeek");
+    await C.waitFor(() => C.evaluate('document.querySelector("#requestStatus").textContent.includes("Opening the saved week")&&document.querySelector("#results").hidden'), "Open retired before native storage delivery");
+    assert.equal(await C.evaluate('window.__caregiverCollectionHold.closed'), false);
+    await currentRetired();
+  }
+  async function obsoleteOpenSettled() {
+    await C.waitFor(() => C.evaluate('document.querySelector("#savedWeeksStatus").textContent.startsWith("The browser copy was not opened.")'), "obsolete Open settled without acceptance");
+  }
+
+  try {
+    await C.navigate(C.base + "/?caregiver-collection=1", "#openCaregiverHandoff");
+    await C.waitFor(() => C.evaluate('document.querySelector("#savedWeeksStatus").textContent.includes("saved")'), "native library ready");
+    await C.restoreHandoff(combined.file);
+    const draftA = await saveBrowser(combined.value);
+    await C.navigate(C.base + "/?caregiver-collection=2", "#openCaregiverHandoff");
+    await preview(draftA);
+    assert.equal(await C.evaluate('document.querySelector("#results").hidden'), true);
+    await C.activate("#openSavedWeek"); await waitOpen(combined.value);
+    await physicalCurrent("browser-reopened-A", emptyHandoff(combined.value));
+    const calendarA = await C.downloaded("#calendarDownload", "collection-browser-A.ics");
+    assert.deepEqual(calendarA.bytes, C.calendarBefore.bytes);
+    C.passed("combined browser Save/reload/Preview/Open preserves the exact accepted week and calendar while creating empty venue notes");
+
+    await C.restoreHandoff(secondFile);
+    const draftB = await saveBrowser(second);
+    assert.notEqual(draftA.id, draftB.id);
+    assert.equal(draftA.name, draftB.name);
+    assert.notEqual(JSON.parse(draftA.text).calendarId, JSON.parse(draftB.text).calendarId);
+    await C.restoreHandoff(combined.file);
+    await C.openHandoff(secondFile); await C.handoffPreview();
+    const beforeMetadata = await snapshot();
+    await preview(draftB);
+    assert.equal(await snapshot(), beforeMetadata);
+    assert.equal(await previewVisible(), true);
+    await C.textInput("#renameSavedWeekName", "Renamed <care> & 海");
+    await C.activate("#renameSavedWeek");
+    await C.waitFor(() => C.evaluate('document.querySelector("#savedWeeksStatus").textContent.startsWith("Renamed")'), "native Rename committed");
+    const renamed = await store("get", [draftB.id]);
+    assert.equal(renamed.name, "Renamed <care> & 海"); assert.equal(renamed.text, draftB.text);
+    assert.equal(await C.evaluate('Boolean(document.querySelector("#savedPreviewTitle care"))'), false);
+    await C.activate("#removeSavedWeek");
+    await C.waitFor(() => C.evaluate('document.querySelector("#savedWeeksStatus").textContent.startsWith("Removed")'), "native Remove committed");
+    assert.equal((await store("list")).some(row => row.id === draftB.id), false);
+    assert.equal(await snapshot(), beforeMetadata);
+    assert.equal(await previewVisible(), true);
+    await physicalCurrent("after-library-metadata", combined.value);
+    assert.equal(await previewVisible(), true);
+    await C.activate("[data-handoff-cancel]");
+    C.passed("same-name library rows stay distinct; physical Preview/Rename/Remove preserves accepted caregiver data and its pending handoff preview");
+
+    for (const outcome of ["success", "removed-record"]) {
+      await C.restoreHandoff(secondFile);
+      const row = await saveBrowser(second);
+      await C.restoreHandoff(combined.file);
+      await C.openHandoff(secondFile); await C.handoffPreview();
+      await heldOpen(row);
+      await C.openHandoff(combined.file);
+      await C.handoffPreview(); // If actual UI refuses while retired, fail; never bypass it.
+      await C.activate("[data-handoff-apply]");
+      await C.waitFor(() => C.evaluate('document.querySelector("[data-handoff-status]").textContent.includes("Caregiver handoff opened.")'), "explicit actual Apply during held Open");
+      const accepted = await snapshot();
+      const requestStatus = await C.evaluate('document.querySelector("#requestStatus").textContent');
+      await endHold(outcome === "removed-record" ? row.id : null);
+      await obsoleteOpenSettled();
+      assert.equal(await snapshot(), accepted);
+      assert.equal(await C.evaluate('document.querySelector("#requestStatus").textContent'), requestStatus);
+      if (outcome === "removed-record") {
+        const missing = await ev(async id => {
+          const { createSavedWeekStore } = await import("/static/saved_week_store.mjs");
+          const s = createSavedWeekStore();
+          try { await s.get(id); return null; } catch (error) { return error.message; } finally { s.close(); }
+        }, row.id);
+        assert.match(missing, /saved week was removed/);
+        record("removed-record native refusal witness", { id: row.id, publicStoreMessage: missing,
+          attribution: "Owned hold transaction deleted the row before queued original readonly get; no synthetic result." });
+      } else assert.equal((await store("get", [row.id])).text, row.text);
+      await physicalCurrent("after-held-" + outcome, combined.value);
+      C.passed("explicit caregiver Apply survives obsolete real collection Open " + outcome + " with exact origin and complete notes");
+    }
+
+    await C.restoreHandoff(secondFile);
+    const refusedRow = await saveBrowser(second);
+    await C.restoreHandoff(combined.file);
+    const inputsBeforeRefusal = await C.evaluate('document.querySelector("#form").city.value');
+    await heldOpen(refusedRow);
+    await endHold(refusedRow.id);
+    await obsoleteOpenSettled();
+    await C.waitFor(() => C.evaluate('document.querySelector("#requestStatus").textContent.includes("saved week was removed")'), "current missing-record refusal");
+    await currentRetired();
+    assert.equal(await C.evaluate('document.querySelector("#form").city.value'), inputsBeforeRefusal);
+    await C.restoreHandoff(secondFile);
+    const canceledRow = await saveBrowser(second);
+    await C.restoreHandoff(combined.file);
+    await heldOpen(canceledRow);
+    await C.activate("#cancelPlan");
+    const cancelStatus = await C.evaluate('document.querySelector("#requestStatus").textContent');
+    assert.match(cancelStatus, /Stopped waiting/);
+    await endHold();
+    await obsoleteOpenSettled();
+    await currentRetired();
+    assert.equal(await C.evaluate('document.querySelector("#requestStatus").textContent'), cancelStatus);
+    assert.equal(await C.evaluate('document.querySelector("#form").city.value'), combined.value.week.inputs.city);
+    await C.restoreHandoff(combined.file);
+    await physicalCurrent("after-current-refusal-cancel-recovery", combined.value);
+    C.passed("current collection refusal and explicit Stop waiting keep old outputs retired, with exact input retention and later handoff recovery");
+
+    await preview(canceledRow);
+    await C.heldHandoff(combined.file);
+    await C.activate("#openSavedWeek");
+    await waitOpen(second);
+    await C.releaseNotes();
+    assert.equal(await previewVisible(), false);
+    await physicalCurrent("after-collection-retires-file-read", emptyHandoff(second));
+    const calendarB = await C.downloaded("#calendarDownload", "collection-browser-B.ics");
+    assert.notDeepEqual(calendarB.bytes, calendarA.bytes);
+    record("accepted distinct collection B", { rowId: canceledRow.id,
+      calendarId: second.week.calendarId, receivedAt: second.week.receivedAt, emptyNotes: true });
+    C.passed("actual collection Open retires a held handoff file read and exports only the accepted distinct source with empty notes");
+  } catch (error) {
+    record("combined case failure", { error: error.stack || String(error) });
+    throw error;
+  } finally {
+    let closureError;
+    if (activeHold) { try { await endHold(null, true); } catch (error) {
+      closureError = error; record("hold cleanup failure", { error: error.stack || String(error) });
+    } }
+    await C.saveArtifact("combined-collection-traces.json", JSON.stringify({
+      schema: "tastetable.caregiver-collection.physical-traces.v1",
+      scope: "Real DOM/keyboard/chooser/download and native IndexedDB when executed by the admitted owner.",
+      injectedStimuli: "Bounded readwrite get-loop hold; optional owned-row delete before commit; inherited selected-file arrayBuffer completion latch.",
+      trace,
+    }, null, 2) + "\n", { kind: "observed combined-case stimuli and closure receipt" });
+    if (closureError) throw closureError;
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "schema": "tastetable.caregiver-collection.browser-tc1-tc4.independent-source-review.v2",
+  "reviewer": "HAMON d98 /root/learner_adoption",
+  "recordedAt": "2026-10-09 18:49:09 UTC",
+  "status": "SOURCE ACCEPTED FOR THE EXACT V2 PAIR AND TC1–TC4 SCOPE; NATIVE 14+6 REMAINS UNEXECUTED",
+  "disposition": "No remaining source blocker found for the four frozen receiving repairs. This disposition supports the separately coordinated additive source-publication recipe; it neither publishes source nor admits any browser or native attempt.",
+  "preExposure": {
+    "interface": {
+      "repository": "Jacob-Met/tastetable",
+      "blob": "b914afe4284ad74a882979b73c774a52ba05f3d1"
+    },
+    "originalPeer": {
+      "repository": "Jacob-Met/hamon",
+      "review": "5cbfc7635b59dad028976ebe1cc312f0c02a3f38",
+      "addendum": "092137dba3330ba86379b3139a06a55ca97868f6"
+    },
+    "ordering": "The frozen interface and original peer/addendum were read before the corrected driver/cases bodies. They remained the review requirements; the corrected source did not redefine them.",
+    "originalContract": "Jacob-Met/tastetable 0057a67e91b542e78e057d73a044559057cf2537"
+  },
+  "intake": {
+    "repository": "Jacob-Met/tastetable",
+    "packet": "673c8e09bf83061dc5a658c1133a77dbb3ffd194",
+    "driver": "bab795b6f0e255a0c4695306c6cb2d87f30df539",
+    "cases": "1ae59a9419f0f9c0ff2fd0b46cc9a6178ef8472b",
+    "sourceProof": "85a00126ed5b739c79a3be927fd5dbe00038b2b7",
+    "syntaxCustody": "3ed59153b01bbc2eaf17028944d779256dfc49c9",
+    "originalDriver": "8a41acb61b17ef2bad6e5a6dbc2113906db280d9",
+    "originalCases": "824354d7037146129d3f727d54da09d97f35ac34",
+    "originalV4": "da062ff20b6b5a621e7294c227a29ee24efd684d",
+    "preservedFirstCaseDraft": "bfd92416597751880ae90e3e9e6067a3f958c38f",
+    "allBodiesComplete": true,
+    "independentDigests": [
+      {
+        "name": "original-v4",
+        "bytes": 37919,
+        "sha256": "3cba0ff3b2c36718f7a0f2e16244c211c05082dc810d0e55560c94ade5b14593",
+        "git": "da062ff20b6b5a621e7294c227a29ee24efd684d",
+        "exact": true
+      },
+      {
+        "name": "original-successor",
+        "bytes": 39247,
+        "sha256": "78e49c8e58854d48d46545fe90f53133c54b9d509f5839541c2d9db731bfeda0",
+        "git": "8a41acb61b17ef2bad6e5a6dbc2113906db280d9",
+        "exact": true
+      },
+      {
+        "name": "original-cases",
+        "bytes": 16730,
+        "sha256": "ce27aac3cd7783776c71f792dba1eb43898c53ba3fe75dc3ece0f5cad17569ad",
+        "git": "824354d7037146129d3f727d54da09d97f35ac34",
+        "exact": true
+      },
+      {
+        "name": "amended-driver",
+        "bytes": 41624,
+        "sha256": "64a2747862999f7c427d678c182d27aa52fb738499cda0c3f46b2083882abcf0",
+        "git": "bab795b6f0e255a0c4695306c6cb2d87f30df539",
+        "exact": true
+      },
+      {
+        "name": "first-case-draft",
+        "bytes": 25865,
+        "sha256": "04c00e7db4ae1603017900a82027df2e27623ed8df30a040d2f12fb64ae11a3d",
+        "git": "bfd92416597751880ae90e3e9e6067a3f958c38f",
+        "exact": true
+      },
+      {
+        "name": "amended-cases",
+        "bytes": 25984,
+        "sha256": "1eb37567fd108d5af466f7f36c067362ec69e85b7cce5bb4ea9e9c2fcf7611da",
+        "git": "1ae59a9419f0f9c0ff2fd0b46cc9a6178ef8472b",
+        "exact": true
+      },
+      {
+        "name": "proof",
+        "bytes": 36892,
+        "sha256": "3c171f3b369e5972b5b7f4900de3db16795f083cd0e088d2fe41851ccbc5bee6",
+        "git": "85a00126ed5b739c79a3be927fd5dbe00038b2b7",
+        "exact": true
+      },
+      {
+        "name": "packet",
+        "bytes": 19669,
+        "sha256": "49bc110edb9dc1d9983a51e06357a6d2dd17db13159bd8ea7a4bf23f718ed74d",
+        "git": "673c8e09bf83061dc5a658c1133a77dbb3ffd194",
+        "exact": true
+      },
+      {
+        "name": "originalPacket",
+        "bytes": 11634,
+        "sha256": "d1fe4756083e89f6497437f8a7aa127e82d995e2533c8cb725937d703ee0230e",
+        "git": "3089c4a91e52ffa43b0d29634e97f6d5367b7c1c",
+        "exact": true
+      },
+      {
+        "name": "syntax",
+        "bytes": 112419,
+        "sha256": "a225c79cdbc8a681db366096821662bba765c3df15dc543379c4055d7b253e62",
+        "git": "3ed59153b01bbc2eaf17028944d779256dfc49c9",
+        "exact": true
+      }
+    ],
+    "interfaceDigest": {
+      "bytes": 11015,
+      "sha256": "d4781b43aa73ff0d9d822eb33d874d6439d5165853f2816a6861c9583a073274",
+      "git": "b914afe4284ad74a882979b73c774a52ba05f3d1"
+    }
+  },
+  "method": {
+    "sourceRead": "Complete final driver/cases read as inert text, with original peer/interface, all declared edit spans, original inverse packet, actual syntax-only custody and relevant original lifecycle contexts.",
+    "independentDataVerification": {
+      "repository": "Jacob-Met/hamon",
+      "result": "f68fa7b88d1e4e6ae249e840e8e2184a4b00834a",
+      "verifierSource": "a95a0cfaa426d70914c92ac5de5ce25606f90599",
+      "originalToolResult": "f5c49c9cfa300aa1a7dee742f2508b1ec1fc02ae",
+      "originalToolChunk": "6fe9d7",
+      "exit": 0,
+      "operations": "UTF-8 byte counts, SHA256/Git blob hashes, JSON parsing, unique exact forward/inverse string edits, inventory/caller/label comparison and data-only joining of the two retained syntax command payloads with their exact source bodies.",
+      "candidateJavascriptParsed": 0,
+      "candidateImported": 0,
+      "candidateLinked": 0,
+      "candidateEvaluated": 0
+    },
+    "originalSyntaxCustody": "The author's original two parser receipts (106018 and 64b7d1, each exit 0) were inspected and their exact command payloads joined to the source. The first parsed the final driver plus first case draft; the second parsed only the changed final case. Both retained unlinked status and original VM Modules warnings. No syntax process was replayed by this reviewer."
+  },
+  "exactPreservation": {
+    "driverEdits": 5,
+    "caseChronologicalEdits": 14,
+    "priorSuccessorEdits": 5,
+    "everyForwardAndReverseSpanUnique": true,
+    "completeDriverForwardInverse": true,
+    "completeCaseForwardInverse": true,
+    "completeOriginalV4Recovered": true,
+    "firstThirteenCaseEditsRecoverFirstDraft": true,
+    "finalFourteenthEdit": "Explicitly reject a still-pending admission when canceled/failed/expired open success creates no transaction. The first draft and its syntax receipt remain preserved; no behavioral failure or reproduction is inferred.",
+    "originalScenarioGroups": 14,
+    "combinedScenarioGroups": 6,
+    "executedScenarioGroups": 0,
+    "staticLabels": "All fourteen original driver passed-site labels are exact. All five original combined passed sites are exact; the unchanged two-outcome loop accounts for the original six combined groups. Static source cardinality is not a passing execution.",
+    "inventory": {
+      "originalPrefix": 16,
+      "unchangedCollectionAssets": 4,
+      "separateV2": 2,
+      "total": 22,
+      "unique": true,
+      "corePins": 20,
+      "interfaceAndPacketPinsExact": true,
+      "coreGuardWithinTryBeforeBrowserSpawn": true
+    },
+    "callerMembers": [
+      "base",
+      "combined",
+      "second",
+      "secondFile",
+      "calendarBefore",
+      "evaluate",
+      "uiState",
+      "activate",
+      "textInput",
+      "waitFor",
+      "navigate",
+      "restoreHandoff",
+      "openHandoff",
+      "handoffPreview",
+      "savedHandoff",
+      "sameHandoff",
+      "downloaded",
+      "heldHandoff",
+      "releaseNotes",
+      "saveArtifact",
+      "passed"
+    ],
+    "sourceFence": "The same 16 original paths and four collection assets remain ordered and exact. Only the two separately named v2 receiver paths replace predecessor receiver filenames. All 20 fixed core Git pins equal the pre-exposure interface and final packet. Actual-byte admission is within the existing try/finally before browser spawn and requires equality to the initial source fence."
+  },
+  "findings": [
+    {
+      "id": "TC1",
+      "disposition": "Resolved in exact source",
+      "evidence": "formInputs observes every ordered #form input/select/textarea with index, tag, id, name, type, value and checked (null when inapplicable). Current refusal and Stop waiting each take independent beforeimages after restoring A and before held Open. Each afterimage is retained beside its own beforeimage and compared by complete deep equality. Old output retirement assertions and later physical A recovery remain."
+    },
+    {
+      "id": "TC2",
+      "disposition": "Resolved in exact source",
+      "evidence": "The existing earlier explicit B acceptance now takes an actual downloaded collection-browser-B-baseline.ics before Save/metadata work and requires it differ from A. Final accepted B must equal that earlier physical B byte buffer exactly and still differ from A. The original fixture, A/B origins, download implementation and artifact caps remain; no model/calendar producer is introduced."
+    },
+    {
+      "id": "TC3",
+      "disposition": "Resolved in exact source with the existing owner-closure boundary retained",
+      "evidence": [
+        "The cleanup marker and per-hold identity are set before dispatching/awaiting admission. Missing or mismatched state cannot be cleared, overwritten or aborted by the matching-id cleanup path; a previous unclosed state refuses a new admission.",
+        "Only handlers directly installed on an owned transaction assign closed=true and completed/aborted. An abort() call, abort exception, blocked request, request error, transaction error and timer expiry retain distinct fields and do not fabricate a native closure witness.",
+        "A terminal failed open or synchronous refusal with transactionCreated=false can establish noTransaction; it is explicitly not a transaction abort. The final pre-transaction cancellation branch rejects pending admission before clearing its timer through noOwnedTransaction.",
+        "Unexpected upgrade is refused after attaching native completion/abort handlers to its owned upgrade transaction; the abort request alone does not discharge it and no schema/store creation is authored.",
+        "Successful release requires admitted hold kind, requested release, real tx.oncomplete, no expiry/error/abort request and real delete-request success for the selected row when removal was requested. Actual missing-record refusal is checked through the unchanged public store.",
+        "The top-level finally covers failed or unreturned admission. Bounded same-id probes retain unresolved or failed cleanup and throw; no later case or repeated admission follows failure. A cleanup success cannot turn the original failed case into a passing case."
+      ],
+      "qualification": "A native transaction event witnesses that transaction's closure only. In an unexpected-upgrade failure it can precede the open request's terminal event; requestSettled/requestState remain in the retained observation. The code does not elevate that event to complete request, connection or browser/child closure. A connection close request is likewise not an independent outer closure receipt."
+    },
+    {
+      "id": "TC4",
+      "disposition": "Resolved in exact source",
+      "evidence": "Both negative retirement sites call requireRetiredPreview, retain the observed previewHidden/applyDisabled pair, and separately require true for each. All three positive visible-and-enabled conjunction checks remain exact."
+    }
+  ],
+  "unchangedBoundaries": {
+    "staticServing": "Inherited GET-only exact static/ membership remains; tests and receiver modules are unservable. No new HTTP method, provider, dependency, credential or security setting is introduced.",
+    "browserLaunch": "Original normal-sandbox Chrome arguments, fresh profile, local debugging address and parent lifecycle text are recovered exactly by inverse. No launch was attempted.",
+    "resourceGuards": "Original 768 MiB disk and 1536 MiB free-memory admission, 2 MiB ordinary artifact cap, original 6 MiB+1 oversized fixture exception and 8 MiB aggregate recorded cap remain. The single added B download uses those same helpers and caps.",
+    "timeBounds": "Original 8000 ms in-page hold stimulus, nominal startup polling and 15-second per-CDP command limits remain. Awaited probes can consume their individual limits; these are not an OS hard deadline or a fresh certification of total lifetime.",
+    "nativeOwner": "chatgpt:c77045b4:windows through existing TasteTable #54/#55 responsibilities only.",
+    "nativeUnknowns": "Every original unknown or unreturned native attempt remains unknown and unreplayed. Exact receiver placement, current resources/runtime/route, original-effect reconciliation and actual browser/child closure require the retained owner route before any newly admitted execution.",
+    "productBinding": "The pair declares corrected app 1d5ac7be among 20 frozen source pins. Author reports published product commit a8dae9841044d8475c7afc641b4704e77153350d/tree6c62db79b15e47cd656fce39ab84da3aae858901 and independently read its complete tree. This reviewer verified the pair's pins against the frozen interface and that packet, without repeating the whole product-tree inventory. The additive publication recipe is a separate action."
+  },
+  "primarySemantics": {
+    "repository": "w3c/IndexedDB",
+    "path": "index.bs",
+    "blob": "88bbfeb4176681b3de7598c727e65ec0c8659141",
+    "url": "https://github.com/w3c/IndexedDB/blob/main/index.bs",
+    "directlyRead": true,
+    "relevance": "The primary specification distinguishes transaction completion from individual request success, permits abort() to throw for committing/finished transactions, and dispatches the native abort event through the abort algorithm. These support requiring actual native event witnesses instead of assigning closure on arbitrary errors.",
+    "sourceLinkQualification": "The primary file was read through GitHub source-file API; the observed Git blob identity is retained above."
+  },
+  "preservedEvidence": {
+    "originalTC1ThroughTC4": "The original source-blocking reviews remain valid for their original pair. This additive disposition applies only to the exact amended pair.",
+    "rootApplicationReceiving": "The separate original 17-group campaign and focused corrected H Apply 1-group/205-check receipt are not browser qualification and were not replayed here.",
+    "authorFirstDraft": "The first case draft's canceled-before-open-success source finding and original parser receipt are preserved; no native defect reproduction was claimed."
+  },
+  "effects": {
+    "productEdits": 0,
+    "receiverEditsByReviewer": 0,
+    "candidateExecutions": 0,
+    "syntaxReplays": 0,
+    "browserServerOrIDBCalls": 0,
+    "nativeHostCalls": 0,
+    "heldHostProbes": 0,
+    "newOwnerAllocation": 0,
+    "sourceTrees": 0,
+    "refs": 0,
+    "PRs": 0,
+    "merges": 0,
+    "Actions": 0,
+    "localDataOnlyVerifierProcesses": 1,
+    "persistence": "Private inert HAMON evidence blobs only, with exact full GET readback."
+  },
+  "next": "Author/root may attach this exact source disposition to the already prepared additive v2 source recipe. No browser, native replay or owner admission follows from this source review."
+}

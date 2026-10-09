@@ -1,0 +1,26 @@
+{
+  "schema": "tastetable.tc1-tc4.independent-data-verifier-invocation-custody.v1",
+  "provenance": "Exact tools.exec_command argument object from the original invocation visible in this conversation, retained additively after the source review. This is not a reconstructed native command or a new invocation.",
+  "originalInvocation": {
+    "cmd": "python3 /tmp/d98-taste-browser-source-review-20261009/verify-data.py",
+    "shell": "/bin/bash",
+    "login": false,
+    "workdir": "/tmp",
+    "yield_time_ms": 10000,
+    "max_output_tokens": 6500
+  },
+  "originalToolChunk": "6fe9d7",
+  "originalToolResult": "f5c49c9cfa300aa1a7dee742f2508b1ec1fc02ae",
+  "originalExit": 0,
+  "verifier": "a95a0cfaa426d70914c92ac5de5ce25606f90599",
+  "exactUsedInput": {
+    "blob": "c7c4451de903fe07ee9371b4073fa572b4b68ec2",
+    "bytes": 403753,
+    "sha256": "8ea5443296dedef06337eb357256c371a8a1f98fba50ad5a5b2cf09676bbe30c",
+    "git": "c7c4451de903fe07ee9371b4073fa572b4b68ec2"
+  },
+  "originalDataResult": "f68fa7b88d1e4e6ae249e840e8e2184a4b00834a",
+  "sourceReview": "a71383cf7dad8650d631ed88f1b957dba41c6564",
+  "custodyPathQualification": "The exact input body includes all source strings used by the original verifier. The verifier treated them as JSON/string data only. Source references in the input remain private inert HAMON/Taste evidence.",
+  "noReplay": true
+}

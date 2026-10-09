@@ -1,0 +1,177 @@
+import hashlib
+import json
+import pathlib
+import re
+import shlex
+
+ROOT = pathlib.Path('/tmp/d98-taste-browser-source-review-20261009')
+input_bytes = (ROOT / 'review-input.json').read_bytes()
+packet = json.loads(input_bytes)
+s = packet['strings']
+proof = json.loads(s['proof'])
+interface = json.loads(packet['interface'])
+author = json.loads(s['packet'])
+original_packet = json.loads(s['originalPacket'])
+syntax = json.loads(s['syntax'])
+
+def identities(text):
+    raw = text.encode('utf-8')
+    return {'bytes': len(raw), 'sha256': hashlib.sha256(raw).hexdigest(),
+            'git': hashlib.sha1(b'blob ' + str(len(raw)).encode('ascii') + b'\0' + raw).hexdigest()}
+
+names = {'original-v4': 'originalV4', 'original-successor': 'originalDriver',
+         'original-cases': 'originalCases', 'amended-driver': 'driver',
+         'first-case-draft': 'firstCases', 'amended-cases': 'cases'}
+digest_results = []
+for declaration in proof['sourceDigests']:
+    key = names[declaration['name']]
+    observed = identities(s[key])
+    for field in ['bytes', 'sha256', 'git']:
+        assert observed[field] == declaration[field], (key, field)
+    digest_results.append({'name': declaration['name'], **observed, 'exact': True})
+extra_pins = {'proof': '85a00126ed5b739c79a3be927fd5dbe00038b2b7',
+              'packet': '673c8e09bf83061dc5a658c1133a77dbb3ffd194',
+              'originalPacket': '3089c4a91e52ffa43b0d29634e97f6d5367b7c1c',
+              'syntax': '3ed59153b01bbc2eaf17028944d779256dfc49c9'}
+for key, pin in extra_pins.items():
+    observed = identities(s[key])
+    assert observed['git'] == pin, key
+    digest_results.append({'name': key, **observed, 'exact': True})
+interface_identity = identities(packet['interface'])
+assert interface_identity['git'] == 'b914afe4284ad74a882979b73c774a52ba05f3d1'
+
+def exact_edits(old, new, edits, before_key='before', after_key='after', midpoint=None):
+    current = old
+    forward = []
+    for index, edit in enumerate(edits):
+        before, after = edit[before_key], edit[after_key]
+        count = current.count(before)
+        assert count == 1, ('forward', edit['label'], count)
+        current = current.replace(before, after, 1)
+        forward.append({'label': edit['label'], 'forwardOccurrences': count})
+        if midpoint is not None and index == midpoint[0]:
+            assert current == midpoint[1], ('first draft', index)
+    assert current == new, 'complete forward body'
+    for edit in reversed(edits):
+        before, after = edit[before_key], edit[after_key]
+        count = current.count(after)
+        assert count == 1, ('inverse', edit['label'], count)
+        current = current.replace(after, before, 1)
+    assert current == old, 'complete inverse body'
+    return {'edits': len(edits), 'forwardExact': True, 'inverseExact': True,
+            'allForwardAndInverseOccurrencesOne': True, 'steps': forward}
+
+assert len(proof['chronologicalDriverEdits']) == 5
+assert len(proof['chronologicalCaseEdits']) == 14
+driver_inverse = exact_edits(s['originalDriver'], s['driver'], proof['chronologicalDriverEdits'])
+cases_inverse = exact_edits(s['originalCases'], s['cases'], proof['chronologicalCaseEdits'],
+                            midpoint=(12, s['firstCases']))
+v4_inverse = exact_edits(s['originalV4'], s['originalDriver'],
+                        original_packet['chronologicalInverseEdits'], 'old', 'new')
+
+def inventory(text):
+    match = re.search(r'^const sourcePaths=(\[.*\]);$', text, re.M)
+    assert match
+    return json.loads(match.group(1))
+
+new_inventory = inventory(s['driver'])
+old_inventory = inventory(s['originalDriver'])
+v4_inventory = inventory(s['originalV4'])
+assert len(v4_inventory) == 16 and len(new_inventory) == 22
+assert new_inventory[:16] == v4_inventory
+assert new_inventory[:20] == old_inventory[:20]
+assert new_inventory[20:] == interface['proposedFiles']
+assert len(set(new_inventory)) == 22
+core_match = re.search(r'const expectedCoreGit=(\{.*?\});', s['driver'], re.S)
+assert core_match
+core = json.loads(core_match.group(1))
+expected_core = {x['path']: x['sha'] for x in interface['productCore']['exactTwentyRetainedSourceInputs']}
+assert len(core) == 20 and core == expected_core
+assert list(core) == new_inventory[:20]
+assert core == {x['path']: x['sha'] for x in author['exactPublishedProductBinding']['exactTwentyInheritedSources']}
+guard_pos = s['driver'].index('for (const [name, expected] of Object.entries(expectedCoreGit))')
+spawn_pos = s['driver'].index('browser = spawn(executable,')
+try_pos = s['driver'].index('\ntry {\n')
+assert try_pos < guard_pos < spawn_pos
+
+original_passed = re.findall(r'^\s*passed\((.*?)\);$', s['originalV4'], re.M)
+driver_passed = re.findall(r'^\s*passed\((.*?)\);$', s['driver'], re.M)
+old_case_passed = re.findall(r'^\s*C\.passed\((.*?)\);$', s['originalCases'], re.M)
+case_passed = re.findall(r'^\s*C\.passed\((.*?)\);$', s['cases'], re.M)
+assert len(original_passed) == 14 and original_passed == driver_passed
+assert len(case_passed) == 5 and old_case_passed == case_passed
+outcome_loop = 'for (const outcome of ["success", "removed-record"]) {'
+assert s['originalCases'].count(outcome_loop) == s['cases'].count(outcome_loop) == 1
+caller = re.search(r'await runCaregiverCollectionCases\(\{(.*?)\}\);', s['driver'], re.S).group(1)
+caller_members = [x.strip() for x in caller.split(',')]
+assert caller_members == interface['interface']['unchangedCallerMembers']
+old_caller = re.search(r'await runCaregiverCollectionCases\(\{(.*?)\}\);', s['originalDriver'], re.S).group(1)
+assert caller == old_caller
+used = set(re.findall(r'\bC\.([A-Za-z_]\w*)', s['cases']))
+used.update(['combined', 'second', 'secondFile'])
+assert used == set(caller_members), sorted(used.symmetric_difference(caller_members))
+
+case = s['cases']
+assert case.count('assert.equal(await previewVisible(), true);') == 3
+assert 'assert.equal(await previewVisible(), false)' not in case
+assert case.count('await requireRetiredPreview();') == 2
+assert case.count('state.closed = true;') == 2
+assert case.count('state.completed = true;') == 1
+assert case.count('state.aborted = true;') == 1
+assert case.count('}, 8000);') == 1
+assert case.index('holdNeedsCleanup = true;') < case.index('const initial = await ev(')
+assert 'if (holdNeedsCleanup) { try { await endHold(null, true); }' in case
+
+syntax_commands = []
+for section, expected_sources in [('initialParse', [s['driver'], s['firstCases']]),
+                                  ('finalChangedCaseParse', [s['cases']])]:
+    item = syntax[section]
+    argv = shlex.split(item['exactCommand'])
+    assert len(argv) == 5 and argv[1:3] == ['--experimental-vm-modules', '-e']
+    assert argv[3] == syntax['parserSource']
+    files = json.loads(argv[4])
+    assert [x['text'] for x in files] == expected_sources
+    assert item['actual']['exit_code'] == 0
+    output = item['actual']['output']
+    parsed_stdout, end = json.JSONDecoder().raw_decode(output)
+    warning = output[end:]
+    assert 'ExperimentalWarning: VM Modules' in warning
+    assert parsed_stdout['linked'] is False and parsed_stdout['evaluated'] is False
+    assert parsed_stdout['candidateBrowserServerOrIDBCalls'] == 0
+    for file, observed in zip(files, parsed_stdout['files'], strict=True):
+        assert file['path'] == observed['path']
+        assert observed['status'] == 'unlinked'
+        digest = identities(file['text'])
+        for field in ['bytes', 'sha256', 'git']:
+            assert observed[field] == digest[field]
+    syntax_commands.append({'section': section, 'originalToolChunk': item['actual']['chunk_id'],
+                            'exit': 0, 'exactCommandPayloadJoined': True,
+                            'candidateEvaluated': False, 'reviewerReplay': False})
+
+result = {
+    'schema': 'tastetable.tc1-tc4.independent-data-verification.v1',
+    'status': 'exact-source-custody-and-inverses-verified',
+    'method': 'UTF-8 hashes, JSON parsing, string replacement and lexical comparisons only. No JavaScript parsing, importing, linking or evaluation; no browser/server/native commands.',
+    'input': {'bytes': len(input_bytes), 'sha256': hashlib.sha256(input_bytes).hexdigest()},
+    'sourceDigests': digest_results, 'interface': interface_identity,
+    'driver': driver_inverse, 'cases': cases_inverse, 'predecessorToV4': v4_inverse,
+    'firstThirteenCaseEditsRecoverPreservedFirstDraft': True,
+    'inventory': {'originalPrefix': 16, 'unchangedCollectionAssets': 4, 'separateV2': 2,
+                  'total': 22, 'unique': True, 'corePins': 20, 'interfaceAndPacketPinsExact': True,
+                  'coreGuardWithinTryBeforeBrowserSpawn': True},
+    'scenarios': {'originalFourteenPassedLabelsExact': True, 'combinedFivePassedSitesExact': True,
+                  'unchangedTwoOutcomeLoop': True, 'proposedCombinedGroups': 6,
+                  'executedGroups': 0},
+    'callerMembersExact': caller_members,
+    'sourcePredicateFacts': {'positivePreviewChecks': 3, 'negativeIndependentSites': 2,
+                            'nativeClosedTrueAssignmentSites': 2, 'completeTrueSites': 1,
+                            'abortTrueSites': 1, 'originalEightSecondDeadlineSites': 1,
+                            'cleanupMarkerBeforeAdmissionAwait': True},
+    'originalSyntaxCustody': syntax_commands,
+    'effects': {'candidateExecution': 0, 'syntaxReplay': 0, 'nativeCalls': 0,
+               'browserLaunches': 0, 'sourceEdits': 0, 'sourceRefs': 0}
+}
+encoded = (json.dumps(result, ensure_ascii=False, indent=2) + '\n').encode('utf-8')
+with (ROOT / 'data-verification.json').open('xb') as stream:
+    stream.write(encoded)
+print(encoded.decode('utf-8'), end='')
