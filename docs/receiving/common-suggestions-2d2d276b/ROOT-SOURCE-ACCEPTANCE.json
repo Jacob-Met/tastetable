@@ -1,0 +1,320 @@
+{
+  "schema": "hamon.tastetable.common-suggestions.root-source-acceptance/v1",
+  "started_at": "2026-10-09T08:03:47.016882+00:00",
+  "accepted_at": "2026-10-09T08:03:47.244104+00:00",
+  "actor": "chatgpt:2d2d276bbccc:root",
+  "status": "exact_product_source_and_independent_behavior_accepted_for_native_delivery",
+  "source": {
+    "repository": "Jacob-Met/tastetable",
+    "issue": 72,
+    "product": "42bc23f796870b3b60ef15033d00d53628e27d59",
+    "tree": "6a5c7432d5d05dc902db38971a17a9ac32635f17",
+    "direct_parent": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+    "baseline_tree": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6",
+    "baseline_leaves": 818,
+    "product_leaves": 824,
+    "unrelated_baseline_leaves_preserved": 816,
+    "changed_paths": [
+      "README.md",
+      "docs/COMMON_SUGGESTIONS.md",
+      "static/common-suggestions.html",
+      "static/common_suggestions.css",
+      "static/common_suggestions.mjs",
+      "static/common_suggestions_ui.mjs",
+      "static/index.html",
+      "tests/test_common_suggestions.mjs"
+    ],
+    "evidence_only_prefix": "docs/receiving/common-suggestions-2d2d276b/"
+  },
+  "root_semantic_review": {
+    "complete_new_module_ui_html_css_test_guide_read": true,
+    "readme_append_and_complete_actual_index_anchor_read": true,
+    "three_original_modules_read_and_byte_unchanged": true,
+    "reviewed_source_pins": [
+      {
+        "path": "README.md",
+        "mode": "100644",
+        "blob": "ade8c57f20c3b9035c834fff2d16e484912689fe",
+        "bytes": 20676,
+        "sha256": "ee746d89fb40a4cca164d2e8eb3eaecb84f6b78b7a4ac8000c121966202049e8"
+      },
+      {
+        "path": "docs/COMMON_SUGGESTIONS.md",
+        "mode": "100644",
+        "blob": "5e76ea91d162ac7c46c2ade271a726eeb9ceaab9",
+        "bytes": 5287,
+        "sha256": "b653a93fec5b99695128dfd4c6ec63831d93d2a4038ecca401224ba8c20e9909"
+      },
+      {
+        "path": "static/common-suggestions.html",
+        "mode": "100644",
+        "blob": "dfe6a80ad6ee82c77f825ba0188aa494d0c18217",
+        "bytes": 3347,
+        "sha256": "0e2ed0cf167ff837491cbf88b38984ddaf919a90adec7d1d77e0478203d36b08"
+      },
+      {
+        "path": "static/common_suggestions.css",
+        "mode": "100644",
+        "blob": "c1987f50ca3f96338fb0fcff37854c92ad8e2dc2",
+        "bytes": 4593,
+        "sha256": "eac5e281beb1822ba0c10e5c68f4c5df20cb0eb8975bcbfbcd7c08b83a4c9353"
+      },
+      {
+        "path": "static/common_suggestions.mjs",
+        "mode": "100644",
+        "blob": "0c68c477d3c92084b0f57133846db1449aca41aa",
+        "bytes": 2938,
+        "sha256": "610cc41dd1a9fdcfc16d2c2bbf2cb7e51a38956ddbcdfd1e5944cd5f88a6e0d1"
+      },
+      {
+        "path": "static/common_suggestions_ui.mjs",
+        "mode": "100644",
+        "blob": "22752ed4f054b3fa1bd594af70ecb2fef2306f5a",
+        "bytes": 10915,
+        "sha256": "1fe0f8de23878d46d9f776250a56afc68c15b2d67b3ae0de2d693d27d6a44fc2"
+      },
+      {
+        "path": "static/index.html",
+        "mode": "100644",
+        "blob": "f8e6f493b2c6ef96b0c4ef377a30546d5ba3516f",
+        "bytes": 9359,
+        "sha256": "4991e437c4cb68235449d9f222460273dc2c217799ec018de1d3c33f4d4f0700"
+      },
+      {
+        "path": "tests/test_common_suggestions.mjs",
+        "mode": "100644",
+        "blob": "09bc1bdbd0acdf91f4220874497ec90e03b4f53c",
+        "bytes": 8435,
+        "sha256": "360fe2adaa132fdb54d88f0feb2e77bacb318686f8f8e7187a9e2ba5f37a9168"
+      },
+      {
+        "path": "static/week_file.mjs",
+        "mode": "100644",
+        "blob": "420ddb8f63fca264dcf97be7147801105696155d",
+        "bytes": 6642,
+        "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+      },
+      {
+        "path": "static/week_plan.mjs",
+        "mode": "100644",
+        "blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+        "bytes": 3913,
+        "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+      },
+      {
+        "path": "static/week_compare.mjs",
+        "mode": "100644",
+        "blob": "2dfc4fb5e9c30481a4bd4276bc4ed6ff3bb114b8",
+        "bytes": 1829,
+        "sha256": "5bc64a317f28cfccffb844f3c74ebb7b1312034996137891ec5161e0bc0953b7"
+      }
+    ],
+    "index_exact_complete_anchor": "    <a href=\"/static/common-suggestions.html\" target=\"_blank\" rel=\"noopener\">Common saved suggestions (new tab)</a>\n",
+    "index_receipt_fragment_explanation": "The earlier inverse insertion receipt used longest common prefix/suffix inside repeated link text. Root directly read the actual complete valid anchor and independently removed exactly its 116 bytes to recover the original index; no product defect or repair.",
+    "findings": [
+      "API admits exactly two through six dense own-indexed sources; string labels are bounded by UTF-8 bytes and saved text by two MiB before unchanged readWeekFile validation and the 500-pick consumer limit.",
+      "JSON string encoding of the kind/id pair gives exact injective string identity. The first source determines group order; all matching duplicate occurrences retain source-index/native order with full snapshots and saved records.",
+      "No trimming, case folding, Unicode normalization, name matching, inferred suitability, refreshed venue checking or shared-availability computation is introduced.",
+      "The new API has no filesystem, network, storage, clock-now or random calls. Explicit saved-date parsing remains in the unchanged original modules. Full-value receiving separately checks frozen inputs, mutation and distinct result object graphs.",
+      "UI selection/Clear/Remove generations retire stale results and invalidate late reads; a cancelled chooser is a no-op and a refused replacement preserves the previous accepted source. Pending reads disable comparison.",
+      "Browser file size is checked before and after arrayBuffer; fatal UTF-8 decoding with ignoreBOM true preserves one BOM for original codec handling. Malformed/invalid/oversized input is refused through current status.",
+      "File-derived display content uses textContent. Source cards and occurrence rows keep saved facts, source mode/week/notes/model messages, duplicates, dates and off-week state visible.",
+      "Export is guarded by the current result and uses a fixed basename with UTF-8 JSON, two-space formatting and a final LF. Object URL failure leaves the current result available; temporary link and object URL cleanup is explicit.",
+      "Print is guarded by the current result and invokes the existing browser print capability. CSS hides interactive controls and keeps source/result content; narrow layout uses wrapping and visible keyboard focus.",
+      "The separate page and guide accurately explain local static serving, limits, saved-data review and absent guarantees. The only existing-file changes are the 464-byte README append and 116-byte anchor insertion."
+    ]
+  },
+  "independent_api": {
+    "freeze": {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-independent\\ORACLE-FROZEN-v1.json",
+      "bytes": 4242,
+      "sha256": "fc2ee8476a5c73102fd6db45f42148d4d6c65e70f6df78e5a67f9d25eeb8c875"
+    },
+    "candidate_intake": {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-independent\\CANDIDATE-INTAKE-v1.json",
+      "bytes": 7359,
+      "sha256": "bc87375eb44bab82709c53cae6a74eeda2526333d9e078cc741d15fd1c671211"
+    },
+    "receipt": {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-independent\\api-receiving-v1\\receipt.json",
+      "bytes": 22778,
+      "sha256": "065033ac6db1cf36a7d916035f8b3810af2831e7dc8ef1004707442cfadc5813"
+    },
+    "accepted_full_value_cases": 25,
+    "refusal_cases": 36,
+    "passed": 61,
+    "failed": 0,
+    "candidate_exposed_before_freeze": false,
+    "first_run_only": true,
+    "pure_guard_scope": "Date without arguments/Date.now, Math.random, fetch and storage during calls; explicit original date parsing allowed. Filesystem and alternate effects assessed by source review, not claimed as dynamically intercepted."
+  },
+  "independent_browser": {
+    "review": {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-independent\\browser-receiving-v1\\FINAL-BROWSER-REVIEW-v1.json",
+      "bytes": 20568,
+      "sha256": "8e0ec7d904ea33e6d7ab2ae9a9828c40439d4fc644f31e0d78ce0a452706a35a"
+    },
+    "freeze": {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-independent\\browser-receiving-v1\\BROWSER-FROZEN-v1.json",
+      "bytes": 5869,
+      "sha256": "9ca7759c706a00d8ee511bd808e52c061ec1fd743cf96771f5c12ffc6ec506b1"
+    },
+    "first_receipt": {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-independent\\browser-receiving-v1\\receiving-r1\\receipt.json",
+      "bytes": 134357,
+      "sha256": "f4d7676efc995502410ad35e92ee26763e05c492fa33c4805c1ac24cfe8ce3a8"
+    },
+    "capsule": {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-independent\\browser-receiving-v1\\final-browser-seal-v1\\taste-common-native-browser-v1.zip",
+      "bytes": 744324,
+      "sha256": "0c4b570e331830584e1abab410eee55363185d83dd79b22f7a4794242ac3ac57"
+    },
+    "groups": 7,
+    "checks": 77,
+    "all_passed": true,
+    "review_attribution": "production_custody executed the frozen native run, directly viewed ten first-run screenshots and the separate focused 390px screenshot; root read the full final browser review and complete receipt references.",
+    "physical_downloads": 3,
+    "pdf_scope": "Seven generated PDF pages were text-read; direct PDF pixel review and physical printer/dialog completion were not claimed.",
+    "controlled_boundaries": "Object URL throw, File.arrayBuffer rejection after actual read and delayed actual original bytes were explicit controlled injections, not OS permission failures or natural race occurrence.",
+    "focus_supplement_scope": "Separate empty-page narrow keyboard-focus visual receiving; no file selection, comparison, export or print success replay.",
+    "own_browser_and_server_cleanup_reported": true
+  },
+  "complete_source_custody": {
+    "receipt": {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-independent\\complete-source-binding-v1\\receipt.json",
+      "bytes": 13980,
+      "sha256": "0730d7879350968ed089ed2e9004e82d149648bff0c0a0fcfb16102e0b28a09f"
+    },
+    "seal": {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-independent\\complete-source-binding-v1\\SEALED.json",
+      "bytes": 1759,
+      "sha256": "7577116d28c505cf0ec7765b0dce8f8d68e43c1ba7af25f3c19050d098b8bbba"
+    },
+    "all_824_physical_raw_git_bytes_exact": true,
+    "all_index_blobs_and_modes_exact": true,
+    "unique_git_blobs_independently_hashed": 726,
+    "metadata_before_after_identical": true,
+    "root_reexecution": false
+  },
+  "author_evidence": {
+    "capsule": {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-suggestions\\author-evidence-seal-v1\\tastetable-common-author-native-v1.zip",
+      "bytes": 647131,
+      "sha256": "569de85ed1b576d53e6838473ae5673da5051755f9e52ae4d4713f4798d7de67"
+    },
+    "console_boundary": {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-suggestions\\author-native-v1\\controller-console-boundary.json",
+      "bytes": 907,
+      "sha256": "117570fd21aee63b98672385b9d5abbc38416288a0de84b790c089c96c215716"
+    },
+    "reported_native_api_tests": 12,
+    "reported_native_test_failures": 0,
+    "ui_syntax_exit": 0,
+    "boundary": "Outer console echo raised cp1252 UnicodeEncodeError after durable native exit-zero test/syntax evidence. Boundary preserved, no success replay or product failure relabel. Earlier ordinary private-index restage/native Git transport boundaries remain in author capsule."
+  },
+  "first_failures_and_limits": [
+    "Initial controller write addressed nonexistent D:\\rootcheckpoints and returned ENOENT before any write or process. The verified estate-native root-checkpoints directory was then used; no source or behavior effect.",
+    "No independent API behavioral failure was observed in the first 61 cases.",
+    "The browser native command-quoting boundary occurred before Node began and is preserved in the separate browser capsule.",
+    "Read-only wrong public path observation is preserved in the browser review; no source conclusion was taken from it.",
+    "This acceptance seals prior behavior and current evidence bytes. It runs no candidate/author tests or browser behavior."
+  ],
+  "receiving_effects": {
+    "git_commands": 0,
+    "product_source_writes": 0,
+    "metadata_or_policy_changes": 0,
+    "behavior_replays": 0,
+    "service_launches": 0,
+    "thinkpad_writes": 0,
+    "github_actions_calls": 0,
+    "source_publications": 0
+  },
+  "delivery_state": "Qualified for an evidence-only child preserving every product leaf and a usable native recipient package. No native recipient delivery, main adoption, hosted publication, PR or deployment is asserted by this receipt.",
+  "references": [
+    {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-independent\\PUBLIC-INTAKE-v1.json",
+      "bytes": 9914,
+      "sha256": "3831b1a77c14628bbc0c4f461794952d4a019bac6f0676b95f7e90ed9af71f23"
+    },
+    {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-independent\\public\\PUBLIC-CONTRACT-v1.md",
+      "bytes": 10648,
+      "sha256": "32c9062e8085a73ec18af5fe909bdfd95c9829153441a0bc272c96231e65a433"
+    },
+    {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-independent\\ORACLE-FROZEN-v1.json",
+      "bytes": 4242,
+      "sha256": "fc2ee8476a5c73102fd6db45f42148d4d6c65e70f6df78e5a67f9d25eeb8c875"
+    },
+    {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-independent\\CANDIDATE-INTAKE-v1.json",
+      "bytes": 7359,
+      "sha256": "bc87375eb44bab82709c53cae6a74eeda2526333d9e078cc741d15fd1c671211"
+    },
+    {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-independent\\candidate-v1\\MANIFEST.json",
+      "bytes": 4442,
+      "sha256": "95cceb5a59cb65807388bca0e6385b28ac3ab54cb8b2a3a7f67c0cda149fc94b"
+    },
+    {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-independent\\candidate-v1\\SEALED.json",
+      "bytes": 1289,
+      "sha256": "26a26ce89fd75d8f828f33f06314b895dbb6f495cd534a62174d1d286ded108a"
+    },
+    {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-independent\\api-receiving-v1\\receipt.json",
+      "bytes": 22778,
+      "sha256": "065033ac6db1cf36a7d916035f8b3810af2831e7dc8ef1004707442cfadc5813"
+    },
+    {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-independent\\complete-source-binding-v1\\receipt.json",
+      "bytes": 13980,
+      "sha256": "0730d7879350968ed089ed2e9004e82d149648bff0c0a0fcfb16102e0b28a09f"
+    },
+    {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-independent\\complete-source-binding-v1\\SEALED.json",
+      "bytes": 1759,
+      "sha256": "7577116d28c505cf0ec7765b0dce8f8d68e43c1ba7af25f3c19050d098b8bbba"
+    },
+    {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-independent\\browser-receiving-v1\\FINAL-BROWSER-REVIEW-v1.json",
+      "bytes": 20568,
+      "sha256": "8e0ec7d904ea33e6d7ab2ae9a9828c40439d4fc644f31e0d78ce0a452706a35a"
+    },
+    {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-independent\\browser-receiving-v1\\BROWSER-FROZEN-v1.json",
+      "bytes": 5869,
+      "sha256": "9ca7759c706a00d8ee511bd808e52c061ec1fd743cf96771f5c12ffc6ec506b1"
+    },
+    {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-independent\\browser-receiving-v1\\receiving-r1\\receipt.json",
+      "bytes": 134357,
+      "sha256": "f4d7676efc995502410ad35e92ee26763e05c492fa33c4805c1ac24cfe8ce3a8"
+    },
+    {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-independent\\browser-receiving-v1\\final-browser-seal-v1\\taste-common-native-browser-v1.zip",
+      "bytes": 744324,
+      "sha256": "0c4b570e331830584e1abab410eee55363185d83dd79b22f7a4794242ac3ac57"
+    },
+    {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-independent\\browser-receiving-v1\\final-browser-seal-v1\\MANIFEST.json",
+      "bytes": 35629,
+      "sha256": "5e4c88a3b34db7798f889b5b85409798bc9bd56b581eb00b80992070d4742e34"
+    },
+    {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-independent\\browser-receiving-v1\\final-browser-seal-v1\\SEALED.json",
+      "bytes": 1106,
+      "sha256": "8d15327ec699dd79be17ec72d3ff24b58c7f79e20abf71432517467298f5b335"
+    },
+    {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-suggestions\\author-native-v1\\controller-console-boundary.json",
+      "bytes": 907,
+      "sha256": "117570fd21aee63b98672385b9d5abbc38416288a0de84b790c089c96c215716"
+    },
+    {
+      "path": "D:\\hamon-ultra-2d2d276b-taste-common-suggestions\\author-evidence-seal-v1\\tastetable-common-author-native-v1.zip",
+      "bytes": 647131,
+      "sha256": "569de85ed1b576d53e6838473ae5673da5051755f9e52ae4d4713f4798d7de67"
+    }
+  ]
+}

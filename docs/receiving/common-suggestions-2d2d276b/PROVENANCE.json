@@ -1,0 +1,105 @@
+{
+  "schema": "hamon.tastetable.common-suggestions.qualified-provenance.v1",
+  "utc": "2026-10-09T08:09:36.380431+00:00",
+  "repository": "Jacob-Met/tastetable",
+  "issue": 72,
+  "canonical_baseline": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+  "product": "42bc23f796870b3b60ef15033d00d53628e27d59",
+  "product_tree": "6a5c7432d5d05dc902db38971a17a9ac32635f17",
+  "product_leaves": 824,
+  "unchanged_baseline_leaves": 816,
+  "owned_product_paths": 8,
+  "qualification": {
+    "author_api": 12,
+    "author_ui_syntax": "passed",
+    "independent_api": 61,
+    "independent_browser_groups": 7,
+    "independent_browser_checks": 77,
+    "physical_downloads": 3,
+    "viewed_screenshots": 10,
+    "print_pages_received": 7,
+    "original_cli_to_consumer": {
+      "sources": 2,
+      "common_identities": 3,
+      "occurrences": 6,
+      "mode": "mock"
+    }
+  },
+  "capsules": [
+    {
+      "path": "PUBLIC-CONTRACT-v1.md",
+      "bytes": 10648,
+      "sha256": "32c9062e8085a73ec18af5fe909bdfd95c9829153441a0bc272c96231e65a433"
+    },
+    {
+      "path": "author-native-v1.zip",
+      "bytes": 647131,
+      "sha256": "569de85ed1b576d53e6838473ae5673da5051755f9e52ae4d4713f4798d7de67"
+    },
+    {
+      "path": "independent-api-v1.zip",
+      "bytes": 477342,
+      "sha256": "7bb9db7f59175341189348348bbaa07eb0df4a8d631b66217af3c48bb869ff1d"
+    },
+    {
+      "path": "independent-browser-v1.zip",
+      "bytes": 744324,
+      "sha256": "0c4b570e331830584e1abab410eee55363185d83dd79b22f7a4794242ac3ac57"
+    },
+    {
+      "path": "ROOT-SOURCE-ACCEPTANCE.json",
+      "bytes": 16720,
+      "sha256": "17409d83637c52871f01723c7870666ba58fe9d8322098beb27b41df8dec7d0a"
+    }
+  ],
+  "receiving_primary_pins": {
+    "author-evidence-seal-v1/MANIFEST.json": {
+      "bytes": 26056,
+      "sha256": "d9c446d17b39705211bd057eb5377e0051b6a87f2142a86653b91a102de0c99d"
+    },
+    "author-evidence-seal-v1/SEALED.json": {
+      "bytes": 398,
+      "sha256": "18699e4bd6e1ad8c7754586372238e08bc1afdc751fd8cce61dfe1c1ab549120"
+    },
+    "independent-root-receive-v1/MANIFEST.json": {
+      "bytes": 21073,
+      "sha256": "8a7c7f90503f8e0b886bb4c157aad82e807b010f7614286c91c149a496af01c6"
+    },
+    "independent-root-receive-v1/SEALED.json": {
+      "bytes": 1264,
+      "sha256": "9a2da51f2bc96738ad7658c0d39d19ca047c54d9225de227d5cdde5e644d758f"
+    },
+    "independent-root-receive-v1/receipt.json": {
+      "bytes": 1547,
+      "sha256": "33b7e5ed5803c14d37e752c6bbf6bc65eac8b4b0cf935b01c27560fb45b577fa"
+    },
+    "independent-browser-receive-v1/MANIFEST.json": {
+      "bytes": 35629,
+      "sha256": "5e4c88a3b34db7798f889b5b85409798bc9bd56b581eb00b80992070d4742e34"
+    },
+    "independent-browser-receive-v1/SEALED.json": {
+      "bytes": 1106,
+      "sha256": "8d15327ec699dd79be17ec72d3ff24b58c7f79e20abf71432517467298f5b335"
+    },
+    "independent-browser-receive-v1/receipt.json": {
+      "bytes": 1808,
+      "sha256": "ddb6a57fa606a1cde28b01c422de13235d80c39ea2610e19077c557b137475fc"
+    },
+    "package-closure-v1/receipt.json": {
+      "bytes": 1242,
+      "sha256": "4a5dbe78aee2428b98f5d8825eaf1d84ce29268626e3dcbac5842081d75c0c51"
+    },
+    "product-custody-v1/receipt.json": {
+      "bytes": 2230,
+      "sha256": "12730cf539f2412601e8a149f1d8f717c450c774ed60c66e30553d2dd5581f72"
+    },
+    "producer-consumer-v1/receipt.json": {
+      "bytes": 3081,
+      "sha256": "59af9a3da37079a45a77f7aff5bb339cb7542f6be050a0e7806bb01f47604688"
+    }
+  },
+  "boundaries": "Initial native original-index normalization boundary, author cp1252 console echo after durable passing logs, and root ENOENT controller-path transport boundary remain attributed to their actual stages. No product failure or behavior replay is claimed.",
+  "custody": "All capsules received with every member size/SHA verified. Private independent expected values were not semantically read by the author.",
+  "publication": "Native qualification and delivery only; no hosted source branch, PR, merge, deployment or Actions adoption.",
+  "lineage_note": "This evidence-only child directly follows the qualified product and changes no product leaf."
+}
