@@ -240,6 +240,10 @@ The worksheet state tests use the same dependency-free Node runner:
 node --test tests/venue_followup.test.mjs tests/venue_note_file.test.mjs
 ~~~
 
+### Create a call sheet from saved files
+
+With Node.js 22+, run `node tools/saved_week_to_call_sheet.mjs --input week.json --venue-notes notes.json --output calls.txt` to create the native call sheet from a saved week and its matching venue notes. The new TXT contains currently scheduled visits; keep both JSON files for editable notes and other dates. Existing output files are preserved. See [saved-file call sheet usage and delivery](docs/SAVED_WEEK_CALL_SHEET.md).
+
 ### Going live with Qloo
 
 ```bash

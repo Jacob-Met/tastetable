@@ -1,0 +1,367 @@
+{
+  "schema": "estate-tastetable67-root-receiving/1",
+  "decision": "QUALIFIED_FOR_NON_MAIN_CUSTODY_BRANCH",
+  "repository": "Jacob-Met/tastetable",
+  "issue": 67,
+  "worker": "estate-60b2c08feb01",
+  "prepared_utc": "2026-10-09T02:07:46.743818+00:00",
+  "purpose": "Create the exact native venue call-sheet TXT from a saved week and matching saved venue notes, preserving editable source files and every existing destination.",
+  "base": {
+    "commit": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+    "tree": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6",
+    "leaves": 818,
+    "trees_including_root": 129
+  },
+  "qualified_packet": {
+    "commit": "b2234a526793e70195829a1fe6c87e807a26c8db",
+    "parent": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+    "tree": "84e2c71f4543953775c8ec6ef45a76edf7d72fbf",
+    "leaves": 827,
+    "trees_including_root": 130,
+    "all_818_base_leaves_exact": true,
+    "all_modes_and_subtrees_recomputed_from_actual_untruncated_tree": true
+  },
+  "contract": {
+    "git": "935225216c18877c7c018858c1b80883ac832984",
+    "frozen_before_implementation": true,
+    "claim_created_before_implementation": "2026-10-09T01:07:14Z"
+  },
+  "product_sources": {
+    "tools/saved_week_to_call_sheet.mjs": {
+      "bytes": 8291,
+      "sha256": "4752bc6f67928e79ec1dd1d03a792326fb9521be746d80ee78eab399a18766d4",
+      "gitBlob": "0e676fa055446136af1edf371587546eaeb8415d"
+    },
+    "tests/test_saved_week_to_call_sheet.mjs": {
+      "bytes": 16518,
+      "sha256": "e7c2183f8f0f06cf72296b1ed490a8524c3714de8323a6322c77b113dfd8b114",
+      "gitBlob": "2e50563729878fe2a353b0cfad51970a78a5416b"
+    },
+    "docs/SAVED_WEEK_CALL_SHEET.md": {
+      "bytes": 7585,
+      "sha256": "9d6d2ca97fdf72df17c9446386dd2a99f906625a9a3770461db767d6eefcb897",
+      "gitBlob": "48932d6929fd1b1416c68b78773b73bf9aec26a6"
+    }
+  },
+  "unchanged_native_sources": {
+    "static/week_file.mjs": {
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "gitBlob": "420ddb8f63fca264dcf97be7147801105696155d"
+    },
+    "static/week_plan.mjs": {
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "gitBlob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+    },
+    "static/venue_note_file.mjs": {
+      "bytes": 10435,
+      "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+      "gitBlob": "f8406cb540d52222996c585666ae1a55a1030def"
+    },
+    "static/venue_followup.mjs": {
+      "bytes": 18444,
+      "sha256": "61bb9cf497b5a37a32afd1b23729e128aed2631cf2c570a1485ca4f0ffbe632c",
+      "gitBlob": "0c1923ecdad8fe9b14f0193a6aba5f3a1e2b9d63"
+    }
+  },
+  "source_review": {
+    "native_chain": "readWeekFile -> createVenueFollowup with exact saved-file source label -> readVenueNoteFile against the complete opened origin and model -> replaceRecords -> native model.text and entries.",
+    "notes_projection": "Current scheduled occurrence/date records only; repeated entity IDs remain distinct. Other dates and omitted picks stay in the editable JSON and count as excluded records.",
+    "file_delivery": "Fatal UTF-8 decoding with the native single-BOM behavior; 4 MiB saved-week and 2 MiB notes raw caps; bounded byte re-read of both inputs; complete private sibling staging, sync and close, exclusive hard-link publication; existing and raced destinations preserved.",
+    "failure_delivery": "Exit 2 for known usage/input/native/refusal cases; exit 1 for unexpected/staging/delivery failures. If publication completed, later cleanup or receipt failure preserves the full TXT and reports that creation occurred.",
+    "scope": "Three new product paths. No preexisting codec, model, app, calendar, HTML, dependency, provider or workflow edit."
+  },
+  "author_and_preparation_custody": {
+    "reviewer": "/root/estate_records",
+    "raw_record": {
+      "bytes": 3230,
+      "sha256": "fe2fd0221ee01403f15d1087d6ffd32c4239c54c79e2709c6d5b2947eea61d3b",
+      "gitBlob": "2b61cd517955a674fc510a103d2028f0ea48c20f"
+    },
+    "record_serialization": "UTF-8 JSON, indent 2, original member order, one terminal LF; this complete embedded record reproduces the pinned 3230-byte original.",
+    "record": {
+      "schema": "tastetable-root-binary-custody-receiving/1",
+      "decision": "PASS",
+      "repository": "Jacob-Met/tastetable",
+      "commit": "b2234a526793e70195829a1fe6c87e807a26c8db",
+      "method": "github_fetch_file encoding=base64, followed by independent native byte hashing and tar/member checks; no product execution",
+      "archives": {
+        "author": {
+          "path": "docs/receiving/saved-week-call-sheet-60b2c08feb01/author-native-evidence.tar.gz",
+          "bytes": 14647,
+          "git": "90078e8dfdb6646d97fd102f33860152f2c173ff",
+          "sha256": "c0482c4e35f7bab59b89b9cf962ceb223a961968668c381e86a759189d071113",
+          "members": 10,
+          "manifest": {
+            "bytes": 1927,
+            "git": "83ce6a858ab5344f485ee0b251774a4a73a62dfc",
+            "sha256": "727761c1dd55c5e603b99c85e981d59ce705460f362a4a978136981824a2ba4d"
+          },
+          "allMembersVerified": true
+        },
+        "preparation": {
+          "path": "docs/receiving/saved-week-call-sheet-60b2c08feb01/preparation-evidence.tar.gz",
+          "bytes": 37242,
+          "git": "e8245fb5cea814579ae76707d94c070b5e3ec60a",
+          "sha256": "725fce6ac00c56d576e9551fb69f24e5e91125162604a49e0e111742ef1d6a99",
+          "members": 18,
+          "manifest": {
+            "bytes": 3732,
+            "git": "1f4547fc9624db5373623f9658c3c8b19cedef56",
+            "sha256": "ffab0362a46306491a1d737072285d4cf2624aa2e4bfbe488902d64a459a1ee2"
+          },
+          "allMembersVerified": true
+        }
+      },
+      "productPins": {
+        "tools/saved_week_to_call_sheet.mjs": "0e676fa055446136af1edf371587546eaeb8415d",
+        "tests/test_saved_week_to_call_sheet.mjs": "2e50563729878fe2a353b0cfad51970a78a5416b",
+        "docs/SAVED_WEEK_CALL_SHEET.md": "48932d6929fd1b1416c68b78773b73bf9aec26a6"
+      },
+      "nativePins": {
+        "static/week_file.mjs": "420ddb8f63fca264dcf97be7147801105696155d",
+        "static/week_plan.mjs": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+        "static/venue_note_file.mjs": "f8406cb540d52222996c585666ae1a55a1030def",
+        "static/venue_followup.mjs": "0c1923ecdad8fe9b14f0193a6aba5f3a1e2b9d63"
+      },
+      "crossChecks": {
+        "authorSourceBeforeAfterAndActualMembers": true,
+        "inheritedBeforeAfterAndCanonicalPreparationMembers": true,
+        "completePreparationSourceManifest": true,
+        "allManifestDeclaredMemberByteGitSha256": true,
+        "exactExpectedMemberNames": true,
+        "regularMembersOnlyNoDuplicateOrEscapingNames": true
+      },
+      "authorEvidenceReadback": {
+        "receipt": {
+          "bytes": 3848,
+          "git": "e5ac8c721e86b28aaa52578f2bab51c58c2ddfb7",
+          "sha256": "d2095ffffe8442ed2f6d6d5a75abec4731f4238c087ee59eda4dbf928323b7fe"
+        },
+        "exit": 0,
+        "node": "v24.19.0",
+        "tests": 16,
+        "pass": 16,
+        "fail": 0,
+        "skip": 0,
+        "stderrBytes": 0,
+        "interpretation": "Historical authored first run read and bound to exact source, not rerun by this receiving."
+      },
+      "rawLossBoundary": "Preparation historical-discovery-observation-raw-lost.json explicitly preserves loss of original03710382 raw receipt. Recaptured source and historical summary do not reconstruct that run.",
+      "scope": "Only AUTHOR and PREPARATION archive receiving. Root owns full tree and independent packet readback. No tests, calibration, discovery, source edits, GitHub mutation, provider operation or hamon-ie call."
+    }
+  },
+  "independent_receiving": {
+    "decision": "APPROVE exact unchanged candidate",
+    "review_git": "327dc45091874c872a2d31f19884e7ccaf234cb2",
+    "pre_candidate_recovery_archive_git": "78eaf6bf85de254d8320e7042b0b09cf6c2895b1",
+    "frozen_driver_git": "08b3c0a5f4dc4467a400c609dba3d2f1c87cae2e",
+    "frozen_oracle_git": "466b127bf8a9b86562b3c6a183e22927a6d4ba40",
+    "frozen_fault_child_git": "58d975a4c51de7e99dce35d8965d8591796ad96d",
+    "archive": {
+      "bytes": 77155,
+      "sha256": "df6d8c7c019b8dd66439e7edd49569db64f767fa473522e239634b932e158648",
+      "gitBlob": "5b6655a020a367e757cec3bbdb65b3f7a67fc056"
+    },
+    "regular_members": 138,
+    "manifest_declared_members": 137,
+    "root_binary_method": "Canonical path at b2234a5, github_fetch_file base64, strict byte decode, outer Git/SHA-256/size, safe unique regular member names and every declared member hash; no product execution.",
+    "all_137_member_pins_verified": true,
+    "native4_cli_guide_and_frozen_receiver_bytes_exact": true,
+    "raw_receipt": {
+      "bytes": 31866,
+      "sha256": "e4d6e4bad86ce6b6552ffbc2e9e562b16dab6c73067859b0fb5fa87e0bd9f19e",
+      "gitBlob": "13a1d8eb6697ce1112051e917d416d7190648bd3"
+    },
+    "first_candidate_outer_exit": 0,
+    "first_candidate_outer_stderr_bytes": 0,
+    "node": "v24.19.0",
+    "platform": "Linux",
+    "groups": [
+      {
+        "name": "exact-hand-and-native-text-receipt-and-input-custody",
+        "passed": true
+      },
+      {
+        "name": "native-origin-history-and-zero-schedule-refusals",
+        "passed": true
+      },
+      {
+        "name": "empty-notes-and-native-current-visit-projection",
+        "passed": true
+      },
+      {
+        "name": "raw-byte-bounds-native-bom-and-fatal-utf8",
+        "passed": true
+      },
+      {
+        "name": "existing-output-aliases-and-regular-input-symlink",
+        "passed": true
+      },
+      {
+        "name": "selected-input-change-and-publication-race-failures",
+        "passed": true
+      },
+      {
+        "name": "post-publication-cleanup-and-receipt-delivery-failures",
+        "passed": true
+      },
+      {
+        "name": "strict-grammar-help-import-and-source-boundary",
+        "passed": true
+      }
+    ],
+    "recorded_processes": 29,
+    "separate_import_control": true,
+    "candidate_or_receiver_correction_or_replay": false,
+    "hooks": [
+      {
+        "mode": "input-change",
+        "count": 1,
+        "exit": 2,
+        "published": false,
+        "thrown": null
+      },
+      {
+        "mode": "publication-race",
+        "count": 1,
+        "exit": 2,
+        "published": false,
+        "thrown": null
+      },
+      {
+        "mode": "link-failure",
+        "count": 1,
+        "exit": 1,
+        "published": false,
+        "thrown": null
+      },
+      {
+        "mode": "cleanup-failure",
+        "count": 1,
+        "exit": 1,
+        "published": true,
+        "thrown": null
+      },
+      {
+        "mode": "stdout-failure",
+        "count": 1,
+        "exit": 1,
+        "published": true,
+        "thrown": null
+      },
+      {
+        "mode": "stderr-failure",
+        "count": 1,
+        "exit": 2,
+        "published": false,
+        "thrown": null
+      }
+    ],
+    "ordinary_physical_txt": {
+      "bytes": 1539,
+      "sha256": "fab8e26d3a2809750c94f610bc10d39f53ce7be4ed9c8d407661511714f00f1f",
+      "gitBlob": "770f2fe7be62b2a7624e67cfb24087443ea610f2"
+    },
+    "ordinary_receipt": {
+      "format": "tastetable.venue-call-sheet.v1",
+      "input": "/dev/estate-60b2c08feb01-taste-recovered-bo0dge6n/candidate-receiving-UL8yPs/01-ordinary/week-Ω.json",
+      "inputSha256": "dbed739591c736cc42040b2c5500bb9ad2042715fd8d921d74298ffb6d93f6b5",
+      "venueNotes": "/dev/estate-60b2c08feb01-taste-recovered-bo0dge6n/candidate-receiving-UL8yPs/01-ordinary/notes.json",
+      "venueNotesSha256": "3461bec8e083cc84768b2e2e3dc871b876f01fad93346f2573a5b8fac1915c00",
+      "output": "/dev/estate-60b2c08feb01-taste-recovered-bo0dge6n/candidate-receiving-UL8yPs/01-ordinary/call sheet.txt",
+      "outputSha256": "fab8e26d3a2809750c94f610bc10d39f53ce7be4ed9c8d407661511714f00f1f",
+      "outputBytes": 1539,
+      "weekStart": "2026-10-05",
+      "sourceMode": "mock",
+      "savedWeekAt": "2026-10-05T09:00:00.000Z",
+      "venueNotesSavedAt": "2026-10-06T10:00:00.000Z",
+      "originalPicks": 3,
+      "scheduledVisits": 2,
+      "omittedPicks": 1,
+      "retainedNoteRecords": 4,
+      "currentNoteRecords": 2,
+      "excludedNoteRecords": 2
+    },
+    "root_physical_output_checks": {
+      "18_field_receipt_matches_raw_run_and_physical_output": true,
+      "both_post_publication_fault_outputs_equal_complete_1539_byte_text": true,
+      "publication_race_kept": "INDEPENDENT_RACE_WINNER"
+    },
+    "raw_process_boundary": "The raw receipt retains every one of the 29 per-run stdout/stderr values. Several grammar controls reused the 24-usage paths, whose final physical stdout is the final help invocation; it is not attributed to all earlier controls.",
+    "filesystem_boundary": "The regular-file archive includes filesystem-observations.json for original symbolic links, directory identities and hard-link observations; archive extraction is not presented as a new native filesystem run."
+  },
+  "readme_composition": {
+    "before": {
+      "bytes": 20212,
+      "sha256": "170bb5e83b2b6de85bb2d6e7f41d3b9eaee9e8a13a73aa74bdaf6a2ab9d8a580",
+      "gitBlob": "c0ebf40a3b97f3efedffbc85561a6af153cc97ef"
+    },
+    "after": {
+      "bytes": 20683,
+      "sha256": "45672fb789ec8c3b662c82725d9f2c3ab649ab291a3724e79d495004b63124f1",
+      "gitBlob": "3e8ff5720b95bb83e7faa4e030e987618c7e559d"
+    },
+    "addition": {
+      "bytes": 471,
+      "sha256": "1bc19c4a7144f1a857fa728a4763a052d59e63ac2e36e44a091ff2643d9178c0",
+      "gitBlob": "3f33ab4394e6b6b356068253022fb8d7a3f6d853"
+    },
+    "location": "One 471-byte insertion immediately before the unique Going live with Qloo section.",
+    "all_other_original_bytes_exact_inverse": true,
+    "evidence_readme": {
+      "bytes": 6097,
+      "sha256": "ea89b2c92166bcc57749a9c897808c5aac74ee2853458053246324f1b85c63ba",
+      "gitBlob": "6b11b268c4be870701ac147fe812d8a0f8998f8a"
+    },
+    "all_15_relative_links_in_both_readmes_resolve_in_planned_tree": true,
+    "qualification_source_change": false
+  },
+  "final_composition_plan": {
+    "parent": "b2234a526793e70195829a1fe6c87e807a26c8db",
+    "expected_leaves": 829,
+    "expected_trees_including_root": 130,
+    "changed_paths_from_base": 12,
+    "additions": 11,
+    "modifications": 1,
+    "unowned_original_leaves_to_preserve": 817,
+    "actual_tree_and_ref_receipt": "Recorded separately after this receipt is included and the actual tree/ref is read back; this file does not claim its own future tree hash.",
+    "changed_after_qualified_packet": [
+      "README.md",
+      "docs/receiving/saved-week-call-sheet-60b2c08feb01/README.md",
+      "docs/receiving/saved-week-call-sheet-60b2c08feb01/root-receiving.json"
+    ]
+  },
+  "publication_policy": {
+    "state_at_this_receipt": "No branch or pull request yet created for this candidate.",
+    "planned_branch": "estate/60b2c08feb01-saved-week-call-sheet-custody",
+    "fresh_main": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+    "planned_branch_absent_404": true,
+    "matching_pull_requests": 0,
+    "claim_comments": 0,
+    "unchanged_workflows": {
+      ".github/workflows/ci.yml": "0e6273139a9bf417a4ee42f4501d067b1c9d95a0",
+      ".github/workflows/native-plan-week-browser.yml": "d674f2698d1b048075a1c49c2035b1096be668f2",
+      ".github/workflows/week-compare.yml": "e591fca2db970460611269ad7d1c53a6bc70f028"
+    },
+    "receiving": "Full workflow bodies previously read; fresh complete listing matches all three exact identities. Non-main branch creation and issue comments match no configured event. ci.yml unconditionally receives pull requests and main pushes.",
+    "hold": "No pull request or main integration under the estate no-Actions relay; do not disable CI or change required gates to bypass the hold.",
+    "relay": "https://github.com/Jacob-Met/hamon/issues/143#issuecomment-6067592767",
+    "owner_seams": [
+      "https://github.com/Jacob-Met/tastetable/issues/54#issuecomment-6072174068",
+      "https://github.com/Jacob-Met/tastetable/issues/55#issuecomment-6072174234"
+    ]
+  },
+  "limits": [
+    "Qualification used installed Linux Node 24.19.0. Node 22 is the documented supported version floor, not an executed matrix; no Windows or browser receiving claim is made for this command.",
+    "Independent receiving does not separately claim FIFO, unreadable input, help-delivery fault, 32 MiB output-cap or inherited whole-suite coverage. The authored suite covers additional selected cases as its preserved raw record states.",
+    "Byte re-reading reduces the observed input-change window; it is not a lock or a multi-file transaction. There is no parent-directory durability or post-publication rollback claim.",
+    "The original historical discovery receipt 03710382575f2269d3b06e2ed8df720a2a41a5c6 was lost before canonical upload. Preparation explicitly labels its observation summary and does not reconstruct that raw run.",
+    "Original independent pre-candidate calibration raw archives were lost on controller reset. The original three receiver programs were recovered byte-exact and canonically frozen before candidate admission, with historical calibration observations marked as such. Completed gates were not replayed.",
+    "An author guide-writing orchestration expression failed before controller execution or source creation; it is retained as preparation history and is not relabelled as a product failure.",
+    "Import control demonstrated clean import stdout/exit plus source inspection; it is not an operating-system sandbox proof.",
+    "This is qualification and source custody, not deployment, provider adoption, participant evidence or clinical validation."
+  ],
+  "hamon_ie_calls": 0
+}
