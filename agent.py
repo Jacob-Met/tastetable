@@ -145,6 +145,10 @@ class ScriptedModel:
                         if m["tool_call_id"][3] == "c" and json.loads(m["content"]).get("matches")]
 
         if phase == 2:
+            # Untagged place results can include cultural venues, not just meals.
+            if not cuisine_tags:
+                return _completion(None, [_call("p2_skip", "qloo_search",
+                                                {"query": "", "kind": "tag"})])
             return _completion(None, [_call("p2_0", "qloo_recs", {
                 "filter_type": "urn:entity:place", "purpose": "restaurant",
                 "tag_ids": cuisine_tags, "signal_entity_ids": signals,
@@ -183,9 +187,13 @@ class ScriptedModel:
             return _completion(None, [_call(f"p7_{n}", "qloo_search", {"query": v, "kind": "tag"})
                                       for n, v in enumerate(VENUE_CONCEPTS)])
         if phase == 8:
+            venue_tags = first_ids(7, "tag_id")
+            if not venue_tags:
+                return _completion(None, [_call("p8_skip", "qloo_search",
+                                                {"query": "", "kind": "tag"})])
             return _completion(None, [_call("p8_0", "qloo_recs", {
                 "filter_type": "urn:entity:place", "purpose": "outing",
-                "tag_ids": first_ids(7, "tag_id"), "signal_entity_ids": signals,
+                "tag_ids": venue_tags, "signal_entity_ids": signals,
                 "location": persona.get("city"), "take": 5})])
         if phase == 9:
             ids = [c["entity_id"] for c in self._results(messages, 8)[0].get("candidates", [])]
