@@ -1,6 +1,7 @@
 /** A caregiver's visit notes. No venue contact, recommendation or storage calls. */
 import { calendarWeek, setWeek, weekRows } from "./week_plan.mjs";
 import { mountVenueNoteFiles } from "./venue_note_file.mjs";
+import { mountQuestionReuse, questionReuseChoices } from "./venue_question_reuse.mjs";
 
 export const CONTACT_STATES = Object.freeze({
   not_contacted: "Not contacted",
@@ -165,6 +166,11 @@ export function mountVenueFollowup(root, current) {
   const source = root.querySelector("[data-contact-source]");
   const download = root.querySelector("[data-contact-download]");
   let session = null;
+  let questionReuse = [];
+  function retireQuestionReuse() {
+    questionReuse.forEach((control) => control.retire());
+    questionReuse = [];
+  }
   const noteFiles = mountVenueNoteFiles(root, () => ({
     state: currentState(), origin: current().origin, model: session,
   }), sync, CONTACT_STATES);
@@ -193,6 +199,7 @@ export function mountVenueFollowup(root, current) {
   }
 
   function sync() {
+    retireQuestionReuse();
     noteFiles.changed();
     if (!session) return;
     root.hidden = false;
@@ -233,12 +240,23 @@ export function mountVenueFollowup(root, current) {
         </div>${notePrint(entry)}
       </li>`;
       }).join("");
+      // One record snapshot supplies initial history options for all admitted visits.
+      const recordedQuestions = session.snapshotRecords();
       // Set values after parsing: HTML strips a leading LF inside <textarea>.
       visits.forEach((entry, index) => {
         const visit = list.children[index];
         visit.querySelector('[data-contact-field="question"]').value = entry.questionText;
         visit.querySelector('[data-contact-field="reply"]').value = entry.note.reply;
         visit.querySelector('[data-contact-field="nextStep"]').value = entry.note.nextStep;
+        questionReuse.push(mountQuestionReuse(visit.querySelector(".contact-question-editor"), () => {
+          if (!root.contains(visit)) throw new Error("This question editor is no longer current.");
+          return { model: session, state: currentState(), key: entry.key, date: entry.date };
+        }, (question) => {
+          const input = visit.querySelector('[data-contact-field="question"]');
+          const changed = edit({ target: input, type: "input" }, question);
+          if (changed) input.value = question; // Display may normalize CR; the stored value stays literal.
+          return changed;
+        }, questionReuseChoices(recordedQuestions, entry.key, entry.date)));
       });
       updateSummary(state);
       root.dataset.empty = String(visits.length === 0);
@@ -251,16 +269,18 @@ export function mountVenueFollowup(root, current) {
     }
   }
 
-  function edit(event) {
+  function edit(event, questionValue) {
     const input = event.target.closest("[data-contact-field]");
     if (!input || !root.contains(input)) return;
     // Commit each native control once; the paired event must not erase a refusal.
     if (event.type !== (input.dataset.contactField === "status" ? "change" : "input")) return;
     const visit = input.closest("[data-contact-key]");
+    questionReuse.forEach((control) => control.invalidate());
     noteFiles.changed();
     try {
       const state = currentState();
-      const note = session.setField(state, visit.dataset.contactKey, visit.dataset.contactDate, input.dataset.contactField, input.value);
+      const value = input.dataset.contactField === "question" && typeof questionValue === "string" ? questionValue : input.value;
+      const note = session.setField(state, visit.dataset.contactKey, visit.dataset.contactDate, input.dataset.contactField, value);
       const entry = session.entries(state).find((item) => item.key === visit.dataset.contactKey);
       visit.querySelector('[data-contact-field="status"]').value = note.status;
       visit.querySelector(".contact-questions").innerHTML = entry.questions.length
@@ -277,6 +297,7 @@ export function mountVenueFollowup(root, current) {
       updateSummary(state);
       status.textContent = "Your note is available for this visit in this tab. Save venue notes to edit them later, or print/download a readable call sheet.";
       noteFiles.refresh();
+      return true;
     } catch (error) {
       if (input.dataset.contactField === "status" && session) {
         try {
@@ -285,6 +306,7 @@ export function mountVenueFollowup(root, current) {
         } catch { /* A retired or moved visit cannot accept this edit. */ }
       }
       status.textContent = `Note not updated: ${error.message}`;
+      return false;
     }
   }
 
@@ -319,6 +341,7 @@ export function mountVenueFollowup(root, current) {
     accept(state, savedSource = "") { noteFiles.retire(); session = createVenueFollowup(state, savedSource); sync(); },
     sync,
     retire() {
+      retireQuestionReuse();
       session = null;
       noteFiles.retire();
       root.hidden = true;

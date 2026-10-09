@@ -313,3 +313,8 @@ Open **Visit record (new tab)** in the planner to record what happened beside th
 ### Visit records as CSV
 
 Export an explicitly selected saved visit record with `node tools/visit_record_to_csv.mjs --input visits.json --output visits.csv` (Node.js 22+). The create-only CSV retains every original occurrence, including omitted and unrecorded picks, with separate planned and actual dates, outcomes and literal notes. Keep the JSON for reopening the record. See [CSV columns, text import and file delivery](docs/VISIT_RECORD_CSV.md).
+
+
+## Reuse recorded venue questions
+
+When a suggested visit moves to another date, its worksheet starts a separate note. Open **Edit questions for this visit**, choose custom questions recorded for another date of that same original visit, review the preview, then choose **Use questions**. Only the literal questions are copied. Current replies and next steps stay with their recorded date, and the existing follow-up warning applies when questions change after a reply. Nothing is saved or sent automatically. [Question reuse, date identity and native checks](docs/VENUE_QUESTION_REUSE.md).
