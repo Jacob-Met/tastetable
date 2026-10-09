@@ -1,0 +1,92 @@
+{
+  "schema": "tastetable.d98-focused-apply-freeze.v1",
+  "frozenAt": "2026-10-09T18:02:30.860Z",
+  "originalCapsule": "121e7a87aa3287bb444bd97679902ea6f680107d",
+  "originalReceiver": {
+    "bytes": 42739,
+    "sha256": "671b0c785eb26227938725f58722661f527ac4ecdf9b9d4521a2d5b0d8d77d2e",
+    "git": "74ec645378f92867ce4661da12111de98736c278"
+  },
+  "fixture": {
+    "bytes": 72738,
+    "sha256": "5593920dd963b580e145b9ba5ab067e94c79de35ae6c503cca0e53cefcf81dfe",
+    "git": "5e9918c1c1a0e57c8f3682804d2d3b21190e8a49"
+  },
+  "oracle": {
+    "bytes": 8868,
+    "sha256": "95626fa34a8edb51e7fb8d4b33ce0ccf4be6fa5649d6bbf17b8a7cd47621f5ee",
+    "git": "4e6754a480c172435da147cd2ffe5790654ec5d9"
+  },
+  "receiver": {
+    "bytes": 40185,
+    "sha256": "f872f52b12b0670ea9301498e8bb2aede8ab148f9732a2190743c600b70748db",
+    "git": "1d0fbce8d3668474455a06a439217d72b106a3d6"
+  },
+  "candidateExposure": false,
+  "originalProductExecuted": false,
+  "syntaxOnly": true,
+  "groups": 1,
+  "unchangedSourcePins": [
+    {
+      "path": "static/index.html",
+      "bytes": 13018,
+      "sha256": "b953d889674d5e54e957dca3facb56efeb647cd37774b1b61f58116775661d59",
+      "git": "c9058dae2b074078902be5badf7c5690293e3ee1"
+    },
+    {
+      "path": "static/plan-request.js",
+      "bytes": 1420,
+      "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+      "git": "b21276dda840fe6dd96a3bf3258a851970ff5e4d"
+    },
+    {
+      "path": "static/calendar.js",
+      "bytes": 15169,
+      "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+      "git": "dbed22d2cb91090bccec9472fbffd2854eed2722"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "git": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+    },
+    {
+      "path": "static/week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "git": "420ddb8f63fca264dcf97be7147801105696155d"
+    },
+    {
+      "path": "static/venue_followup.mjs",
+      "bytes": 18923,
+      "sha256": "cfa96d88aeaf06d55c5a4b7ad457f6a693f571ec06ccd8744141e4922ff3b2c3",
+      "git": "a3c4b8bd120149441d343cbda2d3c15f6d106ca2"
+    },
+    {
+      "path": "static/venue_note_file.mjs",
+      "bytes": 10435,
+      "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+      "git": "f8406cb540d52222996c585666ae1a55a1030def"
+    },
+    {
+      "path": "static/caregiver_handoff.mjs",
+      "bytes": 11673,
+      "sha256": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+      "git": "4286409b3fe932f61957ba72f5db918d18ff0751"
+    },
+    {
+      "path": "static/saved_weeks.mjs",
+      "bytes": 3327,
+      "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3",
+      "git": "0bb822cb6f75c376397c0f7d6d6de78035f865bc"
+    },
+    {
+      "path": "static/saved_week_ui.mjs",
+      "bytes": 9555,
+      "sha256": "03f3580a1260aa4cec5b42076caa09650f3347b57efc42bfe6c51503d766eda7",
+      "git": "5a281492002b61222c70ed9b4268150504d20b15"
+    }
+  ],
+  "oldAppMustNotRun": "ed40637354a456c03dfa32a2e4ec954f23110ffa"
+}

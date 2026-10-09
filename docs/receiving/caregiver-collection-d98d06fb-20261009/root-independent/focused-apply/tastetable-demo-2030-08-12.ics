@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TasteTable//Suggested weekly plan//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:dddddddddddddddddddddddddddddddd-20300812-pick-0@tastetable.invalid
+DTSTAMP:20300104T000000Z
+DTSTART;VALUE=DATE:20300812
+DTEND;VALUE=DATE:20300813
+SUMMARY:[DEMO] TasteTable suggestion: Shared venue display name 1
+DESCRIPTION:DEMO: synthetic Qloo fixture\; these venues are fictional.\n\nS
+ uggested outing only\; no booking or opening hours confirmed. Not medical 
+ or dietary advice. Confirm accessibility\, texture and sodium needs with t
+ he venue and the person's care team.\n\nQloo entity ID: H:pick:1\n\nOrigin
+ ally suggested for: Monday. Arranged for: Monday 2030-08-12.\n\nWhy this s
+ uggestion: Literal H credit / occurrence 1\n\nPlan note: Literal H credit
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CLASS:PRIVATE
+END:VEVENT
+END:VCALENDAR

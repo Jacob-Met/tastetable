@@ -1,0 +1,95 @@
+{
+  "schema": "tastetable.caregiver-handoff-continuity.v1",
+  "at": "2026-10-08T21:03:01.734861+00:00",
+  "claim": "https://github.com/Jacob-Met/tastetable/issues/55",
+  "owner": "chatgpt-d98d06fbfc35/production_receiving_2030",
+  "base": "328df51af830e91f304417a66d74f43d94ae0c02",
+  "baseTree": "df0251092f77d96169daa097abaec409ecabe6ba",
+  "source": "/home/jacob/tastetable-caregiver-handoff-d98d06fb-20261008/source",
+  "productState": "First newly authored candidate after prior scope-only recovery. Seven product/docs/model files stable since candidate-v1-manifest; receiver v2 only corrects a maintained date-message expectation and adds failure UI.",
+  "sourceFiles": {
+    "static/caregiver_handoff.mjs": {
+      "bytes": 11673,
+      "sha256": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95"
+    },
+    "static/app.js": {
+      "bytes": 20941,
+      "sha256": "00e234dc9a69ed4b883ffcc70dbe25db50f38f3f0203b8c5c2eda0f3fe2ff129"
+    },
+    "static/venue_followup.mjs": {
+      "bytes": 18923,
+      "sha256": "cfa96d88aeaf06d55c5a4b7ad457f6a693f571ec06ccd8744141e4922ff3b2c3"
+    },
+    "static/index.html": {
+      "bytes": 11174,
+      "sha256": "114bbd275d2d7ea899e8cdef003436cf3d68187283427f9333d390c32bab2293"
+    },
+    "tests/caregiver_handoff.test.mjs": {
+      "bytes": 10870,
+      "sha256": "dbdcb41b1598970c0ba098216a234887a470ca36fa5a3bfcf7faa4bfdebb7b9f"
+    },
+    "tools/check_caregiver_handoff_browser.mjs": {
+      "bytes": 37912,
+      "sha256": "737d385d40e89b79e476e327cad9a25ca99284507ec61f4ec7a5fe70df946eec"
+    },
+    "docs/CAREGIVER_HANDOFF.md": {
+      "bytes": 3541,
+      "sha256": "9da5e7bdddac7ade887ee3cf21c2445f47d5cb167070d4a2e56320b5feac9906"
+    },
+    "README.md": {
+      "bytes": 20040,
+      "sha256": "3389097a869bfef85ffc7114c8b7dbc15a7e20d5cfce9bcebd957d13f53de27d"
+    }
+  },
+  "sourceChanges": "Exactly eight approved paths; no codec, scheduler, calendar, request-controller, backend, workflow or offline-studio changes.",
+  "baseline": {
+    "receipt": "original-receiving.json",
+    "status": "passed",
+    "models": 32,
+    "browserGroups": 4,
+    "browserReport": "baseline-browser-v1/browser-results.json"
+  },
+  "candidateModel": {
+    "receipt": "candidate-v1-model.json",
+    "status": "passed",
+    "tests": 40
+  },
+  "browserAttempts": [
+    {
+      "id": "candidate-browser-v1",
+      "status": "failed",
+      "groupsPassed": 4,
+      "reason": "Receiver waited for invalid date; actual maintained date rejection says Choose a valid calendar date for your week.",
+      "originalReceiver": "receiver-v1.mjs",
+      "diagnosis": "candidate-browser-v1-date-refusal-diagnosis.json"
+    },
+    {
+      "id": "candidate-browser-v2",
+      "status": "failed-before-page",
+      "groupsPassed": 0,
+      "reason": "No DevToolsActivePort within inherited twelve-second startup window; no stderr or browser requests.",
+      "diagnosis": "candidate-browser-v2-startup-diagnosis.json",
+      "cleanup": "Exact owned profile absent and no matching browser process; no process mutation."
+    }
+  ],
+  "remaining": [
+    "Independent source/interaction review by root/private_cm_2030.",
+    "Complete corrected real-browser receiving when the unchanged native resource guard admits it.",
+    "Root receiving and current-main composition; preserve native batch additions and all reserved adjacent owners.",
+    "Recheck all workflow predicates before any external write; no PR/main/Actions trigger while held."
+  ],
+  "resourceHold": {
+    "receipt": "resource-check-210132.json",
+    "at": "2026-10-08T21:01:32.249334+00:00",
+    "memFreeBytes": 262672384,
+    "memAvailableBytes": 2439184384,
+    "requiredFreeBytes": 1610612736,
+    "loadavg": "45.36 32.77 24.41",
+    "browserLaunched": false
+  },
+  "currentMainObserved": "1cba17347baa7528147c244c1046658960b7fae2",
+  "currentMainDelta": "Native plan batch #53 adds19 files plus README; no static/workflow delta.",
+  "adjacentOwner": "#55 comment6068688064 reserves a4a collection refresh/capture/Open hooks, pending candidate app blob a259470e4f2ab12ca7e455c92ab507cd88ba1af3.",
+  "externalWrites": false,
+  "candidateCommitted": false
+}

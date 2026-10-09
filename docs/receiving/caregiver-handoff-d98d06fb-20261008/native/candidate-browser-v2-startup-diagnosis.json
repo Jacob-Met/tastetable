@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-08T20:57:46.718685+00:00",
+  "ownedAttemptProfile": "/home/jacob/tastetable-caregiver-handoff-d98d06fb-20261008/candidate-browser-v2/profile-Pzz8wj",
+  "profileExists": false,
+  "matchingOwnedBrowserProcesses": [],
+  "mem": {
+    "MemFree": "259008 kB",
+    "MemAvailable": "3088760 kB"
+  },
+  "f_bavailBytes": 13361938432,
+  "loadavg": "25.79 23.95 20.23 23/1659 1567363",
+  "mutatedProcesses": false
+}

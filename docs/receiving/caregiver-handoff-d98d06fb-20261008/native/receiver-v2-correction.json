@@ -1,0 +1,7 @@
+{
+  "kind": "receiver-only correction",
+  "previousSha256": "1828b5a3a7d575f4968d3279e5813f0c0d4f6ed2281af90f0f356a187947b224",
+  "currentSha256": "737d385d40e89b79e476e327cad9a25ca99284507ec61f4ec7a5fe70df946eec",
+  "reason": "The maintained date codec refuses the exact retained negative input with Choose a valid calendar date for your week. v1 incorrectly waited for invalid date. v2 retains the source behavior, corrects that expected fragment and captures refusal UI on failure.",
+  "productSourceChanged": false
+}

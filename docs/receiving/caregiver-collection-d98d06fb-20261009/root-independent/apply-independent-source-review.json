@@ -1,0 +1,212 @@
+{
+  "schema": "tastetable.independent.caregiver-apply-correction-source-review.v1",
+  "reviewer": "HAMON d98 /root/taste_receiving",
+  "reviewedAt": "2026-10-09 18:05:20 UTC",
+  "repository": "Jacob-Met/tastetable",
+  "disposition": "NO BLOCKING SOURCE OBJECTION FOR THE FROZEN H APPLY CASE; BEHAVIORAL RESULT REMAINS SEPARATE",
+  "exposure": {
+    "frozenFocusedOracle": "4e6754a480c172435da147cd2ffe5790654ec5d9",
+    "focusedReceiver": "1d0fbce8d3668474455a06a439217d72b106a3d6",
+    "focusedFreeze": "b69844963e1247d22e70bb48d56a1fdf153da6e5",
+    "oracleReadBeforeCorrectedAppBody": true,
+    "originalOracle": "6a49031f5803b3cc97d65a897b854cfcf2933523",
+    "originalFinding": "e331afbdf678650813f6e999e96c4c1bd0989d28",
+    "originalRawActual": "f7cd75852381d01035ffe7ded730c93d1a81cb5e",
+    "originalCompleteClosure": "2ed422f744d9764b9ef1f32bcd53bf3b4239b486"
+  },
+  "artifact": {
+    "originalApp": {
+      "path": "static/app.js",
+      "git": "ed40637354a456c03dfa32a2e4ec954f23110ffa",
+      "bytes": 21963,
+      "sha256": "c484f029aa70dad81acaa21d99f00a93681dff61101accbca5a8d33c89c9a500"
+    },
+    "correctedApp": {
+      "path": "static/app.js",
+      "bytes": 22129,
+      "sha256": "2002efebe9dda5f6114ac3d6b84d4450714e36fa80a063fb6205a8637dfd6005",
+      "git": "1d5ac7bea1d7ee485ff5db20379d7c715c3df0d6"
+    },
+    "authorCorrectionManifest": "658163fbc5dabf58be75181384f70ff3609b08c7",
+    "exactFourSourceSpans": [
+      {
+        "before": "function commitPlanView({ nextWeek, nextWeekView, fragments, restoredWeek }) {",
+        "after": "function commitPlanView({ nextWeek, nextWeekView, fragments, restoredWeek }, { deferWeekRefresh = false } = {}) {"
+      },
+      {
+        "before": "  commitWeekView(nextWeekView);\n  applyWeekDate();",
+        "after": "  commitWeekView(nextWeekView);\n  if (!deferWeekRefresh) applyWeekDate();"
+      },
+      {
+        "before": "    commitPlanView(prepared.view);\n    fillForm(prepared.inputs);",
+        "after": "    // Restore the whole handoff before refreshing collection capture or exports.\n    commitPlanView(prepared.view, { deferWeekRefresh: true });\n    fillForm(prepared.inputs);"
+      },
+      {
+        "before": "    venueFollowup.acceptPrepared(weekState, prepared.model);\n    acceptCalendar();\n    refreshWeekSave();",
+        "after": "    venueFollowup.acceptPrepared(weekState, prepared.model);\n    acceptCalendar();\n    applyWeekDate();"
+      }
+    ],
+    "independentWholeBodySourceProof": {
+      "spans": [
+        {
+          "beforeOccurrences": 1,
+          "afterOccurrences": 1
+        },
+        {
+          "beforeOccurrences": 1,
+          "afterOccurrences": 1
+        },
+        {
+          "beforeOccurrences": 1,
+          "afterOccurrences": 1
+        },
+        {
+          "beforeOccurrences": 1,
+          "afterOccurrences": 1
+        }
+      ],
+      "forwardExact": true,
+      "inverseExact": true,
+      "bytes": 22129,
+      "sha256": "2002efebe9dda5f6114ac3d6b84d4450714e36fa80a063fb6205a8637dfd6005",
+      "declaredDigestMatches": true
+    },
+    "meaning": "All four before/after source spans occur exactly once in their respective complete files. Applying them forward produces the entire corrected file; inverting them restores the entire original file. Corrected UTF-8 bytes and SHA256 were recomputed independently as data, without evaluating product code."
+  },
+  "requirement": {
+    "exactFocus": "Every collection.refresh.enter, collection.capture and collection.refresh.exit during H acceptance must follow actual venue.acceptPrepared completion and calendar.createWeekExport completion; each observation must have complete H origin/state/assignments/date/model/form/render/calendar. Even null collection capture during a partial interval is forbidden.",
+    "historicalDisposition": "Original 17 groups / 313 assertions exited0 but did not enforce the stronger all-capture/order oracle. Its seq29 mixed A origin + H entities + A calendar finding remains an actual invariant failure. No await or storage Save occurred there; no persisted-corruption or physical-browser claim.",
+    "notWeakenedToFinalOnly": true,
+    "notWeakenedToNullCaptureAllowed": true
+  },
+  "staticControlFlow": {
+    "dataOnlySourceChecks": {
+      "orderedAcceptance": true,
+      "singleInvalidate": true,
+      "singlePreparedCommit": true,
+      "noAwait": true,
+      "defaultFalse": true,
+      "onlyExplicitDeferTrueCall": true,
+      "commitGuardedRefresh": true,
+      "noOtherExplicitRefreshOrCaptureInCommit": true,
+      "defaultRenderCallPreserved": true,
+      "finalDateValidationAndPreferredAssignment": true,
+      "dateValidityPrintSuccessPreserved": true,
+      "finalCollectionRefreshThroughRenderWeek": true,
+      "modelSetWeekSourceIdentityPreserved": true,
+      "exactSameApplyWeekDateBody": true,
+      "exactSameRenderWeekBody": true,
+      "exactSameAcceptCalendarBody": true
+    },
+    "exactAcceptTermOrder": [
+      {
+        "term": "planRequests.invalidate();",
+        "position": 25
+      },
+      {
+        "term": "commitPlanView(prepared.view, { deferWeekRefresh: true });",
+        "position": 138
+      },
+      {
+        "term": "fillForm(prepared.inputs);",
+        "position": 201
+      },
+      {
+        "term": "acceptedPlan = prepared.origin;",
+        "position": 232
+      },
+      {
+        "term": "venueFollowup.acceptPrepared(weekState, prepared.model);",
+        "position": 366
+      },
+      {
+        "term": "acceptCalendar();",
+        "position": 427
+      },
+      {
+        "term": "applyWeekDate();",
+        "position": 449
+      }
+    ],
+    "correctedCommitAndAcceptance": {
+      "commit": "function commitPlanView({ nextWeek, nextWeekView, fragments, restoredWeek }, { deferWeekRefresh = false } = {}) {\n  for (const [selector, value] of Object.entries(fragments)) $(selector).innerHTML = value;\n  weekState = nextWeek;\n  if (restoredWeek || !weekDateInitialized) {\n    $(\"#weekDate\").value = nextWeek.weekStart;\n    weekDateInitialized = true;\n  }\n  commitWeekView(nextWeekView);\n  if (!deferWeekRefresh) applyWeekDate();\n  $(\"#resetWeek\").disabled = false;\n  $(\"#results\").hidden = false;\n  $(\"#results\").scrollIntoView({ behavior: \"smooth\" });\n}\n\n",
+      "accept": "  accept(prepared) {\n    planRequests.invalidate();\n    // Restore the whole handoff before refreshing collection capture or exports.\n    commitPlanView(prepared.view, { deferWeekRefresh: true });\n    fillForm(prepared.inputs);\n    acceptedPlan = prepared.origin;\n    $(\"#savedWeekSource\").textContent = prepared.label;\n    $(\"#savedWeekSource\").hidden = false;\n    venueFollowup.acceptPrepared(weekState, prepared.model);\n    acceptCalendar();\n    applyWeekDate();\n    $(\"#requestStatus\").textContent = \"Caregiver handoff opened. Its original inputs, arrangement and venue notes are restored.\";\n  },\n});\n\n",
+      "applyWeekDate": "function applyWeekDate() {\n  if (!weekState) return false;\n  try {\n    weekState = setWeek(weekState, $(\"#weekDate\").value);\n    preferredWeekStart = weekState.weekStart;\n    $(\"#weekDate\").removeAttribute(\"aria-invalid\");\n    $(\"#weekError\").textContent = \"\";\n    $(\"#printWeek\").disabled = false;\n    renderWeek();\n    return true;\n  } catch (error) {\n    $(\"#weekDate\").setAttribute(\"aria-invalid\", \"true\");\n    $(\"#weekError\").textContent = error.message;\n    $(\"#printWeek\").disabled = true;\n    refreshCalendar();\n    refreshWeekSave();\n    venueFollowup.sync();\n    return false;\n  }\n}\n\n",
+      "renderWeek": "function renderWeek(message = \"\") {\n  commitWeekView(prepareWeekView(weekState, message));\n  refreshCalendar();\n  refreshWeekSave();\n  venueFollowup.sync();\n}\n\n",
+      "acceptCalendar": "function acceptCalendar() {\n  clearCalendar();\n  try {\n    if (weekState.sourceMode === \"unknown\") throw new Error(\"The response did not specify its data source.\");\n    const options = acceptedPlan?.calendarId\n      ? { id: acceptedPlan.calendarId, createdAt: new Date(acceptedPlan.receivedAt) } : {};\n    calendarSession = TasteTableCalendar.createWeekExport(weekState, options);\n    $(\"#calendarSource\").textContent = calendarSession.source;\n    refreshCalendar();\n  } catch (error) {\n    $(\"#calendarStatus\").textContent = \"Calendar download unavailable: \" + error.message;\n  }\n}\n\n"
+    },
+    "phaseReview": [
+      {
+        "phase": "Invalidate",
+        "source": "planRequests.invalidate();",
+        "observation": "Exactly one explicit generation invalidation precedes the view commit. The actual controller increments generation, clears/aborts the previous active request and calls onIdle; app onIdle changes busy/cancel controls, without collection capture."
+      },
+      {
+        "phase": "Commit prepared H view without dependent refresh",
+        "source": "commitPlanView(prepared.view, { deferWeekRefresh: true });",
+        "observation": "The optional parameter defaults false. Only the caregiver Apply call passes true. The function still writes the already prepared fragments, installs prepared nextWeek, restores weekDate for the restored handoff, commits week view, and reveals results. Its sole applyWeekDate call is guarded and skipped. No other explicit calendar/collection refresh, capture or worksheet sync appears in this function."
+      },
+      {
+        "phase": "Restore H form and origin",
+        "source": "fillForm(prepared.inputs); acceptedPlan = prepared.origin;",
+        "observation": "These unchanged operations occur after the deferred commit and before worksheet/calendar installation. All supported form fields are restored by the existing fillForm implementation."
+      },
+      {
+        "phase": "Install the prepared worksheet model",
+        "source": "venueFollowup.acceptPrepared(weekState, prepared.model);",
+        "observation": "Actual acceptPrepared first validates model.entries(state), retires pending note-file UI, assigns the prepared model, then syncs. Its onChange target is caregiverHandoff.changed, not the collection. The read-only caregiver refresh now sees matching H origin/state/model. There is no collection refresh callback along this path."
+      },
+      {
+        "phase": "Accept H calendar",
+        "source": "acceptCalendar();",
+        "observation": "The unchanged function clears old calendar state, constructs the actual calendar session from H state and H acceptedPlan metadata, then refreshes its preview. For the admitted valid H case, construction completes before the following applyWeekDate call. It does not refresh the collection."
+      },
+      {
+        "phase": "Publish coherent H through existing date/render/save path",
+        "source": "applyWeekDate();",
+        "observation": "This replaces the previous explicit final refreshWeekSave call. The unchanged routine validates/restores the date via setWeek, sets preferredWeekStart, clears date invalidity and error text, enables print, then renderWeek updates the view, calendar, collection save capture and worksheet. Thus collection refresh/capture first becomes reachable after H model and calendar acceptance. No await was introduced."
+      }
+    ],
+    "normalCallers": "The only other actual commitPlanView caller is render(res, restoredWeek), which still calls commitPlanView(preparePlanView(...)) without options. Its default false preserves the prior immediate applyWeekDate path."
+  },
+  "preservedFinalSemantics": {
+    "preferredWeekStart": "Still assigned from the checked H weekState by unchanged applyWeekDate before collection refresh.",
+    "dateValidity": "The existing setWeek validation, aria-invalid removal/error clearing on success, print enabling and original invalid-date catch remain byte exact.",
+    "weekDateInitialization": "Restored handoff still writes nextWeek.weekStart and sets weekDateInitialized before calendar acceptance.",
+    "worksheetBinding": {
+      "weekModel": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "worksheet": "a3c4b8bd120149441d343cbda2d3c15f6d106ca2",
+      "setWeekExact": "export function setWeek(state, anchor) {\n  return freeze({ ...state, weekStart: calendarWeek(anchor)[0].date });\n}",
+      "identityGuard": "state.sourcePlan, state.picks, state.constraints and state.sourceMode must equal the model's initial bindings.",
+      "reasoning": "setWeek creates a shallow containing object and changes weekStart only. The recursive freeze function freezes existing nested references without copying them. All four model bindings remain identical; assignments remain the same object. Prepared model and its records are neither replaced nor rewritten by this correction. The restored H date is already a canonical week start, so final validation retains its week."
+    },
+    "exportState": "The same existing save/date/calendar/worksheet paths execute after H installation. Exact final exported bytes and final runtime observer coherence are the independently frozen learner case's responsibility; this review does not manufacture an execution pass.",
+    "unchangedBodies": [
+      "applyWeekDate",
+      "renderWeek",
+      "acceptCalendar",
+      "fillForm",
+      "collection capture",
+      "request controller",
+      "models/codecs"
+    ],
+    "newImports": 0,
+    "newGlobalState": 0,
+    "newDependencies": 0
+  },
+  "evidenceLimits": {
+    "productExecutedByThisReview": false,
+    "correctedCaseExecutedByThisReview": false,
+    "original17Replayed": false,
+    "original40Replayed": false,
+    "authorTestsReplayed": false,
+    "physicalBrowser": false,
+    "actualIndexedDB": false,
+    "providerRequests": false,
+    "nativeInstallation": false,
+    "sourceRefsPrsMergesByThisReview": 0,
+    "workflowsOrSecurityChanges": 0,
+    "actionsTriggered": 0,
+    "interpretation": "This is independent source analysis and full-text/data comparison for one app-only correction against the frozen H requirement. It neither substitutes for the separately owned focused execution nor extends that one case into a full browser/native or all-input acceptance claim."
+  }
+}

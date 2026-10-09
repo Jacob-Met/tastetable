@@ -1,0 +1,63 @@
+{
+  "schema": "tastetable.d98-focused-apply-scope-label-amendment.v1",
+  "issuedAt": "2026-10-09T18:10:21Z",
+  "owner": "d98d06fbfc35/learner_adoption",
+  "repository": "Jacob-Met/tastetable",
+  "appliesTo": {
+    "focusedClosure": "e5dcd4668954ffd2d32411b6ab68f7738610e175",
+    "originalRawReceipt": {
+      "git": "49d0e12808252776457e56dc93e2951822e15605",
+      "bytes": 140927,
+      "sha256": "27aeb707662a16c554f8472fdfdee693de31b722a00f672e38ab2127024b4723"
+    },
+    "frozenReceiver": "1d0fbce8d3668474455a06a439217d72b106a3d6",
+    "correctedInputCapsule": "f29cec340342d4dc4aaaeea0383b911231c7506e",
+    "process": "fe2bbc2e095d8f399e4ef551341cb978d9484b82"
+  },
+  "reason": "The focused receiver retained receipt.boundaries from the original fixture's executionBoundary metadata. Its original-campaign counts and raceAdmission descriptions were inherited verbatim, although the new executable campaign contains exactly one focused group. Those inherited descriptions are not evidence that their described cases ran in the focused execution.",
+  "inheritedLabelsDisavowedForThisRun": [
+    {
+      "path": "boundaries.counts",
+      "originalLiteral": "17 root groups with explicit subtraces for late success/failure and each worksheet/date/arrangement edit. No original forty-case or author eight-hook rerun.",
+      "disposition": "Does not describe this run. The actual groups array contains one group, handoff-H-complete-before-collection-publication, with 205 passed checks and no failed checks."
+    },
+    {
+      "path": "boundaries.raceAdmission",
+      "originalLiteral": "B/C concurrent races use the captured exact app openSaved callback; collection UI busy state itself does not admit a second Open while its first action is pending. Same-name selection and metadata cases use real collection UI event handlers.",
+      "disposition": "Does not describe actions executed in this run. No B/C concurrent Open, late success/failure race, same-name selection, rename or removal case was executed. B/C fixture rows and unused original helper definitions remaining in the explicit receiver adapter are not race receiving."
+    }
+  ],
+  "authoritativeFocusedScope": {
+    "groupId": "handoff-H-complete-before-collection-publication",
+    "groups": 1,
+    "assertionsReached": 205,
+    "passedAssertions": 205,
+    "failedAssertions": 0,
+    "passedGroups": 1,
+    "failedGroups": 0,
+    "processExit": 0,
+    "runtime": "Node v24.19.0",
+    "actions": "Seed literal A through the actual caregiver UI, prepare literal H, click actual H Apply once, inspect its full synchronous acceptance trace and all collection publication observations, then request one caregiver, one saved-week and one calendar Blob export.",
+    "sourceComposition": "One exact corrected app body 1d5ac7bea1d7ee485ff5db20379d7c715c3df0d6 plus ten exact original dependency bodies. The inherited runtime phrase 'exact unchanged source bodies' does not claim that the corrected app equals the original app.",
+    "retainedBoundary": "Actual application/controller/codec/model/calendar JavaScript in the original minimal DOM, in-memory storage, health/persona response and download-transport doubles. Adapter capabilities and unused helpers are not an executed case list."
+  },
+  "unchangedDisposition": "The focused group, 205 checks, original process exit0, complete event trace and actual output artifacts remain as recorded. This disclosure-only amendment changes no behavioral result and does not replace the original stronger-oracle finding or original seventeen-group campaign.",
+  "separateStderr": {
+    "git": "dbb1cf2d7a07cc98cbaca9607f97736c869f18fd",
+    "bytes": 169,
+    "sha256": "4f5c218d8502024ff934abb329df9abea189074321ec8d109cd5aeafc22bf85e",
+    "interpretation": "Only the original Node VM Modules ExperimentalWarning.",
+    "clarification": "The focused closure's originalExecution.stderr is the original process byte/hash object. This explicit Git link supplies the separate retained stream identity."
+  },
+  "preservation": {
+    "originalRawReceiptChanged": false,
+    "frozenReceiverChanged": false,
+    "fixtureChanged": false,
+    "productChanged": false,
+    "newBehavioralExecution": false,
+    "reruns": 0,
+    "originalCampaignExecuted": false,
+    "claimsOfBrowserOrIndexedDBOrPhysicalDownloadOrProviderOrNativeAcceptance": false,
+    "gitEffect": "New inert evidence blob only; no refs, PRs, merges or Actions."
+  }
+}

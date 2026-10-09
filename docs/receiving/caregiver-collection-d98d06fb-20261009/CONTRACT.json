@@ -1,0 +1,181 @@
+{
+  "schema": "tastetable.caregiver-named-collection.composition-contract.v2",
+  "frozenAt": "2026-10-09 03:27:18 UTC",
+  "repository": "Jacob-Met/tastetable",
+  "claim": "https://github.com/Jacob-Met/tastetable/issues/55",
+  "author": "chatgpt-d98d06fbfc35/private_cm_2030",
+  "beneficiary": "A caregiver can reopen a named browser-local week and continue its identity-bound worksheet, or explicitly apply a portable combined week/notes handoff, in one composed application.",
+  "stage": "Frozen before combined candidate source; source-only composition and bounded in-memory receiving. No browser qualification.",
+  "sources": {
+    "base": {
+      "commit": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+      "tree": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6",
+      "leaves": 818
+    },
+    "caregiver": {
+      "commit": "e67e7d83efec9c09c5260e8c6165f7116519f599",
+      "tree": "37f0894628a6a561be9252600e6ab2abbd53c19d",
+      "owner": "chatgpt-d98d06fbfc35/production_recovery -> production_receiving_2030",
+      "originalContract": "d8fb6e173c0e4a595581832b5c93c0fd6e1534d7",
+      "sourceReview": "2f26a498b07594424caac7274786b787cacc1f32"
+    },
+    "collection": {
+      "commit": "75394b1b96f63fab3b843bc349b9b4e84046e623",
+      "tree": "b27ab65087f2f4701341d86ef5c5045e60632519",
+      "owner": "estate-a4a1879c582f/publication_review",
+      "release": "https://github.com/Jacob-Met/tastetable/issues/4#issuecomment-6069400325",
+      "review": "d7254e5bc9fb45de29cbed2797345354654d882c"
+    }
+  },
+  "rootPreExposureExpectations": [
+    "Retain all previously qualified 40 caregiver model cases and all released collection data/credit/history/generation behavior.",
+    "Loading, switching, editing or refusing a collection must not present a stale caregiver result/export as current.",
+    "Cancellation/refusal preserves the explicitly retained state per each existing contract.",
+    "Duplicate recipe/source identities remain exact rather than merged by display text; in these actual TasteTable sources the concrete identities are accepted plan origin, pick occurrence, visit date and local collection row ID.",
+    "Bind caregiver computation/export to the actually accepted collection; preserve original literal credits/content and source version distinction.",
+    "Preserve the existing no-Undo/no-availability scope and all unrelated paths/owners."
+  ],
+  "identityRules": [
+    "Library selection/Preview is not an accepted plan. capture() reads acceptedPlan and weekState, never selected row display text.",
+    "A collection record contains canonical saved-week-v1 only. Its Open restores the exact accepted origin/inputs/calendar/arrangement, then accepts a fresh empty worksheet; it does not silently persist or recover venue notes.",
+    "An applied caregiver handoff restores its exact original accepted origin plus complete validated matching notes, including empty replacement, occurrence/date identity, omitted visits and prior question history.",
+    "A collection Rename/Remove changes local storage metadata/rows. The already opened plan is a detached accepted snapshot and remains unchanged, as the released UI explicitly promises.",
+    "Equal display names do not establish identity. Original origin, canonical source and occurrence/date bindings remain with unchanged native codecs/models.",
+    "Exports are generated on the explicit gesture from the current accepted origin/state/model. There is no cached combined export and no automatic provider request."
+  ],
+  "events": [
+    {
+      "event": "Collection refresh or Preview, unreadable row review, Rename, Remove",
+      "current": "Preserve accepted plan and worksheet snapshot.",
+      "pendingHandoff": "Preserve preview when source/state/model remain unchanged; these events do not accept a source.",
+      "export": "Continues to use the accepted snapshot, never previewed or renamed row.",
+      "source": "saved_week_ui.mjs createSavedWeeksUI; Remove explicitly says current week unchanged."
+    },
+    {
+      "event": "Open browser copy starts",
+      "current": "Start planRequests.run before awaited IDB read; onStart retires current plan/worksheet/calendar and disables their exports while retaining form inputs.",
+      "pendingHandoff": "venueFollowup.retire invokes caregiver changed, invalidating pending read/preview.",
+      "export": "Unavailable until a valid current request accepts.",
+      "source": "app openSaved -> planRequests.run -> onStart -> retirePlan"
+    },
+    {
+      "event": "Current collection Open accepts",
+      "current": "Validate through unchanged readWeekFile, render through prepare/commit wrapper, restore inputs and exact accepted origin/calendar, create empty worksheet.",
+      "pendingHandoff": "Remains retired through normal worksheet acceptance notification.",
+      "export": "Valid accepted collection snapshot only; collection capture refreshes after acceptedPlan assignment.",
+      "source": "app onResult, render, refreshWeekSave, venueFollowup.accept"
+    },
+    {
+      "event": "Current collection Open rejects or user cancels/edits before acceptance",
+      "current": "Existing request contract retains form inputs but keeps old plan retired. Do not resurrect old worksheet/output.",
+      "pendingHandoff": "Retired.",
+      "export": "Unavailable.",
+      "source": "plan-request.js generation, app onError/clearPlan"
+    },
+    {
+      "event": "Obsolete collection success or failure after newer accepted source",
+      "current": "Generation fencing suppresses late onResult/onError and obsolete onIdle; newer source/worksheet stays current.",
+      "pendingHandoff": "No late change notification.",
+      "export": "Uses newer accepted source only.",
+      "source": "unchanged plan-request.js"
+    },
+    {
+      "event": "Choose/read/preview caregiver handoff",
+      "current": "Read and prepare in isolation; preserve accepted plan, worksheet, inputs and calendar.",
+      "pendingHandoff": "Only fully valid complete file can prepare; revision and current snapshot identity fence both sides of async read.",
+      "export": "Existing accepted state remains saveable; candidate not exported as accepted.",
+      "source": "unchanged caregiver_handoff.mjs; pure preparePlanView"
+    },
+    {
+      "event": "Caregiver refusal/cancel",
+      "current": "Preserve accepted plan and notes; no request retirement.",
+      "pendingHandoff": "Discard candidate.",
+      "export": "Current accepted snapshot remains current.",
+      "source": "unchanged mountCaregiverHandoff"
+    },
+    {
+      "event": "Explicit Apply caregiver handoff",
+      "current": "First invalidate existing request generation; commit prepared week; restore inputs and origin; install full prepared model; accept calendar; refresh save/collection capture.",
+      "pendingHandoff": "Consumed/retired, no implicit apply.",
+      "export": "Only newly accepted handoff origin/state/model.",
+      "source": "app mountCaregiverHandoff.accept"
+    },
+    {
+      "event": "Accepted source/date/arrangement/note edit, new file, page departure",
+      "current": "Preserve existing owner behavior for that event.",
+      "pendingHandoff": "Existing worksheet changed/retire and handoff revision retire prior read/preview. Invalid displayed date refuses capture/export.",
+      "export": "Recompute from current valid accepted state, or refuse; never publish stale prior output.",
+      "source": "unchanged worksheet notify and handoff snapshot checks"
+    }
+  ],
+  "composition": {
+    "reconcileOnly": [
+      "static/app.js",
+      "static/index.html",
+      "README.md"
+    ],
+    "app": "Apply only the five released collection additive hunks to the exact caregiver application. Keep preparePlanView read-only. Keep collection refresh in refreshWeekSave/retirePlan and run its Open through the existing request controller. Preserve every owner statement except necessary addition placement.",
+    "html": "Retain both owner controls, exact labels/attributes and stylesheet imports, unique IDs, original script order.",
+    "readme": "Retain both owners' additive feature sections and adopt the collection owner's one exact introductory correction: 'The app stores nothing' becomes 'The app saves browser copies only when explicitly requested'. All other current-parent text stays exact. This is the released collection README delta, not a new claim of automatic persistence.",
+    "exactOtherOwnerLeaves": "All remaining caregiver and collection changed/new leaves, including original receivers and evidence archives, retain exact blob/mode/type identities.",
+    "additions": [
+      "docs/receiving/caregiver-collection-d98d06fb-20261009/CONTRACT.json",
+      "docs/receiving/caregiver-collection-d98d06fb-20261009/COMPOSITION.md",
+      "docs/receiving/caregiver-collection-d98d06fb-20261009/MANIFEST.json",
+      "docs/receiving/caregiver-collection-d98d06fb-20261009/source-receiving.json",
+      "tests/caregiver_collection_composition.test.mjs (only if needed for meaningful focused application hook receiving, separately identified; no native/browser claim)"
+    ],
+    "noChanges": [
+      "canonical codecs/models",
+      "existing owner tests and browser receiver assertions",
+      "backend/provider",
+      "workflow files",
+      "Undo/Redo",
+      "availability",
+      "profile/taste/visit/HTML/CLI owners"
+    ]
+  },
+  "receiving": {
+    "preserve": "All historical raw gates/failures and owner qualification labels retained unchanged; no rerun of 40 caregiver cases or existing browser gates.",
+    "author": "Source admission checks exact inverse owner hunks, every existing leaf/mode/type and unique HTML IDs. A focused in-memory application-hook receiver may exercise real PlanRequests and actual composed app with explicit UI/storage/model doubles; such a result is not DOM/IndexedDB/visual receiving.",
+    "independent": "Root freezes concrete combined cases before candidate exposure; peer source receiving uses this contract first.",
+    "browser": "Existing chatgpt:c77045b4:windows receiver retains physical caregiver receiving. Original receivers lack combined static asset admission until a separate owner reviewed receiving revision. No combined browser pass claimed.",
+    "barriers": "No native call, filesystem stage, browser action, ref, PR, merge, Actions dispatch/rerun or service operation."
+  },
+  "workflowAudit": {
+    "parent": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+    "bodiesRead": true,
+    "events": "All three workflows only main push/pull_request; no issues/issue_comment/create event.",
+    "pins": [
+      {
+        "path": ".github/workflows/ci.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0e6273139a9bf417a4ee42f4501d067b1c9d95a0"
+      },
+      {
+        "path": ".github/workflows/native-plan-week-browser.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d674f2698d1b048075a1c49c2035b1096be668f2"
+      },
+      {
+        "path": ".github/workflows/week-compare.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e591fca2db970460611269ad7d1c53a6bc70f028"
+      }
+    ]
+  },
+  "preparationFailure": [
+    {
+      "kind": "functions JavaScript parse error",
+      "detail": "One metadata-only orchestration draft had a stray closing delimiter; no tool/native/file/source mutation occurred. Corrected metadata read succeeded."
+    },
+    {
+      "kind": "In-memory source admission guard",
+      "detail": "The draft composer required every collection delta to be an addition. It correctly stopped on the released README's one storage-disclosure replacement before composing/sealing a candidate. App and index deltas remain additions only; the exact documented README replacement is now admitted."
+    }
+  ],
+  "predecessor": "dcb2d45619a32b13069957e39ae50387415dc952"
+}

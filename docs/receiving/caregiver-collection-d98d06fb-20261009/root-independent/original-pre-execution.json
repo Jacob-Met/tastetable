@@ -1,0 +1,112 @@
+{
+  "schema": "tastetable.d98-independent-combined-before-execution.v1",
+  "attempt": "ee5049-root-oracle-vm-receiving-d98-20261009-1",
+  "owner": "chatgpt-d98d06fbfc35/taste_receiving",
+  "rootOracle": "6a49031f5803b3cc97d65a897b854cfcf2933523",
+  "contract": "f7c97f393511830421fffe7ba63a1e878f5296f1",
+  "candidateCommit": "ee504914e14b2e4b0fe899f9393a00810aaf5faf",
+  "candidateTree": "92e52941417d14bb9eaf80eb7293857dff884bc6",
+  "receiver": "74ec645378f92867ce4661da12111de98736c278",
+  "fixtures": "5e9918c1c1a0e57c8f3682804d2d3b21190e8a49",
+  "completeExecutionInput": "121e7a87aa3287bb444bd97679902ea6f680107d",
+  "bootstrap": "1aad4749c7765a45d45a7e97ec5248a8a7129c98",
+  "allBlobsExactReadbackBeforeExecution": true,
+  "actualProductExecution": false,
+  "sources": [
+    {
+      "path": "static/app.js",
+      "sha": "ed40637354a456c03dfa32a2e4ec954f23110ffa"
+    },
+    {
+      "path": "static/index.html",
+      "sha": "c9058dae2b074078902be5badf7c5690293e3ee1"
+    },
+    {
+      "path": "static/plan-request.js",
+      "sha": "b21276dda840fe6dd96a3bf3258a851970ff5e4d"
+    },
+    {
+      "path": "static/calendar.js",
+      "sha": "dbed22d2cb91090bccec9472fbffd2854eed2722"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "sha": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+    },
+    {
+      "path": "static/week_file.mjs",
+      "sha": "420ddb8f63fca264dcf97be7147801105696155d"
+    },
+    {
+      "path": "static/venue_followup.mjs",
+      "sha": "a3c4b8bd120149441d343cbda2d3c15f6d106ca2"
+    },
+    {
+      "path": "static/venue_note_file.mjs",
+      "sha": "f8406cb540d52222996c585666ae1a55a1030def"
+    },
+    {
+      "path": "static/caregiver_handoff.mjs",
+      "sha": "4286409b3fe932f61957ba72f5db918d18ff0751"
+    },
+    {
+      "path": "static/saved_weeks.mjs",
+      "sha": "0bb822cb6f75c376397c0f7d6d6de78035f865bc"
+    },
+    {
+      "path": "static/saved_week_ui.mjs",
+      "sha": "5a281492002b61222c70ed9b4268150504d20b15"
+    }
+  ],
+  "execution": {
+    "tool": "exec_command; then existing-session write_stdin for the frozen input and bounded output recovery",
+    "args": {
+      "cmd": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node --experimental-vm-modules -e '(async function receiverBootstrap() {\n  const { createHash } = await import(\"node:crypto\");\n  const digest = (text) => createHash(\"sha256\").update(text).digest(\"hex\");\n  const emit = (value) => process.stdout.write(\"TTRECEIVER:\" + JSON.stringify(value) + \"\\n\");\n  let phase = \"input\", buffer = \"\", chunks = [], chunkIndex = 0, resultHash = \"\", finalExit = 1;\n  function close(code) {\n    try { if (process.stdin.isTTY) process.stdin.setRawMode(false); } catch {}\n    process.stdin.pause(); process.stdin.unref?.(); process.exitCode = code;\n  }\n  function fatal(error) {\n    phase = \"failed\";\n    emit({ type: \"fatal\", pid: process.pid, phase, error: { name: error.name, message: error.message, stack: error.stack } });\n    close(1);\n  }\n  async function line(text) {\n    if (phase === \"input\") {\n      phase = \"running\";\n      const packet = JSON.parse(text);\n      const receiver = (0, eval)(\"(\" + packet.receiverSource + \")\");\n      const started = performance.now();\n      let receipt, error = null;\n      try { receipt = await receiver(packet); }\n      catch (caught) { error = { name: caught.name, message: caught.message, stack: caught.stack }; }\n      const envelope = { schema: \"tastetable.d98-vm-native-output-envelope.v1\", pid: process.pid, runtime: process.version, attempt: packet.attempt, elapsedMs: performance.now() - started, receipt: receipt || null, fatal: error };\n      const output = JSON.stringify(envelope);\n      resultHash = digest(output);\n      for (let start = 0; start < output.length; start += 5000) chunks.push(output.slice(start, start + 5000));\n      finalExit = error || receipt?.status !== \"passed\" ? 1 : 0;\n      phase = \"output\";\n      emit({ type: \"result-ready\", pid: process.pid, chunks: chunks.length, chars: output.length, sha256: resultHash, exit: finalExit, summary: receipt ? { status: receipt.status, passedGroups: receipt.passedGroups, failedGroups: receipt.failedGroups, reached: receipt.assertionsReached, passedAssertions: receipt.passedAssertions, failedAssertions: receipt.failedAssertions, groups: receipt.groups.map((g) => ({ id: g.id, status: g.status, reached: g.checks.length, error: g.error?.message })) } : { fatal: error } });\n      return;\n    }\n    if (phase === \"output\" && text === \"NEXT\") {\n      if (chunkIndex >= chunks.length) throw new Error(\"All output chunks have already been emitted\");\n      emit({ type: \"chunk\", index: chunkIndex, total: chunks.length, text: chunks[chunkIndex++] }); return;\n    }\n    if (phase === \"output\" && text === \"ACK \" + resultHash && chunkIndex === chunks.length) {\n      phase = \"closed\";\n      emit({ type: \"closed\", pid: process.pid, sha256: resultHash, chunksEmitted: chunkIndex, exit: finalExit, terminalRawModeRestored: true });\n      close(finalExit); return;\n    }\n    throw new Error(\"Unexpected protocol input in phase \" + phase);\n  }\n  process.stdin.setEncoding(\"utf8\");\n  if (process.stdin.isTTY) process.stdin.setRawMode(true);\n  process.stdin.on(\"data\", (data) => {\n    buffer += data;\n    if (buffer.length > 1024 * 1024) { fatal(new Error(\"Input frame exceeds 1 MiB\")); return; }\n    let index;\n    while ((index = buffer.indexOf(\"\\n\")) !== -1) {\n      const frame = buffer.slice(0, index).replace(/\\r$/, \"\"); buffer = buffer.slice(index + 1);\n      void line(frame).catch(fatal);\n    }\n  });\n  process.stdin.resume();\n  emit({ type: \"input-ready\", pid: process.pid, runtime: process.version, tty: Boolean(process.stdin.isTTY) });\n})();\n'",
+      "shell": "/bin/bash",
+      "login": false,
+      "workdir": "/tmp",
+      "tty": true
+    },
+    "dataIngress": "One UTF-8 JSON line from completeExecutionInput, no files staged",
+    "dataEgress": "Complete JSON receipt divided into fixed 5000-character chunks; exact SHA256 ACK closes the sole process after every chunk is recovered.",
+    "nativeBindings": "Node v24.19.0; vm.SourceTextModule executes exact module source; wrappers only capture existing dependency callbacks and observe entry/exit.",
+    "qualification": {
+      "runtime": "Node v24.19.0, vm.SourceTextModule, exact unchanged source bodies",
+      "real": [
+        "combined app",
+        "PlanRequests",
+        "week model/codec",
+        "worksheet model/controller",
+        "note-file codec/controller",
+        "caregiver codec/controller",
+        "collection model/controller",
+        "calendar"
+      ],
+      "doubles": [
+        "minimal DOM tree/selectors/event-dispatch, no browser parser/layout/accessibility",
+        "in-memory storage adapter using native draft validation/rename; no IndexedDB transactions",
+        "health/persona HTTP responses, no actual network",
+        "Blob URL/download gesture sink, no physical files"
+      ],
+      "raceAdmission": "B/C concurrent races use the captured exact app openSaved callback; collection UI busy state itself does not admit a second Open while its first action is pending. Same-name selection and metadata cases use real collection UI event handlers.",
+      "counts": "17 root groups with explicit subtraces for late success/failure and each worksheet/date/arrangement edit. No original forty-case or author eight-hook rerun."
+    }
+  },
+  "preparationObservations": [
+    {
+      "kind": "default exec setup failure",
+      "message": "CreateProcess rejected before process creation: exec-server rejected request (-32603): No such file or directory (os error 2)",
+      "qualification": "Normalized visible failure text retained; no child or product execution. Explicit /bin/bash, login:false, /tmp then reported Node v24.19.0 without changing any path."
+    },
+    {
+      "kind": "dependency inventory",
+      "result": "jsdom, happy-dom, linkedom, cheerio and parse5 absent. Playwright installed but unused; no browser launch."
+    }
+  ],
+  "holds": [
+    "No new model/product",
+    "No original 40 cases or author eight-hook receiver run",
+    "No IndexedDB/browser/physical download/installed/provider claim",
+    "No native owner replay, Actions, refs, PRs, merges or workflow changes"
+  ]
+}

@@ -1,0 +1,145 @@
+diff --git a/static/app.js b/static/app.js
+index aa2fa0f..78ea526 100644
+--- a/static/app.js
++++ b/static/app.js
+@@ -1,6 +1,7 @@
+ import { DAYS, createWeekPlan, localDate, offWeekPicks, resetDays, setPickDay, setWeek, weekRows } from "./week_plan.mjs";
+ import { makeWeekFile, readWeekFile } from "./week_file.mjs";
+ import { mountVenueFollowup } from "./venue_followup.mjs";
++import { mountCaregiverHandoff } from "./caregiver_handoff.mjs";
+ 
+ const $ = (s) => document.querySelector(s);
+ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+@@ -14,7 +15,8 @@ let calendarSession = null;
+ let acceptedPlan = null;
+ let requestKind = "plan";
+ const OPEN_SAVED_WEEK = Symbol("open saved week");
+-const venueFollowup = mountVenueFollowup($("#venueFollowup"), () => ({ state: weekState, date: $("#weekDate").value, origin: acceptedPlan }));
++let caregiverHandoff = null;
++const venueFollowup = mountVenueFollowup($("#venueFollowup"), () => ({ state: weekState, date: $("#weekDate").value, origin: acceptedPlan }), () => caregiverHandoff?.changed());
+ 
+ function newCalendarId() {
+   try {
+@@ -223,7 +225,7 @@ async function post(url, body, signal) {
+   return j;
+ }
+ 
+-function render(res, restoredWeek = null) {
++function preparePlanView(res, restoredWeek = null) {
+   const nextWeek = restoredWeek || createWeekPlan(res, preferredWeekStart || localDate());
+   const fragments = {};
+   const p = res.plan;
+@@ -245,7 +247,10 @@ function render(res, restoredWeek = null) {
+   fragments["#rejected"] = p.rejected.map((r) => `<li>${esc(r.name)}: ${r.failed.map((f) => esc(f.constraint + " " + f.status + " - " + f.reason)).join("; ")}</li>`).join("") || "<li>None</li>";
+   fragments["#trace"] = res.trace.map((t) => `<li>${esc(t.tool)}(${esc(JSON.stringify(t.args))}) &rarr; ${esc(t.result_summary)}</li>`).join("");
+   const nextWeekView = prepareWeekView(nextWeek);
++  return { nextWeek, nextWeekView, fragments, restoredWeek: Boolean(restoredWeek) };
++}
+ 
++function commitPlanView({ nextWeek, nextWeekView, fragments, restoredWeek }) {
+   for (const [selector, value] of Object.entries(fragments)) $(selector).innerHTML = value;
+   weekState = nextWeek;
+   if (restoredWeek || !weekDateInitialized) {
+@@ -259,6 +264,10 @@ function render(res, restoredWeek = null) {
+   $("#results").scrollIntoView({ behavior: "smooth" });
+ }
+ 
++function render(res, restoredWeek = null) {
++  commitPlanView(preparePlanView(res, restoredWeek));
++}
++
+ const planRequests = TasteTablePlanRequests.create({
+   async send(url, payload, signal) {
+     if (url === OPEN_SAVED_WEEK) {
+@@ -321,6 +330,34 @@ const planRequests = TasteTablePlanRequests.create({
+   },
+ });
+ 
++
++caregiverHandoff = mountCaregiverHandoff($("#caregiverHandoff"), {
++  current: () => venueFollowup.snapshot(),
++  prepare(opened, filename) {
++    const supported = [...$("#form").querySelectorAll("[name=constraints]")].map((field) => field.value);
++    if (opened.inputs.constraints.some((value) => !supported.includes(value))) {
++      throw new Error("This handoff uses a constraint that this page cannot display.");
++    }
++    const view = preparePlanView(opened.response, opened.state);
++    opened.model.entries(view.nextWeek);
++    return { view, model: opened.model, inputs: structuredClone(opened.inputs),
++      origin: structuredClone(opened.origin),
++      label: `Caregiver handoff opened from “${filename}” (saved ${opened.handoffSavedAt}). Source labels and checks below are retained from the file; they have not been run again.` };
++  },
++  accept(prepared) {
++    planRequests.invalidate();
++    commitPlanView(prepared.view);
++    fillForm(prepared.inputs);
++    acceptedPlan = prepared.origin;
++    $("#savedWeekSource").textContent = prepared.label;
++    $("#savedWeekSource").hidden = false;
++    venueFollowup.acceptPrepared(weekState, prepared.model);
++    acceptCalendar();
++    refreshWeekSave();
++    $("#requestStatus").textContent = "Caregiver handoff opened. Its original inputs, arrangement and venue notes are restored.";
++  },
++});
++
+ function clearPlan(message) {
+   planRequests.invalidate();
+   retirePlan();
+diff --git a/static/venue_followup.mjs b/static/venue_followup.mjs
+index 0c1923e..a3c4b8b 100644
+--- a/static/venue_followup.mjs
++++ b/static/venue_followup.mjs
+@@ -158,7 +158,7 @@ export function createVenueFollowup(initial, savedSource = "") {
+ }
+ 
+ /** Own only this section; the existing app owns plan acceptance and retirement. */
+-export function mountVenueFollowup(root, current) {
++export function mountVenueFollowup(root, current, onChange = () => {}) {
+   const list = root.querySelector("[data-contact-list]");
+   const summary = root.querySelector("[data-contact-summary]");
+   const status = root.querySelector("[data-contact-status]");
+@@ -194,6 +194,7 @@ export function mountVenueFollowup(root, current) {
+ 
+   function sync() {
+     noteFiles.changed();
++    onChange();
+     if (!session) return;
+     root.hidden = false;
+     download.disabled = true;
+@@ -258,6 +259,7 @@ export function mountVenueFollowup(root, current) {
+     if (event.type !== (input.dataset.contactField === "status" ? "change" : "input")) return;
+     const visit = input.closest("[data-contact-key]");
+     noteFiles.changed();
++    onChange();
+     try {
+       const state = currentState();
+       const note = session.setField(state, visit.dataset.contactKey, visit.dataset.contactDate, input.dataset.contactField, input.value);
+@@ -317,6 +319,19 @@ export function mountVenueFollowup(root, current) {
+ 
+   return Object.freeze({
+     accept(state, savedSource = "") { noteFiles.retire(); session = createVenueFollowup(state, savedSource); sync(); },
++    snapshot() {
++      const state = currentState();
++      const origin = current().origin;
++      if (!origin) throw new Error("Open or generate a plan before saving a caregiver handoff.");
++      session.entries(state);
++      return { state, origin, model: session };
++    },
++    acceptPrepared(state, model) {
++      model.entries(state);
++      noteFiles.retire();
++      session = model;
++      sync();
++    },
+     sync,
+     retire() {
+       session = null;
+@@ -325,6 +340,7 @@ export function mountVenueFollowup(root, current) {
+       list.replaceChildren();
+       summary.textContent = source.textContent = status.textContent = "";
+       download.disabled = true;
++      onChange();
+     },
+   });
+ }

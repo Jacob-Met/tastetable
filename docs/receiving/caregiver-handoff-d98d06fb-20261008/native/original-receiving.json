@@ -1,0 +1,43 @@
+{
+  "schema": "tastetable.original-receiving.v1",
+  "startedAt": "2026-10-08T20:45:03.580970+00:00",
+  "sourceCommit": "328df51af830e91f304417a66d74f43d94ae0c02",
+  "commands": [
+    {
+      "name": "baseline-model",
+      "argv": [
+        "node",
+        "--test",
+        "tests/test_week_file.mjs",
+        "tests/venue_followup.test.mjs",
+        "tests/venue_note_file.test.mjs"
+      ],
+      "startedAt": "2026-10-08T20:45:04.248804+00:00",
+      "endedAt": "2026-10-08T20:45:06.617967+00:00",
+      "exitCode": 0,
+      "stdoutSha256": "b2e3d5e4ba0be909dea0bb3c262c592ca9ae9a74132f93578d76688df475b53a",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "baseline-browser-v1",
+      "argv": [
+        "node",
+        "/home/jacob/tastetable-caregiver-handoff-d98d06fb-20261008/baseline-browser-v1.mjs",
+        "--project",
+        "/home/jacob/tastetable-caregiver-handoff-d98d06fb-20261008/source",
+        "--output",
+        "/home/jacob/tastetable-caregiver-handoff-d98d06fb-20261008/baseline-browser-v1",
+        "--browser",
+        "/snap/bin/chromium"
+      ],
+      "startedAt": "2026-10-08T20:45:06.620460+00:00",
+      "endedAt": "2026-10-08T20:45:24.774243+00:00",
+      "exitCode": 0,
+      "stdoutSha256": "04160002e544c3dff730b6e75532cd930c7e8e62c77fe70cd9fd03406584b60e",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "endedAt": "2026-10-08T20:45:24.774557+00:00",
+  "sourceUnchanged": true,
+  "status": "passed"
+}

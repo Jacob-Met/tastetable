@@ -1,0 +1,1423 @@
+{
+  "schema": "tastetable.independent.current-main-corrected-composition-admission.v1",
+  "reviewer": "HAMON d98 /root/taste_receiving",
+  "reviewedAt": "2026-10-09 18:11:25 UTC",
+  "status": "SOURCE AND RECORDED-EVIDENCE ADMITTED FOR ROOT TREE CONSTRUCTION; CONDITIONAL NO-ACTIONS PUBLICATION ELIGIBILITY",
+  "repository": "Jacob-Met/tastetable",
+  "scope": "Compose the exact original caregiver/collection union on unchanged current main, replace static/app.js with the independently reviewed correction, and add inert receiving evidence. No behavior replay, ref, PR, merge, workflow edit or native operation by this reviewer.",
+  "source": {
+    "soleParent": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+    "currentMainTree": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6",
+    "originalCombinedCommit": "ee504914e14b2e4b0fe899f9393a00810aaf5faf",
+    "originalCombinedTree": "92e52941417d14bb9eaf80eb7293857dff884bc6",
+    "originalCombinedManifest": "7e00690b2c8984738a59d033f78fadbbf2837349",
+    "caregiver": {
+      "commit": "e67e7d83efec9c09c5260e8c6165f7116519f599",
+      "tree": "37f0894628a6a561be9252600e6ab2abbd53c19d",
+      "soleParent": "145d27981b3c5fe6afa72e205b42582fd72c7734"
+    },
+    "collection": {
+      "commit": "75394b1b96f63fab3b843bc349b9b4e84046e623",
+      "tree": "b27ab65087f2f4701341d86ef5c5045e60632519",
+      "soleParent": "145d27981b3c5fe6afa72e205b42582fd72c7734"
+    },
+    "correctedApp": {
+      "path": "static/app.js",
+      "mode": "100644",
+      "type": "blob",
+      "git": "1d5ac7bea1d7ee485ff5db20379d7c715c3df0d6",
+      "bytes": 22129,
+      "sha256": "2002efebe9dda5f6114ac3d6b84d4450714e36fa80a063fb6205a8637dfd6005",
+      "sourceReview": "88d0b71d18640b43143be27447ffe901d3650f75"
+    },
+    "currentMainExactlyOriginalBase": true,
+    "interveningMainEdits": [],
+    "excludedOwnerScopes": "No later worksheet union/history/contact-queue source, branch or other owner workspace was selected or changed. This is not a claim that those independent work streams are absent.",
+    "allFourRecursiveTreesComplete": true,
+    "treeEntryCounts": {
+      "base": 946,
+      "caregiver": 986,
+      "collection": 958,
+      "combined": 1011
+    },
+    "leafCounts": {
+      "base": 818,
+      "caregiver": 852,
+      "collection": 829,
+      "ownerUnion": 863,
+      "combined": 875,
+      "correctedCore": 875
+    },
+    "fullTreeMetadataProof": {
+      "originalCombinedAgainstBase": {
+        "unchangedExistingLeaves": 813,
+        "modifiedExistingLeaves": 5,
+        "addedLeaves": 57,
+        "removedLeaves": 0
+      },
+      "ownerTreesAgainstBase": {
+        "caregiver": {
+          "added": 34,
+          "modified": 4,
+          "removed": 0
+        },
+        "collection": {
+          "added": 11,
+          "modified": 4,
+          "removed": 0
+        }
+      },
+      "everyBeforeCaregiverCollectionResultTupleInManifestChecked": true,
+      "allFiftyManifestOwnerRowsExact": true,
+      "exactNonReconciledOwnerChanges": {
+        "caregiver": 35,
+        "collection": 12,
+        "total": 47
+      },
+      "reconciledPaths": [
+        "README.md",
+        "static/app.js",
+        "static/index.html"
+      ],
+      "addedCompositionFilesIncludingOriginalManifest": 12,
+      "allCombinedLeavesReconstructedExactlyFromBaseAndManifest": true,
+      "directories": {
+        "base": 128,
+        "combined": 136,
+        "identicalExistingSubtreeHashes": 123,
+        "combinedNewDirectories": [
+          "docs/receiving/caregiver-collection-d98d06fb-20261009",
+          "docs/receiving/caregiver-handoff-d98d06fb-20261008",
+          "docs/receiving/caregiver-handoff-d98d06fb-20261008/native",
+          "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/baseline-browser-v1",
+          "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-browser-v1",
+          "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-browser-v2",
+          "docs/receiving/caregiver-handoff-d98d06fb-20261008/review",
+          "docs/receiving/named-browser-weeks-a4a1879c582f"
+        ]
+      },
+      "correctedCoreAgainstCombined": {
+        "modifiedLeaves": 1,
+        "path": "static/app.js",
+        "unchangedLeaves": 874,
+        "additions": 0,
+        "removals": 0
+      }
+    },
+    "exactModifiedExistingPaths": [
+      {
+        "path": "README.md",
+        "before": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "c0ebf40a3b97f3efedffbc85561a6af153cc97ef"
+        },
+        "result": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "37857dad1f02b74ac16330cdda9091af9eec270a"
+        }
+      },
+      {
+        "path": "static/app.js",
+        "before": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "aa2fa0ff7aa0a1dd370c4fa6fef4f4222792414b"
+        },
+        "result": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1d5ac7bea1d7ee485ff5db20379d7c715c3df0d6"
+        }
+      },
+      {
+        "path": "static/index.html",
+        "before": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d195d45b8f56a2dee25cf4740e679f80c0c8c547"
+        },
+        "result": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "c9058dae2b074078902be5badf7c5690293e3ee1"
+        }
+      },
+      {
+        "path": "static/venue_followup.mjs",
+        "before": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "0c1923ecdad8fe9b14f0193a6aba5f3a1e2b9d63"
+        },
+        "result": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "a3c4b8bd120149441d343cbda2d3c15f6d106ca2"
+        }
+      },
+      {
+        "path": "tools/check_native_plan_week_browser.mjs",
+        "before": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "0eefbd2df795a9ced63a93738b069f8a4850ddb0"
+        },
+        "result": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "0cd494ca7a5097d4981a46b4a7319653afa5174e"
+        }
+      }
+    ],
+    "donorSourceMapping": [
+      {
+        "path": "docs/CAREGIVER_HANDOFF.md",
+        "donor": "caregiver",
+        "git": "098c8a73d8eabf8ff66336d04a90c07717e4ece9",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/COMPOSITION.md",
+        "donor": "caregiver",
+        "git": "fb1f0a3b4a9d05afe0a6b4f66b047aa4c1cfbf9a",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/CUSTODY-MANIFEST.json",
+        "donor": "caregiver",
+        "git": "76d59ab93279888d8834781f312ee9de3c301d80",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/README.md",
+        "donor": "caregiver",
+        "git": "d00aad506e7153dbc578f6fad338240ca064acbb",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/CONTRACT.json",
+        "donor": "caregiver",
+        "git": "d8fb6e173c0e4a595581832b5c93c0fd6e1534d7",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/README.candidate-v1.md",
+        "donor": "caregiver",
+        "git": "b2e339a92917fd1339d5783f73f213252364657a",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/SOURCE-RECEIVED.json",
+        "donor": "caregiver",
+        "git": "d1906949c7eb506a0d73ae34e2cfc49f39c9ad98",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/STATUS-2102.json",
+        "donor": "caregiver",
+        "git": "90126ae0ee7601222837d1889cdbc294a696042a",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/baseline-browser-v1/browser-results.json",
+        "donor": "caregiver",
+        "git": "a22a4208950e66b3dc5fb902d1b78b48d580b31c",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/baseline-model.stdout.txt",
+        "donor": "caregiver",
+        "git": "401a786deee99b2b1981c15380420be61c6041aa",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-browser-v1-date-refusal-diagnosis.json",
+        "donor": "caregiver",
+        "git": "e615a48e1b6ac1ae972e5288ead3fb3626aec9ec",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-browser-v1-execution.json",
+        "donor": "caregiver",
+        "git": "8e3e943b84b7c186512d0f28a2b7381a66ed501b",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-browser-v1/browser-results.json",
+        "donor": "caregiver",
+        "git": "027c1e66cdcf8d68fd96caecb1da73da02c76119",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-browser-v2-execution.json",
+        "donor": "caregiver",
+        "git": "95a47818163ccb42eae6b62d30b5374aa3d46c4b",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-browser-v2-startup-diagnosis.json",
+        "donor": "caregiver",
+        "git": "1b07f7a06678013d6bd5629a5cb149912a38a90d",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-browser-v2/browser-results.json",
+        "donor": "caregiver",
+        "git": "3c18d5749f7e623babf1199462ad287478573d4d",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-fence-v1.json",
+        "donor": "caregiver",
+        "git": "7d6299352b7635b84f9ac390f0e2a21cb119e3cc",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-v1-manifest.json",
+        "donor": "caregiver",
+        "git": "c380e5e76aaafa98bcbc4790e65bec881a2328c3",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-v1-model.json",
+        "donor": "caregiver",
+        "git": "116a7888045ad5f8e50a443041ca7406e950efc0",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-v1-model.stdout.txt",
+        "donor": "caregiver",
+        "git": "e686471103550e6a99adae3950b0fe199f8a9ff0",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/original-receiving.json",
+        "donor": "caregiver",
+        "git": "3acb5678cc2f3f4b90ed2115bc4896bb143c0e2b",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/receiver-v1.mjs",
+        "donor": "caregiver",
+        "git": "fe8eb3287a593468387d1df7053c4e694756ebe6",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/receiver-v2-correction.json",
+        "donor": "caregiver",
+        "git": "4b5cec59de33141a081d252dade0e52a40c6f3c2",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/receiver-v2.mjs",
+        "donor": "caregiver",
+        "git": "fb904782741a9de535738e2f856b12277d63cf5c",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/receiver-v3-correction.json",
+        "donor": "caregiver",
+        "git": "4197c88673ef1806abffb96df8ebe55d0c10ae02",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/receiver-v3.mjs",
+        "donor": "caregiver",
+        "git": "110257a55edce314c2dc8ff8f826d294ffad24e6",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/receiver-v4-correction.json",
+        "donor": "caregiver",
+        "git": "95467720319e645082ba05f5403fa27ef5d73a26",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/resource-check-210132.json",
+        "donor": "caregiver",
+        "git": "4f9b88d30699a643d7ac6afc06bf572618824345",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/review-existing-hooks.diff",
+        "donor": "caregiver",
+        "git": "cd1b8ec981d16de46e01c666b13e1f3ed05e119b",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/review/MANIFEST.json",
+        "donor": "caregiver",
+        "git": "2b07274bbf4b1edece2666c705ac085f91b6b420",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/review/source-review.json",
+        "donor": "caregiver",
+        "git": "2f26a498b07594424caac7274786b787cacc1f32",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "static/caregiver_handoff.mjs",
+        "donor": "caregiver",
+        "git": "4286409b3fe932f61957ba72f5db918d18ff0751",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "static/venue_followup.mjs",
+        "donor": "caregiver",
+        "git": "a3c4b8bd120149441d343cbda2d3c15f6d106ca2",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "tests/caregiver_handoff.test.mjs",
+        "donor": "caregiver",
+        "git": "f9a0eb76eed9be3213de714c9ee00f444cee06c7",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "tools/check_caregiver_handoff_browser.mjs",
+        "donor": "caregiver",
+        "git": "da062ff20b6b5a621e7294c227a29ee24efd684d",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "tools/check_native_plan_week_browser.mjs",
+        "donor": "collection",
+        "git": "0cd494ca7a5097d4981a46b4a7319653afa5174e",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/named-browser-weeks-a4a1879c582f/FINAL-REVIEW.json",
+        "donor": "collection",
+        "git": "d7254e5bc9fb45de29cbed2797345354654d882c",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/named-browser-weeks-a4a1879c582f/FINAL-SOURCE-MANIFEST.json",
+        "donor": "collection",
+        "git": "c29bb4c3d4c33feb95d1746dca353a5b8b7eae2b",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/named-browser-weeks-a4a1879c582f/HANDOFF.txt",
+        "donor": "collection",
+        "git": "6f8c21c465253717a47527fcc286da412c83b4c4",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/named-browser-weeks-a4a1879c582f/TasteTable-named-browser-weeks-qualified-handoff-2026-10-08.zip",
+        "donor": "collection",
+        "git": "42e20bf6baa508d8cb3b14445a98a77f2c34eb4c",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/named-browser-weeks-a4a1879c582f/named-collection-undo-compatibility.zip",
+        "donor": "collection",
+        "git": "258193a6d80605cbd9b99c56a2210edd2338df74",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "static/saved_week_store.mjs",
+        "donor": "collection",
+        "git": "c525467f00521d7f4182fd57ca9a91e48c6b9e09",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "static/saved_week_ui.mjs",
+        "donor": "collection",
+        "git": "5a281492002b61222c70ed9b4268150504d20b15",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "static/saved_weeks.css",
+        "donor": "collection",
+        "git": "c5b8a9f45a4f7e0ce93c46d7f814308cd1a99009",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "static/saved_weeks.mjs",
+        "donor": "collection",
+        "git": "0bb822cb6f75c376397c0f7d6d6de78035f865bc",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "tests/test_saved_weeks.mjs",
+        "donor": "collection",
+        "git": "9c3f9c3d9a2e2435aae2e453c6bdb3ba61bcd951",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "tools/check_named_collection_browser.cjs",
+        "donor": "collection",
+        "git": "4c740c316c5ed7708b18615e24f321fc7028d401",
+        "mode": "100644",
+        "type": "blob"
+      }
+    ],
+    "wholeLeafTupleDigests": {
+      "serialization": "UTF-8 JSON.stringify of [path,mode,type,sha] rows sorted by ascending path code units, followed by one LF.",
+      "unchangedExisting813": {
+        "rows": 813,
+        "sha256": "f9a61d82d9a1d47e41ef54dc6171945c0f9f2416e34255ad79b347d89e4a2d79"
+      },
+      "correctedCore875": {
+        "rows": 875,
+        "sha256": "bafa88780c0e025efd1a78e3c8aa52b62c02b740b50d760420c69b938f8b66c0"
+      },
+      "finalExcludingThisManifest": {
+        "rows": 902,
+        "sha256": "7c7e57b025f6bf44d2c87b4596a3e38bb77ee8684fb12ce49539281bbb225108"
+      }
+    },
+    "interpretation": "Complete path/mode/type/blob identities were compared across all four untruncated trees. This establishes exact existing/donor leaf preservation without claiming every unchanged blob body was reread. The exact tree entries below select every changed or added leaf; every other existing path is inherited from the pinned current base tree."
+  },
+  "construction": {
+    "base_tree": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6",
+    "tree": [
+      {
+        "path": "docs/CAREGIVER_HANDOFF.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "098c8a73d8eabf8ff66336d04a90c07717e4ece9"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/author-hook-inputs.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f5d30e89d7fcbc90cb482993140e9d9ea03275f5"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/author-hook-result.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6a2ef26a7328fa2ce61a5329688f3f89cf23ebd7"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/author-hook-runner.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b6044e57f17ef115779b3c9a98e14e487a89cefe"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/COMPOSITION.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b69521562486b5a1dd0233b88a1b5ea5a1bb1065"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/CONTRACT-v1.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dcb2d45619a32b13069957e39ae50387415dc952"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/CONTRACT.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f7c97f393511830421fffe7ba63a1e878f5296f1"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/inverse-deltas.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "149890ce2065e8621de7d8c170de8b7096e168d4"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/MANIFEST.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7e00690b2c8984738a59d033f78fadbbf2837349"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/peer-source-review.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "76d58f1da53cbe3c4ad50e7d5c0b22802e9bb1a7"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent-oracle.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6a49031f5803b3cc97d65a897b854cfcf2933523"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/apply-correction.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "658163fbc5dabf58be75181384f70ff3609b08c7"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/apply-independent-source-review.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "88d0b71d18640b43143be27447ffe901d3650f75"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/focused-apply/CANDIDATE-PACKET.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f29cec340342d4dc4aaaeea0383b911231c7506e"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/focused-apply/closure.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e5dcd4668954ffd2d32411b6ab68f7738610e175"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/focused-apply/CORRECTED-APP.STAGING-MISMATCH.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cf46c4155b8721cd1a5cf03436f07e62e7ef906b"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/focused-apply/freeze.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b69844963e1247d22e70bb48d56a1fdf153da6e5"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/focused-apply/LAUNCH.cjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cd0a10edbdab416ce488adde7e9ee5770e79ffe6"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/focused-apply/oracle.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4e6754a480c172435da147cd2ffe5790654ec5d9"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/focused-apply/original-process.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fe2bbc2e095d8f399e4ef551341cb978d9484b82"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/focused-apply/original-stderr.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dbb1cf2d7a07cc98cbaca9607f97736c869f18fd"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/focused-apply/original-stdout.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "49d0e12808252776457e56dc93e2951822e15605"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/focused-apply/original-tool-result.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "22f37c59a1bbecb37d41ceb36cf16bca57f4d875"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/focused-apply/pre-execution.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c03b607d56a220c6fa90d5537c9e43823a47b568"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/focused-apply/preparation-failure.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2d94f1cc4a236f2ea5603f8e443ade963c70ac03"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/focused-apply/receiver.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1d0fbce8d3668474455a06a439217d72b106a3d6"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/focused-apply/scope-label-amendment.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2431194b0355d244b459ff29261c708c5f0149cf"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/focused-apply/tastetable-caregiver-handoff-2030-08-12.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "797f842a72414b9b6052fc6316e6073a9ea673c2"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/focused-apply/tastetable-demo-2030-08-12.ics",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9cece13a8dab48bae44a0de2cbba73a51f984997"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/focused-apply/tastetable-week-2030-08-12.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bbbcbc82977211751a50475ee897fe5a2526271b"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/original-actual-output.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f7cd75852381d01035ffe7ded730c93d1a81cb5e"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/original-bootstrap.cjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1aad4749c7765a45d45a7e97ec5248a8a7129c98"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/original-closure.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2ed422f744d9764b9ef1f32bcd53bf3b4239b486"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/original-fixture.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5e9918c1c1a0e57c8f3682804d2d3b21190e8a49"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/original-input-capsule.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "121e7a87aa3287bb444bd97679902ea6f680107d"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/original-invariant-finding.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e331afbdf678650813f6e999e96c4c1bd0989d28"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/original-pre-execution.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c2035d2a71f5344d991bc21a7af7f969e3868458"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/original-receiver.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "74ec645378f92867ce4661da12111de98736c278"
+      },
+      {
+        "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/source-receiving.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "144bfa1e4d4035e03758a2690f1799c051cbd177"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/COMPOSITION.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fb1f0a3b4a9d05afe0a6b4f66b047aa4c1cfbf9a"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/CUSTODY-MANIFEST.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "76d59ab93279888d8834781f312ee9de3c301d80"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/baseline-browser-v1/browser-results.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a22a4208950e66b3dc5fb902d1b78b48d580b31c"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/baseline-model.stdout.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "401a786deee99b2b1981c15380420be61c6041aa"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-browser-v1-date-refusal-diagnosis.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e615a48e1b6ac1ae972e5288ead3fb3626aec9ec"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-browser-v1-execution.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8e3e943b84b7c186512d0f28a2b7381a66ed501b"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-browser-v1/browser-results.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "027c1e66cdcf8d68fd96caecb1da73da02c76119"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-browser-v2-execution.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "95a47818163ccb42eae6b62d30b5374aa3d46c4b"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-browser-v2-startup-diagnosis.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1b07f7a06678013d6bd5629a5cb149912a38a90d"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-browser-v2/browser-results.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3c18d5749f7e623babf1199462ad287478573d4d"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-fence-v1.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7d6299352b7635b84f9ac390f0e2a21cb119e3cc"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-v1-manifest.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c380e5e76aaafa98bcbc4790e65bec881a2328c3"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-v1-model.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "116a7888045ad5f8e50a443041ca7406e950efc0"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-v1-model.stdout.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e686471103550e6a99adae3950b0fe199f8a9ff0"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/CONTRACT.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d8fb6e173c0e4a595581832b5c93c0fd6e1534d7"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/original-receiving.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3acb5678cc2f3f4b90ed2115bc4896bb143c0e2b"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/README.candidate-v1.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b2e339a92917fd1339d5783f73f213252364657a"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/receiver-v1.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fe8eb3287a593468387d1df7053c4e694756ebe6"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/receiver-v2-correction.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4b5cec59de33141a081d252dade0e52a40c6f3c2"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/receiver-v2.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fb904782741a9de535738e2f856b12277d63cf5c"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/receiver-v3-correction.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4197c88673ef1806abffb96df8ebe55d0c10ae02"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/receiver-v3.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "110257a55edce314c2dc8ff8f826d294ffad24e6"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/receiver-v4-correction.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "95467720319e645082ba05f5403fa27ef5d73a26"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/resource-check-210132.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4f9b88d30699a643d7ac6afc06bf572618824345"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/review-existing-hooks.diff",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cd1b8ec981d16de46e01c666b13e1f3ed05e119b"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/SOURCE-RECEIVED.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d1906949c7eb506a0d73ae34e2cfc49f39c9ad98"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/STATUS-2102.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "90126ae0ee7601222837d1889cdbc294a696042a"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d00aad506e7153dbc578f6fad338240ca064acbb"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/review/MANIFEST.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2b07274bbf4b1edece2666c705ac085f91b6b420"
+      },
+      {
+        "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/review/source-review.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2f26a498b07594424caac7274786b787cacc1f32"
+      },
+      {
+        "path": "docs/receiving/named-browser-weeks-a4a1879c582f/FINAL-REVIEW.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d7254e5bc9fb45de29cbed2797345354654d882c"
+      },
+      {
+        "path": "docs/receiving/named-browser-weeks-a4a1879c582f/FINAL-SOURCE-MANIFEST.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c29bb4c3d4c33feb95d1746dca353a5b8b7eae2b"
+      },
+      {
+        "path": "docs/receiving/named-browser-weeks-a4a1879c582f/HANDOFF.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6f8c21c465253717a47527fcc286da412c83b4c4"
+      },
+      {
+        "path": "docs/receiving/named-browser-weeks-a4a1879c582f/named-collection-undo-compatibility.zip",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "258193a6d80605cbd9b99c56a2210edd2338df74"
+      },
+      {
+        "path": "docs/receiving/named-browser-weeks-a4a1879c582f/TasteTable-named-browser-weeks-qualified-handoff-2026-10-08.zip",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "42e20bf6baa508d8cb3b14445a98a77f2c34eb4c"
+      },
+      {
+        "path": "README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "37857dad1f02b74ac16330cdda9091af9eec270a"
+      },
+      {
+        "path": "static/app.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1d5ac7bea1d7ee485ff5db20379d7c715c3df0d6"
+      },
+      {
+        "path": "static/caregiver_handoff.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4286409b3fe932f61957ba72f5db918d18ff0751"
+      },
+      {
+        "path": "static/index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c9058dae2b074078902be5badf7c5690293e3ee1"
+      },
+      {
+        "path": "static/saved_week_store.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c525467f00521d7f4182fd57ca9a91e48c6b9e09"
+      },
+      {
+        "path": "static/saved_week_ui.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5a281492002b61222c70ed9b4268150504d20b15"
+      },
+      {
+        "path": "static/saved_weeks.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c5b8a9f45a4f7e0ce93c46d7f814308cd1a99009"
+      },
+      {
+        "path": "static/saved_weeks.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0bb822cb6f75c376397c0f7d6d6de78035f865bc"
+      },
+      {
+        "path": "static/venue_followup.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a3c4b8bd120149441d343cbda2d3c15f6d106ca2"
+      },
+      {
+        "path": "tests/caregiver_collection_composition.test.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3e5371488a37eab85de26fbb2d99ae5bcdbfc827"
+      },
+      {
+        "path": "tests/caregiver_handoff.test.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f9a0eb76eed9be3213de714c9ee00f444cee06c7"
+      },
+      {
+        "path": "tests/test_saved_weeks.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9c3f9c3d9a2e2435aae2e453c6bdb3ba61bcd951"
+      },
+      {
+        "path": "tools/check_caregiver_handoff_browser.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "da062ff20b6b5a621e7294c227a29ee24efd684d"
+      },
+      {
+        "path": "tools/check_named_collection_browser.cjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4c740c316c5ed7708b18615e24f321fc7028d401"
+      },
+      {
+        "path": "tools/check_native_plan_week_browser.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0cd494ca7a5097d4981a46b4a7319653afa5174e"
+      }
+    ],
+    "coreDeltaEntries": 62,
+    "evidenceAddedEntries": 27,
+    "declaredEntries": 89,
+    "expectedLeafCountBeforeAddingThisManifest": 902,
+    "admissionManifestSelfAddition": {
+      "path": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/COMPOSITION-ADMISSION.json",
+      "mode": "100644",
+      "type": "blob",
+      "shaInstruction": "Append the actual Git blob returned for this manifest after its full-content readback. No self-hash is asserted inside this body."
+    },
+    "expectedLeafCountIncludingThisManifest": 903,
+    "alternateSameLeafConstruction": {
+      "base_tree": "92e52941417d14bb9eaf80eb7293857dff884bc6",
+      "instruction": "Apply only the corrected app entry plus the 27 evidence entries under root-independent/ and the returned manifest entry. The complete independent comparison above proves the resulting leaves equal the current-main construction. Keep the commit's sole parent at the freshly read current main."
+    },
+    "evidencePathsAllAbsentFromBothBaseAndCombined": true,
+    "noPathDeletion": true,
+    "noExistingEvidenceOverwritten": true,
+    "allowedEvidencePrefix": "docs/receiving/caregiver-collection-d98d06fb-20261009/root-independent/",
+    "rootOwnsTreeCreationAndReadback": true
+  },
+  "evidenceDisposition": {
+    "original": {
+      "preExecution": "c2035d2a71f5344d991bc21a7af7f969e3868458",
+      "actual": "f7cd75852381d01035ffe7ded730c93d1a81cb5e",
+      "closure": "2ed422f744d9764b9ef1f32bcd53bf3b4239b486",
+      "finding": "e331afbdf678650813f6e999e96c4c1bd0989d28",
+      "assertionResult": "17 groups / 313 reached assertions passed, whole process exit0",
+      "oracleDisposition": "Stronger all-capture/order invariant FAILED in the original observed H Apply trace. The original assertions did not enforce it. Preserve the mixed A-origin/H-entities/A-calendar capture and final correct H; no await or storage Save was observed, and no persisted-corruption claim is made."
+    },
+    "correction": {
+      "manifest": "658163fbc5dabf58be75181384f70ff3609b08c7",
+      "independentSourceReview": "88d0b71d18640b43143be27447ffe901d3650f75",
+      "meaning": "Four unique source replacements, whole-file exact inverse, no new imports/global state. Caregiver Apply defers dependent refresh until origin/form/model/calendar match; normal defaults and date/model identity are preserved."
+    },
+    "focused": {
+      "closure": "e5dcd4668954ffd2d32411b6ab68f7738610e175",
+      "scopeAmendment": "2431194b0355d244b459ff29261c708c5f0149cf",
+      "actual": "49d0e12808252776457e56dc93e2951822e15605",
+      "sourceInputCapsule": "f29cec340342d4dc4aaaeea0383b911231c7506e",
+      "process": "fe2bbc2e095d8f399e4ef551341cb978d9484b82",
+      "sourceAndRecordedDataAdmission": {
+        "sameOtherSources": [
+          {
+            "path": "static/index.html",
+            "sha": "c9058dae2b074078902be5badf7c5690293e3ee1",
+            "exactAgainstOriginal": true
+          },
+          {
+            "path": "static/plan-request.js",
+            "sha": "b21276dda840fe6dd96a3bf3258a851970ff5e4d",
+            "exactAgainstOriginal": true
+          },
+          {
+            "path": "static/calendar.js",
+            "sha": "dbed22d2cb91090bccec9472fbffd2854eed2722",
+            "exactAgainstOriginal": true
+          },
+          {
+            "path": "static/week_plan.mjs",
+            "sha": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+            "exactAgainstOriginal": true
+          },
+          {
+            "path": "static/week_file.mjs",
+            "sha": "420ddb8f63fca264dcf97be7147801105696155d",
+            "exactAgainstOriginal": true
+          },
+          {
+            "path": "static/venue_followup.mjs",
+            "sha": "a3c4b8bd120149441d343cbda2d3c15f6d106ca2",
+            "exactAgainstOriginal": true
+          },
+          {
+            "path": "static/venue_note_file.mjs",
+            "sha": "f8406cb540d52222996c585666ae1a55a1030def",
+            "exactAgainstOriginal": true
+          },
+          {
+            "path": "static/caregiver_handoff.mjs",
+            "sha": "4286409b3fe932f61957ba72f5db918d18ff0751",
+            "exactAgainstOriginal": true
+          },
+          {
+            "path": "static/saved_weeks.mjs",
+            "sha": "0bb822cb6f75c376397c0f7d6d6de78035f865bc",
+            "exactAgainstOriginal": true
+          },
+          {
+            "path": "static/saved_week_ui.mjs",
+            "sha": "5a281492002b61222c70ed9b4268150504d20b15",
+            "exactAgainstOriginal": true
+          }
+        ],
+        "allTenOriginalSourcesExact": true,
+        "elevenSourceCount": 11,
+        "correctedAppExact": true,
+        "frozenFixtureExact": true,
+        "frozenReceiverExact": true,
+        "frozenOracleExact": true,
+        "hashItems": [
+          {
+            "name": "capsule",
+            "sha256": "27e36f1bbd99a0fd53e240a34e8e98404d9dca3cb005e0d344042a507bdbbba9",
+            "bytes": 257551,
+            "expectedSha256": "27e36f1bbd99a0fd53e240a34e8e98404d9dca3cb005e0d344042a507bdbbba9",
+            "expectedBytes": 257551,
+            "exact": true
+          },
+          {
+            "name": "raw",
+            "sha256": "27aeb707662a16c554f8472fdfdee693de31b722a00f672e38ab2127024b4723",
+            "bytes": 140927,
+            "expectedSha256": "27aeb707662a16c554f8472fdfdee693de31b722a00f672e38ab2127024b4723",
+            "expectedBytes": 140927,
+            "exact": true
+          },
+          {
+            "name": "closure",
+            "sha256": "b77bc77ac7c3d4a723c735d0b36db037d55ae2e7aa62848cea8f5c23d1d43f2f",
+            "bytes": 8083,
+            "expectedSha256": "b77bc77ac7c3d4a723c735d0b36db037d55ae2e7aa62848cea8f5c23d1d43f2f",
+            "expectedBytes": 8083,
+            "exact": true
+          },
+          {
+            "name": "tastetable-caregiver-handoff-2030-08-12.json",
+            "sha256": "e7805fdb6356a6739b3cc8df265c7d49718a3e998e57287d97e69ea1791b3f6e",
+            "bytes": 6247,
+            "expectedSha256": "e7805fdb6356a6739b3cc8df265c7d49718a3e998e57287d97e69ea1791b3f6e",
+            "expectedBytes": 6247,
+            "exact": true
+          },
+          {
+            "name": "tastetable-week-2030-08-12.json",
+            "sha256": "b6c8d40a7c2ca41dc4161d2db674c8600eb6ae9fd7212bdc7f03538972f95004",
+            "bytes": 2380,
+            "expectedSha256": "b6c8d40a7c2ca41dc4161d2db674c8600eb6ae9fd7212bdc7f03538972f95004",
+            "expectedBytes": 2380,
+            "exact": true
+          },
+          {
+            "name": "tastetable-demo-2030-08-12.ics",
+            "sha256": "182c7d99785e88b2343083ca2ca257c39cbad88325c1face4c1208462a5669a0",
+            "bytes": 876,
+            "expectedSha256": "182c7d99785e88b2343083ca2ca257c39cbad88325c1face4c1208462a5669a0",
+            "expectedBytes": 876,
+            "exact": true
+          }
+        ],
+        "allPayloadHashesExact": true,
+        "rawCounters": {
+          "groups": 1,
+          "reached": 205,
+          "passed": 205,
+          "failed": 0
+        },
+        "process": {
+          "exit": 0,
+          "timeout": false,
+          "automaticReplay": false,
+          "inputPinsUnchanged": true
+        },
+        "onlyRecordedDataReview": true
+      },
+      "independentlyReadOriginalRecordedOrder": [
+        {
+          "seq": 22,
+          "event": "caregiver.accept.enter"
+        },
+        {
+          "seq": 23,
+          "event": "request.invalidate"
+        },
+        {
+          "seq": 24,
+          "event": "request.onIdle"
+        },
+        {
+          "seq": 25,
+          "event": "dom.planWrite"
+        },
+        {
+          "seq": 26,
+          "event": "venue.acceptPrepared.enter"
+        },
+        {
+          "seq": 27,
+          "event": "venue.changed"
+        },
+        {
+          "seq": 28,
+          "event": "venue.acceptPrepared.exit"
+        },
+        {
+          "seq": 29,
+          "event": "calendar.accept"
+        },
+        {
+          "seq": 30,
+          "event": "calendar.accept.complete"
+        },
+        {
+          "seq": 31,
+          "event": "collection.refresh.enter"
+        },
+        {
+          "seq": 32,
+          "event": "collection.capture"
+        },
+        {
+          "seq": 33,
+          "event": "collection.refresh.exit"
+        },
+        {
+          "seq": 34,
+          "event": "venue.sync.enter"
+        },
+        {
+          "seq": 35,
+          "event": "venue.changed"
+        },
+        {
+          "seq": 36,
+          "event": "venue.sync.exit"
+        },
+        {
+          "seq": 37,
+          "event": "caregiver.accept.exit"
+        }
+      ],
+      "actualScope": "One new corrected H Apply group, 205 assertions, exit0, first and only corrected execution. Three explicit final output Blob gestures are retained. This does not replay or pass the original full oracle campaign.",
+      "metadataDisclosure": "Raw boundaries.counts and boundaries.raceAdmission inherited descriptions of the original 17-group/B-C campaign. They are expressly disavowed for this focused run by the attached scope amendment. Raw output, frozen receiver, fixture and product remain unchanged. The actual groups array, focused scope statement and process identify one group.",
+      "preparationFailure": "The byte guard refused one transport-added newline before any product/receiver execution. Original failure note and exact 22,130-byte beforeimage are attached. Independently confirmed that beforeimage is exactly corrected app plus one LF. The admitted 22,129-byte app is exact.",
+      "stderr": "Exact original 169-byte VM Modules ExperimentalWarning is attached at dbb1cf2d7a07cc98cbaca9607f97736c869f18fd and matches the recorded SHA256.",
+      "reviewerDidNotExecuteProduct": true
+    },
+    "native": "Physical browser 14+6 successor remains unexecuted/source-blocked and original c770 native attempts remain unknown/unreplayed. This composition and the VM receipts establish no actual browser, IndexedDB, physical-download, provider or native-installation acceptance."
+  },
+  "noActionsEventReview": {
+    "repositoryRead": {
+      "defaultBranch": "main",
+      "hasPages": false,
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "rulesets": [],
+      "allowMerge": true,
+      "allowSquash": true,
+      "allowRebase": true
+    },
+    "completeWorkflowInventory": [
+      {
+        "path": ".github/workflows/ci.yml",
+        "mode": "100644",
+        "type": "blob",
+        "git": "0e6273139a9bf417a4ee42f4501d067b1c9d95a0",
+        "bytes": 652,
+        "body": "name: ci\n\non:\n  push:\n    branches: [main]\n  pull_request:\n\nconcurrency:\n  group: ci-${{ github.ref }}\n  cancel-in-progress: true\n\npermissions:\n  contents: read\n\njobs:\n  test:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1\n      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0\n        with:\n          python-version: \"3.12\"\n      - name: Install dependencies\n        run: pip install -r requirements.txt\n      - name: Run tests\n        # FixtureTransport + mock-mode defaults keep this hermetic: no Qloo key needed.\n        run: python -m pytest -q\n"
+      },
+      {
+        "path": ".github/workflows/native-plan-week-browser.yml",
+        "mode": "100644",
+        "type": "blob",
+        "git": "d674f2698d1b048075a1c49c2035b1096be668f2",
+        "bytes": 3299,
+        "body": "name: native-plan-week-browser\n\non:\n  pull_request:\n    paths:\n      - 'tools/native_plan_to_week.mjs'\n      - 'tools/check_native_plan_week_browser.mjs'\n      - 'tests/test_native_plan_week.py'\n      - 'tastetable_cli.py'\n      - 'agent.py'\n      - 'constraints.py'\n      - 'qloo_client.py'\n      - 'personas.py'\n      - 'fixtures/qloo_fixtures.json'\n      - 'static/**'\n      - '.github/workflows/native-plan-week-browser.yml'\n  push:\n    branches: [main]\n    paths:\n      - 'tools/native_plan_to_week.mjs'\n      - 'tools/check_native_plan_week_browser.mjs'\n      - 'tests/test_native_plan_week.py'\n      - 'tastetable_cli.py'\n      - 'agent.py'\n      - 'constraints.py'\n      - 'qloo_client.py'\n      - 'personas.py'\n      - 'fixtures/qloo_fixtures.json'\n      - 'static/**'\n      - '.github/workflows/native-plan-week-browser.yml'\n\nconcurrency:\n  group: native-plan-week-browser-${{ github.ref }}\n  cancel-in-progress: true\n\npermissions:\n  contents: read\n\njobs:\n  receive-week:\n    runs-on: ubuntu-latest\n    timeout-minutes: 8\n    steps:\n      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # Existing maintained pin.\n      - name: Require cached Node 22, Python and installed system Chrome\n        id: runtime\n        shell: bash\n        run: |\n          set -euo pipefail\n          NATIVE_WEEK_NODE=\n          for NATIVE_WEEK_NODE_DIR in \"${RUNNER_TOOL_CACHE}/node\"/22.*; do\n            if [[ -x \"${NATIVE_WEEK_NODE_DIR}/x64/bin/node\" && -f \"${NATIVE_WEEK_NODE_DIR}/x64.complete\" ]]; then\n              NATIVE_WEEK_NODE=\"${NATIVE_WEEK_NODE_DIR}/x64/bin/node\"\n            fi\n          done\n          [[ -n \"${NATIVE_WEEK_NODE}\" ]] || { echo \"A complete cached Node 22 is required.\"; exit 1; }\n          NATIVE_WEEK_BROWSER=\n          for NATIVE_WEEK_BROWSER_NAME in google-chrome google-chrome-stable chromium chromium-browser; do\n            if command -v \"${NATIVE_WEEK_BROWSER_NAME}\" >/dev/null 2>&1; then\n              NATIVE_WEEK_BROWSER=\"$(command -v \"${NATIVE_WEEK_BROWSER_NAME}\")\"\n              break\n            fi\n          done\n          [[ -n \"${NATIVE_WEEK_BROWSER}\" ]] || { echo \"An installed Chrome/Chromium is required.\"; exit 1; }\n          NATIVE_WEEK_PYTHON=\"$(command -v python3)\"\n          \"${NATIVE_WEEK_NODE}\" --version\n          \"${NATIVE_WEEK_BROWSER}\" --version\n          \"${NATIVE_WEEK_PYTHON}\" --version\n          printf 'node=%s\\nbrowser=%s\\npython=%s\\n' \"${NATIVE_WEEK_NODE}\" \"${NATIVE_WEEK_BROWSER}\" \"${NATIVE_WEEK_PYTHON}\" >> \"${GITHUB_OUTPUT}\"\n      - name: Receive actual native result, saved file and unchanged browser consumer\n        env:\n          NATIVE_WEEK_PYTHON: ${{ steps.runtime.outputs.python }}\n        run: '\"${{ steps.runtime.outputs.node }}\" tools/check_native_plan_week_browser.mjs --browser \"${{ steps.runtime.outputs.browser }}\" --output \"${RUNNER_TEMP}/native-plan-week-receiving\"'\n      - name: Preserve bounded native inputs, actual downloads and browser artifacts\n        if: always()\n        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # Official v4 pin.\n        with:\n          name: native-plan-week-receiving-${{ github.run_id }}\n          path: ${{ runner.temp }}/native-plan-week-receiving\n          if-no-files-found: warn\n          retention-days: 14\n          compression-level: 6\n"
+      },
+      {
+        "path": ".github/workflows/week-compare.yml",
+        "mode": "100644",
+        "type": "blob",
+        "git": "e591fca2db970460611269ad7d1c53a6bc70f028",
+        "bytes": 1269,
+        "body": "name: saved-week-comparison\n\non:\n  pull_request:\n    paths:\n      - 'static/**'\n      - 'tests/*.mjs'\n      - 'tests/*.cjs'\n      - 'tests/fixtures/**'\n      - '.github/workflows/week-compare.yml'\n  push:\n    branches: [main]\n    paths:\n      - 'static/**'\n      - 'tests/*.mjs'\n      - 'tests/*.cjs'\n      - 'tests/fixtures/**'\n      - '.github/workflows/week-compare.yml'\n\npermissions:\n  contents: read\n\njobs:\n  compare-week:\n    runs-on: ubuntu-latest\n    timeout-minutes: 3\n    steps:\n      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # Existing maintained pin.\n      - name: Test comparison and existing browser domain modules on cached Node 22\n        shell: bash\n        run: |\n          set -euo pipefail\n          COMPARE_WEEK_NODE=\n          for COMPARE_WEEK_NODE_DIR in \"${RUNNER_TOOL_CACHE}/node\"/22.*; do\n            if [[ -x \"${COMPARE_WEEK_NODE_DIR}/x64/bin/node\" && -f \"${COMPARE_WEEK_NODE_DIR}/x64.complete\" ]]; then\n              COMPARE_WEEK_NODE=\"${COMPARE_WEEK_NODE_DIR}/x64/bin/node\"\n            fi\n          done\n          [[ -n \"${COMPARE_WEEK_NODE}\" ]] || { echo \"A complete cached Node 22 is required.\"; exit 1; }\n          \"${COMPARE_WEEK_NODE}\" --version\n          \"${COMPARE_WEEK_NODE}\" --test tests/*.mjs tests/*.cjs\n"
+      }
+    ],
+    "sourceEvents": [
+      {
+        "path": ".github/workflows/ci.yml",
+        "push": {
+          "branches": [
+            "main"
+          ]
+        },
+        "pull_request": {
+          "branches": "unrestricted"
+        },
+        "changedCompositionWouldMatchWithoutSkip": true
+      },
+      {
+        "path": ".github/workflows/native-plan-week-browser.yml",
+        "push": {
+          "branches": [
+            "main"
+          ],
+          "paths": "static/** and declared native inputs"
+        },
+        "pull_request": {
+          "branches": "unrestricted",
+          "paths": "static/** and declared native inputs"
+        },
+        "changedCompositionWouldMatchWithoutSkip": true
+      },
+      {
+        "path": ".github/workflows/week-compare.yml",
+        "push": {
+          "branches": [
+            "main"
+          ],
+          "paths": "static/** and declared tests"
+        },
+        "pull_request": {
+          "branches": "unrestricted",
+          "paths": "static/** and declared tests"
+        },
+        "changedCompositionWouldMatchWithoutSkip": true
+      }
+    ],
+    "allThreeWorkflowLeavesExactBetweenBaseOwnersCombinedAndCorrection": true,
+    "uncoveredEventTriggersFound": [],
+    "manualDispatchTriggerPresent": false,
+    "issueCommentCreatePullRequestTargetScheduleWorkflowRunMergeGroupTriggersPresent": false,
+    "existingDependencyConfigurationBuildLeavesUnchanged": true,
+    "officialPrimarySkipDocumentation": {
+      "url": "https://docs.github.com/en/actions/how-tos/manage-workflow-runs/skip-workflow-runs",
+      "reviewedInThisSession": true,
+      "interpretation": "GitHub commit-message skip instructions, including literal [skip actions], cover push and pull_request only; PR evaluation uses the HEAD commit. The instruction applies only to the commit containing it. Other events are not covered. Skipped required checks can remain pending, but no required contexts/checks or active protection/rulesets were observed here."
+    },
+    "conditionalEligibility": [
+      "Root freshly brackets main, event inventory, protection/rulesets/Pages and actual workflow runs before source publication. Any change requires reconciliation.",
+      "The actual PR HEAD commit contains literal [skip actions]. No unmarked subsequent head is introduced.",
+      "The actual normal merge commit on main also contains literal [skip actions].",
+      "No workflow edits, manual dispatch, gate bypass, credentials/security change or unknown operation replay occurs.",
+      "Root reads actual resulting refs/PR/merge and head/merge Actions run lists after each operation."
+    ],
+    "observedActionsBaseline": {
+      "totalCount": 124,
+      "latest": [
+        {
+          "id": 37847870372,
+          "headSha": "994c03aef94b711d6dcbbeb6bbbc6a4b85a6a3ad",
+          "event": "pull_request",
+          "path": ".github/workflows/native-plan-week-browser.yml",
+          "status": "completed",
+          "conclusion": "success",
+          "createdAt": "2026-10-08T21:35:38Z"
+        }
+      ],
+      "observationTime": "2026-10-09 18:09:52 UTC"
+    },
+    "finalReadMain": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+    "finalReadTime": "2026-10-09 18:11:25 UTC",
+    "authorityBoundary": "Conditional technical eligibility under the root's current assignment. This review does not grant publication authority or bypass requirements. Root alone creates the source tree, commit/ref/PR and any merge; the reviewer created only this inert manifest blob.",
+    "actionsTriggeredByReviewer": 0
+  },
+  "finalDisposition": "No concrete blocking source-composition or current event-coverage objection. Root can construct and independently read back the exact proposed tree, including this returned manifest. The original failure, correction, focused result and scope amendment remain separate and explicit; no broader browser/native acceptance is inferred."
+}

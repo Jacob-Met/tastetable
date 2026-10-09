@@ -1,0 +1,12 @@
+{
+  "schema": "tastetable.caregiver-handoff-receiver-correction.v1",
+  "at": "2026-10-08T21:18:14.311282+00:00",
+  "priorSha256": "a5494390392a2f43fdf1450e371b68162c26d6866710217370b63e22869b01c2",
+  "sha256": "3cba0ff3b2c36718f7a0f2e16244c211c05082dc810d0e55560c94ade5b14593",
+  "bytes": 37919,
+  "revision": "v4",
+  "reason": "Windows forbids angle brackets in filesystem names. Use the legal entity-like literal filename handoff-&lt;literal&gt;-海.json. The preview still must retain that exact filename; unchanged note text separately tests actual HTML markup. Only this authored filename constant and receiverRevision change from v3.",
+  "executionStatus": "unexecuted",
+  "productSourceChanged": false,
+  "guardsChanged": false
+}

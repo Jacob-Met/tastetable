@@ -1,0 +1,401 @@
+{
+  "schema": "tastetable.caregiver-handoff-source-custody.v1",
+  "recordedAt": "2026-10-08T21:24:55.383Z",
+  "owner": "chatgpt-d98d06fbfc35/production_receiving_2030",
+  "issue": "https://github.com/Jacob-Met/tastetable/issues/55",
+  "status": "Held source custody. Complete physical browser receiving, owner composition and required CI remain pending. No PR or merge is authorized by this packet.",
+  "source": {
+    "nativeBase": {
+      "commit": "328df51af830e91f304417a66d74f43d94ae0c02",
+      "tree": "df0251092f77d96169daa097abaec409ecabe6ba",
+      "leaves": 786
+    },
+    "nativeRoot": "/home/jacob/tastetable-caregiver-handoff-d98d06fb-20261008",
+    "custodyParent": {
+      "commit": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+      "tree": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6",
+      "leaves": 818
+    },
+    "branch": "work/astra-caregiver-handoff-custody-d98d06fb-20261008",
+    "retainedMainAdditions": {
+      "nativeBatch": 19,
+      "visitRecordCsv": 13,
+      "total": 32
+    },
+    "modifiedParentPaths": [
+      "README.md",
+      "static/app.js",
+      "static/index.html",
+      "static/venue_followup.mjs"
+    ],
+    "expectedUnownedParentLeavesPreserved": 814,
+    "readmeComposition": "Complete current main text preserved, with the same caregiver insertion used in the native reviewed README. Native reviewed README retained separately.",
+    "runtimeComposition": "All original planner runtime files and workflows are unchanged between the native receiving base and the custody parent. The additional accepted visit-record CSV module and all its owner files are preserved. Four caregiver product files and focused model/guide files retain native reviewed bytes.",
+    "unrecoveredPriorWork": "Only the earlier approved scope was recovered; no older candidate or browser run was recovered. The retained baseline and candidate attempts are newly identified."
+  },
+  "qualification": {
+    "originalModel": {
+      "tests": 32,
+      "passed": 32,
+      "failed": 0
+    },
+    "originalPhysicalBrowser": {
+      "completedGroups": 4,
+      "status": "passed within original separate-file contract"
+    },
+    "candidateModel": {
+      "tests": 40,
+      "passed": 40,
+      "failed": 0,
+      "newTests": 8,
+      "attribution": "Existing native candidate-v1 run; not rerun after receiver-only changes."
+    },
+    "independentReview": {
+      "status": "no blocking source finding",
+      "path": "review/source-review.json",
+      "sha256": "7de1b114c7405bad34a5b078a2f9603cf77e4a68cee7419426e2d141b3e4c8de",
+      "boundary": "Unchanged seven native product/doc/model files, historical v3 receiver pin. Current README composition and v4 receiver-only correction are separately attributed."
+    },
+    "browserV1": {
+      "status": "failed",
+      "completedGroups": 4,
+      "reason": "Receiver expected 'invalid date'; exact retained negative input was refused by the unchanged calendar validator with 'Choose a valid calendar date for your week.'",
+      "productCodeChanged": false
+    },
+    "browserV2": {
+      "status": "failed",
+      "completedGroups": 0,
+      "pages": 0,
+      "requests": 0,
+      "choosers": 0,
+      "reason": "No DevToolsActivePort within the unchanged 12-second startup window.",
+      "productCodeChanged": false
+    },
+    "receiverV3": {
+      "status": "unexecuted",
+      "sha256": "a5494390392a2f43fdf1450e371b68162c26d6866710217370b63e22869b01c2",
+      "change": "node:path.basename instead of slash-only filename extraction; revision marker."
+    },
+    "receiverV4": {
+      "status": "unexecuted",
+      "path": "tools/check_caregiver_handoff_browser.mjs",
+      "sha256": "3cba0ff3b2c36718f7a0f2e16244c211c05082dc810d0e55560c94ade5b14593",
+      "change": "Windows-safe literal entity/Unicode filename fixture and revision marker only."
+    },
+    "completePhysicalGate": "pending",
+    "remaining": [
+      "Complete invalid-file refusal preserving current work",
+      "Explicit Apply and source/input/week/note/calendar identity after reload",
+      "Empty-note replacement",
+      "Competing and stale file reads/previews",
+      "Source/form/date/arrangement/note/navigation invalidation",
+      "Download retry",
+      "Narrow-screen review and actual TXT/print output"
+    ],
+    "resourceBoundary": "No further ThinkPad browser launches or repeated capacity polling. Existing 1.5 GiB free-memory and 768 MiB disk reserves remain unchanged.",
+    "ci": "held; absence is not a passing status"
+  },
+  "receiving": {
+    "existingProjectOwner": "chatgpt:c77045b4:windows",
+    "existingOwnerIssue": "https://github.com/Jacob-Met/tastetable/issues/54",
+    "requestedAttempt": "One new explicitly identified receive of this frozen v4 source/gate through the existing installed native Windows surface, with actual preflight and artifact closure. Unavailable resources leave the receive pending.",
+    "fixture": {
+      "path": "docs/venue-followup-6c20bb4b010e/author/final/saved-composition-week.json",
+      "gitBlob": "8b14090030201d6e8d69cd5bca380a9a71a4da0d",
+      "sha256": "55dfb9c7e50b2aff749dbb33835dcc5cf89c7d7f0eaf4e2b68dd957cb319a824"
+    },
+    "modelSourceBoundary": "Retained native saved-week artifact consumed by exact static files and authored GET-only bootstrap. No Python plan generation, FastAPI or provider invocation."
+  },
+  "actionsBoundary": {
+    "authority": "Root continuation instruction preserving Jacob HAMON's HAMON #143 comment6067592767 hold.",
+    "operation": "New ordinary non-main custody branch with no PR, only after fresh exact workflow/ref/PR predicates. No workflow, main, PR, merge, deployment, dispatch or rerun mutation.",
+    "workflows": [
+      {
+        "path": ".github/workflows/ci.yml",
+        "blob": "0e6273139a9bf417a4ee42f4501d067b1c9d95a0",
+        "triggers": "push branches:[main]; pull_request"
+      },
+      {
+        "path": ".github/workflows/native-plan-week-browser.yml",
+        "blob": "d674f2698d1b048075a1c49c2035b1096be668f2",
+        "triggers": "push branches:[main] and pull_request with source path filters"
+      },
+      {
+        "path": ".github/workflows/week-compare.yml",
+        "blob": "e591fca2db970460611269ad7d1c53a6bc70f028",
+        "triggers": "push branches:[main] and pull_request with static/test path filters"
+      }
+    ],
+    "commentsTrigger": false,
+    "nonMainPushTrigger": false,
+    "currentRefAndPrRead": "Branch absent (404); open PRs for this exact head empty. These predicates must be checked again immediately before reference creation."
+  },
+  "manifestBoundary": "This manifest lists all 37 other owned payloads and excludes itself. Its own hash and the actual commit/tree/ref/readback are recorded in the receiving handoff. Historical evidence bytes and paths within those records are unchanged.",
+  "files": [
+    {
+      "path": "static/caregiver_handoff.mjs",
+      "bytes": 11673,
+      "sha256": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+      "gitBlob": "4286409b3fe932f61957ba72f5db918d18ff0751",
+      "role": "unchanged native reviewed candidate"
+    },
+    {
+      "path": "static/app.js",
+      "bytes": 20941,
+      "sha256": "00e234dc9a69ed4b883ffcc70dbe25db50f38f3f0203b8c5c2eda0f3fe2ff129",
+      "gitBlob": "78ea526ea3b7afb2099d51d07eac59bc80dd6e83",
+      "role": "unchanged native reviewed candidate"
+    },
+    {
+      "path": "static/venue_followup.mjs",
+      "bytes": 18923,
+      "sha256": "cfa96d88aeaf06d55c5a4b7ad457f6a693f571ec06ccd8744141e4922ff3b2c3",
+      "gitBlob": "a3c4b8bd120149441d343cbda2d3c15f6d106ca2",
+      "role": "unchanged native reviewed candidate"
+    },
+    {
+      "path": "static/index.html",
+      "bytes": 11174,
+      "sha256": "114bbd275d2d7ea899e8cdef003436cf3d68187283427f9333d390c32bab2293",
+      "gitBlob": "0eec83bd03afce0a80e6a2885fb134441f8d4275",
+      "role": "unchanged native reviewed candidate"
+    },
+    {
+      "path": "tests/caregiver_handoff.test.mjs",
+      "bytes": 10870,
+      "sha256": "dbdcb41b1598970c0ba098216a234887a470ca36fa5a3bfcf7faa4bfdebb7b9f",
+      "gitBlob": "f9a0eb76eed9be3213de714c9ee00f444cee06c7",
+      "role": "unchanged native reviewed candidate"
+    },
+    {
+      "path": "docs/CAREGIVER_HANDOFF.md",
+      "bytes": 3541,
+      "sha256": "9da5e7bdddac7ade887ee3cf21c2445f47d5cb167070d4a2e56320b5feac9906",
+      "gitBlob": "098c8a73d8eabf8ff66336d04a90c07717e4ece9",
+      "role": "unchanged native reviewed candidate"
+    },
+    {
+      "path": "README.md",
+      "bytes": 20804,
+      "sha256": "e2f3f8aacf34d8a59d8acdf1f4fc1a842abd6bcd889beca2120535f35a70592b",
+      "gitBlob": "669769b222e70f6a2028e99a905d98c3ebe6069e",
+      "role": "strictly additive README composition on custody parent"
+    },
+    {
+      "path": "tools/check_caregiver_handoff_browser.mjs",
+      "bytes": 37919,
+      "sha256": "3cba0ff3b2c36718f7a0f2e16244c211c05082dc810d0e55560c94ade5b14593",
+      "gitBlob": "da062ff20b6b5a621e7294c227a29ee24efd684d",
+      "role": "receiver v4; unexecuted"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/README.md",
+      "bytes": 8672,
+      "sha256": "057643a4fecb996f2ff303dc40210d31f0b88b9745ca566489b1532025c989db",
+      "gitBlob": "d00aad506e7153dbc578f6fad338240ca064acbb",
+      "role": "held qualification and physical receiving handoff"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/COMPOSITION.md",
+      "bytes": 5212,
+      "sha256": "07cb0f1200e1ba8d4aa27553f695031b452b7a4df7a814d84dce66ee3fe7d80f",
+      "gitBlob": "fb1f0a3b4a9d05afe0a6b4f66b047aa4c1cfbf9a",
+      "role": "pending composition against exact public owner contract"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/CONTRACT.json",
+      "bytes": 4293,
+      "sha256": "e4244fc78bf21b62a7ea9d3ccdfe32585031cbcd1f5cf8fac7a6ef8595aeef36",
+      "gitBlob": "d8fb6e173c0e4a595581832b5c93c0fd6e1534d7",
+      "role": "retained native historical evidence"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/SOURCE-RECEIVED.json",
+      "bytes": 495,
+      "sha256": "f5a6f69a844997376a9e46e6a4db67c2d3d1557aadce117716228138b05151ef",
+      "gitBlob": "d1906949c7eb506a0d73ae34e2cfc49f39c9ad98",
+      "role": "retained native historical evidence"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/original-receiving.json",
+      "bytes": 1563,
+      "sha256": "29bfc9c3ab525bb800f798bbeeca843e424bcbc7c2e1bdbe3ae9bbaff49136e6",
+      "gitBlob": "3acb5678cc2f3f4b90ed2115bc4896bb143c0e2b",
+      "role": "retained native historical evidence"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/baseline-model.stdout.txt",
+      "bytes": 7542,
+      "sha256": "b2e3d5e4ba0be909dea0bb3c262c592ca9ae9a74132f93578d76688df475b53a",
+      "gitBlob": "401a786deee99b2b1981c15380420be61c6041aa",
+      "role": "retained native historical evidence"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/baseline-browser-v1/browser-results.json",
+      "bytes": 9470,
+      "sha256": "33fa317caf02db1732b52944e2d65b41dddbc0efbb0fca051a11a7f65a18bb0d",
+      "gitBlob": "a22a4208950e66b3dc5fb902d1b78b48d580b31c",
+      "role": "retained native historical evidence"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-v1-manifest.json",
+      "bytes": 1605,
+      "sha256": "44a1eb2180d4cfc83538230149218b6ac6ad88e1b6cb536489f4372b01eb1f31",
+      "gitBlob": "c380e5e76aaafa98bcbc4790e65bec881a2328c3",
+      "role": "retained native historical evidence"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-v1-model.json",
+      "bytes": 1509,
+      "sha256": "84217c45d52f42fb07b57991b11f160e920732f97a9238300be2559068494fde",
+      "gitBlob": "116a7888045ad5f8e50a443041ca7406e950efc0",
+      "role": "retained native historical evidence"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-v1-model.stdout.txt",
+      "bytes": 9405,
+      "sha256": "18db5ee3cd1721f9cd9e7ea33a771688007679c0f2c4a17d5739a51eef9eb807",
+      "gitBlob": "e686471103550e6a99adae3950b0fe199f8a9ff0",
+      "role": "retained native historical evidence"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-browser-v1-execution.json",
+      "bytes": 757,
+      "sha256": "ff7ae873521acbdf696c66a7873ddadce8e57e1f1679eb6d1539cc1d53444e58",
+      "gitBlob": "8e3e943b84b7c186512d0f28a2b7381a66ed501b",
+      "role": "retained native historical evidence"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-browser-v1/browser-results.json",
+      "bytes": 12831,
+      "sha256": "7932f42a0b1fd65ba24a249ff9dced1acde3c8259180bb8aa3f03fc3389ab172",
+      "gitBlob": "027c1e66cdcf8d68fd96caecb1da73da02c76119",
+      "role": "retained native historical evidence"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-browser-v1-date-refusal-diagnosis.json",
+      "bytes": 513,
+      "sha256": "849400cef52b7103cf2efa3fc299889950116c5af9ab86b4e0fe33a4581bcefe",
+      "gitBlob": "e615a48e1b6ac1ae972e5288ead3fb3626aec9ec",
+      "role": "retained native historical evidence"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/receiver-v1.mjs",
+      "bytes": 37560,
+      "sha256": "1828b5a3a7d575f4968d3279e5813f0c0d4f6ed2281af90f0f356a187947b224",
+      "gitBlob": "fe8eb3287a593468387d1df7053c4e694756ebe6",
+      "role": "retained native historical evidence"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/receiver-v2-correction.json",
+      "bytes": 521,
+      "sha256": "ece579f0d1862d1685e971b23cfa35ac173a5769638a60176ed6a2ce350bc168",
+      "gitBlob": "4b5cec59de33141a081d252dade0e52a40c6f3c2",
+      "role": "retained native historical evidence"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-browser-v2-execution.json",
+      "bytes": 757,
+      "sha256": "12d00a3f79a1821dc8d819a85f1b07f50424f699e6b6c42f49add367c23bb869",
+      "gitBlob": "95a47818163ccb42eae6b62d30b5374aa3d46c4b",
+      "role": "retained native historical evidence"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-browser-v2/browser-results.json",
+      "bytes": 3292,
+      "sha256": "f26b51a591e581f52f05f20b5f636d3c9a275f7811737fd53173ecc34684dd62",
+      "gitBlob": "3c18d5749f7e623babf1199462ad287478573d4d",
+      "role": "retained native historical evidence"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-browser-v2-startup-diagnosis.json",
+      "bytes": 423,
+      "sha256": "53343d090bcb350277b60eba5ce10ec27d2d23603fdc1c239d3930bbc8f27401",
+      "gitBlob": "1b07f7a06678013d6bd5629a5cb149912a38a90d",
+      "role": "retained native historical evidence"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/resource-check-210132.json",
+      "bytes": 285,
+      "sha256": "ee7ff8a366c362b7add1c7e7c77391a7745d221f56611eb54808e730be2818eb",
+      "gitBlob": "4f9b88d30699a643d7ac6afc06bf572618824345",
+      "role": "retained native historical evidence"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/STATUS-2102.json",
+      "bytes": 4164,
+      "sha256": "c3bd0aadf01dc65ebc22fd6caeae6b9443b9377de4fa94ad39ab7ef127ca2edd",
+      "gitBlob": "90126ae0ee7601222837d1889cdbc294a696042a",
+      "role": "retained native historical evidence"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/review/source-review.json",
+      "bytes": 16919,
+      "sha256": "7de1b114c7405bad34a5b078a2f9603cf77e4a68cee7419426e2d141b3e4c8de",
+      "gitBlob": "2f26a498b07594424caac7274786b787cacc1f32",
+      "role": "sealed independent TasteTable source review",
+      "originPath": "/home/jacob/tastetable-caregiver-review-d98d06fb-20261008-v1/source-review.json"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/review/MANIFEST.json",
+      "bytes": 540,
+      "sha256": "9d17f76a4fe30c0717feac1530882c1f86585d7e2e31adc58bf606d24521758b",
+      "gitBlob": "2b07274bbf4b1edece2666c705ac085f91b6b420",
+      "role": "sealed independent TasteTable source review",
+      "originPath": "/home/jacob/tastetable-caregiver-review-d98d06fb-20261008-v1/MANIFEST.json"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/receiver-v3-correction.json",
+      "bytes": 666,
+      "sha256": "8d63f366e8656b2431514b00347d1b4ad515f86f044dbf15e46c7568765132b4",
+      "gitBlob": "4197c88673ef1806abffb96df8ebe55d0c10ae02",
+      "role": "retained receiver-only correction",
+      "originPath": "/home/jacob/tastetable-caregiver-handoff-d98d06fb-20261008/receiver-v3-correction.json"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/receiver-v4-correction.json",
+      "bytes": 737,
+      "sha256": "35858b3a99ae1949f8095471ca9be7671a78d64f5628edd696a6e308df2209ea",
+      "gitBlob": "95467720319e645082ba05f5403fa27ef5d73a26",
+      "role": "retained receiver-only correction",
+      "originPath": "/home/jacob/tastetable-caregiver-handoff-d98d06fb-20261008/receiver-v4-correction.json"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/candidate-fence-v1.json",
+      "bytes": 380,
+      "sha256": "00f9714d9a9e204d2472ee43b4ce3cc91906c5ed8ba40d212c261111a0ab7433",
+      "gitBlob": "7d6299352b7635b84f9ac390f0e2a21cb119e3cc",
+      "role": "retained native source fence/review evidence",
+      "originPath": "/home/jacob/tastetable-caregiver-handoff-d98d06fb-20261008/candidate-fence-v1.json"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/review-existing-hooks.diff",
+      "bytes": 6453,
+      "sha256": "cf52c8eeab55c1169b394d6a67ee78c672c819c95fad10caffa0a50d8e4fd858",
+      "gitBlob": "cd1b8ec981d16de46e01c666b13e1f3ed05e119b",
+      "role": "retained native source fence/review evidence",
+      "originPath": "/home/jacob/tastetable-caregiver-handoff-d98d06fb-20261008/review-existing-hooks.diff"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/receiver-v2.mjs",
+      "bytes": 37912,
+      "sha256": "737d385d40e89b79e476e327cad9a25ca99284507ec61f4ec7a5fe70df946eec",
+      "gitBlob": "fb904782741a9de535738e2f856b12277d63cf5c",
+      "role": "historical failed receiver v2"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/receiver-v3.mjs",
+      "bytes": 37913,
+      "sha256": "a5494390392a2f43fdf1450e371b68162c26d6866710217370b63e22869b01c2",
+      "gitBlob": "110257a55edce314c2dc8ff8f826d294ffad24e6",
+      "role": "historical unexecuted receiver v3"
+    },
+    {
+      "path": "docs/receiving/caregiver-handoff-d98d06fb-20261008/native/README.candidate-v1.md",
+      "bytes": 20040,
+      "sha256": "3389097a869bfef85ffc7114c8b7dbc15a7e20d5cfce9bcebd957d13f53de27d",
+      "gitBlob": "b2e339a92917fd1339d5783f73f213252364657a",
+      "role": "exact original native reviewed README on 328df"
+    }
+  ]
+}

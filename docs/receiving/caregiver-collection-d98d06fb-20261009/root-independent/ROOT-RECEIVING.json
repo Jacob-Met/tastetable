@@ -1,0 +1,237 @@
+{
+  "schema": "tastetable.root.corrected-apply-receiving.v1",
+  "owner": "chatgpt-d98d06fbfc35/root",
+  "originalOracle": "6a49031f5803b3cc97d65a897b854cfcf2933523",
+  "originalCandidate": "ee504914e14b2e4b0fe899f9393a00810aaf5faf",
+  "originalFinding": "e331afbdf678650813f6e999e96c4c1bd0989d28",
+  "originalActual": "f7cd75852381d01035ffe7ded730c93d1a81cb5e",
+  "originalCompleteClosure": "2ed422f744d9764b9ef1f32bcd53bf3b4239b486",
+  "correction": {
+    "schema": "tastetable.caregiver-apply-refresh.correction.v1",
+    "owner": "chatgpt-d98d06fbfc35/root",
+    "baseApp": {
+      "path": "static/app.js",
+      "git": "ed40637354a456c03dfa32a2e4ec954f23110ffa",
+      "bytes": 21963,
+      "sha256": "c484f029aa70dad81acaa21d99f00a93681dff61101accbca5a8d33c89c9a500"
+    },
+    "correctedApp": {
+      "path": "static/app.js",
+      "bytes": 22129,
+      "sha256": "2002efebe9dda5f6114ac3d6b84d4450714e36fa80a063fb6205a8637dfd6005",
+      "git": "1d5ac7bea1d7ee485ff5db20379d7c715c3df0d6"
+    },
+    "originalCandidate": "ee504914e14b2e4b0fe899f9393a00810aaf5faf",
+    "originalOracle": "6a49031f5803b3cc97d65a897b854cfcf2933523",
+    "originalFinding": "e331afbdf678650813f6e999e96c4c1bd0989d28",
+    "originalRawActual": "f7cd75852381d01035ffe7ded730c93d1a81cb5e",
+    "originalCompleteClosure": "2ed422f744d9764b9ef1f32bcd53bf3b4239b486",
+    "preservation": "Original17groups/313assertions exit0 remain an incomplete implementation of the stronger frozen oracle. The actual mixed intermediate capture is retained, not rewritten as a pass. No intervening await or Save; no persisted-corruption claim.",
+    "reason": "The current commitPlanView calls applyWeekDate, which refreshes the calendar, collection capture and worksheet before explicit handoff acceptance restores the matching origin/model/calendar. Defer that dependent refresh only for caregiver Apply, and perform it once after those fields are restored.",
+    "sourceSpans": [
+      {
+        "before": "function commitPlanView({ nextWeek, nextWeekView, fragments, restoredWeek }) {",
+        "after": "function commitPlanView({ nextWeek, nextWeekView, fragments, restoredWeek }, { deferWeekRefresh = false } = {}) {"
+      },
+      {
+        "before": "  commitWeekView(nextWeekView);\n  applyWeekDate();",
+        "after": "  commitWeekView(nextWeekView);\n  if (!deferWeekRefresh) applyWeekDate();"
+      },
+      {
+        "before": "    commitPlanView(prepared.view);\n    fillForm(prepared.inputs);",
+        "after": "    // Restore the whole handoff before refreshing collection capture or exports.\n    commitPlanView(prepared.view, { deferWeekRefresh: true });\n    fillForm(prepared.inputs);"
+      },
+      {
+        "before": "    venueFollowup.acceptPrepared(weekState, prepared.model);\n    acceptCalendar();\n    refreshWeekSave();",
+        "after": "    venueFollowup.acceptPrepared(weekState, prepared.model);\n    acceptCalendar();\n    applyWeekDate();"
+      }
+    ],
+    "sourceProof": {
+      "allFourSpansUnique": true,
+      "exactInverseRestoresOriginalApp": true,
+      "existingDefaultCallersUnchanged": true,
+      "importsOrDependenciesAdded": 0,
+      "globalStateAdded": 0,
+      "modelsCodecsCalendarRequestControllerUnchanged": true,
+      "sourceReview": "Actual setWeek shallow-copies the state and preserves model-bound sourcePlan/picks/constraints/sourceMode identities; deferred final applyWeekDate still restores preferredWeekStart, validity messages and print/save controls."
+    },
+    "focusedReceiving": {
+      "oracle": "4e6754a480c172435da147cd2ffe5790654ec5d9",
+      "receiver": "1d0fbce8d3668474455a06a439217d72b106a3d6",
+      "freeze": "b69844963e1247d22e70bb48d56a1fdf153da6e5",
+      "frozenBeforeCorrectionExposure": true,
+      "execution": "not yet executed"
+    },
+    "notRun": [
+      "original17groups",
+      "original40model",
+      "author tests",
+      "physical browser",
+      "provider",
+      "native consumer"
+    ],
+    "effects": {
+      "gitBlobOnly": true,
+      "sourceRefsPRsMerges": 0,
+      "nativeWrites": 0,
+      "githubActions": 0
+    }
+  },
+  "independentSourceReview": "88d0b71d18640b43143be27447ffe901d3650f75",
+  "focusedClosure": "e5dcd4668954ffd2d32411b6ab68f7738610e175",
+  "focusedScopeLabelAmendment": "2431194b0355d244b459ff29261c708c5f0149cf",
+  "rootDataReceiving": {
+    "proof": {
+      "schema": "tastetable.root.focused-data-receiving.v1",
+      "stdout": {
+        "bytes": 140927,
+        "sha256": "27aeb707662a16c554f8472fdfdee693de31b722a00f672e38ab2127024b4723",
+        "git": "49d0e12808252776457e56dc93e2951822e15605"
+      },
+      "process": {
+        "bytes": 1019,
+        "sha256": "971f29bd04e44bdc29590e921fe8f8d0e6bcb98f8d349017af7d6f4de1fcd87e",
+        "git": "fe2bbc2e095d8f399e4ef551341cb978d9484b82"
+      },
+      "stderr": {
+        "bytes": 169,
+        "sha256": "4f5c218d8502024ff934abb329df9abea189074321ec8d109cd5aeafc22bf85e",
+        "git": "dbb1cf2d7a07cc98cbaca9607f97736c869f18fd"
+      },
+      "originalExit": 0,
+      "fullCheckList": 205,
+      "allReachedChecksPass": true,
+      "oneActualGroup": true,
+      "allThreeInApplyPublicationsCoherentHAgainstFrozenOracle": true,
+      "actualOrder": [
+        {
+          "seq": 22,
+          "event": "caregiver.accept.enter"
+        },
+        {
+          "seq": 23,
+          "event": "request.invalidate"
+        },
+        {
+          "seq": 24,
+          "event": "request.onIdle"
+        },
+        {
+          "seq": 25,
+          "event": "dom.planWrite"
+        },
+        {
+          "seq": 26,
+          "event": "venue.acceptPrepared.enter"
+        },
+        {
+          "seq": 27,
+          "event": "venue.changed"
+        },
+        {
+          "seq": 28,
+          "event": "venue.acceptPrepared.exit"
+        },
+        {
+          "seq": 29,
+          "event": "calendar.accept"
+        },
+        {
+          "seq": 30,
+          "event": "calendar.accept.complete"
+        },
+        {
+          "seq": 31,
+          "event": "collection.refresh.enter"
+        },
+        {
+          "seq": 32,
+          "event": "collection.capture"
+        },
+        {
+          "seq": 33,
+          "event": "collection.refresh.exit"
+        },
+        {
+          "seq": 34,
+          "event": "venue.sync.enter"
+        },
+        {
+          "seq": 35,
+          "event": "venue.changed"
+        },
+        {
+          "seq": 36,
+          "event": "venue.sync.exit"
+        },
+        {
+          "seq": 37,
+          "event": "caregiver.accept.exit"
+        }
+      ],
+      "artifacts": [
+        {
+          "filename": "tastetable-caregiver-handoff-2030-08-12.json",
+          "bytes": 6247,
+          "sha256": "e7805fdb6356a6739b3cc8df265c7d49718a3e998e57287d97e69ea1791b3f6e",
+          "git": "797f842a72414b9b6052fc6316e6073a9ea673c2"
+        },
+        {
+          "filename": "tastetable-week-2030-08-12.json",
+          "bytes": 2380,
+          "sha256": "b6c8d40a7c2ca41dc4161d2db674c8600eb6ae9fd7212bdc7f03538972f95004",
+          "git": "bbbcbc82977211751a50475ee897fe5a2526271b"
+        },
+        {
+          "filename": "tastetable-demo-2030-08-12.ics",
+          "bytes": 876,
+          "sha256": "182c7d99785e88b2343083ca2ca257c39cbad88325c1face4c1208462a5669a0",
+          "git": "9cece13a8dab48bae44a0de2cbba73a51f984997"
+        }
+      ],
+      "pureDataReview": true,
+      "productReexecuted": false,
+      "inheritedScopeLabels": "Raw boundaries.counts and raceAdmission describe old campaign; separate explicit amendment pending. Original raw body remains exact."
+    },
+    "firstActual": {
+      "chunk_id": "e1e9d6",
+      "wall_time_seconds": 0.000034261,
+      "exit_code": 1,
+      "original_token_count": 23,
+      "output": "Traceback (most recent call last):\n  File \"<string>\", line 9, in <module>\nAssertionError\n"
+    },
+    "amendment": {
+      "originalActual": {
+        "chunk_id": "e1e9d6",
+        "wall_time_seconds": 0.000034261,
+        "exit_code": 1,
+        "original_token_count": 23,
+        "output": "Traceback (most recent call last):\n  File \"<string>\", line 9, in <module>\nAssertionError\n"
+      },
+      "originalScript": "import json,hashlib\nfrom pathlib import Path\nroot=Path('/tmp/d98-taste-focused-20261009-1801')\nout=root/'first-corrected-execution'\ndef pin(raw):\n return {'bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest(),'git':hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\\0'+raw).hexdigest()}\nraw=(out/'stdout.bin').read_bytes(); receipt=json.loads(raw)\nassert pin(raw)['git']=='49d0e12808252776457e56dc93e2951822e15605'\nassert (out/'receipt.json').read_bytes()==raw\nprocess_raw=(out/'PROCESS.json').read_bytes(); process=json.loads(process_raw)\nassert pin(process_raw)['git']=='fe2bbc2e095d8f399e4ef551341cb978d9484b82'\nassert process['exit']==0 and not process['timeout'] and process['inputPinsUnchanged']\nassert pin(raw)['bytes']==process['stdout']['bytes'] and pin(raw)['sha256']==process['stdout']['sha256']\nstderr=(out/'stderr.bin').read_bytes()\nassert len(stderr)==169 and hashlib.sha256(stderr).hexdigest()==process['stderr']['sha256']\nassert b'ExperimentalWarning: VM Modules' in stderr\noracle_raw=(root/'ORACLE.json').read_bytes()\nassert pin(oracle_raw)['git']=='4e6754a480c172435da147cd2ffe5790654ec5d9'\nE=json.loads(oracle_raw)['expected']\nassert len(receipt['groups'])==1\ng=receipt['groups'][0]\nassert g['id']=='handoff-H-complete-before-collection-publication'\nassert len(g['checks'])==205 and all(x['passed'] for x in g['checks'])\nassert receipt['assertionsReached']==205 and receipt['failedAssertions']==0 and receipt['passedGroups']==1 and receipt['failedGroups']==0\nevents=g['applyWindow']['events']; order=[(e['seq'],e['event']) for e in events]\ndef seq(name):\n a=[e['seq'] for e in events if e['event']==name]; assert len(a)==1,(name,a); return a[0]\nassert seq('request.invalidate')<seq('dom.planWrite')\nready=max(seq('venue.acceptPrepared.exit'),seq('calendar.accept.complete'))\npub=[e for e in events if e['event'] in ('collection.refresh.enter','collection.capture','collection.refresh.exit')]\nassert [e['event'] for e in pub]==['collection.refresh.enter','collection.capture','collection.refresh.exit']\nfor ev in pub:\n assert ready<ev['seq']<seq('caregiver.accept.exit')\n coh=ev['data']['coherence']; cur=coh['current']\n assert coh['currentError'] is None and cur['origin']==E['origin']\n for k in ('entities','assignments','weekStart','records'): assert cur[k]==E[k],k\n assert coh['date']==E['weekStart'] and coh['calendarEnabled'] is True and coh['calendarPreview']==E['calendar']['preview']\n assert coh['calendar']=={k:v for k,v in E['calendar'].items() if k!='preview'}\n for k in ('cuisines','music','films'): assert coh['form'][k]==', '.join(E['form'][k])\n assert coh['form']['city']==E['form']['city']\n assert [x['value'] for x in coh['form']['constraints'] if x['checked']]==E['form']['constraints']\n for entity in E['entities']: assert entity in coh['view']['plan']\n assert 'H:pick:1' in coh['view']['days'] and 'H:pick:2' in coh['view']['omitted']\n if ev['event']=='collection.capture':\n  assert ev['data']['available'] is True\n  cap=ev['data']['capture']\n  for k in ('response','inputs','receivedAt','calendarId'): assert cap[k]==E['origin'][k]\n  for k in ('entities','assignments','weekStart'): assert cap[k]==E[k]\nartifact_pins=[]\nfor a in g['artifacts']:\n b=a['text'].encode('utf-8')\n assert b==(out/'outputs'/a['filename']).read_bytes()\n observed=pin(b)\n assert observed['bytes']==a['bytes'] and observed['sha256']==a['sha256']\n artifact_pins.append({'filename':a['filename'],**observed})\nassert len(artifact_pins)==3\nprint(json.dumps({'schema':'tastetable.root.focused-data-receiving.v1','stdout':pin(raw),'process':pin(process_raw),'stderr':pin(stderr),'originalExit':process['exit'],'fullCheckList':205,'allReachedChecksPass':True,'oneActualGroup':True,'allThreeInApplyPublicationsCoherentHAgainstFrozenOracle':True,'actualOrder':[{'seq':s,'event':e} for s,e in order],'artifacts':artifact_pins,'pureDataReview':True,'productReexecuted':False,'inheritedScopeLabels':'Raw boundaries.counts and raceAdmission describe old campaign; separate explicit amendment pending. Original raw body remains exact.'}))\n",
+      "oneSpan": {
+        "before": "assert (out/'receipt.json').read_bytes()==raw",
+        "after": "assert json.loads((out/'receipt.json').read_bytes())==receipt"
+      },
+      "why": "Independent formatting is not a byte-identity contract. Full original stdout Git/SHA pins remain mandatory; the additional human-formatted local receipt must parse to exactly the same full JSON value.",
+      "productExecuted": false
+    },
+    "correctedSource": "import json,hashlib\nfrom pathlib import Path\nroot=Path('/tmp/d98-taste-focused-20261009-1801')\nout=root/'first-corrected-execution'\ndef pin(raw):\n return {'bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest(),'git':hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\\0'+raw).hexdigest()}\nraw=(out/'stdout.bin').read_bytes(); receipt=json.loads(raw)\nassert pin(raw)['git']=='49d0e12808252776457e56dc93e2951822e15605'\nassert json.loads((out/'receipt.json').read_bytes())==receipt\nprocess_raw=(out/'PROCESS.json').read_bytes(); process=json.loads(process_raw)\nassert pin(process_raw)['git']=='fe2bbc2e095d8f399e4ef551341cb978d9484b82'\nassert process['exit']==0 and not process['timeout'] and process['inputPinsUnchanged']\nassert pin(raw)['bytes']==process['stdout']['bytes'] and pin(raw)['sha256']==process['stdout']['sha256']\nstderr=(out/'stderr.bin').read_bytes()\nassert len(stderr)==169 and hashlib.sha256(stderr).hexdigest()==process['stderr']['sha256']\nassert b'ExperimentalWarning: VM Modules' in stderr\noracle_raw=(root/'ORACLE.json').read_bytes()\nassert pin(oracle_raw)['git']=='4e6754a480c172435da147cd2ffe5790654ec5d9'\nE=json.loads(oracle_raw)['expected']\nassert len(receipt['groups'])==1\ng=receipt['groups'][0]\nassert g['id']=='handoff-H-complete-before-collection-publication'\nassert len(g['checks'])==205 and all(x['passed'] for x in g['checks'])\nassert receipt['assertionsReached']==205 and receipt['failedAssertions']==0 and receipt['passedGroups']==1 and receipt['failedGroups']==0\nevents=g['applyWindow']['events']; order=[(e['seq'],e['event']) for e in events]\ndef seq(name):\n a=[e['seq'] for e in events if e['event']==name]; assert len(a)==1,(name,a); return a[0]\nassert seq('request.invalidate')<seq('dom.planWrite')\nready=max(seq('venue.acceptPrepared.exit'),seq('calendar.accept.complete'))\npub=[e for e in events if e['event'] in ('collection.refresh.enter','collection.capture','collection.refresh.exit')]\nassert [e['event'] for e in pub]==['collection.refresh.enter','collection.capture','collection.refresh.exit']\nfor ev in pub:\n assert ready<ev['seq']<seq('caregiver.accept.exit')\n coh=ev['data']['coherence']; cur=coh['current']\n assert coh['currentError'] is None and cur['origin']==E['origin']\n for k in ('entities','assignments','weekStart','records'): assert cur[k]==E[k],k\n assert coh['date']==E['weekStart'] and coh['calendarEnabled'] is True and coh['calendarPreview']==E['calendar']['preview']\n assert coh['calendar']=={k:v for k,v in E['calendar'].items() if k!='preview'}\n for k in ('cuisines','music','films'): assert coh['form'][k]==', '.join(E['form'][k])\n assert coh['form']['city']==E['form']['city']\n assert [x['value'] for x in coh['form']['constraints'] if x['checked']]==E['form']['constraints']\n for entity in E['entities']: assert entity in coh['view']['plan']\n assert 'H:pick:1' in coh['view']['days'] and 'H:pick:2' in coh['view']['omitted']\n if ev['event']=='collection.capture':\n  assert ev['data']['available'] is True\n  cap=ev['data']['capture']\n  for k in ('response','inputs','receivedAt','calendarId'): assert cap[k]==E['origin'][k]\n  for k in ('entities','assignments','weekStart'): assert cap[k]==E[k]\nartifact_pins=[]\nfor a in g['artifacts']:\n b=a['text'].encode('utf-8')\n assert b==(out/'outputs'/a['filename']).read_bytes()\n observed=pin(b)\n assert observed['bytes']==a['bytes'] and observed['sha256']==a['sha256']\n artifact_pins.append({'filename':a['filename'],**observed})\nassert len(artifact_pins)==3\nprint(json.dumps({'schema':'tastetable.root.focused-data-receiving.v1','stdout':pin(raw),'process':pin(process_raw),'stderr':pin(stderr),'originalExit':process['exit'],'fullCheckList':205,'allReachedChecksPass':True,'oneActualGroup':True,'allThreeInApplyPublicationsCoherentHAgainstFrozenOracle':True,'actualOrder':[{'seq':s,'event':e} for s,e in order],'artifacts':artifact_pins,'pureDataReview':True,'productReexecuted':False,'inheritedScopeLabels':'Raw boundaries.counts and raceAdmission describe old campaign; separate explicit amendment pending. Original raw body remains exact.'}))\n",
+    "correctedActual": {
+      "chunk_id": "b5a851",
+      "wall_time_seconds": 0.000027862,
+      "exit_code": 0,
+      "original_token_count": 559,
+      "output": "{\"schema\": \"tastetable.root.focused-data-receiving.v1\", \"stdout\": {\"bytes\": 140927, \"sha256\": \"27aeb707662a16c554f8472fdfdee693de31b722a00f672e38ab2127024b4723\", \"git\": \"49d0e12808252776457e56dc93e2951822e15605\"}, \"process\": {\"bytes\": 1019, \"sha256\": \"971f29bd04e44bdc29590e921fe8f8d0e6bcb98f8d349017af7d6f4de1fcd87e\", \"git\": \"fe2bbc2e095d8f399e4ef551341cb978d9484b82\"}, \"stderr\": {\"bytes\": 169, \"sha256\": \"4f5c218d8502024ff934abb329df9abea189074321ec8d109cd5aeafc22bf85e\", \"git\": \"dbb1cf2d7a07cc98cbaca9607f97736c869f18fd\"}, \"originalExit\": 0, \"fullCheckList\": 205, \"allReachedChecksPass\": true, \"oneActualGroup\": true, \"allThreeInApplyPublicationsCoherentHAgainstFrozenOracle\": true, \"actualOrder\": [{\"seq\": 22, \"event\": \"caregiver.accept.enter\"}, {\"seq\": 23, \"event\": \"request.invalidate\"}, {\"seq\": 24, \"event\": \"request.onIdle\"}, {\"seq\": 25, \"event\": \"dom.planWrite\"}, {\"seq\": 26, \"event\": \"venue.acceptPrepared.enter\"}, {\"seq\": 27, \"event\": \"venue.changed\"}, {\"seq\": 28, \"event\": \"venue.acceptPrepared.exit\"}, {\"seq\": 29, \"event\": \"calendar.accept\"}, {\"seq\": 30, \"event\": \"calendar.accept.complete\"}, {\"seq\": 31, \"event\": \"collection.refresh.enter\"}, {\"seq\": 32, \"event\": \"collection.capture\"}, {\"seq\": 33, \"event\": \"collection.refresh.exit\"}, {\"seq\": 34, \"event\": \"venue.sync.enter\"}, {\"seq\": 35, \"event\": \"venue.changed\"}, {\"seq\": 36, \"event\": \"venue.sync.exit\"}, {\"seq\": 37, \"event\": \"caregiver.accept.exit\"}], \"artifacts\": [{\"filename\": \"tastetable-caregiver-handoff-2030-08-12.json\", \"bytes\": 6247, \"sha256\": \"e7805fdb6356a6739b3cc8df265c7d49718a3e998e57287d97e69ea1791b3f6e\", \"git\": \"797f842a72414b9b6052fc6316e6073a9ea673c2\"}, {\"filename\": \"tastetable-week-2030-08-12.json\", \"bytes\": 2380, \"sha256\": \"b6c8d40a7c2ca41dc4161d2db674c8600eb6ae9fd7212bdc7f03538972f95004\", \"git\": \"bbbcbc82977211751a50475ee897fe5a2526271b\"}, {\"filename\": \"tastetable-demo-2030-08-12.ics\", \"bytes\": 876, \"sha256\": \"182c7d99785e88b2343083ca2ca257c39cbad88325c1face4c1208462a5669a0\", \"git\": \"9cece13a8dab48bae44a0de2cbba73a51f984997\"}], \"pureDataReview\": true, \"productReexecuted\": false, \"inheritedScopeLabels\": \"Raw boundaries.counts and raceAdmission describe old campaign; separate explicit amendment pending. Original raw body remains exact.\"}\n"
+    }
+  },
+  "disposition": "Exact four-span app-only correction accepted by independent source review and one pre-exposure frozen H Apply regression. Original17/313 incomplete stronger-oracle result and transient mixed capture remain preserved. The focused1group/205assertion result and full outputs are separately received; no original campaign or model execution repeated.",
+  "scopeLabelDisposition": "Root identified inherited counts and B/C-race metadata in the focused raw receipt. The separate2431194b amendment explicitly disavows those labels for this run without changing original raw bytes or frozen receiver. Actual scope is one H Apply and three explicit final output gestures.",
+  "next": "Compose the exact current-main owner source trees and this correction plus original/focused evidence. No physical browser, IndexedDB, provider or installed-use claim.",
+  "effects": {
+    "productExecutionsByThisDataReview": 0,
+    "oldCampaignReplays": 0,
+    "nativeWrites": 0,
+    "actions": 0
+  }
+}
