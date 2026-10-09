@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-08T21:01:32.249334+00:00",
+  "memBytes": {
+    "MemFree": 262672384,
+    "MemAvailable": 2439184384
+  },
+  "freeDiskBytes": 12822249472,
+  "originalBrowserResourceGuardSatisfied": false,
+  "loadavg": "45.36 32.77 24.41 37/1928 1599354",
+  "launchedBrowser": false
+}

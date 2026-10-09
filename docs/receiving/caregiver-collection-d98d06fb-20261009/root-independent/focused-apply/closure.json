@@ -1,0 +1,200 @@
+{
+  "schema": "tastetable.d98-focused-apply-publication-closure.v1",
+  "sealedAt": "2026-10-09 18:07:41 UTC",
+  "owner": "d98d06fbfc35/learner_adoption",
+  "repository": "Jacob-Met/tastetable",
+  "disposition": "focused-corrected-H-Apply-receiving-passed",
+  "scope": "One new frozen actual-controller H Apply regression and its three explicit final output gestures, using ten unchanged original dependencies. This does not replace the original campaign or establish native/browser acceptance.",
+  "baseline": {
+    "rootOracle": "6a49031f5803b3cc97d65a897b854cfcf2933523",
+    "originalFinding": "e331afbdf678650813f6e999e96c4c1bd0989d28",
+    "originalApp": "ed40637354a456c03dfa32a2e4ec954f23110ffa",
+    "originalReceiver": "74ec645378f92867ce4661da12111de98736c278",
+    "originalCapsule": "121e7a87aa3287bb444bd97679902ea6f680107d",
+    "fixture": "5e9918c1c1a0e57c8f3682804d2d3b21190e8a49",
+    "originalActual": "f7cd75852381d01035ffe7ded730c93d1a81cb5e"
+  },
+  "correction": {
+    "app": "1d5ac7bea1d7ee485ff5db20379d7c715c3df0d6",
+    "bytes": 22129,
+    "sha256": "2002efebe9dda5f6114ac3d6b84d4450714e36fa80a063fb6205a8637dfd6005",
+    "manifest": "658163fbc5dabf58be75181384f70ff3609b08c7"
+  },
+  "frozenBeforeCorrectionExposure": {
+    "oracle": "4e6754a480c172435da147cd2ffe5790654ec5d9",
+    "receiver": "1d0fbce8d3668474455a06a439217d72b106a3d6",
+    "freeze": "b69844963e1247d22e70bb48d56a1fdf153da6e5",
+    "frozenAt": "2026-10-09T18:02:30.860Z",
+    "syntaxOnlyToolChunk": "3409cb",
+    "syntaxOnlyExit": 0
+  },
+  "exactBeforeExecution": {
+    "capsule": "f29cec340342d4dc4aaaeea0383b911231c7506e",
+    "bytes": 257551,
+    "sha256": "27e36f1bbd99a0fd53e240a34e8e98404d9dca3cb005e0d344042a507bdbbba9",
+    "manifest": "c03b607d56a220c6fa90d5537c9e43823a47b568",
+    "launcher": "cd0a10edbdab416ce488adde7e9ee5770e79ffe6"
+  },
+  "originalExecution": {
+    "attempt": "one-focused-H-Apply-corrected-1d5ac7-first",
+    "toolChunk": "541588",
+    "process": "fe2bbc2e095d8f399e4ef551341cb978d9484b82",
+    "toolResult": "22f37c59a1bbecb37d41ceb36cf16bca57f4d875",
+    "rawStdout": "49d0e12808252776457e56dc93e2951822e15605",
+    "stderr": {
+      "bytes": 169,
+      "sha256": "4f5c218d8502024ff934abb329df9abea189074321ec8d109cd5aeafc22bf85e"
+    },
+    "schema": "tastetable.d98-focused-apply-original-process.v1",
+    "startedAt": "2026-10-09T18:05:27.456975+00:00",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "--experimental-vm-modules",
+      "/tmp/d98-taste-focused-20261009-1801/LAUNCH.cjs",
+      "/tmp/d98-taste-focused-20261009-1801/CANDIDATE-PACKET.json"
+    ],
+    "cwd": "/tmp/d98-taste-focused-20261009-1801",
+    "controllerPid": 3,
+    "inputSha256": "27e36f1bbd99a0fd53e240a34e8e98404d9dca3cb005e0d344042a507bdbbba9",
+    "timeout": false,
+    "automaticReplay": false,
+    "childPid": 4,
+    "finishedAt": "2026-10-09T18:05:27.766072+00:00",
+    "elapsedSeconds": 0.30909905999942566,
+    "exit": 0,
+    "stdout": {
+      "bytes": 140927,
+      "sha256": "27aeb707662a16c554f8472fdfdee693de31b722a00f672e38ab2127024b4723"
+    },
+    "inputPinsUnchanged": true,
+    "groups": 1,
+    "passedGroups": 1,
+    "assertionsReached": 205,
+    "passedAssertions": 205,
+    "failedAssertions": 0,
+    "failedGroups": 0,
+    "runtime": "v24.19.0",
+    "reruns": 0,
+    "stderrInterpretation": "Only Node's ExperimentalWarning for VM Modules; exact original 169 bytes retained."
+  },
+  "actualOrder": [
+    {
+      "seq": 22,
+      "event": "caregiver.accept.enter"
+    },
+    {
+      "seq": 23,
+      "event": "request.invalidate"
+    },
+    {
+      "seq": 24,
+      "event": "request.onIdle"
+    },
+    {
+      "seq": 25,
+      "event": "dom.planWrite"
+    },
+    {
+      "seq": 26,
+      "event": "venue.acceptPrepared.enter"
+    },
+    {
+      "seq": 27,
+      "event": "venue.changed"
+    },
+    {
+      "seq": 28,
+      "event": "venue.acceptPrepared.exit"
+    },
+    {
+      "seq": 29,
+      "event": "calendar.accept"
+    },
+    {
+      "seq": 30,
+      "event": "calendar.accept.complete"
+    },
+    {
+      "seq": 31,
+      "event": "collection.refresh.enter"
+    },
+    {
+      "seq": 32,
+      "event": "collection.capture"
+    },
+    {
+      "seq": 33,
+      "event": "collection.refresh.exit"
+    },
+    {
+      "seq": 34,
+      "event": "venue.sync.enter"
+    },
+    {
+      "seq": 35,
+      "event": "venue.changed"
+    },
+    {
+      "seq": 36,
+      "event": "venue.sync.exit"
+    },
+    {
+      "seq": 37,
+      "event": "caregiver.accept.exit"
+    }
+  ],
+  "finding": [
+    "Actual request invalidation seq23 occurred before plan commit seq25, inside synchronous H accept entry22/exit37.",
+    "The prepared H worksheet completed at28 and native calendar construction at30 before the only in-Apply collection refresh31, capture32 and refresh exit33.",
+    "Every in-Apply collection operation read a complete matching H origin, source occurrence set, arrangement/date, full model records, form, rendered scheduled/omitted view and calendar preview/control. No partial or null publication occurred.",
+    "The actual H Apply performed no implicit provider, storage operation or output gesture.",
+    "Final H preview was consumed and export controls ready. Explicit caregiver, saved-week and calendar output Blobs retained exact H source/date/calendar and complete caregiver records.",
+    "The additional post-acceptance capture during the explicit portable-week gesture remained coherent H."
+  ],
+  "artifacts": [
+    {
+      "filename": "tastetable-caregiver-handoff-2030-08-12.json",
+      "git": "797f842a72414b9b6052fc6316e6073a9ea673c2",
+      "bytes": 6247,
+      "sha256": "e7805fdb6356a6739b3cc8df265c7d49718a3e998e57287d97e69ea1791b3f6e"
+    },
+    {
+      "filename": "tastetable-week-2030-08-12.json",
+      "git": "bbbcbc82977211751a50475ee897fe5a2526271b",
+      "bytes": 2380,
+      "sha256": "b6c8d40a7c2ca41dc4161d2db674c8600eb6ae9fd7212bdc7f03538972f95004"
+    },
+    {
+      "filename": "tastetable-demo-2030-08-12.ics",
+      "git": "9cece13a8dab48bae44a0de2cbba73a51f984997",
+      "bytes": 876,
+      "sha256": "182c7d99785e88b2343083ca2ca257c39cbad88325c1face4c1208462a5669a0"
+    }
+  ],
+  "preparationFailure": {
+    "note": "2d94f1cc4a236f2ea5603f8e443ade963c70ac03",
+    "toolChunk": "40c2d2",
+    "exit": 1,
+    "beforeimage": "cf46c4155b8721cd1a5cf03436f07e62e7ef906b",
+    "bytes": 22130,
+    "sha256": "e41a79c45029dc505c4e7294edc090bb718b2c032cc343b5d0c16c5f3176e37b",
+    "cause": "Local patch transport appended exactly one newline. The pre-execution byte guard refused it. Decode from the fetched JSON string restored the supplied exact 22129-byte source; the frozen oracle/receiver did not change.",
+    "applicationExecutedAtFailure": false,
+    "correctedDataPreparationChunk": "7b1a46",
+    "correctedDataPreparationExit": 0
+  },
+  "preservedHistoricalDisposition": "Original seventeen-group/313-assertion exit0 stays an incomplete implementation of the stronger original oracle, with the mixed transient capture retained. No intervening await or storage Save was established there; no persisted-corruption claim. This new one-case outcome does not rewrite those original results.",
+  "limits": {
+    "originalAppOrSeventeenGroupCampaignExecuted": false,
+    "originalFortyCaseModelCampaignExecuted": false,
+    "authorTestsExecuted": false,
+    "actualBrowser": false,
+    "actualIndexedDB": false,
+    "physicalDownloadTransport": false,
+    "provider": false,
+    "nativeConsumer": false,
+    "sourceRefsOrPRsOrMerges": 0,
+    "githubActions": 0
+  },
+  "evidenceCompleteness": "Exact frozen receiver/oracle, original fixture and full eleven-source corrected input capsule are separate readable Git blobs. Original stdout contains the complete check list, event trace, request/storage observations and literal contents of all three generated output Blobs; each output, original stderr, process record, tool result and staging failure beforeimage also has its own Git blob. All newly published evidence received exact full-content GET readback."
+}

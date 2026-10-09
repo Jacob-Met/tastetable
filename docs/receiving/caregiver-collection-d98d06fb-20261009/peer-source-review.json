@@ -1,0 +1,116 @@
+{
+  "schema": "tastetable.caregiver-named-collection.peer-source-review.v1",
+  "reviewer": "d98d06fbfc35/image_receiving_2030",
+  "scope": "Independent source review of the three composed application/HTML/README blobs against the frozen combined contract and both original owner sources. No project execution or browser qualification.",
+  "contracts": {
+    "original": "dcb2d45619a32b13069957e39ae50387415dc952",
+    "precision_before_candidate": "f7c97f393511830421fffe7ba63a1e878f5296f1",
+    "precision": "Only the README rule admits the collection owner's original explicit-browser-storage disclosure replacement; preparation failures retained. All behavior expectations unchanged."
+  },
+  "sources": {
+    "base": {
+      "commit": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+      "tree": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6",
+      "leaves": 818
+    },
+    "caregiver": {
+      "commit": "e67e7d83efec9c09c5260e8c6165f7116519f599",
+      "tree": "37f0894628a6a561be9252600e6ab2abbd53c19d",
+      "leaves": 852,
+      "app": "78ea526ea3b7afb2099d51d07eac59bc80dd6e83",
+      "html": "0eec83bd03afce0a80e6a2885fb134441f8d4275",
+      "readme": "669769b222e70f6a2028e99a905d98c3ebe6069e",
+      "module": "4286409b3fe932f61957ba72f5db918d18ff0751"
+    },
+    "collection": {
+      "commit": "75394b1b96f63fab3b843bc349b9b4e84046e623",
+      "tree": "b27ab65087f2f4701341d86ef5c5045e60632519",
+      "leaves": 829,
+      "app": "a259470e4f2ab12ca7e455c92ab507cd88ba1af3",
+      "html": "e9d72578312f57e1f0c26bd1be77c6a1e62d0c59",
+      "readme": "09e207def7522838c143fed4835dedecdc713279",
+      "ui": "5a281492002b61222c70ed9b4268150504d20b15",
+      "release_directly_read": "https://github.com/Jacob-Met/tastetable/issues/4#issuecomment-6069400325"
+    },
+    "unchanged_plan_requests": "b21276dda840fe6dd96a3bf3258a851970ff5e4d",
+    "candidate": {
+      "app": {
+        "bytes": 21963,
+        "sha256": "c484f029aa70dad81acaa21d99f00a93681dff61101accbca5a8d33c89c9a500",
+        "git_blob": "ed40637354a456c03dfa32a2e4ec954f23110ffa"
+      },
+      "html": {
+        "bytes": 13018,
+        "sha256": "b953d889674d5e54e957dca3facb56efeb647cd37774b1b61f58116775661d59",
+        "git_blob": "c9058dae2b074078902be5badf7c5690293e3ee1"
+      },
+      "readme": {
+        "bytes": 23484,
+        "sha256": "cfc7a2d4190737f83e2a974b1828eaee6bddb790a4890d985506a4ee6d75e5cb",
+        "git_blob": "37857dad1f02b74ac16330cdda9091af9eec270a"
+      }
+    }
+  },
+  "method": [
+    "Read full frozen contract before candidate exposure; directly fetched complete original trees and actual named-collection release comment.",
+    "Read unchanged request controller, named collection UI and caregiver handoff module, and traced the original app's preparation, retirement, acceptance, calendar/save and cancellation paths.",
+    "Independently line-diffed each candidate against caregiver and each released collection file against common base. Complete changed hunk contents are exactly identical across these two deltas.",
+    "Counted literal HTML IDs and compared complete external script tags/order.",
+    "Hashed the three exact candidate strings with standard-library hashlib only. No product module, model, application, browser or receiver was imported/executed."
+  ],
+  "exact_delta_proof": {
+    "app": {
+      "candidate_delta_exactly_released_collection_delta": true,
+      "hunks": 5,
+      "removed_lines": 0
+    },
+    "html": {
+      "candidate_delta_exactly_released_collection_delta": true,
+      "hunks": 3,
+      "removed_lines": 0,
+      "ids": 68,
+      "unique_ids": 68,
+      "script_elements_exact": true,
+      "script_elements": [
+        "<script src=\"/static/plan-request.js\">",
+        "<script src=\"/static/calendar.js\">",
+        "<script type=\"module\" src=\"/static/app.js\">"
+      ]
+    },
+    "readme": {
+      "candidate_delta_exactly_released_collection_delta": true,
+      "hunks": 2,
+      "removed_lines": 1
+    },
+    "source_only": true,
+    "project_code_execution": false
+  },
+  "findings": [],
+  "disposition": "No remaining source-composition blocker in these exact three blobs.",
+  "reasoning": [
+    "Named collection Preview/refresh/Rename/Remove only operate on collection selection/storage. They do not accept a plan, invoke request retirement or call caregiver changed. The accepted plan is a detached snapshot; explicit Remove copy remains accurate.",
+    "Collection Open passes a deferred read function inside payload.text to planRequests.run. The unchanged request controller calls onStart before send reaches its first awaited IDB read. retirePlan clears week/worksheet/calendar and notifies caregiver retirement; no old plan is retained as current after Open refusal or cancellation.",
+    "Request generation increments before Open, cancellation, input edits or handoff Apply. The unchanged controller suppresses obsolete onResult, onError and onIdle, so late storage success/failure cannot overwrite or clear a newer accepted source.",
+    "Current collection acceptance uses the existing readWeekFile, pure preparation/commit render, input restore and accepted-origin assignment. Calendar identity uses that accepted origin. The later save/collection refresh and fresh empty worksheet preserve the saved-week boundary that venue notes are not included.",
+    "Caregiver file reading/preparation does not mutate accepted state. Its revision plus origin/state/model identity check surrounds asynchronous read, and explicit Apply checks again before synchronous accept. Preview/refusal/cancel retain current work.",
+    "Caregiver Apply invalidates request generation before committing the prepared plan, restoring inputs and original accepted origin, installing the complete prepared worksheet model, accepting the calendar and refreshing all saves. The named collection captures that final accepted snapshot; there is no cached combined export.",
+    "Collection capture reads acceptedPlan and weekState and refuses hidden results or invalid/mismatched displayed week dates. It never adopts a preview name, stored row ID, renamed label or equal venue display text as source identity.",
+    "All five collection app additions are outside preparePlanView; preparation remains read-only. The original caregiver callbacks and worksheet notification path are byte-preserved.",
+    "Both HTML control groups and stylesheet imports are present. All 68 IDs are distinct and request/calendar/app script tag order is unchanged. This is source evidence, not actual accessibility/visual/browser receiving.",
+    "The sole README replacement accurately describes explicitly requested browser copies. The rest of the common parent text and both released feature sections are preserved exactly."
+  ],
+  "qualification_boundaries": [
+    "No execution/replay of the 40 caregiver model cases, original collection state/browser cases, native week receiver, or either retained browser driver.",
+    "No DOM, IndexedDB, physical download, live provider, account, BFCache or visual acceptance established by this review.",
+    "Original browser receiver static allowlists do not yet admit the combined assets. Any future owner receiving revision must preserve original assertions and identify its new exact source inventory.",
+    "Complete final combined tree/manifest has not yet been supplied to this review; this acceptance is limited to the three exact composed blobs and their source delta. Other owner leaf custody must be checked from that final tree separately.",
+    "No native probe, local file write, ref/PR/merge, Actions, provider or service operation."
+  ],
+  "hash_only_actual_tool_result": {
+    "chunk_id": "c6bc21",
+    "wall_time_seconds": 0.0000264,
+    "exit_code": 0,
+    "original_token_count": 116,
+    "output": "{\"app\":{\"bytes\":21963,\"sha256\":\"c484f029aa70dad81acaa21d99f00a93681dff61101accbca5a8d33c89c9a500\",\"git_blob\":\"ed40637354a456c03dfa32a2e4ec954f23110ffa\"},\"html\":{\"bytes\":13018,\"sha256\":\"b953d889674d5e54e957dca3facb56efeb647cd37774b1b61f58116775661d59\",\"git_blob\":\"c9058dae2b074078902be5badf7c5690293e3ee1\"},\"readme\":{\"bytes\":23484,\"sha256\":\"cfc7a2d4190737f83e2a974b1828eaee6bddb790a4890d985506a4ee6d75e5cb\",\"git_blob\":\"37857dad1f02b74ac16330cdda9091af9eec270a\"}}\n"
+  }
+}

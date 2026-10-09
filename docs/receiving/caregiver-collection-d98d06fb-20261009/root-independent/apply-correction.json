@@ -1,0 +1,71 @@
+{
+  "schema": "tastetable.caregiver-apply-refresh.correction.v1",
+  "owner": "chatgpt-d98d06fbfc35/root",
+  "baseApp": {
+    "path": "static/app.js",
+    "git": "ed40637354a456c03dfa32a2e4ec954f23110ffa",
+    "bytes": 21963,
+    "sha256": "c484f029aa70dad81acaa21d99f00a93681dff61101accbca5a8d33c89c9a500"
+  },
+  "correctedApp": {
+    "path": "static/app.js",
+    "bytes": 22129,
+    "sha256": "2002efebe9dda5f6114ac3d6b84d4450714e36fa80a063fb6205a8637dfd6005",
+    "git": "1d5ac7bea1d7ee485ff5db20379d7c715c3df0d6"
+  },
+  "originalCandidate": "ee504914e14b2e4b0fe899f9393a00810aaf5faf",
+  "originalOracle": "6a49031f5803b3cc97d65a897b854cfcf2933523",
+  "originalFinding": "e331afbdf678650813f6e999e96c4c1bd0989d28",
+  "originalRawActual": "f7cd75852381d01035ffe7ded730c93d1a81cb5e",
+  "originalCompleteClosure": "2ed422f744d9764b9ef1f32bcd53bf3b4239b486",
+  "preservation": "Original17groups/313assertions exit0 remain an incomplete implementation of the stronger frozen oracle. The actual mixed intermediate capture is retained, not rewritten as a pass. No intervening await or Save; no persisted-corruption claim.",
+  "reason": "The current commitPlanView calls applyWeekDate, which refreshes the calendar, collection capture and worksheet before explicit handoff acceptance restores the matching origin/model/calendar. Defer that dependent refresh only for caregiver Apply, and perform it once after those fields are restored.",
+  "sourceSpans": [
+    {
+      "before": "function commitPlanView({ nextWeek, nextWeekView, fragments, restoredWeek }) {",
+      "after": "function commitPlanView({ nextWeek, nextWeekView, fragments, restoredWeek }, { deferWeekRefresh = false } = {}) {"
+    },
+    {
+      "before": "  commitWeekView(nextWeekView);\n  applyWeekDate();",
+      "after": "  commitWeekView(nextWeekView);\n  if (!deferWeekRefresh) applyWeekDate();"
+    },
+    {
+      "before": "    commitPlanView(prepared.view);\n    fillForm(prepared.inputs);",
+      "after": "    // Restore the whole handoff before refreshing collection capture or exports.\n    commitPlanView(prepared.view, { deferWeekRefresh: true });\n    fillForm(prepared.inputs);"
+    },
+    {
+      "before": "    venueFollowup.acceptPrepared(weekState, prepared.model);\n    acceptCalendar();\n    refreshWeekSave();",
+      "after": "    venueFollowup.acceptPrepared(weekState, prepared.model);\n    acceptCalendar();\n    applyWeekDate();"
+    }
+  ],
+  "sourceProof": {
+    "allFourSpansUnique": true,
+    "exactInverseRestoresOriginalApp": true,
+    "existingDefaultCallersUnchanged": true,
+    "importsOrDependenciesAdded": 0,
+    "globalStateAdded": 0,
+    "modelsCodecsCalendarRequestControllerUnchanged": true,
+    "sourceReview": "Actual setWeek shallow-copies the state and preserves model-bound sourcePlan/picks/constraints/sourceMode identities; deferred final applyWeekDate still restores preferredWeekStart, validity messages and print/save controls."
+  },
+  "focusedReceiving": {
+    "oracle": "4e6754a480c172435da147cd2ffe5790654ec5d9",
+    "receiver": "1d0fbce8d3668474455a06a439217d72b106a3d6",
+    "freeze": "b69844963e1247d22e70bb48d56a1fdf153da6e5",
+    "frozenBeforeCorrectionExposure": true,
+    "execution": "not yet executed"
+  },
+  "notRun": [
+    "original17groups",
+    "original40model",
+    "author tests",
+    "physical browser",
+    "provider",
+    "native consumer"
+  ],
+  "effects": {
+    "gitBlobOnly": true,
+    "sourceRefsPRsMerges": 0,
+    "nativeWrites": 0,
+    "githubActions": 0
+  }
+}

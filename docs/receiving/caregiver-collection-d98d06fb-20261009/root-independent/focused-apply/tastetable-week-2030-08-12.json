@@ -1,0 +1,106 @@
+{
+  "format": "tastetable.saved-week.v1",
+  "receivedAt": "2030-01-04T00:00:00.000Z",
+  "savedAt": "2026-10-09T18:05:27.739Z",
+  "calendarId": "dddddddddddddddddddddddddddddddd",
+  "inputs": {
+    "cuisines": [
+      "root-inputs-H:cuisine"
+    ],
+    "music": [
+      "root-inputs-H:music"
+    ],
+    "films": [
+      "root-inputs-H:film"
+    ],
+    "city": "root-inputs-H:city",
+    "constraints": [
+      "soft_foods",
+      "low_sodium",
+      "wheelchair"
+    ]
+  },
+  "response": {
+    "mock": true,
+    "rootAcceptedOrigin": "root-origin-H",
+    "rootPreparedWeek": "root-week-H",
+    "plan": {
+      "meals": [
+        {
+          "day": "Monday",
+          "kind": "restaurant",
+          "name": "Shared venue display name 1",
+          "entity_id": "H:pick:1",
+          "why": "Literal H credit / occurrence 1",
+          "affinity": 0.25,
+          "fallback": false
+        },
+        {
+          "day": "Tuesday",
+          "kind": "restaurant",
+          "name": "Shared venue display name 2",
+          "entity_id": "H:pick:2",
+          "why": "Literal H credit / occurrence 2",
+          "affinity": 0.5,
+          "fallback": false
+        }
+      ],
+      "outing": null,
+      "notes": [
+        "Literal H credit"
+      ],
+      "rejected": []
+    },
+    "llm_only": {
+      "meals": [
+        {
+          "day": "Monday",
+          "name": "Unverified H",
+          "why": "fictional baseline H"
+        }
+      ],
+      "outing": {
+        "day": "Friday",
+        "name": "Baseline outing H",
+        "why": "unverified"
+      }
+    },
+    "comparison": {
+      "constraints": [
+        "soft_foods",
+        "low_sodium",
+        "wheelchair"
+      ],
+      "grounded": {
+        "picks": 2,
+        "with_qloo_entity_id": 2,
+        "with_affinity_evidence": 2,
+        "constraint_checked": 2,
+        "unsafe_candidates_rejected": 0
+      },
+      "llm_only": {
+        "picks": 2,
+        "with_qloo_entity_id": 0,
+        "with_affinity_evidence": 0,
+        "constraint_checked": 0,
+        "unsafe_candidates_rejected": 0
+      }
+    },
+    "trace": [
+      {
+        "tool": "root-fixture-H",
+        "args": {
+          "sourceToken": "root-origin-H"
+        },
+        "result_summary": "Literal trace H"
+      }
+    ]
+  },
+  "week": {
+    "start": "2030-08-12",
+    "assignments": {
+      "pick-0": "Monday",
+      "pick-1": null
+    }
+  }
+}

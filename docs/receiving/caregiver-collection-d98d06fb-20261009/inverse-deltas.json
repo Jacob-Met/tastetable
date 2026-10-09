@@ -1,0 +1,931 @@
+{
+  "schema": "tastetable.caregiver-collection.inverse-deltas.v1",
+  "base": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+  "sources": {
+    "static/app.js": "ed40637354a456c03dfa32a2e4ec954f23110ffa",
+    "static/index.html": "c9058dae2b074078902be5badf7c5690293e3ee1",
+    "README.md": "37857dad1f02b74ac16330cdda9091af9eec270a"
+  },
+  "exactForwardReconstruction": true,
+  "edits": {
+    "static/app.js": {
+      "baseToCaregiver": [
+        {
+          "at": 3,
+          "remove": [],
+          "add": [
+            "import { mountCaregiverHandoff } from \"./caregiver_handoff.mjs\";"
+          ]
+        },
+        {
+          "at": 16,
+          "remove": [
+            "const venueFollowup = mountVenueFollowup($(\"#venueFollowup\"), () => ({ state: weekState, date: $(\"#weekDate\").value, origin: acceptedPlan }));"
+          ],
+          "add": [
+            "let caregiverHandoff = null;",
+            "const venueFollowup = mountVenueFollowup($(\"#venueFollowup\"), () => ({ state: weekState, date: $(\"#weekDate\").value, origin: acceptedPlan }), () => caregiverHandoff?.changed());"
+          ]
+        },
+        {
+          "at": 225,
+          "remove": [
+            "function render(res, restoredWeek = null) {"
+          ],
+          "add": [
+            "function preparePlanView(res, restoredWeek = null) {"
+          ]
+        },
+        {
+          "at": 247,
+          "remove": [],
+          "add": [
+            "  return { nextWeek, nextWeekView, fragments, restoredWeek: Boolean(restoredWeek) };",
+            "}"
+          ]
+        },
+        {
+          "at": 248,
+          "remove": [],
+          "add": [
+            "function commitPlanView({ nextWeek, nextWeekView, fragments, restoredWeek }) {"
+          ]
+        },
+        {
+          "at": 261,
+          "remove": [],
+          "add": [
+            "function render(res, restoredWeek = null) {",
+            "  commitPlanView(preparePlanView(res, restoredWeek));",
+            "}",
+            ""
+          ]
+        },
+        {
+          "at": 323,
+          "remove": [],
+          "add": [
+            "",
+            "caregiverHandoff = mountCaregiverHandoff($(\"#caregiverHandoff\"), {",
+            "  current: () => venueFollowup.snapshot(),",
+            "  prepare(opened, filename) {",
+            "    const supported = [...$(\"#form\").querySelectorAll(\"[name=constraints]\")].map((field) => field.value);",
+            "    if (opened.inputs.constraints.some((value) => !supported.includes(value))) {",
+            "      throw new Error(\"This handoff uses a constraint that this page cannot display.\");",
+            "    }",
+            "    const view = preparePlanView(opened.response, opened.state);",
+            "    opened.model.entries(view.nextWeek);",
+            "    return { view, model: opened.model, inputs: structuredClone(opened.inputs),",
+            "      origin: structuredClone(opened.origin),",
+            "      label: `Caregiver handoff opened from “${filename}” (saved ${opened.handoffSavedAt}). Source labels and checks below are retained from the file; they have not been run again.` };",
+            "  },",
+            "  accept(prepared) {",
+            "    planRequests.invalidate();",
+            "    commitPlanView(prepared.view);",
+            "    fillForm(prepared.inputs);",
+            "    acceptedPlan = prepared.origin;",
+            "    $(\"#savedWeekSource\").textContent = prepared.label;",
+            "    $(\"#savedWeekSource\").hidden = false;",
+            "    venueFollowup.acceptPrepared(weekState, prepared.model);",
+            "    acceptCalendar();",
+            "    refreshWeekSave();",
+            "    $(\"#requestStatus\").textContent = \"Caregiver handoff opened. Its original inputs, arrangement and venue notes are restored.\";",
+            "  },",
+            "});",
+            ""
+          ]
+        }
+      ],
+      "baseToCollection": [
+        {
+          "at": 3,
+          "remove": [],
+          "add": [
+            "import { createSavedWeeksUI } from \"./saved_week_ui.mjs\";"
+          ]
+        },
+        {
+          "at": 15,
+          "remove": [],
+          "add": [
+            "let savedWeeks = null;"
+          ]
+        },
+        {
+          "at": 98,
+          "remove": [],
+          "add": [
+            "  savedWeeks?.refreshCurrent();"
+          ]
+        },
+        {
+          "at": 172,
+          "remove": [],
+          "add": [
+            "  savedWeeks?.refreshCurrent();"
+          ]
+        },
+        {
+          "at": 323,
+          "remove": [],
+          "add": [
+            "// A browser collection Open shares the portable file's admission, retirement,",
+            "// input restoration and calendar identity. Start the controller before IDB reads.",
+            "savedWeeks = createSavedWeeksUI({",
+            "  capture() {",
+            "    if (!acceptedPlan || !weekState || $(\"#results\").hidden) return null;",
+            "    try {",
+            "      const shown = setWeek(weekState, $(\"#weekDate\").value);",
+            "      if (!$(\"#weekDate\").checkValidity() || shown.weekStart !== weekState.weekStart) return null;",
+            "      return { ...acceptedPlan, weekState };",
+            "    } catch { return null; }",
+            "  },",
+            "  openSaved(read) {",
+            "    requestKind = \"file\";",
+            "    const payload = {",
+            "      name: \"this browser's saved weeks\",",
+            "      async text() {",
+            "        const draft = await read();",
+            "        payload.name = `this browser's saved weeks: ${draft.name}`;",
+            "        return draft.text;",
+            "      },",
+            "    };",
+            "    return planRequests.run(OPEN_SAVED_WEEK, payload);",
+            "  },",
+            "});",
+            ""
+          ]
+        }
+      ],
+      "merged": [
+        {
+          "at": 3,
+          "remove": [],
+          "add": [
+            "import { mountCaregiverHandoff } from \"./caregiver_handoff.mjs\";"
+          ],
+          "owner": "caregiver"
+        },
+        {
+          "at": 3,
+          "remove": [],
+          "add": [
+            "import { createSavedWeeksUI } from \"./saved_week_ui.mjs\";"
+          ],
+          "owner": "collection"
+        },
+        {
+          "at": 15,
+          "remove": [],
+          "add": [
+            "let savedWeeks = null;"
+          ],
+          "owner": "collection"
+        },
+        {
+          "at": 16,
+          "remove": [
+            "const venueFollowup = mountVenueFollowup($(\"#venueFollowup\"), () => ({ state: weekState, date: $(\"#weekDate\").value, origin: acceptedPlan }));"
+          ],
+          "add": [
+            "let caregiverHandoff = null;",
+            "const venueFollowup = mountVenueFollowup($(\"#venueFollowup\"), () => ({ state: weekState, date: $(\"#weekDate\").value, origin: acceptedPlan }), () => caregiverHandoff?.changed());"
+          ],
+          "owner": "caregiver"
+        },
+        {
+          "at": 98,
+          "remove": [],
+          "add": [
+            "  savedWeeks?.refreshCurrent();"
+          ],
+          "owner": "collection"
+        },
+        {
+          "at": 172,
+          "remove": [],
+          "add": [
+            "  savedWeeks?.refreshCurrent();"
+          ],
+          "owner": "collection"
+        },
+        {
+          "at": 225,
+          "remove": [
+            "function render(res, restoredWeek = null) {"
+          ],
+          "add": [
+            "function preparePlanView(res, restoredWeek = null) {"
+          ],
+          "owner": "caregiver"
+        },
+        {
+          "at": 247,
+          "remove": [],
+          "add": [
+            "  return { nextWeek, nextWeekView, fragments, restoredWeek: Boolean(restoredWeek) };",
+            "}"
+          ],
+          "owner": "caregiver"
+        },
+        {
+          "at": 248,
+          "remove": [],
+          "add": [
+            "function commitPlanView({ nextWeek, nextWeekView, fragments, restoredWeek }) {"
+          ],
+          "owner": "caregiver"
+        },
+        {
+          "at": 261,
+          "remove": [],
+          "add": [
+            "function render(res, restoredWeek = null) {",
+            "  commitPlanView(preparePlanView(res, restoredWeek));",
+            "}",
+            ""
+          ],
+          "owner": "caregiver"
+        },
+        {
+          "at": 323,
+          "remove": [],
+          "add": [
+            "",
+            "caregiverHandoff = mountCaregiverHandoff($(\"#caregiverHandoff\"), {",
+            "  current: () => venueFollowup.snapshot(),",
+            "  prepare(opened, filename) {",
+            "    const supported = [...$(\"#form\").querySelectorAll(\"[name=constraints]\")].map((field) => field.value);",
+            "    if (opened.inputs.constraints.some((value) => !supported.includes(value))) {",
+            "      throw new Error(\"This handoff uses a constraint that this page cannot display.\");",
+            "    }",
+            "    const view = preparePlanView(opened.response, opened.state);",
+            "    opened.model.entries(view.nextWeek);",
+            "    return { view, model: opened.model, inputs: structuredClone(opened.inputs),",
+            "      origin: structuredClone(opened.origin),",
+            "      label: `Caregiver handoff opened from “${filename}” (saved ${opened.handoffSavedAt}). Source labels and checks below are retained from the file; they have not been run again.` };",
+            "  },",
+            "  accept(prepared) {",
+            "    planRequests.invalidate();",
+            "    commitPlanView(prepared.view);",
+            "    fillForm(prepared.inputs);",
+            "    acceptedPlan = prepared.origin;",
+            "    $(\"#savedWeekSource\").textContent = prepared.label;",
+            "    $(\"#savedWeekSource\").hidden = false;",
+            "    venueFollowup.acceptPrepared(weekState, prepared.model);",
+            "    acceptCalendar();",
+            "    refreshWeekSave();",
+            "    $(\"#requestStatus\").textContent = \"Caregiver handoff opened. Its original inputs, arrangement and venue notes are restored.\";",
+            "  },",
+            "});",
+            ""
+          ],
+          "owner": "caregiver"
+        },
+        {
+          "at": 323,
+          "remove": [],
+          "add": [
+            "// A browser collection Open shares the portable file's admission, retirement,",
+            "// input restoration and calendar identity. Start the controller before IDB reads.",
+            "savedWeeks = createSavedWeeksUI({",
+            "  capture() {",
+            "    if (!acceptedPlan || !weekState || $(\"#results\").hidden) return null;",
+            "    try {",
+            "      const shown = setWeek(weekState, $(\"#weekDate\").value);",
+            "      if (!$(\"#weekDate\").checkValidity() || shown.weekStart !== weekState.weekStart) return null;",
+            "      return { ...acceptedPlan, weekState };",
+            "    } catch { return null; }",
+            "  },",
+            "  openSaved(read) {",
+            "    requestKind = \"file\";",
+            "    const payload = {",
+            "      name: \"this browser's saved weeks\",",
+            "      async text() {",
+            "        const draft = await read();",
+            "        payload.name = `this browser's saved weeks: ${draft.name}`;",
+            "        return draft.text;",
+            "      },",
+            "    };",
+            "    return planRequests.run(OPEN_SAVED_WEEK, payload);",
+            "  },",
+            "});",
+            ""
+          ],
+          "owner": "collection"
+        }
+      ],
+      "caregiverToCombined": [
+        {
+          "at": 4,
+          "remove": [],
+          "add": [
+            "import { createSavedWeeksUI } from \"./saved_week_ui.mjs\";"
+          ]
+        },
+        {
+          "at": 16,
+          "remove": [],
+          "add": [
+            "let savedWeeks = null;"
+          ]
+        },
+        {
+          "at": 100,
+          "remove": [],
+          "add": [
+            "  savedWeeks?.refreshCurrent();"
+          ]
+        },
+        {
+          "at": 174,
+          "remove": [],
+          "add": [
+            "  savedWeeks?.refreshCurrent();"
+          ]
+        },
+        {
+          "at": 360,
+          "remove": [],
+          "add": [
+            "// A browser collection Open shares the portable file's admission, retirement,",
+            "// input restoration and calendar identity. Start the controller before IDB reads.",
+            "savedWeeks = createSavedWeeksUI({",
+            "  capture() {",
+            "    if (!acceptedPlan || !weekState || $(\"#results\").hidden) return null;",
+            "    try {",
+            "      const shown = setWeek(weekState, $(\"#weekDate\").value);",
+            "      if (!$(\"#weekDate\").checkValidity() || shown.weekStart !== weekState.weekStart) return null;",
+            "      return { ...acceptedPlan, weekState };",
+            "    } catch { return null; }",
+            "  },",
+            "  openSaved(read) {",
+            "    requestKind = \"file\";",
+            "    const payload = {",
+            "      name: \"this browser's saved weeks\",",
+            "      async text() {",
+            "        const draft = await read();",
+            "        payload.name = `this browser's saved weeks: ${draft.name}`;",
+            "        return draft.text;",
+            "      },",
+            "    };",
+            "    return planRequests.run(OPEN_SAVED_WEEK, payload);",
+            "  },",
+            "});",
+            ""
+          ]
+        }
+      ],
+      "collectionToCombined": [
+        {
+          "at": 3,
+          "remove": [],
+          "add": [
+            "import { mountCaregiverHandoff } from \"./caregiver_handoff.mjs\";"
+          ]
+        },
+        {
+          "at": 18,
+          "remove": [
+            "const venueFollowup = mountVenueFollowup($(\"#venueFollowup\"), () => ({ state: weekState, date: $(\"#weekDate\").value, origin: acceptedPlan }));"
+          ],
+          "add": [
+            "let caregiverHandoff = null;",
+            "const venueFollowup = mountVenueFollowup($(\"#venueFollowup\"), () => ({ state: weekState, date: $(\"#weekDate\").value, origin: acceptedPlan }), () => caregiverHandoff?.changed());"
+          ]
+        },
+        {
+          "at": 229,
+          "remove": [
+            "function render(res, restoredWeek = null) {"
+          ],
+          "add": [
+            "function preparePlanView(res, restoredWeek = null) {"
+          ]
+        },
+        {
+          "at": 251,
+          "remove": [],
+          "add": [
+            "  return { nextWeek, nextWeekView, fragments, restoredWeek: Boolean(restoredWeek) };",
+            "}"
+          ]
+        },
+        {
+          "at": 252,
+          "remove": [],
+          "add": [
+            "function commitPlanView({ nextWeek, nextWeekView, fragments, restoredWeek }) {"
+          ]
+        },
+        {
+          "at": 265,
+          "remove": [],
+          "add": [
+            "function render(res, restoredWeek = null) {",
+            "  commitPlanView(preparePlanView(res, restoredWeek));",
+            "}",
+            ""
+          ]
+        },
+        {
+          "at": 327,
+          "remove": [],
+          "add": [
+            "",
+            "caregiverHandoff = mountCaregiverHandoff($(\"#caregiverHandoff\"), {",
+            "  current: () => venueFollowup.snapshot(),",
+            "  prepare(opened, filename) {",
+            "    const supported = [...$(\"#form\").querySelectorAll(\"[name=constraints]\")].map((field) => field.value);",
+            "    if (opened.inputs.constraints.some((value) => !supported.includes(value))) {",
+            "      throw new Error(\"This handoff uses a constraint that this page cannot display.\");",
+            "    }",
+            "    const view = preparePlanView(opened.response, opened.state);",
+            "    opened.model.entries(view.nextWeek);",
+            "    return { view, model: opened.model, inputs: structuredClone(opened.inputs),",
+            "      origin: structuredClone(opened.origin),",
+            "      label: `Caregiver handoff opened from “${filename}” (saved ${opened.handoffSavedAt}). Source labels and checks below are retained from the file; they have not been run again.` };",
+            "  },",
+            "  accept(prepared) {",
+            "    planRequests.invalidate();",
+            "    commitPlanView(prepared.view);",
+            "    fillForm(prepared.inputs);",
+            "    acceptedPlan = prepared.origin;",
+            "    $(\"#savedWeekSource\").textContent = prepared.label;",
+            "    $(\"#savedWeekSource\").hidden = false;",
+            "    venueFollowup.acceptPrepared(weekState, prepared.model);",
+            "    acceptCalendar();",
+            "    refreshWeekSave();",
+            "    $(\"#requestStatus\").textContent = \"Caregiver handoff opened. Its original inputs, arrangement and venue notes are restored.\";",
+            "  },",
+            "});",
+            ""
+          ]
+        }
+      ],
+      "ownerReconstructionsExact": true
+    },
+    "static/index.html": {
+      "baseToCaregiver": [
+        {
+          "at": 52,
+          "remove": [],
+          "add": [
+            "  <section id=\"caregiverHandoff\" class=\"card contact-session-help\" aria-labelledby=\"caregiverHandoffTitle\">",
+            "    <h2 id=\"caregiverHandoffTitle\">Keep your caregiver handoff</h2>",
+            "    <p>Save the arranged week and all its venue notes in one editable file. Open a handoff to review it before replacing the current week and notes.</p>",
+            "    <div class=\"contact-actions\">",
+            "      <button id=\"saveCaregiverHandoff\" data-handoff-save type=\"button\" disabled>Save caregiver handoff (.json)</button>",
+            "      <button id=\"openCaregiverHandoff\" data-handoff-open type=\"button\">Open caregiver handoff</button>",
+            "      <button data-handoff-cancel type=\"button\" hidden>Cancel opening</button>",
+            "      <input id=\"caregiverHandoffFile\" data-handoff-input type=\"file\" accept=\".json,application/json\" aria-label=\"Choose a TasteTable caregiver handoff\" hidden>",
+            "    </div>",
+            "    <p data-handoff-status class=\"why contact-file-status\" role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"></p>",
+            "    <section data-handoff-preview class=\"contact-file-preview\" aria-label=\"Review caregiver handoff\" hidden>",
+            "      <h3>Review before replacing</h3>",
+            "      <p data-handoff-description tabindex=\"-1\"></p>",
+            "      <pre data-handoff-source></pre>",
+            "      <details>",
+            "        <summary>Review every scheduled and omitted pick</summary>",
+            "        <ol data-handoff-visits></ol>",
+            "      </details>",
+            "      <details>",
+            "        <summary>Review all retained venue notes, including other dates</summary>",
+            "        <ol data-handoff-records></ol>",
+            "      </details>",
+            "      <p>Replacement includes the original inputs, this arrangement and the complete note set. An empty set clears current venue notes.</p>",
+            "      <button data-handoff-apply type=\"button\" disabled>Replace week and notes</button>",
+            "    </section>",
+            "    <p class=\"why\">Keep the file to continue later. Files are read locally; nothing is saved automatically or sent to a provider. Original checks are retained without being run again.</p>",
+            "  </section>",
+            ""
+          ]
+        }
+      ],
+      "baseToCollection": [
+        {
+          "at": 9,
+          "remove": [],
+          "add": [
+            "<link rel=\"stylesheet\" href=\"/static/saved_weeks.css\">"
+          ]
+        },
+        {
+          "at": 52,
+          "remove": [],
+          "add": [
+            "  <section id=\"savedWeeks\" class=\"card saved-weeks\" aria-labelledby=\"savedWeeksTitle\">",
+            "    <h2 id=\"savedWeeksTitle\">Saved in this browser</h2>",
+            "    <p>Keep named planning drafts in this browser. Each explicit Save keeps the original inputs, source evidence and arranged dates. Venue call notes are not included. It is not refreshed automatically. Clearing this site's browser data removes these drafts.</p>",
+            "    <button id=\"refreshSavedWeeks\" type=\"button\">Refresh saved weeks</button>",
+            "    <p id=\"savedWeeksStatus\" class=\"why\" role=\"status\" aria-live=\"polite\"></p>",
+            "    <p id=\"savedWeeksEmpty\" hidden>No saved weeks yet. Generate a plan, arrange it, then choose <strong>Save in this browser</strong>.</p>",
+            "    <ul id=\"savedWeeksList\"></ul>",
+            "    <section id=\"savedWeekPreview\" class=\"saved-week-preview\" aria-labelledby=\"savedPreviewTitle\" hidden>",
+            "      <h3 id=\"savedPreviewTitle\"></h3>",
+            "      <p id=\"savedPreviewSummary\"></p>",
+            "      <p id=\"savedPreviewSource\" class=\"mode\"></p>",
+            "      <ol id=\"savedPreviewDays\"></ol>",
+            "      <p id=\"savedPreviewOmitted\"></p>",
+            "      <div class=\"saved-week-actions\">",
+            "        <button id=\"openSavedWeek\" type=\"button\" class=\"primary\" disabled>Open browser copy</button>",
+            "        <label>Name for this saved week <input id=\"renameSavedWeekName\" maxlength=\"120\" autocomplete=\"off\"></label>",
+            "        <button id=\"renameSavedWeek\" type=\"button\" disabled>Rename saved week</button>",
+            "        <button id=\"removeSavedWeek\" type=\"button\" disabled>Remove saved week</button>",
+            "      </div>",
+            "    </section>",
+            "  </section>",
+            ""
+          ]
+        },
+        {
+          "at": 68,
+          "remove": [],
+          "add": [
+            "      <div class=\"saved-week-actions organizer-help\">",
+            "        <label>Name for this browser copy <input id=\"savedWeekName\" maxlength=\"120\" autocomplete=\"off\"></label>",
+            "        <button id=\"saveCurrentWeek\" type=\"button\" disabled>Save in this browser</button>",
+            "      </div>"
+          ]
+        }
+      ],
+      "merged": [
+        {
+          "at": 9,
+          "remove": [],
+          "add": [
+            "<link rel=\"stylesheet\" href=\"/static/saved_weeks.css\">"
+          ],
+          "owner": "collection"
+        },
+        {
+          "at": 52,
+          "remove": [],
+          "add": [
+            "  <section id=\"caregiverHandoff\" class=\"card contact-session-help\" aria-labelledby=\"caregiverHandoffTitle\">",
+            "    <h2 id=\"caregiverHandoffTitle\">Keep your caregiver handoff</h2>",
+            "    <p>Save the arranged week and all its venue notes in one editable file. Open a handoff to review it before replacing the current week and notes.</p>",
+            "    <div class=\"contact-actions\">",
+            "      <button id=\"saveCaregiverHandoff\" data-handoff-save type=\"button\" disabled>Save caregiver handoff (.json)</button>",
+            "      <button id=\"openCaregiverHandoff\" data-handoff-open type=\"button\">Open caregiver handoff</button>",
+            "      <button data-handoff-cancel type=\"button\" hidden>Cancel opening</button>",
+            "      <input id=\"caregiverHandoffFile\" data-handoff-input type=\"file\" accept=\".json,application/json\" aria-label=\"Choose a TasteTable caregiver handoff\" hidden>",
+            "    </div>",
+            "    <p data-handoff-status class=\"why contact-file-status\" role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"></p>",
+            "    <section data-handoff-preview class=\"contact-file-preview\" aria-label=\"Review caregiver handoff\" hidden>",
+            "      <h3>Review before replacing</h3>",
+            "      <p data-handoff-description tabindex=\"-1\"></p>",
+            "      <pre data-handoff-source></pre>",
+            "      <details>",
+            "        <summary>Review every scheduled and omitted pick</summary>",
+            "        <ol data-handoff-visits></ol>",
+            "      </details>",
+            "      <details>",
+            "        <summary>Review all retained venue notes, including other dates</summary>",
+            "        <ol data-handoff-records></ol>",
+            "      </details>",
+            "      <p>Replacement includes the original inputs, this arrangement and the complete note set. An empty set clears current venue notes.</p>",
+            "      <button data-handoff-apply type=\"button\" disabled>Replace week and notes</button>",
+            "    </section>",
+            "    <p class=\"why\">Keep the file to continue later. Files are read locally; nothing is saved automatically or sent to a provider. Original checks are retained without being run again.</p>",
+            "  </section>",
+            ""
+          ],
+          "owner": "caregiver"
+        },
+        {
+          "at": 52,
+          "remove": [],
+          "add": [
+            "  <section id=\"savedWeeks\" class=\"card saved-weeks\" aria-labelledby=\"savedWeeksTitle\">",
+            "    <h2 id=\"savedWeeksTitle\">Saved in this browser</h2>",
+            "    <p>Keep named planning drafts in this browser. Each explicit Save keeps the original inputs, source evidence and arranged dates. Venue call notes are not included. It is not refreshed automatically. Clearing this site's browser data removes these drafts.</p>",
+            "    <button id=\"refreshSavedWeeks\" type=\"button\">Refresh saved weeks</button>",
+            "    <p id=\"savedWeeksStatus\" class=\"why\" role=\"status\" aria-live=\"polite\"></p>",
+            "    <p id=\"savedWeeksEmpty\" hidden>No saved weeks yet. Generate a plan, arrange it, then choose <strong>Save in this browser</strong>.</p>",
+            "    <ul id=\"savedWeeksList\"></ul>",
+            "    <section id=\"savedWeekPreview\" class=\"saved-week-preview\" aria-labelledby=\"savedPreviewTitle\" hidden>",
+            "      <h3 id=\"savedPreviewTitle\"></h3>",
+            "      <p id=\"savedPreviewSummary\"></p>",
+            "      <p id=\"savedPreviewSource\" class=\"mode\"></p>",
+            "      <ol id=\"savedPreviewDays\"></ol>",
+            "      <p id=\"savedPreviewOmitted\"></p>",
+            "      <div class=\"saved-week-actions\">",
+            "        <button id=\"openSavedWeek\" type=\"button\" class=\"primary\" disabled>Open browser copy</button>",
+            "        <label>Name for this saved week <input id=\"renameSavedWeekName\" maxlength=\"120\" autocomplete=\"off\"></label>",
+            "        <button id=\"renameSavedWeek\" type=\"button\" disabled>Rename saved week</button>",
+            "        <button id=\"removeSavedWeek\" type=\"button\" disabled>Remove saved week</button>",
+            "      </div>",
+            "    </section>",
+            "  </section>",
+            ""
+          ],
+          "owner": "collection"
+        },
+        {
+          "at": 68,
+          "remove": [],
+          "add": [
+            "      <div class=\"saved-week-actions organizer-help\">",
+            "        <label>Name for this browser copy <input id=\"savedWeekName\" maxlength=\"120\" autocomplete=\"off\"></label>",
+            "        <button id=\"saveCurrentWeek\" type=\"button\" disabled>Save in this browser</button>",
+            "      </div>"
+          ],
+          "owner": "collection"
+        }
+      ],
+      "caregiverToCombined": [
+        {
+          "at": 9,
+          "remove": [],
+          "add": [
+            "<link rel=\"stylesheet\" href=\"/static/saved_weeks.css\">"
+          ]
+        },
+        {
+          "at": 80,
+          "remove": [],
+          "add": [
+            "  <section id=\"savedWeeks\" class=\"card saved-weeks\" aria-labelledby=\"savedWeeksTitle\">",
+            "    <h2 id=\"savedWeeksTitle\">Saved in this browser</h2>",
+            "    <p>Keep named planning drafts in this browser. Each explicit Save keeps the original inputs, source evidence and arranged dates. Venue call notes are not included. It is not refreshed automatically. Clearing this site's browser data removes these drafts.</p>",
+            "    <button id=\"refreshSavedWeeks\" type=\"button\">Refresh saved weeks</button>",
+            "    <p id=\"savedWeeksStatus\" class=\"why\" role=\"status\" aria-live=\"polite\"></p>",
+            "    <p id=\"savedWeeksEmpty\" hidden>No saved weeks yet. Generate a plan, arrange it, then choose <strong>Save in this browser</strong>.</p>",
+            "    <ul id=\"savedWeeksList\"></ul>",
+            "    <section id=\"savedWeekPreview\" class=\"saved-week-preview\" aria-labelledby=\"savedPreviewTitle\" hidden>",
+            "      <h3 id=\"savedPreviewTitle\"></h3>",
+            "      <p id=\"savedPreviewSummary\"></p>",
+            "      <p id=\"savedPreviewSource\" class=\"mode\"></p>",
+            "      <ol id=\"savedPreviewDays\"></ol>",
+            "      <p id=\"savedPreviewOmitted\"></p>",
+            "      <div class=\"saved-week-actions\">",
+            "        <button id=\"openSavedWeek\" type=\"button\" class=\"primary\" disabled>Open browser copy</button>",
+            "        <label>Name for this saved week <input id=\"renameSavedWeekName\" maxlength=\"120\" autocomplete=\"off\"></label>",
+            "        <button id=\"renameSavedWeek\" type=\"button\" disabled>Rename saved week</button>",
+            "        <button id=\"removeSavedWeek\" type=\"button\" disabled>Remove saved week</button>",
+            "      </div>",
+            "    </section>",
+            "  </section>",
+            ""
+          ]
+        },
+        {
+          "at": 96,
+          "remove": [],
+          "add": [
+            "      <div class=\"saved-week-actions organizer-help\">",
+            "        <label>Name for this browser copy <input id=\"savedWeekName\" maxlength=\"120\" autocomplete=\"off\"></label>",
+            "        <button id=\"saveCurrentWeek\" type=\"button\" disabled>Save in this browser</button>",
+            "      </div>"
+          ]
+        }
+      ],
+      "collectionToCombined": [
+        {
+          "at": 53,
+          "remove": [],
+          "add": [
+            "  <section id=\"caregiverHandoff\" class=\"card contact-session-help\" aria-labelledby=\"caregiverHandoffTitle\">",
+            "    <h2 id=\"caregiverHandoffTitle\">Keep your caregiver handoff</h2>",
+            "    <p>Save the arranged week and all its venue notes in one editable file. Open a handoff to review it before replacing the current week and notes.</p>",
+            "    <div class=\"contact-actions\">",
+            "      <button id=\"saveCaregiverHandoff\" data-handoff-save type=\"button\" disabled>Save caregiver handoff (.json)</button>",
+            "      <button id=\"openCaregiverHandoff\" data-handoff-open type=\"button\">Open caregiver handoff</button>",
+            "      <button data-handoff-cancel type=\"button\" hidden>Cancel opening</button>",
+            "      <input id=\"caregiverHandoffFile\" data-handoff-input type=\"file\" accept=\".json,application/json\" aria-label=\"Choose a TasteTable caregiver handoff\" hidden>",
+            "    </div>",
+            "    <p data-handoff-status class=\"why contact-file-status\" role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"></p>",
+            "    <section data-handoff-preview class=\"contact-file-preview\" aria-label=\"Review caregiver handoff\" hidden>",
+            "      <h3>Review before replacing</h3>",
+            "      <p data-handoff-description tabindex=\"-1\"></p>",
+            "      <pre data-handoff-source></pre>",
+            "      <details>",
+            "        <summary>Review every scheduled and omitted pick</summary>",
+            "        <ol data-handoff-visits></ol>",
+            "      </details>",
+            "      <details>",
+            "        <summary>Review all retained venue notes, including other dates</summary>",
+            "        <ol data-handoff-records></ol>",
+            "      </details>",
+            "      <p>Replacement includes the original inputs, this arrangement and the complete note set. An empty set clears current venue notes.</p>",
+            "      <button data-handoff-apply type=\"button\" disabled>Replace week and notes</button>",
+            "    </section>",
+            "    <p class=\"why\">Keep the file to continue later. Files are read locally; nothing is saved automatically or sent to a provider. Original checks are retained without being run again.</p>",
+            "  </section>",
+            ""
+          ]
+        }
+      ],
+      "ownerReconstructionsExact": true
+    },
+    "README.md": {
+      "baseToCaregiver": [
+        {
+          "at": 242,
+          "remove": [],
+          "add": [
+            "### Save one editable caregiver handoff",
+            "",
+            "**Save caregiver handoff (.json)** keeps the arranged week and all its venue notes together,",
+            "including notes for omitted visits, other dates and earlier reply questions. **Open caregiver",
+            "handoff** reviews the complete file before **Replace week and notes** replaces the current",
+            "inputs, arrangement and complete note set. Cancel or a refused file preserves current work.",
+            "An empty note set clears notes only after explicit replacement. No file is uploaded or",
+            "saved automatically. [Caregiver handoff usage and file contract](docs/CAREGIVER_HANDOFF.md).",
+            ""
+          ]
+        }
+      ],
+      "baseToCollection": [
+        {
+          "at": 13,
+          "remove": [
+            "> fictional. The app stores nothing, and it never sends names or health details to Qloo."
+          ],
+          "add": [
+            "> fictional. The app saves browser copies only when explicitly requested, and it never sends names or health details to Qloo."
+          ]
+        },
+        {
+          "at": 314,
+          "remove": [],
+          "add": [
+            "## Named saved weeks in this browser",
+            "",
+            "Choose **Save in this browser** to keep a named copy of the current arranged week. Reload, preview a saved copy, then choose **Open browser copy** to restore its original inputs, source evidence, date, assignments, accepted timestamp and calendar identity. Opening retires the current planner result immediately, as opening a saved JSON file does. Original checks are not rerun. Rename changes only the collection label; Remove deletes only the selected stored copy. Later edits require another explicit Save.",
+            "",
+            "These copies stay in this browser's site data, with up to 50 named records and a 512 KiB limit per saved JSON payload. Clearing site data removes them. Use the existing **Save week (.json)** action to keep a portable file elsewhere. There is no automatic saving or upload. Venue call notes are excluded from browser copies, saved-week JSON files and calendar files. Use **Save venue notes (.json)** for the matching editable companion, or Print week/Download call sheet for a readable copy.",
+            "",
+            "The browser collection wraps the unchanged `makeWeekFile`/`readWeekFile` format with a local identity and label. Its native IndexedDB mutations resolve only when their transaction commits; malformed or unsupported records remain stored and can be explicitly removed. Failed collection opens follow the existing planner's retirement and recovery behavior. The saved-week codec, model, calendar writer, request controller, worksheet modules, comparison page and offline studio remain their existing implementations.",
+            "",
+            "### Check the browser collection locally",
+            "",
+            "The focused state checks use the existing dependency-free Node runner:",
+            "",
+            "~~~bash",
+            "node --test tests/test_saved_weeks.mjs",
+            "~~~",
+            "",
+            "The browser receiver uses Node.js 22+, an existing Playwright installation whose",
+            "module directory is identified by CODEX_PRIMARY_RUNTIME_NODE_MODULES, Python",
+            "with the project's dependencies, and an installed Chromium. Set",
+            "TASTETABLE_REVIEW_CHROMIUM to that browser's absolute path.",
+            "CODEX_PRIMARY_RUNTIME_PYTHON can select the Python executable.",
+            "TASTETABLE_REVIEW_PARENT can identify the checked-out Git commit; when omitted",
+            "the receipt records no current parent. The original qualification baseline is",
+            "recorded separately.",
+            "",
+            "~~~bash",
+            "node tools/check_named_collection_browser.cjs /absolute/path/to/checkout /new/receiving-output",
+            "~~~",
+            "",
+            "The output directory must not exist. The receiver retains its real downloads,",
+            "screenshots, source identities and result report. It uses the fixture-backed",
+            "native producer and local browser; it does not establish live-provider,",
+            "FastAPI deployment, hosted CI or physical-device acceptance.",
+            ""
+          ]
+        }
+      ],
+      "merged": [
+        {
+          "at": 13,
+          "remove": [
+            "> fictional. The app stores nothing, and it never sends names or health details to Qloo."
+          ],
+          "add": [
+            "> fictional. The app saves browser copies only when explicitly requested, and it never sends names or health details to Qloo."
+          ],
+          "owner": "collection"
+        },
+        {
+          "at": 242,
+          "remove": [],
+          "add": [
+            "### Save one editable caregiver handoff",
+            "",
+            "**Save caregiver handoff (.json)** keeps the arranged week and all its venue notes together,",
+            "including notes for omitted visits, other dates and earlier reply questions. **Open caregiver",
+            "handoff** reviews the complete file before **Replace week and notes** replaces the current",
+            "inputs, arrangement and complete note set. Cancel or a refused file preserves current work.",
+            "An empty note set clears notes only after explicit replacement. No file is uploaded or",
+            "saved automatically. [Caregiver handoff usage and file contract](docs/CAREGIVER_HANDOFF.md).",
+            ""
+          ],
+          "owner": "caregiver"
+        },
+        {
+          "at": 314,
+          "remove": [],
+          "add": [
+            "## Named saved weeks in this browser",
+            "",
+            "Choose **Save in this browser** to keep a named copy of the current arranged week. Reload, preview a saved copy, then choose **Open browser copy** to restore its original inputs, source evidence, date, assignments, accepted timestamp and calendar identity. Opening retires the current planner result immediately, as opening a saved JSON file does. Original checks are not rerun. Rename changes only the collection label; Remove deletes only the selected stored copy. Later edits require another explicit Save.",
+            "",
+            "These copies stay in this browser's site data, with up to 50 named records and a 512 KiB limit per saved JSON payload. Clearing site data removes them. Use the existing **Save week (.json)** action to keep a portable file elsewhere. There is no automatic saving or upload. Venue call notes are excluded from browser copies, saved-week JSON files and calendar files. Use **Save venue notes (.json)** for the matching editable companion, or Print week/Download call sheet for a readable copy.",
+            "",
+            "The browser collection wraps the unchanged `makeWeekFile`/`readWeekFile` format with a local identity and label. Its native IndexedDB mutations resolve only when their transaction commits; malformed or unsupported records remain stored and can be explicitly removed. Failed collection opens follow the existing planner's retirement and recovery behavior. The saved-week codec, model, calendar writer, request controller, worksheet modules, comparison page and offline studio remain their existing implementations.",
+            "",
+            "### Check the browser collection locally",
+            "",
+            "The focused state checks use the existing dependency-free Node runner:",
+            "",
+            "~~~bash",
+            "node --test tests/test_saved_weeks.mjs",
+            "~~~",
+            "",
+            "The browser receiver uses Node.js 22+, an existing Playwright installation whose",
+            "module directory is identified by CODEX_PRIMARY_RUNTIME_NODE_MODULES, Python",
+            "with the project's dependencies, and an installed Chromium. Set",
+            "TASTETABLE_REVIEW_CHROMIUM to that browser's absolute path.",
+            "CODEX_PRIMARY_RUNTIME_PYTHON can select the Python executable.",
+            "TASTETABLE_REVIEW_PARENT can identify the checked-out Git commit; when omitted",
+            "the receipt records no current parent. The original qualification baseline is",
+            "recorded separately.",
+            "",
+            "~~~bash",
+            "node tools/check_named_collection_browser.cjs /absolute/path/to/checkout /new/receiving-output",
+            "~~~",
+            "",
+            "The output directory must not exist. The receiver retains its real downloads,",
+            "screenshots, source identities and result report. It uses the fixture-backed",
+            "native producer and local browser; it does not establish live-provider,",
+            "FastAPI deployment, hosted CI or physical-device acceptance.",
+            ""
+          ],
+          "owner": "collection"
+        }
+      ],
+      "caregiverToCombined": [
+        {
+          "at": 13,
+          "remove": [
+            "> fictional. The app stores nothing, and it never sends names or health details to Qloo."
+          ],
+          "add": [
+            "> fictional. The app saves browser copies only when explicitly requested, and it never sends names or health details to Qloo."
+          ]
+        },
+        {
+          "at": 323,
+          "remove": [],
+          "add": [
+            "## Named saved weeks in this browser",
+            "",
+            "Choose **Save in this browser** to keep a named copy of the current arranged week. Reload, preview a saved copy, then choose **Open browser copy** to restore its original inputs, source evidence, date, assignments, accepted timestamp and calendar identity. Opening retires the current planner result immediately, as opening a saved JSON file does. Original checks are not rerun. Rename changes only the collection label; Remove deletes only the selected stored copy. Later edits require another explicit Save.",
+            "",
+            "These copies stay in this browser's site data, with up to 50 named records and a 512 KiB limit per saved JSON payload. Clearing site data removes them. Use the existing **Save week (.json)** action to keep a portable file elsewhere. There is no automatic saving or upload. Venue call notes are excluded from browser copies, saved-week JSON files and calendar files. Use **Save venue notes (.json)** for the matching editable companion, or Print week/Download call sheet for a readable copy.",
+            "",
+            "The browser collection wraps the unchanged `makeWeekFile`/`readWeekFile` format with a local identity and label. Its native IndexedDB mutations resolve only when their transaction commits; malformed or unsupported records remain stored and can be explicitly removed. Failed collection opens follow the existing planner's retirement and recovery behavior. The saved-week codec, model, calendar writer, request controller, worksheet modules, comparison page and offline studio remain their existing implementations.",
+            "",
+            "### Check the browser collection locally",
+            "",
+            "The focused state checks use the existing dependency-free Node runner:",
+            "",
+            "~~~bash",
+            "node --test tests/test_saved_weeks.mjs",
+            "~~~",
+            "",
+            "The browser receiver uses Node.js 22+, an existing Playwright installation whose",
+            "module directory is identified by CODEX_PRIMARY_RUNTIME_NODE_MODULES, Python",
+            "with the project's dependencies, and an installed Chromium. Set",
+            "TASTETABLE_REVIEW_CHROMIUM to that browser's absolute path.",
+            "CODEX_PRIMARY_RUNTIME_PYTHON can select the Python executable.",
+            "TASTETABLE_REVIEW_PARENT can identify the checked-out Git commit; when omitted",
+            "the receipt records no current parent. The original qualification baseline is",
+            "recorded separately.",
+            "",
+            "~~~bash",
+            "node tools/check_named_collection_browser.cjs /absolute/path/to/checkout /new/receiving-output",
+            "~~~",
+            "",
+            "The output directory must not exist. The receiver retains its real downloads,",
+            "screenshots, source identities and result report. It uses the fixture-backed",
+            "native producer and local browser; it does not establish live-provider,",
+            "FastAPI deployment, hosted CI or physical-device acceptance.",
+            ""
+          ]
+        }
+      ],
+      "collectionToCombined": [
+        {
+          "at": 242,
+          "remove": [],
+          "add": [
+            "### Save one editable caregiver handoff",
+            "",
+            "**Save caregiver handoff (.json)** keeps the arranged week and all its venue notes together,",
+            "including notes for omitted visits, other dates and earlier reply questions. **Open caregiver",
+            "handoff** reviews the complete file before **Replace week and notes** replaces the current",
+            "inputs, arrangement and complete note set. Cancel or a refused file preserves current work.",
+            "An empty note set clears notes only after explicit replacement. No file is uploaded or",
+            "saved automatically. [Caregiver handoff usage and file contract](docs/CAREGIVER_HANDOFF.md).",
+            ""
+          ]
+        }
+      ],
+      "ownerReconstructionsExact": true
+    }
+  }
+}

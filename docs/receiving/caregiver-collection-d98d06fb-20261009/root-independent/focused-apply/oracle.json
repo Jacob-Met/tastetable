@@ -1,0 +1,224 @@
+{
+  "schema": "tastetable.d98-focused-apply-publication-oracle.v1",
+  "owner": "d98d06fbfc35/learner_adoption",
+  "exposure": "Frozen from the original root oracle, literal A/H fixtures, original receiver infrastructure and original app only. No corrected app body or corrected execution has been seen.",
+  "upstream": {
+    "repository": "Jacob-Met/tastetable",
+    "rootOracle": "6a49031f5803b3cc97d65a897b854cfcf2933523",
+    "finding": "e331afbdf678650813f6e999e96c4c1bd0989d28",
+    "receiver": "74ec645378f92867ce4661da12111de98736c278",
+    "fixture": "5e9918c1c1a0e57c8f3682804d2d3b21190e8a49",
+    "capsule": "121e7a87aa3287bb444bd97679902ea6f680107d",
+    "originalApp": "ed40637354a456c03dfa32a2e4ec954f23110ffa"
+  },
+  "case": "handoff-H-complete-before-collection-publication",
+  "actions": [
+    "Boot the actual supplied application with the original ten other source bodies and unchanged real request/controller/codec/model/calendar modules.",
+    "Seed literal A through real caregiver UI, then prepare literal H through real file input and preview; no storage Open/race campaign.",
+    "Mark the event trace, click the real H Apply once, inspect its complete synchronous acceptance window.",
+    "Inspect final controls and explicitly generate one caregiver handoff, one portable saved week, and one calendar Blob through their actual UI gestures."
+  ],
+  "expected": {
+    "origin": {
+      "response": {
+        "mock": true,
+        "rootAcceptedOrigin": "root-origin-H",
+        "rootPreparedWeek": "root-week-H",
+        "plan": {
+          "meals": [
+            {
+              "day": "Monday",
+              "kind": "restaurant",
+              "name": "Shared venue display name 1",
+              "entity_id": "H:pick:1",
+              "why": "Literal H credit / occurrence 1",
+              "affinity": 0.25,
+              "fallback": false
+            },
+            {
+              "day": "Tuesday",
+              "kind": "restaurant",
+              "name": "Shared venue display name 2",
+              "entity_id": "H:pick:2",
+              "why": "Literal H credit / occurrence 2",
+              "affinity": 0.5,
+              "fallback": false
+            }
+          ],
+          "outing": null,
+          "notes": [
+            "Literal H credit"
+          ],
+          "rejected": []
+        },
+        "llm_only": {
+          "meals": [
+            {
+              "day": "Monday",
+              "name": "Unverified H",
+              "why": "fictional baseline H"
+            }
+          ],
+          "outing": {
+            "day": "Friday",
+            "name": "Baseline outing H",
+            "why": "unverified"
+          }
+        },
+        "comparison": {
+          "constraints": [
+            "soft_foods",
+            "low_sodium",
+            "wheelchair"
+          ],
+          "grounded": {
+            "picks": 2,
+            "with_qloo_entity_id": 2,
+            "with_affinity_evidence": 2,
+            "constraint_checked": 2,
+            "unsafe_candidates_rejected": 0
+          },
+          "llm_only": {
+            "picks": 2,
+            "with_qloo_entity_id": 0,
+            "with_affinity_evidence": 0,
+            "constraint_checked": 0,
+            "unsafe_candidates_rejected": 0
+          }
+        },
+        "trace": [
+          {
+            "tool": "root-fixture-H",
+            "args": {
+              "sourceToken": "root-origin-H"
+            },
+            "result_summary": "Literal trace H"
+          }
+        ]
+      },
+      "inputs": {
+        "cuisines": [
+          "root-inputs-H:cuisine"
+        ],
+        "music": [
+          "root-inputs-H:music"
+        ],
+        "films": [
+          "root-inputs-H:film"
+        ],
+        "city": "root-inputs-H:city",
+        "constraints": [
+          "soft_foods",
+          "low_sodium",
+          "wheelchair"
+        ]
+      },
+      "receivedAt": "2030-01-04T00:00:00.000Z",
+      "calendarId": "dddddddddddddddddddddddddddddddd"
+    },
+    "form": {
+      "cuisines": [
+        "root-inputs-H:cuisine"
+      ],
+      "music": [
+        "root-inputs-H:music"
+      ],
+      "films": [
+        "root-inputs-H:film"
+      ],
+      "city": "root-inputs-H:city",
+      "constraints": [
+        "soft_foods",
+        "low_sodium",
+        "wheelchair"
+      ]
+    },
+    "assignments": {
+      "pick-0": "Monday",
+      "pick-1": null
+    },
+    "weekStart": "2030-08-12",
+    "entities": [
+      "H:pick:1",
+      "H:pick:2"
+    ],
+    "records": [
+      {
+        "key": "pick-0",
+        "date": "2030-08-12",
+        "note": {
+          "status": "follow_up",
+          "question": "H-current questions",
+          "reply": "root-notes-H",
+          "replyQuestions": "H-history",
+          "nextStep": "root-notes-H:next"
+        }
+      },
+      {
+        "key": "pick-1",
+        "date": "2030-08-13",
+        "note": {
+          "status": "awaiting_reply",
+          "question": "H omitted question",
+          "reply": "H-omitted",
+          "replyQuestions": "H omitted question",
+          "nextStep": "H omitted next"
+        }
+      },
+      {
+        "key": "pick-0",
+        "date": "2030-08-19",
+        "note": {
+          "status": "not_contacted",
+          "question": "",
+          "reply": "",
+          "replyQuestions": null,
+          "nextStep": ""
+        }
+      }
+    ],
+    "calendar": {
+      "id": "dddddddddddddddddddddddddddddddd",
+      "receivedAt": "2030-01-04T00:00:00.000Z",
+      "weekStart": "2030-08-12",
+      "entities": [
+        "H:pick:1",
+        "H:pick:2"
+      ],
+      "preview": [
+        "Monday 2030-08-12 — Shared venue display name 1 (all-day suggestion)"
+      ]
+    },
+    "ordering": [
+      "The real request generation is invalidated exactly once after H accept entry and before the first plan commit.",
+      "The actual H accept hook returns synchronously exactly once; the plan commit occurs exactly once.",
+      "Every collection.refresh.enter, collection.capture and collection.refresh.exit in the H acceptance window occurs after both actual venue.acceptPrepared completion and actual calendar.createWeekExport completion.",
+      "No collection refresh or capture, including null capture, occurs while origin, visible week, form, model or calendar is partially updated.",
+      "Every refresh/capture coherence observation matches full H origin, H state/assignments/date, complete H model records, H form, H rendered entities/credit and fully accepted H calendar.",
+      "Every non-null collection capture matches exact H response and inputs, current H entities, assignments, week, calendar ID and original receive time.",
+      "No store mutation, provider request or download occurs inside H Apply."
+    ],
+    "final": [
+      "Only H is accepted; complete H history, omitted-visit note and explicit empty replacement fields remain.",
+      "Preview is consumed, Apply disabled, accepted results/worksheet visible and week/calendar/caregiver save controls enabled.",
+      "Caregiver export has exact H week source plus complete H venue-note origin/records. Portable week export has exact H source/date/arrangement; generated savedAt must be a valid timestamp and is not compared to fixture savedAt.",
+      "Calendar output uses exact H UID, original receive timestamp and scheduled H date.",
+      "All captures and output gestures after acceptance remain fully coherent H. No collection storage save is performed."
+    ]
+  },
+  "observerBoundary": "Reuse original DOM/storage/HTTP/download doubles and actual source module linking. Extend only transparent observer wrappers. Coherence reads real venue.snapshot and model.snapshotRecords plus actual DOM/form values; these methods are read-only by original source inspection. Calendar completion is observed immediately after the actual constructor returns, without replacing its return. No fabricated app state, callback result, collection capture or export.",
+  "sourcePolicy": "Only static/app.js may differ from the original eleven-source capsule. Its exact later supplied Git identity must be admitted before the one corrected run. The original ten source identities and fixture remain exact. Never execute the old app or original seventeen-group campaign.",
+  "failurePolicy": "Keep the first corrected run and any original exception/failure unchanged. No assertion rewrite or replay to manufacture a pass.",
+  "historicalFinding": "The original campaign observed transient source A plus H entities and A calendar before final correct H. No await or storage Save occurred during that interval; this oracle makes no persisted-corruption or browser claim.",
+  "boundaries": {
+    "groups": 1,
+    "oldCampaignReplay": false,
+    "modelCampaignReplay": false,
+    "actualBrowser": false,
+    "actualIndexedDB": false,
+    "physicalDownload": false,
+    "provider": false,
+    "nativeInstallation": false
+  }
+}
+

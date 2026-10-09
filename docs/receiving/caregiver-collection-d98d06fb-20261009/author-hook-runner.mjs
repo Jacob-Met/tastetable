@@ -1,0 +1,13 @@
+import vm from "node:vm";
+import * as test from "node:test";
+import * as assert from "node:assert/strict";
+import { createHash } from "node:crypto";
+const p = JSON.parse(process.argv[1]);
+const identity = (text) => ({bytes: Buffer.byteLength(text), sha256:createHash("sha256").update(text).digest("hex"),gitBlob:createHash("sha1").update("blob "+Buffer.byteLength(text)+"\0").update(text).digest("hex")});
+console.log("SOURCE_ADMISSION "+JSON.stringify({runtime:process.version,files:Object.fromEntries(Object.entries(p.files).map(([k,v])=>[k,identity(v)])),test:identity(p.test),scope:"in-memory app hooks; explicit DOM/mount/storage/calendar doubles; no filesystem/browser/native calls"}));
+const context=vm.createContext({console,structuredClone,AbortController,Uint8Array});
+const libs={"node:test":test,"node:assert/strict":{...assert,default:assert},"node:vm":{...vm,default:vm},"node:fs/promises":{readFile:async(url,encoding)=>{if(encoding!=="utf8"||!Object.hasOwn(p.files,String(url)))throw Error("undeclared source read "+url);return p.files[String(url)]}}};
+context.URL=URL;
+const mod=new vm.SourceTextModule(p.test,{context,identifier:"file:///composition/tests/caregiver_collection_composition.test.mjs",initializeImportMeta(meta){meta.url="file:///composition/tests/caregiver_collection_composition.test.mjs"}});
+await mod.link((name)=>{const x=libs[name];if(!x)throw Error("undeclared import "+name);return new vm.SyntheticModule(Object.keys(x),function(){for(const [k,v]of Object.entries(x))this.setExport(k,v)},{context})});
+await mod.evaluate();

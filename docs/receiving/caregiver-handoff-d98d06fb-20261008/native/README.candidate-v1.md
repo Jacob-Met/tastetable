@@ -11,7 +11,7 @@ Built for the [Qloo Agentic Hackathon](https://qloo.devpost.com/).
 
 > **Not medical or dietary advice.** Constraint checks are heuristics over venue tags and
 > menu keywords. Confirm needs with the venue and the care team. The sample personas are
-> fictional. The app saves browser copies only when explicitly requested, and it never sends names or health details to Qloo.
+> fictional. The app stores nothing, and it never sends names or health details to Qloo.
 
 ## Problem
 
@@ -77,10 +77,6 @@ app.py (FastAPI) ──► agent.py  tool loop (OpenAI chat.completions shape)
   deterministically from tool results, so the model cannot invent a venue.
 * The "LLM-only" column is a fixed, ungrounded template that shows what a model without tools
   typically returns. It is not a live model call.
-
-## Plan for several people locally
-
-Create an ordered, create-only ZIP of native fixture plans and editable saved weeks from explicit profile files with [the native batch command](docs/NATIVE_PLAN_BATCH.md). Every requested profile receives a saved or failed entry; a partial bundle has a nonzero process exit.
 
 ## Setup
 
@@ -316,41 +312,3 @@ the plain-text download so embedded line breaks cannot become report headings.
 ## Keep a visit record
 
 Open **Visit record (new tab)** in the planner to record what happened beside the original saved suggestions. Open a JSON saved week from the planner or offline studio, review it, and choose **Use this file**. Each original occurrence has its own explicit outcome, optional actual date and note, including repeated venues and omitted picks. Download the separate visit-record JSON to reopen it later, or print a readable copy. Original dates, explanations and source text remain preserved; checks are not rerun and notes do not change future recommendations. Nothing is uploaded or stored automatically. [Usage, file contract and native checks](docs/visit-record/README.md).
-
-### Visit records as CSV
-
-Export an explicitly selected saved visit record with `node tools/visit_record_to_csv.mjs --input visits.json --output visits.csv` (Node.js 22+). The create-only CSV retains every original occurrence, including omitted and unrecorded picks, with separate planned and actual dates, outcomes and literal notes. Keep the JSON for reopening the record. See [CSV columns, text import and file delivery](docs/VISIT_RECORD_CSV.md).
-
-## Named saved weeks in this browser
-
-Choose **Save in this browser** to keep a named copy of the current arranged week. Reload, preview a saved copy, then choose **Open browser copy** to restore its original inputs, source evidence, date, assignments, accepted timestamp and calendar identity. Opening retires the current planner result immediately, as opening a saved JSON file does. Original checks are not rerun. Rename changes only the collection label; Remove deletes only the selected stored copy. Later edits require another explicit Save.
-
-These copies stay in this browser's site data, with up to 50 named records and a 512 KiB limit per saved JSON payload. Clearing site data removes them. Use the existing **Save week (.json)** action to keep a portable file elsewhere. There is no automatic saving or upload. Venue call notes are excluded from browser copies, saved-week JSON files and calendar files. Use **Save venue notes (.json)** for the matching editable companion, or Print week/Download call sheet for a readable copy.
-
-The browser collection wraps the unchanged `makeWeekFile`/`readWeekFile` format with a local identity and label. Its native IndexedDB mutations resolve only when their transaction commits; malformed or unsupported records remain stored and can be explicitly removed. Failed collection opens follow the existing planner's retirement and recovery behavior. The saved-week codec, model, calendar writer, request controller, worksheet modules, comparison page and offline studio remain their existing implementations.
-
-### Check the browser collection locally
-
-The focused state checks use the existing dependency-free Node runner:
-
-~~~bash
-node --test tests/test_saved_weeks.mjs
-~~~
-
-The browser receiver uses Node.js 22+, an existing Playwright installation whose
-module directory is identified by CODEX_PRIMARY_RUNTIME_NODE_MODULES, Python
-with the project's dependencies, and an installed Chromium. Set
-TASTETABLE_REVIEW_CHROMIUM to that browser's absolute path.
-CODEX_PRIMARY_RUNTIME_PYTHON can select the Python executable.
-TASTETABLE_REVIEW_PARENT can identify the checked-out Git commit; when omitted
-the receipt records no current parent. The original qualification baseline is
-recorded separately.
-
-~~~bash
-node tools/check_named_collection_browser.cjs /absolute/path/to/checkout /new/receiving-output
-~~~
-
-The output directory must not exist. The receiver retains its real downloads,
-screenshots, source identities and result report. It uses the fixture-backed
-native producer and local browser; it does not establish live-provider,
-FastAPI deployment, hosted CI or physical-device acceptance.

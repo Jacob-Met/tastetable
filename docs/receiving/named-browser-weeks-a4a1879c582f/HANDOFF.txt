@@ -1,0 +1,73 @@
+TASTETABLE — NAMED BROWSER-LOCAL WEEKS
+Qualified local source and receiving handoff | 2026-10-08
+Status: native qualification complete; integration held by the current Actions instruction.
+
+WHAT THE USER GETS
+Explicit Save in this browser, Preview, Open browser copy, Rename and Remove. Each named
+record wraps unchanged canonical saved-week JSON and retains original inputs, response,
+assigned dates, source time and calendar identity. A real focus-refresh Rename race was fixed.
+Open starts the established request lifecycle before reading IndexedDB, so late acceptance or
+refusal cannot replace a newer accepted plan. Saved venue notes remain a separate matching
+companion; the author receiver exercised that existing workflow.
+
+EXACT SOURCE
+Native receiving base:328df51af830e91f304417a66d74f43d94ae0c02.
+Held composition base:145d27981b3c5fe6afa72e205b42582fd72c7734.
+Tree:71f2c5b144e2a54787cb92b37d6e639bbfef6ba6.
+The later native-batch and visit-record CSV work only overlaps README. Both sections are
+preserved. All tested application/helper/producer bytes remain identical at the new base.
+
+root/FINAL-SOURCE-MANIFEST.json identifies all10 files, Git blobs and SHA256 hashes.
+Complete source bytes are retained in the exact author capsule plus explicit adaptations.
+Extract root/extract-final-source.py, then run:
+python3 extract-final-source.py THIS_CAPSULE.zip NEW_SOURCE_DIRECTORY
+This creates10 reviewed files in a new directory. It does not edit a checkout, fetch, push,
+create a ref or run a test. Use the pinned repository for unchanged dependencies.
+README describes replay prerequisites; always use a new receiving-output directory.
+
+The maintained browser tool adds only an installed-Chromium path override and separates
+optional replay-parent metadata from the original baseline. It passed syntax parsing and
+was not rerun. The actually executed driver and raw report remain exact in author/.
+
+ACCEPTED EVIDENCE
+8 focused Node cases,9 author Chromium cases,1 independent native history with14 assertions,
+and all9 existing native receiver checks passed with observed child exit0.
+The peer delays a real IndexedDB read, accepts a newer portable week, then delivers the
+obsolete missing-record refusal. Newer inputs/source/worksheet/JSON/ICS survive.
+The existing receiver retains15 artifacts totaling474498 bytes, including real downloads,
+three PNGs and the actual generated PDF. Root verified every artifact hash and all25 source
+identities and confirmed its only source change is four collection asset whitelist entries.
+Root visually inspected the actual author desktop and390px JPEGs.
+
+ARCHIVE MAP
+author/native-recovery.zip — exact padded source, driver, report/log and downloads.
+peer/native-delayed-refusal.zip — exact independent source, driver, receipt and downloads.
+gate/PART1-PADDED.zip + gate/PART2-PADDED.zip — exact delivered gate parts, all15 outputs.
+root/FINAL-REVIEW.json — decisions, report identities, limits and remaining gates.
+root/GATE-DEPENDENCY-PROOF.json — independently fetched unchanged producer/helper inputs.
+root/ROOT-REVIEW.json — historical checkpoint, superseded by FINAL-REVIEW.
+root/STORAGE-REALLOCATION.json + STORAGE-FOLLOWUP.json — allocation and custody provenance.
+MEMBER-MANIFEST.json — every non-manifest outer member's size and SHA256.
+
+FAILURES AND LIMITS
+The earlier unretained author9/9 claim is excluded. The accepted recovery ended at
+2026-10-08T20:51:34.543Z. A later aggregate checkpoint refused276437 bytes against262144
+capacity before overwriting anything; that does not change the successful gate child exit.
+All gate outputs were then preserved in two exact parts. The former single private ZIP's
+container bytes are not claimed retained. Root's report-terminator concern was resolved:
+the original driver correctly writes LF; no normalization or receiver defect occurred.
+
+These are native Chromium, DOM and IndexedDB results with a fixture-backed producer.
+No live provider, hosted backend, deployment, physical phone or BFCache result is claimed.
+No combined Undo, availability or caregiver-handoff runtime acceptance is claimed.
+A separately retained Undo source-only proposal identifies both receiver allowlists and
+the narrow VM-fixture capability needed by its owner's composition. That owner retains
+adoption and combined receiving; original hooks, workflows and assertions remain intact.
+
+INTEGRATION
+Hold:https://github.com/Jacob-Met/hamon/issues/143#issuecomment-6067592767
+Scope:https://github.com/Jacob-Met/tastetable/issues/4#issuecomment-6067053840
+Handoff boundary:https://github.com/Jacob-Met/tastetable/issues/55#issuecomment-6068688064
+No contribution branch, PR, merge, dispatch or rerun has been made. Hosted gates remain
+required after hold release. Any later unattached review objects are separate source custody,
+not branch integration, deployment or substitute gate passes.

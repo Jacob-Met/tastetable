@@ -507,3 +507,4 @@ init().catch(() => {
   $("#sampleBtn").disabled = true;
   $("#mode").textContent += " Sample personas could not load. Enter your own tastes to request a plan.";
 });
+

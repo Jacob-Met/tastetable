@@ -1,0 +1,888 @@
+{
+  "schema": "tastetable.d98-independent-combined-source-aware-fixtures.v1",
+  "owner": "chatgpt-d98d06fbfc35/taste_receiving",
+  "frozenBeforeExecution": true,
+  "oracle": "6a49031f5803b3cc97d65a897b854cfcf2933523",
+  "contract": "f7c97f393511830421fffe7ba63a1e878f5296f1",
+  "sourceCommit": "ee504914e14b2e4b0fe899f9393a00810aaf5faf",
+  "provenance": "Read root oracle before all candidate source bodies. Actual app/controllers/codecs/model/calendar read afterwards; author eight-hook receiver and original forty-case harness not read or run. These explicit fixtures map the root tokens into native schema without running product code.",
+  "fixtures": {
+    "A": {
+      "key": "A",
+      "origin": {
+        "response": {
+          "mock": true,
+          "rootAcceptedOrigin": "root-origin-A",
+          "rootPreparedWeek": "root-week-A",
+          "plan": {
+            "meals": [
+              {
+                "day": "Monday",
+                "kind": "restaurant",
+                "name": "Shared venue display name 1",
+                "entity_id": "A:pick:1",
+                "why": "Literal A credit & <b>text</b> / occurrence 1",
+                "affinity": 0.25,
+                "fallback": false
+              },
+              {
+                "day": "Tuesday",
+                "kind": "restaurant",
+                "name": "Shared venue display name 2",
+                "entity_id": "A:pick:2",
+                "why": "Literal A credit & <b>text</b> / occurrence 2",
+                "affinity": 0.5,
+                "fallback": false
+              }
+            ],
+            "outing": null,
+            "notes": [
+              "Literal A credit & <b>text</b>"
+            ],
+            "rejected": []
+          },
+          "llm_only": {
+            "meals": [
+              {
+                "day": "Monday",
+                "name": "Unverified A",
+                "why": "fictional baseline A"
+              }
+            ],
+            "outing": {
+              "day": "Friday",
+              "name": "Baseline outing A",
+              "why": "unverified"
+            }
+          },
+          "comparison": {
+            "constraints": [
+              "soft_foods"
+            ],
+            "grounded": {
+              "picks": 2,
+              "with_qloo_entity_id": 2,
+              "with_affinity_evidence": 2,
+              "constraint_checked": 2,
+              "unsafe_candidates_rejected": 0
+            },
+            "llm_only": {
+              "picks": 2,
+              "with_qloo_entity_id": 0,
+              "with_affinity_evidence": 0,
+              "constraint_checked": 0,
+              "unsafe_candidates_rejected": 0
+            }
+          },
+          "trace": [
+            {
+              "tool": "root-fixture-A",
+              "args": {
+                "sourceToken": "root-origin-A"
+              },
+              "result_summary": "Literal trace A"
+            }
+          ]
+        },
+        "inputs": {
+          "cuisines": [
+            "root-inputs-A:cuisine"
+          ],
+          "music": [
+            "root-inputs-A:music"
+          ],
+          "films": [
+            "root-inputs-A:film"
+          ],
+          "city": "root-inputs-A:city",
+          "constraints": [
+            "soft_foods"
+          ]
+        },
+        "receivedAt": "2030-01-01T00:00:00.000Z",
+        "calendarId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "weekText": "{\n  \"format\": \"tastetable.saved-week.v1\",\n  \"receivedAt\": \"2030-01-01T00:00:00.000Z\",\n  \"savedAt\": \"2030-04-01T00:00:00.000Z\",\n  \"calendarId\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\n  \"inputs\": {\n    \"cuisines\": [\n      \"root-inputs-A:cuisine\"\n    ],\n    \"music\": [\n      \"root-inputs-A:music\"\n    ],\n    \"films\": [\n      \"root-inputs-A:film\"\n    ],\n    \"city\": \"root-inputs-A:city\",\n    \"constraints\": [\n      \"soft_foods\"\n    ]\n  },\n  \"response\": {\n    \"mock\": true,\n    \"rootAcceptedOrigin\": \"root-origin-A\",\n    \"rootPreparedWeek\": \"root-week-A\",\n    \"plan\": {\n      \"meals\": [\n        {\n          \"day\": \"Monday\",\n          \"kind\": \"restaurant\",\n          \"name\": \"Shared venue display name 1\",\n          \"entity_id\": \"A:pick:1\",\n          \"why\": \"Literal A credit & <b>text</b> / occurrence 1\",\n          \"affinity\": 0.25,\n          \"fallback\": false\n        },\n        {\n          \"day\": \"Tuesday\",\n          \"kind\": \"restaurant\",\n          \"name\": \"Shared venue display name 2\",\n          \"entity_id\": \"A:pick:2\",\n          \"why\": \"Literal A credit & <b>text</b> / occurrence 2\",\n          \"affinity\": 0.5,\n          \"fallback\": false\n        }\n      ],\n      \"outing\": null,\n      \"notes\": [\n        \"Literal A credit & <b>text</b>\"\n      ],\n      \"rejected\": []\n    },\n    \"llm_only\": {\n      \"meals\": [\n        {\n          \"day\": \"Monday\",\n          \"name\": \"Unverified A\",\n          \"why\": \"fictional baseline A\"\n        }\n      ],\n      \"outing\": {\n        \"day\": \"Friday\",\n        \"name\": \"Baseline outing A\",\n        \"why\": \"unverified\"\n      }\n    },\n    \"comparison\": {\n      \"constraints\": [\n        \"soft_foods\"\n      ],\n      \"grounded\": {\n        \"picks\": 2,\n        \"with_qloo_entity_id\": 2,\n        \"with_affinity_evidence\": 2,\n        \"constraint_checked\": 2,\n        \"unsafe_candidates_rejected\": 0\n      },\n      \"llm_only\": {\n        \"picks\": 2,\n        \"with_qloo_entity_id\": 0,\n        \"with_affinity_evidence\": 0,\n        \"constraint_checked\": 0,\n        \"unsafe_candidates_rejected\": 0\n      }\n    },\n    \"trace\": [\n      {\n        \"tool\": \"root-fixture-A\",\n        \"args\": {\n          \"sourceToken\": \"root-origin-A\"\n        },\n        \"result_summary\": \"Literal trace A\"\n      }\n    ]\n  },\n  \"week\": {\n    \"start\": \"2030-04-29\",\n    \"assignments\": {\n      \"pick-0\": \"Wednesday\",\n      \"pick-1\": \"Thursday\"\n    }\n  }\n}\n",
+      "handoffText": "{\n  \"format\": \"tastetable.caregiver-handoff.v1\",\n  \"savedAt\": \"2030-04-01T00:00:00.000Z\",\n  \"week\": {\n    \"format\": \"tastetable.saved-week.v1\",\n    \"receivedAt\": \"2030-01-01T00:00:00.000Z\",\n    \"savedAt\": \"2030-04-01T00:00:00.000Z\",\n    \"calendarId\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\n    \"inputs\": {\n      \"cuisines\": [\n        \"root-inputs-A:cuisine\"\n      ],\n      \"music\": [\n        \"root-inputs-A:music\"\n      ],\n      \"films\": [\n        \"root-inputs-A:film\"\n      ],\n      \"city\": \"root-inputs-A:city\",\n      \"constraints\": [\n        \"soft_foods\"\n      ]\n    },\n    \"response\": {\n      \"mock\": true,\n      \"rootAcceptedOrigin\": \"root-origin-A\",\n      \"rootPreparedWeek\": \"root-week-A\",\n      \"plan\": {\n        \"meals\": [\n          {\n            \"day\": \"Monday\",\n            \"kind\": \"restaurant\",\n            \"name\": \"Shared venue display name 1\",\n            \"entity_id\": \"A:pick:1\",\n            \"why\": \"Literal A credit & <b>text</b> / occurrence 1\",\n            \"affinity\": 0.25,\n            \"fallback\": false\n          },\n          {\n            \"day\": \"Tuesday\",\n            \"kind\": \"restaurant\",\n            \"name\": \"Shared venue display name 2\",\n            \"entity_id\": \"A:pick:2\",\n            \"why\": \"Literal A credit & <b>text</b> / occurrence 2\",\n            \"affinity\": 0.5,\n            \"fallback\": false\n          }\n        ],\n        \"outing\": null,\n        \"notes\": [\n          \"Literal A credit & <b>text</b>\"\n        ],\n        \"rejected\": []\n      },\n      \"llm_only\": {\n        \"meals\": [\n          {\n            \"day\": \"Monday\",\n            \"name\": \"Unverified A\",\n            \"why\": \"fictional baseline A\"\n          }\n        ],\n        \"outing\": {\n          \"day\": \"Friday\",\n          \"name\": \"Baseline outing A\",\n          \"why\": \"unverified\"\n        }\n      },\n      \"comparison\": {\n        \"constraints\": [\n          \"soft_foods\"\n        ],\n        \"grounded\": {\n          \"picks\": 2,\n          \"with_qloo_entity_id\": 2,\n          \"with_affinity_evidence\": 2,\n          \"constraint_checked\": 2,\n          \"unsafe_candidates_rejected\": 0\n        },\n        \"llm_only\": {\n          \"picks\": 2,\n          \"with_qloo_entity_id\": 0,\n          \"with_affinity_evidence\": 0,\n          \"constraint_checked\": 0,\n          \"unsafe_candidates_rejected\": 0\n        }\n      },\n      \"trace\": [\n        {\n          \"tool\": \"root-fixture-A\",\n          \"args\": {\n            \"sourceToken\": \"root-origin-A\"\n          },\n          \"result_summary\": \"Literal trace A\"\n        }\n      ]\n    },\n    \"week\": {\n      \"start\": \"2030-04-29\",\n      \"assignments\": {\n        \"pick-0\": \"Wednesday\",\n        \"pick-1\": \"Thursday\"\n      }\n    }\n  },\n  \"venueNotes\": {\n    \"format\": \"tastetable.venue-notes.v1\",\n    \"savedAt\": \"2030-04-01T00:00:00.000Z\",\n    \"origin\": {\n      \"receivedAt\": \"2030-01-01T00:00:00.000Z\",\n      \"calendarId\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\n      \"inputs\": {\n        \"cuisines\": [\n          \"root-inputs-A:cuisine\"\n        ],\n        \"music\": [\n          \"root-inputs-A:music\"\n        ],\n        \"films\": [\n          \"root-inputs-A:film\"\n        ],\n        \"city\": \"root-inputs-A:city\",\n        \"constraints\": [\n          \"soft_foods\"\n        ]\n      },\n      \"response\": {\n        \"mock\": true,\n        \"rootAcceptedOrigin\": \"root-origin-A\",\n        \"rootPreparedWeek\": \"root-week-A\",\n        \"plan\": {\n          \"meals\": [\n            {\n              \"day\": \"Monday\",\n              \"kind\": \"restaurant\",\n              \"name\": \"Shared venue display name 1\",\n              \"entity_id\": \"A:pick:1\",\n              \"why\": \"Literal A credit & <b>text</b> / occurrence 1\",\n              \"affinity\": 0.25,\n              \"fallback\": false\n            },\n            {\n              \"day\": \"Tuesday\",\n              \"kind\": \"restaurant\",\n              \"name\": \"Shared venue display name 2\",\n              \"entity_id\": \"A:pick:2\",\n              \"why\": \"Literal A credit & <b>text</b> / occurrence 2\",\n              \"affinity\": 0.5,\n              \"fallback\": false\n            }\n          ],\n          \"outing\": null,\n          \"notes\": [\n            \"Literal A credit & <b>text</b>\"\n          ],\n          \"rejected\": []\n        },\n        \"llm_only\": {\n          \"meals\": [\n            {\n              \"day\": \"Monday\",\n              \"name\": \"Unverified A\",\n              \"why\": \"fictional baseline A\"\n            }\n          ],\n          \"outing\": {\n            \"day\": \"Friday\",\n            \"name\": \"Baseline outing A\",\n            \"why\": \"unverified\"\n          }\n        },\n        \"comparison\": {\n          \"constraints\": [\n            \"soft_foods\"\n          ],\n          \"grounded\": {\n            \"picks\": 2,\n            \"with_qloo_entity_id\": 2,\n            \"with_affinity_evidence\": 2,\n            \"constraint_checked\": 2,\n            \"unsafe_candidates_rejected\": 0\n          },\n          \"llm_only\": {\n            \"picks\": 2,\n            \"with_qloo_entity_id\": 0,\n            \"with_affinity_evidence\": 0,\n            \"constraint_checked\": 0,\n            \"unsafe_candidates_rejected\": 0\n          }\n        },\n        \"trace\": [\n          {\n            \"tool\": \"root-fixture-A\",\n            \"args\": {\n              \"sourceToken\": \"root-origin-A\"\n            },\n            \"result_summary\": \"Literal trace A\"\n          }\n        ]\n      }\n    },\n    \"records\": [\n      {\n        \"key\": \"pick-0\",\n        \"date\": \"2030-05-01\",\n        \"note\": {\n          \"status\": \"follow_up\",\n          \"question\": \"A-current questions\",\n          \"reply\": \"root-notes-A\",\n          \"replyQuestions\": \"A-history\",\n          \"nextStep\": \"root-notes-A:next\"\n        }\n      }\n    ]\n  }\n}\n",
+      "records": [
+        {
+          "key": "pick-0",
+          "date": "2030-05-01",
+          "note": {
+            "status": "follow_up",
+            "question": "A-current questions",
+            "reply": "root-notes-A",
+            "replyQuestions": "A-history",
+            "nextStep": "root-notes-A:next"
+          }
+        }
+      ],
+      "expected": {
+        "weekStart": "2030-04-29",
+        "assignments": {
+          "pick-0": "Wednesday",
+          "pick-1": "Thursday"
+        },
+        "visitDates": [
+          "2030-05-01",
+          "2030-05-02"
+        ],
+        "credit": "Literal A credit & <b>text</b>",
+        "entityIds": [
+          "A:pick:1",
+          "A:pick:2"
+        ],
+        "calendarId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "receivedAt": "2030-01-01T00:00:00.000Z",
+        "inputs": {
+          "cuisines": [
+            "root-inputs-A:cuisine"
+          ],
+          "music": [
+            "root-inputs-A:music"
+          ],
+          "films": [
+            "root-inputs-A:film"
+          ],
+          "city": "root-inputs-A:city",
+          "constraints": [
+            "soft_foods"
+          ]
+        },
+        "sourceToken": "root-origin-A"
+      },
+      "draft": {
+        "format": "tastetable.browser-week",
+        "version": 1,
+        "id": "root-row-A",
+        "name": "root-row-A",
+        "createdAt": "2030-04-01T00:00:00.000Z",
+        "updatedAt": "2030-04-01T00:00:00.000Z",
+        "text": "{\n  \"format\": \"tastetable.saved-week.v1\",\n  \"receivedAt\": \"2030-01-01T00:00:00.000Z\",\n  \"savedAt\": \"2030-04-01T00:00:00.000Z\",\n  \"calendarId\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\n  \"inputs\": {\n    \"cuisines\": [\n      \"root-inputs-A:cuisine\"\n    ],\n    \"music\": [\n      \"root-inputs-A:music\"\n    ],\n    \"films\": [\n      \"root-inputs-A:film\"\n    ],\n    \"city\": \"root-inputs-A:city\",\n    \"constraints\": [\n      \"soft_foods\"\n    ]\n  },\n  \"response\": {\n    \"mock\": true,\n    \"rootAcceptedOrigin\": \"root-origin-A\",\n    \"rootPreparedWeek\": \"root-week-A\",\n    \"plan\": {\n      \"meals\": [\n        {\n          \"day\": \"Monday\",\n          \"kind\": \"restaurant\",\n          \"name\": \"Shared venue display name 1\",\n          \"entity_id\": \"A:pick:1\",\n          \"why\": \"Literal A credit & <b>text</b> / occurrence 1\",\n          \"affinity\": 0.25,\n          \"fallback\": false\n        },\n        {\n          \"day\": \"Tuesday\",\n          \"kind\": \"restaurant\",\n          \"name\": \"Shared venue display name 2\",\n          \"entity_id\": \"A:pick:2\",\n          \"why\": \"Literal A credit & <b>text</b> / occurrence 2\",\n          \"affinity\": 0.5,\n          \"fallback\": false\n        }\n      ],\n      \"outing\": null,\n      \"notes\": [\n        \"Literal A credit & <b>text</b>\"\n      ],\n      \"rejected\": []\n    },\n    \"llm_only\": {\n      \"meals\": [\n        {\n          \"day\": \"Monday\",\n          \"name\": \"Unverified A\",\n          \"why\": \"fictional baseline A\"\n        }\n      ],\n      \"outing\": {\n        \"day\": \"Friday\",\n        \"name\": \"Baseline outing A\",\n        \"why\": \"unverified\"\n      }\n    },\n    \"comparison\": {\n      \"constraints\": [\n        \"soft_foods\"\n      ],\n      \"grounded\": {\n        \"picks\": 2,\n        \"with_qloo_entity_id\": 2,\n        \"with_affinity_evidence\": 2,\n        \"constraint_checked\": 2,\n        \"unsafe_candidates_rejected\": 0\n      },\n      \"llm_only\": {\n        \"picks\": 2,\n        \"with_qloo_entity_id\": 0,\n        \"with_affinity_evidence\": 0,\n        \"constraint_checked\": 0,\n        \"unsafe_candidates_rejected\": 0\n      }\n    },\n    \"trace\": [\n      {\n        \"tool\": \"root-fixture-A\",\n        \"args\": {\n          \"sourceToken\": \"root-origin-A\"\n        },\n        \"result_summary\": \"Literal trace A\"\n      }\n    ]\n  },\n  \"week\": {\n    \"start\": \"2030-04-29\",\n    \"assignments\": {\n      \"pick-0\": \"Wednesday\",\n      \"pick-1\": \"Thursday\"\n    }\n  }\n}\n"
+      }
+    },
+    "B": {
+      "key": "B",
+      "origin": {
+        "response": {
+          "mock": true,
+          "rootAcceptedOrigin": "root-origin-B",
+          "rootPreparedWeek": "root-week-B",
+          "plan": {
+            "meals": [
+              {
+                "day": "Monday",
+                "kind": "restaurant",
+                "name": "Shared venue display name 1",
+                "entity_id": "B:pick:1",
+                "why": "Literal B credit / occurrence 1",
+                "affinity": 0.25,
+                "fallback": false
+              },
+              {
+                "day": "Tuesday",
+                "kind": "restaurant",
+                "name": "Shared venue display name 2",
+                "entity_id": "B:pick:2",
+                "why": "Literal B credit / occurrence 2",
+                "affinity": 0.5,
+                "fallback": false
+              }
+            ],
+            "outing": null,
+            "notes": [
+              "Literal B credit"
+            ],
+            "rejected": []
+          },
+          "llm_only": {
+            "meals": [
+              {
+                "day": "Monday",
+                "name": "Unverified B",
+                "why": "fictional baseline B"
+              }
+            ],
+            "outing": {
+              "day": "Friday",
+              "name": "Baseline outing B",
+              "why": "unverified"
+            }
+          },
+          "comparison": {
+            "constraints": [
+              "low_sodium"
+            ],
+            "grounded": {
+              "picks": 2,
+              "with_qloo_entity_id": 2,
+              "with_affinity_evidence": 2,
+              "constraint_checked": 2,
+              "unsafe_candidates_rejected": 0
+            },
+            "llm_only": {
+              "picks": 2,
+              "with_qloo_entity_id": 0,
+              "with_affinity_evidence": 0,
+              "constraint_checked": 0,
+              "unsafe_candidates_rejected": 0
+            }
+          },
+          "trace": [
+            {
+              "tool": "root-fixture-B",
+              "args": {
+                "sourceToken": "root-origin-B"
+              },
+              "result_summary": "Literal trace B"
+            }
+          ]
+        },
+        "inputs": {
+          "cuisines": [
+            "root-inputs-B:cuisine"
+          ],
+          "music": [
+            "root-inputs-B:music"
+          ],
+          "films": [
+            "root-inputs-B:film"
+          ],
+          "city": "root-inputs-B:city",
+          "constraints": [
+            "low_sodium"
+          ]
+        },
+        "receivedAt": "2030-01-02T00:00:00.000Z",
+        "calendarId": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "weekText": "{\n  \"format\": \"tastetable.saved-week.v1\",\n  \"receivedAt\": \"2030-01-02T00:00:00.000Z\",\n  \"savedAt\": \"2030-04-01T00:00:00.000Z\",\n  \"calendarId\": \"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\",\n  \"inputs\": {\n    \"cuisines\": [\n      \"root-inputs-B:cuisine\"\n    ],\n    \"music\": [\n      \"root-inputs-B:music\"\n    ],\n    \"films\": [\n      \"root-inputs-B:film\"\n    ],\n    \"city\": \"root-inputs-B:city\",\n    \"constraints\": [\n      \"low_sodium\"\n    ]\n  },\n  \"response\": {\n    \"mock\": true,\n    \"rootAcceptedOrigin\": \"root-origin-B\",\n    \"rootPreparedWeek\": \"root-week-B\",\n    \"plan\": {\n      \"meals\": [\n        {\n          \"day\": \"Monday\",\n          \"kind\": \"restaurant\",\n          \"name\": \"Shared venue display name 1\",\n          \"entity_id\": \"B:pick:1\",\n          \"why\": \"Literal B credit / occurrence 1\",\n          \"affinity\": 0.25,\n          \"fallback\": false\n        },\n        {\n          \"day\": \"Tuesday\",\n          \"kind\": \"restaurant\",\n          \"name\": \"Shared venue display name 2\",\n          \"entity_id\": \"B:pick:2\",\n          \"why\": \"Literal B credit / occurrence 2\",\n          \"affinity\": 0.5,\n          \"fallback\": false\n        }\n      ],\n      \"outing\": null,\n      \"notes\": [\n        \"Literal B credit\"\n      ],\n      \"rejected\": []\n    },\n    \"llm_only\": {\n      \"meals\": [\n        {\n          \"day\": \"Monday\",\n          \"name\": \"Unverified B\",\n          \"why\": \"fictional baseline B\"\n        }\n      ],\n      \"outing\": {\n        \"day\": \"Friday\",\n        \"name\": \"Baseline outing B\",\n        \"why\": \"unverified\"\n      }\n    },\n    \"comparison\": {\n      \"constraints\": [\n        \"low_sodium\"\n      ],\n      \"grounded\": {\n        \"picks\": 2,\n        \"with_qloo_entity_id\": 2,\n        \"with_affinity_evidence\": 2,\n        \"constraint_checked\": 2,\n        \"unsafe_candidates_rejected\": 0\n      },\n      \"llm_only\": {\n        \"picks\": 2,\n        \"with_qloo_entity_id\": 0,\n        \"with_affinity_evidence\": 0,\n        \"constraint_checked\": 0,\n        \"unsafe_candidates_rejected\": 0\n      }\n    },\n    \"trace\": [\n      {\n        \"tool\": \"root-fixture-B\",\n        \"args\": {\n          \"sourceToken\": \"root-origin-B\"\n        },\n        \"result_summary\": \"Literal trace B\"\n      }\n    ]\n  },\n  \"week\": {\n    \"start\": \"2030-06-10\",\n    \"assignments\": {\n      \"pick-0\": \"Monday\",\n      \"pick-1\": \"Tuesday\"\n    }\n  }\n}\n",
+      "handoffText": "{\n  \"format\": \"tastetable.caregiver-handoff.v1\",\n  \"savedAt\": \"2030-04-01T00:00:00.000Z\",\n  \"week\": {\n    \"format\": \"tastetable.saved-week.v1\",\n    \"receivedAt\": \"2030-01-02T00:00:00.000Z\",\n    \"savedAt\": \"2030-04-01T00:00:00.000Z\",\n    \"calendarId\": \"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\",\n    \"inputs\": {\n      \"cuisines\": [\n        \"root-inputs-B:cuisine\"\n      ],\n      \"music\": [\n        \"root-inputs-B:music\"\n      ],\n      \"films\": [\n        \"root-inputs-B:film\"\n      ],\n      \"city\": \"root-inputs-B:city\",\n      \"constraints\": [\n        \"low_sodium\"\n      ]\n    },\n    \"response\": {\n      \"mock\": true,\n      \"rootAcceptedOrigin\": \"root-origin-B\",\n      \"rootPreparedWeek\": \"root-week-B\",\n      \"plan\": {\n        \"meals\": [\n          {\n            \"day\": \"Monday\",\n            \"kind\": \"restaurant\",\n            \"name\": \"Shared venue display name 1\",\n            \"entity_id\": \"B:pick:1\",\n            \"why\": \"Literal B credit / occurrence 1\",\n            \"affinity\": 0.25,\n            \"fallback\": false\n          },\n          {\n            \"day\": \"Tuesday\",\n            \"kind\": \"restaurant\",\n            \"name\": \"Shared venue display name 2\",\n            \"entity_id\": \"B:pick:2\",\n            \"why\": \"Literal B credit / occurrence 2\",\n            \"affinity\": 0.5,\n            \"fallback\": false\n          }\n        ],\n        \"outing\": null,\n        \"notes\": [\n          \"Literal B credit\"\n        ],\n        \"rejected\": []\n      },\n      \"llm_only\": {\n        \"meals\": [\n          {\n            \"day\": \"Monday\",\n            \"name\": \"Unverified B\",\n            \"why\": \"fictional baseline B\"\n          }\n        ],\n        \"outing\": {\n          \"day\": \"Friday\",\n          \"name\": \"Baseline outing B\",\n          \"why\": \"unverified\"\n        }\n      },\n      \"comparison\": {\n        \"constraints\": [\n          \"low_sodium\"\n        ],\n        \"grounded\": {\n          \"picks\": 2,\n          \"with_qloo_entity_id\": 2,\n          \"with_affinity_evidence\": 2,\n          \"constraint_checked\": 2,\n          \"unsafe_candidates_rejected\": 0\n        },\n        \"llm_only\": {\n          \"picks\": 2,\n          \"with_qloo_entity_id\": 0,\n          \"with_affinity_evidence\": 0,\n          \"constraint_checked\": 0,\n          \"unsafe_candidates_rejected\": 0\n        }\n      },\n      \"trace\": [\n        {\n          \"tool\": \"root-fixture-B\",\n          \"args\": {\n            \"sourceToken\": \"root-origin-B\"\n          },\n          \"result_summary\": \"Literal trace B\"\n        }\n      ]\n    },\n    \"week\": {\n      \"start\": \"2030-06-10\",\n      \"assignments\": {\n        \"pick-0\": \"Monday\",\n        \"pick-1\": \"Tuesday\"\n      }\n    }\n  },\n  \"venueNotes\": {\n    \"format\": \"tastetable.venue-notes.v1\",\n    \"savedAt\": \"2030-04-01T00:00:00.000Z\",\n    \"origin\": {\n      \"receivedAt\": \"2030-01-02T00:00:00.000Z\",\n      \"calendarId\": \"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\",\n      \"inputs\": {\n        \"cuisines\": [\n          \"root-inputs-B:cuisine\"\n        ],\n        \"music\": [\n          \"root-inputs-B:music\"\n        ],\n        \"films\": [\n          \"root-inputs-B:film\"\n        ],\n        \"city\": \"root-inputs-B:city\",\n        \"constraints\": [\n          \"low_sodium\"\n        ]\n      },\n      \"response\": {\n        \"mock\": true,\n        \"rootAcceptedOrigin\": \"root-origin-B\",\n        \"rootPreparedWeek\": \"root-week-B\",\n        \"plan\": {\n          \"meals\": [\n            {\n              \"day\": \"Monday\",\n              \"kind\": \"restaurant\",\n              \"name\": \"Shared venue display name 1\",\n              \"entity_id\": \"B:pick:1\",\n              \"why\": \"Literal B credit / occurrence 1\",\n              \"affinity\": 0.25,\n              \"fallback\": false\n            },\n            {\n              \"day\": \"Tuesday\",\n              \"kind\": \"restaurant\",\n              \"name\": \"Shared venue display name 2\",\n              \"entity_id\": \"B:pick:2\",\n              \"why\": \"Literal B credit / occurrence 2\",\n              \"affinity\": 0.5,\n              \"fallback\": false\n            }\n          ],\n          \"outing\": null,\n          \"notes\": [\n            \"Literal B credit\"\n          ],\n          \"rejected\": []\n        },\n        \"llm_only\": {\n          \"meals\": [\n            {\n              \"day\": \"Monday\",\n              \"name\": \"Unverified B\",\n              \"why\": \"fictional baseline B\"\n            }\n          ],\n          \"outing\": {\n            \"day\": \"Friday\",\n            \"name\": \"Baseline outing B\",\n            \"why\": \"unverified\"\n          }\n        },\n        \"comparison\": {\n          \"constraints\": [\n            \"low_sodium\"\n          ],\n          \"grounded\": {\n            \"picks\": 2,\n            \"with_qloo_entity_id\": 2,\n            \"with_affinity_evidence\": 2,\n            \"constraint_checked\": 2,\n            \"unsafe_candidates_rejected\": 0\n          },\n          \"llm_only\": {\n            \"picks\": 2,\n            \"with_qloo_entity_id\": 0,\n            \"with_affinity_evidence\": 0,\n            \"constraint_checked\": 0,\n            \"unsafe_candidates_rejected\": 0\n          }\n        },\n        \"trace\": [\n          {\n            \"tool\": \"root-fixture-B\",\n            \"args\": {\n              \"sourceToken\": \"root-origin-B\"\n            },\n            \"result_summary\": \"Literal trace B\"\n          }\n        ]\n      }\n    },\n    \"records\": []\n  }\n}\n",
+      "records": [],
+      "expected": {
+        "weekStart": "2030-06-10",
+        "assignments": {
+          "pick-0": "Monday",
+          "pick-1": "Tuesday"
+        },
+        "visitDates": [
+          "2030-06-10",
+          "2030-06-11"
+        ],
+        "credit": "Literal B credit",
+        "entityIds": [
+          "B:pick:1",
+          "B:pick:2"
+        ],
+        "calendarId": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "receivedAt": "2030-01-02T00:00:00.000Z",
+        "inputs": {
+          "cuisines": [
+            "root-inputs-B:cuisine"
+          ],
+          "music": [
+            "root-inputs-B:music"
+          ],
+          "films": [
+            "root-inputs-B:film"
+          ],
+          "city": "root-inputs-B:city",
+          "constraints": [
+            "low_sodium"
+          ]
+        },
+        "sourceToken": "root-origin-B"
+      },
+      "draft": {
+        "format": "tastetable.browser-week",
+        "version": 1,
+        "id": "root-row-B",
+        "name": "Same display name",
+        "createdAt": "2030-04-01T00:00:00.000Z",
+        "updatedAt": "2030-04-01T00:00:00.000Z",
+        "text": "{\n  \"format\": \"tastetable.saved-week.v1\",\n  \"receivedAt\": \"2030-01-02T00:00:00.000Z\",\n  \"savedAt\": \"2030-04-01T00:00:00.000Z\",\n  \"calendarId\": \"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\",\n  \"inputs\": {\n    \"cuisines\": [\n      \"root-inputs-B:cuisine\"\n    ],\n    \"music\": [\n      \"root-inputs-B:music\"\n    ],\n    \"films\": [\n      \"root-inputs-B:film\"\n    ],\n    \"city\": \"root-inputs-B:city\",\n    \"constraints\": [\n      \"low_sodium\"\n    ]\n  },\n  \"response\": {\n    \"mock\": true,\n    \"rootAcceptedOrigin\": \"root-origin-B\",\n    \"rootPreparedWeek\": \"root-week-B\",\n    \"plan\": {\n      \"meals\": [\n        {\n          \"day\": \"Monday\",\n          \"kind\": \"restaurant\",\n          \"name\": \"Shared venue display name 1\",\n          \"entity_id\": \"B:pick:1\",\n          \"why\": \"Literal B credit / occurrence 1\",\n          \"affinity\": 0.25,\n          \"fallback\": false\n        },\n        {\n          \"day\": \"Tuesday\",\n          \"kind\": \"restaurant\",\n          \"name\": \"Shared venue display name 2\",\n          \"entity_id\": \"B:pick:2\",\n          \"why\": \"Literal B credit / occurrence 2\",\n          \"affinity\": 0.5,\n          \"fallback\": false\n        }\n      ],\n      \"outing\": null,\n      \"notes\": [\n        \"Literal B credit\"\n      ],\n      \"rejected\": []\n    },\n    \"llm_only\": {\n      \"meals\": [\n        {\n          \"day\": \"Monday\",\n          \"name\": \"Unverified B\",\n          \"why\": \"fictional baseline B\"\n        }\n      ],\n      \"outing\": {\n        \"day\": \"Friday\",\n        \"name\": \"Baseline outing B\",\n        \"why\": \"unverified\"\n      }\n    },\n    \"comparison\": {\n      \"constraints\": [\n        \"low_sodium\"\n      ],\n      \"grounded\": {\n        \"picks\": 2,\n        \"with_qloo_entity_id\": 2,\n        \"with_affinity_evidence\": 2,\n        \"constraint_checked\": 2,\n        \"unsafe_candidates_rejected\": 0\n      },\n      \"llm_only\": {\n        \"picks\": 2,\n        \"with_qloo_entity_id\": 0,\n        \"with_affinity_evidence\": 0,\n        \"constraint_checked\": 0,\n        \"unsafe_candidates_rejected\": 0\n      }\n    },\n    \"trace\": [\n      {\n        \"tool\": \"root-fixture-B\",\n        \"args\": {\n          \"sourceToken\": \"root-origin-B\"\n        },\n        \"result_summary\": \"Literal trace B\"\n      }\n    ]\n  },\n  \"week\": {\n    \"start\": \"2030-06-10\",\n    \"assignments\": {\n      \"pick-0\": \"Monday\",\n      \"pick-1\": \"Tuesday\"\n    }\n  }\n}\n"
+      }
+    },
+    "C": {
+      "key": "C",
+      "origin": {
+        "response": {
+          "mock": true,
+          "rootAcceptedOrigin": "root-origin-C",
+          "rootPreparedWeek": "root-week-C",
+          "plan": {
+            "meals": [
+              {
+                "day": "Monday",
+                "kind": "restaurant",
+                "name": "Shared venue display name 1",
+                "entity_id": "C:pick:1",
+                "why": "Literal C credit / occurrence 1",
+                "affinity": 0.25,
+                "fallback": false
+              },
+              {
+                "day": "Tuesday",
+                "kind": "restaurant",
+                "name": "Shared venue display name 2",
+                "entity_id": "C:pick:2",
+                "why": "Literal C credit / occurrence 2",
+                "affinity": 0.5,
+                "fallback": false
+              }
+            ],
+            "outing": null,
+            "notes": [
+              "Literal C credit"
+            ],
+            "rejected": []
+          },
+          "llm_only": {
+            "meals": [
+              {
+                "day": "Monday",
+                "name": "Unverified C",
+                "why": "fictional baseline C"
+              }
+            ],
+            "outing": {
+              "day": "Friday",
+              "name": "Baseline outing C",
+              "why": "unverified"
+            }
+          },
+          "comparison": {
+            "constraints": [
+              "wheelchair"
+            ],
+            "grounded": {
+              "picks": 2,
+              "with_qloo_entity_id": 2,
+              "with_affinity_evidence": 2,
+              "constraint_checked": 2,
+              "unsafe_candidates_rejected": 0
+            },
+            "llm_only": {
+              "picks": 2,
+              "with_qloo_entity_id": 0,
+              "with_affinity_evidence": 0,
+              "constraint_checked": 0,
+              "unsafe_candidates_rejected": 0
+            }
+          },
+          "trace": [
+            {
+              "tool": "root-fixture-C",
+              "args": {
+                "sourceToken": "root-origin-C"
+              },
+              "result_summary": "Literal trace C"
+            }
+          ]
+        },
+        "inputs": {
+          "cuisines": [
+            "root-inputs-C:cuisine"
+          ],
+          "music": [
+            "root-inputs-C:music"
+          ],
+          "films": [
+            "root-inputs-C:film"
+          ],
+          "city": "root-inputs-C:city",
+          "constraints": [
+            "wheelchair"
+          ]
+        },
+        "receivedAt": "2030-01-03T00:00:00.000Z",
+        "calendarId": "cccccccccccccccccccccccccccccccc"
+      },
+      "weekText": "{\n  \"format\": \"tastetable.saved-week.v1\",\n  \"receivedAt\": \"2030-01-03T00:00:00.000Z\",\n  \"savedAt\": \"2030-04-01T00:00:00.000Z\",\n  \"calendarId\": \"cccccccccccccccccccccccccccccccc\",\n  \"inputs\": {\n    \"cuisines\": [\n      \"root-inputs-C:cuisine\"\n    ],\n    \"music\": [\n      \"root-inputs-C:music\"\n    ],\n    \"films\": [\n      \"root-inputs-C:film\"\n    ],\n    \"city\": \"root-inputs-C:city\",\n    \"constraints\": [\n      \"wheelchair\"\n    ]\n  },\n  \"response\": {\n    \"mock\": true,\n    \"rootAcceptedOrigin\": \"root-origin-C\",\n    \"rootPreparedWeek\": \"root-week-C\",\n    \"plan\": {\n      \"meals\": [\n        {\n          \"day\": \"Monday\",\n          \"kind\": \"restaurant\",\n          \"name\": \"Shared venue display name 1\",\n          \"entity_id\": \"C:pick:1\",\n          \"why\": \"Literal C credit / occurrence 1\",\n          \"affinity\": 0.25,\n          \"fallback\": false\n        },\n        {\n          \"day\": \"Tuesday\",\n          \"kind\": \"restaurant\",\n          \"name\": \"Shared venue display name 2\",\n          \"entity_id\": \"C:pick:2\",\n          \"why\": \"Literal C credit / occurrence 2\",\n          \"affinity\": 0.5,\n          \"fallback\": false\n        }\n      ],\n      \"outing\": null,\n      \"notes\": [\n        \"Literal C credit\"\n      ],\n      \"rejected\": []\n    },\n    \"llm_only\": {\n      \"meals\": [\n        {\n          \"day\": \"Monday\",\n          \"name\": \"Unverified C\",\n          \"why\": \"fictional baseline C\"\n        }\n      ],\n      \"outing\": {\n        \"day\": \"Friday\",\n        \"name\": \"Baseline outing C\",\n        \"why\": \"unverified\"\n      }\n    },\n    \"comparison\": {\n      \"constraints\": [\n        \"wheelchair\"\n      ],\n      \"grounded\": {\n        \"picks\": 2,\n        \"with_qloo_entity_id\": 2,\n        \"with_affinity_evidence\": 2,\n        \"constraint_checked\": 2,\n        \"unsafe_candidates_rejected\": 0\n      },\n      \"llm_only\": {\n        \"picks\": 2,\n        \"with_qloo_entity_id\": 0,\n        \"with_affinity_evidence\": 0,\n        \"constraint_checked\": 0,\n        \"unsafe_candidates_rejected\": 0\n      }\n    },\n    \"trace\": [\n      {\n        \"tool\": \"root-fixture-C\",\n        \"args\": {\n          \"sourceToken\": \"root-origin-C\"\n        },\n        \"result_summary\": \"Literal trace C\"\n      }\n    ]\n  },\n  \"week\": {\n    \"start\": \"2030-07-08\",\n    \"assignments\": {\n      \"pick-0\": \"Wednesday\",\n      \"pick-1\": \"Thursday\"\n    }\n  }\n}\n",
+      "handoffText": "{\n  \"format\": \"tastetable.caregiver-handoff.v1\",\n  \"savedAt\": \"2030-04-01T00:00:00.000Z\",\n  \"week\": {\n    \"format\": \"tastetable.saved-week.v1\",\n    \"receivedAt\": \"2030-01-03T00:00:00.000Z\",\n    \"savedAt\": \"2030-04-01T00:00:00.000Z\",\n    \"calendarId\": \"cccccccccccccccccccccccccccccccc\",\n    \"inputs\": {\n      \"cuisines\": [\n        \"root-inputs-C:cuisine\"\n      ],\n      \"music\": [\n        \"root-inputs-C:music\"\n      ],\n      \"films\": [\n        \"root-inputs-C:film\"\n      ],\n      \"city\": \"root-inputs-C:city\",\n      \"constraints\": [\n        \"wheelchair\"\n      ]\n    },\n    \"response\": {\n      \"mock\": true,\n      \"rootAcceptedOrigin\": \"root-origin-C\",\n      \"rootPreparedWeek\": \"root-week-C\",\n      \"plan\": {\n        \"meals\": [\n          {\n            \"day\": \"Monday\",\n            \"kind\": \"restaurant\",\n            \"name\": \"Shared venue display name 1\",\n            \"entity_id\": \"C:pick:1\",\n            \"why\": \"Literal C credit / occurrence 1\",\n            \"affinity\": 0.25,\n            \"fallback\": false\n          },\n          {\n            \"day\": \"Tuesday\",\n            \"kind\": \"restaurant\",\n            \"name\": \"Shared venue display name 2\",\n            \"entity_id\": \"C:pick:2\",\n            \"why\": \"Literal C credit / occurrence 2\",\n            \"affinity\": 0.5,\n            \"fallback\": false\n          }\n        ],\n        \"outing\": null,\n        \"notes\": [\n          \"Literal C credit\"\n        ],\n        \"rejected\": []\n      },\n      \"llm_only\": {\n        \"meals\": [\n          {\n            \"day\": \"Monday\",\n            \"name\": \"Unverified C\",\n            \"why\": \"fictional baseline C\"\n          }\n        ],\n        \"outing\": {\n          \"day\": \"Friday\",\n          \"name\": \"Baseline outing C\",\n          \"why\": \"unverified\"\n        }\n      },\n      \"comparison\": {\n        \"constraints\": [\n          \"wheelchair\"\n        ],\n        \"grounded\": {\n          \"picks\": 2,\n          \"with_qloo_entity_id\": 2,\n          \"with_affinity_evidence\": 2,\n          \"constraint_checked\": 2,\n          \"unsafe_candidates_rejected\": 0\n        },\n        \"llm_only\": {\n          \"picks\": 2,\n          \"with_qloo_entity_id\": 0,\n          \"with_affinity_evidence\": 0,\n          \"constraint_checked\": 0,\n          \"unsafe_candidates_rejected\": 0\n        }\n      },\n      \"trace\": [\n        {\n          \"tool\": \"root-fixture-C\",\n          \"args\": {\n            \"sourceToken\": \"root-origin-C\"\n          },\n          \"result_summary\": \"Literal trace C\"\n        }\n      ]\n    },\n    \"week\": {\n      \"start\": \"2030-07-08\",\n      \"assignments\": {\n        \"pick-0\": \"Wednesday\",\n        \"pick-1\": \"Thursday\"\n      }\n    }\n  },\n  \"venueNotes\": {\n    \"format\": \"tastetable.venue-notes.v1\",\n    \"savedAt\": \"2030-04-01T00:00:00.000Z\",\n    \"origin\": {\n      \"receivedAt\": \"2030-01-03T00:00:00.000Z\",\n      \"calendarId\": \"cccccccccccccccccccccccccccccccc\",\n      \"inputs\": {\n        \"cuisines\": [\n          \"root-inputs-C:cuisine\"\n        ],\n        \"music\": [\n          \"root-inputs-C:music\"\n        ],\n        \"films\": [\n          \"root-inputs-C:film\"\n        ],\n        \"city\": \"root-inputs-C:city\",\n        \"constraints\": [\n          \"wheelchair\"\n        ]\n      },\n      \"response\": {\n        \"mock\": true,\n        \"rootAcceptedOrigin\": \"root-origin-C\",\n        \"rootPreparedWeek\": \"root-week-C\",\n        \"plan\": {\n          \"meals\": [\n            {\n              \"day\": \"Monday\",\n              \"kind\": \"restaurant\",\n              \"name\": \"Shared venue display name 1\",\n              \"entity_id\": \"C:pick:1\",\n              \"why\": \"Literal C credit / occurrence 1\",\n              \"affinity\": 0.25,\n              \"fallback\": false\n            },\n            {\n              \"day\": \"Tuesday\",\n              \"kind\": \"restaurant\",\n              \"name\": \"Shared venue display name 2\",\n              \"entity_id\": \"C:pick:2\",\n              \"why\": \"Literal C credit / occurrence 2\",\n              \"affinity\": 0.5,\n              \"fallback\": false\n            }\n          ],\n          \"outing\": null,\n          \"notes\": [\n            \"Literal C credit\"\n          ],\n          \"rejected\": []\n        },\n        \"llm_only\": {\n          \"meals\": [\n            {\n              \"day\": \"Monday\",\n              \"name\": \"Unverified C\",\n              \"why\": \"fictional baseline C\"\n            }\n          ],\n          \"outing\": {\n            \"day\": \"Friday\",\n            \"name\": \"Baseline outing C\",\n            \"why\": \"unverified\"\n          }\n        },\n        \"comparison\": {\n          \"constraints\": [\n            \"wheelchair\"\n          ],\n          \"grounded\": {\n            \"picks\": 2,\n            \"with_qloo_entity_id\": 2,\n            \"with_affinity_evidence\": 2,\n            \"constraint_checked\": 2,\n            \"unsafe_candidates_rejected\": 0\n          },\n          \"llm_only\": {\n            \"picks\": 2,\n            \"with_qloo_entity_id\": 0,\n            \"with_affinity_evidence\": 0,\n            \"constraint_checked\": 0,\n            \"unsafe_candidates_rejected\": 0\n          }\n        },\n        \"trace\": [\n          {\n            \"tool\": \"root-fixture-C\",\n            \"args\": {\n              \"sourceToken\": \"root-origin-C\"\n            },\n            \"result_summary\": \"Literal trace C\"\n          }\n        ]\n      }\n    },\n    \"records\": []\n  }\n}\n",
+      "records": [],
+      "expected": {
+        "weekStart": "2030-07-08",
+        "assignments": {
+          "pick-0": "Wednesday",
+          "pick-1": "Thursday"
+        },
+        "visitDates": [
+          "2030-07-10",
+          "2030-07-11"
+        ],
+        "credit": "Literal C credit",
+        "entityIds": [
+          "C:pick:1",
+          "C:pick:2"
+        ],
+        "calendarId": "cccccccccccccccccccccccccccccccc",
+        "receivedAt": "2030-01-03T00:00:00.000Z",
+        "inputs": {
+          "cuisines": [
+            "root-inputs-C:cuisine"
+          ],
+          "music": [
+            "root-inputs-C:music"
+          ],
+          "films": [
+            "root-inputs-C:film"
+          ],
+          "city": "root-inputs-C:city",
+          "constraints": [
+            "wheelchair"
+          ]
+        },
+        "sourceToken": "root-origin-C"
+      },
+      "draft": {
+        "format": "tastetable.browser-week",
+        "version": 1,
+        "id": "root-row-C",
+        "name": "Same display name",
+        "createdAt": "2030-04-01T00:00:00.000Z",
+        "updatedAt": "2030-04-01T00:00:00.000Z",
+        "text": "{\n  \"format\": \"tastetable.saved-week.v1\",\n  \"receivedAt\": \"2030-01-03T00:00:00.000Z\",\n  \"savedAt\": \"2030-04-01T00:00:00.000Z\",\n  \"calendarId\": \"cccccccccccccccccccccccccccccccc\",\n  \"inputs\": {\n    \"cuisines\": [\n      \"root-inputs-C:cuisine\"\n    ],\n    \"music\": [\n      \"root-inputs-C:music\"\n    ],\n    \"films\": [\n      \"root-inputs-C:film\"\n    ],\n    \"city\": \"root-inputs-C:city\",\n    \"constraints\": [\n      \"wheelchair\"\n    ]\n  },\n  \"response\": {\n    \"mock\": true,\n    \"rootAcceptedOrigin\": \"root-origin-C\",\n    \"rootPreparedWeek\": \"root-week-C\",\n    \"plan\": {\n      \"meals\": [\n        {\n          \"day\": \"Monday\",\n          \"kind\": \"restaurant\",\n          \"name\": \"Shared venue display name 1\",\n          \"entity_id\": \"C:pick:1\",\n          \"why\": \"Literal C credit / occurrence 1\",\n          \"affinity\": 0.25,\n          \"fallback\": false\n        },\n        {\n          \"day\": \"Tuesday\",\n          \"kind\": \"restaurant\",\n          \"name\": \"Shared venue display name 2\",\n          \"entity_id\": \"C:pick:2\",\n          \"why\": \"Literal C credit / occurrence 2\",\n          \"affinity\": 0.5,\n          \"fallback\": false\n        }\n      ],\n      \"outing\": null,\n      \"notes\": [\n        \"Literal C credit\"\n      ],\n      \"rejected\": []\n    },\n    \"llm_only\": {\n      \"meals\": [\n        {\n          \"day\": \"Monday\",\n          \"name\": \"Unverified C\",\n          \"why\": \"fictional baseline C\"\n        }\n      ],\n      \"outing\": {\n        \"day\": \"Friday\",\n        \"name\": \"Baseline outing C\",\n        \"why\": \"unverified\"\n      }\n    },\n    \"comparison\": {\n      \"constraints\": [\n        \"wheelchair\"\n      ],\n      \"grounded\": {\n        \"picks\": 2,\n        \"with_qloo_entity_id\": 2,\n        \"with_affinity_evidence\": 2,\n        \"constraint_checked\": 2,\n        \"unsafe_candidates_rejected\": 0\n      },\n      \"llm_only\": {\n        \"picks\": 2,\n        \"with_qloo_entity_id\": 0,\n        \"with_affinity_evidence\": 0,\n        \"constraint_checked\": 0,\n        \"unsafe_candidates_rejected\": 0\n      }\n    },\n    \"trace\": [\n      {\n        \"tool\": \"root-fixture-C\",\n        \"args\": {\n          \"sourceToken\": \"root-origin-C\"\n        },\n        \"result_summary\": \"Literal trace C\"\n      }\n    ]\n  },\n  \"week\": {\n    \"start\": \"2030-07-08\",\n    \"assignments\": {\n      \"pick-0\": \"Wednesday\",\n      \"pick-1\": \"Thursday\"\n    }\n  }\n}\n"
+      }
+    },
+    "H": {
+      "key": "H",
+      "origin": {
+        "response": {
+          "mock": true,
+          "rootAcceptedOrigin": "root-origin-H",
+          "rootPreparedWeek": "root-week-H",
+          "plan": {
+            "meals": [
+              {
+                "day": "Monday",
+                "kind": "restaurant",
+                "name": "Shared venue display name 1",
+                "entity_id": "H:pick:1",
+                "why": "Literal H credit / occurrence 1",
+                "affinity": 0.25,
+                "fallback": false
+              },
+              {
+                "day": "Tuesday",
+                "kind": "restaurant",
+                "name": "Shared venue display name 2",
+                "entity_id": "H:pick:2",
+                "why": "Literal H credit / occurrence 2",
+                "affinity": 0.5,
+                "fallback": false
+              }
+            ],
+            "outing": null,
+            "notes": [
+              "Literal H credit"
+            ],
+            "rejected": []
+          },
+          "llm_only": {
+            "meals": [
+              {
+                "day": "Monday",
+                "name": "Unverified H",
+                "why": "fictional baseline H"
+              }
+            ],
+            "outing": {
+              "day": "Friday",
+              "name": "Baseline outing H",
+              "why": "unverified"
+            }
+          },
+          "comparison": {
+            "constraints": [
+              "soft_foods",
+              "low_sodium",
+              "wheelchair"
+            ],
+            "grounded": {
+              "picks": 2,
+              "with_qloo_entity_id": 2,
+              "with_affinity_evidence": 2,
+              "constraint_checked": 2,
+              "unsafe_candidates_rejected": 0
+            },
+            "llm_only": {
+              "picks": 2,
+              "with_qloo_entity_id": 0,
+              "with_affinity_evidence": 0,
+              "constraint_checked": 0,
+              "unsafe_candidates_rejected": 0
+            }
+          },
+          "trace": [
+            {
+              "tool": "root-fixture-H",
+              "args": {
+                "sourceToken": "root-origin-H"
+              },
+              "result_summary": "Literal trace H"
+            }
+          ]
+        },
+        "inputs": {
+          "cuisines": [
+            "root-inputs-H:cuisine"
+          ],
+          "music": [
+            "root-inputs-H:music"
+          ],
+          "films": [
+            "root-inputs-H:film"
+          ],
+          "city": "root-inputs-H:city",
+          "constraints": [
+            "soft_foods",
+            "low_sodium",
+            "wheelchair"
+          ]
+        },
+        "receivedAt": "2030-01-04T00:00:00.000Z",
+        "calendarId": "dddddddddddddddddddddddddddddddd"
+      },
+      "weekText": "{\n  \"format\": \"tastetable.saved-week.v1\",\n  \"receivedAt\": \"2030-01-04T00:00:00.000Z\",\n  \"savedAt\": \"2030-04-01T00:00:00.000Z\",\n  \"calendarId\": \"dddddddddddddddddddddddddddddddd\",\n  \"inputs\": {\n    \"cuisines\": [\n      \"root-inputs-H:cuisine\"\n    ],\n    \"music\": [\n      \"root-inputs-H:music\"\n    ],\n    \"films\": [\n      \"root-inputs-H:film\"\n    ],\n    \"city\": \"root-inputs-H:city\",\n    \"constraints\": [\n      \"soft_foods\",\n      \"low_sodium\",\n      \"wheelchair\"\n    ]\n  },\n  \"response\": {\n    \"mock\": true,\n    \"rootAcceptedOrigin\": \"root-origin-H\",\n    \"rootPreparedWeek\": \"root-week-H\",\n    \"plan\": {\n      \"meals\": [\n        {\n          \"day\": \"Monday\",\n          \"kind\": \"restaurant\",\n          \"name\": \"Shared venue display name 1\",\n          \"entity_id\": \"H:pick:1\",\n          \"why\": \"Literal H credit / occurrence 1\",\n          \"affinity\": 0.25,\n          \"fallback\": false\n        },\n        {\n          \"day\": \"Tuesday\",\n          \"kind\": \"restaurant\",\n          \"name\": \"Shared venue display name 2\",\n          \"entity_id\": \"H:pick:2\",\n          \"why\": \"Literal H credit / occurrence 2\",\n          \"affinity\": 0.5,\n          \"fallback\": false\n        }\n      ],\n      \"outing\": null,\n      \"notes\": [\n        \"Literal H credit\"\n      ],\n      \"rejected\": []\n    },\n    \"llm_only\": {\n      \"meals\": [\n        {\n          \"day\": \"Monday\",\n          \"name\": \"Unverified H\",\n          \"why\": \"fictional baseline H\"\n        }\n      ],\n      \"outing\": {\n        \"day\": \"Friday\",\n        \"name\": \"Baseline outing H\",\n        \"why\": \"unverified\"\n      }\n    },\n    \"comparison\": {\n      \"constraints\": [\n        \"soft_foods\",\n        \"low_sodium\",\n        \"wheelchair\"\n      ],\n      \"grounded\": {\n        \"picks\": 2,\n        \"with_qloo_entity_id\": 2,\n        \"with_affinity_evidence\": 2,\n        \"constraint_checked\": 2,\n        \"unsafe_candidates_rejected\": 0\n      },\n      \"llm_only\": {\n        \"picks\": 2,\n        \"with_qloo_entity_id\": 0,\n        \"with_affinity_evidence\": 0,\n        \"constraint_checked\": 0,\n        \"unsafe_candidates_rejected\": 0\n      }\n    },\n    \"trace\": [\n      {\n        \"tool\": \"root-fixture-H\",\n        \"args\": {\n          \"sourceToken\": \"root-origin-H\"\n        },\n        \"result_summary\": \"Literal trace H\"\n      }\n    ]\n  },\n  \"week\": {\n    \"start\": \"2030-08-12\",\n    \"assignments\": {\n      \"pick-0\": \"Monday\",\n      \"pick-1\": null\n    }\n  }\n}\n",
+      "handoffText": "{\n  \"format\": \"tastetable.caregiver-handoff.v1\",\n  \"savedAt\": \"2030-04-01T00:00:00.000Z\",\n  \"week\": {\n    \"format\": \"tastetable.saved-week.v1\",\n    \"receivedAt\": \"2030-01-04T00:00:00.000Z\",\n    \"savedAt\": \"2030-04-01T00:00:00.000Z\",\n    \"calendarId\": \"dddddddddddddddddddddddddddddddd\",\n    \"inputs\": {\n      \"cuisines\": [\n        \"root-inputs-H:cuisine\"\n      ],\n      \"music\": [\n        \"root-inputs-H:music\"\n      ],\n      \"films\": [\n        \"root-inputs-H:film\"\n      ],\n      \"city\": \"root-inputs-H:city\",\n      \"constraints\": [\n        \"soft_foods\",\n        \"low_sodium\",\n        \"wheelchair\"\n      ]\n    },\n    \"response\": {\n      \"mock\": true,\n      \"rootAcceptedOrigin\": \"root-origin-H\",\n      \"rootPreparedWeek\": \"root-week-H\",\n      \"plan\": {\n        \"meals\": [\n          {\n            \"day\": \"Monday\",\n            \"kind\": \"restaurant\",\n            \"name\": \"Shared venue display name 1\",\n            \"entity_id\": \"H:pick:1\",\n            \"why\": \"Literal H credit / occurrence 1\",\n            \"affinity\": 0.25,\n            \"fallback\": false\n          },\n          {\n            \"day\": \"Tuesday\",\n            \"kind\": \"restaurant\",\n            \"name\": \"Shared venue display name 2\",\n            \"entity_id\": \"H:pick:2\",\n            \"why\": \"Literal H credit / occurrence 2\",\n            \"affinity\": 0.5,\n            \"fallback\": false\n          }\n        ],\n        \"outing\": null,\n        \"notes\": [\n          \"Literal H credit\"\n        ],\n        \"rejected\": []\n      },\n      \"llm_only\": {\n        \"meals\": [\n          {\n            \"day\": \"Monday\",\n            \"name\": \"Unverified H\",\n            \"why\": \"fictional baseline H\"\n          }\n        ],\n        \"outing\": {\n          \"day\": \"Friday\",\n          \"name\": \"Baseline outing H\",\n          \"why\": \"unverified\"\n        }\n      },\n      \"comparison\": {\n        \"constraints\": [\n          \"soft_foods\",\n          \"low_sodium\",\n          \"wheelchair\"\n        ],\n        \"grounded\": {\n          \"picks\": 2,\n          \"with_qloo_entity_id\": 2,\n          \"with_affinity_evidence\": 2,\n          \"constraint_checked\": 2,\n          \"unsafe_candidates_rejected\": 0\n        },\n        \"llm_only\": {\n          \"picks\": 2,\n          \"with_qloo_entity_id\": 0,\n          \"with_affinity_evidence\": 0,\n          \"constraint_checked\": 0,\n          \"unsafe_candidates_rejected\": 0\n        }\n      },\n      \"trace\": [\n        {\n          \"tool\": \"root-fixture-H\",\n          \"args\": {\n            \"sourceToken\": \"root-origin-H\"\n          },\n          \"result_summary\": \"Literal trace H\"\n        }\n      ]\n    },\n    \"week\": {\n      \"start\": \"2030-08-12\",\n      \"assignments\": {\n        \"pick-0\": \"Monday\",\n        \"pick-1\": null\n      }\n    }\n  },\n  \"venueNotes\": {\n    \"format\": \"tastetable.venue-notes.v1\",\n    \"savedAt\": \"2030-04-01T00:00:00.000Z\",\n    \"origin\": {\n      \"receivedAt\": \"2030-01-04T00:00:00.000Z\",\n      \"calendarId\": \"dddddddddddddddddddddddddddddddd\",\n      \"inputs\": {\n        \"cuisines\": [\n          \"root-inputs-H:cuisine\"\n        ],\n        \"music\": [\n          \"root-inputs-H:music\"\n        ],\n        \"films\": [\n          \"root-inputs-H:film\"\n        ],\n        \"city\": \"root-inputs-H:city\",\n        \"constraints\": [\n          \"soft_foods\",\n          \"low_sodium\",\n          \"wheelchair\"\n        ]\n      },\n      \"response\": {\n        \"mock\": true,\n        \"rootAcceptedOrigin\": \"root-origin-H\",\n        \"rootPreparedWeek\": \"root-week-H\",\n        \"plan\": {\n          \"meals\": [\n            {\n              \"day\": \"Monday\",\n              \"kind\": \"restaurant\",\n              \"name\": \"Shared venue display name 1\",\n              \"entity_id\": \"H:pick:1\",\n              \"why\": \"Literal H credit / occurrence 1\",\n              \"affinity\": 0.25,\n              \"fallback\": false\n            },\n            {\n              \"day\": \"Tuesday\",\n              \"kind\": \"restaurant\",\n              \"name\": \"Shared venue display name 2\",\n              \"entity_id\": \"H:pick:2\",\n              \"why\": \"Literal H credit / occurrence 2\",\n              \"affinity\": 0.5,\n              \"fallback\": false\n            }\n          ],\n          \"outing\": null,\n          \"notes\": [\n            \"Literal H credit\"\n          ],\n          \"rejected\": []\n        },\n        \"llm_only\": {\n          \"meals\": [\n            {\n              \"day\": \"Monday\",\n              \"name\": \"Unverified H\",\n              \"why\": \"fictional baseline H\"\n            }\n          ],\n          \"outing\": {\n            \"day\": \"Friday\",\n            \"name\": \"Baseline outing H\",\n            \"why\": \"unverified\"\n          }\n        },\n        \"comparison\": {\n          \"constraints\": [\n            \"soft_foods\",\n            \"low_sodium\",\n            \"wheelchair\"\n          ],\n          \"grounded\": {\n            \"picks\": 2,\n            \"with_qloo_entity_id\": 2,\n            \"with_affinity_evidence\": 2,\n            \"constraint_checked\": 2,\n            \"unsafe_candidates_rejected\": 0\n          },\n          \"llm_only\": {\n            \"picks\": 2,\n            \"with_qloo_entity_id\": 0,\n            \"with_affinity_evidence\": 0,\n            \"constraint_checked\": 0,\n            \"unsafe_candidates_rejected\": 0\n          }\n        },\n        \"trace\": [\n          {\n            \"tool\": \"root-fixture-H\",\n            \"args\": {\n              \"sourceToken\": \"root-origin-H\"\n            },\n            \"result_summary\": \"Literal trace H\"\n          }\n        ]\n      }\n    },\n    \"records\": [\n      {\n        \"key\": \"pick-0\",\n        \"date\": \"2030-08-12\",\n        \"note\": {\n          \"status\": \"follow_up\",\n          \"question\": \"H-current questions\",\n          \"reply\": \"root-notes-H\",\n          \"replyQuestions\": \"H-history\",\n          \"nextStep\": \"root-notes-H:next\"\n        }\n      },\n      {\n        \"key\": \"pick-1\",\n        \"date\": \"2030-08-13\",\n        \"note\": {\n          \"status\": \"awaiting_reply\",\n          \"question\": \"H omitted question\",\n          \"reply\": \"H-omitted\",\n          \"replyQuestions\": \"H omitted question\",\n          \"nextStep\": \"H omitted next\"\n        }\n      },\n      {\n        \"key\": \"pick-0\",\n        \"date\": \"2030-08-19\",\n        \"note\": {\n          \"status\": \"not_contacted\",\n          \"question\": \"\",\n          \"reply\": \"\",\n          \"replyQuestions\": null,\n          \"nextStep\": \"\"\n        }\n      }\n    ]\n  }\n}\n",
+      "records": [
+        {
+          "key": "pick-0",
+          "date": "2030-08-12",
+          "note": {
+            "status": "follow_up",
+            "question": "H-current questions",
+            "reply": "root-notes-H",
+            "replyQuestions": "H-history",
+            "nextStep": "root-notes-H:next"
+          }
+        },
+        {
+          "key": "pick-1",
+          "date": "2030-08-13",
+          "note": {
+            "status": "awaiting_reply",
+            "question": "H omitted question",
+            "reply": "H-omitted",
+            "replyQuestions": "H omitted question",
+            "nextStep": "H omitted next"
+          }
+        },
+        {
+          "key": "pick-0",
+          "date": "2030-08-19",
+          "note": {
+            "status": "not_contacted",
+            "question": "",
+            "reply": "",
+            "replyQuestions": null,
+            "nextStep": ""
+          }
+        }
+      ],
+      "expected": {
+        "weekStart": "2030-08-12",
+        "assignments": {
+          "pick-0": "Monday",
+          "pick-1": null
+        },
+        "visitDates": [
+          "2030-08-12",
+          "2030-08-13"
+        ],
+        "credit": "Literal H credit",
+        "entityIds": [
+          "H:pick:1",
+          "H:pick:2"
+        ],
+        "calendarId": "dddddddddddddddddddddddddddddddd",
+        "receivedAt": "2030-01-04T00:00:00.000Z",
+        "inputs": {
+          "cuisines": [
+            "root-inputs-H:cuisine"
+          ],
+          "music": [
+            "root-inputs-H:music"
+          ],
+          "films": [
+            "root-inputs-H:film"
+          ],
+          "city": "root-inputs-H:city",
+          "constraints": [
+            "soft_foods",
+            "low_sodium",
+            "wheelchair"
+          ]
+        },
+        "sourceToken": "root-origin-H"
+      },
+      "draft": {
+        "format": "tastetable.browser-week",
+        "version": 1,
+        "id": "root-row-H",
+        "name": "root-row-H",
+        "createdAt": "2030-04-01T00:00:00.000Z",
+        "updatedAt": "2030-04-01T00:00:00.000Z",
+        "text": "{\n  \"format\": \"tastetable.saved-week.v1\",\n  \"receivedAt\": \"2030-01-04T00:00:00.000Z\",\n  \"savedAt\": \"2030-04-01T00:00:00.000Z\",\n  \"calendarId\": \"dddddddddddddddddddddddddddddddd\",\n  \"inputs\": {\n    \"cuisines\": [\n      \"root-inputs-H:cuisine\"\n    ],\n    \"music\": [\n      \"root-inputs-H:music\"\n    ],\n    \"films\": [\n      \"root-inputs-H:film\"\n    ],\n    \"city\": \"root-inputs-H:city\",\n    \"constraints\": [\n      \"soft_foods\",\n      \"low_sodium\",\n      \"wheelchair\"\n    ]\n  },\n  \"response\": {\n    \"mock\": true,\n    \"rootAcceptedOrigin\": \"root-origin-H\",\n    \"rootPreparedWeek\": \"root-week-H\",\n    \"plan\": {\n      \"meals\": [\n        {\n          \"day\": \"Monday\",\n          \"kind\": \"restaurant\",\n          \"name\": \"Shared venue display name 1\",\n          \"entity_id\": \"H:pick:1\",\n          \"why\": \"Literal H credit / occurrence 1\",\n          \"affinity\": 0.25,\n          \"fallback\": false\n        },\n        {\n          \"day\": \"Tuesday\",\n          \"kind\": \"restaurant\",\n          \"name\": \"Shared venue display name 2\",\n          \"entity_id\": \"H:pick:2\",\n          \"why\": \"Literal H credit / occurrence 2\",\n          \"affinity\": 0.5,\n          \"fallback\": false\n        }\n      ],\n      \"outing\": null,\n      \"notes\": [\n        \"Literal H credit\"\n      ],\n      \"rejected\": []\n    },\n    \"llm_only\": {\n      \"meals\": [\n        {\n          \"day\": \"Monday\",\n          \"name\": \"Unverified H\",\n          \"why\": \"fictional baseline H\"\n        }\n      ],\n      \"outing\": {\n        \"day\": \"Friday\",\n        \"name\": \"Baseline outing H\",\n        \"why\": \"unverified\"\n      }\n    },\n    \"comparison\": {\n      \"constraints\": [\n        \"soft_foods\",\n        \"low_sodium\",\n        \"wheelchair\"\n      ],\n      \"grounded\": {\n        \"picks\": 2,\n        \"with_qloo_entity_id\": 2,\n        \"with_affinity_evidence\": 2,\n        \"constraint_checked\": 2,\n        \"unsafe_candidates_rejected\": 0\n      },\n      \"llm_only\": {\n        \"picks\": 2,\n        \"with_qloo_entity_id\": 0,\n        \"with_affinity_evidence\": 0,\n        \"constraint_checked\": 0,\n        \"unsafe_candidates_rejected\": 0\n      }\n    },\n    \"trace\": [\n      {\n        \"tool\": \"root-fixture-H\",\n        \"args\": {\n          \"sourceToken\": \"root-origin-H\"\n        },\n        \"result_summary\": \"Literal trace H\"\n      }\n    ]\n  },\n  \"week\": {\n    \"start\": \"2030-08-12\",\n    \"assignments\": {\n      \"pick-0\": \"Monday\",\n      \"pick-1\": null\n    }\n  }\n}\n"
+      }
+    }
+  },
+  "unreadableRow": {
+    "id": "root-row-corrupt",
+    "label": "root unreadable row",
+    "error": "root designated unreadable record"
+  },
+  "cases": [
+    {
+      "id": "preview-B-over-A",
+      "initial": "Accepted A with notes-A and pending valid H preview",
+      "actions": [
+        "Preview collection row B",
+        "capture/export current caregiver"
+      ],
+      "expected": [
+        "A origin/week/inputs/calendar/notes and H preview remain exact",
+        "capture/export binds A including notes-A; B is not accepted"
+      ]
+    },
+    {
+      "id": "rename-remove-snapshot",
+      "initial": "Accepted detached B opened earlier; valid H preview",
+      "actions": [
+        "Rename stored row B to 'Renamed B'",
+        "Remove stored row B",
+        "capture/export"
+      ],
+      "expected": [
+        "Local row metadata/removal events occur",
+        "Accepted B origin/week/notes remain unchanged",
+        "Pending H remains if snapshot unchanged",
+        "Capture still B, not storage row existence or new display text"
+      ]
+    },
+    {
+      "id": "unreadable-preview",
+      "initial": "Accepted A with notes-A",
+      "actions": [
+        "Preview a corrupt/unreadable collection row"
+      ],
+      "expected": [
+        "Review refusal only",
+        "Accepted A and notes-A unchanged",
+        "Current A export remains available"
+      ]
+    },
+    {
+      "id": "open-retire-before-await",
+      "initial": "Accepted A and pending H preview",
+      "actions": [
+        "Start Open B whose IDB promise stays unresolved",
+        "inspect synchronously before resolving storage"
+      ],
+      "expected": [
+        "Request generation started and A plan/worksheet/calendar retired before IDB read wait",
+        "Old exports/capture unavailable; form inputs-A retained",
+        "H pending read/preview retired",
+        "No acceptance before IDB resolution"
+      ]
+    },
+    {
+      "id": "open-B-success",
+      "initial": "Start Open B from A",
+      "actions": [
+        "Resolve B storage with valid saved-week-B"
+      ],
+      "expected": [
+        "Commit B only for current generation",
+        "Inputs/origin/calendar/arrangement exactly B",
+        "Fresh empty worksheet for B rather than notes-A",
+        "Final collection capture sees B after acceptedPlan assignment",
+        "No provider request"
+      ]
+    },
+    {
+      "id": "open-B-current-refusal",
+      "initial": "Accepted A then unresolved Open B",
+      "actions": [
+        "Reject current B read with designated error"
+      ],
+      "expected": [
+        "A remains retired; no old model/export resurrection",
+        "Input values retained per existing controller",
+        "Current error/idle displayed once; H absent",
+        "No successful acceptance"
+      ]
+    },
+    {
+      "id": "open-B-edit-cancel",
+      "initial": "Accepted A then unresolved Open B",
+      "actions": [
+        "Invoke existing input-edit cancellation",
+        "Resolve obsolete B read successfully"
+      ],
+      "expected": [
+        "Retired output stays unavailable",
+        "Edit values stay current",
+        "Late B result and idle/error cannot accept or restore old A"
+      ]
+    },
+    {
+      "id": "B-then-C-success-race",
+      "initial": "Accepted A",
+      "actions": [
+        "Start Open B deferred",
+        "Start Open C deferred",
+        "Resolve C successfully",
+        "Resolve B successfully"
+      ],
+      "expected": [
+        "C accepted once with empty C worksheet",
+        "B late success cannot replace C origin/calendar/model",
+        "Capture/export C; equal B/C display names do not equate identities",
+        "No obsolete onIdle mutation"
+      ]
+    },
+    {
+      "id": "B-late-failure-after-C",
+      "initial": "Accepted A",
+      "actions": [
+        "Start Open B deferred",
+        "Start Open C deferred",
+        "Resolve C successfully",
+        "Reject B"
+      ],
+      "expected": [
+        "C remains current",
+        "No late B error replaces success or clears C",
+        "Only C export/capture"
+      ]
+    },
+    {
+      "id": "handoff-preview-over-A",
+      "initial": "Accepted A with notes-A",
+      "actions": [
+        "Read and prepare valid H without Apply",
+        "capture/export current state"
+      ],
+      "expected": [
+        "A inputs/week/calendar/origin/model unchanged",
+        "H candidate available only as preview",
+        "Export remains A with notes-A"
+      ]
+    },
+    {
+      "id": "handoff-refusal-cancel",
+      "initial": "Accepted A with notes-A",
+      "actions": [
+        "Reject invalid H preparation",
+        "Then prepare valid H and Cancel"
+      ],
+      "expected": [
+        "Both actions preserve accepted A and notes-A",
+        "No planRequests retirement caused by refusal/cancel",
+        "H absent after cancel; A export remains current"
+      ]
+    },
+    {
+      "id": "handoff-apply-H",
+      "initial": "Accepted A and prepared valid H",
+      "actions": [
+        "Explicit Apply H"
+      ],
+      "expected": [
+        "Request generation invalidated before commit",
+        "Prepared H committed exactly once",
+        "Origin/inputs/arrangement/calendar H and complete notes-H including history/omitted/empty fields retained",
+        "Final save/capture H only, after acceptedPlan/model/calendar assignments",
+        "No implicit provider or storage save"
+      ]
+    },
+    {
+      "id": "apply-H-obsoletes-B",
+      "initial": "Open B deferred; prepare H against current retained form/retired snapshot if admitted by unchanged handoff UI",
+      "actions": [
+        "Explicit Apply H",
+        "Resolve obsolete B success or failure as two independent traces"
+      ],
+      "expected": [
+        "Where H preview was admitted, Apply makes H current and invalidates B first",
+        "Late B success/error cannot replace/clear H",
+        "If unchanged handoff UI refuses preview without accepted snapshot, preserve that refusal and exercise generation order with an already prepared source-shaped H via actual accept callback; do not invent UI admission"
+      ]
+    },
+    {
+      "id": "open-retires-pending-handoff-read",
+      "initial": "Accepted A; H async file read unresolved",
+      "actions": [
+        "Start Open B",
+        "Resolve H read",
+        "Resolve B successfully"
+      ],
+      "expected": [
+        "H stale read cannot prepare or apply against retired A",
+        "B current with empty model and B export only"
+      ]
+    },
+    {
+      "id": "note-date-edit-retires-preview",
+      "initial": "Accepted A and prepared valid H",
+      "actions": [
+        "Invoke current worksheet note/date/arrangement change one at a time through existing changed hook",
+        "Attempt obsolete Apply"
+      ],
+      "expected": [
+        "Revision changes and pending H retired",
+        "No stale prepared H replaces edited current snapshot",
+        "Valid current export recomputed; invalid displayed date refuses capture/export"
+      ]
+    },
+    {
+      "id": "collection-save-after-apply",
+      "initial": "Explicitly accepted H with notes-H",
+      "actions": [
+        "Capture a browser collection save",
+        "Reopen that saved browser copy through actual Open lifecycle"
+      ],
+      "expected": [
+        "Browser copy contains canonical saved-week-v1 H origin/week, no silently persisted venue notes",
+        "Reopened source is H with fresh empty worksheet",
+        "Original H notes are not recovered without explicit caregiver handoff"
+      ]
+    },
+    {
+      "id": "same-name-two-row-identities",
+      "initial": "Accepted A",
+      "actions": [
+        "Preview B and C with identical displayName",
+        "Open C by exact row ID"
+      ],
+      "expected": [
+        "Storage Open uses root-row-C; no title dedup",
+        "Accepted origin/pick/date/calendar/credit C",
+        "No B metadata or notes carried across"
+      ]
+    }
+  ],
+  "executionBoundary": {
+    "runtime": "Node v24.19.0, vm.SourceTextModule, exact unchanged source bodies",
+    "real": [
+      "combined app",
+      "PlanRequests",
+      "week model/codec",
+      "worksheet model/controller",
+      "note-file codec/controller",
+      "caregiver codec/controller",
+      "collection model/controller",
+      "calendar"
+    ],
+    "doubles": [
+      "minimal DOM tree/selectors/event-dispatch, no browser parser/layout/accessibility",
+      "in-memory storage adapter using native draft validation/rename; no IndexedDB transactions",
+      "health/persona HTTP responses, no actual network",
+      "Blob URL/download gesture sink, no physical files"
+    ],
+    "raceAdmission": "B/C concurrent races use the captured exact app openSaved callback; collection UI busy state itself does not admit a second Open while its first action is pending. Same-name selection and metadata cases use real collection UI event handlers.",
+    "counts": "17 root groups with explicit subtraces for late success/failure and each worksheet/date/arrangement edit. No original forty-case or author eight-hook rerun."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "exitCode": 0,
+  "endedAt": "2026-10-08T20:50:05.940703+00:00",
+  "stdoutSha256": "18db5ee3cd1721f9cd9e7ea33a771688007679c0f2c4a17d5739a51eef9eb807",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "tail": "nvalid or duplicate records cannot partially replace current notes\n  ---\n  duration_ms: 3.253794\n  type: 'test'\n  ...\n# Subtest: unsupported field types and inconsistent reply history are refused literally\nok 37 - unsupported field types and inconsistent reply history are refused literally\n  ---\n  duration_ms: 22.861768\n  type: 'test'\n  ...\n# Subtest: full origin equality accepts reordered JSON keys but refuses another request or response\nok 38 - full origin equality accepts reordered JSON keys but refuses another request or response\n  ---\n  duration_ms: 39.386832\n  type: 'test'\n  ...\n# Subtest: bounded v1 file admission and explicit empty replacement preserve the original week codec\nok 39 - bounded v1 file admission and explicit empty replacement preserve the original week codec\n  ---\n  duration_ms: 91.601944\n  type: 'test'\n  ...\n# Subtest: source-bound model guard and exact existing field limits remain in the new file boundary\nok 40 - source-bound model guard and exact existing field limits remain in the new file boundary\n  ---\n  duration_ms: 47.310594\n  type: 'test'\n  ...\n1..40\n# tests 40\n# suites 0\n# pass 40\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 1739.598604\n",
+  "stderr": ""
+}

@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="/static/style.css">
 <link rel="stylesheet" href="/static/calendar.css">
 <link rel="stylesheet" href="/static/venue_followup.css">
+<link rel="stylesheet" href="/static/saved_weeks.css">
 </head>
 <body>
 <header>
@@ -50,6 +51,56 @@
     <button id="cancelPlan" type="button" hidden>Stop waiting</button>
   </section>
 
+  <section id="caregiverHandoff" class="card contact-session-help" aria-labelledby="caregiverHandoffTitle">
+    <h2 id="caregiverHandoffTitle">Keep your caregiver handoff</h2>
+    <p>Save the arranged week and all its venue notes in one editable file. Open a handoff to review it before replacing the current week and notes.</p>
+    <div class="contact-actions">
+      <button id="saveCaregiverHandoff" data-handoff-save type="button" disabled>Save caregiver handoff (.json)</button>
+      <button id="openCaregiverHandoff" data-handoff-open type="button">Open caregiver handoff</button>
+      <button data-handoff-cancel type="button" hidden>Cancel opening</button>
+      <input id="caregiverHandoffFile" data-handoff-input type="file" accept=".json,application/json" aria-label="Choose a TasteTable caregiver handoff" hidden>
+    </div>
+    <p data-handoff-status class="why contact-file-status" role="status" aria-live="polite" aria-atomic="true"></p>
+    <section data-handoff-preview class="contact-file-preview" aria-label="Review caregiver handoff" hidden>
+      <h3>Review before replacing</h3>
+      <p data-handoff-description tabindex="-1"></p>
+      <pre data-handoff-source></pre>
+      <details>
+        <summary>Review every scheduled and omitted pick</summary>
+        <ol data-handoff-visits></ol>
+      </details>
+      <details>
+        <summary>Review all retained venue notes, including other dates</summary>
+        <ol data-handoff-records></ol>
+      </details>
+      <p>Replacement includes the original inputs, this arrangement and the complete note set. An empty set clears current venue notes.</p>
+      <button data-handoff-apply type="button" disabled>Replace week and notes</button>
+    </section>
+    <p class="why">Keep the file to continue later. Files are read locally; nothing is saved automatically or sent to a provider. Original checks are retained without being run again.</p>
+  </section>
+
+  <section id="savedWeeks" class="card saved-weeks" aria-labelledby="savedWeeksTitle">
+    <h2 id="savedWeeksTitle">Saved in this browser</h2>
+    <p>Keep named planning drafts in this browser. Each explicit Save keeps the original inputs, source evidence and arranged dates. Venue call notes are not included. It is not refreshed automatically. Clearing this site's browser data removes these drafts.</p>
+    <button id="refreshSavedWeeks" type="button">Refresh saved weeks</button>
+    <p id="savedWeeksStatus" class="why" role="status" aria-live="polite"></p>
+    <p id="savedWeeksEmpty" hidden>No saved weeks yet. Generate a plan, arrange it, then choose <strong>Save in this browser</strong>.</p>
+    <ul id="savedWeeksList"></ul>
+    <section id="savedWeekPreview" class="saved-week-preview" aria-labelledby="savedPreviewTitle" hidden>
+      <h3 id="savedPreviewTitle"></h3>
+      <p id="savedPreviewSummary"></p>
+      <p id="savedPreviewSource" class="mode"></p>
+      <ol id="savedPreviewDays"></ol>
+      <p id="savedPreviewOmitted"></p>
+      <div class="saved-week-actions">
+        <button id="openSavedWeek" type="button" class="primary" disabled>Open browser copy</button>
+        <label>Name for this saved week <input id="renameSavedWeekName" maxlength="120" autocomplete="off"></label>
+        <button id="renameSavedWeek" type="button" disabled>Rename saved week</button>
+        <button id="removeSavedWeek" type="button" disabled>Remove saved week</button>
+      </div>
+    </section>
+  </section>
+
   <section id="results" hidden>
     <section id="weekOrganizer" class="card grounded" aria-labelledby="weekTitle">
       <h2 id="weekTitle">Your week</h2>
@@ -65,6 +116,10 @@
         <button id="printWeek" type="button" class="primary" disabled>Print week</button>
         <button id="saveWeek" type="button" disabled aria-describedby="weekFileStatus">Save week (.json)</button>
         <button id="calendarDownload" type="button" disabled aria-describedby="calendarStatus">Download calendar (.ics)</button>
+      </div>
+      <div class="saved-week-actions organizer-help">
+        <label>Name for this browser copy <input id="savedWeekName" maxlength="120" autocomplete="off"></label>
+        <button id="saveCurrentWeek" type="button" disabled>Save in this browser</button>
       </div>
       <p id="weekHelp" class="why organizer-help">Choose any date to show its Monday–Sunday week. Move checked picks to the days that suit you, or keep a pick off this week. Several picks can share a day. Save your week to continue editing after this visit.</p>
       <p id="weekFileStatus" class="why organizer-help" role="status" aria-live="polite"></p>

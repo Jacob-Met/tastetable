@@ -1,0 +1,338 @@
+{
+  "schema": "tastetable.caregiver-collection.root-independent-oracle.v1",
+  "owner": "chatgpt-d98d06fbfc35/root",
+  "contract": {
+    "repository": "Jacob-Met/tastetable",
+    "blob": "f7c97f393511830421fffe7ba63a1e878f5296f1"
+  },
+  "exposure": "Root read v2 contract and original owner identities. Image peer has sent opaque combined app/HTML/README pins and no-blocker source-review summary; root has not read combined source, author receiver source, author execution results or peer review body. This concrete oracle freezes before those bodies. No source-blind claim about already known metadata.",
+  "qualification": "Focused actual composed application hooks with real unchanged PlanRequests generation, explicit storage/UI/codec/model doubles if needed. Preserve all original40 caregiver model outcomes without rerunning them. No DOM/IndexedDB/physical browser, provider or native acceptance.",
+  "fixtures": {
+    "A": {
+      "acceptedOriginToken": "root-origin-A",
+      "preparedWeekToken": "root-week-A",
+      "inputsToken": "root-inputs-A",
+      "calendarToken": "root-calendar-A",
+      "arrangementToken": "root-arrangement-A",
+      "worksheetToken": "root-notes-A",
+      "pickOccurrences": [
+        "A:pick:1",
+        "A:pick:2"
+      ],
+      "visitDates": [
+        "2030-05-01",
+        "2030-05-02"
+      ],
+      "credit": "Literal A credit & <b>text</b>",
+      "questionHistoryToken": "A-history"
+    },
+    "B": {
+      "collectionRowId": "root-row-B",
+      "displayName": "Same display name",
+      "acceptedOriginToken": "root-origin-B",
+      "preparedWeekToken": "root-week-B",
+      "inputsToken": "root-inputs-B",
+      "calendarToken": "root-calendar-B",
+      "arrangementToken": "root-arrangement-B",
+      "pickOccurrences": [
+        "B:pick:1",
+        "B:pick:2"
+      ],
+      "visitDates": [
+        "2030-06-10",
+        "2030-06-11"
+      ],
+      "credit": "Literal B credit",
+      "worksheetAfterOpen": "fresh empty model for B"
+    },
+    "C": {
+      "collectionRowId": "root-row-C",
+      "displayName": "Same display name",
+      "acceptedOriginToken": "root-origin-C",
+      "preparedWeekToken": "root-week-C",
+      "inputsToken": "root-inputs-C",
+      "calendarToken": "root-calendar-C",
+      "arrangementToken": "root-arrangement-C",
+      "pickOccurrences": [
+        "C:pick:1",
+        "C:pick:2"
+      ],
+      "visitDates": [
+        "2030-07-10",
+        "2030-07-11"
+      ],
+      "credit": "Literal C credit",
+      "worksheetAfterOpen": "fresh empty model for C"
+    },
+    "H": {
+      "handoffToken": "root-handoff-H",
+      "acceptedOriginToken": "root-origin-H",
+      "preparedWeekToken": "root-week-H",
+      "inputsToken": "root-inputs-H",
+      "calendarToken": "root-calendar-H",
+      "arrangementToken": "root-arrangement-H",
+      "worksheetToken": "root-notes-H",
+      "pickOccurrences": [
+        "H:pick:1",
+        "H:pick:2"
+      ],
+      "visitDates": [
+        "2030-08-12",
+        "2030-08-13"
+      ],
+      "credit": "Literal H credit",
+      "questionHistoryToken": "H-history",
+      "omittedVisitToken": "H-omitted",
+      "emptyReplacementToken": ""
+    },
+    "binding": "Tokens are exact independent value/identity sentinels at explicit application dependency boundaries, mapped through source-shaped fixtures after source inspection. Never infer expected acceptance or event order from actual execution. Native codecs remain unchanged; their semantics are not reimplemented here."
+  },
+  "invariants": [
+    "Preview/storage metadata changes never change accepted origin, current worksheet, date/arrangement or export capture.",
+    "Every export/capture uses accepted source plus current matching state/model; equal names never merge identity.",
+    "Collection Open synchronously retires current week/model/exports before first awaited IDB read, preserving form input values.",
+    "Only current request generation may accept/error/idle; a later obsolete success or failure cannot mutate current state.",
+    "Caregiver preparation/refusal/cancel preserves accepted source and current notes. Only explicit Apply accepts the new prepared handoff.",
+    "Apply invalidates outstanding request generation before committing prepared week; then restores matching origin/inputs/model/calendar and only then refreshes collection save capture.",
+    "Source/note/date/arrangement change or page departure retires stale handoff read/preview; no failed operation resurrects old output."
+  ],
+  "cases": [
+    {
+      "id": "preview-B-over-A",
+      "initial": "Accepted A with notes-A and pending valid H preview",
+      "actions": [
+        "Preview collection row B",
+        "capture/export current caregiver"
+      ],
+      "expected": [
+        "A origin/week/inputs/calendar/notes and H preview remain exact",
+        "capture/export binds A including notes-A; B is not accepted"
+      ]
+    },
+    {
+      "id": "rename-remove-snapshot",
+      "initial": "Accepted detached B opened earlier; valid H preview",
+      "actions": [
+        "Rename stored row B to 'Renamed B'",
+        "Remove stored row B",
+        "capture/export"
+      ],
+      "expected": [
+        "Local row metadata/removal events occur",
+        "Accepted B origin/week/notes remain unchanged",
+        "Pending H remains if snapshot unchanged",
+        "Capture still B, not storage row existence or new display text"
+      ]
+    },
+    {
+      "id": "unreadable-preview",
+      "initial": "Accepted A with notes-A",
+      "actions": [
+        "Preview a corrupt/unreadable collection row"
+      ],
+      "expected": [
+        "Review refusal only",
+        "Accepted A and notes-A unchanged",
+        "Current A export remains available"
+      ]
+    },
+    {
+      "id": "open-retire-before-await",
+      "initial": "Accepted A and pending H preview",
+      "actions": [
+        "Start Open B whose IDB promise stays unresolved",
+        "inspect synchronously before resolving storage"
+      ],
+      "expected": [
+        "Request generation started and A plan/worksheet/calendar retired before IDB read wait",
+        "Old exports/capture unavailable; form inputs-A retained",
+        "H pending read/preview retired",
+        "No acceptance before IDB resolution"
+      ]
+    },
+    {
+      "id": "open-B-success",
+      "initial": "Start Open B from A",
+      "actions": [
+        "Resolve B storage with valid saved-week-B"
+      ],
+      "expected": [
+        "Commit B only for current generation",
+        "Inputs/origin/calendar/arrangement exactly B",
+        "Fresh empty worksheet for B rather than notes-A",
+        "Final collection capture sees B after acceptedPlan assignment",
+        "No provider request"
+      ]
+    },
+    {
+      "id": "open-B-current-refusal",
+      "initial": "Accepted A then unresolved Open B",
+      "actions": [
+        "Reject current B read with designated error"
+      ],
+      "expected": [
+        "A remains retired; no old model/export resurrection",
+        "Input values retained per existing controller",
+        "Current error/idle displayed once; H absent",
+        "No successful acceptance"
+      ]
+    },
+    {
+      "id": "open-B-edit-cancel",
+      "initial": "Accepted A then unresolved Open B",
+      "actions": [
+        "Invoke existing input-edit cancellation",
+        "Resolve obsolete B read successfully"
+      ],
+      "expected": [
+        "Retired output stays unavailable",
+        "Edit values stay current",
+        "Late B result and idle/error cannot accept or restore old A"
+      ]
+    },
+    {
+      "id": "B-then-C-success-race",
+      "initial": "Accepted A",
+      "actions": [
+        "Start Open B deferred",
+        "Start Open C deferred",
+        "Resolve C successfully",
+        "Resolve B successfully"
+      ],
+      "expected": [
+        "C accepted once with empty C worksheet",
+        "B late success cannot replace C origin/calendar/model",
+        "Capture/export C; equal B/C display names do not equate identities",
+        "No obsolete onIdle mutation"
+      ]
+    },
+    {
+      "id": "B-late-failure-after-C",
+      "initial": "Accepted A",
+      "actions": [
+        "Start Open B deferred",
+        "Start Open C deferred",
+        "Resolve C successfully",
+        "Reject B"
+      ],
+      "expected": [
+        "C remains current",
+        "No late B error replaces success or clears C",
+        "Only C export/capture"
+      ]
+    },
+    {
+      "id": "handoff-preview-over-A",
+      "initial": "Accepted A with notes-A",
+      "actions": [
+        "Read and prepare valid H without Apply",
+        "capture/export current state"
+      ],
+      "expected": [
+        "A inputs/week/calendar/origin/model unchanged",
+        "H candidate available only as preview",
+        "Export remains A with notes-A"
+      ]
+    },
+    {
+      "id": "handoff-refusal-cancel",
+      "initial": "Accepted A with notes-A",
+      "actions": [
+        "Reject invalid H preparation",
+        "Then prepare valid H and Cancel"
+      ],
+      "expected": [
+        "Both actions preserve accepted A and notes-A",
+        "No planRequests retirement caused by refusal/cancel",
+        "H absent after cancel; A export remains current"
+      ]
+    },
+    {
+      "id": "handoff-apply-H",
+      "initial": "Accepted A and prepared valid H",
+      "actions": [
+        "Explicit Apply H"
+      ],
+      "expected": [
+        "Request generation invalidated before commit",
+        "Prepared H committed exactly once",
+        "Origin/inputs/arrangement/calendar H and complete notes-H including history/omitted/empty fields retained",
+        "Final save/capture H only, after acceptedPlan/model/calendar assignments",
+        "No implicit provider or storage save"
+      ]
+    },
+    {
+      "id": "apply-H-obsoletes-B",
+      "initial": "Open B deferred; prepare H against current retained form/retired snapshot if admitted by unchanged handoff UI",
+      "actions": [
+        "Explicit Apply H",
+        "Resolve obsolete B success or failure as two independent traces"
+      ],
+      "expected": [
+        "Where H preview was admitted, Apply makes H current and invalidates B first",
+        "Late B success/error cannot replace/clear H",
+        "If unchanged handoff UI refuses preview without accepted snapshot, preserve that refusal and exercise generation order with an already prepared source-shaped H via actual accept callback; do not invent UI admission"
+      ]
+    },
+    {
+      "id": "open-retires-pending-handoff-read",
+      "initial": "Accepted A; H async file read unresolved",
+      "actions": [
+        "Start Open B",
+        "Resolve H read",
+        "Resolve B successfully"
+      ],
+      "expected": [
+        "H stale read cannot prepare or apply against retired A",
+        "B current with empty model and B export only"
+      ]
+    },
+    {
+      "id": "note-date-edit-retires-preview",
+      "initial": "Accepted A and prepared valid H",
+      "actions": [
+        "Invoke current worksheet note/date/arrangement change one at a time through existing changed hook",
+        "Attempt obsolete Apply"
+      ],
+      "expected": [
+        "Revision changes and pending H retired",
+        "No stale prepared H replaces edited current snapshot",
+        "Valid current export recomputed; invalid displayed date refuses capture/export"
+      ]
+    },
+    {
+      "id": "collection-save-after-apply",
+      "initial": "Explicitly accepted H with notes-H",
+      "actions": [
+        "Capture a browser collection save",
+        "Reopen that saved browser copy through actual Open lifecycle"
+      ],
+      "expected": [
+        "Browser copy contains canonical saved-week-v1 H origin/week, no silently persisted venue notes",
+        "Reopened source is H with fresh empty worksheet",
+        "Original H notes are not recovered without explicit caregiver handoff"
+      ]
+    },
+    {
+      "id": "same-name-two-row-identities",
+      "initial": "Accepted A",
+      "actions": [
+        "Preview B and C with identical displayName",
+        "Open C by exact row ID"
+      ],
+      "expected": [
+        "Storage Open uses root-row-C; no title dedup",
+        "Accepted origin/pick/date/calendar/credit C",
+        "No B metadata or notes carried across"
+      ]
+    }
+  ],
+  "sourceCompositionChecks": [
+    "Exactly three reconciled source paths app/index/README; candidate relative to caregiver equals released collection owner delta exactly.",
+    "App five additive collection hunks; HTML three additive hunks with unique IDs and original script order; README exact released disclosure replacement plus feature section.",
+    "Every unchanged base leaf and both owners' nonshared leaves/receivers/evidence preserve exact mode/type/blob identities.",
+    "preparePlanView stays free of accepted-state mutation; collection capture refresh occurs only after appropriate accepted origin assignment.",
+    "No workflow, backend/provider, codec/model, existing receiver, Undo/availability or unrelated owner change."
+  ],
+  "executionPolicy": "Publish exact source-bound receiver and source pins before one focused execution. Keep any failure/exception as original evidence; no broad original-model/browser reruns or expanded assertions derived after seeing outcome. Distinguish source review, hook receiving, DOM/IDB and actual browser."
+}

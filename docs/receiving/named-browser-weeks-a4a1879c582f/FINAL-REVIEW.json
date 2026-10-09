@@ -1,0 +1,119 @@
+{
+  "schema": "estate.tastetable.named_collection.final_review.v1",
+  "reviewed_at": "2026-10-08T21:23:24.022817+00:00",
+  "status": "LOCAL_NATIVE_QUALIFIED_INTEGRATION_HELD",
+  "native_base": {
+    "commit": "328df51af830e91f304417a66d74f43d94ae0c02",
+    "tree": "df0251092f77d96169daa097abaec409ecabe6ba"
+  },
+  "held_composition_base": {
+    "commit": "145d27981b3c5fe6afa72e205b42582fd72c7734",
+    "tree": "71f2c5b144e2a54787cb92b37d6e639bbfef6ba6",
+    "leaves": 818,
+    "README_blob": "c0ebf40a3b97f3efedffbc85561a6af153cc97ef",
+    "drift": "PR53 native batch and PR59 visit-record CSV additions; all received app/index/canonical/helper/producer inputs remain identical. Their README additions are preserved."
+  },
+  "source_review": {
+    "all_current_parent_app_and_index_lines_preserved": true,
+    "accepted_origin_and_worksheet_hooks_preserved": true,
+    "unchanged_canonical_makeWeekFile_readWeekFile": true,
+    "explicit_save_only": true,
+    "transaction_commit_before_success": true,
+    "request_controller_before_async_IDB": true,
+    "dirty_rename_regression_fixed_and_received": true
+  },
+  "author": {
+    "status": "accepted",
+    "cases": 9,
+    "child_exit": 0,
+    "startedAt": "2026-10-08T20:51:24.998Z",
+    "finishedAt": "2026-10-08T20:51:34.543Z",
+    "report_sha256": "bf55ef6d688e9fe498ae01a212b409dca1cdf1be7daf8705b0b63cabf5b27c02",
+    "executed_driver_sha256": "1ee6e008307850a12a6d513fb8b49ccedc29486fc629235e393d464d5947c68a",
+    "raw_report_directly_parses": true,
+    "all_reported_artifact_hashes_verified": 12,
+    "source_unchanged": true,
+    "full_driver_and_report_reviewed": true,
+    "desktop_and_390px_JPEG_visually_reviewed": true
+  },
+  "node": {
+    "status": "passed",
+    "cases": 8,
+    "child_exit": 0,
+    "raw_stdout_sha256": "9f80ff871c9102486cd95c90a2592621b3d89a19534e829938c736bc27b8d377"
+  },
+  "peer": {
+    "status": "accepted",
+    "distinct_native_histories": 1,
+    "assertions": 14,
+    "child_exit": 0,
+    "report_sha256": "a6888f688b2bb46fdae94266676e2e47f3197cf0e47ad8ea4de2266e3ab012c9",
+    "driver_sha256": "ee528aef89409a0ff45b9635b74852b5e7bb030d3bc362e8138199e7994e1f30",
+    "review": "Full driver/raw report reviewed; all27 manifested members and10 unchanged dependency/fixture blobs verified. Held native IDB Open A, newer portable B, late removed-A refusal preserves B and its worksheet. Actual JSON/ICS and375px layout accepted."
+  },
+  "existing_native_gate": {
+    "status": "accepted",
+    "cases": 9,
+    "child_exit": 0,
+    "report_sha256": "55b322fb655f33a699eabdb45f8ec411f88f158aecfe80a6451ffa4bd911727a",
+    "artifacts": 15,
+    "artifact_bytes": 474498,
+    "all_artifact_hashes_verified": true,
+    "raw_log_receipt_equals_report": true,
+    "source_unchanged": true,
+    "all25_receiving_source_hashes_accounted_for": true,
+    "helper_diff": "Exactly four collection asset whitelist additions; existing assertions unchanged.",
+    "custody": "Exact padded two-part ZIPs preserve all15 outputs plus raw report/log/custody. Original combined private ZIP container is not retained.",
+    "post_exit_checkpoint_failure": {
+      "status": "refused_before_write",
+      "attempted_bytes": 276437,
+      "capacity": 262144
+    }
+  },
+  "post_receiving_source_adaptations": {
+    "paths": [
+      "README.md",
+      "tools/check_named_collection_browser.cjs"
+    ],
+    "product_source_unchanged": true,
+    "details": "README preserves two later owner sections and adds replay instructions. Maintained receiver adds executable-path override and separates optional current parent from original qualification baseline. Original executed driver/report remain exact.",
+    "maintained_runner_syntax_exit": 0,
+    "maintained_runner_behavior_rerun": false,
+    "reason_no_repeat": "No application logic, receiver assertion, browser interaction or report formatting changed."
+  },
+  "inspection_correction": {
+    "observation": "Root initially confused nested JSON escaping with Python repr while inspecting report termination.",
+    "exact_driver_terminator_codes": [
+      43,
+      39,
+      92,
+      110,
+      39,
+      41
+    ],
+    "result": "One backslash byte; valid JS newline escape. Raw report ends LF and parses directly. Author independently confirmed; no normalization or defect."
+  },
+  "compatibility_proposal": {
+    "archive": "named-collection-undo-compatibility.zip",
+    "sha256": "76287f6625c6d7a8751092e77f052e718a16eb42c039b67c2381e38a57323405",
+    "owner_tree": "887d32489a0ed84b9ffc8c2e754420a36b5149df",
+    "root_full_patch_reviewed": true,
+    "all34_manifested_members_and5_proposed_source_identities_verified": true,
+    "unique_combined_HTML_IDs": 65,
+    "acceptance": "Source-only. Four assets must be admitted by both owner native receivers; four-button capability is added to existing VM fixture. Owner hooks/assertions/workflows retained. Combined runtime acceptance pending."
+  },
+  "historical_limits": {
+    "earlier_reported_author_9_pass": "Unavailable raw report/private session; excluded from acceptance. The retained recovery is a distinct execution.",
+    "superseded_a14_source": "Earlier predecessor packet remains separate; not integrated or relabelled.",
+    "local_boundary": "Native Chromium/DOM/IndexedDB and fixture-backed producer. No live provider, FastAPI deployment, physical phone, BFCache or combined Undo/availability/handoff acceptance."
+  },
+  "integration": {
+    "status": "HELD_ACTIONS",
+    "hold": "https://github.com/Jacob-Met/hamon/issues/143#issuecomment-6067592767",
+    "adoption": "https://github.com/Jacob-Met/hamon/issues/140#issuecomment-6068788258",
+    "branch_PR_merge_dispatch_rerun": "not performed for this contribution",
+    "hosted_gates": "Unrun, not passed and not bypassed.",
+    "future_requirements": "Owner review of later composition and normal exact-head hosted gates after hold release; no activation or adoption of pending owner features."
+  },
+  "packaging_preflight": "An initial root builder invocation had a JavaScript parse error from embedded Markdown fences before any tool execution or filesystem mutation; corrected using tilde fences."
+}

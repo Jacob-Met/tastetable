@@ -1,0 +1,255 @@
+{
+  "schema": "tastetable.caregiver-handoff-browser/1",
+  "status": "failed",
+  "project": "/home/jacob/tastetable-caregiver-handoff-d98d06fb-20261008/source",
+  "node": "v22.22.1",
+  "baseCommit": "328df51af830e91f304417a66d74f43d94ae0c02",
+  "input": {
+    "path": "fixtures/received-week.json",
+    "publishedPath": "docs/venue-followup-6c20bb4b010e/author/final/saved-composition-week.json",
+    "git_blob": "8b14090030201d6e8d69cd5bca380a9a71a4da0d",
+    "attribution": "Unchanged published native saved-week artifact; this invocation does not run its producer.",
+    "actualPath": "/home/jacob/tastetable-caregiver-handoff-d98d06fb-20261008/source/docs/venue-followup-6c20bb4b010e/author/final/saved-composition-week.json",
+    "sha256": "55dfb9c7e50b2aff749dbb33835dcc5cf89c7d7f0eaf4e2b68dd957cb319a824"
+  },
+  "bootstrap": "Authored GET-only mock health/personas and exact project static files; no FastAPI or provider.",
+  "checks": [
+    "real keyboard edits retain an earlier reply with its exact earlier questions and a distinct second visit note",
+    "actual notes and week downloads retain all three occurrence/date records separately from the unchanged saved-week format",
+    "one physical caregiver-handoff download contains the exact arranged week and all three source-bound native note records",
+    "actual chooser reviews literal filename, complete hidden-date records and earlier reply questions; explicit Cancel preserves the current week, inputs and notes"
+  ],
+  "artifacts": [
+    {
+      "name": "saved-venue-notes.json",
+      "bytes": 16777,
+      "sha256": "86507ef94be0fbdb95846432c3b2e79816675ea1a223236ec00b8577864451cc",
+      "kind": "actual browser download",
+      "suggestedFilename": "tastetable-venue-notes-2026-12-28.json"
+    },
+    {
+      "name": "arranged-week.json",
+      "bytes": 14596,
+      "sha256": "f4f46ebe18d0c7bd0ff9a9e8451c9c4b1c5874cd59949fce93fd4340290cffa7",
+      "kind": "actual browser download",
+      "suggestedFilename": "tastetable-week-2026-12-28.json"
+    },
+    {
+      "name": "saved-caregiver-handoff.json",
+      "bytes": 33586,
+      "sha256": "9e0beb8c987f50142a410f15a51332103313b34df426eb86ceb246f17e04718d",
+      "kind": "actual browser download",
+      "suggestedFilename": "tastetable-caregiver-handoff-2026-12-28.json"
+    },
+    {
+      "name": "before-handoff.ics",
+      "bytes": 3326,
+      "sha256": "b9a3e8fd6594eea12aa9ea7b4d02d9a06990283273d80410329965e57725b2fb",
+      "kind": "actual browser download",
+      "suggestedFilename": "tastetable-demo-2026-12-28.ics"
+    },
+    {
+      "name": "handoff-<literal>-海.json",
+      "bytes": 33586,
+      "sha256": "9e0beb8c987f50142a410f15a51332103313b34df426eb86ceb246f17e04718d",
+      "kind": "unchanged actual download copied under a literal filename"
+    },
+    {
+      "name": "desktop-handoff-review.png",
+      "bytes": 275146,
+      "sha256": "eafb583eda2832ddacf824f0913aae60235af99e1f8878bb4694f8e30bed27c5",
+      "kind": "actual Chrome screenshot"
+    },
+    {
+      "name": "before-refusals-handoff.json",
+      "bytes": 33952,
+      "sha256": "c27185ccaa225a8f1aa49d26f33c71232ede17181ead447c66464cc9827450d8",
+      "kind": "actual browser download",
+      "suggestedFilename": "tastetable-caregiver-handoff-2026-12-28.json"
+    },
+    {
+      "name": "mismatched-source.json",
+      "bytes": 33605,
+      "sha256": "09b6def2bbd335fd53a36cf9d3cc6e2c1a5ceff2d0a450fd1e5b815e401207e3",
+      "kind": "authored negative handoff input"
+    },
+    {
+      "name": "malformed-week.json",
+      "bytes": 33592,
+      "sha256": "264299ca9c4a8fac866a519e26ec02ccb3f5c636e33b64e12c11f73d7dcbaffe",
+      "kind": "authored negative handoff input"
+    },
+    {
+      "name": "late-invalid-note.json",
+      "bytes": 34109,
+      "sha256": "e279147174c03f43b1c717eefdccd04eaa7bfe23f29a974b70390a99d611cde8",
+      "kind": "authored negative handoff input"
+    },
+    {
+      "name": "observed-state.png",
+      "bytes": 197400,
+      "sha256": "6bf2265f5006062d2089c4ca03b56818b32bdf47788e0f86f3addcd2efa2e753",
+      "kind": "actual Chrome screenshot"
+    }
+  ],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:35543/",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:35543/static/style.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:35543/static/calendar.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:35543/static/venue_followup.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:35543/static/plan-request.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:35543/static/calendar.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:35543/static/app.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:35543/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:35543/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:35543/static/venue_followup.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:35543/static/caregiver_handoff.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:35543/static/venue_note_file.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:35543/api/health",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:35543/favicon.ico",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:35543/api/personas",
+      "method": "GET"
+    },
+    {
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+      "method": "GET"
+    }
+  ],
+  "externalRequests": [],
+  "serverRequests": [
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/plan-request.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_plan.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/caregiver_handoff.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_note_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/favicon.ico"
+    },
+    {
+      "method": "GET",
+      "path": "/api/personas"
+    }
+  ],
+  "sourceSha256": {
+    "static/index.html": "114bbd275d2d7ea899e8cdef003436cf3d68187283427f9333d390c32bab2293",
+    "static/style.css": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+    "static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+    "static/calendar.css": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+    "static/venue_followup.css": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+    "static/plan-request.js": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+    "tests/venue_followup.test.mjs": "a53284b48da8375d7f6cf26b1d4e5943dfd203e60ff1ef44780f9a02f299479f",
+    "static/venue_followup.mjs": "cfa96d88aeaf06d55c5a4b7ad457f6a693f571ec06ccd8744141e4922ff3b2c3",
+    "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+    "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+    "static/app.js": "00e234dc9a69ed4b883ffcc70dbe25db50f38f3f0203b8c5c2eda0f3fe2ff129",
+    "static/venue_note_file.mjs": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+    "tests/venue_note_file.test.mjs": "8c1b12a02302e414346a04710d5efb14af45e0cb8994ba75135c9e1988252740",
+    "static/caregiver_handoff.mjs": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+    "tests/caregiver_handoff.test.mjs": "dbdcb41b1598970c0ba098216a234887a470ca36fa5a3bfcf7faa4bfdebb7b9f",
+    "tools/check_caregiver_handoff_browser.mjs": "1828b5a3a7d575f4968d3279e5813f0c0d4f6ed2281af90f0f356a187947b224"
+  },
+  "sourceUnchanged": true,
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/153.0.8010.47",
+    "revision": "@73934a44f61e6b3878d1943064c141a5a820f5f7",
+    "userAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+    "jsVersion": "15.3.76.12"
+  },
+  "error": "Error: Timed out: whole handoff refusal late-invalid-note.json\n    at waitFor (file:///home/jacob/tastetable-caregiver-handoff-d98d06fb-20261008/source/tools/check_caregiver_handoff_browser.mjs:60:9)\n    at async file:///home/jacob/tastetable-caregiver-handoff-d98d06fb-20261008/source/tools/check_caregiver_handoff_browser.mjs:381:5",
+  "browserLog": "[1521864:1523073:1008/205316.800715:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[1521864:1523073:1008/205316.924724:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[1521864:1523073:1008/205317.417694:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n\nDevTools listening on ws://127.0.0.1:38139/devtools/browser/fbaf505c-a2f3-4d93-a392-6c4153cb99d1\n[1521864:1521864:1008/205318.424142:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[1521864:1521864:1008/205318.424368:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[1521864:1523073:1008/205318.426619:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[1521864:1521864:1008/205318.486360:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[1521864:1523073:1008/205318.486560:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[1521864:1521864:1008/205318.571096:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[1521864:1523073:1008/205318.574716:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[1521864:1521864:1008/205318.579222:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[1521864:1521864:1008/205318.632087:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[1521864:1523073:1008/205318.635777:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[1521864:1521864:1008/205318.663183:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[1521864:1523073:1008/205318.663338:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[1521864:1521864:1008/205318.762427:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[1521864:1523074:1008/205322.506562:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT\n",
+  "pageErrors": [],
+  "nativeFileChooserEvents": 5,
+  "artifactBytes": 709675
+}

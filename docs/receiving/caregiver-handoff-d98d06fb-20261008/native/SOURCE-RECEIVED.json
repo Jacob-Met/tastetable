@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-08T20:41:32.585069+00:00",
+  "root": "/home/jacob/tastetable-caregiver-handoff-d98d06fb-20261008",
+  "source": "/home/jacob/tastetable-caregiver-handoff-d98d06fb-20261008/source",
+  "head": "328df51af830e91f304417a66d74f43d94ae0c02",
+  "tree": "df0251092f77d96169daa097abaec409ecabe6ba",
+  "trackedFiles": 786,
+  "instructions": [],
+  "contractSha256": "e4244fc78bf21b62a7ea9d3ccdfe32585031cbcd1f5cf8fac7a6ef8595aeef36",
+  "sourceChanged": false,
+  "candidateExists": false
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "tastetable.d98-focused-preparation-event.v1",
+  "toolChunk": "40c2d2",
+  "exit": 1,
+  "stage": "pre-execution corrected app byte identity guard",
+  "error": "Error: corrected app identity mismatch",
+  "cause": "apply_patch file transport added a final newline to the fetched body.",
+  "applicationExecuted": false,
+  "receiverExecuted": false,
+  "preservedBeforeimage": "CORRECTED-APP.STAGING-MISMATCH.js",
+  "disposition": "Decode fetched source from JSON literal and require exact original Git/byte/SHA pin before any behavioral run; frozen oracle and receiver are unchanged."
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "tastetable.caregiver-collection.author-hook-receiving.v1",
+  "contract": "f7c97f393511830421fffe7ba63a1e878f5296f1",
+  "rootOracle": "6a49031f5803b3cc97d65a897b854cfcf2933523",
+  "exposure": "Author's eight-case receiver was written and executed independently before reading the frozen root 17-trace oracle body. Root's oracle was frozen before root read candidate bodies or this execution result. This is author evidence, not independent receiving.",
+  "source": {
+    "static/app.js": "ed40637354a456c03dfa32a2e4ec954f23110ffa",
+    "static/index.html": "c9058dae2b074078902be5badf7c5690293e3ee1",
+    "README.md": "37857dad1f02b74ac16330cdda9091af9eec270a"
+  },
+  "maintainedReceiver": {
+    "path": "tests/caregiver_collection_composition.test.mjs",
+    "blob": "3e5371488a37eab85de26fbb2d99ae5bcdbfc827"
+  },
+  "actual": {
+    "chunk_id": "8ab6eb",
+    "wall_time_seconds": 0.132751419,
+    "exit_code": 0,
+    "original_token_count": 552,
+    "output": "SOURCE_ADMISSION {\"runtime\":\"v24.19.0\",\"files\":{\"file:///composition/static/app.js\":{\"bytes\":21963,\"sha256\":\"c484f029aa70dad81acaa21d99f00a93681dff61101accbca5a8d33c89c9a500\",\"gitBlob\":\"ed40637354a456c03dfa32a2e4ec954f23110ffa\"},\"file:///composition/static/plan-request.js\":{\"bytes\":1420,\"sha256\":\"b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995\",\"gitBlob\":\"b21276dda840fe6dd96a3bf3258a851970ff5e4d\"},\"file:///composition/static/week_plan.mjs\":{\"bytes\":3913,\"sha256\":\"e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809\",\"gitBlob\":\"8ed28163e0273c510fdd8e6f7c5d1c8476efb862\"},\"file:///composition/static/week_file.mjs\":{\"bytes\":6642,\"sha256\":\"914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614\",\"gitBlob\":\"420ddb8f63fca264dcf97be7147801105696155d\"}},\"test\":{\"bytes\":14881,\"sha256\":\"baa6243b5e537ddb91216bb3f41bb4df6b4a662d139f982fcb1651e5511261b2\",\"gitBlob\":\"3e5371488a37eab85de26fbb2d99ae5bcdbfc827\"},\"scope\":\"in-memory app hooks; explicit DOM/mount/storage/calendar doubles; no filesystem/browser/native calls\"}\n(node:2) ExperimentalWarning: VM Modules is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n✔ both mounted features start without accepted data and only GET bootstrap is allowed (3.887948ms)\n✔ collection Open retires before the read and accepts exact source, duplicate occurrences and empty notes (37.093633ms)\n✔ handoff preparation and late preparation refusal do not change the accepted collection snapshot (15.798364ms)\n✔ explicit handoff Apply invalidates a held collection success and final capture uses the applied model/origin (13.333187ms)\n✔ a late collection failure cannot retire a newer accepted handoff (8.916853ms)\n✔ current collection refusal retains inputs but does not resurrect the retired plan or worksheet (8.730332ms)\n✔ cancel while a collection read is held invalidates its eventual success (6.615491ms)\n✔ invalid dates refuse capture; arrangement edits retain accepted source and notify handoff retirement (13.254659ms)\nℹ tests 8\nℹ suites 0\nℹ pass 8\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 115.532524\n"
+  },
+  "scope": {
+    "actual": [
+      "exact composed app module",
+      "unchanged PlanRequests script",
+      "unchanged week_plan module",
+      "unchanged week_file module",
+      "eight focused node:test cases"
+    ],
+    "doubles": [
+      "DOM element/event carriers",
+      "worksheet UI mount/model carrier",
+      "caregiver mount only",
+      "collection UI mount/storage promise",
+      "calendar delivery/preview"
+    ],
+    "notExecuted": [
+      "real DOM",
+      "IndexedDB",
+      "caregiver/collection UI module implementation",
+      "physical downloads",
+      "browser",
+      "native device",
+      "original 40 caregiver model cases",
+      "original collection gates"
+    ]
+  },
+  "constraints": "No filesystem reads/writes by the source runner: declared node:fs/promises import is replaced by exact in-memory source map. No network/provider operation; two GET bootstrap calls are explicit local doubles. Standard-library Node execution only.",
+  "outcome": "8 tests passed, 0 failed, child exit 0. Actual stdout/stderr and tool completion fields retained verbatim.",
+  "timestamps": "Per-test timings and actual completion receipt retained; no process start/end wall timestamp was captured."
+}

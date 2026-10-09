@@ -1,0 +1,19 @@
+{
+  "schema": "tastetable.caregiver-handoff-browser-execution.v1",
+  "startedAt": "2026-10-08T20:53:09.387235+00:00",
+  "argv": [
+    "node",
+    "tools/check_caregiver_handoff_browser.mjs",
+    "--project",
+    "/home/jacob/tastetable-caregiver-handoff-d98d06fb-20261008/source",
+    "--output",
+    "/home/jacob/tastetable-caregiver-handoff-d98d06fb-20261008/candidate-browser-v1",
+    "--browser",
+    "/snap/bin/chromium"
+  ],
+  "programSha256": "1828b5a3a7d575f4968d3279e5813f0c0d4f6ed2281af90f0f356a187947b224",
+  "endedAt": "2026-10-08T20:53:46.264943+00:00",
+  "exitCode": 1,
+  "stdoutSha256": "3c099e010ea290b2628dad0e35437d68cf033df3117a64199656b41227d56834",
+  "stderrSha256": "52cfdef2462d424ce62e7fae5bd8cef37d7e30ddf4d0a0ba21c8e6cafdfce91f"
+}

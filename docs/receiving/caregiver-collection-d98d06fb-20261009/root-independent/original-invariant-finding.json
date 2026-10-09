@@ -1,0 +1,395 @@
+{
+  "schema": "tastetable.d98-independent-root-oracle-disposition.v1",
+  "owner": "chatgpt-d98d06fbfc35/taste_receiving",
+  "candidate": "ee504914e14b2e4b0fe899f9393a00810aaf5faf",
+  "rawResult": "f7cd75852381d01035ffe7ded730c93d1a81cb5e",
+  "closure": "2ed422f744d9764b9ef1f32bcd53bf3b4239b486",
+  "beforeExecution": "c2035d2a71f5344d991bc21a7af7f969e3868458",
+  "executableResult": {
+    "groups": 17,
+    "passedGroups": 17,
+    "reachedAssertions": 313,
+    "passedAssertions": 313,
+    "failedAssertions": 0,
+    "runtime": "v24.19.0",
+    "elapsedMs": 2223.599304000001,
+    "processExit": 0,
+    "completeRawOutputRecovered": true
+  },
+  "completeRootOracleDisposition": "NOT_FULLY_SATISFIED: executable focused assertions qualified final capture; the stronger frozen all-capture/order invariant has an actual transient counterexample.",
+  "finding": {
+    "id": "ROOT-CAPTURE-ORDER-1",
+    "status": "root source/adoption disposition required before full oracle acceptance",
+    "oracle": "6a49031f5803b3cc97d65a897b854cfcf2933523",
+    "requirement": [
+      "Every export/capture uses accepted source plus current matching state/model.",
+      "Apply restores matching origin/inputs/model/calendar and only then refreshes collection save capture."
+    ],
+    "source": "static/app.js ed40637354a456c03dfa32a2e4ec954f23110ffa",
+    "actualSequence": [
+      {
+        "seq": 24,
+        "event": "caregiver.accept.enter",
+        "data": null
+      },
+      {
+        "seq": 25,
+        "event": "request.invalidate",
+        "data": null
+      },
+      {
+        "seq": 27,
+        "event": "dom.planWrite",
+        "data": null
+      },
+      {
+        "seq": 29,
+        "event": "collection.capture",
+        "data": {
+          "source": "root-origin-A",
+          "entities": [
+            "H:pick:1",
+            "H:pick:2"
+          ],
+          "calendarId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      },
+      {
+        "seq": 34,
+        "event": "venue.acceptPrepared.enter",
+        "data": null
+      },
+      {
+        "seq": 36,
+        "event": "venue.acceptPrepared.exit",
+        "data": null
+      },
+      {
+        "seq": 37,
+        "event": "calendar.accept",
+        "data": {
+          "id": "dddddddddddddddddddddddddddddddd",
+          "entities": [
+            "H:pick:1",
+            "H:pick:2"
+          ]
+        }
+      },
+      {
+        "seq": 39,
+        "event": "collection.capture",
+        "data": {
+          "source": "root-origin-H",
+          "entities": [
+            "H:pick:1",
+            "H:pick:2"
+          ],
+          "calendarId": "dddddddddddddddddddddddddddddddd"
+        }
+      },
+      {
+        "seq": 41,
+        "event": "caregiver.accept.exit",
+        "data": null
+      }
+    ],
+    "cause": "commitPlanView calls applyWeekDate -> renderWeek -> refreshWeekSave -> savedWeeks.refreshCurrent before the handoff accept callback assigns acceptedPlan=prepared.origin. capture() combines the previous A acceptedPlan with the newly committed H weekState during that synchronous refresh.",
+    "qualification": "The final capture, physical-transport-double handoff export and calendar all bind H. The trace has no await or implicit Save between the mixed transient capture and final correction; no user-visible corruption, persisted bad browser draft or browser defect was established. The stronger contract nevertheless is not proved and should not be reported as passed.",
+    "receiverLimit": "The frozen source-aware receiver transparently recorded transient capture sources and asserted the final H capture; it did not assert the stronger every-capture invariant. Its 17/313 pass must be described with that exact limit.",
+    "possibleCorrection": "A narrow owner correction could retire acceptedPlan before committing the prepared handoff view, then assign the prepared origin as already done before final model/calendar/save refresh. This is a source proposal only; no product edit or rerun was performed."
+  },
+  "coverage": [
+    {
+      "id": "preview-B-over-A",
+      "result": "passed",
+      "reached": 16,
+      "actualModules": [
+        "saved_week_ui: preview/showPreview",
+        "app: collection capture",
+        "caregiver_handoff: Save/current export"
+      ],
+      "boundary": "Actual controller event handlers with declared DOM/store/file-transport doubles."
+    },
+    {
+      "id": "rename-remove-snapshot",
+      "result": "passed",
+      "reached": 22,
+      "actualModules": [
+        "saved_week_ui: Rename/Remove/action/refresh",
+        "saved_weeks: renameDraft",
+        "app: detached accepted snapshot",
+        "caregiver_handoff: Save"
+      ],
+      "boundary": "Actual controller event handlers with declared DOM/store/file-transport doubles."
+    },
+    {
+      "id": "unreadable-preview",
+      "result": "passed",
+      "reached": 11,
+      "actualModules": [
+        "saved_week_ui: unreadable-row review",
+        "app: capture",
+        "caregiver_handoff: Save"
+      ],
+      "boundary": "Actual controller event handlers with declared DOM/store/file-transport doubles."
+    },
+    {
+      "id": "open-retire-before-await",
+      "result": "passed",
+      "reached": 14,
+      "actualModules": [
+        "saved_week_ui: Open/action",
+        "app: openSaved/send/onStart/retirePlan",
+        "plan-request: run",
+        "worksheet: retire",
+        "caregiver: changed/discard"
+      ],
+      "boundary": "Actual controller event handlers with declared DOM/store/file-transport doubles."
+    },
+    {
+      "id": "open-B-success",
+      "result": "passed",
+      "reached": 17,
+      "actualModules": [
+        "app: Open/onResult/render/fillForm/acceptCalendar/refreshWeekSave",
+        "week_file: readWeekFile",
+        "worksheet: accept",
+        "calendar: createWeekExport/download"
+      ],
+      "boundary": "Actual controller event handlers with declared DOM/store/file-transport doubles."
+    },
+    {
+      "id": "open-B-current-refusal",
+      "result": "passed",
+      "reached": 15,
+      "actualModules": [
+        "app: onError/retirePlan",
+        "plan-request: current failure/finally",
+        "saved_week_ui: action completion"
+      ],
+      "boundary": "Actual controller event handlers with declared DOM/store/file-transport doubles."
+    },
+    {
+      "id": "open-B-edit-cancel",
+      "result": "passed",
+      "reached": 14,
+      "actualModules": [
+        "app: form input/clearPlan/retirePlan",
+        "plan-request: invalidate and stale success"
+      ],
+      "boundary": "Actual controller event handlers with declared DOM/store/file-transport doubles."
+    },
+    {
+      "id": "B-then-C-success-race",
+      "result": "passed",
+      "reached": 21,
+      "actualModules": [
+        "captured exact app openSaved callback twice",
+        "plan-request: generation/current",
+        "app: onResult/C source acceptance"
+      ],
+      "boundary": "Actual app callback exercised directly; collection UI busy does not admit a concurrent second Open."
+    },
+    {
+      "id": "B-late-failure-after-C",
+      "result": "passed",
+      "reached": 10,
+      "actualModules": [
+        "captured exact app openSaved callback twice",
+        "plan-request: obsolete failure and idle suppression"
+      ],
+      "boundary": "Actual app callback exercised directly; collection UI busy does not admit a concurrent second Open."
+    },
+    {
+      "id": "handoff-preview-over-A",
+      "result": "passed",
+      "reached": 13,
+      "actualModules": [
+        "caregiver_handoff: file read/readCaregiverHandoff/showReview",
+        "app: preparePlanView/prepare callback",
+        "native codecs/model"
+      ],
+      "boundary": "Actual controller event handlers with declared DOM/store/file-transport doubles."
+    },
+    {
+      "id": "handoff-refusal-cancel",
+      "result": "passed",
+      "reached": 19,
+      "actualModules": [
+        "caregiver_handoff: invalid JSON/refusal/discard/Cancel",
+        "app: no prepare commit/retirement"
+      ],
+      "boundary": "Actual controller event handlers with declared DOM/store/file-transport doubles."
+    },
+    {
+      "id": "handoff-apply-H",
+      "result": "passed",
+      "reached": 24,
+      "actualModules": [
+        "caregiver_handoff: explicit Apply/current guard",
+        "app: invalidate/commit/fillForm/origin/model/calendar/final refresh",
+        "native complete note export"
+      ],
+      "boundary": "Actual controller event handlers with declared DOM/store/file-transport doubles."
+    },
+    {
+      "id": "apply-H-obsoletes-B",
+      "result": "passed",
+      "reached": 43,
+      "actualModules": [
+        "app Open callback",
+        "caregiver actual UI read/Apply over retired snapshot",
+        "plan-request: obsolete success/failure"
+      ],
+      "boundary": "Actual controller event handlers with declared DOM/store/file-transport doubles."
+    },
+    {
+      "id": "open-retires-pending-handoff-read",
+      "result": "passed",
+      "reached": 15,
+      "actualModules": [
+        "caregiver_handoff: real revision/current checks around deferred file bytes",
+        "app collection Open/worksheet retire",
+        "app B acceptance"
+      ],
+      "boundary": "Actual controller event handlers with declared DOM/store/file-transport doubles."
+    },
+    {
+      "id": "note-date-edit-retires-preview",
+      "result": "passed",
+      "reached": 22,
+      "actualModules": [
+        "worksheet actual edit/setField/onChange",
+        "app: date input/arrangement change/invalid date",
+        "caregiver actual changed/stale Apply guard"
+      ],
+      "boundary": "Actual controller event handlers with declared DOM/store/file-transport doubles."
+    },
+    {
+      "id": "collection-save-after-apply",
+      "result": "passed",
+      "reached": 19,
+      "actualModules": [
+        "saved_week_ui: real Save gesture/createDraft/store call/Preview/Open",
+        "saved_weeks/week_file native codec",
+        "worksheet: fresh accept on browser reopen"
+      ],
+      "boundary": "Actual controller event handlers with declared DOM/store/file-transport doubles."
+    },
+    {
+      "id": "same-name-two-row-identities",
+      "result": "passed",
+      "reached": 18,
+      "actualModules": [
+        "saved_week_ui: actual row buttons/exact selected id",
+        "app: onResult/C snapshot",
+        "calendar exact C UID/date output"
+      ],
+      "boundary": "Actual controller event handlers with declared DOM/store/file-transport doubles."
+    }
+  ],
+  "sourcePins": [
+    {
+      "path": "static/app.js",
+      "git": "ed40637354a456c03dfa32a2e4ec954f23110ffa",
+      "bytes": 21963,
+      "sha256": "c484f029aa70dad81acaa21d99f00a93681dff61101accbca5a8d33c89c9a500"
+    },
+    {
+      "path": "static/index.html",
+      "git": "c9058dae2b074078902be5badf7c5690293e3ee1",
+      "bytes": 13018,
+      "sha256": "b953d889674d5e54e957dca3facb56efeb647cd37774b1b61f58116775661d59"
+    },
+    {
+      "path": "static/plan-request.js",
+      "git": "b21276dda840fe6dd96a3bf3258a851970ff5e4d",
+      "bytes": 1420,
+      "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995"
+    },
+    {
+      "path": "static/calendar.js",
+      "git": "dbed22d2cb91090bccec9472fbffd2854eed2722",
+      "bytes": 15169,
+      "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "git": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+    },
+    {
+      "path": "static/week_file.mjs",
+      "git": "420ddb8f63fca264dcf97be7147801105696155d",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+    },
+    {
+      "path": "static/venue_followup.mjs",
+      "git": "a3c4b8bd120149441d343cbda2d3c15f6d106ca2",
+      "bytes": 18923,
+      "sha256": "cfa96d88aeaf06d55c5a4b7ad457f6a693f571ec06ccd8744141e4922ff3b2c3"
+    },
+    {
+      "path": "static/venue_note_file.mjs",
+      "git": "f8406cb540d52222996c585666ae1a55a1030def",
+      "bytes": 10435,
+      "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1"
+    },
+    {
+      "path": "static/caregiver_handoff.mjs",
+      "git": "4286409b3fe932f61957ba72f5db918d18ff0751",
+      "bytes": 11673,
+      "sha256": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95"
+    },
+    {
+      "path": "static/saved_weeks.mjs",
+      "git": "0bb822cb6f75c376397c0f7d6d6de78035f865bc",
+      "bytes": 3327,
+      "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3"
+    },
+    {
+      "path": "static/saved_week_ui.mjs",
+      "git": "5a281492002b61222c70ed9b4268150504d20b15",
+      "bytes": 9555,
+      "sha256": "03f3580a1260aa4cec5b42076caa09650f3347b57efc42bfe6c51503d766eda7"
+    }
+  ],
+  "remainingBrowser": {
+    "contract": {
+      "repository": "Jacob-Met/tastetable",
+      "blob": "0057a67e91b542e78e057d73a044559057cf2537"
+    },
+    "packet": {
+      "repository": "Jacob-Met/tastetable",
+      "blob": "3089c4a91e52ffa43b0d29634e97f6d5367b7c1c"
+    },
+    "peer": {
+      "repository": "Jacob-Met/hamon",
+      "blob": "5cbfc7635b59dad028976ebe1cc312f0c02a3f38"
+    },
+    "addendum": {
+      "repository": "Jacob-Met/hamon",
+      "blob": "092137dba3330ba86379b3139a06a55ca97868f6"
+    },
+    "status": "Original proposed 14+6 successor is unexecuted and source-blocked by TC1-TC4. No newer final pins or c770 adoption/admission result found in bounded current TasteTable #54/#55 comments and HAMON143 pages4-10 through17:36:23Z.",
+    "findings": [
+      "TC1: preserve/assert all form controls separately for refusal and cancel",
+      "TC2: exact earlier physically saved B calendar baseline",
+      "TC3: only actual native transaction completion/abort witnesses prove closure; failed/unknown admission requires bounded cleanup coverage",
+      "TC4: preview.hidden and apply.disabled each independently required at negative retirement sites"
+    ],
+    "nativeOwner": "chatgpt:c77045b4:windows; unknown prior attempts remain unreplayed"
+  },
+  "actions": {
+    "productChanges": 0,
+    "existingHarnessReruns": 0,
+    "browserLaunches": 0,
+    "deviceCalls": 0,
+    "refs": 0,
+    "PRs": 0,
+    "merges": 0,
+    "Actions": 0
+  }
+}
