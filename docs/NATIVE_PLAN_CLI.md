@@ -31,6 +31,8 @@ The fixture venues are fictional, affinities are hand-set, and the current food/
 
 Supply a UTF-8 JSON object of at most **65,536 bytes**. File and stdin inputs use the same admission rules.
 
+A named profile must be a regular file; symlinks to regular files are accepted. Named pipes, devices and other non-regular inputs are refused before planning. To read a deliberate input stream, use `--profile -`; stdin retains its normal waiting-for-input behavior.
+
 | Field | Accepted value | Default when omitted |
 | --- | --- | --- |
 | `cuisines`, `music`, `films` | Arrays of at most five nonblank strings each. | Empty arrays |

@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import stat
 import sys
 from pathlib import Path
 
@@ -134,7 +135,15 @@ def load_profile(filename: str) -> dict:
         if filename == "-":
             raw = sys.stdin.buffer.read(MAX_PROFILE_BYTES + 1)
         else:
-            with Path(filename).open("rb") as stream:
+            path = Path(filename)
+            if not stat.S_ISREG(path.stat().st_mode):
+                raise OSError("profile must be a regular file; use - for stdin")
+            # Check the acquired descriptor too: the path can change after stat.
+            # Nonblocking open prevents a substituted FIFO from waiting for a writer.
+            fd = os.open(path, os.O_RDONLY | getattr(os, "O_NONBLOCK", 0))
+            with os.fdopen(fd, "rb") as stream:
+                if not stat.S_ISREG(os.fstat(stream.fileno()).st_mode):
+                    raise OSError("profile must be a regular file; use - for stdin")
                 raw = stream.read(MAX_PROFILE_BYTES + 1)
     except OSError as exc:
         raise InputError(f"cannot read profile: {exc}") from None
