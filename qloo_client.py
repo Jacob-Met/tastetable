@@ -141,6 +141,7 @@ def http_transport(base_url: str, timeout: float = 15.0) -> Transport:
             with urllib.request.urlopen(req, timeout=timeout) as resp:
                 return json.loads(resp.read().decode("utf-8"))
         except urllib.error.HTTPError as e:  # surface status clearly, never echo headers
+            e.close()
             raise QlooError(e.code, e.reason) from None
     return _call
 

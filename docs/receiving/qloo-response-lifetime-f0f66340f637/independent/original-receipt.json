@@ -1,0 +1,331 @@
+{
+  "schema": "hamon.independent-http-lifetime-receipt.v1",
+  "actor": "chatgpt-f0f66340f637/runtime_integration",
+  "completed_utc": "2026-10-12T21:51:54.687507+00:00",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "source": "/workspace/scratch/f0f66340f637/source_delivery/tastetable-qloo-response-original/qloo_client.py",
+  "source_sha256_before": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+  "source_sha256_after": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+  "contract_sha256": "16af1488945d3286b8d4924a5b9769c1139b7ee4ad8ca8fb888e349ccacd1096",
+  "runner_sha256": "4a706e2e31c2f6bd111a05837ba9597a88bba4afe1cc198d7932e452a16ccff9",
+  "source_unchanged": true,
+  "authored_tests_used": false,
+  "provider_calls": 0,
+  "network_scope": "actual HTTP to one ephemeral 127.0.0.1 fixture per case; environment proxy disabled",
+  "cases": [
+    {
+      "name": "actual-http-401",
+      "status": 401,
+      "passed": false,
+      "checks": [
+        {
+          "name": "no-unexpected-exception",
+          "passed": true
+        },
+        {
+          "name": "exactly-one-get-no-retry",
+          "passed": true
+        },
+        {
+          "name": "explicit-timeout-preserved",
+          "passed": true
+        },
+        {
+          "name": "path-query-and-filtering-preserved",
+          "passed": true
+        },
+        {
+          "name": "supplied-headers-preserved",
+          "passed": true
+        },
+        {
+          "name": "closed-before-qlooerror-construction",
+          "passed": false
+        },
+        {
+          "name": "closed-when-translation-escapes",
+          "passed": false
+        },
+        {
+          "name": "error-body-unread",
+          "passed": true
+        },
+        {
+          "name": "exact-status-reason-diagnostic",
+          "passed": true
+        },
+        {
+          "name": "status-and-retryable-preserved",
+          "passed": true
+        },
+        {
+          "name": "suppressed-cause-preserved",
+          "passed": true
+        },
+        {
+          "name": "body-and-header-not-in-diagnostic",
+          "passed": true
+        }
+      ],
+      "constructor_close_snapshots": [
+        [
+          {
+            "wrapper_closed": false,
+            "underlying_closed": false
+          }
+        ]
+      ],
+      "close_state_before_fixture_cleanup": [
+        {
+          "wrapper_closed": false,
+          "underlying_closed": false
+        }
+      ],
+      "error_body_read_calls": [],
+      "actual_opener_calls": [
+        {
+          "method": "GET",
+          "timeout": 2.25,
+          "positional_arguments": 0
+        }
+      ],
+      "actual_request_count": 1,
+      "request_path": "/v2/insights?filter.type=urn%3Aentity%3Aplace&filter.location.query=Caf%C3%A9+%26+tea&take=0&fixture.false=False",
+      "diagnostic": "Qloo HTTP 401: Fixture Unauthorized",
+      "translation_context": "HTTPError",
+      "success_response_closed": [],
+      "unexpected_exception": null,
+      "fixture_thread_stopped": true
+    },
+    {
+      "name": "actual-http-429",
+      "status": 429,
+      "passed": false,
+      "checks": [
+        {
+          "name": "no-unexpected-exception",
+          "passed": true
+        },
+        {
+          "name": "exactly-one-get-no-retry",
+          "passed": true
+        },
+        {
+          "name": "explicit-timeout-preserved",
+          "passed": true
+        },
+        {
+          "name": "path-query-and-filtering-preserved",
+          "passed": true
+        },
+        {
+          "name": "supplied-headers-preserved",
+          "passed": true
+        },
+        {
+          "name": "closed-before-qlooerror-construction",
+          "passed": false
+        },
+        {
+          "name": "closed-when-translation-escapes",
+          "passed": false
+        },
+        {
+          "name": "error-body-unread",
+          "passed": true
+        },
+        {
+          "name": "exact-status-reason-diagnostic",
+          "passed": true
+        },
+        {
+          "name": "status-and-retryable-preserved",
+          "passed": true
+        },
+        {
+          "name": "suppressed-cause-preserved",
+          "passed": true
+        },
+        {
+          "name": "body-and-header-not-in-diagnostic",
+          "passed": true
+        }
+      ],
+      "constructor_close_snapshots": [
+        [
+          {
+            "wrapper_closed": false,
+            "underlying_closed": false
+          }
+        ]
+      ],
+      "close_state_before_fixture_cleanup": [
+        {
+          "wrapper_closed": false,
+          "underlying_closed": false
+        }
+      ],
+      "error_body_read_calls": [],
+      "actual_opener_calls": [
+        {
+          "method": "GET",
+          "timeout": 2.25,
+          "positional_arguments": 0
+        }
+      ],
+      "actual_request_count": 1,
+      "request_path": "/v2/insights?filter.type=urn%3Aentity%3Aplace&filter.location.query=Caf%C3%A9+%26+tea&take=0&fixture.false=False",
+      "diagnostic": "Qloo HTTP 429: Fixture Rate Limited",
+      "translation_context": "HTTPError",
+      "success_response_closed": [],
+      "unexpected_exception": null,
+      "fixture_thread_stopped": true
+    },
+    {
+      "name": "actual-http-503",
+      "status": 503,
+      "passed": false,
+      "checks": [
+        {
+          "name": "no-unexpected-exception",
+          "passed": true
+        },
+        {
+          "name": "exactly-one-get-no-retry",
+          "passed": true
+        },
+        {
+          "name": "explicit-timeout-preserved",
+          "passed": true
+        },
+        {
+          "name": "path-query-and-filtering-preserved",
+          "passed": true
+        },
+        {
+          "name": "supplied-headers-preserved",
+          "passed": true
+        },
+        {
+          "name": "closed-before-qlooerror-construction",
+          "passed": false
+        },
+        {
+          "name": "closed-when-translation-escapes",
+          "passed": false
+        },
+        {
+          "name": "error-body-unread",
+          "passed": true
+        },
+        {
+          "name": "exact-status-reason-diagnostic",
+          "passed": true
+        },
+        {
+          "name": "status-and-retryable-preserved",
+          "passed": true
+        },
+        {
+          "name": "suppressed-cause-preserved",
+          "passed": true
+        },
+        {
+          "name": "body-and-header-not-in-diagnostic",
+          "passed": true
+        }
+      ],
+      "constructor_close_snapshots": [
+        [
+          {
+            "wrapper_closed": false,
+            "underlying_closed": false
+          }
+        ]
+      ],
+      "close_state_before_fixture_cleanup": [
+        {
+          "wrapper_closed": false,
+          "underlying_closed": false
+        }
+      ],
+      "error_body_read_calls": [],
+      "actual_opener_calls": [
+        {
+          "method": "GET",
+          "timeout": 2.25,
+          "positional_arguments": 0
+        }
+      ],
+      "actual_request_count": 1,
+      "request_path": "/v2/insights?filter.type=urn%3Aentity%3Aplace&filter.location.query=Caf%C3%A9+%26+tea&take=0&fixture.false=False",
+      "diagnostic": "Qloo HTTP 503: Fixture Unavailable",
+      "translation_context": "HTTPError",
+      "success_response_closed": [],
+      "unexpected_exception": null,
+      "fixture_thread_stopped": true
+    },
+    {
+      "name": "actual-http-200",
+      "status": 200,
+      "passed": true,
+      "checks": [
+        {
+          "name": "no-unexpected-exception",
+          "passed": true
+        },
+        {
+          "name": "exactly-one-get-no-retry",
+          "passed": true
+        },
+        {
+          "name": "explicit-timeout-preserved",
+          "passed": true
+        },
+        {
+          "name": "path-query-and-filtering-preserved",
+          "passed": true
+        },
+        {
+          "name": "supplied-headers-preserved",
+          "passed": true
+        },
+        {
+          "name": "successful-json-unchanged",
+          "passed": true
+        },
+        {
+          "name": "success-response-closed",
+          "passed": true
+        },
+        {
+          "name": "success-has-no-error-translation",
+          "passed": true
+        }
+      ],
+      "constructor_close_snapshots": [],
+      "close_state_before_fixture_cleanup": [],
+      "error_body_read_calls": [],
+      "actual_opener_calls": [
+        {
+          "method": "GET",
+          "timeout": 2.25,
+          "positional_arguments": 0
+        }
+      ],
+      "actual_request_count": 1,
+      "request_path": "/v2/insights?filter.type=urn%3Aentity%3Aplace&filter.location.query=Caf%C3%A9+%26+tea&take=0&fixture.false=False",
+      "diagnostic": null,
+      "translation_context": null,
+      "success_response_closed": [
+        true
+      ],
+      "unexpected_exception": null,
+      "fixture_thread_stopped": true
+    }
+  ],
+  "passed": 1,
+  "total": 4,
+  "accepted": false
+}

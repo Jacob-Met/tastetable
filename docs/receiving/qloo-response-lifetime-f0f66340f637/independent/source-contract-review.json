@@ -1,0 +1,29 @@
+{
+  "schema": "tastetable.http-error-close.source-contract-review.v1",
+  "verdict": "ACCEPT",
+  "reviewer": "f0f66340f637/context_artifacts",
+  "scope": "Independent production-source and exception-contract review only. No HTTP tests, provider requests, source edits, GitHub writes, Actions execution or adoption performed by this reviewer.",
+  "original": {
+    "path": "/workspace/scratch/f0f66340f637/source_delivery/tastetable-qloo-response-original/qloo_client.py",
+    "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b"
+  },
+  "candidate": {
+    "path": "/workspace/scratch/f0f66340f637/source_delivery/tastetable-qloo-response/qloo_client.py",
+    "sha256": "a7b3362896273e05782e789cb1f89f053f32c4e1b766ae5998e19ed9fab103f9"
+  },
+  "exact_delta": "One inserted e.close() call in the urllib.error.HTTPError handler, immediately before the existing raise QlooError(e.code, e.reason) from None.",
+  "assessment": [
+    "HTTPError is an exception and an owned file-like error response; after translation the current code does not return that response to a caller. Closing it at this boundary releases the otherwise abandoned response.",
+    "The local Python stdlib HTTPError implementation stores code and msg separately; reason returns msg. Closing the response does not invalidate the status/reason used by the immediately following QlooError translation.",
+    "QlooError's existing message, status attribute, retryable classification (429 or >=500), and suppressed exception chain are unchanged.",
+    "The change neither reads nor logs response headers or the error body. Request construction, method, query encoding, timeout and credential handling are unchanged.",
+    "The success-path with block, JSON decoding, non-HTTP-error behavior, cache assignment boundary and parser are byte-identical. A translated error still exits before successful cache assignment.",
+    "The production delta is disjoint from the optional parse_entity finite-metric offer described for issue85. This review does not adopt that separate source."
+  ],
+  "concerns": [],
+  "qualification_limits": [
+    "This source review does not replace runtime_integration's independently authored HTTP/consumer receiving.",
+    "Only the standard urllib response cleanup contract was assessed; no arbitrary custom object with a failing close method was introduced or claimed qualified.",
+    "Publication eligibility, current workflow safety, maintained gates and installation/adoption are the source owner/root's separate decision and evidence."
+  ]
+}
