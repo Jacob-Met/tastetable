@@ -1,0 +1,20 @@
+{
+  "schema": "hamon.independent-http-lifetime-contract.v1",
+  "actor": "chatgpt-f0f66340f637/runtime_integration",
+  "repository": "Jacob-Met/tastetable",
+  "scope": "http_transport translates actual urllib HTTPError responses to QlooError",
+  "authored_tests_read": false,
+  "source_pins": {
+    "original_sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+    "candidate_sha256": "a7b3362896273e05782e789cb1f89f053f32c4e1b766ae5998e19ed9fab103f9"
+  },
+  "expectations": [
+    "For actual localhost HTTP 401, 429 and 503 responses, both the HTTPError wrapper and its underlying response must already be closed when QlooError construction begins and when it escapes.",
+    "Error response bodies must remain unread; body and header sentinel text must never enter the translated diagnostic.",
+    "The existing QlooError status, retryable property, exact status/reason diagnostic, suppressed cause and absence of retry are preserved.",
+    "The actual GET preserves the requested path, percent-decoded dotted query parameters, zero and False values, filters only None and empty strings, and preserves the supplied synthetic fixture headers and explicit timeout.",
+    "A successful HTTP 200 response returns the same decoded JSON and closes its response through the existing context manager.",
+    "Each invocation sends exactly one request. Tests use no provider, actual credential, installation or external network. Source bytes remain unchanged."
+  ],
+  "method": "Use an actual ThreadingHTTPServer and the real urllib opener. A scoped urlopen wrapper retains actual error/response objects and observes reads; a QlooError subclass records close state at construction without changing original error semantics. Keep references alive until assertions, then close fixture objects."
+}

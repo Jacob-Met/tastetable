@@ -1,0 +1,155 @@
+{
+  "schema": "tastetable.qloo-http-response-lifetime.receiving.v1",
+  "repository": "Jacob-Met/tastetable",
+  "parent_commit": "bce1c08618a208b2d80f3e36e747ae7315616038",
+  "parent_tree": "c2e0c6cf4d4b671b3ac151ff3773926adb752ea8",
+  "status": "independently_accepted_source_candidate",
+  "production_change": "Close the original HTTPError response immediately before the existing QlooError translation.",
+  "source_before": {
+    "bytes": 12206,
+    "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+    "git_blob": "cca322e0c9af96c481ba8f7ef286e85d3b90cfd2"
+  },
+  "source_after": {
+    "bytes": 12228,
+    "sha256": "a7b3362896273e05782e789cb1f89f053f32c4e1b766ae5998e19ed9fab103f9",
+    "git_blob": "612243c34e879684c303ab60f0f8404f7ac3aa34"
+  },
+  "test": {
+    "path": "tests/test_qloo_http_lifetime.py",
+    "bytes": 5652,
+    "sha256": "b4f0f12728236ef5bf11be9f52b66de6fa3432ccfd0c8e4317508909b4ca2461",
+    "git_blob": "e9ff04ef11f984ce652ea05639d4b516075ec82c",
+    "same_bytes_in_original_and_candidate": true
+  },
+  "command": "python -m unittest discover -s tests -p test_qloo_http_lifetime.py -v",
+  "python_version": "3.12.14",
+  "original": {
+    "passed": 1,
+    "failed": 3,
+    "exit_code": 1,
+    "custody": "Complete merged stdout/stderr transferred from the original exec tool response; no rerun."
+  },
+  "candidate": {
+    "passed": 4,
+    "failed": 0,
+    "exit_code": 0,
+    "custody": "Direct returned execution tool result."
+  },
+  "receipts": [
+    {
+      "path": "original-tool-receipt.json",
+      "bytes": 4237,
+      "sha256": "facb266c5dd9d7a153e5af990d2d5eb535df084023b8ddec4cc05f2efb519833",
+      "git_blob": "432722732f8f9e78e286accb0fed17315bc6966d"
+    },
+    {
+      "path": "candidate-tool-receipt.json",
+      "bytes": 1014,
+      "sha256": "43a6f9f7cae42c95359e310a0f463a20a11c837bc12721434f48f2eb8e37c23d",
+      "git_blob": "405b6041ba30690daa4424f589ce8de7a121eef2"
+    }
+  ],
+  "intake_files": [
+    {
+      "path": "qloo_client.py",
+      "original_unchanged": true,
+      "candidate_unchanged": false,
+      "bytes": 12206,
+      "sha256": "88d951b6271460f17aa307d4979fe23d8cf3a674afa30dd7324f95424dd0ec9b",
+      "git_blob": "cca322e0c9af96c481ba8f7ef286e85d3b90cfd2"
+    },
+    {
+      "path": "requirements.txt",
+      "original_unchanged": true,
+      "candidate_unchanged": true,
+      "bytes": 74,
+      "sha256": "80f580784e41edbf585cdc133c99d6e52ad9fae5876459c74ba6cbb4ed6b0602",
+      "git_blob": "d2fa2b085ecd75cc196fa8a02ddb54e1728c0b23"
+    },
+    {
+      "path": "tests/test_tastetable.py",
+      "original_unchanged": true,
+      "candidate_unchanged": true,
+      "bytes": 8240,
+      "sha256": "7ace6361e9baf4a1e1a4ccfa528df1a4d2165b99bacb0423a572ac78bf3e9c5b",
+      "git_blob": "e6731e2c560a921074f034057404ce9bdd81e6ac"
+    }
+  ],
+  "limits": {
+    "full_checkout": false,
+    "full_pytest_run": false,
+    "browser_suite_run": false,
+    "provider_calls": false,
+    "real_credentials_used": false,
+    "deployment": false,
+    "workflow_execution_authorized": false
+  },
+  "owner_fence": {
+    "record": "https://github.com/Jacob-Met/tastetable/issues/85",
+    "reserved_scope": "Optional finite metric conversion in parse_entity; current transport/cache/auth explicitly outside that owner change."
+  },
+  "independent_review": {
+    "source_contract": {
+      "reviewer": "f0f66340f637/context_artifacts",
+      "verdict": "ACCEPT",
+      "path": "independent/source-contract-review.json"
+    },
+    "http_receiving": {
+      "reviewer": "f0f66340f637/runtime_integration",
+      "verdict": "ACCEPT",
+      "original_passed": 1,
+      "candidate_passed": 4,
+      "cases": 4,
+      "candidate_checks_passed": 44,
+      "original_failed_close_checks": 6,
+      "python": "3.12.14",
+      "author_tests_read": false,
+      "source_unchanged": true,
+      "fixture_threads_stopped": true,
+      "candidate_receipt": "independent/candidate-receipt.json",
+      "original_receipt": "independent/original-receipt.json",
+      "contract": "independent/frozen-contract.json",
+      "receiver": "independent/receive_http.py"
+    },
+    "root_source_review_claimed": false,
+    "publication_or_deployment_claimed": false
+  },
+  "independent_files": [
+    {
+      "path": "independent/candidate-receipt.json",
+      "bytes": 8910,
+      "sha256": "b9cc4062d28935acc0adf91b40eac66b2ea1bc3ceace0c90eaaa59745d5006ce",
+      "git_blob": "3d7e9be8e583214b5eb53cbf33cfc145f14dc151",
+      "copied_unchanged": true
+    },
+    {
+      "path": "independent/frozen-contract.json",
+      "bytes": 1810,
+      "sha256": "16af1488945d3286b8d4924a5b9769c1139b7ee4ad8ca8fb888e349ccacd1096",
+      "git_blob": "697bb4a9edfeea84ca76ad7138ddecebf6ed0dd2",
+      "copied_unchanged": true
+    },
+    {
+      "path": "independent/original-receipt.json",
+      "bytes": 8941,
+      "sha256": "256eb180108d439e83f3627128fa28a7def194421e33bead4b22d56feeb1a1e1",
+      "git_blob": "4fb4098b73ef7810fa4b1a7a5801d93d6b6ebc2b",
+      "copied_unchanged": true
+    },
+    {
+      "path": "independent/receive_http.py",
+      "bytes": 10036,
+      "sha256": "4a706e2e31c2f6bd111a05837ba9597a88bba4afe1cc198d7932e452a16ccff9",
+      "git_blob": "b52cd4308832683773cfa52c238394df37c6e531",
+      "copied_unchanged": true
+    },
+    {
+      "path": "independent/source-contract-review.json",
+      "bytes": 2557,
+      "sha256": "993d0f1731b7512c9d2e6ac9141a45bf8f1c415a0c674399f7ec4679a858c428",
+      "git_blob": "f3122a2f6e201584840453e60f57416b17372be1",
+      "copied_unchanged": true
+    }
+  ]
+}

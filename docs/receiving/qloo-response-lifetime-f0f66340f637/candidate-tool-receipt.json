@@ -1,0 +1,7 @@
+{
+  "chunk_id": "b691e8",
+  "wall_time_seconds": 0.10303665,
+  "exit_code": 0,
+  "original_token_count": 220,
+  "output": "test_refused_search_is_not_cached_and_later_success_is_cached (test_qloo_http_lifetime.QlooHttpResponseLifetimeTests.test_refused_search_is_not_cached_and_later_success_is_cached) ... ok\ntest_server_error_response_closes_and_keeps_retryable_classification (test_qloo_http_lifetime.QlooHttpResponseLifetimeTests.test_server_error_response_closes_and_keeps_retryable_classification) ... ok\ntest_throttled_response_closes_and_keeps_retryable_classification (test_qloo_http_lifetime.QlooHttpResponseLifetimeTests.test_throttled_response_closes_and_keeps_retryable_classification) ... ok\ntest_unauthorized_response_closes_before_error_translation_returns (test_qloo_http_lifetime.QlooHttpResponseLifetimeTests.test_unauthorized_response_closes_before_error_translation_returns) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.100s\n\nOK\n"
+}
