@@ -1,0 +1,954 @@
+{
+  "schema": "tastetable-pr88-independent-browser-checkpoint-v1",
+  "actor": "719c8e1b4e10/source_product",
+  "status": "blocked",
+  "repository": "Jacob-Met/tastetable",
+  "original_commit": "bce1c08618a208b2d80f3e36e747ae7315616038",
+  "candidate_commit": "db9ec366ea0b0a82f729ef61700e31842168da0a",
+  "candidate_tree": "6e563492e887128c35bafb14965ae4526f5e36ca",
+  "receiving_kind": "Independent native execution of the existing authored receiver after reading its source; not a blinded-oracle or full-browser-acceptance claim.",
+  "environments": {
+    "linux": {
+      "device": "hamon-thinkpad",
+      "node": "v22.22.1",
+      "browser": "Chromium 153.0.8010.47 snap",
+      "stage": "/home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6",
+      "alternative_output_stage": "/home/jacob/snap/chromium/common/tastetable-filters-719c8e1b4e10-i_bgbz8u"
+    },
+    "mac": {
+      "device": "Mac.lan",
+      "node": "v26.11.0",
+      "browser": "Google Chrome 154.0.8037.99",
+      "stage": "/private/tmp/tastetable-filters-719c8e1b4e10-i1yd6ibt"
+    }
+  },
+  "authored_receiver": {
+    "git_blob": "299c663abcdc4ac7b9ed70a9902afebd565bfec1",
+    "sha256": "98a48b4507a55655cff20dc5a501a6001d1791d619454bd9a0fd75da9c7fba55"
+  },
+  "linux_original_and_candidate": [
+    {
+      "side": "baseline",
+      "command": {
+        "side": "baseline",
+        "command": [
+          "node",
+          "/home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate/tools/check_visit_record_filters_browser.mjs",
+          "--browser",
+          "/snap/bin/chromium",
+          "--source-root",
+          "/home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/baseline",
+          "--output",
+          "/home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/baseline-browser",
+          "--expect-absent"
+        ],
+        "started_at": "2026-10-12T23:42:54.179211+00:00",
+        "exit_code": 0,
+        "seconds": 1.551,
+        "stdout": "{\"status\":\"original-absence-confirmed\",\"checks\":[\"original editor loads the six-occurrence file; requested filter controls are absent\"],\"output\":\"/home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/baseline-browser\",\"browserExited\":true}\n",
+        "stderr": "",
+        "stdout_sha256": "586d47aa2fdb3569360c5d05d09b0f9ca71907488c17ad9dd2c12c4c4f26b2e7",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "receipt": {
+        "schema": "tastetable.visit_record_filters.browser.v1",
+        "startedAt": "2026-10-12T23:42:54.339Z",
+        "sourceRoot": "/home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/baseline",
+        "sourcePins": [
+          {
+            "path": "static/visit-record.html",
+            "sha256": "6a26be64a58a36a6c7102fcb3c1b6ea29a05a4f3842ed40609cabb0425cb0c24"
+          },
+          {
+            "path": "static/visit_record.css",
+            "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403"
+          },
+          {
+            "path": "static/visit_record_ui.mjs",
+            "sha256": "bec91c2dc84902f8c948bce7a87cf87b19fdabf2a1bde17e94cf2fd0b324a64a"
+          },
+          {
+            "path": "static/visit_record.mjs",
+            "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f"
+          },
+          {
+            "path": "static/week_file.mjs",
+            "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+          },
+          {
+            "path": "static/week_plan.mjs",
+            "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+          }
+        ],
+        "checks": [
+          "original editor loads the six-occurrence file; requested filter controls are absent"
+        ],
+        "pageErrors": [],
+        "externalRequests": [],
+        "downloads": [],
+        "originalSha256": "45907b898c4907f6fd9bbde0d7d46ee914f1a409b0f62072112b73f7547a5dfb",
+        "status": "original-absence-confirmed",
+        "browser": {
+          "protocolVersion": "1.3",
+          "product": "Chrome/153.0.8010.47",
+          "revision": "@73934a44f61e6b3878d1943064c141a5a820f5f7",
+          "userAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+          "jsVersion": "15.3.76.12"
+        },
+        "browserExited": true,
+        "finishedAt": "2026-10-12T23:42:55.722Z",
+        "receiverSha256": "98a48b4507a55655cff20dc5a501a6001d1791d619454bd9a0fd75da9c7fba55"
+      }
+    },
+    {
+      "side": "candidate",
+      "command": {
+        "side": "candidate",
+        "command": [
+          "node",
+          "/home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate/tools/check_visit_record_filters_browser.mjs",
+          "--browser",
+          "/snap/bin/chromium",
+          "--source-root",
+          "/home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate",
+          "--output",
+          "/home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate-browser"
+        ],
+        "started_at": "2026-10-12T23:42:55.730449+00:00",
+        "exit_code": 1,
+        "seconds": 13.441,
+        "stdout": "{\"status\":\"failed\",\"checks\":[\"literal/Unicode venue and note matching, every outcome, intersection, no-match recovery and stable numbers\",\"focused edits remain usable; invalid drafts stay visible and preserve existing export refusal until corrected\"],\"output\":\"/home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate-browser\",\"browserExited\":true}\n",
+        "stderr": "",
+        "stdout_sha256": "324e24ff9de62d0a034cee73b45521960a37adc643881ce87d01c259b7e84a1f",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "receipt": {
+        "schema": "tastetable.visit_record_filters.browser.v1",
+        "startedAt": "2026-10-12T23:42:55.908Z",
+        "sourceRoot": "/home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate",
+        "sourcePins": [
+          {
+            "path": "static/visit-record.html",
+            "sha256": "6b28f55f818386107d6401e038ab162b94e67f0e107f22bc5a1ac69faa9d6252"
+          },
+          {
+            "path": "static/visit_record.css",
+            "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403"
+          },
+          {
+            "path": "static/visit_record_ui.mjs",
+            "sha256": "bec91c2dc84902f8c948bce7a87cf87b19fdabf2a1bde17e94cf2fd0b324a64a"
+          },
+          {
+            "path": "static/visit_record.mjs",
+            "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f"
+          },
+          {
+            "path": "static/week_file.mjs",
+            "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+          },
+          {
+            "path": "static/week_plan.mjs",
+            "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+          },
+          {
+            "path": "static/visit_record_filter.mjs",
+            "sha256": "e994f0a444bed81ca67d04e279e79eb1526f6c8577c5c678bc11d481ba06f42c"
+          },
+          {
+            "path": "static/visit_record_filter.css",
+            "sha256": "07fb6423060e05f445910899343f640aea3a9e305b4337f1aa9e63c8f7057a3d"
+          }
+        ],
+        "checks": [
+          "literal/Unicode venue and note matching, every outcome, intersection, no-match recovery and stable numbers",
+          "focused edits remain usable; invalid drafts stay visible and preserve existing export refusal until corrected"
+        ],
+        "pageErrors": [],
+        "externalRequests": [],
+        "downloads": [],
+        "originalSha256": "45907b898c4907f6fd9bbde0d7d46ee914f1a409b0f62072112b73f7547a5dfb",
+        "status": "failed",
+        "browser": {
+          "protocolVersion": "1.3",
+          "product": "Chrome/153.0.8010.47",
+          "revision": "@73934a44f61e6b3878d1943064c141a5a820f5f7",
+          "userAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+          "jsVersion": "15.3.76.12"
+        },
+        "error": "Error: Timed out: physical full-record download\n    at waitFor (file:///home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate/tools/check_visit_record_filters_browser.mjs:82:9)\n    at async receive (file:///home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate/tools/check_visit_record_filters_browser.mjs:163:17)\n    at async file:///home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate/tools/check_visit_record_filters_browser.mjs:241:3",
+        "browserLog": "[2342195:2342292:1012/234256.393018:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2342195:2342292:1012/234256.393385:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2342195:2342292:1012/234256.450158:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n\nDevTools listening on ws://127.0.0.1:36835/devtools/browser/8dcc4f47-ab7c-4a12-bda9-ce3ea2a63a61\n[2342195:2342195:1012/234256.544127:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2342195:2342195:1012/234256.544160:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2342195:2342292:1012/234256.544224:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2342195:2342195:1012/234256.549520:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2342195:2342292:1012/234256.549627:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2342195:2342195:1012/234256.565068:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2342195:2342292:1012/234256.565734:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2342195:2342195:1012/234256.566506:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2342195:2342195:1012/234256.584331:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2342195:2342292:1012/234256.584877:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2342195:2342195:1012/234256.589133:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2342195:2342292:1012/234256.589203:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2342195:2342195:1012/234256.601965:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2342195:2342294:1012/234258.997041:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\n[2342195:2342294:1012/234258.998090:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\n[2342195:2342294:1012/234259.011428:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\n",
+        "browserExited": true,
+        "finishedAt": "2026-10-12T23:43:09.165Z",
+        "receiverSha256": "98a48b4507a55655cff20dc5a501a6001d1791d619454bd9a0fd75da9c7fba55"
+      }
+    }
+  ],
+  "linux_download_observer": {
+    "schema": "tastetable.visit_record_filters.browser.v1",
+    "startedAt": "2026-10-12T23:44:40.918Z",
+    "sourceRoot": "/home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate",
+    "sourcePins": [
+      {
+        "path": "static/visit-record.html",
+        "sha256": "6b28f55f818386107d6401e038ab162b94e67f0e107f22bc5a1ac69faa9d6252"
+      },
+      {
+        "path": "static/visit_record.css",
+        "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403"
+      },
+      {
+        "path": "static/visit_record_ui.mjs",
+        "sha256": "bec91c2dc84902f8c948bce7a87cf87b19fdabf2a1bde17e94cf2fd0b324a64a"
+      },
+      {
+        "path": "static/visit_record.mjs",
+        "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f"
+      },
+      {
+        "path": "static/week_file.mjs",
+        "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+      },
+      {
+        "path": "static/week_plan.mjs",
+        "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+      },
+      {
+        "path": "static/visit_record_filter.mjs",
+        "sha256": "e994f0a444bed81ca67d04e279e79eb1526f6c8577c5c678bc11d481ba06f42c"
+      },
+      {
+        "path": "static/visit_record_filter.css",
+        "sha256": "07fb6423060e05f445910899343f640aea3a9e305b4337f1aa9e63c8f7057a3d"
+      }
+    ],
+    "checks": [
+      "literal/Unicode venue and note matching, every outcome, intersection, no-match recovery and stable numbers",
+      "focused edits remain usable; invalid drafts stay visible and preserve existing export refusal until corrected"
+    ],
+    "pageErrors": [],
+    "externalRequests": [],
+    "downloads": [],
+    "originalSha256": "45907b898c4907f6fd9bbde0d7d46ee914f1a409b0f62072112b73f7547a5dfb",
+    "status": "failed",
+    "browser": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/153.0.8010.47",
+      "revision": "@73934a44f61e6b3878d1943064c141a5a820f5f7",
+      "userAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+      "jsVersion": "15.3.76.12"
+    },
+    "beforeSave": "{\"button\":\"<button id=\\\"saveRecord\\\" type=\\\"button\\\">Download visit record</button>\",\"buttonDisplay\":\"block\",\"active\":\"visitFilterQuery\",\"status\":\"\",\"invalid\":0,\"clicks\":0,\"userActivation\":{\"active\":true,\"ever\":true}}",
+    "afterSave": "{\"button\":\"<button id=\\\"saveRecord\\\" type=\\\"button\\\">Download visit record</button>\",\"buttonDisplay\":\"block\",\"active\":\"saveRecord\",\"status\":\"Download requested. Keep the JSON file to reopen this record.\",\"invalid\":0,\"clicks\":1,\"userActivation\":{\"active\":true,\"ever\":true}}",
+    "error": "Error: Timed out: physical full-record download\n    at waitFor (file:///home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate/tools/diagnose_visit_record_filters_719c8e1b4e10.mjs:82:9)\n    at async receive (file:///home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate/tools/diagnose_visit_record_filters_719c8e1b4e10.mjs:166:17)\n    at async file:///home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate/tools/diagnose_visit_record_filters_719c8e1b4e10.mjs:245:3",
+    "browserLog": "[2347215:2347318:1012/234441.578990:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2347215:2347318:1012/234441.579861:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2347215:2347318:1012/234441.661994:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n\nDevTools listening on ws://127.0.0.1:32783/devtools/browser/f0fa7bee-2c6f-4810-8400-50936aa18654\n[2347215:2347215:1012/234441.821980:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2347215:2347215:1012/234441.822009:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2347215:2347318:1012/234441.822083:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2347215:2347215:1012/234441.826476:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2347215:2347318:1012/234441.826536:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2347215:2347215:1012/234441.842012:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2347215:2347215:1012/234441.843175:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2347215:2347318:1012/234441.843754:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2347215:2347215:1012/234441.857556:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2347215:2347318:1012/234441.857608:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2347215:2347215:1012/234441.863933:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2347215:2347318:1012/234441.863986:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2347215:2347215:1012/234441.885780:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2347215:2347321:1012/234444.626710:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT\n",
+    "observedDownloads": [
+      {
+        "frameId": "775C8A3FFD29F1FEEF98CE271B441AEF",
+        "guid": "2dddfbb0-d396-4609-921e-715efe26fe7e",
+        "url": "blob:http://127.0.0.1:43609/1b274e0c-f69d-4225-97bd-a045d48d21ef",
+        "suggestedFilename": "tastetable-visits-2024-02-26.json",
+        "totalBytes": 3887,
+        "receivedBytes": 0,
+        "state": "canceled"
+      }
+    ],
+    "browserExited": true,
+    "finishedAt": "2026-10-12T23:44:54.457Z",
+    "receiverSha256": "f8179d26129bf5229afd8a6127c31035c7e01d4f35afdcc538d9426bcbcf57a0"
+  },
+  "linux_diagnostic_iteration_1": {
+    "status": "failed",
+    "error": "Error: Timed out: downloads diagnostic page Object couldn't be returned by value\n    at waitFor (file:///home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate/tools/diagnose_download_reason_719c8e1b4e10.mjs:82:9)\n    at async receive (file:///home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate/tools/diagnose_download_reason_719c8e1b4e10.mjs:171:5)\n    at async file:///home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate/tools/diagnose_download_reason_719c8e1b4e10.mjs:258:3",
+    "qualification": "Own diagnostic attempted to return a ShadowRoot through CDP by value; this is an instrumentation failure, not product evidence."
+  },
+  "linux_diagnostic_iteration_2": {
+    "status": "failed",
+    "error": "Error: TypeError: Do not know how to serialize a BigInt\n    at JSON.stringify (<anonymous>)\n    at <anonymous>:3:289\n    at Array.map (<anonymous>)\n    at <anonymous>:3:259\n    at <anonymous>:4:7\n    at evaluate (file:///home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate/tools/diagnose_download_reason_v2_719c8e1b4e10.mjs:94:38)\n    at async receive (file:///home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate/tools/diagnose_download_reason_v2_719c8e1b4e10.mjs:173:27)\n    at async file:///home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate/tools/diagnose_download_reason_v2_719c8e1b4e10.mjs:258:3",
+    "qualification": "Own diagnostic attempted to serialize Chrome internal metadata containing BigInt; this is an instrumentation failure, not product evidence."
+  },
+  "linux_download_reason": {
+    "schema": "tastetable.visit_record_filters.browser.v1",
+    "startedAt": "2026-10-12T23:49:47.977Z",
+    "sourceRoot": "/home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate",
+    "sourcePins": [
+      {
+        "path": "static/visit-record.html",
+        "sha256": "6b28f55f818386107d6401e038ab162b94e67f0e107f22bc5a1ac69faa9d6252"
+      },
+      {
+        "path": "static/visit_record.css",
+        "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403"
+      },
+      {
+        "path": "static/visit_record_ui.mjs",
+        "sha256": "bec91c2dc84902f8c948bce7a87cf87b19fdabf2a1bde17e94cf2fd0b324a64a"
+      },
+      {
+        "path": "static/visit_record.mjs",
+        "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f"
+      },
+      {
+        "path": "static/week_file.mjs",
+        "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+      },
+      {
+        "path": "static/week_plan.mjs",
+        "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+      },
+      {
+        "path": "static/visit_record_filter.mjs",
+        "sha256": "e994f0a444bed81ca67d04e279e79eb1526f6c8577c5c678bc11d481ba06f42c"
+      },
+      {
+        "path": "static/visit_record_filter.css",
+        "sha256": "07fb6423060e05f445910899343f640aea3a9e305b4337f1aa9e63c8f7057a3d"
+      }
+    ],
+    "checks": [
+      "literal/Unicode venue and note matching, every outcome, intersection, no-match recovery and stable numbers",
+      "focused edits remain usable; invalid drafts stay visible and preserve existing export refusal until corrected"
+    ],
+    "pageErrors": [],
+    "externalRequests": [],
+    "downloads": [],
+    "originalSha256": "45907b898c4907f6fd9bbde0d7d46ee914f1a409b0f62072112b73f7547a5dfb",
+    "status": "failed",
+    "browser": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/153.0.8010.47",
+      "revision": "@73934a44f61e6b3878d1943064c141a5a820f5f7",
+      "userAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+      "jsVersion": "15.3.76.12"
+    },
+    "beforeSave": "{\"button\":\"<button id=\\\"saveRecord\\\" type=\\\"button\\\">Download visit record</button>\",\"buttonDisplay\":\"block\",\"active\":\"visitFilterQuery\",\"status\":\"\",\"invalid\":0,\"clicks\":0,\"userActivation\":{\"active\":true,\"ever\":true}}",
+    "rawDownloadEvents": [
+      {
+        "method": "Page.downloadWillBegin",
+        "params": {
+          "frameId": "DAEC40FE1D23B6145D698CADFE16445E",
+          "guid": "a92ca947-d029-4282-89a8-f3736cf645b1",
+          "url": "blob:http://127.0.0.1:38365/a971b8ac-4b6a-432d-8a2e-59d11a00b3d2",
+          "suggestedFilename": "tastetable-visits-2024-02-26.json"
+        },
+        "sessionId": "BEB47EB1C51CD2C799CBE129268FCC38"
+      },
+      {
+        "method": "Browser.downloadWillBegin",
+        "params": {
+          "frameId": "DAEC40FE1D23B6145D698CADFE16445E",
+          "guid": "a92ca947-d029-4282-89a8-f3736cf645b1",
+          "url": "blob:http://127.0.0.1:38365/a971b8ac-4b6a-432d-8a2e-59d11a00b3d2",
+          "suggestedFilename": "tastetable-visits-2024-02-26.json"
+        }
+      },
+      {
+        "method": "Page.downloadProgress",
+        "params": {
+          "guid": "a92ca947-d029-4282-89a8-f3736cf645b1",
+          "totalBytes": 3887,
+          "receivedBytes": 0,
+          "state": "inProgress"
+        },
+        "sessionId": "BEB47EB1C51CD2C799CBE129268FCC38"
+      },
+      {
+        "method": "Browser.downloadProgress",
+        "params": {
+          "guid": "a92ca947-d029-4282-89a8-f3736cf645b1",
+          "totalBytes": 3887,
+          "receivedBytes": 0,
+          "state": "inProgress"
+        }
+      },
+      {
+        "method": "Page.downloadProgress",
+        "params": {
+          "guid": "a92ca947-d029-4282-89a8-f3736cf645b1",
+          "totalBytes": 3887,
+          "receivedBytes": 0,
+          "state": "inProgress"
+        },
+        "sessionId": "BEB47EB1C51CD2C799CBE129268FCC38"
+      },
+      {
+        "method": "Browser.downloadProgress",
+        "params": {
+          "guid": "a92ca947-d029-4282-89a8-f3736cf645b1",
+          "totalBytes": 3887,
+          "receivedBytes": 0,
+          "state": "inProgress"
+        }
+      },
+      {
+        "method": "Page.downloadProgress",
+        "params": {
+          "guid": "a92ca947-d029-4282-89a8-f3736cf645b1",
+          "totalBytes": 3887,
+          "receivedBytes": 0,
+          "state": "inProgress"
+        },
+        "sessionId": "BEB47EB1C51CD2C799CBE129268FCC38"
+      },
+      {
+        "method": "Browser.downloadProgress",
+        "params": {
+          "guid": "a92ca947-d029-4282-89a8-f3736cf645b1",
+          "totalBytes": 3887,
+          "receivedBytes": 0,
+          "state": "inProgress"
+        }
+      },
+      {
+        "method": "Page.downloadProgress",
+        "params": {
+          "guid": "a92ca947-d029-4282-89a8-f3736cf645b1",
+          "totalBytes": 3887,
+          "receivedBytes": 0,
+          "state": "canceled"
+        },
+        "sessionId": "BEB47EB1C51CD2C799CBE129268FCC38"
+      },
+      {
+        "method": "Browser.downloadProgress",
+        "params": {
+          "guid": "a92ca947-d029-4282-89a8-f3736cf645b1",
+          "totalBytes": 3887,
+          "receivedBytes": 0,
+          "state": "canceled"
+        }
+      }
+    ],
+    "afterSave": "{\"button\":\"<button id=\\\"saveRecord\\\" type=\\\"button\\\">Download visit record</button>\",\"buttonDisplay\":\"block\",\"active\":\"saveRecord\",\"status\":\"Download requested. Keep the JSON file to reopen this record.\",\"invalid\":0,\"clicks\":1,\"userActivation\":{\"active\":true,\"ever\":true}}",
+    "downloadPage": {
+      "items": [
+        {
+          "state": "5",
+          "lastReasonText": "Failed - Download error",
+          "filePath": "/home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate-download-reason-v3/downloads/a92ca947-d029-4282-89a8-f3736cf645b1",
+          "dangerType": "0",
+          "isMixedContent": "undefined",
+          "fileName": "a92ca947-d029-4282-89a8-f3736cf645b1"
+        }
+      ],
+      "entries": [
+        {
+          "text": "\nToday\n\n\n  \n    \n      \n      \n      \n    \n\n    \n      a92ca947-d029-4282-89a8-f3736cf645b1a92ca947-d029-4282-89a8-f3736cf645b1\n        Failed - Download error\n      \n\n      \n        \n          From http://127.0.0.1:38365\n        \n      \n\n      \n        \n      \n\n      \n        Scanning for malware…\n      \n\n      \n\n      \n        \n          \n            \n          \n        \n      \n      \n    \n    \n      \n      \n        \n        \n        \n        \n        \n        \n        \n        \n      \n      \n        \n          Show in folder\n        \n        \n          \n        \n        \n          Delete from history\n        \n        \n          Delete from history\n        \n        \n          Retry\n        \n        \n          Scan for malware\n        \n        \n          \n        \n        \n          Cancel\n        \n        \n          Open anyway\n        \n        \n          Discard\n        \n        \n          Review\n        \n        \n          \n        \n      \n      \n      \n    \n  \n\n\n"
+        }
+      ]
+    },
+    "error": "AssertionError [ERR_ASSERTION]: Browser must complete the physical record download\n+ actual - expected\n\n+ 'canceled'\n- 'completed'\n\n    at receive (file:///home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate/tools/diagnose_download_reason_v3_719c8e1b4e10.mjs:179:10)\n    at async file:///home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate/tools/diagnose_download_reason_v3_719c8e1b4e10.mjs:258:3",
+    "browserLog": "[2367798:2367899:1012/234948.905988:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2367798:2367899:1012/234948.906409:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2367798:2367899:1012/234949.049728:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n\nDevTools listening on ws://127.0.0.1:46829/devtools/browser/56652842-9afa-4959-b260-ab3a93219922\n[2367798:2367798:1012/234949.339501:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2367798:2367798:1012/234949.339543:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2367798:2367899:1012/234949.339629:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2367798:2367798:1012/234949.350584:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2367798:2367899:1012/234949.350975:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2367798:2367798:1012/234949.379159:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2367798:2367899:1012/234949.380098:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2367798:2367798:1012/234949.386547:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2367798:2367798:1012/234949.399147:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2367798:2367899:1012/234949.399232:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2367798:2367798:1012/234949.410668:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2367798:2367899:1012/234949.410751:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2367798:2367798:1012/234949.444487:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n",
+    "observedDownloads": [
+      {
+        "frameId": "DAEC40FE1D23B6145D698CADFE16445E",
+        "guid": "a92ca947-d029-4282-89a8-f3736cf645b1",
+        "url": "blob:http://127.0.0.1:38365/a971b8ac-4b6a-432d-8a2e-59d11a00b3d2",
+        "suggestedFilename": "tastetable-visits-2024-02-26.json",
+        "totalBytes": 3887,
+        "receivedBytes": 0,
+        "state": "canceled"
+      }
+    ],
+    "browserExited": true,
+    "finishedAt": "2026-10-12T23:49:50.643Z",
+    "receiverSha256": "07bf09d8fe528d0b61bc5b432cc50bf520e8a5e2678272e7be0400700ce769e4"
+  },
+  "linux_alternative_writable_output": {
+    "schema": "tastetable.visit_record_filters.browser.v1",
+    "startedAt": "2026-10-12T23:48:19.506Z",
+    "sourceRoot": "/home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate",
+    "sourcePins": [
+      {
+        "path": "static/visit-record.html",
+        "sha256": "6b28f55f818386107d6401e038ab162b94e67f0e107f22bc5a1ac69faa9d6252"
+      },
+      {
+        "path": "static/visit_record.css",
+        "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403"
+      },
+      {
+        "path": "static/visit_record_ui.mjs",
+        "sha256": "bec91c2dc84902f8c948bce7a87cf87b19fdabf2a1bde17e94cf2fd0b324a64a"
+      },
+      {
+        "path": "static/visit_record.mjs",
+        "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f"
+      },
+      {
+        "path": "static/week_file.mjs",
+        "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+      },
+      {
+        "path": "static/week_plan.mjs",
+        "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+      },
+      {
+        "path": "static/visit_record_filter.mjs",
+        "sha256": "e994f0a444bed81ca67d04e279e79eb1526f6c8577c5c678bc11d481ba06f42c"
+      },
+      {
+        "path": "static/visit_record_filter.css",
+        "sha256": "07fb6423060e05f445910899343f640aea3a9e305b4337f1aa9e63c8f7057a3d"
+      }
+    ],
+    "checks": [
+      "literal/Unicode venue and note matching, every outcome, intersection, no-match recovery and stable numbers",
+      "focused edits remain usable; invalid drafts stay visible and preserve existing export refusal until corrected"
+    ],
+    "pageErrors": [],
+    "externalRequests": [],
+    "downloads": [],
+    "originalSha256": "45907b898c4907f6fd9bbde0d7d46ee914f1a409b0f62072112b73f7547a5dfb",
+    "status": "failed",
+    "browser": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/153.0.8010.47",
+      "revision": "@73934a44f61e6b3878d1943064c141a5a820f5f7",
+      "userAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+      "jsVersion": "15.3.76.12"
+    },
+    "error": "Error: Timed out: physical full-record download\n    at waitFor (file:///home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate/tools/check_visit_record_filters_browser.mjs:82:9)\n    at async receive (file:///home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate/tools/check_visit_record_filters_browser.mjs:163:17)\n    at async file:///home/jacob/tastetable-filters-719c8e1b4e10-ndj6mo_6/candidate/tools/check_visit_record_filters_browser.mjs:241:3",
+    "browserLog": "[2361816:2362284:1012/234822.837264:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2361816:2362284:1012/234822.838928:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2361816:2362284:1012/234823.162587:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n\nDevTools listening on ws://127.0.0.1:45419/devtools/browser/ce9f74c6-ccf6-4b16-be04-8907067ded39\n[2361816:2361816:1012/234823.710967:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2361816:2361816:1012/234823.711015:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2361816:2362284:1012/234823.711096:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2361816:2361816:1012/234823.732085:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2361816:2362284:1012/234823.734854:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2361816:2361816:1012/234823.816567:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2361816:2362284:1012/234823.817947:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2361816:2361816:1012/234823.818105:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2361816:2361816:1012/234823.858756:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2361816:2362284:1012/234823.859018:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2361816:2361816:1012/234823.885295:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2361816:2362284:1012/234823.888125:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[2361816:2361816:1012/234823.934098:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[2361816:2362286:1012/234827.339130:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT\n",
+    "browserExited": true,
+    "finishedAt": "2026-10-12T23:48:37.166Z",
+    "receiverSha256": "98a48b4507a55655cff20dc5a501a6001d1791d619454bd9a0fd75da9c7fba55"
+  },
+  "mac_original_and_candidate": [
+    {
+      "side": "baseline",
+      "command": {
+        "side": "baseline",
+        "command": [
+          "node",
+          "/private/tmp/tastetable-filters-719c8e1b4e10-i1yd6ibt/candidate/tools/check_visit_record_filters_browser.mjs",
+          "--browser",
+          "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+          "--source-root",
+          "/private/tmp/tastetable-filters-719c8e1b4e10-i1yd6ibt/baseline",
+          "--output",
+          "/private/tmp/tastetable-filters-719c8e1b4e10-i1yd6ibt/baseline-browser",
+          "--expect-absent"
+        ],
+        "started_at": "2026-10-12T23:51:09.631452+00:00",
+        "exit_code": 0,
+        "seconds": 3.055,
+        "stdout": "{\"status\":\"original-absence-confirmed\",\"checks\":[\"original editor loads the six-occurrence file; requested filter controls are absent\"],\"output\":\"/private/tmp/tastetable-filters-719c8e1b4e10-i1yd6ibt/baseline-browser\",\"browserExited\":true}\n",
+        "stderr": "",
+        "stdout_sha256": "6c1942fa7a247e37ce62970eadcec1fdbd82c8d3b73ec8cf09a6d99a10445ab4",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "receipt": {
+        "schema": "tastetable.visit_record_filters.browser.v1",
+        "startedAt": "2026-10-12T23:51:09.719Z",
+        "sourceRoot": "/private/tmp/tastetable-filters-719c8e1b4e10-i1yd6ibt/baseline",
+        "sourcePins": [
+          {
+            "path": "static/visit-record.html",
+            "sha256": "6a26be64a58a36a6c7102fcb3c1b6ea29a05a4f3842ed40609cabb0425cb0c24"
+          },
+          {
+            "path": "static/visit_record.css",
+            "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403"
+          },
+          {
+            "path": "static/visit_record_ui.mjs",
+            "sha256": "bec91c2dc84902f8c948bce7a87cf87b19fdabf2a1bde17e94cf2fd0b324a64a"
+          },
+          {
+            "path": "static/visit_record.mjs",
+            "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f"
+          },
+          {
+            "path": "static/week_file.mjs",
+            "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+          },
+          {
+            "path": "static/week_plan.mjs",
+            "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+          }
+        ],
+        "checks": [
+          "original editor loads the six-occurrence file; requested filter controls are absent"
+        ],
+        "pageErrors": [],
+        "externalRequests": [],
+        "downloads": [],
+        "originalSha256": "45907b898c4907f6fd9bbde0d7d46ee914f1a409b0f62072112b73f7547a5dfb",
+        "status": "original-absence-confirmed",
+        "browser": {
+          "protocolVersion": "1.3",
+          "product": "Chrome/154.0.8037.99",
+          "revision": "@45889d77830582727fe00dbfd614bcb7aac35caa",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+          "jsVersion": "15.4.80.20"
+        },
+        "browserExited": true,
+        "finishedAt": "2026-10-12T23:51:12.681Z",
+        "receiverSha256": "98a48b4507a55655cff20dc5a501a6001d1791d619454bd9a0fd75da9c7fba55"
+      }
+    },
+    {
+      "side": "candidate",
+      "command": {
+        "side": "candidate",
+        "command": [
+          "node",
+          "/private/tmp/tastetable-filters-719c8e1b4e10-i1yd6ibt/candidate/tools/check_visit_record_filters_browser.mjs",
+          "--browser",
+          "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+          "--source-root",
+          "/private/tmp/tastetable-filters-719c8e1b4e10-i1yd6ibt/candidate",
+          "--output",
+          "/private/tmp/tastetable-filters-719c8e1b4e10-i1yd6ibt/candidate-browser"
+        ],
+        "started_at": "2026-10-12T23:51:12.687236+00:00",
+        "exit_code": 1,
+        "seconds": 12.831,
+        "stdout": "{\"status\":\"failed\",\"checks\":[],\"output\":\"/private/tmp/tastetable-filters-719c8e1b4e10-i1yd6ibt/candidate-browser\",\"browserExited\":true}\n",
+        "stderr": "",
+        "stdout_sha256": "50975e077c1cc800053b001e0bcd916464f2dc6880b7c98fb314610180e3d0a4",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "receipt": {
+        "schema": "tastetable.visit_record_filters.browser.v1",
+        "startedAt": "2026-10-12T23:51:12.811Z",
+        "sourceRoot": "/private/tmp/tastetable-filters-719c8e1b4e10-i1yd6ibt/candidate",
+        "sourcePins": [
+          {
+            "path": "static/visit-record.html",
+            "sha256": "6b28f55f818386107d6401e038ab162b94e67f0e107f22bc5a1ac69faa9d6252"
+          },
+          {
+            "path": "static/visit_record.css",
+            "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403"
+          },
+          {
+            "path": "static/visit_record_ui.mjs",
+            "sha256": "bec91c2dc84902f8c948bce7a87cf87b19fdabf2a1bde17e94cf2fd0b324a64a"
+          },
+          {
+            "path": "static/visit_record.mjs",
+            "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f"
+          },
+          {
+            "path": "static/week_file.mjs",
+            "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+          },
+          {
+            "path": "static/week_plan.mjs",
+            "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+          },
+          {
+            "path": "static/visit_record_filter.mjs",
+            "sha256": "e994f0a444bed81ca67d04e279e79eb1526f6c8577c5c678bc11d481ba06f42c"
+          },
+          {
+            "path": "static/visit_record_filter.css",
+            "sha256": "07fb6423060e05f445910899343f640aea3a9e305b4337f1aa9e63c8f7057a3d"
+          }
+        ],
+        "checks": [],
+        "pageErrors": [],
+        "externalRequests": [],
+        "downloads": [],
+        "originalSha256": "45907b898c4907f6fd9bbde0d7d46ee914f1a409b0f62072112b73f7547a5dfb",
+        "status": "failed",
+        "browser": {
+          "protocolVersion": "1.3",
+          "product": "Chrome/154.0.8037.99",
+          "revision": "@45889d77830582727fe00dbfd614bcb7aac35caa",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+          "jsVersion": "15.4.80.20"
+        },
+        "error": "Error: CDP timeout Page.navigate\n    at Timeout._onTimeout (file:///private/tmp/tastetable-filters-719c8e1b4e10-i1yd6ibt/candidate/tools/check_visit_record_filters_browser.mjs:87:61)\n    at listOnTimeout (node:internal/timers:685:17)\n    at process.processTimers (node:internal/timers:618:7)",
+        "browserLog": "\nDevTools listening on ws://127.0.0.1:61405/devtools/browser/bcaef9ec-9e8d-4966-a02a-af70b46534d9\nTrying to load the allocator multiple times. This is *not* supported.\n[20664:49801966:1012/165113.354650:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[20664:49801966:1012/165113.355046:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[20664:49801966:1012/165113.355377:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[20664:49801966:1012/165113.355634:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[20664:49801966:1012/165113.355702:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[20664:49801966:1012/165113.355817:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[20664:49801966:1012/165115.423657:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[20664:49801966:1012/165115.483004:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[20664:49801966:1012/165115.508450:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[20664:49801966:1012/165115.550756:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[20664:49801966:1012/165115.576090:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[20664:49801966:1012/165115.623946:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[20664:49801966:1012/165115.649827:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n",
+        "browserExited": true,
+        "finishedAt": "2026-10-12T23:51:25.513Z",
+        "receiverSha256": "98a48b4507a55655cff20dc5a501a6001d1791d619454bd9a0fd75da9c7fba55"
+      }
+    }
+  ],
+  "post_receiving_preservation": {
+    "linux": {
+      "source_files_verified": 15,
+      "source_unchanged": true,
+      "owned_browser_processes": [],
+      "verified_files": [
+        {
+          "side": "baseline",
+          "path": "static/visit-record.html",
+          "sha256": "6a26be64a58a36a6c7102fcb3c1b6ea29a05a4f3842ed40609cabb0425cb0c24"
+        },
+        {
+          "side": "baseline",
+          "path": "static/visit_record.css",
+          "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403"
+        },
+        {
+          "side": "baseline",
+          "path": "static/visit_record_ui.mjs",
+          "sha256": "bec91c2dc84902f8c948bce7a87cf87b19fdabf2a1bde17e94cf2fd0b324a64a"
+        },
+        {
+          "side": "baseline",
+          "path": "static/visit_record.mjs",
+          "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f"
+        },
+        {
+          "side": "baseline",
+          "path": "static/week_file.mjs",
+          "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+        },
+        {
+          "side": "baseline",
+          "path": "static/week_plan.mjs",
+          "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+        },
+        {
+          "side": "candidate",
+          "path": "static/visit-record.html",
+          "sha256": "6b28f55f818386107d6401e038ab162b94e67f0e107f22bc5a1ac69faa9d6252"
+        },
+        {
+          "side": "candidate",
+          "path": "static/visit_record.css",
+          "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403"
+        },
+        {
+          "side": "candidate",
+          "path": "static/visit_record_ui.mjs",
+          "sha256": "bec91c2dc84902f8c948bce7a87cf87b19fdabf2a1bde17e94cf2fd0b324a64a"
+        },
+        {
+          "side": "candidate",
+          "path": "static/visit_record.mjs",
+          "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f"
+        },
+        {
+          "side": "candidate",
+          "path": "static/week_file.mjs",
+          "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+        },
+        {
+          "side": "candidate",
+          "path": "static/week_plan.mjs",
+          "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+        },
+        {
+          "side": "candidate",
+          "path": "static/visit_record_filter.mjs",
+          "sha256": "e994f0a444bed81ca67d04e279e79eb1526f6c8577c5c678bc11d481ba06f42c"
+        },
+        {
+          "side": "candidate",
+          "path": "static/visit_record_filter.css",
+          "sha256": "07fb6423060e05f445910899343f640aea3a9e305b4337f1aa9e63c8f7057a3d"
+        },
+        {
+          "side": "candidate",
+          "path": "tools/check_visit_record_filters_browser.mjs",
+          "sha256": "98a48b4507a55655cff20dc5a501a6001d1791d619454bd9a0fd75da9c7fba55"
+        }
+      ]
+    },
+    "mac": {
+      "source_files_verified": 15,
+      "source_unchanged": true,
+      "owned_browser_processes": [],
+      "verified_files": [
+        {
+          "side": "baseline",
+          "path": "static/visit-record.html",
+          "sha256": "6a26be64a58a36a6c7102fcb3c1b6ea29a05a4f3842ed40609cabb0425cb0c24"
+        },
+        {
+          "side": "baseline",
+          "path": "static/visit_record.css",
+          "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403"
+        },
+        {
+          "side": "baseline",
+          "path": "static/visit_record_ui.mjs",
+          "sha256": "bec91c2dc84902f8c948bce7a87cf87b19fdabf2a1bde17e94cf2fd0b324a64a"
+        },
+        {
+          "side": "baseline",
+          "path": "static/visit_record.mjs",
+          "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f"
+        },
+        {
+          "side": "baseline",
+          "path": "static/week_file.mjs",
+          "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+        },
+        {
+          "side": "baseline",
+          "path": "static/week_plan.mjs",
+          "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+        },
+        {
+          "side": "candidate",
+          "path": "static/visit-record.html",
+          "sha256": "6b28f55f818386107d6401e038ab162b94e67f0e107f22bc5a1ac69faa9d6252"
+        },
+        {
+          "side": "candidate",
+          "path": "static/visit_record.css",
+          "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403"
+        },
+        {
+          "side": "candidate",
+          "path": "static/visit_record_ui.mjs",
+          "sha256": "bec91c2dc84902f8c948bce7a87cf87b19fdabf2a1bde17e94cf2fd0b324a64a"
+        },
+        {
+          "side": "candidate",
+          "path": "static/visit_record.mjs",
+          "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f"
+        },
+        {
+          "side": "candidate",
+          "path": "static/week_file.mjs",
+          "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+        },
+        {
+          "side": "candidate",
+          "path": "static/week_plan.mjs",
+          "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+        },
+        {
+          "side": "candidate",
+          "path": "static/visit_record_filter.mjs",
+          "sha256": "e994f0a444bed81ca67d04e279e79eb1526f6c8577c5c678bc11d481ba06f42c"
+        },
+        {
+          "side": "candidate",
+          "path": "static/visit_record_filter.css",
+          "sha256": "07fb6423060e05f445910899343f640aea3a9e305b4337f1aa9e63c8f7057a3d"
+        },
+        {
+          "side": "candidate",
+          "path": "tools/check_visit_record_filters_browser.mjs",
+          "sha256": "98a48b4507a55655cff20dc5a501a6001d1791d619454bd9a0fd75da9c7fba55"
+        }
+      ]
+    }
+  },
+  "source_manifest": [
+    {
+      "side": "baseline",
+      "path": "static/visit-record.html",
+      "bytes": 4010,
+      "sha256": "6a26be64a58a36a6c7102fcb3c1b6ea29a05a4f3842ed40609cabb0425cb0c24",
+      "gitBlob": "22b5069faebfffd979aad3a089c656e585007f61"
+    },
+    {
+      "side": "baseline",
+      "path": "static/visit_record.css",
+      "bytes": 4621,
+      "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403",
+      "gitBlob": "cf2ed8fc0871196a55ceef4e0aa0cab09d1fcfeb"
+    },
+    {
+      "side": "baseline",
+      "path": "static/visit_record_ui.mjs",
+      "bytes": 9376,
+      "sha256": "bec91c2dc84902f8c948bce7a87cf87b19fdabf2a1bde17e94cf2fd0b324a64a",
+      "gitBlob": "b136fa1a9f688d8a27db7d96668ace0895e547ee"
+    },
+    {
+      "side": "baseline",
+      "path": "static/visit_record.mjs",
+      "bytes": 7525,
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f",
+      "gitBlob": "2b5b37e3d4a227e00a5b0052a962d13512b53e48"
+    },
+    {
+      "side": "baseline",
+      "path": "static/week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "gitBlob": "420ddb8f63fca264dcf97be7147801105696155d"
+    },
+    {
+      "side": "baseline",
+      "path": "static/week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "gitBlob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+    },
+    {
+      "side": "candidate",
+      "path": "static/visit-record.html",
+      "bytes": 4131,
+      "sha256": "6b28f55f818386107d6401e038ab162b94e67f0e107f22bc5a1ac69faa9d6252",
+      "gitBlob": "ab19859b4c542463381171efc7713cd61869e61e"
+    },
+    {
+      "side": "candidate",
+      "path": "static/visit_record.css",
+      "bytes": 4621,
+      "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403",
+      "gitBlob": "cf2ed8fc0871196a55ceef4e0aa0cab09d1fcfeb"
+    },
+    {
+      "side": "candidate",
+      "path": "static/visit_record_ui.mjs",
+      "bytes": 9376,
+      "sha256": "bec91c2dc84902f8c948bce7a87cf87b19fdabf2a1bde17e94cf2fd0b324a64a",
+      "gitBlob": "b136fa1a9f688d8a27db7d96668ace0895e547ee"
+    },
+    {
+      "side": "candidate",
+      "path": "static/visit_record.mjs",
+      "bytes": 7525,
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f",
+      "gitBlob": "2b5b37e3d4a227e00a5b0052a962d13512b53e48"
+    },
+    {
+      "side": "candidate",
+      "path": "static/week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "gitBlob": "420ddb8f63fca264dcf97be7147801105696155d"
+    },
+    {
+      "side": "candidate",
+      "path": "static/week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "gitBlob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+    },
+    {
+      "side": "candidate",
+      "path": "static/visit_record_filter.mjs",
+      "bytes": 5568,
+      "sha256": "e994f0a444bed81ca67d04e279e79eb1526f6c8577c5c678bc11d481ba06f42c",
+      "gitBlob": "8cda0f3a9ab662ef80404ba038124847a7d248a6"
+    },
+    {
+      "side": "candidate",
+      "path": "static/visit_record_filter.css",
+      "bytes": 696,
+      "sha256": "07fb6423060e05f445910899343f640aea3a9e305b4337f1aa9e63c8f7057a3d",
+      "gitBlob": "88fbb0c97142cffaf355951cba85f4a1353865ae"
+    },
+    {
+      "side": "candidate",
+      "path": "tools/check_visit_record_filters_browser.mjs",
+      "bytes": 19632,
+      "sha256": "98a48b4507a55655cff20dc5a501a6001d1791d619454bd9a0fd75da9c7fba55",
+      "gitBlob": "299c663abcdc4ac7b9ed70a9902afebd565bfec1"
+    }
+  ],
+  "remaining_gates": [
+    "Physical full-record download",
+    "Print/PDF complete-record behavior",
+    "Replacement/preview/cancel/refusal behavior",
+    "Keyboard and narrow viewport course",
+    "Empty-record course",
+    "Owner integration and installed adoption"
+  ],
+  "conclusion": "Original file opening was observed on both devices. Linux candidate completed the first two behavior groups; browser canceled its initiated 3887-byte record download at zero received bytes. Chrome reported Failed - Download error; root cause remains unresolved. Changing to the browser's writable area did not resolve it. Mac candidate timed out at Page.navigate before assertions. No production changes proposed; feature remains pending full browser receiving."
+}
