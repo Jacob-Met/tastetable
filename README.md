@@ -78,6 +78,15 @@ app.py (FastAPI) ──► agent.py  tool loop (OpenAI chat.completions shape)
 * The "LLM-only" column is a fixed, ungrounded template that shows what a model without tools
   typically returns. It is not a live model call.
 
+## Plan one profile locally
+
+Use [native offline planning](docs/NATIVE_PLAN_CLI.md) for one fictional persona
+or authored profile. The Python command explicitly uses fictional fixtures and
+the scripted policy, without an application server or provider configuration.
+The guide also covers converting a completed native result into an editable
+saved week and rendering a saved week as a standalone HTML handoff, preserving
+the original source labels and heuristic-check explanations.
+
 ## Plan for several people locally
 
 Create an ordered, create-only ZIP of native fixture plans and editable saved weeks from explicit profile files with [the native batch command](docs/NATIVE_PLAN_BATCH.md). Every requested profile receives a saved or failed entry; a partial bundle has a nonzero process exit.
