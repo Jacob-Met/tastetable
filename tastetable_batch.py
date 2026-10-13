@@ -265,6 +265,9 @@ def main(argv: list[str] | None = None) -> int:
         if not destination.parent.is_dir():
             raise InputError("the output parent must already be a directory")
         node = args.node or "node"
+        if os.path.dirname(node) and not os.path.isabs(node):
+            drive, tail = os.path.splitdrive(node)
+            node = os.path.join(os.path.abspath(drive or os.curdir), tail)
         selected = check_week(node, args.week)
         stage = Path(tempfile.mkdtemp(prefix=".tastetable-batch-", dir=destination.parent))
         try:
