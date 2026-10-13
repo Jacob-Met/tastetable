@@ -1,0 +1,116 @@
+{
+  "scope": "Source-delivery routed native preflight, transfer and authored execution; independent routing is retained separately inside raw-results.zip.",
+  "device": "d55b2499-5e82-4805-819a-d0d7ddea1efe",
+  "configuration": {
+    "version": "0.2.52",
+    "blockedCommands": [],
+    "allowedDirectories": [],
+    "defaultShell": "/bin/bash"
+  },
+  "records": {
+    "tag-native-preflight-exec": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Process started with PID 3274865 (shell: /bin/bash)\nInitial output:\n{\"host\": \"hamon-thinkpad\", \"user\": \"jacob\", \"uid\": 1000, \"python\": \"3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]\", \"executable\": \"/usr/bin/python3\", \"parent\": \"/home/jacob\", \"parent_uid\": 1000, \"writable\": true, \"root_exists\": false, \"free\": 25257562112, \"agents\": {\"/AGENTS.md\": null, \"/home/AGENTS.md\": null, \"/home/jacob/AGENTS.md\": null}}\n"
+        },
+        {
+          "type": "text",
+          "text": "\n[executed on device: hamon-thinkpad (d55b2499-5e82-4805-819a-d0d7ddea1efe)]"
+        }
+      ],
+      "isError": false
+    },
+    "tag-native-preflight-completion": {
+      "content": [
+        {
+          "type": "text",
+          "text": "[Reading 2 new lines (total: 2 lines)]\n\n{\"host\": \"hamon-thinkpad\", \"user\": \"jacob\", \"uid\": 1000, \"python\": \"3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]\", \"executable\": \"/usr/bin/python3\", \"parent\": \"/home/jacob\", \"parent_uid\": 1000, \"writable\": true, \"root_exists\": false, \"free\": 25257562112, \"agents\": {\"/AGENTS.md\": null, \"/home/AGENTS.md\": null, \"/home/jacob/AGENTS.md\": null}}\n\n\u2705 Process completed with exit code 0 (runtime: 0.12s)"
+        },
+        {
+          "type": "text",
+          "text": "\n[executed on device: hamon-thinkpad (d55b2499-5e82-4805-819a-d0d7ddea1efe)]"
+        }
+      ],
+      "isError": false
+    },
+    "tag-projection-transfer": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Process started with PID 3280027 (shell: /bin/bash)\nInitial output:\n{\"root\": \"/home/jacob/hamon-tastetable-tag-limit-1caa1d8e028a\", \"count\": 8, \"projection_sha256\": \"e91492de699cee4f8cbc8c15117ba94998ee9bdfca9290bcef2cdf7e5e500a85\"}\n"
+        },
+        {
+          "type": "text",
+          "text": "\n[executed on device: hamon-thinkpad (d55b2499-5e82-4805-819a-d0d7ddea1efe)]"
+        }
+      ],
+      "isError": false
+    },
+    "tag-author-harness-transfer": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Successfully wrote to /home/jacob/hamon-tastetable-tag-limit-1caa1d8e028a/author_receive.py (86 lines) "
+        },
+        {
+          "type": "text",
+          "text": "\n[executed on device: hamon-thinkpad (d55b2499-5e82-4805-819a-d0d7ddea1efe)]"
+        }
+      ],
+      "isError": false
+    },
+    "tag-author-original-process": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Process started with PID 3288049 (shell: /bin/bash)\nInitial output:\n{\"passed\": 8, \"total\": 14, \"source_guard\": true, \"receipt_sha256\": \"dfdc813d79bb741a0d890471293f3b24ade09de5acac1df7fb3820663f292838\"}\n"
+        },
+        {
+          "type": "text",
+          "text": "\n[executed on device: hamon-thinkpad (d55b2499-5e82-4805-819a-d0d7ddea1efe)]"
+        }
+      ],
+      "isError": false
+    },
+    "tag-candidate-create": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Process started with PID 3294087 (shell: /bin/bash)\nInitial output:\n{\"base_commit\": \"60d08e7c7c23033a343f1feb3ee67165f07c53f2\", \"base_tree\": \"2ce86ab237ba021f875e068984838b9b5aceeed2\", \"files\": [{\"path\": \"qloo_client.py\", \"bytes\": 12587, \"sha256\": \"2927c5f6c924a5d0d31dbadcc8731d10944c07ca6302c814de7544fef4c16610\", \"git_blob\": \"c3f3ccb658b4ab019ebafda4593a9206c54ae84c\"}, {\"path\": \"tests/test_fixture_tag_limits.py\", \"bytes\": 3880, \"sha256\": \"6ea5597edeae7cb3af85ead62d9f71a57f6540dadd570eecd39ee541adeff7ed\", \"git_blob\": \"92149ef24a376a242b64c39397859ba41626e023\"}, {\"path\": \"docs/QLOO_FIXTURE_TAG_LIMITS.md\", \"bytes\": 2352, \"sha256\": \"21ef9c703c0e27ae3826b0c3474c33593c8a1a2fada621d86c425ca4399ec0a7\", \"git_blob\": \"dd5edc8099ea8b9dc5f9d48affbae1e9a6c25740\"}], \"original_test_exit\": 1}\n['Ran 8 tests in 0.004s', '', 'FAILED (failures=7)']\n"
+        },
+        {
+          "type": "text",
+          "text": "\n[executed on device: hamon-thinkpad (d55b2499-5e82-4805-819a-d0d7ddea1efe)]"
+        }
+      ],
+      "isError": false
+    },
+    "tag-candidate-execution": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Process started with PID 3295203 (shell: /bin/bash)\nInitial output:\ncandidate-tests 0  _are_retained) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.002s\n\nOK\n\ncandidate-public 0 {\"passed\": 14, \"total\": 14, \"source_guard\": true, \"receipt_sha256\": \"49cd0ebff109a2c3e435ce27b3c58d8663f235aab0af9b0783a8e2f0bef2cb0f\"}\n \nreceipt 51fdf8e51ab33b1d4292975c6d9501c774b5fac5f53dcb4549a84b1a71721916\n"
+        },
+        {
+          "type": "text",
+          "text": "\n[executed on device: hamon-thinkpad (d55b2499-5e82-4805-819a-d0d7ddea1efe)]"
+        }
+      ],
+      "isError": false
+    },
+    "tag-candidate-execution-completion": {
+      "content": [
+        {
+          "type": "text",
+          "text": "[Reading 11 new lines (total: 11 lines)]\n\ncandidate-tests 0  _are_retained) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.002s\n\nOK\n\ncandidate-public 0 {\"passed\": 14, \"total\": 14, \"source_guard\": true, \"receipt_sha256\": \"49cd0ebff109a2c3e435ce27b3c58d8663f235aab0af9b0783a8e2f0bef2cb0f\"}\n \nreceipt 51fdf8e51ab33b1d4292975c6d9501c774b5fac5f53dcb4549a84b1a71721916\n\n\u2705 Process completed with exit code 0 (runtime: 0.40s)"
+        },
+        {
+          "type": "text",
+          "text": "\n[executed on device: hamon-thinkpad (d55b2499-5e82-4805-819a-d0d7ddea1efe)]"
+        }
+      ],
+      "isError": false
+    }
+  }
+}

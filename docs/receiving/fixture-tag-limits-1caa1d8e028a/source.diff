@@ -1,0 +1,11 @@
+--- original/qloo_client.py
++++ candidate/qloo_client.py
+@@ -184,7 +184,7 @@
+         hits = [t for t in self.data["tags"]
+                 if q and (q in t["name"].lower() or q in [a.lower() for a in t.get("aka", [])])]
+         return {"success": True,
+-                "results": {"tags": [{k: t[k] for k in ("id", "name", "type")} for t in hits]}}
++                "results": {"tags": [{k: t[k] for k in ("id", "name", "type")} for t in hits[: int(p.get("take", len(hits)))]]}}
+ 
+     def _insights(self, p: dict) -> dict:
+         ftype = p.get("filter.type")
