@@ -1,0 +1,60 @@
+{
+  "verdict": "PASS",
+  "reviewer": "remote_consumer",
+  "scope": "TasteTable issue 102 fixture tag limits",
+  "base_commit": "60d08e7c7c23033a343f1feb3ee67165f07c53f2",
+  "source_freeze_sha256": "b075333a06383c98e7b1d3e1b7a3c1d28bb0a22f45c696c91bc07e4b3448e454",
+  "files": [
+    {
+      "path": "qloo_client.py",
+      "bytes": 12587,
+      "sha256": "2927c5f6c924a5d0d31dbadcc8731d10944c07ca6302c814de7544fef4c16610",
+      "git_blob": "c3f3ccb658b4ab019ebafda4593a9206c54ae84c"
+    },
+    {
+      "path": "tests/test_fixture_tag_limits.py",
+      "bytes": 3880,
+      "sha256": "6ea5597edeae7cb3af85ead62d9f71a57f6540dadd570eecd39ee541adeff7ed",
+      "git_blob": "92149ef24a376a242b64c39397859ba41626e023"
+    },
+    {
+      "path": "docs/QLOO_FIXTURE_TAG_LIMITS.md",
+      "bytes": 2352,
+      "sha256": "21ef9c703c0e27ae3826b0c3474c33593c8a1a2fada621d86c425ca4399ec0a7",
+      "git_blob": "dd5edc8099ea8b9dc5f9d48affbae1e9a6c25740"
+    }
+  ],
+  "independent_oracle": {
+    "path": "independent_receive.py",
+    "bytes": 6171,
+    "sha256": "61c4d83267f2c005f3f6a5da81e5166a4e60354c9feff162812b4da61017db46",
+    "frozen_before_candidate_inspection": true
+  },
+  "original": {
+    "passed": 3,
+    "total": 12,
+    "exit": 1,
+    "receipt_sha256": "d004dab8caab048112e0665d9d225d77a3fa6a7cf307ac58b67868a69208a253"
+  },
+  "candidate": {
+    "passed": 12,
+    "total": 12,
+    "exit": 0,
+    "receipt_sha256": "a1811dc6d4c54cbc459b9e996901d37912a213ee3991d03d9d3646ac20839c7e"
+  },
+  "source_review": [
+    "One production slice hunk applies integer-converted take after existing name and exact-alias filtering, retaining stable order.",
+    "Direct transport omitted take defaults to len(hits); public find_tags retains its existing default 3.",
+    "No query, type filter, provider, parser, successful-parse cache admission, caller isolation, or other transport changes.",
+    "Read all eight maintained test methods and complete guide. Nonnegative integer bounds are specified without a new invalid-input policy.",
+    "Independent actual public API covers limits 0/1/2/3/5/99, default, synthetic matching order, direct omitted count, query/type compatibility, cache keys/detachment, and unrelated search/insights.",
+    "Original and candidate source byte/metadata guards pass; seven inherited source files match. No live provider or installed application claim."
+  ],
+  "runtime": {
+    "device": "d55b2499-5e82-4805-819a-d0d7ddea1efe",
+    "python": "3.14.4",
+    "original_controller": 3290073,
+    "candidate_controller": 3301957
+  },
+  "metadata_note": "An initial review serialization command failed before writing either review file; source and qualification receipts were not rerun or changed."
+}

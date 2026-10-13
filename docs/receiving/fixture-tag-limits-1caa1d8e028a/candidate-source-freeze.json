@@ -1,0 +1,25 @@
+{
+  "base_commit": "60d08e7c7c23033a343f1feb3ee67165f07c53f2",
+  "base_tree": "2ce86ab237ba021f875e068984838b9b5aceeed2",
+  "files": [
+    {
+      "path": "qloo_client.py",
+      "bytes": 12587,
+      "sha256": "2927c5f6c924a5d0d31dbadcc8731d10944c07ca6302c814de7544fef4c16610",
+      "git_blob": "c3f3ccb658b4ab019ebafda4593a9206c54ae84c"
+    },
+    {
+      "path": "tests/test_fixture_tag_limits.py",
+      "bytes": 3880,
+      "sha256": "6ea5597edeae7cb3af85ead62d9f71a57f6540dadd570eecd39ee541adeff7ed",
+      "git_blob": "92149ef24a376a242b64c39397859ba41626e023"
+    },
+    {
+      "path": "docs/QLOO_FIXTURE_TAG_LIMITS.md",
+      "bytes": 2352,
+      "sha256": "21ef9c703c0e27ae3826b0c3474c33593c8a1a2fada621d86c425ca4399ec0a7",
+      "git_blob": "dd5edc8099ea8b9dc5f9d48affbae1e9a6c25740"
+    }
+  ],
+  "original_test_exit": 1
+}
