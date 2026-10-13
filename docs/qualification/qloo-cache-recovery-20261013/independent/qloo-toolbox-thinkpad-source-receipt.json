@@ -1,0 +1,61 @@
+{
+  "schema": "hamon.qloo-source-receiving/1",
+  "utc": "2026-10-13T02:26:05.342591+00:00",
+  "base": "368da250717cc9d1859253ac08a2f4783cd17560",
+  "python": "3.14.4",
+  "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+  "files": [
+    {
+      "path": "source/qloo_client.py",
+      "bytes": 12498,
+      "sha256": "a8362350fd8f549b312255d7c7c5630b111f57e40ab1ec0da7ff9bf7b43b1aaf",
+      "git_blob": "1061f8fda2599100c3af0479588657cc5831c932"
+    },
+    {
+      "path": "source/agent.py",
+      "bytes": 28440,
+      "sha256": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+      "git_blob": "883aff984464f2d43cda18f8e60b81240d6c3fb3"
+    },
+    {
+      "path": "source/constraints.py",
+      "bytes": 8720,
+      "sha256": "f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa",
+      "git_blob": "e9d5cd1575df72b089273740e4b6a444d0cd21a8"
+    },
+    {
+      "path": "source/personas.py",
+      "bytes": 1247,
+      "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+      "git_blob": "1eb6768780cafaf9b1666e39b7fc17aa21204f16"
+    },
+    {
+      "path": "source/fixtures/qloo_fixtures.json",
+      "bytes": 21190,
+      "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+      "git_blob": "60c5d92f905755454bb280b8181f8836a74bd955"
+    },
+    {
+      "path": "source/tests/test_qloo_cache_recovery.py",
+      "bytes": 6508,
+      "sha256": "e3477c2448de44cc5152ba4265b4b3ebf5819d3f98dd6cab0e33f2bd42a81b33",
+      "git_blob": "946947bea885e24e558f0a0afbc46ab599495487"
+    },
+    {
+      "path": "evidence/qloo_client.baseline.py",
+      "bytes": 12228,
+      "sha256": "a7b3362896273e05782e789cb1f89f053f32c4e1b766ae5998e19ed9fab103f9",
+      "git_blob": "612243c34e879684c303ab60f0f8404f7ac3aa34"
+    },
+    {
+      "path": "qloo-toolbox-portable.py",
+      "bytes": 6884,
+      "sha256": "640e3f6598335fd9aa523ce74d93b7ebb000f5ee89d65dac112f206c3bee325e"
+    },
+    {
+      "path": "run-qloo-toolbox-courses.py",
+      "bytes": 2330,
+      "sha256": "bb6becf26b915a423c4c3fab2e8317233eaf32e1cc999d7bd5a0581cd004495e"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+test_cache_hits_still_create_fresh_result_objects (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_cache_hits_still_create_fresh_result_objects) ... ok
+test_failed_query_preserves_other_cached_queries (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_failed_query_preserves_other_cached_queries) ... ok
+test_insights_error_envelope_can_recover_on_the_same_request (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_insights_error_envelope_can_recover_on_the_same_request) ... ok
+test_insights_partial_list_failure_can_recover (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_insights_partial_list_failure_can_recover) ... ok
+test_search_numeric_parse_failure_can_recover (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_search_numeric_parse_failure_can_recover) ... ok
+test_successful_empty_and_missing_results_remain_cacheable (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_successful_empty_and_missing_results_remain_cacheable) ... ok
+test_tag_partial_list_failure_can_recover (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_tag_partial_list_failure_can_recover) ... ok
+test_transport_refusal_retains_error_and_recovery_behavior (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_transport_refusal_retains_error_and_recovery_behavior) ... ok
+test_wrong_top_level_shape_can_recover (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_wrong_top_level_shape_can_recover) ... ok
+test_refused_search_is_not_cached_and_later_success_is_cached (test_qloo_http_lifetime.QlooHttpResponseLifetimeTests.test_refused_search_is_not_cached_and_later_success_is_cached) ... ok
+test_server_error_response_closes_and_keeps_retryable_classification (test_qloo_http_lifetime.QlooHttpResponseLifetimeTests.test_server_error_response_closes_and_keeps_retryable_classification) ... ok
+test_throttled_response_closes_and_keeps_retryable_classification (test_qloo_http_lifetime.QlooHttpResponseLifetimeTests.test_throttled_response_closes_and_keeps_retryable_classification) ... ok
+test_unauthorized_response_closes_before_error_translation_returns (test_qloo_http_lifetime.QlooHttpResponseLifetimeTests.test_unauthorized_response_closes_before_error_translation_returns) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.075s
+
+OK

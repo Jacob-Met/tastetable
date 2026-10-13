@@ -1,0 +1,140 @@
+test_cache_hits_still_create_fresh_result_objects (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_cache_hits_still_create_fresh_result_objects) ... ok
+test_failed_query_preserves_other_cached_queries (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_failed_query_preserves_other_cached_queries) ... ERROR
+test_insights_error_envelope_can_recover_on_the_same_request (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_insights_error_envelope_can_recover_on_the_same_request) ... ERROR
+test_insights_partial_list_failure_can_recover (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_insights_partial_list_failure_can_recover) ... ERROR
+test_search_numeric_parse_failure_can_recover (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_search_numeric_parse_failure_can_recover) ... ERROR
+test_successful_empty_and_missing_results_remain_cacheable (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_successful_empty_and_missing_results_remain_cacheable) ... ok
+test_tag_partial_list_failure_can_recover (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_tag_partial_list_failure_can_recover) ... ERROR
+test_transport_refusal_retains_error_and_recovery_behavior (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_transport_refusal_retains_error_and_recovery_behavior) ... ok
+test_wrong_top_level_shape_can_recover (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_wrong_top_level_shape_can_recover) ... ERROR
+
+======================================================================
+ERROR: test_failed_query_preserves_other_cached_queries (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_failed_query_preserves_other_cached_queries)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/forge-d3745/tastetable/tests/test_qloo_cache_recovery.py", line 122, in test_failed_query_preserves_other_cached_queries
+    self.assertEqual(client.search("second")[0].name, "Other venue")
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/dev/shm/forge-d3745/evidence/qloo_client.baseline.py", line 251, in search
+    return parse_search(self._get("/search", params))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/dev/shm/forge-d3745/evidence/qloo_client.baseline.py", line 116, in parse_search
+    return [parse_entity(r) for r in _entity_list(payload)]
+            ^^^^^^^^^^^^^^^
+  File "/dev/shm/forge-d3745/evidence/qloo_client.baseline.py", line 101, in parse_entity
+    q = raw.get("query") or {}
+        ^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+
+======================================================================
+ERROR: test_insights_error_envelope_can_recover_on_the_same_request (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_insights_error_envelope_can_recover_on_the_same_request)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/forge-d3745/tastetable/tests/test_qloo_cache_recovery.py", line 48, in test_insights_error_envelope_can_recover_on_the_same_request
+    self.assert_recovers(
+  File "/dev/shm/forge-d3745/tastetable/tests/test_qloo_cache_recovery.py", line 40, in assert_recovers
+    recovered = request(client)
+                ^^^^^^^^^^^^^^^
+  File "/dev/shm/forge-d3745/tastetable/tests/test_qloo_cache_recovery.py", line 49, in <lambda>
+    lambda client: [entity.name for entity in client.insights(
+                                              ^^^^^^^^^^^^^^^^
+  File "/dev/shm/forge-d3745/evidence/qloo_client.baseline.py", line 274, in insights
+    return parse_insights(self._get("/v2/insights", params))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/dev/shm/forge-d3745/evidence/qloo_client.baseline.py", line 121, in parse_insights
+    raise QlooError(400, str(payload.get("errors") or payload))
+qloo_client.QlooError: Qloo HTTP 400: ['authored temporary refusal']
+
+======================================================================
+ERROR: test_insights_partial_list_failure_can_recover (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_insights_partial_list_failure_can_recover)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/forge-d3745/tastetable/tests/test_qloo_cache_recovery.py", line 63, in test_insights_partial_list_failure_can_recover
+    self.assert_recovers(
+  File "/dev/shm/forge-d3745/tastetable/tests/test_qloo_cache_recovery.py", line 40, in assert_recovers
+    recovered = request(client)
+                ^^^^^^^^^^^^^^^
+  File "/dev/shm/forge-d3745/tastetable/tests/test_qloo_cache_recovery.py", line 64, in <lambda>
+    lambda client: [entity.name for entity in client.insights("urn:entity:place")],
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/dev/shm/forge-d3745/evidence/qloo_client.baseline.py", line 274, in insights
+    return parse_insights(self._get("/v2/insights", params))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/dev/shm/forge-d3745/evidence/qloo_client.baseline.py", line 122, in parse_insights
+    return [parse_entity(r) for r in _entity_list(payload, "entities")]
+            ^^^^^^^^^^^^^^^
+  File "/dev/shm/forge-d3745/evidence/qloo_client.baseline.py", line 101, in parse_entity
+    q = raw.get("query") or {}
+        ^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+
+======================================================================
+ERROR: test_search_numeric_parse_failure_can_recover (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_search_numeric_parse_failure_can_recover)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/forge-d3745/tastetable/tests/test_qloo_cache_recovery.py", line 57, in test_search_numeric_parse_failure_can_recover
+    self.assert_recovers(
+  File "/dev/shm/forge-d3745/tastetable/tests/test_qloo_cache_recovery.py", line 40, in assert_recovers
+    recovered = request(client)
+                ^^^^^^^^^^^^^^^
+  File "/dev/shm/forge-d3745/tastetable/tests/test_qloo_cache_recovery.py", line 58, in <lambda>
+    lambda client: [entity.name for entity in client.search("venue")],
+                                              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/dev/shm/forge-d3745/evidence/qloo_client.baseline.py", line 251, in search
+    return parse_search(self._get("/search", params))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/dev/shm/forge-d3745/evidence/qloo_client.baseline.py", line 116, in parse_search
+    return [parse_entity(r) for r in _entity_list(payload)]
+            ^^^^^^^^^^^^^^^
+  File "/dev/shm/forge-d3745/evidence/qloo_client.baseline.py", line 109, in parse_entity
+    popularity=float(raw["popularity"]) if raw.get("popularity") is not None else None,
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'not-a-number'
+
+======================================================================
+ERROR: test_tag_partial_list_failure_can_recover (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_tag_partial_list_failure_can_recover)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/forge-d3745/tastetable/tests/test_qloo_cache_recovery.py", line 70, in test_tag_partial_list_failure_can_recover
+    self.assert_recovers(
+  File "/dev/shm/forge-d3745/tastetable/tests/test_qloo_cache_recovery.py", line 40, in assert_recovers
+    recovered = request(client)
+                ^^^^^^^^^^^^^^^
+  File "/dev/shm/forge-d3745/tastetable/tests/test_qloo_cache_recovery.py", line 71, in <lambda>
+    lambda client: client.find_tags("authored"),
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/dev/shm/forge-d3745/evidence/qloo_client.baseline.py", line 258, in find_tags
+    return parse_tags(self._get("/v2/tags", params))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/dev/shm/forge-d3745/evidence/qloo_client.baseline.py", line 128, in parse_tags
+    out.append({"tag_id": t.get("id") or t.get("tag_id"), "name": t.get("name"),
+                          ^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+
+======================================================================
+ERROR: test_wrong_top_level_shape_can_recover (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_wrong_top_level_shape_can_recover)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/forge-d3745/tastetable/tests/test_qloo_cache_recovery.py", line 77, in test_wrong_top_level_shape_can_recover
+    self.assert_recovers(
+  File "/dev/shm/forge-d3745/tastetable/tests/test_qloo_cache_recovery.py", line 40, in assert_recovers
+    recovered = request(client)
+                ^^^^^^^^^^^^^^^
+  File "/dev/shm/forge-d3745/tastetable/tests/test_qloo_cache_recovery.py", line 78, in <lambda>
+    lambda client: [entity.name for entity in client.search("venue")],
+                                              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/dev/shm/forge-d3745/evidence/qloo_client.baseline.py", line 251, in search
+    return parse_search(self._get("/search", params))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/dev/shm/forge-d3745/evidence/qloo_client.baseline.py", line 116, in parse_search
+    return [parse_entity(r) for r in _entity_list(payload)]
+                                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/dev/shm/forge-d3745/evidence/qloo_client.baseline.py", line 94, in _entity_list
+    res = payload.get("results", [])
+          ^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.003s
+
+FAILED (errors=6)

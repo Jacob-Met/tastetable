@@ -1,0 +1,209 @@
+{
+  "status": "accepted",
+  "boundary": "actual local urllib HTTP200 parsing then caller-requested retry; no Qloo service or live credential",
+  "receipts": {
+    "original": {
+      "source_sha256": "a7b3362896273e05782e789cb1f89f053f32c4e1b766ae5998e19ed9fab103f9",
+      "rows": [
+        {
+          "endpoint": "search",
+          "attempts": [
+            {
+              "outcome": "error",
+              "type": "ValueError",
+              "message": "could not convert string to float: 'broken'"
+            },
+            {
+              "outcome": "error",
+              "type": "ValueError",
+              "message": "could not convert string to float: 'broken'"
+            },
+            {
+              "outcome": "error",
+              "type": "ValueError",
+              "message": "could not convert string to float: 'broken'"
+            }
+          ]
+        },
+        {
+          "endpoint": "tags",
+          "attempts": [
+            {
+              "outcome": "error",
+              "type": "AttributeError",
+              "message": "'NoneType' object has no attribute 'get'"
+            },
+            {
+              "outcome": "error",
+              "type": "AttributeError",
+              "message": "'NoneType' object has no attribute 'get'"
+            },
+            {
+              "outcome": "error",
+              "type": "AttributeError",
+              "message": "'NoneType' object has no attribute 'get'"
+            }
+          ]
+        },
+        {
+          "endpoint": "insights",
+          "attempts": [
+            {
+              "outcome": "error",
+              "type": "QlooError",
+              "message": "Qloo HTTP 400: ['authored refusal']"
+            },
+            {
+              "outcome": "error",
+              "type": "QlooError",
+              "message": "Qloo HTTP 400: ['authored refusal']"
+            },
+            {
+              "outcome": "error",
+              "type": "QlooError",
+              "message": "Qloo HTTP 400: ['authored refusal']"
+            }
+          ]
+        }
+      ],
+      "http_counts": {
+        "/search": 1,
+        "/v2/tags": 1,
+        "/v2/insights": 1
+      },
+      "empty_result_http_requests": 1,
+      "request_targets": [
+        "/search?query=alpha+caf%C3%A9&take=3",
+        "/v2/tags?filter.query=alpha&take=3",
+        "/v2/insights?filter.type=urn%3Aentity%3Aplace&take=10&filter.location.query=Pasadena",
+        "/search?query=empty&take=3"
+      ]
+    },
+    "candidate": {
+      "source_sha256": "a8362350fd8f549b312255d7c7c5630b111f57e40ab1ec0da7ff9bf7b43b1aaf",
+      "rows": [
+        {
+          "endpoint": "search",
+          "attempts": [
+            {
+              "outcome": "error",
+              "type": "ValueError",
+              "message": "could not convert string to float: 'broken'"
+            },
+            {
+              "outcome": "value",
+              "value": [
+                {
+                  "entity_id": "venue-alpha",
+                  "name": "Recovered search",
+                  "types": [],
+                  "affinity": null,
+                  "popularity": 0.4,
+                  "tags": [],
+                  "properties": {}
+                }
+              ]
+            },
+            {
+              "outcome": "value",
+              "value": [
+                {
+                  "entity_id": "venue-alpha",
+                  "name": "Recovered search",
+                  "types": [],
+                  "affinity": null,
+                  "popularity": 0.4,
+                  "tags": [],
+                  "properties": {}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "endpoint": "tags",
+          "attempts": [
+            {
+              "outcome": "error",
+              "type": "AttributeError",
+              "message": "'NoneType' object has no attribute 'get'"
+            },
+            {
+              "outcome": "value",
+              "value": [
+                {
+                  "tag_id": "tag-alpha",
+                  "name": "Recovered tag",
+                  "type": null
+                }
+              ]
+            },
+            {
+              "outcome": "value",
+              "value": [
+                {
+                  "tag_id": "tag-alpha",
+                  "name": "Recovered tag",
+                  "type": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "endpoint": "insights",
+          "attempts": [
+            {
+              "outcome": "error",
+              "type": "QlooError",
+              "message": "Qloo HTTP 400: ['authored refusal']"
+            },
+            {
+              "outcome": "value",
+              "value": [
+                {
+                  "entity_id": "venue-beta",
+                  "name": "Recovered insight",
+                  "types": [],
+                  "affinity": null,
+                  "popularity": null,
+                  "tags": [],
+                  "properties": {}
+                }
+              ]
+            },
+            {
+              "outcome": "value",
+              "value": [
+                {
+                  "entity_id": "venue-beta",
+                  "name": "Recovered insight",
+                  "types": [],
+                  "affinity": null,
+                  "popularity": null,
+                  "tags": [],
+                  "properties": {}
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "http_counts": {
+        "/search": 2,
+        "/v2/tags": 2,
+        "/v2/insights": 2
+      },
+      "empty_result_http_requests": 1,
+      "request_targets": [
+        "/search?query=alpha+caf%C3%A9&take=3",
+        "/search?query=alpha+caf%C3%A9&take=3",
+        "/v2/tags?filter.query=alpha&take=3",
+        "/v2/tags?filter.query=alpha&take=3",
+        "/v2/insights?filter.type=urn%3Aentity%3Aplace&take=10&filter.location.query=Pasadena",
+        "/v2/insights?filter.type=urn%3Aentity%3Aplace&take=10&filter.location.query=Pasadena",
+        "/search?query=empty&take=3"
+      ]
+    }
+  }
+}
