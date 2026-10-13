@@ -1,0 +1,48 @@
+{
+  "recorded_utc": "2026-10-13T03:19:01.779071+00:00",
+  "runs": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-composition/qloo-composed-public-receive.py",
+        "--client",
+        "/home/jacob/hamon/receiving/root-d3745-qloo-composition/combined/qloo_client.py",
+        "--expected-sha256",
+        "bcabc1fa1a2440e19028ac6e5ec21e9ff8ab049276920f225d968eda84141573",
+        "--output",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-composition/combined-normal.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ok\": true, \"optimization\": 0, \"courses\": [{\"endpoint\": \"search\", \"ok\": true, \"transport_calls\": 2, \"failed_stage\": null}, {\"endpoint\": \"insights\", \"ok\": true, \"transport_calls\": 2, \"failed_stage\": null}]}\n",
+      "stderr": "",
+      "receipt_path": "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-composition/combined-normal.json",
+      "receipt_bytes": 2448,
+      "receipt_sha256": "10cdc63b8ef4ff64c086eff9602f1f07ef159b66be601454e708db76a160e030"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-composition/qloo-composed-public-receive.py",
+        "--client",
+        "/home/jacob/hamon/receiving/root-d3745-qloo-composition/combined/qloo_client.py",
+        "--expected-sha256",
+        "bcabc1fa1a2440e19028ac6e5ec21e9ff8ab049276920f225d968eda84141573",
+        "--output",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-composition/combined-optimized.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ok\": true, \"optimization\": 1, \"courses\": [{\"endpoint\": \"search\", \"ok\": true, \"transport_calls\": 2, \"failed_stage\": null}, {\"endpoint\": \"insights\", \"ok\": true, \"transport_calls\": 2, \"failed_stage\": null}]}\n",
+      "stderr": "",
+      "receipt_path": "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-composition/combined-optimized.json",
+      "receipt_bytes": 2448,
+      "receipt_sha256": "b33d71e0c227d93a714fad8aeb8c9b6559d68da5a12c52980c1e098ac9243ed9"
+    }
+  ],
+  "source_sha256": "bcabc1fa1a2440e19028ac6e5ec21e9ff8ab049276920f225d968eda84141573",
+  "source_unchanged": true,
+  "witness_sha256": "6c94c54fd20440fba49e0d246b1099d9e13d1a77864f11fb8d9094696adfea8e",
+  "witness_unchanged": true
+}

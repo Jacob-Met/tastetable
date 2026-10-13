@@ -1,0 +1,80 @@
+{
+  "schema": "hamon.qloo-recovery-isolation-public-receiving/1",
+  "recorded_utc": "2026-10-13T03:12:57.372180+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "optimization": 1,
+  "source_path": "/dev/shm/forge-d3745/tastetable/qloo_client.py",
+  "source_bytes": 12498,
+  "source_sha256_before": "a8362350fd8f549b312255d7c7c5630b111f57e40ab1ec0da7ff9bf7b43b1aaf",
+  "source_sha256_after": "a8362350fd8f549b312255d7c7c5630b111f57e40ab1ec0da7ff9bf7b43b1aaf",
+  "source_unchanged": true,
+  "courses": [
+    {
+      "endpoint": "search",
+      "initial_error_type": "ValueError",
+      "ok": false,
+      "failed_stage": "mutation_after_transport_success",
+      "error_type": "CheckFailed",
+      "error": "Caller mutation after recovery contaminated the next cache result",
+      "passed_stages": [
+        "initial_refusal",
+        "explicit_identical_retry"
+      ],
+      "transport_calls": 2,
+      "requests": [
+        {
+          "path": "/search",
+          "params": {
+            "query": "authored composition",
+            "take": 2,
+            "types": "urn:entity:place"
+          }
+        },
+        {
+          "path": "/search",
+          "params": {
+            "query": "authored composition",
+            "take": 2,
+            "types": "urn:entity:place"
+          }
+        }
+      ]
+    },
+    {
+      "endpoint": "insights",
+      "initial_error_type": "QlooError",
+      "ok": false,
+      "failed_stage": "mutation_after_transport_success",
+      "error_type": "CheckFailed",
+      "error": "Caller mutation after recovery contaminated the next cache result",
+      "passed_stages": [
+        "initial_refusal",
+        "explicit_identical_retry"
+      ],
+      "transport_calls": 2,
+      "requests": [
+        {
+          "path": "/v2/insights",
+          "params": {
+            "filter.type": "urn:entity:place",
+            "take": 2,
+            "signal.interests.entities": "fixture-signal",
+            "filter.location.query": "Authored city"
+          }
+        },
+        {
+          "path": "/v2/insights",
+          "params": {
+            "filter.type": "urn:entity:place",
+            "take": 2,
+            "signal.interests.entities": "fixture-signal",
+            "filter.location.query": "Authored city"
+          }
+        }
+      ]
+    }
+  ],
+  "ok": false,
+  "scope": "Public search/insights calls with authored synthetic transports. No private-cache inspection, network, provider, real key, automatic retry, external model, service upgrade or original receiver change."
+}

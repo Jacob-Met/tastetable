@@ -1,0 +1,52 @@
+test_backend_without_model_attribute_keeps_scripted_name (test_model_selection.ModelSelection.test_backend_without_model_attribute_keeps_scripted_name) ... ok
+test_configured_backend_model_is_used_on_every_step (test_model_selection.ModelSelection.test_configured_backend_model_is_used_on_every_step) ... ok
+test_environment_factory_custom_model_reaches_wire (test_model_selection.ModelSelection.test_environment_factory_custom_model_reaches_wire) ... ok
+test_environment_factory_default_model_reaches_wire (test_model_selection.ModelSelection.test_environment_factory_default_model_reaches_wire) ... ok
+test_explicit_per_call_model_override_is_preserved (test_model_selection.ModelSelection.test_explicit_per_call_model_override_is_preserved) ... ok
+test_scripted_default_remains_offline_and_matches_explicit_model (test_model_selection.ModelSelection.test_scripted_default_remains_offline_and_matches_explicit_model) ... ok
+test_cache_hits_still_create_fresh_result_objects (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_cache_hits_still_create_fresh_result_objects) ... ok
+test_failed_query_preserves_other_cached_queries (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_failed_query_preserves_other_cached_queries) ... ok
+test_insights_error_envelope_can_recover_on_the_same_request (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_insights_error_envelope_can_recover_on_the_same_request) ... ok
+test_insights_partial_list_failure_can_recover (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_insights_partial_list_failure_can_recover) ... ok
+test_search_numeric_parse_failure_can_recover (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_search_numeric_parse_failure_can_recover) ... ok
+test_successful_empty_and_missing_results_remain_cacheable (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_successful_empty_and_missing_results_remain_cacheable) ... ok
+test_tag_partial_list_failure_can_recover (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_tag_partial_list_failure_can_recover) ... ok
+test_transport_refusal_retains_error_and_recovery_behavior (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_transport_refusal_retains_error_and_recovery_behavior) ... ok
+test_wrong_top_level_shape_can_recover (test_qloo_cache_recovery.QlooCacheRecoveryTests.test_wrong_top_level_shape_can_recover) ... ok
+test_refused_search_is_not_cached_and_later_success_is_cached (test_qloo_http_lifetime.QlooHttpResponseLifetimeTests.test_refused_search_is_not_cached_and_later_success_is_cached) ... ok
+test_server_error_response_closes_and_keeps_retryable_classification (test_qloo_http_lifetime.QlooHttpResponseLifetimeTests.test_server_error_response_closes_and_keeps_retryable_classification) ... ok
+test_throttled_response_closes_and_keeps_retryable_classification (test_qloo_http_lifetime.QlooHttpResponseLifetimeTests.test_throttled_response_closes_and_keeps_retryable_classification) ... ok
+test_unauthorized_response_closes_before_error_translation_returns (test_qloo_http_lifetime.QlooHttpResponseLifetimeTests.test_unauthorized_response_closes_before_error_translation_returns) ... ok
+test_actual_rejection_note_requires_checked_rejected_candidate_evidence (test_recommendation_notes.RecommendationNotesTests.test_actual_rejection_note_requires_checked_rejected_candidate_evidence) ... ok
+test_all_refused_lookups_do_not_claim_constraint_rejection (test_recommendation_notes.RecommendationNotesTests.test_all_refused_lookups_do_not_claim_constraint_rejection) ... ok
+test_an_invalid_attempt_does_not_clear_an_earlier_incomplete_lookup (test_recommendation_notes.RecommendationNotesTests.test_an_invalid_attempt_does_not_clear_an_earlier_incomplete_lookup) ... ok
+test_bookkeeping_does_not_consume_single_pass_or_custom_id_carriers (test_recommendation_notes.RecommendationNotesTests.test_bookkeeping_does_not_consume_single_pass_or_custom_id_carriers) ... ok
+test_fetched_but_unchecked_candidates_are_not_reported_as_rejections (test_recommendation_notes.RecommendationNotesTests.test_fetched_but_unchecked_candidates_are_not_reported_as_rejections) ... ok
+test_healthy_personas_keep_complete_plans_without_new_notes (test_recommendation_notes.RecommendationNotesTests.test_healthy_personas_keep_complete_plans_without_new_notes) ... ok
+test_invalid_native_inputs_make_no_lookup_completion_claim_or_request (test_recommendation_notes.RecommendationNotesTests.test_invalid_native_inputs_make_no_lookup_completion_claim_or_request) ... ok
+test_malformed_response_is_incomplete_not_successfully_empty_or_rejected (test_recommendation_notes.RecommendationNotesTests.test_malformed_response_is_incomplete_not_successfully_empty_or_rejected) ... ok
+test_outing_completion_problem_is_visible_and_retains_checked_meals (test_recommendation_notes.RecommendationNotesTests.test_outing_completion_problem_is_visible_and_retains_checked_meals) ... ok
+test_restaurant_completion_problems_keep_the_checked_outing (test_recommendation_notes.RecommendationNotesTests.test_restaurant_completion_problems_keep_the_checked_outing) ... ok
+test_same_query_recovery_normalizes_empty_options_and_respects_native_cache (test_recommendation_notes.RecommendationNotesTests.test_same_query_recovery_normalizes_empty_options_and_respects_native_cache) ... ok
+test_success_for_a_different_query_does_not_erase_an_incomplete_lookup (test_recommendation_notes.RecommendationNotesTests.test_success_for_a_different_query_does_not_erase_an_incomplete_lookup) ... ok
+test_successful_empty_responses_are_described_as_observed_empty_results (test_recommendation_notes.RecommendationNotesTests.test_successful_empty_responses_are_described_as_observed_empty_results) ... ok
+test_api_recovers_a_valid_checked_meal_after_a_malformed_recommendation (test_recommendation_purpose.RecommendationPurposeTests.test_api_recovers_a_valid_checked_meal_after_a_malformed_recommendation) ... ERROR
+test_invalid_purposes_cannot_fetch_or_reserve_candidate_state (test_recommendation_purpose.RecommendationPurposeTests.test_invalid_purposes_cannot_fetch_or_reserve_candidate_state) ... ok
+test_all_recommendations_refused_leave_all_slots_empty (test_tool_error_continuation.ToolErrorContinuation.test_all_recommendations_refused_leave_all_slots_empty) ... ok
+test_existing_fallback_error_retains_primary_picks (test_tool_error_continuation.ToolErrorContinuation.test_existing_fallback_error_retains_primary_picks) ... ok
+test_healthy_fixture_plans_are_still_complete (test_tool_error_continuation.ToolErrorContinuation.test_healthy_fixture_plans_are_still_complete) ... ok
+test_outing_error_preserves_the_checked_meals (test_tool_error_continuation.ToolErrorContinuation.test_outing_error_preserves_the_checked_meals) ... ok
+test_primary_error_returns_fallback_picks_and_error_trace (test_tool_error_continuation.ToolErrorContinuation.test_primary_error_returns_fallback_picks_and_error_trace) ... ok
+
+======================================================================
+ERROR: test_api_recovers_a_valid_checked_meal_after_a_malformed_recommendation (test_recommendation_purpose.RecommendationPurposeTests.test_api_recovers_a_valid_checked_meal_after_a_malformed_recommendation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/forge-d3745/tastetable/tests/test_recommendation_purpose.py", line 47, in test_api_recovers_a_valid_checked_meal_after_a_malformed_recommendation
+    from fastapi.testclient import TestClient
+ModuleNotFoundError: No module named 'fastapi'
+
+----------------------------------------------------------------------
+Ran 39 tests in 0.194s
+
+FAILED (errors=1)

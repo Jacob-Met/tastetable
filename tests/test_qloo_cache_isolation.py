@@ -147,7 +147,7 @@ def test_cached_raw_values_are_still_parsed_once_per_public_read():
     assert len(transport.calls) == 1
 
 
-def test_existing_parse_error_identity_and_cache_behavior_remain():
+def test_existing_parse_error_identity_survives_explicit_retry():
     error = ValueError("synthetic metric conversion failure")
 
     class BrokenFloat:
@@ -162,7 +162,8 @@ def test_existing_parse_error_identity_and_cache_behavior_remain():
         with pytest.raises(ValueError) as refused:
             client.search("hall")
         assert refused.value is error
-    assert len(transport.calls) == 1
+    # Rejected payloads are not cached; each explicit call fetches again.
+    assert len(transport.calls) == 2
 
 
 def test_failed_transport_is_not_cached_and_later_success_is_reused():

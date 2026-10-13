@@ -33,6 +33,18 @@ entity, while remaining isolated from other public calls. Direct calls to the
 low-level `parse_entity`, `parse_search`, `parse_tags` and `parse_insights`
 functions retain their existing behavior.
 
+## Explicit recovery after parsing fails
+
+A payload enters the cache only after its endpoint parser succeeds. If parsing
+raises, that explicit call retains its exception and performs no automatic retry.
+A later identical call fetches again. After it succeeds, caller-owned nested
+results remain isolated on both that return and subsequent cache hits.
+
+The original isolation receipt below records the earlier behavior. The separate
+[composition qualification](qualification/qloo-cache-composition-20261013/README.md)
+records recovery and isolation together, including the updated repeated-error
+transport count of two.
+
 ## Regression checks
 
 Run from the repository root with the project's pytest dependency available:

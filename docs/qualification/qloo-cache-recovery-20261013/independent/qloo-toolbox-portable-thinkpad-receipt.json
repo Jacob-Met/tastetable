@@ -1,0 +1,649 @@
+{
+  "schema": "hamon.qloo-toolbox-independent-receiving/2",
+  "utc": "2026-10-13T02:26:06.804272+00:00",
+  "python": "3.14.4",
+  "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+  "base_source": "368da250717cc9d1859253ac08a2f4783cd17560",
+  "candidate_sha256": "a8362350fd8f549b312255d7c7c5630b111f57e40ab1ec0da7ff9bf7b43b1aaf",
+  "receiver_sha256": "640e3f6598335fd9aa523ce74d93b7ebb000f5ee89d65dac112f206c3bee325e",
+  "driver_sha256": "bb6becf26b915a423c4c3fab2e8317233eaf32e1cc999d7bd5a0581cd004495e",
+  "scope": "Actual Toolbox, Qloo client, fixture, constraints and plan assembler with synthetic transport. No live provider, full-suite, installed-service or external-model qualification.",
+  "courses": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/qloo-toolbox-portable.py",
+        "--source-root",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source",
+        "--baseline-client",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py",
+        "--variant",
+        "baseline",
+        "--malformed",
+        "late_bad_affinity"
+      ],
+      "returncode": 0,
+      "stdout": "{\"agent_module\": \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py\", \"automatic_retry\": false, \"checked_meal_ids\": [\"FIX-P-07\", \"FIX-P-11\", \"FIX-V-01\", \"FIX-P-01\"], \"client_module\": \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py\", \"different_query_notes\": [\"A restaurant recommendation lookup could not be completed; any checked suggestions are retained.\", \"No checked outing suggestion is available in this plan.\"], \"final_notes\": [\"A restaurant recommendation lookup could not be completed; any checked suggestions are retained.\", \"No checked outing suggestion is available in this plan.\"], \"first_error_type\": \"ValueError\", \"initial_notes\": [\"A restaurant recommendation lookup could not be completed; any checked suggestions are retained.\", \"The plan contains 0 checked restaurant suggestions; unfilled meal days are left open.\", \"No checked outing suggestion is available in this plan.\"], \"malformed\": \"late_bad_affinity\", \"network_used\": false, \"optimization\": 0, \"outcome\": \"reproduced stale malformed cache; explicit original lookup stayed incomplete\", \"python\": \"3.14.4\", \"request_count\": 2, \"requests\": [{\"params\": {\"filter.type\": \"urn:entity:place\", \"take\": 50}, \"path\": \"/v2/insights\"}, {\"params\": {\"filter.type\": \"urn:entity:place\", \"take\": 49}, \"path\": \"/v2/insights\"}], \"unchanged_files\": {\"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py\": \"a7b3362896273e05782e789cb1f89f053f32c4e1b766ae5998e19ed9fab103f9\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py\": \"fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/constraints.py\": \"f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/fixtures/qloo_fixtures.json\": \"5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/personas.py\": \"caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/qloo_client.py\": \"a8362350fd8f549b312255d7c7c5630b111f57e40ab1ec0da7ff9bf7b43b1aaf\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/tests/test_qloo_cache_recovery.py\": \"e3477c2448de44cc5152ba4265b4b3ebf5819d3f98dd6cab0e33f2bd42a81b33\"}, \"variant\": \"baseline\"}\n",
+      "stderr": "",
+      "result": {
+        "agent_module": "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py",
+        "automatic_retry": false,
+        "checked_meal_ids": [
+          "FIX-P-07",
+          "FIX-P-11",
+          "FIX-V-01",
+          "FIX-P-01"
+        ],
+        "client_module": "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py",
+        "different_query_notes": [
+          "A restaurant recommendation lookup could not be completed; any checked suggestions are retained.",
+          "No checked outing suggestion is available in this plan."
+        ],
+        "final_notes": [
+          "A restaurant recommendation lookup could not be completed; any checked suggestions are retained.",
+          "No checked outing suggestion is available in this plan."
+        ],
+        "first_error_type": "ValueError",
+        "initial_notes": [
+          "A restaurant recommendation lookup could not be completed; any checked suggestions are retained.",
+          "The plan contains 0 checked restaurant suggestions; unfilled meal days are left open.",
+          "No checked outing suggestion is available in this plan."
+        ],
+        "malformed": "late_bad_affinity",
+        "network_used": false,
+        "optimization": 0,
+        "outcome": "reproduced stale malformed cache; explicit original lookup stayed incomplete",
+        "python": "3.14.4",
+        "request_count": 2,
+        "requests": [
+          {
+            "params": {
+              "filter.type": "urn:entity:place",
+              "take": 50
+            },
+            "path": "/v2/insights"
+          },
+          {
+            "params": {
+              "filter.type": "urn:entity:place",
+              "take": 49
+            },
+            "path": "/v2/insights"
+          }
+        ],
+        "unchanged_files": {
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py": "a7b3362896273e05782e789cb1f89f053f32c4e1b766ae5998e19ed9fab103f9",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/constraints.py": "f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/fixtures/qloo_fixtures.json": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/personas.py": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/qloo_client.py": "a8362350fd8f549b312255d7c7c5630b111f57e40ab1ec0da7ff9bf7b43b1aaf",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/tests/test_qloo_cache_recovery.py": "e3477c2448de44cc5152ba4265b4b3ebf5819d3f98dd6cab0e33f2bd42a81b33"
+        },
+        "variant": "baseline"
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/qloo-toolbox-portable.py",
+        "--source-root",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source",
+        "--baseline-client",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py",
+        "--variant",
+        "baseline",
+        "--malformed",
+        "late_bad_affinity"
+      ],
+      "returncode": 0,
+      "stdout": "{\"agent_module\": \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py\", \"automatic_retry\": false, \"checked_meal_ids\": [\"FIX-P-07\", \"FIX-P-11\", \"FIX-V-01\", \"FIX-P-01\"], \"client_module\": \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py\", \"different_query_notes\": [\"A restaurant recommendation lookup could not be completed; any checked suggestions are retained.\", \"No checked outing suggestion is available in this plan.\"], \"final_notes\": [\"A restaurant recommendation lookup could not be completed; any checked suggestions are retained.\", \"No checked outing suggestion is available in this plan.\"], \"first_error_type\": \"ValueError\", \"initial_notes\": [\"A restaurant recommendation lookup could not be completed; any checked suggestions are retained.\", \"The plan contains 0 checked restaurant suggestions; unfilled meal days are left open.\", \"No checked outing suggestion is available in this plan.\"], \"malformed\": \"late_bad_affinity\", \"network_used\": false, \"optimization\": 1, \"outcome\": \"reproduced stale malformed cache; explicit original lookup stayed incomplete\", \"python\": \"3.14.4\", \"request_count\": 2, \"requests\": [{\"params\": {\"filter.type\": \"urn:entity:place\", \"take\": 50}, \"path\": \"/v2/insights\"}, {\"params\": {\"filter.type\": \"urn:entity:place\", \"take\": 49}, \"path\": \"/v2/insights\"}], \"unchanged_files\": {\"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py\": \"a7b3362896273e05782e789cb1f89f053f32c4e1b766ae5998e19ed9fab103f9\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py\": \"fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/constraints.py\": \"f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/fixtures/qloo_fixtures.json\": \"5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/personas.py\": \"caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/qloo_client.py\": \"a8362350fd8f549b312255d7c7c5630b111f57e40ab1ec0da7ff9bf7b43b1aaf\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/tests/test_qloo_cache_recovery.py\": \"e3477c2448de44cc5152ba4265b4b3ebf5819d3f98dd6cab0e33f2bd42a81b33\"}, \"variant\": \"baseline\"}\n",
+      "stderr": "",
+      "result": {
+        "agent_module": "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py",
+        "automatic_retry": false,
+        "checked_meal_ids": [
+          "FIX-P-07",
+          "FIX-P-11",
+          "FIX-V-01",
+          "FIX-P-01"
+        ],
+        "client_module": "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py",
+        "different_query_notes": [
+          "A restaurant recommendation lookup could not be completed; any checked suggestions are retained.",
+          "No checked outing suggestion is available in this plan."
+        ],
+        "final_notes": [
+          "A restaurant recommendation lookup could not be completed; any checked suggestions are retained.",
+          "No checked outing suggestion is available in this plan."
+        ],
+        "first_error_type": "ValueError",
+        "initial_notes": [
+          "A restaurant recommendation lookup could not be completed; any checked suggestions are retained.",
+          "The plan contains 0 checked restaurant suggestions; unfilled meal days are left open.",
+          "No checked outing suggestion is available in this plan."
+        ],
+        "malformed": "late_bad_affinity",
+        "network_used": false,
+        "optimization": 1,
+        "outcome": "reproduced stale malformed cache; explicit original lookup stayed incomplete",
+        "python": "3.14.4",
+        "request_count": 2,
+        "requests": [
+          {
+            "params": {
+              "filter.type": "urn:entity:place",
+              "take": 50
+            },
+            "path": "/v2/insights"
+          },
+          {
+            "params": {
+              "filter.type": "urn:entity:place",
+              "take": 49
+            },
+            "path": "/v2/insights"
+          }
+        ],
+        "unchanged_files": {
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py": "a7b3362896273e05782e789cb1f89f053f32c4e1b766ae5998e19ed9fab103f9",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/constraints.py": "f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/fixtures/qloo_fixtures.json": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/personas.py": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/qloo_client.py": "a8362350fd8f549b312255d7c7c5630b111f57e40ab1ec0da7ff9bf7b43b1aaf",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/tests/test_qloo_cache_recovery.py": "e3477c2448de44cc5152ba4265b4b3ebf5819d3f98dd6cab0e33f2bd42a81b33"
+        },
+        "variant": "baseline"
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/qloo-toolbox-portable.py",
+        "--source-root",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source",
+        "--baseline-client",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py",
+        "--variant",
+        "baseline",
+        "--malformed",
+        "declared_failure"
+      ],
+      "returncode": 0,
+      "stdout": "{\"agent_module\": \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py\", \"automatic_retry\": false, \"checked_meal_ids\": [\"FIX-P-07\", \"FIX-P-11\", \"FIX-V-01\", \"FIX-P-01\"], \"client_module\": \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py\", \"different_query_notes\": [\"A restaurant recommendation lookup could not be completed; any checked suggestions are retained.\", \"No checked outing suggestion is available in this plan.\"], \"final_notes\": [\"A restaurant recommendation lookup could not be completed; any checked suggestions are retained.\", \"No checked outing suggestion is available in this plan.\"], \"first_error_type\": \"QlooError\", \"initial_notes\": [\"A restaurant recommendation lookup could not be completed; any checked suggestions are retained.\", \"The plan contains 0 checked restaurant suggestions; unfilled meal days are left open.\", \"No checked outing suggestion is available in this plan.\"], \"malformed\": \"declared_failure\", \"network_used\": false, \"optimization\": 0, \"outcome\": \"reproduced stale malformed cache; explicit original lookup stayed incomplete\", \"python\": \"3.14.4\", \"request_count\": 2, \"requests\": [{\"params\": {\"filter.type\": \"urn:entity:place\", \"take\": 50}, \"path\": \"/v2/insights\"}, {\"params\": {\"filter.type\": \"urn:entity:place\", \"take\": 49}, \"path\": \"/v2/insights\"}], \"unchanged_files\": {\"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py\": \"a7b3362896273e05782e789cb1f89f053f32c4e1b766ae5998e19ed9fab103f9\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py\": \"fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/constraints.py\": \"f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/fixtures/qloo_fixtures.json\": \"5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/personas.py\": \"caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/qloo_client.py\": \"a8362350fd8f549b312255d7c7c5630b111f57e40ab1ec0da7ff9bf7b43b1aaf\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/tests/test_qloo_cache_recovery.py\": \"e3477c2448de44cc5152ba4265b4b3ebf5819d3f98dd6cab0e33f2bd42a81b33\"}, \"variant\": \"baseline\"}\n",
+      "stderr": "",
+      "result": {
+        "agent_module": "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py",
+        "automatic_retry": false,
+        "checked_meal_ids": [
+          "FIX-P-07",
+          "FIX-P-11",
+          "FIX-V-01",
+          "FIX-P-01"
+        ],
+        "client_module": "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py",
+        "different_query_notes": [
+          "A restaurant recommendation lookup could not be completed; any checked suggestions are retained.",
+          "No checked outing suggestion is available in this plan."
+        ],
+        "final_notes": [
+          "A restaurant recommendation lookup could not be completed; any checked suggestions are retained.",
+          "No checked outing suggestion is available in this plan."
+        ],
+        "first_error_type": "QlooError",
+        "initial_notes": [
+          "A restaurant recommendation lookup could not be completed; any checked suggestions are retained.",
+          "The plan contains 0 checked restaurant suggestions; unfilled meal days are left open.",
+          "No checked outing suggestion is available in this plan."
+        ],
+        "malformed": "declared_failure",
+        "network_used": false,
+        "optimization": 0,
+        "outcome": "reproduced stale malformed cache; explicit original lookup stayed incomplete",
+        "python": "3.14.4",
+        "request_count": 2,
+        "requests": [
+          {
+            "params": {
+              "filter.type": "urn:entity:place",
+              "take": 50
+            },
+            "path": "/v2/insights"
+          },
+          {
+            "params": {
+              "filter.type": "urn:entity:place",
+              "take": 49
+            },
+            "path": "/v2/insights"
+          }
+        ],
+        "unchanged_files": {
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py": "a7b3362896273e05782e789cb1f89f053f32c4e1b766ae5998e19ed9fab103f9",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/constraints.py": "f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/fixtures/qloo_fixtures.json": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/personas.py": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/qloo_client.py": "a8362350fd8f549b312255d7c7c5630b111f57e40ab1ec0da7ff9bf7b43b1aaf",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/tests/test_qloo_cache_recovery.py": "e3477c2448de44cc5152ba4265b4b3ebf5819d3f98dd6cab0e33f2bd42a81b33"
+        },
+        "variant": "baseline"
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/qloo-toolbox-portable.py",
+        "--source-root",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source",
+        "--baseline-client",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py",
+        "--variant",
+        "baseline",
+        "--malformed",
+        "declared_failure"
+      ],
+      "returncode": 0,
+      "stdout": "{\"agent_module\": \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py\", \"automatic_retry\": false, \"checked_meal_ids\": [\"FIX-P-07\", \"FIX-P-11\", \"FIX-V-01\", \"FIX-P-01\"], \"client_module\": \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py\", \"different_query_notes\": [\"A restaurant recommendation lookup could not be completed; any checked suggestions are retained.\", \"No checked outing suggestion is available in this plan.\"], \"final_notes\": [\"A restaurant recommendation lookup could not be completed; any checked suggestions are retained.\", \"No checked outing suggestion is available in this plan.\"], \"first_error_type\": \"QlooError\", \"initial_notes\": [\"A restaurant recommendation lookup could not be completed; any checked suggestions are retained.\", \"The plan contains 0 checked restaurant suggestions; unfilled meal days are left open.\", \"No checked outing suggestion is available in this plan.\"], \"malformed\": \"declared_failure\", \"network_used\": false, \"optimization\": 1, \"outcome\": \"reproduced stale malformed cache; explicit original lookup stayed incomplete\", \"python\": \"3.14.4\", \"request_count\": 2, \"requests\": [{\"params\": {\"filter.type\": \"urn:entity:place\", \"take\": 50}, \"path\": \"/v2/insights\"}, {\"params\": {\"filter.type\": \"urn:entity:place\", \"take\": 49}, \"path\": \"/v2/insights\"}], \"unchanged_files\": {\"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py\": \"a7b3362896273e05782e789cb1f89f053f32c4e1b766ae5998e19ed9fab103f9\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py\": \"fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/constraints.py\": \"f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/fixtures/qloo_fixtures.json\": \"5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/personas.py\": \"caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/qloo_client.py\": \"a8362350fd8f549b312255d7c7c5630b111f57e40ab1ec0da7ff9bf7b43b1aaf\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/tests/test_qloo_cache_recovery.py\": \"e3477c2448de44cc5152ba4265b4b3ebf5819d3f98dd6cab0e33f2bd42a81b33\"}, \"variant\": \"baseline\"}\n",
+      "stderr": "",
+      "result": {
+        "agent_module": "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py",
+        "automatic_retry": false,
+        "checked_meal_ids": [
+          "FIX-P-07",
+          "FIX-P-11",
+          "FIX-V-01",
+          "FIX-P-01"
+        ],
+        "client_module": "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py",
+        "different_query_notes": [
+          "A restaurant recommendation lookup could not be completed; any checked suggestions are retained.",
+          "No checked outing suggestion is available in this plan."
+        ],
+        "final_notes": [
+          "A restaurant recommendation lookup could not be completed; any checked suggestions are retained.",
+          "No checked outing suggestion is available in this plan."
+        ],
+        "first_error_type": "QlooError",
+        "initial_notes": [
+          "A restaurant recommendation lookup could not be completed; any checked suggestions are retained.",
+          "The plan contains 0 checked restaurant suggestions; unfilled meal days are left open.",
+          "No checked outing suggestion is available in this plan."
+        ],
+        "malformed": "declared_failure",
+        "network_used": false,
+        "optimization": 1,
+        "outcome": "reproduced stale malformed cache; explicit original lookup stayed incomplete",
+        "python": "3.14.4",
+        "request_count": 2,
+        "requests": [
+          {
+            "params": {
+              "filter.type": "urn:entity:place",
+              "take": 50
+            },
+            "path": "/v2/insights"
+          },
+          {
+            "params": {
+              "filter.type": "urn:entity:place",
+              "take": 49
+            },
+            "path": "/v2/insights"
+          }
+        ],
+        "unchanged_files": {
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py": "a7b3362896273e05782e789cb1f89f053f32c4e1b766ae5998e19ed9fab103f9",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/constraints.py": "f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/fixtures/qloo_fixtures.json": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/personas.py": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/qloo_client.py": "a8362350fd8f549b312255d7c7c5630b111f57e40ab1ec0da7ff9bf7b43b1aaf",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/tests/test_qloo_cache_recovery.py": "e3477c2448de44cc5152ba4265b4b3ebf5819d3f98dd6cab0e33f2bd42a81b33"
+        },
+        "variant": "baseline"
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/qloo-toolbox-portable.py",
+        "--source-root",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source",
+        "--baseline-client",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py",
+        "--variant",
+        "candidate",
+        "--malformed",
+        "late_bad_affinity"
+      ],
+      "returncode": 0,
+      "stdout": "{\"agent_module\": \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py\", \"automatic_retry\": false, \"checked_meal_ids\": [\"FIX-P-07\", \"FIX-P-11\", \"FIX-V-01\", \"FIX-P-01\"], \"client_module\": \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/qloo_client.py\", \"different_query_notes\": [\"A restaurant recommendation lookup could not be completed; any checked suggestions are retained.\", \"No checked outing suggestion is available in this plan.\"], \"final_notes\": [\"No checked outing suggestion is available in this plan.\"], \"first_error_type\": \"ValueError\", \"initial_notes\": [\"A restaurant recommendation lookup could not be completed; any checked suggestions are retained.\", \"The plan contains 0 checked restaurant suggestions; unfilled meal days are left open.\", \"No checked outing suggestion is available in this plan.\"], \"malformed\": \"late_bad_affinity\", \"network_used\": false, \"optimization\": 0, \"outcome\": \"explicit identical retry recovered checked meals and cleared only matching incomplete lookup\", \"python\": \"3.14.4\", \"request_count\": 3, \"requests\": [{\"params\": {\"filter.type\": \"urn:entity:place\", \"take\": 50}, \"path\": \"/v2/insights\"}, {\"params\": {\"filter.type\": \"urn:entity:place\", \"take\": 49}, \"path\": \"/v2/insights\"}, {\"params\": {\"filter.type\": \"urn:entity:place\", \"take\": 50}, \"path\": \"/v2/insights\"}], \"unchanged_files\": {\"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py\": \"a7b3362896273e05782e789cb1f89f053f32c4e1b766ae5998e19ed9fab103f9\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py\": \"fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/constraints.py\": \"f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/fixtures/qloo_fixtures.json\": \"5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/personas.py\": \"caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/qloo_client.py\": \"a8362350fd8f549b312255d7c7c5630b111f57e40ab1ec0da7ff9bf7b43b1aaf\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/tests/test_qloo_cache_recovery.py\": \"e3477c2448de44cc5152ba4265b4b3ebf5819d3f98dd6cab0e33f2bd42a81b33\"}, \"variant\": \"candidate\"}\n",
+      "stderr": "",
+      "result": {
+        "agent_module": "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py",
+        "automatic_retry": false,
+        "checked_meal_ids": [
+          "FIX-P-07",
+          "FIX-P-11",
+          "FIX-V-01",
+          "FIX-P-01"
+        ],
+        "client_module": "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/qloo_client.py",
+        "different_query_notes": [
+          "A restaurant recommendation lookup could not be completed; any checked suggestions are retained.",
+          "No checked outing suggestion is available in this plan."
+        ],
+        "final_notes": [
+          "No checked outing suggestion is available in this plan."
+        ],
+        "first_error_type": "ValueError",
+        "initial_notes": [
+          "A restaurant recommendation lookup could not be completed; any checked suggestions are retained.",
+          "The plan contains 0 checked restaurant suggestions; unfilled meal days are left open.",
+          "No checked outing suggestion is available in this plan."
+        ],
+        "malformed": "late_bad_affinity",
+        "network_used": false,
+        "optimization": 0,
+        "outcome": "explicit identical retry recovered checked meals and cleared only matching incomplete lookup",
+        "python": "3.14.4",
+        "request_count": 3,
+        "requests": [
+          {
+            "params": {
+              "filter.type": "urn:entity:place",
+              "take": 50
+            },
+            "path": "/v2/insights"
+          },
+          {
+            "params": {
+              "filter.type": "urn:entity:place",
+              "take": 49
+            },
+            "path": "/v2/insights"
+          },
+          {
+            "params": {
+              "filter.type": "urn:entity:place",
+              "take": 50
+            },
+            "path": "/v2/insights"
+          }
+        ],
+        "unchanged_files": {
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py": "a7b3362896273e05782e789cb1f89f053f32c4e1b766ae5998e19ed9fab103f9",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/constraints.py": "f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/fixtures/qloo_fixtures.json": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/personas.py": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/qloo_client.py": "a8362350fd8f549b312255d7c7c5630b111f57e40ab1ec0da7ff9bf7b43b1aaf",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/tests/test_qloo_cache_recovery.py": "e3477c2448de44cc5152ba4265b4b3ebf5819d3f98dd6cab0e33f2bd42a81b33"
+        },
+        "variant": "candidate"
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/qloo-toolbox-portable.py",
+        "--source-root",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source",
+        "--baseline-client",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py",
+        "--variant",
+        "candidate",
+        "--malformed",
+        "late_bad_affinity"
+      ],
+      "returncode": 0,
+      "stdout": "{\"agent_module\": \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py\", \"automatic_retry\": false, \"checked_meal_ids\": [\"FIX-P-07\", \"FIX-P-11\", \"FIX-V-01\", \"FIX-P-01\"], \"client_module\": \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/qloo_client.py\", \"different_query_notes\": [\"A restaurant recommendation lookup could not be completed; any checked suggestions are retained.\", \"No checked outing suggestion is available in this plan.\"], \"final_notes\": [\"No checked outing suggestion is available in this plan.\"], \"first_error_type\": \"ValueError\", \"initial_notes\": [\"A restaurant recommendation lookup could not be completed; any checked suggestions are retained.\", \"The plan contains 0 checked restaurant suggestions; unfilled meal days are left open.\", \"No checked outing suggestion is available in this plan.\"], \"malformed\": \"late_bad_affinity\", \"network_used\": false, \"optimization\": 1, \"outcome\": \"explicit identical retry recovered checked meals and cleared only matching incomplete lookup\", \"python\": \"3.14.4\", \"request_count\": 3, \"requests\": [{\"params\": {\"filter.type\": \"urn:entity:place\", \"take\": 50}, \"path\": \"/v2/insights\"}, {\"params\": {\"filter.type\": \"urn:entity:place\", \"take\": 49}, \"path\": \"/v2/insights\"}, {\"params\": {\"filter.type\": \"urn:entity:place\", \"take\": 50}, \"path\": \"/v2/insights\"}], \"unchanged_files\": {\"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py\": \"a7b3362896273e05782e789cb1f89f053f32c4e1b766ae5998e19ed9fab103f9\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py\": \"fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/constraints.py\": \"f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/fixtures/qloo_fixtures.json\": \"5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/personas.py\": \"caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/qloo_client.py\": \"a8362350fd8f549b312255d7c7c5630b111f57e40ab1ec0da7ff9bf7b43b1aaf\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/tests/test_qloo_cache_recovery.py\": \"e3477c2448de44cc5152ba4265b4b3ebf5819d3f98dd6cab0e33f2bd42a81b33\"}, \"variant\": \"candidate\"}\n",
+      "stderr": "",
+      "result": {
+        "agent_module": "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py",
+        "automatic_retry": false,
+        "checked_meal_ids": [
+          "FIX-P-07",
+          "FIX-P-11",
+          "FIX-V-01",
+          "FIX-P-01"
+        ],
+        "client_module": "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/qloo_client.py",
+        "different_query_notes": [
+          "A restaurant recommendation lookup could not be completed; any checked suggestions are retained.",
+          "No checked outing suggestion is available in this plan."
+        ],
+        "final_notes": [
+          "No checked outing suggestion is available in this plan."
+        ],
+        "first_error_type": "ValueError",
+        "initial_notes": [
+          "A restaurant recommendation lookup could not be completed; any checked suggestions are retained.",
+          "The plan contains 0 checked restaurant suggestions; unfilled meal days are left open.",
+          "No checked outing suggestion is available in this plan."
+        ],
+        "malformed": "late_bad_affinity",
+        "network_used": false,
+        "optimization": 1,
+        "outcome": "explicit identical retry recovered checked meals and cleared only matching incomplete lookup",
+        "python": "3.14.4",
+        "request_count": 3,
+        "requests": [
+          {
+            "params": {
+              "filter.type": "urn:entity:place",
+              "take": 50
+            },
+            "path": "/v2/insights"
+          },
+          {
+            "params": {
+              "filter.type": "urn:entity:place",
+              "take": 49
+            },
+            "path": "/v2/insights"
+          },
+          {
+            "params": {
+              "filter.type": "urn:entity:place",
+              "take": 50
+            },
+            "path": "/v2/insights"
+          }
+        ],
+        "unchanged_files": {
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py": "a7b3362896273e05782e789cb1f89f053f32c4e1b766ae5998e19ed9fab103f9",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/constraints.py": "f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/fixtures/qloo_fixtures.json": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/personas.py": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/qloo_client.py": "a8362350fd8f549b312255d7c7c5630b111f57e40ab1ec0da7ff9bf7b43b1aaf",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/tests/test_qloo_cache_recovery.py": "e3477c2448de44cc5152ba4265b4b3ebf5819d3f98dd6cab0e33f2bd42a81b33"
+        },
+        "variant": "candidate"
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/qloo-toolbox-portable.py",
+        "--source-root",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source",
+        "--baseline-client",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py",
+        "--variant",
+        "candidate",
+        "--malformed",
+        "declared_failure"
+      ],
+      "returncode": 0,
+      "stdout": "{\"agent_module\": \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py\", \"automatic_retry\": false, \"checked_meal_ids\": [\"FIX-P-07\", \"FIX-P-11\", \"FIX-V-01\", \"FIX-P-01\"], \"client_module\": \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/qloo_client.py\", \"different_query_notes\": [\"A restaurant recommendation lookup could not be completed; any checked suggestions are retained.\", \"No checked outing suggestion is available in this plan.\"], \"final_notes\": [\"No checked outing suggestion is available in this plan.\"], \"first_error_type\": \"QlooError\", \"initial_notes\": [\"A restaurant recommendation lookup could not be completed; any checked suggestions are retained.\", \"The plan contains 0 checked restaurant suggestions; unfilled meal days are left open.\", \"No checked outing suggestion is available in this plan.\"], \"malformed\": \"declared_failure\", \"network_used\": false, \"optimization\": 0, \"outcome\": \"explicit identical retry recovered checked meals and cleared only matching incomplete lookup\", \"python\": \"3.14.4\", \"request_count\": 3, \"requests\": [{\"params\": {\"filter.type\": \"urn:entity:place\", \"take\": 50}, \"path\": \"/v2/insights\"}, {\"params\": {\"filter.type\": \"urn:entity:place\", \"take\": 49}, \"path\": \"/v2/insights\"}, {\"params\": {\"filter.type\": \"urn:entity:place\", \"take\": 50}, \"path\": \"/v2/insights\"}], \"unchanged_files\": {\"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py\": \"a7b3362896273e05782e789cb1f89f053f32c4e1b766ae5998e19ed9fab103f9\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py\": \"fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/constraints.py\": \"f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/fixtures/qloo_fixtures.json\": \"5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/personas.py\": \"caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/qloo_client.py\": \"a8362350fd8f549b312255d7c7c5630b111f57e40ab1ec0da7ff9bf7b43b1aaf\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/tests/test_qloo_cache_recovery.py\": \"e3477c2448de44cc5152ba4265b4b3ebf5819d3f98dd6cab0e33f2bd42a81b33\"}, \"variant\": \"candidate\"}\n",
+      "stderr": "",
+      "result": {
+        "agent_module": "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py",
+        "automatic_retry": false,
+        "checked_meal_ids": [
+          "FIX-P-07",
+          "FIX-P-11",
+          "FIX-V-01",
+          "FIX-P-01"
+        ],
+        "client_module": "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/qloo_client.py",
+        "different_query_notes": [
+          "A restaurant recommendation lookup could not be completed; any checked suggestions are retained.",
+          "No checked outing suggestion is available in this plan."
+        ],
+        "final_notes": [
+          "No checked outing suggestion is available in this plan."
+        ],
+        "first_error_type": "QlooError",
+        "initial_notes": [
+          "A restaurant recommendation lookup could not be completed; any checked suggestions are retained.",
+          "The plan contains 0 checked restaurant suggestions; unfilled meal days are left open.",
+          "No checked outing suggestion is available in this plan."
+        ],
+        "malformed": "declared_failure",
+        "network_used": false,
+        "optimization": 0,
+        "outcome": "explicit identical retry recovered checked meals and cleared only matching incomplete lookup",
+        "python": "3.14.4",
+        "request_count": 3,
+        "requests": [
+          {
+            "params": {
+              "filter.type": "urn:entity:place",
+              "take": 50
+            },
+            "path": "/v2/insights"
+          },
+          {
+            "params": {
+              "filter.type": "urn:entity:place",
+              "take": 49
+            },
+            "path": "/v2/insights"
+          },
+          {
+            "params": {
+              "filter.type": "urn:entity:place",
+              "take": 50
+            },
+            "path": "/v2/insights"
+          }
+        ],
+        "unchanged_files": {
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py": "a7b3362896273e05782e789cb1f89f053f32c4e1b766ae5998e19ed9fab103f9",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/constraints.py": "f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/fixtures/qloo_fixtures.json": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/personas.py": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/qloo_client.py": "a8362350fd8f549b312255d7c7c5630b111f57e40ab1ec0da7ff9bf7b43b1aaf",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/tests/test_qloo_cache_recovery.py": "e3477c2448de44cc5152ba4265b4b3ebf5819d3f98dd6cab0e33f2bd42a81b33"
+        },
+        "variant": "candidate"
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/qloo-toolbox-portable.py",
+        "--source-root",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source",
+        "--baseline-client",
+        "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py",
+        "--variant",
+        "candidate",
+        "--malformed",
+        "declared_failure"
+      ],
+      "returncode": 0,
+      "stdout": "{\"agent_module\": \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py\", \"automatic_retry\": false, \"checked_meal_ids\": [\"FIX-P-07\", \"FIX-P-11\", \"FIX-V-01\", \"FIX-P-01\"], \"client_module\": \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/qloo_client.py\", \"different_query_notes\": [\"A restaurant recommendation lookup could not be completed; any checked suggestions are retained.\", \"No checked outing suggestion is available in this plan.\"], \"final_notes\": [\"No checked outing suggestion is available in this plan.\"], \"first_error_type\": \"QlooError\", \"initial_notes\": [\"A restaurant recommendation lookup could not be completed; any checked suggestions are retained.\", \"The plan contains 0 checked restaurant suggestions; unfilled meal days are left open.\", \"No checked outing suggestion is available in this plan.\"], \"malformed\": \"declared_failure\", \"network_used\": false, \"optimization\": 1, \"outcome\": \"explicit identical retry recovered checked meals and cleared only matching incomplete lookup\", \"python\": \"3.14.4\", \"request_count\": 3, \"requests\": [{\"params\": {\"filter.type\": \"urn:entity:place\", \"take\": 50}, \"path\": \"/v2/insights\"}, {\"params\": {\"filter.type\": \"urn:entity:place\", \"take\": 49}, \"path\": \"/v2/insights\"}, {\"params\": {\"filter.type\": \"urn:entity:place\", \"take\": 50}, \"path\": \"/v2/insights\"}], \"unchanged_files\": {\"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py\": \"a7b3362896273e05782e789cb1f89f053f32c4e1b766ae5998e19ed9fab103f9\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py\": \"fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/constraints.py\": \"f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/fixtures/qloo_fixtures.json\": \"5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/personas.py\": \"caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/qloo_client.py\": \"a8362350fd8f549b312255d7c7c5630b111f57e40ab1ec0da7ff9bf7b43b1aaf\", \"/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/tests/test_qloo_cache_recovery.py\": \"e3477c2448de44cc5152ba4265b4b3ebf5819d3f98dd6cab0e33f2bd42a81b33\"}, \"variant\": \"candidate\"}\n",
+      "stderr": "",
+      "result": {
+        "agent_module": "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py",
+        "automatic_retry": false,
+        "checked_meal_ids": [
+          "FIX-P-07",
+          "FIX-P-11",
+          "FIX-V-01",
+          "FIX-P-01"
+        ],
+        "client_module": "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/qloo_client.py",
+        "different_query_notes": [
+          "A restaurant recommendation lookup could not be completed; any checked suggestions are retained.",
+          "No checked outing suggestion is available in this plan."
+        ],
+        "final_notes": [
+          "No checked outing suggestion is available in this plan."
+        ],
+        "first_error_type": "QlooError",
+        "initial_notes": [
+          "A restaurant recommendation lookup could not be completed; any checked suggestions are retained.",
+          "The plan contains 0 checked restaurant suggestions; unfilled meal days are left open.",
+          "No checked outing suggestion is available in this plan."
+        ],
+        "malformed": "declared_failure",
+        "network_used": false,
+        "optimization": 1,
+        "outcome": "explicit identical retry recovered checked meals and cleared only matching incomplete lookup",
+        "python": "3.14.4",
+        "request_count": 3,
+        "requests": [
+          {
+            "params": {
+              "filter.type": "urn:entity:place",
+              "take": 50
+            },
+            "path": "/v2/insights"
+          },
+          {
+            "params": {
+              "filter.type": "urn:entity:place",
+              "take": 49
+            },
+            "path": "/v2/insights"
+          },
+          {
+            "params": {
+              "filter.type": "urn:entity:place",
+              "take": 50
+            },
+            "path": "/v2/insights"
+          }
+        ],
+        "unchanged_files": {
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/evidence/qloo_client.baseline.py": "a7b3362896273e05782e789cb1f89f053f32c4e1b766ae5998e19ed9fab103f9",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/agent.py": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/constraints.py": "f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/fixtures/qloo_fixtures.json": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/personas.py": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/qloo_client.py": "a8362350fd8f549b312255d7c7c5630b111f57e40ab1ec0da7ff9bf7b43b1aaf",
+          "/home/jacob/hamon/receiving/anvil-d3745ea0f44f-qloo-cache/source/tests/test_qloo_cache_recovery.py": "e3477c2448de44cc5152ba4265b4b3ebf5819d3f98dd6cab0e33f2bd42a81b33"
+        },
+        "variant": "candidate"
+      }
+    }
+  ]
+}

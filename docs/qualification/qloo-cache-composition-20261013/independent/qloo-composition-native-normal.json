@@ -1,0 +1,78 @@
+{
+  "schema": "hamon.qloo-recovery-isolation-public-receiving/1",
+  "recorded_utc": "2026-10-13T03:19:01.509862+00:00",
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+  "optimization": 0,
+  "source_path": "/home/jacob/hamon/receiving/root-d3745-qloo-composition/combined/qloo_client.py",
+  "source_bytes": 12554,
+  "source_sha256_before": "bcabc1fa1a2440e19028ac6e5ec21e9ff8ab049276920f225d968eda84141573",
+  "source_sha256_after": "bcabc1fa1a2440e19028ac6e5ec21e9ff8ab049276920f225d968eda84141573",
+  "source_unchanged": true,
+  "courses": [
+    {
+      "endpoint": "search",
+      "initial_error_type": "ValueError",
+      "ok": true,
+      "passed_stages": [
+        "initial_refusal",
+        "explicit_identical_retry",
+        "mutation_after_transport_success",
+        "mutation_after_cache_hit"
+      ],
+      "transport_calls": 2,
+      "requests": [
+        {
+          "path": "/search",
+          "params": {
+            "query": "authored composition",
+            "take": 2,
+            "types": "urn:entity:place"
+          }
+        },
+        {
+          "path": "/search",
+          "params": {
+            "query": "authored composition",
+            "take": 2,
+            "types": "urn:entity:place"
+          }
+        }
+      ]
+    },
+    {
+      "endpoint": "insights",
+      "initial_error_type": "QlooError",
+      "ok": true,
+      "passed_stages": [
+        "initial_refusal",
+        "explicit_identical_retry",
+        "mutation_after_transport_success",
+        "mutation_after_cache_hit"
+      ],
+      "transport_calls": 2,
+      "requests": [
+        {
+          "path": "/v2/insights",
+          "params": {
+            "filter.type": "urn:entity:place",
+            "take": 2,
+            "signal.interests.entities": "fixture-signal",
+            "filter.location.query": "Authored city"
+          }
+        },
+        {
+          "path": "/v2/insights",
+          "params": {
+            "filter.type": "urn:entity:place",
+            "take": 2,
+            "signal.interests.entities": "fixture-signal",
+            "filter.location.query": "Authored city"
+          }
+        }
+      ]
+    }
+  ],
+  "ok": true,
+  "scope": "Public search/insights calls with authored synthetic transports. No private-cache inspection, network, provider, real key, automatic retry, external model, service upgrade or original receiver change."
+}

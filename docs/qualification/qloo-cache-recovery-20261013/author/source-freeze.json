@@ -1,0 +1,16 @@
+{
+  "repository": "Jacob-Met/tastetable",
+  "base": "368da250717cc9d1859253ac08a2f4783cd17560",
+  "files": {
+    "qloo_client.py": {
+      "bytes": 12498,
+      "sha256": "a8362350fd8f549b312255d7c7c5630b111f57e40ab1ec0da7ff9bf7b43b1aaf",
+      "git_blob": "1061f8fda2599100c3af0479588657cc5831c932"
+    },
+    "tests/test_qloo_cache_recovery.py": {
+      "bytes": 6508,
+      "sha256": "e3477c2448de44cc5152ba4265b4b3ebf5819d3f98dd6cab0e33f2bd42a81b33",
+      "git_blob": "946947bea885e24e558f0a0afbc46ab599495487"
+    }
+  }
+}

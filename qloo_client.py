@@ -237,26 +237,31 @@ class QlooClient:
     def is_mock(self) -> bool:
         return isinstance(self.transport, FixtureTransport)
 
-    def _get(self, path: str, params: dict) -> dict:
+    def _get(self, path: str, params: dict, parse: Callable[[dict], Any]) -> Any:
         ck = path + json.dumps(params, sort_keys=True)
-        if ck not in self._cache:
-            headers = {"X-Api-Key": self._api_key or "", "accept": "application/json"}
-            self._cache[ck] = self.transport(path, params, headers)
-        return self._cache[ck]
+        if ck in self._cache:
+            return parse(self._cache[ck])
+        headers = {"X-Api-Key": self._api_key or "", "accept": "application/json"}
+        payload = self.transport(path, params, headers)
+        # A rejected payload must not poison caller-requested recovery. Keep raw
+        # successful responses so cache hits still produce fresh parsed objects.
+        result = parse(payload)
+        self._cache[ck] = payload
+        return result
 
     # GET /search  - https://docs.qloo.com/reference/get-search
     def search(self, query: str, types: Optional[str] = None, take: int = 3) -> list[Entity]:
         params = {"query": query, "take": take}
         if types:
             params["types"] = types
-        return deepcopy(parse_search(self._get("/search", params)))
+        return deepcopy(self._get("/search", params, parse_search))
 
     # GET /v2/tags - https://docs.qloo.com/reference/get-tags-1
     def find_tags(self, query: str, tag_type: Optional[str] = None, take: int = 3) -> list[dict]:
         params = {"filter.query": query, "take": take}
         if tag_type:
             params["filter.tag.types"] = tag_type
-        return deepcopy(parse_tags(self._get("/v2/tags", params)))
+        return deepcopy(self._get("/v2/tags", params, parse_tags))
 
     # GET /v2/insights - https://docs.qloo.com/reference/insights-api-deep-dive
     def insights(self, filter_type: str, *, signal_entities: Optional[list[str]] = None,
@@ -272,4 +277,4 @@ class QlooClient:
         if location_query:
             params["filter.location.query"] = location_query
         params.update(extra or {})
-        return deepcopy(parse_insights(self._get("/v2/insights", params)))
+        return deepcopy(self._get("/v2/insights", params, parse_insights))
