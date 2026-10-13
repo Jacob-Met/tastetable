@@ -1,0 +1,144 @@
+{
+  "methods_run": 3,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "subtests": [
+    {
+      "method": "received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries",
+      "subtest": "test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) (case='missing')",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries",
+      "subtest": "test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) (case='null')",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries",
+      "subtest": "test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) (case='empty')",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries",
+      "subtest": "test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) (case='only-boundary-whitespace')",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries",
+      "subtest": "test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) (case='case')",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries",
+      "subtest": "test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) (case='interior-spaces')",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries",
+      "subtest": "test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) (case='interior-tab')",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries",
+      "subtest": "test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) (case='literal-unicode')",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries",
+      "subtest": "test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) (case='zero-width-is-not-whitespace')",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries",
+      "subtest": "test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) (case='strip-before-cap')",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries",
+      "subtest": "test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) (case='python-code-point-cap')",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries",
+      "subtest": "test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) (case='no-second-strip')",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_invalid_requests_still_stop_before_provider_factories",
+      "subtest": "test_invalid_requests_still_stop_before_provider_factories (received_test_api_city.ApiCityInput.test_invalid_requests_still_stop_before_provider_factories) (profile={})",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_invalid_requests_still_stop_before_provider_factories",
+      "subtest": "test_invalid_requests_still_stop_before_provider_factories (received_test_api_city.ApiCityInput.test_invalid_requests_still_stop_before_provider_factories) (profile={'cuisines': ['Cuban'], 'constraints': ['unsupported']})",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_invalid_requests_still_stop_before_provider_factories",
+      "subtest": "test_invalid_requests_still_stop_before_provider_factories (received_test_api_city.ApiCityInput.test_invalid_requests_still_stop_before_provider_factories) (profile={'cuisines': ['Cuban'], 'city': ['Pasadena']})",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan",
+      "subtest": "test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) (city=\"' Pasadena '\", persona='rosa')",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan",
+      "subtest": "test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) (city=\"'\\\\t\\\\r\\\\nPasadena\\\\xa0\\\\u3000'\", persona='rosa')",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan",
+      "subtest": "test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) (city=\"'                                                             Pasadena                                                             '\", persona='rosa')",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan",
+      "subtest": "test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) (persona='rosa')",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan",
+      "subtest": "test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) (city=\"' Pasadena '\", persona='harold')",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan",
+      "subtest": "test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) (city=\"'\\\\t\\\\r\\\\nPasadena\\\\xa0\\\\u3000'\", persona='harold')",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan",
+      "subtest": "test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) (city=\"'                                                             Pasadena                                                             '\", persona='harold')",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan",
+      "subtest": "test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) (persona='harold')",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan",
+      "subtest": "test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) (city=\"' Pasadena '\", persona='mei')",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan",
+      "subtest": "test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) (city=\"'\\\\t\\\\r\\\\nPasadena\\\\xa0\\\\u3000'\", persona='mei')",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan",
+      "subtest": "test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) (city=\"'                                                             Pasadena                                                             '\", persona='mei')",
+      "passed": true
+    },
+    {
+      "method": "received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan",
+      "subtest": "test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) (persona='mei')",
+      "passed": true
+    }
+  ],
+  "successful": true
+}

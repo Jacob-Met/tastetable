@@ -1,0 +1,71 @@
+{
+  "schema": "hamon.source-tree/1",
+  "repository": "Jacob-Met/tastetable",
+  "commit": "32aaab5542bca5001215a7cb259f11db21093f9a",
+  "tree": "7e36e89f0177bdad3f0c5b8da5ab61608644f239",
+  "entries": [
+    {
+      "path": "app.py",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "df80c9e450bba126f784253e2119e0176d27f961",
+      "size": 2351
+    },
+    {
+      "path": "agent.py",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "883aff984464f2d43cda18f8e60b81240d6c3fb3",
+      "size": 28440
+    },
+    {
+      "path": "constraints.py",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "e9d5cd1575df72b089273740e4b6a444d0cd21a8",
+      "size": 8720
+    },
+    {
+      "path": "personas.py",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "1eb6768780cafaf9b1666e39b7fc17aa21204f16",
+      "size": 1247
+    },
+    {
+      "path": "qloo_client.py",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "c3f3ccb658b4ab019ebafda4593a9206c54ae84c",
+      "size": 12587
+    },
+    {
+      "path": "static/index.html",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "ee986de462854c00a2d2c465bf2bef0cca4379fb",
+      "size": 13247
+    },
+    {
+      "path": "tests/test_api_city.py",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "8eb8b87f8db096d8dff50c4bcc785d9b189f5784",
+      "size": 5001
+    },
+    {
+      "path": "docs/API_CITY_INPUT.md",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "d281b19c1db03f3ddccc51819fb5972143116b2b",
+      "size": 2382
+    },
+    {
+      "path": "fixtures/qloo_fixtures.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "60c5d92f905755454bb280b8181f8836a74bd955",
+      "size": 21190
+    }
+  ]
+}
