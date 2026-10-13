@@ -1,0 +1,388 @@
+{
+  "observed_at": "2026-10-13T07:26:55.579841+00:00",
+  "pid": 140608,
+  "machine": "MSI",
+  "user": "jacob",
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "source": {
+    "repository": "Jacob-Met/tastetable",
+    "commit": "32aaab5542bca5001215a7cb259f11db21093f9a",
+    "tree": "7e36e89f0177bdad3f0c5b8da5ab61608644f239"
+  },
+  "parents": [
+    "da02d3572099221b92372f8df573584c8e210b2d",
+    "2a649909951fcb95db1c3d422b110825d0121936"
+  ],
+  "tool_source": {
+    "repository": "Jacob-Met/estate-push-tools",
+    "commit": "9518bb8add1396332c83d945179f766850a1887e"
+  },
+  "commands": [
+    {
+      "name": "make-packet",
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "-B",
+        "C:\\Users\\jacob\\AppData\\Local\\Temp\\hamon-dcac8b3b8755-maintained-handoff\\tools\\make_source_packet.py",
+        "C:\\Users\\jacob\\AppData\\Local\\Temp\\hamon-dcac8b3b8755-taste-city-currentmain-v1\\selected-source.json",
+        "--source-root",
+        "C:\\Users\\jacob\\AppData\\Local\\Temp\\hamon-dcac8b3b8755-taste-city-currentmain-v1\\staged",
+        "--out",
+        "C:\\Users\\jacob\\AppData\\Local\\Temp\\hamon-dcac8b3b8755-taste-city-currentmain-v1\\source-packet.json"
+      ],
+      "cwd": "C:\\Users\\jacob\\AppData\\Local\\Temp\\hamon-dcac8b3b8755-taste-city-currentmain-v1",
+      "returncode": 0,
+      "stdout": {
+        "bytes": 619,
+        "sha256": "c262aa037ca82ec7cef1716403edd53b97448b3c1bc7b7cbd8151cdd7ef5ba3d",
+        "git_blob": "f0e4843886eed7e4739f407596ea45366c9606e4",
+        "mtime_ns": 1791876416262159300
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "mtime_ns": 1791876416263661500
+      }
+    },
+    {
+      "name": "receive",
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "-B",
+        "C:\\Users\\jacob\\AppData\\Local\\Temp\\hamon-dcac8b3b8755-maintained-handoff\\tools\\receive_source.py",
+        "C:\\Users\\jacob\\AppData\\Local\\Temp\\hamon-dcac8b3b8755-taste-city-currentmain-v1\\source-packet.json",
+        "--sha256",
+        "6657d514c7da4d409885adeca512301ed720c104c756659f5e9fbcb90e834b15",
+        "--out",
+        "C:\\Users\\jacob\\AppData\\Local\\Temp\\hamon-dcac8b3b8755-taste-city-currentmain-v1\\received"
+      ],
+      "cwd": "C:\\Users\\jacob\\AppData\\Local\\Temp\\hamon-dcac8b3b8755-taste-city-currentmain-v1",
+      "returncode": 0,
+      "stdout": {
+        "bytes": 320,
+        "sha256": "acb65e840f1397127ded20e056fc3f60430f7602d5ebe67459f23be0b9108c15",
+        "git_blob": "75b5a75920770edbbcffce60c2bd95ee27fedd45",
+        "mtime_ns": 1791876416666468500
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "mtime_ns": 1791876416666468500
+      }
+    },
+    {
+      "name": "verify-before",
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "-B",
+        "C:\\Users\\jacob\\AppData\\Local\\Temp\\hamon-dcac8b3b8755-maintained-handoff\\tools\\verify_received_source.py",
+        "C:\\Users\\jacob\\AppData\\Local\\Temp\\hamon-dcac8b3b8755-taste-city-currentmain-v1\\source-packet.json",
+        "--sha256",
+        "6657d514c7da4d409885adeca512301ed720c104c756659f5e9fbcb90e834b15",
+        "--source",
+        "C:\\Users\\jacob\\AppData\\Local\\Temp\\hamon-dcac8b3b8755-taste-city-currentmain-v1\\received\\source"
+      ],
+      "cwd": "C:\\Users\\jacob\\AppData\\Local\\Temp\\hamon-dcac8b3b8755-taste-city-currentmain-v1",
+      "returncode": 0,
+      "stdout": {
+        "bytes": 304,
+        "sha256": "93dc7bbef60c56a39952e2de2a092aaafea546fe6d39d08f078d4c6d7e3a288b",
+        "git_blob": "4777ff6d0c426b4dffbdcac2e46c25c71796f599",
+        "mtime_ns": 1791876416866611200
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "mtime_ns": 1791876416866611200
+      }
+    },
+    {
+      "name": "api-city-course",
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "-B",
+        "C:\\Users\\jacob\\AppData\\Local\\Temp\\hamon-dcac8b3b8755-taste-city-currentmain-v1\\run-retained-tests.py",
+        "C:\\Users\\jacob\\AppData\\Local\\Temp\\hamon-dcac8b3b8755-taste-city-currentmain-v1\\received\\source",
+        "C:\\Users\\jacob\\AppData\\Local\\Temp\\hamon-dcac8b3b8755-taste-city-currentmain-v1\\test-results.json"
+      ],
+      "cwd": "C:\\Users\\jacob\\AppData\\Local\\Temp\\hamon-dcac8b3b8755-taste-city-currentmain-v1\\received\\source",
+      "returncode": 0,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "mtime_ns": 1791876418587639100
+      },
+      "stderr": {
+        "bytes": 575,
+        "sha256": "2b172d23e1867be6e210c438e38c780937e98b08838832ef22efe05dbf66c865",
+        "git_blob": "fda3adad610eece66a7e062871ab85ce05c02a8f",
+        "mtime_ns": 1791876418588647700
+      }
+    },
+    {
+      "name": "verify-after",
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "-B",
+        "C:\\Users\\jacob\\AppData\\Local\\Temp\\hamon-dcac8b3b8755-maintained-handoff\\tools\\verify_received_source.py",
+        "C:\\Users\\jacob\\AppData\\Local\\Temp\\hamon-dcac8b3b8755-taste-city-currentmain-v1\\source-packet.json",
+        "--sha256",
+        "6657d514c7da4d409885adeca512301ed720c104c756659f5e9fbcb90e834b15",
+        "--source",
+        "C:\\Users\\jacob\\AppData\\Local\\Temp\\hamon-dcac8b3b8755-taste-city-currentmain-v1\\received\\source"
+      ],
+      "cwd": "C:\\Users\\jacob\\AppData\\Local\\Temp\\hamon-dcac8b3b8755-taste-city-currentmain-v1",
+      "returncode": 0,
+      "stdout": {
+        "bytes": 304,
+        "sha256": "93dc7bbef60c56a39952e2de2a092aaafea546fe6d39d08f078d4c6d7e3a288b",
+        "git_blob": "4777ff6d0c426b4dffbdcac2e46c25c71796f599",
+        "mtime_ns": 1791876418772519300
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "mtime_ns": 1791876418773518000
+      }
+    }
+  ],
+  "packages": {
+    "fastapi": "0.134.0",
+    "pydantic": "2.13.4",
+    "starlette": "0.52.1",
+    "httpx": "0.28.1"
+  },
+  "tools": {
+    "make_source_packet.py": {
+      "bytes": 8738,
+      "sha256": "5575a1201d5be3eba5ff284a50fa7c929cd95dfbca95db54439811123e0ce9aa",
+      "git_blob": "e3bce1c35d600e088514c061f7633d84b405d9e6",
+      "mtime_ns": 1791870132690613100
+    },
+    "receive_source.py": {
+      "bytes": 12539,
+      "sha256": "90af676b35c39f3cb1a3295d94a31a752893265af3a73292e2b2b22fb2750f35",
+      "git_blob": "c39c963f472c74c96320ad4174c886c2315d5cba",
+      "mtime_ns": 1791870132692123600
+    },
+    "verify_received_source.py": {
+      "bytes": 5605,
+      "sha256": "7ac25c688c459cae71fcc95af7f1de154f5f4b14a20becbc171c4d471fc17bb7",
+      "git_blob": "f6167bbf62aedbec25750c090b4844baf7b9ec67",
+      "mtime_ns": 1791870132692123600
+    }
+  },
+  "packet": {
+    "bytes": 128708,
+    "sha256": "6657d514c7da4d409885adeca512301ed720c104c756659f5e9fbcb90e834b15",
+    "git_blob": "5ce49dbec92444b65e4454d2c313d53998b0a437",
+    "mtime_ns": 1791876416213639800
+  },
+  "test_results": {
+    "methods_run": 3,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "subtests": [
+      {
+        "method": "received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries",
+        "subtest": "test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) (case='missing')",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries",
+        "subtest": "test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) (case='null')",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries",
+        "subtest": "test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) (case='empty')",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries",
+        "subtest": "test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) (case='only-boundary-whitespace')",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries",
+        "subtest": "test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) (case='case')",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries",
+        "subtest": "test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) (case='interior-spaces')",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries",
+        "subtest": "test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) (case='interior-tab')",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries",
+        "subtest": "test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) (case='literal-unicode')",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries",
+        "subtest": "test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) (case='zero-width-is-not-whitespace')",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries",
+        "subtest": "test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) (case='strip-before-cap')",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries",
+        "subtest": "test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) (case='python-code-point-cap')",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries",
+        "subtest": "test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) (case='no-second-strip')",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_invalid_requests_still_stop_before_provider_factories",
+        "subtest": "test_invalid_requests_still_stop_before_provider_factories (received_test_api_city.ApiCityInput.test_invalid_requests_still_stop_before_provider_factories) (profile={})",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_invalid_requests_still_stop_before_provider_factories",
+        "subtest": "test_invalid_requests_still_stop_before_provider_factories (received_test_api_city.ApiCityInput.test_invalid_requests_still_stop_before_provider_factories) (profile={'cuisines': ['Cuban'], 'constraints': ['unsupported']})",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_invalid_requests_still_stop_before_provider_factories",
+        "subtest": "test_invalid_requests_still_stop_before_provider_factories (received_test_api_city.ApiCityInput.test_invalid_requests_still_stop_before_provider_factories) (profile={'cuisines': ['Cuban'], 'city': ['Pasadena']})",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan",
+        "subtest": "test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) (city=\"' Pasadena '\", persona='rosa')",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan",
+        "subtest": "test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) (city=\"'\\\\t\\\\r\\\\nPasadena\\\\xa0\\\\u3000'\", persona='rosa')",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan",
+        "subtest": "test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) (city=\"'                                                             Pasadena                                                             '\", persona='rosa')",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan",
+        "subtest": "test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) (persona='rosa')",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan",
+        "subtest": "test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) (city=\"' Pasadena '\", persona='harold')",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan",
+        "subtest": "test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) (city=\"'\\\\t\\\\r\\\\nPasadena\\\\xa0\\\\u3000'\", persona='harold')",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan",
+        "subtest": "test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) (city=\"'                                                             Pasadena                                                             '\", persona='harold')",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan",
+        "subtest": "test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) (persona='harold')",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan",
+        "subtest": "test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) (city=\"' Pasadena '\", persona='mei')",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan",
+        "subtest": "test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) (city=\"'\\\\t\\\\r\\\\nPasadena\\\\xa0\\\\u3000'\", persona='mei')",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan",
+        "subtest": "test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) (city=\"'                                                             Pasadena                                                             '\", persona='mei')",
+        "passed": true
+      },
+      {
+        "method": "received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan",
+        "subtest": "test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) (persona='mei')",
+        "passed": true
+      }
+    ],
+    "successful": true
+  },
+  "source_before": {
+    "app.py": {
+      "bytes": 2351,
+      "sha256": "0c53ee8aa7ca7f1445573be7ec2dc6e1287cd460ae8be9ac1ed62b4e85139193",
+      "git_blob": "df80c9e450bba126f784253e2119e0176d27f961",
+      "mtime_ns": 1791876416467266300
+    },
+    "agent.py": {
+      "bytes": 28440,
+      "sha256": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+      "git_blob": "883aff984464f2d43cda18f8e60b81240d6c3fb3",
+      "mtime_ns": 1791876416466265900
+    },
+    "constraints.py": {
+      "bytes": 8720,
+      "sha256": "f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa",
+      "git_blob": "e9d5cd1575df72b089273740e4b6a444d0cd21a8",
+      "mtime_ns": 1791876416467266300
+    },
+    "personas.py": {
+      "bytes": 1247,
+      "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+      "git_blob": "1eb6768780cafaf9b1666e39b7fc17aa21204f16",
+      "mtime_ns": 1791876416469779300
+    },
+    "qloo_client.py": {
+      "bytes": 12587,
+      "sha256": "2927c5f6c924a5d0d31dbadcc8731d10944c07ca6302c814de7544fef4c16610",
+      "git_blob": "c3f3ccb658b4ab019ebafda4593a9206c54ae84c",
+      "mtime_ns": 1791876416470866000
+    },
+    "static/index.html": {
+      "bytes": 13247,
+      "sha256": "c5723c1c8ba1c7695c863a400805c5aa75e1f5cd3515cea1137318a96626c567",
+      "git_blob": "ee986de462854c00a2d2c465bf2bef0cca4379fb",
+      "mtime_ns": 1791876416470866000
+    },
+    "tests/test_api_city.py": {
+      "bytes": 5001,
+      "sha256": "bd32c80dd0c93404718e7c9ae09e64af9d462ccaa45f1aa641f92b7fc63299c1",
+      "git_blob": "8eb8b87f8db096d8dff50c4bcc785d9b189f5784",
+      "mtime_ns": 1791876416472374400
+    },
+    "docs/API_CITY_INPUT.md": {
+      "bytes": 2382,
+      "sha256": "8a1a0ec0911eb6db45d55073d2d0bcadab15837719dc24857388c8a636076261",
+      "git_blob": "d281b19c1db03f3ddccc51819fb5972143116b2b",
+      "mtime_ns": 1791876416468772400
+    },
+    "fixtures/qloo_fixtures.json": {
+      "bytes": 21190,
+      "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+      "git_blob": "60c5d92f905755454bb280b8181f8836a74bd955",
+      "mtime_ns": 1791876416468772400
+    }
+  },
+  "source_unchanged": true,
+  "finished_at": "2026-10-13T07:26:58.781498+00:00"
+}
