@@ -1,0 +1,30 @@
+{
+  "schema": "independent-tastetable-departure-review/1",
+  "reviewer": "memory_optimizer",
+  "status": "passed",
+  "node": "v24.19.0",
+  "candidate_sha256": "9cd974e794e17c87e3b51b4ba7820200ce820ae611c8565a5224d68790441d32",
+  "original_sha256": "cfa96d88aeaf06d55c5a4b7ad457f6a693f571ec06ccd8744141e4922ff3b2c3",
+  "checks": [
+    "Explicit original questions remain unrecorded for restaurant and outing constraints",
+    "Old-date explicit default questions remain default after changing displayed week",
+    "Duplicate venue identity does not merge occurrence content",
+    "All visits omitted and week changed retains protected historical content",
+    "Atomic invalid full replacement retains prior records and protection",
+    "Accepted hidden-date multi-record import is protected and byte-equivalent",
+    "Preparing readable export cannot mark content clean or change records",
+    "Reverting only nondefault field releases protection despite retained default records",
+    "Whitespace that remains in serialized text is conservatively protected",
+    "Removing that recorded whitespace releases protection",
+    "Refused edit from a clean model stays clean and unchanged",
+    "Explicit empty replacement has no retained records or protection",
+    "Exact product source unchanged by review"
+  ],
+  "source_review": [
+    "Mutation, record admission and replacement bodies are unchanged; new observation checks every retained record against per-occurrence original date questions.",
+    "Mounted successful edit, sync/import and retire refresh exactly one window listener; failed setField does not modify the prior protection state.",
+    "beforeLeave only requests cancellation and has no record or lifecycle mutation. Note-file preview/cancel and readable/download preparation contain no false-clean transition.",
+    "Documentation explicitly limits browser reliability and preserves export requirement, hidden-date coverage and in-app plan-retirement behavior."
+  ],
+  "limitations": "Pure model execution and source review only. No independent DOM, browser prompt, cancellation or file-download execution; author native receiving owns those claims. No provider/storage changes or live care use."
+}

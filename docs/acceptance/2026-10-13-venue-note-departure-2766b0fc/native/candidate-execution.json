@@ -1,0 +1,11 @@
+{
+  "variant": "candidate",
+  "start": "2026-10-13T04:30:40.484Z",
+  "finished": "2026-10-13T04:31:24.853Z",
+  "pid": 114816,
+  "exit": 0,
+  "signal": null,
+  "error": null,
+  "stdout": "{\"variant\":\"candidate\",\"status\":\"passed\",\"groups\":[{\"name\":\"empty-and-reverted\",\"status\":\"passed\"},{\"name\":\"reply-cancel-export-and-leave\",\"status\":\"passed\"},{\"name\":\"field-status\",\"status\":\"passed\"},{\"name\":\"field-nextStep\",\"status\":\"passed\"},{\"name\":\"field-question\",\"status\":\"passed\"},{\"name\":\"retained-hidden-date-and-invalid-date\",\"status\":\"passed\"},{\"name\":\"import-and-empty-replacement\",\"status\":\"passed\"},{\"name\":\"explicit-plan-retirement\",\"status\":\"passed\"},{\"name\":\"actual-tab-close\",\"status\":\"passed\"}],\"pageErrors\":[],\"externalRequests\":0,\"started\":\"2026-10-13T04:30:40.828Z\",\"finished\":\"2026-10-13T04:31:24.598Z\"}\n",
+  "stderr": ""
+}
