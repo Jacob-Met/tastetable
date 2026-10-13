@@ -1,0 +1,54 @@
+TASTETABLE — RECORDED VENUE NOTES BEFORE DEPARTURE
+Source, evidence and replay companion · received 2026-10-13
+
+OUTCOME IN THE EXISTING APP
+The worksheet asks the browser for a generic confirmation when non-default recorded notes remain and the user reloads, navigates away or closes the tab. Stay retains the same document, week and notes. Leave permits departure. Complete default reversion, empty accepted replacement and normal plan retirement remove the listener.
+The model includes records retained for omitted visits and other dates. A prepared download leaves the reminder active because the page cannot verify that the user retained the file.
+Use the existing Save venue notes or Save caregiver handoff controls before leaving. Browser prompts depend on prior interaction and browser policy and can be suppressed. This adds no persistence, crash recovery, provider operation or medical assessment.
+
+THIS COMPANION
+This is an exact source and receiving projection, not a deployed TasteTable application or a complete backend installation. It contains the original 19-file static/fixture/test closure, four reviewed candidate bodies, the original native source packet, frozen native drivers, preserved unsuccessful attempts, actual note downloads and the independent/final source reviews. The existing app context and all other owners' workflows remain unchanged.
+
+VERIFY
+Use Python 3.9+ with its standard library:
+  python -B verify.py
+This checks all payload hashes, 51 published Git blobs, the native source packet, tested static source identities, three actual retained JSON downloads and recorded 2/9 original versus 9/9 candidate browser groups. It does not run the app or browser.
+
+REPLAY THE MODEL COURSE
+Choose a new directory whose parent already exists:
+  python -B prepare.py NEW_RECEIVING_DIRECTORY
+Then change to NEW_RECEIVING_DIRECTORY/candidate and run with an existing Node installation:
+  node --test tests/venue_followup.test.mjs tests/venue_note_departure.test.mjs
+This runs the fifteen existing venue-followup methods and six new departure-model methods. It needs no provider account, network connection or third-party package.
+Preparation copies exact original files and overlays the candidate; it does not change the delivered sources or any installed application. An existing output directory is refused.
+
+THE FROZEN BROWSER COURSE
+The prepared directory also contains receive-departure.cjs, run-native.cjs, source-packet.json and both original/candidate input trees.
+On the originally qualified MSI environment, the frozen driver uses installed Playwright at:
+  C:/HAMON/acceptance/status-download-2766b0fc/node_modules/playwright
+and Chrome at:
+  C:/Program Files/Google/Chrome/Application/chrome.exe
+From the new prepared directory, the bounded wrapper can run:
+  node run-native.cjs original
+  node run-native.cjs candidate
+Original exit 1 with seven consequential failed groups is the recorded expected comparison; candidate exit 0 with nine passed groups is the qualified result. New results are written inside that new receiving directory.
+On another host, copy and adapt the two Playwright require paths and Chrome executable path in the prepared driver, recording its changed hash and environment. That is a distinct replay, not an unchanged MSI-driver execution. No installation is performed by this package.
+
+NATIVE QUALIFICATION
+Installed MSI Windows 10.0.26200, Node 24.14.0, Playwright 1.62.1, Chrome 154.0.8037.97 received actual reload/navigation/tab-close Stay/Leave, real file controls, retained historical/omitted notes, exact reversion, imported/empty/malformed notes and explicit retirement. Candidate passed 9/9; original passed 2/9. Source hashes remained unchanged; no page errors or external requests were observed.
+The receiver serves the actual static app using an authored GET-only local health/personas bootstrap, then imports the existing published saved-week fixture. It does not launch a new FastAPI backend or contact a provider.
+The candidate's two actual downloads are 16,022 and 15,994 bytes. One original 15,994-byte download is preserved separately. The empty-notes control is authored, not a browser download.
+Earlier receiver assumptions about cancelled reload timing and malformed-file wording remain recorded, along with the corrected frozen driver. Expected navigation cancellation errors are not concealed.
+
+REVIEW, COMPOSITION AND LIMITS
+Tested product: 217447aa17ff741fdeafdd37edbe237b15698c5d
+Qualified source/evidence head: 354a0085506415024ff7c3ed9af6ca9b995cc230
+Adopted merge: 1462e397fb06c23d2a49a75f530d356f7feabf7a
+Final evidence: 3047a3e8e9c880ba6d95160a0448a0fcef01566f
+PR: https://github.com/Jacob-Met/tastetable/pull/98
+Independent source review and thirteen separate model checks passed. The two one-line existing verification-binding repairs were separately reviewed. Final repository checks passed 167 JavaScript tests, 215 Python tests with 217 subtests, and a separate nine-check hosted native producer/converter/browser course.
+The hosted course and MSI departure course have different environments and purposes; their raw receipts remain separate. Source adoption preserves 989 unaffected fresh-parent leaves and all 33 qualified changed paths. There is no installed deployment, live-provider, physical-mobile, assistive-technology or durable-storage claim.
+
+SOURCE
+SOURCE-PINS.json links every included published blob. The full acceptance record and retained historical evidence are:
+https://github.com/Jacob-Met/tastetable/tree/3047a3e8e9c880ba6d95160a0448a0fcef01566f/docs/acceptance/2026-10-13-venue-note-departure-2766b0fc
