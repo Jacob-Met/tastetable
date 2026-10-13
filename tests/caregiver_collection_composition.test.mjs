@@ -296,3 +296,38 @@ test("invalid dates refuse capture; arrangement edits retain accepted source and
   assert.ok(f.changed() > changed);
   assert.equal(f.capture().response.plan.notes[0], "Original A <credit>& 海");
 });
+
+const comparisonFields = [
+  "picks", "with_qloo_entity_id", "with_affinity_evidence",
+  "constraint_checked", "unsafe_candidates_rejected",
+];
+const comparisonLabels = [
+  "Picks", "Tied to a Qloo entity ID", "Has affinity evidence",
+  "Constraint-checked", "Unsafe candidates caught",
+];
+
+for (const [label, values] of [
+  ["zero evidence counts", [1, 0, 0, 0, 0]],
+  ["positive counts", [1, 1, 1, 1, 1]],
+  ["mixed zero and positive counts", [1, 0, 1, 0, 1]],
+]) {
+  test("accepted comparison preserves " + label, async () => {
+    const f = await appFixture(), envelope = saved();
+    envelope.response.comparison.llm_only = Object.fromEntries(
+      comparisonFields.map((key, index) => [key, values[index]]));
+    const original = JSON.stringify(envelope);
+
+    assert.equal(await f.open(envelope), true);
+    const rows = [...f.node("#compare").innerHTML.matchAll(
+      /<tr><td>([^<]*)<\/td><td>([^<]*)<\/td><td>([^<]*)<\/td><\/tr>/g)]
+      .map((match) => match.slice(1));
+    assert.deepEqual(rows, comparisonLabels.map((name, index) => [
+      name, String(index === 4 ? 0 : 2), String(values[index]),
+    ]));
+    assert.deepEqual(JSON.parse(JSON.stringify(f.capture().response)), envelope.response);
+    assert.equal(JSON.stringify(envelope), original);
+    assert.deepEqual(f.requests, [
+      { url: "/api/health", method: "GET" }, { url: "/api/personas", method: "GET" },
+    ]);
+  });
+}
