@@ -17,7 +17,7 @@ for (let i=2;i<process.argv.length;i+=2) {
 for (const key of ["--browser","--browser-workdir","--week","--output"]) assert.ok(options[key],"Missing "+key);
 const root=resolve(dirname(fileURLToPath(import.meta.url)),".."),output=resolve(options["--output"]);
 const sha=b=>createHash("sha256").update(b).digest("hex"),sleep=ms=>new Promise(r=>setTimeout(r,ms));
-const paths=["static/visit-record.html","static/visit_record.css","static/visit_record_ui.mjs","static/visit_record.mjs","static/week_file.mjs","static/week_plan.mjs","static/index.html"];
+const paths=["static/visit-record.html","static/visit_record.css","static/visit_record_ui.mjs","static/visit_departure.mjs","static/visit_record.mjs","static/week_file.mjs","static/week_plan.mjs","static/index.html"];
 const pins=await Promise.all(paths.map(async path=>({path,sha256:sha(await readFile(join(root,path)))})));
 const original=await readFile(resolve(options["--week"]));
 await mkdir(output);
