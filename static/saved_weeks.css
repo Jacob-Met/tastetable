@@ -14,3 +14,7 @@
   .saved-weeks, .save-week-controls, .saved-week-help { display: none !important; }
   .saved-draft-notice { border: 1px solid #777; color: #111; background: none; }
 }
+
+.saved-week-search { display: flex; flex-wrap: wrap; align-items: end; gap: .75rem; margin-top: 1rem; }
+.saved-week-search label { flex: 1 1 15rem; min-width: 0; }
+.saved-week-search input { width: 100%; min-width: 0; box-sizing: border-box; }

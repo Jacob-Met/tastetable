@@ -1,5 +1,6 @@
 import { createDraft, draftSummary } from "./saved_weeks.mjs";
 import { createSavedWeekStore } from "./saved_week_store.mjs";
+import { filterSavedWeekRows } from "./saved_week_search.mjs";
 
 const sourceLabels = {
   mock: "Demo draft — fictional venues from a synthetic fixture",
@@ -20,6 +21,8 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
   let refreshGeneration = 0;
   let previewGeneration = 0;
   let lifetime = 0;
+  let listedRows = [];
+  let listedItems = [];
   const status = (message) => { if (!disposed) $("#savedWeeksStatus").textContent = message; };
 
   function current() { try { return capture(); } catch { return null; } }
@@ -34,6 +37,8 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
     $("#openSavedWeek").disabled = busy || !selected?.draft;
     $("#renameSavedWeek").disabled = busy || !selected?.draft;
     $("#removeSavedWeek").disabled = busy || !selected;
+    $("#savedWeeksSearch").disabled = busy || !ready;
+    $("#clearSavedWeeksSearch").disabled = busy || !ready || !$("#savedWeeksSearch").value;
     refreshCurrent();
   }
   function clearPreview() {
@@ -91,6 +96,15 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
       status(`Could not preview the saved week: ${error.message}`);
     }
   }
+  function applySearch() {
+    const matched = new Set(filterSavedWeekRows(listedRows, $("#savedWeeksSearch").value));
+    // Keep the already rendered rows and their order. Typing does not parse
+    // saved payloads, reread storage, or replace any preview or rename controls.
+    for (const [row, item] of listedItems) item.hidden = !matched.has(row);
+    $("#savedWeeksSearchCount").textContent = `Showing ${matched.size} of ${listedRows.length} saved records.`;
+    $("#savedWeeksNoMatches").hidden = !listedRows.length || matched.size > 0;
+    $("#clearSavedWeeksSearch").disabled = busy || !ready || !$("#savedWeeksSearch").value;
+  }
   async function refresh(message) {
     const generation = ++refreshGeneration;
     try {
@@ -99,6 +113,8 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
       ready = true;
       const list = $("#savedWeeksList");
       list.replaceChildren();
+      listedRows = rows;
+      listedItems = [];
       for (const row of rows) {
         const item = document.createElement("li");
         const description = document.createElement("p");
@@ -117,7 +133,9 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
         }
         item.append(description, button);
         list.append(item);
+        listedItems.push([row, item]);
       }
+      applySearch();
       if (selected) {
         const row = rows.find((item) => item.id === selected.id);
         if (row) showPreview(row, true);
@@ -132,6 +150,8 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
       clearPreview();
       // Do not replace an unreadable library with a supposedly empty one.
       $("#savedWeeksEmpty").hidden = true;
+      $("#savedWeeksNoMatches").hidden = true;
+      $("#savedWeeksSearchCount").textContent = "Search is unavailable until saved weeks can be read.";
       status(`Could not read saved weeks: ${error.message} You can keep arranging the current week and retry.`);
       controls();
     }
@@ -161,6 +181,16 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
       if (!active()) return;
       await refresh(`Saved “${draft.name}” in this browser. Later edits need another explicit Save.`);
     });
+  });
+  $("#savedWeeksSearch").addEventListener("input", () => {
+    if (disposed || busy || !ready) return;
+    applySearch();
+  });
+  $("#clearSavedWeeksSearch").addEventListener("click", () => {
+    if (disposed || busy || !ready) return;
+    $("#savedWeeksSearch").value = "";
+    applySearch();
+    $("#savedWeeksSearch").focus();
   });
   $("#refreshSavedWeeks").addEventListener("click", () => { void refresh(); });
   $("#openSavedWeek").addEventListener("click", () => {

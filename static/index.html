@@ -83,6 +83,15 @@
     <h2 id="savedWeeksTitle">Saved in this browser</h2>
     <p>Keep named planning drafts in this browser. Each explicit Save keeps the original inputs, source evidence and arranged dates. Venue call notes are not included. It is not refreshed automatically. Clearing this site's browser data removes these drafts.</p>
     <button id="refreshSavedWeeks" type="button">Refresh saved weeks</button>
+    <div class="saved-week-search">
+      <label for="savedWeeksSearch">Search saved names
+        <input id="savedWeeksSearch" type="search" autocomplete="off" aria-describedby="savedWeeksSearchHelp" disabled>
+      </label>
+      <button id="clearSavedWeeksSearch" type="button" disabled>Clear search</button>
+    </div>
+    <p id="savedWeeksSearchHelp" class="why">Search matches saved names only. Your selected preview stays open even when its name is filtered out.</p>
+    <p id="savedWeeksSearchCount" class="why" role="status" aria-live="polite"></p>
+    <p id="savedWeeksNoMatches" hidden>No saved names match your search. Clear search to show all saved records.</p>
     <p id="savedWeeksStatus" class="why" role="status" aria-live="polite"></p>
     <p id="savedWeeksEmpty" hidden>No saved weeks yet. Generate a plan, arrange it, then choose <strong>Save in this browser</strong>.</p>
     <ul id="savedWeeksList"></ul>
