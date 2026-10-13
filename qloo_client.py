@@ -31,6 +31,7 @@ only. It is never logged, never sent to the browser, and never stored in repo.
 """
 from __future__ import annotations
 
+from copy import deepcopy
 import json
 import os
 import urllib.error
@@ -253,14 +254,14 @@ class QlooClient:
         params = {"query": query, "take": take}
         if types:
             params["types"] = types
-        return self._get("/search", params, parse_search)
+        return deepcopy(self._get("/search", params, parse_search))
 
     # GET /v2/tags - https://docs.qloo.com/reference/get-tags-1
     def find_tags(self, query: str, tag_type: Optional[str] = None, take: int = 3) -> list[dict]:
         params = {"filter.query": query, "take": take}
         if tag_type:
             params["filter.tag.types"] = tag_type
-        return self._get("/v2/tags", params, parse_tags)
+        return deepcopy(self._get("/v2/tags", params, parse_tags))
 
     # GET /v2/insights - https://docs.qloo.com/reference/insights-api-deep-dive
     def insights(self, filter_type: str, *, signal_entities: Optional[list[str]] = None,
@@ -276,4 +277,4 @@ class QlooClient:
         if location_query:
             params["filter.location.query"] = location_query
         params.update(extra or {})
-        return self._get("/v2/insights", params, parse_insights)
+        return deepcopy(self._get("/v2/insights", params, parse_insights))

@@ -1,0 +1,76 @@
+{
+  "repository": "Jacob-Met/tastetable",
+  "issue": 94,
+  "reviewer": "estate-1caa1d8e028a/remote_consumer",
+  "verdict": "PASS for bounded public-result ownership repair",
+  "source_files": [
+    {
+      "path": "qloo_client.py",
+      "bytes": 12284,
+      "sha256": "22b6d5ee7664f37d4477d0e0973727d36f07d862a455a1ff9d7e7d2b4acc79eb",
+      "git_blob_sha": "7a722724e20e5ac4976936c9c1998de214bf9b76"
+    },
+    {
+      "path": "tests/test_qloo_cache_isolation.py",
+      "bytes": 7699,
+      "sha256": "6533dc8542f0eae105ce4cb0b0b2c89d3bea7735e921d97240e2535a422c69db",
+      "git_blob_sha": "d0d646707fa3b60c4c8a6dc194debd38fc68b97b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 23654,
+      "sha256": "2ec72ed2f29eef6c4e91083c5b924defdd6de07790fd28a8e5d03c526879893f",
+      "git_blob_sha": "b630df2ee2439f7ec03cb9b0763fc6917b491753"
+    },
+    {
+      "path": "docs/QLOO_CACHE_ISOLATION.md",
+      "bytes": 2342,
+      "sha256": "89498b4ce56cb4a27bc6c29324d2da57eef41639d7597faa6805ac2d53903bf0",
+      "git_blob_sha": "d3d39419216d9d48b662a067f038b0a4ad793c6e"
+    }
+  ],
+  "source_review": {
+    "exact_change": "One standard-library import and three public return wrappers. Reversing exactly those substitutions reproduces every original module byte.",
+    "raw_cache_and_parsers_exact": true,
+    "issue85_metric_behavior_preserved": true,
+    "read_full_author_tests_and_guide": true,
+    "read_exact_two_line_readme_diff": true
+  },
+  "receiver": {
+    "path": "/dev/shm/hamon-1caa-receive-tastetable-cache.py",
+    "bytes": 11565,
+    "sha256": "f1b2a0f0f63a1ed0be21afd80ea3b45cfba54837b8c1a2281085903c187db830"
+  },
+  "qualification": [
+    {
+      "variant": "original",
+      "path": "/dev/shm/hamon-1caa-tastetable-cache-independent-original/receipt.json",
+      "bytes": 17164,
+      "sha256": "2b535f75750b3e01173d2a2cb25721b1892f38bd8972f8fc93409007be042621",
+      "passed": 7,
+      "total": 10,
+      "exit_code": 1,
+      "source_unchanged": true,
+      "source_sha256": "a7b3362896273e05782e789cb1f89f053f32c4e1b766ae5998e19ed9fab103f9"
+    },
+    {
+      "variant": "candidate",
+      "path": "/dev/shm/hamon-1caa-tastetable-cache-independent-candidate/receipt.json",
+      "bytes": 17076,
+      "sha256": "312e4900c576630bf4ace46251f5df1ec01f514013c15bfa4424cfe436c32ca0",
+      "passed": 10,
+      "total": 10,
+      "exit_code": 0,
+      "source_unchanged": true,
+      "source_sha256": "22b6d5ee7664f37d4477d0e0973727d36f07d862a455a1ff9d7e7d2b4acc79eb"
+    }
+  ],
+  "findings": [
+    "Receiver was frozen and executed against the original before candidate source, tests or guide were inspected. The unchanged oracle exposes three original nested-alias failures and passes all ten candidate contracts.",
+    "Nested caller edits through search, insights and tolerated tag fields preserve earlier and later returned values and the fictional transport payload. Repeated calls use one transport request per key.",
+    "The public-result copy happens after parsing: authored numeric conversion objects in the raw cached payload are still converted on every call. No separate metric-owner correction was adopted.",
+    "Entity.to_dict continues to alias its own entity fields, while distinct public calls remain independent; the guide describes this boundary accurately.",
+    "Request parameters and headers, distinct query/type/take keys, declared and conversion errors, non-cached transport failure, unsupported-type refusal and empty-result fallback remain intact."
+  ],
+  "limits": "Cloud Linux CPython 3.12.14 with authored in-memory payloads and a transport callable. No network, real provider key, browser or installed/native client was used. Author pytest suites and CLI persona tests were read as author evidence, not rerun."
+}

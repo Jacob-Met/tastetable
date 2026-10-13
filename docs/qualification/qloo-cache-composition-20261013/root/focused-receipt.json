@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "tests",
+    "-k",
+    "not test_api_recovers_a_valid_checked_meal_after_a_malformed_recommendation"
+  ],
+  "exit_code": 0,
+  "stdout": "....................................................                                                           [100%]\n52 passed, 1 deselected, 34 subtests passed in 0.24s\n",
+  "stderr": "",
+  "source_sha256": "bcabc1fa1a2440e19028ac6e5ec21e9ff8ab049276920f225d968eda84141573",
+  "scope": "All received focused methods except one unavailable FastAPI API integration method; wider failed attempt retained separately."
+}

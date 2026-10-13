@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-B",
+    "-S",
+    "/dev/shm/hamon-1caa-receive-tastetable-cache.py",
+    "--source",
+    "/dev/shm/hamon-1caa-tastetable-cache/checkout/qloo_client.py",
+    "--out",
+    "/dev/shm/hamon-1caa-tastetable-cache-independent-candidate"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 0.13473851000890136
+}

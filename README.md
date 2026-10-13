@@ -66,6 +66,8 @@ app.py (FastAPI) ──► agent.py  tool loop (OpenAI chat.completions shape)
 * `qloo_client.py` uses only the standard library. It sends `X-Api-Key` auth, makes GET requests
   against `https://hackathon.api.qloo.com`, parses responses loosely, caches results in memory,
   and marks errors as retryable only for 429 and 5xx. Every endpoint cites its documentation URL.
+  Each public call returns mutable results isolated from later cached reads; see
+  [Qloo result ownership](docs/QLOO_CACHE_ISOLATION.md) before attaching local metadata.
 * `fixtures/qloo_fixtures.json` is **synthetic** data: fictional venues, `FIX-` IDs, and
   hand-set affinities, in the documented response shapes. Regenerate it with
   `python scripts/build_fixtures.py`.

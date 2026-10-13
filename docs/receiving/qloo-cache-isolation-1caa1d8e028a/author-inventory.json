@@ -1,0 +1,195 @@
+{
+  "archive": "author-results.tar.gz",
+  "archive_sha256": "135ec6065a4f316fbc2501ecda4fad0c789e0ee41c54ffea97e9a0059ff8e802",
+  "archive_bytes": 37865,
+  "files": [
+    {
+      "path": "source-projection.json",
+      "bytes": 2271,
+      "sha256": "e2bc781315805adfc8beab7a9cf35a83d0b3d32a41b5d4ade5e8c3fc2ae17a98",
+      "mode": "0644"
+    },
+    {
+      "path": "candidate-source-freeze.json",
+      "bytes": 1461,
+      "sha256": "d60fc6aeb87a6f7b9627952ee4d803f2d6b574919de118d1f58db2ced522e922",
+      "mode": "0644"
+    },
+    {
+      "path": "source.patch",
+      "bytes": 1502,
+      "sha256": "093c8012c8b46c230ef853f3603f76523096ca1f5b2b8315b1364b823fb5b80d",
+      "mode": "0644"
+    },
+    {
+      "path": "original-alias-reproduction.json",
+      "bytes": 558,
+      "sha256": "bb61310cfadceff94b8e2aa5c6f4cf778639b832b8efb115bca01ce9b10a1ed9",
+      "mode": "0644"
+    },
+    {
+      "path": "focused-results-01.json",
+      "bytes": 2258,
+      "sha256": "7155f2373767ba730fedd775811cfb6f39802218d6fdbe6ffb6b715f21e5e40b",
+      "mode": "0644"
+    },
+    {
+      "path": "original-focused-01.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0644"
+    },
+    {
+      "path": "original-focused-01.stderr",
+      "bytes": 97,
+      "sha256": "51f5550d86043279227c92b72199d4ee1f66d30623405f70c98442058ffe76c7",
+      "mode": "0644"
+    },
+    {
+      "path": "candidate-focused-01.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0644"
+    },
+    {
+      "path": "candidate-focused-01.stderr",
+      "bytes": 97,
+      "sha256": "51f5550d86043279227c92b72199d4ee1f66d30623405f70c98442058ffe76c7",
+      "mode": "0644"
+    },
+    {
+      "path": "test-deps-recovery.json",
+      "bytes": 80186,
+      "sha256": "c39a1d5dff426dd63a5bd6d0ed232782635d63fb761052128c5fb42419c79bb8",
+      "mode": "0644"
+    },
+    {
+      "path": "focused-results-02.json",
+      "bytes": 1728,
+      "sha256": "10ea530cf1de5c8ef96badcdd48b304aea197fcf67c1d98d0c498ae79d421000",
+      "mode": "0644"
+    },
+    {
+      "path": "original-focused-02.stdout",
+      "bytes": 9736,
+      "sha256": "c0cf1bbcba110f5dc32eecb88925d2fd93f9602658fc4212b4f6894bf5cf98ba",
+      "mode": "0644"
+    },
+    {
+      "path": "original-focused-02.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0644"
+    },
+    {
+      "path": "candidate-focused-02.stdout",
+      "bytes": 99,
+      "sha256": "c90552887b15f0dd338283c6b09a470ebacdbd4677c68174867fe21155a8b633",
+      "mode": "0644"
+    },
+    {
+      "path": "candidate-focused-02.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0644"
+    },
+    {
+      "path": "maintained-results-01.json",
+      "bytes": 1092,
+      "sha256": "d8186c69790d057b27970167a28f32aefe97f71a2c7406cb4705c7b967788526",
+      "mode": "0644"
+    },
+    {
+      "path": "maintained-01.stdout",
+      "bytes": 113,
+      "sha256": "7c0b775c7770df4b0e6e2795bcea8c0a7939b7a10b442203a918fb8751316060",
+      "mode": "0644"
+    },
+    {
+      "path": "maintained-01.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0644"
+    },
+    {
+      "path": "cli-receiving-01/candidate-harold.json",
+      "bytes": 12775,
+      "sha256": "c9066f70349e88814c278e09e33992e8a11ff32ba24fb29f0d3c3eb8b34ff566",
+      "mode": "0644"
+    },
+    {
+      "path": "cli-receiving-01/candidate-harold.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0644"
+    },
+    {
+      "path": "cli-receiving-01/candidate-mei.json",
+      "bytes": 9444,
+      "sha256": "4d6ee08feea84dfb877e673844ad6f481f13449b661b153219d32ee31d7f7f76",
+      "mode": "0644"
+    },
+    {
+      "path": "cli-receiving-01/candidate-mei.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0644"
+    },
+    {
+      "path": "cli-receiving-01/candidate-rosa.json",
+      "bytes": 14470,
+      "sha256": "5d9fa0af32fb943547bd13c0c27e1f70d50d7fc3b25430758511aeb51cd4eaba",
+      "mode": "0644"
+    },
+    {
+      "path": "cli-receiving-01/candidate-rosa.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0644"
+    },
+    {
+      "path": "cli-receiving-01/original-harold.json",
+      "bytes": 12775,
+      "sha256": "c9066f70349e88814c278e09e33992e8a11ff32ba24fb29f0d3c3eb8b34ff566",
+      "mode": "0644"
+    },
+    {
+      "path": "cli-receiving-01/original-harold.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0644"
+    },
+    {
+      "path": "cli-receiving-01/original-mei.json",
+      "bytes": 9444,
+      "sha256": "4d6ee08feea84dfb877e673844ad6f481f13449b661b153219d32ee31d7f7f76",
+      "mode": "0644"
+    },
+    {
+      "path": "cli-receiving-01/original-mei.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0644"
+    },
+    {
+      "path": "cli-receiving-01/original-rosa.json",
+      "bytes": 14470,
+      "sha256": "5d9fa0af32fb943547bd13c0c27e1f70d50d7fc3b25430758511aeb51cd4eaba",
+      "mode": "0644"
+    },
+    {
+      "path": "cli-receiving-01/original-rosa.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0644"
+    },
+    {
+      "path": "cli-receiving-01/receipt.json",
+      "bytes": 7822,
+      "sha256": "f081ff41b87aed0463e82e6cd1d98256a9db0e5401c41ccc3b79dbace3cf9121",
+      "mode": "0644"
+    }
+  ],
+  "archive_readback_verified": true,
+  "bounds": "All payload bytes copied exactly from preserved raw author records. Deterministic archive metadata is not original filesystem metadata."
+}
