@@ -1,0 +1,8 @@
+{
+  "removed": "/dev/shm/hamon-1caa-tastetable-cache/test-deps",
+  "reason": "Own reproducible pytest package copy; author test processes completed, independent receiver uses stdlib. Source, tests, all results and original recovery inventory remain.",
+  "validated_files": 497,
+  "validated_bytes": 6593759,
+  "free_before": 2109440,
+  "free_after": 9719808
+}

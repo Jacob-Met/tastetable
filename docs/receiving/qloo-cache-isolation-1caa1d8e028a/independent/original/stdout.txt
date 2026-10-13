@@ -1,0 +1,1 @@
+{"receipt": "/dev/shm/hamon-1caa-tastetable-cache-independent-original/receipt.json", "passed": 7, "total": 10, "pass": false, "failed": ["search_nested_caller_edits_stay_out_of_existing_and_future_returns", "insights_nested_caller_edits_stay_out_of_existing_and_future_returns", "tag_return_graph_detached_without_tightening_existing_tolerant_parser"]}

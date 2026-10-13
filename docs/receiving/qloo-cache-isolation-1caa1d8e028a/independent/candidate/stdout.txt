@@ -1,0 +1,1 @@
+{"receipt": "/dev/shm/hamon-1caa-tastetable-cache-independent-candidate/receipt.json", "passed": 10, "total": 10, "pass": true, "failed": []}

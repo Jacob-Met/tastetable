@@ -1,0 +1,696 @@
+{
+  "source": "/dev/shm/hamon-1caa-tastetable-cache/original/qloo_client.py",
+  "source_before": {
+    "bytes": 12228,
+    "sha256": "a7b3362896273e05782e789cb1f89f053f32c4e1b766ae5998e19ed9fab103f9",
+    "mtime_ns": 1791854151320414331,
+    "mode": 33188,
+    "inode": 646717
+  },
+  "source_after": {
+    "bytes": 12228,
+    "sha256": "a7b3362896273e05782e789cb1f89f053f32c4e1b766ae5998e19ed9fab103f9",
+    "mtime_ns": 1791854151320414331,
+    "mode": 33188,
+    "inode": 646717
+  },
+  "source_bytes_mtime_mode_inode_unchanged": true,
+  "receiver": {
+    "bytes": 11565,
+    "sha256": "f1b2a0f0f63a1ed0be21afd80ea3b45cfba54837b8c1a2281085903c187db830",
+    "mtime_ns": 1791856747642818635,
+    "mode": 33188,
+    "inode": 817322
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39"
+  },
+  "scope": "Real public QlooClient methods with a fictional in-memory transport; no network, provider key, browser, fixture file or installed client used.",
+  "checks": [
+    {
+      "name": "search_nested_caller_edits_stay_out_of_existing_and_future_returns",
+      "pass": false,
+      "calls": [
+        {
+          "path": "/search",
+          "params": {
+            "query": "fictional",
+            "take": 2,
+            "types": "urn:entity:place"
+          },
+          "header_shape_ok": true
+        }
+      ],
+      "header_shapes_ok": true,
+      "initial": {
+        "entity_id": "fictional-place",
+        "name": "Fictional Cafe",
+        "types": [
+          "urn:entity:place"
+        ],
+        "affinity": 0.625,
+        "popularity": 0.75,
+        "tags": [
+          {
+            "tag_id": "fictional-tag",
+            "name": "Fictional cuisine",
+            "labels": [
+              "original",
+              "secondary"
+            ]
+          }
+        ],
+        "properties": {
+          "geocode": {
+            "city": "Fictional City",
+            "coordinates": [
+              1.25,
+              2.5
+            ]
+          },
+          "keywords": [
+            {
+              "text": "fictional quiet",
+              "weights": [
+                0.5,
+                0.25
+              ]
+            }
+          ]
+        }
+      },
+      "caller_owned_after_edit": {
+        "entity_id": "fictional-place",
+        "name": "Fictional Cafe",
+        "types": [
+          "urn:entity:place",
+          "urn:entity:caller-only"
+        ],
+        "affinity": -1.0,
+        "popularity": 0.75,
+        "tags": [
+          {
+            "tag_id": "fictional-tag",
+            "name": "Fictional cuisine",
+            "labels": [
+              "CALLER-EDIT",
+              "secondary"
+            ]
+          }
+        ],
+        "properties": {
+          "geocode": {
+            "city": "CALLER-CITY",
+            "coordinates": [
+              1.25,
+              99.0
+            ]
+          },
+          "keywords": [
+            {
+              "text": "fictional quiet",
+              "weights": [
+                0.5,
+                0.25,
+                9.0
+              ]
+            }
+          ]
+        }
+      },
+      "other_return_after_edit": {
+        "entity_id": "fictional-place",
+        "name": "Fictional Cafe",
+        "types": [
+          "urn:entity:place"
+        ],
+        "affinity": 0.625,
+        "popularity": 0.75,
+        "tags": [
+          {
+            "tag_id": "fictional-tag",
+            "name": "Fictional cuisine",
+            "labels": [
+              "CALLER-EDIT",
+              "secondary"
+            ]
+          }
+        ],
+        "properties": {
+          "geocode": {
+            "city": "CALLER-CITY",
+            "coordinates": [
+              1.25,
+              99.0
+            ]
+          },
+          "keywords": [
+            {
+              "text": "fictional quiet",
+              "weights": [
+                0.5,
+                0.25,
+                9.0
+              ]
+            }
+          ]
+        }
+      },
+      "later_return": {
+        "entity_id": "fictional-place",
+        "name": "Fictional Cafe",
+        "types": [
+          "urn:entity:place"
+        ],
+        "affinity": 0.625,
+        "popularity": 0.75,
+        "tags": [
+          {
+            "tag_id": "fictional-tag",
+            "name": "Fictional cuisine",
+            "labels": [
+              "CALLER-EDIT",
+              "secondary"
+            ]
+          }
+        ],
+        "properties": {
+          "geocode": {
+            "city": "CALLER-CITY",
+            "coordinates": [
+              1.25,
+              99.0
+            ]
+          },
+          "keywords": [
+            {
+              "text": "fictional quiet",
+              "weights": [
+                0.5,
+                0.25,
+                9.0
+              ]
+            }
+          ]
+        }
+      },
+      "transport_payload_unchanged": false,
+      "to_dict_still_aliases_its_own_entity": true
+    },
+    {
+      "name": "insights_nested_caller_edits_stay_out_of_existing_and_future_returns",
+      "pass": false,
+      "calls": [
+        {
+          "path": "/v2/insights",
+          "params": {
+            "filter.type": "urn:entity:place",
+            "take": 2,
+            "signal.interests.entities": "fictional-artist",
+            "filter.tags": "fictional-tag",
+            "filter.location.query": "Fictional City",
+            "filter.exclude.entities": "fictional-excluded"
+          },
+          "header_shape_ok": true
+        }
+      ],
+      "header_shapes_ok": true,
+      "initial": {
+        "entity_id": "fictional-place",
+        "name": "Fictional Cafe",
+        "types": [
+          "urn:entity:place"
+        ],
+        "affinity": 0.625,
+        "popularity": 0.75,
+        "tags": [
+          {
+            "tag_id": "fictional-tag",
+            "name": "Fictional cuisine",
+            "labels": [
+              "original",
+              "secondary"
+            ]
+          }
+        ],
+        "properties": {
+          "geocode": {
+            "city": "Fictional City",
+            "coordinates": [
+              1.25,
+              2.5
+            ]
+          },
+          "keywords": [
+            {
+              "text": "fictional quiet",
+              "weights": [
+                0.5,
+                0.25
+              ]
+            }
+          ]
+        }
+      },
+      "caller_owned_after_edit": {
+        "entity_id": "fictional-place",
+        "name": "Fictional Cafe",
+        "types": [
+          "urn:entity:place",
+          "urn:entity:caller-only"
+        ],
+        "affinity": -1.0,
+        "popularity": 0.75,
+        "tags": [
+          {
+            "tag_id": "fictional-tag",
+            "name": "Fictional cuisine",
+            "labels": [
+              "CALLER-EDIT",
+              "secondary"
+            ]
+          }
+        ],
+        "properties": {
+          "geocode": {
+            "city": "CALLER-CITY",
+            "coordinates": [
+              1.25,
+              99.0
+            ]
+          },
+          "keywords": [
+            {
+              "text": "fictional quiet",
+              "weights": [
+                0.5,
+                0.25,
+                9.0
+              ]
+            }
+          ]
+        }
+      },
+      "other_return_after_edit": {
+        "entity_id": "fictional-place",
+        "name": "Fictional Cafe",
+        "types": [
+          "urn:entity:place"
+        ],
+        "affinity": 0.625,
+        "popularity": 0.75,
+        "tags": [
+          {
+            "tag_id": "fictional-tag",
+            "name": "Fictional cuisine",
+            "labels": [
+              "CALLER-EDIT",
+              "secondary"
+            ]
+          }
+        ],
+        "properties": {
+          "geocode": {
+            "city": "CALLER-CITY",
+            "coordinates": [
+              1.25,
+              99.0
+            ]
+          },
+          "keywords": [
+            {
+              "text": "fictional quiet",
+              "weights": [
+                0.5,
+                0.25,
+                9.0
+              ]
+            }
+          ]
+        }
+      },
+      "later_return": {
+        "entity_id": "fictional-place",
+        "name": "Fictional Cafe",
+        "types": [
+          "urn:entity:place"
+        ],
+        "affinity": 0.625,
+        "popularity": 0.75,
+        "tags": [
+          {
+            "tag_id": "fictional-tag",
+            "name": "Fictional cuisine",
+            "labels": [
+              "CALLER-EDIT",
+              "secondary"
+            ]
+          }
+        ],
+        "properties": {
+          "geocode": {
+            "city": "CALLER-CITY",
+            "coordinates": [
+              1.25,
+              99.0
+            ]
+          },
+          "keywords": [
+            {
+              "text": "fictional quiet",
+              "weights": [
+                0.5,
+                0.25,
+                9.0
+              ]
+            }
+          ]
+        }
+      },
+      "transport_payload_unchanged": false,
+      "to_dict_still_aliases_its_own_entity": true
+    },
+    {
+      "name": "tag_return_graph_detached_without_tightening_existing_tolerant_parser",
+      "pass": false,
+      "calls": [
+        {
+          "path": "/v2/tags",
+          "params": {
+            "filter.query": "fictional",
+            "take": 2,
+            "filter.tag.types": "urn:tag:genre"
+          },
+          "header_shape_ok": true
+        }
+      ],
+      "header_shapes_ok": true,
+      "initial": [
+        {
+          "tag_id": "fictional-nested-tag",
+          "name": {
+            "localized": [
+              "Fictional name"
+            ]
+          },
+          "type": "urn:tag:genre"
+        },
+        {
+          "tag_id": "fictional-flat-tag",
+          "name": "Fictional flat",
+          "type": "urn:tag:genre"
+        }
+      ],
+      "caller_after_edit": [
+        {
+          "tag_id": "fictional-nested-tag",
+          "name": {
+            "localized": [
+              "CALLER-EDIT"
+            ]
+          },
+          "type": "urn:tag:genre"
+        },
+        {
+          "tag_id": "fictional-flat-tag",
+          "name": "CALLER-FLAT",
+          "type": "urn:tag:genre"
+        }
+      ],
+      "other_return_after_edit": [
+        {
+          "tag_id": "fictional-nested-tag",
+          "name": {
+            "localized": [
+              "CALLER-EDIT"
+            ]
+          },
+          "type": "urn:tag:genre"
+        },
+        {
+          "tag_id": "fictional-flat-tag",
+          "name": "Fictional flat",
+          "type": "urn:tag:genre"
+        }
+      ],
+      "later_return": [
+        {
+          "tag_id": "fictional-nested-tag",
+          "name": {
+            "localized": [
+              "CALLER-EDIT"
+            ]
+          },
+          "type": "urn:tag:genre"
+        },
+        {
+          "tag_id": "fictional-flat-tag",
+          "name": "Fictional flat",
+          "type": "urn:tag:genre"
+        }
+      ],
+      "transport_payload_unchanged": false,
+      "fixture_note": "Nested name is an authored tolerant-parser control, not a claim about provider schema. The second tag uses ordinary flat strings."
+    },
+    {
+      "name": "distinct_query_type_and_take_keep_distinct_cache_entries",
+      "pass": true,
+      "calls": [
+        {
+          "path": "/search",
+          "params": {
+            "query": "one",
+            "take": 2,
+            "types": "urn:entity:place"
+          },
+          "header_shape_ok": true
+        },
+        {
+          "path": "/search",
+          "params": {
+            "query": "two",
+            "take": 2,
+            "types": "urn:entity:place"
+          },
+          "header_shape_ok": true
+        },
+        {
+          "path": "/search",
+          "params": {
+            "query": "one",
+            "take": 2,
+            "types": "urn:entity:book"
+          },
+          "header_shape_ok": true
+        },
+        {
+          "path": "/search",
+          "params": {
+            "query": "one",
+            "take": 1,
+            "types": "urn:entity:place"
+          },
+          "header_shape_ok": true
+        }
+      ],
+      "header_shapes_ok": true,
+      "names": [
+        "{\"query\": \"one\", \"take\": 2, \"types\": \"urn:entity:place\"}",
+        "{\"query\": \"one\", \"take\": 2, \"types\": \"urn:entity:place\"}",
+        "{\"query\": \"two\", \"take\": 2, \"types\": \"urn:entity:place\"}",
+        "{\"query\": \"one\", \"take\": 2, \"types\": \"urn:entity:book\"}",
+        "{\"query\": \"one\", \"take\": 1, \"types\": \"urn:entity:place\"}"
+      ]
+    },
+    {
+      "name": "cached_raw_metrics_are_still_parsed_on_each_public_call",
+      "pass": true,
+      "calls": [
+        {
+          "path": "/search",
+          "params": {
+            "query": "metric-control",
+            "take": 3
+          },
+          "header_shape_ok": true
+        }
+      ],
+      "header_shapes_ok": true,
+      "values": [
+        [
+          0.25,
+          0.5
+        ],
+        [
+          0.375,
+          0.625
+        ]
+      ],
+      "raw_float_calls": {
+        "affinity": 2,
+        "popularity": 2
+      },
+      "fixture_note": "Authored numeric conversion controls verify preserved raw-cache parsing order; no metric repair is adopted."
+    },
+    {
+      "name": "declared_insight_refusal_retains_error_and_cached_response",
+      "pass": true,
+      "calls": [
+        {
+          "path": "/v2/insights",
+          "params": {
+            "filter.type": "urn:entity:place",
+            "take": 10
+          },
+          "header_shape_ok": true
+        }
+      ],
+      "header_shapes_ok": true,
+      "outcomes": [
+        {
+          "returned": false,
+          "exception": "QlooError",
+          "message": "Qloo HTTP 400: ['fictional declared refusal']",
+          "status": 400,
+          "retryable": false
+        },
+        {
+          "returned": false,
+          "exception": "QlooError",
+          "message": "Qloo HTTP 400: ['fictional declared refusal']",
+          "status": 400,
+          "retryable": false
+        }
+      ]
+    },
+    {
+      "name": "malformed_metric_conversion_error_remains_unchanged",
+      "pass": true,
+      "calls": [
+        {
+          "path": "/search",
+          "params": {
+            "query": "bad-metric",
+            "take": 3
+          },
+          "header_shape_ok": true
+        }
+      ],
+      "header_shapes_ok": true,
+      "outcomes": [
+        {
+          "returned": false,
+          "exception": "ValueError",
+          "message": "could not convert string to float: 'fictional-not-a-number'",
+          "status": null,
+          "retryable": null
+        },
+        {
+          "returned": false,
+          "exception": "ValueError",
+          "message": "could not convert string to float: 'fictional-not-a-number'",
+          "status": null,
+          "retryable": null
+        }
+      ]
+    },
+    {
+      "name": "transport_error_is_not_cached_or_automatically_retried",
+      "pass": true,
+      "calls": [
+        {
+          "path": "/search",
+          "params": {
+            "query": "retry-control",
+            "take": 3
+          },
+          "header_shape_ok": true
+        },
+        {
+          "path": "/search",
+          "params": {
+            "query": "retry-control",
+            "take": 3
+          },
+          "header_shape_ok": true
+        }
+      ],
+      "header_shapes_ok": true,
+      "outcomes": [
+        {
+          "returned": false,
+          "exception": "QlooError",
+          "message": "Qloo HTTP 503: fictional transport failure",
+          "status": 503,
+          "retryable": true
+        },
+        {
+          "returned": false,
+          "exception": "QlooError",
+          "message": "Qloo HTTP 503: fictional transport failure",
+          "status": 503,
+          "retryable": true
+        }
+      ]
+    },
+    {
+      "name": "unsupported_type_refused_before_transport",
+      "pass": true,
+      "calls": [],
+      "header_shapes_ok": true,
+      "outcome": {
+        "returned": false,
+        "exception": "ValueError",
+        "message": "unsupported filter.type urn:entity:fictional-unsupported",
+        "status": null,
+        "retryable": null
+      }
+    },
+    {
+      "name": "existing_empty_results_fallback_and_each_route_cache_are_preserved",
+      "pass": true,
+      "calls": [
+        {
+          "path": "/search",
+          "params": {
+            "query": "empty",
+            "take": 3
+          },
+          "header_shape_ok": true
+        },
+        {
+          "path": "/v2/tags",
+          "params": {
+            "filter.query": "empty",
+            "take": 3
+          },
+          "header_shape_ok": true
+        },
+        {
+          "path": "/v2/insights",
+          "params": {
+            "filter.type": "urn:entity:place",
+            "take": 10
+          },
+          "header_shape_ok": true
+        }
+      ],
+      "header_shapes_ok": true,
+      "results": [
+        [],
+        [],
+        []
+      ],
+      "repeated": [
+        [],
+        [],
+        []
+      ]
+    }
+  ],
+  "passed": 7,
+  "total": 10,
+  "pass": false
+}
