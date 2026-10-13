@@ -38,4 +38,4 @@ jobs:
           done
           [[ -n "${COMPARE_WEEK_NODE}" ]] || { echo "A complete cached Node 22 is required."; exit 1; }
           "${COMPARE_WEEK_NODE}" --version
-          "${COMPARE_WEEK_NODE}" --test tests/*.mjs tests/*.cjs
+          "${COMPARE_WEEK_NODE}" --experimental-vm-modules --test tests/*.mjs tests/*.cjs

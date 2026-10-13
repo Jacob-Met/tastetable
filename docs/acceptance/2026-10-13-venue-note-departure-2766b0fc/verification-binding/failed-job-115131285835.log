@@ -1,0 +1,1300 @@
+﻿2026-10-13T04:35:57.8087118Z Current runner version: '2.337.0'
+2026-10-13T04:35:57.8112378Z ##[group]Runner Image Provisioner
+2026-10-13T04:35:57.8113280Z Hosted Compute Agent
+2026-10-13T04:35:57.8114010Z Version: 20261002.596
+2026-10-13T04:35:57.8114668Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-13T04:35:57.8115463Z Build Date: 2026-10-02T22:28:27Z
+2026-10-13T04:35:57.8116265Z Worker ID: {006cd5b9-5a5e-47a2-a0ee-4f42f03210e7}
+2026-10-13T04:35:57.8117015Z Region: westcentralus
+2026-10-13T04:35:57.8117729Z Cloud: Azure
+2026-10-13T04:35:57.8118314Z ##[endgroup]
+2026-10-13T04:35:57.8119896Z ##[group]Operating System
+2026-10-13T04:35:57.8120921Z Ubuntu
+2026-10-13T04:35:57.8121851Z 24.04.5
+2026-10-13T04:35:57.8122693Z LTS
+2026-10-13T04:35:57.8123528Z ##[endgroup]
+2026-10-13T04:35:57.8124444Z ##[group]Runner Image
+2026-10-13T04:35:57.8125488Z Image: ubuntu-24.04
+2026-10-13T04:35:57.8126389Z Version: 20261004.327.1
+2026-10-13T04:35:57.8128547Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-13T04:35:57.8131173Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-13T04:35:57.8133139Z ##[endgroup]
+2026-10-13T04:35:57.8134905Z ##[group]GITHUB_TOKEN Permissions
+2026-10-13T04:35:57.8137980Z Contents: read
+2026-10-13T04:35:57.8138970Z Metadata: read
+2026-10-13T04:35:57.8139947Z ##[endgroup]
+2026-10-13T04:35:57.8143035Z Secret source: Actions
+2026-10-13T04:35:57.8144351Z Cache mode: write
+2026-10-13T04:35:57.8146149Z Prepare workflow directory
+2026-10-13T04:35:57.8508295Z Prepare all required actions
+2026-10-13T04:35:57.8554922Z Getting action download info
+2026-10-13T04:35:58.1376418Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-13T04:35:58.3329097Z Complete job name: compare-week
+2026-10-13T04:35:58.4074583Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-13T04:35:58.4075630Z with:
+2026-10-13T04:35:58.4076123Z   repository: Jacob-Met/tastetable
+2026-10-13T04:35:58.4080275Z   token: ***
+2026-10-13T04:35:58.4080719Z   ssh-strict: true
+2026-10-13T04:35:58.4081176Z   ssh-user: git
+2026-10-13T04:35:58.4081800Z   persist-credentials: true
+2026-10-13T04:35:58.4082296Z   clean: true
+2026-10-13T04:35:58.4082745Z   sparse-checkout-cone-mode: true
+2026-10-13T04:35:58.4083277Z   fetch-depth: 1
+2026-10-13T04:35:58.4083708Z   fetch-tags: false
+2026-10-13T04:35:58.4084254Z   show-progress: true
+2026-10-13T04:35:58.4084713Z   lfs: false
+2026-10-13T04:35:58.4085144Z   submodules: false
+2026-10-13T04:35:58.4085594Z   set-safe-directory: true
+2026-10-13T04:35:58.4086110Z   allow-unsafe-pr-checkout: false
+2026-10-13T04:35:58.4086844Z ##[endgroup]
+2026-10-13T04:35:58.5161431Z Syncing repository: Jacob-Met/tastetable
+2026-10-13T04:35:58.5164496Z ##[group]Getting Git version info
+2026-10-13T04:35:58.5165295Z Working directory is '/home/runner/work/tastetable/tastetable'
+2026-10-13T04:35:58.5166395Z [command]/usr/bin/git version
+2026-10-13T04:35:58.5214036Z git version 2.55.0
+2026-10-13T04:35:58.5234986Z ##[endgroup]
+2026-10-13T04:35:58.5246629Z Temporarily overriding HOME='/home/runner/work/_temp/8b2dfdc1-b505-44bd-a123-061b6c365c4f' before making global git config changes
+2026-10-13T04:35:58.5249151Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-13T04:35:58.5253489Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tastetable/tastetable
+2026-10-13T04:35:58.5303233Z Deleting the contents of '/home/runner/work/tastetable/tastetable'
+2026-10-13T04:35:58.5306626Z ##[group]Determining repository object format
+2026-10-13T04:35:58.5308888Z ##[endgroup]
+2026-10-13T04:35:58.5310313Z ##[group]Initializing the repository
+2026-10-13T04:35:58.5313884Z [command]/usr/bin/git init /home/runner/work/tastetable/tastetable
+2026-10-13T04:35:58.5394421Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-13T04:35:58.5396656Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-13T04:35:58.5398894Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-13T04:35:58.5400265Z hint: call:
+2026-10-13T04:35:58.5401050Z hint:
+2026-10-13T04:35:58.5402156Z hint: 	git config --global init.defaultBranch <name>
+2026-10-13T04:35:58.5403226Z hint:
+2026-10-13T04:35:58.5404203Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-13T04:35:58.5405844Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-13T04:35:58.5407268Z hint:
+2026-10-13T04:35:58.5408349Z hint: 	git branch -m <name>
+2026-10-13T04:35:58.5409458Z hint:
+2026-10-13T04:35:58.5410985Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-13T04:35:58.5413046Z Initialized empty Git repository in /home/runner/work/tastetable/tastetable/.git/
+2026-10-13T04:35:58.5416254Z [command]/usr/bin/git remote add origin https://github.com/Jacob-Met/tastetable
+2026-10-13T04:35:58.5453139Z ##[endgroup]
+2026-10-13T04:35:58.5454409Z ##[group]Disabling automatic garbage collection
+2026-10-13T04:35:58.5457041Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-13T04:35:58.5491132Z ##[endgroup]
+2026-10-13T04:35:58.5492486Z ##[group]Setting up auth
+2026-10-13T04:35:58.5493354Z Removing SSH command configuration
+2026-10-13T04:35:58.5498272Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-13T04:35:58.5535199Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-13T04:35:58.5876032Z Removing HTTP extra header
+2026-10-13T04:35:58.5876983Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-13T04:35:58.5924004Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-13T04:35:58.6175780Z Removing includeIf entries pointing to credentials config files
+2026-10-13T04:35:58.6182239Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-13T04:35:58.6222108Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-13T04:35:58.6462088Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-59328a49-98ad-4e80-90a7-4aafff4ab178.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-13T04:35:58.6504348Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/tastetable/tastetable/.git.path /home/runner/work/_temp/git-credentials-59328a49-98ad-4e80-90a7-4aafff4ab178.config
+2026-10-13T04:35:58.6540705Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/tastetable/tastetable/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-59328a49-98ad-4e80-90a7-4aafff4ab178.config
+2026-10-13T04:35:58.6579691Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-59328a49-98ad-4e80-90a7-4aafff4ab178.config
+2026-10-13T04:35:58.6618803Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-59328a49-98ad-4e80-90a7-4aafff4ab178.config
+2026-10-13T04:35:58.6654089Z ##[endgroup]
+2026-10-13T04:35:58.6655336Z ##[group]Fetching the repository
+2026-10-13T04:35:58.6662337Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +7dd8862417e2b0379b05913965225fde5a0eae44:refs/remotes/pull/98/merge
+2026-10-13T04:36:00.1395893Z From https://github.com/Jacob-Met/tastetable
+2026-10-13T04:36:00.1398731Z  * [new ref]         7dd8862417e2b0379b05913965225fde5a0eae44 -> pull/98/merge
+2026-10-13T04:36:00.1404637Z ##[endgroup]
+2026-10-13T04:36:00.1406338Z ##[group]Determining the checkout info
+2026-10-13T04:36:00.1408184Z ##[endgroup]
+2026-10-13T04:36:00.1409273Z [command]/usr/bin/git sparse-checkout disable
+2026-10-13T04:36:00.1458465Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-13T04:36:00.1493677Z ##[group]Checking out the ref
+2026-10-13T04:36:00.1495563Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/98/merge
+2026-10-13T04:36:00.2634625Z Note: switching to 'refs/remotes/pull/98/merge'.
+2026-10-13T04:36:00.2635829Z 
+2026-10-13T04:36:00.2636768Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-13T04:36:00.2639193Z changes and commit them, and you can discard any commits you make in this
+2026-10-13T04:36:00.2641550Z state without impacting any branches by switching back to a branch.
+2026-10-13T04:36:00.2643274Z 
+2026-10-13T04:36:00.2644241Z If you want to create a new branch to retain commits you create, you may
+2026-10-13T04:36:00.2646419Z do so (now or later) by using -c with the switch command. Example:
+2026-10-13T04:36:00.2647414Z 
+2026-10-13T04:36:00.2647831Z   git switch -c <new-branch-name>
+2026-10-13T04:36:00.2648500Z 
+2026-10-13T04:36:00.2648968Z Or undo this operation with:
+2026-10-13T04:36:00.2649733Z 
+2026-10-13T04:36:00.2650310Z   git switch -
+2026-10-13T04:36:00.2650943Z 
+2026-10-13T04:36:00.2652047Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-13T04:36:00.2653434Z 
+2026-10-13T04:36:00.2654979Z HEAD is now at 7dd8862 Merge e49b41f25dcf8b6d4ec3d4327755daa8b4162a01 into 95738e812de81e3ace9830cdfabbbe7e39ff4686
+2026-10-13T04:36:00.2660791Z ##[endgroup]
+2026-10-13T04:36:00.2704816Z [command]/usr/bin/git log -1 --format=%H
+2026-10-13T04:36:00.2736945Z 7dd8862417e2b0379b05913965225fde5a0eae44
+2026-10-13T04:36:00.3016133Z ##[group]Run set -euo pipefail
+2026-10-13T04:36:00.3017586Z [36;1mset -euo pipefail[0m
+2026-10-13T04:36:00.3018797Z [36;1mCOMPARE_WEEK_NODE=[0m
+2026-10-13T04:36:00.3020465Z [36;1mfor COMPARE_WEEK_NODE_DIR in "${RUNNER_TOOL_CACHE}/node"/22.*; do[0m
+2026-10-13T04:36:00.3023251Z [36;1m  if [[ -x "${COMPARE_WEEK_NODE_DIR}/x64/bin/node" && -f "${COMPARE_WEEK_NODE_DIR}/x64.complete" ]]; then[0m
+2026-10-13T04:36:00.3025767Z [36;1m    COMPARE_WEEK_NODE="${COMPARE_WEEK_NODE_DIR}/x64/bin/node"[0m
+2026-10-13T04:36:00.3027414Z [36;1m  fi[0m
+2026-10-13T04:36:00.3028399Z [36;1mdone[0m
+2026-10-13T04:36:00.3030051Z [36;1m[[ -n "${COMPARE_WEEK_NODE}" ]] || { echo "A complete cached Node 22 is required."; exit 1; }[0m
+2026-10-13T04:36:00.3032239Z [36;1m"${COMPARE_WEEK_NODE}" --version[0m
+2026-10-13T04:36:00.3033832Z [36;1m"${COMPARE_WEEK_NODE}" --test tests/*.mjs tests/*.cjs[0m
+2026-10-13T04:36:00.3261276Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-13T04:36:00.3263112Z ##[endgroup]
+2026-10-13T04:36:00.3801116Z v22.23.3
+2026-10-13T04:36:00.4963759Z TAP version 13
+2026-10-13T04:36:00.6024148Z # Subtest: the writer receives the existing week and preserves checked source details
+2026-10-13T04:36:00.6053438Z ok 1 - the writer receives the existing week and preserves checked source details
+2026-10-13T04:36:00.6088490Z   ---
+2026-10-13T04:36:00.6092035Z   duration_ms: 15.157479
+2026-10-13T04:36:00.6092816Z   type: 'test'
+2026-10-13T04:36:00.6093385Z   ...
+2026-10-13T04:36:00.6094230Z # Subtest: moved picks share a day without collisions and keep their original explanations
+2026-10-13T04:36:00.6095464Z ok 2 - moved picks share a day without collisions and keep their original explanations
+2026-10-13T04:36:00.6096531Z   ---
+2026-10-13T04:36:00.6097187Z   duration_ms: 3.129852
+2026-10-13T04:36:00.6097886Z   type: 'test'
+2026-10-13T04:36:00.6098595Z   ...
+2026-10-13T04:36:00.6099649Z # Subtest: off-week picks are absent, and reset restores byte-identical content and identities
+2026-10-13T04:36:00.6101123Z ok 3 - off-week picks are absent, and reset restores byte-identical content and identities
+2026-10-13T04:36:00.6102355Z   ---
+2026-10-13T04:36:00.6102990Z   duration_ms: 12.410275
+2026-10-13T04:36:00.6104189Z   type: 'test'
+2026-10-13T04:36:00.6104815Z   ...
+2026-10-13T04:36:00.6105818Z # Subtest: moves preserve a weekly pick's UID, while other weeks and new plans get distinct identities
+2026-10-13T04:36:00.6107323Z ok 4 - moves preserve a weekly pick's UID, while other weeks and new plans get distinct identities
+2026-10-13T04:36:00.6108550Z   ---
+2026-10-13T04:36:00.6109210Z   duration_ms: 15.740585
+2026-10-13T04:36:00.6109918Z   type: 'test'
+2026-10-13T04:36:00.6110595Z   ...
+2026-10-13T04:36:00.6111508Z # Subtest: repeated source entities remain separate stable picks when arranged together
+2026-10-13T04:36:00.6112980Z ok 5 - repeated source entities remain separate stable picks when arranged together
+2026-10-13T04:36:00.6113924Z   ---
+2026-10-13T04:36:00.6114497Z   duration_ms: 3.45127
+2026-10-13T04:36:00.6115248Z   type: 'test'
+2026-10-13T04:36:00.6115857Z   ...
+2026-10-13T04:36:00.6116648Z # Subtest: partial and empty checked source plans remain partial and empty
+2026-10-13T04:36:00.6117860Z ok 6 - partial and empty checked source plans remain partial and empty
+2026-10-13T04:36:00.6118722Z   ---
+2026-10-13T04:36:00.6119273Z   duration_ms: 0.772738
+2026-10-13T04:36:00.6119911Z   type: 'test'
+2026-10-13T04:36:00.6120466Z   ...
+2026-10-13T04:36:00.6121232Z # Subtest: stale, missing, repeated or altered rows refuse the whole export
+2026-10-13T04:36:00.6122824Z ok 7 - stale, missing, repeated or altered rows refuse the whole export
+2026-10-13T04:36:00.6123767Z   ---
+2026-10-13T04:36:00.6124363Z   duration_ms: 2.553426
+2026-10-13T04:36:00.6125001Z   type: 'test'
+2026-10-13T04:36:00.6125560Z   ...
+2026-10-13T04:36:00.6126444Z # Subtest: malformed assignments, source identity, provenance and picker dates refuse export
+2026-10-13T04:36:00.6128244Z ok 8 - malformed assignments, source identity, provenance and picker dates refuse export
+2026-10-13T04:36:00.6129328Z   ---
+2026-10-13T04:36:00.6129883Z   duration_ms: 1.878412
+2026-10-13T04:36:00.6130490Z   type: 'test'
+2026-10-13T04:36:00.6131075Z   ...
+2026-10-13T04:36:00.6132097Z # Subtest: source and preview mutations cannot silently change an existing session
+2026-10-13T04:36:00.6133358Z ok 9 - source and preview mutations cannot silently change an existing session
+2026-10-13T04:36:00.6134325Z   ---
+2026-10-13T04:36:00.6134912Z   duration_ms: 4.240232
+2026-10-13T04:36:00.6135509Z   type: 'test'
+2026-10-13T04:36:00.6136141Z   ...
+2026-10-13T04:36:00.6136990Z # Subtest: live source and UTF-8 descriptions keep provenance, escaping and byte limits
+2026-10-13T04:36:00.6138240Z ok 10 - live source and UTF-8 descriptions keep provenance, escaping and byte limits
+2026-10-13T04:36:00.6139199Z   ---
+2026-10-13T04:36:00.6140003Z   duration_ms: 7.755597
+2026-10-13T04:36:00.6140696Z   type: 'test'
+2026-10-13T04:36:00.6141300Z   ...
+2026-10-13T04:36:00.7282117Z # Subtest: the native weekday layout becomes five dated all-day suggestions
+2026-10-13T04:36:00.7304359Z ok 11 - the native weekday layout becomes five dated all-day suggestions
+2026-10-13T04:36:00.7305290Z   ---
+2026-10-13T04:36:00.7305828Z   duration_ms: 12.279941
+2026-10-13T04:36:00.7306383Z   type: 'test'
+2026-10-13T04:36:00.7306912Z   ...
+2026-10-13T04:36:00.7307731Z # Subtest: each description preserves the selected source and notes, excluding other columns
+2026-10-13T04:36:00.7308973Z ok 12 - each description preserves the selected source and notes, excluding other columns
+2026-10-13T04:36:00.7309871Z   ---
+2026-10-13T04:36:00.7310357Z   duration_ms: 7.788085
+2026-10-13T04:36:00.7310902Z   type: 'test'
+2026-10-13T04:36:00.7311397Z   ...
+2026-10-13T04:36:00.7312449Z # Subtest: partial plans keep missing slots absent and retain the partial-plan note
+2026-10-13T04:36:00.7313580Z ok 13 - partial plans keep missing slots absent and retain the partial-plan note
+2026-10-13T04:36:00.7314419Z   ---
+2026-10-13T04:36:00.7314900Z   duration_ms: 0.832687
+2026-10-13T04:36:00.7315434Z   type: 'test'
+2026-10-13T04:36:00.7315931Z   ...
+2026-10-13T04:36:00.7316653Z # Subtest: an empty checked plan is a readable preview but never a calendar download
+2026-10-13T04:36:00.7318164Z ok 14 - an empty checked plan is a readable preview but never a calendar download
+2026-10-13T04:36:00.7319142Z   ---
+2026-10-13T04:36:00.7319709Z   duration_ms: 0.734291
+2026-10-13T04:36:00.7320260Z   type: 'test'
+2026-10-13T04:36:00.7320763Z   ...
+2026-10-13T04:36:00.7321740Z # Subtest: mock provenance comes from the actual response, and live suggestions remain tentative
+2026-10-13T04:36:00.7323032Z ok 15 - mock provenance comes from the actual response, and live suggestions remain tentative
+2026-10-13T04:36:00.7323998Z   ---
+2026-10-13T04:36:00.7324492Z   duration_ms: 3.065496
+2026-10-13T04:36:00.7325042Z   type: 'test'
+2026-10-13T04:36:00.7325534Z   ...
+2026-10-13T04:36:00.7326360Z # Subtest: dates require an explicit valid Monday and reject normalization or injected syntax
+2026-10-13T04:36:00.7327615Z ok 16 - dates require an explicit valid Monday and reject normalization or injected syntax
+2026-10-13T04:36:00.7328532Z   ---
+2026-10-13T04:36:00.7329039Z   duration_ms: 0.599951
+2026-10-13T04:36:00.7329578Z   type: 'test'
+2026-10-13T04:36:00.7330074Z   ...
+2026-10-13T04:36:00.7330762Z # Subtest: leap days, year changes, and DST weeks retain calendar dates
+2026-10-13T04:36:00.7352584Z ok 17 - leap days, year changes, and DST weeks retain calendar dates
+2026-10-13T04:36:00.7359728Z   ---
+2026-10-13T04:36:00.7361482Z   duration_ms: 12.361793
+2026-10-13T04:36:00.7362533Z   type: 'test'
+2026-10-13T04:36:00.7363109Z   ...
+2026-10-13T04:36:00.7363911Z # Subtest: calendar bytes do not depend on the host timezone
+2026-10-13T04:36:00.7464986Z ok 18 - calendar bytes do not depend on the host timezone
+2026-10-13T04:36:00.7485522Z   ---
+2026-10-13T04:36:00.7486286Z   duration_ms: 124.068972
+2026-10-13T04:36:00.7486995Z   type: 'test'
+2026-10-13T04:36:00.7488075Z   ...
+2026-10-13T04:36:00.7488905Z # Subtest: source text cannot inject events or calendar properties
+2026-10-13T04:36:00.7489926Z ok 19 - source text cannot inject events or calendar properties
+2026-10-13T04:36:00.7490753Z   ---
+2026-10-13T04:36:00.7491339Z   duration_ms: 5.836725
+2026-10-13T04:36:00.7492137Z   type: 'test'
+2026-10-13T04:36:00.7492664Z   ...
+2026-10-13T04:36:00.7493492Z # Subtest: UTF-8 folding keeps every physical line at most 75 bytes and every code point intact
+2026-10-13T04:36:00.7494752Z ok 20 - UTF-8 folding keeps every physical line at most 75 bytes and every code point intact
+2026-10-13T04:36:00.7495668Z   ---
+2026-10-13T04:36:00.7496194Z   duration_ms: 4.250317
+2026-10-13T04:36:00.7496776Z   type: 'test'
+2026-10-13T04:36:00.7497315Z   ...
+2026-10-13T04:36:00.7498088Z # Subtest: a displayed plan is immutable and same-week re-exports are byte-stable
+2026-10-13T04:36:00.7499217Z ok 21 - a displayed plan is immutable and same-week re-exports are byte-stable
+2026-10-13T04:36:00.7500075Z   ---
+2026-10-13T04:36:00.7500632Z   duration_ms: 10.215313
+2026-10-13T04:36:00.7501231Z   type: 'test'
+2026-10-13T04:36:00.7502096Z   ...
+2026-10-13T04:36:00.7502950Z # Subtest: malformed result envelopes and missing provenance refuse the whole export
+2026-10-13T04:36:00.7504285Z ok 22 - malformed result envelopes and missing provenance refuse the whole export
+2026-10-13T04:36:00.7505243Z   ---
+2026-10-13T04:36:00.7505789Z   duration_ms: 1.202306
+2026-10-13T04:36:00.7506391Z   type: 'test'
+2026-10-13T04:36:00.7506909Z   ...
+2026-10-13T04:36:00.7507959Z # Subtest: unsupported text, excessive fields, and metadata injection refuse before output
+2026-10-13T04:36:00.7509282Z ok 23 - unsupported text, excessive fields, and metadata injection refuse before output
+2026-10-13T04:36:00.7510230Z   ---
+2026-10-13T04:36:00.7510812Z   duration_ms: 0.488386
+2026-10-13T04:36:00.7511427Z   type: 'test'
+2026-10-13T04:36:00.7512161Z   ...
+2026-10-13T04:36:00.7570220Z # Subtest: both mounted features start without accepted data and only GET bootstrap is allowed
+2026-10-13T04:36:00.7583069Z not ok 24 - both mounted features start without accepted data and only GET bootstrap is allowed
+2026-10-13T04:36:00.7584532Z   ---
+2026-10-13T04:36:00.7585110Z   duration_ms: 3.407865
+2026-10-13T04:36:00.7585714Z   type: 'test'
+2026-10-13T04:36:00.7586759Z   location: '/home/runner/work/tastetable/tastetable/tests/caregiver_collection_composition.test.mjs:162:1'
+2026-10-13T04:36:00.7587951Z   failureType: 'testCodeFailure'
+2026-10-13T04:36:00.7588728Z   error: 'vm.SourceTextModule is not a constructor'
+2026-10-13T04:36:00.7589468Z   code: 'ERR_TEST_FAILURE'
+2026-10-13T04:36:00.7590085Z   name: 'TypeError'
+2026-10-13T04:36:00.7590718Z   stack: |-
+2026-10-13T04:36:00.7592015Z     appFixture (file:///home/runner/work/tastetable/tastetable/tests/caregiver_collection_composition.test.mjs:128:23)
+2026-10-13T04:36:00.7595164Z     TestContext.<anonymous> (file:///home/runner/work/tastetable/tastetable/tests/caregiver_collection_composition.test.mjs:163:19)
+2026-10-13T04:36:00.7596646Z     Test.runInAsyncScope (node:async_hooks:214:14)
+2026-10-13T04:36:00.7597516Z     Test.run (node:internal/test_runner/test:1047:25)
+2026-10-13T04:36:00.7598367Z     Test.start (node:internal/test_runner/test:944:17)
+2026-10-13T04:36:00.7599386Z     startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+2026-10-13T04:36:00.7600279Z   ...
+2026-10-13T04:36:00.7601289Z # Subtest: collection Open retires before the read and accepts exact source, duplicate occurrences and empty notes
+2026-10-13T04:36:00.7603155Z not ok 25 - collection Open retires before the read and accepts exact source, duplicate occurrences and empty notes
+2026-10-13T04:36:00.7604258Z   ---
+2026-10-13T04:36:00.7604770Z   duration_ms: 1.389154
+2026-10-13T04:36:00.7605322Z   type: 'test'
+2026-10-13T04:36:00.7606280Z   location: '/home/runner/work/tastetable/tastetable/tests/caregiver_collection_composition.test.mjs:172:1'
+2026-10-13T04:36:00.7607364Z   failureType: 'testCodeFailure'
+2026-10-13T04:36:00.7608347Z   error: 'vm.SourceTextModule is not a constructor'
+2026-10-13T04:36:00.7609028Z   code: 'ERR_TEST_FAILURE'
+2026-10-13T04:36:00.7609519Z   name: 'TypeError'
+2026-10-13T04:36:00.7609999Z   stack: |-
+2026-10-13T04:36:00.7611000Z     appFixture (file:///home/runner/work/tastetable/tastetable/tests/caregiver_collection_composition.test.mjs:128:23)
+2026-10-13T04:36:00.7612946Z     TestContext.<anonymous> (file:///home/runner/work/tastetable/tastetable/tests/caregiver_collection_composition.test.mjs:173:19)
+2026-10-13T04:36:00.7614107Z     Test.runInAsyncScope (node:async_hooks:214:14)
+2026-10-13T04:36:00.7614857Z     Test.run (node:internal/test_runner/test:1047:25)
+2026-10-13T04:36:00.7615756Z     Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+2026-10-13T04:36:00.7616741Z     Test.postRun (node:internal/test_runner/test:1173:19)
+2026-10-13T04:36:00.7617519Z     Test.run (node:internal/test_runner/test:1101:12)
+2026-10-13T04:36:00.7618524Z     async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+2026-10-13T04:36:00.7619361Z   ...
+2026-10-13T04:36:00.7631208Z # Subtest: handoff preparation and late preparation refusal do not change the accepted collection snapshot
+2026-10-13T04:36:00.7633028Z not ok 26 - handoff preparation and late preparation refusal do not change the accepted collection snapshot
+2026-10-13T04:36:00.7634005Z   ---
+2026-10-13T04:36:00.7634510Z   duration_ms: 1.300033
+2026-10-13T04:36:00.7635052Z   type: 'test'
+2026-10-13T04:36:00.7635999Z   location: '/home/runner/work/tastetable/tastetable/tests/caregiver_collection_composition.test.mjs:201:1'
+2026-10-13T04:36:00.7637021Z   failureType: 'testCodeFailure'
+2026-10-13T04:36:00.7637699Z   error: 'vm.SourceTextModule is not a constructor'
+2026-10-13T04:36:00.7638374Z   code: 'ERR_TEST_FAILURE'
+2026-10-13T04:36:00.7638922Z   name: 'TypeError'
+2026-10-13T04:36:00.7639424Z   stack: |-
+2026-10-13T04:36:00.7640446Z     appFixture (file:///home/runner/work/tastetable/tastetable/tests/caregiver_collection_composition.test.mjs:128:23)
+2026-10-13T04:36:00.7642382Z     TestContext.<anonymous> (file:///home/runner/work/tastetable/tastetable/tests/caregiver_collection_composition.test.mjs:202:19)
+2026-10-13T04:36:00.7643977Z     Test.runInAsyncScope (node:async_hooks:214:14)
+2026-10-13T04:36:00.7644852Z     Test.run (node:internal/test_runner/test:1047:25)
+2026-10-13T04:36:00.7645671Z     Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+2026-10-13T04:36:00.7646483Z     Test.postRun (node:internal/test_runner/test:1173:19)
+2026-10-13T04:36:00.7647096Z     Test.run (node:internal/test_runner/test:1101:12)
+2026-10-13T04:36:00.7647902Z     async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+2026-10-13T04:36:00.7648621Z   ...
+2026-10-13T04:36:00.7649496Z # Subtest: explicit handoff Apply invalidates a held collection success and final capture uses the applied model/origin
+2026-10-13T04:36:00.7650612Z not ok 27 - explicit handoff Apply invalidates a held collection success and final capture uses the applied model/origin
+2026-10-13T04:36:00.7651201Z   ---
+2026-10-13T04:36:00.7651543Z   duration_ms: 1.414883
+2026-10-13T04:36:00.7652116Z   type: 'test'
+2026-10-13T04:36:00.7652952Z   location: '/home/runner/work/tastetable/tastetable/tests/caregiver_collection_composition.test.mjs:222:1'
+2026-10-13T04:36:00.7653753Z   failureType: 'testCodeFailure'
+2026-10-13T04:36:00.7654143Z   error: 'vm.SourceTextModule is not a constructor'
+2026-10-13T04:36:00.7654673Z   code: 'ERR_TEST_FAILURE'
+2026-10-13T04:36:00.7655121Z   name: 'TypeError'
+2026-10-13T04:36:00.7655395Z   stack: |-
+2026-10-13T04:36:00.7655992Z     appFixture (file:///home/runner/work/tastetable/tastetable/tests/caregiver_collection_composition.test.mjs:128:23)
+2026-10-13T04:36:00.7656990Z     TestContext.<anonymous> (file:///home/runner/work/tastetable/tastetable/tests/caregiver_collection_composition.test.mjs:223:19)
+2026-10-13T04:36:00.7657722Z     Test.runInAsyncScope (node:async_hooks:214:14)
+2026-10-13T04:36:00.7658551Z     Test.run (node:internal/test_runner/test:1047:25)
+2026-10-13T04:36:00.7659165Z     Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+2026-10-13T04:36:00.7659873Z     Test.postRun (node:internal/test_runner/test:1173:19)
+2026-10-13T04:36:00.7660393Z     Test.run (node:internal/test_runner/test:1101:12)
+2026-10-13T04:36:00.7660913Z     async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+2026-10-13T04:36:00.7661517Z   ...
+2026-10-13T04:36:00.7662233Z # Subtest: a late collection failure cannot retire a newer accepted handoff
+2026-10-13T04:36:00.7662985Z not ok 28 - a late collection failure cannot retire a newer accepted handoff
+2026-10-13T04:36:00.7663565Z   ---
+2026-10-13T04:36:00.7663922Z   duration_ms: 1.271009
+2026-10-13T04:36:00.7664299Z   type: 'test'
+2026-10-13T04:36:00.7664983Z   location: '/home/runner/work/tastetable/tastetable/tests/caregiver_collection_composition.test.mjs:240:1'
+2026-10-13T04:36:00.7665893Z   failureType: 'testCodeFailure'
+2026-10-13T04:36:00.7666367Z   error: 'vm.SourceTextModule is not a constructor'
+2026-10-13T04:36:00.7666860Z   code: 'ERR_TEST_FAILURE'
+2026-10-13T04:36:00.7667222Z   name: 'TypeError'
+2026-10-13T04:36:00.7667638Z   stack: |-
+2026-10-13T04:36:00.7668412Z     appFixture (file:///home/runner/work/tastetable/tastetable/tests/caregiver_collection_composition.test.mjs:128:23)
+2026-10-13T04:36:00.7669801Z     TestContext.<anonymous> (file:///home/runner/work/tastetable/tastetable/tests/caregiver_collection_composition.test.mjs:241:19)
+2026-10-13T04:36:00.7670546Z     Test.runInAsyncScope (node:async_hooks:214:14)
+2026-10-13T04:36:00.7670981Z     Test.run (node:internal/test_runner/test:1047:25)
+2026-10-13T04:36:00.7671506Z     Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+2026-10-13T04:36:00.7672455Z     Test.postRun (node:internal/test_runner/test:1173:19)
+2026-10-13T04:36:00.7673346Z     Test.run (node:internal/test_runner/test:1101:12)
+2026-10-13T04:36:00.7674210Z     async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+2026-10-13T04:36:00.7674673Z   ...
+2026-10-13T04:36:00.7675184Z # Subtest: current collection refusal retains inputs but does not resurrect the retired plan or worksheet
+2026-10-13T04:36:00.7676230Z not ok 29 - current collection refusal retains inputs but does not resurrect the retired plan or worksheet
+2026-10-13T04:36:00.7676772Z   ---
+2026-10-13T04:36:00.7677038Z   duration_ms: 1.05625
+2026-10-13T04:36:00.7677466Z   type: 'test'
+2026-10-13T04:36:00.7678115Z   location: '/home/runner/work/tastetable/tastetable/tests/caregiver_collection_composition.test.mjs:253:1'
+2026-10-13T04:36:00.7678751Z   failureType: 'testCodeFailure'
+2026-10-13T04:36:00.7679135Z   error: 'vm.SourceTextModule is not a constructor'
+2026-10-13T04:36:00.7679527Z   code: 'ERR_TEST_FAILURE'
+2026-10-13T04:36:00.7679828Z   name: 'TypeError'
+2026-10-13T04:36:00.7680089Z   stack: |-
+2026-10-13T04:36:00.7680687Z     appFixture (file:///home/runner/work/tastetable/tastetable/tests/caregiver_collection_composition.test.mjs:128:23)
+2026-10-13T04:36:00.7681813Z     TestContext.<anonymous> (file:///home/runner/work/tastetable/tastetable/tests/caregiver_collection_composition.test.mjs:254:19)
+2026-10-13T04:36:00.7682546Z     Test.runInAsyncScope (node:async_hooks:214:14)
+2026-10-13T04:36:00.7683129Z     Test.run (node:internal/test_runner/test:1047:25)
+2026-10-13T04:36:00.7683679Z     Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+2026-10-13T04:36:00.7684199Z     Test.postRun (node:internal/test_runner/test:1173:19)
+2026-10-13T04:36:00.7684722Z     Test.run (node:internal/test_runner/test:1101:12)
+2026-10-13T04:36:00.7685266Z     async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+2026-10-13T04:36:00.7685715Z   ...
+2026-10-13T04:36:00.7686134Z # Subtest: cancel while a collection read is held invalidates its eventual success
+2026-10-13T04:36:00.7686761Z not ok 30 - cancel while a collection read is held invalidates its eventual success
+2026-10-13T04:36:00.7687213Z   ---
+2026-10-13T04:36:00.7687637Z   duration_ms: 2.17975
+2026-10-13T04:36:00.7687921Z   type: 'test'
+2026-10-13T04:36:00.7688460Z   location: '/home/runner/work/tastetable/tastetable/tests/caregiver_collection_composition.test.mjs:265:1'
+2026-10-13T04:36:00.7689059Z   failureType: 'testCodeFailure'
+2026-10-13T04:36:00.7689433Z   error: 'vm.SourceTextModule is not a constructor'
+2026-10-13T04:36:00.7689810Z   code: 'ERR_TEST_FAILURE'
+2026-10-13T04:36:00.7690107Z   name: 'TypeError'
+2026-10-13T04:36:00.7690372Z   stack: |-
+2026-10-13T04:36:00.7690942Z     appFixture (file:///home/runner/work/tastetable/tastetable/tests/caregiver_collection_composition.test.mjs:128:23)
+2026-10-13T04:36:00.7692078Z     TestContext.<anonymous> (file:///home/runner/work/tastetable/tastetable/tests/caregiver_collection_composition.test.mjs:266:19)
+2026-10-13T04:36:00.7692785Z     Test.runInAsyncScope (node:async_hooks:214:14)
+2026-10-13T04:36:00.7693216Z     Test.run (node:internal/test_runner/test:1047:25)
+2026-10-13T04:36:00.7693732Z     Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+2026-10-13T04:36:00.7694248Z     Test.postRun (node:internal/test_runner/test:1173:19)
+2026-10-13T04:36:00.7694688Z     Test.run (node:internal/test_runner/test:1101:12)
+2026-10-13T04:36:00.7695207Z     async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+2026-10-13T04:36:00.7695649Z   ...
+2026-10-13T04:36:00.7696179Z # Subtest: invalid dates refuse capture; arrangement edits retain accepted source and notify handoff retirement
+2026-10-13T04:36:00.7697027Z not ok 31 - invalid dates refuse capture; arrangement edits retain accepted source and notify handoff retirement
+2026-10-13T04:36:00.7697572Z   ---
+2026-10-13T04:36:00.7697828Z   duration_ms: 0.912637
+2026-10-13T04:36:00.7698115Z   type: 'test'
+2026-10-13T04:36:00.7698660Z   location: '/home/runner/work/tastetable/tastetable/tests/caregiver_collection_composition.test.mjs:279:1'
+2026-10-13T04:36:00.7699250Z   failureType: 'testCodeFailure'
+2026-10-13T04:36:00.7699640Z   error: 'vm.SourceTextModule is not a constructor'
+2026-10-13T04:36:00.7700022Z   code: 'ERR_TEST_FAILURE'
+2026-10-13T04:36:00.7700318Z   name: 'TypeError'
+2026-10-13T04:36:00.7700582Z   stack: |-
+2026-10-13T04:36:00.7701325Z     appFixture (file:///home/runner/work/tastetable/tastetable/tests/caregiver_collection_composition.test.mjs:128:23)
+2026-10-13T04:36:00.7723312Z     TestContext.<anonymous> (file:///home/runner/work/tastetable/tastetable/tests/caregiver_collection_composition.test.mjs:280:19)
+2026-10-13T04:36:00.7724507Z     Test.runInAsyncScope (node:async_hooks:214:14)
+2026-10-13T04:36:00.7725174Z     Test.run (node:internal/test_runner/test:1047:25)
+2026-10-13T04:36:00.7725963Z     Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+2026-10-13T04:36:00.7726779Z     Test.postRun (node:internal/test_runner/test:1173:19)
+2026-10-13T04:36:00.7727465Z     Test.run (node:internal/test_runner/test:1101:12)
+2026-10-13T04:36:00.7728293Z     async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+2026-10-13T04:36:00.7729005Z   ...
+2026-10-13T04:36:00.8515260Z # Subtest: one editable handoff preserves both native formats, original inputs and calendar identity
+2026-10-13T04:36:00.8533359Z ok 32 - one editable handoff preserves both native formats, original inputs and calendar identity
+2026-10-13T04:36:00.8556977Z   ---
+2026-10-13T04:36:00.8606900Z   duration_ms: 18.22674
+2026-10-13T04:36:00.8624918Z   type: 'test'
+2026-10-13T04:36:00.8625535Z   ...
+2026-10-13T04:36:00.8626360Z # Subtest: same named venue occurrences, omitted visits and earlier weeks keep distinct records
+2026-10-13T04:36:00.8627665Z ok 33 - same named venue occurrences, omitted visits and earlier weeks keep distinct records
+2026-10-13T04:36:00.8628608Z   ---
+2026-10-13T04:36:00.8629075Z   duration_ms: 3.903612
+2026-10-13T04:36:00.8629590Z   type: 'test'
+2026-10-13T04:36:00.8630041Z   ...
+2026-10-13T04:36:00.8630742Z # Subtest: a valid week paired with another source's notes is wholly refused
+2026-10-13T04:36:00.8632451Z ok 34 - a valid week paired with another source's notes is wholly refused
+2026-10-13T04:36:00.8633312Z   ---
+2026-10-13T04:36:00.8633783Z   duration_ms: 9.585847
+2026-10-13T04:36:00.8634351Z   type: 'test'
+2026-10-13T04:36:00.8634839Z   ...
+2026-10-13T04:36:00.8635793Z # Subtest: complete native week validation and complete late note validation remain required
+2026-10-13T04:36:00.8637348Z ok 35 - complete native week validation and complete late note validation remain required
+2026-10-13T04:36:00.8638338Z   ---
+2026-10-13T04:36:00.8638801Z   duration_ms: 9.789641
+2026-10-13T04:36:00.8639373Z   type: 'test'
+2026-10-13T04:36:00.8639892Z   ...
+2026-10-13T04:36:00.8640820Z # Subtest: the new outer version and timestamp do not admit a native section by itself
+2026-10-13T04:36:00.8642469Z ok 36 - the new outer version and timestamp do not admit a native section by itself
+2026-10-13T04:36:00.8643337Z   ---
+2026-10-13T04:36:00.8643839Z   duration_ms: 6.018795
+2026-10-13T04:36:00.8644366Z   type: 'test'
+2026-10-13T04:36:00.8644846Z   ...
+2026-10-13T04:36:00.8645586Z # Subtest: the 6 MiB UTF-8 envelope boundary retains the native 2 MiB notes boundary
+2026-10-13T04:36:00.8662634Z ok 37 - the 6 MiB UTF-8 envelope boundary retains the native 2 MiB notes boundary
+2026-10-13T04:36:00.8682535Z   ---
+2026-10-13T04:36:00.8683165Z   duration_ms: 148.192805
+2026-10-13T04:36:00.8683602Z   type: 'test'
+2026-10-13T04:36:00.8683962Z   ...
+2026-10-13T04:36:00.8684723Z # Subtest: a prepared empty handoff has an independent empty model and preserves null calendar identity
+2026-10-13T04:36:00.8685695Z ok 38 - a prepared empty handoff has an independent empty model and preserves null calendar identity
+2026-10-13T04:36:00.8686206Z   ---
+2026-10-13T04:36:00.8686460Z   duration_ms: 2.850737
+2026-10-13T04:36:00.8686777Z   type: 'test'
+2026-10-13T04:36:00.8687023Z   ...
+2026-10-13T04:36:00.8687467Z # Subtest: source labels and source-bound writer guard stay attached to the original response
+2026-10-13T04:36:00.8688186Z ok 39 - source labels and source-bound writer guard stay attached to the original response
+2026-10-13T04:36:00.8688655Z   ---
+2026-10-13T04:36:00.8688899Z   duration_ms: 4.843799
+2026-10-13T04:36:00.8689172Z   type: 'test'
+2026-10-13T04:36:00.8689710Z   ...
+2026-10-13T04:36:00.8730583Z # Subtest: only newest result commits when earlier transport ignores abort
+2026-10-13T04:36:00.8732053Z ok 40 - only newest result commits when earlier transport ignores abort
+2026-10-13T04:36:00.8733127Z   ---
+2026-10-13T04:36:00.8733780Z   duration_ms: 2.841003
+2026-10-13T04:36:00.8734434Z   type: 'test'
+2026-10-13T04:36:00.8735022Z   ...
+2026-10-13T04:36:00.8735921Z # Subtest: stale errors cannot clear newer loading state or replace its result
+2026-10-13T04:36:00.8737054Z ok 41 - stale errors cannot clear newer loading state or replace its result
+2026-10-13T04:36:00.8737885Z   ---
+2026-10-13T04:36:00.8738450Z   duration_ms: 0.542506
+2026-10-13T04:36:00.8739079Z   type: 'test'
+2026-10-13T04:36:00.8739657Z   ...
+2026-10-13T04:36:00.8740487Z # Subtest: input invalidation suppresses a response already being read
+2026-10-13T04:36:00.8741512Z ok 42 - input invalidation suppresses a response already being read
+2026-10-13T04:36:00.8742533Z   ---
+2026-10-13T04:36:00.8743238Z   duration_ms: 0.341968
+2026-10-13T04:36:00.8743860Z   type: 'test'
+2026-10-13T04:36:00.8744432Z   ...
+2026-10-13T04:36:00.8745319Z # Subtest: invalidated failure remains silent and a later request can succeed
+2026-10-13T04:36:00.8746457Z ok 43 - invalidated failure remains silent and a later request can succeed
+2026-10-13T04:36:00.8747312Z   ---
+2026-10-13T04:36:00.8747889Z   duration_ms: 0.306055
+2026-10-13T04:36:00.8748506Z   type: 'test'
+2026-10-13T04:36:00.8749025Z   ...
+2026-10-13T04:36:00.8749872Z # Subtest: disposal blocks new work and suppresses all pending completion callbacks
+2026-10-13T04:36:00.8751037Z ok 44 - disposal blocks new work and suppresses all pending completion callbacks
+2026-10-13T04:36:00.8752251Z   ---
+2026-10-13T04:36:00.8752848Z   duration_ms: 1.444367
+2026-10-13T04:36:00.8753778Z   type: 'test'
+2026-10-13T04:36:00.8754353Z   ...
+2026-10-13T04:36:00.8755127Z # Subtest: current transport error is reported once and returns to idle
+2026-10-13T04:36:00.8756184Z ok 45 - current transport error is reported once and returns to idle
+2026-10-13T04:36:00.8756988Z   ---
+2026-10-13T04:36:00.8757570Z   duration_ms: 0.312905
+2026-10-13T04:36:00.8758185Z   type: 'test'
+2026-10-13T04:36:00.8758737Z   ...
+2026-10-13T04:36:00.8759538Z # Subtest: a malformed current result cannot leave the request busy
+2026-10-13T04:36:00.8760520Z ok 46 - a malformed current result cannot leave the request busy
+2026-10-13T04:36:00.8761309Z   ---
+2026-10-13T04:36:00.8762208Z   duration_ms: 0.464951
+2026-10-13T04:36:00.8762826Z   type: 'test'
+2026-10-13T04:36:00.8763514Z   ...
+2026-10-13T04:36:00.8764553Z # Subtest: actual AbortSignal rejection from supersession is not a user error
+2026-10-13T04:36:00.8765751Z ok 47 - actual AbortSignal rejection from supersession is not a user error
+2026-10-13T04:36:00.8766815Z   ---
+2026-10-13T04:36:00.8767543Z   duration_ms: 0.573733
+2026-10-13T04:36:00.8768000Z   type: 'test'
+2026-10-13T04:36:00.8768417Z   ...
+2026-10-13T04:36:00.9093481Z # Subtest: real CLI publishes a UTF-8 handoff and receipt without changing the input
+2026-10-13T04:36:00.9119196Z ok 48 - real CLI publishes a UTF-8 handoff and receipt without changing the input
+2026-10-13T04:36:00.9152205Z   ---
+2026-10-13T04:36:00.9182302Z   duration_ms: 77.745382
+2026-10-13T04:36:00.9207173Z   type: 'test'
+2026-10-13T04:36:00.9207749Z   ...
+2026-10-13T04:36:00.9208502Z # Subtest: BOM input is accepted and the receipt fingerprints its exact bytes
+2026-10-13T04:36:00.9209559Z ok 49 - BOM input is accepted and the receipt fingerprints its exact bytes
+2026-10-13T04:36:00.9210387Z   ---
+2026-10-13T04:36:00.9210888Z   duration_ms: 71.018282
+2026-10-13T04:36:00.9211434Z   type: 'test'
+2026-10-13T04:36:00.9212093Z   ...
+2026-10-13T04:36:01.1431439Z # Subtest: malformed, unsupported, non-UTF8 and over-limit input are refused before output
+2026-10-13T04:36:01.1433627Z ok 50 - malformed, unsupported, non-UTF8 and over-limit input are refused before output
+2026-10-13T04:36:01.1434838Z   ---
+2026-10-13T04:36:01.1436103Z   duration_ms: 235.082207
+2026-10-13T04:36:01.1436781Z   type: 'test'
+2026-10-13T04:36:01.1437420Z   ...
+2026-10-13T04:36:01.2253215Z # Subtest: missing and directory input are refused with no output
+2026-10-13T04:36:01.2276881Z ok 51 - missing and directory input are refused with no output
+2026-10-13T04:36:01.2292705Z   ---
+2026-10-13T04:36:01.2306089Z   duration_ms: 76.091613
+2026-10-13T04:36:01.2306958Z   type: 'test'
+2026-10-13T04:36:01.2307556Z   ...
+2026-10-13T04:36:01.4238491Z # Subtest: occupied file, directory and input aliases retain their original bytes
+2026-10-13T04:36:01.4276261Z ok 52 - occupied file, directory and input aliases retain their original bytes
+2026-10-13T04:36:01.4292263Z   ---
+2026-10-13T04:36:01.4322195Z   duration_ms: 203.921584
+2026-10-13T04:36:01.4349660Z   type: 'test'
+2026-10-13T04:36:01.4350507Z   ...
+2026-10-13T04:36:01.8452665Z # Subtest: strict arguments and help do not consume the input or create a report
+2026-10-13T04:36:01.8453917Z ok 53 - strict arguments and help do not consume the input or create a report
+2026-10-13T04:36:01.8460282Z   ---
+2026-10-13T04:36:01.8482174Z   duration_ms: 421.803978
+2026-10-13T04:36:01.8482867Z   type: 'test'
+2026-10-13T04:36:01.8483563Z   ...
+2026-10-13T04:36:01.9068275Z # Subtest: missing output parent is a delivery failure without a partially accepted file
+2026-10-13T04:36:01.9083562Z ok 54 - missing output parent is a delivery failure without a partially accepted file
+2026-10-13T04:36:01.9084704Z   ---
+2026-10-13T04:36:01.9093433Z   duration_ms: 56.808863
+2026-10-13T04:36:01.9094061Z   type: 'test'
+2026-10-13T04:36:01.9094729Z   ...
+2026-10-13T04:36:01.9597944Z # Subtest: a competing output created before publication is preserved and the stage is removed
+2026-10-13T04:36:01.9602868Z ok 55 - a competing output created before publication is preserved and the stage is removed
+2026-10-13T04:36:01.9603867Z   ---
+2026-10-13T04:36:01.9604762Z   duration_ms: 57.927567
+2026-10-13T04:36:01.9605291Z   type: 'test'
+2026-10-13T04:36:01.9605591Z   ...
+2026-10-13T04:36:02.0186636Z # Subtest: a real partial staged write is removed and never published
+2026-10-13T04:36:02.0190768Z ok 56 - a real partial staged write is removed and never published
+2026-10-13T04:36:02.0191754Z   ---
+2026-10-13T04:36:02.0192538Z   duration_ms: 58.755416
+2026-10-13T04:36:02.0193269Z   type: 'test'
+2026-10-13T04:36:02.0193889Z   ...
+2026-10-13T04:36:02.1147096Z # Subtest: failure after publication identifies the complete report and refuses overwrite on retry
+2026-10-13T04:36:02.1164384Z ok 57 - failure after publication identifies the complete report and refuses overwrite on retry
+2026-10-13T04:36:02.1164879Z   ---
+2026-10-13T04:36:02.1165088Z   duration_ms: 94.097214
+2026-10-13T04:36:02.1165324Z   type: 'test'
+2026-10-13T04:36:02.1165527Z   ...
+2026-10-13T04:36:02.2507262Z # Subtest: unrepresentable displayed JSON text is refused without publishing output
+2026-10-13T04:36:02.2508772Z ok 58 - unrepresentable displayed JSON text is refused without publishing output
+2026-10-13T04:36:02.2510938Z   ---
+2026-10-13T04:36:02.2513098Z   duration_ms: 137.689255
+2026-10-13T04:36:02.2515225Z   type: 'test'
+2026-10-13T04:36:02.2516292Z   ...
+2026-10-13T04:36:02.2634900Z # Subtest: named copy contains exactly the existing portable producer's text and detached accepted state
+2026-10-13T04:36:02.2635902Z ok 59 - named copy contains exactly the existing portable producer's text and detached accepted state
+2026-10-13T04:36:02.2636491Z   ---
+2026-10-13T04:36:02.2636790Z   duration_ms: 7.005012
+2026-10-13T04:36:02.2637094Z   type: 'test'
+2026-10-13T04:36:02.2637423Z   ...
+2026-10-13T04:36:02.2638007Z # Subtest: reopening and metadata rename preserve exact ICS and accepted/calendar identities
+2026-10-13T04:36:02.2638618Z ok 60 - reopening and metadata rename preserve exact ICS and accepted/calendar identities
+2026-10-13T04:36:02.2639175Z   ---
+2026-10-13T04:36:02.2639521Z   duration_ms: 15.699535
+2026-10-13T04:36:02.2639933Z   type: 'test'
+2026-10-13T04:36:02.2640272Z   ...
+2026-10-13T04:36:02.2640889Z # Subtest: continued arrangement changes resave through the canonical format without changing original evidence
+2026-10-13T04:36:02.2643636Z ok 61 - continued arrangement changes resave through the canonical format without changing original evidence
+2026-10-13T04:36:02.2644233Z   ---
+2026-10-13T04:36:02.2644525Z   duration_ms: 3.21608
+2026-10-13T04:36:02.2644930Z   type: 'test'
+2026-10-13T04:36:02.2645293Z   ...
+2026-10-13T04:36:02.2645815Z # Subtest: canonical native recovered response survives named storage: invalid_json
+2026-10-13T04:36:02.2646563Z ok 62 - canonical native recovered response survives named storage: invalid_json
+2026-10-13T04:36:02.2647073Z   ---
+2026-10-13T04:36:02.2647475Z   duration_ms: 1.366591
+2026-10-13T04:36:02.2647872Z   type: 'test'
+2026-10-13T04:36:02.2648230Z   ...
+2026-10-13T04:36:02.2648743Z # Subtest: canonical native recovered response survives named storage: decoded_list
+2026-10-13T04:36:02.2649469Z ok 63 - canonical native recovered response survives named storage: decoded_list
+2026-10-13T04:36:02.2650037Z   ---
+2026-10-13T04:36:02.2650308Z   duration_ms: 1.602212
+2026-10-13T04:36:02.2650530Z   type: 'test'
+2026-10-13T04:36:02.2650725Z   ...
+2026-10-13T04:36:02.2651094Z # Subtest: corrupt, stale-format, invalid metadata and oversized records refuse without mutation
+2026-10-13T04:36:02.2651900Z ok 64 - corrupt, stale-format, invalid metadata and oversized records refuse without mutation
+2026-10-13T04:36:02.2652563Z   ---
+2026-10-13T04:36:02.2652850Z   duration_ms: 6.488414
+2026-10-13T04:36:02.2653178Z   type: 'test'
+2026-10-13T04:36:02.2653441Z   ...
+2026-10-13T04:36:02.2654181Z # Subtest: all-omitted and unknown-source copies retain the native source and every occurrence
+2026-10-13T04:36:02.2655378Z ok 65 - all-omitted and unknown-source copies retain the native source and every occurrence
+2026-10-13T04:36:02.2656062Z   ---
+2026-10-13T04:36:02.2656356Z   duration_ms: 3.981297
+2026-10-13T04:36:02.2656686Z   type: 'test'
+2026-10-13T04:36:02.2656977Z   ...
+2026-10-13T04:36:02.2657594Z # Subtest: duplicate entity identities remain distinct occurrence assignments in the named payload
+2026-10-13T04:36:02.2658606Z ok 66 - duplicate entity identities remain distinct occurrence assignments in the named payload
+2026-10-13T04:36:02.2659312Z   ---
+2026-10-13T04:36:02.2659593Z   duration_ms: 3.431239
+2026-10-13T04:36:02.2659921Z   type: 'test'
+2026-10-13T04:36:02.2660204Z   ...
+2026-10-13T04:36:02.2660710Z # Subtest: native codec accepts the original fixture before the new module consumes it
+2026-10-13T04:36:02.2661549Z ok 67 - native codec accepts the original fixture before the new module consumes it
+2026-10-13T04:36:02.2662314Z   ---
+2026-10-13T04:36:02.2662594Z   duration_ms: 2.707835
+2026-10-13T04:36:02.2662915Z   type: 'test'
+2026-10-13T04:36:02.2663192Z   ...
+2026-10-13T04:36:02.2663725Z # Subtest: each occurrence starts unrecorded, including omitted and repeated identities
+2026-10-13T04:36:02.2664621Z ok 68 - each occurrence starts unrecorded, including omitted and repeated identities
+2026-10-13T04:36:02.2665243Z   ---
+2026-10-13T04:36:02.2665517Z   duration_ms: 3.173877
+2026-10-13T04:36:02.2665838Z   type: 'test'
+2026-10-13T04:36:02.2666127Z   ...
+2026-10-13T04:36:02.2666687Z # Subtest: projection retains the complete original pick, saved assignments and exact dates
+2026-10-13T04:36:02.2667627Z ok 69 - projection retains the complete original pick, saved assignments and exact dates
+2026-10-13T04:36:02.2668282Z   ---
+2026-10-13T04:36:02.2668562Z   duration_ms: 2.207391
+2026-10-13T04:36:02.2668893Z   type: 'test'
+2026-10-13T04:36:02.2669192Z   ...
+2026-10-13T04:36:02.2669665Z # Subtest: date and note do not infer attendance; outside-week dates are explicit
+2026-10-13T04:36:02.2670439Z ok 70 - date and note do not infer attendance; outside-week dates are explicit
+2026-10-13T04:36:02.2671004Z   ---
+2026-10-13T04:36:02.2671288Z   duration_ms: 2.675416
+2026-10-13T04:36:02.2671768Z   type: 'test'
+2026-10-13T04:36:02.2672054Z   ...
+2026-10-13T04:36:02.2672599Z # Subtest: literal CR/LF, whitespace and astral Unicode survive unrelated updates and export
+2026-10-13T04:36:02.2673847Z ok 71 - literal CR/LF, whitespace and astral Unicode survive unrelated updates and export
+2026-10-13T04:36:02.2674478Z   ---
+2026-10-13T04:36:02.2674763Z   duration_ms: 2.489641
+2026-10-13T04:36:02.2675084Z   type: 'test'
+2026-10-13T04:36:02.2675359Z   ...
+2026-10-13T04:36:02.2675796Z # Subtest: Gregorian dates admit year endpoints and leap-century rules
+2026-10-13T04:36:02.2676505Z ok 72 - Gregorian dates admit year endpoints and leap-century rules
+2026-10-13T04:36:02.2677028Z   ---
+2026-10-13T04:36:02.2677298Z   duration_ms: 9.934706
+2026-10-13T04:36:02.2677611Z   type: 'test'
+2026-10-13T04:36:02.2677881Z   ...
+2026-10-13T04:36:02.2678373Z # Subtest: notes and source names count code points and preserve admitted whitespace
+2026-10-13T04:36:02.2679206Z ok 73 - notes and source names count code points and preserve admitted whitespace
+2026-10-13T04:36:02.2679808Z   ---
+2026-10-13T04:36:02.2680085Z   duration_ms: 7.766023
+2026-10-13T04:36:02.2680409Z   type: 'test'
+2026-10-13T04:36:02.2680691Z   ...
+2026-10-13T04:36:02.2681154Z # Subtest: valid reordered visits are restored to original occurrence order
+2026-10-13T04:36:02.2682053Z ok 74 - valid reordered visits are restored to original occurrence order
+2026-10-13T04:36:02.2682607Z   ---
+2026-10-13T04:36:02.2682877Z   duration_ms: 1.376356
+2026-10-13T04:36:02.2683198Z   type: 'test'
+2026-10-13T04:36:02.2683473Z   ...
+2026-10-13T04:36:02.2683961Z # Subtest: all operations validate full records without mutating a refused input
+2026-10-13T04:36:02.2684783Z ok 75 - all operations validate full records without mutating a refused input
+2026-10-13T04:36:02.2685357Z   ---
+2026-10-13T04:36:02.2685635Z   duration_ms: 6.009032
+2026-10-13T04:36:02.2685947Z   type: 'test'
+2026-10-13T04:36:02.2686427Z   ...
+2026-10-13T04:36:02.2686858Z # Subtest: invalid patches and unsupported outcomes refuse atomically
+2026-10-13T04:36:02.2687556Z ok 76 - invalid patches and unsupported outcomes refuse atomically
+2026-10-13T04:36:02.2688079Z   ---
+2026-10-13T04:36:02.2688363Z   duration_ms: 3.770985
+2026-10-13T04:36:02.2688678Z   type: 'test'
+2026-10-13T04:36:02.2688958Z   ...
+2026-10-13T04:36:02.2689465Z # Subtest: record envelope uses an exact field set and canonical finite save time
+2026-10-13T04:36:02.2690256Z ok 77 - record envelope uses an exact field set and canonical finite save time
+2026-10-13T04:36:02.2690833Z   ---
+2026-10-13T04:36:02.2691102Z   duration_ms: 4.670822
+2026-10-13T04:36:02.2691421Z   type: 'test'
+2026-10-13T04:36:02.2691823Z   ...
+2026-10-13T04:36:02.2692351Z # Subtest: zero and 100 original picks are supported; 101 is refused without changing source
+2026-10-13T04:36:02.2693256Z ok 78 - zero and 100 original picks are supported; 101 is refused without changing source
+2026-10-13T04:36:02.2693886Z   ---
+2026-10-13T04:36:02.2694173Z   duration_ms: 11.392873
+2026-10-13T04:36:02.2694503Z   type: 'test'
+2026-10-13T04:36:02.2694784Z   ...
+2026-10-13T04:36:02.2695204Z # Subtest: source and file UTF-8 budgets are enforced before parsing
+2026-10-13T04:36:02.2695879Z ok 79 - source and file UTF-8 budgets are enforced before parsing
+2026-10-13T04:36:02.2696383Z   ---
+2026-10-13T04:36:02.2696665Z   duration_ms: 7.83125
+2026-10-13T04:36:02.2696982Z   type: 'test'
+2026-10-13T04:36:02.2697261Z   ...
+2026-10-13T04:36:02.2697884Z # Subtest: exact CSV retains all occurrences, original order, planned/actual dates and literal source text
+2026-10-13T04:36:02.2698985Z ok 80 - exact CSV retains all occurrences, original order, planned/actual dates and literal source text
+2026-10-13T04:36:02.2699698Z   ---
+2026-10-13T04:36:02.2699977Z   duration_ms: 6.549164
+2026-10-13T04:36:02.2700297Z   type: 'test'
+2026-10-13T04:36:02.2700579Z   ...
+2026-10-13T04:36:02.2701145Z # Subtest: source labels follow unchanged saved-week admission without inferred authenticity
+2026-10-13T04:36:02.2702246Z ok 81 - source labels follow unchanged saved-week admission without inferred authenticity
+2026-10-13T04:36:02.2702908Z   ---
+2026-10-13T04:36:02.2703395Z   duration_ms: 4.930047
+2026-10-13T04:36:02.2703721Z   type: 'test'
+2026-10-13T04:36:02.2703997Z   ...
+2026-10-13T04:36:02.2704468Z # Subtest: an admitted week with zero occurrences produces only its exact header
+2026-10-13T04:36:02.2705246Z ok 82 - an admitted week with zero occurrences produces only its exact header
+2026-10-13T04:36:02.2705705Z   ---
+2026-10-13T04:36:02.2705893Z   duration_ms: 0.990873
+2026-10-13T04:36:02.2706102Z   type: 'test'
+2026-10-13T04:36:02.2706289Z   ...
+2026-10-13T04:36:02.2706659Z # Subtest: identifiers and formula-like notes remain exact text, without spreadsheet inference
+2026-10-13T04:36:02.2707268Z ok 83 - identifiers and formula-like notes remain exact text, without spreadsheet inference
+2026-10-13T04:36:02.2707691Z   ---
+2026-10-13T04:36:02.2707892Z   duration_ms: 0.944043
+2026-10-13T04:36:02.2708115Z   type: 'test'
+2026-10-13T04:36:02.2708307Z   ...
+2026-10-13T04:36:02.2708592Z # Subtest: all original codec refusals happen before a CSV is returned
+2026-10-13T04:36:02.2709035Z ok 84 - all original codec refusals happen before a CSV is returned
+2026-10-13T04:36:02.2709361Z   ---
+2026-10-13T04:36:02.2709553Z   duration_ms: 2.027203
+2026-10-13T04:36:02.2709762Z   type: 'test'
+2026-10-13T04:36:02.2709954Z   ...
+2026-10-13T04:36:02.2710326Z # Subtest: a lone surrogate in an inherited pick is refused instead of silently replaced in UTF-8
+2026-10-13T04:36:02.2710919Z ok 85 - a lone surrogate in an inherited pick is refused instead of silently replaced in UTF-8
+2026-10-13T04:36:02.2711328Z   ---
+2026-10-13T04:36:02.2711521Z   duration_ms: 1.21106
+2026-10-13T04:36:02.2712019Z   type: 'test'
+2026-10-13T04:36:02.2712215Z   ...
+2026-10-13T04:36:02.2712514Z # Subtest: a BOM on a valid record is admitted and export stays deterministic
+2026-10-13T04:36:02.2713175Z ok 86 - a BOM on a valid record is admitted and export stays deterministic
+2026-10-13T04:36:02.2713523Z   ---
+2026-10-13T04:36:02.2713778Z   duration_ms: 1.436895
+2026-10-13T04:36:02.2714043Z   type: 'test'
+2026-10-13T04:36:02.2714241Z   ...
+2026-10-13T04:36:02.2714756Z # Subtest: actual command publishes complete CSV and byte-bound receipt without changing input
+2026-10-13T04:36:02.2715461Z ok 87 - actual command publishes complete CSV and byte-bound receipt without changing input
+2026-10-13T04:36:02.2716032Z   ---
+2026-10-13T04:36:02.2716224Z   duration_ms: 66.737761
+2026-10-13T04:36:02.2716519Z   type: 'test'
+2026-10-13T04:36:02.2716710Z   ...
+2026-10-13T04:36:02.2717207Z # Subtest: existing file, input alias and directory destinations refuse without replacement
+2026-10-13T04:36:02.2717775Z ok 88 - existing file, input alias and directory destinations refuse without replacement
+2026-10-13T04:36:02.2718172Z   ---
+2026-10-13T04:36:02.2718359Z   duration_ms: 177.881552
+2026-10-13T04:36:02.2718579Z   type: 'test'
+2026-10-13T04:36:02.2718806Z   ...
+2026-10-13T04:36:02.2719189Z # Subtest: invalid UTF-8, oversize, malformed or unsupported input never creates output
+2026-10-13T04:36:02.2719887Z ok 89 - invalid UTF-8, oversize, malformed or unsupported input never creates output
+2026-10-13T04:36:02.2720348Z   ---
+2026-10-13T04:36:02.2720569Z   duration_ms: 332.435841
+2026-10-13T04:36:02.2720866Z   type: 'test'
+2026-10-13T04:36:02.2721091Z   ...
+2026-10-13T04:36:02.2721432Z # Subtest: input BOM is decoded but receipt hashes exact original bytes
+2026-10-13T04:36:02.2722230Z ok 90 - input BOM is decoded but receipt hashes exact original bytes
+2026-10-13T04:36:02.2722757Z   ---
+2026-10-13T04:36:02.2723037Z   duration_ms: 55.030281
+2026-10-13T04:36:02.2723373Z   type: 'test'
+2026-10-13T04:36:02.2723657Z   ...
+2026-10-13T04:36:02.2724165Z # Subtest: two actual concurrent commands publish one complete file without overwrite
+2026-10-13T04:36:02.2725043Z ok 91 - two actual concurrent commands publish one complete file without overwrite
+2026-10-13T04:36:02.2725670Z   ---
+2026-10-13T04:36:02.2725943Z   duration_ms: 86.992515
+2026-10-13T04:36:02.2726287Z   type: 'test'
+2026-10-13T04:36:02.2726564Z   ...
+2026-10-13T04:36:02.2727110Z # Subtest: argument, missing-file, non-file and missing-parent refusals leave source intact
+2026-10-13T04:36:02.2728219Z ok 92 - argument, missing-file, non-file and missing-parent refusals leave source intact
+2026-10-13T04:36:02.2728866Z   ---
+2026-10-13T04:36:02.2729153Z   duration_ms: 394.851649
+2026-10-13T04:36:02.2729486Z   type: 'test'
+2026-10-13T04:36:02.2729819Z   ...
+2026-10-13T04:36:02.2730417Z # Subtest: publication failure removes its private stage and preserves another writer's destination
+2026-10-13T04:36:02.2731452Z ok 93 - publication failure removes its private stage and preserves another writer's destination
+2026-10-13T04:36:02.2732285Z   ---
+2026-10-13T04:36:02.2732552Z   duration_ms: 50.309334
+2026-10-13T04:36:02.2732893Z   type: 'test'
+2026-10-13T04:36:02.2733176Z   ...
+2026-10-13T04:36:02.2733740Z # Subtest: failed final cleanup reports the completed file rather than claiming no publication
+2026-10-13T04:36:02.2734535Z ok 94 - failed final cleanup reports the completed file rather than claiming no publication
+2026-10-13T04:36:02.2734955Z   ---
+2026-10-13T04:36:02.2735234Z   duration_ms: 46.789102
+2026-10-13T04:36:02.2735458Z   type: 'test'
+2026-10-13T04:36:02.2735649Z   ...
+2026-10-13T04:36:02.2736026Z # Subtest: caregiver brief carries exact date transitions, counts and original occurrence identity
+2026-10-13T04:36:02.2736644Z ok 95 - caregiver brief carries exact date transitions, counts and original occurrence identity
+2026-10-13T04:36:02.2737060Z   ---
+2026-10-13T04:36:02.2737245Z   duration_ms: 13.270254
+2026-10-13T04:36:02.2737462Z   type: 'test'
+2026-10-13T04:36:02.2737651Z   ...
+2026-10-13T04:36:02.2737998Z # Subtest: chosen-week shifts include actual dates, even when weekday assignments are unchanged
+2026-10-13T04:36:02.2738725Z ok 96 - chosen-week shifts include actual dates, even when weekday assignments are unchanged
+2026-10-13T04:36:02.2739134Z   ---
+2026-10-13T04:36:02.2739319Z   duration_ms: 3.804214
+2026-10-13T04:36:02.2739535Z   type: 'test'
+2026-10-13T04:36:02.2739740Z   ...
+2026-10-13T04:36:02.2740064Z # Subtest: repeated venue names and IDs never collapse distinct original occurrences
+2026-10-13T04:36:02.2740696Z ok 97 - repeated venue names and IDs never collapse distinct original occurrences
+2026-10-13T04:36:02.2741360Z   ---
+2026-10-13T04:36:02.2741799Z   duration_ms: 5.641475
+2026-10-13T04:36:02.2742132Z   type: 'test'
+2026-10-13T04:36:02.2742417Z   ...
+2026-10-13T04:36:02.2743013Z # Subtest: changed source, profile, received time or calendar identity refuses an actionable brief
+2026-10-13T04:36:02.2744058Z ok 98 - changed source, profile, received time or calendar identity refuses an actionable brief
+2026-10-13T04:36:02.2744770Z   ---
+2026-10-13T04:36:02.2745055Z   duration_ms: 11.633931
+2026-10-13T04:36:02.2745399Z   type: 'test'
+2026-10-13T04:36:02.2745708Z   ...
+2026-10-13T04:36:02.2746206Z # Subtest: unchanged, all-off and empty plans have explicit, useful brief states
+2026-10-13T04:36:02.2747050Z ok 99 - unchanged, all-off and empty plans have explicit, useful brief states
+2026-10-13T04:36:02.2747666Z   ---
+2026-10-13T04:36:02.2747952Z   duration_ms: 11.294927
+2026-10-13T04:36:02.2748299Z   type: 'test'
+2026-10-13T04:36:02.2748631Z   ...
+2026-10-13T04:36:02.2749209Z # Subtest: unknown/live source labels and legacy null identities stay explicit
+2026-10-13T04:36:02.2750063Z ok 100 - unknown/live source labels and legacy null identities stay explicit
+2026-10-13T04:36:02.2750676Z   ---
+2026-10-13T04:36:02.2750966Z   duration_ms: 7.677951
+2026-10-13T04:36:02.2751307Z   type: 'test'
+2026-10-13T04:36:02.2751785Z   ...
+2026-10-13T04:36:02.2752334Z # Subtest: literal Unicode and embedded controls remain quoted data in the text artifact
+2026-10-13T04:36:02.2753268Z ok 101 - literal Unicode and embedded controls remain quoted data in the text artifact
+2026-10-13T04:36:02.2753919Z   ---
+2026-10-13T04:36:02.2754223Z   duration_ms: 8.417751
+2026-10-13T04:36:02.2754557Z   type: 'test'
+2026-10-13T04:36:02.2754859Z   ...
+2026-10-13T04:36:02.2755488Z # Subtest: codec-created copies compare exact moves, omissions and inclusion without mutating inputs
+2026-10-13T04:36:02.2756834Z ok 102 - codec-created copies compare exact moves, omissions and inclusion without mutating inputs
+2026-10-13T04:36:02.2757572Z   ---
+2026-10-13T04:36:02.2757870Z   duration_ms: 9.636392
+2026-10-13T04:36:02.2758224Z   type: 'test'
+2026-10-13T04:36:02.2758520Z   ...
+2026-10-13T04:36:02.2782194Z # Subtest: different chosen weeks compare actual dates through the year boundary
+2026-10-13T04:36:02.2783173Z ok 103 - different chosen weeks compare actual dates through the year boundary
+2026-10-13T04:36:02.2783775Z   ---
+2026-10-13T04:36:02.2784048Z   duration_ms: 3.214478
+2026-10-13T04:36:02.2784389Z   type: 'test'
+2026-10-13T04:36:02.2784660Z   ...
+2026-10-13T04:36:02.2785143Z # Subtest: repeated venue identities retain original occurrence mapping
+2026-10-13T04:36:02.2785901Z ok 104 - repeated venue identities retain original occurrence mapping
+2026-10-13T04:36:02.2786443Z   ---
+2026-10-13T04:36:02.2786651Z   duration_ms: 3.758476
+2026-10-13T04:36:02.2786875Z   type: 'test'
+2026-10-13T04:36:02.2787070Z   ...
+2026-10-13T04:36:02.2787471Z # Subtest: changed response, profile, timestamp or calendar identity prevents inferred movement
+2026-10-13T04:36:02.2788271Z ok 105 - changed response, profile, timestamp or calendar identity prevents inferred movement
+2026-10-13T04:36:02.2788890Z   ---
+2026-10-13T04:36:02.2789114Z   duration_ms: 4.625534
+2026-10-13T04:36:02.2789328Z   type: 'test'
+2026-10-13T04:36:02.2789555Z   ...
+2026-10-13T04:36:02.2790041Z # Subtest: JSON property order is immaterial, source array order is not
+2026-10-13T04:36:02.2790778Z ok 106 - JSON property order is immaterial, source array order is not
+2026-10-13T04:36:02.2791292Z   ---
+2026-10-13T04:36:02.2791725Z   duration_ms: 2.207832
+2026-10-13T04:36:02.2792070Z   type: 'test'
+2026-10-13T04:36:02.2792615Z   ...
+2026-10-13T04:36:02.2793106Z # Subtest: all-omitted arrangements and empty original plans have honest counts
+2026-10-13T04:36:02.2793894Z ok 107 - all-omitted arrangements and empty original plans have honest counts
+2026-10-13T04:36:02.2794499Z   ---
+2026-10-13T04:36:02.2794824Z   duration_ms: 4.539326
+2026-10-13T04:36:02.2795209Z   type: 'test'
+2026-10-13T04:36:02.2795545Z   ...
+2026-10-13T04:36:02.2795920Z # Subtest: unknown source and legacy null calendar IDs remain explicitly saved-source comparisons
+2026-10-13T04:36:02.2796558Z ok 108 - unknown source and legacy null calendar IDs remain explicitly saved-source comparisons
+2026-10-13T04:36:02.2796979Z   ---
+2026-10-13T04:36:02.2797165Z   duration_ms: 1.878362
+2026-10-13T04:36:02.2797379Z   type: 'test'
+2026-10-13T04:36:02.2797570Z   ...
+2026-10-13T04:36:02.2797885Z # Subtest: native response and edited occurrences round-trip across a new state
+2026-10-13T04:36:02.2798389Z ok 109 - native response and edited occurrences round-trip across a new state
+2026-10-13T04:36:02.2798741Z   ---
+2026-10-13T04:36:02.2798919Z   duration_ms: 7.567197
+2026-10-13T04:36:02.2799127Z   type: 'test'
+2026-10-13T04:36:02.2799327Z   ...
+2026-10-13T04:36:02.2799639Z # Subtest: resaving preserves the accepted source and new local arrangement
+2026-10-13T04:36:02.2800115Z ok 110 - resaving preserves the accepted source and new local arrangement
+2026-10-13T04:36:02.2800468Z   ---
+2026-10-13T04:36:02.2800650Z   duration_ms: 4.106974
+2026-10-13T04:36:02.2800865Z   type: 'test'
+2026-10-13T04:36:02.2801055Z   ...
+2026-10-13T04:36:02.2801353Z # Subtest: occurrence keys keep repeated entity IDs distinct after reopening
+2026-10-13T04:36:02.2802037Z ok 111 - occurrence keys keep repeated entity IDs distinct after reopening
+2026-10-13T04:36:02.2802401Z   ---
+2026-10-13T04:36:02.2802582Z   duration_ms: 1.115298
+2026-10-13T04:36:02.2802790Z   type: 'test'
+2026-10-13T04:36:02.2802972Z   ...
+2026-10-13T04:36:02.2803281Z # Subtest: UTF-8 JSON with BOM or different indentation preserves source values
+2026-10-13T04:36:02.2803769Z ok 112 - UTF-8 JSON with BOM or different indentation preserves source values
+2026-10-13T04:36:02.2804119Z   ---
+2026-10-13T04:36:02.2804462Z   duration_ms: 2.652593
+2026-10-13T04:36:02.2804676Z   type: 'test'
+2026-10-13T04:36:02.2804859Z   ...
+2026-10-13T04:36:02.2805145Z # Subtest: empty arrangements and unknown source remain usable snapshots
+2026-10-13T04:36:02.2805616Z ok 113 - empty arrangements and unknown source remain usable snapshots
+2026-10-13T04:36:02.2805952Z   ---
+2026-10-13T04:36:02.2806133Z   duration_ms: 2.745
+2026-10-13T04:36:02.2806347Z   type: 'test'
+2026-10-13T04:36:02.2806526Z   ...
+2026-10-13T04:36:02.2806807Z # Subtest: save refuses a derived week whose original evidence has changed
+2026-10-13T04:36:02.2807302Z ok 114 - save refuses a derived week whose original evidence has changed
+2026-10-13T04:36:02.2807660Z   ---
+2026-10-13T04:36:02.2807860Z   duration_ms: 2.275953
+2026-10-13T04:36:02.2808080Z   type: 'test'
+2026-10-13T04:36:02.2808280Z   ...
+2026-10-13T04:36:02.2808644Z # Subtest: malformed format, dates, timestamps and inconsistent source inputs fail
+2026-10-13T04:36:02.2809191Z ok 115 - malformed format, dates, timestamps and inconsistent source inputs fail
+2026-10-13T04:36:02.2809580Z   ---
+2026-10-13T04:36:02.2809780Z   duration_ms: 10.54275
+2026-10-13T04:36:02.2809991Z   type: 'test'
+2026-10-13T04:36:02.2810192Z   ...
+2026-10-13T04:36:02.2810566Z # Subtest: missing, additional or invalid occurrence assignments cannot silently drop picks
+2026-10-13T04:36:02.2811204Z ok 116 - missing, additional or invalid occurrence assignments cannot silently drop picks
+2026-10-13T04:36:02.2811860Z   ---
+2026-10-13T04:36:02.2812063Z   duration_ms: 7.604633
+2026-10-13T04:36:02.2812280Z   type: 'test'
+2026-10-13T04:36:02.2812484Z   ...
+2026-10-13T04:36:02.2812863Z # Subtest: saved files validate native response types before reaching HTML or late render fields
+2026-10-13T04:36:02.2813674Z ok 117 - saved files validate native response types before reaching HTML or late render fields
+2026-10-13T04:36:02.2814121Z   ---
+2026-10-13T04:36:02.2814350Z   duration_ms: 13.473385
+2026-10-13T04:36:02.2814588Z   type: 'test'
+2026-10-13T04:36:02.2814800Z   ...
+2026-10-13T04:36:02.2815196Z # Subtest: current native recovery traces retain null and list args with the checked partial plan
+2026-10-13T04:36:02.2815833Z ok 118 - current native recovery traces retain null and list args with the checked partial plan
+2026-10-13T04:36:02.2816290Z   ---
+2026-10-13T04:36:02.2816487Z   duration_ms: 2.188673
+2026-10-13T04:36:02.2816709Z   type: 'test'
+2026-10-13T04:36:02.2816892Z   ...
+2026-10-13T04:36:02.2817296Z # Subtest: initial week retains every suggestion and exposes all seven dates
+2026-10-13T04:36:02.2817804Z ok 119 - initial week retains every suggestion and exposes all seven dates
+2026-10-13T04:36:02.2818170Z   ---
+2026-10-13T04:36:02.2818368Z   duration_ms: 5.535487
+2026-10-13T04:36:02.2818592Z   type: 'test'
+2026-10-13T04:36:02.2818797Z   ...
+2026-10-13T04:36:02.2819119Z # Subtest: move, omit and restore preserve source evidence and unrelated picks
+2026-10-13T04:36:02.2819621Z ok 120 - move, omit and restore preserve source evidence and unrelated picks
+2026-10-13T04:36:02.2819981Z   ---
+2026-10-13T04:36:02.2820178Z   duration_ms: 1.207585
+2026-10-13T04:36:02.2820399Z   type: 'test'
+2026-10-13T04:36:02.2820588Z   ...
+2026-10-13T04:36:02.2820891Z # Subtest: reset restores original assignments while keeping the chosen week
+2026-10-13T04:36:02.2821341Z ok 121 - reset restores original assignments while keeping the chosen week
+2026-10-13T04:36:02.2821817Z   ---
+2026-10-13T04:36:02.2821996Z   duration_ms: 0.580863
+2026-10-13T04:36:02.2822222Z   type: 'test'
+2026-10-13T04:36:02.2822438Z   ...
+2026-10-13T04:36:02.2822699Z # Subtest: calendar weeks handle leap days and year boundaries
+2026-10-13T04:36:02.2823090Z ok 122 - calendar weeks handle leap days and year boundaries
+2026-10-13T04:36:02.2823415Z   ---
+2026-10-13T04:36:02.2823593Z   duration_ms: 0.274568
+2026-10-13T04:36:02.2823818Z   type: 'test'
+2026-10-13T04:36:02.2824003Z   ...
+2026-10-13T04:36:02.2824460Z # Subtest: invalid dates and unknown transitions refuse without changing the plan
+2026-10-13T04:36:02.2825496Z ok 123 - invalid dates and unknown transitions refuse without changing the plan
+2026-10-13T04:36:02.2825929Z   ---
+2026-10-13T04:36:02.2826134Z   duration_ms: 0.991624
+2026-10-13T04:36:02.2826357Z   type: 'test'
+2026-10-13T04:36:02.2826576Z   ...
+2026-10-13T04:36:02.2826805Z # Subtest: source plan is a detached immutable snapshot
+2026-10-13T04:36:02.2827155Z ok 124 - source plan is a detached immutable snapshot
+2026-10-13T04:36:02.2827435Z   ---
+2026-10-13T04:36:02.2827615Z   duration_ms: 0.382278
+2026-10-13T04:36:02.2827817Z   type: 'test'
+2026-10-13T04:36:02.2827995Z   ...
+2026-10-13T04:36:02.2828333Z # Subtest: empty and partial plans remain honest and rejected candidates cannot be scheduled
+2026-10-13T04:36:02.2828910Z ok 125 - empty and partial plans remain honest and rejected candidates cannot be scheduled
+2026-10-13T04:36:02.2829314Z   ---
+2026-10-13T04:36:02.2829491Z   duration_ms: 0.462707
+2026-10-13T04:36:02.2829694Z   type: 'test'
+2026-10-13T04:36:02.2829911Z   ...
+2026-10-13T04:36:02.2830226Z # Subtest: duplicate source IDs remain distinct suggestions through scheduling
+2026-10-13T04:36:02.2830734Z ok 126 - duplicate source IDs remain distinct suggestions through scheduling
+2026-10-13T04:36:02.2831094Z   ---
+2026-10-13T04:36:02.2831276Z   duration_ms: 0.391281
+2026-10-13T04:36:02.2831481Z   type: 'test'
+2026-10-13T04:36:02.2831901Z   ...
+2026-10-13T04:36:02.2832185Z # Subtest: mode is retained explicitly and absence is never labeled live
+2026-10-13T04:36:02.2832633Z ok 127 - mode is retained explicitly and absence is never labeled live
+2026-10-13T04:36:02.2832965Z   ---
+2026-10-13T04:36:02.2833142Z   duration_ms: 0.831365
+2026-10-13T04:36:02.2833345Z   type: 'test'
+2026-10-13T04:36:02.2833527Z   ...
+2026-10-13T04:36:02.2833792Z # Subtest: missing source identity cannot create a local suggestion
+2026-10-13T04:36:02.2834363Z ok 128 - missing source identity cannot create a local suggestion
+2026-10-13T04:36:02.2834692Z   ---
+2026-10-13T04:36:02.2834871Z   duration_ms: 0.628724
+2026-10-13T04:36:02.2835086Z   type: 'test'
+2026-10-13T04:36:02.2835272Z   ...
+2026-10-13T04:36:02.2835632Z # Subtest: calendar arithmetic stays stable across time zones and daylight-saving boundaries
+2026-10-13T04:36:02.2836218Z ok 129 - calendar arithmetic stays stable across time zones and daylight-saving boundaries
+2026-10-13T04:36:02.2836633Z   ---
+2026-10-13T04:36:02.2836815Z   duration_ms: 92.356508
+2026-10-13T04:36:02.2837033Z   type: 'test'
+2026-10-13T04:36:02.2837215Z   ...
+2026-10-13T04:36:02.2837557Z # Subtest: edited arrangement uses the saved seven dates and retains each original occurrence
+2026-10-13T04:36:02.2838125Z ok 130 - edited arrangement uses the saved seven dates and retains each original occurrence
+2026-10-13T04:36:02.2838527Z   ---
+2026-10-13T04:36:02.2838705Z   duration_ms: 6.708381
+2026-10-13T04:36:02.2838923Z   type: 'test'
+2026-10-13T04:36:02.2839107Z   ...
+2026-10-13T04:36:02.2839400Z # Subtest: repeated venues remain distinct scheduled and omitted occurrences
+2026-10-13T04:36:02.2839875Z ok 131 - repeated venues remain distinct scheduled and omitted occurrences
+2026-10-13T04:36:02.2840230Z   ---
+2026-10-13T04:36:02.2840407Z   duration_ms: 1.954795
+2026-10-13T04:36:02.2840607Z   type: 'test'
+2026-10-13T04:36:02.2840789Z   ...
+2026-10-13T04:36:02.2841122Z # Subtest: all-omitted and empty files remain readable without inventing a scheduled visit
+2026-10-13T04:36:02.2841857Z ok 132 - all-omitted and empty files remain readable without inventing a scheduled visit
+2026-10-13T04:36:02.2842250Z   ---
+2026-10-13T04:36:02.2842432Z   duration_ms: 3.014731
+2026-10-13T04:36:02.2842638Z   type: 'test'
+2026-10-13T04:36:02.2842817Z   ...
+2026-10-13T04:36:02.2843157Z # Subtest: mock, live and unknown labels describe saved source rather than fresh verification
+2026-10-13T04:36:02.2843733Z ok 133 - mock, live and unknown labels describe saved source rather than fresh verification
+2026-10-13T04:36:02.2844139Z   ---
+2026-10-13T04:36:02.2844321Z   duration_ms: 3.981147
+2026-10-13T04:36:02.2844527Z   type: 'test'
+2026-10-13T04:36:02.2844865Z   ...
+2026-10-13T04:36:02.2845224Z # Subtest: source timestamps, constraint text, zero affinity and incomplete notes are preserved
+2026-10-13T04:36:02.2845830Z ok 134 - source timestamps, constraint text, zero affinity and incomplete notes are preserved
+2026-10-13T04:36:02.2846266Z   ---
+2026-10-13T04:36:02.2846450Z   duration_ms: 1.7491
+2026-10-13T04:36:02.2846657Z   type: 'test'
+2026-10-13T04:36:02.2846838Z   ...
+2026-10-13T04:36:02.2847197Z # Subtest: all file-controlled text stays literal, including markup, quotes, Unicode and newlines
+2026-10-13T04:36:02.2847794Z ok 135 - all file-controlled text stays literal, including markup, quotes, Unicode and newlines
+2026-10-13T04:36:02.2848198Z   ---
+2026-10-13T04:36:02.2848392Z   duration_ms: 1.654329
+2026-10-13T04:36:02.2848612Z   type: 'test'
+2026-10-13T04:36:02.2848810Z   ...
+2026-10-13T04:36:02.2849176Z # Subtest: the canonical codec rejects malformed files and changed source/arrangement agreement
+2026-10-13T04:36:02.2849755Z ok 136 - the canonical codec rejects malformed files and changed source/arrangement agreement
+2026-10-13T04:36:02.2850164Z   ---
+2026-10-13T04:36:02.2850369Z   duration_ms: 5.564721
+2026-10-13T04:36:02.2850583Z   type: 'test'
+2026-10-13T04:36:02.2850768Z   ...
+2026-10-13T04:36:02.2851120Z # Subtest: the same saved bytes yield a deterministic report with a literal source filename
+2026-10-13T04:36:02.2851868Z ok 137 - the same saved bytes yield a deterministic report with a literal source filename
+2026-10-13T04:36:02.2852290Z   ---
+2026-10-13T04:36:02.2852480Z   duration_ms: 3.741752
+2026-10-13T04:36:02.2852685Z   type: 'test'
+2026-10-13T04:36:02.2852976Z   ...
+2026-10-13T04:36:02.2853446Z # Subtest: carriage returns and valid surrogate pairs retain their literal report text
+2026-10-13T04:36:02.2854474Z ok 138 - carriage returns and valid surrogate pairs retain their literal report text
+2026-10-13T04:36:02.2855119Z   ---
+2026-10-13T04:36:02.2855390Z   duration_ms: 2.405536
+2026-10-13T04:36:02.2855732Z   type: 'test'
+2026-10-13T04:36:02.2856031Z   ...
+2026-10-13T04:36:02.2856808Z # Subtest: displayed NUL and unpaired surrogates admitted by the codec refuse HTML export
+2026-10-13T04:36:02.2857548Z ok 139 - displayed NUL and unpaired surrogates admitted by the codec refuse HTML export
+2026-10-13T04:36:02.2857947Z   ---
+2026-10-13T04:36:02.2858142Z   duration_ms: 39.568299
+2026-10-13T04:36:02.2858373Z   type: 'test'
+2026-10-13T04:36:02.2858673Z   ...
+2026-10-13T04:36:02.2859046Z # Subtest: questions use the native purpose and constraints; original unknown explanation survives
+2026-10-13T04:36:02.2859656Z ok 140 - questions use the native purpose and constraints; original unknown explanation survives
+2026-10-13T04:36:02.2860070Z   ---
+2026-10-13T04:36:02.2860254Z   duration_ms: 2.841873
+2026-10-13T04:36:02.2860472Z   type: 'test'
+2026-10-13T04:36:02.2860665Z   ...
+2026-10-13T04:36:02.2861028Z # Subtest: a different date starts a separate note; returning restores only that occurrence's note
+2026-10-13T04:36:02.2861785Z ok 141 - a different date starts a separate note; returning restores only that occurrence's note
+2026-10-13T04:36:02.2862209Z   ---
+2026-10-13T04:36:02.2862393Z   duration_ms: 0.944453
+2026-10-13T04:36:02.2862606Z   type: 'test'
+2026-10-13T04:36:02.2862788Z   ...
+2026-10-13T04:36:02.2863116Z # Subtest: two occurrences sharing an entity and date retain distinct caregiver notes
+2026-10-13T04:36:02.2863649Z ok 142 - two occurrences sharing an entity and date retain distinct caregiver notes
+2026-10-13T04:36:02.2864031Z   ---
+2026-10-13T04:36:02.2864213Z   duration_ms: 1.043741
+2026-10-13T04:36:02.2864433Z   type: 'test'
+2026-10-13T04:36:02.2864619Z   ...
+2026-10-13T04:36:02.2864981Z # Subtest: omitted picks have no active contact card or exported note, and restore retains its date
+2026-10-13T04:36:02.2865576Z ok 143 - omitted picks have no active contact card or exported note, and restore retains its date
+2026-10-13T04:36:02.2865988Z   ---
+2026-10-13T04:36:02.2866163Z   duration_ms: 0.950804
+2026-10-13T04:36:02.2866363Z   type: 'test'
+2026-10-13T04:36:02.2866843Z   ...
+2026-10-13T04:36:02.2867177Z # Subtest: another week has separate notes even when weekday and occurrence are unchanged
+2026-10-13T04:36:02.2867719Z ok 144 - another week has separate notes even when weekday and occurrence are unchanged
+2026-10-13T04:36:02.2868108Z   ---
+2026-10-13T04:36:02.2868289Z   duration_ms: 1.585807
+2026-10-13T04:36:02.2868493Z   type: 'test'
+2026-10-13T04:36:02.2868676Z   ...
+2026-10-13T04:36:02.2869024Z # Subtest: an identical newly accepted response cannot inherit or access the prior worksheet
+2026-10-13T04:36:02.2869592Z ok 145 - an identical newly accepted response cannot inherit or access the prior worksheet
+2026-10-13T04:36:02.2869993Z   ---
+2026-10-13T04:36:02.2870182Z   duration_ms: 0.42351
+2026-10-13T04:36:02.2870400Z   type: 'test'
+2026-10-13T04:36:02.2870601Z   ...
+2026-10-13T04:36:02.2870947Z # Subtest: source provenance cannot be relabeled while borrowing the original source objects
+2026-10-13T04:36:02.2871543Z ok 146 - source provenance cannot be relabeled while borrowing the original source objects
+2026-10-13T04:36:02.2872254Z   ---
+2026-10-13T04:36:02.2872445Z   duration_ms: 0.293967
+2026-10-13T04:36:02.2872668Z   type: 'test'
+2026-10-13T04:36:02.2872861Z   ...
+2026-10-13T04:36:02.2873191Z # Subtest: an event still carrying the old date cannot update the newly scheduled visit
+2026-10-13T04:36:02.2873724Z ok 147 - an event still carrying the old date cannot update the newly scheduled visit
+2026-10-13T04:36:02.2874107Z   ---
+2026-10-13T04:36:02.2874295Z   duration_ms: 0.439013
+2026-10-13T04:36:02.2874507Z   type: 'test'
+2026-10-13T04:36:02.2874704Z   ...
+2026-10-13T04:36:02.2875067Z # Subtest: the printable export carries exact source, dates and labeled multiline caregiver notes
+2026-10-13T04:36:02.2875864Z ok 148 - the printable export carries exact source, dates and labeled multiline caregiver notes
+2026-10-13T04:36:02.2876285Z   ---
+2026-10-13T04:36:02.2876472Z   duration_ms: 1.033186
+2026-10-13T04:36:02.2876676Z   type: 'test'
+2026-10-13T04:36:02.2876867Z   ...
+2026-10-13T04:36:02.2877184Z # Subtest: empty scheduled weeks cannot create an apparently populated call sheet
+2026-10-13T04:36:02.2877697Z ok 149 - empty scheduled weeks cannot create an apparently populated call sheet
+2026-10-13T04:36:02.2878068Z   ---
+2026-10-13T04:36:02.2878257Z   duration_ms: 0.651649
+2026-10-13T04:36:02.2878466Z   type: 'test'
+2026-10-13T04:36:02.2878653Z   ...
+2026-10-13T04:36:02.2878985Z # Subtest: unknown fields, status values and oversized notes do not modify a retained note
+2026-10-13T04:36:02.2879533Z ok 150 - unknown fields, status values and oversized notes do not modify a retained note
+2026-10-13T04:36:02.2879920Z   ---
+2026-10-13T04:36:02.2880097Z   duration_ms: 0.724036
+2026-10-13T04:36:02.2880304Z   type: 'test'
+2026-10-13T04:36:02.2880484Z   ...
+2026-10-13T04:36:02.2880852Z # Subtest: a reopened source retains its filename, age and unchanged-check label in the call sheet
+2026-10-13T04:36:02.2881458Z ok 151 - a reopened source retains its filename, age and unchanged-check label in the call sheet
+2026-10-13T04:36:02.2882147Z   ---
+2026-10-13T04:36:02.2882341Z   duration_ms: 0.487415
+2026-10-13T04:36:02.2882561Z   type: 'test'
+2026-10-13T04:36:02.2882759Z   ...
+2026-10-13T04:36:02.2883171Z # Subtest: editable questions remain literal, occurrence/date-bound text alongside unchanged source checks
+2026-10-13T04:36:02.2883851Z ok 152 - editable questions remain literal, occurrence/date-bound text alongside unchanged source checks
+2026-10-13T04:36:02.2884312Z   ---
+2026-10-13T04:36:02.2884503Z   duration_ms: 0.514315
+2026-10-13T04:36:02.2884724Z   type: 'test'
+2026-10-13T04:36:02.2884918Z   ...
+2026-10-13T04:36:02.2885333Z # Subtest: revising questions retains the earlier reply with its actual question context and a follow-up hold
+2026-10-13T04:36:02.2886022Z ok 153 - revising questions retains the earlier reply with its actual question context and a follow-up hold
+2026-10-13T04:36:02.2886469Z   ---
+2026-10-13T04:36:02.2886655Z   duration_ms: 1.236598
+2026-10-13T04:36:02.2887045Z   type: 'test'
+2026-10-13T04:36:02.2887233Z   ...
+2026-10-13T04:36:02.2887632Z # Subtest: unchanged questions preserve status; returning to the earlier questions removes only the mismatch
+2026-10-13T04:36:02.2888301Z ok 154 - unchanged questions preserve status; returning to the earlier questions removes only the mismatch
+2026-10-13T04:36:02.2888750Z   ---
+2026-10-13T04:36:02.2888945Z   duration_ms: 0.392273
+2026-10-13T04:36:02.2889157Z   type: 'test'
+2026-10-13T04:36:02.2889344Z   ...
+2026-10-13T04:36:02.2889650Z # Subtest: unchanged and explicitly default records have no content to protect
+2026-10-13T04:36:02.2890137Z ok 155 - unchanged and explicitly default records have no content to protect
+2026-10-13T04:36:02.2890485Z   ---
+2026-10-13T04:36:02.2890666Z   duration_ms: 2.311696
+2026-10-13T04:36:02.2890877Z   type: 'test'
+2026-10-13T04:36:02.2891058Z   ...
+2026-10-13T04:36:02.2891421Z # Subtest: each independently edited field arms protection and exact reversion releases it
+2026-10-13T04:36:02.2892334Z ok 156 - each independently edited field arms protection and exact reversion releases it
+2026-10-13T04:36:02.2892761Z   ---
+2026-10-13T04:36:02.2892949Z   duration_ms: 0.943042
+2026-10-13T04:36:02.2893175Z   type: 'test'
+2026-10-13T04:36:02.2893358Z   ...
+2026-10-13T04:36:02.2893681Z # Subtest: protection covers retained records beyond visible dates and omitted visits
+2026-10-13T04:36:02.2894223Z ok 157 - protection covers retained records beyond visible dates and omitted visits
+2026-10-13T04:36:02.2894611Z   ---
+2026-10-13T04:36:02.2894796Z   duration_ms: 0.427626
+2026-10-13T04:36:02.2895002Z   type: 'test'
+2026-10-13T04:36:02.2895185Z   ...
+2026-10-13T04:36:02.2895557Z # Subtest: accepted imports and empty replacement update protection without altering serialization
+2026-10-13T04:36:02.2896325Z ok 158 - accepted imports and empty replacement update protection without altering serialization
+2026-10-13T04:36:02.2896768Z   ---
+2026-10-13T04:36:02.2896951Z   duration_ms: 0.579241
+2026-10-13T04:36:02.2897169Z   type: 'test'
+2026-10-13T04:36:02.2897354Z   ...
+2026-10-13T04:36:02.2897672Z # Subtest: refused edits and invalid imports preserve the admitted note and protection
+2026-10-13T04:36:02.2898199Z ok 159 - refused edits and invalid imports preserve the admitted note and protection
+2026-10-13T04:36:02.2898572Z   ---
+2026-10-13T04:36:02.2898748Z   duration_ms: 0.638018
+2026-10-13T04:36:02.2898952Z   type: 'test'
+2026-10-13T04:36:02.2899134Z   ...
+2026-10-13T04:36:02.2899486Z # Subtest: question-history status remains meaningful even after restoring original questions
+2026-10-13T04:36:02.2900082Z ok 160 - question-history status remains meaningful even after restoring original questions
+2026-10-13T04:36:02.2900488Z   ---
+2026-10-13T04:36:02.2900677Z   duration_ms: 0.401958
+2026-10-13T04:36:02.2900886Z   type: 'test'
+2026-10-13T04:36:02.2901070Z   ...
+2026-10-13T04:36:02.2901423Z # Subtest: companion restores all exact records across reopening, omitted visits and other dates
+2026-10-13T04:36:02.2902232Z ok 161 - companion restores all exact records across reopening, omitted visits and other dates
+2026-10-13T04:36:02.2902651Z   ---
+2026-10-13T04:36:02.2902844Z   duration_ms: 10.012452
+2026-10-13T04:36:02.2903063Z   type: 'test'
+2026-10-13T04:36:02.2903256Z   ...
+2026-10-13T04:36:02.2903597Z # Subtest: same venue, day and visible name keep their separate original occurrence identities
+2026-10-13T04:36:02.2904148Z ok 162 - same venue, day and visible name keep their separate original occurrence identities
+2026-10-13T04:36:02.2904538Z   ---
+2026-10-13T04:36:02.2904721Z   duration_ms: 3.107469
+2026-10-13T04:36:02.2904929Z   type: 'test'
+2026-10-13T04:36:02.2905115Z   ...
+2026-10-13T04:36:02.2905430Z # Subtest: late invalid or duplicate records cannot partially replace current notes
+2026-10-13T04:36:02.2905949Z ok 163 - late invalid or duplicate records cannot partially replace current notes
+2026-10-13T04:36:02.2906317Z   ---
+2026-10-13T04:36:02.2906509Z   duration_ms: 1.146274
+2026-10-13T04:36:02.2906866Z   type: 'test'
+2026-10-13T04:36:02.2907054Z   ...
+2026-10-13T04:36:02.2907388Z # Subtest: unsupported field types and inconsistent reply history are refused literally
+2026-10-13T04:36:02.2907933Z ok 164 - unsupported field types and inconsistent reply history are refused literally
+2026-10-13T04:36:02.2908313Z   ---
+2026-10-13T04:36:02.2908496Z   duration_ms: 8.954609
+2026-10-13T04:36:02.2908707Z   type: 'test'
+2026-10-13T04:36:02.2908891Z   ...
+2026-10-13T04:36:02.2909264Z # Subtest: full origin equality accepts reordered JSON keys but refuses another request or response
+2026-10-13T04:36:02.2909884Z ok 165 - full origin equality accepts reordered JSON keys but refuses another request or response
+2026-10-13T04:36:02.2910314Z   ---
+2026-10-13T04:36:02.2910497Z   duration_ms: 4.879132
+2026-10-13T04:36:02.2910711Z   type: 'test'
+2026-10-13T04:36:02.2910897Z   ...
+2026-10-13T04:36:02.2911267Z # Subtest: bounded v1 file admission and explicit empty replacement preserve the original week codec
+2026-10-13T04:36:02.2912058Z ok 166 - bounded v1 file admission and explicit empty replacement preserve the original week codec
+2026-10-13T04:36:02.2912477Z   ---
+2026-10-13T04:36:02.2912662Z   duration_ms: 7.2468
+2026-10-13T04:36:02.2912876Z   type: 'test'
+2026-10-13T04:36:02.2913060Z   ...
+2026-10-13T04:36:02.2913423Z # Subtest: source-bound model guard and exact existing field limits remain in the new file boundary
+2026-10-13T04:36:02.2914010Z ok 167 - source-bound model guard and exact existing field limits remain in the new file boundary
+2026-10-13T04:36:02.2914420Z   ---
+2026-10-13T04:36:02.2914617Z   duration_ms: 2.091198
+2026-10-13T04:36:02.2914835Z   type: 'test'
+2026-10-13T04:36:02.2915023Z   ...
+2026-10-13T04:36:02.2915197Z 1..167
+2026-10-13T04:36:02.2915374Z # tests 167
+2026-10-13T04:36:02.2915558Z # suites 0
+2026-10-13T04:36:02.2915892Z # pass 159
+2026-10-13T04:36:02.2916083Z # fail 8
+2026-10-13T04:36:02.2916275Z # cancelled 0
+2026-10-13T04:36:02.2916471Z # skipped 0
+2026-10-13T04:36:02.2916659Z # todo 0
+2026-10-13T04:36:02.2916861Z # duration_ms 1803.823474
+2026-10-13T04:36:02.2929855Z ##[error]Process completed with exit code 1.
+2026-10-13T04:36:02.3072996Z Post job cleanup.
+2026-10-13T04:36:02.3942480Z [command]/usr/bin/git version
+2026-10-13T04:36:02.4002551Z git version 2.55.0
+2026-10-13T04:36:02.4026143Z Temporarily overriding HOME='/home/runner/work/_temp/98ad62cb-7f12-48a4-9b5a-04af70718d58' before making global git config changes
+2026-10-13T04:36:02.4027428Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-13T04:36:02.4030863Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tastetable/tastetable
+2026-10-13T04:36:02.4066949Z Removing SSH command configuration
+2026-10-13T04:36:02.4073825Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-13T04:36:02.4110618Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-13T04:36:02.4370947Z Removing HTTP extra header
+2026-10-13T04:36:02.4377073Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-13T04:36:02.4415063Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-13T04:36:02.4704267Z Removing includeIf entries pointing to credentials config files
+2026-10-13T04:36:02.4705193Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-13T04:36:02.4761170Z includeif.gitdir:/home/runner/work/tastetable/tastetable/.git.path
+2026-10-13T04:36:02.4762227Z includeif.gitdir:/home/runner/work/tastetable/tastetable/.git/worktrees/*.path
+2026-10-13T04:36:02.4762958Z includeif.gitdir:/github/workspace/.git.path
+2026-10-13T04:36:02.4763558Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-13T04:36:02.4775318Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/tastetable/tastetable/.git.path
+2026-10-13T04:36:02.4808336Z /home/runner/work/_temp/git-credentials-59328a49-98ad-4e80-90a7-4aafff4ab178.config
+2026-10-13T04:36:02.4823806Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/tastetable/tastetable/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-59328a49\-98ad\-4e80\-90a7\-4aafff4ab178\.config
+2026-10-13T04:36:02.4867290Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/tastetable/tastetable/.git/worktrees/*.path
+2026-10-13T04:36:02.4899522Z /home/runner/work/_temp/git-credentials-59328a49-98ad-4e80-90a7-4aafff4ab178.config
+2026-10-13T04:36:02.4908733Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/tastetable/tastetable/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-59328a49\-98ad\-4e80\-90a7\-4aafff4ab178\.config
+2026-10-13T04:36:02.4949226Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-13T04:36:02.4977867Z /github/runner_temp/git-credentials-59328a49-98ad-4e80-90a7-4aafff4ab178.config
+2026-10-13T04:36:02.4985258Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-59328a49\-98ad\-4e80\-90a7\-4aafff4ab178\.config
+2026-10-13T04:36:02.5022828Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-13T04:36:02.5050100Z /github/runner_temp/git-credentials-59328a49-98ad-4e80-90a7-4aafff4ab178.config
+2026-10-13T04:36:02.5058002Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-59328a49\-98ad\-4e80\-90a7\-4aafff4ab178\.config
+2026-10-13T04:36:02.5097334Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-13T04:36:02.5334979Z Removing credentials config '/home/runner/work/_temp/git-credentials-59328a49-98ad-4e80-90a7-4aafff4ab178.config'
+2026-10-13T04:36:02.5485081Z Cleaning up orphan processes

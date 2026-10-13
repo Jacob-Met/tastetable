@@ -1,0 +1,7 @@
+{
+  "chunk_id": "3547ad",
+  "wall_time_seconds": 0.089538121,
+  "exit_code": 0,
+  "original_token_count": 287,
+  "output": "(node:11) ExperimentalWarning: VM Modules is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n✔ both mounted features start without accepted data and only GET bootstrap is allowed (6.88459ms)\n✔ collection Open retires before the read and accepts exact source, duplicate occurrences and empty notes (35.082289ms)\n✔ handoff preparation and late preparation refusal do not change the accepted collection snapshot (9.896754ms)\n✔ explicit handoff Apply invalidates a held collection success and final capture uses the applied model/origin (6.630267ms)\n✔ a late collection failure cannot retire a newer accepted handoff (8.450126ms)\n✔ current collection refusal retains inputs but does not resurrect the retired plan or worksheet (9.088606ms)\n✔ cancel while a collection read is held invalidates its eventual success (7.233979ms)\n✔ invalid dates refuse capture; arrangement edits retain accepted source and notify handoff retirement (8.506381ms)\nℹ tests 8\nℹ suites 0\nℹ pass 8\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 195.876336\n"
+}
