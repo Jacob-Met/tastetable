@@ -18,6 +18,14 @@ Repeat `--profile` in the order you want to receive the plans. Choose one throug
 
 `--node /path/to/node` selects an existing Node executable when it is not on PATH. The week, output, and Node options may each appear only once. The output directory must already exist, and the filename must be unused.
 
+An explicit relative Node pathname, such as `--node ./toolchain/node`, is relative
+to the directory where you invoke the batch command. This also works when you
+invoke `tastetable_batch.py` by its full path from another directory. Both the
+week check and saved-week converter use that same selected executable. Pathnames
+retain parent components and symbolic-link behavior; they are not resolved to a
+different canonical path. A bare name such as `--node node` retains the existing
+PATH lookup. No executable is installed or downloaded.
+
 ## Receive the bundle
 
 Extract the ZIP and read `READ-ME.txt`. It names every requested input in order and clearly labels the whole bundle as all saved, partial, or no profiles saved. `index.json` carries the same status, counts, input labels, captured input byte hashes, output byte hashes, and per-input failure details.
@@ -55,6 +63,7 @@ A completed archive is published into an unused name. Existing files, directorie
 ```sh
 python3 -m unittest discover -s tests -p 'test_native_plan_batch.py' -v
 python3 -m unittest discover -s tests -p 'test_native_plan_cli.py' -v
+python3 -m unittest discover -s tests -p 'test_native_batch_node_path.py' -v
 ```
 
 The batch receiving suite requires an existing Node executable. It runs real producer and converter subprocesses, reopens every successful week through the native strict reader, and challenges input snapshots, partial results, publication races, partial writes, cleanup, and receipt delivery. It uses only authored synthetic profiles and explicit network refusal controls for Python producer processes.
