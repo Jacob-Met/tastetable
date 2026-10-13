@@ -1,0 +1,4599 @@
+{
+  "schema": "hamon.tastetable.comparison-zero-receiving.v1",
+  "source": {
+    "repository": "Jacob-Met/tastetable",
+    "issue": 105,
+    "qualified_base": "da02d3572099221b92372f8df573584c8e210b2d",
+    "qualified_tree": "b2cb38675f023ae337ba124b01cfeb5d6e0aeed0",
+    "candidate_app_blob": "9a34d0e4719bc472144c3ec966e609cc8fbf4626",
+    "candidate_test_blob": "f2c2edc21bae431cb2f4ea4ae710c681b0bd089f"
+  },
+  "scope": {
+    "production_change": "One comparison fallback operator: || to ??. Numeric zero remains visible; nullish fallback and Picks branch remain unchanged.",
+    "tests": "Three appended accepted-file cases in the maintained application-hook harness. Existing test prefix unchanged. Focused course includes unchanged saved-file codec tests.",
+    "runtime": "Independent local Chromium saved-file UI receiving with synthetic bootstrap health/persona responses. No native backend or provider execution, clinical claim, installed application update, deployment or full-suite claim."
+  },
+  "reviews": [
+    {
+      "reviewer": "/root/shared_context_delivery",
+      "scope": "Complete source/test inverse and unchanged prefix; original/candidate focused native results and source bindings approved."
+    },
+    {
+      "reviewer": "/root/runtime_delivery",
+      "scope": "Independent frozen original-first browser acceptance and candidate receiving; final packet readback follows."
+    }
+  ],
+  "native_roots": {
+    "author": "/home/jacob/hamon-source-taste-counts-20261013-ogkzztl0",
+    "independent_browser": "/home/jacob/hamon-runtime-tastetable-zero-20261013-tfg6odm0"
+  },
+  "publication_preservation": {
+    "base": "da02d3572099221b92372f8df573584c8e210b2d",
+    "base_tree": "b2cb38675f023ae337ba124b01cfeb5d6e0aeed0",
+    "base_leaves": 1040,
+    "existing_changed_paths": [
+      "static/app.js",
+      "tests/caregiver_collection_composition.test.mjs"
+    ],
+    "added_paths": [
+      "docs/comparison-zero-counts.md",
+      "docs/qualification/comparison-zero-counts-20261013/receiving.json"
+    ],
+    "unrelated_leaves_to_preserve": 1038
+  },
+  "author_receiving": {
+    "original": {
+      "source_commit": "da02d3572099221b92372f8df573584c8e210b2d",
+      "started": "2026-10-13T07:39:13.260639+00:00",
+      "finished": "2026-10-13T07:39:13.597568+00:00",
+      "command": [
+        "/usr/bin/node",
+        "--experimental-vm-modules",
+        "--test",
+        "--test-reporter=junit",
+        "tests/caregiver_collection_composition.test.mjs",
+        "tests/test_week_file.mjs"
+      ],
+      "exit_code": 1,
+      "tests": 21,
+      "failures": [
+        {
+          "name": "accepted comparison preserves zero evidence counts",
+          "failures": [
+            {
+              "type": "testCodeFailure",
+              "message": "Expected values to be strictly deep-equal:+ actual - expected... Skipped lines  [    [      'Picks',      '2',      '1'...      '2',+     '&mdash;'-     '0'    ],    [      'Has affinity evidence',      '2',+     '&mdash;'-     '0'    ],    [      'Constraint-checked',      '2',+     '&mdash;'-     '0'    ],    [      'Unsafe candidates caught',      '0',+     '&mdash;'-     '0'    ]  ]"
+            }
+          ]
+        },
+        {
+          "name": "accepted comparison preserves mixed zero and positive counts",
+          "failures": [
+            {
+              "type": "testCodeFailure",
+              "message": "Expected values to be strictly deep-equal:+ actual - expected... Skipped lines  [    [      'Picks',      '2',      '1'...      '2',+     '&mdash;'-     '0'    ],    [      'Has affinity evidence',      '2',      '1'...      '2',+     '&mdash;'-     '0'    ],    [      'Unsafe candidates caught',      '0',      '1'"
+            }
+          ]
+        }
+      ],
+      "stdout": {
+        "bytes": 7653,
+        "sha256": "fccc076dbd5772c7160ab6410f0d458e51be1fa89902670b1409ebaf49db8c78"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "inputs": [
+        {
+          "path": "static/app.js",
+          "blob": "1d5ac7bea1d7ee485ff5db20379d7c715c3df0d6",
+          "sha256": "2002efebe9dda5f6114ac3d6b84d4450714e36fa80a063fb6205a8637dfd6005",
+          "bytes": 22129,
+          "mode": "100644"
+        },
+        {
+          "path": "static/plan-request.js",
+          "blob": "b21276dda840fe6dd96a3bf3258a851970ff5e4d",
+          "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+          "bytes": 1420,
+          "mode": "100644"
+        },
+        {
+          "path": "static/week_plan.mjs",
+          "blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+          "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+          "bytes": 3913,
+          "mode": "100644"
+        },
+        {
+          "path": "static/week_file.mjs",
+          "blob": "420ddb8f63fca264dcf97be7147801105696155d",
+          "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+          "bytes": 6642,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/caregiver_collection_composition.test.mjs",
+          "blob": "3e5371488a37eab85de26fbb2d99ae5bcdbfc827",
+          "sha256": "baa6243b5e537ddb91216bb3f41bb4df6b4a662d139f982fcb1651e5511261b2",
+          "bytes": 14881,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_week_file.mjs",
+          "blob": "98c7fa65f00c08042f842012aa600096f9f238a3",
+          "sha256": "c3db4871054f7739e0377726a1a992e533a4edfc5b1b564c56cd6cfdc8765b38",
+          "bytes": 8639,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/fixtures/saved-week-response.json",
+          "blob": "eca4eee4d93d0046833fc798e6c34bf87879c858",
+          "sha256": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f",
+          "bytes": 12983,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/fixtures/saved-week-recovery.json",
+          "blob": "1d2086d31d8d832aa578bc6ef75fd75b3bc0fbff",
+          "sha256": "1b38b7449a3e6ca6111d36c9523262d715294f1e2aa397920659cf94b0c823f6",
+          "bytes": 11163,
+          "mode": "100644"
+        }
+      ],
+      "test_overlay": {
+        "path": "tests/caregiver_collection_composition.test.mjs",
+        "bytes": 16288,
+        "sha256": "57388deb3f87d871d42544026f48c8e222c2fb3a8bd441424dee4f237478e7fd",
+        "blob": "f2c2edc21bae431cb2f4ea4ae710c681b0bd089f"
+      },
+      "source_preserved": true
+    },
+    "candidate": {
+      "source_commit": "da02d3572099221b92372f8df573584c8e210b2d",
+      "node": "v22.22.1",
+      "started": "2026-10-13T07:43:14.085641+00:00",
+      "finished": "2026-10-13T07:43:14.430057+00:00",
+      "command": [
+        "/usr/bin/node",
+        "--experimental-vm-modules",
+        "--test",
+        "--test-reporter=junit",
+        "tests/caregiver_collection_composition.test.mjs",
+        "tests/test_week_file.mjs"
+      ],
+      "exit_code": 0,
+      "tests": 21,
+      "failures": [],
+      "stdout": {
+        "bytes": 2949,
+        "sha256": "88408b14a5490b294f252f74577b618720d21739a73422bfb797029e5ff2f662"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "executed_inputs": [
+        {
+          "path": "static/app.js",
+          "blob": "9a34d0e4719bc472144c3ec966e609cc8fbf4626",
+          "sha256": "1e328ff4185f0f5a671932bfcb5f906f99603fa48432684a6396e3097d199370",
+          "bytes": 22129,
+          "mode": "100644"
+        },
+        {
+          "path": "static/plan-request.js",
+          "blob": "b21276dda840fe6dd96a3bf3258a851970ff5e4d",
+          "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+          "bytes": 1420,
+          "mode": "100644"
+        },
+        {
+          "path": "static/week_plan.mjs",
+          "blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+          "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+          "bytes": 3913,
+          "mode": "100644"
+        },
+        {
+          "path": "static/week_file.mjs",
+          "blob": "420ddb8f63fca264dcf97be7147801105696155d",
+          "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+          "bytes": 6642,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/caregiver_collection_composition.test.mjs",
+          "blob": "f2c2edc21bae431cb2f4ea4ae710c681b0bd089f",
+          "sha256": "57388deb3f87d871d42544026f48c8e222c2fb3a8bd441424dee4f237478e7fd",
+          "bytes": 16288,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_week_file.mjs",
+          "blob": "98c7fa65f00c08042f842012aa600096f9f238a3",
+          "sha256": "c3db4871054f7739e0377726a1a992e533a4edfc5b1b564c56cd6cfdc8765b38",
+          "bytes": 8639,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/fixtures/saved-week-response.json",
+          "blob": "eca4eee4d93d0046833fc798e6c34bf87879c858",
+          "sha256": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f",
+          "bytes": 12983,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/fixtures/saved-week-recovery.json",
+          "blob": "1d2086d31d8d832aa578bc6ef75fd75b3bc0fbff",
+          "sha256": "1b38b7449a3e6ca6111d36c9523262d715294f1e2aa397920659cf94b0c823f6",
+          "bytes": 11163,
+          "mode": "100644"
+        }
+      ],
+      "source_preserved": true,
+      "original_preserved": true,
+      "existing_tests_preserved": true
+    },
+    "original_stdout_xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<testsuites>\n\t<testcase name=\"both mounted features start without accepted data and only GET bootstrap is allowed\" time=\"0.006760\" classname=\"test\"/>\n\t<testcase name=\"collection Open retires before the read and accepts exact source, duplicate occurrences and empty notes\" time=\"0.034862\" classname=\"test\"/>\n\t<testcase name=\"handoff preparation and late preparation refusal do not change the accepted collection snapshot\" time=\"0.008748\" classname=\"test\"/>\n\t<testcase name=\"explicit handoff Apply invalidates a held collection success and final capture uses the applied model/origin\" time=\"0.006570\" classname=\"test\"/>\n\t<testcase name=\"a late collection failure cannot retire a newer accepted handoff\" time=\"0.006406\" classname=\"test\"/>\n\t<testcase name=\"current collection refusal retains inputs but does not resurrect the retired plan or worksheet\" time=\"0.008410\" classname=\"test\"/>\n\t<testcase name=\"cancel while a collection read is held invalidates its eventual success\" time=\"0.007253\" classname=\"test\"/>\n\t<testcase name=\"invalid dates refuse capture; arrangement edits retain accepted source and notify handoff retirement\" time=\"0.007900\" classname=\"test\"/>\n\t<testcase name=\"accepted comparison preserves zero evidence counts\" time=\"0.008359\" classname=\"test\" failure=\"Expected values to be strictly deep-equal:+ actual - expected... Skipped lines  [    [      'Picks',      '2',      '1'...      '2',+     '&amp;mdash;'-     '0'    ],    [      'Has affinity evidence',      '2',+     '&amp;mdash;'-     '0'    ],    [      'Constraint-checked',      '2',+     '&amp;mdash;'-     '0'    ],    [      'Unsafe candidates caught',      '0',+     '&amp;mdash;'-     '0'    ]  ]\">\n\t\t<failure type=\"testCodeFailure\" message=\"Expected values to be strictly deep-equal:+ actual - expected... Skipped lines  [    [      'Picks',      '2',      '1'...      '2',+     '&amp;mdash;'-     '0'    ],    [      'Has affinity evidence',      '2',+     '&amp;mdash;'-     '0'    ],    [      'Constraint-checked',      '2',+     '&amp;mdash;'-     '0'    ],    [      'Unsafe candidates caught',      '0',+     '&amp;mdash;'-     '0'    ]  ]\">\n[Error [ERR_TEST_FAILURE]: Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  [\n    [\n      'Picks',\n      '2',\n      '1'\n...\n      '2',\n+     '&amp;mdash;'\n-     '0'\n    ],\n    [\n      'Has affinity evidence',\n      '2',\n+     '&amp;mdash;'\n-     '0'\n    ],\n    [\n      'Constraint-checked',\n      '2',\n+     '&amp;mdash;'\n-     '0'\n    ],\n    [\n      'Unsafe candidates caught',\n      '0',\n+     '&amp;mdash;'\n-     '0'\n    ]\n  ]\n] {\n  code: 'ERR_TEST_FAILURE',\n  failureType: 'testCodeFailure',\n  cause: AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n  + actual - expected\n  ... Skipped lines\n  \n    [\n      [\n        'Picks',\n        '2',\n        '1'\n  ...\n        '2',\n  +     '&amp;mdash;'\n  -     '0'\n      ],\n      [\n        'Has affinity evidence',\n        '2',\n  +     '&amp;mdash;'\n  -     '0'\n      ],\n      [\n        'Constraint-checked',\n        '2',\n  +     '&amp;mdash;'\n  -     '0'\n      ],\n      [\n        'Unsafe candidates caught',\n        '0',\n  +     '&amp;mdash;'\n  -     '0'\n      ]\n    ]\n  \n      at TestContext.&lt;anonymous> (file:///home/jacob/hamon-source-taste-counts-20261013-ogkzztl0/original-course/tests/caregiver_collection_composition.test.mjs:324:12)\n      at async Test.run (node:internal/test_runner/test:1054:7)\n      at async Test.processPendingSubtests (node:internal/test_runner/test:744:7) {\n    generatedMessage: true,\n    code: 'ERR_ASSERTION',\n    actual: [ [Array], [Array], [Array], [Array], [Array] ],\n    expected: [ [Array], [Array], [Array], [Array], [Array] ],\n    operator: 'deepStrictEqual',\n    diff: 'simple'\n  }\n}\n\t\t</failure>\n\t</testcase>\n\t<testcase name=\"accepted comparison preserves positive counts\" time=\"0.005759\" classname=\"test\"/>\n\t<testcase name=\"accepted comparison preserves mixed zero and positive counts\" time=\"0.006511\" classname=\"test\" failure=\"Expected values to be strictly deep-equal:+ actual - expected... Skipped lines  [    [      'Picks',      '2',      '1'...      '2',+     '&amp;mdash;'-     '0'    ],    [      'Has affinity evidence',      '2',      '1'...      '2',+     '&amp;mdash;'-     '0'    ],    [      'Unsafe candidates caught',      '0',      '1'\">\n\t\t<failure type=\"testCodeFailure\" message=\"Expected values to be strictly deep-equal:+ actual - expected... Skipped lines  [    [      'Picks',      '2',      '1'...      '2',+     '&amp;mdash;'-     '0'    ],    [      'Has affinity evidence',      '2',      '1'...      '2',+     '&amp;mdash;'-     '0'    ],    [      'Unsafe candidates caught',      '0',      '1'\">\n[Error [ERR_TEST_FAILURE]: Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  [\n    [\n      'Picks',\n      '2',\n      '1'\n...\n      '2',\n+     '&amp;mdash;'\n-     '0'\n    ],\n    [\n      'Has affinity evidence',\n      '2',\n      '1'\n...\n      '2',\n+     '&amp;mdash;'\n-     '0'\n    ],\n    [\n      'Unsafe candidates caught',\n      '0',\n      '1'\n] {\n  code: 'ERR_TEST_FAILURE',\n  failureType: 'testCodeFailure',\n  cause: AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n  + actual - expected\n  ... Skipped lines\n  \n    [\n      [\n        'Picks',\n        '2',\n        '1'\n  ...\n        '2',\n  +     '&amp;mdash;'\n  -     '0'\n      ],\n      [\n        'Has affinity evidence',\n        '2',\n        '1'\n  ...\n        '2',\n  +     '&amp;mdash;'\n  -     '0'\n      ],\n      [\n        'Unsafe candidates caught',\n        '0',\n        '1'\n  \n      at TestContext.&lt;anonymous> (file:///home/jacob/hamon-source-taste-counts-20261013-ogkzztl0/original-course/tests/caregiver_collection_composition.test.mjs:324:12)\n      at async Test.run (node:internal/test_runner/test:1054:7)\n      at async Test.processPendingSubtests (node:internal/test_runner/test:744:7) {\n    generatedMessage: true,\n    code: 'ERR_ASSERTION',\n    actual: [ [Array], [Array], [Array], [Array], [Array] ],\n    expected: [ [Array], [Array], [Array], [Array], [Array] ],\n    operator: 'deepStrictEqual',\n    diff: 'simple'\n  }\n}\n\t\t</failure>\n\t</testcase>\n\t<testcase name=\"native response and edited occurrences round-trip across a new state\" time=\"0.006382\" classname=\"test\"/>\n\t<testcase name=\"resaving preserves the accepted source and new local arrangement\" time=\"0.002749\" classname=\"test\"/>\n\t<testcase name=\"occurrence keys keep repeated entity IDs distinct after reopening\" time=\"0.001102\" classname=\"test\"/>\n\t<testcase name=\"UTF-8 JSON with BOM or different indentation preserves source values\" time=\"0.001597\" classname=\"test\"/>\n\t<testcase name=\"empty arrangements and unknown source remain usable snapshots\" time=\"0.002031\" classname=\"test\"/>\n\t<testcase name=\"save refuses a derived week whose original evidence has changed\" time=\"0.002256\" classname=\"test\"/>\n\t<testcase name=\"malformed format, dates, timestamps and inconsistent source inputs fail\" time=\"0.006501\" classname=\"test\"/>\n\t<testcase name=\"missing, additional or invalid occurrence assignments cannot silently drop picks\" time=\"0.004303\" classname=\"test\"/>\n\t<testcase name=\"saved files validate native response types before reaching HTML or late render fields\" time=\"0.008317\" classname=\"test\"/>\n\t<testcase name=\"current native recovery traces retain null and list args with the checked partial plan\" time=\"0.001500\" classname=\"test\"/>\n\t<!-- tests 21 -->\n\t<!-- suites 0 -->\n\t<!-- pass 19 -->\n\t<!-- fail 2 -->\n\t<!-- cancelled 0 -->\n\t<!-- skipped 0 -->\n\t<!-- todo 0 -->\n\t<!-- duration_ms 242.133683 -->\n</testsuites>\n",
+    "candidate_stdout_xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<testsuites>\n\t<testcase name=\"both mounted features start without accepted data and only GET bootstrap is allowed\" time=\"0.007723\" classname=\"test\"/>\n\t<testcase name=\"collection Open retires before the read and accepts exact source, duplicate occurrences and empty notes\" time=\"0.027804\" classname=\"test\"/>\n\t<testcase name=\"handoff preparation and late preparation refusal do not change the accepted collection snapshot\" time=\"0.008867\" classname=\"test\"/>\n\t<testcase name=\"explicit handoff Apply invalidates a held collection success and final capture uses the applied model/origin\" time=\"0.007775\" classname=\"test\"/>\n\t<testcase name=\"a late collection failure cannot retire a newer accepted handoff\" time=\"0.007759\" classname=\"test\"/>\n\t<testcase name=\"current collection refusal retains inputs but does not resurrect the retired plan or worksheet\" time=\"0.008659\" classname=\"test\"/>\n\t<testcase name=\"cancel while a collection read is held invalidates its eventual success\" time=\"0.007107\" classname=\"test\"/>\n\t<testcase name=\"invalid dates refuse capture; arrangement edits retain accepted source and notify handoff retirement\" time=\"0.008936\" classname=\"test\"/>\n\t<testcase name=\"accepted comparison preserves zero evidence counts\" time=\"0.007246\" classname=\"test\"/>\n\t<testcase name=\"accepted comparison preserves positive counts\" time=\"0.005965\" classname=\"test\"/>\n\t<testcase name=\"accepted comparison preserves mixed zero and positive counts\" time=\"0.005714\" classname=\"test\"/>\n\t<testcase name=\"native response and edited occurrences round-trip across a new state\" time=\"0.006230\" classname=\"test\"/>\n\t<testcase name=\"resaving preserves the accepted source and new local arrangement\" time=\"0.002931\" classname=\"test\"/>\n\t<testcase name=\"occurrence keys keep repeated entity IDs distinct after reopening\" time=\"0.001118\" classname=\"test\"/>\n\t<testcase name=\"UTF-8 JSON with BOM or different indentation preserves source values\" time=\"0.001522\" classname=\"test\"/>\n\t<testcase name=\"empty arrangements and unknown source remain usable snapshots\" time=\"0.002053\" classname=\"test\"/>\n\t<testcase name=\"save refuses a derived week whose original evidence has changed\" time=\"0.002118\" classname=\"test\"/>\n\t<testcase name=\"malformed format, dates, timestamps and inconsistent source inputs fail\" time=\"0.006923\" classname=\"test\"/>\n\t<testcase name=\"missing, additional or invalid occurrence assignments cannot silently drop picks\" time=\"0.004380\" classname=\"test\"/>\n\t<testcase name=\"saved files validate native response types before reaching HTML or late render fields\" time=\"0.008849\" classname=\"test\"/>\n\t<testcase name=\"current native recovery traces retain null and list args with the checked partial plan\" time=\"0.001499\" classname=\"test\"/>\n\t<!-- tests 21 -->\n\t<!-- suites 0 -->\n\t<!-- pass 21 -->\n\t<!-- fail 0 -->\n\t<!-- cancelled 0 -->\n\t<!-- skipped 0 -->\n\t<!-- todo 0 -->\n\t<!-- duration_ms 236.946121 -->\n</testsuites>\n",
+    "original_stderr": "",
+    "candidate_stderr": "",
+    "original_controller": "import hashlib,json,os,pathlib,subprocess,datetime,shutil\nROOT=pathlib.Path(__file__).resolve().parent\npacket=json.loads((ROOT/\"inputs.json\").read_text())\ndef h(b): return hashlib.sha256(b).hexdigest()\ndef blob(b): return hashlib.sha1(b\"blob \"+str(len(b)).encode()+b\"\\0\"+b).hexdigest()\ndef stamp(): return datetime.datetime.now(datetime.timezone.utc).isoformat()\noriginal=ROOT/\"original\"\ncourse=ROOT/\"original-course\"\noriginal.mkdir(mode=0o700);course.mkdir(mode=0o700)\nmanifest=[]\nfor path,entry in packet[\"inputs\"].items():\n    b=entry[\"content\"].encode()\n    assert blob(b)==entry[\"sha\"],path\n    for target in (original,course):\n        out=target/path;out.parent.mkdir(parents=True,exist_ok=True);out.write_bytes(b)\n    manifest.append(dict(path=path,blob=entry[\"sha\"],sha256=h(b),bytes=len(b),mode=entry[\"mode\"]))\ntestpath=\"tests/caregiver_collection_composition.test.mjs\"\nold=packet[\"inputs\"][testpath][\"content\"]\nassert packet[\"test\"].startswith(old)\n(course/testpath).write_text(packet[\"test\"])\ncommand=[\"/usr/bin/node\",\"--experimental-vm-modules\",\"--test\",\"--test-reporter=junit\",\"tests/caregiver_collection_composition.test.mjs\",\"tests/test_week_file.mjs\"]\nstarted=stamp()\np=subprocess.run(command,cwd=course,capture_output=True,timeout=90)\nfor name,b in ((\"stdout.xml\",p.stdout),(\"stderr.log\",p.stderr)):(ROOT/(\"original-\"+name)).write_bytes(b)\nimport xml.etree.ElementTree as ET\ntree=ET.fromstring(p.stdout)\ncases=tree.findall(\".//testcase\")\nfailures=[dict(name=x.attrib.get(\"name\"),failures=[c.attrib for c in x.findall(\"failure\")]) for x in cases if x.find(\"failure\") is not None]\nreceipt=dict(source_commit=packet[\"source_commit\"],started=started,finished=stamp(),command=command,exit_code=p.returncode,tests=len(cases),failures=failures,stdout=dict(bytes=len(p.stdout),sha256=h(p.stdout)),stderr=dict(bytes=len(p.stderr),sha256=h(p.stderr)),inputs=manifest,test_overlay=dict(path=testpath,bytes=len(packet[\"test\"].encode()),sha256=h(packet[\"test\"].encode()),blob=blob(packet[\"test\"].encode())),source_preserved=all((original/x[\"path\"]).read_bytes()==packet[\"inputs\"][x[\"path\"]][\"content\"].encode() for x in manifest))\n(ROOT/\"original-qualification.json\").write_text(json.dumps(receipt,indent=2)+\"\\n\")\nprint(json.dumps({k:v for k,v in receipt.items() if k not in (\"inputs\",)}))\n",
+    "candidate_controller": "import hashlib,json,pathlib,subprocess,datetime,xml.etree.ElementTree as ET\nROOT=pathlib.Path(__file__).resolve().parent\npacket=json.loads((ROOT/\"inputs.json\").read_text())\ndef h(b):return hashlib.sha256(b).hexdigest()\ndef blob(b):return hashlib.sha1(b\"blob \"+str(len(b)).encode()+b\"\\0\"+b).hexdigest()\ndef stamp():return datetime.datetime.now(datetime.timezone.utc).isoformat()\ncandidate=ROOT/\"candidate\";candidate.mkdir(mode=0o700)\napp=(ROOT/\"candidate-app.js\").read_bytes()\noriginal=packet[\"inputs\"][\"static/app.js\"][\"content\"].encode()\nassert original.count(b'c.llm_only[k] || \"&mdash;\"')==1\nassert app==original.replace(b'c.llm_only[k] || \"&mdash;\"',b'c.llm_only[k] ?? \"&mdash;\"')\nassert blob(app)==\"9a34d0e4719bc472144c3ec966e609cc8fbf4626\"\nmanifest=[]\nfor path,entry in packet[\"inputs\"].items():\n    b=entry[\"content\"].encode()\n    if path==\"static/app.js\":b=app\n    if path==\"tests/caregiver_collection_composition.test.mjs\":b=packet[\"test\"].encode()\n    out=candidate/path;out.parent.mkdir(parents=True,exist_ok=True);out.write_bytes(b)\n    manifest.append(dict(path=path,blob=blob(b),sha256=h(b),bytes=len(b),mode=entry[\"mode\"]))\ncommand=[\"/usr/bin/node\",\"--experimental-vm-modules\",\"--test\",\"--test-reporter=junit\",\"tests/caregiver_collection_composition.test.mjs\",\"tests/test_week_file.mjs\"]\nstarted=stamp();p=subprocess.run(command,cwd=candidate,capture_output=True,timeout=90)\nfor name,b in ((\"stdout.xml\",p.stdout),(\"stderr.log\",p.stderr)):(ROOT/(\"candidate-\"+name)).write_bytes(b)\ntree=ET.fromstring(p.stdout);cases=tree.findall(\".//testcase\")\nfailures=[x.attrib.get(\"name\") for x in cases if x.find(\"failure\") is not None]\nreceipt=dict(source_commit=packet[\"source_commit\"],node=subprocess.check_output([\"/usr/bin/node\",\"--version\"],text=True).strip(),started=started,finished=stamp(),command=command,exit_code=p.returncode,tests=len(cases),failures=failures,stdout=dict(bytes=len(p.stdout),sha256=h(p.stdout)),stderr=dict(bytes=len(p.stderr),sha256=h(p.stderr)),executed_inputs=manifest,source_preserved=all(blob((candidate/x[\"path\"]).read_bytes())==x[\"blob\"] for x in manifest),original_preserved=all((ROOT/\"original\"/k).read_bytes()==v[\"content\"].encode() for k,v in packet[\"inputs\"].items()),existing_tests_preserved=packet[\"test\"].startswith(packet[\"inputs\"][\"tests/caregiver_collection_composition.test.mjs\"][\"content\"]))\n(ROOT/\"candidate-qualification.json\").write_text(json.dumps(receipt,indent=2)+\"\\n\")\nprint(json.dumps(receipt))\nassert p.returncode==0 and not failures and len(cases)==21\n"
+  },
+  "independent_browser": {
+    "acceptance": {
+      "schema": 1,
+      "frozen_before_candidate_receipt": true,
+      "repository": "Jacob-Met/tastetable",
+      "base": "da02d3572099221b92372f8df573584c8e210b2d",
+      "app_blob": "1d5ac7bea1d7ee485ff5db20379d7c715c3df0d6",
+      "fixture_blob": "eca4eee4d93d0046833fc798e6c34bf87879c858",
+      "purpose": "Recorded numeric zero remains visible as 0 in the existing saved-week comparison. File admission and saved data remain unchanged.",
+      "scope": "Authored synthetic saved-week fixture, exact static source on loopback; synthetic health/persona boot endpoints only. No FastAPI, provider, care-quality, deployment or installation qualification.",
+      "keys": [
+        "picks",
+        "with_qloo_entity_id",
+        "with_affinity_evidence",
+        "constraint_checked",
+        "unsafe_candidates_rejected"
+      ],
+      "labels": [
+        "Picks",
+        "Tied to a Qloo entity ID",
+        "Has affinity evidence",
+        "Constraint-checked",
+        "Unsafe candidates caught"
+      ],
+      "cases": [
+        {
+          "id": "zero-desktop",
+          "file": "zero.json",
+          "width": 1280,
+          "valid": true,
+          "grounded": [
+            5,
+            5,
+            5,
+            5,
+            7
+          ],
+          "llm": [
+            5,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "positive-desktop",
+          "file": "positive.json",
+          "width": 1280,
+          "valid": true,
+          "grounded": [
+            5,
+            5,
+            5,
+            5,
+            7
+          ],
+          "llm": [
+            5,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "id": "missing-desktop",
+          "file": "missing.json",
+          "width": 1280,
+          "valid": false,
+          "prior": "positive.json"
+        },
+        {
+          "id": "null-desktop",
+          "file": "null.json",
+          "width": 1280,
+          "valid": false,
+          "prior": "zero.json"
+        },
+        {
+          "id": "zero-phone",
+          "file": "zero.json",
+          "width": 375,
+          "valid": true,
+          "grounded": [
+            5,
+            5,
+            5,
+            5,
+            7
+          ],
+          "llm": [
+            5,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "valid_checks": [
+        "normal file opening visible",
+        "row labels preserved",
+        "grounded counts exact",
+        "LLM-only counts exact",
+        "saved-file provenance retained",
+        "native downloaded response exact",
+        "native downloaded inputs and week exact",
+        "native downloaded source time and calendar identity exact",
+        "no external requests",
+        "no plan or other API calls",
+        "no browser errors",
+        "no automatic local/session storage"
+      ],
+      "invalid_checks": [
+        "prior valid file opened",
+        "missing/null count refused by unchanged numeric schema",
+        "prior result retired",
+        "save disabled",
+        "prior restored inputs retained",
+        "no external requests",
+        "no plan or other API calls",
+        "no browser errors",
+        "no automatic local/session storage"
+      ],
+      "policy": "Missing/null is invalid; it is not a valid dash-display fixture. Positive values are display-only variants of the authored fixture, not claims of verified checks. One actual browser course per source; no baseline rerun after candidate."
+    },
+    "freeze": {
+      "frozen_at": "2026-10-13T07:32:27.361969+00:00",
+      "base": "da02d3572099221b92372f8df573584c8e210b2d",
+      "source_manifest": {
+        "static/index.html": {
+          "bytes": 13247,
+          "sha256": "c5723c1c8ba1c7695c863a400805c5aa75e1f5cd3515cea1137318a96626c567",
+          "git_blob": "ee986de462854c00a2d2c465bf2bef0cca4379fb"
+        },
+        "static/app.js": {
+          "bytes": 22129,
+          "sha256": "2002efebe9dda5f6114ac3d6b84d4450714e36fa80a063fb6205a8637dfd6005",
+          "git_blob": "1d5ac7bea1d7ee485ff5db20379d7c715c3df0d6"
+        },
+        "static/style.css": {
+          "bytes": 5064,
+          "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+          "git_blob": "28df6c5229b6b592db33e929ae058fe514304af4"
+        },
+        "static/calendar.css": {
+          "bytes": 708,
+          "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+          "git_blob": "9e53b951316d841b86f0256cd2444a3ce547269f"
+        },
+        "static/calendar.js": {
+          "bytes": 15169,
+          "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+          "git_blob": "dbed22d2cb91090bccec9472fbffd2854eed2722"
+        },
+        "static/plan-request.js": {
+          "bytes": 1420,
+          "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+          "git_blob": "b21276dda840fe6dd96a3bf3258a851970ff5e4d"
+        },
+        "static/venue_followup.css": {
+          "bytes": 2166,
+          "sha256": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+          "git_blob": "dd88e221133be5281330cba11a6d141ae5e8d239"
+        },
+        "static/venue_followup.mjs": {
+          "bytes": 19991,
+          "sha256": "9cd974e794e17c87e3b51b4ba7820200ce820ae611c8565a5224d68790441d32",
+          "git_blob": "e19affca590d4b4d0d31a6fc11d5558173320133"
+        },
+        "static/venue_note_file.mjs": {
+          "bytes": 10435,
+          "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+          "git_blob": "f8406cb540d52222996c585666ae1a55a1030def"
+        },
+        "static/caregiver_handoff.mjs": {
+          "bytes": 11673,
+          "sha256": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+          "git_blob": "4286409b3fe932f61957ba72f5db918d18ff0751"
+        },
+        "static/saved_weeks.css": {
+          "bytes": 1097,
+          "sha256": "0663f31c567cd438101e11d44ff698e2fd5e17c31c232f7f23f43727ac51fa7f",
+          "git_blob": "c5b8a9f45a4f7e0ce93c46d7f814308cd1a99009"
+        },
+        "static/saved_week_ui.mjs": {
+          "bytes": 9555,
+          "sha256": "03f3580a1260aa4cec5b42076caa09650f3347b57efc42bfe6c51503d766eda7",
+          "git_blob": "5a281492002b61222c70ed9b4268150504d20b15"
+        },
+        "static/saved_week_store.mjs": {
+          "bytes": 6704,
+          "sha256": "8968ad85cc362af59f40b1d01d6123c725a8cd2037939e49c739b04495dce913",
+          "git_blob": "c525467f00521d7f4182fd57ca9a91e48c6b9e09"
+        },
+        "static/saved_weeks.mjs": {
+          "bytes": 3327,
+          "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3",
+          "git_blob": "0bb822cb6f75c376397c0f7d6d6de78035f865bc"
+        },
+        "static/week_file.mjs": {
+          "bytes": 6642,
+          "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+          "git_blob": "420ddb8f63fca264dcf97be7147801105696155d"
+        },
+        "static/week_plan.mjs": {
+          "bytes": 3913,
+          "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+          "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+        }
+      },
+      "original_fixture": {
+        "bytes": 12983,
+        "sha256": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f",
+        "git_blob": "eca4eee4d93d0046833fc798e6c34bf87879c858"
+      },
+      "acceptance": {
+        "bytes": 3095,
+        "sha256": "9a7f357f1c6033d15b6515f6125706d234d8b1f70f22b512a1b34029fc68324f",
+        "git_blob": "efde5951fdd1974d135a1249e68281491353c0ce"
+      },
+      "receiver": {
+        "bytes": 10791,
+        "sha256": "41036295ff70189da4f5f46a38de6e404ad617a4d3ab572d7f1ea3d8ca60d654",
+        "git_blob": "ba85bf058f27ed3e5fd513aea4849a72ed0d1daf"
+      },
+      "fixture_builder": {
+        "bytes": 1531,
+        "sha256": "5d84ea9c3bdb1d71c2e957a383ddbde1b72e811193689d7e4e35e2b083c84907",
+        "git_blob": "acb9f8bdf3e174a6db09adb106b8dbef19182e03"
+      },
+      "build_exit": 0,
+      "stdout": "{\"created\":[\"zero.json\",\"positive.json\",\"missing.json\",\"null.json\"],\"node\":\"v22.22.1\"}\n",
+      "stderr": "",
+      "fixtures": {
+        "zero.json": {
+          "bytes": 14607,
+          "sha256": "7c841aaa69d55c0c3b24f9c5e1d2c739f39d5f3ccf639541731d25f320e10d87",
+          "git_blob": "96e3373968f7df941b94a6c47ea6635b464041f2"
+        },
+        "missing.json": {
+          "bytes": 14574,
+          "sha256": "613d7ccf00d1c736b4d43f7c470144aca147277032621bcbb3cf74201f6c6985",
+          "git_blob": "15ec03bafb00ba0316c6939f225337ea1bb6530e"
+        },
+        "positive.json": {
+          "bytes": 14607,
+          "sha256": "9ad8b1d66a6925dc73309e0b5fc0d67d8627f97d0e86b82526594a41bde32d47",
+          "git_blob": "5426f7cdf0a019cf526c379ccba136bd72017ca3"
+        },
+        "null.json": {
+          "bytes": 14610,
+          "sha256": "489da5899232d4b72ddc10c5d4bcc1771110c4c38604298c072220121845f5d8",
+          "git_blob": "a48733dee2e301b7e357e3ad361669097d109ba8"
+        }
+      }
+    },
+    "receiver_python": "\"\"\"Independent saved-week UI receiver; exact source on loopback, synthetic boot API only.\"\"\"\nimport argparse, hashlib, json, mimetypes, os, platform, threading, traceback\nfrom datetime import datetime, timezone\nfrom http.server import BaseHTTPRequestHandler, ThreadingHTTPServer\nfrom pathlib import Path\nfrom urllib.parse import urlsplit\nfrom playwright.sync_api import sync_playwright\n\ndef now(): return datetime.now(timezone.utc).isoformat()\ndef identity(path):\n    b=path.read_bytes()\n    return {\"bytes\":len(b),\"sha256\":hashlib.sha256(b).hexdigest(),\"git_blob\":hashlib.sha1(b\"blob \"+str(len(b)).encode()+b\"\\0\"+b).hexdigest()}\ndef inventory(root): return {str(p.relative_to(root)):identity(p) for p in sorted(root.rglob(\"*\")) if p.is_file()}\nparser=argparse.ArgumentParser()\nparser.add_argument(\"--root\",type=Path,required=True)\nparser.add_argument(\"--source\",type=Path,required=True)\nparser.add_argument(\"--output\",type=Path,required=True)\nargs=parser.parse_args()\nroot=args.root.resolve(); source=args.source.resolve(); out=args.output\nout.mkdir(mode=0o700)\nacceptance=json.loads((root/\"acceptance.json\").read_text())\nbefore=inventory(source)\nrecord={\"schema\":1,\"started_at\":now(),\"scope\":acceptance[\"scope\"],\"base\":acceptance[\"base\"],\n        \"source\":str(source),\"source_before\":before,\"receiver\":identity(Path(__file__)),\n        \"acceptance\":identity(root/\"acceptance.json\"),\"fixture_files\":inventory(root/\"fixtures\"),\n        \"environment\":{\"python\":platform.python_version(),\"os\":platform.platform(),\n        \"isolation\":\"private launcher HOME/XDG/TMP; environment isolation, not an OS sandbox\",\n        \"chromium_sandbox\":False},\"cases\":[],\"server_requests\":[]}\nstatic={(\"/\"+p):source/p for p in before}\nstatic[\"/\"]=source/\"static/index.html\"\nclass Handler(BaseHTTPRequestHandler):\n    def log_message(self,*unused): pass\n    def do_GET(self):\n        path=urlsplit(self.path).path\n        record[\"server_requests\"].append({\"method\":\"GET\",\"path\":path})\n        if path==\"/api/health\": data=b'{\"qloo_mode\":\"mock\"}'; mime=\"application/json\"\n        elif path==\"/api/personas\": data=b\"[]\"; mime=\"application/json\"\n        elif path==\"/favicon.ico\": self.send_response(204);self.end_headers();return\n        elif path in static:\n            data=static[path].read_bytes()\n            mime=\"text/javascript\" if path.endswith((\".js\",\".mjs\")) else (mimetypes.guess_type(path)[0] or \"text/html\")\n        else: self.send_error(404);return\n        self.send_response(200); self.send_header(\"Content-Type\",mime+\"; charset=utf-8\")\n        self.send_header(\"Content-Length\",str(len(data)));self.end_headers();self.wfile.write(data)\n    def do_POST(self):\n        record[\"server_requests\"].append({\"method\":\"POST\",\"path\":urlsplit(self.path).path})\n        self.send_error(405)\nserver=ThreadingHTTPServer((\"127.0.0.1\",0),Handler)\norigin=\"http://127.0.0.1:\"+str(server.server_port)\nthread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()\nrecord[\"origin\"]=origin\ndef form(page):\n    return page.locator(\"#form\").evaluate(\"(f)=>({city:f.city.value,cuisines:f.cuisines.value,music:f.music.value,films:f.films.value,constraints:[...f.querySelectorAll('[name=constraints]:checked')].map(x=>x.value)})\")\ndef open_file(page,name):\n    with page.expect_file_chooser() as fc: page.locator(\"#openWeek\").click()\n    fc.value.set_files(root/\"fixtures\"/name)\n    page.wait_for_function(\"document.querySelector('#form').getAttribute('aria-busy')==='false'\")\n    return page.locator(\"#requestStatus\").inner_text()\ndef check(case,name,value,observed=None):\n    case[\"checks\"].append({\"name\":name,\"pass\":bool(value),\"observed\":observed})\ntry:\n    with sync_playwright() as pw:\n        browser=pw.chromium.launch(headless=True,chromium_sandbox=False)\n        record[\"environment\"][\"browser\"]=browser.version\n        for spec in acceptance[\"cases\"]:\n            case={\"id\":spec[\"id\"],\"width\":spec[\"width\"],\"checks\":[],\"requests\":[],\"external_requests\":[],\"errors\":[],\"assets\":{}}\n            record[\"cases\"].append(case)\n            context=browser.new_context(viewport={\"width\":spec[\"width\"],\"height\":900},accept_downloads=True,service_workers=\"block\")\n            page=context.new_page();responses=[]\n            def route_request(route):\n                url=route.request.url\n                if url.startswith(origin+\"/\"): route.continue_()\n                else:\n                    case[\"external_requests\"].append(url);route.abort()\n            context.route(\"**/*\",route_request)\n            page.on(\"request\",lambda r:case[\"requests\"].append({\"method\":r.method,\"url\":r.url}))\n            page.on(\"pageerror\",lambda e:case[\"errors\"].append(str(e)))\n            page.on(\"response\",lambda r:responses.append(r))\n            try:\n                page.goto(origin+\"/\",wait_until=\"networkidle\")\n                page.wait_for_function(\"document.querySelector('#mode').textContent.startsWith('Demo mode:')\")\n                if not spec[\"valid\"]:\n                    status=open_file(page,spec[\"prior\"])\n                    prior=form(page)\n                    check(case,acceptance[\"invalid_checks\"][0],status.startswith(\"Saved week opened.\") and page.locator(\"#results\").is_visible(),status)\n                status=open_file(page,spec[\"file\"])\n                case[\"status\"]=status\n                if spec[\"valid\"]:\n                    names=acceptance[\"valid_checks\"]\n                    check(case,names[0],status.startswith(\"Saved week opened.\") and page.locator(\"#results\").is_visible(),status)\n                    disclosure=page.locator(\"details.original-evidence\")\n                    if disclosure.get_attribute(\"open\") is None: disclosure.locator(\"summary\").first.click()\n                    rows=page.locator(\"#compare tr\").evaluate_all(\"(rs)=>rs.slice(1).map(r=>[...r.querySelectorAll('td')].map(c=>c.textContent.trim()))\")\n                    case[\"table_rows\"]=rows\n                    check(case,names[1],[r[0] for r in rows]==acceptance[\"labels\"],[r[0] for r in rows])\n                    check(case,names[2],[r[1] for r in rows]==list(map(str,spec[\"grounded\"])),[r[1] for r in rows])\n                    check(case,names[3],[r[2] for r in rows]==list(map(str,spec[\"llm\"])),[r[2] for r in rows])\n                    provenance=page.locator(\"#savedWeekSource\").inner_text()\n                    check(case,names[4],spec[\"file\"] in provenance and \"have not been run again\" in provenance,provenance)\n                    with page.expect_download() as download_info: page.locator(\"#saveWeek\").click()\n                    download=download_info.value\n                    download_path=out/(spec[\"id\"]+\"-resaved.json\");download.save_as(download_path)\n                    saved=json.loads(download_path.read_text()); original=json.loads((root/\"fixtures\"/spec[\"file\"]).read_text())\n                    case[\"download\"]={\"suggested_filename\":download.suggested_filename,**identity(download_path)}\n                    check(case,names[5],saved[\"response\"]==original[\"response\"])\n                    check(case,names[6],saved[\"inputs\"]==original[\"inputs\"] and saved[\"week\"]==original[\"week\"])\n                    check(case,names[7],saved[\"receivedAt\"]==original[\"receivedAt\"] and saved[\"calendarId\"]==original[\"calendarId\"])\n                    if spec[\"id\"].startswith(\"zero\"):\n                        picture=out/(spec[\"id\"]+\".png\")\n                        page.locator(\"#compare\").screenshot(path=picture)\n                        case[\"screenshot\"]={\"path\":str(picture),**identity(picture)}\n                    common=names[8:]\n                else:\n                    names=acceptance[\"invalid_checks\"]\n                    check(case,names[1],\"invalid comparison counts\" in status,status)\n                    check(case,names[2],page.locator(\"#results\").is_hidden())\n                    check(case,names[3],page.locator(\"#saveWeek\").is_disabled())\n                    check(case,names[4],form(page)==prior,form(page))\n                    common=names[5:]\n                storage=page.evaluate(\"({local:Object.keys(localStorage),session:Object.keys(sessionStorage)})\")\n                check(case,common[0],not case[\"external_requests\"],case[\"external_requests\"])\n                forbidden=[r for r in case[\"requests\"] if r[\"method\"]!=\"GET\" or (\"/api/\" in r[\"url\"] and urlsplit(r[\"url\"]).path not in [\"/api/health\",\"/api/personas\"])]\n                check(case,common[1],not forbidden,forbidden)\n                check(case,common[2],not case[\"errors\"],case[\"errors\"])\n                check(case,common[3],not storage[\"local\"] and not storage[\"session\"],storage)\n                for response in responses:\n                    path=urlsplit(response.url).path\n                    if path in static:\n                        data=response.body()\n                        relative=str(static[path].relative_to(source))\n                        case[\"assets\"][relative]={\"bytes\":len(data),\"sha256\":hashlib.sha256(data).hexdigest(),\"status\":response.status}\n                case[\"served_assets_exact\"]=all(before[p][\"bytes\"]==v[\"bytes\"] and before[p][\"sha256\"]==v[\"sha256\"] and v[\"status\"]==200 for p,v in case[\"assets\"].items())\n                case[\"app_js_loaded_exact\"]=case[\"assets\"].get(\"static/app.js\",{}).get(\"sha256\")==before[\"static/app.js\"][\"sha256\"]\n                case[\"pass\"]=all(x[\"pass\"] for x in case[\"checks\"]) and case[\"served_assets_exact\"] and case[\"app_js_loaded_exact\"]\n            except Exception:\n                case[\"driver_error\"]=traceback.format_exc();case[\"pass\"]=False\n            finally: context.close()\n        browser.close()\nexcept Exception: record[\"driver_error\"]=traceback.format_exc()\nfinally:\n    server.shutdown();server.server_close();thread.join(timeout=5)\n    record[\"server_stopped\"]=not thread.is_alive()\n    record[\"source_after\"]=inventory(source);record[\"source_preserved\"]=record[\"source_after\"]==before\n    record[\"completed_at\"]=now()\n    record[\"summary\"]={\"cases\":len(record[\"cases\"]),\"passed_cases\":sum(c.get(\"pass\",False) for c in record[\"cases\"]),\n      \"checks\":sum(len(c[\"checks\"]) for c in record[\"cases\"]),\"passed_checks\":sum(x[\"pass\"] for c in record[\"cases\"] for x in c[\"checks\"])}\n    record[\"pass\"]=record[\"summary\"][\"passed_cases\"]==len(acceptance[\"cases\"]) and record[\"source_preserved\"] and record[\"server_stopped\"] and not record.get(\"driver_error\")\n    target=out/\"browser-receipt.json\";target.write_text(json.dumps(record,indent=2)+\"\\n\")\n    print(json.dumps({\"receipt\":str(target),\"identity\":identity(target),\"summary\":record[\"summary\"],\"pass\":record[\"pass\"],\"driver_error\":record.get(\"driver_error\"),\"cases\":[{\"id\":c[\"id\"],\"pass\":c.get(\"pass\"),\"failed\":[x[\"name\"] for x in c[\"checks\"] if not x[\"pass\"]],\"driver_error\":c.get(\"driver_error\")} for c in record[\"cases\"]]}))\nraise SystemExit(0 if record[\"pass\"] else 1)\n",
+    "fixture_builder": "import fs from \"node:fs\";\nimport {pathToFileURL} from \"node:url\";\nconst root=process.argv[2];\nconst {createWeekPlan}=await import(pathToFileURL(root+\"/original/static/week_plan.mjs\"));\nconst {makeWeekFile}=await import(pathToFileURL(root+\"/original/static/week_file.mjs\"));\nconst response=JSON.parse(fs.readFileSync(root+\"/saved-week-response.json\",\"utf8\"));\nconst inputs={cuisines:[\"Cuban\",\"Mexican\"],music:[\"Celia Cruz\"],films:[\"West Side Story\"],city:\"Pasadena\",constraints:response.comparison.constraints};\nfunction make(res){return JSON.parse(makeWeekFile({response:res,inputs,state:createWeekPlan(res,\"2026-10-12\"),receivedAt:\"2026-10-12T10:00:00.000Z\",calendarId:\"0123456789abcdef0123456789abcdef\"},new Date(\"2026-10-13T00:00:00.000Z\")).text);}\nconst zero=make(response);\nconst positiveResponse=structuredClone(response);\n[\"with_qloo_entity_id\",\"with_affinity_evidence\",\"constraint_checked\",\"unsafe_candidates_rejected\"].forEach((key,i)=>{positiveResponse.comparison.llm_only[key]=i+1;});\nconst positive=make(positiveResponse);\nconst missing=structuredClone(zero);delete missing.response.comparison.llm_only.constraint_checked;\nconst absent=structuredClone(zero);absent.response.comparison.llm_only.unsafe_candidates_rejected=null;\nfor(const [name,value] of Object.entries({zero,positive,missing,null:absent}))fs.writeFileSync(root+\"/fixtures/\"+name+\".json\",JSON.stringify(value,null,2)+\"\\n\",{flag:\"wx\"});\nconsole.log(JSON.stringify({created:[\"zero.json\",\"positive.json\",\"missing.json\",\"null.json\"],node:process.version}));\n",
+    "original": {
+      "schema": 1,
+      "started_at": "2026-10-13T07:33:57.603130+00:00",
+      "scope": "Authored synthetic saved-week fixture, exact static source on loopback; synthetic health/persona boot endpoints only. No FastAPI, provider, care-quality, deployment or installation qualification.",
+      "base": "da02d3572099221b92372f8df573584c8e210b2d",
+      "source": "/home/jacob/hamon-runtime-tastetable-zero-20261013-tfg6odm0/original",
+      "source_before": {
+        "static/app.js": {
+          "bytes": 22129,
+          "sha256": "2002efebe9dda5f6114ac3d6b84d4450714e36fa80a063fb6205a8637dfd6005",
+          "git_blob": "1d5ac7bea1d7ee485ff5db20379d7c715c3df0d6"
+        },
+        "static/calendar.css": {
+          "bytes": 708,
+          "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+          "git_blob": "9e53b951316d841b86f0256cd2444a3ce547269f"
+        },
+        "static/calendar.js": {
+          "bytes": 15169,
+          "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+          "git_blob": "dbed22d2cb91090bccec9472fbffd2854eed2722"
+        },
+        "static/caregiver_handoff.mjs": {
+          "bytes": 11673,
+          "sha256": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+          "git_blob": "4286409b3fe932f61957ba72f5db918d18ff0751"
+        },
+        "static/index.html": {
+          "bytes": 13247,
+          "sha256": "c5723c1c8ba1c7695c863a400805c5aa75e1f5cd3515cea1137318a96626c567",
+          "git_blob": "ee986de462854c00a2d2c465bf2bef0cca4379fb"
+        },
+        "static/plan-request.js": {
+          "bytes": 1420,
+          "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+          "git_blob": "b21276dda840fe6dd96a3bf3258a851970ff5e4d"
+        },
+        "static/saved_week_store.mjs": {
+          "bytes": 6704,
+          "sha256": "8968ad85cc362af59f40b1d01d6123c725a8cd2037939e49c739b04495dce913",
+          "git_blob": "c525467f00521d7f4182fd57ca9a91e48c6b9e09"
+        },
+        "static/saved_week_ui.mjs": {
+          "bytes": 9555,
+          "sha256": "03f3580a1260aa4cec5b42076caa09650f3347b57efc42bfe6c51503d766eda7",
+          "git_blob": "5a281492002b61222c70ed9b4268150504d20b15"
+        },
+        "static/saved_weeks.css": {
+          "bytes": 1097,
+          "sha256": "0663f31c567cd438101e11d44ff698e2fd5e17c31c232f7f23f43727ac51fa7f",
+          "git_blob": "c5b8a9f45a4f7e0ce93c46d7f814308cd1a99009"
+        },
+        "static/saved_weeks.mjs": {
+          "bytes": 3327,
+          "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3",
+          "git_blob": "0bb822cb6f75c376397c0f7d6d6de78035f865bc"
+        },
+        "static/style.css": {
+          "bytes": 5064,
+          "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+          "git_blob": "28df6c5229b6b592db33e929ae058fe514304af4"
+        },
+        "static/venue_followup.css": {
+          "bytes": 2166,
+          "sha256": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+          "git_blob": "dd88e221133be5281330cba11a6d141ae5e8d239"
+        },
+        "static/venue_followup.mjs": {
+          "bytes": 19991,
+          "sha256": "9cd974e794e17c87e3b51b4ba7820200ce820ae611c8565a5224d68790441d32",
+          "git_blob": "e19affca590d4b4d0d31a6fc11d5558173320133"
+        },
+        "static/venue_note_file.mjs": {
+          "bytes": 10435,
+          "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+          "git_blob": "f8406cb540d52222996c585666ae1a55a1030def"
+        },
+        "static/week_file.mjs": {
+          "bytes": 6642,
+          "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+          "git_blob": "420ddb8f63fca264dcf97be7147801105696155d"
+        },
+        "static/week_plan.mjs": {
+          "bytes": 3913,
+          "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+          "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+        }
+      },
+      "receiver": {
+        "bytes": 10791,
+        "sha256": "41036295ff70189da4f5f46a38de6e404ad617a4d3ab572d7f1ea3d8ca60d654",
+        "git_blob": "ba85bf058f27ed3e5fd513aea4849a72ed0d1daf"
+      },
+      "acceptance": {
+        "bytes": 3095,
+        "sha256": "9a7f357f1c6033d15b6515f6125706d234d8b1f70f22b512a1b34029fc68324f",
+        "git_blob": "efde5951fdd1974d135a1249e68281491353c0ce"
+      },
+      "fixture_files": {
+        "missing.json": {
+          "bytes": 14574,
+          "sha256": "613d7ccf00d1c736b4d43f7c470144aca147277032621bcbb3cf74201f6c6985",
+          "git_blob": "15ec03bafb00ba0316c6939f225337ea1bb6530e"
+        },
+        "null.json": {
+          "bytes": 14610,
+          "sha256": "489da5899232d4b72ddc10c5d4bcc1771110c4c38604298c072220121845f5d8",
+          "git_blob": "a48733dee2e301b7e357e3ad361669097d109ba8"
+        },
+        "positive.json": {
+          "bytes": 14607,
+          "sha256": "9ad8b1d66a6925dc73309e0b5fc0d67d8627f97d0e86b82526594a41bde32d47",
+          "git_blob": "5426f7cdf0a019cf526c379ccba136bd72017ca3"
+        },
+        "zero.json": {
+          "bytes": 14607,
+          "sha256": "7c841aaa69d55c0c3b24f9c5e1d2c739f39d5f3ccf639541731d25f320e10d87",
+          "git_blob": "96e3373968f7df941b94a6c47ea6635b464041f2"
+        }
+      },
+      "environment": {
+        "python": "3.14.4",
+        "os": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+        "isolation": "private launcher HOME/XDG/TMP; environment isolation, not an OS sandbox",
+        "chromium_sandbox": false,
+        "browser": "153.0.8010.12"
+      },
+      "cases": [
+        {
+          "id": "zero-desktop",
+          "width": 1280,
+          "checks": [
+            {
+              "name": "normal file opening visible",
+              "pass": true,
+              "observed": "Saved week opened. Its original inputs and your arrangement are restored."
+            },
+            {
+              "name": "row labels preserved",
+              "pass": true,
+              "observed": [
+                "Picks",
+                "Tied to a Qloo entity ID",
+                "Has affinity evidence",
+                "Constraint-checked",
+                "Unsafe candidates caught"
+              ]
+            },
+            {
+              "name": "grounded counts exact",
+              "pass": true,
+              "observed": [
+                "5",
+                "5",
+                "5",
+                "5",
+                "7"
+              ]
+            },
+            {
+              "name": "LLM-only counts exact",
+              "pass": false,
+              "observed": [
+                "5",
+                "—",
+                "—",
+                "—",
+                "—"
+              ]
+            },
+            {
+              "name": "saved-file provenance retained",
+              "pass": true,
+              "observed": "Saved copy opened from “zero.json” (saved 2026-10-13T00:00:00.000Z). Source labels and checks below are retained from the file; they have not been run again."
+            },
+            {
+              "name": "native downloaded response exact",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "native downloaded inputs and week exact",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "native downloaded source time and calendar identity exact",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "no external requests",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no plan or other API calls",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no browser errors",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no automatic local/session storage",
+              "pass": true,
+              "observed": {
+                "local": [],
+                "session": []
+              }
+            }
+          ],
+          "requests": [
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/style.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/calendar.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/venue_followup.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/saved_weeks.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/plan-request.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/calendar.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/app.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/week_plan.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/week_file.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/venue_followup.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/caregiver_handoff.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/saved_week_ui.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/venue_note_file.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/saved_weeks.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/saved_week_store.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/api/health"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/api/personas"
+            }
+          ],
+          "external_requests": [],
+          "errors": [],
+          "assets": {
+            "static/index.html": {
+              "bytes": 13247,
+              "sha256": "c5723c1c8ba1c7695c863a400805c5aa75e1f5cd3515cea1137318a96626c567",
+              "status": 200
+            },
+            "static/style.css": {
+              "bytes": 5064,
+              "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+              "status": 200
+            },
+            "static/calendar.css": {
+              "bytes": 708,
+              "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+              "status": 200
+            },
+            "static/venue_followup.css": {
+              "bytes": 2166,
+              "sha256": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+              "status": 200
+            },
+            "static/saved_weeks.css": {
+              "bytes": 1097,
+              "sha256": "0663f31c567cd438101e11d44ff698e2fd5e17c31c232f7f23f43727ac51fa7f",
+              "status": 200
+            },
+            "static/plan-request.js": {
+              "bytes": 1420,
+              "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+              "status": 200
+            },
+            "static/calendar.js": {
+              "bytes": 15169,
+              "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+              "status": 200
+            },
+            "static/app.js": {
+              "bytes": 22129,
+              "sha256": "2002efebe9dda5f6114ac3d6b84d4450714e36fa80a063fb6205a8637dfd6005",
+              "status": 200
+            },
+            "static/week_plan.mjs": {
+              "bytes": 3913,
+              "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+              "status": 200
+            },
+            "static/week_file.mjs": {
+              "bytes": 6642,
+              "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+              "status": 200
+            },
+            "static/venue_followup.mjs": {
+              "bytes": 19991,
+              "sha256": "9cd974e794e17c87e3b51b4ba7820200ce820ae611c8565a5224d68790441d32",
+              "status": 200
+            },
+            "static/caregiver_handoff.mjs": {
+              "bytes": 11673,
+              "sha256": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+              "status": 200
+            },
+            "static/saved_week_ui.mjs": {
+              "bytes": 9555,
+              "sha256": "03f3580a1260aa4cec5b42076caa09650f3347b57efc42bfe6c51503d766eda7",
+              "status": 200
+            },
+            "static/venue_note_file.mjs": {
+              "bytes": 10435,
+              "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+              "status": 200
+            },
+            "static/saved_weeks.mjs": {
+              "bytes": 3327,
+              "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3",
+              "status": 200
+            },
+            "static/saved_week_store.mjs": {
+              "bytes": 6704,
+              "sha256": "8968ad85cc362af59f40b1d01d6123c725a8cd2037939e49c739b04495dce913",
+              "status": 200
+            }
+          },
+          "status": "Saved week opened. Its original inputs and your arrangement are restored.",
+          "table_rows": [
+            [
+              "Picks",
+              "5",
+              "5"
+            ],
+            [
+              "Tied to a Qloo entity ID",
+              "5",
+              "—"
+            ],
+            [
+              "Has affinity evidence",
+              "5",
+              "—"
+            ],
+            [
+              "Constraint-checked",
+              "5",
+              "—"
+            ],
+            [
+              "Unsafe candidates caught",
+              "7",
+              "—"
+            ]
+          ],
+          "download": {
+            "suggested_filename": "tastetable-week-2026-10-12.json",
+            "bytes": 14607,
+            "sha256": "82e0e862692e0c6f87bbcaeb8f51554ba1f547739deebac0ad51e72c462074e5",
+            "git_blob": "adfb1aae2e732a79ce6f79aad55c3727b1c35e37"
+          },
+          "screenshot": {
+            "path": "/home/jacob/hamon-runtime-tastetable-zero-20261013-tfg6odm0/original-course/zero-desktop.png",
+            "bytes": 18636,
+            "sha256": "9206a16f516db2efa58c274c467e7ae35f0c49fde920b125d8e8a0ced077b6d3",
+            "git_blob": "bcdd6e7789383ad2d5ab4c1ed399b2f41cf76b78"
+          },
+          "served_assets_exact": true,
+          "app_js_loaded_exact": true,
+          "pass": false
+        },
+        {
+          "id": "positive-desktop",
+          "width": 1280,
+          "checks": [
+            {
+              "name": "normal file opening visible",
+              "pass": true,
+              "observed": "Saved week opened. Its original inputs and your arrangement are restored."
+            },
+            {
+              "name": "row labels preserved",
+              "pass": true,
+              "observed": [
+                "Picks",
+                "Tied to a Qloo entity ID",
+                "Has affinity evidence",
+                "Constraint-checked",
+                "Unsafe candidates caught"
+              ]
+            },
+            {
+              "name": "grounded counts exact",
+              "pass": true,
+              "observed": [
+                "5",
+                "5",
+                "5",
+                "5",
+                "7"
+              ]
+            },
+            {
+              "name": "LLM-only counts exact",
+              "pass": true,
+              "observed": [
+                "5",
+                "1",
+                "2",
+                "3",
+                "4"
+              ]
+            },
+            {
+              "name": "saved-file provenance retained",
+              "pass": true,
+              "observed": "Saved copy opened from “positive.json” (saved 2026-10-13T00:00:00.000Z). Source labels and checks below are retained from the file; they have not been run again."
+            },
+            {
+              "name": "native downloaded response exact",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "native downloaded inputs and week exact",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "native downloaded source time and calendar identity exact",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "no external requests",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no plan or other API calls",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no browser errors",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no automatic local/session storage",
+              "pass": true,
+              "observed": {
+                "local": [],
+                "session": []
+              }
+            }
+          ],
+          "requests": [
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/style.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/calendar.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/venue_followup.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/saved_weeks.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/plan-request.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/calendar.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/app.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/week_plan.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/week_file.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/venue_followup.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/caregiver_handoff.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/saved_week_ui.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/venue_note_file.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/saved_weeks.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/saved_week_store.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/api/health"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/api/personas"
+            }
+          ],
+          "external_requests": [],
+          "errors": [],
+          "assets": {
+            "static/index.html": {
+              "bytes": 13247,
+              "sha256": "c5723c1c8ba1c7695c863a400805c5aa75e1f5cd3515cea1137318a96626c567",
+              "status": 200
+            },
+            "static/style.css": {
+              "bytes": 5064,
+              "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+              "status": 200
+            },
+            "static/calendar.css": {
+              "bytes": 708,
+              "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+              "status": 200
+            },
+            "static/venue_followup.css": {
+              "bytes": 2166,
+              "sha256": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+              "status": 200
+            },
+            "static/saved_weeks.css": {
+              "bytes": 1097,
+              "sha256": "0663f31c567cd438101e11d44ff698e2fd5e17c31c232f7f23f43727ac51fa7f",
+              "status": 200
+            },
+            "static/plan-request.js": {
+              "bytes": 1420,
+              "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+              "status": 200
+            },
+            "static/calendar.js": {
+              "bytes": 15169,
+              "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+              "status": 200
+            },
+            "static/app.js": {
+              "bytes": 22129,
+              "sha256": "2002efebe9dda5f6114ac3d6b84d4450714e36fa80a063fb6205a8637dfd6005",
+              "status": 200
+            },
+            "static/week_file.mjs": {
+              "bytes": 6642,
+              "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+              "status": 200
+            },
+            "static/week_plan.mjs": {
+              "bytes": 3913,
+              "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+              "status": 200
+            },
+            "static/venue_followup.mjs": {
+              "bytes": 19991,
+              "sha256": "9cd974e794e17c87e3b51b4ba7820200ce820ae611c8565a5224d68790441d32",
+              "status": 200
+            },
+            "static/saved_week_ui.mjs": {
+              "bytes": 9555,
+              "sha256": "03f3580a1260aa4cec5b42076caa09650f3347b57efc42bfe6c51503d766eda7",
+              "status": 200
+            },
+            "static/caregiver_handoff.mjs": {
+              "bytes": 11673,
+              "sha256": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+              "status": 200
+            },
+            "static/venue_note_file.mjs": {
+              "bytes": 10435,
+              "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+              "status": 200
+            },
+            "static/saved_weeks.mjs": {
+              "bytes": 3327,
+              "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3",
+              "status": 200
+            },
+            "static/saved_week_store.mjs": {
+              "bytes": 6704,
+              "sha256": "8968ad85cc362af59f40b1d01d6123c725a8cd2037939e49c739b04495dce913",
+              "status": 200
+            }
+          },
+          "status": "Saved week opened. Its original inputs and your arrangement are restored.",
+          "table_rows": [
+            [
+              "Picks",
+              "5",
+              "5"
+            ],
+            [
+              "Tied to a Qloo entity ID",
+              "5",
+              "1"
+            ],
+            [
+              "Has affinity evidence",
+              "5",
+              "2"
+            ],
+            [
+              "Constraint-checked",
+              "5",
+              "3"
+            ],
+            [
+              "Unsafe candidates caught",
+              "7",
+              "4"
+            ]
+          ],
+          "download": {
+            "suggested_filename": "tastetable-week-2026-10-12.json",
+            "bytes": 14607,
+            "sha256": "0e5f17944713a485ee5bb1adbaab7003d27d19ac19a8629e1a61ca995c2fc07c",
+            "git_blob": "6ce9a11c16fe58b2e39cd14e4ab70f43a24d12f2"
+          },
+          "served_assets_exact": true,
+          "app_js_loaded_exact": true,
+          "pass": true
+        },
+        {
+          "id": "missing-desktop",
+          "width": 1280,
+          "checks": [
+            {
+              "name": "prior valid file opened",
+              "pass": true,
+              "observed": "Saved week opened. Its original inputs and your arrangement are restored."
+            },
+            {
+              "name": "missing/null count refused by unchanged numeric schema",
+              "pass": true,
+              "observed": "We could not open this saved week: The saved response has invalid comparison counts. Your inputs are still here."
+            },
+            {
+              "name": "prior result retired",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "save disabled",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "prior restored inputs retained",
+              "pass": true,
+              "observed": {
+                "city": "Pasadena",
+                "cuisines": "Cuban, Mexican",
+                "music": "Celia Cruz",
+                "films": "West Side Story",
+                "constraints": [
+                  "soft_foods",
+                  "low_sodium",
+                  "wheelchair"
+                ]
+              }
+            },
+            {
+              "name": "no external requests",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no plan or other API calls",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no browser errors",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no automatic local/session storage",
+              "pass": true,
+              "observed": {
+                "local": [],
+                "session": []
+              }
+            }
+          ],
+          "requests": [
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/style.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/calendar.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/venue_followup.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/saved_weeks.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/plan-request.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/calendar.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/app.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/week_plan.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/week_file.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/venue_followup.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/caregiver_handoff.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/saved_week_ui.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/venue_note_file.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/saved_weeks.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/saved_week_store.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/api/health"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/api/personas"
+            }
+          ],
+          "external_requests": [],
+          "errors": [],
+          "assets": {
+            "static/index.html": {
+              "bytes": 13247,
+              "sha256": "c5723c1c8ba1c7695c863a400805c5aa75e1f5cd3515cea1137318a96626c567",
+              "status": 200
+            },
+            "static/style.css": {
+              "bytes": 5064,
+              "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+              "status": 200
+            },
+            "static/venue_followup.css": {
+              "bytes": 2166,
+              "sha256": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+              "status": 200
+            },
+            "static/calendar.css": {
+              "bytes": 708,
+              "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+              "status": 200
+            },
+            "static/saved_weeks.css": {
+              "bytes": 1097,
+              "sha256": "0663f31c567cd438101e11d44ff698e2fd5e17c31c232f7f23f43727ac51fa7f",
+              "status": 200
+            },
+            "static/plan-request.js": {
+              "bytes": 1420,
+              "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+              "status": 200
+            },
+            "static/calendar.js": {
+              "bytes": 15169,
+              "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+              "status": 200
+            },
+            "static/app.js": {
+              "bytes": 22129,
+              "sha256": "2002efebe9dda5f6114ac3d6b84d4450714e36fa80a063fb6205a8637dfd6005",
+              "status": 200
+            },
+            "static/week_plan.mjs": {
+              "bytes": 3913,
+              "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+              "status": 200
+            },
+            "static/week_file.mjs": {
+              "bytes": 6642,
+              "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+              "status": 200
+            },
+            "static/venue_followup.mjs": {
+              "bytes": 19991,
+              "sha256": "9cd974e794e17c87e3b51b4ba7820200ce820ae611c8565a5224d68790441d32",
+              "status": 200
+            },
+            "static/caregiver_handoff.mjs": {
+              "bytes": 11673,
+              "sha256": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+              "status": 200
+            },
+            "static/saved_week_ui.mjs": {
+              "bytes": 9555,
+              "sha256": "03f3580a1260aa4cec5b42076caa09650f3347b57efc42bfe6c51503d766eda7",
+              "status": 200
+            },
+            "static/venue_note_file.mjs": {
+              "bytes": 10435,
+              "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+              "status": 200
+            },
+            "static/saved_weeks.mjs": {
+              "bytes": 3327,
+              "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3",
+              "status": 200
+            },
+            "static/saved_week_store.mjs": {
+              "bytes": 6704,
+              "sha256": "8968ad85cc362af59f40b1d01d6123c725a8cd2037939e49c739b04495dce913",
+              "status": 200
+            }
+          },
+          "status": "We could not open this saved week: The saved response has invalid comparison counts. Your inputs are still here.",
+          "served_assets_exact": true,
+          "app_js_loaded_exact": true,
+          "pass": true
+        },
+        {
+          "id": "null-desktop",
+          "width": 1280,
+          "checks": [
+            {
+              "name": "prior valid file opened",
+              "pass": true,
+              "observed": "Saved week opened. Its original inputs and your arrangement are restored."
+            },
+            {
+              "name": "missing/null count refused by unchanged numeric schema",
+              "pass": true,
+              "observed": "We could not open this saved week: The saved response has invalid comparison counts. Your inputs are still here."
+            },
+            {
+              "name": "prior result retired",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "save disabled",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "prior restored inputs retained",
+              "pass": true,
+              "observed": {
+                "city": "Pasadena",
+                "cuisines": "Cuban, Mexican",
+                "music": "Celia Cruz",
+                "films": "West Side Story",
+                "constraints": [
+                  "soft_foods",
+                  "low_sodium",
+                  "wheelchair"
+                ]
+              }
+            },
+            {
+              "name": "no external requests",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no plan or other API calls",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no browser errors",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no automatic local/session storage",
+              "pass": true,
+              "observed": {
+                "local": [],
+                "session": []
+              }
+            }
+          ],
+          "requests": [
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/style.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/calendar.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/venue_followup.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/saved_weeks.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/plan-request.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/calendar.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/app.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/week_plan.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/week_file.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/venue_followup.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/caregiver_handoff.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/saved_week_ui.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/venue_note_file.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/saved_weeks.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/saved_week_store.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/api/health"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/api/personas"
+            }
+          ],
+          "external_requests": [],
+          "errors": [],
+          "assets": {
+            "static/index.html": {
+              "bytes": 13247,
+              "sha256": "c5723c1c8ba1c7695c863a400805c5aa75e1f5cd3515cea1137318a96626c567",
+              "status": 200
+            },
+            "static/style.css": {
+              "bytes": 5064,
+              "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+              "status": 200
+            },
+            "static/calendar.css": {
+              "bytes": 708,
+              "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+              "status": 200
+            },
+            "static/venue_followup.css": {
+              "bytes": 2166,
+              "sha256": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+              "status": 200
+            },
+            "static/saved_weeks.css": {
+              "bytes": 1097,
+              "sha256": "0663f31c567cd438101e11d44ff698e2fd5e17c31c232f7f23f43727ac51fa7f",
+              "status": 200
+            },
+            "static/plan-request.js": {
+              "bytes": 1420,
+              "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+              "status": 200
+            },
+            "static/calendar.js": {
+              "bytes": 15169,
+              "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+              "status": 200
+            },
+            "static/app.js": {
+              "bytes": 22129,
+              "sha256": "2002efebe9dda5f6114ac3d6b84d4450714e36fa80a063fb6205a8637dfd6005",
+              "status": 200
+            },
+            "static/week_plan.mjs": {
+              "bytes": 3913,
+              "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+              "status": 200
+            },
+            "static/week_file.mjs": {
+              "bytes": 6642,
+              "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+              "status": 200
+            },
+            "static/venue_followup.mjs": {
+              "bytes": 19991,
+              "sha256": "9cd974e794e17c87e3b51b4ba7820200ce820ae611c8565a5224d68790441d32",
+              "status": 200
+            },
+            "static/caregiver_handoff.mjs": {
+              "bytes": 11673,
+              "sha256": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+              "status": 200
+            },
+            "static/saved_week_ui.mjs": {
+              "bytes": 9555,
+              "sha256": "03f3580a1260aa4cec5b42076caa09650f3347b57efc42bfe6c51503d766eda7",
+              "status": 200
+            },
+            "static/venue_note_file.mjs": {
+              "bytes": 10435,
+              "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+              "status": 200
+            },
+            "static/saved_weeks.mjs": {
+              "bytes": 3327,
+              "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3",
+              "status": 200
+            },
+            "static/saved_week_store.mjs": {
+              "bytes": 6704,
+              "sha256": "8968ad85cc362af59f40b1d01d6123c725a8cd2037939e49c739b04495dce913",
+              "status": 200
+            }
+          },
+          "status": "We could not open this saved week: The saved response has invalid comparison counts. Your inputs are still here.",
+          "served_assets_exact": true,
+          "app_js_loaded_exact": true,
+          "pass": true
+        },
+        {
+          "id": "zero-phone",
+          "width": 375,
+          "checks": [
+            {
+              "name": "normal file opening visible",
+              "pass": true,
+              "observed": "Saved week opened. Its original inputs and your arrangement are restored."
+            },
+            {
+              "name": "row labels preserved",
+              "pass": true,
+              "observed": [
+                "Picks",
+                "Tied to a Qloo entity ID",
+                "Has affinity evidence",
+                "Constraint-checked",
+                "Unsafe candidates caught"
+              ]
+            },
+            {
+              "name": "grounded counts exact",
+              "pass": true,
+              "observed": [
+                "5",
+                "5",
+                "5",
+                "5",
+                "7"
+              ]
+            },
+            {
+              "name": "LLM-only counts exact",
+              "pass": false,
+              "observed": [
+                "5",
+                "—",
+                "—",
+                "—",
+                "—"
+              ]
+            },
+            {
+              "name": "saved-file provenance retained",
+              "pass": true,
+              "observed": "Saved copy opened from “zero.json” (saved 2026-10-13T00:00:00.000Z). Source labels and checks below are retained from the file; they have not been run again."
+            },
+            {
+              "name": "native downloaded response exact",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "native downloaded inputs and week exact",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "native downloaded source time and calendar identity exact",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "no external requests",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no plan or other API calls",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no browser errors",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no automatic local/session storage",
+              "pass": true,
+              "observed": {
+                "local": [],
+                "session": []
+              }
+            }
+          ],
+          "requests": [
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/style.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/calendar.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/venue_followup.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/saved_weeks.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/plan-request.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/calendar.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/app.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/week_plan.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/week_file.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/venue_followup.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/caregiver_handoff.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/saved_week_ui.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/venue_note_file.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/saved_weeks.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/static/saved_week_store.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/api/health"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:41147/api/personas"
+            }
+          ],
+          "external_requests": [],
+          "errors": [],
+          "assets": {
+            "static/index.html": {
+              "bytes": 13247,
+              "sha256": "c5723c1c8ba1c7695c863a400805c5aa75e1f5cd3515cea1137318a96626c567",
+              "status": 200
+            },
+            "static/style.css": {
+              "bytes": 5064,
+              "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+              "status": 200
+            },
+            "static/calendar.css": {
+              "bytes": 708,
+              "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+              "status": 200
+            },
+            "static/venue_followup.css": {
+              "bytes": 2166,
+              "sha256": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+              "status": 200
+            },
+            "static/saved_weeks.css": {
+              "bytes": 1097,
+              "sha256": "0663f31c567cd438101e11d44ff698e2fd5e17c31c232f7f23f43727ac51fa7f",
+              "status": 200
+            },
+            "static/plan-request.js": {
+              "bytes": 1420,
+              "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+              "status": 200
+            },
+            "static/calendar.js": {
+              "bytes": 15169,
+              "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+              "status": 200
+            },
+            "static/app.js": {
+              "bytes": 22129,
+              "sha256": "2002efebe9dda5f6114ac3d6b84d4450714e36fa80a063fb6205a8637dfd6005",
+              "status": 200
+            },
+            "static/week_plan.mjs": {
+              "bytes": 3913,
+              "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+              "status": 200
+            },
+            "static/week_file.mjs": {
+              "bytes": 6642,
+              "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+              "status": 200
+            },
+            "static/venue_followup.mjs": {
+              "bytes": 19991,
+              "sha256": "9cd974e794e17c87e3b51b4ba7820200ce820ae611c8565a5224d68790441d32",
+              "status": 200
+            },
+            "static/caregiver_handoff.mjs": {
+              "bytes": 11673,
+              "sha256": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+              "status": 200
+            },
+            "static/saved_week_ui.mjs": {
+              "bytes": 9555,
+              "sha256": "03f3580a1260aa4cec5b42076caa09650f3347b57efc42bfe6c51503d766eda7",
+              "status": 200
+            },
+            "static/venue_note_file.mjs": {
+              "bytes": 10435,
+              "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+              "status": 200
+            },
+            "static/saved_weeks.mjs": {
+              "bytes": 3327,
+              "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3",
+              "status": 200
+            },
+            "static/saved_week_store.mjs": {
+              "bytes": 6704,
+              "sha256": "8968ad85cc362af59f40b1d01d6123c725a8cd2037939e49c739b04495dce913",
+              "status": 200
+            }
+          },
+          "status": "Saved week opened. Its original inputs and your arrangement are restored.",
+          "table_rows": [
+            [
+              "Picks",
+              "5",
+              "5"
+            ],
+            [
+              "Tied to a Qloo entity ID",
+              "5",
+              "—"
+            ],
+            [
+              "Has affinity evidence",
+              "5",
+              "—"
+            ],
+            [
+              "Constraint-checked",
+              "5",
+              "—"
+            ],
+            [
+              "Unsafe candidates caught",
+              "7",
+              "—"
+            ]
+          ],
+          "download": {
+            "suggested_filename": "tastetable-week-2026-10-12.json",
+            "bytes": 14607,
+            "sha256": "35b8cad89dc51eec3d68e3d0c2c5a306bf395779c0b474e5b182771378f7a127",
+            "git_blob": "99b79e181fdba6afdba09e3a6ac68a8563798640"
+          },
+          "screenshot": {
+            "path": "/home/jacob/hamon-runtime-tastetable-zero-20261013-tfg6odm0/original-course/zero-phone.png",
+            "bytes": 17695,
+            "sha256": "6ab74f389391663af311eddf3efce640b9811179017e502aa1ef31e59e36961f",
+            "git_blob": "907890f8312ebd93eb3004ad097c2c053b51d878"
+          },
+          "served_assets_exact": true,
+          "app_js_loaded_exact": true,
+          "pass": false
+        }
+      ],
+      "server_requests": [
+        {
+          "method": "GET",
+          "path": "/"
+        },
+        {
+          "method": "GET",
+          "path": "/static/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/calendar.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_followup.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_weeks.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/plan-request.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/calendar.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/app.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/week_plan.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/week_file.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_followup.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/caregiver_handoff.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_week_ui.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_note_file.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_weeks.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_week_store.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/api/health"
+        },
+        {
+          "method": "GET",
+          "path": "/api/personas"
+        },
+        {
+          "method": "GET",
+          "path": "/"
+        },
+        {
+          "method": "GET",
+          "path": "/static/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/calendar.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_followup.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_weeks.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/plan-request.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/calendar.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/app.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/week_plan.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/week_file.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_followup.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/caregiver_handoff.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_week_ui.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_note_file.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_weeks.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_week_store.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/api/health"
+        },
+        {
+          "method": "GET",
+          "path": "/api/personas"
+        },
+        {
+          "method": "GET",
+          "path": "/"
+        },
+        {
+          "method": "GET",
+          "path": "/static/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/calendar.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_followup.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_weeks.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/plan-request.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/calendar.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/app.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/week_plan.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/week_file.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_followup.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/caregiver_handoff.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_week_ui.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_note_file.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_weeks.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_week_store.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/api/health"
+        },
+        {
+          "method": "GET",
+          "path": "/api/personas"
+        },
+        {
+          "method": "GET",
+          "path": "/"
+        },
+        {
+          "method": "GET",
+          "path": "/static/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/calendar.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_followup.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_weeks.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/plan-request.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/calendar.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/app.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/week_plan.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/week_file.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_followup.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/caregiver_handoff.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_week_ui.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_note_file.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_weeks.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_week_store.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/api/health"
+        },
+        {
+          "method": "GET",
+          "path": "/api/personas"
+        },
+        {
+          "method": "GET",
+          "path": "/"
+        },
+        {
+          "method": "GET",
+          "path": "/static/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/calendar.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_followup.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_weeks.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/plan-request.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/calendar.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/app.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/week_plan.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/week_file.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_followup.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/caregiver_handoff.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_week_ui.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_note_file.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_weeks.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_week_store.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/api/health"
+        },
+        {
+          "method": "GET",
+          "path": "/api/personas"
+        }
+      ],
+      "origin": "http://127.0.0.1:41147",
+      "server_stopped": true,
+      "source_after": {
+        "static/app.js": {
+          "bytes": 22129,
+          "sha256": "2002efebe9dda5f6114ac3d6b84d4450714e36fa80a063fb6205a8637dfd6005",
+          "git_blob": "1d5ac7bea1d7ee485ff5db20379d7c715c3df0d6"
+        },
+        "static/calendar.css": {
+          "bytes": 708,
+          "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+          "git_blob": "9e53b951316d841b86f0256cd2444a3ce547269f"
+        },
+        "static/calendar.js": {
+          "bytes": 15169,
+          "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+          "git_blob": "dbed22d2cb91090bccec9472fbffd2854eed2722"
+        },
+        "static/caregiver_handoff.mjs": {
+          "bytes": 11673,
+          "sha256": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+          "git_blob": "4286409b3fe932f61957ba72f5db918d18ff0751"
+        },
+        "static/index.html": {
+          "bytes": 13247,
+          "sha256": "c5723c1c8ba1c7695c863a400805c5aa75e1f5cd3515cea1137318a96626c567",
+          "git_blob": "ee986de462854c00a2d2c465bf2bef0cca4379fb"
+        },
+        "static/plan-request.js": {
+          "bytes": 1420,
+          "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+          "git_blob": "b21276dda840fe6dd96a3bf3258a851970ff5e4d"
+        },
+        "static/saved_week_store.mjs": {
+          "bytes": 6704,
+          "sha256": "8968ad85cc362af59f40b1d01d6123c725a8cd2037939e49c739b04495dce913",
+          "git_blob": "c525467f00521d7f4182fd57ca9a91e48c6b9e09"
+        },
+        "static/saved_week_ui.mjs": {
+          "bytes": 9555,
+          "sha256": "03f3580a1260aa4cec5b42076caa09650f3347b57efc42bfe6c51503d766eda7",
+          "git_blob": "5a281492002b61222c70ed9b4268150504d20b15"
+        },
+        "static/saved_weeks.css": {
+          "bytes": 1097,
+          "sha256": "0663f31c567cd438101e11d44ff698e2fd5e17c31c232f7f23f43727ac51fa7f",
+          "git_blob": "c5b8a9f45a4f7e0ce93c46d7f814308cd1a99009"
+        },
+        "static/saved_weeks.mjs": {
+          "bytes": 3327,
+          "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3",
+          "git_blob": "0bb822cb6f75c376397c0f7d6d6de78035f865bc"
+        },
+        "static/style.css": {
+          "bytes": 5064,
+          "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+          "git_blob": "28df6c5229b6b592db33e929ae058fe514304af4"
+        },
+        "static/venue_followup.css": {
+          "bytes": 2166,
+          "sha256": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+          "git_blob": "dd88e221133be5281330cba11a6d141ae5e8d239"
+        },
+        "static/venue_followup.mjs": {
+          "bytes": 19991,
+          "sha256": "9cd974e794e17c87e3b51b4ba7820200ce820ae611c8565a5224d68790441d32",
+          "git_blob": "e19affca590d4b4d0d31a6fc11d5558173320133"
+        },
+        "static/venue_note_file.mjs": {
+          "bytes": 10435,
+          "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+          "git_blob": "f8406cb540d52222996c585666ae1a55a1030def"
+        },
+        "static/week_file.mjs": {
+          "bytes": 6642,
+          "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+          "git_blob": "420ddb8f63fca264dcf97be7147801105696155d"
+        },
+        "static/week_plan.mjs": {
+          "bytes": 3913,
+          "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+          "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+        }
+      },
+      "source_preserved": true,
+      "completed_at": "2026-10-13T07:34:07.079869+00:00",
+      "summary": {
+        "cases": 5,
+        "passed_cases": 3,
+        "checks": 54,
+        "passed_checks": 52
+      },
+      "pass": false
+    },
+    "candidate": {
+      "schema": 1,
+      "started_at": "2026-10-13T07:47:09.070134+00:00",
+      "scope": "Authored synthetic saved-week fixture, exact static source on loopback; synthetic health/persona boot endpoints only. No FastAPI, provider, care-quality, deployment or installation qualification.",
+      "base": "da02d3572099221b92372f8df573584c8e210b2d",
+      "source": "/home/jacob/hamon-runtime-tastetable-zero-20261013-tfg6odm0/candidate",
+      "source_before": {
+        "static/app.js": {
+          "bytes": 22129,
+          "sha256": "1e328ff4185f0f5a671932bfcb5f906f99603fa48432684a6396e3097d199370",
+          "git_blob": "9a34d0e4719bc472144c3ec966e609cc8fbf4626"
+        },
+        "static/calendar.css": {
+          "bytes": 708,
+          "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+          "git_blob": "9e53b951316d841b86f0256cd2444a3ce547269f"
+        },
+        "static/calendar.js": {
+          "bytes": 15169,
+          "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+          "git_blob": "dbed22d2cb91090bccec9472fbffd2854eed2722"
+        },
+        "static/caregiver_handoff.mjs": {
+          "bytes": 11673,
+          "sha256": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+          "git_blob": "4286409b3fe932f61957ba72f5db918d18ff0751"
+        },
+        "static/index.html": {
+          "bytes": 13247,
+          "sha256": "c5723c1c8ba1c7695c863a400805c5aa75e1f5cd3515cea1137318a96626c567",
+          "git_blob": "ee986de462854c00a2d2c465bf2bef0cca4379fb"
+        },
+        "static/plan-request.js": {
+          "bytes": 1420,
+          "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+          "git_blob": "b21276dda840fe6dd96a3bf3258a851970ff5e4d"
+        },
+        "static/saved_week_store.mjs": {
+          "bytes": 6704,
+          "sha256": "8968ad85cc362af59f40b1d01d6123c725a8cd2037939e49c739b04495dce913",
+          "git_blob": "c525467f00521d7f4182fd57ca9a91e48c6b9e09"
+        },
+        "static/saved_week_ui.mjs": {
+          "bytes": 9555,
+          "sha256": "03f3580a1260aa4cec5b42076caa09650f3347b57efc42bfe6c51503d766eda7",
+          "git_blob": "5a281492002b61222c70ed9b4268150504d20b15"
+        },
+        "static/saved_weeks.css": {
+          "bytes": 1097,
+          "sha256": "0663f31c567cd438101e11d44ff698e2fd5e17c31c232f7f23f43727ac51fa7f",
+          "git_blob": "c5b8a9f45a4f7e0ce93c46d7f814308cd1a99009"
+        },
+        "static/saved_weeks.mjs": {
+          "bytes": 3327,
+          "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3",
+          "git_blob": "0bb822cb6f75c376397c0f7d6d6de78035f865bc"
+        },
+        "static/style.css": {
+          "bytes": 5064,
+          "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+          "git_blob": "28df6c5229b6b592db33e929ae058fe514304af4"
+        },
+        "static/venue_followup.css": {
+          "bytes": 2166,
+          "sha256": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+          "git_blob": "dd88e221133be5281330cba11a6d141ae5e8d239"
+        },
+        "static/venue_followup.mjs": {
+          "bytes": 19991,
+          "sha256": "9cd974e794e17c87e3b51b4ba7820200ce820ae611c8565a5224d68790441d32",
+          "git_blob": "e19affca590d4b4d0d31a6fc11d5558173320133"
+        },
+        "static/venue_note_file.mjs": {
+          "bytes": 10435,
+          "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+          "git_blob": "f8406cb540d52222996c585666ae1a55a1030def"
+        },
+        "static/week_file.mjs": {
+          "bytes": 6642,
+          "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+          "git_blob": "420ddb8f63fca264dcf97be7147801105696155d"
+        },
+        "static/week_plan.mjs": {
+          "bytes": 3913,
+          "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+          "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+        }
+      },
+      "receiver": {
+        "bytes": 10791,
+        "sha256": "41036295ff70189da4f5f46a38de6e404ad617a4d3ab572d7f1ea3d8ca60d654",
+        "git_blob": "ba85bf058f27ed3e5fd513aea4849a72ed0d1daf"
+      },
+      "acceptance": {
+        "bytes": 3095,
+        "sha256": "9a7f357f1c6033d15b6515f6125706d234d8b1f70f22b512a1b34029fc68324f",
+        "git_blob": "efde5951fdd1974d135a1249e68281491353c0ce"
+      },
+      "fixture_files": {
+        "missing.json": {
+          "bytes": 14574,
+          "sha256": "613d7ccf00d1c736b4d43f7c470144aca147277032621bcbb3cf74201f6c6985",
+          "git_blob": "15ec03bafb00ba0316c6939f225337ea1bb6530e"
+        },
+        "null.json": {
+          "bytes": 14610,
+          "sha256": "489da5899232d4b72ddc10c5d4bcc1771110c4c38604298c072220121845f5d8",
+          "git_blob": "a48733dee2e301b7e357e3ad361669097d109ba8"
+        },
+        "positive.json": {
+          "bytes": 14607,
+          "sha256": "9ad8b1d66a6925dc73309e0b5fc0d67d8627f97d0e86b82526594a41bde32d47",
+          "git_blob": "5426f7cdf0a019cf526c379ccba136bd72017ca3"
+        },
+        "zero.json": {
+          "bytes": 14607,
+          "sha256": "7c841aaa69d55c0c3b24f9c5e1d2c739f39d5f3ccf639541731d25f320e10d87",
+          "git_blob": "96e3373968f7df941b94a6c47ea6635b464041f2"
+        }
+      },
+      "environment": {
+        "python": "3.14.4",
+        "os": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+        "isolation": "private launcher HOME/XDG/TMP; environment isolation, not an OS sandbox",
+        "chromium_sandbox": false,
+        "browser": "153.0.8010.12"
+      },
+      "cases": [
+        {
+          "id": "zero-desktop",
+          "width": 1280,
+          "checks": [
+            {
+              "name": "normal file opening visible",
+              "pass": true,
+              "observed": "Saved week opened. Its original inputs and your arrangement are restored."
+            },
+            {
+              "name": "row labels preserved",
+              "pass": true,
+              "observed": [
+                "Picks",
+                "Tied to a Qloo entity ID",
+                "Has affinity evidence",
+                "Constraint-checked",
+                "Unsafe candidates caught"
+              ]
+            },
+            {
+              "name": "grounded counts exact",
+              "pass": true,
+              "observed": [
+                "5",
+                "5",
+                "5",
+                "5",
+                "7"
+              ]
+            },
+            {
+              "name": "LLM-only counts exact",
+              "pass": true,
+              "observed": [
+                "5",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "name": "saved-file provenance retained",
+              "pass": true,
+              "observed": "Saved copy opened from “zero.json” (saved 2026-10-13T00:00:00.000Z). Source labels and checks below are retained from the file; they have not been run again."
+            },
+            {
+              "name": "native downloaded response exact",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "native downloaded inputs and week exact",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "native downloaded source time and calendar identity exact",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "no external requests",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no plan or other API calls",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no browser errors",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no automatic local/session storage",
+              "pass": true,
+              "observed": {
+                "local": [],
+                "session": []
+              }
+            }
+          ],
+          "requests": [
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/style.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/calendar.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/venue_followup.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/saved_weeks.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/plan-request.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/calendar.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/app.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/week_plan.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/week_file.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/venue_followup.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/caregiver_handoff.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/saved_week_ui.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/venue_note_file.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/saved_weeks.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/saved_week_store.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/api/health"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/api/personas"
+            }
+          ],
+          "external_requests": [],
+          "errors": [],
+          "assets": {
+            "static/index.html": {
+              "bytes": 13247,
+              "sha256": "c5723c1c8ba1c7695c863a400805c5aa75e1f5cd3515cea1137318a96626c567",
+              "status": 200
+            },
+            "static/style.css": {
+              "bytes": 5064,
+              "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+              "status": 200
+            },
+            "static/calendar.css": {
+              "bytes": 708,
+              "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+              "status": 200
+            },
+            "static/venue_followup.css": {
+              "bytes": 2166,
+              "sha256": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+              "status": 200
+            },
+            "static/saved_weeks.css": {
+              "bytes": 1097,
+              "sha256": "0663f31c567cd438101e11d44ff698e2fd5e17c31c232f7f23f43727ac51fa7f",
+              "status": 200
+            },
+            "static/plan-request.js": {
+              "bytes": 1420,
+              "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+              "status": 200
+            },
+            "static/calendar.js": {
+              "bytes": 15169,
+              "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+              "status": 200
+            },
+            "static/app.js": {
+              "bytes": 22129,
+              "sha256": "1e328ff4185f0f5a671932bfcb5f906f99603fa48432684a6396e3097d199370",
+              "status": 200
+            },
+            "static/week_file.mjs": {
+              "bytes": 6642,
+              "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+              "status": 200
+            },
+            "static/week_plan.mjs": {
+              "bytes": 3913,
+              "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+              "status": 200
+            },
+            "static/venue_followup.mjs": {
+              "bytes": 19991,
+              "sha256": "9cd974e794e17c87e3b51b4ba7820200ce820ae611c8565a5224d68790441d32",
+              "status": 200
+            },
+            "static/caregiver_handoff.mjs": {
+              "bytes": 11673,
+              "sha256": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+              "status": 200
+            },
+            "static/saved_week_ui.mjs": {
+              "bytes": 9555,
+              "sha256": "03f3580a1260aa4cec5b42076caa09650f3347b57efc42bfe6c51503d766eda7",
+              "status": 200
+            },
+            "static/venue_note_file.mjs": {
+              "bytes": 10435,
+              "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+              "status": 200
+            },
+            "static/saved_week_store.mjs": {
+              "bytes": 6704,
+              "sha256": "8968ad85cc362af59f40b1d01d6123c725a8cd2037939e49c739b04495dce913",
+              "status": 200
+            },
+            "static/saved_weeks.mjs": {
+              "bytes": 3327,
+              "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3",
+              "status": 200
+            }
+          },
+          "status": "Saved week opened. Its original inputs and your arrangement are restored.",
+          "table_rows": [
+            [
+              "Picks",
+              "5",
+              "5"
+            ],
+            [
+              "Tied to a Qloo entity ID",
+              "5",
+              "0"
+            ],
+            [
+              "Has affinity evidence",
+              "5",
+              "0"
+            ],
+            [
+              "Constraint-checked",
+              "5",
+              "0"
+            ],
+            [
+              "Unsafe candidates caught",
+              "7",
+              "0"
+            ]
+          ],
+          "download": {
+            "suggested_filename": "tastetable-week-2026-10-12.json",
+            "bytes": 14607,
+            "sha256": "2e90c8fe82167343642531503273a95d0be2852a0b13d5428b9634679be8dac3",
+            "git_blob": "6520f17eb92d433461d1a2d41b42e9afc4f97a1a"
+          },
+          "screenshot": {
+            "path": "/home/jacob/hamon-runtime-tastetable-zero-20261013-tfg6odm0/candidate-course/zero-desktop.png",
+            "bytes": 19512,
+            "sha256": "4187f40fbe128b8db6e773cfe56b9def71f57bc1c999a26000abdd530464e6a0",
+            "git_blob": "6920ecc07f371ecd9c2a37b2057c5e3997de7217"
+          },
+          "served_assets_exact": true,
+          "app_js_loaded_exact": true,
+          "pass": true
+        },
+        {
+          "id": "positive-desktop",
+          "width": 1280,
+          "checks": [
+            {
+              "name": "normal file opening visible",
+              "pass": true,
+              "observed": "Saved week opened. Its original inputs and your arrangement are restored."
+            },
+            {
+              "name": "row labels preserved",
+              "pass": true,
+              "observed": [
+                "Picks",
+                "Tied to a Qloo entity ID",
+                "Has affinity evidence",
+                "Constraint-checked",
+                "Unsafe candidates caught"
+              ]
+            },
+            {
+              "name": "grounded counts exact",
+              "pass": true,
+              "observed": [
+                "5",
+                "5",
+                "5",
+                "5",
+                "7"
+              ]
+            },
+            {
+              "name": "LLM-only counts exact",
+              "pass": true,
+              "observed": [
+                "5",
+                "1",
+                "2",
+                "3",
+                "4"
+              ]
+            },
+            {
+              "name": "saved-file provenance retained",
+              "pass": true,
+              "observed": "Saved copy opened from “positive.json” (saved 2026-10-13T00:00:00.000Z). Source labels and checks below are retained from the file; they have not been run again."
+            },
+            {
+              "name": "native downloaded response exact",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "native downloaded inputs and week exact",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "native downloaded source time and calendar identity exact",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "no external requests",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no plan or other API calls",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no browser errors",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no automatic local/session storage",
+              "pass": true,
+              "observed": {
+                "local": [],
+                "session": []
+              }
+            }
+          ],
+          "requests": [
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/style.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/calendar.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/venue_followup.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/saved_weeks.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/plan-request.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/calendar.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/app.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/week_plan.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/week_file.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/venue_followup.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/caregiver_handoff.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/saved_week_ui.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/venue_note_file.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/saved_weeks.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/saved_week_store.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/api/health"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/api/personas"
+            }
+          ],
+          "external_requests": [],
+          "errors": [],
+          "assets": {
+            "static/index.html": {
+              "bytes": 13247,
+              "sha256": "c5723c1c8ba1c7695c863a400805c5aa75e1f5cd3515cea1137318a96626c567",
+              "status": 200
+            },
+            "static/style.css": {
+              "bytes": 5064,
+              "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+              "status": 200
+            },
+            "static/calendar.css": {
+              "bytes": 708,
+              "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+              "status": 200
+            },
+            "static/venue_followup.css": {
+              "bytes": 2166,
+              "sha256": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+              "status": 200
+            },
+            "static/saved_weeks.css": {
+              "bytes": 1097,
+              "sha256": "0663f31c567cd438101e11d44ff698e2fd5e17c31c232f7f23f43727ac51fa7f",
+              "status": 200
+            },
+            "static/plan-request.js": {
+              "bytes": 1420,
+              "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+              "status": 200
+            },
+            "static/calendar.js": {
+              "bytes": 15169,
+              "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+              "status": 200
+            },
+            "static/app.js": {
+              "bytes": 22129,
+              "sha256": "1e328ff4185f0f5a671932bfcb5f906f99603fa48432684a6396e3097d199370",
+              "status": 200
+            },
+            "static/week_plan.mjs": {
+              "bytes": 3913,
+              "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+              "status": 200
+            },
+            "static/week_file.mjs": {
+              "bytes": 6642,
+              "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+              "status": 200
+            },
+            "static/venue_followup.mjs": {
+              "bytes": 19991,
+              "sha256": "9cd974e794e17c87e3b51b4ba7820200ce820ae611c8565a5224d68790441d32",
+              "status": 200
+            },
+            "static/caregiver_handoff.mjs": {
+              "bytes": 11673,
+              "sha256": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+              "status": 200
+            },
+            "static/saved_week_ui.mjs": {
+              "bytes": 9555,
+              "sha256": "03f3580a1260aa4cec5b42076caa09650f3347b57efc42bfe6c51503d766eda7",
+              "status": 200
+            },
+            "static/venue_note_file.mjs": {
+              "bytes": 10435,
+              "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+              "status": 200
+            },
+            "static/saved_weeks.mjs": {
+              "bytes": 3327,
+              "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3",
+              "status": 200
+            },
+            "static/saved_week_store.mjs": {
+              "bytes": 6704,
+              "sha256": "8968ad85cc362af59f40b1d01d6123c725a8cd2037939e49c739b04495dce913",
+              "status": 200
+            }
+          },
+          "status": "Saved week opened. Its original inputs and your arrangement are restored.",
+          "table_rows": [
+            [
+              "Picks",
+              "5",
+              "5"
+            ],
+            [
+              "Tied to a Qloo entity ID",
+              "5",
+              "1"
+            ],
+            [
+              "Has affinity evidence",
+              "5",
+              "2"
+            ],
+            [
+              "Constraint-checked",
+              "5",
+              "3"
+            ],
+            [
+              "Unsafe candidates caught",
+              "7",
+              "4"
+            ]
+          ],
+          "download": {
+            "suggested_filename": "tastetable-week-2026-10-12.json",
+            "bytes": 14607,
+            "sha256": "04fbf59ce779c3c6b458cc15d70ac387b49deefa705f64ce8eb8788e7a5dad0d",
+            "git_blob": "f311a2648a146a13bde69d6f9f4d9e105397db54"
+          },
+          "served_assets_exact": true,
+          "app_js_loaded_exact": true,
+          "pass": true
+        },
+        {
+          "id": "missing-desktop",
+          "width": 1280,
+          "checks": [
+            {
+              "name": "prior valid file opened",
+              "pass": true,
+              "observed": "Saved week opened. Its original inputs and your arrangement are restored."
+            },
+            {
+              "name": "missing/null count refused by unchanged numeric schema",
+              "pass": true,
+              "observed": "We could not open this saved week: The saved response has invalid comparison counts. Your inputs are still here."
+            },
+            {
+              "name": "prior result retired",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "save disabled",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "prior restored inputs retained",
+              "pass": true,
+              "observed": {
+                "city": "Pasadena",
+                "cuisines": "Cuban, Mexican",
+                "music": "Celia Cruz",
+                "films": "West Side Story",
+                "constraints": [
+                  "soft_foods",
+                  "low_sodium",
+                  "wheelchair"
+                ]
+              }
+            },
+            {
+              "name": "no external requests",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no plan or other API calls",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no browser errors",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no automatic local/session storage",
+              "pass": true,
+              "observed": {
+                "local": [],
+                "session": []
+              }
+            }
+          ],
+          "requests": [
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/style.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/calendar.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/venue_followup.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/saved_weeks.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/plan-request.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/calendar.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/app.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/week_plan.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/week_file.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/venue_followup.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/caregiver_handoff.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/saved_week_ui.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/venue_note_file.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/saved_weeks.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/saved_week_store.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/api/health"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/api/personas"
+            }
+          ],
+          "external_requests": [],
+          "errors": [],
+          "assets": {
+            "static/index.html": {
+              "bytes": 13247,
+              "sha256": "c5723c1c8ba1c7695c863a400805c5aa75e1f5cd3515cea1137318a96626c567",
+              "status": 200
+            },
+            "static/style.css": {
+              "bytes": 5064,
+              "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+              "status": 200
+            },
+            "static/calendar.css": {
+              "bytes": 708,
+              "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+              "status": 200
+            },
+            "static/venue_followup.css": {
+              "bytes": 2166,
+              "sha256": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+              "status": 200
+            },
+            "static/saved_weeks.css": {
+              "bytes": 1097,
+              "sha256": "0663f31c567cd438101e11d44ff698e2fd5e17c31c232f7f23f43727ac51fa7f",
+              "status": 200
+            },
+            "static/plan-request.js": {
+              "bytes": 1420,
+              "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+              "status": 200
+            },
+            "static/calendar.js": {
+              "bytes": 15169,
+              "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+              "status": 200
+            },
+            "static/app.js": {
+              "bytes": 22129,
+              "sha256": "1e328ff4185f0f5a671932bfcb5f906f99603fa48432684a6396e3097d199370",
+              "status": 200
+            },
+            "static/week_plan.mjs": {
+              "bytes": 3913,
+              "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+              "status": 200
+            },
+            "static/week_file.mjs": {
+              "bytes": 6642,
+              "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+              "status": 200
+            },
+            "static/venue_followup.mjs": {
+              "bytes": 19991,
+              "sha256": "9cd974e794e17c87e3b51b4ba7820200ce820ae611c8565a5224d68790441d32",
+              "status": 200
+            },
+            "static/caregiver_handoff.mjs": {
+              "bytes": 11673,
+              "sha256": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+              "status": 200
+            },
+            "static/saved_week_ui.mjs": {
+              "bytes": 9555,
+              "sha256": "03f3580a1260aa4cec5b42076caa09650f3347b57efc42bfe6c51503d766eda7",
+              "status": 200
+            },
+            "static/venue_note_file.mjs": {
+              "bytes": 10435,
+              "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+              "status": 200
+            },
+            "static/saved_weeks.mjs": {
+              "bytes": 3327,
+              "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3",
+              "status": 200
+            },
+            "static/saved_week_store.mjs": {
+              "bytes": 6704,
+              "sha256": "8968ad85cc362af59f40b1d01d6123c725a8cd2037939e49c739b04495dce913",
+              "status": 200
+            }
+          },
+          "status": "We could not open this saved week: The saved response has invalid comparison counts. Your inputs are still here.",
+          "served_assets_exact": true,
+          "app_js_loaded_exact": true,
+          "pass": true
+        },
+        {
+          "id": "null-desktop",
+          "width": 1280,
+          "checks": [
+            {
+              "name": "prior valid file opened",
+              "pass": true,
+              "observed": "Saved week opened. Its original inputs and your arrangement are restored."
+            },
+            {
+              "name": "missing/null count refused by unchanged numeric schema",
+              "pass": true,
+              "observed": "We could not open this saved week: The saved response has invalid comparison counts. Your inputs are still here."
+            },
+            {
+              "name": "prior result retired",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "save disabled",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "prior restored inputs retained",
+              "pass": true,
+              "observed": {
+                "city": "Pasadena",
+                "cuisines": "Cuban, Mexican",
+                "music": "Celia Cruz",
+                "films": "West Side Story",
+                "constraints": [
+                  "soft_foods",
+                  "low_sodium",
+                  "wheelchair"
+                ]
+              }
+            },
+            {
+              "name": "no external requests",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no plan or other API calls",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no browser errors",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no automatic local/session storage",
+              "pass": true,
+              "observed": {
+                "local": [],
+                "session": []
+              }
+            }
+          ],
+          "requests": [
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/style.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/calendar.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/venue_followup.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/saved_weeks.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/plan-request.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/calendar.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/app.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/week_plan.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/week_file.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/venue_followup.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/caregiver_handoff.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/saved_week_ui.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/venue_note_file.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/saved_weeks.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/saved_week_store.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/api/health"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/api/personas"
+            }
+          ],
+          "external_requests": [],
+          "errors": [],
+          "assets": {
+            "static/index.html": {
+              "bytes": 13247,
+              "sha256": "c5723c1c8ba1c7695c863a400805c5aa75e1f5cd3515cea1137318a96626c567",
+              "status": 200
+            },
+            "static/style.css": {
+              "bytes": 5064,
+              "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+              "status": 200
+            },
+            "static/calendar.css": {
+              "bytes": 708,
+              "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+              "status": 200
+            },
+            "static/venue_followup.css": {
+              "bytes": 2166,
+              "sha256": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+              "status": 200
+            },
+            "static/saved_weeks.css": {
+              "bytes": 1097,
+              "sha256": "0663f31c567cd438101e11d44ff698e2fd5e17c31c232f7f23f43727ac51fa7f",
+              "status": 200
+            },
+            "static/plan-request.js": {
+              "bytes": 1420,
+              "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+              "status": 200
+            },
+            "static/calendar.js": {
+              "bytes": 15169,
+              "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+              "status": 200
+            },
+            "static/app.js": {
+              "bytes": 22129,
+              "sha256": "1e328ff4185f0f5a671932bfcb5f906f99603fa48432684a6396e3097d199370",
+              "status": 200
+            },
+            "static/week_plan.mjs": {
+              "bytes": 3913,
+              "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+              "status": 200
+            },
+            "static/week_file.mjs": {
+              "bytes": 6642,
+              "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+              "status": 200
+            },
+            "static/venue_followup.mjs": {
+              "bytes": 19991,
+              "sha256": "9cd974e794e17c87e3b51b4ba7820200ce820ae611c8565a5224d68790441d32",
+              "status": 200
+            },
+            "static/caregiver_handoff.mjs": {
+              "bytes": 11673,
+              "sha256": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+              "status": 200
+            },
+            "static/saved_week_ui.mjs": {
+              "bytes": 9555,
+              "sha256": "03f3580a1260aa4cec5b42076caa09650f3347b57efc42bfe6c51503d766eda7",
+              "status": 200
+            },
+            "static/venue_note_file.mjs": {
+              "bytes": 10435,
+              "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+              "status": 200
+            },
+            "static/saved_weeks.mjs": {
+              "bytes": 3327,
+              "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3",
+              "status": 200
+            },
+            "static/saved_week_store.mjs": {
+              "bytes": 6704,
+              "sha256": "8968ad85cc362af59f40b1d01d6123c725a8cd2037939e49c739b04495dce913",
+              "status": 200
+            }
+          },
+          "status": "We could not open this saved week: The saved response has invalid comparison counts. Your inputs are still here.",
+          "served_assets_exact": true,
+          "app_js_loaded_exact": true,
+          "pass": true
+        },
+        {
+          "id": "zero-phone",
+          "width": 375,
+          "checks": [
+            {
+              "name": "normal file opening visible",
+              "pass": true,
+              "observed": "Saved week opened. Its original inputs and your arrangement are restored."
+            },
+            {
+              "name": "row labels preserved",
+              "pass": true,
+              "observed": [
+                "Picks",
+                "Tied to a Qloo entity ID",
+                "Has affinity evidence",
+                "Constraint-checked",
+                "Unsafe candidates caught"
+              ]
+            },
+            {
+              "name": "grounded counts exact",
+              "pass": true,
+              "observed": [
+                "5",
+                "5",
+                "5",
+                "5",
+                "7"
+              ]
+            },
+            {
+              "name": "LLM-only counts exact",
+              "pass": true,
+              "observed": [
+                "5",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "name": "saved-file provenance retained",
+              "pass": true,
+              "observed": "Saved copy opened from “zero.json” (saved 2026-10-13T00:00:00.000Z). Source labels and checks below are retained from the file; they have not been run again."
+            },
+            {
+              "name": "native downloaded response exact",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "native downloaded inputs and week exact",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "native downloaded source time and calendar identity exact",
+              "pass": true,
+              "observed": null
+            },
+            {
+              "name": "no external requests",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no plan or other API calls",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no browser errors",
+              "pass": true,
+              "observed": []
+            },
+            {
+              "name": "no automatic local/session storage",
+              "pass": true,
+              "observed": {
+                "local": [],
+                "session": []
+              }
+            }
+          ],
+          "requests": [
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/style.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/calendar.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/venue_followup.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/saved_weeks.css"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/plan-request.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/calendar.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/app.js"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/week_plan.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/week_file.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/venue_followup.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/caregiver_handoff.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/saved_week_ui.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/venue_note_file.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/saved_weeks.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/static/saved_week_store.mjs"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/api/health"
+            },
+            {
+              "method": "GET",
+              "url": "http://127.0.0.1:42439/api/personas"
+            }
+          ],
+          "external_requests": [],
+          "errors": [],
+          "assets": {
+            "static/index.html": {
+              "bytes": 13247,
+              "sha256": "c5723c1c8ba1c7695c863a400805c5aa75e1f5cd3515cea1137318a96626c567",
+              "status": 200
+            },
+            "static/style.css": {
+              "bytes": 5064,
+              "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+              "status": 200
+            },
+            "static/calendar.css": {
+              "bytes": 708,
+              "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+              "status": 200
+            },
+            "static/venue_followup.css": {
+              "bytes": 2166,
+              "sha256": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+              "status": 200
+            },
+            "static/saved_weeks.css": {
+              "bytes": 1097,
+              "sha256": "0663f31c567cd438101e11d44ff698e2fd5e17c31c232f7f23f43727ac51fa7f",
+              "status": 200
+            },
+            "static/plan-request.js": {
+              "bytes": 1420,
+              "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+              "status": 200
+            },
+            "static/calendar.js": {
+              "bytes": 15169,
+              "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+              "status": 200
+            },
+            "static/app.js": {
+              "bytes": 22129,
+              "sha256": "1e328ff4185f0f5a671932bfcb5f906f99603fa48432684a6396e3097d199370",
+              "status": 200
+            },
+            "static/week_plan.mjs": {
+              "bytes": 3913,
+              "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+              "status": 200
+            },
+            "static/week_file.mjs": {
+              "bytes": 6642,
+              "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+              "status": 200
+            },
+            "static/venue_followup.mjs": {
+              "bytes": 19991,
+              "sha256": "9cd974e794e17c87e3b51b4ba7820200ce820ae611c8565a5224d68790441d32",
+              "status": 200
+            },
+            "static/caregiver_handoff.mjs": {
+              "bytes": 11673,
+              "sha256": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+              "status": 200
+            },
+            "static/saved_week_ui.mjs": {
+              "bytes": 9555,
+              "sha256": "03f3580a1260aa4cec5b42076caa09650f3347b57efc42bfe6c51503d766eda7",
+              "status": 200
+            },
+            "static/saved_weeks.mjs": {
+              "bytes": 3327,
+              "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3",
+              "status": 200
+            },
+            "static/venue_note_file.mjs": {
+              "bytes": 10435,
+              "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+              "status": 200
+            },
+            "static/saved_week_store.mjs": {
+              "bytes": 6704,
+              "sha256": "8968ad85cc362af59f40b1d01d6123c725a8cd2037939e49c739b04495dce913",
+              "status": 200
+            }
+          },
+          "status": "Saved week opened. Its original inputs and your arrangement are restored.",
+          "table_rows": [
+            [
+              "Picks",
+              "5",
+              "5"
+            ],
+            [
+              "Tied to a Qloo entity ID",
+              "5",
+              "0"
+            ],
+            [
+              "Has affinity evidence",
+              "5",
+              "0"
+            ],
+            [
+              "Constraint-checked",
+              "5",
+              "0"
+            ],
+            [
+              "Unsafe candidates caught",
+              "7",
+              "0"
+            ]
+          ],
+          "download": {
+            "suggested_filename": "tastetable-week-2026-10-12.json",
+            "bytes": 14607,
+            "sha256": "2c7bb586956e7744c8c3ce371444687b8815e986fd8361b9eaa716126c49ec50",
+            "git_blob": "fd453a8a47db34092694ae4ad9ac9cc7d6c9e777"
+          },
+          "screenshot": {
+            "path": "/home/jacob/hamon-runtime-tastetable-zero-20261013-tfg6odm0/candidate-course/zero-phone.png",
+            "bytes": 18521,
+            "sha256": "9355df9181e19d8fe47fc297b22d2c467438314f66ec05f0996a49df4ab54927",
+            "git_blob": "40db277c72a2f4d85651052c08e84342179e63b8"
+          },
+          "served_assets_exact": true,
+          "app_js_loaded_exact": true,
+          "pass": true
+        }
+      ],
+      "server_requests": [
+        {
+          "method": "GET",
+          "path": "/"
+        },
+        {
+          "method": "GET",
+          "path": "/static/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/calendar.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_followup.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_weeks.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/plan-request.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/calendar.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/app.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/week_plan.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/week_file.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_followup.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/caregiver_handoff.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_week_ui.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_note_file.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_weeks.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_week_store.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/api/health"
+        },
+        {
+          "method": "GET",
+          "path": "/api/personas"
+        },
+        {
+          "method": "GET",
+          "path": "/"
+        },
+        {
+          "method": "GET",
+          "path": "/static/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/calendar.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_followup.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_weeks.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/plan-request.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/calendar.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/app.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/week_plan.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/week_file.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_followup.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/caregiver_handoff.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_week_ui.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_note_file.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_weeks.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_week_store.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/api/health"
+        },
+        {
+          "method": "GET",
+          "path": "/api/personas"
+        },
+        {
+          "method": "GET",
+          "path": "/"
+        },
+        {
+          "method": "GET",
+          "path": "/static/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/calendar.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_followup.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_weeks.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/plan-request.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/calendar.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/app.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/week_plan.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/week_file.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_followup.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/caregiver_handoff.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_week_ui.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_note_file.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_weeks.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_week_store.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/api/health"
+        },
+        {
+          "method": "GET",
+          "path": "/api/personas"
+        },
+        {
+          "method": "GET",
+          "path": "/"
+        },
+        {
+          "method": "GET",
+          "path": "/static/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/calendar.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_followup.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_weeks.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/plan-request.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/calendar.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/app.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/week_plan.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/week_file.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_followup.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/caregiver_handoff.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_week_ui.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_note_file.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_weeks.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_week_store.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/api/health"
+        },
+        {
+          "method": "GET",
+          "path": "/api/personas"
+        },
+        {
+          "method": "GET",
+          "path": "/"
+        },
+        {
+          "method": "GET",
+          "path": "/static/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_followup.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/calendar.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_weeks.css"
+        },
+        {
+          "method": "GET",
+          "path": "/static/plan-request.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/calendar.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/app.js"
+        },
+        {
+          "method": "GET",
+          "path": "/static/week_plan.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/week_file.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_followup.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/caregiver_handoff.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_week_ui.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/venue_note_file.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_weeks.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/static/saved_week_store.mjs"
+        },
+        {
+          "method": "GET",
+          "path": "/api/health"
+        },
+        {
+          "method": "GET",
+          "path": "/api/personas"
+        }
+      ],
+      "origin": "http://127.0.0.1:42439",
+      "server_stopped": true,
+      "source_after": {
+        "static/app.js": {
+          "bytes": 22129,
+          "sha256": "1e328ff4185f0f5a671932bfcb5f906f99603fa48432684a6396e3097d199370",
+          "git_blob": "9a34d0e4719bc472144c3ec966e609cc8fbf4626"
+        },
+        "static/calendar.css": {
+          "bytes": 708,
+          "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+          "git_blob": "9e53b951316d841b86f0256cd2444a3ce547269f"
+        },
+        "static/calendar.js": {
+          "bytes": 15169,
+          "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+          "git_blob": "dbed22d2cb91090bccec9472fbffd2854eed2722"
+        },
+        "static/caregiver_handoff.mjs": {
+          "bytes": 11673,
+          "sha256": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+          "git_blob": "4286409b3fe932f61957ba72f5db918d18ff0751"
+        },
+        "static/index.html": {
+          "bytes": 13247,
+          "sha256": "c5723c1c8ba1c7695c863a400805c5aa75e1f5cd3515cea1137318a96626c567",
+          "git_blob": "ee986de462854c00a2d2c465bf2bef0cca4379fb"
+        },
+        "static/plan-request.js": {
+          "bytes": 1420,
+          "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+          "git_blob": "b21276dda840fe6dd96a3bf3258a851970ff5e4d"
+        },
+        "static/saved_week_store.mjs": {
+          "bytes": 6704,
+          "sha256": "8968ad85cc362af59f40b1d01d6123c725a8cd2037939e49c739b04495dce913",
+          "git_blob": "c525467f00521d7f4182fd57ca9a91e48c6b9e09"
+        },
+        "static/saved_week_ui.mjs": {
+          "bytes": 9555,
+          "sha256": "03f3580a1260aa4cec5b42076caa09650f3347b57efc42bfe6c51503d766eda7",
+          "git_blob": "5a281492002b61222c70ed9b4268150504d20b15"
+        },
+        "static/saved_weeks.css": {
+          "bytes": 1097,
+          "sha256": "0663f31c567cd438101e11d44ff698e2fd5e17c31c232f7f23f43727ac51fa7f",
+          "git_blob": "c5b8a9f45a4f7e0ce93c46d7f814308cd1a99009"
+        },
+        "static/saved_weeks.mjs": {
+          "bytes": 3327,
+          "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3",
+          "git_blob": "0bb822cb6f75c376397c0f7d6d6de78035f865bc"
+        },
+        "static/style.css": {
+          "bytes": 5064,
+          "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+          "git_blob": "28df6c5229b6b592db33e929ae058fe514304af4"
+        },
+        "static/venue_followup.css": {
+          "bytes": 2166,
+          "sha256": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+          "git_blob": "dd88e221133be5281330cba11a6d141ae5e8d239"
+        },
+        "static/venue_followup.mjs": {
+          "bytes": 19991,
+          "sha256": "9cd974e794e17c87e3b51b4ba7820200ce820ae611c8565a5224d68790441d32",
+          "git_blob": "e19affca590d4b4d0d31a6fc11d5558173320133"
+        },
+        "static/venue_note_file.mjs": {
+          "bytes": 10435,
+          "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+          "git_blob": "f8406cb540d52222996c585666ae1a55a1030def"
+        },
+        "static/week_file.mjs": {
+          "bytes": 6642,
+          "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+          "git_blob": "420ddb8f63fca264dcf97be7147801105696155d"
+        },
+        "static/week_plan.mjs": {
+          "bytes": 3913,
+          "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+          "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+        }
+      },
+      "source_preserved": true,
+      "completed_at": "2026-10-13T07:47:18.162737+00:00",
+      "summary": {
+        "cases": 5,
+        "passed_cases": 5,
+        "checks": 54,
+        "passed_checks": 54
+      },
+      "pass": true
+    },
+    "candidate_composition": {
+      "created_at": "2026-10-13T07:47:08.593554+00:00",
+      "base": "da02d3572099221b92372f8df573584c8e210b2d",
+      "candidate_app": {
+        "bytes": 22129,
+        "sha256": "1e328ff4185f0f5a671932bfcb5f906f99603fa48432684a6396e3097d199370",
+        "git_blob": "9a34d0e4719bc472144c3ec966e609cc8fbf4626"
+      },
+      "unchanged_companions": 15,
+      "source_manifest": {
+        "static/app.js": {
+          "bytes": 22129,
+          "sha256": "1e328ff4185f0f5a671932bfcb5f906f99603fa48432684a6396e3097d199370",
+          "git_blob": "9a34d0e4719bc472144c3ec966e609cc8fbf4626"
+        },
+        "static/calendar.css": {
+          "bytes": 708,
+          "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+          "git_blob": "9e53b951316d841b86f0256cd2444a3ce547269f"
+        },
+        "static/calendar.js": {
+          "bytes": 15169,
+          "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+          "git_blob": "dbed22d2cb91090bccec9472fbffd2854eed2722"
+        },
+        "static/caregiver_handoff.mjs": {
+          "bytes": 11673,
+          "sha256": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+          "git_blob": "4286409b3fe932f61957ba72f5db918d18ff0751"
+        },
+        "static/index.html": {
+          "bytes": 13247,
+          "sha256": "c5723c1c8ba1c7695c863a400805c5aa75e1f5cd3515cea1137318a96626c567",
+          "git_blob": "ee986de462854c00a2d2c465bf2bef0cca4379fb"
+        },
+        "static/plan-request.js": {
+          "bytes": 1420,
+          "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+          "git_blob": "b21276dda840fe6dd96a3bf3258a851970ff5e4d"
+        },
+        "static/saved_week_store.mjs": {
+          "bytes": 6704,
+          "sha256": "8968ad85cc362af59f40b1d01d6123c725a8cd2037939e49c739b04495dce913",
+          "git_blob": "c525467f00521d7f4182fd57ca9a91e48c6b9e09"
+        },
+        "static/saved_week_ui.mjs": {
+          "bytes": 9555,
+          "sha256": "03f3580a1260aa4cec5b42076caa09650f3347b57efc42bfe6c51503d766eda7",
+          "git_blob": "5a281492002b61222c70ed9b4268150504d20b15"
+        },
+        "static/saved_weeks.css": {
+          "bytes": 1097,
+          "sha256": "0663f31c567cd438101e11d44ff698e2fd5e17c31c232f7f23f43727ac51fa7f",
+          "git_blob": "c5b8a9f45a4f7e0ce93c46d7f814308cd1a99009"
+        },
+        "static/saved_weeks.mjs": {
+          "bytes": 3327,
+          "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3",
+          "git_blob": "0bb822cb6f75c376397c0f7d6d6de78035f865bc"
+        },
+        "static/style.css": {
+          "bytes": 5064,
+          "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+          "git_blob": "28df6c5229b6b592db33e929ae058fe514304af4"
+        },
+        "static/venue_followup.css": {
+          "bytes": 2166,
+          "sha256": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+          "git_blob": "dd88e221133be5281330cba11a6d141ae5e8d239"
+        },
+        "static/venue_followup.mjs": {
+          "bytes": 19991,
+          "sha256": "9cd974e794e17c87e3b51b4ba7820200ce820ae611c8565a5224d68790441d32",
+          "git_blob": "e19affca590d4b4d0d31a6fc11d5558173320133"
+        },
+        "static/venue_note_file.mjs": {
+          "bytes": 10435,
+          "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+          "git_blob": "f8406cb540d52222996c585666ae1a55a1030def"
+        },
+        "static/week_file.mjs": {
+          "bytes": 6642,
+          "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+          "git_blob": "420ddb8f63fca264dcf97be7147801105696155d"
+        },
+        "static/week_plan.mjs": {
+          "bytes": 3913,
+          "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+          "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+        }
+      },
+      "receiver": {
+        "bytes": 10791,
+        "sha256": "41036295ff70189da4f5f46a38de6e404ad617a4d3ab572d7f1ea3d8ca60d654",
+        "git_blob": "ba85bf058f27ed3e5fd513aea4849a72ed0d1daf"
+      },
+      "acceptance": {
+        "bytes": 3095,
+        "sha256": "9a7f357f1c6033d15b6515f6125706d234d8b1f70f22b512a1b34029fc68324f",
+        "git_blob": "efde5951fdd1974d135a1249e68281491353c0ce"
+      }
+    }
+  },
+  "native_artifacts": [
+    {
+      "path": "/home/jacob/hamon-source-taste-counts-20261013-ogkzztl0/original-qualification.json",
+      "bytes": 4006,
+      "sha256": "176ac23cdbd3acb30fbac6d76837ca7c43a42b9a70673105ab16fd147046e9ec"
+    },
+    {
+      "path": "/home/jacob/hamon-source-taste-counts-20261013-ogkzztl0/candidate-qualification.json",
+      "bytes": 2761,
+      "sha256": "714d87215e05a39483e02b27f40e32437ba97c59b03c4effc40d4f8faa3ab2b7"
+    },
+    {
+      "path": "/home/jacob/hamon-source-taste-counts-20261013-ogkzztl0/original-stdout.xml",
+      "bytes": 7653,
+      "sha256": "fccc076dbd5772c7160ab6410f0d458e51be1fa89902670b1409ebaf49db8c78"
+    },
+    {
+      "path": "/home/jacob/hamon-source-taste-counts-20261013-ogkzztl0/candidate-stdout.xml",
+      "bytes": 2949,
+      "sha256": "88408b14a5490b294f252f74577b618720d21739a73422bfb797029e5ff2f662"
+    },
+    {
+      "path": "/home/jacob/hamon-source-taste-counts-20261013-ogkzztl0/original-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/jacob/hamon-source-taste-counts-20261013-ogkzztl0/candidate-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/jacob/hamon-source-taste-counts-20261013-ogkzztl0/receive-original.py",
+      "bytes": 2294,
+      "sha256": "fb0d77c27ad99850e967b7b7c02422c57c64a8dd74d556c081f3ef78b276c203"
+    },
+    {
+      "path": "/home/jacob/hamon-source-taste-counts-20261013-ogkzztl0/qualify-candidate.py",
+      "bytes": 2514,
+      "sha256": "e9973cff7b45f8f0f7777e1b44f88fdb940cdcd3747365e3fc6bb7f7bf29a4aa"
+    },
+    {
+      "path": "/home/jacob/hamon-runtime-tastetable-zero-20261013-tfg6odm0/acceptance.json",
+      "bytes": 3095,
+      "sha256": "9a7f357f1c6033d15b6515f6125706d234d8b1f70f22b512a1b34029fc68324f"
+    },
+    {
+      "path": "/home/jacob/hamon-runtime-tastetable-zero-20261013-tfg6odm0/freeze.json",
+      "bytes": 5107,
+      "sha256": "1ddfd30f8045dc924d785dab5a6e81137bd0615f4e1be3cc7bcd8483d363ed3d"
+    },
+    {
+      "path": "/home/jacob/hamon-runtime-tastetable-zero-20261013-tfg6odm0/receive_browser.py",
+      "bytes": 10791,
+      "sha256": "41036295ff70189da4f5f46a38de6e404ad617a4d3ab572d7f1ea3d8ca60d654"
+    },
+    {
+      "path": "/home/jacob/hamon-runtime-tastetable-zero-20261013-tfg6odm0/build_fixtures.mjs",
+      "bytes": 1531,
+      "sha256": "5d84ea9c3bdb1d71c2e957a383ddbde1b72e811193689d7e4e35e2b083c84907"
+    },
+    {
+      "path": "/home/jacob/hamon-runtime-tastetable-zero-20261013-tfg6odm0/original-course/browser-receipt.json",
+      "bytes": 54393,
+      "sha256": "b98583a2aaaf382e438d6d46f74ca84edeea6aeac24efcde1008ed3846bc886d"
+    },
+    {
+      "path": "/home/jacob/hamon-runtime-tastetable-zero-20261013-tfg6odm0/candidate-course/browser-receipt.json",
+      "bytes": 54311,
+      "sha256": "748d5f751e4dbd2ac2d9478a5e343cb973b4702dd3ea083fe27e29e40a8f9ae1"
+    },
+    {
+      "path": "/home/jacob/hamon-runtime-tastetable-zero-20261013-tfg6odm0/candidate-composition.json",
+      "bytes": 3995,
+      "sha256": "1de6fde773038fc0bf5d6d7ec924d18d7c75360728bca06f1460ee69178ae4d9"
+    }
+  ],
+  "publication_composition": {
+    "base": "3ffafc78190c69d69063dfa69018cb4f0bbe42a5",
+    "base_tree": "638793f3c72354419e8579134463306b48793c4a",
+    "base_leaves": 1058,
+    "unrelated_leaves_to_preserve": 1056,
+    "accepted_delta_from_qualified_base": [
+      {
+        "path": "app.py",
+        "sha": "df80c9e450bba126f784253e2119e0176d27f961",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/API_CITY_INPUT.md",
+        "sha": "d281b19c1db03f3ddccc51819fb5972143116b2b",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/api-city-current-main-dcac8b3b8755/README.md",
+        "sha": "713bca931f745bc696532fb90a3853cc08a99386",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/api-city-current-main-dcac8b3b8755/api-city-course.stderr",
+        "sha": "fda3adad610eece66a7e062871ab85ce05c02a8f",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/api-city-current-main-dcac8b3b8755/api-city-course.stdout",
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/api-city-current-main-dcac8b3b8755/evidence-manifest.json",
+        "sha": "b0d0a212347cff942cb1a1a195a670ed277f8b57",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/api-city-current-main-dcac8b3b8755/make-packet.stderr",
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/api-city-current-main-dcac8b3b8755/make-packet.stdout",
+        "sha": "f0e4843886eed7e4739f407596ea45366c9606e4",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/api-city-current-main-dcac8b3b8755/receive.stderr",
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/api-city-current-main-dcac8b3b8755/receive.stdout",
+        "sha": "75b5a75920770edbbcffce60c2bd95ee27fedd45",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/api-city-current-main-dcac8b3b8755/receiving.json",
+        "sha": "d3881d440015615e2c6fa07bb916e13f16c55ea8",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/api-city-current-main-dcac8b3b8755/run-retained-tests.py",
+        "sha": "f10d92dddc4d55d51d87c02ba1652070e51d55e0",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/api-city-current-main-dcac8b3b8755/selected-source.json",
+        "sha": "08055f28cfc7cef19ac5aec1b56ef106b5c58da8",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/api-city-current-main-dcac8b3b8755/test-results.json",
+        "sha": "3c440a696d0887612842644497fc9dab89c9ba35",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/api-city-current-main-dcac8b3b8755/verify-after.stderr",
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/api-city-current-main-dcac8b3b8755/verify-after.stdout",
+        "sha": "4777ff6d0c426b4dffbdcac2e46c25c71796f599",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/api-city-current-main-dcac8b3b8755/verify-before.stderr",
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "docs/receiving/api-city-current-main-dcac8b3b8755/verify-before.stdout",
+        "sha": "4777ff6d0c426b4dffbdcac2e46c25c71796f599",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "tests/test_api_city.py",
+        "sha": "8eb8b87f8db096d8dff50c4bcc785d9b189f5784",
+        "mode": "100644",
+        "type": "blob"
+      }
+    ],
+    "scope": "Static publication composition preserves accepted PR100 city-input backend/test/guide and PR106 receiving artifacts. All eight focused-course inputs and all sixteen browser static inputs remain identical to qualified da02d357. Original publication_preservation describes the earlier qualified-base candidate; all raw courses remain bound to that source. No new backend or full-stack execution claimed."
+  }
+}
