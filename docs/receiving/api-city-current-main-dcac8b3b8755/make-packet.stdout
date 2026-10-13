@@ -1,0 +1,16 @@
+{
+  "origin_metadata": "caller_supplied_not_authenticated",
+  "packet_bytes": 128708,
+  "packet_sha256": "6657d514c7da4d409885adeca512301ed720c104c756659f5e9fbcb90e834b15",
+  "posix_file_modes_verified": false,
+  "schema": "hamon.source-packet-created/1",
+  "scope": "selected_blobs",
+  "selected_files": 9,
+  "source": {
+    "commit": "32aaab5542bca5001215a7cb259f11db21093f9a",
+    "repository": "Jacob-Met/tastetable",
+    "tree": "7e36e89f0177bdad3f0c5b8da5ab61608644f239"
+  },
+  "source_manifest_sha256": "4f3be1fc0055256694ea6cc0a604bca931f7d3d1b92ed90221cf5602303004ea",
+  "status": "complete"
+}

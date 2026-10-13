@@ -1,0 +1,8 @@
+test_exact_city_default_empty_text_and_slice_boundaries (received_test_api_city.ApiCityInput.test_exact_city_default_empty_text_and_slice_boundaries) ... ok
+test_invalid_requests_still_stop_before_provider_factories (received_test_api_city.ApiCityInput.test_invalid_requests_still_stop_before_provider_factories) ... ok
+test_pasted_city_keeps_each_complete_fictional_plan (received_test_api_city.ApiCityInput.test_pasted_city_keeps_each_complete_fictional_plan) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.188s
+
+OK

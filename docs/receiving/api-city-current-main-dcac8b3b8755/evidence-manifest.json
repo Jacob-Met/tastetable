@@ -1,0 +1,90 @@
+{
+  "schema": "hamon.receiving-files/1",
+  "scope": "raw native receiving files; excludes this manifest and explanatory README",
+  "files": [
+    {
+      "path": "receiving.json",
+      "bytes": 20294,
+      "sha256": "5fa3983aa4fd15169e51b041f70ef8e9525eb091c4f4e999bc12bcfac74479e6",
+      "git_blob": "d3881d440015615e2c6fa07bb916e13f16c55ea8"
+    },
+    {
+      "path": "test-results.json",
+      "bytes": 9924,
+      "sha256": "991ac39782f57c10407c988e0328d827a2ff86c0737e4d4aef063f497cf0ee4e",
+      "git_blob": "3c440a696d0887612842644497fc9dab89c9ba35"
+    },
+    {
+      "path": "selected-source.json",
+      "bytes": 1800,
+      "sha256": "4f3be1fc0055256694ea6cc0a604bca931f7d3d1b92ed90221cf5602303004ea",
+      "git_blob": "08055f28cfc7cef19ac5aec1b56ef106b5c58da8"
+    },
+    {
+      "path": "run-retained-tests.py",
+      "bytes": 1148,
+      "sha256": "834a5a11b64df39ca58a944e0d1482b1eeb52320b4f5593e90eecd4215c3078e",
+      "git_blob": "f10d92dddc4d55d51d87c02ba1652070e51d55e0"
+    },
+    {
+      "path": "make-packet.stdout",
+      "bytes": 619,
+      "sha256": "c262aa037ca82ec7cef1716403edd53b97448b3c1bc7b7cbd8151cdd7ef5ba3d",
+      "git_blob": "f0e4843886eed7e4739f407596ea45366c9606e4"
+    },
+    {
+      "path": "make-packet.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "receive.stdout",
+      "bytes": 320,
+      "sha256": "acb65e840f1397127ded20e056fc3f60430f7602d5ebe67459f23be0b9108c15",
+      "git_blob": "75b5a75920770edbbcffce60c2bd95ee27fedd45"
+    },
+    {
+      "path": "receive.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "verify-before.stdout",
+      "bytes": 304,
+      "sha256": "93dc7bbef60c56a39952e2de2a092aaafea546fe6d39d08f078d4c6d7e3a288b",
+      "git_blob": "4777ff6d0c426b4dffbdcac2e46c25c71796f599"
+    },
+    {
+      "path": "verify-before.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "api-city-course.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "api-city-course.stderr",
+      "bytes": 575,
+      "sha256": "2b172d23e1867be6e210c438e38c780937e98b08838832ef22efe05dbf66c865",
+      "git_blob": "fda3adad610eece66a7e062871ab85ce05c02a8f"
+    },
+    {
+      "path": "verify-after.stdout",
+      "bytes": 304,
+      "sha256": "93dc7bbef60c56a39952e2de2a092aaafea546fe6d39d08f078d4c6d7e3a288b",
+      "git_blob": "4777ff6d0c426b4dffbdcac2e46c25c71796f599"
+    },
+    {
+      "path": "verify-after.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    }
+  ]
+}
