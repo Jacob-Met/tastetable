@@ -1,0 +1,29 @@
+{
+  "result": "PASS",
+  "reviewer": "1caa1d8e028a/source_delivery",
+  "archive_sha256": "aa0f4b3e9ca004b7db2eeefec40de325ce1673b55502b80f11ce2bb9264ff8c7",
+  "archive_bytes": 98971,
+  "archive_members": 26,
+  "manifest_all_25_entries_exact": true,
+  "nine_source_git_blobs_and_receiver_match_published_tree": true,
+  "qualified_commit": "d2a3d26cb686b568ed0db0509f152e6c24e260cc",
+  "qualified_merge": "59dbb0c4348b9a0374da4f05f95c23eef6080521",
+  "qualified_tree": "78515e64cd61965ed15cba4a2601d8feae5ca3e5",
+  "oracle_sha256": "f1b2a0f0f63a1ed0be21afd80ea3b45cfba54837b8c1a2281085903c187db830",
+  "oracle_checks": 10,
+  "offline_persona_stdout_matches_cloud": 3,
+  "jobs_exit_zero": 4,
+  "all_ten_input_bytes_mtime_mode_inode_unchanged": true,
+  "native_receipt_sha256": "dfa38681593323f5781de7e1ea1135e58d1188abf45cb6b3cc98ab4bcecdac67",
+  "raw_custody_sha256": "e5ad924416c25b093384d09ae618a368824016c8bd1e6e368cb5ef95abbe5f1f",
+  "routed_start_and_completed_zero_verified": [
+    "preflight",
+    "staging",
+    "qualification",
+    "export"
+  ],
+  "controller_read": true,
+  "subsequent_main_observed": "95738e812de81e3ace9830cdfabbbe7e39ff4686",
+  "subsequent_main_limit": "PR96 changes successful-parse admission and repeated-error request counts; this unchanged PR95 oracle is historical qualification, not a PR96/current-composition check. Separate maintained composition evidence remains authoritative.",
+  "scope": "Read-only custody and byte review, no duplicate native execution. Isolated ThinkPad source execution only, not installed consumer adoption, live provider use, browser receiving or scientific/clinical validation."
+}

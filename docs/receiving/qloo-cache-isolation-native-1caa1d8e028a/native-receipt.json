@@ -1,0 +1,273 @@
+{
+  "device_id": "d55b2499-5e82-4805-819a-d0d7ddea1efe",
+  "native_root": "/home/jacob/hamon-tastetable-native-1caa1d8e028a",
+  "environment": {
+    "utc": "2026-10-13T03:39:06.572336+00:00",
+    "pid": 2940225,
+    "hostname": "hamon-thinkpad",
+    "uid": 1000,
+    "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+    "executable": "/usr/bin/python3"
+  },
+  "source_commit": "d2a3d26cb686b568ed0db0509f152e6c24e260cc",
+  "merge_commit": "59dbb0c4348b9a0374da4f05f95c23eef6080521",
+  "tree": "78515e64cd61965ed15cba4a2601d8feae5ca3e5",
+  "source_before": {
+    "source/agent.py": {
+      "bytes": 28440,
+      "sha256": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+      "mtime_ns": 1791862440361841767,
+      "mode": 33204,
+      "inode": 588764
+    },
+    "source/constraints.py": {
+      "bytes": 8720,
+      "sha256": "f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa",
+      "mtime_ns": 1791862440361929023,
+      "mode": 33204,
+      "inode": 588765
+    },
+    "source/personas.py": {
+      "bytes": 1247,
+      "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+      "mtime_ns": 1791862440362079227,
+      "mode": 33204,
+      "inode": 588768
+    },
+    "source/tastetable_cli.py": {
+      "bytes": 7568,
+      "sha256": "e061239806f3fa279b278dd71b33fd731fa53f4eb1bdce4b821f91f8b7401192",
+      "mtime_ns": 1791862440362983419,
+      "mode": 33204,
+      "inode": 588772
+    },
+    "source/fixtures/qloo_fixtures.json": {
+      "bytes": 21190,
+      "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+      "mtime_ns": 1791862440362019289,
+      "mode": 33204,
+      "inode": 588767
+    },
+    "source/tests/test_qloo_http_lifetime.py": {
+      "bytes": 5652,
+      "sha256": "b4f0f12728236ef5bf11be9f52b66de6fa3432ccfd0c8e4317508909b4ca2461",
+      "mtime_ns": 1791862440363063836,
+      "mode": 33204,
+      "inode": 588774
+    },
+    "source/qloo_client.py": {
+      "bytes": 12284,
+      "sha256": "22b6d5ee7664f37d4477d0e0973727d36f07d862a455a1ff9d7e7d2b4acc79eb",
+      "mtime_ns": 1791862440362897562,
+      "mode": 33204,
+      "inode": 588771
+    },
+    "source/tests/test_tastetable.py": {
+      "bytes": 8240,
+      "sha256": "7ace6361e9baf4a1e1a4ccfa528df1a4d2165b99bacb0423a572ac78bf3e9c5b",
+      "mtime_ns": 1791862440363140325,
+      "mode": 33204,
+      "inode": 588775
+    },
+    "source/README.md": {
+      "bytes": 23654,
+      "sha256": "2ec72ed2f29eef6c4e91083c5b924defdd6de07790fd28a8e5d03c526879893f",
+      "mtime_ns": 1791862440361695835,
+      "mode": 33204,
+      "inode": 588763
+    },
+    "receive_cache.py": {
+      "bytes": 11565,
+      "sha256": "f1b2a0f0f63a1ed0be21afd80ea3b45cfba54837b8c1a2281085903c187db830",
+      "mtime_ns": 1791862440361516402,
+      "mode": 33204,
+      "inode": 588761
+    }
+  },
+  "source_after": {
+    "source/agent.py": {
+      "bytes": 28440,
+      "sha256": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+      "mtime_ns": 1791862440361841767,
+      "mode": 33204,
+      "inode": 588764
+    },
+    "source/constraints.py": {
+      "bytes": 8720,
+      "sha256": "f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa",
+      "mtime_ns": 1791862440361929023,
+      "mode": 33204,
+      "inode": 588765
+    },
+    "source/personas.py": {
+      "bytes": 1247,
+      "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+      "mtime_ns": 1791862440362079227,
+      "mode": 33204,
+      "inode": 588768
+    },
+    "source/tastetable_cli.py": {
+      "bytes": 7568,
+      "sha256": "e061239806f3fa279b278dd71b33fd731fa53f4eb1bdce4b821f91f8b7401192",
+      "mtime_ns": 1791862440362983419,
+      "mode": 33204,
+      "inode": 588772
+    },
+    "source/fixtures/qloo_fixtures.json": {
+      "bytes": 21190,
+      "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+      "mtime_ns": 1791862440362019289,
+      "mode": 33204,
+      "inode": 588767
+    },
+    "source/tests/test_qloo_http_lifetime.py": {
+      "bytes": 5652,
+      "sha256": "b4f0f12728236ef5bf11be9f52b66de6fa3432ccfd0c8e4317508909b4ca2461",
+      "mtime_ns": 1791862440363063836,
+      "mode": 33204,
+      "inode": 588774
+    },
+    "source/qloo_client.py": {
+      "bytes": 12284,
+      "sha256": "22b6d5ee7664f37d4477d0e0973727d36f07d862a455a1ff9d7e7d2b4acc79eb",
+      "mtime_ns": 1791862440362897562,
+      "mode": 33204,
+      "inode": 588771
+    },
+    "source/tests/test_tastetable.py": {
+      "bytes": 8240,
+      "sha256": "7ace6361e9baf4a1e1a4ccfa528df1a4d2165b99bacb0423a572ac78bf3e9c5b",
+      "mtime_ns": 1791862440363140325,
+      "mode": 33204,
+      "inode": 588775
+    },
+    "source/README.md": {
+      "bytes": 23654,
+      "sha256": "2ec72ed2f29eef6c4e91083c5b924defdd6de07790fd28a8e5d03c526879893f",
+      "mtime_ns": 1791862440361695835,
+      "mode": 33204,
+      "inode": 588763
+    },
+    "receive_cache.py": {
+      "bytes": 11565,
+      "sha256": "f1b2a0f0f63a1ed0be21afd80ea3b45cfba54837b8c1a2281085903c187db830",
+      "mtime_ns": 1791862440361516402,
+      "mode": 33204,
+      "inode": 588761
+    }
+  },
+  "source_bytes_mtime_mode_inode_unchanged": true,
+  "cloud_cli_receipt_sha256": "f081ff41b87aed0463e82e6cd1d98256a9db0e5401c41ccc3b79dbace3cf9121",
+  "jobs": [
+    {
+      "name": "oracle",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-S",
+        "/home/jacob/hamon-tastetable-native-1caa1d8e028a/receive_cache.py",
+        "--source",
+        "/home/jacob/hamon-tastetable-native-1caa1d8e028a/source/qloo_client.py",
+        "--out",
+        "/home/jacob/hamon-tastetable-native-1caa1d8e028a/results/oracle"
+      ],
+      "pid": 2940292,
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.07340099406428635,
+      "stdout_bytes": 147,
+      "stdout_sha256": "5de6520e99e364b2ebf4288de0db92b2519afa741f0869ff8a9ff3a653f36b83",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bytes_mtime_mode_inode_unchanged": true,
+      "receiver_receipt_sha256": "b9d277ffc560f9109f5106be0838ebda91770afa1fd2a07846287caff2f2e76e",
+      "receiver_passed": 10,
+      "receiver_total": 10,
+      "receiver_pass": true,
+      "pass": true
+    },
+    {
+      "name": "persona-rosa",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-S",
+        "/home/jacob/hamon-tastetable-native-1caa1d8e028a/source/tastetable_cli.py",
+        "--persona",
+        "rosa"
+      ],
+      "pid": 2940294,
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.062129613012075424,
+      "stdout_bytes": 14470,
+      "stdout_sha256": "5d9fa0af32fb943547bd13c0c27e1f70d50d7fc3b25430758511aeb51cd4eaba",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bytes_mtime_mode_inode_unchanged": true,
+      "cloud_expected": {
+        "bytes": 14470,
+        "sha256": "5d9fa0af32fb943547bd13c0c27e1f70d50d7fc3b25430758511aeb51cd4eaba"
+      },
+      "stdout_matches_cloud": true,
+      "offline_provenance_matches": true,
+      "pass": true
+    },
+    {
+      "name": "persona-harold",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-S",
+        "/home/jacob/hamon-tastetable-native-1caa1d8e028a/source/tastetable_cli.py",
+        "--persona",
+        "harold"
+      ],
+      "pid": 2940296,
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.060763332061469555,
+      "stdout_bytes": 12775,
+      "stdout_sha256": "c9066f70349e88814c278e09e33992e8a11ff32ba24fb29f0d3c3eb8b34ff566",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bytes_mtime_mode_inode_unchanged": true,
+      "cloud_expected": {
+        "bytes": 12775,
+        "sha256": "c9066f70349e88814c278e09e33992e8a11ff32ba24fb29f0d3c3eb8b34ff566"
+      },
+      "stdout_matches_cloud": true,
+      "offline_provenance_matches": true,
+      "pass": true
+    },
+    {
+      "name": "persona-mei",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-S",
+        "/home/jacob/hamon-tastetable-native-1caa1d8e028a/source/tastetable_cli.py",
+        "--persona",
+        "mei"
+      ],
+      "pid": 2940300,
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.05827494501136243,
+      "stdout_bytes": 9444,
+      "stdout_sha256": "4d6ee08feea84dfb877e673844ad6f481f13449b661b153219d32ee31d7f7f76",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bytes_mtime_mode_inode_unchanged": true,
+      "cloud_expected": {
+        "bytes": 9444,
+        "sha256": "4d6ee08feea84dfb877e673844ad6f481f13449b661b153219d32ee31d7f7f76"
+      },
+      "stdout_matches_cloud": true,
+      "offline_provenance_matches": true,
+      "pass": true
+    }
+  ],
+  "pass": true,
+  "scope": "Isolated native Linux/Python qualification of nine published source files and the unchanged independent receiver. Actual offline CLI uses explicit fictional FixtureTransport and ScriptedModel. No dependency installation, provider call, existing project, installed consumer or service change is claimed."
+}
