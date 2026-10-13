@@ -1,0 +1,34 @@
+{
+  "merged": "1462e397fb06c23d2a49a75f530d356f7feabf7a",
+  "freshParent": "9717f21b758969119fbc5c97d97085d787cf5cd7",
+  "qualifiedHead": "354a0085506415024ff7c3ed9af6ca9b995cc230",
+  "mergedLeaves": 1022,
+  "unaffectedParentLeavesPreserved": 989,
+  "qualifiedChangedPathsExact": 33,
+  "issue97": "closed",
+  "pull98": "merged",
+  "noDeploymentClaim": true,
+  "checks": [
+    {
+      "name": "receive-week",
+      "head_sha": "354a0085506415024ff7c3ed9af6ca9b995cc230",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/Jacob-Met/tastetable/actions/runs/38347591414/job/115132474671"
+    },
+    {
+      "name": "test",
+      "head_sha": "354a0085506415024ff7c3ed9af6ca9b995cc230",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/Jacob-Met/tastetable/actions/runs/38347591416/job/115132474250"
+    },
+    {
+      "name": "compare-week",
+      "head_sha": "354a0085506415024ff7c3ed9af6ca9b995cc230",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/Jacob-Met/tastetable/actions/runs/38347591491/job/115132474243"
+    }
+  ]
+}

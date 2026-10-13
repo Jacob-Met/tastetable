@@ -1,0 +1,603 @@
+{
+  "schema": "tastetable.native-plan-week-browser/1",
+  "status": "passed",
+  "project": "/home/runner/work/tastetable/tastetable",
+  "executable": "/usr/bin/google-chrome",
+  "node": "v22.23.3",
+  "checkout": "94bac14d76fc5a7a0762129f645ecdd056f0dece",
+  "claim": "https://github.com/Jacob-Met/tastetable/issues/25",
+  "bootstrap": "Unchanged application files; authored GET-only /api/health mock and /api/personas empty responses. No FastAPI/deployment claim.",
+  "fileSelection": "Actual Open saved week keyboard control, Page.fileChooserOpened and DOM.setFileInputFiles; native File.text is unchanged.",
+  "checks": [
+    "actual original Python producer and new converter preserve authored and empty native results",
+    "actual native file picker refuses the original raw result at the existing saved-week format boundary",
+    "converted native file opens with exact original inputs, picks, explanations and current calendar identity",
+    "actual keyboard selection moves and omits distinct occurrences without changing source evidence",
+    "real Save week and calendar downloads retain edited dates, complete source and occurrence IDs",
+    "existing Print week invokes native print with retained provenance and produces a bounded PDF",
+    "actual downloaded week reopens at 390px with the same assignments and byte-identical calendar",
+    "actual native no-match result opens and resaves an empty week without invented calendar events",
+    "conversion and browser handoff preserve original files without planner HTTP calls or runtime exceptions"
+  ],
+  "artifacts": [
+    {
+      "name": "authored-profile.json",
+      "bytes": 197,
+      "sha256": "344dddbf74cb2dac1a2b6958f55821ef78be440c2f807b8018788693c4c83065",
+      "kind": "authored native input"
+    },
+    {
+      "name": "authored-native.json",
+      "bytes": 9063,
+      "sha256": "1d1d0d56c13796a229b13f5171b80c306a74cb998d5b7dc0f6d488d57f9ff48f",
+      "kind": "actual Python CLI stdout"
+    },
+    {
+      "name": "authored-converted-week.json",
+      "bytes": 9179,
+      "sha256": "6bad1255d42f5e311013a3bd13b29f29c5466b0b6e5f90e1b11bc3d018301d53",
+      "kind": "actual create-only converter output"
+    },
+    {
+      "name": "empty-profile.json",
+      "bytes": 213,
+      "sha256": "70ec9404c123ad0018291e329e92f12e51fb591ea1b7828edd7d19dfe867fcc8",
+      "kind": "authored native input"
+    },
+    {
+      "name": "empty-native.json",
+      "bytes": 7154,
+      "sha256": "7321a1a9e55deb6f715974549f359b8789e27b9e34e2c2cf447fad555effe3c3",
+      "kind": "actual Python CLI stdout"
+    },
+    {
+      "name": "empty-converted-week.json",
+      "bytes": 7131,
+      "sha256": "269a405fec86ec1902b50e79e370eda619016fa94047fb59010c7dae4a1ac1fc",
+      "kind": "actual create-only converter output"
+    },
+    {
+      "name": "original-calendar.ics",
+      "bytes": 4475,
+      "sha256": "4bbe7e896645356e7b661f3d91e489f2f54e7bd240d1a0fe6e38929b58d3fe61",
+      "kind": "actual browser download",
+      "suggestedFilename": "tastetable-demo-2026-12-28.ics"
+    },
+    {
+      "name": "edited-saved-week.json",
+      "bytes": 9175,
+      "sha256": "77c94896cb82be65b8ff89b617a76dbd1d8736469099910941830538a5b501cc",
+      "kind": "actual browser download",
+      "suggestedFilename": "tastetable-week-2026-12-28.json"
+    },
+    {
+      "name": "edited-calendar.ics",
+      "bytes": 3681,
+      "sha256": "9f000dbf6487e2942cf2411f0000f0210f962a78bf58c4245f535c2c3fafd516",
+      "kind": "actual browser download",
+      "suggestedFilename": "tastetable-demo-2026-12-28.ics"
+    },
+    {
+      "name": "arranged-native-week.pdf",
+      "bytes": 128075,
+      "sha256": "25d48926c6f360347a5dc1b2e7543c04e90c8da80c104769944e9a6c2546ebf4",
+      "kind": "actual Chrome print PDF",
+      "pages": 5,
+      "boundary": "Generation and print DOM only; no PDF text extraction, physical printer or direct pixel claim."
+    },
+    {
+      "name": "desktop-arranged-week.png",
+      "bytes": 155794,
+      "sha256": "b8d6f7d2aad606cd16a5c574c5a9721c21f874fb222531a56d665f4e5e0c0f79",
+      "kind": "actual Chrome screenshot"
+    },
+    {
+      "name": "reopened-calendar.ics",
+      "bytes": 3681,
+      "sha256": "9f000dbf6487e2942cf2411f0000f0210f962a78bf58c4245f535c2c3fafd516",
+      "kind": "actual browser download",
+      "suggestedFilename": "tastetable-demo-2026-12-28.ics"
+    },
+    {
+      "name": "phone-reopened-week.png",
+      "bytes": 71227,
+      "sha256": "e7f845c6b56e4429d7c60a5ed0efda2b1e748eebc6de2c09ff7fecf3aea1dd68",
+      "kind": "actual Chrome screenshot"
+    },
+    {
+      "name": "empty-resaved-week.json",
+      "bytes": 7131,
+      "sha256": "4ae4980b28d0548ea06774859a2391c406bddf2613ef5ff2392c80aa7c2ef836",
+      "kind": "actual browser download",
+      "suggestedFilename": "tastetable-week-2026-12-28.json"
+    },
+    {
+      "name": "phone-empty-week.png",
+      "bytes": 71846,
+      "sha256": "7b2b09c36a770ea83c164048d248541907c06bfe8fd037191265cffc04e6c3ea",
+      "kind": "actual Chrome screenshot"
+    }
+  ],
+  "programs": [
+    {
+      "label": "authored native producer",
+      "executable": "/usr/bin/python3",
+      "args": [
+        "/home/runner/work/tastetable/tastetable/tastetable_cli.py",
+        "--profile",
+        "/home/runner/work/_temp/native-plan-week-receiving/authored-profile.json"
+      ],
+      "status": 0,
+      "signal": null,
+      "stdoutSha256": "1d1d0d56c13796a229b13f5171b80c306a74cb998d5b7dc0f6d488d57f9ff48f",
+      "stderr": "",
+      "error": null
+    },
+    {
+      "label": "authored actual converter",
+      "executable": "/opt/hostedtoolcache/node/22.23.3/x64/bin/node",
+      "args": [
+        "/home/runner/work/tastetable/tastetable/tools/native_plan_to_week.mjs",
+        "--input",
+        "/home/runner/work/_temp/native-plan-week-receiving/authored-native.json",
+        "--week",
+        "2026-12-30",
+        "--output",
+        "/home/runner/work/_temp/native-plan-week-receiving/authored-converted-week.json"
+      ],
+      "status": 0,
+      "signal": null,
+      "stdoutSha256": "bb2c2981ad36ebfdd81344db7cc6fdf52831f69bb67d956c444d6e0fc4ce4b02",
+      "stderr": "",
+      "error": null
+    },
+    {
+      "label": "empty native producer",
+      "executable": "/usr/bin/python3",
+      "args": [
+        "/home/runner/work/tastetable/tastetable/tastetable_cli.py",
+        "--profile",
+        "/home/runner/work/_temp/native-plan-week-receiving/empty-profile.json"
+      ],
+      "status": 0,
+      "signal": null,
+      "stdoutSha256": "7321a1a9e55deb6f715974549f359b8789e27b9e34e2c2cf447fad555effe3c3",
+      "stderr": "",
+      "error": null
+    },
+    {
+      "label": "empty actual converter",
+      "executable": "/opt/hostedtoolcache/node/22.23.3/x64/bin/node",
+      "args": [
+        "/home/runner/work/tastetable/tastetable/tools/native_plan_to_week.mjs",
+        "--input",
+        "/home/runner/work/_temp/native-plan-week-receiving/empty-native.json",
+        "--week",
+        "2026-12-30",
+        "--output",
+        "/home/runner/work/_temp/native-plan-week-receiving/empty-converted-week.json"
+      ],
+      "status": 0,
+      "signal": null,
+      "stdoutSha256": "86e39ebb6a93d2997e12c9fb44d56f05e8bae548c4faa64200ad7a67f2a71d37",
+      "stderr": "",
+      "error": null
+    }
+  ],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:46093/",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/style.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/calendar.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/venue_followup.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/saved_weeks.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/plan-request.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/calendar.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/app.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/venue_followup.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/caregiver_handoff.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/saved_week_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/venue_note_file.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/saved_weeks.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/saved_week_store.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/api/health",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/favicon.ico",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/api/personas",
+      "method": "GET"
+    },
+    {
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/style.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/calendar.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/venue_followup.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/saved_weeks.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/plan-request.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/calendar.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/app.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/venue_followup.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/caregiver_handoff.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/saved_week_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/venue_note_file.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/saved_weeks.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/static/saved_week_store.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/api/health",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:46093/api/personas",
+      "method": "GET"
+    },
+    {
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+      "method": "GET"
+    }
+  ],
+  "externalRequests": [],
+  "serverRequests": [
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/plan-request.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_plan.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/caregiver_handoff.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_ui.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_note_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_store.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/favicon.ico"
+    },
+    {
+      "method": "GET",
+      "path": "/api/personas"
+    },
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/plan-request.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_plan.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/caregiver_handoff.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_ui.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_note_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_store.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/api/personas"
+    }
+  ],
+  "sourceSha256": {
+    "tastetable_cli.py": "e061239806f3fa279b278dd71b33fd731fa53f4eb1bdce4b821f91f8b7401192",
+    "agent.py": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3",
+    "constraints.py": "f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa",
+    "qloo_client.py": "bcabc1fa1a2440e19028ac6e5ec21e9ff8ab049276920f225d968eda84141573",
+    "personas.py": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2",
+    "fixtures/qloo_fixtures.json": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0",
+    "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+    "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+    "static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+    "static/calendar.css": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+    "static/app.js": "2002efebe9dda5f6114ac3d6b84d4450714e36fa80a063fb6205a8637dfd6005",
+    "static/index.html": "c5723c1c8ba1c7695c863a400805c5aa75e1f5cd3515cea1137318a96626c567",
+    "static/venue_followup.mjs": "9cd974e794e17c87e3b51b4ba7820200ce820ae611c8565a5224d68790441d32",
+    "static/venue_followup.css": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+    "static/caregiver_handoff.mjs": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+    "static/saved_weeks.mjs": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3",
+    "static/saved_week_store.mjs": "8968ad85cc362af59f40b1d01d6123c725a8cd2037939e49c739b04495dce913",
+    "static/saved_week_ui.mjs": "03f3580a1260aa4cec5b42076caa09650f3347b57efc42bfe6c51503d766eda7",
+    "static/saved_weeks.css": "0663f31c567cd438101e11d44ff698e2fd5e17c31c232f7f23f43727ac51fa7f",
+    "static/venue_note_file.mjs": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+    "static/style.css": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+    "static/plan-request.js": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+    "tools/native_plan_to_week.mjs": "bbdf06cf5f358ef5eb3d0875d6f2182382a625b246f0c39df159b6b15b025563",
+    "tests/test_native_plan_week.py": "dc1e65ff357672218799adf0152baf9d7041e2f15d74a1e9c9c614e3f87e964a",
+    "tools/check_native_plan_week_browser.mjs": "9985608e5d310f12b32f6862afbe9457460287973e554f9d5ef8c468e9b3e41c",
+    ".github/workflows/native-plan-week-browser.yml": "b40992512e13d653c51fb8b4dfb0d15ad0a090ae4754c4082a18ab20ca62ace3"
+  },
+  "sourceUnchanged": true,
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/154.0.8037.97",
+    "revision": "@b510e9d7cd3a2fbd78d0ddc42234103206c5f78d",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "jsVersion": "15.4.80.20"
+  },
+  "savedFile": {
+    "name": "edited-saved-week.json",
+    "weekStart": "2026-12-28",
+    "calendarId": "b09ebc3d1ca6c7b8824962ae5a91afde",
+    "assignments": {
+      "pick-0": "Thursday",
+      "pick-1": "Wednesday",
+      "pick-2": "Friday",
+      "pick-3": "Sunday",
+      "pick-4": null
+    },
+    "sourceProfileUnchanged": true,
+    "sourceResponseUnchanged": true
+  },
+  "narrowState": {
+    "shown": true,
+    "date": "2026-12-28",
+    "source": "Demo plan: fictional venues from a synthetic fixture.",
+    "saved": "Saved copy opened from “edited-saved-week.json” (saved 2026-10-13T04:40:54.445Z). Source labels and checks below are retained from the file; they have not been run again.",
+    "picks": [
+      {
+        "key": "pick-1",
+        "day": "Wednesday",
+        "name": "Osteria del Ponte",
+        "why": "Qloo affinity 0.80 for audiences who like Roman Holiday (tag match: Italian). Checks: Soft foods: pass (soft options listed: gnocchi, soups).",
+        "identity": "Qloo id: FIX-P-13"
+      },
+      {
+        "key": "pick-0",
+        "day": "Thursday",
+        "name": "Trattoria Nonna Lucia",
+        "why": "Qloo affinity 0.92 for audiences who like Roman Holiday (tag match: Italian). Checks: Soft foods: pass (soft options listed: made to order, polenta, risotto).",
+        "identity": "Qloo id: FIX-P-11"
+      },
+      {
+        "key": "pick-2",
+        "day": "Friday",
+        "name": "Ramen Tatsu",
+        "why": "Qloo affinity 0.31 for audiences who like Roman Holiday (tag match: Japanese). Weak taste signal: chosen mainly because it passes the care constraints. Checks: Soft foods: unknown (no texture signal in Qloo keywords; ask the venue).",
+        "identity": "Qloo id: FIX-P-10"
+      },
+      {
+        "key": "pick-3",
+        "day": "Sunday",
+        "name": "Kotobuki Tofu House",
+        "why": "Qloo affinity 0.22 for audiences who like Roman Holiday (tag match: Japanese). Weak taste signal: chosen mainly because it passes the care constraints. Checks: Soft foods: pass (soft options listed: chawanmushi, steamed fish, tofu).",
+        "identity": "Qloo id: FIX-P-09"
+      },
+      {
+        "key": "pick-4",
+        "day": null,
+        "name": "Rialto Revival Cinema (fictional)",
+        "why": "Qloo affinity 0.95 for audiences who like Roman Holiday (tag match: Movie Theater).",
+        "identity": "Qloo id: FIX-V-02"
+      }
+    ],
+    "openDays": 3,
+    "calendarDisabled": false,
+    "saveDisabled": false,
+    "overflow": false,
+    "injected": false,
+    "inputs": {
+      "cuisines": "Japanese, Italian",
+      "music": "海 <keys> Björk",
+      "films": "Roman Holiday",
+      "city": "Pasadena"
+    }
+  },
+  "pageErrors": [],
+  "nativeFileChooserEvents": 4,
+  "totalArtifactBytes": 488022
+}

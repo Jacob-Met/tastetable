@@ -1,0 +1,61 @@
+{
+  "schema": "tastetable-original-helper-binding-probe/1",
+  "base": "95738e812de81e3ace9830cdfabbbe7e39ff4686",
+  "source": "Original product in both controls; only the declared HTTP allowlist differs.",
+  "started": "2026-10-13T04:40:28.967Z",
+  "node": "v24.14.0",
+  "groups": [
+    {
+      "repaired": false,
+      "moduleHttpStatus": 404,
+      "requests": [
+        "/",
+        "/static/style.css",
+        "/static/calendar.css",
+        "/static/venue_followup.css",
+        "/static/saved_weeks.css",
+        "/static/plan-request.js",
+        "/static/calendar.js",
+        "/static/app.js",
+        "/static/week_plan.mjs",
+        "/static/venue_followup.mjs",
+        "/static/caregiver_handoff.mjs",
+        "/static/week_file.mjs",
+        "/static/saved_week_ui.mjs",
+        "/favicon.ico"
+      ],
+      "originalAppInitializationPrevented": true,
+      "status": "passed"
+    },
+    {
+      "repaired": true,
+      "moduleHttpStatus": 200,
+      "requests": [
+        "/",
+        "/static/style.css",
+        "/static/calendar.css",
+        "/static/venue_followup.css",
+        "/static/saved_weeks.css",
+        "/static/plan-request.js",
+        "/static/calendar.js",
+        "/static/app.js",
+        "/static/week_plan.mjs",
+        "/static/week_file.mjs",
+        "/static/venue_followup.mjs",
+        "/static/caregiver_handoff.mjs",
+        "/static/saved_week_ui.mjs",
+        "/static/venue_note_file.mjs",
+        "/static/saved_weeks.mjs",
+        "/static/saved_week_store.mjs",
+        "/api/health",
+        "/api/personas",
+        "/favicon.ico"
+      ],
+      "fileChooserAndNativeWeekOpened": true,
+      "status": "passed"
+    }
+  ],
+  "browser": "154.0.8037.97",
+  "finished": "2026-10-13T04:40:30.127Z",
+  "status": "passed"
+}
