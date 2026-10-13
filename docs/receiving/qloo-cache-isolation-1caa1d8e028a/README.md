@@ -65,7 +65,11 @@ the current entity's own fields.
 Both independent runs preserve source bytes, mtime, mode and inode. The exact
 oracle is [receive_cache.py](independent/receive_cache.py), SHA-256
 `f1b2a0f0f63a1ed0be21afd80ea3b45cfba54837b8c1a2281085903c187db830`.
-To use it with a fresh output directory:
+This frozen oracle qualifies PR #95 source `d2a3d26cb686b568ed0db0509f152e6c24e260cc`
+(and merge `59dbb0c4348b9a0374da4f05f95c23eef6080521`). Later PR #96 intentionally
+changes parser-error cache admission and repeated-error transport counts. For that
+composition, use its [separate qualification](../../qualification/qloo-cache-composition-20261013/README.md).
+To rerun this historical oracle, use the exact PR #95 source and a fresh output directory:
 
 ```sh
 python -B -S docs/receiving/qloo-cache-isolation-1caa1d8e028a/independent/receive_cache.py --source qloo_client.py --out /tmp/tastetable-cache-receiving-new
@@ -94,3 +98,13 @@ fixture data, plus an authored loopback HTTP server. They do not claim live Qloo
 or model responses, browser receiving, a full repository suite, installed-device
 adoption, recommendation quality or clinical validation. No provider credentials
 were used and no GitHub Actions execution was requested.
+
+## Isolated native follow-up
+
+The [ThinkPad receiving record](../qloo-cache-isolation-native-1caa1d8e028a/README.md)
+qualifies the same exact PR #95 source on native Linux/Python 3.14.4: the unchanged
+oracle passes 10/10, and three actual offline persona outputs match the saved
+cloud results byte for byte. That record preserves all source and receipt pins,
+raw routed completion evidence, and the later PR #96 composition boundary. It
+does not claim installed-consumer adoption.
+

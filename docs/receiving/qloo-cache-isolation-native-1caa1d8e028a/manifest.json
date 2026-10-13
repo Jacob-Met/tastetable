@@ -1,0 +1,135 @@
+{
+  "source_commit": "d2a3d26cb686b568ed0db0509f152e6c24e260cc",
+  "merge_commit": "59dbb0c4348b9a0374da4f05f95c23eef6080521",
+  "tree": "78515e64cd61965ed15cba4a2601d8feae5ca3e5",
+  "device_id": "d55b2499-5e82-4805-819a-d0d7ddea1efe",
+  "native_root": "/home/jacob/hamon-tastetable-native-1caa1d8e028a",
+  "qualification": "One completed native receiver plus three actual offline CLI persona processes; isolated source qualification only.",
+  "files": [
+    {
+      "path": "NATIVE_RECEIPT.json",
+      "bytes": 9339,
+      "sha256": "dfa38681593323f5781de7e1ea1135e58d1188abf45cb6b3cc98ab4bcecdac67"
+    },
+    {
+      "path": "RUN_STARTED.json",
+      "bytes": 214,
+      "sha256": "29ff61295bbe36d3bf40f2ab754bc10e4a6cc9206ff702e837dc0775358bd857"
+    },
+    {
+      "path": "SOURCE.json",
+      "bytes": 2614,
+      "sha256": "473f3694102d6abe3fb1e174e47f21430e82d50b6ed22ef0f992b22509a1f33c"
+    },
+    {
+      "path": "qualify_native.py",
+      "bytes": 6706,
+      "sha256": "e941aaf7c32831c0dcceff499ba39948d70c641f74653bfb5fc9b89d6976b771"
+    },
+    {
+      "path": "receive_cache.py",
+      "bytes": 11565,
+      "sha256": "f1b2a0f0f63a1ed0be21afd80ea3b45cfba54837b8c1a2281085903c187db830"
+    },
+    {
+      "path": "received-source.zip",
+      "bytes": 41175,
+      "sha256": "2dd813466f9f90d713488b33c0d1aa4f3f9204e0c5cf66d8e0352f9b7b8ca91f"
+    },
+    {
+      "path": "results/oracle.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/oracle.stdout",
+      "bytes": 147,
+      "sha256": "5de6520e99e364b2ebf4288de0db92b2519afa741f0869ff8a9ff3a653f36b83"
+    },
+    {
+      "path": "results/oracle/receipt.json",
+      "bytes": 17035,
+      "sha256": "b9d277ffc560f9109f5106be0838ebda91770afa1fd2a07846287caff2f2e76e"
+    },
+    {
+      "path": "results/persona-harold.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/persona-harold.stdout",
+      "bytes": 12775,
+      "sha256": "c9066f70349e88814c278e09e33992e8a11ff32ba24fb29f0d3c3eb8b34ff566"
+    },
+    {
+      "path": "results/persona-mei.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/persona-mei.stdout",
+      "bytes": 9444,
+      "sha256": "4d6ee08feea84dfb877e673844ad6f481f13449b661b153219d32ee31d7f7f76"
+    },
+    {
+      "path": "results/persona-rosa.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/persona-rosa.stdout",
+      "bytes": 14470,
+      "sha256": "5d9fa0af32fb943547bd13c0c27e1f70d50d7fc3b25430758511aeb51cd4eaba"
+    },
+    {
+      "path": "source/README.md",
+      "bytes": 23654,
+      "sha256": "2ec72ed2f29eef6c4e91083c5b924defdd6de07790fd28a8e5d03c526879893f"
+    },
+    {
+      "path": "source/agent.py",
+      "bytes": 28440,
+      "sha256": "fae9eced334ec58c23af301166f6c62dd2b6ff1991bebc6e8e4d9139d3f5b4b3"
+    },
+    {
+      "path": "source/constraints.py",
+      "bytes": 8720,
+      "sha256": "f18e4d5ffa14d8a02db2fe9ec6e97a6c0e45e8ebdab1e158124a66f7dd113efa"
+    },
+    {
+      "path": "source/fixtures/qloo_fixtures.json",
+      "bytes": 21190,
+      "sha256": "5eaa5d2f32a6e4522ecc4f6c69e84dc110be031c3cdf5737ac52f9fabb99fed0"
+    },
+    {
+      "path": "source/personas.py",
+      "bytes": 1247,
+      "sha256": "caef501a8af8abc5f9553e425eaf4ecaadcaf94e0d5c5b6e74d821dac86b24e2"
+    },
+    {
+      "path": "source/qloo_client.py",
+      "bytes": 12284,
+      "sha256": "22b6d5ee7664f37d4477d0e0973727d36f07d862a455a1ff9d7e7d2b4acc79eb"
+    },
+    {
+      "path": "source/tastetable_cli.py",
+      "bytes": 7568,
+      "sha256": "e061239806f3fa279b278dd71b33fd731fa53f4eb1bdce4b821f91f8b7401192"
+    },
+    {
+      "path": "source/tests/test_qloo_http_lifetime.py",
+      "bytes": 5652,
+      "sha256": "b4f0f12728236ef5bf11be9f52b66de6fa3432ccfd0c8e4317508909b4ca2461"
+    },
+    {
+      "path": "source/tests/test_tastetable.py",
+      "bytes": 8240,
+      "sha256": "7ace6361e9baf4a1e1a4ccfa528df1a4d2165b99bacb0423a572ac78bf3e9c5b"
+    },
+    {
+      "path": "staging.json",
+      "bytes": 686,
+      "sha256": "5650fa202f3dfd4ea8c8163aa343380d36398af423f108bc654d050a2d848e31"
+    }
+  ]
+}
