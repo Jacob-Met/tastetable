@@ -1,0 +1,566 @@
+{
+  "schema": "tastetable-visit-departure-browser/1",
+  "mode": "candidate",
+  "source": {
+    "commit": "73586a7319816537d404626aebdb1b87e8c3c068",
+    "tree": "64f052d2b68074ce46698101cd649caa2d98affc",
+    "parent": "b93fdbbb314cdb0b10b802213741538fbbee1fcc",
+    "closure": [
+      {
+        "path": "static/visit_departure.mjs",
+        "git": "aa7da42a08a2b9aacf92fdb0ac4a1a353fbdbacd"
+      },
+      {
+        "path": "static/visit_record_ui.mjs",
+        "git": "ec57b0a2d1484c95572b9c60bf5573bfb0b5580e"
+      },
+      {
+        "path": "static/visit_record.css",
+        "git": "cf2ed8fc0871196a55ceef4e0aa0cab09d1fcfeb"
+      },
+      {
+        "path": "static/visit_record.mjs",
+        "git": "2b5b37e3d4a227e00a5b0052a962d13512b53e48"
+      },
+      {
+        "path": "static/visit-record.html",
+        "git": "af76cbc1d3403fc75ddddb2e497c7977569a81d0"
+      },
+      {
+        "path": "static/week_file.mjs",
+        "git": "420ddb8f63fca264dcf97be7147801105696155d"
+      },
+      {
+        "path": "static/week_plan.mjs",
+        "git": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+      }
+    ]
+  },
+  "started": "2026-10-13T17:03:58.193236+00:00",
+  "device": {
+    "node": "Mac.lan",
+    "uid": 501,
+    "python": "3.13.7"
+  },
+  "checks": [
+    {
+      "name": "source is owned ordinary directory",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source blob static/visit_departure.mjs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source blob static/visit_record_ui.mjs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source blob static/visit_record.css",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source blob static/visit_record.mjs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source blob static/visit-record.html",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source blob static/week_file.mjs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source blob static/week_plan.mjs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "exact runtime membership",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original fixture pin",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "empty-clean expected native confirmation count",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "empty-clean only native beforeunload dialogs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "empty-clean actual navigation completed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "loaded-clean imported three separate occurrences",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "loaded-clean preserves literal source filename",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "loaded-clean expected native confirmation count",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "loaded-clean only native beforeunload dialogs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "loaded-clean actual reload discards tab record",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dirty-outcome imported three separate occurrences",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dirty-outcome preserves literal source filename",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dirty-outcome-stay expected native confirmation count",
+      "pass": true,
+      "detail": [
+        {
+          "type": "beforeunload",
+          "message": "",
+          "choice": "stay"
+        }
+      ]
+    },
+    {
+      "name": "dirty-outcome-stay only native beforeunload dialogs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dirty-outcome-stay Stay keeps page open",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dirty-outcome-stay Stay keeps exact displayed values and storage",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dirty-outcome-stay only cancelled navigation error",
+      "pass": false,
+      "detail": "Page.reload: Timeout 5000ms exceeded.\nCall log:\n  - waiting for navigation until \"domcontentloaded\"\n"
+    }
+  ],
+  "departures": [
+    {
+      "case": "empty-clean",
+      "action": "navigation",
+      "dirty": false,
+      "choice_policy": "stay",
+      "dialogs": [],
+      "browser_error": null,
+      "stayed": false,
+      "original_missing_protection": false
+    },
+    {
+      "case": "loaded-clean",
+      "action": "reload",
+      "dirty": false,
+      "choice_policy": "stay",
+      "dialogs": [],
+      "browser_error": null,
+      "stayed": false,
+      "original_missing_protection": false
+    }
+  ],
+  "downloads": [],
+  "requests": [
+    {
+      "case": "empty-clean",
+      "url": "http://127.0.0.1:63150/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "empty-clean",
+      "url": "http://127.0.0.1:63150/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "empty-clean",
+      "url": "http://127.0.0.1:63150/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "empty-clean",
+      "url": "http://127.0.0.1:63150/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "empty-clean",
+      "url": "http://127.0.0.1:63150/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "empty-clean",
+      "url": "http://127.0.0.1:63150/static/visit_departure.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "empty-clean",
+      "url": "http://127.0.0.1:63150/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "empty-clean",
+      "url": "http://127.0.0.1:63150/departed.html",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:63150/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:63150/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:63150/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:63150/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:63150/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:63150/static/visit_departure.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:63150/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:63150/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:63150/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:63150/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:63150/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:63150/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:63150/static/visit_departure.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:63150/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-outcome",
+      "url": "http://127.0.0.1:63150/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-outcome",
+      "url": "http://127.0.0.1:63150/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-outcome",
+      "url": "http://127.0.0.1:63150/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-outcome",
+      "url": "http://127.0.0.1:63150/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-outcome",
+      "url": "http://127.0.0.1:63150/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-outcome",
+      "url": "http://127.0.0.1:63150/static/visit_departure.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-outcome",
+      "url": "http://127.0.0.1:63150/static/week_plan.mjs",
+      "method": "GET"
+    }
+  ],
+  "page_errors": [],
+  "outside_requests": [],
+  "print_observations": [],
+  "browser_disconnected": false,
+  "os_browser_exit_code": null,
+  "inputs_before": {
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/candidate/static/visit-record.html": {
+      "bytes": 4285,
+      "sha256": "62138b32f12aaf884b1b12e19b91983865995ac5ce2f3794f2dc6dd575763769",
+      "git": "af76cbc1d3403fc75ddddb2e497c7977569a81d0",
+      "mode": 33188,
+      "mtime_ns": 1791910975127890542,
+      "inode": 149081530
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/candidate/static/visit_departure.mjs": {
+      "bytes": 805,
+      "sha256": "bf8a7e43445f964183ddb0079d53799a0077510e63ab77c38efcf40527438747",
+      "git": "aa7da42a08a2b9aacf92fdb0ac4a1a353fbdbacd",
+      "mode": 33188,
+      "mtime_ns": 1791910975127404832,
+      "inode": 149081526
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/candidate/static/visit_record.css": {
+      "bytes": 4621,
+      "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403",
+      "git": "cf2ed8fc0871196a55ceef4e0aa0cab09d1fcfeb",
+      "mode": 33188,
+      "mtime_ns": 1791910975127680916,
+      "inode": 149081528
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/candidate/static/visit_record.mjs": {
+      "bytes": 7525,
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f",
+      "git": "2b5b37e3d4a227e00a5b0052a962d13512b53e48",
+      "mode": 33188,
+      "mtime_ns": 1791910975127785916,
+      "inode": 149081529
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/candidate/static/visit_record_ui.mjs": {
+      "bytes": 9572,
+      "sha256": "fe3dee857835f8417ee3efff084d72859f97ddcaba75950c7f5f26f9b2be577a",
+      "git": "ec57b0a2d1484c95572b9c60bf5573bfb0b5580e",
+      "mode": 33188,
+      "mtime_ns": 1791910975127561666,
+      "inode": 149081527
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/candidate/static/week_file.mjs": {
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "git": "420ddb8f63fca264dcf97be7147801105696155d",
+      "mode": 33188,
+      "mtime_ns": 1791910975127984959,
+      "inode": 149081531
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/candidate/static/week_plan.mjs": {
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "git": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "mode": 33188,
+      "mtime_ns": 1791910975128068459,
+      "inode": 149081532
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/candidate-source.json": {
+      "bytes": 959,
+      "sha256": "c3afd7135793a28dd51b8db82ec3393690f75b07a2fb5e87f6c6de443e75c8e4",
+      "git": "0d9e2e75fbc86102673702d1b6406b53bfd78b6c",
+      "mode": 33188,
+      "mtime_ns": 1791910975128179542,
+      "inode": 149081533
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/fixtures/original-record.json": {
+      "bytes": 1934,
+      "sha256": "ee45bdd3fb7dd31d48094a9752e88be7fc15331cad4e702e29b0eb5626df0624",
+      "git": "69d1c226ab9b7ed25a08f9372a0534d2be00d27f",
+      "mode": 33188,
+      "mtime_ns": 1791910258337883178,
+      "inode": 149046487
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/fixtures/original-week.json": {
+      "bytes": 1209,
+      "sha256": "81da628ed0c3c68c9be6639eb5ac1353664479262fe7760905ebce842bfc4b25",
+      "git": "7980f27eaeca995681a2c8a7b68b2ebe57740d95",
+      "mode": 33188,
+      "mtime_ns": 1791910258337991303,
+      "inode": 149046488
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/fixtures/pending.json": {
+      "bytes": 1934,
+      "sha256": "ee45bdd3fb7dd31d48094a9752e88be7fc15331cad4e702e29b0eb5626df0624",
+      "git": "69d1c226ab9b7ed25a08f9372a0534d2be00d27f",
+      "mode": 33188,
+      "mtime_ns": 1791910258338162012,
+      "inode": 149046490
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/fixtures/refused.json": {
+      "bytes": 9,
+      "sha256": "2a1872c922f8b61f9016f345dda22ea7b2d2707658b7ad5061f724440b1d6559",
+      "git": "f2dcf6a25df6e784c3cf36c6817838e028866039",
+      "mode": 33188,
+      "mtime_ns": 1791910258338083262,
+      "inode": 149046489
+    }
+  },
+  "origin": "http://127.0.0.1:63150",
+  "browser_version": "155.0.8059.40",
+  "passed": false,
+  "error": "dirty-outcome-stay only cancelled navigation error",
+  "traceback": "Traceback (most recent call last):\n  File \"/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/receive_departure_v1.py\", line 119, in <module>\n    stayed=depart(p,\"dirty-\"+field+\"-stay\",action,True,\"stay\")\n  File \"/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/receive_departure_v1.py\", line 107, in depart\n    if error:require(name+\" only cancelled navigation error\",stayed and (\"ERR_ABORTED\" in error or \"interrupted\" in error.lower()),error)\n             ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/receive_departure_v1.py\", line 14, in require\n    if not value:raise RuntimeError(name)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: dirty-outcome-stay only cancelled navigation error\n",
+  "context_cleanup_error": "Event loop is closed! Is Playwright already stopped?",
+  "browser_cleanup_error": "Event loop is closed! Is Playwright already stopped?",
+  "inputs_after": {
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/candidate/static/visit-record.html": {
+      "bytes": 4285,
+      "sha256": "62138b32f12aaf884b1b12e19b91983865995ac5ce2f3794f2dc6dd575763769",
+      "git": "af76cbc1d3403fc75ddddb2e497c7977569a81d0",
+      "mode": 33188,
+      "mtime_ns": 1791910975127890542,
+      "inode": 149081530
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/candidate/static/visit_departure.mjs": {
+      "bytes": 805,
+      "sha256": "bf8a7e43445f964183ddb0079d53799a0077510e63ab77c38efcf40527438747",
+      "git": "aa7da42a08a2b9aacf92fdb0ac4a1a353fbdbacd",
+      "mode": 33188,
+      "mtime_ns": 1791910975127404832,
+      "inode": 149081526
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/candidate/static/visit_record.css": {
+      "bytes": 4621,
+      "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403",
+      "git": "cf2ed8fc0871196a55ceef4e0aa0cab09d1fcfeb",
+      "mode": 33188,
+      "mtime_ns": 1791910975127680916,
+      "inode": 149081528
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/candidate/static/visit_record.mjs": {
+      "bytes": 7525,
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f",
+      "git": "2b5b37e3d4a227e00a5b0052a962d13512b53e48",
+      "mode": 33188,
+      "mtime_ns": 1791910975127785916,
+      "inode": 149081529
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/candidate/static/visit_record_ui.mjs": {
+      "bytes": 9572,
+      "sha256": "fe3dee857835f8417ee3efff084d72859f97ddcaba75950c7f5f26f9b2be577a",
+      "git": "ec57b0a2d1484c95572b9c60bf5573bfb0b5580e",
+      "mode": 33188,
+      "mtime_ns": 1791910975127561666,
+      "inode": 149081527
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/candidate/static/week_file.mjs": {
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "git": "420ddb8f63fca264dcf97be7147801105696155d",
+      "mode": 33188,
+      "mtime_ns": 1791910975127984959,
+      "inode": 149081531
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/candidate/static/week_plan.mjs": {
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "git": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "mode": 33188,
+      "mtime_ns": 1791910975128068459,
+      "inode": 149081532
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/candidate-source.json": {
+      "bytes": 959,
+      "sha256": "c3afd7135793a28dd51b8db82ec3393690f75b07a2fb5e87f6c6de443e75c8e4",
+      "git": "0d9e2e75fbc86102673702d1b6406b53bfd78b6c",
+      "mode": 33188,
+      "mtime_ns": 1791910975128179542,
+      "inode": 149081533
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/fixtures/original-record.json": {
+      "bytes": 1934,
+      "sha256": "ee45bdd3fb7dd31d48094a9752e88be7fc15331cad4e702e29b0eb5626df0624",
+      "git": "69d1c226ab9b7ed25a08f9372a0534d2be00d27f",
+      "mode": 33188,
+      "mtime_ns": 1791910258337883178,
+      "inode": 149046487
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/fixtures/original-week.json": {
+      "bytes": 1209,
+      "sha256": "81da628ed0c3c68c9be6639eb5ac1353664479262fe7760905ebce842bfc4b25",
+      "git": "7980f27eaeca995681a2c8a7b68b2ebe57740d95",
+      "mode": 33188,
+      "mtime_ns": 1791910258337991303,
+      "inode": 149046488
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/fixtures/pending.json": {
+      "bytes": 1934,
+      "sha256": "ee45bdd3fb7dd31d48094a9752e88be7fc15331cad4e702e29b0eb5626df0624",
+      "git": "69d1c226ab9b7ed25a08f9372a0534d2be00d27f",
+      "mode": 33188,
+      "mtime_ns": 1791910258338162012,
+      "inode": 149046490
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/fixtures/refused.json": {
+      "bytes": 9,
+      "sha256": "2a1872c922f8b61f9016f345dda22ea7b2d2707658b7ad5061f724440b1d6559",
+      "git": "f2dcf6a25df6e784c3cf36c6817838e028866039",
+      "mode": 33188,
+      "mtime_ns": 1791910258338083262,
+      "inode": 149046489
+    }
+  },
+  "inputs_preserved": true,
+  "observer": {
+    "bytes": 13524,
+    "sha256": "a4cc7630529bf87a973faa074b71e1f1483f294f645b91cb8f7c6305cb5496e4",
+    "git": "f4df785e260d8102147703eb58b397c2f72d95a0",
+    "mode": 33188,
+    "mtime_ns": 1791910494157952420,
+    "inode": 149053240
+  },
+  "finished": "2026-10-13T17:04:07.997704+00:00"
+}
