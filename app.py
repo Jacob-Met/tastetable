@@ -57,7 +57,7 @@ def plan(req: PlanRequest):
         raise HTTPException(400, f"unsupported constraints: {bad}")
     persona = {"cuisines": _clean(req.cuisines), "music": _clean(req.music),
                "films": _clean(req.films), "constraints": req.constraints,
-               "city": (req.city or "")[:60]}
+               "city": (req.city or "").strip()[:60]}
     if not (persona["cuisines"] or persona["music"] or persona["films"]):
         raise HTTPException(400, "enter at least one cuisine, artist or film")
     return run_agent(persona, qloo=QlooClient.from_env(), model=model_from_env())
