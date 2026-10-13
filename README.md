@@ -231,7 +231,7 @@ and 2 MiB of UTF-8 JSON. [Venue-note file usage and receiving](docs/venue-notes/
 explains these limits and the local format.
 
 Unsaved notes remain in this tab for the current accepted plan. Replacing the plan, editing
-its inputs, opening a saved week or leaving the page clears them. **Save week** and calendar
+its inputs, opening a saved week or leaving the page clears them. While recorded venue-note content remains, the planner asks the browser to confirm refresh, close or navigation. Choose to stay if you still need to save your notes; cancelling keeps the current worksheet and exports available. This includes notes for visits moved to another date or omitted from the current week. Reverting every field to its original/default value or retiring the plan removes the warning. Preparing a download does not turn off the reminder, because the page cannot confirm that you kept the file. Browser warnings can be suppressed or skipped, especially when a mobile browser is closed; save a file before leaving. **Save week** and calendar
 files retain their existing formats and do not include contact notes. No venue is contacted
 and no note is sent to a provider or stored automatically. Do not enter names or private
 health information.

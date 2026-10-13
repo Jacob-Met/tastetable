@@ -106,6 +106,16 @@ export function createVenueFollowup(initial, savedSource = "") {
   }
 
 
+  /** Include retained notes for other dates and currently omitted visits. */
+  function hasRecordedNotes() {
+    return [...records].some(([identity, note]) => {
+      const [key, date] = JSON.parse(identity);
+      const pick = picks.find((item) => item.key === key).pick;
+      return note.status !== EMPTY_NOTE.status || note.reply !== "" || note.nextStep !== ""
+        || (note.question !== null && note.question !== suggestedQuestions(pick, date).join("\n"));
+    });
+  }
+
   /** Copy every retained occurrence/date record, including visits currently omitted. */
   function snapshotRecords() {
     return Object.freeze([...records].map(([identity, note]) => {
@@ -154,7 +164,7 @@ export function createVenueFollowup(initial, savedSource = "") {
     records = replacement;
   }
 
-  return Object.freeze({ entries, setField, text, sourceLabel, snapshotRecords, prepareRecords, replaceRecords });
+  return Object.freeze({ entries, setField, text, sourceLabel, hasRecordedNotes, snapshotRecords, prepareRecords, replaceRecords });
 }
 
 /** Own only this section; the existing app owns plan acceptance and retirement. */
@@ -165,6 +175,18 @@ export function mountVenueFollowup(root, current, onChange = () => {}) {
   const source = root.querySelector("[data-contact-source]");
   const download = root.querySelector("[data-contact-download]");
   let session = null;
+  const ownerWindow = root.ownerDocument.defaultView;
+  let departureProtected = false;
+  function beforeLeave(event) {
+    event.preventDefault();
+    event.returnValue = true;
+  }
+  function refreshDepartureProtection() {
+    const needed = session?.hasRecordedNotes() ?? false;
+    if (needed === departureProtected) return;
+    ownerWindow[needed ? "addEventListener" : "removeEventListener"]("beforeunload", beforeLeave);
+    departureProtected = needed;
+  }
   const noteFiles = mountVenueNoteFiles(root, () => ({
     state: currentState(), origin: current().origin, model: session,
   }), sync, CONTACT_STATES);
@@ -193,6 +215,7 @@ export function mountVenueFollowup(root, current, onChange = () => {}) {
   }
 
   function sync() {
+    refreshDepartureProtection();
     noteFiles.changed();
     onChange();
     if (!session) return;
@@ -263,6 +286,7 @@ export function mountVenueFollowup(root, current, onChange = () => {}) {
     try {
       const state = currentState();
       const note = session.setField(state, visit.dataset.contactKey, visit.dataset.contactDate, input.dataset.contactField, input.value);
+      refreshDepartureProtection();
       const entry = session.entries(state).find((item) => item.key === visit.dataset.contactKey);
       visit.querySelector('[data-contact-field="status"]').value = note.status;
       visit.querySelector(".contact-questions").innerHTML = entry.questions.length
@@ -335,6 +359,7 @@ export function mountVenueFollowup(root, current, onChange = () => {}) {
     sync,
     retire() {
       session = null;
+      refreshDepartureProtection();
       noteFiles.retire();
       root.hidden = true;
       list.replaceChildren();
