@@ -1,0 +1,122 @@
+{
+  "schema": "tastetable-native-departure-receipt/1",
+  "repository": "Jacob-Met/tastetable",
+  "sourceCommit": "217447aa17ff741fdeafdd37edbe237b15698c5d",
+  "base": "95738e812de81e3ace9830cdfabbbe7e39ff4686",
+  "deviceId": "edc358ed-5ad6-4036-b7aa-8667bf0e14e0",
+  "deviceLabel": "MSI",
+  "runtime": {
+    "node": "v24.14.0",
+    "os": "Windows_NT",
+    "release": "10.0.26200",
+    "arch": "x64",
+    "user": "jacob",
+    "playwright": "1.62.1",
+    "browser": "154.0.8037.97"
+  },
+  "sourceClosure": {
+    "files": 19,
+    "manifestSha256": "8c1e9e04dabe465a56ee72a9537e5bc3cc8ed9d3639a285f881b87eea42d08af"
+  },
+  "candidateStatic": {
+    "static/app.js": "2002efebe9dda5f6114ac3d6b84d4450714e36fa80a063fb6205a8637dfd6005",
+    "static/calendar.css": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+    "static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+    "static/caregiver_handoff.mjs": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+    "static/index.html": "c5723c1c8ba1c7695c863a400805c5aa75e1f5cd3515cea1137318a96626c567",
+    "static/plan-request.js": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+    "static/saved_week_store.mjs": "8968ad85cc362af59f40b1d01d6123c725a8cd2037939e49c739b04495dce913",
+    "static/saved_week_ui.mjs": "03f3580a1260aa4cec5b42076caa09650f3347b57efc42bfe6c51503d766eda7",
+    "static/saved_weeks.css": "0663f31c567cd438101e11d44ff698e2fd5e17c31c232f7f23f43727ac51fa7f",
+    "static/saved_weeks.mjs": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3",
+    "static/style.css": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+    "static/venue_followup.css": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+    "static/venue_followup.mjs": "9cd974e794e17c87e3b51b4ba7820200ce820ae611c8565a5224d68790441d32",
+    "static/venue_note_file.mjs": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+    "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+    "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+    "static/week_report.mjs": "6fa8de588fbce5d3dce39826feb7ff06e7430fd2006c34b68d570b314a240210"
+  },
+  "driver": {
+    "path": "receive-departure.cjs",
+    "bytes": 13161,
+    "sha256": "17649c8bba6015b1d22ab238c2472486213001fee3b23202852faa5f4083f7e1"
+  },
+  "candidate": {
+    "variant": "candidate",
+    "start": "2026-10-13T04:30:40.484Z",
+    "finished": "2026-10-13T04:31:24.853Z",
+    "pid": 114816,
+    "exit": 0,
+    "signal": null,
+    "error": null,
+    "stdout": "{\"variant\":\"candidate\",\"status\":\"passed\",\"groups\":[{\"name\":\"empty-and-reverted\",\"status\":\"passed\"},{\"name\":\"reply-cancel-export-and-leave\",\"status\":\"passed\"},{\"name\":\"field-status\",\"status\":\"passed\"},{\"name\":\"field-nextStep\",\"status\":\"passed\"},{\"name\":\"field-question\",\"status\":\"passed\"},{\"name\":\"retained-hidden-date-and-invalid-date\",\"status\":\"passed\"},{\"name\":\"import-and-empty-replacement\",\"status\":\"passed\"},{\"name\":\"explicit-plan-retirement\",\"status\":\"passed\"},{\"name\":\"actual-tab-close\",\"status\":\"passed\"}],\"pageErrors\":[],\"externalRequests\":0,\"started\":\"2026-10-13T04:30:40.828Z\",\"finished\":\"2026-10-13T04:31:24.598Z\"}\n",
+    "stderr": ""
+  },
+  "original": {
+    "variant": "original",
+    "start": "2026-10-13T04:31:51.311Z",
+    "finished": "2026-10-13T04:32:03.769Z",
+    "pid": 117356,
+    "exit": 1,
+    "signal": null,
+    "error": null,
+    "stdout": "{\"variant\":\"original\",\"status\":\"failed\",\"groups\":[{\"name\":\"empty-and-reverted\",\"status\":\"passed\"},{\"name\":\"reply-cancel-export-and-leave\",\"status\":\"failed\",\"error\":\"AssertionError [ERR_ASSERTION]: actual browser departure dialog count\\n\\n0 !== 1\\n\"},{\"name\":\"field-status\",\"status\":\"failed\",\"error\":\"AssertionError [ERR_ASSERTION]: actual browser departure dialog count\\n\\n0 !== 1\\n\"},{\"name\":\"field-nextStep\",\"status\":\"failed\",\"error\":\"AssertionError [ERR_ASSERTION]: actual browser departure dialog count\\n\\n0 !== 1\\n\"},{\"name\":\"field-question\",\"status\":\"failed\",\"error\":\"AssertionError [ERR_ASSERTION]: actual browser departure dialog count\\n\\n0 !== 1\\n\"},{\"name\":\"retained-hidden-date-and-invalid-date\",\"status\":\"failed\",\"error\":\"AssertionError [ERR_ASSERTION]: actual browser departure dialog count\\n\\n0 !== 1\\n\"},{\"name\":\"import-and-empty-replacement\",\"status\":\"failed\",\"error\":\"AssertionError [ERR_ASSERTION]: actual browser departure dialog count\\n\\n0 !== 1\\n\"},{\"name\":\"explicit-plan-retirement\",\"status\":\"passed\"},{\"name\":\"actual-tab-close\",\"status\":\"failed\",\"error\":\"AssertionError [ERR_ASSERTION]: tab close asks before discarding recorded notes\"}],\"pageErrors\":[],\"externalRequests\":0,\"started\":\"2026-10-13T04:31:51.646Z\",\"finished\":\"2026-10-13T04:32:03.523Z\"}\n",
+    "stderr": ""
+  },
+  "remoteProcesses": {
+    "assembly": {
+      "pid": 134080,
+      "testsExit": 0,
+      "terminalReadback": "native model-tests.json"
+    },
+    "originalInitial": {
+      "pid": 106372,
+      "exit": 1,
+      "runtimeSeconds": 8.65
+    },
+    "candidateInitial": {
+      "pid": 125816,
+      "exit": null,
+      "qualification": "final result retained; later process polling reported no session, so no exit code is inferred"
+    },
+    "candidateReloadFix": {
+      "wrapperPid": 116412,
+      "childPid": 132312,
+      "exit": 1,
+      "runtimeSeconds": 69.64
+    },
+    "candidateQualified": {
+      "wrapperPid": 93452,
+      "childPid": 114816,
+      "exit": 0,
+      "runtimeSeconds": 44.84
+    },
+    "originalQualified": {
+      "wrapperPid": 130212,
+      "childPid": 117356,
+      "exit": 1,
+      "runtimeSeconds": 12.78
+    },
+    "textTransfer": {
+      "pid": 124980,
+      "exit": 0,
+      "runtimeSeconds": 0.32
+    }
+  },
+  "qualifiedDownloads": [
+    {
+      "name": "retained-venue-notes.json",
+      "bytes": 16022,
+      "sha256": "5006aa5fd9b7b77c0bb8ad2991dcb8a4adfd05e647bddafcf37633d0fd325c34",
+      "suggestedFilename": "tastetable-venue-notes-2026-12-28.json"
+    },
+    {
+      "name": "imported-venue-notes.json",
+      "bytes": 15994,
+      "sha256": "ce088b37496ad46af3326ad2dee6c2c49eaa95557e894709ab470a7523d4e670",
+      "suggestedFilename": "tastetable-venue-notes-2026-12-28.json"
+    }
+  ],
+  "qualification": "Actual installed Chrome reload/navigation/tab-close interaction, file controls and downloads on the unchanged static consumer. Authored local GET-only health/personas bootstrap, existing Git-pinned saved-week fixture. No live provider, FastAPI deployment, private data, physical mobile, browser-kill recovery or persistence guarantee."
+}

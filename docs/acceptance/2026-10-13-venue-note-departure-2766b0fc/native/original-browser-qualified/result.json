@@ -1,0 +1,2761 @@
+{
+  "schema": "tastetable-venue-departure-receiving/1",
+  "variant": "original",
+  "base": "95738e812de81e3ace9830cdfabbbe7e39ff4686",
+  "started": "2026-10-13T04:31:51.646Z",
+  "runtime": {
+    "node": "v24.14.0",
+    "os": "Windows_NT",
+    "release": "10.0.26200",
+    "arch": "x64",
+    "user": "jacob",
+    "playwright": "1.62.1",
+    "browser": "154.0.8037.97"
+  },
+  "bootstrap": "Exact static app; authored GET-only mock health/personas. Existing Git-pinned native saved-week fixture imported through actual file chooser. No FastAPI/provider execution.",
+  "fixture": {
+    "bytes": 14602,
+    "sha256": "55dfb9c7e50b2aff749dbb33835dcc5cf89c7d7f0eaf4e2b68dd957cb319a824"
+  },
+  "sources": {
+    "static/app.js": "2002efebe9dda5f6114ac3d6b84d4450714e36fa80a063fb6205a8637dfd6005",
+    "static/calendar.css": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+    "static/calendar.js": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+    "static/caregiver_handoff.mjs": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+    "static/index.html": "b953d889674d5e54e957dca3facb56efeb647cd37774b1b61f58116775661d59",
+    "static/plan-request.js": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+    "static/saved_week_store.mjs": "8968ad85cc362af59f40b1d01d6123c725a8cd2037939e49c739b04495dce913",
+    "static/saved_week_ui.mjs": "03f3580a1260aa4cec5b42076caa09650f3347b57efc42bfe6c51503d766eda7",
+    "static/saved_weeks.css": "0663f31c567cd438101e11d44ff698e2fd5e17c31c232f7f23f43727ac51fa7f",
+    "static/saved_weeks.mjs": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3",
+    "static/style.css": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+    "static/venue_followup.css": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+    "static/venue_followup.mjs": "cfa96d88aeaf06d55c5a4b7ad457f6a693f571ec06ccd8744141e4922ff3b2c3",
+    "static/venue_note_file.mjs": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+    "static/week_file.mjs": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+    "static/week_plan.mjs": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+    "static/week_report.mjs": "6fa8de588fbce5d3dce39826feb7ff06e7430fd2006c34b68d570b314a240210"
+  },
+  "groups": [
+    {
+      "name": "empty-and-reverted",
+      "status": "passed",
+      "observations": [
+        {
+          "kind": "reload",
+          "seen": [],
+          "error": null,
+          "sameDocumentAfterCancellation": null
+        },
+        {
+          "kind": "reload",
+          "seen": [],
+          "error": null,
+          "sameDocumentAfterCancellation": null
+        }
+      ]
+    },
+    {
+      "name": "reply-cancel-export-and-leave",
+      "status": "failed",
+      "observations": [],
+      "error": "AssertionError [ERR_ASSERTION]: actual browser departure dialog count\n\n0 !== 1\n"
+    },
+    {
+      "name": "field-status",
+      "status": "failed",
+      "observations": [],
+      "error": "AssertionError [ERR_ASSERTION]: actual browser departure dialog count\n\n0 !== 1\n"
+    },
+    {
+      "name": "field-nextStep",
+      "status": "failed",
+      "observations": [],
+      "error": "AssertionError [ERR_ASSERTION]: actual browser departure dialog count\n\n0 !== 1\n"
+    },
+    {
+      "name": "field-question",
+      "status": "failed",
+      "observations": [],
+      "error": "AssertionError [ERR_ASSERTION]: actual browser departure dialog count\n\n0 !== 1\n"
+    },
+    {
+      "name": "retained-hidden-date-and-invalid-date",
+      "status": "failed",
+      "observations": [],
+      "error": "AssertionError [ERR_ASSERTION]: actual browser departure dialog count\n\n0 !== 1\n"
+    },
+    {
+      "name": "import-and-empty-replacement",
+      "status": "failed",
+      "observations": [
+        {
+          "kind": "reload",
+          "seen": [],
+          "error": null,
+          "sameDocumentAfterCancellation": null
+        }
+      ],
+      "error": "AssertionError [ERR_ASSERTION]: actual browser departure dialog count\n\n0 !== 1\n"
+    },
+    {
+      "name": "explicit-plan-retirement",
+      "status": "passed",
+      "observations": [
+        {
+          "kind": "reload",
+          "seen": [],
+          "error": null,
+          "sameDocumentAfterCancellation": null
+        }
+      ]
+    },
+    {
+      "name": "actual-tab-close",
+      "status": "failed",
+      "observations": [],
+      "error": "AssertionError [ERR_ASSERTION]: tab close asks before discarding recorded notes"
+    }
+  ],
+  "pageErrors": [],
+  "requests": [
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/style.css",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/calendar.css",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/venue_followup.css",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.css",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/plan-request.js",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/calendar.js",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/app.js",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/venue_followup.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/caregiver_handoff.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/saved_week_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/venue_note_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/saved_week_store.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/api/health",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/api/personas",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/style.css",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/calendar.css",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/venue_followup.css",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.css",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/plan-request.js",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/calendar.js",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/app.js",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/venue_followup.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/caregiver_handoff.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/saved_week_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/venue_note_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/saved_week_store.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/api/health",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/api/personas",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/style.css",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/calendar.css",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/venue_followup.css",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.css",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/plan-request.js",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/calendar.js",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/app.js",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/venue_followup.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/caregiver_handoff.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/saved_week_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/venue_note_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/static/saved_week_store.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/api/health",
+      "method": "GET"
+    },
+    {
+      "group": "empty-and-reverted",
+      "url": "http://127.0.0.1:57772/api/personas",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/style.css",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/calendar.css",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/venue_followup.css",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.css",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/plan-request.js",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/calendar.js",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/app.js",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/venue_followup.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/caregiver_handoff.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/saved_week_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/venue_note_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/saved_week_store.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/api/health",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/api/personas",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/style.css",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/calendar.css",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/venue_followup.css",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.css",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/plan-request.js",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/calendar.js",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/app.js",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/venue_followup.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/caregiver_handoff.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/saved_week_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/venue_note_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/static/saved_week_store.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/api/health",
+      "method": "GET"
+    },
+    {
+      "group": "reply-cancel-export-and-leave",
+      "url": "http://127.0.0.1:57772/api/personas",
+      "method": "GET"
+    },
+    {
+      "group": "field-status",
+      "url": "http://127.0.0.1:57772/",
+      "method": "GET"
+    },
+    {
+      "group": "field-status",
+      "url": "http://127.0.0.1:57772/static/style.css",
+      "method": "GET"
+    },
+    {
+      "group": "field-status",
+      "url": "http://127.0.0.1:57772/static/calendar.css",
+      "method": "GET"
+    },
+    {
+      "group": "field-status",
+      "url": "http://127.0.0.1:57772/static/venue_followup.css",
+      "method": "GET"
+    },
+    {
+      "group": "field-status",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.css",
+      "method": "GET"
+    },
+    {
+      "group": "field-status",
+      "url": "http://127.0.0.1:57772/static/plan-request.js",
+      "method": "GET"
+    },
+    {
+      "group": "field-status",
+      "url": "http://127.0.0.1:57772/static/calendar.js",
+      "method": "GET"
+    },
+    {
+      "group": "field-status",
+      "url": "http://127.0.0.1:57772/static/app.js",
+      "method": "GET"
+    },
+    {
+      "group": "field-status",
+      "url": "http://127.0.0.1:57772/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "field-status",
+      "url": "http://127.0.0.1:57772/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "field-status",
+      "url": "http://127.0.0.1:57772/static/venue_followup.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "field-status",
+      "url": "http://127.0.0.1:57772/static/caregiver_handoff.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "field-status",
+      "url": "http://127.0.0.1:57772/static/saved_week_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "field-status",
+      "url": "http://127.0.0.1:57772/static/venue_note_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "field-status",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "field-status",
+      "url": "http://127.0.0.1:57772/static/saved_week_store.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "field-status",
+      "url": "http://127.0.0.1:57772/api/health",
+      "method": "GET"
+    },
+    {
+      "group": "field-status",
+      "url": "http://127.0.0.1:57772/api/personas",
+      "method": "GET"
+    },
+    {
+      "group": "field-status",
+      "url": "http://127.0.0.1:57772/left.html",
+      "method": "GET"
+    },
+    {
+      "group": "field-nextStep",
+      "url": "http://127.0.0.1:57772/",
+      "method": "GET"
+    },
+    {
+      "group": "field-nextStep",
+      "url": "http://127.0.0.1:57772/static/style.css",
+      "method": "GET"
+    },
+    {
+      "group": "field-nextStep",
+      "url": "http://127.0.0.1:57772/static/calendar.css",
+      "method": "GET"
+    },
+    {
+      "group": "field-nextStep",
+      "url": "http://127.0.0.1:57772/static/venue_followup.css",
+      "method": "GET"
+    },
+    {
+      "group": "field-nextStep",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.css",
+      "method": "GET"
+    },
+    {
+      "group": "field-nextStep",
+      "url": "http://127.0.0.1:57772/static/plan-request.js",
+      "method": "GET"
+    },
+    {
+      "group": "field-nextStep",
+      "url": "http://127.0.0.1:57772/static/calendar.js",
+      "method": "GET"
+    },
+    {
+      "group": "field-nextStep",
+      "url": "http://127.0.0.1:57772/static/app.js",
+      "method": "GET"
+    },
+    {
+      "group": "field-nextStep",
+      "url": "http://127.0.0.1:57772/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "field-nextStep",
+      "url": "http://127.0.0.1:57772/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "field-nextStep",
+      "url": "http://127.0.0.1:57772/static/venue_followup.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "field-nextStep",
+      "url": "http://127.0.0.1:57772/static/caregiver_handoff.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "field-nextStep",
+      "url": "http://127.0.0.1:57772/static/saved_week_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "field-nextStep",
+      "url": "http://127.0.0.1:57772/static/venue_note_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "field-nextStep",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "field-nextStep",
+      "url": "http://127.0.0.1:57772/static/saved_week_store.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "field-nextStep",
+      "url": "http://127.0.0.1:57772/api/health",
+      "method": "GET"
+    },
+    {
+      "group": "field-nextStep",
+      "url": "http://127.0.0.1:57772/api/personas",
+      "method": "GET"
+    },
+    {
+      "group": "field-nextStep",
+      "url": "http://127.0.0.1:57772/left.html",
+      "method": "GET"
+    },
+    {
+      "group": "field-question",
+      "url": "http://127.0.0.1:57772/",
+      "method": "GET"
+    },
+    {
+      "group": "field-question",
+      "url": "http://127.0.0.1:57772/static/style.css",
+      "method": "GET"
+    },
+    {
+      "group": "field-question",
+      "url": "http://127.0.0.1:57772/static/calendar.css",
+      "method": "GET"
+    },
+    {
+      "group": "field-question",
+      "url": "http://127.0.0.1:57772/static/venue_followup.css",
+      "method": "GET"
+    },
+    {
+      "group": "field-question",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.css",
+      "method": "GET"
+    },
+    {
+      "group": "field-question",
+      "url": "http://127.0.0.1:57772/static/plan-request.js",
+      "method": "GET"
+    },
+    {
+      "group": "field-question",
+      "url": "http://127.0.0.1:57772/static/calendar.js",
+      "method": "GET"
+    },
+    {
+      "group": "field-question",
+      "url": "http://127.0.0.1:57772/static/app.js",
+      "method": "GET"
+    },
+    {
+      "group": "field-question",
+      "url": "http://127.0.0.1:57772/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "field-question",
+      "url": "http://127.0.0.1:57772/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "field-question",
+      "url": "http://127.0.0.1:57772/static/venue_followup.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "field-question",
+      "url": "http://127.0.0.1:57772/static/caregiver_handoff.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "field-question",
+      "url": "http://127.0.0.1:57772/static/saved_week_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "field-question",
+      "url": "http://127.0.0.1:57772/static/venue_note_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "field-question",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "field-question",
+      "url": "http://127.0.0.1:57772/static/saved_week_store.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "field-question",
+      "url": "http://127.0.0.1:57772/api/health",
+      "method": "GET"
+    },
+    {
+      "group": "field-question",
+      "url": "http://127.0.0.1:57772/api/personas",
+      "method": "GET"
+    },
+    {
+      "group": "field-question",
+      "url": "http://127.0.0.1:57772/left.html",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/style.css",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/calendar.css",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/venue_followup.css",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.css",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/plan-request.js",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/calendar.js",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/app.js",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/venue_followup.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/caregiver_handoff.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/saved_week_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/venue_note_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/saved_week_store.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/api/health",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/api/personas",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/style.css",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/calendar.css",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/venue_followup.css",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.css",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/plan-request.js",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/calendar.js",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/app.js",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/venue_followup.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/caregiver_handoff.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/saved_week_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/venue_note_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/static/saved_week_store.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/api/health",
+      "method": "GET"
+    },
+    {
+      "group": "retained-hidden-date-and-invalid-date",
+      "url": "http://127.0.0.1:57772/api/personas",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/style.css",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/calendar.css",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/venue_followup.css",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.css",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/plan-request.js",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/calendar.js",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/app.js",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/venue_followup.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/caregiver_handoff.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/saved_week_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/venue_note_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/saved_week_store.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/api/health",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/api/personas",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/style.css",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/calendar.css",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/venue_followup.css",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.css",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/plan-request.js",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/calendar.js",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/app.js",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/venue_followup.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/caregiver_handoff.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/saved_week_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/venue_note_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/saved_week_store.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/api/health",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/api/personas",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/style.css",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/calendar.css",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/venue_followup.css",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.css",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/plan-request.js",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/calendar.js",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/app.js",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/venue_followup.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/caregiver_handoff.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/saved_week_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/venue_note_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/static/saved_week_store.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/api/health",
+      "method": "GET"
+    },
+    {
+      "group": "import-and-empty-replacement",
+      "url": "http://127.0.0.1:57772/api/personas",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/style.css",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/calendar.css",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/venue_followup.css",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.css",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/plan-request.js",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/calendar.js",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/app.js",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/venue_followup.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/caregiver_handoff.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/saved_week_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/venue_note_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/saved_week_store.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/api/health",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/api/personas",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/style.css",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/calendar.css",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/venue_followup.css",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.css",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/plan-request.js",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/calendar.js",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/app.js",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/venue_followup.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/caregiver_handoff.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/saved_week_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/venue_note_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/static/saved_week_store.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/api/health",
+      "method": "GET"
+    },
+    {
+      "group": "explicit-plan-retirement",
+      "url": "http://127.0.0.1:57772/api/personas",
+      "method": "GET"
+    },
+    {
+      "group": "actual-tab-close",
+      "url": "http://127.0.0.1:57772/",
+      "method": "GET"
+    },
+    {
+      "group": "actual-tab-close",
+      "url": "http://127.0.0.1:57772/static/style.css",
+      "method": "GET"
+    },
+    {
+      "group": "actual-tab-close",
+      "url": "http://127.0.0.1:57772/static/calendar.css",
+      "method": "GET"
+    },
+    {
+      "group": "actual-tab-close",
+      "url": "http://127.0.0.1:57772/static/venue_followup.css",
+      "method": "GET"
+    },
+    {
+      "group": "actual-tab-close",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.css",
+      "method": "GET"
+    },
+    {
+      "group": "actual-tab-close",
+      "url": "http://127.0.0.1:57772/static/plan-request.js",
+      "method": "GET"
+    },
+    {
+      "group": "actual-tab-close",
+      "url": "http://127.0.0.1:57772/static/calendar.js",
+      "method": "GET"
+    },
+    {
+      "group": "actual-tab-close",
+      "url": "http://127.0.0.1:57772/static/app.js",
+      "method": "GET"
+    },
+    {
+      "group": "actual-tab-close",
+      "url": "http://127.0.0.1:57772/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "actual-tab-close",
+      "url": "http://127.0.0.1:57772/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "actual-tab-close",
+      "url": "http://127.0.0.1:57772/static/venue_followup.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "actual-tab-close",
+      "url": "http://127.0.0.1:57772/static/caregiver_handoff.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "actual-tab-close",
+      "url": "http://127.0.0.1:57772/static/saved_week_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "actual-tab-close",
+      "url": "http://127.0.0.1:57772/static/venue_note_file.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "actual-tab-close",
+      "url": "http://127.0.0.1:57772/static/saved_weeks.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "actual-tab-close",
+      "url": "http://127.0.0.1:57772/static/saved_week_store.mjs",
+      "method": "GET"
+    },
+    {
+      "group": "actual-tab-close",
+      "url": "http://127.0.0.1:57772/api/health",
+      "method": "GET"
+    },
+    {
+      "group": "actual-tab-close",
+      "url": "http://127.0.0.1:57772/api/personas",
+      "method": "GET"
+    }
+  ],
+  "serverRequests": [
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/plan-request.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_plan.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/caregiver_handoff.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_ui.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_note_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_store.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/api/personas"
+    },
+    {
+      "method": "GET",
+      "path": "/favicon.ico"
+    },
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/plan-request.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_plan.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/caregiver_handoff.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_ui.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_note_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_store.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/api/personas"
+    },
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/plan-request.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_plan.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/caregiver_handoff.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_ui.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_note_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_store.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/api/personas"
+    },
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/plan-request.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_plan.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/caregiver_handoff.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_ui.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_note_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_store.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/api/personas"
+    },
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/plan-request.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_plan.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/caregiver_handoff.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_ui.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_note_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_store.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/api/personas"
+    },
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/plan-request.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_plan.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/caregiver_handoff.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_ui.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_note_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_store.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/api/personas"
+    },
+    {
+      "method": "GET",
+      "path": "/left.html"
+    },
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/plan-request.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_plan.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/caregiver_handoff.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_ui.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_note_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_store.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/api/personas"
+    },
+    {
+      "method": "GET",
+      "path": "/left.html"
+    },
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/plan-request.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_plan.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/caregiver_handoff.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_ui.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_note_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_store.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/api/personas"
+    },
+    {
+      "method": "GET",
+      "path": "/left.html"
+    },
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/plan-request.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_plan.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/caregiver_handoff.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_ui.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_note_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_store.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/api/personas"
+    },
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/plan-request.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_plan.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/caregiver_handoff.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_ui.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_note_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_store.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/api/personas"
+    },
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/plan-request.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_plan.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/caregiver_handoff.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_ui.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_note_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_store.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/api/personas"
+    },
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/plan-request.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_plan.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/caregiver_handoff.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_ui.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_note_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_store.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/api/personas"
+    },
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/plan-request.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_plan.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/caregiver_handoff.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_ui.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_note_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_store.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/api/personas"
+    },
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/plan-request.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_plan.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/caregiver_handoff.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_ui.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_note_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_store.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/api/personas"
+    },
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/plan-request.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_plan.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/caregiver_handoff.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_ui.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_note_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_store.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/api/personas"
+    },
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/plan-request.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/calendar.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_plan.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/week_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_followup.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/caregiver_handoff.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_ui.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/venue_note_file.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_weeks.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/static/saved_week_store.mjs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/api/personas"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "imported-venue-notes.json",
+      "bytes": 15994,
+      "sha256": "ea08ef1ecd3a0c6d483c04cc1a240cbc874890e8f8aefe9b19002bb982ae3f3f",
+      "suggestedFilename": "tastetable-venue-notes-2026-12-28.json"
+    }
+  ],
+  "baseUrl": "http://127.0.0.1:57772",
+  "externalRequests": [],
+  "sourceUnchanged": true,
+  "status": "failed",
+  "finished": "2026-10-13T04:32:03.523Z"
+}
