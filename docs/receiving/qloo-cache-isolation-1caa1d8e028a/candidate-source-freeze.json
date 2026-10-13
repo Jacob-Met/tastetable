@@ -1,0 +1,34 @@
+{
+  "repository": "Jacob-Met/tastetable",
+  "issue": "https://github.com/Jacob-Met/tastetable/issues/94",
+  "parent_commit": "368da250717cc9d1859253ac08a2f4783cd17560",
+  "parent_tree": "4b94ecb13f6cefdc32f1c27335f9bca2130a0912",
+  "source_scope": "One import and three public parse-return expressions; no raw-cache/parser/transport changes. Independent issue85 metric source is not adopted.",
+  "files": [
+    {
+      "path": "qloo_client.py",
+      "bytes": 12284,
+      "sha256": "22b6d5ee7664f37d4477d0e0973727d36f07d862a455a1ff9d7e7d2b4acc79eb",
+      "git_blob_sha": "7a722724e20e5ac4976936c9c1998de214bf9b76"
+    },
+    {
+      "path": "tests/test_qloo_cache_isolation.py",
+      "bytes": 7699,
+      "sha256": "6533dc8542f0eae105ce4cb0b0b2c89d3bea7735e921d97240e2535a422c69db",
+      "git_blob_sha": "d0d646707fa3b60c4c8a6dc194debd38fc68b97b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 23654,
+      "sha256": "2ec72ed2f29eef6c4e91083c5b924defdd6de07790fd28a8e5d03c526879893f",
+      "git_blob_sha": "b630df2ee2439f7ec03cb9b0763fc6917b491753"
+    },
+    {
+      "path": "docs/QLOO_CACHE_ISOLATION.md",
+      "bytes": 2342,
+      "sha256": "89498b4ce56cb4a27bc6c29324d2da57eef41639d7597faa6805ac2d53903bf0",
+      "git_blob_sha": "d3d39419216d9d48b662a067f038b0a4ad793c6e"
+    }
+  ],
+  "evidence_status": "Author regression and maintained/CLI receiving complete; independent receiving pending; product/test/documentation frozen for review."
+}
