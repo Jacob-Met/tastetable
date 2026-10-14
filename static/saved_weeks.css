@@ -27,3 +27,11 @@
 .saved-week-order { margin-top: .75rem; }
 .saved-week-order label { display: block; }
 .saved-week-order select { display: block; width: 100%; max-width: 28rem; min-width: 0; box-sizing: border-box; }
+
+.saved-week-collection { margin: 1rem 0; overflow-wrap: anywhere; }
+.saved-week-collection-controls { display: flex; flex-wrap: wrap; gap: .75rem; align-items: end; }
+.saved-week-collection-controls label { flex: 1 1 16rem; min-width: 0; }
+.saved-week-collection-controls input { display: block; width: 100%; min-width: 0; box-sizing: border-box; }
+.saved-week-collection li { margin: .75rem 0; }
+.saved-week-collection button:disabled { opacity: .6; cursor: not-allowed; }
+@media print { .saved-week-collection { display: none !important; } }
