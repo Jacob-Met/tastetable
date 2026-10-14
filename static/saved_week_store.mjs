@@ -1,4 +1,5 @@
 import { MAX_DRAFTS, validateDraft, renameDraft, draftName } from "./saved_weeks.mjs";
+import { makeCollectionBackup, planCollectionRestore } from "./saved_week_collection.mjs";
 
 export const DATABASE_NAME = "tastetable.saved-weeks";
 export const STORE_NAME = "drafts";
@@ -148,6 +149,40 @@ export function createSavedWeekStore(options = {}) {
           if (request.result === undefined) throw new Error("That saved week was already removed. Refresh the saved weeks list.");
           store.delete(id);
           done(id);
+        });
+      });
+    },
+    restoreMissing(backup, expected) {
+      // Copy before awaiting database access: caller edits cannot change this
+      // explicit restore while a connection or another transaction is pending.
+      // Validate the supplied shape before copying: JSON serialization would
+      // otherwise drop undefined fields or coerce values through toJSON.
+      const incoming = planCollectionRestore(backup, []);
+      const admitted = { format: backup.format, savedAt: backup.savedAt, records: incoming.missing };
+      const token = planCollectionRestore(admitted, expected.map((draft) => ({ id: draft.id, draft }))).expected;
+      return transaction("readwrite", (store, done, guard) => {
+        const rows = [];
+        const request = store.openCursor();
+        request.onsuccess = guard(() => {
+          const cursor = request.result;
+          if (cursor) {
+            if (rows.length >= MAX_DRAFTS) throw new Error("The browser collection exceeds this version's limit. Nothing was added.");
+            rows.push({ id: cursor.primaryKey, draft: validateDraft(cursor.value) });
+            cursor.continue();
+            return;
+          }
+          const plan = planCollectionRestore(admitted, rows);
+          // Canonical order and the fixed date make this a complete seven-field
+          // equality check, including every retained portable text character.
+          const date = "2000-01-01T00:00:00.000Z";
+          const previous = token.map((draft) => ({ id: draft.id, draft }));
+          if (makeCollectionBackup(rows, date) !== makeCollectionBackup(previous, date)) {
+            throw new Error("Saved weeks changed since this preview. Open the backup again before adding anything.");
+          }
+          if (plan.conflicts.length) throw new Error("This backup conflicts with an existing saved week. Nothing was added.");
+          if (plan.totalAfter > MAX_DRAFTS) throw new Error(`Adding this backup would exceed ${MAX_DRAFTS} saved weeks. Nothing was added.`);
+          for (const draft of plan.missing) store.add(draft);
+          done({ added: plan.missing.length, alreadyPresent: plan.identical.length });
         });
       });
     },

@@ -3,6 +3,7 @@ import { createSavedWeekStore } from "./saved_week_store.mjs";
 import { filterSavedWeekRows } from "./saved_week_search.mjs";
 import { createImportedDraft } from "./saved_week_import.mjs";
 import { orderSavedWeekRows } from "./saved_week_order.mjs";
+import { createSavedWeekCollectionUI } from "./saved_week_collection_ui.mjs";
 
 const sourceLabels = {
   mock: "Demo draft — fictional venues from a synthetic fixture",
@@ -34,6 +35,8 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
   let importGeneration = 0;
   const status = (message) => { if (!disposed) $("#savedWeeksStatus").textContent = message; };
   const importStatus = (message) => { if (!disposed) $("#importSavedWeekStatus").textContent = message; };
+  const collection = createSavedWeekCollectionUI({ root, store,
+    state: () => ({ busy, ready, disposed }), run: action, refresh });
 
   function importControls() {
     $("#importSavedWeekFile").disabled = disposed || busy;
@@ -92,14 +95,17 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
     $("#clearSavedWeeksSearch").disabled = busy || !ready || !$("#savedWeeksSearch").value;
     importControls();
     refreshCurrent();
+    collection.controls();
   }
   function clearPreview() {
+    collection.invalidate();
     selected = null;
     previewGeneration++;
     $("#savedWeekPreview").hidden = true;
     controls();
   }
   function showPreview(row, preserveName = false) {
+    if (!preserveName) collection.invalidate();
     // Focus refreshes can finish after typing. Keep a dirty name for the same
     // selected record; explicit Preview still initializes from stored metadata.
     const nameField = $("#renameSavedWeekName");
@@ -165,6 +171,7 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
     $("#clearSavedWeeksSearch").disabled = busy || !ready || !$("#savedWeeksSearch").value;
   }
   async function refresh(message) {
+    collection.invalidate();
     const generation = ++refreshGeneration;
     try {
       const rows = await store.list();
@@ -218,6 +225,7 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
   }
   async function action(task) {
     if (busy || disposed) return;
+    collection.invalidate();
     const generation = lifetime;
     const active = () => !disposed && generation === lifetime;
     busy = true;
@@ -340,6 +348,7 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
   const onFocus = () => { if (!busy) void refresh(); };
   const onPageHide = () => {
     disposed = true;
+    collection.invalidate();
     if (orderControl) orderControl.disabled = true;
     lifetime++;
     refreshGeneration++;

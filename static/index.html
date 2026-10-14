@@ -142,6 +142,25 @@
     </section>
   </section>
 
+  <section id="savedWeekCollection" class="card saved-week-collection" aria-labelledby="savedWeekCollectionTitle">
+    <h2 id="savedWeekCollectionTitle">Back up or recover saved weeks</h2>
+    <p id="collectionBackupHelp">A collection backup includes every saved week in this browser, regardless of search or ordering. It keeps names, identities, dates and complete portable copies. Store the file privately. Opening a backup only previews it; adding missing records never overwrites existing weeks or changes the active planner or venue notes.</p>
+    <div class="saved-week-collection-controls">
+      <button id="downloadCollectionBackup" type="button" disabled>Back up saved weeks (.json)</button>
+      <label for="collectionBackupFile">Open collection backup
+        <input id="collectionBackupFile" type="file" accept=".json,application/json" aria-describedby="collectionBackupHelp">
+      </label>
+      <button id="cancelCollectionBackup" type="button" disabled>Cancel collection preview</button>
+    </div>
+    <p id="collectionBackupStatus" role="status" aria-live="polite"></p>
+    <section id="collectionBackupPreview" aria-labelledby="collectionBackupPreviewTitle" hidden>
+      <h3 id="collectionBackupPreviewTitle">Review the complete collection before adding</h3>
+      <p id="collectionBackupSummary"></p>
+      <ol id="collectionBackupRecords"></ol>
+      <button id="addMissingSavedWeeks" type="button" disabled>Add missing saved weeks</button>
+    </section>
+  </section>
+
   <section id="results" hidden>
     <section id="weekOrganizer" class="card grounded" aria-labelledby="weekTitle">
       <h2 id="weekTitle">Your week</h2>
