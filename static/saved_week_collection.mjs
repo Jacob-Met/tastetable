@@ -118,8 +118,9 @@ export function readCollectionBackup(text) {
 
 /** A preview token covers the complete admitted collection, not a selected row. */
 export function planCollectionRestore(backup, rows) {
-  const incoming = envelope(backup).records;
-  const expected = currentRecords(rows);
+  const admitted = envelope(backup);
+  const incoming = admitted.records;
+  const expected = envelope({ ...admitted, records: currentRecords(rows) }).records;
   const current = new Map(expected.map((record) => [record.id, record]));
   const missing = [], identical = [], conflicts = [];
   for (const record of incoming) {

@@ -93,3 +93,20 @@ test("identical and empty are no-ops; insufficient combined capacity is a whole-
   const plan = planCollectionRestore(backup([a]), full);
   assert.equal(plan.totalAfter, 51); assert.equal(plan.canApply, false); assert.equal(plan.missing.length, 1);
 });
+
+
+test("preview refuses an oversized current collection before returning a plan", () => {
+  const a = draft();
+  a.text += "\t".repeat(500000);
+  const rows = Array.from({ length: 50 }, (_, n) => row({ ...a, id: `current_large_${n}` }));
+  const incoming = backup([]);
+  const before = JSON.stringify({ incoming, rows });
+  const bytes = new TextEncoder().encode(JSON.stringify(backup(rows.map((item) => item.draft)), null, 2) + "\n").byteLength;
+  assert.ok(bytes > MAX_COLLECTION_BYTES);
+  assert.throws(() => planCollectionRestore(incoming, rows), /32 MiB/);
+  const small = planCollectionRestore(incoming, [rows[0]]);
+  assert.deepEqual(small.expected, [rows[0].draft]);
+  assert.deepEqual(small.missing, []);
+  assert.equal(small.canApply, false);
+  assert.equal(JSON.stringify({ incoming, rows }), before);
+});
