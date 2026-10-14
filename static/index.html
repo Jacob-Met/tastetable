@@ -92,6 +92,14 @@
     <p id="savedWeeksSearchHelp" class="why">Search matches saved names only. Your selected preview stays open even when its name is filtered out.</p>
     <p id="savedWeeksSearchCount" class="why" role="status" aria-live="polite"></p>
     <p id="savedWeeksNoMatches" hidden>No saved names match your search. Clear search to show all saved records.</p>
+    <div class="saved-week-order">
+      <label for="savedWeeksOrder">Order saved records</label>
+      <select id="savedWeeksOrder" aria-describedby="savedWeeksOrderHelp" disabled>
+        <option value="newest">Original saved date (newest first)</option>
+        <option value="name">Saved name</option>
+      </select>
+    </div>
+    <p id="savedWeeksOrderHelp" class="why">Ordering only rearranges this list. Your selected preview and unfinished edits stay open. Original saved dates are not import times.</p>
     <p id="savedWeeksStatus" class="why" role="status" aria-live="polite"></p>
     <p id="savedWeeksEmpty" hidden>No saved weeks yet. Generate a plan, arrange it, then choose <strong>Save in this browser</strong>.</p>
     <ul id="savedWeeksList"></ul>

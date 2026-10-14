@@ -2,6 +2,7 @@ import { createDraft, draftSummary, MAX_DRAFT_BYTES } from "./saved_weeks.mjs";
 import { createSavedWeekStore } from "./saved_week_store.mjs";
 import { filterSavedWeekRows } from "./saved_week_search.mjs";
 import { createImportedDraft } from "./saved_week_import.mjs";
+import { orderSavedWeekRows } from "./saved_week_order.mjs";
 
 const sourceLabels = {
   mock: "Demo draft — fictional venues from a synthetic fixture",
@@ -15,6 +16,10 @@ const savedDate = (value) => new Intl.DateTimeFormat(undefined, {
 /** UI for explicit local snapshots; the host retains recommendation and calendar ownership. */
 export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeekStore(), root = document }) {
   const $ = (selector) => root.querySelector(selector);
+  // Older component hosts without this optional view control retain store order.
+  const orderControl = $("#savedWeeksOrder");
+  let orderMode = "newest";
+  if (orderControl) orderControl.value = orderMode;
   let selected = null;
   let busy = false;
   let ready = false;
@@ -80,6 +85,10 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
     $("#renameSavedWeek").disabled = busy || !selected?.draft;
     $("#removeSavedWeek").disabled = busy || !selected;
     $("#savedWeeksSearch").disabled = busy || !ready;
+    if (orderControl) {
+      orderControl.disabled = disposed || busy || !ready;
+      orderControl.value = orderMode;
+    }
     $("#clearSavedWeeksSearch").disabled = busy || !ready || !$("#savedWeeksSearch").value;
     importControls();
     refreshCurrent();
@@ -139,6 +148,13 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
       status(`Could not preview the saved week: ${error.message}`);
     }
   }
+  function applyOrder() {
+    if (!orderControl) return;
+    const items = new Map(listedItems);
+    const list = $("#savedWeeksList");
+    for (const row of orderSavedWeekRows(listedRows, orderMode)) list.append(items.get(row));
+    orderControl.value = orderMode;
+  }
   function applySearch() {
     const matched = new Set(filterSavedWeekRows(listedRows, $("#savedWeeksSearch").value));
     // Keep the already rendered rows and their order. Typing does not parse
@@ -178,6 +194,7 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
         list.append(item);
         listedItems.push([row, item]);
       }
+      applyOrder();
       applySearch();
       if (selected) {
         const row = rows.find((item) => item.id === selected.id);
@@ -267,6 +284,15 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
       await refresh();
     });
   });
+  orderControl?.addEventListener("change", () => {
+    if (disposed || busy || !ready) return;
+    if (orderControl.value !== "newest" && orderControl.value !== "name") {
+      orderControl.value = orderMode;
+      return;
+    }
+    orderMode = orderControl.value;
+    applyOrder();
+  });
   $("#savedWeeksSearch").addEventListener("input", () => {
     if (disposed || busy || !ready) return;
     applySearch();
@@ -314,6 +340,7 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
   const onFocus = () => { if (!busy) void refresh(); };
   const onPageHide = () => {
     disposed = true;
+    if (orderControl) orderControl.disabled = true;
     lifetime++;
     refreshGeneration++;
     previewGeneration++;
