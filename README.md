@@ -98,6 +98,21 @@ pytest -q                                # run the test suite
 
 By default the app runs in **mock mode** (it uses the fixture and makes no network calls).
 
+### Explicit fixture demo
+
+To start the maintained app with its synthetic Qloo fixtures and scripted model,
+including when your shell has live-provider settings, use:
+
+```bash
+python -B tools/serve_fixture_demo.py --port 8017
+```
+
+After successful startup, open <http://127.0.0.1:8017> manually. The command stays
+in the foreground; stop it with Ctrl+C. It uses your existing installed Python
+dependencies, leaves your shell environment unchanged, and does not open a
+browser or install a service. See [fixture-demo startup](docs/FIXTURE_DEMO_SERVER.md)
+for provider selection, ports and receiving limits.
+
 ### Arrange and print your week
 
 After generating a plan, choose any date to display its Monday–Sunday week. Each checked pick
