@@ -1,0 +1,19 @@
+{
+  "schema": "hamon.handoff-native-environment/1",
+  "device": "d55b2499-5e82-4805-819a-d0d7ddea1efe",
+  "client": "d2b7a455-1f85-4600-be37-f1f64f0990f0",
+  "version": "0.2.52",
+  "permissions": {
+    "allowedDirectories": [],
+    "blockedCommands": []
+  },
+  "identity": [
+    "Process started with PID 793768 (shell: /bin/bash)\nInitial output:\n{\"hostname\": \"hamon-thinkpad\", \"uid\": 1000, \"user\": \"jacob\", \"home\": \"/home/jacob\", \"cwd\": \"/home/jacob/.local/lib/node_modules/@wonderwhy-er/desktop-commander/dist\", \"python\": \"3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]\"}\n",
+    "\n[executed on device: hamon-thinkpad (d55b2499-5e82-4805-819a-d0d7ddea1efe)]"
+  ],
+  "runtime": [
+    "[Reading 2 new lines (total: 2 lines)]\n\n{\"puppeteer_exists\": true, \"puppeteer_version\": \"25.12.0\", \"firefox\": \"/usr/bin/firefox\", \"firefox_version\": \"Mozilla Firefox 157.0\", \"node\": \"v22.22.1\", \"receiving_path_exists\": false}\n\n✅ Process completed with exit code 0 (runtime: 3.11s)",
+    "\n[executed on device: hamon-thinkpad (d55b2499-5e82-4805-819a-d0d7ddea1efe)]"
+  ],
+  "scope": "Fresh selected-device config, ping, identity and installed-browser dependency observation. No service changes."
+}

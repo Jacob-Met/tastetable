@@ -1,0 +1,154 @@
+{
+  "accepted": true,
+  "author_evidence": {
+    "commands": 1,
+    "inherited_methods": 8,
+    "new_methods": 14,
+    "passed": 22,
+    "receipt": {
+      "bytes": 17875,
+      "git_blob": "6217951fdfce4787a61a01ac86c882ed7a62e89b",
+      "mode": 420,
+      "path": "forge/tastetable-handoff-compare/author-v1/receipt.json",
+      "sha256": "a21aa68c69d06ff396454353d281aeedb41f9abc9ac5d97a0ac607682faf9e6e"
+    },
+    "recorded_exit": 0,
+    "recorded_group_absent": true,
+    "recorded_source_before_after_equal_current": true,
+    "skipped": 0,
+    "stderr": {
+      "bytes": 0,
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": 420,
+      "path": "forge/tastetable-handoff-compare/author-v1/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 5608,
+      "git_blob": "b9418fc0e264622c36ebe23ee0069b03416a2f8c",
+      "mode": 420,
+      "path": "forge/tastetable-handoff-compare/author-v1/stdout.txt",
+      "sha256": "24e33fe94cf9ef3b52c68ce543b8a03965ef19fab1d786a04d0fc7faac4eee69"
+    }
+  },
+  "candidate_freeze": {
+    "bytes": 13458,
+    "git_blob": "364c2989f6d8f094416befa5bea499e6b68f9897",
+    "mode": 420,
+    "path": "forge/tastetable-handoff-compare/candidate-freeze-v1.json",
+    "sha256": "c1f5c0a6debfc1d53a0cac0f01e07bc3f29fe0f813e4a791effdbbf44de95f3b"
+  },
+  "created_utc": "2026-10-14T04:50:22.791243+00:00",
+  "custody": {
+    "all_23_candidate_leaves_exact": true,
+    "all_9_frozen_controls_exact": true,
+    "base_and_donor_full_tree_git_hashes_reconstructed": true,
+    "helper_exact_donor_bytes": true,
+    "index_exact_one_link_inverse": true,
+    "no_other_staged_file_change": true,
+    "original_16_bodies_modes_bind_fresh_complete_base_tree": true,
+    "readme_exact_append_only": true,
+    "six_authored_paths_absent_in_base": true,
+    "unchanged_14_leaves_exact_including_workflows": true
+  },
+  "donor_commit": "975bf346cc300f50abfac3c3ebac2fc492077091",
+  "donor_tree": "8adfbd679f4e0e16ee19e7533a7e55db5fb64794",
+  "limits": "Source-informed passive review only; no module import, test invocation, browser execution, user-file admission, network behavior measurement or new visual acceptance. No candidate source details sent to Root before his independent executable freeze. Fresh Git source trees establish selected preimage/donor identity, not final publication/adoption.",
+  "manual_source_review": [
+    "Read complete model, UI module, HTML, CSS, new tests and guide; compared complete README/index diffs and unchanged reader/comparator/donor coupling.",
+    "Admission delegates the full combined envelope and both nested native formats to unchanged readCaregiverHandoff after pre/post array-buffer byte limits and fatal UTF-8. Pairing uses unchanged complete response/input/receivedAt/calendar identity; valid mismatch retains both summaries without inferred matching.",
+    "All original occurrences and note occurrence/date identities remain distinct. Reused exact donor preserves five literal fields, missing records, null/empty values, prior reply-question history, omitted/other-date rows and declared ordering.",
+    "Each file slot has an independent generation guard. Pending comparison is hidden while prior accepted source remains visible; invalid replacements restore prior comparison; new selection, clear and page departure retire older success/error without changing the other slot. No async interval exists between final guard and accepted commit.",
+    "File-derived values use textContent or text nodes. Explicit null/empty/missing explanations and original source labels do not infer chronology, health, venue verification or reservation. No new file-action network/storage/restore/editor path.",
+    "CSS uses wrapping cards and a single-column narrow breakpoint; semantic native file labels/buttons/status/disclosures are present. This is static review, not a visual usability acceptance.",
+    "Author tests use model and small DOM listener fixtures; their 14 new plus 8 inherited results are separate from Root actual browser receiving."
+  ],
+  "original_commit": "c93c83c4b5f05686dca5810427dd4f5f826709e9",
+  "original_tree": "5dbdb2e6a1a649ddcf568146911572b5f7a41117",
+  "schema": "hamon.loom.tastetable-handoff-source-review/1",
+  "source_repository": "Jacob-Met/tastetable",
+  "source_rows": [
+    {
+      "bytes": 27122,
+      "git_blob": "0d0047df6704eb588b716c2ffe9a5d6e25469602",
+      "git_mode": "100644",
+      "mode": 420,
+      "repository_path": "README.md",
+      "role": "modified-source",
+      "sha256": "f05d253df8fde05d386cc0c6aaceb34f3db5c8204093b64984641c70647e47fc"
+    },
+    {
+      "bytes": 5254,
+      "git_blob": "15a059bf36ee070a24147c460af80c6a913c9563",
+      "git_mode": "100644",
+      "mode": 420,
+      "repository_path": "docs/COMPARE_CAREGIVER_HANDOFFS.md",
+      "role": "new-source",
+      "sha256": "e3f2f62c1be5cdda9e8c34baf9cb305c75cddc3695909fb96544ced38a7c28f0"
+    },
+    {
+      "bytes": 3143,
+      "git_blob": "cbe473374536c8949df90c1aae9383274292ec79",
+      "git_mode": "100644",
+      "mode": 420,
+      "repository_path": "static/compare-handoffs.html",
+      "role": "new-source",
+      "sha256": "95fb28f5e93a7c2f996d511bda60a4c2018bf3a3265fefba498a5d7f3199f7ed"
+    },
+    {
+      "bytes": 3033,
+      "git_blob": "639d116b799a538cc7ee4b0697362c87e601095b",
+      "git_mode": "100644",
+      "mode": 420,
+      "repository_path": "static/handoff_compare.css",
+      "role": "new-source",
+      "sha256": "fb20bf7f7efbfec324e90e209bcdb9ef9ca5abe688154baf6aa6314d650fb93c"
+    },
+    {
+      "bytes": 1031,
+      "git_blob": "5a2756d460fb5fa92207877e14ecb01882c19db7",
+      "git_mode": "100644",
+      "mode": 420,
+      "repository_path": "static/handoff_compare.mjs",
+      "role": "new-source",
+      "sha256": "a6be1de3b5128aac02bf8faceb5658f1fd26fa3f0a1166e32ab2ceb98689e137"
+    },
+    {
+      "bytes": 11884,
+      "git_blob": "f8499957445f100caa27a2e45894cf9ed5919021",
+      "git_mode": "100644",
+      "mode": 420,
+      "repository_path": "static/handoff_compare_ui.mjs",
+      "role": "new-source",
+      "sha256": "87d86c70d747dcdf567356c0230a96e9184391ab43ae12b68b8a221d1820afa5"
+    },
+    {
+      "bytes": 16119,
+      "git_blob": "46ce48c5380d43f33395a259ce0421c280d3065c",
+      "git_mode": "100644",
+      "mode": 420,
+      "repository_path": "static/index.html",
+      "role": "modified-source",
+      "sha256": "e05f98e218ca912fd86b8abf3ece1b2ed86088ec9a95612d65c5b0347a310158"
+    },
+    {
+      "bytes": 2303,
+      "git_blob": "9d7153966d16d61a3089e1df2454a7d3b3806d96",
+      "git_mode": "100644",
+      "mode": 420,
+      "repository_path": "static/venue_note_changes.mjs",
+      "role": "reused-source",
+      "sha256": "9299824e9bcd2b9b8fd63ed3efeaa9dbaefcc5c47e35e099c7b8bbd6d9fb3983"
+    },
+    {
+      "bytes": 18395,
+      "git_blob": "6a41b823e2beaa85c7193961254588ce6cecf98d",
+      "git_mode": "100644",
+      "mode": 420,
+      "repository_path": "tests/test_handoff_compare.mjs",
+      "role": "new-source",
+      "sha256": "2c10aab6174dae13548adeee87c4bb55d2c752603bfbf687d1c41f05de4589b3"
+    }
+  ],
+  "source_state_at_review": "unpublished"
+}

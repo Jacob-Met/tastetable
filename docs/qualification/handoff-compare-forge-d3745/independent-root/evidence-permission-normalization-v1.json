@@ -1,0 +1,83 @@
+{
+  "scope": "Explicit native staging permission normalization of generated receiving evidence; only remove group write, preserving all bytes and mtime. No product/fixture/controller content change. Original failed course remains retained.",
+  "preflight_process": 977311,
+  "files": [
+    {
+      "path": "received-v2/receipt.json",
+      "sha256": "9106304adaf2d642b18f750f72bc7a50e827caad5e73925b3b481226a580ae04",
+      "before_mode": 436,
+      "mtime_ns": 1791954359612425813,
+      "after_mode": 420
+    },
+    {
+      "path": "process-v2/REQUEST.json",
+      "sha256": "dae09a7d865cb33e28213645d39f50c01df45b3fd5210385959d75d998ccf526",
+      "before_mode": 436,
+      "mtime_ns": 1791954354267844968,
+      "after_mode": 420
+    },
+    {
+      "path": "process-v2/PROCESS.json",
+      "sha256": "61476348df263c9da3adb4717b3beaf725a01b013823cf4764d4e9d6d0058d67",
+      "before_mode": 436,
+      "mtime_ns": 1791954359648939131,
+      "after_mode": 420
+    },
+    {
+      "path": "process-v2/stdout",
+      "sha256": "d27d69a101fb748c4d2d3bff69e93830e5d29055fd06e10e4e46411eaf1e1bb4",
+      "before_mode": 436,
+      "mtime_ns": 1791954359613425809,
+      "after_mode": 420
+    },
+    {
+      "path": "process-v2/stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "before_mode": 436,
+      "mtime_ns": 1791954354269448535,
+      "after_mode": 420
+    },
+    {
+      "path": "transport-diagnostic-v1.cjs",
+      "sha256": "96a777fd4ee76045c75b274313aa446afd3f17eacaffb257bd0ab01b9f119575",
+      "before_mode": 436,
+      "mtime_ns": 1791954660608145754,
+      "after_mode": 420
+    },
+    {
+      "path": "transport-diagnostic-v1/result.json",
+      "sha256": "c2e6ace2118286d8eac491b7ed664d4aa5aa20498242158bfba12c043c399bbe",
+      "before_mode": 436,
+      "mtime_ns": 1791954665582124603,
+      "after_mode": 420
+    },
+    {
+      "path": "transport-process-v1/REQUEST.json",
+      "sha256": "4847af766e8ae2c3a909fd92b0e3a26b12e8a0a821744dec09b49584869fe60d",
+      "before_mode": 436,
+      "mtime_ns": 1791954662521983361,
+      "after_mode": 420
+    },
+    {
+      "path": "transport-process-v1/PROCESS.json",
+      "sha256": "cf59ea2dafdc5259a9d422f61e573ac1203abe28d68cf878c32c4dd1c8e1e851",
+      "before_mode": 436,
+      "mtime_ns": 1791954665597398186,
+      "after_mode": 420
+    },
+    {
+      "path": "transport-process-v1/stdout",
+      "sha256": "2b78f1f718ebe3d5501fb6e531d90ea73e55c95a886859d57881034eb6b9457f",
+      "before_mode": 436,
+      "mtime_ns": 1791954665582124603,
+      "after_mode": 420
+    },
+    {
+      "path": "transport-process-v1/stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "before_mode": 436,
+      "mtime_ns": 1791954662524137608,
+      "after_mode": 420
+    }
+  ]
+}

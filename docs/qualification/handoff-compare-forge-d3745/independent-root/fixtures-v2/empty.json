@@ -1,0 +1,145 @@
+{
+  "format": "tastetable.caregiver-handoff.v1",
+  "savedAt": "2026-10-14T00:00:00.000Z",
+  "week": {
+    "format": "tastetable.saved-week.v1",
+    "receivedAt": "2026-10-01T12:00:00.000Z",
+    "savedAt": "2026-10-14T00:00:00.000Z",
+    "calendarId": "0123456789abcdef0123456789abcdef",
+    "inputs": {
+      "city": "Fixture city",
+      "cuisines": [
+        "A",
+        "B"
+      ],
+      "music": [],
+      "films": [],
+      "constraints": []
+    },
+    "response": {
+      "mock": true,
+      "plan": {
+        "meals": [],
+        "outing": null,
+        "notes": [
+          "Synthetic receiving fixture."
+        ],
+        "rejected": []
+      },
+      "llm_only": {
+        "meals": [],
+        "outing": {
+          "name": "Synthetic comparison",
+          "day": "Friday",
+          "why": "Retained"
+        }
+      },
+      "comparison": {
+        "constraints": [],
+        "grounded": {
+          "picks": 4,
+          "with_qloo_entity_id": 4,
+          "with_affinity_evidence": 0,
+          "constraint_checked": 4,
+          "unsafe_candidates_rejected": 0
+        },
+        "llm_only": {
+          "picks": 4,
+          "with_qloo_entity_id": 4,
+          "with_affinity_evidence": 0,
+          "constraint_checked": 4,
+          "unsafe_candidates_rejected": 0
+        }
+      },
+      "trace": [
+        {
+          "tool": "receiving_fixture",
+          "args": {
+            "source": {
+              "ordinal": [
+                1,
+                2
+              ],
+              "label": "literal source"
+            }
+          },
+          "result_summary": "Synthetic original source"
+        }
+      ]
+    },
+    "week": {
+      "start": "2026-12-28",
+      "assignments": {}
+    }
+  },
+  "venueNotes": {
+    "format": "tastetable.venue-notes.v1",
+    "savedAt": "2026-10-14T00:00:00.000Z",
+    "origin": {
+      "receivedAt": "2026-10-01T12:00:00.000Z",
+      "calendarId": "0123456789abcdef0123456789abcdef",
+      "inputs": {
+        "city": "Fixture city",
+        "cuisines": [
+          "A",
+          "B"
+        ],
+        "music": [],
+        "films": [],
+        "constraints": []
+      },
+      "response": {
+        "mock": true,
+        "plan": {
+          "meals": [],
+          "outing": null,
+          "notes": [
+            "Synthetic receiving fixture."
+          ],
+          "rejected": []
+        },
+        "llm_only": {
+          "meals": [],
+          "outing": {
+            "name": "Synthetic comparison",
+            "day": "Friday",
+            "why": "Retained"
+          }
+        },
+        "comparison": {
+          "constraints": [],
+          "grounded": {
+            "picks": 4,
+            "with_qloo_entity_id": 4,
+            "with_affinity_evidence": 0,
+            "constraint_checked": 4,
+            "unsafe_candidates_rejected": 0
+          },
+          "llm_only": {
+            "picks": 4,
+            "with_qloo_entity_id": 4,
+            "with_affinity_evidence": 0,
+            "constraint_checked": 4,
+            "unsafe_candidates_rejected": 0
+          }
+        },
+        "trace": [
+          {
+            "tool": "receiving_fixture",
+            "args": {
+              "source": {
+                "ordinal": [
+                  1,
+                  2
+                ],
+                "label": "literal source"
+              }
+            },
+            "result_summary": "Synthetic original source"
+          }
+        ]
+      }
+    },
+    "records": []
+  }
+}

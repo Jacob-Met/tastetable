@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Compare caregiver handoffs</title>
+  <link rel="stylesheet" href="/static/handoff_compare.css">
+  <script type="module" src="/static/handoff_compare_ui.mjs"></script>
+</head>
+<body>
+  <main>
+    <nav aria-label="TasteTable pages"><a href="/">TasteTable planner</a><a href="/static/compare-weeks.html">Compare saved weeks only</a></nav>
+    <header>
+      <p class="eyebrow">TasteTable · saved copies</p>
+      <h1>Compare caregiver handoffs</h1>
+      <p class="intro">See what changed in the arranged week and the saved venue notes. Choose two files saved with <strong>Save caregiver handoff</strong>.</p>
+      <p>Your files stay in this page. Nothing is uploaded, restored or merged. “Earlier” and “revised” are the roles you choose; the page does not decide which copy is newer.</p>
+    </header>
+    <div class="file-grid">
+      <section class="file-panel" aria-labelledby="earlierHeading">
+        <h2 id="earlierHeading">Earlier copy</h2>
+        <label for="earlierFile">Choose the earlier caregiver handoff (.json, up to 6 MiB)</label>
+        <input id="earlierFile" type="file" accept=".json,application/json">
+        <button id="earlierClear" type="button" disabled>Clear earlier copy</button>
+        <p id="earlierStatus" class="file-status" role="status" aria-live="polite" aria-atomic="true">Earlier copy: no file selected.</p>
+        <div id="earlierSource"></div>
+      </section>
+      <section class="file-panel" aria-labelledby="revisedHeading">
+        <h2 id="revisedHeading">Revised copy</h2>
+        <label for="revisedFile">Choose the revised caregiver handoff (.json, up to 6 MiB)</label>
+        <input id="revisedFile" type="file" accept=".json,application/json">
+        <button id="revisedClear" type="button" disabled>Clear revised copy</button>
+        <p id="revisedStatus" class="file-status" role="status" aria-live="polite" aria-atomic="true">Revised copy: no file selected.</p>
+        <div id="revisedSource"></div>
+      </section>
+    </div>
+    <p id="comparisonStatus" class="comparison-status" role="status" aria-live="polite" aria-atomic="true">Choose both saved handoffs to compare them.</p>
+    <section id="comparison" aria-label="Handoff comparison" hidden>
+      <section aria-labelledby="arrangementHeading"><h2 id="arrangementHeading">Arranged week</h2><div id="arrangementChanges"></div></section>
+      <section aria-labelledby="notesHeading"><h2 id="notesHeading">Saved venue notes</h2>
+        <p>Added and removed refer to saved note records, not to new or canceled visits. Notes for other dates and omitted visits are included.</p>
+        <div id="noteChanges"></div>
+      </section>
+    </section>
+    <footer><p>These are differences between saved copies. Entered notes, source labels and explanations are retained as written; source checks have not been run again. The comparison does not verify venue facts, care needs or reservations.</p></footer>
+  </main>
+</body>
+</html>

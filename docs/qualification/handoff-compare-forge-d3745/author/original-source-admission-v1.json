@@ -1,0 +1,158 @@
+{
+  "schema": "forge.tastetable.original-source-admission.v1",
+  "files": [
+    {
+      "path": "README.md",
+      "source_commit": "c93c83c4b5f05686dca5810427dd4f5f826709e9",
+      "bytes": 26525,
+      "sha256": "8364231fb5ac9dfffdd8eab77c4d004655562f113ff9be3a83f0c4d2a565fb75",
+      "git_blob": "4de8cf3f93ecf7e24a97b3d327000adff2e85722",
+      "mode": "100644",
+      "local_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/original/README.md"
+    },
+    {
+      "path": "static/caregiver_handoff.mjs",
+      "source_commit": "c93c83c4b5f05686dca5810427dd4f5f826709e9",
+      "bytes": 11673,
+      "sha256": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+      "git_blob": "4286409b3fe932f61957ba72f5db918d18ff0751",
+      "mode": "100644",
+      "local_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/original/static/caregiver_handoff.mjs"
+    },
+    {
+      "path": "static/week_compare.mjs",
+      "source_commit": "c93c83c4b5f05686dca5810427dd4f5f826709e9",
+      "bytes": 1829,
+      "sha256": "5bc64a317f28cfccffb844f3c74ebb7b1312034996137891ec5161e0bc0953b7",
+      "git_blob": "2dfc4fb5e9c30481a4bd4276bc4ed6ff3bb114b8",
+      "mode": "100644",
+      "local_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/original/static/week_compare.mjs"
+    },
+    {
+      "path": "docs/CAREGIVER_HANDOFF.md",
+      "source_commit": "c93c83c4b5f05686dca5810427dd4f5f826709e9",
+      "bytes": 3541,
+      "sha256": "9da5e7bdddac7ade887ee3cf21c2445f47d5cb167070d4a2e56320b5feac9906",
+      "git_blob": "098c8a73d8eabf8ff66336d04a90c07717e4ece9",
+      "mode": "100644",
+      "local_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/original/docs/CAREGIVER_HANDOFF.md"
+    },
+    {
+      "path": "static/week_file.mjs",
+      "source_commit": "c93c83c4b5f05686dca5810427dd4f5f826709e9",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "git_blob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "mode": "100644",
+      "local_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/original/static/week_file.mjs"
+    },
+    {
+      "path": "static/venue_note_file.mjs",
+      "source_commit": "c93c83c4b5f05686dca5810427dd4f5f826709e9",
+      "bytes": 10435,
+      "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+      "git_blob": "f8406cb540d52222996c585666ae1a55a1030def",
+      "mode": "100644",
+      "local_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/original/static/venue_note_file.mjs"
+    },
+    {
+      "path": "static/venue_followup.mjs",
+      "source_commit": "c93c83c4b5f05686dca5810427dd4f5f826709e9",
+      "bytes": 19991,
+      "sha256": "9cd974e794e17c87e3b51b4ba7820200ce820ae611c8565a5224d68790441d32",
+      "git_blob": "e19affca590d4b4d0d31a6fc11d5558173320133",
+      "mode": "100644",
+      "local_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/original/static/venue_followup.mjs"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "source_commit": "c93c83c4b5f05686dca5810427dd4f5f826709e9",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "mode": "100644",
+      "local_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/original/static/week_plan.mjs"
+    },
+    {
+      "path": "static/calendar.js",
+      "source_commit": "c93c83c4b5f05686dca5810427dd4f5f826709e9",
+      "bytes": 15169,
+      "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+      "git_blob": "dbed22d2cb91090bccec9472fbffd2854eed2722",
+      "mode": "100644",
+      "local_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/original/static/calendar.js"
+    },
+    {
+      "path": "static/index.html",
+      "source_commit": "c93c83c4b5f05686dca5810427dd4f5f826709e9",
+      "bytes": 16001,
+      "sha256": "9a05d5c64e7b70e461a5f96914c13714d1fa6704ec49ca7a98f98ffca1fd7186",
+      "git_blob": "f71e1d5ce96279d3f5f0fc29dd83ded16e6086a7",
+      "mode": "100644",
+      "local_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/original/static/index.html"
+    },
+    {
+      "path": "static/week_compare_ui.mjs",
+      "source_commit": "c93c83c4b5f05686dca5810427dd4f5f826709e9",
+      "bytes": 9037,
+      "sha256": "2ae33874c70d1d9962c69fb53a373e6a9544a0eefe0d95e81289ca7598aaecd3",
+      "git_blob": "2a185f0b850f0f35aaead19aeb06bc38ca4d1f1f",
+      "mode": "100644",
+      "local_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/original/static/week_compare_ui.mjs"
+    },
+    {
+      "path": "tests/caregiver_handoff.test.mjs",
+      "source_commit": "c93c83c4b5f05686dca5810427dd4f5f826709e9",
+      "bytes": 10870,
+      "sha256": "dbdcb41b1598970c0ba098216a234887a470ca36fa5a3bfcf7faa4bfdebb7b9f",
+      "git_blob": "f9a0eb76eed9be3213de714c9ee00f444cee06c7",
+      "mode": "100644",
+      "local_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/original/tests/caregiver_handoff.test.mjs"
+    },
+    {
+      "path": "tests/venue_note_file.test.mjs",
+      "source_commit": "c93c83c4b5f05686dca5810427dd4f5f826709e9",
+      "bytes": 10558,
+      "sha256": "8c1b12a02302e414346a04710d5efb14af45e0cb8994ba75135c9e1988252740",
+      "git_blob": "a32d542a76779e8d820a9fc233b6e1a82d9aff2c",
+      "mode": "100644",
+      "local_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/original/tests/venue_note_file.test.mjs"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "source_commit": "c93c83c4b5f05686dca5810427dd4f5f826709e9",
+      "bytes": 652,
+      "sha256": "2f83a6f17995602ec28e9f0dacc901511bae2dd3e348e2dfc9190494830da876",
+      "git_blob": "0e6273139a9bf417a4ee42f4501d067b1c9d95a0",
+      "mode": "100644",
+      "local_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/original/.github/workflows/ci.yml"
+    },
+    {
+      "path": ".github/workflows/native-plan-week-browser.yml",
+      "source_commit": "c93c83c4b5f05686dca5810427dd4f5f826709e9",
+      "bytes": 3299,
+      "sha256": "b40992512e13d653c51fb8b4dfb0d15ad0a090ae4754c4082a18ab20ca62ace3",
+      "git_blob": "d674f2698d1b048075a1c49c2035b1096be668f2",
+      "mode": "100644",
+      "local_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/original/.github/workflows/native-plan-week-browser.yml"
+    },
+    {
+      "path": ".github/workflows/week-compare.yml",
+      "source_commit": "c93c83c4b5f05686dca5810427dd4f5f826709e9",
+      "bytes": 1295,
+      "sha256": "47d0b0eedcd551068b5b36c2b9e95ea69ed297ce8f3cb7002325f42dd388b1d5",
+      "git_blob": "1a26ec8c97c9b69e9e149c0cf6c22ea15fc6c31b",
+      "mode": "100644",
+      "local_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/original/.github/workflows/week-compare.yml"
+    },
+    {
+      "path": "static/venue_note_changes.mjs",
+      "source_commit": "975bf346cc300f50abfac3c3ebac2fc492077091",
+      "bytes": 2303,
+      "sha256": "9299824e9bcd2b9b8fd63ed3efeaa9dbaefcc5c47e35e099c7b8bbd6d9fb3983",
+      "git_blob": "9d7153966d16d61a3089e1df2454a7d3b3806d96",
+      "mode": "100644",
+      "local_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/donor/static/venue_note_changes.mjs"
+    }
+  ]
+}

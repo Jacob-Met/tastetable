@@ -1,0 +1,38 @@
+--- receive-browser-v2.cjs
++++ receive-browser-v3.cjs
+@@ -3,15 +3,15 @@
+ const assert=require('node:assert/strict'),{isDeepStrictEqual}=require('node:util');
+ const root=__dirname,read=p=>JSON.parse(fs.readFileSync(p,'utf8')),digest=b=>crypto.createHash('sha256').update(b).digest('hex');
+ function identity(p){const s=fs.lstatSync(p);assert(s.isFile()&&!s.isSymbolicLink());const b=fs.readFileSync(p);return{bytes:b.length,sha256:digest(b),git_blob:crypto.createHash('sha1').update(Buffer.from('blob '+b.length+'\0')).update(b).digest('hex'),mode:s.mode&0o777,mtime_ms:s.mtimeMs};}
+-const freeze=read(path.join(root,'freeze-v2.json'));
++const freeze=read(path.join(root,'freeze-v3.json'));
+ for(const row of freeze.controls){const got=identity(path.join(root,row.path));for(const key of ['bytes','sha256','git_blob','mode'])assert.equal(got[key],row[key],row.path+' '+key);}
+ const spec=read(process.argv[2]);assert.equal(spec.schema,'hamon.handoff-compare-candidate/1');assert(path.isAbsolute(spec.source_dir));
+ const source=spec.source_dir;for(const row of spec.files){assert(!path.isAbsolute(row.path)&&!row.path.split('/').includes('..'));const got=identity(path.join(source,row.path));for(const key of ['bytes','sha256','git_blob','mode'])assert.equal(got[key],row[key],row.path+' '+key);}
+-const output=path.join(root,'received-v2');fs.mkdirSync(output);fs.mkdirSync(path.join(output,'tmp'));
++const output=path.join(root,'received-v3');fs.mkdirSync(output);fs.mkdirSync(path.join(output,'tmp'));
+ const fixtures=path.join(root,'fixtures-v2'),facts=read(path.join(root,'expected-facts-v2.json'));
+-const watched=[...spec.files.map(x=>path.join(source,x.path)),...freeze.controls.map(x=>path.join(root,x.path)),path.join(root,'freeze-v2.json'),process.argv[2]];
++const watched=[...spec.files.map(x=>path.join(source,x.path)),...freeze.controls.map(x=>path.join(root,x.path)),path.join(root,'freeze-v3.json'),process.argv[2]];
+ const before=Object.fromEntries(watched.map(p=>[p,identity(p)]));
+-const receipt={schema:'hamon.handoff-compare-browser-receiving/2',started:new Date().toISOString(),accepted:false,pid:process.pid,checks:[],requests:[],page_errors:[],console_errors:[],screenshots:[],before,scope:'One fresh-profile native consumer course over independently authored files. Controlled File.arrayBuffer promises exercise asynchronous deliveries; parsers and comparison functions remain actual source. No provider call, production installation or qualification replay.'};
++const receipt={schema:'hamon.handoff-compare-browser-receiving/3',started:new Date().toISOString(),accepted:false,pid:process.pid,checks:[],requests:[],page_errors:[],console_errors:[],screenshots:[],before,scope:'One fresh-profile native consumer course over independently authored files. Controlled File.arrayBuffer promises exercise asynchronous deliveries; parsers and comparison functions remain actual source. No provider call, production installation or qualification replay.'};
+ function check(name,actual,expected){const pass=isDeepStrictEqual(actual,expected);receipt.checks.push({name,pass,actual,expected});assert.deepEqual(actual,expected,name);}
+ const isNetworkRequest=r=>['http:','https:','ws:','wss:'].includes(new URL(r.url).protocol);
+ const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+@@ -47,12 +47,13 @@
+  check('three live status roles',await page.evaluate(()=>['earlierStatus','revisedStatus','comparisonStatus'].map(id=>document.getElementById(id).getAttribute('role'))),['status','status','status']);
+  // Use actual public browser modules with separate prewritten expected facts.
+  const all=Object.fromEntries(read(path.join(root,'fixture-admission-v2.json')).files.filter(x=>x.admitted).map(x=>[x.name.slice(0,-5),fs.readFileSync(path.join(fixtures,x.name),'utf8')]));
+- const model=await page.evaluate(async values=>{
++ const modelJSON=await page.evaluate(async values=>{
+   const m=await import(location.origin+'/static/handoff_compare.mjs');const opened=Object.fromEntries(Object.entries(values).map(([k,t])=>[k,m.readHandoffForComparison(t,'earlier')]));const before=JSON.stringify(opened);const pair=m.compareCaregiverHandoffs(opened.earlier,opened.revised);
+   const same=m.compareCaregiverHandoffs(opened.earlier,opened.earlier),empty=m.compareCaregiverHandoffs(opened.empty,opened.empty),shift=m.compareCaregiverHandoffs(opened.earlier,opened['week-shift']),nullEmpty=m.compareCaregiverHandoffs(opened.earlier,opened['empty-question']),history=m.compareCaregiverHandoffs(opened['history-a'],opened['history-b']);
+   let unsupported=false;try{m.readHandoffForComparison(values.earlier,'third')}catch(e){unsupported=e instanceof TypeError;}
+-  return{pair,same,empty,shift,nullEmpty,history,reordered:m.compareCaregiverHandoffs(opened.earlier,opened['property-order']),mismatches:['source-deep','source-inputs','source-received','source-calendar'].map(n=>m.compareCaregiverHandoffs(opened.earlier,opened[n])),unchanged:before===JSON.stringify(opened),unsupported};
++  return JSON.stringify({pair,same,empty,shift,nullEmpty,history,reordered:m.compareCaregiverHandoffs(opened.earlier,opened['property-order']),mismatches:['source-deep','source-inputs','source-received','source-calendar'].map(n=>m.compareCaregiverHandoffs(opened.earlier,opened[n])),unchanged:before===JSON.stringify(opened),unsupported});
+  },all);
++ fs.writeFileSync(path.join(output,'model.json'),modelJSON+'\n',{flag:'wx'});const model=JSON.parse(modelJSON);receipt.model_result=identity(path.join(output,'model.json'));
+  check('compound arrangement counts',model.pair.arrangement.counts,facts.arrangement);check('compound note counts',model.pair.notes.counts,facts.notes);check('note occurrence/date order',model.pair.notes.records.map(r=>[r.key,r.date,r.change]),facts.noteOrder);check('all five note changes',model.pair.notes.records[0].changedFields,facts.changedFields);check('literal revised note',model.pair.notes.records[0].after,facts.revisedNote);check('original occurrence keys',model.pair.arrangement.changes.map(r=>r.key),['pick-0','pick-1','pick-2','pick-3']);
+  check('unchanged nonempty arrangements',model.same.arrangement.counts,{unchanged:4,moved:0,scheduled:0,omitted:0});check('unchanged nonempty notes',model.same.notes.counts,{added:0,removed:0,changed:0,unchanged:4});check('paired empty', [model.empty.paired,model.empty.arrangement.changes.length,model.empty.notes.records.length],[true,0,0]);check('week shifted exact dates',model.shift.arrangement.changes.map(r=>r.after.date),facts.shiftedDates);check('null versus empty only question',model.nullEmpty.notes.records.filter(r=>r.change==='changed').map(r=>r.changedFields),[['question']]);check('reply history only',model.history.notes.records.filter(r=>r.change==='changed').map(r=>r.changedFields),[['replyQuestions']]);check('object ordering immaterial',model.reordered.paired,true);check('complete identity mismatches',model.mismatches.map(r=>[r.paired,r.arrangement.counts,r.notes]),Array(4).fill([false,null,null]));check('snapshot fields preserved',model.unchanged,true);check('unsupported side refused',model.unsupported,true);
+  const actionStart=receipt.requests.length;

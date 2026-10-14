@@ -377,3 +377,7 @@ The output directory must not exist. The receiver retains its real downloads,
 screenshots, source identities and result report. It uses the fixture-backed
 native producer and local browser; it does not establish live-provider,
 FastAPI deployment, hosted CI or physical-device acceptance.
+
+## Compare caregiver handoffs
+
+Open **Compare caregiver handoffs (new tab)** beside the combined handoff Save/Open controls to compare two local saved copies. The separate page shows arranged-week changes and complete literal venue-note differences only when the original saved source matches. It keeps repeated visits and note dates distinct, preserves both original files, and makes no health or venue-verification inference. See [Compare caregiver handoffs](docs/COMPARE_CAREGIVER_HANDOFFS.md) for file limits, mismatch handling and the difference from arrangement-only saved-week comparison.

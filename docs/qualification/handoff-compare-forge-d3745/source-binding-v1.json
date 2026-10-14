@@ -1,0 +1,151 @@
+{
+  "schema": "forge.tastetable.handoff-source-binding.v1",
+  "repository": "Jacob-Met/tastetable",
+  "issue": "https://github.com/Jacob-Met/tastetable/issues/125",
+  "base": "c93c83c4b5f05686dca5810427dd4f5f826709e9",
+  "base_tree": "5dbdb2e6a1a649ddcf568146911572b5f7a41117",
+  "publication_state": "unpublished author freeze",
+  "selected_source": [
+    {
+      "bytes": 27122,
+      "sha256": "f05d253df8fde05d386cc0c6aaceb34f3db5c8204093b64984641c70647e47fc",
+      "git_blob": "0d0047df6704eb588b716c2ffe9a5d6e25469602",
+      "mode": 420,
+      "repository_path": "README.md",
+      "git_mode": "100644",
+      "role": "modified-source",
+      "before_git_blob": "4de8cf3f93ecf7e24a97b3d327000adff2e85722"
+    },
+    {
+      "bytes": 5254,
+      "sha256": "e3f2f62c1be5cdda9e8c34baf9cb305c75cddc3695909fb96544ced38a7c28f0",
+      "git_blob": "15a059bf36ee070a24147c460af80c6a913c9563",
+      "mode": 420,
+      "repository_path": "docs/COMPARE_CAREGIVER_HANDOFFS.md",
+      "git_mode": "100644",
+      "role": "new-source"
+    },
+    {
+      "bytes": 3143,
+      "sha256": "95fb28f5e93a7c2f996d511bda60a4c2018bf3a3265fefba498a5d7f3199f7ed",
+      "git_blob": "cbe473374536c8949df90c1aae9383274292ec79",
+      "mode": 420,
+      "repository_path": "static/compare-handoffs.html",
+      "git_mode": "100644",
+      "role": "new-source"
+    },
+    {
+      "bytes": 3033,
+      "sha256": "fb20bf7f7efbfec324e90e209bcdb9ef9ca5abe688154baf6aa6314d650fb93c",
+      "git_blob": "639d116b799a538cc7ee4b0697362c87e601095b",
+      "mode": 420,
+      "repository_path": "static/handoff_compare.css",
+      "git_mode": "100644",
+      "role": "new-source"
+    },
+    {
+      "bytes": 1031,
+      "sha256": "a6be1de3b5128aac02bf8faceb5658f1fd26fa3f0a1166e32ab2ceb98689e137",
+      "git_blob": "5a2756d460fb5fa92207877e14ecb01882c19db7",
+      "mode": 420,
+      "repository_path": "static/handoff_compare.mjs",
+      "git_mode": "100644",
+      "role": "new-source"
+    },
+    {
+      "bytes": 11884,
+      "sha256": "87d86c70d747dcdf567356c0230a96e9184391ab43ae12b68b8a221d1820afa5",
+      "git_blob": "f8499957445f100caa27a2e45894cf9ed5919021",
+      "mode": 420,
+      "repository_path": "static/handoff_compare_ui.mjs",
+      "git_mode": "100644",
+      "role": "new-source"
+    },
+    {
+      "bytes": 16119,
+      "sha256": "e05f98e218ca912fd86b8abf3ece1b2ed86088ec9a95612d65c5b0347a310158",
+      "git_blob": "46ce48c5380d43f33395a259ce0421c280d3065c",
+      "mode": 420,
+      "repository_path": "static/index.html",
+      "git_mode": "100644",
+      "role": "modified-source",
+      "before_git_blob": "f71e1d5ce96279d3f5f0fc29dd83ded16e6086a7"
+    },
+    {
+      "bytes": 2303,
+      "sha256": "9299824e9bcd2b9b8fd63ed3efeaa9dbaefcc5c47e35e099c7b8bbd6d9fb3983",
+      "git_blob": "9d7153966d16d61a3089e1df2454a7d3b3806d96",
+      "mode": 420,
+      "repository_path": "static/venue_note_changes.mjs",
+      "git_mode": "100644",
+      "role": "reused-source",
+      "source_commit": "975bf346cc300f50abfac3c3ebac2fc492077091"
+    },
+    {
+      "bytes": 18395,
+      "sha256": "2c10aab6174dae13548adeee87c4bb55d2c752603bfbf687d1c41f05de4589b3",
+      "git_blob": "6a41b823e2beaa85c7193961254588ce6cecf98d",
+      "mode": 420,
+      "repository_path": "tests/test_handoff_compare.mjs",
+      "git_mode": "100644",
+      "role": "new-source"
+    }
+  ],
+  "unchanged_dependencies": [
+    {
+      "bytes": 11673,
+      "sha256": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+      "git_blob": "4286409b3fe932f61957ba72f5db918d18ff0751",
+      "mode": 420,
+      "repository_path": "static/caregiver_handoff.mjs",
+      "git_mode": "100644"
+    },
+    {
+      "bytes": 19991,
+      "sha256": "9cd974e794e17c87e3b51b4ba7820200ce820ae611c8565a5224d68790441d32",
+      "git_blob": "e19affca590d4b4d0d31a6fc11d5558173320133",
+      "mode": 420,
+      "repository_path": "static/venue_followup.mjs",
+      "git_mode": "100644"
+    },
+    {
+      "bytes": 10435,
+      "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+      "git_blob": "f8406cb540d52222996c585666ae1a55a1030def",
+      "mode": 420,
+      "repository_path": "static/venue_note_file.mjs",
+      "git_mode": "100644"
+    },
+    {
+      "bytes": 1829,
+      "sha256": "5bc64a317f28cfccffb844f3c74ebb7b1312034996137891ec5161e0bc0953b7",
+      "git_blob": "2dfc4fb5e9c30481a4bd4276bc4ed6ff3bb114b8",
+      "mode": 420,
+      "repository_path": "static/week_compare.mjs",
+      "git_mode": "100644"
+    },
+    {
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "git_blob": "420ddb8f63fca264dcf97be7147801105696155d",
+      "mode": 420,
+      "repository_path": "static/week_file.mjs",
+      "git_mode": "100644"
+    },
+    {
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "mode": 420,
+      "repository_path": "static/week_plan.mjs",
+      "git_mode": "100644"
+    }
+  ],
+  "source_review": "Independent source review and root consumer are separate gates; this record makes no result claim for them.",
+  "original_packet": {
+    "bytes": 829020,
+    "sha256": "6f5201047785ebe4707563b2378bc80ff69e27862cf46f17aef47e6dbd925509",
+    "git_blob": "1d32d5c2cb2d2beb38c6a21ee8369c274c65cff6"
+  },
+  "original_packet_note": "Retained locally, not duplicated in this source selection. Complete original files can be fetched at the immutable base/donor commits; source-admission records exact tuples. The packet also retains the bounded owner-query responses and complete base tree."
+}

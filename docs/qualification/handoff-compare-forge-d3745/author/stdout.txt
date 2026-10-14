@@ -1,0 +1,142 @@
+TAP version 13
+# Subtest: one editable handoff preserves both native formats, original inputs and calendar identity
+ok 1 - one editable handoff preserves both native formats, original inputs and calendar identity
+  ---
+  duration_ms: 72.601079
+  type: 'test'
+  ...
+# Subtest: same named venue occurrences, omitted visits and earlier weeks keep distinct records
+ok 2 - same named venue occurrences, omitted visits and earlier weeks keep distinct records
+  ---
+  duration_ms: 12.105858
+  type: 'test'
+  ...
+# Subtest: a valid week paired with another source's notes is wholly refused
+ok 3 - a valid week paired with another source's notes is wholly refused
+  ---
+  duration_ms: 14.903339
+  type: 'test'
+  ...
+# Subtest: complete native week validation and complete late note validation remain required
+ok 4 - complete native week validation and complete late note validation remain required
+  ---
+  duration_ms: 14.000386
+  type: 'test'
+  ...
+# Subtest: the new outer version and timestamp do not admit a native section by itself
+ok 5 - the new outer version and timestamp do not admit a native section by itself
+  ---
+  duration_ms: 10.961977
+  type: 'test'
+  ...
+# Subtest: the 6 MiB UTF-8 envelope boundary retains the native 2 MiB notes boundary
+ok 6 - the 6 MiB UTF-8 envelope boundary retains the native 2 MiB notes boundary
+  ---
+  duration_ms: 645.714655
+  type: 'test'
+  ...
+# Subtest: a prepared empty handoff has an independent empty model and preserves null calendar identity
+ok 7 - a prepared empty handoff has an independent empty model and preserves null calendar identity
+  ---
+  duration_ms: 4.964916
+  type: 'test'
+  ...
+# Subtest: source labels and source-bound writer guard stay attached to the original response
+ok 8 - source labels and source-bound writer guard stay attached to the original response
+  ---
+  duration_ms: 11.102852
+  type: 'test'
+  ...
+# Subtest: comparison preserves repeated occurrences and all source/state/note values
+ok 9 - comparison preserves repeated occurrences and all source/state/note values
+  ---
+  duration_ms: 41.14372
+  type: 'test'
+  ...
+# Subtest: a changed week changes exact dates; returning an omitted visit is scheduled
+ok 10 - a changed week changes exact dates; returning an omitted visit is scheduled
+  ---
+  duration_ms: 17.31679
+  type: 'test'
+  ...
+# Subtest: notes retain original ordering, omitted/other dates, literal reply history and all five fields
+ok 11 - notes retain original ordering, omitted/other dates, literal reply history and all five fields
+  ---
+  duration_ms: 19.283861
+  type: 'test'
+  ...
+# Subtest: missing records, explicit default records and null versus empty questions stay distinct
+ok 12 - missing records, explicit default records and null versus empty questions stay distinct
+  ---
+  duration_ms: 32.720118
+  type: 'test'
+  ...
+# Subtest: complete origin mismatches and array order refuse matching without discarding independent arrangements
+ok 13 - complete origin mismatches and array order refuse matching without discarding independent arrangements
+  ---
+  duration_ms: 77.893516
+  type: 'test'
+  ...
+# Subtest: saved timestamps are metadata; same copies and empty sets are successful distinct results
+ok 14 - saved timestamps are metadata; same copies and empty sets are successful distinct results
+  ---
+  duration_ms: 18.798718
+  type: 'test'
+  ...
+# Subtest: full native admission errors identify side, including late invalid note and within-file source mismatch
+ok 15 - full native admission errors identify side, including late invalid note and within-file source mismatch
+  ---
+  duration_ms: 100.04767
+  type: 'test'
+  ...
+# Subtest: UI shows literal complete note history and distinguishes missing/null/empty values without active markup
+ok 16 - UI shows literal complete note history and distinguishes missing/null/empty values without active markup
+  ---
+  duration_ms: 38.24245
+  type: 'test'
+  ...
+# Subtest: invalid replacement retains prior accepted pair and names the affected side; corrected retry succeeds
+ok 17 - invalid replacement retains prior accepted pair and names the affected side; corrected retry succeeds
+  ---
+  duration_ms: 13.838242
+  type: 'test'
+  ...
+# Subtest: valid different sources show a mismatch, while unchanged and empty admitted copies remain useful
+ok 18 - valid different sources show a mismatch, while unchanged and empty admitted copies remain useful
+  ---
+  duration_ms: 28.916595
+  type: 'test'
+  ...
+# Subtest: pending replacement hides comparison, latest success wins and obsolete failure is silent
+ok 19 - pending replacement hides comparison, latest success wins and obsolete failure is silent
+  ---
+  duration_ms: 10.239652
+  type: 'test'
+  ...
+# Subtest: clear and page departure invalidate pending completions without changing the other accepted slot
+ok 20 - clear and page departure invalidate pending completions without changing the other accepted slot
+  ---
+  duration_ms: 5.605753
+  type: 'test'
+  ...
+# Subtest: UI refuses oversize before and after reading and invalid UTF-8, preserving an accepted file
+ok 21 - UI refuses oversize before and after reading and invalid UTF-8, preserving an accepted file
+  ---
+  duration_ms: 10.011525
+  type: 'test'
+  ...
+# Subtest: page exposes labeled controls and an isolated comparison link; new render code has no upload/storage path
+ok 22 - page exposes labeled controls and an isolated comparison link; new render code has no upload/storage path
+  ---
+  duration_ms: 53.211811
+  type: 'test'
+  ...
+1..22
+# tests 22
+# suites 0
+# pass 22
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1187.584544

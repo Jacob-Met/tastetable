@@ -1,0 +1,61 @@
+{
+  "arrangement": {
+    "moved": 1,
+    "omitted": 1,
+    "scheduled": 1,
+    "unchanged": 1
+  },
+  "notes": {
+    "added": 1,
+    "removed": 1,
+    "changed": 1,
+    "unchanged": 2
+  },
+  "noteOrder": [
+    [
+      "pick-0",
+      "2026-12-28",
+      "changed"
+    ],
+    [
+      "pick-1",
+      "2026-12-29",
+      "removed"
+    ],
+    [
+      "pick-2",
+      "2026-11-02",
+      "unchanged"
+    ],
+    [
+      "pick-0",
+      "2026-11-30",
+      "unchanged"
+    ],
+    [
+      "pick-3",
+      "2027-01-03",
+      "added"
+    ]
+  ],
+  "changedFields": [
+    "status",
+    "question",
+    "reply",
+    "replyQuestions",
+    "nextStep"
+  ],
+  "revisedNote": {
+    "status": "follow_up",
+    "question": " New question?\r\n海 🙂  ",
+    "reply": "Reply: <strong>literal text</strong>\n  retained spaces  ",
+    "replyQuestions": "Earlier recorded question?\r\nOriginal",
+    "nextStep": "Next: verify the entered note"
+  },
+  "shiftedDates": [
+    "2027-01-04",
+    "2027-01-05",
+    null,
+    "2027-01-10"
+  ]
+}

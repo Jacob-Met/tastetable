@@ -1,0 +1,261 @@
+{
+  "format": "tastetable.caregiver-handoff.v1",
+  "savedAt": "2026-10-14T00:00:00.000Z",
+  "week": {
+    "format": "tastetable.saved-week.v1",
+    "receivedAt": "2026-10-01T12:00:00.000Z",
+    "savedAt": "2026-10-14T00:00:00.000Z",
+    "calendarId": null,
+    "inputs": {
+      "city": "Fixture city",
+      "cuisines": [
+        "A",
+        "B"
+      ],
+      "music": [],
+      "films": [],
+      "constraints": []
+    },
+    "response": {
+      "mock": true,
+      "plan": {
+        "meals": [
+          {
+            "name": "Repeated café 海",
+            "entity_id": "same-id",
+            "kind": "restaurant",
+            "day": "Monday",
+            "why": "Original occurrence 0",
+            "affinity": null
+          },
+          {
+            "name": "Repeated café 海",
+            "entity_id": "same-id",
+            "kind": "restaurant",
+            "day": "Tuesday",
+            "why": "Original occurrence 1",
+            "affinity": null
+          },
+          {
+            "name": "Fictional stop 2",
+            "entity_id": "fixture-2",
+            "kind": "restaurant",
+            "day": "Wednesday",
+            "why": "Original occurrence 2",
+            "affinity": null
+          },
+          {
+            "name": "Fictional stop 3",
+            "entity_id": "fixture-3",
+            "kind": "restaurant",
+            "day": "Sunday",
+            "why": "Original occurrence 3",
+            "affinity": null
+          }
+        ],
+        "outing": null,
+        "notes": [
+          "Synthetic receiving fixture."
+        ],
+        "rejected": []
+      },
+      "llm_only": {
+        "meals": [],
+        "outing": {
+          "name": "Synthetic comparison",
+          "day": "Friday",
+          "why": "Retained"
+        }
+      },
+      "comparison": {
+        "constraints": [],
+        "grounded": {
+          "picks": 4,
+          "with_qloo_entity_id": 4,
+          "with_affinity_evidence": 0,
+          "constraint_checked": 4,
+          "unsafe_candidates_rejected": 0
+        },
+        "llm_only": {
+          "picks": 4,
+          "with_qloo_entity_id": 4,
+          "with_affinity_evidence": 0,
+          "constraint_checked": 4,
+          "unsafe_candidates_rejected": 0
+        }
+      },
+      "trace": [
+        {
+          "tool": "receiving_fixture",
+          "args": {
+            "source": {
+              "ordinal": [
+                1,
+                2
+              ],
+              "label": "literal source"
+            }
+          },
+          "result_summary": "Synthetic original source"
+        }
+      ]
+    },
+    "week": {
+      "start": "2026-12-28",
+      "assignments": {
+        "pick-0": "Monday",
+        "pick-1": "Tuesday",
+        "pick-2": null,
+        "pick-3": "Sunday"
+      }
+    }
+  },
+  "venueNotes": {
+    "format": "tastetable.venue-notes.v1",
+    "savedAt": "2026-10-14T00:00:00.000Z",
+    "origin": {
+      "receivedAt": "2026-10-01T12:00:00.000Z",
+      "calendarId": null,
+      "inputs": {
+        "city": "Fixture city",
+        "cuisines": [
+          "A",
+          "B"
+        ],
+        "music": [],
+        "films": [],
+        "constraints": []
+      },
+      "response": {
+        "mock": true,
+        "plan": {
+          "meals": [
+            {
+              "name": "Repeated café 海",
+              "entity_id": "same-id",
+              "kind": "restaurant",
+              "day": "Monday",
+              "why": "Original occurrence 0",
+              "affinity": null
+            },
+            {
+              "name": "Repeated café 海",
+              "entity_id": "same-id",
+              "kind": "restaurant",
+              "day": "Tuesday",
+              "why": "Original occurrence 1",
+              "affinity": null
+            },
+            {
+              "name": "Fictional stop 2",
+              "entity_id": "fixture-2",
+              "kind": "restaurant",
+              "day": "Wednesday",
+              "why": "Original occurrence 2",
+              "affinity": null
+            },
+            {
+              "name": "Fictional stop 3",
+              "entity_id": "fixture-3",
+              "kind": "restaurant",
+              "day": "Sunday",
+              "why": "Original occurrence 3",
+              "affinity": null
+            }
+          ],
+          "outing": null,
+          "notes": [
+            "Synthetic receiving fixture."
+          ],
+          "rejected": []
+        },
+        "llm_only": {
+          "meals": [],
+          "outing": {
+            "name": "Synthetic comparison",
+            "day": "Friday",
+            "why": "Retained"
+          }
+        },
+        "comparison": {
+          "constraints": [],
+          "grounded": {
+            "picks": 4,
+            "with_qloo_entity_id": 4,
+            "with_affinity_evidence": 0,
+            "constraint_checked": 4,
+            "unsafe_candidates_rejected": 0
+          },
+          "llm_only": {
+            "picks": 4,
+            "with_qloo_entity_id": 4,
+            "with_affinity_evidence": 0,
+            "constraint_checked": 4,
+            "unsafe_candidates_rejected": 0
+          }
+        },
+        "trace": [
+          {
+            "tool": "receiving_fixture",
+            "args": {
+              "source": {
+                "ordinal": [
+                  1,
+                  2
+                ],
+                "label": "literal source"
+              }
+            },
+            "result_summary": "Synthetic original source"
+          }
+        ]
+      }
+    },
+    "records": [
+      {
+        "key": "pick-0",
+        "date": "2026-12-28",
+        "note": {
+          "status": "awaiting_reply",
+          "question": null,
+          "reply": "",
+          "replyQuestions": null,
+          "nextStep": "Call before noon"
+        }
+      },
+      {
+        "key": "pick-1",
+        "date": "2026-12-29",
+        "note": {
+          "status": "not_contacted",
+          "question": null,
+          "reply": "",
+          "replyQuestions": null,
+          "nextStep": ""
+        }
+      },
+      {
+        "key": "pick-2",
+        "date": "2026-11-02",
+        "note": {
+          "status": "not_contacted",
+          "question": null,
+          "reply": "",
+          "replyQuestions": null,
+          "nextStep": ""
+        }
+      },
+      {
+        "key": "pick-0",
+        "date": "2026-11-30",
+        "note": {
+          "status": "not_contacted",
+          "question": "Earlier date question",
+          "reply": "",
+          "replyQuestions": null,
+          "nextStep": ""
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "schema": "anvil.tastetable.accepted-receiving-passive-review/1",
+  "reviewed_at": "2026-10-14T05:23:55.474565+00:00",
+  "accepted": true,
+  "scope": "Read-only complete receipt/model/raw-stream/source and control custody audit, plus direct inspection of the two retained original screenshots. No native call, product import, server, browser or suite execution.",
+  "reviewer_exposure": "Source-informed delivery reviewer; not the independent receiving author.",
+  "source_basis": "Unpublished candidate at actual execution, based on c93c83c4b5f05686dca5810427dd4f5f826709e9; immutable publication binding remains a later custody step.",
+  "inputs": {
+    "received-v3/receipt.json": {
+      "bytes": 121244,
+      "sha256": "241ba871a7b9f2ee8e2283e2d5da24b6f9a23fe220c18f9ee9431ed0fb1d64ac",
+      "git_blob": "344bfe7765d670413020f4bc90a4cb4ba7982456",
+      "mode": 420
+    },
+    "received-v3/model.json": {
+      "bytes": 42527,
+      "sha256": "547200c6e0722ba4234f379e4d00b668e3c7e7ab4df9014aeb9e8da547ae1303",
+      "git_blob": "a4cdfdbe40212713a3c9275c2733ab52ae032d13",
+      "mode": 420
+    },
+    "freeze-v3.json": {
+      "bytes": 13237,
+      "sha256": "6af4d8c80ec81aa95f2725e9cbd202919c151e0bd2d29da710462b22d930b1e7",
+      "git_blob": "e17d2ec76170faa5b23c072a75e9ff78f7153329",
+      "mode": 420
+    },
+    "candidate-native-spec-v1.json": {
+      "bytes": 3865,
+      "sha256": "cf154982598527cbe7f9453da37935a47c3f9d8cad3dfa4fc3e7e96a6e5719e8",
+      "git_blob": "319d95272884c8140eb2053f18d21c41ffcfa53a",
+      "mode": 420
+    },
+    "expected-facts-v2.json": {
+      "bytes": 1016,
+      "sha256": "0e6b79650ae7b47b2e77cc6be7c83ad9b0d72b79e131931110247e395317443a",
+      "git_blob": "9473a8a40da27aafee2565c5eb50fa4d1654ce7c",
+      "mode": 420
+    },
+    "publication-inputs-v1.json": {
+      "bytes": 31314,
+      "sha256": "7d7435b944e5c247fda5a4887b3333d2d7304e6e1f75d359159147c3cdbc3358",
+      "git_blob": "9e7f083ccea3ba8d704f7b606829533b1c5ac028",
+      "mode": 420
+    },
+    "native-result-v3-custody.json": {
+      "bytes": 1555,
+      "sha256": "2013c43969884e3b5e3efc4468d03df88ed82ad3b9697e9f8e6d37d1ff8b40aa",
+      "git_blob": "5dd31a0844be86ca99868f9f809acb51ef070755",
+      "mode": 420
+    },
+    "evidence-permission-normalization-v1.json": {
+      "bytes": 2821,
+      "sha256": "e8326adcf83642684aaea45bfd7852cef8f2a02ab278e6b044a7faf6257a8882",
+      "git_blob": "172fb5c5bb561903a7497308c3cb422898fbd7a0",
+      "mode": 420
+    }
+  },
+  "results": {
+    "comparisons_recomputed_type_strictly": 68,
+    "recorded_before_after_inputs": 70,
+    "current_local_inputs_rehashed": 70,
+    "freeze_controls": 53,
+    "candidate_source_rows": 15,
+    "native_output_bodies": 9,
+    "original_publication_rows": 66,
+    "full_original_authority_payload_bytes": 600186,
+    "actual_process_exit": 0,
+    "raw_stdout_bytes": 240,
+    "raw_stderr_bytes": 0,
+    "recorded_seconds": 4.825724144931883
+  },
+  "model_audit": "Complete saved model parsed. Counts, exact ordered note identities, all five literal changed fields, shifted dates, null/empty and historical-question distinctions, four source mismatches and unchanged/empty cases match the original facts. All primary before/after note values and occurrence assignments crosswalk to the retained two input files.",
+  "visuals": [
+    {
+      "path": "received-v3/paired-desktop.png",
+      "bytes": 522535,
+      "sha256": "03a1fcb5398a953eb4701fb385e066ce074af126a6c93a607ab38fdae09cb583",
+      "git_blob": "cea6174ed49c9b1f6c5cae74c234d17168b8ef84",
+      "mode": 420,
+      "observation": "Both accepted file summaries, arrangement cards and complete five-field before/after note values are readable. Repeated venue labels retain distinct occurrence keys; literal markup is displayed as text."
+    },
+    {
+      "path": "received-v3/paired-narrow.png",
+      "bytes": 545399,
+      "sha256": "0c6d43208c2faa321b2202742c66d18aea64cb69795f30ef65095ae6fe1e0298",
+      "git_blob": "de8d38177c630d115207017f9ad9c315430a0255",
+      "mode": 420,
+      "observation": "Single-column layout at the received narrow viewport; headings and literal values wrap legibly, added/removed absence labels remain explicit, and no visible horizontal clipping occurs. The recorded width-fit predicate also passed."
+    }
+  ],
+  "custody_and_closure": "All 70 recorded before/after dictionaries including byte, mode and mtime metadata are identical; corresponding cloud source/control bytes and modes independently rehashed. Direct-child capture reports exit 0; receiver separately records owned Firefox exit 0 and browser/server closure. This review does not assert an independent native process or socket inspection.",
+  "limits": [
+    "V1 controller unexecuted; actual V2 stopped before file UI after 21 passing observations. Its failed raw result and separate source-free transport diagnostic remain immutable. V3 is the second actual candidate course, using the reviewed source-informed JSON transport correction.",
+    "No network during file actions and no Storage.setItem calls are recorded. This does not assert every possible browser storage API was instrumented.",
+    "One inline data: font request is not an external network request; twelve recorded HTTP GETs remain loopback-only.",
+    "Historical eleven evidence files were explicitly normalized from native 0664 to 0644 before V3, bytes/mtime preserved as recorded. New V3 generated receipt/model/PNGs originally record 0664; current cloud mirrors and intended Git/packet copies are 0644, with bytes exact.",
+    "Native file input widgets are reset after capture; the accepted filename and metadata summaries identify the retained copy. Earlier/Revised are user roles, not inferred temporal ordering."
+  ],
+  "reviewer_script": {
+    "bytes": 10780,
+    "sha256": "a029ccf93d5d87633523bd8c153cc051eeac61621a50b22372e6bad46f15d97b",
+    "git_blob": "bbcd40272f4e7f522b8c04da625b863e320f1182",
+    "mode": 420
+  }
+}

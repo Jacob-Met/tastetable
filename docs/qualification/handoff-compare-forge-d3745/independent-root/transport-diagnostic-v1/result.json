@@ -1,0 +1,37 @@
+{
+  "scope": "Source-free Firefox return-value transport diagnostic; no TasteTable source imported or file input loaded.",
+  "started": "2026-10-14T05:11:02.595Z",
+  "browser_pid": 974733,
+  "version": "firefox/157.0",
+  "raw": {
+    "right": [
+      {
+        "date": "2027-01-04"
+      }
+    ],
+    "changes": [
+      {}
+    ]
+  },
+  "raw_after_present": true,
+  "raw_after_type": "undefined",
+  "json_string": "{\"right\":[{\"date\":\"2027-01-04\"}],\"changes\":[{\"after\":{\"date\":\"2027-01-04\"}}]}",
+  "json_parsed": {
+    "right": [
+      {
+        "date": "2027-01-04"
+      }
+    ],
+    "changes": [
+      {
+        "after": {
+          "date": "2027-01-04"
+        }
+      }
+    ]
+  },
+  "browser_exit": 0,
+  "browser_signal": null,
+  "closed": true,
+  "finished": "2026-10-14T05:11:05.582Z"
+}
