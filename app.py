@@ -10,17 +10,17 @@ from typing import Optional
 
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
-from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from agent import model_from_env, run_agent
 from constraints import SUPPORTED
 from personas import PERSONAS
 from qloo_client import QlooClient
+from static_modules import ModuleStaticFiles
 
 STATIC = Path(__file__).parent / "static"
 app = FastAPI(title="TasteTable", version="0.1.0")
-app.mount("/static", StaticFiles(directory=STATIC), name="static")
+app.mount("/static", ModuleStaticFiles(directory=STATIC), name="static")
 
 
 def _clean(items: list[str], limit: int = 5) -> list[str]:
