@@ -352,6 +352,12 @@ These copies stay in this browser's site data, with up to 50 named records and a
 
 The browser collection wraps the unchanged `makeWeekFile`/`readWeekFile` format with a local identity and label. Its native IndexedDB mutations resolve only when their transaction commits; malformed or unsupported records remain stored and can be explicitly removed. Failed collection opens follow the existing planner's retirement and recovery behavior. The saved-week codec, model, calendar writer, request controller, worksheet modules, comparison page and offline studio remain their existing implementations.
 
+### Back up and recover the complete collection
+
+Use **Back up saved weeks (.json)** to keep every named browser copy together, independent of search, ordering or selection. The file retains each original name, ID, created/updated date and complete portable-week text. Confirm the completed download and keep it somewhere deliberate; a backup includes the saved responses and personal labels.
+
+Choose **Open collection backup** to review all records before writing. **Add missing saved weeks** adds only absent IDs in one transaction, preserves identical records and refuses the complete addition if an identity conflicts, capacity is insufficient, storage changes after preview or a request fails. Empty and identical-only backups are no-ops. No existing record is overwritten, renamed or deleted, and recovery does not open a week or replace the active planner or venue notes. Use the same browser origin to reach an existing collection, or explicitly recover the file on another origin. See [collection backup and recovery](docs/SAVED_WEEK_COLLECTION.md) for limits, conflicts and stale-preview behavior.
+
 ### Check the browser collection locally
 
 The focused state checks use the existing dependency-free Node runner:
