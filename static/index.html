@@ -108,6 +108,30 @@
         <button id="removeSavedWeek" type="button" disabled>Remove saved week</button>
       </div>
     </section>
+    <section class="saved-week-import" aria-labelledby="importSavedWeekTitle">
+      <h3 id="importSavedWeekTitle">Add a portable week to this browser</h3>
+      <p id="importSavedWeekHelp" class="why">Review a portable saved-week file, then give this browser copy a name. Importing does not open it or replace your current week or venue notes.</p>
+      <div class="saved-week-import-controls">
+        <label for="importSavedWeekFile">Choose a portable saved-week file
+          <input id="importSavedWeekFile" type="file" accept=".json,application/json" aria-describedby="importSavedWeekHelp">
+        </label>
+        <button id="cancelImportedWeek" type="button" disabled>Cancel import</button>
+      </div>
+      <p id="importSavedWeekStatus" class="why" role="status" aria-live="polite"></p>
+      <section id="importSavedWeekPreview" aria-labelledby="importSavedWeekPreviewTitle" hidden>
+        <h4 id="importSavedWeekPreviewTitle">Review portable week before saving a browser copy</h4>
+        <p id="importSavedWeekSummary"></p>
+        <p id="importSavedWeekSource" class="mode"></p>
+        <ol id="importSavedWeekDays"></ol>
+        <p id="importSavedWeekOmitted"></p>
+        <div class="saved-week-import-controls">
+          <label for="importSavedWeekName">Name for this imported browser copy
+            <input id="importSavedWeekName" maxlength="120" autocomplete="off" disabled>
+          </label>
+          <button id="saveImportedWeek" type="button" disabled>Save imported browser copy</button>
+        </div>
+      </section>
+    </section>
   </section>
 
   <section id="results" hidden>
