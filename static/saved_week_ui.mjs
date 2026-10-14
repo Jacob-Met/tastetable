@@ -1,6 +1,7 @@
-import { createDraft, draftSummary } from "./saved_weeks.mjs";
+import { createDraft, draftSummary, MAX_DRAFT_BYTES } from "./saved_weeks.mjs";
 import { createSavedWeekStore } from "./saved_week_store.mjs";
 import { filterSavedWeekRows } from "./saved_week_search.mjs";
+import { createImportedDraft } from "./saved_week_import.mjs";
 
 const sourceLabels = {
   mock: "Demo draft — fictional venues from a synthetic fixture",
@@ -23,7 +24,48 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
   let lifetime = 0;
   let listedRows = [];
   let listedItems = [];
+  let imported = null;
+  let importReading = false;
+  let importGeneration = 0;
   const status = (message) => { if (!disposed) $("#savedWeeksStatus").textContent = message; };
+  const importStatus = (message) => { if (!disposed) $("#importSavedWeekStatus").textContent = message; };
+
+  function importControls() {
+    $("#importSavedWeekFile").disabled = disposed || busy;
+    $("#importSavedWeekName").disabled = disposed || busy || !imported;
+    $("#saveImportedWeek").disabled = disposed || busy || !ready || !imported || !$("#importSavedWeekName").value.trim();
+    $("#cancelImportedWeek").disabled = disposed || busy || (!imported && !importReading);
+  }
+  function clearImport(message = "") {
+    importGeneration++;
+    imported = null;
+    importReading = false;
+    $("#importSavedWeekPreview").hidden = true;
+    $("#importSavedWeekName").value = "";
+    $("#importSavedWeekFile").value = "";
+    $("#importSavedWeekStatus").textContent = message;
+    importControls();
+  }
+  function showImport(draft, file) {
+    const summary = draftSummary(draft);
+    const days = $("#importSavedWeekDays");
+    days.replaceChildren();
+    for (const day of summary.rows) {
+      const item = document.createElement("li");
+      item.textContent = `${day.day} ${day.date}: ${day.picks.length ? day.picks.map(({ pick }) => pick.name).join("; ") : "Open day"}`;
+      days.append(item);
+    }
+    $("#importSavedWeekSummary").textContent = `${file.name} · ${file.size} bytes · originally saved ${savedDate(summary.createdAt)} · week of ${summary.weekStart}. ${summary.scheduled} of ${summary.suggested} suggestions scheduled. The original saved date is retained in the browser list.`;
+    $("#importSavedWeekSource").textContent = sourceLabels[summary.sourceMode];
+    $("#importSavedWeekOmitted").textContent = summary.omitted.length
+      ? `Kept off this week: ${summary.omitted.map(({ pick }) => pick.name).join("; ")}.`
+      : "No suggestions kept off this week.";
+    imported = draft;
+    importReading = false;
+    $("#importSavedWeekPreview").hidden = false;
+    importStatus("Review this file and enter a name before saving a browser copy. The current week and venue notes are unchanged.");
+    importControls();
+  }
 
   function current() { try { return capture(); } catch { return null; } }
   function refreshCurrent() {
@@ -39,6 +81,7 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
     $("#removeSavedWeek").disabled = busy || !selected;
     $("#savedWeeksSearch").disabled = busy || !ready;
     $("#clearSavedWeeksSearch").disabled = busy || !ready || !$("#savedWeeksSearch").value;
+    importControls();
     refreshCurrent();
   }
   function clearPreview() {
@@ -182,6 +225,48 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
       await refresh(`Saved “${draft.name}” in this browser. Later edits need another explicit Save.`);
     });
   });
+  $("#importSavedWeekFile").addEventListener("change", async () => {
+    // Retain the File, then clear the chooser before awaiting. A cancelled or
+    // superseded read cannot leave the same file impossible to choose again.
+    const file = $("#importSavedWeekFile").files?.[0];
+    $("#importSavedWeekFile").value = "";
+    if (!file || disposed || busy) return;
+    clearImport();
+    const generation = importGeneration;
+    importReading = true;
+    importStatus("Reading the selected portable week. Nothing has been saved.");
+    importControls();
+    try {
+      if (file.size > MAX_DRAFT_BYTES) throw new TypeError("This saved week exceeds the 512 KiB browser-copy limit.");
+      const bytes = await file.arrayBuffer();
+      if (disposed || generation !== importGeneration) return;
+      if (bytes.byteLength > MAX_DRAFT_BYTES) throw new TypeError("This saved week exceeds the 512 KiB browser-copy limit.");
+      let text;
+      try { text = new TextDecoder("utf-8", { fatal: true, ignoreBOM: true }).decode(bytes); }
+      catch { throw new TypeError("Choose a saved-week file encoded as valid UTF-8."); }
+      showImport(createImportedDraft({ text, name: "Portable file preview" }), file);
+    } catch (error) {
+      if (!disposed && generation === importGeneration) clearImport(`Could not review the portable week: ${error.message}`);
+    }
+  });
+  $("#importSavedWeekName").addEventListener("input", importControls);
+  $("#cancelImportedWeek").addEventListener("click", () => {
+    if (!disposed && !busy) clearImport();
+  });
+  $("#saveImportedWeek").addEventListener("click", () => {
+    if (disposed || busy || !ready || !imported) return;
+    let draft;
+    try {
+      draft = createImportedDraft({ text: imported.text, id: imported.id, name: $("#importSavedWeekName").value });
+    } catch (error) { importStatus(`Could not save the imported week: ${error.message}`); return; }
+    void action(async (active) => {
+      try { await store.save(draft); }
+      catch (error) { if (active()) importStatus(`Could not save the imported week: ${error.message}`); return; }
+      if (!active()) return;
+      clearImport(`Saved “${draft.name}” in this browser. The current week and venue notes are unchanged. Your saved-name search may hide the new copy.`);
+      await refresh();
+    });
+  });
   $("#savedWeeksSearch").addEventListener("input", () => {
     if (disposed || busy || !ready) return;
     applySearch();
@@ -232,6 +317,7 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
     lifetime++;
     refreshGeneration++;
     previewGeneration++;
+    clearImport();
     store.close();
   };
   // A page restored from the back-forward cache reuses its document and module.
