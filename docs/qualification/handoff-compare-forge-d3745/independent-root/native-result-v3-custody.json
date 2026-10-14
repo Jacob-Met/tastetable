@@ -1,0 +1,51 @@
+{
+  "schema": "hamon.native-full-output-custody/1",
+  "files": [
+    {
+      "path": "received-v3/receipt.json",
+      "bytes": 121244,
+      "sha256": "241ba871a7b9f2ee8e2283e2d5da24b6f9a23fe220c18f9ee9431ed0fb1d64ac"
+    },
+    {
+      "path": "received-v3/model.json",
+      "bytes": 42527,
+      "sha256": "547200c6e0722ba4234f379e4d00b668e3c7e7ab4df9014aeb9e8da547ae1303"
+    },
+    {
+      "path": "received-v3/paired-desktop.png",
+      "bytes": 522535,
+      "sha256": "03a1fcb5398a953eb4701fb385e066ce074af126a6c93a607ab38fdae09cb583"
+    },
+    {
+      "path": "received-v3/paired-narrow.png",
+      "bytes": 545399,
+      "sha256": "0c6d43208c2faa321b2202742c66d18aea64cb69795f30ef65095ae6fe1e0298"
+    },
+    {
+      "path": "process-v3/REQUEST.json",
+      "bytes": 549,
+      "sha256": "6063ac811a2fbd22df98662cadd717a566aff5b21d10fe96c6f6e08976ef7955"
+    },
+    {
+      "path": "process-v3/PROCESS.json",
+      "bytes": 984,
+      "sha256": "6f93a28f0f94eadf77c8010c3973bf60b0db929885a30d539bd7eedacdea32f7"
+    },
+    {
+      "path": "process-v3/stdout",
+      "bytes": 240,
+      "sha256": "38e371bb6a7325fa9e53393f60210a7cfcdefc58e072acab28e0573fe2095530"
+    },
+    {
+      "path": "process-v3/stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence-permission-normalization-v1.json",
+      "bytes": 2821,
+      "sha256": "e8326adcf83642684aaea45bfd7852cef8f2a02ab278e6b044a7faf6257a8882"
+    }
+  ],
+  "all_bytes_received_and_rehashed": true
+}

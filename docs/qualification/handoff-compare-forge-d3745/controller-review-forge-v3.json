@@ -1,0 +1,107 @@
+{
+  "addendum": {
+    "bytes": 2444,
+    "git_blob": "d150274c93b9fdac39ef9ee4915e4bccebe195e7",
+    "mode": 420,
+    "path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/controller-addendum-v3.md",
+    "sha256": "e88f8c431210798fb6310a430e0fb129053f1a567338e6d8e0c985e2b672046a"
+  },
+  "controller": {
+    "bytes": 18629,
+    "git_blob": "1f39caacdb1feac48e7557ad504221c49fa1f27e",
+    "mode": 420,
+    "path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/receive-browser-v3.cjs",
+    "sha256": "73ceaf0bf6b777a55b83210de23a6cdbdddf681edb2b79d3ee8e4418ebc5cc66"
+  },
+  "controls_authenticated": 53,
+  "freeze": {
+    "bytes": 13237,
+    "git_blob": "e17d2ec76170faa5b23c072a75e9ff78f7153329",
+    "mode": 420,
+    "path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/freeze-v3.json",
+    "sha256": "6af4d8c80ec81aa95f2725e9cbd202919c151e0bd2d29da710462b22d930b1e7"
+  },
+  "mechanical_delta": {
+    "changes": [
+      "Versioned freeze/output/schema references.",
+      "Return grouped actual model as JSON text inside page.evaluate.",
+      "Save returned JSON plus a final LF before parsing it in Node; record saved model identity."
+    ],
+    "complete_reconstruction_exact": true,
+    "replacement_groups": 6,
+    "unchanged": "All model calls, fixtures, complete expected facts, acceptance predicates, UI actions and cleanup logic are byte-identical after reversing those groups."
+  },
+  "patch": {
+    "bytes": 7164,
+    "git_blob": "738425e41dce3d29d8fba5d1d9fff653b950eed6",
+    "mode": 420,
+    "path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/controller-diff-v3.patch",
+    "sha256": "c39e36f145f4c27ac250df5beb5bcb70402144315a82eb7ac101815357629d82"
+  },
+  "prior_failure": {
+    "accepted": false,
+    "observed_error": {
+      "message": "Cannot read properties of undefined (reading 'date')",
+      "name": "TypeError",
+      "stack": "TypeError: Cannot read properties of undefined (reading 'date')\n    at /home/jacob/tastetable-handoff-compare-d3745-receiving/receive-browser-v2.cjs:57:424\n    at Array.map (<anonymous>)\n    at run (/home/jacob/tastetable-handoff-compare-d3745-receiving/receive-browser-v2.cjs:57:409)\n    at async /home/jacob/tastetable-handoff-compare-d3745-receiving/receive-browser-v2.cjs:82:16"
+    },
+    "passed": 21,
+    "receipt": {
+      "bytes": 82128,
+      "git_blob": "2e12d84a326f18d7c8d3efedd1a20889ca2e8b8a",
+      "mode": 420,
+      "path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/received-v2/receipt.json",
+      "sha256": "9106304adaf2d642b18f750f72bc7a50e827caad5e73925b3b481226a580ae04"
+    },
+    "scope": "V2 remains the first failed/incomplete actual course; failure precedes file UI and screenshots. Source/input preservation and owned Firefox0/server closure passed."
+  },
+  "retained_limits": [
+    "JSON value equality is the existing oracle; no JavaScript reference-identity claim.",
+    "No additional test case, source change or weakened acceptance predicate.",
+    "The external direct-child collector remains responsible for its finite deadline and raw streams.",
+    "Original V2 failure, diagnostic and prior controls are included in V3 preservation inventory."
+  ],
+  "reviewed_at": "2026-10-14T05:13:55.877766+00:00",
+  "schema": "forge.tastetable.root-controller-review.v3",
+  "scope": "Source-informed read-only review of preserved V2 failure, one source-free transport diagnostic and the narrowly versioned V3 receiver. No product, fixture, controller or browser execution by this review.",
+  "timing": "V3 is source-informed after V2 execution. V1 remains authored/unexecuted. The next V3 run is a second candidate course, not candidate-blind or the sole attempted course.",
+  "transport_evidence": {
+    "diagnostic": {
+      "bytes": 806,
+      "git_blob": "23e0152ac4c5d3ffd6cdb0d308288585ef617922",
+      "mode": 420,
+      "path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/transport-diagnostic-v1/result.json",
+      "sha256": "c2e6ace2118286d8eac491b7ed664d4aa5aa20498242158bfba12c043c399bbe"
+    },
+    "diagnostic_controller": {
+      "bytes": 1898,
+      "git_blob": "2ba14b07a3ea1da5519fae82532eda87d7417ac6",
+      "mode": 420,
+      "path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/transport-diagnostic-v1.cjs",
+      "sha256": "96a777fd4ee76045c75b274313aa446afd3f17eacaffb257bd0ab01b9f119575"
+    },
+    "limit": "V2 original grouped result was not saved; neither review nor diagnostic reconstructs its exact wire payload.",
+    "mechanism": "Installed BiDi Deserializer.js25-30 resolves object.value only and has no internalId memo. Realm.js168 invokes it for returned values. Unchanged compareSavedWeeks explicitly aliases right[index] as changes[index].after.",
+    "native_observation_processes": [
+      {
+        "exit": 0,
+        "operation": "read-only path search",
+        "pid": 972892
+      },
+      {
+        "exit": 0,
+        "operation": "read-only source capture/hash",
+        "pid": 974194
+      }
+    ],
+    "native_source_capture": {
+      "bytes": 22153,
+      "git_blob": "972c009616413894c521270fda23dcad35d5dd6f",
+      "mode": 420,
+      "path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/native-puppeteer-transport-source-v1.json",
+      "sha256": "c959b447e5fbbd08362a32c9447e11227715ed5884550047d146bfcadf62c234"
+    },
+    "observed": "Plain shared object raw return yields undefined changes[0].after; JSON text roundtrip preserves the date. Diagnostic loaded no product source."
+  },
+  "verdict": "accepted"
+}

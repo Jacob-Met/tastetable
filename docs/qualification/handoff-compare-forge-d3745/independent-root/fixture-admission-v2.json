@@ -1,0 +1,109 @@
+{
+  "schema": "hamon.handoff-compare-fixture-admission/1",
+  "scope": "Independent fixtures admitted with unchanged original reader before candidate exposure; no candidate execution.",
+  "source": "c93c83c4b5f05686dca5810427dd4f5f826709e9",
+  "files": [
+    {
+      "name": "earlier.json",
+      "bytes": 6602,
+      "sha256": "00219f90a8244120392243e44062f7530e36be1ae4c7aa29255e63898d329deb",
+      "admitted": true
+    },
+    {
+      "name": "revised.json",
+      "bytes": 6732,
+      "sha256": "0c53215a92a870bdca80daea4b4c89f4beeabf9531b11834ae6f71e237d583c3",
+      "admitted": true
+    },
+    {
+      "name": "empty.json",
+      "bytes": 3457,
+      "sha256": "7d5cbbdf01f444e5c5580548ad303a85d0e040a00655164ad4ab7e31154871c2",
+      "admitted": true
+    },
+    {
+      "name": "week-shift.json",
+      "bytes": 6602,
+      "sha256": "27adec3f9d0cbcfc0bcf7b266b49040df1d7befa48618eaf2fa638cdb7b27667",
+      "admitted": true
+    },
+    {
+      "name": "empty-question.json",
+      "bytes": 6600,
+      "sha256": "252635ed0bbd6a543f913df6809338aca1ac0fa6d2b96af1a1903430c736ee93",
+      "admitted": true
+    },
+    {
+      "name": "history-a.json",
+      "bytes": 6703,
+      "sha256": "6c93cb1502cfffac7c98a1c4a3ec750b173991754e54f7ec16cb6aa4bd2b66ce",
+      "admitted": true
+    },
+    {
+      "name": "history-b.json",
+      "bytes": 6703,
+      "sha256": "1b3f430a97eaf2cb0b24aa793066b12b613b558b0902fbb96ca07b83ef22293d",
+      "admitted": true
+    },
+    {
+      "name": "property-order.json",
+      "bytes": 6602,
+      "sha256": "f740c69016742cff5da156b58e9a73e532b194df2c8d39da5ec6b37f9371ef9e",
+      "admitted": true
+    },
+    {
+      "name": "source-deep.json",
+      "bytes": 6602,
+      "sha256": "d3f73310ec0a54f5e458480c32b49e1156a857dd96ac248e821d19ca11f11167",
+      "admitted": true
+    },
+    {
+      "name": "source-inputs.json",
+      "bytes": 6602,
+      "sha256": "41b5275efaa0425cf23cc313537de763b66968c1c8f54900efa7f84ce6d6cca2",
+      "admitted": true
+    },
+    {
+      "name": "source-received.json",
+      "bytes": 6602,
+      "sha256": "2b3953b9354f962ad5ff2de577c12a152de31df97b5418200792c743fea7c7ad",
+      "admitted": true
+    },
+    {
+      "name": "source-calendar.json",
+      "bytes": 6542,
+      "sha256": "2215d4a99d8750158b0e852547742fd39eee7b20eaf25ecd417dc7b38f516047",
+      "admitted": true
+    },
+    {
+      "name": "invalid-format.json",
+      "bytes": 6576,
+      "sha256": "bf6d3da2d4a01973582b0c72142a37d4ccf1ddd2bfb39111f226ad6168638624",
+      "admitted": false
+    },
+    {
+      "name": "invalid-binding.json",
+      "bytes": 6599,
+      "sha256": "18d0b9a5e2d0a56f6f6d6f54aa911cf4665cbce9c3cda565c8a94dc5c69b35cc",
+      "admitted": false
+    },
+    {
+      "name": "invalid-duplicate.json",
+      "bytes": 6866,
+      "sha256": "17a3f5044e61b096904a0d0299e7db3dee0a2a12e11e2fd3b93427db6cff36c8",
+      "admitted": false
+    },
+    {
+      "name": "invalid-json.json",
+      "bytes": 1,
+      "sha256": "021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96",
+      "admitted": false
+    },
+    {
+      "name": "invalid-utf8.json",
+      "bytes": 2,
+      "sha256": "eddf68639913a3cb8331cdfe7f87559e0beccf2c289c0d90ac4d89b3204004f8",
+      "admitted": false
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "scope": "Original baseline fixture preparation, before candidate exposure",
+  "exit": 1,
+  "error": "The saved response has invalid tool trace fields.",
+  "cause": "Authored fixture omitted original reader required tool/args/result_summary trace fields.",
+  "inputs_created": 0,
+  "candidate_invocations": 0,
+  "correction": "Version2 uses a fully shaped synthetic trace and separate fixtures-v2 output; original builder retained unchanged."
+}

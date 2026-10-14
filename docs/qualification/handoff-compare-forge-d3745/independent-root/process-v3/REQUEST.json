@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "node",
+    "/home/jacob/tastetable-handoff-compare-d3745-receiving/receive-browser-v3.cjs",
+    "/home/jacob/tastetable-handoff-compare-d3745-receiving/candidate-native-spec-v1.json"
+  ],
+  "cwd": "/home/jacob/tastetable-handoff-compare-d3745-receiving",
+  "output": "/home/jacob/tastetable-handoff-compare-d3745-receiving/process-v3",
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "schema": "hamon.process-capture-request/1",
+  "started_utc": "2026-10-14T05:16:04.579599+00:00",
+  "timeout_seconds": 180.0
+}

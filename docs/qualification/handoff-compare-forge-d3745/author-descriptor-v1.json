@@ -1,0 +1,204 @@
+{
+  "schema": "forge.tastetable.handoff-author-publication-inputs.v1",
+  "created_at": "2026-10-14T04:46:25Z",
+  "repository": "Jacob-Met/tastetable",
+  "base": "c93c83c4b5f05686dca5810427dd4f5f826709e9",
+  "qualification_prefix": "docs/qualification/handoff-compare-forge-d3745/",
+  "files": [
+    {
+      "path": "README.md",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/candidate/README.md",
+      "mode": "100644",
+      "role": "source",
+      "bytes": 27122,
+      "sha256": "f05d253df8fde05d386cc0c6aaceb34f3db5c8204093b64984641c70647e47fc",
+      "git_blob": "0d0047df6704eb588b716c2ffe9a5d6e25469602"
+    },
+    {
+      "path": "docs/COMPARE_CAREGIVER_HANDOFFS.md",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/candidate/docs/COMPARE_CAREGIVER_HANDOFFS.md",
+      "mode": "100644",
+      "role": "source",
+      "bytes": 5254,
+      "sha256": "e3f2f62c1be5cdda9e8c34baf9cb305c75cddc3695909fb96544ced38a7c28f0",
+      "git_blob": "15a059bf36ee070a24147c460af80c6a913c9563"
+    },
+    {
+      "path": "static/compare-handoffs.html",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/candidate/static/compare-handoffs.html",
+      "mode": "100644",
+      "role": "source",
+      "bytes": 3143,
+      "sha256": "95fb28f5e93a7c2f996d511bda60a4c2018bf3a3265fefba498a5d7f3199f7ed",
+      "git_blob": "cbe473374536c8949df90c1aae9383274292ec79"
+    },
+    {
+      "path": "static/handoff_compare.css",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/candidate/static/handoff_compare.css",
+      "mode": "100644",
+      "role": "source",
+      "bytes": 3033,
+      "sha256": "fb20bf7f7efbfec324e90e209bcdb9ef9ca5abe688154baf6aa6314d650fb93c",
+      "git_blob": "639d116b799a538cc7ee4b0697362c87e601095b"
+    },
+    {
+      "path": "static/handoff_compare.mjs",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/candidate/static/handoff_compare.mjs",
+      "mode": "100644",
+      "role": "source",
+      "bytes": 1031,
+      "sha256": "a6be1de3b5128aac02bf8faceb5658f1fd26fa3f0a1166e32ab2ceb98689e137",
+      "git_blob": "5a2756d460fb5fa92207877e14ecb01882c19db7"
+    },
+    {
+      "path": "static/handoff_compare_ui.mjs",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/candidate/static/handoff_compare_ui.mjs",
+      "mode": "100644",
+      "role": "source",
+      "bytes": 11884,
+      "sha256": "87d86c70d747dcdf567356c0230a96e9184391ab43ae12b68b8a221d1820afa5",
+      "git_blob": "f8499957445f100caa27a2e45894cf9ed5919021"
+    },
+    {
+      "path": "static/index.html",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/candidate/static/index.html",
+      "mode": "100644",
+      "role": "source",
+      "bytes": 16119,
+      "sha256": "e05f98e218ca912fd86b8abf3ece1b2ed86088ec9a95612d65c5b0347a310158",
+      "git_blob": "46ce48c5380d43f33395a259ce0421c280d3065c"
+    },
+    {
+      "path": "static/venue_note_changes.mjs",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/candidate/static/venue_note_changes.mjs",
+      "mode": "100644",
+      "role": "source",
+      "bytes": 2303,
+      "sha256": "9299824e9bcd2b9b8fd63ed3efeaa9dbaefcc5c47e35e099c7b8bbd6d9fb3983",
+      "git_blob": "9d7153966d16d61a3089e1df2454a7d3b3806d96"
+    },
+    {
+      "path": "tests/test_handoff_compare.mjs",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/candidate/tests/test_handoff_compare.mjs",
+      "mode": "100644",
+      "role": "source",
+      "bytes": 18395,
+      "sha256": "2c10aab6174dae13548adeee87c4bb55d2c752603bfbf687d1c41f05de4589b3",
+      "git_blob": "6a41b823e2beaa85c7193961254588ce6cecf98d"
+    },
+    {
+      "path": "docs/qualification/handoff-compare-forge-d3745/author/README.md",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/publication-author-v1/README.md",
+      "mode": "100644",
+      "role": "support",
+      "bytes": 2401,
+      "sha256": "5f208234cb9605bc9fe519be6bb195f9faa30c641eb1475e81a1b73b2ae0bed6",
+      "git_blob": "0e7eb169eacba129f25364915bf003294d5c7a9d"
+    },
+    {
+      "path": "docs/qualification/handoff-compare-forge-d3745/source-binding-v1.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/publication-author-v1/source-binding-v1.json",
+      "mode": "100644",
+      "role": "support",
+      "bytes": 5669,
+      "sha256": "1e5f9b2c8e86d65a2e0afeccc043b93450371cc1d1a3798c2d39affd7069d2a2",
+      "git_blob": "66c53aec5d201cd23c8aad929086995df8e97d44"
+    },
+    {
+      "path": "docs/qualification/handoff-compare-forge-d3745/author/public-contract-v1.md",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/public-contract-v1.md",
+      "mode": "100644",
+      "role": "support",
+      "bytes": 7789,
+      "sha256": "4038ecf7316fd35e0344fb1ab18bda23c7217702e89de12087b635a7e9d765ea",
+      "git_blob": "0473e3963ac00dc5bf89da92cf5f03b0fe203f55"
+    },
+    {
+      "path": "docs/qualification/handoff-compare-forge-d3745/author/reservation-response-v1.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/reservation-response-v1.json",
+      "mode": "100644",
+      "role": "support",
+      "bytes": 9359,
+      "sha256": "69f50719fb0f54c16c7d2ed86b98aa18c0f3aa8f08fa663aa3fe5d8898252981",
+      "git_blob": "30f2071bc3bf9a19ef90b7e117ce92462999173c"
+    },
+    {
+      "path": "docs/qualification/handoff-compare-forge-d3745/author/original-source-admission-v1.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/original-source-admission-v1.json",
+      "mode": "100644",
+      "role": "support",
+      "bytes": 7511,
+      "sha256": "ac61afe72c3be4ff02822c3e90f466cfd74836326b94aa17d10f6d0816ea2d58",
+      "git_blob": "9bf0c4db13192ff328ec1360afed24678fcf7c4d"
+    },
+    {
+      "path": "docs/qualification/handoff-compare-forge-d3745/author/candidate-freeze-v1.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/candidate-freeze-v1.json",
+      "mode": "100644",
+      "role": "support",
+      "bytes": 13458,
+      "sha256": "c1f5c0a6debfc1d53a0cac0f01e07bc3f29fe0f813e4a791effdbbf44de95f3b",
+      "git_blob": "364c2989f6d8f094416befa5bea499e6b68f9897"
+    },
+    {
+      "path": "docs/qualification/handoff-compare-forge-d3745/author/run-author-v1.py",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/run-author-v1.py",
+      "mode": "100644",
+      "role": "support",
+      "bytes": 2257,
+      "sha256": "2e9c2043c86cab3d86d9ffd9398531c177e9686b04634489591f86e7a27d12ee",
+      "git_blob": "788f4bfabb2c159d6583f467b1f7f9e66a5f9555"
+    },
+    {
+      "path": "docs/qualification/handoff-compare-forge-d3745/author/freeze-candidate-v1.py",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/freeze-candidate-v1.py",
+      "mode": "100644",
+      "role": "support",
+      "bytes": 3648,
+      "sha256": "63774769ee4db82f7c12e4bb97236f154067b902b7fa5d41b670892e26cf2cfe",
+      "git_blob": "fb431bb2539aa1191c979af655ee3ef86d4d4a78"
+    },
+    {
+      "path": "docs/qualification/handoff-compare-forge-d3745/author/receipt.json",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/author-v1/receipt.json",
+      "mode": "100644",
+      "role": "support",
+      "bytes": 17875,
+      "sha256": "a21aa68c69d06ff396454353d281aeedb41f9abc9ac5d97a0ac607682faf9e6e",
+      "git_blob": "6217951fdfce4787a61a01ac86c882ed7a62e89b"
+    },
+    {
+      "path": "docs/qualification/handoff-compare-forge-d3745/author/stdout.txt",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/author-v1/stdout.txt",
+      "mode": "100644",
+      "role": "support",
+      "bytes": 5608,
+      "sha256": "24e33fe94cf9ef3b52c68ce543b8a03965ef19fab1d786a04d0fc7faac4eee69",
+      "git_blob": "b9418fc0e264622c36ebe23ee0069b03416a2f8c"
+    },
+    {
+      "path": "docs/qualification/handoff-compare-forge-d3745/author/stderr.txt",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/author-v1/stderr.txt",
+      "mode": "100644",
+      "role": "support",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/qualification/handoff-compare-forge-d3745/author/seal-author-selection-v1.py",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/seal-author-selection-v1.py",
+      "mode": "100644",
+      "role": "support",
+      "bytes": 5703,
+      "sha256": "69f0009b788a274b0ed8036f0c0c2106613b28e1ca655da28672fd0163c57c5d",
+      "git_blob": "5c67a4d6a493f0d532dc13fec5bf48be0bb7de55"
+    }
+  ],
+  "counts": {
+    "source": 9,
+    "support": 12,
+    "total": 21
+  },
+  "scope": "Original source and author evidence only; no later independent authority inferred or regenerated."
+}
