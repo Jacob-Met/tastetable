@@ -23,3 +23,7 @@
 .saved-week-import-controls { display: flex; flex-wrap: wrap; align-items: end; gap: .75rem; }
 .saved-week-import-controls label { flex: 1 1 15rem; min-width: 0; }
 .saved-week-import-controls input { width: 100%; min-width: 0; box-sizing: border-box; }
+
+.saved-week-order { margin-top: .75rem; }
+.saved-week-order label { display: block; }
+.saved-week-order select { display: block; width: 100%; max-width: 28rem; min-width: 0; box-sizing: border-box; }
