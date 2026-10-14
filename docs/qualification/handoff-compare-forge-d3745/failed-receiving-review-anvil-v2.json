@@ -1,0 +1,87 @@
+{
+  "all_completed_actual_expected_pairs_type_strict_equal": true,
+  "auditor": {
+    "bytes": 4063,
+    "git_blob": "20c7c4ff5ed651746013c7299c73705ecbb749c7",
+    "local_mode": 420,
+    "path": "/workspace/scratch/d3745ea0f44f/anvil/tastetable-handoff-delivery/preparation/audit-failed-receiving-v2.py",
+    "sha256": "496d8be25fe0e4c02d5be1571632810c5975701fcb985a9b2e102a855752a7ac"
+  },
+  "browser_closed_recorded": true,
+  "browser_exit": 0,
+  "browser_signal": null,
+  "completed_comparisons": 21,
+  "console_errors": [],
+  "files_read_before_after_exact": [
+    {
+      "bytes": 82128,
+      "git_blob": "2e12d84a326f18d7c8d3efedd1a20889ca2e8b8a",
+      "local_mode": 420,
+      "path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/received-v2/receipt.json",
+      "sha256": "9106304adaf2d642b18f750f72bc7a50e827caad5e73925b3b481226a580ae04"
+    },
+    {
+      "bytes": 549,
+      "git_blob": "a875512c2be2f3c5007a6ac1ccc4f9fc853b7f78",
+      "local_mode": 420,
+      "path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/process-v2/REQUEST.json",
+      "sha256": "dae09a7d865cb33e28213645d39f50c01df45b3fd5210385959d75d998ccf526"
+    },
+    {
+      "bytes": 984,
+      "git_blob": "5d21e0f5184ced6f5d0e9b4e01d47971f558dd92",
+      "local_mode": 420,
+      "path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/process-v2/PROCESS.json",
+      "sha256": "61476348df263c9da3adb4717b3beaf725a01b013823cf4764d4e9d6d0058d67"
+    },
+    {
+      "bytes": 240,
+      "git_blob": "38ed96e4bce1054e7b12b8fce3b026c03b578662",
+      "local_mode": 420,
+      "path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/process-v2/stdout",
+      "sha256": "d27d69a101fb748c4d2d3bff69e93830e5d29055fd06e10e4e46411eaf1e1bb4"
+    },
+    {
+      "bytes": 0,
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "local_mode": 420,
+      "path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/process-v2/stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "limits": [
+    "The course stopped during grouped browser model observation before file UI actions. Later UI behavior is not qualified by this receipt.",
+    "No product defect or transport root cause is inferred by this passive audit. Forge and Loom own the narrow observer diagnosis.",
+    "The maintained outer collector observes the direct child only. Firefox/server closure and watched native input preservation are attributed to the saved browser receiver.",
+    "No process, browser, model, source, native device, or qualification was executed by this audit. No screenshots or later results were reconstructed."
+  ],
+  "original_error": {
+    "message": "Cannot read properties of undefined (reading 'date')",
+    "name": "TypeError",
+    "stack": "TypeError: Cannot read properties of undefined (reading 'date')\n    at /home/jacob/tastetable-handoff-compare-d3745-receiving/receive-browser-v2.cjs:57:424\n    at Array.map (<anonymous>)\n    at run (/home/jacob/tastetable-handoff-compare-d3745-receiving/receive-browser-v2.cjs:57:409)\n    at async /home/jacob/tastetable-handoff-compare-d3745-receiving/receive-browser-v2.cjs:82:16"
+  },
+  "original_receipt": {
+    "bytes": 82128,
+    "git_blob": "2e12d84a326f18d7c8d3efedd1a20889ca2e8b8a",
+    "local_mode": 420,
+    "path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/received-v2/receipt.json",
+    "sha256": "9106304adaf2d642b18f750f72bc7a50e827caad5e73925b3b481226a580ae04"
+  },
+  "outer_exit": 1,
+  "page_errors": [],
+  "passive_audit_accepted": true,
+  "product_course_accepted": false,
+  "raw_streams": {
+    "bytes": 240,
+    "sha256": "d27d69a101fb748c4d2d3bff69e93830e5d29055fd06e10e4e46411eaf1e1bb4",
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "recorded_before_after_exact": true,
+  "recorded_watched_inputs": 55,
+  "schema": "anvil.tastetable-failed-native-receiving-history.v2",
+  "screenshots": 0,
+  "server_closed_recorded": true
+}

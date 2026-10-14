@@ -1,0 +1,66 @@
+{
+  "schema": "forge.tastetable.root-controller-review.v2",
+  "reviewed_at": "2026-10-14T05:04:19.744642+00:00",
+  "reviewer": "Forge, product source author",
+  "accepted": true,
+  "scope": "Full V1 controller/criteria/fixture reading plus complete V1-to-V2 diff/addendum review and38control hash/mode checks. Source-informed passive review; no controller, parser, product or browser invocation.",
+  "inputs": [
+    {
+      "path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/receive-browser-v1.cjs",
+      "bytes": 17925,
+      "sha256": "e126106dcd578957e8248f9a99802fed854f52af5947f2e4eb3e5b49566d2d0b",
+      "git_blob": "4b544118aff890589da5977e2258f4804d4c1c05",
+      "mode": 420
+    },
+    {
+      "path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/receive-browser-v2.cjs",
+      "bytes": 18434,
+      "sha256": "74407a31cf76d369b5e532b6d0f44f45ca2e0cc1fc21ceaf13e10b2dc7dac2d5",
+      "git_blob": "af830b53ccf7c32cc8f1ce9aa2563b9a40e2742d",
+      "mode": 420
+    },
+    {
+      "path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/freeze-v1.json",
+      "bytes": 8649,
+      "sha256": "87e7a0709748c18adb0de4d0f663f789caee37998206882607fcf3dcb2381857",
+      "git_blob": "7417403c954de41c2cece97d238412b78a432ced",
+      "mode": 420
+    },
+    {
+      "path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/freeze-v2.json",
+      "bytes": 9606,
+      "sha256": "15af10906f05645f773aa1128e0883dadb87dd1a771d2127ec0652174e90b139",
+      "git_blob": "d11e3df5851e79998f2c4603282ee091459f0888",
+      "mode": 420
+    },
+    {
+      "path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/controller-diff-v2.patch",
+      "bytes": 14062,
+      "sha256": "7de42c69fe2ace71f8fa8a873e00c9c11d3dd1af00a5963490e337c74bbd7234",
+      "git_blob": "79324eb8a9880ee51e15620dba017fc1fac9aafc",
+      "mode": 420
+    },
+    {
+      "path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/controller-addendum-v2.md",
+      "bytes": 2310,
+      "sha256": "79fc86299d84f5be539d0ee7013c3608af35b33e9cf909203ea5dc585e6606ae",
+      "git_blob": "efc9fa94823537b7a27b25694808666625a20a39",
+      "mode": 420
+    }
+  ],
+  "checks": {
+    "complete_saved_diff_equals_recomputed_diff": true,
+    "all_38_frozen_controls_exact": true,
+    "v1_driver_unchanged": true,
+    "same_fixtures_and_prewritten_model_oracles": true
+  },
+  "findings": [
+    "Named JSON/UTF-8/6MiB refusal plus absence of reading status closes the prior early-completion oracle defect. Existing preserved-source/comparison checks follow that observed refusal.",
+    "Pending comparison remains hidden; prior filename and received/saved timestamp values plus visible source container are required. This observes those metadata fields, not whole-container byte equality, and allows the permitted pending explanation.",
+    "Network classification retains every raw request while treating only HTTP/HTTPS/WS/WSS as network. File-action interval now begins before first selected file, after deliberate module imports.",
+    "Storage.setItem-only, dispatched-pagehide and no planner navigation limits are explicit; no broader browser storage/navigation claim is added.",
+    "Versioned output/schema/freeze preserve unexecuted V1; full prewritten model cases, UI lifetime cases and required normal closure/custody are otherwise unchanged."
+  ],
+  "closure_condition": "Root will retain a separate finite outer collector and complete streams; timeout/forced cleanup is a failure, not accepted normal closure.",
+  "timing": "Root explicitly confirmed no candidate controller run before V2; candidate metadata released after V1 freeze. V2 is source-informed, not wholly candidate-blind. Product source remains original frozenV1."
+}

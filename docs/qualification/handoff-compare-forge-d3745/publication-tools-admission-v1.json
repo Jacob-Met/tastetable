@@ -1,0 +1,62 @@
+{
+  "commit": "2dc3458b06db4ffe64d25b54e3a48e3029350b30",
+  "files": [
+    {
+      "bytes": 4041,
+      "captured_from": "/workspace/scratch/d3745ea0f44f/anvil/publication-tree-output/preparation/tools/prepare_git_objects.py",
+      "git_blob": "5a31e72360b1ebcd7595c97c8f1dc433659e71b9",
+      "mode": "100644",
+      "path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/publication-tools-v1/prepare_git_objects.py",
+      "repository_path": "prepare_git_objects.py",
+      "sha256": "fb6596df63889b6b72038e3921b9144b802cc9546f9617705cfd112b57dab676"
+    },
+    {
+      "bytes": 12539,
+      "captured_from": "/workspace/scratch/d3745ea0f44f/anvil/publication-tree-output/preparation/tools/receive_source.py",
+      "git_blob": "c39c963f472c74c96320ad4174c886c2315d5cba",
+      "mode": "100755",
+      "path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/publication-tools-v1/receive_source.py",
+      "repository_path": "receive_source.py",
+      "sha256": "90af676b35c39f3cb1a3295d94a31a752893265af3a73292e2b2b22fb2750f35"
+    },
+    {
+      "bytes": 10827,
+      "captured_from": "/workspace/scratch/d3745ea0f44f/anvil/publication-tree-output/preparation/tools/validate_publication_layout.py",
+      "git_blob": "ff680dc0db8600e1e29a16e5516aa74632891e5a",
+      "mode": "100644",
+      "path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/publication-tools-v1/validate_publication_layout.py",
+      "repository_path": "validate_publication_layout.py",
+      "sha256": "09e931bcdb5d1ec5e55d76c8123a973a75a2d5072c6ffb84b302ddac8f443907"
+    },
+    {
+      "bytes": 8791,
+      "captured_from": "/workspace/scratch/d3745ea0f44f/anvil/publication-tree-output/preparation/tools/verify_tree_union.py",
+      "git_blob": "f6f3585033d393ce9f496336e4626db649f2711f",
+      "mode": "100644",
+      "path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/publication-tools-v1/verify_tree_union.py",
+      "repository_path": "verify_tree_union.py",
+      "sha256": "6242be3016714c26b34c1e4640d606a82cfb4df60e56b5a0018c95afc60dacb2"
+    },
+    {
+      "bytes": 4923,
+      "captured_from": "/workspace/scratch/d3745ea0f44f/root-publication-tree-output/runtime-v1/verify_publication_tree.py",
+      "git_blob": "60c759c7276eab6e0b86ecdaa553a1d6c85a66a1",
+      "mode": "100644",
+      "path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/publication-tools-v1/verify_publication_tree.py",
+      "repository_path": "verify_publication_tree.py",
+      "sha256": "abc0f87fad7c24904e6e2b33c273bbcd33d2110d5e2ce45089ab3aaab2d256d9"
+    },
+    {
+      "bytes": 6158,
+      "captured_from": "/workspace/scratch/d3745ea0f44f/root-git-blob-readback/runtime-v2/verify_git_blob_readback.py",
+      "git_blob": "b092817ac3052fa4705ea43017e0bce9a9d48613",
+      "mode": "100644",
+      "path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/publication-tools-v1/verify_git_blob_readback.py",
+      "repository_path": "verify_git_blob_readback.py",
+      "sha256": "463b8e6aacfafbd78c439db246702167db738bb3a322f8745eff3c825ba2db0a"
+    }
+  ],
+  "schema": "forge.tastetable.publication-tools-admission.v1",
+  "scope": "Exact previously captured tool bodies freshly authenticated to complete immutable adopted Git tree. No tool or product execution in this admission.",
+  "tree": "8bfbf7427a9eb51d6eeb60ef1dae4d73c031c74b"
+}

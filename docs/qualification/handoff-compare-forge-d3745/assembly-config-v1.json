@@ -1,0 +1,152 @@
+{
+  "author": {
+    "bytes": 9334,
+    "git_blob": "5cc88f27a496017e8d342438fcd52ae4457c7590",
+    "path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/publication-author-inputs-v1.json",
+    "sha256": "94a46f6ca7c586b00f5b3aa15132dd31d1bda6487c93d1672e02045c24974c27"
+  },
+  "base_commit": "c93c83c4b5f05686dca5810427dd4f5f826709e9",
+  "extra_support": [
+    {
+      "bytes": 9334,
+      "git_blob": "5cc88f27a496017e8d342438fcd52ae4457c7590",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/author-descriptor-v1.json",
+      "purpose": "Original author21 authority, unchanged",
+      "sha256": "94a46f6ca7c586b00f5b3aa15132dd31d1bda6487c93d1672e02045c24974c27",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/publication-author-inputs-v1.json"
+    },
+    {
+      "bytes": 31314,
+      "git_blob": "9e7f083ccea3ba8d704f7b606829533b1c5ac028",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/independent-root-descriptor-v1.json",
+      "purpose": "Original Root66 authority, unchanged",
+      "sha256": "7d7435b944e5c247fda5a4887b3333d2d7304e6e1f75d359159147c3cdbc3358",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/publication-inputs-v1.json"
+    },
+    {
+      "bytes": 27337,
+      "git_blob": "35a37c57dd0d8d5a026f381cc4439f281f91bf9a",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/independent-root-layout-view-v1.json",
+      "purpose": "Root-authored relative layout view with exact original crosswalk",
+      "sha256": "9bdb034c863a8a692c3be86a8c4174a566421f41b9c04c7ddba19b7f75f376ce",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/publication-layout-view-v1.json"
+    },
+    {
+      "bytes": 6327,
+      "git_blob": "e0ef71c36ea9e2c06db19d712cecaed81b07c2ce",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/README.md",
+      "purpose": "Qualification guide and explicit history",
+      "sha256": "fd062a9a0f1c5326957ce3d3b71b8f2a95284636ba7e51c136c79c4a35a83500",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/publication-v1/README.md"
+    },
+    {
+      "bytes": 7217,
+      "git_blob": "ab273a2c327aa9d0748fcd0e24a502fc5f72b6eb",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/source-review-loom-v1.json",
+      "purpose": "Independent complete source review",
+      "sha256": "5c24681369e65f99839f9a5f89839ab45f454de872826f79814b82eed7b38d63",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-tastetable-handoff-review/source-review-v1.json"
+    },
+    {
+      "bytes": 12534,
+      "git_blob": "e32181ee0fb4bea8970ca8808888b42095f80378",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/controller-review-forge-v1.json",
+      "purpose": "Initial passive receiver review and two concrete observer corrections",
+      "sha256": "51583b76f9241d796f7a8704903bfd388ad9dbb9cf9b05599c5effddd332b0e3",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/root-controller-review-v1.json"
+    },
+    {
+      "bytes": 3806,
+      "git_blob": "04ba33fea90ce16397d61fe6dd25c129cf63b82f",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/controller-review-forge-v2.json",
+      "purpose": "Corrected pre-execution receiver review",
+      "sha256": "b2babef66b737ffffa4b89f5f5badf883e02a13762f9699420b40711900ceca0",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/root-controller-review-v2.json"
+    },
+    {
+      "bytes": 5640,
+      "git_blob": "3fb86a73e112c7f93b009f5c863bdbdc947273bb",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/controller-review-forge-v3.json",
+      "purpose": "Source-informed transport correction review",
+      "sha256": "f145b1f0a1ae702227a7b30feeed913e341783f35fa99ef3e0f8f1ee7abdeaee",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/root-controller-review-v3.json"
+    },
+    {
+      "bytes": 22153,
+      "git_blob": "972c009616413894c521270fda23dcad35d5dd6f",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/native-puppeteer-transport-source-v1.json",
+      "purpose": "Exact installed deserializer/realm source evidence for diagnostic interpretation",
+      "sha256": "c959b447e5fbbd08362a32c9447e11227715ed5884550047d146bfcadf62c234",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/native-puppeteer-transport-source-v1.json"
+    },
+    {
+      "bytes": 3491,
+      "git_blob": "b356f99ebade49d2e4e9c22b298b54cb736b95b2",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/publication-tools-admission-v1.json",
+      "purpose": "Fresh immutable adopted tool-body admission",
+      "sha256": "75767bcd03a72e6edaf7014871b8c78f64888f820a0dd19c518f2535ac164b17",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/publication-tools-admission-v1.json"
+    },
+    {
+      "bytes": 4130,
+      "git_blob": "d1fa55bb22e87f1b2dc691a454b59e25a74ddeda",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/failed-receiving-review-anvil-v2.json",
+      "purpose": "Independent passive failed-course history review",
+      "sha256": "7d6493d87f112ce7c2c0a560f7dddae792611355cd54172f4f3f539c905db99f",
+      "source_path": "/workspace/scratch/d3745ea0f44f/anvil/tastetable-handoff-delivery/preparation/failed-receiving-history-v2.json"
+    },
+    {
+      "bytes": 5965,
+      "git_blob": "3a5043f9d143336ddeaa1ea5e293247d7a38e15e",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/accepted-receiving-review-anvil-v3.json",
+      "purpose": "Independent passive accepted result and actual screenshot review",
+      "sha256": "dfee795d4e877994a1510a55a76e788b9bbaf72e184c290b9d013433d93d9eea",
+      "source_path": "/workspace/scratch/d3745ea0f44f/anvil/tastetable-handoff-delivery/preparation/accepted-receiving-review-v3.json"
+    },
+    {
+      "bytes": 10209,
+      "git_blob": "6563c7749cb9548c0df9aefe69aa7077b6a17cee",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/assemble-publication-v1.py",
+      "purpose": "Exact publication selection and preflight driver",
+      "sha256": "7a7cdd6e936d3bd673e936dfb9f6c6a219cb4e7d30dc51c47df380f8b764156b",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/publication-v1/assemble-publication-v1.py"
+    }
+  ],
+  "independent": {
+    "bytes": 31314,
+    "git_blob": "9e7f083ccea3ba8d704f7b606829533b1c5ac028",
+    "path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/publication-inputs-v1.json",
+    "sha256": "7d7435b944e5c247fda5a4887b3333d2d7304e6e1f75d359159147c3cdbc3358"
+  },
+  "layout_view": {
+    "bytes": 27337,
+    "git_blob": "35a37c57dd0d8d5a026f381cc4439f281f91bf9a",
+    "path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/publication-layout-view-v1.json",
+    "sha256": "9bdb034c863a8a692c3be86a8c4174a566421f41b9c04c7ddba19b7f75f376ce"
+  },
+  "schema": "forge.tastetable.assembly-config.v1",
+  "source_fence": [
+    "README.md",
+    "docs/COMPARE_CAREGIVER_HANDOFFS.md",
+    "static/compare-handoffs.html",
+    "static/handoff_compare.css",
+    "static/handoff_compare.mjs",
+    "static/handoff_compare_ui.mjs",
+    "static/index.html",
+    "static/venue_note_changes.mjs",
+    "tests/test_handoff_compare.mjs"
+  ]
+}

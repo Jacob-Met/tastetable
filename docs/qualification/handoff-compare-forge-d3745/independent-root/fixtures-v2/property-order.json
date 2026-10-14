@@ -1,0 +1,261 @@
+{
+  "venueNotes": {
+    "records": [
+      {
+        "note": {
+          "nextStep": "Call before noon",
+          "replyQuestions": null,
+          "reply": "",
+          "question": null,
+          "status": "awaiting_reply"
+        },
+        "date": "2026-12-28",
+        "key": "pick-0"
+      },
+      {
+        "note": {
+          "nextStep": "",
+          "replyQuestions": null,
+          "reply": "",
+          "question": null,
+          "status": "not_contacted"
+        },
+        "date": "2026-12-29",
+        "key": "pick-1"
+      },
+      {
+        "note": {
+          "nextStep": "",
+          "replyQuestions": null,
+          "reply": "",
+          "question": null,
+          "status": "not_contacted"
+        },
+        "date": "2026-11-02",
+        "key": "pick-2"
+      },
+      {
+        "note": {
+          "nextStep": "",
+          "replyQuestions": null,
+          "reply": "",
+          "question": "Earlier date question",
+          "status": "not_contacted"
+        },
+        "date": "2026-11-30",
+        "key": "pick-0"
+      }
+    ],
+    "origin": {
+      "response": {
+        "trace": [
+          {
+            "result_summary": "Synthetic original source",
+            "args": {
+              "source": {
+                "label": "literal source",
+                "ordinal": [
+                  1,
+                  2
+                ]
+              }
+            },
+            "tool": "receiving_fixture"
+          }
+        ],
+        "comparison": {
+          "llm_only": {
+            "unsafe_candidates_rejected": 0,
+            "constraint_checked": 4,
+            "with_affinity_evidence": 0,
+            "with_qloo_entity_id": 4,
+            "picks": 4
+          },
+          "grounded": {
+            "unsafe_candidates_rejected": 0,
+            "constraint_checked": 4,
+            "with_affinity_evidence": 0,
+            "with_qloo_entity_id": 4,
+            "picks": 4
+          },
+          "constraints": []
+        },
+        "llm_only": {
+          "outing": {
+            "why": "Retained",
+            "day": "Friday",
+            "name": "Synthetic comparison"
+          },
+          "meals": []
+        },
+        "plan": {
+          "rejected": [],
+          "notes": [
+            "Synthetic receiving fixture."
+          ],
+          "outing": null,
+          "meals": [
+            {
+              "affinity": null,
+              "why": "Original occurrence 0",
+              "day": "Monday",
+              "kind": "restaurant",
+              "entity_id": "same-id",
+              "name": "Repeated café 海"
+            },
+            {
+              "affinity": null,
+              "why": "Original occurrence 1",
+              "day": "Tuesday",
+              "kind": "restaurant",
+              "entity_id": "same-id",
+              "name": "Repeated café 海"
+            },
+            {
+              "affinity": null,
+              "why": "Original occurrence 2",
+              "day": "Wednesday",
+              "kind": "restaurant",
+              "entity_id": "fixture-2",
+              "name": "Fictional stop 2"
+            },
+            {
+              "affinity": null,
+              "why": "Original occurrence 3",
+              "day": "Sunday",
+              "kind": "restaurant",
+              "entity_id": "fixture-3",
+              "name": "Fictional stop 3"
+            }
+          ]
+        },
+        "mock": true
+      },
+      "inputs": {
+        "constraints": [],
+        "films": [],
+        "music": [],
+        "cuisines": [
+          "A",
+          "B"
+        ],
+        "city": "Fixture city"
+      },
+      "calendarId": "0123456789abcdef0123456789abcdef",
+      "receivedAt": "2026-10-01T12:00:00.000Z"
+    },
+    "savedAt": "2026-10-14T00:00:00.000Z",
+    "format": "tastetable.venue-notes.v1"
+  },
+  "week": {
+    "week": {
+      "assignments": {
+        "pick-3": "Sunday",
+        "pick-2": null,
+        "pick-1": "Tuesday",
+        "pick-0": "Monday"
+      },
+      "start": "2026-12-28"
+    },
+    "response": {
+      "trace": [
+        {
+          "result_summary": "Synthetic original source",
+          "args": {
+            "source": {
+              "label": "literal source",
+              "ordinal": [
+                1,
+                2
+              ]
+            }
+          },
+          "tool": "receiving_fixture"
+        }
+      ],
+      "comparison": {
+        "llm_only": {
+          "unsafe_candidates_rejected": 0,
+          "constraint_checked": 4,
+          "with_affinity_evidence": 0,
+          "with_qloo_entity_id": 4,
+          "picks": 4
+        },
+        "grounded": {
+          "unsafe_candidates_rejected": 0,
+          "constraint_checked": 4,
+          "with_affinity_evidence": 0,
+          "with_qloo_entity_id": 4,
+          "picks": 4
+        },
+        "constraints": []
+      },
+      "llm_only": {
+        "outing": {
+          "why": "Retained",
+          "day": "Friday",
+          "name": "Synthetic comparison"
+        },
+        "meals": []
+      },
+      "plan": {
+        "rejected": [],
+        "notes": [
+          "Synthetic receiving fixture."
+        ],
+        "outing": null,
+        "meals": [
+          {
+            "affinity": null,
+            "why": "Original occurrence 0",
+            "day": "Monday",
+            "kind": "restaurant",
+            "entity_id": "same-id",
+            "name": "Repeated café 海"
+          },
+          {
+            "affinity": null,
+            "why": "Original occurrence 1",
+            "day": "Tuesday",
+            "kind": "restaurant",
+            "entity_id": "same-id",
+            "name": "Repeated café 海"
+          },
+          {
+            "affinity": null,
+            "why": "Original occurrence 2",
+            "day": "Wednesday",
+            "kind": "restaurant",
+            "entity_id": "fixture-2",
+            "name": "Fictional stop 2"
+          },
+          {
+            "affinity": null,
+            "why": "Original occurrence 3",
+            "day": "Sunday",
+            "kind": "restaurant",
+            "entity_id": "fixture-3",
+            "name": "Fictional stop 3"
+          }
+        ]
+      },
+      "mock": true
+    },
+    "inputs": {
+      "constraints": [],
+      "films": [],
+      "music": [],
+      "cuisines": [
+        "A",
+        "B"
+      ],
+      "city": "Fixture city"
+    },
+    "calendarId": "0123456789abcdef0123456789abcdef",
+    "savedAt": "2026-10-14T00:00:00.000Z",
+    "receivedAt": "2026-10-01T12:00:00.000Z",
+    "format": "tastetable.saved-week.v1"
+  },
+  "savedAt": "2026-10-14T00:00:00.000Z",
+  "format": "tastetable.caregiver-handoff.v1"
+}

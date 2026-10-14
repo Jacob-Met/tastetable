@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "node",
+    "/home/jacob/tastetable-handoff-compare-d3745-receiving/transport-diagnostic-v1.cjs"
+  ],
+  "cwd": "/home/jacob/tastetable-handoff-compare-d3745-receiving",
+  "output": "/home/jacob/tastetable-handoff-compare-d3745-receiving/transport-process-v1",
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "schema": "hamon.process-capture-request/1",
+  "started_utc": "2026-10-14T05:11:02.521851+00:00",
+  "timeout_seconds": 60.0
+}

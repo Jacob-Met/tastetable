@@ -1,0 +1,298 @@
+{
+  "base_commit": "c93c83c4b5f05686dca5810427dd4f5f826709e9",
+  "base_tree": "5dbdb2e6a1a649ddcf568146911572b5f7a41117",
+  "extra_support": [
+    {
+      "bytes": 9334,
+      "git_blob": "5cc88f27a496017e8d342438fcd52ae4457c7590",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/author-descriptor-v1.json",
+      "purpose": "Original author21 authority, unchanged",
+      "sha256": "94a46f6ca7c586b00f5b3aa15132dd31d1bda6487c93d1672e02045c24974c27",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/publication-author-inputs-v1.json"
+    },
+    {
+      "bytes": 31314,
+      "git_blob": "9e7f083ccea3ba8d704f7b606829533b1c5ac028",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/independent-root-descriptor-v1.json",
+      "purpose": "Original Root66 authority, unchanged",
+      "sha256": "7d7435b944e5c247fda5a4887b3333d2d7304e6e1f75d359159147c3cdbc3358",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/publication-inputs-v1.json"
+    },
+    {
+      "bytes": 27337,
+      "git_blob": "35a37c57dd0d8d5a026f381cc4439f281f91bf9a",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/independent-root-layout-view-v1.json",
+      "purpose": "Root-authored relative layout view with exact original crosswalk",
+      "sha256": "9bdb034c863a8a692c3be86a8c4174a566421f41b9c04c7ddba19b7f75f376ce",
+      "source_path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/publication-layout-view-v1.json"
+    },
+    {
+      "bytes": 6327,
+      "git_blob": "e0ef71c36ea9e2c06db19d712cecaed81b07c2ce",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/README.md",
+      "purpose": "Qualification guide and explicit history",
+      "sha256": "fd062a9a0f1c5326957ce3d3b71b8f2a95284636ba7e51c136c79c4a35a83500",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/publication-v1/README.md"
+    },
+    {
+      "bytes": 7217,
+      "git_blob": "ab273a2c327aa9d0748fcd0e24a502fc5f72b6eb",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/source-review-loom-v1.json",
+      "purpose": "Independent complete source review",
+      "sha256": "5c24681369e65f99839f9a5f89839ab45f454de872826f79814b82eed7b38d63",
+      "source_path": "/workspace/scratch/d3745ea0f44f/loom-tastetable-handoff-review/source-review-v1.json"
+    },
+    {
+      "bytes": 12534,
+      "git_blob": "e32181ee0fb4bea8970ca8808888b42095f80378",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/controller-review-forge-v1.json",
+      "purpose": "Initial passive receiver review and two concrete observer corrections",
+      "sha256": "51583b76f9241d796f7a8704903bfd388ad9dbb9cf9b05599c5effddd332b0e3",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/root-controller-review-v1.json"
+    },
+    {
+      "bytes": 3806,
+      "git_blob": "04ba33fea90ce16397d61fe6dd25c129cf63b82f",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/controller-review-forge-v2.json",
+      "purpose": "Corrected pre-execution receiver review",
+      "sha256": "b2babef66b737ffffa4b89f5f5badf883e02a13762f9699420b40711900ceca0",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/root-controller-review-v2.json"
+    },
+    {
+      "bytes": 5640,
+      "git_blob": "3fb86a73e112c7f93b009f5c863bdbdc947273bb",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/controller-review-forge-v3.json",
+      "purpose": "Source-informed transport correction review",
+      "sha256": "f145b1f0a1ae702227a7b30feeed913e341783f35fa99ef3e0f8f1ee7abdeaee",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/root-controller-review-v3.json"
+    },
+    {
+      "bytes": 22153,
+      "git_blob": "972c009616413894c521270fda23dcad35d5dd6f",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/native-puppeteer-transport-source-v1.json",
+      "purpose": "Exact installed deserializer/realm source evidence for diagnostic interpretation",
+      "sha256": "c959b447e5fbbd08362a32c9447e11227715ed5884550047d146bfcadf62c234",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/native-puppeteer-transport-source-v1.json"
+    },
+    {
+      "bytes": 3491,
+      "git_blob": "b356f99ebade49d2e4e9c22b298b54cb736b95b2",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/publication-tools-admission-v1.json",
+      "purpose": "Fresh immutable adopted tool-body admission",
+      "sha256": "75767bcd03a72e6edaf7014871b8c78f64888f820a0dd19c518f2535ac164b17",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/publication-tools-admission-v1.json"
+    },
+    {
+      "bytes": 4130,
+      "git_blob": "d1fa55bb22e87f1b2dc691a454b59e25a74ddeda",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/failed-receiving-review-anvil-v2.json",
+      "purpose": "Independent passive failed-course history review",
+      "sha256": "7d6493d87f112ce7c2c0a560f7dddae792611355cd54172f4f3f539c905db99f",
+      "source_path": "/workspace/scratch/d3745ea0f44f/anvil/tastetable-handoff-delivery/preparation/failed-receiving-history-v2.json"
+    },
+    {
+      "bytes": 5965,
+      "git_blob": "3a5043f9d143336ddeaa1ea5e293247d7a38e15e",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/accepted-receiving-review-anvil-v3.json",
+      "purpose": "Independent passive accepted result and actual screenshot review",
+      "sha256": "dfee795d4e877994a1510a55a76e788b9bbaf72e184c290b9d013433d93d9eea",
+      "source_path": "/workspace/scratch/d3745ea0f44f/anvil/tastetable-handoff-delivery/preparation/accepted-receiving-review-v3.json"
+    },
+    {
+      "bytes": 10209,
+      "git_blob": "6563c7749cb9548c0df9aefe69aa7077b6a17cee",
+      "mode": "100644",
+      "path": "docs/qualification/handoff-compare-forge-d3745/assemble-publication-v1.py",
+      "purpose": "Exact publication selection and preflight driver",
+      "sha256": "7a7cdd6e936d3bd673e936dfb9f6c6a219cb4e7d30dc51c47df380f8b764156b",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/publication-v1/assemble-publication-v1.py"
+    }
+  ],
+  "independent_authority": {
+    "bytes": 31314,
+    "git_blob": "9e7f083ccea3ba8d704f7b606829533b1c5ac028",
+    "path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/publication-inputs-v1.json",
+    "sha256": "7d7435b944e5c247fda5a4887b3333d2d7304e6e1f75d359159147c3cdbc3358"
+  },
+  "layout_view_crosswalk": "All 66 complete destination/identity records equal the unchanged original; only exact prefix stripped for maintained descriptor admission.",
+  "maintained_layout_view": {
+    "bytes": 27337,
+    "git_blob": "35a37c57dd0d8d5a026f381cc4439f281f91bf9a",
+    "path": "/workspace/scratch/d3745ea0f44f/root-tastetable-handoff-receiving/publication-layout-view-v1.json",
+    "sha256": "9bdb034c863a8a692c3be86a8c4174a566421f41b9c04c7ddba19b7f75f376ce"
+  },
+  "original_authority": {
+    "bytes": 9334,
+    "git_blob": "5cc88f27a496017e8d342438fcd52ae4457c7590",
+    "path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/publication-author-inputs-v1.json",
+    "sha256": "94a46f6ca7c586b00f5b3aa15132dd31d1bda6487c93d1672e02045c24974c27"
+  },
+  "schema": "forge.tastetable.publication-binding.v1",
+  "scope": "Publication only. Original author22, failed V2, source-free transport diagnostic and successful V3/68 remain distinct. No product rerun, remote mutation or prior authority rewrite.",
+  "source_fence": [
+    {
+      "authority": "original-author21",
+      "bytes": 27122,
+      "git_blob": "0d0047df6704eb588b716c2ffe9a5d6e25469602",
+      "mode": "100644",
+      "path": "README.md",
+      "role": "source",
+      "sha256": "f05d253df8fde05d386cc0c6aaceb34f3db5c8204093b64984641c70647e47fc",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/candidate/README.md"
+    },
+    {
+      "authority": "original-author21",
+      "bytes": 5254,
+      "git_blob": "15a059bf36ee070a24147c460af80c6a913c9563",
+      "mode": "100644",
+      "path": "docs/COMPARE_CAREGIVER_HANDOFFS.md",
+      "role": "source",
+      "sha256": "e3f2f62c1be5cdda9e8c34baf9cb305c75cddc3695909fb96544ced38a7c28f0",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/candidate/docs/COMPARE_CAREGIVER_HANDOFFS.md"
+    },
+    {
+      "authority": "original-author21",
+      "bytes": 3143,
+      "git_blob": "cbe473374536c8949df90c1aae9383274292ec79",
+      "mode": "100644",
+      "path": "static/compare-handoffs.html",
+      "role": "source",
+      "sha256": "95fb28f5e93a7c2f996d511bda60a4c2018bf3a3265fefba498a5d7f3199f7ed",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/candidate/static/compare-handoffs.html"
+    },
+    {
+      "authority": "original-author21",
+      "bytes": 3033,
+      "git_blob": "639d116b799a538cc7ee4b0697362c87e601095b",
+      "mode": "100644",
+      "path": "static/handoff_compare.css",
+      "role": "source",
+      "sha256": "fb20bf7f7efbfec324e90e209bcdb9ef9ca5abe688154baf6aa6314d650fb93c",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/candidate/static/handoff_compare.css"
+    },
+    {
+      "authority": "original-author21",
+      "bytes": 1031,
+      "git_blob": "5a2756d460fb5fa92207877e14ecb01882c19db7",
+      "mode": "100644",
+      "path": "static/handoff_compare.mjs",
+      "role": "source",
+      "sha256": "a6be1de3b5128aac02bf8faceb5658f1fd26fa3f0a1166e32ab2ceb98689e137",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/candidate/static/handoff_compare.mjs"
+    },
+    {
+      "authority": "original-author21",
+      "bytes": 11884,
+      "git_blob": "f8499957445f100caa27a2e45894cf9ed5919021",
+      "mode": "100644",
+      "path": "static/handoff_compare_ui.mjs",
+      "role": "source",
+      "sha256": "87d86c70d747dcdf567356c0230a96e9184391ab43ae12b68b8a221d1820afa5",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/candidate/static/handoff_compare_ui.mjs"
+    },
+    {
+      "authority": "original-author21",
+      "bytes": 16119,
+      "git_blob": "46ce48c5380d43f33395a259ce0421c280d3065c",
+      "mode": "100644",
+      "path": "static/index.html",
+      "role": "source",
+      "sha256": "e05f98e218ca912fd86b8abf3ece1b2ed86088ec9a95612d65c5b0347a310158",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/candidate/static/index.html"
+    },
+    {
+      "authority": "original-author21",
+      "bytes": 2303,
+      "git_blob": "9d7153966d16d61a3089e1df2454a7d3b3806d96",
+      "mode": "100644",
+      "path": "static/venue_note_changes.mjs",
+      "role": "source",
+      "sha256": "9299824e9bcd2b9b8fd63ed3efeaa9dbaefcc5c47e35e099c7b8bbd6d9fb3983",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/candidate/static/venue_note_changes.mjs"
+    },
+    {
+      "authority": "original-author21",
+      "bytes": 18395,
+      "git_blob": "6a41b823e2beaa85c7193961254588ce6cecf98d",
+      "mode": "100644",
+      "path": "tests/test_handoff_compare.mjs",
+      "role": "source",
+      "sha256": "2c10aab6174dae13548adeee87c4bb55d2c752603bfbf687d1c41f05de4589b3",
+      "source_path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/candidate/tests/test_handoff_compare.mjs"
+    }
+  ],
+  "tool_admission": {
+    "commit": "2dc3458b06db4ffe64d25b54e3a48e3029350b30",
+    "files": [
+      {
+        "bytes": 4041,
+        "captured_from": "/workspace/scratch/d3745ea0f44f/anvil/publication-tree-output/preparation/tools/prepare_git_objects.py",
+        "git_blob": "5a31e72360b1ebcd7595c97c8f1dc433659e71b9",
+        "mode": "100644",
+        "path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/publication-tools-v1/prepare_git_objects.py",
+        "repository_path": "prepare_git_objects.py",
+        "sha256": "fb6596df63889b6b72038e3921b9144b802cc9546f9617705cfd112b57dab676"
+      },
+      {
+        "bytes": 12539,
+        "captured_from": "/workspace/scratch/d3745ea0f44f/anvil/publication-tree-output/preparation/tools/receive_source.py",
+        "git_blob": "c39c963f472c74c96320ad4174c886c2315d5cba",
+        "mode": "100755",
+        "path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/publication-tools-v1/receive_source.py",
+        "repository_path": "receive_source.py",
+        "sha256": "90af676b35c39f3cb1a3295d94a31a752893265af3a73292e2b2b22fb2750f35"
+      },
+      {
+        "bytes": 10827,
+        "captured_from": "/workspace/scratch/d3745ea0f44f/anvil/publication-tree-output/preparation/tools/validate_publication_layout.py",
+        "git_blob": "ff680dc0db8600e1e29a16e5516aa74632891e5a",
+        "mode": "100644",
+        "path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/publication-tools-v1/validate_publication_layout.py",
+        "repository_path": "validate_publication_layout.py",
+        "sha256": "09e931bcdb5d1ec5e55d76c8123a973a75a2d5072c6ffb84b302ddac8f443907"
+      },
+      {
+        "bytes": 8791,
+        "captured_from": "/workspace/scratch/d3745ea0f44f/anvil/publication-tree-output/preparation/tools/verify_tree_union.py",
+        "git_blob": "f6f3585033d393ce9f496336e4626db649f2711f",
+        "mode": "100644",
+        "path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/publication-tools-v1/verify_tree_union.py",
+        "repository_path": "verify_tree_union.py",
+        "sha256": "6242be3016714c26b34c1e4640d606a82cfb4df60e56b5a0018c95afc60dacb2"
+      },
+      {
+        "bytes": 4923,
+        "captured_from": "/workspace/scratch/d3745ea0f44f/root-publication-tree-output/runtime-v1/verify_publication_tree.py",
+        "git_blob": "60c759c7276eab6e0b86ecdaa553a1d6c85a66a1",
+        "mode": "100644",
+        "path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/publication-tools-v1/verify_publication_tree.py",
+        "repository_path": "verify_publication_tree.py",
+        "sha256": "abc0f87fad7c24904e6e2b33c273bbcd33d2110d5e2ce45089ab3aaab2d256d9"
+      },
+      {
+        "bytes": 6158,
+        "captured_from": "/workspace/scratch/d3745ea0f44f/root-git-blob-readback/runtime-v2/verify_git_blob_readback.py",
+        "git_blob": "b092817ac3052fa4705ea43017e0bce9a9d48613",
+        "mode": "100644",
+        "path": "/workspace/scratch/d3745ea0f44f/forge/tastetable-handoff-compare/preparation/publication-tools-v1/verify_git_blob_readback.py",
+        "repository_path": "verify_git_blob_readback.py",
+        "sha256": "463b8e6aacfafbd78c439db246702167db738bb3a322f8745eff3c825ba2db0a"
+      }
+    ],
+    "schema": "forge.tastetable.publication-tools-admission.v1",
+    "scope": "Exact previously captured tool bodies freshly authenticated to complete immutable adopted Git tree. No tool or product execution in this admission.",
+    "tree": "8bfbf7427a9eb51d6eeb60ef1dae4d73c031c74b"
+  }
+}
