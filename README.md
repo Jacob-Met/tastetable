@@ -358,6 +358,24 @@ Use **Back up saved weeks (.json)** to keep every named browser copy together, i
 
 Choose **Open collection backup** to review all records before writing. **Add missing saved weeks** adds only absent IDs in one transaction, preserves identical records and refuses the complete addition if an identity conflicts, capacity is insufficient, storage changes after preview or a request fails. Empty and identical-only backups are no-ops. No existing record is overwritten, renamed or deleted, and recovery does not open a week or replace the active planner or venue notes. Use the same browser origin to reach an existing collection, or explicitly recover the file on another origin. See [collection backup and recovery](docs/SAVED_WEEK_COLLECTION.md) for limits, conflicts and stale-preview behavior.
 
+### Recover one week from a collection backup
+
+With Node.js 18+ from the repository root, list a retained collection backup, then
+recover one listed ID to a new portable-week file:
+
+```bash
+node tools/collection_week.mjs --input "collection-backup.json"
+node tools/collection_week.mjs --input "collection-backup.json" --id EXACT_ID --output "recovered-week.json"
+```
+
+Replace `EXACT_ID` with an ID from the listing. Both commands validate the complete
+backup first. Recovery keeps the selected stored text, including its whitespace
+and any UTF-8 BOM. Choose an unused filename in an existing directory on a
+filesystem that supports hard links. The input backup and browser collection stay
+unchanged. Use **Open saved week** to reopen the recovered file. See
+[recover one stored week](docs/COLLECTION_WEEK_RECOVERY.md) for file limits,
+output receipts and handling a failure after the file was created.
+
 ### Check the browser collection locally
 
 The focused state checks use the existing dependency-free Node runner:
