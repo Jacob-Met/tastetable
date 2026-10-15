@@ -47,6 +47,29 @@ chosen. Keep both files, inspect the difference and resolve it deliberately;
 this panel does not overwrite, rename, delete, evict or mint replacement IDs.
 An empty or already-identical backup is an explicit no-op.
 
+### Understand an excluded conflict
+
+For a **Conflicting** row, open **Why this ID conflicts**. This disclosure starts
+closed and lists only the fields whose captured values differ, in this order:
+**Saved name**, **Created date**, **Updated date**, **Stored week text**. Missing
+and already-identical rows have no conflict disclosure.
+
+Changed names or dates show both literal values under **Currently saved in this
+browser** and **In this backup**. These labels identify the two copies; they do
+not choose a winner or imply that the later date is the right copy. If only
+metadata differs, the stored week text is identical. When **Stored week text**
+is listed, the exact saved strings differ. Formatting, including a BOM or line
+endings, can cause this even when the parsed week is the same. The explanation
+does not compare planned visits or display the complete week text.
+
+Opening or closing the explanation does not select a record, add or change
+anything in storage, or alter the active planner or notes. The missing-record
+choices below remain available under their existing rules. Cancel, another
+file or an existing preview invalidation removes the explanation together with
+its row; a replacement preview starts with its disclosures closed. Keep both
+copies while deciding what to do with an excluded conflict. There is still no
+overwrite, rename or automatic resolution action here.
+
 ### Choose only some missing weeks
 
 The separate **Choose missing saved weeks** group lets you recover a useful
@@ -159,3 +182,17 @@ actual store method, including a failed later addition and a changed collection.
 The DOM double checks literal previews, explicit actions, stale reads and
 download cleanup. These checks do not substitute for real IndexedDB/browser
 receiving, materialized downloads, layout or the complete live planner.
+
+For passive conflict explanations, run the four focused methods together with
+the unchanged collection UI and selection checks:
+
+```sh
+node --test tests/test_saved_week_collection_ui.mjs tests/test_saved_week_collection_selection.mjs tests/test_saved_week_collection_conflicts.mjs
+```
+
+These checks use a DOM fixture and fictional admitted records to verify the
+exact differing-field order, literal metadata values, formatting-only text
+conflicts and preservation of recovery actions and preview lifetime. They do
+not establish native disclosure keyboard behavior or visual layout; the earlier
+selected-recovery component acceptance does not automatically cover this new
+disclosure.
