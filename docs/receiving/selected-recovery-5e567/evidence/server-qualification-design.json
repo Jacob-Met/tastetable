@@ -1,0 +1,27 @@
+{
+  "schema": "tastetable143.component-server-qualification-design/1",
+  "utc": "2026-10-15T10:38:18.119804+00:00",
+  "chronology": "Post-source-exposure local server test; literal outcomes below frozen before executable test authoring. No JavaScript/browser/product import or execution.",
+  "server": {
+    "bytes": 10474,
+    "sha256": "bd1b6a8a834144531337be32eb8ea14d7d8c729db6b70390d3bae70d157829c5"
+  },
+  "cases": [
+    {
+      "name": "exact-assets-and-parent-stop",
+      "input": "GET each of twelve exact manifest routes plus root index alias, then exact owned parent stop marker",
+      "expected": "HTTP200 and complete original asset bytes for every route; no server errors, stop_seen=true, terminal0 PASS and all files unchanged"
+    },
+    {
+      "name": "unknown-route-refused",
+      "input": "One GET /index.html?unapproved=1 at owned current endpoint",
+      "expected": "Connection closed without an asset, one route error retained, stop_seen=false and terminal1 FAIL; no asset body supplied"
+    },
+    {
+      "name": "partial-header-deadline-recorded",
+      "input": "One owned connection writes GET / HTTP/1.1 plus Host header without final blank line, then awaits socket timeout",
+      "expected": "HTTP handler timeout retained, stop_seen=false and terminal1 FAIL; no asset body supplied"
+    }
+  ],
+  "lifetime": "Three successive newly owned local server processes under one finite qualification invocation. Each uses a distinct new output directory and fixed exact-source/data pins. Direct children cannot create descendants in reviewed source; force cleanup retained as test failure. Up to10s per child, complete original stdout/stderr, PID+inputbeforeafter+server receipts; no automatic repeat. No native Windows claim."
+}

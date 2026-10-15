@@ -1,0 +1,14 @@
+{
+  "schema": "tastetable143.server-test-freeze/1",
+  "utc": "2026-10-15T10:40:54.736340+00:00",
+  "test": {
+    "bytes": 10834,
+    "sha256": "cdd1df585086a0cf0e63333b9fadb303fe20906a3cfdba3e71d71af69d20db29"
+  },
+  "server": {
+    "bytes": 10474,
+    "sha256": "bd1b6a8a834144531337be32eb8ea14d7d8c729db6b70390d3bae70d157829c5"
+  },
+  "executed": false,
+  "scope": "Three source-exposed local server cases from pre-test frozen literal design; no JS/browser/native Windows test."
+}

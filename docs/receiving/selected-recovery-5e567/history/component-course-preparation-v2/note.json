@@ -1,0 +1,4 @@
+{
+  "utc": "2026-10-15T11:17:50.089836+00:00",
+  "reason": "Independent review found incomplete-document ready view could satisfy initial wait predicate. Retain raw observation but return null until document-complete admission. No browser/course or pure observer test ran; prior invocation was rejected at exec process creation and run directory was verified absent."
+}

@@ -1,0 +1,79 @@
+--- controller-before
++++ controller-after
+@@ -64,12 +64,13 @@
+     fixtures:FIXTURES,observations:[],actions:[],captures:[],storage:[],externalWriter:null,
+     outcome:'FAIL',boundary:'Real component UI/store only. File admission uses CDP DOM.setFileInputFiles; this does not exercise the operating-system file chooser. Native keyboard events and IndexedDB are required. Full application, provider and caregiver campaign are outside this course.'};
+   const course=receipt.component;
+-  const observeExpression='(() => { const f=window.taste143Fixture; return {location:location.href,ready:document.readyState,schema:f?.schema ?? null,database:f?.databaseName ?? null,view:f?f.snapshotDOM():null}; })()';
++  const observeExpression='(() => { const f=window.taste143Fixture, status=document.getElementById("fixtureState"), phase=status?.dataset.state ?? null; return {location:location.href,ready:document.readyState,schema:f?.schema ?? null,database:f?.databaseName ?? null,phase,status:status?.textContent ?? null,view:phase==="ready"&&f?f.snapshotDOM():null}; })()';
+   async function observe(label, allowStarting=false) {
+     timeLeft(); assert(course.observations.length<120);
+     const value=await evaluate(observeExpression);
+     course.observations.push({label,value});
+     assert.equal(value.location,page);
++    if (value.phase==='failed') throw new Error('Component fixture failed: '+value.status);
+     if (allowStarting && (value.ready!=='complete' || !value.view ||
+         value.view.fixtureState==='starting')) return value.view;
+     assert.equal(value.ready,'complete');
+@@ -170,6 +171,11 @@
+     await settle();
+     const view=await observe('capture-'+name);
+     checkboxesExactly(view,['selected_D','selected_C'],['selected_D','selected_C']);
++    assert(idle(view)); assert.equal(view.restoreCalls.length,0); assert.equal(view.refreshCount,1);
++    assert.equal(control(view,'addMissingSavedWeeks').disabled,true);
++    assert.equal(control(view,'addSelectedMissingSavedWeeks').disabled,false);
++    assert.equal(view.selectionSummary,selectedSummary(2,2));
++    await readStorage('before-capture-'+name,fixture['initial-records.json']);
+     assert.equal(view.viewport.width,width); assert.equal(view.viewport.height,height);
+     const layout=await call('Page.getLayoutMetrics');
+     const content=layout.cssContentSize;
+@@ -213,6 +219,7 @@
+     await activate('addSelectedMissingSavedWeeks');
+     view=await waitFor('selected-commit',v=>idle(v) && !v.previewVisible && v.restoreCalls.length===1);
+     assert.equal(view.refreshCount,2); assert.equal(view.checkboxes.length,0);
++    assert.equal(control(view,'addSelectedMissingSavedWeeks').disabled,true);
+     assert.equal(view.status,'Added 2 selected missing saved weeks. Other backup records were not added or resolved. The active week and venue notes are unchanged. Your saved-name search may hide added records.');
+     const first=view.restoreCalls[0];
+     assert.deepEqual(first.backup,{format:fixture['mixed-backup.json'].format,
+@@ -236,6 +243,7 @@
+     await activate('addSelectedMissingSavedWeeks');
+     view=await waitFor('stale-refused',v=>idle(v) && !v.previewVisible && v.restoreCalls.length===2);
+     assert.equal(view.refreshCount,2); assert.equal(view.checkboxes.length,0);
++    assert.equal(control(view,'addSelectedMissingSavedWeeks').disabled,true);
+     assert.equal(view.status,'Could not add selected missing saved weeks: Saved weeks changed since this preview. Open the backup again before adding anything. Open the backup again to review current storage.');
+     assert.deepEqual(view.restoreCalls[1].backup,fixture['stale-backup.json']);
+     assert.deepEqual(view.restoreCalls[1].expected,fixture['expected-after-selected.json']);
+@@ -248,6 +256,7 @@
+     assert.equal(view.status,'Collection preview cancelled. Nothing was changed.');
+     assert.equal(view.checkboxes.length,0); assert.equal(view.restoreCalls.length,2);
+     assert.equal(control(view,'cancelCollectionBackup').disabled,true);
++    assert.equal(control(view,'addSelectedMissingSavedWeeks').disabled,true);
+ 
+     view=await openFile('replacement-identical-backup.json',[],1,5);
+     assert.equal(view.completeRows[0],'Current B identical · ID selected_B · created 2026-10-14T04:00:00.000Z · updated 2026-10-14T04:00:00.000Z · week of 2026-12-28 · Already identical');
+@@ -261,6 +270,12 @@
+     assert.equal(view.events.filter(x=>x.kind==='restore-refused').length,1);
+     assert.equal(view.events.filter(x=>x.kind==='action-start').length,2);
+     assert.equal(view.events.filter(x=>x.kind==='action-finished').length,2);
++    assert.deepEqual(view.events.map(x=>x.kind),[
++      'initial-seed-committed','refresh','action-start','restore-submitted','restore-committed',
++      'refresh','action-finished','external-writer-start','external-writer-committed',
++      'action-start','restore-submitted','restore-refused','action-finished']);
++    assert.deepEqual(view.events.filter(x=>x.kind==='restore-committed'),
++      [{kind:'restore-committed',added:2,alreadyPresent:0}]);
+     await readStorage('replacement-left-A-B-C-D-E-exact',fixture['expected-after-stale-refusal.json']);
+     assert.equal(course.captures.length,2);
+     assert.equal(course.actions.filter(x=>x.kind==='real-file-input').length,4);
+@@ -270,8 +285,10 @@
+   } finally {
+     course.fixturesUnchanged=true;
+     for (const [name,raw] of Object.entries(before)) {
+-      if (!fs.readFileSync(path.join(root,'fixtures',name)).equals(raw)) course.fixturesUnchanged=false;
+-    }
++      try { if (!fs.readFileSync(path.join(root,'fixtures',name)).equals(raw)) course.fixturesUnchanged=false; }
++      catch(error) { course.fixturesUnchanged=false; course.fixturePreservationError=String(error); }
++    }
++    if (!course.fixturesUnchanged) course.outcome='FAIL';
+     assert.equal(course.fixturesUnchanged,true);
+   }
+ }

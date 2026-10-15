@@ -1,0 +1,59 @@
+--- test-observer-v1
++++ test-observer-v2
+@@ -11,8 +11,8 @@
+ const filename = path.join(directory, 'component_course.mjs');
+ const original = fs.readFileSync(filename);
+ const sha = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
+-assert.equal(original.length, 18704);
+-assert.equal(sha(original), '3545d503fc3afa9b2f2a2dd8dd1b19d96a9290e42af130a5475327f95a39285f');
++assert.equal(original.length, 18698);
++assert.equal(sha(original), '872a84c3fcc584f50e2961e80a7683e4cb738ea5cd63bbe49326c90b8350de8a');
+ const source = original.toString('utf8');
+ const declarations = [...source.matchAll(/^  const observeExpression='[^'\n]*';$/gm)];
+ assert.equal(declarations.length, 1);
+@@ -33,13 +33,13 @@
+   order: 'name', activeWeek: 'original fictional week', venueNotes: 'original fictional notes'
+ });
+ 
+-function environment(phase, statusText, readyView = null) {
++function environment(phase, statusText, readyView = null, documentState = 'complete') {
+   const result = { snapshotCalls: 0, deadlineChecks: 0, evaluations: 0,
+     statusReads: [], course: { observations: [] } };
+   const browser = {
+     location: { href: PAGE },
+     document: {
+-      readyState: 'complete',
++      readyState: documentState,
+       getElementById(id) {
+         result.statusReads.push(id);
+         assert.equal(id, 'fixtureState');
+@@ -70,14 +70,14 @@
+   return result;
+ }
+ 
+-function retained(result, phase, text, view) {
++function retained(result, phase, text, view, documentState = 'complete') {
+   assert.equal(result.deadlineChecks, 1);
+   assert.equal(result.evaluations, 1);
+   assert.deepEqual(result.statusReads, ['fixtureState']);
+   assert.equal(result.course.observations.length, 1);
+   const observed = result.course.observations[0].value;
+   assert.equal(observed.location, PAGE);
+-  assert.equal(observed.ready, 'complete');
++  assert.equal(observed.ready, documentState);
+   assert.equal(observed.schema, SCHEMA);
+   assert.equal(observed.database, DATABASE);
+   assert.equal(observed.phase, phase);
+@@ -110,6 +110,12 @@
+   assert.equal(ready.snapshotCalls, 1);
+   retained(ready, 'ready', 'Ready — isolated fictional fixture.', readyView);
+   cases.push({ name: 'ready fixture invokes one full snapshot', outcome: 'PASS', snapshotCalls: 1 });
++
++  const interactive = environment('ready', 'Ready — document still interactive.', readyView, 'interactive');
++  assert.strictEqual(await interactive.observe('ready-phase-before-document-complete', true), null);
++  assert.equal(interactive.snapshotCalls, 1);
++  retained(interactive, 'ready', 'Ready — document still interactive.', readyView, 'interactive');
++  cases.push({ name: 'ready phase waits for complete document', outcome: 'PASS', snapshotCalls: 1 });
+ } finally {
+   assert(fs.readFileSync(filename).equals(original), 'Observer source changed during pure check');
+ }

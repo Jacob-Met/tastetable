@@ -1,0 +1,22 @@
+{
+  "schema": "tastetable143.component-server-ready/1",
+  "pid": 6,
+  "token": "taste143-local-server-2",
+  "url": "http://127.0.0.1:56815/",
+  "routes": [
+    "/",
+    "/component-host.mjs",
+    "/fixtures/external-addition.json",
+    "/fixtures/initial-records.json",
+    "/index.html",
+    "/static/saved_week_collection.mjs",
+    "/static/saved_week_collection_ui.mjs",
+    "/static/saved_week_store.mjs",
+    "/static/saved_weeks.css",
+    "/static/saved_weeks.mjs",
+    "/static/style.css",
+    "/static/week_file.mjs",
+    "/static/week_plan.mjs"
+  ],
+  "manifest_sha256": "13d4ce90a5a4dc13bd1ca441afb18baae15e19a5436fa49f8fbfbba464d2d06a"
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "tastetable143.component-server-source-freeze/1",
+  "utc": "2026-10-15T10:33:24.925805+00:00",
+  "source": {
+    "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/serve_component.py",
+    "bytes": 10129,
+    "sha256": "a61552f07c0fedc79dc4feb1e9ee471f9ea1a29221cf5be5c6951315a8017f1b"
+  },
+  "executed": false,
+  "server_started": false,
+  "scope": "Source-only preparation; real loopback endpoint/owned listener/process supervision and one native course remain separately gated. Parent must bind returned PID/listener and enforce independent cumulative deadline; a socket timeout is not a whole-course process bound.",
+  "revision": 2,
+  "preparation_history": "server-preparation-v1"
+}

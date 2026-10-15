@@ -1,0 +1,16 @@
+{
+  "schema": "tastetable143.native-fixture-pre-execution-freeze/1",
+  "utc": "2026-10-15T10:00:10.344050+00:00",
+  "candidate_seen": false,
+  "fixture_course_run": false,
+  "files": {
+    "generate_original_fixtures.mjs": {
+      "bytes": 4484,
+      "sha256": "383fe753f8564c0bc6bcaf555c3d0c0371c1e8bc9221bd8cf87f593f01f7c4e1"
+    },
+    "NATIVE-EXPECTATIONS.md": {
+      "bytes": 4443,
+      "sha256": "737c219f40b04a05318eaeb133438624b5b0a0b64788ebe97105abab05cb7ec4"
+    }
+  }
+}

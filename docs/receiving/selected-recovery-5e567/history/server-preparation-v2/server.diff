@@ -1,0 +1,22 @@
+--- before
++++ after
+@@ -84,6 +84,9 @@
+ 
+     class Server(HTTPServer):
+         allow_reuse_address = False
++        def handle_error(self, request, client_address):
++            errors.append({"phase": "server-handler", "message": "Uncaught request handler exception"})
++            super().handle_error(request, client_address)
+         def verify_request(self, request, address):
+             request.settimeout(2)
+             return address[0] == "127.0.0.1"
+@@ -94,6 +97,9 @@
+         sys_version = ""
+         def log_message(self, *_args):
+             pass
++
++        def log_error(self, message, *args):
++            errors.append({"phase": "http-handler", "message": message % args})
+ 
+         def send_error(self, code, message=None, explain=None):
+             row = {"method": getattr(self, "command", None),

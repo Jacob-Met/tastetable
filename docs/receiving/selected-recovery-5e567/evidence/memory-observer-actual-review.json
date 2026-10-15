@@ -1,0 +1,105 @@
+{
+  "schema": "hamon.tastetable143.memory-observer-actual-review/1",
+  "reviewedAtUTC": "2026-10-15T11:22:26.454345+00:00",
+  "outcome": "ACCEPT_PURE_OBSERVER_RESULT",
+  "checks": [
+    "exact command and ten-second budget",
+    "one retained child identity",
+    "normal zero without forced cleanup",
+    "bounded actual elapsed time",
+    "raw stdout metadata",
+    "empty original stderr",
+    "whole observed result equals original stdout",
+    "four complete source identities preserved",
+    "current exact: /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "current exact: /dev/shm/hamon-root-taste143-native-contract-5e567/test_component_observer.mjs",
+    "current exact: /dev/shm/hamon-root-taste143-native-contract-5e567/component_course.mjs",
+    "current exact: /dev/shm/hamon-root-taste143-native-contract-5e567/memory-observer-test-freeze-v2.json",
+    "one exact observer declaration",
+    "actual exact observer fragment identities",
+    "actual whole source identity",
+    "all four intended outcomes and call counts",
+    "actual declared scope and PASS",
+    "whole original checkpoint identity",
+    "closed nine-member checkpoint, unique paths and healthy CRC",
+    "whole original checkpoint member: original/intent.json",
+    "whole original checkpoint member: original/result.json",
+    "whole original checkpoint member: original/started.json",
+    "whole original checkpoint member: original/stderr.bin",
+    "whole original checkpoint member: original/stdout.bin",
+    "whole original checkpoint member: source/test_component_observer.mjs",
+    "whole original checkpoint member: source/component_course.mjs",
+    "whole original checkpoint member: source/memory-observer-test-freeze-v2.json",
+    "whole original checkpoint member: source/memory-controller-review-v3.json"
+  ],
+  "actual": {
+    "pid": 6,
+    "elapsed_seconds": 0.21494216499922913,
+    "returncode": 0,
+    "forced_cleanup": false,
+    "stdout": {
+      "bytes": 1173,
+      "sha256": "ef650604cb267cc8a2544c57452b1243251c9d675a7400b846b1c9842bc02d48"
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "cases": [
+      {
+        "name": "starting API before selection DOM",
+        "outcome": "PASS",
+        "snapshotCalls": 0
+      },
+      {
+        "name": "failed fixture is retained and rejected immediately",
+        "outcome": "PASS",
+        "snapshotCalls": 0
+      },
+      {
+        "name": "ready fixture invokes one full snapshot",
+        "outcome": "PASS",
+        "snapshotCalls": 1
+      },
+      {
+        "name": "ready phase waits for complete document",
+        "outcome": "PASS",
+        "snapshotCalls": 1
+      }
+    ]
+  },
+  "originals": [
+    {
+      "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/observer-qualification-v1/intent.json",
+      "bytes": 1291,
+      "sha256": "4ea07e74dd0e4a8a9122e7ec1ce156849cd5fb3da24ddbbf5ade16b568b7eeb7"
+    },
+    {
+      "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/observer-qualification-v1/started.json",
+      "bytes": 54,
+      "sha256": "023b8d4e70814b9d81e918920158526c978d9bb15a76d4157190f15f43ee3e40"
+    },
+    {
+      "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/observer-qualification-v1/result.json",
+      "bytes": 3343,
+      "sha256": "b30297e9f1ce9efb85a6000d788b41067dab9aeeb361aa21a77e6fdb830c87b3"
+    },
+    {
+      "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/observer-qualification-v1/stdout.bin",
+      "bytes": 1173,
+      "sha256": "ef650604cb267cc8a2544c57452b1243251c9d675a7400b846b1c9842bc02d48"
+    },
+    {
+      "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/observer-qualification-v1/stderr.bin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "checkpoint": {
+    "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/observer-qualification-v1-complete.zip",
+    "bytes": 13934,
+    "sha256": "fe74021ba1eab00e256bf9c5852c9012abac8e220e098ff7e4068690ce0a3bf5"
+  },
+  "boundary": "Passive full original output, current source and checkpoint byte joins only. The retained one root run executed extracted observer code against explicit stubs. No product, complete controller, host, server, browser, IndexedDB or native receiving invocation by reviewer; no replay.",
+  "chronology": "Both source-only startup corrections and the three-to-four-case test successor remain retained. Earlier root process-creation rejection is documented as pre-process, not a failed test course."
+}

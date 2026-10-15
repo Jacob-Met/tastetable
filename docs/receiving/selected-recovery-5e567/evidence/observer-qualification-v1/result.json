@@ -1,0 +1,90 @@
+{
+  "schema": "hamon.tastetable143.root-observer-actual/1",
+  "utc": "2026-10-15T11:20:55.954093+00:00",
+  "pid": 6,
+  "returncode": 0,
+  "forced_cleanup": false,
+  "elapsed_seconds": 0.21494216499922913,
+  "before": {
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node": {
+      "bytes": 125989464,
+      "sha256": "bc17c508ffeed0ec622934f9b7fa72f8e78da65350e63c3eceb56fa688aa5e12"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/test_component_observer.mjs": {
+      "bytes": 6271,
+      "sha256": "2139d31e76cc0ec31941c9026e84b33c3f30ca7855d8c28da2d0605358e77abf"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component_course.mjs": {
+      "bytes": 18698,
+      "sha256": "872a84c3fcc584f50e2961e80a7683e4cb738ea5cd63bbe49326c90b8350de8a"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/memory-observer-test-freeze-v2.json": {
+      "bytes": 3847,
+      "sha256": "e9fcd08dbee1acd6c8d5c58ccd9723ade1485a8d5d0857c4d0c7ac49f8b046cc"
+    }
+  },
+  "after": {
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node": {
+      "bytes": 125989464,
+      "sha256": "bc17c508ffeed0ec622934f9b7fa72f8e78da65350e63c3eceb56fa688aa5e12"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/test_component_observer.mjs": {
+      "bytes": 6271,
+      "sha256": "2139d31e76cc0ec31941c9026e84b33c3f30ca7855d8c28da2d0605358e77abf"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component_course.mjs": {
+      "bytes": 18698,
+      "sha256": "872a84c3fcc584f50e2961e80a7683e4cb738ea5cd63bbe49326c90b8350de8a"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/memory-observer-test-freeze-v2.json": {
+      "bytes": 3847,
+      "sha256": "e9fcd08dbee1acd6c8d5c58ccd9723ade1485a8d5d0857c4d0c7ac49f8b046cc"
+    }
+  },
+  "stdout": {
+    "bytes": 1173,
+    "sha256": "ef650604cb267cc8a2544c57452b1243251c9d675a7400b846b1c9842bc02d48"
+  },
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "observed": {
+    "schema": "hamon.tastetable143.pure-observer-check/1",
+    "source": {
+      "bytes": 18698,
+      "sha256": "872a84c3fcc584f50e2961e80a7683e4cb738ea5cd63bbe49326c90b8350de8a"
+    },
+    "fragments": {
+      "declarationBytes": 362,
+      "declarationSha256": "95150fd57fc6b813e46b83aa7cd5bacfc9a91cad6c286767a5e43763b0e5e198",
+      "observerBytes": 890,
+      "observerSha256": "99891187f0d43628d0ad3213eded47bbfc14d42a2693ab1df7940869b61f6525"
+    },
+    "outcome": "PASS",
+    "cases": [
+      {
+        "name": "starting API before selection DOM",
+        "outcome": "PASS",
+        "snapshotCalls": 0
+      },
+      {
+        "name": "failed fixture is retained and rejected immediately",
+        "outcome": "PASS",
+        "snapshotCalls": 0
+      },
+      {
+        "name": "ready fixture invokes one full snapshot",
+        "outcome": "PASS",
+        "snapshotCalls": 1
+      },
+      {
+        "name": "ready phase waits for complete document",
+        "outcome": "PASS",
+        "snapshotCalls": 1
+      }
+    ],
+    "boundary": "Only the extracted source observer expression and observe function ran against explicit in-memory stubs. No course/module import, product, host, server, browser, IndexedDB or native operation."
+  },
+  "outcome": "PASS"
+}

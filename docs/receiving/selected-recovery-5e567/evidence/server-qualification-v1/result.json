@@ -1,0 +1,871 @@
+{
+  "schema": "tastetable143.local-server-course-result/1",
+  "outcome": "PASS",
+  "cases": [
+    {
+      "name": "exact-assets-and-parent-stop",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-s",
+        "/dev/shm/hamon-root-taste143-native-contract-5e567/serve_component.py",
+        "--root",
+        "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture",
+        "--manifest-sha256",
+        "13d4ce90a5a4dc13bd1ca441afb18baae15e19a5436fa49f8fbfbba464d2d06a",
+        "--run-dir",
+        "/dev/shm/hamon-root-taste143-native-contract-5e567/server-qualification-v1/01-exact-assets-and-parent-stop/server",
+        "--token",
+        "taste143-local-server-1"
+      ],
+      "outcome": "PASS",
+      "pid": 5,
+      "ready": {
+        "schema": "tastetable143.component-server-ready/1",
+        "pid": 5,
+        "token": "taste143-local-server-1",
+        "url": "http://127.0.0.1:60467/",
+        "routes": [
+          "/",
+          "/component-host.mjs",
+          "/fixtures/external-addition.json",
+          "/fixtures/initial-records.json",
+          "/index.html",
+          "/static/saved_week_collection.mjs",
+          "/static/saved_week_collection_ui.mjs",
+          "/static/saved_week_store.mjs",
+          "/static/saved_weeks.css",
+          "/static/saved_weeks.mjs",
+          "/static/style.css",
+          "/static/week_file.mjs",
+          "/static/week_plan.mjs"
+        ],
+        "manifest_sha256": "13d4ce90a5a4dc13bd1ca441afb18baae15e19a5436fa49f8fbfbba464d2d06a"
+      },
+      "responses": [
+        {
+          "route": "/",
+          "status": 200,
+          "bytes": 2168,
+          "sha256": "5d589cd0b6bd95931d8d4f03e13f52cb016bc7c3de5429772e714366da1e6420"
+        },
+        {
+          "route": "/component-host.mjs",
+          "status": 200,
+          "bytes": 7511,
+          "sha256": "c7ae39ca46475807a09325cdc17fc2d769ef18741f4458af135e86f4ea41cbee"
+        },
+        {
+          "route": "/fixtures/external-addition.json",
+          "status": 200,
+          "bytes": 16319,
+          "sha256": "2b89248cbdd58ae0bce2d9b4c1f4fe6b78cefeb3cbf4930061ba3c54eadb8090"
+        },
+        {
+          "route": "/fixtures/initial-records.json",
+          "status": 200,
+          "bytes": 32633,
+          "sha256": "aa29653a619579b13f0662f749fbaab90e89e814e69c01c2fd4c4037e21900ab"
+        },
+        {
+          "route": "/index.html",
+          "status": 200,
+          "bytes": 2168,
+          "sha256": "5d589cd0b6bd95931d8d4f03e13f52cb016bc7c3de5429772e714366da1e6420"
+        },
+        {
+          "route": "/static/saved_week_collection.mjs",
+          "status": 200,
+          "bytes": 5798,
+          "sha256": "578fdbd327ffb2539bf59432bb70c51d3ea7041459bb009ba5ae50d6fc084a99"
+        },
+        {
+          "route": "/static/saved_week_collection_ui.mjs",
+          "status": 200,
+          "bytes": 11315,
+          "sha256": "198cc57031e7a4fbb25cdb8d089278c7bc622c0f8f417396549ca9ad196cef93"
+        },
+        {
+          "route": "/static/saved_week_store.mjs",
+          "status": 200,
+          "bytes": 8960,
+          "sha256": "621a1270f4b7771e8b14820cb6b12f35b53af8f45b04ea76da046f111647fa64"
+        },
+        {
+          "route": "/static/saved_weeks.css",
+          "status": 200,
+          "bytes": 2458,
+          "sha256": "f147ebcf6343be774e920766720ec031ccfc3e5d2d68a82c3d3cc4f5e9cf0e63"
+        },
+        {
+          "route": "/static/saved_weeks.mjs",
+          "status": 200,
+          "bytes": 3327,
+          "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3"
+        },
+        {
+          "route": "/static/style.css",
+          "status": 200,
+          "bytes": 5064,
+          "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96"
+        },
+        {
+          "route": "/static/week_file.mjs",
+          "status": 200,
+          "bytes": 6642,
+          "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+        },
+        {
+          "route": "/static/week_plan.mjs",
+          "status": 200,
+          "bytes": 3913,
+          "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+        }
+      ],
+      "server_result": {
+        "schema": "tastetable143.component-server-result/1",
+        "outcome": "PASS",
+        "pid": 5,
+        "token": "taste143-local-server-1",
+        "elapsed_seconds": 0.2175041369991959,
+        "stop_seen": true,
+        "requests": [
+          {
+            "method": "GET",
+            "path": "/",
+            "host": "127.0.0.1:60467",
+            "elapsed_seconds": 0.010905536000791471,
+            "status": 200,
+            "file": "index.html",
+            "bytes": 2168,
+            "sha256": "5d589cd0b6bd95931d8d4f03e13f52cb016bc7c3de5429772e714366da1e6420"
+          },
+          {
+            "method": "GET",
+            "path": "/component-host.mjs",
+            "host": "127.0.0.1:60467",
+            "elapsed_seconds": 0.011603039998590248,
+            "status": 200,
+            "file": "component-host.mjs",
+            "bytes": 7511,
+            "sha256": "c7ae39ca46475807a09325cdc17fc2d769ef18741f4458af135e86f4ea41cbee"
+          },
+          {
+            "method": "GET",
+            "path": "/fixtures/external-addition.json",
+            "host": "127.0.0.1:60467",
+            "elapsed_seconds": 0.012040177000017138,
+            "status": 200,
+            "file": "fixtures/external-addition.json",
+            "bytes": 16319,
+            "sha256": "2b89248cbdd58ae0bce2d9b4c1f4fe6b78cefeb3cbf4930061ba3c54eadb8090"
+          },
+          {
+            "method": "GET",
+            "path": "/fixtures/initial-records.json",
+            "host": "127.0.0.1:60467",
+            "elapsed_seconds": 0.01241275899883476,
+            "status": 200,
+            "file": "fixtures/initial-records.json",
+            "bytes": 32633,
+            "sha256": "aa29653a619579b13f0662f749fbaab90e89e814e69c01c2fd4c4037e21900ab"
+          },
+          {
+            "method": "GET",
+            "path": "/index.html",
+            "host": "127.0.0.1:60467",
+            "elapsed_seconds": 0.01287019699884695,
+            "status": 200,
+            "file": "index.html",
+            "bytes": 2168,
+            "sha256": "5d589cd0b6bd95931d8d4f03e13f52cb016bc7c3de5429772e714366da1e6420"
+          },
+          {
+            "method": "GET",
+            "path": "/static/saved_week_collection.mjs",
+            "host": "127.0.0.1:60467",
+            "elapsed_seconds": 0.01334979799867142,
+            "status": 200,
+            "file": "static/saved_week_collection.mjs",
+            "bytes": 5798,
+            "sha256": "578fdbd327ffb2539bf59432bb70c51d3ea7041459bb009ba5ae50d6fc084a99"
+          },
+          {
+            "method": "GET",
+            "path": "/static/saved_week_collection_ui.mjs",
+            "host": "127.0.0.1:60467",
+            "elapsed_seconds": 0.013762308997684158,
+            "status": 200,
+            "file": "static/saved_week_collection_ui.mjs",
+            "bytes": 11315,
+            "sha256": "198cc57031e7a4fbb25cdb8d089278c7bc622c0f8f417396549ca9ad196cef93"
+          },
+          {
+            "method": "GET",
+            "path": "/static/saved_week_store.mjs",
+            "host": "127.0.0.1:60467",
+            "elapsed_seconds": 0.014275738998549059,
+            "status": 200,
+            "file": "static/saved_week_store.mjs",
+            "bytes": 8960,
+            "sha256": "621a1270f4b7771e8b14820cb6b12f35b53af8f45b04ea76da046f111647fa64"
+          },
+          {
+            "method": "GET",
+            "path": "/static/saved_weeks.css",
+            "host": "127.0.0.1:60467",
+            "elapsed_seconds": 0.014631055997597286,
+            "status": 200,
+            "file": "static/saved_weeks.css",
+            "bytes": 2458,
+            "sha256": "f147ebcf6343be774e920766720ec031ccfc3e5d2d68a82c3d3cc4f5e9cf0e63"
+          },
+          {
+            "method": "GET",
+            "path": "/static/saved_weeks.mjs",
+            "host": "127.0.0.1:60467",
+            "elapsed_seconds": 0.015063617000123486,
+            "status": 200,
+            "file": "static/saved_weeks.mjs",
+            "bytes": 3327,
+            "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3"
+          },
+          {
+            "method": "GET",
+            "path": "/static/style.css",
+            "host": "127.0.0.1:60467",
+            "elapsed_seconds": 0.01539968499855604,
+            "status": 200,
+            "file": "static/style.css",
+            "bytes": 5064,
+            "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96"
+          },
+          {
+            "method": "GET",
+            "path": "/static/week_file.mjs",
+            "host": "127.0.0.1:60467",
+            "elapsed_seconds": 0.015763112998683937,
+            "status": 200,
+            "file": "static/week_file.mjs",
+            "bytes": 6642,
+            "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+          },
+          {
+            "method": "GET",
+            "path": "/static/week_plan.mjs",
+            "host": "127.0.0.1:60467",
+            "elapsed_seconds": 0.016074003997346153,
+            "status": 200,
+            "file": "static/week_plan.mjs",
+            "bytes": 3913,
+            "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+          }
+        ],
+        "response_bytes": 108276,
+        "errors": [],
+        "before": {
+          "component-host.mjs": {
+            "bytes": 7511,
+            "sha256": "c7ae39ca46475807a09325cdc17fc2d769ef18741f4458af135e86f4ea41cbee"
+          },
+          "fixtures/external-addition.json": {
+            "bytes": 16319,
+            "sha256": "2b89248cbdd58ae0bce2d9b4c1f4fe6b78cefeb3cbf4930061ba3c54eadb8090"
+          },
+          "fixtures/initial-records.json": {
+            "bytes": 32633,
+            "sha256": "aa29653a619579b13f0662f749fbaab90e89e814e69c01c2fd4c4037e21900ab"
+          },
+          "index.html": {
+            "bytes": 2168,
+            "sha256": "5d589cd0b6bd95931d8d4f03e13f52cb016bc7c3de5429772e714366da1e6420"
+          },
+          "static/saved_week_collection.mjs": {
+            "bytes": 5798,
+            "sha256": "578fdbd327ffb2539bf59432bb70c51d3ea7041459bb009ba5ae50d6fc084a99"
+          },
+          "static/saved_week_collection_ui.mjs": {
+            "bytes": 11315,
+            "sha256": "198cc57031e7a4fbb25cdb8d089278c7bc622c0f8f417396549ca9ad196cef93"
+          },
+          "static/saved_week_store.mjs": {
+            "bytes": 8960,
+            "sha256": "621a1270f4b7771e8b14820cb6b12f35b53af8f45b04ea76da046f111647fa64"
+          },
+          "static/saved_weeks.css": {
+            "bytes": 2458,
+            "sha256": "f147ebcf6343be774e920766720ec031ccfc3e5d2d68a82c3d3cc4f5e9cf0e63"
+          },
+          "static/saved_weeks.mjs": {
+            "bytes": 3327,
+            "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3"
+          },
+          "static/style.css": {
+            "bytes": 5064,
+            "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96"
+          },
+          "static/week_file.mjs": {
+            "bytes": 6642,
+            "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+          },
+          "static/week_plan.mjs": {
+            "bytes": 3913,
+            "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+          }
+        },
+        "after": {
+          "component-host.mjs": {
+            "bytes": 7511,
+            "sha256": "c7ae39ca46475807a09325cdc17fc2d769ef18741f4458af135e86f4ea41cbee"
+          },
+          "fixtures/external-addition.json": {
+            "bytes": 16319,
+            "sha256": "2b89248cbdd58ae0bce2d9b4c1f4fe6b78cefeb3cbf4930061ba3c54eadb8090"
+          },
+          "fixtures/initial-records.json": {
+            "bytes": 32633,
+            "sha256": "aa29653a619579b13f0662f749fbaab90e89e814e69c01c2fd4c4037e21900ab"
+          },
+          "index.html": {
+            "bytes": 2168,
+            "sha256": "5d589cd0b6bd95931d8d4f03e13f52cb016bc7c3de5429772e714366da1e6420"
+          },
+          "static/saved_week_collection.mjs": {
+            "bytes": 5798,
+            "sha256": "578fdbd327ffb2539bf59432bb70c51d3ea7041459bb009ba5ae50d6fc084a99"
+          },
+          "static/saved_week_collection_ui.mjs": {
+            "bytes": 11315,
+            "sha256": "198cc57031e7a4fbb25cdb8d089278c7bc622c0f8f417396549ca9ad196cef93"
+          },
+          "static/saved_week_store.mjs": {
+            "bytes": 8960,
+            "sha256": "621a1270f4b7771e8b14820cb6b12f35b53af8f45b04ea76da046f111647fa64"
+          },
+          "static/saved_weeks.css": {
+            "bytes": 2458,
+            "sha256": "f147ebcf6343be774e920766720ec031ccfc3e5d2d68a82c3d3cc4f5e9cf0e63"
+          },
+          "static/saved_weeks.mjs": {
+            "bytes": 3327,
+            "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3"
+          },
+          "static/style.css": {
+            "bytes": 5064,
+            "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96"
+          },
+          "static/week_file.mjs": {
+            "bytes": 6642,
+            "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+          },
+          "static/week_plan.mjs": {
+            "bytes": 3913,
+            "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+          }
+        },
+        "scope": "Server integrity/lifetime only. A successful server does not establish product or visual acceptance."
+      },
+      "returncode": 0,
+      "forced_cleanup": false,
+      "elapsed_seconds": 0.2914317460017628,
+      "stdout": {
+        "bytes": 7325,
+        "sha256": "146a3809782a68b61768422a2f606d491490a6a3d1acf6a8cbc064c13ee7d6cb"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "unknown-route-refused",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-s",
+        "/dev/shm/hamon-root-taste143-native-contract-5e567/serve_component.py",
+        "--root",
+        "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture",
+        "--manifest-sha256",
+        "13d4ce90a5a4dc13bd1ca441afb18baae15e19a5436fa49f8fbfbba464d2d06a",
+        "--run-dir",
+        "/dev/shm/hamon-root-taste143-native-contract-5e567/server-qualification-v1/02-unknown-route-refused/server",
+        "--token",
+        "taste143-local-server-2"
+      ],
+      "outcome": "PASS",
+      "pid": 6,
+      "ready": {
+        "schema": "tastetable143.component-server-ready/1",
+        "pid": 6,
+        "token": "taste143-local-server-2",
+        "url": "http://127.0.0.1:56815/",
+        "routes": [
+          "/",
+          "/component-host.mjs",
+          "/fixtures/external-addition.json",
+          "/fixtures/initial-records.json",
+          "/index.html",
+          "/static/saved_week_collection.mjs",
+          "/static/saved_week_collection_ui.mjs",
+          "/static/saved_week_store.mjs",
+          "/static/saved_weeks.css",
+          "/static/saved_weeks.mjs",
+          "/static/style.css",
+          "/static/week_file.mjs",
+          "/static/week_plan.mjs"
+        ],
+        "manifest_sha256": "13d4ce90a5a4dc13bd1ca441afb18baae15e19a5436fa49f8fbfbba464d2d06a"
+      },
+      "refusal_request": "GET /index.html?unapproved=1 HTTP/1.1\r\nHost: 127.0.0.1:56815\r\n\r\n",
+      "refusal_response_bytes": 0,
+      "server_result": {
+        "schema": "tastetable143.component-server-result/1",
+        "outcome": "FAIL",
+        "pid": 6,
+        "token": "taste143-local-server-2",
+        "elapsed_seconds": 0.005866110001079505,
+        "stop_seen": false,
+        "requests": [
+          {
+            "method": "GET",
+            "path": "/index.html?unapproved=1",
+            "host": "127.0.0.1:56815",
+            "elapsed_seconds": 0.005028790001233574,
+            "error": {
+              "type": "ValueError",
+              "message": "Unexpected host or route"
+            }
+          }
+        ],
+        "response_bytes": 0,
+        "errors": [
+          {
+            "type": "ValueError",
+            "message": "Unexpected host or route"
+          },
+          "No exact parent stop marker before shutdown"
+        ],
+        "before": {
+          "component-host.mjs": {
+            "bytes": 7511,
+            "sha256": "c7ae39ca46475807a09325cdc17fc2d769ef18741f4458af135e86f4ea41cbee"
+          },
+          "fixtures/external-addition.json": {
+            "bytes": 16319,
+            "sha256": "2b89248cbdd58ae0bce2d9b4c1f4fe6b78cefeb3cbf4930061ba3c54eadb8090"
+          },
+          "fixtures/initial-records.json": {
+            "bytes": 32633,
+            "sha256": "aa29653a619579b13f0662f749fbaab90e89e814e69c01c2fd4c4037e21900ab"
+          },
+          "index.html": {
+            "bytes": 2168,
+            "sha256": "5d589cd0b6bd95931d8d4f03e13f52cb016bc7c3de5429772e714366da1e6420"
+          },
+          "static/saved_week_collection.mjs": {
+            "bytes": 5798,
+            "sha256": "578fdbd327ffb2539bf59432bb70c51d3ea7041459bb009ba5ae50d6fc084a99"
+          },
+          "static/saved_week_collection_ui.mjs": {
+            "bytes": 11315,
+            "sha256": "198cc57031e7a4fbb25cdb8d089278c7bc622c0f8f417396549ca9ad196cef93"
+          },
+          "static/saved_week_store.mjs": {
+            "bytes": 8960,
+            "sha256": "621a1270f4b7771e8b14820cb6b12f35b53af8f45b04ea76da046f111647fa64"
+          },
+          "static/saved_weeks.css": {
+            "bytes": 2458,
+            "sha256": "f147ebcf6343be774e920766720ec031ccfc3e5d2d68a82c3d3cc4f5e9cf0e63"
+          },
+          "static/saved_weeks.mjs": {
+            "bytes": 3327,
+            "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3"
+          },
+          "static/style.css": {
+            "bytes": 5064,
+            "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96"
+          },
+          "static/week_file.mjs": {
+            "bytes": 6642,
+            "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+          },
+          "static/week_plan.mjs": {
+            "bytes": 3913,
+            "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+          }
+        },
+        "after": {
+          "component-host.mjs": {
+            "bytes": 7511,
+            "sha256": "c7ae39ca46475807a09325cdc17fc2d769ef18741f4458af135e86f4ea41cbee"
+          },
+          "fixtures/external-addition.json": {
+            "bytes": 16319,
+            "sha256": "2b89248cbdd58ae0bce2d9b4c1f4fe6b78cefeb3cbf4930061ba3c54eadb8090"
+          },
+          "fixtures/initial-records.json": {
+            "bytes": 32633,
+            "sha256": "aa29653a619579b13f0662f749fbaab90e89e814e69c01c2fd4c4037e21900ab"
+          },
+          "index.html": {
+            "bytes": 2168,
+            "sha256": "5d589cd0b6bd95931d8d4f03e13f52cb016bc7c3de5429772e714366da1e6420"
+          },
+          "static/saved_week_collection.mjs": {
+            "bytes": 5798,
+            "sha256": "578fdbd327ffb2539bf59432bb70c51d3ea7041459bb009ba5ae50d6fc084a99"
+          },
+          "static/saved_week_collection_ui.mjs": {
+            "bytes": 11315,
+            "sha256": "198cc57031e7a4fbb25cdb8d089278c7bc622c0f8f417396549ca9ad196cef93"
+          },
+          "static/saved_week_store.mjs": {
+            "bytes": 8960,
+            "sha256": "621a1270f4b7771e8b14820cb6b12f35b53af8f45b04ea76da046f111647fa64"
+          },
+          "static/saved_weeks.css": {
+            "bytes": 2458,
+            "sha256": "f147ebcf6343be774e920766720ec031ccfc3e5d2d68a82c3d3cc4f5e9cf0e63"
+          },
+          "static/saved_weeks.mjs": {
+            "bytes": 3327,
+            "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3"
+          },
+          "static/style.css": {
+            "bytes": 5064,
+            "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96"
+          },
+          "static/week_file.mjs": {
+            "bytes": 6642,
+            "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+          },
+          "static/week_plan.mjs": {
+            "bytes": 3913,
+            "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+          }
+        },
+        "scope": "Server integrity/lifetime only. A successful server does not establish product or visual acceptance."
+      },
+      "returncode": 1,
+      "forced_cleanup": false,
+      "elapsed_seconds": 0.06148390999805997,
+      "stdout": {
+        "bytes": 4193,
+        "sha256": "817ea7f3a47c17fe324f093bf805dabf73b8600065837a0edaee3a02f0c35a82"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "partial-header-deadline-recorded",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-s",
+        "/dev/shm/hamon-root-taste143-native-contract-5e567/serve_component.py",
+        "--root",
+        "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture",
+        "--manifest-sha256",
+        "13d4ce90a5a4dc13bd1ca441afb18baae15e19a5436fa49f8fbfbba464d2d06a",
+        "--run-dir",
+        "/dev/shm/hamon-root-taste143-native-contract-5e567/server-qualification-v1/03-partial-header-deadline-recorded/server",
+        "--token",
+        "taste143-local-server-3"
+      ],
+      "outcome": "PASS",
+      "pid": 7,
+      "ready": {
+        "schema": "tastetable143.component-server-ready/1",
+        "pid": 7,
+        "token": "taste143-local-server-3",
+        "url": "http://127.0.0.1:59937/",
+        "routes": [
+          "/",
+          "/component-host.mjs",
+          "/fixtures/external-addition.json",
+          "/fixtures/initial-records.json",
+          "/index.html",
+          "/static/saved_week_collection.mjs",
+          "/static/saved_week_collection_ui.mjs",
+          "/static/saved_week_store.mjs",
+          "/static/saved_weeks.css",
+          "/static/saved_weeks.mjs",
+          "/static/style.css",
+          "/static/week_file.mjs",
+          "/static/week_plan.mjs"
+        ],
+        "manifest_sha256": "13d4ce90a5a4dc13bd1ca441afb18baae15e19a5436fa49f8fbfbba464d2d06a"
+      },
+      "refusal_request": "GET / HTTP/1.1\r\nHost: 127.0.0.1:59937\r\n",
+      "refusal_response_bytes": 0,
+      "server_result": {
+        "schema": "tastetable143.component-server-result/1",
+        "outcome": "FAIL",
+        "pid": 7,
+        "token": "taste143-local-server-3",
+        "elapsed_seconds": 2.0076903640001547,
+        "stop_seen": false,
+        "requests": [],
+        "response_bytes": 0,
+        "errors": [
+          {
+            "phase": "http-handler",
+            "message": "Request timed out: TimeoutError('timed out')"
+          },
+          "No exact parent stop marker before shutdown"
+        ],
+        "before": {
+          "component-host.mjs": {
+            "bytes": 7511,
+            "sha256": "c7ae39ca46475807a09325cdc17fc2d769ef18741f4458af135e86f4ea41cbee"
+          },
+          "fixtures/external-addition.json": {
+            "bytes": 16319,
+            "sha256": "2b89248cbdd58ae0bce2d9b4c1f4fe6b78cefeb3cbf4930061ba3c54eadb8090"
+          },
+          "fixtures/initial-records.json": {
+            "bytes": 32633,
+            "sha256": "aa29653a619579b13f0662f749fbaab90e89e814e69c01c2fd4c4037e21900ab"
+          },
+          "index.html": {
+            "bytes": 2168,
+            "sha256": "5d589cd0b6bd95931d8d4f03e13f52cb016bc7c3de5429772e714366da1e6420"
+          },
+          "static/saved_week_collection.mjs": {
+            "bytes": 5798,
+            "sha256": "578fdbd327ffb2539bf59432bb70c51d3ea7041459bb009ba5ae50d6fc084a99"
+          },
+          "static/saved_week_collection_ui.mjs": {
+            "bytes": 11315,
+            "sha256": "198cc57031e7a4fbb25cdb8d089278c7bc622c0f8f417396549ca9ad196cef93"
+          },
+          "static/saved_week_store.mjs": {
+            "bytes": 8960,
+            "sha256": "621a1270f4b7771e8b14820cb6b12f35b53af8f45b04ea76da046f111647fa64"
+          },
+          "static/saved_weeks.css": {
+            "bytes": 2458,
+            "sha256": "f147ebcf6343be774e920766720ec031ccfc3e5d2d68a82c3d3cc4f5e9cf0e63"
+          },
+          "static/saved_weeks.mjs": {
+            "bytes": 3327,
+            "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3"
+          },
+          "static/style.css": {
+            "bytes": 5064,
+            "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96"
+          },
+          "static/week_file.mjs": {
+            "bytes": 6642,
+            "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+          },
+          "static/week_plan.mjs": {
+            "bytes": 3913,
+            "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+          }
+        },
+        "after": {
+          "component-host.mjs": {
+            "bytes": 7511,
+            "sha256": "c7ae39ca46475807a09325cdc17fc2d769ef18741f4458af135e86f4ea41cbee"
+          },
+          "fixtures/external-addition.json": {
+            "bytes": 16319,
+            "sha256": "2b89248cbdd58ae0bce2d9b4c1f4fe6b78cefeb3cbf4930061ba3c54eadb8090"
+          },
+          "fixtures/initial-records.json": {
+            "bytes": 32633,
+            "sha256": "aa29653a619579b13f0662f749fbaab90e89e814e69c01c2fd4c4037e21900ab"
+          },
+          "index.html": {
+            "bytes": 2168,
+            "sha256": "5d589cd0b6bd95931d8d4f03e13f52cb016bc7c3de5429772e714366da1e6420"
+          },
+          "static/saved_week_collection.mjs": {
+            "bytes": 5798,
+            "sha256": "578fdbd327ffb2539bf59432bb70c51d3ea7041459bb009ba5ae50d6fc084a99"
+          },
+          "static/saved_week_collection_ui.mjs": {
+            "bytes": 11315,
+            "sha256": "198cc57031e7a4fbb25cdb8d089278c7bc622c0f8f417396549ca9ad196cef93"
+          },
+          "static/saved_week_store.mjs": {
+            "bytes": 8960,
+            "sha256": "621a1270f4b7771e8b14820cb6b12f35b53af8f45b04ea76da046f111647fa64"
+          },
+          "static/saved_weeks.css": {
+            "bytes": 2458,
+            "sha256": "f147ebcf6343be774e920766720ec031ccfc3e5d2d68a82c3d3cc4f5e9cf0e63"
+          },
+          "static/saved_weeks.mjs": {
+            "bytes": 3327,
+            "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3"
+          },
+          "static/style.css": {
+            "bytes": 5064,
+            "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96"
+          },
+          "static/week_file.mjs": {
+            "bytes": 6642,
+            "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+          },
+          "static/week_plan.mjs": {
+            "bytes": 3913,
+            "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+          }
+        },
+        "scope": "Server integrity/lifetime only. A successful server does not establish product or visual acceptance."
+      },
+      "returncode": 1,
+      "forced_cleanup": false,
+      "elapsed_seconds": 2.0654351439989114,
+      "stdout": {
+        "bytes": 4021,
+        "sha256": "13907bb5ca47e466d3ca805d970e69b65f5145e7935c566c64775a84c27ce3f5"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "before": {
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/serve_component.py": {
+      "bytes": 10474,
+      "sha256": "bd1b6a8a834144531337be32eb8ea14d7d8c729db6b70390d3bae70d157829c5"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/component-freeze.json": {
+      "bytes": 2298,
+      "sha256": "13d4ce90a5a4dc13bd1ca441afb18baae15e19a5436fa49f8fbfbba464d2d06a"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/server-qualification-design.json": {
+      "bytes": 1758,
+      "sha256": "c3cf9f3e322b7e8eeaa5f75b0e00f6035372210bb55369c881fb9abab5fadbfa"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/qualify_component_server.py": {
+      "bytes": 10834,
+      "sha256": "cdd1df585086a0cf0e63333b9fadb303fe20906a3cfdba3e71d71af69d20db29"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/component-host.mjs": {
+      "bytes": 7511,
+      "sha256": "c7ae39ca46475807a09325cdc17fc2d769ef18741f4458af135e86f4ea41cbee"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/fixtures/external-addition.json": {
+      "bytes": 16319,
+      "sha256": "2b89248cbdd58ae0bce2d9b4c1f4fe6b78cefeb3cbf4930061ba3c54eadb8090"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/fixtures/initial-records.json": {
+      "bytes": 32633,
+      "sha256": "aa29653a619579b13f0662f749fbaab90e89e814e69c01c2fd4c4037e21900ab"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/index.html": {
+      "bytes": 2168,
+      "sha256": "5d589cd0b6bd95931d8d4f03e13f52cb016bc7c3de5429772e714366da1e6420"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/saved_week_collection.mjs": {
+      "bytes": 5798,
+      "sha256": "578fdbd327ffb2539bf59432bb70c51d3ea7041459bb009ba5ae50d6fc084a99"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/saved_week_collection_ui.mjs": {
+      "bytes": 11315,
+      "sha256": "198cc57031e7a4fbb25cdb8d089278c7bc622c0f8f417396549ca9ad196cef93"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/saved_week_store.mjs": {
+      "bytes": 8960,
+      "sha256": "621a1270f4b7771e8b14820cb6b12f35b53af8f45b04ea76da046f111647fa64"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/saved_weeks.css": {
+      "bytes": 2458,
+      "sha256": "f147ebcf6343be774e920766720ec031ccfc3e5d2d68a82c3d3cc4f5e9cf0e63"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/saved_weeks.mjs": {
+      "bytes": 3327,
+      "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/style.css": {
+      "bytes": 5064,
+      "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/week_file.mjs": {
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/week_plan.mjs": {
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+    }
+  },
+  "after": {
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/serve_component.py": {
+      "bytes": 10474,
+      "sha256": "bd1b6a8a834144531337be32eb8ea14d7d8c729db6b70390d3bae70d157829c5"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/component-freeze.json": {
+      "bytes": 2298,
+      "sha256": "13d4ce90a5a4dc13bd1ca441afb18baae15e19a5436fa49f8fbfbba464d2d06a"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/server-qualification-design.json": {
+      "bytes": 1758,
+      "sha256": "c3cf9f3e322b7e8eeaa5f75b0e00f6035372210bb55369c881fb9abab5fadbfa"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/qualify_component_server.py": {
+      "bytes": 10834,
+      "sha256": "cdd1df585086a0cf0e63333b9fadb303fe20906a3cfdba3e71d71af69d20db29"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/component-host.mjs": {
+      "bytes": 7511,
+      "sha256": "c7ae39ca46475807a09325cdc17fc2d769ef18741f4458af135e86f4ea41cbee"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/fixtures/external-addition.json": {
+      "bytes": 16319,
+      "sha256": "2b89248cbdd58ae0bce2d9b4c1f4fe6b78cefeb3cbf4930061ba3c54eadb8090"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/fixtures/initial-records.json": {
+      "bytes": 32633,
+      "sha256": "aa29653a619579b13f0662f749fbaab90e89e814e69c01c2fd4c4037e21900ab"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/index.html": {
+      "bytes": 2168,
+      "sha256": "5d589cd0b6bd95931d8d4f03e13f52cb016bc7c3de5429772e714366da1e6420"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/saved_week_collection.mjs": {
+      "bytes": 5798,
+      "sha256": "578fdbd327ffb2539bf59432bb70c51d3ea7041459bb009ba5ae50d6fc084a99"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/saved_week_collection_ui.mjs": {
+      "bytes": 11315,
+      "sha256": "198cc57031e7a4fbb25cdb8d089278c7bc622c0f8f417396549ca9ad196cef93"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/saved_week_store.mjs": {
+      "bytes": 8960,
+      "sha256": "621a1270f4b7771e8b14820cb6b12f35b53af8f45b04ea76da046f111647fa64"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/saved_weeks.css": {
+      "bytes": 2458,
+      "sha256": "f147ebcf6343be774e920766720ec031ccfc3e5d2d68a82c3d3cc4f5e9cf0e63"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/saved_weeks.mjs": {
+      "bytes": 3327,
+      "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/style.css": {
+      "bytes": 5064,
+      "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/week_file.mjs": {
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/week_plan.mjs": {
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+    }
+  },
+  "all_subjects_unchanged": true,
+  "failure": null,
+  "scope": "Actual owned local HTTP server only; no browser, native Windows, IndexedDB or JavaScript execution."
+}
