@@ -1,0 +1,25 @@
+--- owner-v1.py
++++ owner-v2.py
+@@ -184,9 +184,21 @@
+                 raise ValueError('Unattributed owned server process observation')
+             if server['child'].poll() is not None:
+                 raise RuntimeError('Fixed asset server exited before ready')
+-            if (SERVER_RUN/'ready.json').exists():
++            # The server prints this first line only after closing ready.json.
++            # Path existence alone is not a completed-write signal.
++            with (ROOT/'server.stdout.bin').open('rb') as ready_stream:
++                ready_stdout=ready_stream.read(16385)
++            if len(ready_stdout)>16384:raise ValueError('Server readiness stdout bound')
++            if b'\n' in ready_stdout:
++                if ready_stdout.count(b'\n')!=1 or not ready_stdout.endswith(b'\n'):
++                    raise ValueError('Expected only one complete server readiness line')
++                ready_line=json.loads(ready_stdout)
+                 ordinary_directory(SERVER_RUN)
+                 rec['server_endpoint']=server_binding()
++                if ready_line!=rec['server_endpoint']['ready']:
++                    raise ValueError('Complete server stdout and ready file disagree')
++                rec['server_ready_stdout']={'bytes':len(ready_stdout),'sha256':sha(ready_stdout),
++                                            'text':ready_stdout.decode('utf-8')}
+                 remaining()
+                 if time.monotonic()>=server_stop:raise TimeoutError('Fixed asset server startup deadline')
+                 break

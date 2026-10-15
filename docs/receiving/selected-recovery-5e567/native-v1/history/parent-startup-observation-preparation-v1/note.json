@@ -1,0 +1,6 @@
+{
+  "reason": "Independent review found that a retained initial ready-phase snapshot may precede document complete. Initial ready-* observations only may wait; all action/stable views remain complete.",
+  "application_calls": 0,
+  "before": "5533aacc6bb28466c52b056b4b86529c35d1e1b7deeb9efef621154cc74d68c4",
+  "after": "9ffa2dc13915b7fff27dc5b0c707e31e080e5e015484854d821c579a4975b603"
+}

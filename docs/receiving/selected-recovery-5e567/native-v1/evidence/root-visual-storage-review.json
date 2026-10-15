@@ -1,0 +1,113 @@
+{
+  "schema": "hamon.tastetable145.root-visual-storage-review/1",
+  "utc": "2026-10-15T12:40:51.300539+00:00",
+  "disposition": "ACCEPT_ORIGINAL_VISUAL_AND_STORAGE_EVIDENCE",
+  "scope": "Passive whole-archive/capture/receipt joins and inspection of original PNG pixels. No source execution, browser replay, image editing or machine receipt rewrite.",
+  "archive": {
+    "bytes": 2731277,
+    "sha256": "587820ceff1e58db143ad187106bc2b85bea4cbe00221f3e9f5fdc09d597c2db"
+  },
+  "node": {
+    "bytes": 5358580,
+    "sha256": "46acc06bb8d6e246ce0b4143845a915270f280ed698e9da4a0d41b180c149619"
+  },
+  "parent": {
+    "bytes": 1702304,
+    "sha256": "1d8d6bdb6e4d6176f48292ace9f038c4a1876b7cb54a45c371b34b79255d1756"
+  },
+  "captures": [
+    {
+      "file": "01-selected-desktop.png",
+      "bytes": 109523,
+      "sha256": "18e71b63f7dab4b82cbd74b408a01d119553fa7051ad8054b815cdcb83ae78e4",
+      "dimensions": [
+        1265,
+        1291
+      ],
+      "observation": 14,
+      "viewport": {
+        "width": 1280,
+        "height": 960,
+        "documentWidth": 1265,
+        "documentHeight": 1291
+      },
+      "original_pixels_inspected": true
+    },
+    {
+      "file": "02-selected-narrow.png",
+      "bytes": 109856,
+      "sha256": "55b0977854a2b911da38cb4dcdff5251c7a287e634f32f03c5b8900ffb7a11db",
+      "dimensions": [
+        375,
+        2377
+      ],
+      "observation": 15,
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "documentWidth": 375,
+        "documentHeight": 2377
+      },
+      "original_pixels_inspected": true
+    }
+  ],
+  "visual_findings": [
+    "Original desktop PNG viewed with detail original. Complete mixed preview, conflict status, two native checkboxes, selected count and explicit selected-add action are readable. D focus outline is visible.",
+    "Original narrow PNG viewed with detail original. Preview rows and literal C label wrap within the column; count/status and both actions remain legible. D focus outline is visible. No horizontal clipping or overlapping label was observed.",
+    "Both captures show the pre-commit selected state, not final storage. The seven native storage observations separately establish A/B preservation, D/C addition and stale-F refusal.",
+    "These are full-page captures at CSS viewport settings1280x960 and390x844; content widths1265 and375 exclude the vertical scrollbar. Original pixel dimensions are1265x1291 and375x2377."
+  ],
+  "checks": [
+    "Whole original native archive matches seal",
+    "Original node course PASS",
+    "Original parent retains pending-pixels status",
+    "All original parent assertions report pass; independent details reviewed separately",
+    "Parent binds exact complete Node receipt",
+    "Parent binds exact complete browser receipt",
+    "Unique isolated native database",
+    "Original component and unchanged fixtures accepted",
+    "Whole seven-field initial native records equal fixed A/B",
+    "Capture occurs before commit with exact A/B: before-capture-01-selected-desktop.png",
+    "Capture occurs before commit with exact A/B: before-capture-02-selected-narrow.png",
+    "Whole seven-field selected native records equal fixed A/B/C/D",
+    "Whole five-record result exact: external-E-before-stale-action",
+    "Whole five-record result exact: stale-F-absent",
+    "Whole five-record result exact: replacement-left-A-B-C-D-E-exact",
+    "Initial mixed preview starts with zero selected",
+    "Actual Space selects C first",
+    "Actual Shift+Tab then Space selects D second",
+    "Recorded native Shift+Tab action",
+    "Four file admissions in intended order",
+    "Actual submits are D/C in backup order then stale F",
+    "Two restores, two refreshes and thirteen complete host events",
+    "Stale refusal clears preview and reports complete-token mismatch",
+    "Cancellation clears selected preview",
+    "Replacement identical backup retains no selection",
+    "Controlled planner, unsaved rename, notes, search and order unchanged",
+    "Closed original eighty-member ZIP and CRCs",
+    "Original archive contains whole viewed PNG: 01-selected-desktop.png",
+    "PNG signature/IHDR: 01-selected-desktop.png",
+    "Whole PNG matches manifest and Node receipt: 01-selected-desktop.png",
+    "Whole PNG matches parent descriptor: 01-selected-desktop.png",
+    "PNG matches exact original capture clip: 01-selected-desktop.png",
+    "Four preview rows/two selectors and no horizontal overflow: 01-selected-desktop.png",
+    "Both associated native selectors selected/visible: 01-selected-desktop.png",
+    "Visible capture focus matches D: 01-selected-desktop.png",
+    "All-record action refused and selected action enabled: 01-selected-desktop.png",
+    "Literal Unicode/markup-like label retained: 01-selected-desktop.png",
+    "Original archive contains whole viewed PNG: 02-selected-narrow.png",
+    "PNG signature/IHDR: 02-selected-narrow.png",
+    "Whole PNG matches manifest and Node receipt: 02-selected-narrow.png",
+    "Whole PNG matches parent descriptor: 02-selected-narrow.png",
+    "PNG matches exact original capture clip: 02-selected-narrow.png",
+    "Four preview rows/two selectors and no horizontal overflow: 02-selected-narrow.png",
+    "Both associated native selectors selected/visible: 02-selected-narrow.png",
+    "Visible capture focus matches D: 02-selected-narrow.png",
+    "All-record action refused and selected action enabled: 02-selected-narrow.png",
+    "Literal Unicode/markup-like label retained: 02-selected-narrow.png"
+  ],
+  "check_count": 47,
+  "findings": [],
+  "limits": "Isolated actual component UI, native keyboard and IndexedDB with fictional records. CDP sets the real file input; the operating-system chooser is outside scope. Full app/provider/caregiver workflows remain separately owned. Machine PASS_PENDING_VISUAL_REVIEW receipts are unchanged; this is the additive visual acceptance.",
+  "preparation_note": "An informal coordination message initially misstated narrow height as2409; originalIHDR/Node/parent allsay2377 and finalreceipt uses2377. A passive shape-print command treated storage list as dict and stopped; no receipt or subject action existed from that inspection."
+}

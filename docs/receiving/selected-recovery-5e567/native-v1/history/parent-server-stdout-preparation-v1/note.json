@@ -1,0 +1,4 @@
+{
+  "reason": "Independent review identified normal server stdout has first ready and second terminal JSON lines. Join exactly these two originals; owner startup first-line admission unchanged.",
+  "application_calls": 0
+}

@@ -1,0 +1,241 @@
+{
+  "schema": "hamon.tastetable143.memory-parent-interface-review/1",
+  "utc": "2026-10-15T11:55:34.151062+00:00",
+  "disposition": "ACCEPT_SOURCE_INTERFACE_AFTER_CORRECTIONS",
+  "application_calls": 0,
+  "scope": "Full read of component evidence and parent, and relevant unchanged owner/server startup, stdout and cleanup interfaces. Passive source/retained-original joins only; not final packet release, new runtime qualification, browser result or visual acceptance.",
+  "subjects": {
+    "parent": {
+      "path": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/candidate/receive_taste.py",
+      "bytes": 25136,
+      "sha256": "9e8b3737820970fcf3d83c7776412c24354a5502387644271a5dd4514447a258"
+    },
+    "evidence": {
+      "path": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/candidate/component_evidence.py",
+      "bytes": 17295,
+      "sha256": "9ffa2dc13915b7fff27dc5b0c707e31e080e5e015484854d821c579a4975b603"
+    },
+    "owner": {
+      "path": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/candidate/receive_component.py",
+      "bytes": 28321,
+      "sha256": "42cd38d7a9c74cac79e2448ebb68167ac3e1212d0e4d90789f5ebe5fa039d3df"
+    },
+    "server": {
+      "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/serve_component.py",
+      "bytes": 10474,
+      "sha256": "bd1b6a8a834144531337be32eb8ea14d7d8c729db6b70390d3bae70d157829c5"
+    },
+    "course": {
+      "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/component_course.mjs",
+      "bytes": 18698,
+      "sha256": "872a84c3fcc584f50e2961e80a7683e4cb738ea5cd63bbe49326c90b8350de8a"
+    },
+    "client": {
+      "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/component_client.mjs",
+      "bytes": 24200,
+      "sha256": "16186666f590a26681b04134aeca47b8aef25f078641a09788d31add4f81f806"
+    },
+    "core_freeze": {
+      "path": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/native-core-freeze-v2.json",
+      "bytes": 1516,
+      "sha256": "b420dbc6791d760eb541f9c8dc9685fe6d92c361e0b90d2ad80cc97a7fb5228f"
+    },
+    "expectations": {
+      "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/NATIVE-EXPECTATIONS.md",
+      "bytes": 4443,
+      "sha256": "737c219f40b04a05318eaeb133438624b5b0a0b64788ebe97105abab05cb7ec4"
+    },
+    "independent_design": {
+      "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/memory-native-observation-design.md",
+      "bytes": 10433,
+      "sha256": "30c36252eee1bdc59812de3df6389aea2a4fbc7483116a7e73536a9f6c422985"
+    },
+    "prior_root_review": {
+      "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/root-client-parent-source-review.json",
+      "bytes": 7937,
+      "sha256": "07947d4b6ef8f0a2cd037edfc137a9665175ae368eb0319312edd959b4335409"
+    },
+    "existing_server_stdout": {
+      "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/server-qualification-v1/01-exact-assets-and-parent-stop/stdout.bin",
+      "bytes": 7325,
+      "sha256": "146a3809782a68b61768422a2f606d491490a6a3d1acf6a8cbc064c13ee7d6cb"
+    }
+  },
+  "chronology": [
+    "Root source-core review 07947d4b initially reported no defect and remains unchanged as historical evidence.",
+    "Independent memory review found original evidence5533aacc rejected a legitimate retained ready-phase observation while document remained interactive. Source-only successor9ffa2dc restricts this exception to ready-* startup and retains page/nonfailed phase/available schema/database checks; all action and stable states still require complete document.",
+    "After the earlier root acceptance, independent memory review found original parent80f4fb1f treated final server stdout as one readiness line although unchanged server emits readiness and terminal result. Both source statements and the previously qualified original7325-byte stdout confirm two lines. This superseded the earlier no-defect disposition before native execution.",
+    "Remote preserved complete parent beforeimage, core freeze and exact two-span diff, then wrote successor9e8b3737. This review accepts only that successor: exactly two LF-terminated original lines, first bounded and byte-bound to recorded startup readiness, second parsed equal to terminal result; full stream cap and no extras. No native invocation or replay occurred for this correction."
+  ],
+  "semantic_review": [
+    "All saved component DOM observations join ordered actual Runtime.evaluate returns. Startup-only observations can be incomplete; later stable observations require actual ready/complete fixture, fixed title/database/schema, no error and unchanged host sentinel state.",
+    "Seven complete storage observations join actual awaited readStorage values and literal seven-field records: A/B seed and both precommit captures; A/B/C/D after selected addition; A/B/C/D/E before stale action, after refusal and after replacement. No F admitted.",
+    "Four real file inputs join fixed fixture paths and raw DOM.setFileInputFiles replies. Missing-only checkboxes, labels, conflicts, initial selection reset and all-record disabled state are inspected.",
+    "Native key down/up request pairs and before/after focus are joined. Space order C, D, selected addition, F, selected addition, F, cancellation matches the independent course. Backward Tab between C and D is explicit.",
+    "D then C transaction follows backup order despite C then D selection; the expected token is complete original A/B. External E writer is awaited exactly once before the stale F action; that second restore retains the complete A/B/C/D expected token and explicit stale refusal.",
+    "Exact 13 host event kinds and one successful restore result are checked, with two restores/two refreshes and cancellation/replacement leaving storage unchanged.",
+    "Two original capture files join CDP base64 bytes, PNG chunks/CRCs/dimensions, full-document clip, desktop/narrow viewport and precommit selected state. Readability remains a later inspection of actual original images.",
+    "Parent joins complete unfiltered initial/final target arrays, one attached selected page/session, raw navigation and protocol requests,12 original HTTP asset bodies,22 before/after file identities, fixed server readiness/listener/normal result and stop marker.",
+    "Owner startup captures only first complete ready line while server is live. Parent runs after owned cleanup and now handles the distinct completed two-line stdout. No other concrete source interface defect found in this bounded review."
+  ],
+  "limits": [
+    "Source review does not establish native IndexedDB, keyboard or visual outcome.",
+    "Full fresh admission/preparer/outer packet and lifetime release remain root/peer/remote gates.",
+    "Pinned client retains resource MIME/type and strict JavaScript record comparison checks; this receipt does not claim every one is independently reimplemented by the Python parent."
+  ],
+  "checks": [
+    {
+      "name": "current core freeze receive_component.py",
+      "pass": true
+    },
+    {
+      "name": "current core freeze component_endpoint.py",
+      "pass": true
+    },
+    {
+      "name": "current core freeze component_support.py",
+      "pass": true
+    },
+    {
+      "name": "current core freeze receive_taste.py",
+      "pass": true
+    },
+    {
+      "name": "current core freeze component_evidence.py",
+      "pass": true
+    },
+    {
+      "name": "current core freeze child_lifecycle.py",
+      "pass": true
+    },
+    {
+      "name": "current core freeze browser_endpoint.py",
+      "pass": true
+    },
+    {
+      "name": "current core freeze job_support.py",
+      "pass": true
+    },
+    {
+      "name": "current core freeze native_process_diagnostics.py",
+      "pass": true
+    },
+    {
+      "name": "current core freeze process_diagnostics.py",
+      "pass": true
+    },
+    {
+      "name": "parent parser-only source read",
+      "pass": true
+    },
+    {
+      "name": "evidence parser-only source read",
+      "pass": true
+    },
+    {
+      "name": "parent exact two declared stdout-only replacements",
+      "pass": true
+    },
+    {
+      "name": "parent retained exact diff",
+      "pass": true
+    },
+    {
+      "name": "evidence exact startup-only replacements",
+      "pass": true
+    },
+    {
+      "name": "evidence retained exact diff",
+      "pass": true
+    },
+    {
+      "name": "unchanged server exact reviewed identity",
+      "pass": true
+    },
+    {
+      "name": "server source first ready then terminal prints",
+      "pass": true
+    },
+    {
+      "name": "existing original server stdout whole pin",
+      "pass": true
+    },
+    {
+      "name": "existing original server actually retained two lines",
+      "pass": true
+    },
+    {
+      "name": "existing original first line equals ready file",
+      "pass": true
+    },
+    {
+      "name": "existing original second line equals terminal file",
+      "pass": true
+    },
+    {
+      "name": "course unchanged",
+      "pass": true
+    },
+    {
+      "name": "client unchanged",
+      "pass": true
+    },
+    {
+      "name": "prior root source review retained",
+      "pass": true
+    },
+    {
+      "name": "fixed manifest12 assets",
+      "pass": true
+    },
+    {
+      "name": "unchanged served asset component-host.mjs",
+      "pass": true
+    },
+    {
+      "name": "unchanged served asset fixtures/external-addition.json",
+      "pass": true
+    },
+    {
+      "name": "unchanged served asset fixtures/initial-records.json",
+      "pass": true
+    },
+    {
+      "name": "unchanged served asset index.html",
+      "pass": true
+    },
+    {
+      "name": "unchanged served asset static/saved_week_collection.mjs",
+      "pass": true
+    },
+    {
+      "name": "unchanged served asset static/saved_week_collection_ui.mjs",
+      "pass": true
+    },
+    {
+      "name": "unchanged served asset static/saved_week_store.mjs",
+      "pass": true
+    },
+    {
+      "name": "unchanged served asset static/saved_weeks.css",
+      "pass": true
+    },
+    {
+      "name": "unchanged served asset static/saved_weeks.mjs",
+      "pass": true
+    },
+    {
+      "name": "unchanged served asset static/style.css",
+      "pass": true
+    },
+    {
+      "name": "unchanged served asset static/week_file.mjs",
+      "pass": true
+    },
+    {
+      "name": "unchanged served asset static/week_plan.mjs",
+      "pass": true
+    }
+  ],
+  "check_count": 38
+}

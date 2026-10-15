@@ -1,0 +1,15 @@
+--- component_evidence-v1.py
++++ component_evidence-v2.py
+@@ -49,8 +49,11 @@
+         value=observation['value'];view=value['view'];views.append(view)
+         check('observation '+str(index)+' exact location and no fixture failure',
+               value['location']==page and value['phase']!='failed')
+-        if view is None or view.get('fixtureState')=='starting':
++        if value['ready']!='complete' or view is None or view.get('fixtureState')=='starting':
+             check('only initial ready wait may observe startup',observation['label'].startswith('ready-'))
++            check('startup observation has no foreign available interface',
++                  value['schema'] in (None,'hamon.tastetable143.component-observation/1') and
++                  value['database'] in (None,DATABASE))
+             continue
+         check('observation '+str(index)+' actual native host and sentinels',
+               value['ready']=='complete' and value['phase']=='ready' and
