@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-15T11:12:39.530722+00:00",
+  "reason": "Independent review found the published fixture API precedes selection DOM construction; gate snapshotDOM by actual ready phase and preserve explicit failed phase. Add assertions for already intended precommit storage, disabled controls, exact event order and truthful preservation-failure outcome. No product/host/source fixture changed, no browser or exported controller invocation occurred.",
+  "before": {
+    "bytes": 17226,
+    "sha256": "88c570136fd23c1fbc95703f42f432a210a4511a4d846a55b2d3aaf16aea3545"
+  },
+  "changes": 9
+}

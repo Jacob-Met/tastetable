@@ -1,0 +1,4 @@
+{
+  "utc": "2026-10-15T10:37:08.872659+00:00",
+  "reason": "Independent peer inspection of exact Python3.12 standard library found request-line/header TimeoutError logs and outer handler exception path could be omitted from errors[]. Add narrow log_error and Server.handle_error overrides; clean empty EOF remains permitted. No server/product/browser execution."
+}

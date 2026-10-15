@@ -1,0 +1,37 @@
+{
+  "schema": "hamon.tastetable143.pure-observer-check/1",
+  "source": {
+    "bytes": 18698,
+    "sha256": "872a84c3fcc584f50e2961e80a7683e4cb738ea5cd63bbe49326c90b8350de8a"
+  },
+  "fragments": {
+    "declarationBytes": 362,
+    "declarationSha256": "95150fd57fc6b813e46b83aa7cd5bacfc9a91cad6c286767a5e43763b0e5e198",
+    "observerBytes": 890,
+    "observerSha256": "99891187f0d43628d0ad3213eded47bbfc14d42a2693ab1df7940869b61f6525"
+  },
+  "outcome": "PASS",
+  "cases": [
+    {
+      "name": "starting API before selection DOM",
+      "outcome": "PASS",
+      "snapshotCalls": 0
+    },
+    {
+      "name": "failed fixture is retained and rejected immediately",
+      "outcome": "PASS",
+      "snapshotCalls": 0
+    },
+    {
+      "name": "ready fixture invokes one full snapshot",
+      "outcome": "PASS",
+      "snapshotCalls": 1
+    },
+    {
+      "name": "ready phase waits for complete document",
+      "outcome": "PASS",
+      "snapshotCalls": 1
+    }
+  ],
+  "boundary": "Only the extracted source observer expression and observe function ran against explicit in-memory stubs. No course/module import, product, host, server, browser, IndexedDB or native operation."
+}

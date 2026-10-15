@@ -1,0 +1,52 @@
+{
+  "schema": "hamon.tastetable143.pure-observer-design/1",
+  "frozenAtUTC": "2026-10-15T11:15:39.430926+00:00",
+  "author": "memory_consumer",
+  "chronology": "Source-exposed narrowly scoped check after static startup-race finding and root correction; authored without execution. Not a blind product oracle.",
+  "source": {
+    "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/component_course.mjs",
+    "bytes": 18704,
+    "sha256": "3545d503fc3afa9b2f2a2dd8dd1b19d96a9290e42af130a5475327f95a39285f"
+  },
+  "test": {
+    "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/test_component_observer.mjs",
+    "bytes": 5747,
+    "sha256": "9b10dabf068b1736e5e17e8594b31b6d79760d7ea6474d2d644c3dfd7159ced5"
+  },
+  "command": [
+    "PINNED_NODE",
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/test_component_observer.mjs"
+  ],
+  "expectedExit": 0,
+  "expectedStderrBytes": 0,
+  "cases": [
+    {
+      "case": "starting API before controls",
+      "fixture": "API published, document complete, actual status starting, snapshot throws TypeError if called",
+      "expected": "null view; exact actual phase/status retained; zero snapshot calls; one observation"
+    },
+    {
+      "case": "failed API before controls",
+      "fixture": "API published, document complete, actual status failed, snapshot throws TypeError if called",
+      "expected": "immediate explicit Error with exact failed status; null view retained; zero snapshot calls"
+    },
+    {
+      "case": "ready controls",
+      "fixture": "API published, document complete, ready phase, snapshot returns frozen expected view",
+      "expected": "same view object returned/retained; exactly one snapshot call"
+    }
+  ],
+  "bounds": {
+    "vmFragmentTimeoutMs": 100,
+    "cases": 3,
+    "suggestedOuterSeconds": 10
+  },
+  "noExecution": [
+    "No import of component_course or product/host modules",
+    "No runComponentCourse invocation",
+    "No browser, DOM implementation, network, server or IndexedDB",
+    "No fixture generation or native run"
+  ],
+  "sourcePreservation": "Whole controller bytes read before and after the pure checks; exact SHA admitted before fragment extraction.",
+  "rootOwns": "Independent full test review and one bounded invocation, retaining original stdout/stderr/result."
+}

@@ -1,0 +1,31 @@
+--- before
++++ after
+@@ -94,6 +94,14 @@
+         sys_version = ""
+         def log_message(self, *_args):
+             pass
++
++        def send_error(self, code, message=None, explain=None):
++            row = {"method": getattr(self, "command", None),
++                   "path": getattr(self, "path", None), "http_error": code}
++            if len(requests) < 128:
++                requests.append(row)
++            errors.append(row)
++            return super().send_error(code, message, explain)
+ 
+         def do_GET(self):
+             nonlocal response_bytes
+@@ -188,8 +196,11 @@
+                 errors.append({"file": name, "type": type(exc).__name__, "message": str(exc)})
+         if before != after:
+             errors.append("Fixture source changed during serving")
+-        if hashlib.sha256((root / "component-freeze.json").read_bytes()).hexdigest() != args.manifest_sha256:
+-            errors.append("Fixture manifest changed during serving")
++        try:
++            if hashlib.sha256((root / "component-freeze.json").read_bytes()).hexdigest() != args.manifest_sha256:
++                errors.append("Fixture manifest changed during serving")
++        except Exception as exc:
++            errors.append({"file": "component-freeze.json", "type": type(exc).__name__, "message": str(exc)})
+         result = {"schema": "tastetable143.component-server-result/1",
+                   "outcome": "PASS" if not errors and stop_seen else "FAIL",
+                   "pid": os.getpid(), "token": args.token,

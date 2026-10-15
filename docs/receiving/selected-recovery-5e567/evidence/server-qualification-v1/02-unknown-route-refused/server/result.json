@@ -1,0 +1,129 @@
+{
+  "schema": "tastetable143.component-server-result/1",
+  "outcome": "FAIL",
+  "pid": 6,
+  "token": "taste143-local-server-2",
+  "elapsed_seconds": 0.005866110001079505,
+  "stop_seen": false,
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/index.html?unapproved=1",
+      "host": "127.0.0.1:56815",
+      "elapsed_seconds": 0.005028790001233574,
+      "error": {
+        "type": "ValueError",
+        "message": "Unexpected host or route"
+      }
+    }
+  ],
+  "response_bytes": 0,
+  "errors": [
+    {
+      "type": "ValueError",
+      "message": "Unexpected host or route"
+    },
+    "No exact parent stop marker before shutdown"
+  ],
+  "before": {
+    "component-host.mjs": {
+      "bytes": 7511,
+      "sha256": "c7ae39ca46475807a09325cdc17fc2d769ef18741f4458af135e86f4ea41cbee"
+    },
+    "fixtures/external-addition.json": {
+      "bytes": 16319,
+      "sha256": "2b89248cbdd58ae0bce2d9b4c1f4fe6b78cefeb3cbf4930061ba3c54eadb8090"
+    },
+    "fixtures/initial-records.json": {
+      "bytes": 32633,
+      "sha256": "aa29653a619579b13f0662f749fbaab90e89e814e69c01c2fd4c4037e21900ab"
+    },
+    "index.html": {
+      "bytes": 2168,
+      "sha256": "5d589cd0b6bd95931d8d4f03e13f52cb016bc7c3de5429772e714366da1e6420"
+    },
+    "static/saved_week_collection.mjs": {
+      "bytes": 5798,
+      "sha256": "578fdbd327ffb2539bf59432bb70c51d3ea7041459bb009ba5ae50d6fc084a99"
+    },
+    "static/saved_week_collection_ui.mjs": {
+      "bytes": 11315,
+      "sha256": "198cc57031e7a4fbb25cdb8d089278c7bc622c0f8f417396549ca9ad196cef93"
+    },
+    "static/saved_week_store.mjs": {
+      "bytes": 8960,
+      "sha256": "621a1270f4b7771e8b14820cb6b12f35b53af8f45b04ea76da046f111647fa64"
+    },
+    "static/saved_weeks.css": {
+      "bytes": 2458,
+      "sha256": "f147ebcf6343be774e920766720ec031ccfc3e5d2d68a82c3d3cc4f5e9cf0e63"
+    },
+    "static/saved_weeks.mjs": {
+      "bytes": 3327,
+      "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3"
+    },
+    "static/style.css": {
+      "bytes": 5064,
+      "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96"
+    },
+    "static/week_file.mjs": {
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+    },
+    "static/week_plan.mjs": {
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+    }
+  },
+  "after": {
+    "component-host.mjs": {
+      "bytes": 7511,
+      "sha256": "c7ae39ca46475807a09325cdc17fc2d769ef18741f4458af135e86f4ea41cbee"
+    },
+    "fixtures/external-addition.json": {
+      "bytes": 16319,
+      "sha256": "2b89248cbdd58ae0bce2d9b4c1f4fe6b78cefeb3cbf4930061ba3c54eadb8090"
+    },
+    "fixtures/initial-records.json": {
+      "bytes": 32633,
+      "sha256": "aa29653a619579b13f0662f749fbaab90e89e814e69c01c2fd4c4037e21900ab"
+    },
+    "index.html": {
+      "bytes": 2168,
+      "sha256": "5d589cd0b6bd95931d8d4f03e13f52cb016bc7c3de5429772e714366da1e6420"
+    },
+    "static/saved_week_collection.mjs": {
+      "bytes": 5798,
+      "sha256": "578fdbd327ffb2539bf59432bb70c51d3ea7041459bb009ba5ae50d6fc084a99"
+    },
+    "static/saved_week_collection_ui.mjs": {
+      "bytes": 11315,
+      "sha256": "198cc57031e7a4fbb25cdb8d089278c7bc622c0f8f417396549ca9ad196cef93"
+    },
+    "static/saved_week_store.mjs": {
+      "bytes": 8960,
+      "sha256": "621a1270f4b7771e8b14820cb6b12f35b53af8f45b04ea76da046f111647fa64"
+    },
+    "static/saved_weeks.css": {
+      "bytes": 2458,
+      "sha256": "f147ebcf6343be774e920766720ec031ccfc3e5d2d68a82c3d3cc4f5e9cf0e63"
+    },
+    "static/saved_weeks.mjs": {
+      "bytes": 3327,
+      "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3"
+    },
+    "static/style.css": {
+      "bytes": 5064,
+      "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96"
+    },
+    "static/week_file.mjs": {
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+    },
+    "static/week_plan.mjs": {
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+    }
+  },
+  "scope": "Server integrity/lifetime only. A successful server does not establish product or visual acceptance."
+}

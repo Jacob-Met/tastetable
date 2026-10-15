@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TasteTable — isolated saved-week recovery fixture</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="./static/style.css">
+<link rel="stylesheet" href="./static/saved_weeks.css">
+</head>
+<body>
+<header><h1>TasteTable saved-week recovery</h1><p class="tag">Isolated component fixture · fictional data</p><p id="fixtureState" role="status" data-state="starting">Preparing isolated browser storage.</p></header>
+<main id="fixtureHost">
+  <section id="savedWeekCollection" class="card saved-week-collection" aria-labelledby="savedWeekCollectionTitle">
+    <h2 id="savedWeekCollectionTitle">Back up or recover saved weeks</h2>
+    <p id="collectionBackupHelp">A collection backup includes every saved week in this browser, regardless of search or ordering. It keeps names, identities, dates and complete portable copies. Store the file privately. Opening a backup only previews it; adding missing records never overwrites existing weeks or changes the active planner or venue notes.</p>
+    <div class="saved-week-collection-controls">
+      <button id="downloadCollectionBackup" type="button" disabled>Back up saved weeks (.json)</button>
+      <label for="collectionBackupFile">Open collection backup
+        <input id="collectionBackupFile" type="file" accept=".json,application/json" aria-describedby="collectionBackupHelp">
+      </label>
+      <button id="cancelCollectionBackup" type="button" disabled>Cancel collection preview</button>
+    </div>
+    <p id="collectionBackupStatus" role="status" aria-live="polite"></p>
+    <section id="collectionBackupPreview" aria-labelledby="collectionBackupPreviewTitle" hidden>
+      <h3 id="collectionBackupPreviewTitle">Review the complete collection before adding</h3>
+      <p id="collectionBackupSummary"></p>
+      <ol id="collectionBackupRecords"></ol>
+      <button id="addMissingSavedWeeks" type="button" disabled>Add missing saved weeks</button>
+    </section>
+  </section>
+</main>
+<script type="module" src="./component-host.mjs"></script>
+</body>
+</html>

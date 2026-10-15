@@ -1,0 +1,11 @@
+--- before
++++ after
+@@ -72,7 +72,7 @@
+     assert.equal(value.location,page);
+     if (value.phase==='failed') throw new Error('Component fixture failed: '+value.status);
+     if (allowStarting && (value.ready!=='complete' || !value.view ||
+-        value.view.fixtureState==='starting')) return value.view;
++        value.view.fixtureState==='starting')) return null;
+     assert.equal(value.ready,'complete');
+     assert.equal(value.schema,'hamon.tastetable143.component-observation/1');
+     assert.equal(value.database,DATABASE);

@@ -1,0 +1,32 @@
+{
+  "schema": "hamon.tastetable143.controller-review/3",
+  "reviewedAtUTC": "2026-10-15T11:18:54.328090+00:00",
+  "outcome": "ACCEPT_STATIC_COMPONENT_MODULE",
+  "priorFullReview": {
+    "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/memory-controller-review-v2.json",
+    "bytes": 6095,
+    "sha256": "d6cb44f06c01fbdfbcbfe2295bd2101f67f7eea0d3c2148f66ea51bd4d674d0e"
+  },
+  "source": {
+    "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/component_course.mjs",
+    "bytes": 18698,
+    "sha256": "872a84c3fcc584f50e2961e80a7683e4cb738ea5cd63bbe49326c90b8350de8a"
+  },
+  "before": {
+    "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/component-course-preparation-v2/component_course.before.mjs",
+    "bytes": 18704,
+    "sha256": "3545d503fc3afa9b2f2a2dd8dd1b19d96a9290e42af130a5475327f95a39285f"
+  },
+  "diff": {
+    "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/component-course-preparation-v2/controller.diff",
+    "bytes": 536,
+    "sha256": "89abe3dc9ed76b8955d0b704466c74f1a86a09e5fa4bcfed853dabe8ce338ba4"
+  },
+  "change": "Exactly one allowStarting return value.view became return null. Raw observation is retained before the branch, ready-phase full view remains available as evidence, but incomplete document readiness cannot satisfy waitFor through that view. All other controller bytes are exact.",
+  "testFreeze": {
+    "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/memory-observer-test-freeze-v2.json",
+    "bytes": 3847,
+    "sha256": "e9fcd08dbee1acd6c8d5c58ccd9723ade1485a8d5d0857c4d0c7ac49f8b046cc"
+  },
+  "execution": "No test, module/course, product, host, server, browser or native invocation by reviewer. Root owns next bounded pure check; native release remains separate."
+}

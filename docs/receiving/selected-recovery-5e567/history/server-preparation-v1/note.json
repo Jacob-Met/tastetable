@@ -1,0 +1,4 @@
+{
+  "utc": "2026-10-15T10:33:24.925686+00:00",
+  "reason": "Root pre-execution review: preserve default HTTP parser/unknown-method errors in the failure receipt, and retain final receipt if the final manifest reread fails. Two source replacements only; no component/source/server execution."
+}

@@ -1,0 +1,93 @@
+{
+  "schema": "tastetable143.local-server-course-intent/1",
+  "utc": "2026-10-15T10:48:26.890255+00:00",
+  "runtime": {
+    "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "bytes": 30894944,
+    "sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7"
+  },
+  "subjects": {
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/serve_component.py": {
+      "bytes": 10474,
+      "sha256": "bd1b6a8a834144531337be32eb8ea14d7d8c729db6b70390d3bae70d157829c5"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/component-freeze.json": {
+      "bytes": 2298,
+      "sha256": "13d4ce90a5a4dc13bd1ca441afb18baae15e19a5436fa49f8fbfbba464d2d06a"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/server-qualification-design.json": {
+      "bytes": 1758,
+      "sha256": "c3cf9f3e322b7e8eeaa5f75b0e00f6035372210bb55369c881fb9abab5fadbfa"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/qualify_component_server.py": {
+      "bytes": 10834,
+      "sha256": "cdd1df585086a0cf0e63333b9fadb303fe20906a3cfdba3e71d71af69d20db29"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/component-host.mjs": {
+      "bytes": 7511,
+      "sha256": "c7ae39ca46475807a09325cdc17fc2d769ef18741f4458af135e86f4ea41cbee"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/fixtures/external-addition.json": {
+      "bytes": 16319,
+      "sha256": "2b89248cbdd58ae0bce2d9b4c1f4fe6b78cefeb3cbf4930061ba3c54eadb8090"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/fixtures/initial-records.json": {
+      "bytes": 32633,
+      "sha256": "aa29653a619579b13f0662f749fbaab90e89e814e69c01c2fd4c4037e21900ab"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/index.html": {
+      "bytes": 2168,
+      "sha256": "5d589cd0b6bd95931d8d4f03e13f52cb016bc7c3de5429772e714366da1e6420"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/saved_week_collection.mjs": {
+      "bytes": 5798,
+      "sha256": "578fdbd327ffb2539bf59432bb70c51d3ea7041459bb009ba5ae50d6fc084a99"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/saved_week_collection_ui.mjs": {
+      "bytes": 11315,
+      "sha256": "198cc57031e7a4fbb25cdb8d089278c7bc622c0f8f417396549ca9ad196cef93"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/saved_week_store.mjs": {
+      "bytes": 8960,
+      "sha256": "621a1270f4b7771e8b14820cb6b12f35b53af8f45b04ea76da046f111647fa64"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/saved_weeks.css": {
+      "bytes": 2458,
+      "sha256": "f147ebcf6343be774e920766720ec031ccfc3e5d2d68a82c3d3cc4f5e9cf0e63"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/saved_weeks.mjs": {
+      "bytes": 3327,
+      "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/style.css": {
+      "bytes": 5064,
+      "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/week_file.mjs": {
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/week_plan.mjs": {
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+    }
+  },
+  "cases": [
+    {
+      "name": "exact-assets-and-parent-stop",
+      "input": "GET each of twelve exact manifest routes plus root index alias, then exact owned parent stop marker",
+      "expected": "HTTP200 and complete original asset bytes for every route; no server errors, stop_seen=true, terminal0 PASS and all files unchanged"
+    },
+    {
+      "name": "unknown-route-refused",
+      "input": "One GET /index.html?unapproved=1 at owned current endpoint",
+      "expected": "Connection closed without an asset, one route error retained, stop_seen=false and terminal1 FAIL; no asset body supplied"
+    },
+    {
+      "name": "partial-header-deadline-recorded",
+      "input": "One owned connection writes GET / HTTP/1.1 plus Host header without final blank line, then awaits socket timeout",
+      "expected": "HTTP handler timeout retained, stop_seen=false and terminal1 FAIL; no asset body supplied"
+    }
+  ],
+  "scope": "Actual owned local HTTP server only; no browser, native Windows, IndexedDB or JavaScript execution."
+}

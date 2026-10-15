@@ -1,0 +1,66 @@
+{
+  "schema": "tastetable143.peer-component-observation-fit/1",
+  "utc": "2026-10-15T10:42:09.506982+00:00",
+  "verdict": "ACCEPT_STATIC_COMPONENT_OBSERVATION_FIT_PENDING_NATIVE_RECEIVER",
+  "check_count": 30,
+  "checks": [
+    "closed twelve payloads plus freeze",
+    "exact frozen body component-host.mjs",
+    "exact frozen body fixtures/external-addition.json",
+    "exact frozen body fixtures/initial-records.json",
+    "exact frozen body index.html",
+    "exact frozen body static/saved_week_collection.mjs",
+    "exact frozen body static/saved_week_collection_ui.mjs",
+    "exact frozen body static/saved_week_store.mjs",
+    "exact frozen body static/saved_weeks.css",
+    "exact frozen body static/saved_weeks.mjs",
+    "exact frozen body static/style.css",
+    "exact frozen body static/week_file.mjs",
+    "exact frozen body static/week_plan.mjs",
+    "exact qualified source static/saved_week_collection.mjs",
+    "exact qualified source static/saved_week_collection_ui.mjs",
+    "exact qualified source static/saved_week_store.mjs",
+    "exact qualified source static/saved_weeks.css",
+    "exact qualified source static/saved_weeks.mjs",
+    "exact qualified source static/week_file.mjs",
+    "exact qualified source static/week_plan.mjs",
+    "exact complete original collection section including nested section",
+    "independently admitted original fixture initial-records.json",
+    "independently admitted original fixture mixed-backup.json",
+    "independently admitted original fixture stale-backup.json",
+    "independently admitted original fixture replacement-identical-backup.json",
+    "independently admitted original fixture external-addition.json",
+    "independently admitted original fixture expected-after-selected.json",
+    "independently admitted original fixture expected-after-stale-refusal.json",
+    "exact host setup fixture initial-records.json",
+    "exact host setup fixture external-addition.json"
+  ],
+  "host": {
+    "bytes": 7511,
+    "sha256": "c7ae39ca46475807a09325cdc17fc2d769ef18741f4458af135e86f4ea41cbee"
+  },
+  "freeze": {
+    "bytes": 2298,
+    "sha256": "13d4ce90a5a4dc13bd1ca441afb18baae15e19a5436fa49f8fbfbba464d2d06a"
+  },
+  "full_read": "Independent native expectations, complete host and HTML, fixture admission and pre-execution freeze, author complementary host review. No server, host or product invocation.",
+  "observability": [
+    "Actual preview rows, native labels, checked/disabled/focus boxes and selection/status counts are read without setters or direct-click substitutes.",
+    "Measured restore calls preserve complete submitted records and expected token before unchanged store delegation. Check D,C backup submission order separately from the store-sorted final record list.",
+    "Idle fresh native storage observations support all-seven-field comparison by ID against original expected files, including exact C BOM/CRLF.",
+    "The once-only second-connection E writer is explicit stale-state setup; receiver must await its commit after actual F preview/selection.",
+    "Immutable host sentinels and refresh count concern this controlled component only, not full planner/search/rename functionality."
+  ],
+  "receiver_obligations": [
+    "Wait for actual ready/error and pendingActions; snapshotDOM requires constructed controls, so it cannot alone diagnose earlier startup failure.",
+    "Bind exact modules/fixtures, absent fixed owned database and owned server/browser/endpoint with finite deadlines before execution.",
+    "Use real file selection and bounded Tab/Shift+Tab/Space; retain observed focus/checked states and original ordinary/narrow pixels.",
+    "Observe cancellation/replacement and stale-token refusal separately from successful subset addition."
+  ],
+  "source_binding_limit": "Seven imported module/style files independently joined to qualified candidate; style.css joined to component freeze only in this review. Memory source review binds its retained original. No new remote query.",
+  "execution_limit": "Static fit only. No browser, real IndexedDB, server course, source test, fixture regeneration or pixel inspection.",
+  "preparation_note": {
+    "bytes": 480,
+    "sha256": "a9a566bea54b238b4e6a644011249dd10abfa555da84f63a4c400bf005254ee1"
+  }
+}

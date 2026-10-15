@@ -1,0 +1,27 @@
+{
+  "utc": "2026-10-15T11:20:55.738979+00:00",
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/test_component_observer.mjs"
+  ],
+  "budget_seconds": 10,
+  "before": {
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node": {
+      "bytes": 125989464,
+      "sha256": "bc17c508ffeed0ec622934f9b7fa72f8e78da65350e63c3eceb56fa688aa5e12"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/test_component_observer.mjs": {
+      "bytes": 6271,
+      "sha256": "2139d31e76cc0ec31941c9026e84b33c3f30ca7855d8c28da2d0605358e77abf"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component_course.mjs": {
+      "bytes": 18698,
+      "sha256": "872a84c3fcc584f50e2961e80a7683e4cb738ea5cd63bbe49326c90b8350de8a"
+    },
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/memory-observer-test-freeze-v2.json": {
+      "bytes": 3847,
+      "sha256": "e9fcd08dbee1acd6c8d5c58ccd9723ade1485a8d5d0857c4d0c7ac49f8b046cc"
+    }
+  },
+  "scope": "Root fully read peer pure observer test and revised delta; extracted observer-only VM cases, no product/module/host/browser/native invocation. Earlier exec creation rejected before process or run-directory creation."
+}

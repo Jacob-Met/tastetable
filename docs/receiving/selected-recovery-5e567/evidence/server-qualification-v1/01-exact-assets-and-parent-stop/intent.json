@@ -1,0 +1,18 @@
+{
+  "name": "exact-assets-and-parent-stop",
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "-s",
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/serve_component.py",
+    "--root",
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture",
+    "--manifest-sha256",
+    "13d4ce90a5a4dc13bd1ca441afb18baae15e19a5436fa49f8fbfbba464d2d06a",
+    "--run-dir",
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/server-qualification-v1/01-exact-assets-and-parent-stop/server",
+    "--token",
+    "taste143-local-server-1"
+  ],
+  "outcome": "FAIL"
+}

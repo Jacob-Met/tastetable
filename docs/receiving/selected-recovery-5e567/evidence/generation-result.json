@@ -1,0 +1,18 @@
+{
+  "utc": "2026-10-15T10:01:33.863159+00:00",
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "/dev/shm/hamon-root-taste143-native-contract-5e567/generate_original_fixtures.mjs"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 0.0836207469983492,
+  "stdout": {
+    "bytes": 2397,
+    "sha256": "1ac84b64061553a79c14017d15c64445a0e95218cbb982cafd96075516c2da0b"
+  },
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "scope": "One original-helper fixture construction/admission; no candidate/UI/store/browser call"
+}

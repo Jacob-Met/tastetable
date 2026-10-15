@@ -1,0 +1,91 @@
+{
+  "schema": "hamon.tastetable143.controller-review/2",
+  "reviewedAtUTC": "2026-10-15T11:14:04.067697+00:00",
+  "reviewer": "memory_consumer",
+  "outcome": "ACCEPT_STATIC_COMPONENT_MODULE",
+  "execution": "No controller, product, browser, server or test invocation. Python only read and joined source bytes and retained diff. Pure observer qualification remains separately proposed.",
+  "subjects": [
+    {
+      "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/component-course-preparation-v1/component_course.before.mjs",
+      "bytes": 17226,
+      "sha256": "88c570136fd23c1fbc95703f42f432a210a4511a4d846a55b2d3aaf16aea3545"
+    },
+    {
+      "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/component_course.mjs",
+      "bytes": 18704,
+      "sha256": "3545d503fc3afa9b2f2a2dd8dd1b19d96a9290e42af130a5475327f95a39285f"
+    },
+    {
+      "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/component-course-preparation-v1/controller.diff",
+      "bytes": 5883,
+      "sha256": "f672f5c9a61f3c3ed065ae62d752d0728578f49ad336af17240dec29c335312e"
+    },
+    {
+      "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/component-course-preparation-v1/note.json",
+      "bytes": 592,
+      "sha256": "1e51b42d3d0aaf927ba1bc48d68ea7fe6192e4fda7d5d80259f773f34650237f"
+    },
+    {
+      "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/component-host.mjs",
+      "bytes": 7511,
+      "sha256": "c7ae39ca46475807a09325cdc17fc2d769ef18741f4458af135e86f4ea41cbee"
+    },
+    {
+      "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/saved_week_collection_ui.mjs",
+      "bytes": 11315,
+      "sha256": "198cc57031e7a4fbb25cdb8d089278c7bc622c0f8f417396549ca9ad196cef93"
+    },
+    {
+      "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/saved_week_collection.mjs",
+      "bytes": 5798,
+      "sha256": "578fdbd327ffb2539bf59432bb70c51d3ea7041459bb009ba5ae50d6fc084a99"
+    },
+    {
+      "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/saved_week_store.mjs",
+      "bytes": 8960,
+      "sha256": "621a1270f4b7771e8b14820cb6b12f35b53af8f45b04ea76da046f111647fa64"
+    },
+    {
+      "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/component-fixture/static/saved_weeks.mjs",
+      "bytes": 3327,
+      "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3"
+    },
+    {
+      "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/NATIVE-EXPECTATIONS.md",
+      "bytes": 4443,
+      "sha256": "737c219f40b04a05318eaeb133438624b5b0a0b64788ebe97105abab05cb7ec4"
+    },
+    {
+      "path": "/dev/shm/hamon-root-taste143-native-contract-5e567/memory-native-observation-design.md",
+      "bytes": 10433,
+      "sha256": "30c36252eee1bdc59812de3df6389aea2a4fbc7483116a7e73536a9f6c422985"
+    }
+  ],
+  "preExecutionFinding": {
+    "oldDisposition": "HOLD_STARTUP_OBSERVER",
+    "cause": "The host publishes its observation API before awaiting native inventory and fixture fetches; selection controls exist only after createSavedWeekCollectionUI. The original observer called snapshotDOM as soon as the API existed, so an early ordinary poll could dereference absent controls before allowStarting ran. This was a static finding, not an observed browser failure.",
+    "successor": "Actual phase/status are read without snapshotDOM. Only ready invokes the full snapshot; failed throws immediately with original status; starting is retained and waited. Product and host bytes are unchanged."
+  },
+  "fullReadJoins": [
+    "Seven fixed fixture byte/SHA literals and original D,A,B,C order match independent receiving inputs.",
+    "Four declared CDP file-input admissions are accurately distinguished from an operating-system chooser.",
+    "Complete mixed rows, native associated labels, summary/date/week and success/refusal/cancel/replacement text match the qualified UI.",
+    "Observed Tab/ShiftTab and native Space target current enabled checkboxes/buttons; no evaluated DOM mutation, handler call or product import occurs.",
+    "C then D selection submits exact D,C incoming order and the full A/B token. Storage comparisons are independently order-insensitive by ID and require exact seven-field values.",
+    "Exact C BOM/CRLF and all names/dates/text survive full string/field equality checks.",
+    "E setup is awaited once while the F preview and original four-record count stay retained; subsequent F submission uses the original A/B/C/D token and must refuse.",
+    "Final native storage remains exact A/B/C/D/E with F absent, two restores and two refreshes.",
+    "Cancellation/replacement clear selection and disable selected action; all-record conflict action remains disabled.",
+    "Both original captures are taken before submission, at declared dimensions with identical selection, idle/zero restores/one refresh and exact A/B storage.",
+    "Final thirteen event kinds and the exact successful commit result are checked.",
+    "PNG signatures, dimensions, byte limits and exclusive original writes are bounded; actual pixels still require later review.",
+    "Fixture preservation rereads all originals; read errors now mark course FAIL before throwing.",
+    "Full before/after source and exact nine-change diff are retained; all changes concern observation correctness or existing intended assertions."
+  ],
+  "preparationNote": "An initial reviewer receipt-generation pin assertion caught the concurrently updated root source before any receipt/beforeimage write. The next read joined the retained original and exact successor; no product/test was executed and no original evidence was overwritten.",
+  "parentObligations": [
+    "Admit one exact page/session, new isolated profile/database and owned loopback server/endpoint.",
+    "Own cumulative deadline, process/job lifecycle, key transport error cleanup and receipt persistence.",
+    "Do not label component-module acceptance as actual browser, native IndexedDB, pixel readability or full-app acceptance."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "hamon.taste143.node-version-provenance/1",
+  "utc": "2026-10-15T11:01:01.165451+00:00",
+  "binary": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+  "before": {
+    "bytes": 125989464,
+    "sha256": "bc17c508ffeed0ec622934f9b7fa72f8e78da65350e63c3eceb56fa688aa5e12"
+  },
+  "after": {
+    "bytes": 125989464,
+    "sha256": "bc17c508ffeed0ec622934f9b7fa72f8e78da65350e63c3eceb56fa688aa5e12"
+  },
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--version"
+  ],
+  "returncode": 0,
+  "stdout": "v24.19.0\n",
+  "stderr": "",
+  "scope": "Current metadata-only version observation joined by exact binary identity to the original source qualification intent. Does not claim the version output was observed during the original course; no product test was rerun."
+}
