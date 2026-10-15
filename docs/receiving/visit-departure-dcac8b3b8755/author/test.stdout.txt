@@ -1,0 +1,31 @@
+✔ no session or an explicitly opened record has no departure listener (0.658208ms)
+✔ an accepted outcome change requests confirmation and exact reversion clears it (0.792166ms)
+✔ an accepted date change requests confirmation and exact reversion clears it (0.350542ms)
+✔ an accepted note change requests confirmation and exact reversion clears it (0.630625ms)
+✔ all changed occurrences must revert, including a duplicate omitted suggestion (0.419959ms)
+✔ an invalid draft protects the tab even when the admitted record is unchanged (0.082792ms)
+✔ correcting an invalid draft does not clear other accepted edits (0.157583ms)
+✔ literal imported CR and CRLF notes are not normalized by unrelated edits (0.277ms)
+✔ repeated refreshes install only one listener and explicit replacement removes it (0.170875ms)
+✔ exporting and reading a copy does not mark the current edited session saved (0.343916ms)
+✔ native codec accepts the original fixture before the new module consumes it (1.488292ms)
+✔ each occurrence starts unrecorded, including omitted and repeated identities (1.007291ms)
+✔ projection retains the complete original pick, saved assignments and exact dates (0.493958ms)
+✔ date and note do not infer attendance; outside-week dates are explicit (0.555625ms)
+✔ literal CR/LF, whitespace and astral Unicode survive unrelated updates and export (0.560125ms)
+✔ Gregorian dates admit year endpoints and leap-century rules (2.396833ms)
+✔ notes and source names count code points and preserve admitted whitespace (1.4085ms)
+✔ valid reordered visits are restored to original occurrence order (0.34175ms)
+✔ all operations validate full records without mutating a refused input (1.5765ms)
+✔ invalid patches and unsupported outcomes refuse atomically (0.693792ms)
+✔ record envelope uses an exact field set and canonical finite save time (0.871459ms)
+✔ zero and 100 original picks are supported; 101 is refused without changing source (2.861667ms)
+✔ source and file UTF-8 budgets are enforced before parsing (1.588375ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 87.991334

@@ -1,0 +1,70 @@
+{
+  "schema": "tastetable-visit-departure-acceptance/1",
+  "frozen_before_candidate": true,
+  "source": {
+    "commit": "b93fdbbb314cdb0b10b802213741538fbbee1fcc",
+    "tree": "7aab0dec93da6a4d697cbedab1ccf7ad4b9bae76",
+    "closure": [
+      {
+        "path": "static/visit-record.html",
+        "git": "22b5069faebfffd979aad3a089c656e585007f61"
+      },
+      {
+        "path": "static/visit_record.css",
+        "git": "cf2ed8fc0871196a55ceef4e0aa0cab09d1fcfeb"
+      },
+      {
+        "path": "static/visit_record_ui.mjs",
+        "git": "b136fa1a9f688d8a27db7d96668ace0895e547ee"
+      },
+      {
+        "path": "static/visit_record.mjs",
+        "git": "2b5b37e3d4a227e00a5b0052a962d13512b53e48"
+      },
+      {
+        "path": "static/week_file.mjs",
+        "git": "420ddb8f63fca264dcf97be7147801105696155d"
+      },
+      {
+        "path": "static/week_plan.mjs",
+        "git": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+      }
+    ]
+  },
+  "fixture": {
+    "path": "tests/fixtures/visit-record-csv.json",
+    "git": "69d1c226ab9b7ed25a08f9372a0534d2be00d27f",
+    "expected_records": 3,
+    "preserved_notes": {
+      "pick1": "  A\rB\r\nC\n🙂\t "
+    },
+    "source_text_verbatim": true
+  },
+  "intended_cases": [
+    "empty clean navigation",
+    "explicit Use clean reload",
+    "accepted outcome dirty refresh Stay/Leave",
+    "accepted date dirty navigation Stay/Leave",
+    "accepted note dirty close Stay/Leave",
+    "all fields changed then exact full reversion",
+    "invalid date draft protection without model replacement",
+    "invalid note draft protection without model replacement",
+    "valid preview retains displayed record and protection",
+    "cancelled preview retains displayed record and protection",
+    "refused file retains displayed record and protection",
+    "pending file read retains displayed record and protection",
+    "explicit Use establishes replacement clean baseline",
+    "real JSON download preserves source text and untouched literal note without clearing protection",
+    "Print button requests native print without clearing protection"
+  ],
+  "original_expected": "No beforeunload confirmation on dirty refresh/navigation/close; accepted edits and invalid drafts can be discarded. Other existing controls must retain behavior.",
+  "candidate_expected": "Exactly one beforeunload confirmation per actual dirty departure attempt after user interaction; dismiss keeps page/values, accept leaves. Clean/exact-reverted/replaced states have no confirmation.",
+  "limits": [
+    "six-file original runtime projection, not whole repository receiving",
+    "fresh isolated loopback Chrome context; no provider/backend/remote request",
+    "browser confirmation depends on browser policy and interaction; no crash/mobile-close recovery claim",
+    "Print button request and resulting browser observations only, no physical print claim",
+    "managed browser disconnection observed separately from unmeasured OS browser exit",
+    "no automatic local/session storage or uploads; audit through browser request/storage observations"
+  ]
+}

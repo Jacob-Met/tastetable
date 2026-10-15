@@ -24,6 +24,7 @@
     <input id="weekFile" type="file" accept=".json,application/json" hidden aria-label="Choose a saved TasteTable week">
     <input id="recordFile" type="file" accept=".json,application/json" hidden aria-label="Choose a TasteTable visit record">
     <p class="muted">Files are read in this tab. Nothing is uploaded or stored automatically. Download a copy before leaving; it can include your notes and the original saved week. Do not include private health information.</p>
+    <p class="muted">After an edit, this page asks the browser to confirm before you leave. Returning every field to the opened values or choosing Use this file clears that request. Downloads do not clear it. Browsers may suppress the warning; keep your saved JSON copy.</p>
     <p id="fileStatus" role="status" aria-live="polite"></p>
     <p id="fileError" class="error" role="alert"></p>
     <button id="cancelOpen" type="button" class="secondary" hidden>Cancel opening</button>
