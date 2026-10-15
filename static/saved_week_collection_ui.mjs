@@ -1,6 +1,41 @@
 import { draftSummary, MAX_DRAFTS } from "./saved_weeks.mjs";
 import { MAX_COLLECTION_BYTES, makeCollectionBackup, readCollectionBackup, planCollectionRestore } from "./saved_week_collection.mjs";
 
+function conflictDetails({ existing, incoming }) {
+  const details = document.createElement("details");
+  details.open = false;
+  const summary = document.createElement("summary");
+  summary.textContent = "Why this ID conflicts";
+  const fields = document.createElement("ul");
+  for (const [key, label] of [["name", "Saved name"], ["createdAt", "Created date"],
+    ["updatedAt", "Updated date"], ["text", "Stored week text"]]) {
+    if (existing[key] === incoming[key]) continue;
+    const field = document.createElement("li");
+    const heading = document.createElement("p");
+    heading.textContent = label;
+    field.append(heading);
+    if (key === "text") {
+      const explanation = document.createElement("p");
+      explanation.textContent = "The stored week text differs. Formatting alone can cause this; this does not compare planned visits.";
+      field.append(explanation);
+    } else {
+      const values = document.createElement("dl");
+      for (const [side, literal] of [["Currently saved in this browser", existing[key]], ["In this backup", incoming[key]]]) {
+        const term = document.createElement("dt");
+        term.textContent = side;
+        const value = document.createElement("dd");
+        value.textContent = literal;
+        value.style = "white-space: pre-wrap; overflow-wrap: anywhere;";
+        values.append(term, value);
+      }
+      field.append(values);
+    }
+    fields.append(field);
+  }
+  details.append(summary, fields);
+  return details;
+}
+
 /** Collection-only controls. The existing host owns all planner and copy actions. */
 export function createSavedWeekCollectionUI({ root, store, state, run, refresh }) {
   const $ = (selector) => root.querySelector(selector);
@@ -55,15 +90,17 @@ export function createSavedWeekCollectionUI({ root, store, state, run, refresh }
   function show(backup, plan) {
     const list = $("#collectionBackupRecords");
     const missing = new Set(plan.missing.map((record) => record.id));
-    const conflicts = new Map(plan.conflicts.map((pair) => [pair.incoming.id, pair.existing]));
+    const conflicts = new Map(plan.conflicts.map((pair) => [pair.incoming.id, pair]));
     list.replaceChildren();
     for (const record of backup.records) {
       const item = document.createElement("li");
       const summary = draftSummary(record);
-      const existing = conflicts.get(record.id);
+      const conflict = conflicts.get(record.id);
+      const existing = conflict?.existing;
       const disposition = existing ? "Conflicting" : missing.has(record.id) ? "Missing" : "Already identical";
       item.textContent = `${record.name} · ID ${record.id} · created ${record.createdAt} · updated ${record.updatedAt} · week of ${summary.weekStart} · ${disposition}`;
       if (existing) item.textContent += ` · Existing: ${existing.name}, updated ${existing.updatedAt}.`;
+      if (conflict) item.append(conflictDetails(conflict));
       list.append(item);
     }
     $("#collectionBackupSummary").textContent = `${plan.missing.length} missing · ${plan.identical.length} already identical · ${plan.conflicts.length} conflicting. ${plan.expected.length} currently saved; ${plan.totalAfter} after adding missing records. Backup created ${backup.savedAt}.`;
