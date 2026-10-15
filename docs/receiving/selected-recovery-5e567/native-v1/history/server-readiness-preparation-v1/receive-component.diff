@@ -1,0 +1,258 @@
+--- view288-v3/receive_browser.py
++++ taste143/receive_component.py
+@@ -1,17 +1,27 @@
+-"""One isolated Edge tree and one fixed Node CDP child; no existing session control."""
++"""One fixed asset server, isolated Edge tree and Node component client; owned lifetimes only."""
+ from pathlib import Path
+ import ctypes as C
+ from ctypes import wintypes as W
+ import json,os,stat,subprocess,sys,time,traceback
+-from browser_support import ROOT,EDGE,NODE,PYTHON,INPUT,PROFILE,WORKING,sha,write_json,state,admit
++from component_support import ROOT,EDGE,NODE,PYTHON,PROFILE,WORKING,sha,write_json,file_state,state,admit
+ from job_support import api,ExtendedLimits,checked,job_pids,observe,resume_owned_primary,utc
+ from native_process_diagnostics import configure,retained_identity,PROCESSENTRY32W
+ from process_diagnostics import wait_retained_handles
+-from browser_endpoint import bind_endpoint
++from browser_endpoint import bind_endpoint,listener_rows
++from component_endpoint import bind_server
+ 
+ COURSE_SECONDS=180
+ STARTUP_SECONDS=30
+ CLEANUP_SECONDS=20
++SERVER_STARTUP_SECONDS=15
++SERVER_RUN=ROOT/'server'
++SERVER_TOKEN='hamon-taste143-component-v1-5e567'
++SERVER_MANIFEST_SHA='13d4ce90a5a4dc13bd1ca441afb18baae15e19a5436fa49f8fbfbba464d2d06a'
++NODE_RECEIPT_LIMIT=32*1024*1024
++STREAM_LIMITS={'node.stdout.bin':32*1024*1024,'node.stderr.bin':1024*1024,
++               'browser.stdout.bin':1024*1024,'browser.stderr.bin':1024*1024,
++               'server.stdout.bin':1024*1024,'server.stderr.bin':1024*1024}
++
+ 
+ def ordinary_directory(path):
+     s=path.lstat()
+@@ -57,18 +67,20 @@
+         raise ValueError('Exact Python 3.12.2 controller required')
+     if sys.argv[1:]!=['--execute-after-review']:raise ValueError('Reviewed fixed course only')
+     admit();before=state()
+-    for p in (PROFILE,WORKING):
++    for p in (PROFILE,WORKING,SERVER_RUN):
+         if os.path.lexists(p):raise FileExistsError('Owned new path already exists: '+str(p))
+     PROFILE.mkdir();WORKING.mkdir()
+     ordinary_directory(PROFILE);ordinary_directory(WORKING)
+-    rec={'schema':'hamon.view288.browser-lifetime/3','outcome':'FAIL','started_utc':utc(),
++    rec={'schema':'hamon.tastetable143.browser-lifetime/1','outcome':'FAIL','started_utc':utc(),
+          'controller_pid':os.getpid(),'controller_executable':sys.executable,
+          'before':before,'checks':[],'errors':[],'groups':{},'endpoint':None,
+-         'browser_launches':0,'node_launches':0,'forced_cleanup':False,'startup_trace':[],
++         'server_launches':0,'browser_launches':0,'node_launches':0,'forced_cleanup':False,'startup_trace':[],
++         'server_endpoint':None,'server_startup_seconds':SERVER_STARTUP_SECONDS,
++         'node_receipt_limit':NODE_RECEIPT_LIMIT,'stream_limits':STREAM_LIMITS,
+          'whole_seconds':COURSE_SECONDS,'startup_seconds':STARTUP_SECONDS,
+          'cleanup_seconds':CLEANUP_SECONDS}
+     started=time.monotonic();deadline=started+COURSE_SECONDS
+-    k=None;groups=[];streams=[]
++    k=None;groups=[];streams=[];server=None
+     events=(ROOT/'lifetime-events.ndjson').open('xb',buffering=0)
+     def event(kind,value):
+         raw=(json.dumps({'utc':utc(),'elapsed':time.monotonic()-started,'kind':kind,'value':value},ensure_ascii=True)+'\n').encode()
+@@ -128,6 +140,23 @@
+         group['record']['direct_before_resume']=identity
+         group['record']['primary_thread']=resume_owned_primary(k,child.pid,handle,job)
+         return group
++    def check_stream_caps():
++        for name,bound in STREAM_LIMITS.items():
++            path=ROOT/name
++            if path.exists() and path.stat().st_size>bound:
++                raise ValueError('Sampled fixed child stream bound: '+name)
++        transcript=ROOT/'cdp-transcript.ndjson'
++        if transcript.exists() and transcript.stat().st_size>64*1024*1024:
++            raise ValueError('Sampled component transcript bound')
++    def server_binding():
++        if server is None or server['child'].poll() is not None:
++            raise ValueError('Owned fixed asset server exited before normal parent stop')
++        observe_group(server)
++        if server['record']['unknown_snapshots']:
++            raise ValueError('Unattributed owned server process observation')
++        return bind_server(k,server['job'],server['retained'],server['child'].pid,
++                           SERVER_RUN/'ready.json',PYTHON,SERVER_TOKEN,SERVER_MANIFEST_SHA,
++                           expected_routes,file_state)
+     def close_handle(h):
+         checked(k.CloseHandle(h),'Close retained owned process handle')
+     def exit_code(h):
+@@ -138,9 +167,34 @@
+         k=api();configure(k)
+         rec['existing_edge_before']=existing_edge(k)
+         excluded={(x['pid'],x['created_filetime']) for x in rec['existing_edge_before'] if x['retained_identity']}
++        manifest_raw=(ROOT/'component-fixture/component-freeze.json').read_bytes()
++        if sha(manifest_raw)!=SERVER_MANIFEST_SHA:raise ValueError('Fixed server manifest differs')
++        fixture_manifest=json.loads(manifest_raw);asset_pins=fixture_manifest['files']
++        expected_routes=sorted(['/']+['/'+name for name in asset_pins])
++        server_argv=[str(PYTHON),'-B','-s',str(ROOT/'serve_component.py'),
++                     '--root',str(ROOT/'component-fixture'),'--manifest-sha256',SERVER_MANIFEST_SHA,
++                     '--run-dir',str(SERVER_RUN),'--token',SERVER_TOKEN]
++        server=create_group('server',server_argv,PYTHON)
++        server_stop=min(deadline,time.monotonic()+SERVER_STARTUP_SECONDS)
++        while True:
++            remaining();check_stream_caps()
++            if time.monotonic()>=server_stop:raise TimeoutError('Fixed asset server startup deadline')
++            observe_group(server)
++            if server['record']['unknown_snapshots']:
++                raise ValueError('Unattributed owned server process observation')
++            if server['child'].poll() is not None:
++                raise RuntimeError('Fixed asset server exited before ready')
++            if (SERVER_RUN/'ready.json').exists():
++                ordinary_directory(SERVER_RUN)
++                rec['server_endpoint']=server_binding()
++                remaining()
++                if time.monotonic()>=server_stop:raise TimeoutError('Fixed asset server startup deadline')
++                break
++            time.sleep(min(.1,max(0,server_stop-time.monotonic())))
++        event('admitted_server_endpoint',rec['server_endpoint'])
+         edge_argv=[str(EDGE),'--headless=new','--remote-debugging-address=127.0.0.1',
+                    '--remote-debugging-port=0','--user-data-dir='+str(PROFILE),
+-                   '--window-size=1600,1100','--no-first-run','--no-default-browser-check',
++                   '--window-size=1280,960','--no-first-run','--no-default-browser-check',
+                    '--disable-background-networking','--disable-component-update','--disable-sync',
+                    '--metrics-recording-only','about:blank']
+         browser=create_group('browser',edge_argv,EDGE)
+@@ -150,6 +204,10 @@
+         while True:
+             remaining()
+             if time.monotonic()>=startup_stop:raise TimeoutError('Owned endpoint startup deadline')
++            check_stream_caps()
++            observe_group(server)
++            if server['child'].poll() is not None or server['record']['unknown_snapshots']:
++                raise ValueError('Fixed server lost during owned browser startup')
+             members=observe_group(browser)
+             if browser['record']['unknown_snapshots']:
+                 raise ValueError('Unattributed owned startup process observation')
+@@ -194,26 +252,37 @@
+         admit()
+         if bind_endpoint(k,browser['job'],browser['retained'],PROFILE,EDGE)!=rec['endpoint']:
+             raise ValueError('Endpoint identity changed before client launch')
+-        node_argv=[str(NODE),str(ROOT/'page_course.mjs'),rec['endpoint']['endpoint'],
+-                   str(int(remaining()*1000))]
++        if server_binding()!=rec['server_endpoint']:
++            raise ValueError('Fixed server ready/listener identity changed before client')
++        node_argv=[str(NODE),str(ROOT/'component_client.mjs'),rec['endpoint']['endpoint'],
++                   str(int(remaining()*1000)),rec['server_endpoint']['ready_identity']['sha256']]
+         node=create_group('node',node_argv,NODE)
+         while node['child'].poll() is None:
+             remaining()
+             for group in groups:observe_group(group)
++            check_stream_caps()
++            if server['child'].poll() is not None or server['record']['unknown_snapshots']:
++                raise ValueError('Fixed server lost during component course')
+             time.sleep(.1)
+         for group in groups:observe_group(group)
+         rec['node_returncode']=node['child'].returncode
+         raw=(ROOT/'node-receipt.json').read_bytes()
+-        if len(raw)>2*1024*1024:raise ValueError('Node receipt size bound')
++        check_stream_caps()
++        if len(raw)>NODE_RECEIPT_LIMIT:raise ValueError('Node receipt size bound')
+         result=json.loads(raw)
+         rec['node_receipt']={'bytes':len(raw),'sha256':sha(raw)}
+-        check('Node receipt schema',result['schema']=='hamon.view288.node-course/3')
++        check('Node receipt schema',result['schema']=='hamon.tastetable143.node-course/1')
+         check('Node retained endpoint exact',result['endpoint']==rec['endpoint']['endpoint'])
+         check('Node normal exit and semantic course PASS',node['child'].returncode==0 and result['outcome']=='PASS')
+-        check('Node observed terminal socket and exact fixed course',
+-              result['socket_terminal_observed'] is True and len(result['actions'])==3 and
+-              len(result['captures'])==2 and len(result['observations'])==4 and
+-              result['input_unchanged'] is True)
++        component=result['component']
++        check('Node observed terminal socket and exact fixed component course',
++              result['socket_terminal_observed'] is True and component['outcome']=='PASS' and
++              component['page']==rec['server_endpoint']['url'] and
++              len(component['captures'])==2 and len(component['observations'])<=120 and
++              len([x for x in component['actions'] if x['kind']=='real-file-input'])==4 and
++              component['fixturesUnchanged'] is True)
++        check('Fixed server identity retained through component completion',
++              server_binding()==rec['server_endpoint'])
+         check('Browser.close actually requested',result['close'].get('requested_utc') is not None and
+               'result' in result['close'] and 'error' not in result['close'])
+         rec['normal_close_requested']=True
+@@ -231,17 +300,29 @@
+         graceful=bool(rec.get('normal_close_requested'))
+         try:
+             p=ROOT/'node-receipt.json'
+-            if p.exists() and p.stat().st_size<=2*1024*1024:
++            if p.exists() and p.stat().st_size<=NODE_RECEIPT_LIMIT:
+                 value=json.loads(p.read_bytes())
+                 graceful=graceful or (value.get('close',{}).get('requested_utc') is not None
+                                       and 'result' in value.get('close',{}))
+         except BaseException as e:rec['errors'].append({'phase':'cleanup close evidence','error':repr(e)})
+-        if k and graceful:
++        # Stop only this fixed server through its reviewed data marker. A marker
++        # written after an already terminal server would not establish normal stop.
++        if server is not None and server['child'] is not None and server['child'].poll() is None:
++            try:
++                ordinary_directory(SERVER_RUN)
++                stop=SERVER_RUN/'stop.json'
++                if os.path.lexists(stop):raise FileExistsError('Unexpected existing server stop marker')
++                write_json(stop,{'schema':'tastetable143.component-stop/1','token':SERVER_TOKEN})
++                rec['server_stop_requested']={'utc':utc(),'identity':file_state(stop)}
++                safe_event('server_stop_requested',rec['server_stop_requested'])
++            except BaseException as e:rec['errors'].append({'phase':'normal server stop','error':repr(e)})
++        if k and (graceful or rec.get('server_stop_requested')):
+             grace_stop=cleanup_deadline-5
+             try:
+                 while time.monotonic()<grace_stop:
+                     active=[]
+                     for group in groups:
++                        if not graceful and group['name']!='server':continue
+                         if group['assigned']:active.extend(observe_group(group))
+                         if group['child'] is not None and group['child'].poll() is None:
+                             active.append(group['child'].pid)
+@@ -290,15 +371,48 @@
+             try:stream.close()
+             except BaseException as e:rec['errors'].append({'phase':'stream close','error':repr(e)})
+         try:
++            check_stream_caps()
++            result_path=SERVER_RUN/'result.json'
++            if not result_path.exists():raise ValueError('Fixed server terminal receipt absent')
++            server_raw=result_path.read_bytes()
++            if len(server_raw)>1024*1024:raise ValueError('Fixed server terminal receipt bound')
++            result=json.loads(server_raw)
++            rec['server_result']={'identity':file_state(result_path),'value':result}
++            check('Fixed server normal stop and unchanged selected assets',
++                  server is not None and result['schema']=='tastetable143.component-server-result/1' and
++                  result['outcome']=='PASS' and result['pid']==server['child'].pid and
++                  result['token']==SERVER_TOKEN and result['stop_seen'] is True and
++                  rec.get('server_stop_requested') is not None and result['errors']==[] and
++                  result['before']==asset_pins and result['after']==asset_pins)
++            requests=result['requests']
++            check('Fixed server bounded actual asset requests',
++                  type(requests) is list and 1<=len(requests)<=128)
++            total=0
++            for row in requests:
++                name='index.html' if row['path']=='/' else row['path'][1:]
++                expected=asset_pins.get(name)
++                check('Fixed served asset '+row['path'],
++                      row['method']=='GET' and row['host']=='127.0.0.1:'+str(rec['server_endpoint']['port']) and
++                      row['path'] in expected_routes and row.get('status')==200 and
++                      row.get('file')==name and expected is not None and
++                      {'bytes':row['bytes'],'sha256':row['sha256']}==expected and 'error' not in row)
++                total+=row['bytes']
++            check('Fixed server exact response-byte accounting',total==result['response_bytes'] and total<=32*1024*1024)
++            rec['server_listener_after']=listener_rows(rec['server_endpoint']['port'])
++            check('Owned fixed server listener closed',rec['server_listener_after']==[])
++        except BaseException:
++            rec['errors'].append({'phase':'server final evidence','traceback':traceback.format_exc()})
++        try:
+             rec['after']=state()
+             check('known consumer input runtime and frozen bytes preserved',rec['after']==before)
+             if k:rec['existing_edge_after']=existing_edge(k)
+-            check('one browser and one fixed Node launch',rec['browser_launches']==1 and rec['node_launches']==1)
++            check('one fixed server browser and Node launch',
++                  rec['server_launches']==1 and rec['browser_launches']==1 and rec['node_launches']==1)
+             check('all captured owned handles terminal with normal cleanup',
+                   bool(groups) and all(g['record'].get('retained_waits',{}).get('normal_cleanup') is True
+                   and len(g['record']['retained_waits']['handles'])>0 for g in groups))
+             check('all owned Jobs empty and direct exits normal zero',
+-                  len(groups)==2 and all(g['record'].get('job_active_at_teardown')==[] and
++                  len(groups)==3 and all(g['record'].get('job_active_at_teardown')==[] and
+                   g['record'].get('direct_returncode')==0 for g in groups))
+             check('no forced cleanup',not rec['forced_cleanup'])
+         except BaseException:

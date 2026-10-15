@@ -1,0 +1,28 @@
+{
+  "schema": "hamon.tastetable143.root-source-review-addendum/1",
+  "utc": "2026-10-15T11:53:22.997615+00:00",
+  "status": "SUCCESSOR_SOURCE_ACCEPTED_FOR_PACKET_INTEGRATION",
+  "prior_review": {
+    "bytes": 7937,
+    "sha256": "07947d4b6ef8f0a2cd037edfc137a9665175ae368eb0319312edd959b4335409"
+  },
+  "chronology": "Root first accepted source core v1; memory then found the final parent expected one server stdout line although the server emits ready and terminal lines. No native execution was released. This addendum supersedes the prior no-blocking-defect conclusion for the old parent; all original records remain unchanged.",
+  "review": "Read full exact delta and rejoined all ten source bodies. Parent now requires exactly two complete LF-ended lines, first byte-exact retained readiness, second parsed equal to original terminal result. Native owner and server are unchanged.",
+  "changed_files": [
+    "receive_taste.py"
+  ],
+  "current_core_freeze": {
+    "bytes": 1516,
+    "sha256": "b420dbc6791d760eb541f9c8dc9685fe6d92c361e0b90d2ad80cc97a7fb5228f"
+  },
+  "current_parent": {
+    "bytes": 25136,
+    "sha256": "9e8b3737820970fcf3d83c7776412c24354a5502387644271a5dd4514447a258"
+  },
+  "history_diff": {
+    "bytes": 1815,
+    "sha256": "40edc79e3d93c7299202516ef3255ec1922cc07ec773fc2cd4131f03c0c515be"
+  },
+  "no_execution": true,
+  "remaining": "Final fresh admission, preparer, outer wrapper and whole sealed packet review before native release."
+}

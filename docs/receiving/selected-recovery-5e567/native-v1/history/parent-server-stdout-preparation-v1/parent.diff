@@ -1,0 +1,23 @@
+--- receive_taste-v1.py
++++ receive_taste-v2.py
+@@ -207,7 +207,11 @@
+               file_state(ready_path)==server_endpoint['ready_identity'] and node['page']==expected_url and
+               ready['pid']==server_group['pid'] and ready['token']=='hamon-taste143-component-v1-5e567' and
+               ready['schema']=='tastetable143.component-server-ready/1')
+-        raw_line=(ROOT/'server.stdout.bin').read_bytes()
++        server_stdout=(ROOT/'server.stdout.bin').read_bytes()
++        server_lines=server_stdout.splitlines(keepends=True)
++        check('server complete original ready and terminal stdout lines',len(server_stdout)<=1024*1024 and
++              len(server_lines)==2 and all(line.endswith(b'\n') for line in server_lines))
++        raw_line=server_lines[0]
+         check('server complete readiness line precedes file admission',0<len(raw_line)<=16384 and
+               raw_line.count(b'\n')==1 and raw_line.endswith(b'\n') and json.loads(raw_line)==ready and
+               browser['server_ready_stdout']=={'bytes':len(raw_line),'sha256':sha(raw_line),'text':raw_line.decode('utf-8')})
+@@ -271,6 +275,7 @@
+                       response['response']['remoteIPAddress']=='127.0.0.1' and
+                       response['response']['remotePort']==server_endpoint['port'])
+         result_raw=(ROOT/'server/result.json').read_bytes();server_result=json.loads(result_raw)
++        check('original second server stdout line equals terminal result',json.loads(server_lines[1])==server_result)
+         check('whole server terminal receipt joined',browser['server_result']=={
+               'identity':file_state(ROOT/'server/result.json'),'value':server_result})
+         check('server normal fixed stop and full asset custody',server_result['schema']=='tastetable143.component-server-result/1' and

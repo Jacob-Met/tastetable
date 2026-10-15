@@ -1,0 +1,46 @@
+{
+  "schema": "hamon.tastetable143.native-core-freeze/2",
+  "application_calls": 0,
+  "files": {
+    "receive_component.py": {
+      "bytes": 28321,
+      "sha256": "42cd38d7a9c74cac79e2448ebb68167ac3e1212d0e4d90789f5ebe5fa039d3df"
+    },
+    "component_endpoint.py": {
+      "bytes": 2521,
+      "sha256": "b0795c9f582bcb1ba96f60868a4e4139085aa79ab2876bfef3e2d89fd02490c0"
+    },
+    "component_support.py": {
+      "bytes": 12076,
+      "sha256": "00b3a6009d98048450933170e7e4f868724a7625461b25e85cb771d0fa927976"
+    },
+    "receive_taste.py": {
+      "bytes": 25136,
+      "sha256": "9e8b3737820970fcf3d83c7776412c24354a5502387644271a5dd4514447a258"
+    },
+    "component_evidence.py": {
+      "bytes": 17295,
+      "sha256": "9ffa2dc13915b7fff27dc5b0c707e31e080e5e015484854d821c579a4975b603"
+    },
+    "child_lifecycle.py": {
+      "bytes": 5035,
+      "sha256": "b52825365a9cfa1ee310c4f95eddd69606a66bd320547dc1c111a017eade18f7"
+    },
+    "browser_endpoint.py": {
+      "bytes": 5035,
+      "sha256": "ff3e5c3e2e0dc63e71b7da6dbaee5859151bec39a79fad70ccfa55711ddb5986"
+    },
+    "job_support.py": {
+      "bytes": 7760,
+      "sha256": "ef4d2000a2e8c365b52bfbcd2347edc3e7b8ce7150ee1cf81695d625326a42b5"
+    },
+    "native_process_diagnostics.py": {
+      "bytes": 5324,
+      "sha256": "84c8ce565cfcd35fd087465684ad86f5444e716b6e63289b2579750534cfeb6d"
+    },
+    "process_diagnostics.py": {
+      "bytes": 4100,
+      "sha256": "9c572d15066b9f859fdbafa0c6c8b64598d3d8e3ff96423e9af75869c9f2e287"
+    }
+  }
+}

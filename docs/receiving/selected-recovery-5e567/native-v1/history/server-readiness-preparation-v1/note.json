@@ -1,0 +1,13 @@
+{
+  "scope": "Source-only complete-readiness-line synchronization; unchanged server/product/browser guards",
+  "before": {
+    "bytes": 27416,
+    "sha256": "8a10c4f637e1536b91b1f382e5c7f6509f1b00a771960bdb7d93942aa325da22"
+  },
+  "after": {
+    "bytes": 28321,
+    "sha256": "42cd38d7a9c74cac79e2448ebb68167ac3e1212d0e4d90789f5ebe5fa039d3df"
+  },
+  "composition_correction": "Initial generator escaping stopped AST parse before candidate write; exact first generator and error retained.",
+  "readiness_stdout_read_bound": 16385
+}

@@ -1,0 +1,18 @@
+{
+  "compose_owner.py": {
+    "bytes": 12631,
+    "sha256": "1f5d656ce91076ffa64442172951bb1ed94270df9445e33a346b793c2d221c23"
+  },
+  "candidate/receive_component.py": {
+    "bytes": 27416,
+    "sha256": "8a10c4f637e1536b91b1f382e5c7f6509f1b00a771960bdb7d93942aa325da22"
+  },
+  "inheritance/receive-component.diff": {
+    "bytes": 16393,
+    "sha256": "3e9a870a2722e95268a30b0d4e834461bc87274f7963723d02a4ca6c142979c8"
+  },
+  "owner-composition.json": {
+    "bytes": 315,
+    "sha256": "28990f4d28a0ac0c6b2bf8e654896024dd2d69962aee54babaf6939281b97dd7"
+  }
+}

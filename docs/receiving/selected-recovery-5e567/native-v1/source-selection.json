@@ -1,0 +1,503 @@
+{
+  "schema": "hamon.tastetable145.native-publication-selection/1",
+  "status": "FINAL_PROPOSED_AWAIT_PUBLICATION_REVIEW_NO_GIT_WRITE",
+  "prefix": "docs/receiving/selected-recovery-5e567/native-v1/",
+  "prior_fixture_merge": "56f5f7720f201ac8642c721dc50017105ab912e5",
+  "files": [
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/README.md",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/publication-proposal/README.md",
+      "role": "Final measured practical opening with separate additive actual and original pixel acceptances",
+      "bytes": 7536,
+      "sha256": "3079d5a6202447efd48ab07500a267f6fdd34ec3fc7d429465d3df5c4d53559e",
+      "git_blob": "87cd89679d1fc05fbca53085d42cf8daa820ee3b"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/source/component_client.mjs",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/native-extracted/component_client.mjs",
+      "role": "Exact originally executed native source",
+      "bytes": 24200,
+      "sha256": "16186666f590a26681b04134aeca47b8aef25f078641a09788d31add4f81f806",
+      "git_blob": "520a93ea884056279016cb22fc9bf144d5d34428"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/source/receive_component.py",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/native-extracted/receive_component.py",
+      "role": "Exact originally executed native source",
+      "bytes": 28321,
+      "sha256": "42cd38d7a9c74cac79e2448ebb68167ac3e1212d0e4d90789f5ebe5fa039d3df",
+      "git_blob": "3d72aff935d8365a06c3b109a64c655f468ad453"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/source/receive_taste.py",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/native-extracted/receive_taste.py",
+      "role": "Exact originally executed native source",
+      "bytes": 25136,
+      "sha256": "9e8b3737820970fcf3d83c7776412c24354a5502387644271a5dd4514447a258",
+      "git_blob": "a58c6c02e962734a5e3e7ba730fae784d6ca1d87"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/source/component_evidence.py",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/native-extracted/component_evidence.py",
+      "role": "Exact originally executed native source",
+      "bytes": 17295,
+      "sha256": "9ffa2dc13915b7fff27dc5b0c707e31e080e5e015484854d821c579a4975b603",
+      "git_blob": "f4dd4f11bd77ad568623411c7c5ebc21959c0f17"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/source/component_endpoint.py",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/native-extracted/component_endpoint.py",
+      "role": "Exact originally executed native source",
+      "bytes": 2521,
+      "sha256": "b0795c9f582bcb1ba96f60868a4e4139085aa79ab2876bfef3e2d89fd02490c0",
+      "git_blob": "96fac0b9b3267b9a631a7f8081a26a4eb861ffad"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/source/component_support.py",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/native-extracted/component_support.py",
+      "role": "Exact originally executed native source",
+      "bytes": 12076,
+      "sha256": "00b3a6009d98048450933170e7e4f868724a7625461b25e85cb771d0fa927976",
+      "git_blob": "b56d53111109abd4d608dc49f3f5d73067f9f60e"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/source/browser_endpoint.py",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/native-extracted/browser_endpoint.py",
+      "role": "Exact originally executed native source",
+      "bytes": 5035,
+      "sha256": "ff3e5c3e2e0dc63e71b7da6dbaee5859151bec39a79fad70ccfa55711ddb5986",
+      "git_blob": "8d59ce70f3f3747e7a9c4a14c1bd70533532f803"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/source/child_lifecycle.py",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/native-extracted/child_lifecycle.py",
+      "role": "Exact originally executed native source",
+      "bytes": 5035,
+      "sha256": "b52825365a9cfa1ee310c4f95eddd69606a66bd320547dc1c111a017eade18f7",
+      "git_blob": "095d055d9de29616a18f29c5b19320086278d540"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/source/job_support.py",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/native-extracted/job_support.py",
+      "role": "Exact originally executed native source",
+      "bytes": 7760,
+      "sha256": "ef4d2000a2e8c365b52bfbcd2347edc3e7b8ce7150ee1cf81695d625326a42b5",
+      "git_blob": "5bcedcc9154a45a4d931c4c482fef72f9f865a35"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/source/native_process_diagnostics.py",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/native-extracted/native_process_diagnostics.py",
+      "role": "Exact originally executed native source",
+      "bytes": 5324,
+      "sha256": "84c8ce565cfcd35fd087465684ad86f5444e716b6e63289b2579750534cfeb6d",
+      "git_blob": "50065804b038be855925b76ee039584f843c570c"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/source/process_diagnostics.py",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/native-extracted/process_diagnostics.py",
+      "role": "Exact originally executed native source",
+      "bytes": 4100,
+      "sha256": "9c572d15066b9f859fdbafa0c6c8b64598d3d8e3ff96423e9af75869c9f2e287",
+      "git_blob": "36982caeff7c1f878bdc3ed25917a37df4b03e8c"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/source/run_step.py",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/native-extracted/run_step.py",
+      "role": "Exact originally executed native source",
+      "bytes": 11182,
+      "sha256": "9df4818cc00534a01791910158209bccdf4af2037878c3045246c684dc3f6f42",
+      "git_blob": "732006bfe4bedc57e6fdbe7566d332e33f04bc14"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/source/seal_native.py",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/native-extracted/seal_native.py",
+      "role": "Exact originally executed native source",
+      "bytes": 5291,
+      "sha256": "c4dc814d46fa401497c13d1373e90733938657fe0c7604c065a5d7cc65f33c0a",
+      "git_blob": "ccdb6ee2146a16b0ce0e4185b659352442b528e0"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/RECEIVING-CONTRACT.md",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/packet/RECEIVING-CONTRACT.md",
+      "role": "Original frozen course contract, retained unchanged",
+      "bytes": 10973,
+      "sha256": "2df5286e88842e84fa7bfda78afc04f4dc7c60f4b8c444c983d43a6bc1a44c25",
+      "git_blob": "b20e24c87687f09a7a57098ba80551ba1906d27f"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/evidence/native-core-freeze-v2.json",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/native-core-freeze-v2.json",
+      "role": "Original source/visual gate or exact native payload inventory; machine pending status remains unchanged",
+      "bytes": 1516,
+      "sha256": "b420dbc6791d760eb541f9c8dc9685fe6d92c361e0b90d2ad80cc97a7fb5228f",
+      "git_blob": "5234909c8e1dbbc1a6ce75a1177397380b9606c3"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/evidence/packet-freeze.json",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/packet/packet-freeze.json",
+      "role": "Original source/visual gate or exact native payload inventory; machine pending status remains unchanged",
+      "bytes": 6880,
+      "sha256": "fdd847b872dc8c6ef1b8468cfb1b04fc1e6aa1166aa5461622110b659f22da8c",
+      "git_blob": "ee4d85a5e27ae77092bb18edf836a80ac1a89620"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/evidence/native-MANIFEST.json",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/native-extracted/MANIFEST.json",
+      "role": "Original source/visual gate or exact native payload inventory; machine pending status remains unchanged",
+      "bytes": 11885,
+      "sha256": "6171d387c95d0bfc7307b5bbb7ac455f6c773ccdd400ac03ea0c2e0f1b743658",
+      "git_blob": "950a54556ecbb01fe11f9a084be70770aff6b247"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/evidence/root-client-parent-source-review.json",
+      "source": "/dev/shm/hamon-root-taste143-native-contract-5e567/root-client-parent-source-review.json",
+      "role": "Original source/visual gate or exact native payload inventory; machine pending status remains unchanged",
+      "bytes": 7937,
+      "sha256": "07947d4b6ef8f0a2cd037edfc137a9665175ae368eb0319312edd959b4335409",
+      "git_blob": "dfe07220362ba1d52f69bbfb2d38183a456883b1"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/evidence/root-client-parent-source-review-addendum.json",
+      "source": "/dev/shm/hamon-root-taste143-native-contract-5e567/root-client-parent-source-review-addendum.json",
+      "role": "Original source/visual gate or exact native payload inventory; machine pending status remains unchanged",
+      "bytes": 1466,
+      "sha256": "42c220e0ae1c0c44fd5d317f47d3e56629fc6059e6a8a008860d74d07eb5837a",
+      "git_blob": "82750ea909e3ab9a1c56b01788e5398dab327aad"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/evidence/memory-parent-interface-review-v2.json",
+      "source": "/dev/shm/hamon-root-taste143-native-contract-5e567/memory-parent-interface-review-v2.json",
+      "role": "Original source/visual gate or exact native payload inventory; machine pending status remains unchanged",
+      "bytes": 10464,
+      "sha256": "4d7ca317ee1a0d4f34faba15ecba4b2ffd9c0ce36a852bc894ccacc2e8517b12",
+      "git_blob": "2e24ea5416fec652b018867d127c079d313530ac"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/evidence/root-visual-storage-review.json",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/root-visual-storage-review.json",
+      "role": "Original source/visual gate or exact native payload inventory; machine pending status remains unchanged",
+      "bytes": 6185,
+      "sha256": "4a8fe61609df7ea3b8227b5a94c7f99a1bc8ce32a7f09b3fe104e6e3941fd6a7",
+      "git_blob": "5283856b7ad47b089595ac42b9222a71b4240b7f"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/history/server-readiness-preparation-v1/before-pins.json",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/server-readiness-preparation-v1/before-pins.json",
+      "role": "Original pre-execution correction history",
+      "bytes": 559,
+      "sha256": "35c7db13661c9262717ae719bf140ca84deb59e3d25f54bec4da562e9def156c",
+      "git_blob": "48d9fe0d069a18502174c72c48abdd655dd67299"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/history/server-readiness-preparation-v1/compose_owner-first-readiness-edit.py.txt",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/server-readiness-preparation-v1/compose_owner-first-readiness-edit.py.txt",
+      "role": "Original pre-execution correction history",
+      "bytes": 13475,
+      "sha256": "5284451cf5c51de098b11ac7f05b0a295ffec0c9bbc23c24905d06b74dc324a5",
+      "git_blob": "d52985c4615b2784bce0fea0ca9f56025b449a74"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/history/server-readiness-preparation-v1/compose_owner.py",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/server-readiness-preparation-v1/compose_owner.py",
+      "role": "Original pre-execution correction history",
+      "bytes": 12631,
+      "sha256": "1f5d656ce91076ffa64442172951bb1ed94270df9445e33a346b793c2d221c23",
+      "git_blob": "830165d8e3fe9670bbdd7e9a73defd10fc9ed54c"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/history/server-readiness-preparation-v1/composition-first-error.txt",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/server-readiness-preparation-v1/composition-first-error.txt",
+      "role": "Original pre-execution correction history",
+      "bytes": 455,
+      "sha256": "f191c15a199c89600827d971f14640d3586c30bb68a174385ad4e95dbaa784e5",
+      "git_blob": "03777c5c7efc015552ca44cb81953e3999fe0771"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/history/server-readiness-preparation-v1/note.json",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/server-readiness-preparation-v1/note.json",
+      "role": "Original pre-execution correction history",
+      "bytes": 531,
+      "sha256": "f86dfd840d69fb8f79413f4748a780afc11af2c9f9771e9847db96f12af21f69",
+      "git_blob": "838eb3c2ba979f26b58a05aa6d8bc408ffa01cd5"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/history/server-readiness-preparation-v1/owner-composition.json",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/server-readiness-preparation-v1/owner-composition.json",
+      "role": "Original pre-execution correction history",
+      "bytes": 315,
+      "sha256": "28990f4d28a0ac0c6b2bf8e654896024dd2d69962aee54babaf6939281b97dd7",
+      "git_blob": "4942b9641e4ee083ad2504a64e6e6f3c417ee8a6"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/history/server-readiness-preparation-v1/owner.diff",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/server-readiness-preparation-v1/owner.diff",
+      "role": "Original pre-execution correction history",
+      "bytes": 1552,
+      "sha256": "d6c2c9a7a9e5fc5f108a12850cb378c9dff5bc2719c7444f1041a5c2d4463cd0",
+      "git_blob": "1f87f8b7a58c648c13b3997474bf6819275ab861"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/history/server-readiness-preparation-v1/receive-component.diff",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/server-readiness-preparation-v1/receive-component.diff",
+      "role": "Original pre-execution correction history",
+      "bytes": 16393,
+      "sha256": "3e9a870a2722e95268a30b0d4e834461bc87274f7963723d02a4ca6c142979c8",
+      "git_blob": "4572db1d06a2692134f99043d2885b4fe3ef82cd"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/history/server-readiness-preparation-v1/receive_component.py",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/server-readiness-preparation-v1/receive_component.py",
+      "role": "Original pre-execution correction history",
+      "bytes": 27416,
+      "sha256": "8a10c4f637e1536b91b1f382e5c7f6509f1b00a771960bdb7d93942aa325da22",
+      "git_blob": "37b829a468613661783725444043c5927b73bbde"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/history/parent-startup-observation-preparation-v1/component_evidence.py",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/parent-startup-observation-preparation-v1/component_evidence.py",
+      "role": "Original pre-execution correction history",
+      "bytes": 17039,
+      "sha256": "5533aacc6bb28466c52b056b4b86529c35d1e1b7deeb9efef621154cc74d68c4",
+      "git_blob": "26b7c873a85eb0b40b201f15c4bcea9fdc627959"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/history/parent-startup-observation-preparation-v1/note.json",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/parent-startup-observation-preparation-v1/note.json",
+      "role": "Original pre-execution correction history",
+      "bytes": 389,
+      "sha256": "a3151c325e6fb780e986a18f0dc28fe71a5572f602172c01ebd012019fc3f300",
+      "git_blob": "8751a09529393a1457b6a913d62c70ea88587d62"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/history/parent-startup-observation-preparation-v1/observer.diff",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/parent-startup-observation-preparation-v1/observer.diff",
+      "role": "Original pre-execution correction history",
+      "bytes": 976,
+      "sha256": "a90550e547d2a6cef7829600fc2b1af87ddefb2dfca633139d929d0ca428fe90",
+      "git_blob": "af9257b5250ce36e4f33ee0331dd6ea21a63a071"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/history/parent-startup-observation-preparation-v1/parent-composition.json",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/parent-startup-observation-preparation-v1/parent-composition.json",
+      "role": "Original pre-execution correction history",
+      "bytes": 466,
+      "sha256": "ec6b3bf99e622834b925816815d67161aea11d043e833a66dda0a11d53f793e8",
+      "git_blob": "bbbd9e10421d0b53c4525819ad261f6d38e52284"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/history/parent-server-stdout-preparation-v1/compose_parent.py",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/parent-server-stdout-preparation-v1/compose_parent.py",
+      "role": "Original pre-execution correction history",
+      "bytes": 13225,
+      "sha256": "4514f38afc782520a6766dc51ad07147256c15b63b90dd47b3030e004ae7fdb7",
+      "git_blob": "a635d8fe8512bb4eef38a7e82487b321cb476648"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/history/parent-server-stdout-preparation-v1/native-core-freeze-v1.json",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/parent-server-stdout-preparation-v1/native-core-freeze-v1.json",
+      "role": "Original pre-execution correction history",
+      "bytes": 1516,
+      "sha256": "e50a73966f55e34eb9512ae37df4cfb81c63fbb3640f7a4af07b98bd6021ed33",
+      "git_blob": "477e93b2685ebddda52b16cb8adb020a5d1cc5a2"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/history/parent-server-stdout-preparation-v1/note.json",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/parent-server-stdout-preparation-v1/note.json",
+      "role": "Original pre-execution correction history",
+      "bytes": 223,
+      "sha256": "38f714315abaa70f64ee603f09e8114188c658cfd1270f3eb679b690146a79ef",
+      "git_blob": "e7b11607654a92e04f293cdb073cd87569013899"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/history/parent-server-stdout-preparation-v1/parent-composition.json",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/parent-server-stdout-preparation-v1/parent-composition.json",
+      "role": "Original pre-execution correction history",
+      "bytes": 466,
+      "sha256": "85003a11c0cee13933ac6324d600ecb36896a2eb4d22254b4fb14f7aeec01cfe",
+      "git_blob": "ab169873a65f62e72757652273072b524a9d0158"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/history/parent-server-stdout-preparation-v1/parent.diff",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/parent-server-stdout-preparation-v1/parent.diff",
+      "role": "Original pre-execution correction history",
+      "bytes": 1815,
+      "sha256": "40edc79e3d93c7299202516ef3255ec1922cc07ec773fc2cd4131f03c0c515be",
+      "git_blob": "b585a53903bf59f0547b1d2e5007ab95329817d2"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/history/parent-server-stdout-preparation-v1/receive_taste.py",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/parent-server-stdout-preparation-v1/receive_taste.py",
+      "role": "Original pre-execution correction history",
+      "bytes": 24721,
+      "sha256": "80f4fb1fa994f3536d4322d6156ffe0b5592b6d5e0ca30efc9a4b3ae089a9750",
+      "git_blob": "9aba67a42e87bd5334bf3653e8ea724344680a13"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/evidence/memory-native-actual-review.json",
+      "source": "/workspace/scratch/5e5670099628/remote-recovery-20261015/tastetable143-native/memory-native-actual-review.json",
+      "role": "Additive independent complete original actual evidence acceptance; original machine statuses unchanged",
+      "bytes": 25138,
+      "sha256": "1d7fd97f8bd51bd3b38002bc276224e8e2d439840ea31d5db745e6a5ae07f4e1",
+      "git_blob": "f90a7cdbbc6b5090030b2115de434d2cc7c14501"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/native-v1/evidence/memory_review_native_actual.py",
+      "source": "/dev/shm/hamon-root-taste143-native-contract-5e567/memory_review_native_actual.py",
+      "role": "Exact independent passive actual reviewer source; no preparation or amendment history exists",
+      "bytes": 19843,
+      "sha256": "c6db68ba055293993300d74345535db49384cc3c6de883ecf2e63a3309043352",
+      "git_blob": "a51ba2afd5c56eb70ff44922d824472fcc470d06"
+    }
+  ],
+  "existing_source_bindings": [
+    {
+      "path": "docs/receiving/selected-recovery-5e567/source/component_course.mjs",
+      "bytes": 18698,
+      "sha256": "872a84c3fcc584f50e2961e80a7683e4cb738ea5cd63bbe49326c90b8350de8a",
+      "git_blob": "eb7d5e6b6a790d25e0eef77bf4252f49493d4d0a"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/source/serve_component.py",
+      "bytes": 10474,
+      "sha256": "bd1b6a8a834144531337be32eb8ea14d7d8c729db6b70390d3bae70d157829c5",
+      "git_blob": "20f8c903f8d54230229b17ab4b28a59243081932"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/source/component-fixture/component-freeze.json",
+      "bytes": 2298,
+      "sha256": "13d4ce90a5a4dc13bd1ca441afb18baae15e19a5436fa49f8fbfbba464d2d06a",
+      "git_blob": "90035e7a69edb9b20ba12de16fd64f0e56d07c99"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/source/component-fixture/component-host.mjs",
+      "bytes": 7511,
+      "sha256": "c7ae39ca46475807a09325cdc17fc2d769ef18741f4458af135e86f4ea41cbee",
+      "git_blob": "208a290f63143c82082b62336a5ad2d7623c45bd"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/source/component-fixture/fixtures/external-addition.json",
+      "bytes": 16319,
+      "sha256": "2b89248cbdd58ae0bce2d9b4c1f4fe6b78cefeb3cbf4930061ba3c54eadb8090",
+      "git_blob": "3148ec830ccf54164d1a0a758e805da714570ebc"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/source/component-fixture/fixtures/initial-records.json",
+      "bytes": 32633,
+      "sha256": "aa29653a619579b13f0662f749fbaab90e89e814e69c01c2fd4c4037e21900ab",
+      "git_blob": "0f65858bf977cddec1adf28f7ea0d2f2e4eb976e"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/source/component-fixture/index.html",
+      "bytes": 2168,
+      "sha256": "5d589cd0b6bd95931d8d4f03e13f52cb016bc7c3de5429772e714366da1e6420",
+      "git_blob": "3aa9a8e242f34becf3c26b8cfdc18c87fd469b04"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/source/component-fixture/static/saved_week_collection.mjs",
+      "bytes": 5798,
+      "sha256": "578fdbd327ffb2539bf59432bb70c51d3ea7041459bb009ba5ae50d6fc084a99",
+      "git_blob": "2906e7fddd6806ec2e1172c1e2c0402614d20fc4"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/source/component-fixture/static/saved_week_collection_ui.mjs",
+      "bytes": 11315,
+      "sha256": "198cc57031e7a4fbb25cdb8d089278c7bc622c0f8f417396549ca9ad196cef93",
+      "git_blob": "b62e76494e252d01a7879922ea1c87839a7ecfd0"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/source/component-fixture/static/saved_week_store.mjs",
+      "bytes": 8960,
+      "sha256": "621a1270f4b7771e8b14820cb6b12f35b53af8f45b04ea76da046f111647fa64",
+      "git_blob": "d3b9f81057ceca5e137e73ec25c0164f2e1b562b"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/source/component-fixture/static/saved_weeks.css",
+      "bytes": 2458,
+      "sha256": "f147ebcf6343be774e920766720ec031ccfc3e5d2d68a82c3d3cc4f5e9cf0e63",
+      "git_blob": "6e02cec6a5a5d590cf05ee4e5cb784bb3f3edddd"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/source/component-fixture/static/saved_weeks.mjs",
+      "bytes": 3327,
+      "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3",
+      "git_blob": "0bb822cb6f75c376397c0f7d6d6de78035f865bc"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/source/component-fixture/static/style.css",
+      "bytes": 5064,
+      "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+      "git_blob": "28df6c5229b6b592db33e929ae058fe514304af4"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/source/component-fixture/static/week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "git_blob": "420ddb8f63fca264dcf97be7147801105696155d"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/source/component-fixture/static/week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/source/fixtures/expected-after-selected.json",
+      "bytes": 66282,
+      "sha256": "500900f9022dd89741ce5ff0b4b7e8147906c680db08e6322b22bb5a96bd0a9f",
+      "git_blob": "63eb2c349149e853c54985651dfd5399cc0a6ff9"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/source/fixtures/expected-after-stale-refusal.json",
+      "bytes": 82620,
+      "sha256": "174cfec2013ad7c9de1c4a95f7cb2597b7bf498d12f51de7a04cf94b5d479fb8",
+      "git_blob": "ca822916ab8c5ded3fb4de6bec81c8e825920102"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/source/fixtures/external-addition.json",
+      "bytes": 16319,
+      "sha256": "2b89248cbdd58ae0bce2d9b4c1f4fe6b78cefeb3cbf4930061ba3c54eadb8090",
+      "git_blob": "3148ec830ccf54164d1a0a758e805da714570ebc"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/source/fixtures/initial-records.json",
+      "bytes": 32633,
+      "sha256": "aa29653a619579b13f0662f749fbaab90e89e814e69c01c2fd4c4037e21900ab",
+      "git_blob": "0f65858bf977cddec1adf28f7ea0d2f2e4eb976e"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/source/fixtures/mixed-backup.json",
+      "bytes": 66480,
+      "sha256": "1d5809777396524a0b789c49429e3cf88f444eadb8665659aa30735e08c4aeb2",
+      "git_blob": "af558f44024eea2d6c374a566d9c92feb8025c0a"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/source/fixtures/replacement-identical-backup.json",
+      "bytes": 16454,
+      "sha256": "424cdc8c3c278bd6d119133d648dfa38a16b9f911a0bf95766b69a3bf7ff03a5",
+      "git_blob": "8fa38fbd575fefe80fbd02a7bde6b872f6f228b4"
+    },
+    {
+      "path": "docs/receiving/selected-recovery-5e567/source/fixtures/stale-backup.json",
+      "bytes": 16473,
+      "sha256": "b7dd5124f3539681fcf39c969b318131bfefb80ce4e60a73c1ef16da806db111",
+      "git_blob": "352b25e762d93f34baf506153928a2b6657704f4"
+    }
+  ],
+  "full_actual_review": {
+    "disposition": "ACCEPT_COMPONENT_STORAGE_ACTION_AND_ORIGINAL_EVIDENCE",
+    "receipt": "docs/receiving/selected-recovery-5e567/native-v1/evidence/memory-native-actual-review.json",
+    "bytes": 25138,
+    "sha256": "1d7fd97f8bd51bd3b38002bc276224e8e2d439840ea31d5db745e6a5ae07f4e1",
+    "passive_joins": 492,
+    "pixel_review": {
+      "receipt": "docs/receiving/selected-recovery-5e567/native-v1/evidence/root-visual-storage-review.json",
+      "bytes": 6185,
+      "sha256": "4a8fe61609df7ea3b8227b5a94c7f99a1bc8ce32a7f09b3fe104e6e3941fd6a7",
+      "passive_joins": 47,
+      "original_images_directly_viewed": 2
+    },
+    "original_machine_status": "PASS_PENDING_VISUAL_REVIEW",
+    "reviewer_history": "The independent reviewer confirmed its first invocation completed all 492 joins; no preparation/error successor or amendment history exists for this actual receipt or script."
+  },
+  "scope": "Add native client/owner/parent/lifecycle source and exact correction provenance only under new native-v1 scope. Original raw source/state/transport/full receipts remain in the native evidence delivery; prior published fixture sources are byte-joined and referenced, not replaced."
+}

@@ -1,0 +1,17 @@
+{
+  "application_calls": 0,
+  "files": {
+    "receive_taste.py": {
+      "bytes": 24721,
+      "sha256": "80f4fb1fa994f3536d4322d6156ffe0b5592b6d5e0ca30efc9a4b3ae089a9750"
+    },
+    "component_evidence.py": {
+      "bytes": 17039,
+      "sha256": "5533aacc6bb28466c52b056b4b86529c35d1e1b7deeb9efef621154cc74d68c4"
+    },
+    "child_lifecycle.py": {
+      "bytes": 5035,
+      "sha256": "b52825365a9cfa1ee310c4f95eddd69606a66bd320547dc1c111a017eade18f7"
+    }
+  }
+}
