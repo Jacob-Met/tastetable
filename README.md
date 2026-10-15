@@ -376,6 +376,22 @@ unchanged. Use **Open saved week** to reopen the recovered file. See
 [recover one stored week](docs/COLLECTION_WEEK_RECOVERY.md) for file limits,
 output receipts and handling a failure after the file was created.
 
+### Compare two collection backups
+
+With Node.js 18+ from the repository root, compare two retained collection files:
+
+```bash
+node tools/compare_collection_backups.mjs --left "left-collection.json" --right "right-collection.json" --output "collection-comparison.json"
+```
+
+The report matches exact saved-record IDs and shows which occur only in one file,
+which are unchanged, and which differ in name, timestamps or exact stored week
+text. Left and Right are roles you choose; the command does not select a winner
+or merge records. Both complete backups must validate. Choose an unused output
+filename in an existing directory on a filesystem supporting hard links. Inputs
+and browser storage stay unchanged. See [compare collection backups](docs/COLLECTION_BACKUP_COMPARISON.md)
+for report fields, input limits and handling a failure after publication.
+
 ### Check the browser collection locally
 
 The focused state checks use the existing dependency-free Node runner:
