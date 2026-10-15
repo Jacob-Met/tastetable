@@ -209,6 +209,8 @@ export async function main(argv = process.argv.slice(2), { fs = fsDefault, write
   }
 }
 
+export { readInput as readCollectionInput, InputError as CollectionInputError };
+
 if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1])) {
   process.exitCode = await main();
 }
