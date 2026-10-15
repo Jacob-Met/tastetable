@@ -47,6 +47,43 @@ chosen. Keep both files, inspect the difference and resolve it deliberately;
 this panel does not overwrite, rename, delete, evict or mint replacement IDs.
 An empty or already-identical backup is an explicit no-op.
 
+### Choose only some missing weeks
+
+The separate **Choose missing saved weeks** group lets you recover a useful
+subset even when another incoming ID conflicts, or the complete addition would
+exceed the 50-record capacity. The existing **Add missing saved weeks** action
+above keeps its complete, conflict-free behavior.
+
+1. Read the complete preview first. Every backup record is validated before
+   either action is available; an invalid record cannot be skipped by selection.
+2. Check the missing records you want. Each checkbox's label includes the saved
+   name and ID. Identical and conflicting records stay visible above but cannot
+   be selected. Nothing is checked automatically. Use ordinary Tab and Space
+   keyboard controls if preferred.
+3. Review the separate selected count and the complete count after addition.
+   Choose **Add selected missing weeks** only when that selection fits. Zero
+   selected is a no-op. A backup too large to add in full may still have a
+   fitting explicit subset.
+
+Only those selected original records are submitted, in their backup order.
+Their names, IDs, dates and complete stored text stay exact. Excluded records
+remain in the backup; a successful subset does not resolve their conflicts.
+Keep the original backup while deciding what to do with them.
+
+The same native storage transaction compares the **whole** current browser
+collection against the reviewed snapshot, including existing records excluded
+from the selection. A change to any of those records in another tab therefore
+refuses all selected additions. Reopen the backup after a refusal; there is no
+automatic retry. If the selected addition commits but the subsequent list
+refresh throws, the message explicitly acknowledges the addition and asks you
+to refresh the list. It does not claim that committed records were rolled back.
+
+Cancel, another file, host refresh/mutation or page departure clears selection
+and retires its callbacks together with the preview. A new preview starts with
+zero selected; late reads or old checkbox events cannot restore earlier choices.
+Search and ordering alone retain their existing complete-preview behavior.
+Selection does not open a recovered week or alter the active planner or notes.
+
 The final addition uses one IndexedDB readwrite transaction. It rereads and
 compares the **whole** saved collection with the preview, then queues only the
 missing records. A change in another tab, insufficient capacity, invalid
@@ -101,6 +138,20 @@ From the repository root, with Node available:
 ```sh
 node --test tests/test_saved_week_collection.mjs tests/test_saved_week_collection_store.mjs tests/test_saved_week_collection_ui.mjs
 ```
+
+For the focused missing-record selection integration, run the four new methods
+with the unchanged collection UI and transaction methods:
+
+```sh
+node --test tests/test_saved_week_collection_ui.mjs tests/test_saved_week_collection_store.mjs tests/test_saved_week_collection_selection.mjs
+```
+
+The new checks cover literal selected records, the complete store token, subset
+capacity, stale preview/checkbox lifetime, busy/disposed guards, unchanged
+all-record behavior and the distinction between failed storage and a failed
+refresh after commit. Native labels and status semantics are asserted in the
+DOM fixture; actual keyboard operation, readable layout and real IndexedDB
+commit/refusal require the separately recorded browser component receiving.
 
 The model checks complete text retention, duplicate/admission boundaries,
 identity conflicts and limits. The transactional test double exercises the

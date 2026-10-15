@@ -6,6 +6,24 @@ export function createSavedWeekCollectionUI({ root, store, state, run, refresh }
   const $ = (selector) => root.querySelector(selector);
   if (!$("#savedWeekCollection")) return Object.freeze({ controls() {}, invalidate() {} });
   let generation = 0, reading = false, preview = null;
+  const selection = document.createElement("fieldset");
+  selection.id = "collectionMissingSelection";
+  const legend = document.createElement("legend");
+  legend.textContent = "Choose missing saved weeks";
+  const help = document.createElement("p");
+  help.textContent = "Select only the missing records you want to add. Identical and conflicting records remain in the complete preview above and cannot be selected here. Other records stay in your backup.";
+  const selectionList = document.createElement("ul");
+  selectionList.id = "collectionMissingSelectionRecords";
+  const selectionStatus = document.createElement("p");
+  selectionStatus.id = "collectionMissingSelectionStatus";
+  selectionStatus.role = "status";
+  selectionStatus.ariaLive = "polite";
+  const addSelected = document.createElement("button");
+  addSelected.id = "addSelectedMissingSavedWeeks";
+  addSelected.type = "button";
+  addSelected.textContent = "Add selected missing weeks";
+  selection.append(legend, help, selectionList, selectionStatus, addSelected);
+  $("#collectionBackupPreview").append(selection);
   const notice = (text) => { if (!state().disposed) $("#collectionBackupStatus").textContent = text; };
   function controls() {
     const { busy, ready, disposed } = state();
@@ -13,6 +31,15 @@ export function createSavedWeekCollectionUI({ root, store, state, run, refresh }
     $("#collectionBackupFile").disabled = disposed || busy;
     $("#addMissingSavedWeeks").disabled = disposed || busy || !ready || !preview?.plan.canApply;
     $("#cancelCollectionBackup").disabled = disposed || busy || (!preview && !reading);
+    const selected = preview?.selected.size || 0;
+    const current = preview?.plan.expected.length || 0;
+    selection.disabled = disposed || busy || !ready || !preview;
+    addSelected.disabled = selection.disabled || selected === 0 || current + selected > MAX_DRAFTS;
+    for (const checkbox of preview?.checkboxes || []) checkbox.disabled = selection.disabled;
+    selectionStatus.textContent = preview
+      ? `${selected} missing selected; ${current} currently saved; ${current + selected} after this selected addition. Other backup records are excluded.`
+        + (current + selected > MAX_DRAFTS ? ` Choose fewer records to stay within ${MAX_DRAFTS} saved weeks.` : "")
+      : "Open a collection backup to choose missing records. Nothing is selected.";
   }
   function invalidate(message = "") {
     generation++;
@@ -21,6 +48,7 @@ export function createSavedWeekCollectionUI({ root, store, state, run, refresh }
     $("#collectionBackupFile").value = "";
     $("#collectionBackupPreview").hidden = true;
     $("#collectionBackupRecords").replaceChildren();
+    selectionList.replaceChildren();
     notice(message);
     controls();
   }
@@ -39,7 +67,30 @@ export function createSavedWeekCollectionUI({ root, store, state, run, refresh }
       list.append(item);
     }
     $("#collectionBackupSummary").textContent = `${plan.missing.length} missing · ${plan.identical.length} already identical · ${plan.conflicts.length} conflicting. ${plan.expected.length} currently saved; ${plan.totalAfter} after adding missing records. Backup created ${backup.savedAt}.`;
-    preview = { backup, plan };
+    preview = { backup, plan, selected: new Set(), checkboxes: [] };
+    const reviewed = preview, ticket = generation;
+    selectionList.replaceChildren();
+    for (const record of plan.missing) {
+      const item = document.createElement("li");
+      const label = document.createElement("label");
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = false;
+      checkbox.value = record.id;
+      const caption = document.createElement("span");
+      caption.textContent = ` ${record.name} · ID ${record.id}`;
+      label.append(checkbox, caption);
+      item.append(label);
+      selectionList.append(item);
+      reviewed.checkboxes.push(checkbox);
+      checkbox.addEventListener("change", () => {
+        const { busy, ready, disposed } = state();
+        if (preview !== reviewed || generation !== ticket || disposed || busy || !ready) return;
+        if (checkbox.checked) reviewed.selected.add(record.id);
+        else reviewed.selected.delete(record.id);
+        controls();
+      });
+    }
     reading = false;
     $("#collectionBackupPreview").hidden = false;
     notice(plan.conflicts.length ? "Conflicting identities were found. Nothing was added. Keep both files and resolve the difference deliberately; this tool never overwrites saved weeks."
@@ -113,6 +164,32 @@ export function createSavedWeekCollectionUI({ root, store, state, run, refresh }
         if (active()) notice(`Added ${result.added} missing saved ${result.added === 1 ? "week" : "weeks"}; ${result.alreadyPresent} already identical. The active week and venue notes are unchanged. Your saved-name search may hide added records.`);
       } catch (error) {
         if (active()) invalidate(`Could not add missing saved weeks: ${error.message} Open the backup again to review current storage.`);
+      }
+    });
+  });
+  addSelected.addEventListener("click", () => {
+    const { busy, ready, disposed } = state();
+    if (disposed || busy || !ready || !preview || preview.selected.size === 0
+        || preview.plan.expected.length + preview.selected.size > MAX_DRAFTS) return;
+    const reviewed = preview;
+    // Capture before run() retires this preview. Keep the complete store token,
+    // and retain incoming order even when checkboxes were toggled out of order.
+    const records = reviewed.backup.records.filter((record) => reviewed.selected.has(record.id));
+    const selectedBackup = { format: reviewed.backup.format, savedAt: reviewed.backup.savedAt, records };
+    void run(async (active) => {
+      let committed;
+      try {
+        committed = await store.restoreMissing(selectedBackup, reviewed.plan.expected);
+        if (!active()) return;
+        await refresh();
+        if (active()) notice(`Added ${committed.added} selected missing saved ${committed.added === 1 ? "week" : "weeks"}. Other backup records were not added or resolved. The active week and venue notes are unchanged. Your saved-name search may hide added records.`);
+      } catch (error) {
+        if (!active()) return;
+        if (committed) {
+          invalidate(`Added ${committed.added} selected missing saved ${committed.added === 1 ? "week" : "weeks"}, but the saved-week list refresh failed: ${error.message} Refresh the list to inspect the committed addition.`);
+        } else {
+          invalidate(`Could not add selected missing saved weeks: ${error.message} Open the backup again to review current storage.`);
+        }
       }
     });
   });
