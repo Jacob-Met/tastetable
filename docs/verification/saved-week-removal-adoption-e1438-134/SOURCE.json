@@ -1,0 +1,139 @@
+{
+  "schema": "tastetable.removal-adoption.evidence/1",
+  "status": "ADOPTED_WITH_CURRENT_COMPOSITION_CAPTURE_ACCEPTED",
+  "repository": "Jacob-Met/tastetable",
+  "issue": 134,
+  "pull_request": 151,
+  "adopted_revision": "bb1f59a9cbb9e3569481edee4bfc58b0ad600040",
+  "adopted_tree": "c9b5f880ced7d1cea269c1a50dccbffd48f8b949",
+  "integration_parent": "71d3c226cff51b8f23db4846dd130c75d83a8e0c",
+  "prior_offer": "7d15dcafe86f746cb8903ec7351ff40fd248a09a",
+  "current_capture": {
+    "methods": 24,
+    "removal_observations": 37,
+    "removal_scenarios": 18,
+    "source_files": 44,
+    "capture_count": 1,
+    "original_quartet_files": 4,
+    "start": "b1a1d9",
+    "completion": "70a5c2",
+    "returncode": 0
+  },
+  "historical_kit": {
+    "url": "https://drive.google.com/file/d/1uDjZqZslmAy_q5mEss7dFAh7lMp_UE6y/view",
+    "bytes": 1199244,
+    "sha256": "822f4e7c4a77ada615b2cd73d349bdf9a6c49003495f858a64a4c7f0846f02b2",
+    "qualification": "Previously delivered isolated offer; unchanged by current adoption."
+  },
+  "qualification": "Current24 controlled-DOM composition and normal four-path adoption only. The pre-capture25-to24 description correction changes no source or argv. Historical16-method child success with reporter-level outerFAIL/adjudication and separate112-check component browser remain distinct. No current native, IndexedDB, provider, whole-app or deployment qualification.",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 7379,
+      "sha256": "a9ac1d24a44a6a639a8b9a805042c254f3d35b9d42c663f0d45d3a2746f82b86",
+      "git_blob": "d7aca5ade9f195a216448273159cc123ec90851f"
+    },
+    {
+      "path": "captures/integration-capture-completion.json",
+      "bytes": 1440,
+      "sha256": "c3a435da93042dac8b041decf43891d9dcc74f6c64ce068fd4da9cd27abe02a7",
+      "git_blob": "8e6661d6e609b50007d2bfb9e6c4f061e17cf9c5"
+    },
+    {
+      "path": "captures/integration-capture-start.json",
+      "bytes": 131,
+      "sha256": "d9bc92cdd3502a28186ea1b2a9ccdef8a92bc46a5bb478f111736c75ff69160e",
+      "git_blob": "3408b0cfa6cfa330ee38094a73c550435207efee"
+    },
+    {
+      "path": "integration-v1/PROCESS.json",
+      "bytes": 1202,
+      "sha256": "3a8e58eaa861a42dc9d353e412598d747f9194ecce88337e83f3210e3d4cdbca",
+      "git_blob": "92cac38b8e7a610930a37004a1664a2fbd1c219c"
+    },
+    {
+      "path": "integration-v1/REQUEST.json",
+      "bytes": 769,
+      "sha256": "db020084ebfb925e86b382537423d907c424322ceb246a59c279086e40737794",
+      "git_blob": "fd275cf762223b40f86bea94fd0621394750fac1"
+    },
+    {
+      "path": "integration-v1/stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "integration-v1/stdout",
+      "bytes": 57539,
+      "sha256": "5866b64078d8d58d5cd02532ef337201709f097419a454339fd4a272bb8ae6bd",
+      "git_blob": "cec7f990a7c3654abe16b0675f3b7085e238d380"
+    },
+    {
+      "path": "requests/integration-request-before-count-correction.json",
+      "bytes": 17362,
+      "sha256": "0f9acbc30ccbd0d760d452e2178f4db51bb205d073f585b28ccfcabf1f39462e",
+      "git_blob": "5d43af00dc75cd3871e3933be83c6a7535387a30"
+    },
+    {
+      "path": "requests/integration-request.json",
+      "bytes": 17362,
+      "sha256": "ba94c6e26466f41fdf3dd5b1aaa1c9dcef44d8681799b22c2f11b8f1f72dfc8a",
+      "git_blob": "6f4ed453c8128fb7934bdbe68e0ad4750c852520"
+    },
+    {
+      "path": "requests/pre-capture-count-correction.json",
+      "bytes": 660,
+      "sha256": "037351ce35fdba41c98585f51f58b4fab561c1097ae4b7182fcbfb2e83968609",
+      "git_blob": "df93c640f6db8c920ace8db0eeab900ed1854f77"
+    },
+    {
+      "path": "requests/publication-plan-before-count-correction.json",
+      "bytes": 2107,
+      "sha256": "f68ea25bc498e2f08760b407ae538a74c991fc860552bd1855aed3e0741fdaae",
+      "git_blob": "e7d890234be658dd255e8526b59ee48ac4825b81"
+    },
+    {
+      "path": "requests/publication-plan.json",
+      "bytes": 2107,
+      "sha256": "8c86bbc7efdbe6e9298d401c591b1a9c9f1ed0fc7596b25240c60c44ea8e403a",
+      "git_blob": "7d84554938563026a471359d06c8b7dae7f78d9a"
+    },
+    {
+      "path": "reviews/machine-source-review-process.json",
+      "bytes": 518,
+      "sha256": "09ab17b63e475e248df6ca6de15615daf3d74dcf2aa40752fbbe73f14ca86faf",
+      "git_blob": "32f41b91e50bbc872508e33d6616b5ec06a2e1dc"
+    },
+    {
+      "path": "reviews/machine-source-review.json",
+      "bytes": 2835,
+      "sha256": "37960b1c510845c9a37c4d66d2ba648d1f326abe56a7dfe1d7b3bf082abfe8a0",
+      "git_blob": "eda63eb5a109e9542ee8bcc48546038bd2a0f387"
+    },
+    {
+      "path": "reviews/source-result-review-process.json",
+      "bytes": 2425,
+      "sha256": "7ca76da9483d8fd670f39d13872352bfb52ddcb01068969d3382d8b415b4c25f",
+      "git_blob": "86c66ddc4e58c18ba12ef2d080c50a50b08aae4e"
+    },
+    {
+      "path": "reviews/source-result-review.json",
+      "bytes": 2424,
+      "sha256": "f92220905435306c4b41d72f52ccd79fa2a3566180221d8e3104c05987873f5a",
+      "git_blob": "8f3d304e4bd5323b4eb6d76cc2ee026787029bd6"
+    },
+    {
+      "path": "source-adoption-process.json",
+      "bytes": 948,
+      "sha256": "669b97f460893f13dd4e0a9ae84674de235d6cdddc9692de62c9975dccbf5a74",
+      "git_blob": "b3b4b694239233a608b70c9e0d5289cd19f16dc8"
+    },
+    {
+      "path": "source-adoption.json",
+      "bytes": 813,
+      "sha256": "e76b47f605c8ff0a79792dfe670a184a4c1e257dfce043d9ce0f565dadea33e6",
+      "git_blob": "d2ff1b8811d9b86ba20c46fdacdf20b37a4a4bdf"
+    }
+  ]
+}

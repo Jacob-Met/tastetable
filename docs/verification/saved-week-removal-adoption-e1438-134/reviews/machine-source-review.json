@@ -1,0 +1,50 @@
+{
+  "schema": "tastetable.removal-adoption.machine-source-review/1",
+  "status": "ACCEPT_CURRENT_COMPOSITION_SOURCE_AND_CORRECTED_TWENTY_FOUR_METHOD_REQUEST",
+  "source_files": 44,
+  "runtime_files": 37,
+  "selected_product_paths": 4,
+  "selected_product_bytes": 68310,
+  "prior_leaves": 1326,
+  "successor_leaves": 1328,
+  "preserved_prior_leaves": 1324,
+  "successor_tree": "c9b5f880ced7d1cea269c1a50dccbffd48f8b949",
+  "test_groups": {
+    "test_saved_week_remove_confirmation.mjs": 4,
+    "test_saved_week_import.mjs": 6,
+    "test_saved_week_order.mjs": 6,
+    "test_saved_week_collection_conflicts.mjs": 4,
+    "test_saved_week_collection_selection.mjs": 4
+  },
+  "total_methods": 24,
+  "composition_review": "Full removal UI, current collection UI, index confirmation markup, guide and all five selected test modules read. Collection actions capture their reviewed rows and complete store token before common action retires pending removal/preview; source remains exact current collection implementation. Optional confirmation controls fail closed; exact selection/primary key and plaintext stored name are retained. No product defect found.",
+  "correction": "Unrun request originally overstated current conflicts tests as five; four top-level methods exist. Request now declares 24 total; executable source and selected test bodies unchanged.",
+  "qualification": "Passive source/data review only; no test, product, browser or native invocation. Historical sixteen-method success with reporter-level outer FAIL and separate 112-check browser result remain distinct; current native/full-app acceptance is not claimed.",
+  "pins": {
+    "source-plan.json": {
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source-plan.json",
+      "bytes": 16956,
+      "sha256": "d1f464e22f2a5e26f0e58700e372990743c78e5d00d96047142fb5e1e835c783"
+    },
+    "source-pins.json": {
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source-pins.json",
+      "bytes": 14343,
+      "sha256": "3f9de8f69413d9677fff64dd111493c975d04bc19ea7b682689b4ad22bb5bec8"
+    },
+    "source-bodies.json": {
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source-bodies.json",
+      "bytes": 386114,
+      "sha256": "207073bd64002aa3bae4615d6aff04ecb1cce4971d4bc1086d254ebdbd6d64b8"
+    },
+    "integration-request.json": {
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/integration-request.json",
+      "bytes": 17362,
+      "sha256": "ba94c6e26466f41fdf3dd5b1aaa1c9dcef44d8681799b22c2f11b8f1f72dfc8a"
+    },
+    "publication-plan.json": {
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/publication-plan.json",
+      "bytes": 2107,
+      "sha256": "8c86bbc7efdbe6e9298d401c591b1a9c9f1ed0fc7596b25240c60c44ea8e403a"
+    }
+  }
+}

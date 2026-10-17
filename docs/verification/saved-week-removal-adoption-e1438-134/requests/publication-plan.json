@@ -1,0 +1,45 @@
+{
+  "schema": "tastetable.removal-adoption.publication-plan/1",
+  "repository": "Jacob-Met/tastetable",
+  "branch": "estate/e1438-saved-week-removal-adoption-134",
+  "parent": "71d3c226cff51b8f23db4846dd130c75d83a8e0c",
+  "base_tree": "fdf3be6d3f39b9b94bf2d7b109ba527e6d216b28",
+  "prior_offer": "7d15dcafe86f746cb8903ec7351ff40fd248a09a",
+  "rows": [
+    {
+      "source": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/docs/SAVED_WEEK_REMOVAL_CONFIRMATION.md",
+      "path": "docs/SAVED_WEEK_REMOVAL_CONFIRMATION.md",
+      "bytes": 9817,
+      "sha256": "a5984336337e29c2a984fd16c17d6fa19ce4b08bcb42c63e755aa01f7cf25303",
+      "git_blob": "9e04ba0c07cffde60e63085e2c1cc05cef21fca3"
+    },
+    {
+      "source": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/index.html",
+      "path": "static/index.html",
+      "bytes": 18342,
+      "sha256": "79ce6412fa4b8e3da51d4d6d843116f346fef3125bd61bcb9865b7c7362901c9",
+      "git_blob": "7172518bdbdf740e435c7160fa44c026b9b54448"
+    },
+    {
+      "source": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/saved_week_ui.mjs",
+      "path": "static/saved_week_ui.mjs",
+      "bytes": 19006,
+      "sha256": "c222e61b91c0ec82dee941013df7342d94e7be9f3d5a46ba72d8b62894918582",
+      "git_blob": "0f835bb6bbbf294d624c587e99c30f7a749caadb"
+    },
+    {
+      "source": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/tests/test_saved_week_remove_confirmation.mjs",
+      "path": "tests/test_saved_week_remove_confirmation.mjs",
+      "bytes": 21145,
+      "sha256": "eaafea9c5498cce406ab91ab6d07d1265bfbd5ae9ee3156106e23f0bd62438c5",
+      "git_blob": "617b06c5b5135d21d97581ed7339bee885194f4a"
+    }
+  ],
+  "selected_count": 4,
+  "selected_bytes": 68310,
+  "prior_leaves": 1326,
+  "expected_leaf_count": 1328,
+  "preserved_prior_leaves": 1324,
+  "issue": 134,
+  "qualification": "Exact four previously accepted offer bodies; current collection controller and all other prior source preserved. Pending current-composition peer and single24group integration result."
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PRECAPTURE_COUNT_CORRECTED",
+  "finding": "Machine peer counted four actual top-level collection-conflict tests; text regex counted a non-test occurrence. Frozen request25 changed to24 before any product invocation.",
+  "changes": [
+    "integration-request.test_groups[test_saved_week_collection_conflicts.mjs]5to4",
+    "qualification25to24and9to8currentmethods",
+    "publication-plan prose25to24"
+  ],
+  "all_source_argv_and_outputs_unchanged": true,
+  "before_request_sha256": "0f9acbc30ccbd0d760d452e2178f4db51bb205d073f585b28ccfcabf1f39462e",
+  "after_request_sha256": "ba94c6e26466f41fdf3dd5b1aaa1c9dcef44d8681799b22c2f11b8f1f72dfc8a"
+}

@@ -1,0 +1,58 @@
+{
+  "schema": "tastetable.removal-adoption.original-result-review/1",
+  "status": "ACCEPT_CURRENT_TWENTY_FOUR_METHOD_CAPTURE_AND_FOUR_PATH_PLAN",
+  "findings": [],
+  "original_process": {
+    "start_chunk": "b1a1d9",
+    "completion_chunk": "70a5c2",
+    "session": 17055,
+    "pid": 7,
+    "returncode": 0,
+    "elapsed_seconds": 1.2179599570008577
+  },
+  "method_count": 24,
+  "removal_observations": 37,
+  "removal_scenarios": 18,
+  "source_files": 44,
+  "publication": {
+    "parent": "71d3c226cff51b8f23db4846dd130c75d83a8e0c",
+    "paths": [
+      "docs/SAVED_WEEK_REMOVAL_CONFIRMATION.md",
+      "static/index.html",
+      "static/saved_week_ui.mjs",
+      "tests/test_saved_week_remove_confirmation.mjs"
+    ],
+    "selected_bytes": 68310,
+    "prior_leaves": 1326,
+    "expected_leaves": 1328,
+    "preserved": 1324
+  },
+  "records": {
+    "integration-request.json": {
+      "bytes": 17362,
+      "sha256": "ba94c6e26466f41fdf3dd5b1aaa1c9dcef44d8681799b22c2f11b8f1f72dfc8a",
+      "git_blob": "6f4ed453c8128fb7934bdbe68e0ad4750c852520"
+    },
+    "integration-capture-start.json": {
+      "bytes": 131,
+      "sha256": "d9bc92cdd3502a28186ea1b2a9ccdef8a92bc46a5bb478f111736c75ff69160e",
+      "git_blob": "3408b0cfa6cfa330ee38094a73c550435207efee"
+    },
+    "integration-capture-completion.json": {
+      "bytes": 1440,
+      "sha256": "c3a435da93042dac8b041decf43891d9dcc74f6c64ce068fd4da9cd27abe02a7",
+      "git_blob": "8e6661d6e609b50007d2bfb9e6c4f061e17cf9c5"
+    },
+    "publication-plan.json": {
+      "bytes": 2107,
+      "sha256": "8c86bbc7efdbe6e9298d401c591b1a9c9f1ed0fc7596b25240c60c44ea8e403a",
+      "git_blob": "7d84554938563026a471359d06c8b7dae7f78d9a"
+    },
+    "pre-capture-count-correction.json": {
+      "bytes": 660,
+      "sha256": "037351ce35fdba41c98585f51f58b4fab561c1097ae4b7182fcbfb2e83968609",
+      "git_blob": "df93c640f6db8c920ace8db0eeab900ed1854f77"
+    }
+  },
+  "qualification": "Passive full original quartet/envelopes, all24 exact source-derived names, all37 removal observations/18 scenarios and44 whole current-composition inputs joined. Four candidate bodies equal the historical offer; current collection controller and1324 other prior leaves remain preserved. Count correction preceded capture. Historical native16-method reporter FAIL/adjudication and112-check component browser remain distinct; no new product, native, provider or browser invocation by this review."
+}

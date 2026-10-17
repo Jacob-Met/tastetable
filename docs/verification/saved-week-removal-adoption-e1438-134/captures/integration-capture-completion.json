@@ -1,0 +1,7 @@
+{
+  "chunk_id": "70a5c2",
+  "wall_time_seconds": 0.000019809,
+  "exit_code": 0,
+  "original_token_count": 301,
+  "output": "{\n  \"argv\": [\n    \"/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node\",\n    \"--test\",\n    \"--test-reporter=tap\",\n    \"--test-concurrency=1\",\n    \"tests/test_saved_week_remove_confirmation.mjs\",\n    \"tests/test_saved_week_import.mjs\",\n    \"tests/test_saved_week_order.mjs\",\n    \"tests/test_saved_week_collection_conflicts.mjs\",\n    \"tests/test_saved_week_collection_selection.mjs\"\n  ],\n  \"cwd\": \"/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source\",\n  \"descendants_observed\": false,\n  \"elapsed_seconds\": 1.2179599570008577,\n  \"finished_utc\": \"2026-10-17T10:08:01.926587+00:00\",\n  \"observer_errors\": [],\n  \"output\": \"/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/integration-v1\",\n  \"pid\": 7,\n  \"python\": \"3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]\",\n  \"returncode\": 0,\n  \"schema\": \"hamon.process-capture/1\",\n  \"started_utc\": \"2026-10-17T10:08:00.708632+00:00\",\n  \"state\": \"exited\",\n  \"stderr\": {\n    \"bytes\": 0,\n    \"sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"\n  },\n  \"stdout\": {\n    \"bytes\": 57539,\n    \"sha256\": \"5866b64078d8d58d5cd02532ef337201709f097419a454339fd4a272bb8ae6bd\"\n  },\n  \"timeout_seconds\": 45.0\n}\n"
+}

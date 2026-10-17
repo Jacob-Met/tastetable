@@ -1,0 +1,7 @@
+{
+  "chunk_id": "779b08",
+  "wall_time_seconds": 0.000021732,
+  "exit_code": 0,
+  "original_token_count": 191,
+  "output": "{\"schema\": \"tastetable.removal-adoption.adoption/1\", \"status\": \"PASS\", \"adopted\": \"bb1f59a9cbb9e3569481edee4bfc58b0ad600040\", \"tree\": \"c9b5f880ced7d1cea269c1a50dccbffd48f8b949\", \"source_head\": \"2bb5b2a485514ffb881f303d341ec719fd05b7d8\", \"parent\": \"71d3c226cff51b8f23db4846dd130c75d83a8e0c\", \"pull_request\": 151, \"issue\": 134, \"changed\": [\"docs/SAVED_WEEK_REMOVAL_CONFIRMATION.md\", \"static/index.html\", \"static/saved_week_ui.mjs\", \"tests/test_saved_week_remove_confirmation.mjs\"], \"leaves\": 1328, \"preserved_prior\": 1324, \"source_peer\": \"c710c5\", \"result_peer\": \"d7af68\", \"publication_gate\": \"889600\", \"validation\": \"One current24/24 TAP capture; historical16/report-format FAIL and112-check isolated browser remain separate; no new native or whole-app claim.\"}\n"
+}

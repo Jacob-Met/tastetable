@@ -1,0 +1,364 @@
+{
+  "schema": "tastetable.removal-adoption.integration-request/1",
+  "status": "PREPARED_UNRUN",
+  "parent": "71d3c226cff51b8f23db4846dd130c75d83a8e0c",
+  "prior_offer": "7d15dcafe86f746cb8903ec7351ff40fd248a09a",
+  "cwd": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source",
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--test",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/test_saved_week_remove_confirmation.mjs",
+    "tests/test_saved_week_import.mjs",
+    "tests/test_saved_week_order.mjs",
+    "tests/test_saved_week_collection_conflicts.mjs",
+    "tests/test_saved_week_collection_selection.mjs"
+  ],
+  "output": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/integration-v1",
+  "timeout_seconds": 45,
+  "test_groups": {
+    "test_saved_week_remove_confirmation.mjs": 4,
+    "test_saved_week_import.mjs": 6,
+    "test_saved_week_order.mjs": 6,
+    "test_saved_week_collection_conflicts.mjs": 5,
+    "test_saved_week_collection_selection.mjs": 4
+  },
+  "source_files": [
+    {
+      "relative": "docs/SAVED_WEEK_REMOVAL_CONFIRMATION.md",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/docs/SAVED_WEEK_REMOVAL_CONFIRMATION.md",
+      "bytes": 9817,
+      "sha256": "a5984336337e29c2a984fd16c17d6fa19ce4b08bcb42c63e755aa01f7cf25303",
+      "git_blob": "9e04ba0c07cffde60e63085e2c1cc05cef21fca3"
+    },
+    {
+      "relative": "static/app.js",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/app.js",
+      "bytes": 22129,
+      "sha256": "1e328ff4185f0f5a671932bfcb5f906f99603fa48432684a6396e3097d199370",
+      "git_blob": "9a34d0e4719bc472144c3ec966e609cc8fbf4626"
+    },
+    {
+      "relative": "static/calendar.css",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/calendar.css",
+      "bytes": 708,
+      "sha256": "36c217b55b7f05e0dc446980f024e0cf0b771f496e162ead1bbe8ef05deb4733",
+      "git_blob": "9e53b951316d841b86f0256cd2444a3ce547269f"
+    },
+    {
+      "relative": "static/calendar.js",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/calendar.js",
+      "bytes": 15169,
+      "sha256": "09dfe98a95da6c7fd0b7ee531c3ec4cf9ae5697dc730fab6cffdd07d8bd94b3b",
+      "git_blob": "dbed22d2cb91090bccec9472fbffd2854eed2722"
+    },
+    {
+      "relative": "static/caregiver_handoff.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/caregiver_handoff.mjs",
+      "bytes": 11673,
+      "sha256": "fd3bfdd7b297948315403e7cc8cc27b394126636f357f7574c58d3e7999aeb95",
+      "git_blob": "4286409b3fe932f61957ba72f5db918d18ff0751"
+    },
+    {
+      "relative": "static/compare-handoffs.html",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/compare-handoffs.html",
+      "bytes": 3143,
+      "sha256": "95fb28f5e93a7c2f996d511bda60a4c2018bf3a3265fefba498a5d7f3199f7ed",
+      "git_blob": "cbe473374536c8949df90c1aae9383274292ec79"
+    },
+    {
+      "relative": "static/compare-weeks.html",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/compare-weeks.html",
+      "bytes": 3055,
+      "sha256": "ff74de00afff8fbe7abe675c502962692eeb1eba544c5e0c0e2742810f0a1288",
+      "git_blob": "03c1a353915dc3ccb8a215aac957d9cf5cfff78c"
+    },
+    {
+      "relative": "static/handoff_compare.css",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/handoff_compare.css",
+      "bytes": 3033,
+      "sha256": "fb20bf7f7efbfec324e90e209bcdb9ef9ca5abe688154baf6aa6314d650fb93c",
+      "git_blob": "639d116b799a538cc7ee4b0697362c87e601095b"
+    },
+    {
+      "relative": "static/handoff_compare.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/handoff_compare.mjs",
+      "bytes": 1031,
+      "sha256": "a6be1de3b5128aac02bf8faceb5658f1fd26fa3f0a1166e32ab2ceb98689e137",
+      "git_blob": "5a2756d460fb5fa92207877e14ecb01882c19db7"
+    },
+    {
+      "relative": "static/handoff_compare_ui.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/handoff_compare_ui.mjs",
+      "bytes": 11884,
+      "sha256": "87d86c70d747dcdf567356c0230a96e9184391ab43ae12b68b8a221d1820afa5",
+      "git_blob": "f8499957445f100caa27a2e45894cf9ed5919021"
+    },
+    {
+      "relative": "static/index.html",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/index.html",
+      "bytes": 18342,
+      "sha256": "79ce6412fa4b8e3da51d4d6d843116f346fef3125bd61bcb9865b7c7362901c9",
+      "git_blob": "7172518bdbdf740e435c7160fa44c026b9b54448"
+    },
+    {
+      "relative": "static/plan-request.js",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/plan-request.js",
+      "bytes": 1420,
+      "sha256": "b35d09ca6270cf6150bcc40501d2d6a6728aa592597bb8d3e49aa3ae26cdf995",
+      "git_blob": "b21276dda840fe6dd96a3bf3258a851970ff5e4d"
+    },
+    {
+      "relative": "static/saved_week_collection.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/saved_week_collection.mjs",
+      "bytes": 5798,
+      "sha256": "578fdbd327ffb2539bf59432bb70c51d3ea7041459bb009ba5ae50d6fc084a99",
+      "git_blob": "2906e7fddd6806ec2e1172c1e2c0402614d20fc4"
+    },
+    {
+      "relative": "static/saved_week_collection_ui.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/saved_week_collection_ui.mjs",
+      "bytes": 12898,
+      "sha256": "cafb7b4427dd7505ba81fe9ea8d4fc96524d5d62aff186b3615e33aa077a0572",
+      "git_blob": "be277f1a2e046a87ecc163a2b9d4ec827c7aa5e6"
+    },
+    {
+      "relative": "static/saved_week_import.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/saved_week_import.mjs",
+      "bytes": 710,
+      "sha256": "286ed1b474ba9e5af382fa744fd648eb5283c694767d5e14a51de64e0e78efbf",
+      "git_blob": "936dff41d4259b8e55b70d9d5f46375640c75d08"
+    },
+    {
+      "relative": "static/saved_week_order.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/saved_week_order.mjs",
+      "bytes": 607,
+      "sha256": "401f30d60067b2f48a0089ad4de521adeebb0ff56d61f27113652e8441333e1e",
+      "git_blob": "df43882192355fb5e912901d11c23ac1ff797a84"
+    },
+    {
+      "relative": "static/saved_week_search.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/saved_week_search.mjs",
+      "bytes": 390,
+      "sha256": "aafb190cff56f5eaf4c4749e6c6e14529041f6899b8899dc15f0341792c6bd8e",
+      "git_blob": "2e726e910ee7a9cbd1e8fa1ac9d1fc687bf67a00"
+    },
+    {
+      "relative": "static/saved_week_store.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/saved_week_store.mjs",
+      "bytes": 8960,
+      "sha256": "621a1270f4b7771e8b14820cb6b12f35b53af8f45b04ea76da046f111647fa64",
+      "git_blob": "d3b9f81057ceca5e137e73ec25c0164f2e1b562b"
+    },
+    {
+      "relative": "static/saved_week_ui.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/saved_week_ui.mjs",
+      "bytes": 19006,
+      "sha256": "c222e61b91c0ec82dee941013df7342d94e7be9f3d5a46ba72d8b62894918582",
+      "git_blob": "0f835bb6bbbf294d624c587e99c30f7a749caadb"
+    },
+    {
+      "relative": "static/saved_weeks.css",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/saved_weeks.css",
+      "bytes": 2458,
+      "sha256": "f147ebcf6343be774e920766720ec031ccfc3e5d2d68a82c3d3cc4f5e9cf0e63",
+      "git_blob": "6e02cec6a5a5d590cf05ee4e5cb784bb3f3edddd"
+    },
+    {
+      "relative": "static/saved_weeks.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/saved_weeks.mjs",
+      "bytes": 3327,
+      "sha256": "258c01226e9cd82f29983726dc6f5152ad7a127b9ab05a0574851c1a447b2bd3",
+      "git_blob": "0bb822cb6f75c376397c0f7d6d6de78035f865bc"
+    },
+    {
+      "relative": "static/style.css",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/style.css",
+      "bytes": 5064,
+      "sha256": "0dcea471f360b3085a70da9154537708bc9c282c5c08b974657dab41224cfc96",
+      "git_blob": "28df6c5229b6b592db33e929ae058fe514304af4"
+    },
+    {
+      "relative": "static/venue_followup.css",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/venue_followup.css",
+      "bytes": 2166,
+      "sha256": "727fc5656f4fb9707a89c9a36b056589d0201e6e95ddfe6ecdc009d0e7ceafc7",
+      "git_blob": "dd88e221133be5281330cba11a6d141ae5e8d239"
+    },
+    {
+      "relative": "static/venue_followup.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/venue_followup.mjs",
+      "bytes": 19991,
+      "sha256": "9cd974e794e17c87e3b51b4ba7820200ce820ae611c8565a5224d68790441d32",
+      "git_blob": "e19affca590d4b4d0d31a6fc11d5558173320133"
+    },
+    {
+      "relative": "static/venue_note_changes.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/venue_note_changes.mjs",
+      "bytes": 2303,
+      "sha256": "9299824e9bcd2b9b8fd63ed3efeaa9dbaefcc5c47e35e099c7b8bbd6d9fb3983",
+      "git_blob": "9d7153966d16d61a3089e1df2454a7d3b3806d96"
+    },
+    {
+      "relative": "static/venue_note_file.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/venue_note_file.mjs",
+      "bytes": 10435,
+      "sha256": "7b099b0dcbbd714bc63497932787d20127236d82784e76861ae9f3a32f146af1",
+      "git_blob": "f8406cb540d52222996c585666ae1a55a1030def"
+    },
+    {
+      "relative": "static/visit-record.html",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/visit-record.html",
+      "bytes": 4010,
+      "sha256": "6a26be64a58a36a6c7102fcb3c1b6ea29a05a4f3842ed40609cabb0425cb0c24",
+      "git_blob": "22b5069faebfffd979aad3a089c656e585007f61"
+    },
+    {
+      "relative": "static/visit_record.css",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/visit_record.css",
+      "bytes": 4621,
+      "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403",
+      "git_blob": "cf2ed8fc0871196a55ceef4e0aa0cab09d1fcfeb"
+    },
+    {
+      "relative": "static/visit_record.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/visit_record.mjs",
+      "bytes": 7525,
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f",
+      "git_blob": "2b5b37e3d4a227e00a5b0052a962d13512b53e48"
+    },
+    {
+      "relative": "static/visit_record_csv.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/visit_record_csv.mjs",
+      "bytes": 1646,
+      "sha256": "a233a983918291ef93577f91eb64c56adb4644c10cd8f4046e875d4536cc970c",
+      "git_blob": "b001286f411bec6a9088b1902e9455f2fc3540c2"
+    },
+    {
+      "relative": "static/visit_record_ui.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/visit_record_ui.mjs",
+      "bytes": 9376,
+      "sha256": "bec91c2dc84902f8c948bce7a87cf87b19fdabf2a1bde17e94cf2fd0b324a64a",
+      "git_blob": "b136fa1a9f688d8a27db7d96668ace0895e547ee"
+    },
+    {
+      "relative": "static/week_change_brief.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/week_change_brief.mjs",
+      "bytes": 5163,
+      "sha256": "689fa56135c4b1ba42a15c676af677615e45ddfbdd1af5e991ea691eeff7098a",
+      "git_blob": "18e637273fb20b4ab1703db450fa16f1bcd39cf1"
+    },
+    {
+      "relative": "static/week_compare.css",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/week_compare.css",
+      "bytes": 1345,
+      "sha256": "c37b5b5cade22b7982511e4341f9ec83b9571daae9e1a31ea8e41c1c08d4f236",
+      "git_blob": "7ee8e8add97261965fcdcbf5612fb0ec126eda89"
+    },
+    {
+      "relative": "static/week_compare.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/week_compare.mjs",
+      "bytes": 1829,
+      "sha256": "5bc64a317f28cfccffb844f3c74ebb7b1312034996137891ec5161e0bc0953b7",
+      "git_blob": "2dfc4fb5e9c30481a4bd4276bc4ed6ff3bb114b8"
+    },
+    {
+      "relative": "static/week_compare_ui.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/week_compare_ui.mjs",
+      "bytes": 9037,
+      "sha256": "2ae33874c70d1d9962c69fb53a373e6a9544a0eefe0d95e81289ca7598aaecd3",
+      "git_blob": "2a185f0b850f0f35aaead19aeb06bc38ca4d1f1f"
+    },
+    {
+      "relative": "static/week_file.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/week_file.mjs",
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "git_blob": "420ddb8f63fca264dcf97be7147801105696155d"
+    },
+    {
+      "relative": "static/week_plan.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/week_plan.mjs",
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "git_blob": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+    },
+    {
+      "relative": "static/week_report.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/static/week_report.mjs",
+      "bytes": 10728,
+      "sha256": "6fa8de588fbce5d3dce39826feb7ff06e7430fd2006c34b68d570b314a240210",
+      "git_blob": "09f1c8ef5077a2d78eea62ea22ca99fde2feded2"
+    },
+    {
+      "relative": "tests/fixtures/saved-week-response.json",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/tests/fixtures/saved-week-response.json",
+      "bytes": 12983,
+      "sha256": "5e7b785c0a02a999647e52a0229b0b649c82bbca131ca0f8db50f99c270d992f",
+      "git_blob": "eca4eee4d93d0046833fc798e6c34bf87879c858"
+    },
+    {
+      "relative": "tests/test_saved_week_collection_conflicts.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/tests/test_saved_week_collection_conflicts.mjs",
+      "bytes": 21311,
+      "sha256": "dace01a6b622faa5255450b2c023ded9559d4aac95e18296206eea23021f874e",
+      "git_blob": "d074c9a7f2a1657e8a16568f340cd79d59870f66"
+    },
+    {
+      "relative": "tests/test_saved_week_collection_selection.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/tests/test_saved_week_collection_selection.mjs",
+      "bytes": 16072,
+      "sha256": "96d60d8a2f7dce9e0c8ea615f75bf572844a90b4750323d8c33b2251a99465b9",
+      "git_blob": "796b22adcbc6558dfe7ae9b2501ed34714a7e330"
+    },
+    {
+      "relative": "tests/test_saved_week_import.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/tests/test_saved_week_import.mjs",
+      "bytes": 12025,
+      "sha256": "5b0d0cde29314f1c9396ec5995ab74ec03f7edaa5558d971f8b52871d2216c00",
+      "git_blob": "51041bec8699c497743cb83c90ab6d08e2cc690b"
+    },
+    {
+      "relative": "tests/test_saved_week_order.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/tests/test_saved_week_order.mjs",
+      "bytes": 12098,
+      "sha256": "c1627e7c65bf5043dee81d084d28030b34f3f5f8f32fd3e5b577c1d2288f19b0",
+      "git_blob": "b3ae5c245f0cd207843f9ef2d7e910ae07425981"
+    },
+    {
+      "relative": "tests/test_saved_week_remove_confirmation.mjs",
+      "path": "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source/tests/test_saved_week_remove_confirmation.mjs",
+      "bytes": 21145,
+      "sha256": "eaafea9c5498cce406ab91ab6d07d1265bfbd5ae9ee3156106e23f0bd62438c5",
+      "git_blob": "617b06c5b5135d21d97581ed7339bee885194f4a"
+    }
+  ],
+  "capture_source": {
+    "path": "/workspace/scratch/e1438c9d058f/money-comparison-navigation-native/capture_process.py",
+    "bytes": 7969,
+    "sha256": "48ea98257bce2198e7e0f3009cb8c3ed09f9a017dbae2777e01b86e7ab2fc2d0"
+  },
+  "qualification": "One25group current-composition controlled DOM integration.16 preserved original removal/import/order methods and9 current collection methods. No native/browser/IndexedDB/provider/whole-app claim; historical reporter FAIL and browser outcome retained separately.",
+  "capture_argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "/workspace/scratch/e1438c9d058f/money-comparison-navigation-native/capture_process.py",
+    "--cwd",
+    "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/source",
+    "--out",
+    "/workspace/scratch/e1438c9d058f/tastetable-removal-adoption/integration-v1",
+    "--timeout",
+    "45",
+    "--",
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--test",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/test_saved_week_remove_confirmation.mjs",
+    "tests/test_saved_week_import.mjs",
+    "tests/test_saved_week_order.mjs",
+    "tests/test_saved_week_collection_conflicts.mjs",
+    "tests/test_saved_week_collection_selection.mjs"
+  ]
+}
