@@ -116,6 +116,15 @@
         <button id="renameSavedWeek" type="button" disabled>Rename saved week</button>
         <button id="removeSavedWeek" type="button" disabled>Remove saved week</button>
       </div>
+      <section id="savedWeekRemoval" class="saved-week-import" aria-labelledby="savedWeekRemovalTitle" hidden>
+        <h4 id="savedWeekRemovalTitle">Review removal of this browser copy</h4>
+        <p>Saved copy: <strong id="savedWeekRemovalName"></strong></p>
+        <p>Only this saved browser copy will be removed. Your currently open week and venue notes stay unchanged. To recover this copy later, you need a portable week file or collection backup you already kept.</p>
+        <div class="saved-week-actions">
+          <button id="keepSavedWeek" type="button" disabled>Keep saved copy</button>
+          <button id="confirmRemoveSavedWeek" type="button" disabled>Confirm removal</button>
+        </div>
+      </section>
     </section>
     <section class="saved-week-import" aria-labelledby="importSavedWeekTitle">
       <h3 id="importSavedWeekTitle">Add a portable week to this browser</h3>
