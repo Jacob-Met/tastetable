@@ -1,5 +1,6 @@
 import { createVisitRecord, updateVisitRecord, visitRecordRows, makeVisitRecordFile, readVisitRecord, VISIT_RECORD_LIMITS } from "./visit_record.mjs";
 import { readWeekFile } from "./week_file.mjs";
+import { renderVisitRecordCsv } from "./visit_record_csv.mjs";
 
 const $ = selector => document.querySelector(selector);
 const labels = {unrecorded: "Unrecorded", went: "Went", did_not_go: "Did not go"};
@@ -18,6 +19,7 @@ function retire(message = "") {
 function controls() {
   const blocked = !current || invalid.size > 0;
   $("#saveRecord").disabled = blocked; $("#printRecord").disabled = blocked;
+  $("#downloadCsv").disabled = blocked;
   document.body.classList.toggle("invalid-draft", invalid.size > 0);
   $("#draftError").textContent = invalid.size ? "Correct the marked fields before downloading or printing. Your earlier valid values remain in this tab." : "";
   if (current) {
@@ -133,6 +135,18 @@ $("#saveRecord").addEventListener("click", () => {
     document.body.append(link); link.click(); link.remove();
     $("#saveStatus").textContent = "Download requested. Keep the JSON file to reopen this record.";
   } catch (e) { $("#saveStatus").textContent = "Could not save this record: " + e.message; }
+});
+$("#downloadCsv").addEventListener("click", () => {
+  if (!current || invalid.size) return;
+  retire();
+  try {
+    const report = renderVisitRecordCsv(makeVisitRecordFile(current).text);
+    if (downloadUrl) URL.revokeObjectURL(downloadUrl);
+    downloadUrl = URL.createObjectURL(new Blob([report.csv], {type:"text/csv;charset=utf-8"}));
+    const link = document.createElement("a"); link.href = downloadUrl; link.download = `tastetable-visits-${report.weekStart}.csv`;
+    document.body.append(link); link.click(); link.remove();
+    $("#saveStatus").textContent = "CSV download requested. Keep the JSON file to reopen and edit this record.";
+  } catch (e) { $("#saveStatus").textContent = "Could not download this CSV report: " + e.message; }
 });
 $("#printRecord").addEventListener("click", () => { if (current && !invalid.size) { retire(); window.print(); } });
 window.addEventListener("pagehide", () => { if (downloadUrl) URL.revokeObjectURL(downloadUrl); });

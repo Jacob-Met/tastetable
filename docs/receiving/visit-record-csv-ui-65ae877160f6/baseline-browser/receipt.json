@@ -1,0 +1,61 @@
+{
+  "schema": "tastetable.visit_record_csv.author_browser.v1",
+  "mode": "baseline",
+  "startedAt": "2026-10-08T21:20:27.536Z",
+  "status": "passed",
+  "sourcePins": [
+    {
+      "path": "static/visit-record.html",
+      "sha256": "6a26be64a58a36a6c7102fcb3c1b6ea29a05a4f3842ed40609cabb0425cb0c24"
+    },
+    {
+      "path": "static/visit_record_ui.mjs",
+      "sha256": "bec91c2dc84902f8c948bce7a87cf87b19fdabf2a1bde17e94cf2fd0b324a64a"
+    },
+    {
+      "path": "static/visit_record.css",
+      "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403"
+    },
+    {
+      "path": "static/visit_record.mjs",
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f"
+    },
+    {
+      "path": "static/week_file.mjs",
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+    }
+  ],
+  "checks": [
+    "original physical file selection, explicit Use and JSON continuation preserve model/source",
+    "original browser has no CSV download control"
+  ],
+  "pageErrors": [],
+  "externalRequests": [],
+  "downloads": [
+    {
+      "path": "download-1.json",
+      "suggestedFilename": "tastetable-visits-2024-02-26.json",
+      "bytes": 2691,
+      "sha256": "89f03111e1eeffe3716055ff5f8e5d5bbd7b8a78ee5ba38b364a58f3e8e61e9d"
+    }
+  ],
+  "screenshots": [],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/153.0.8010.47",
+    "revision": "@73934a44f61e6b3878d1943064c141a5a820f5f7",
+    "userAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+    "jsVersion": "15.3.76.12"
+  },
+  "browserPid": 1769240,
+  "sourceFilesUnchanged": true,
+  "browserExited": true,
+  "ownedProfileRemoved": true,
+  "serverClosed": true,
+  "receiverSha256": "7680ee3ca881284fa8019109574bcbf6acaca4bffb825e577b2c0dad290f7375",
+  "finishedAt": "2026-10-08T21:20:42.695Z"
+}
