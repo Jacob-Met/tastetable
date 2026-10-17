@@ -21,6 +21,12 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
   const orderControl = $("#savedWeeksOrder");
   let orderMode = "newest";
   if (orderControl) orderControl.value = orderMode;
+  const removalPanel = $("#savedWeekRemoval");
+  const removalName = $("#savedWeekRemovalName");
+  const confirmRemoval = $("#confirmRemoveSavedWeek");
+  const keepSavedCopy = $("#keepSavedWeek");
+  const hasRemovalControls = !!(removalPanel && removalName && confirmRemoval && keepSavedCopy);
+  let pendingRemoval = null;
   let selected = null;
   let busy = false;
   let ready = false;
@@ -37,6 +43,19 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
   const importStatus = (message) => { if (!disposed) $("#importSavedWeekStatus").textContent = message; };
   const collection = createSavedWeekCollectionUI({ root, store,
     state: () => ({ busy, ready, disposed }), run: action, refresh });
+
+  function removalControls() {
+    const allowed = hasRemovalControls && !disposed && !busy && ready
+      && pendingRemoval?.row === selected && pendingRemoval?.id === selected?.id;
+    if (confirmRemoval) confirmRemoval.disabled = !allowed;
+    if (keepSavedCopy) keepSavedCopy.disabled = !allowed;
+  }
+  function clearRemoval() {
+    pendingRemoval = null;
+    if (removalPanel) removalPanel.hidden = true;
+    if (removalName) removalName.textContent = "";
+    removalControls();
+  }
 
   function importControls() {
     $("#importSavedWeekFile").disabled = disposed || busy;
@@ -86,7 +105,7 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
     for (const button of $("#savedWeeks").querySelectorAll("button")) button.disabled = busy;
     $("#openSavedWeek").disabled = busy || !selected?.draft;
     $("#renameSavedWeek").disabled = busy || !selected?.draft;
-    $("#removeSavedWeek").disabled = busy || !selected;
+    $("#removeSavedWeek").disabled = disposed || busy || !ready || !selected;
     $("#savedWeeksSearch").disabled = busy || !ready;
     if (orderControl) {
       orderControl.disabled = disposed || busy || !ready;
@@ -96,8 +115,10 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
     importControls();
     refreshCurrent();
     collection.controls();
+    removalControls();
   }
   function clearPreview() {
+    clearRemoval();
     collection.invalidate();
     selected = null;
     previewGeneration++;
@@ -105,6 +126,7 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
     controls();
   }
   function showPreview(row, preserveName = false) {
+    clearRemoval();
     if (!preserveName) collection.invalidate();
     // Focus refreshes can finish after typing. Keep a dirty name for the same
     // selected record; explicit Preview still initializes from stored metadata.
@@ -171,6 +193,7 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
     $("#clearSavedWeeksSearch").disabled = busy || !ready || !$("#savedWeeksSearch").value;
   }
   async function refresh(message) {
+    clearRemoval();
     collection.invalidate();
     const generation = ++refreshGeneration;
     try {
@@ -225,6 +248,7 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
   }
   async function action(task) {
     if (busy || disposed) return;
+    clearRemoval();
     collection.invalidate();
     const generation = lifetime;
     const active = () => !disposed && generation === lifetime;
@@ -336,8 +360,31 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
     });
   });
   $("#removeSavedWeek").addEventListener("click", () => {
-    if (!selected) return;
-    const id = selected.id, name = selected.draft?.name || selected.label || "unreadable record";
+    if (disposed || busy || !ready || !selected) return;
+    if (!hasRemovalControls) {
+      status("Removal confirmation is unavailable in this view. No saved copy was removed.");
+      return;
+    }
+    // Bind this request to this exact preview, not an unfinished Rename value
+    // or a same-ID row returned by a later refresh.
+    pendingRemoval = { row: selected, id: selected.id,
+      name: selected.draft?.name || selected.label || "unreadable record" };
+    removalName.textContent = pendingRemoval.name;
+    removalPanel.hidden = false;
+    removalControls();
+    keepSavedCopy.focus();
+  });
+  keepSavedCopy?.addEventListener("click", () => {
+    if (disposed || busy || !pendingRemoval) return;
+    clearRemoval();
+    $("#removeSavedWeek").focus();
+  });
+  confirmRemoval?.addEventListener("click", () => {
+    if (!hasRemovalControls || disposed || busy || !ready || !pendingRemoval
+      || pendingRemoval.row !== selected || pendingRemoval.id !== selected?.id) return;
+    const { id, name } = pendingRemoval;
+    // Retire before the transaction starts, including repeated activations.
+    clearRemoval();
     void action(async (active) => {
       await store.remove(id);
       if (!active()) return;
@@ -348,6 +395,7 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
   const onFocus = () => { if (!busy) void refresh(); };
   const onPageHide = () => {
     disposed = true;
+    clearRemoval();
     collection.invalidate();
     if (orderControl) orderControl.disabled = true;
     lifetime++;
