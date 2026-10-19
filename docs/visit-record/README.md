@@ -12,6 +12,25 @@ Repeated venue names and IDs remain separate occurrences, including picks omitte
 
 This is a local caregiver record, not a safety check, reservation or medical or dietary recommendation. Files can contain the original inputs and notes. Do not include private health information. There is no automatic storage or upload, and changes do not modify the saved week, venue call sheet, calendar or future recommendations.
 
+## Leaving an edited record
+
+After **Use this file**, the opened values are the baseline for this tab. Editing
+an outcome, date or note, or leaving an invalid draft, requests the browser's
+normal confirmation on refresh, navigation or tab close. Choose Stay to keep
+working. Returning every field to its opened value removes the request; Use
+explicitly replaces the record and starts a new baseline. Opening, cancelling
+or refusing a file does not discard the displayed edits or their protection.
+
+Download and Print do not tell the page whether you kept a copy, so they do not
+clear the request. A freshly reopened saved record starts clean. Imported note
+line breaks are compared in the admitted model; unrelated edits do not read
+them back from the textarea.
+
+Browsers decide whether to show this warning, usually after interaction. It
+does not provide automatic storage or protection against crashes, forced closure
+or every mobile app switch. Keep the downloaded JSON before leaving. Existing
+in-page replacement still requires your explicit Use action.
+
 ## File and model contract
 
 The unchanged shared `readWeekFile` codec admits the original source. Its entire decoded source string is retained verbatim, including a UTF-8 BOM, CRLF, unknown metadata, JSON whitespace and escaped values. The file picker uses strict UTF-8 decoding with BOM retention. The displayed filename is provenance supplied by the file picker; it is not a verified identity.
@@ -51,7 +70,7 @@ Each row is exactly `{key,originalDay,plannedDay,plannedDate,pick,outcome,date,n
 No new runtime dependencies are required.
 
 ```sh
-node --test tests/test_visit_record.mjs
+node --test tests/test_visit_record.mjs tests/test_visit_departure.mjs
 ```
 
 The authored native-browser check uses the preserved original producer fixture described in the qualification packet: the 2026-10-12 five-pick offline week with pick-0 on Sunday and pick-1 omitted. It verifies physical downloads, explicit Use/reopen, invalid/cancel preservation, narrow layout and native print. It requires an existing Chromium and a browser-readable workspace; Snap Chromium needs a location inside its permitted common directory.

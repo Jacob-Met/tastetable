@@ -1,0 +1,1741 @@
+{
+  "schema": "tastetable-visit-departure-browser/1",
+  "mode": "original",
+  "source": {
+    "commit": "b93fdbbb314cdb0b10b802213741538fbbee1fcc",
+    "tree": "7aab0dec93da6a4d697cbedab1ccf7ad4b9bae76",
+    "closure": [
+      {
+        "path": "static/visit-record.html",
+        "git": "22b5069faebfffd979aad3a089c656e585007f61"
+      },
+      {
+        "path": "static/visit_record.css",
+        "git": "cf2ed8fc0871196a55ceef4e0aa0cab09d1fcfeb"
+      },
+      {
+        "path": "static/visit_record_ui.mjs",
+        "git": "b136fa1a9f688d8a27db7d96668ace0895e547ee"
+      },
+      {
+        "path": "static/visit_record.mjs",
+        "git": "2b5b37e3d4a227e00a5b0052a962d13512b53e48"
+      },
+      {
+        "path": "static/week_file.mjs",
+        "git": "420ddb8f63fca264dcf97be7147801105696155d"
+      },
+      {
+        "path": "static/week_plan.mjs",
+        "git": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862"
+      }
+    ]
+  },
+  "started": "2026-10-13T16:55:42.215270+00:00",
+  "device": {
+    "node": "Mac.lan",
+    "uid": 501,
+    "python": "3.13.7"
+  },
+  "checks": [
+    {
+      "name": "source is owned ordinary directory",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source blob static/visit-record.html",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source blob static/visit_record.css",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source blob static/visit_record_ui.mjs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source blob static/visit_record.mjs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source blob static/week_file.mjs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source blob static/week_plan.mjs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "exact runtime membership",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original fixture pin",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "empty-clean expected native confirmation count",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "empty-clean only native beforeunload dialogs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "empty-clean actual navigation completed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "loaded-clean imported three separate occurrences",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "loaded-clean preserves literal source filename",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "loaded-clean expected native confirmation count",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "loaded-clean only native beforeunload dialogs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "loaded-clean actual reload discards tab record",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dirty-outcome imported three separate occurrences",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dirty-outcome preserves literal source filename",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dirty-outcome-stay expected native confirmation count",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "dirty-outcome-stay only native beforeunload dialogs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dirty-outcome-stay actual reload discards tab record",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dirty-date imported three separate occurrences",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dirty-date preserves literal source filename",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dirty-date-stay expected native confirmation count",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "dirty-date-stay only native beforeunload dialogs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dirty-date-stay actual navigation completed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dirty-note imported three separate occurrences",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dirty-note preserves literal source filename",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "390px page fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dirty-note-stay expected native confirmation count",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "dirty-note-stay only native beforeunload dialogs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dirty-note-stay actual page closed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "exact-revert imported three separate occurrences",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "exact-revert preserves literal source filename",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "reverted-record complete envelope fields",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "reverted-record original source exact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "reverted-record complete accepted visits exact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "reverted-record untouched CR CRLF tab Unicode note exact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "reverted-record duplicate occurrence keys retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "exact-revert expected native confirmation count",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "exact-revert only native beforeunload dialogs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "exact-revert actual reload discards tab record",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "invalid-date imported three separate occurrences",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "invalid-date preserves literal source filename",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "invalid-date invalid draft shown",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "invalid-date export blocked",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "invalid-date expected native confirmation count",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "invalid-date only native beforeunload dialogs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "invalid-date actual reload discards tab record",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "invalid-note imported three separate occurrences",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "invalid-note preserves literal source filename",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "invalid-note invalid draft shown",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "invalid-note export blocked",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "invalid-note expected native confirmation count",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "invalid-note only native beforeunload dialogs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "invalid-note actual reload discards tab record",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "file-preview imported three separate occurrences",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "file-preview preserves literal source filename",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "file-preview displayed record and storage retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "file-preview expected native confirmation count",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "file-preview only native beforeunload dialogs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "file-preview actual reload discards tab record",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "file-cancel imported three separate occurrences",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "file-cancel preserves literal source filename",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "file-cancel displayed record and storage retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "file-cancel expected native confirmation count",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "file-cancel only native beforeunload dialogs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "file-cancel actual reload discards tab record",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "file-refusal imported three separate occurrences",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "file-refusal preserves literal source filename",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "file-refusal refused message",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "file-refusal displayed record and storage retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "file-refusal expected native confirmation count",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "file-refusal only native beforeunload dialogs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "file-refusal actual reload discards tab record",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "file-pending imported three separate occurrences",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "file-pending preserves literal source filename",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "pending read status visible",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "file-pending displayed record and storage retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "file-pending expected native confirmation count",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "file-pending only native beforeunload dialogs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "file-pending actual reload discards tab record",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "replacement imported three separate occurrences",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "replacement preserves literal source filename",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "replacement baseline unrecorded",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "replacement-clean expected native confirmation count",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "replacement-clean only native beforeunload dialogs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "replacement-clean actual reload discards tab record",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "download-retains imported three separate occurrences",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "download-retains preserves literal source filename",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "changed-record complete envelope fields",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "changed-record original source exact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "changed-record complete accepted visits exact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "changed-record untouched CR CRLF tab Unicode note exact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "changed-record duplicate occurrence keys retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "download request status",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "download-retains expected native confirmation count",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "download-retains only native beforeunload dialogs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "download-retains actual navigation completed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "print-retains imported three separate occurrences",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "print-retains preserves literal source filename",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Print button invokes native print",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "print-retains expected native confirmation count",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "print-retains only native beforeunload dialogs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "print-retains actual navigation completed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "no outside requests",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "no page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "managed browser disconnected",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "departures": [
+    {
+      "case": "empty-clean",
+      "action": "navigation",
+      "dirty": false,
+      "choice_policy": "stay",
+      "dialogs": [],
+      "browser_error": null,
+      "stayed": false,
+      "original_missing_protection": false
+    },
+    {
+      "case": "loaded-clean",
+      "action": "reload",
+      "dirty": false,
+      "choice_policy": "stay",
+      "dialogs": [],
+      "browser_error": null,
+      "stayed": false,
+      "original_missing_protection": false
+    },
+    {
+      "case": "dirty-outcome-stay",
+      "action": "reload",
+      "dirty": true,
+      "choice_policy": "stay",
+      "dialogs": [],
+      "browser_error": null,
+      "stayed": false,
+      "original_missing_protection": true
+    },
+    {
+      "case": "dirty-date-stay",
+      "action": "navigation",
+      "dirty": true,
+      "choice_policy": "stay",
+      "dialogs": [],
+      "browser_error": null,
+      "stayed": false,
+      "original_missing_protection": true
+    },
+    {
+      "case": "dirty-note-stay",
+      "action": "close",
+      "dirty": true,
+      "choice_policy": "stay",
+      "dialogs": [],
+      "browser_error": null,
+      "stayed": false,
+      "original_missing_protection": true
+    },
+    {
+      "case": "exact-revert",
+      "action": "reload",
+      "dirty": false,
+      "choice_policy": "stay",
+      "dialogs": [],
+      "browser_error": null,
+      "stayed": false,
+      "original_missing_protection": false
+    },
+    {
+      "case": "invalid-date",
+      "action": "reload",
+      "dirty": true,
+      "choice_policy": "stay",
+      "dialogs": [],
+      "browser_error": null,
+      "stayed": false,
+      "original_missing_protection": true
+    },
+    {
+      "case": "invalid-note",
+      "action": "reload",
+      "dirty": true,
+      "choice_policy": "stay",
+      "dialogs": [],
+      "browser_error": null,
+      "stayed": false,
+      "original_missing_protection": true
+    },
+    {
+      "case": "file-preview",
+      "action": "reload",
+      "dirty": true,
+      "choice_policy": "stay",
+      "dialogs": [],
+      "browser_error": null,
+      "stayed": false,
+      "original_missing_protection": true
+    },
+    {
+      "case": "file-cancel",
+      "action": "reload",
+      "dirty": true,
+      "choice_policy": "stay",
+      "dialogs": [],
+      "browser_error": null,
+      "stayed": false,
+      "original_missing_protection": true
+    },
+    {
+      "case": "file-refusal",
+      "action": "reload",
+      "dirty": true,
+      "choice_policy": "stay",
+      "dialogs": [],
+      "browser_error": null,
+      "stayed": false,
+      "original_missing_protection": true
+    },
+    {
+      "case": "file-pending",
+      "action": "reload",
+      "dirty": true,
+      "choice_policy": "stay",
+      "dialogs": [],
+      "browser_error": null,
+      "stayed": false,
+      "original_missing_protection": true
+    },
+    {
+      "case": "replacement-clean",
+      "action": "reload",
+      "dirty": false,
+      "choice_policy": "stay",
+      "dialogs": [],
+      "browser_error": null,
+      "stayed": false,
+      "original_missing_protection": false
+    },
+    {
+      "case": "download-retains",
+      "action": "navigation",
+      "dirty": true,
+      "choice_policy": "stay",
+      "dialogs": [],
+      "browser_error": null,
+      "stayed": false,
+      "original_missing_protection": true
+    },
+    {
+      "case": "print-retains",
+      "action": "navigation",
+      "dirty": true,
+      "choice_policy": "stay",
+      "dialogs": [],
+      "browser_error": null,
+      "stayed": false,
+      "original_missing_protection": true
+    }
+  ],
+  "downloads": [
+    {
+      "path": "reverted-record.json",
+      "suggested_filename": "tastetable-visits-2024-02-26.json",
+      "identity": {
+        "bytes": 1934,
+        "sha256": "289afd820de0aa76db29a28d61b3ac9d0265b9935dced74133952211801828f0",
+        "git": "a2516c82d82b7227cdefb4d4862e2ebf84bf7671",
+        "mode": 33188,
+        "mtime_ns": 1791910548750905360,
+        "inode": 149059018
+      }
+    },
+    {
+      "path": "changed-record.json",
+      "suggested_filename": "tastetable-visits-2024-02-26.json",
+      "identity": {
+        "bytes": 1928,
+        "sha256": "11d6489fc42e3c18c243f770f7bcbae6b6b36ba0dfa716e165372ad32a92672f",
+        "git": "a44872c044166d9b4bb771b2fc1656978840f169",
+        "mode": 33188,
+        "mtime_ns": 1791910556843320796,
+        "inode": 149060965
+      }
+    }
+  ],
+  "requests": [
+    {
+      "case": "empty-clean",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "empty-clean",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "empty-clean",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "empty-clean",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "empty-clean",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "empty-clean",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "empty-clean",
+      "url": "http://127.0.0.1:61741/departed.html",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "loaded-clean",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-outcome",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-outcome",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-outcome",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-outcome",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-outcome",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-outcome",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-outcome",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-outcome",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-outcome",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-outcome",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-outcome",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-outcome",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-date",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-date",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-date",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-date",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-date",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-date",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-date",
+      "url": "http://127.0.0.1:61741/departed.html",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-note",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-note",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-note",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-note",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-note",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "dirty-note",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "exact-revert",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "exact-revert",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "exact-revert",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "exact-revert",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "exact-revert",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "exact-revert",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "exact-revert",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "exact-revert",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "exact-revert",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "exact-revert",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "exact-revert",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "exact-revert",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "invalid-date",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "invalid-date",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "invalid-date",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "invalid-date",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "invalid-date",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "invalid-date",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "invalid-date",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "invalid-date",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "invalid-date",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "invalid-date",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "invalid-date",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "invalid-date",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "invalid-note",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "invalid-note",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "invalid-note",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "invalid-note",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "invalid-note",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "invalid-note",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "invalid-note",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "invalid-note",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "invalid-note",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "invalid-note",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "invalid-note",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "invalid-note",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-preview",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "file-preview",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "file-preview",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-preview",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-preview",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-preview",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-preview",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "file-preview",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "file-preview",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-preview",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-preview",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-preview",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-cancel",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "file-cancel",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "file-cancel",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-cancel",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-cancel",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-cancel",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-cancel",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "file-cancel",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "file-cancel",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-cancel",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-cancel",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-cancel",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-refusal",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "file-refusal",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "file-refusal",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-refusal",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-refusal",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-refusal",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-refusal",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "file-refusal",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "file-refusal",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-refusal",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-refusal",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-refusal",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-pending",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "file-pending",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "file-pending",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-pending",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-pending",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-pending",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-pending",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "file-pending",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "file-pending",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-pending",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-pending",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "file-pending",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "replacement",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "replacement",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "replacement",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "replacement",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "replacement",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "replacement",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "replacement",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "replacement",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "replacement",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "replacement",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "replacement",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "replacement",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "download-retains",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "download-retains",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "download-retains",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "download-retains",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "download-retains",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "download-retains",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "download-retains",
+      "url": "http://127.0.0.1:61741/departed.html",
+      "method": "GET"
+    },
+    {
+      "case": "print-retains",
+      "url": "http://127.0.0.1:61741/static/visit-record.html",
+      "method": "GET"
+    },
+    {
+      "case": "print-retains",
+      "url": "http://127.0.0.1:61741/static/visit_record.css",
+      "method": "GET"
+    },
+    {
+      "case": "print-retains",
+      "url": "http://127.0.0.1:61741/static/visit_record_ui.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "print-retains",
+      "url": "http://127.0.0.1:61741/static/visit_record.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "print-retains",
+      "url": "http://127.0.0.1:61741/static/week_file.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "print-retains",
+      "url": "http://127.0.0.1:61741/static/week_plan.mjs",
+      "method": "GET"
+    },
+    {
+      "case": "print-retains",
+      "url": "http://127.0.0.1:61741/departed.html",
+      "method": "GET"
+    }
+  ],
+  "page_errors": [],
+  "outside_requests": [],
+  "print_observations": [
+    {
+      "calls": 1,
+      "before": 1,
+      "after": 0
+    }
+  ],
+  "browser_disconnected": true,
+  "os_browser_exit_code": null,
+  "inputs_before": {
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/fixtures/original-record.json": {
+      "bytes": 1934,
+      "sha256": "ee45bdd3fb7dd31d48094a9752e88be7fc15331cad4e702e29b0eb5626df0624",
+      "git": "69d1c226ab9b7ed25a08f9372a0534d2be00d27f",
+      "mode": 33188,
+      "mtime_ns": 1791910258337883178,
+      "inode": 149046487
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/fixtures/original-week.json": {
+      "bytes": 1209,
+      "sha256": "81da628ed0c3c68c9be6639eb5ac1353664479262fe7760905ebce842bfc4b25",
+      "git": "7980f27eaeca995681a2c8a7b68b2ebe57740d95",
+      "mode": 33188,
+      "mtime_ns": 1791910258337991303,
+      "inode": 149046488
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/fixtures/pending.json": {
+      "bytes": 1934,
+      "sha256": "ee45bdd3fb7dd31d48094a9752e88be7fc15331cad4e702e29b0eb5626df0624",
+      "git": "69d1c226ab9b7ed25a08f9372a0534d2be00d27f",
+      "mode": 33188,
+      "mtime_ns": 1791910258338162012,
+      "inode": 149046490
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/fixtures/refused.json": {
+      "bytes": 9,
+      "sha256": "2a1872c922f8b61f9016f345dda22ea7b2d2707658b7ad5061f724440b1d6559",
+      "git": "f2dcf6a25df6e784c3cf36c6817838e028866039",
+      "mode": 33188,
+      "mtime_ns": 1791910258338083262,
+      "inode": 149046489
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/original/static/visit-record.html": {
+      "bytes": 4010,
+      "sha256": "6a26be64a58a36a6c7102fcb3c1b6ea29a05a4f3842ed40609cabb0425cb0c24",
+      "git": "22b5069faebfffd979aad3a089c656e585007f61",
+      "mode": 33188,
+      "mtime_ns": 1791910258337079633,
+      "inode": 149046480
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/original/static/visit_record.css": {
+      "bytes": 4621,
+      "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403",
+      "git": "cf2ed8fc0871196a55ceef4e0aa0cab09d1fcfeb",
+      "mode": 33188,
+      "mtime_ns": 1791910258337242800,
+      "inode": 149046481
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/original/static/visit_record.mjs": {
+      "bytes": 7525,
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f",
+      "git": "2b5b37e3d4a227e00a5b0052a962d13512b53e48",
+      "mode": 33188,
+      "mtime_ns": 1791910258337551093,
+      "inode": 149046483
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/original/static/visit_record_ui.mjs": {
+      "bytes": 9376,
+      "sha256": "bec91c2dc84902f8c948bce7a87cf87b19fdabf2a1bde17e94cf2fd0b324a64a",
+      "git": "b136fa1a9f688d8a27db7d96668ace0895e547ee",
+      "mode": 33188,
+      "mtime_ns": 1791910258337418468,
+      "inode": 149046482
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/original/static/week_file.mjs": {
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "git": "420ddb8f63fca264dcf97be7147801105696155d",
+      "mode": 33188,
+      "mtime_ns": 1791910258337654635,
+      "inode": 149046484
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/original/static/week_plan.mjs": {
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "git": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "mode": 33188,
+      "mtime_ns": 1791910258337741969,
+      "inode": 149046485
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/original-source.json": {
+      "bytes": 790,
+      "sha256": "8edf473d02460f8201e89b71ac3d75669953f441c569ea9d650788ed9a183bac",
+      "git": "1fec29b80bbf31928221c8560b0eee941249a9eb",
+      "mode": 33188,
+      "mtime_ns": 1791910258338509596,
+      "inode": 149046492
+    }
+  },
+  "origin": "http://127.0.0.1:61741",
+  "browser_version": "155.0.8059.40",
+  "passed": true,
+  "inputs_after": {
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/fixtures/original-record.json": {
+      "bytes": 1934,
+      "sha256": "ee45bdd3fb7dd31d48094a9752e88be7fc15331cad4e702e29b0eb5626df0624",
+      "git": "69d1c226ab9b7ed25a08f9372a0534d2be00d27f",
+      "mode": 33188,
+      "mtime_ns": 1791910258337883178,
+      "inode": 149046487
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/fixtures/original-week.json": {
+      "bytes": 1209,
+      "sha256": "81da628ed0c3c68c9be6639eb5ac1353664479262fe7760905ebce842bfc4b25",
+      "git": "7980f27eaeca995681a2c8a7b68b2ebe57740d95",
+      "mode": 33188,
+      "mtime_ns": 1791910258337991303,
+      "inode": 149046488
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/fixtures/pending.json": {
+      "bytes": 1934,
+      "sha256": "ee45bdd3fb7dd31d48094a9752e88be7fc15331cad4e702e29b0eb5626df0624",
+      "git": "69d1c226ab9b7ed25a08f9372a0534d2be00d27f",
+      "mode": 33188,
+      "mtime_ns": 1791910258338162012,
+      "inode": 149046490
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/fixtures/refused.json": {
+      "bytes": 9,
+      "sha256": "2a1872c922f8b61f9016f345dda22ea7b2d2707658b7ad5061f724440b1d6559",
+      "git": "f2dcf6a25df6e784c3cf36c6817838e028866039",
+      "mode": 33188,
+      "mtime_ns": 1791910258338083262,
+      "inode": 149046489
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/original/static/visit-record.html": {
+      "bytes": 4010,
+      "sha256": "6a26be64a58a36a6c7102fcb3c1b6ea29a05a4f3842ed40609cabb0425cb0c24",
+      "git": "22b5069faebfffd979aad3a089c656e585007f61",
+      "mode": 33188,
+      "mtime_ns": 1791910258337079633,
+      "inode": 149046480
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/original/static/visit_record.css": {
+      "bytes": 4621,
+      "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403",
+      "git": "cf2ed8fc0871196a55ceef4e0aa0cab09d1fcfeb",
+      "mode": 33188,
+      "mtime_ns": 1791910258337242800,
+      "inode": 149046481
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/original/static/visit_record.mjs": {
+      "bytes": 7525,
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f",
+      "git": "2b5b37e3d4a227e00a5b0052a962d13512b53e48",
+      "mode": 33188,
+      "mtime_ns": 1791910258337551093,
+      "inode": 149046483
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/original/static/visit_record_ui.mjs": {
+      "bytes": 9376,
+      "sha256": "bec91c2dc84902f8c948bce7a87cf87b19fdabf2a1bde17e94cf2fd0b324a64a",
+      "git": "b136fa1a9f688d8a27db7d96668ace0895e547ee",
+      "mode": 33188,
+      "mtime_ns": 1791910258337418468,
+      "inode": 149046482
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/original/static/week_file.mjs": {
+      "bytes": 6642,
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614",
+      "git": "420ddb8f63fca264dcf97be7147801105696155d",
+      "mode": 33188,
+      "mtime_ns": 1791910258337654635,
+      "inode": 149046484
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/original/static/week_plan.mjs": {
+      "bytes": 3913,
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809",
+      "git": "8ed28163e0273c510fdd8e6f7c5d1c8476efb862",
+      "mode": 33188,
+      "mtime_ns": 1791910258337741969,
+      "inode": 149046485
+    },
+    "/private/var/tmp/hamon-dcac8b3b8755-taste-departure-v1/original-source.json": {
+      "bytes": 790,
+      "sha256": "8edf473d02460f8201e89b71ac3d75669953f441c569ea9d650788ed9a183bac",
+      "git": "1fec29b80bbf31928221c8560b0eee941249a9eb",
+      "mode": 33188,
+      "mtime_ns": 1791910258338509596,
+      "inode": 149046492
+    }
+  },
+  "inputs_preserved": true,
+  "observer": {
+    "bytes": 13524,
+    "sha256": "a4cc7630529bf87a973faa074b71e1f1483f294f645b91cb8f7c6305cb5496e4",
+    "git": "f4df785e260d8102147703eb58b397c2f72d95a0",
+    "mode": 33188,
+    "mtime_ns": 1791910494157952420,
+    "inode": 149053240
+  },
+  "finished": "2026-10-13T16:55:59.078945+00:00"
+}
