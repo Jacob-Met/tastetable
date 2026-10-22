@@ -1,0 +1,137 @@
+{
+  "schema": "tastetable.visit_record_csv.author_browser.v1",
+  "mode": "candidate",
+  "startedAt": "2026-10-08T21:25:27.873Z",
+  "status": "passed",
+  "sourcePins": [
+    {
+      "path": "static/visit-record.html",
+      "sha256": "a9b59ef15324068998a8fa23c6c745329b036f40e7210bd92f3747538d9721f4"
+    },
+    {
+      "path": "static/visit_record_ui.mjs",
+      "sha256": "717be547c5833c1baca6f5b9c79791b28c3928dfcefe48666eeabf97a7a63836"
+    },
+    {
+      "path": "static/visit_record.css",
+      "sha256": "9dd37c6e08a426bca1df358ffe9e9aff86f55315ff5c4e61dcc6dc0cb5da3403"
+    },
+    {
+      "path": "static/visit_record.mjs",
+      "sha256": "feab129527c2b596cbc64f26c59901dbfb878bf590d3927f1819af4edc1a3b2f"
+    },
+    {
+      "path": "static/week_file.mjs",
+      "sha256": "914291b97250a97f6e09f47e6fed58b607b3b1ed9e4c60e3242ff39546913614"
+    },
+    {
+      "path": "static/week_plan.mjs",
+      "sha256": "e739adc10d9ae9ba1cb82c6d800c453e8f7bec53e343e0685adeabe98e6f4809"
+    },
+    {
+      "path": "static/visit_record_csv.mjs",
+      "sha256": "a233a983918291ef93577f91eb64c56adb4644c10cd8f4046e875d4536cc970c"
+    }
+  ],
+  "checks": [
+    "original physical file selection, explicit Use and JSON continuation preserve model/source",
+    "keyboard CSV physical bytes match17-column expected report,3 distinct occurrences, export timestamp, CRLF/CR/LF and Unicode",
+    "unrelated outcome/date edits preserve literal imported note bytes",
+    "simultaneous invalid date and note drafts guard forced clicks; every draft must recover before export",
+    "CSV exports current record and retires pending replacement preview",
+    "CSV retires a late physical File read without replacing accepted model",
+    "alternating JSON/CSV exports preserve records and yield complete physical files",
+    "390px controls remain in bounds and keyboard export still works",
+    "explicit empty record replacement yields header-only CSV"
+  ],
+  "pageErrors": [],
+  "externalRequests": [],
+  "downloads": [
+    {
+      "path": "download-1.json",
+      "suggestedFilename": "tastetable-visits-2024-02-26.json",
+      "bytes": 2691,
+      "sha256": "89f03111e1eeffe3716055ff5f8e5d5bbd7b8a78ee5ba38b364a58f3e8e61e9d"
+    },
+    {
+      "path": "download-2.csv",
+      "suggestedFilename": "tastetable-visits-2024-02-26.csv",
+      "bytes": 1012,
+      "sha256": "9d60b0f2d92ae42166cda06553ecbe8aa3cfa63ce831e477253d6e375816b17d"
+    },
+    {
+      "path": "download-3.csv",
+      "suggestedFilename": "tastetable-visits-2024-02-26.csv",
+      "bytes": 1018,
+      "sha256": "c328f55269db5dc8cf942993f66dd3648105475f9950e52a4a5f1ce12a2e3099"
+    },
+    {
+      "path": "download-4.csv",
+      "suggestedFilename": "tastetable-visits-2024-02-26.csv",
+      "bytes": 1035,
+      "sha256": "a7962f0bbd57f4b3beecfa443890766e92aa7dcc9845361439a4c948863d3b68"
+    },
+    {
+      "path": "download-5.csv",
+      "suggestedFilename": "tastetable-visits-2024-02-26.csv",
+      "bytes": 1035,
+      "sha256": "a7962f0bbd57f4b3beecfa443890766e92aa7dcc9845361439a4c948863d3b68"
+    },
+    {
+      "path": "download-6.csv",
+      "suggestedFilename": "tastetable-visits-2024-02-26.csv",
+      "bytes": 1035,
+      "sha256": "a7962f0bbd57f4b3beecfa443890766e92aa7dcc9845361439a4c948863d3b68"
+    },
+    {
+      "path": "download-7.json",
+      "suggestedFilename": "tastetable-visits-2024-02-26.json",
+      "bytes": 2715,
+      "sha256": "dffad7dc8364dfd365177ae7f569317116599258246a58e95beecab331b18fbd"
+    },
+    {
+      "path": "download-8.csv",
+      "suggestedFilename": "tastetable-visits-2024-02-26.csv",
+      "bytes": 1035,
+      "sha256": "a7962f0bbd57f4b3beecfa443890766e92aa7dcc9845361439a4c948863d3b68"
+    },
+    {
+      "path": "download-9.csv",
+      "suggestedFilename": "tastetable-visits-2024-02-26.csv",
+      "bytes": 1035,
+      "sha256": "a7962f0bbd57f4b3beecfa443890766e92aa7dcc9845361439a4c948863d3b68"
+    },
+    {
+      "path": "download-10.csv",
+      "suggestedFilename": "tastetable-visits-2024-02-26.csv",
+      "bytes": 246,
+      "sha256": "f9f63a431ee416d5ddf61e6e93f957db3132248aac34512710bbc0dac4451f6e"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "desktop-csv.png",
+      "bytes": 103832,
+      "sha256": "bdf89b63f82037110a550c659ab1cdcadc1340589e5027484f17080b8f2a80c4"
+    },
+    {
+      "path": "mobile-csv.png",
+      "bytes": 70012,
+      "sha256": "93bbd27348c3ba3ca69aff858d9afdd1ee9a926f4e3300c5c11457d05be98fab"
+    }
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/153.0.8010.47",
+    "revision": "@73934a44f61e6b3878d1943064c141a5a820f5f7",
+    "userAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+    "jsVersion": "15.3.76.12"
+  },
+  "browserPid": 1821593,
+  "sourceFilesUnchanged": true,
+  "browserExited": true,
+  "ownedProfileRemoved": true,
+  "serverClosed": true,
+  "receiverSha256": "7680ee3ca881284fa8019109574bcbf6acaca4bffb825e577b2c0dad290f7375",
+  "finishedAt": "2026-10-08T21:25:46.735Z"
+}

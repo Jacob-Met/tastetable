@@ -1,0 +1,135 @@
+docs/receiving/visit-record-csv-ui-65ae877160f6/baseline-browser/expected-original.csv:1: trailing whitespace.
++"source_name","week_start","source_mode","source_received_at","source_saved_at","record_saved_at","occurrence_key","venue_name","entity_id","kind","original_day","planned_day","planned_date","outcome","actual_date","note","original_explanation"
+docs/receiving/visit-record-csv-ui-65ae877160f6/baseline-browser/expected-original.csv:2: trailing whitespace.
++" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-0","Café, ""Same""","same-id","restaurant","Monday","Thursday","2024-02-29","went","2024-03-01","He said ""yes"", then went.","  First
+docs/receiving/visit-record-csv-ui-65ae877160f6/baseline-browser/expected-original.csv:3: trailing whitespace.
++reason  "
+docs/receiving/visit-record-csv-ui-65ae877160f6/baseline-browser/expected-original.csv:4: trailing whitespace.
++" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-1","Café, ""Same""","same-id","restaurant","Tuesday","","","did_not_go","2024-03-02","  A
+B
+docs/receiving/visit-record-csv-ui-65ae877160f6/baseline-browser/expected-original.csv:6: trailing whitespace.
++🙂	 ","Second reason"
+docs/receiving/visit-record-csv-ui-65ae877160f6/baseline-browser/expected-original.csv:7: trailing whitespace.
++" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-2","Third café","third-id","restaurant","Friday","Friday","2024-03-01","unrecorded","","","Third reason"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-10.csv:1: trailing whitespace.
++"source_name","week_start","source_mode","source_received_at","source_saved_at","record_saved_at","occurrence_key","venue_name","entity_id","kind","original_day","planned_day","planned_date","outcome","actual_date","note","original_explanation"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-2.csv:1: trailing whitespace.
++"source_name","week_start","source_mode","source_received_at","source_saved_at","record_saved_at","occurrence_key","venue_name","entity_id","kind","original_day","planned_day","planned_date","outcome","actual_date","note","original_explanation"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-2.csv:2: trailing whitespace.
++" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-0","Café, ""Same""","same-id","restaurant","Monday","Thursday","2024-02-29","went","2024-03-01","He said ""yes"", then went.","  First
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-2.csv:3: trailing whitespace.
++reason  "
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-2.csv:4: trailing whitespace.
++" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-1","Café, ""Same""","same-id","restaurant","Tuesday","","","did_not_go","2024-03-02","  A
+B
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-2.csv:6: trailing whitespace.
++🙂	 ","Second reason"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-2.csv:7: trailing whitespace.
++" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-2","Third café","third-id","restaurant","Friday","Friday","2024-03-01","unrecorded","","","Third reason"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-3.csv:1: trailing whitespace.
++"source_name","week_start","source_mode","source_received_at","source_saved_at","record_saved_at","occurrence_key","venue_name","entity_id","kind","original_day","planned_day","planned_date","outcome","actual_date","note","original_explanation"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-3.csv:2: trailing whitespace.
++" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-0","Café, ""Same""","same-id","restaurant","Monday","Thursday","2024-02-29","did_not_go","2024-03-01","He said ""yes"", then went.","  First
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-3.csv:3: trailing whitespace.
++reason  "
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-3.csv:4: trailing whitespace.
++" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-1","Café, ""Same""","same-id","restaurant","Tuesday","","","did_not_go","2025-01-01","  A
+B
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-3.csv:6: trailing whitespace.
++🙂	 ","Second reason"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-3.csv:7: trailing whitespace.
++" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-2","Third café","third-id","restaurant","Friday","Friday","2024-03-01","unrecorded","","","Third reason"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-4.csv:1: trailing whitespace.
++"source_name","week_start","source_mode","source_received_at","source_saved_at","record_saved_at","occurrence_key","venue_name","entity_id","kind","original_day","planned_day","planned_date","outcome","actual_date","note","original_explanation"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-4.csv:2: trailing whitespace.
++" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-0","Café, ""Same""","same-id","restaurant","Monday","Thursday","2024-02-29","did_not_go","2024-03-01","He said ""yes"", then went.","  First
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-4.csv:3: trailing whitespace.
++reason  "
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-4.csv:4: trailing whitespace.
++" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-1","Café, ""Same""","same-id","restaurant","Tuesday","","","did_not_go","2025-01-01","  A
+B
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-4.csv:6: trailing whitespace.
++🙂	 ","Second reason"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-4.csv:8: trailing whitespace.
++next","Third reason"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-5.csv:1: trailing whitespace.
++"source_name","week_start","source_mode","source_received_at","source_saved_at","record_saved_at","occurrence_key","venue_name","entity_id","kind","original_day","planned_day","planned_date","outcome","actual_date","note","original_explanation"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-5.csv:2: trailing whitespace.
++" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-0","Café, ""Same""","same-id","restaurant","Monday","Thursday","2024-02-29","did_not_go","2024-03-01","He said ""yes"", then went.","  First
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-5.csv:3: trailing whitespace.
++reason  "
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-5.csv:4: trailing whitespace.
++" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-1","Café, ""Same""","same-id","restaurant","Tuesday","","","did_not_go","2025-01-01","  A
+B
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-5.csv:6: trailing whitespace.
++🙂	 ","Second reason"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-5.csv:8: trailing whitespace.
++next","Third reason"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-6.csv:1: trailing whitespace.
++"source_name","week_start","source_mode","source_received_at","source_saved_at","record_saved_at","occurrence_key","venue_name","entity_id","kind","original_day","planned_day","planned_date","outcome","actual_date","note","original_explanation"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-6.csv:2: trailing whitespace.
++" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-0","Café, ""Same""","same-id","restaurant","Monday","Thursday","2024-02-29","did_not_go","2024-03-01","He said ""yes"", then went.","  First
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-6.csv:3: trailing whitespace.
++reason  "
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-6.csv:4: trailing whitespace.
++" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-1","Café, ""Same""","same-id","restaurant","Tuesday","","","did_not_go","2025-01-01","  A
+B
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-6.csv:6: trailing whitespace.
++🙂	 ","Second reason"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-6.csv:8: trailing whitespace.
++next","Third reason"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-8.csv:1: trailing whitespace.
++"source_name","week_start","source_mode","source_received_at","source_saved_at","record_saved_at","occurrence_key","venue_name","entity_id","kind","original_day","planned_day","planned_date","outcome","actual_date","note","original_explanation"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-8.csv:2: trailing whitespace.
++" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-0","Café, ""Same""","same-id","restaurant","Monday","Thursday","2024-02-29","did_not_go","2024-03-01","He said ""yes"", then went.","  First
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-8.csv:3: trailing whitespace.
++reason  "
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-8.csv:4: trailing whitespace.
++" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-1","Café, ""Same""","same-id","restaurant","Tuesday","","","did_not_go","2025-01-01","  A
+B
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-8.csv:6: trailing whitespace.
++🙂	 ","Second reason"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-8.csv:8: trailing whitespace.
++next","Third reason"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-9.csv:1: trailing whitespace.
++"source_name","week_start","source_mode","source_received_at","source_saved_at","record_saved_at","occurrence_key","venue_name","entity_id","kind","original_day","planned_day","planned_date","outcome","actual_date","note","original_explanation"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-9.csv:2: trailing whitespace.
++" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-0","Café, ""Same""","same-id","restaurant","Monday","Thursday","2024-02-29","did_not_go","2024-03-01","He said ""yes"", then went.","  First
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-9.csv:3: trailing whitespace.
++reason  "
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-9.csv:4: trailing whitespace.
++" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-1","Café, ""Same""","same-id","restaurant","Tuesday","","","did_not_go","2025-01-01","  A
+B
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-9.csv:6: trailing whitespace.
++🙂	 ","Second reason"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/download-9.csv:8: trailing whitespace.
++next","Third reason"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/expected-original.csv:1: trailing whitespace.
++"source_name","week_start","source_mode","source_received_at","source_saved_at","record_saved_at","occurrence_key","venue_name","entity_id","kind","original_day","planned_day","planned_date","outcome","actual_date","note","original_explanation"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/expected-original.csv:2: trailing whitespace.
++" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-0","Café, ""Same""","same-id","restaurant","Monday","Thursday","2024-02-29","went","2024-03-01","He said ""yes"", then went.","  First
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/expected-original.csv:3: trailing whitespace.
++reason  "
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/expected-original.csv:4: trailing whitespace.
++" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-1","Café, ""Same""","same-id","restaurant","Tuesday","","","did_not_go","2024-03-02","  A
+B
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/expected-original.csv:6: trailing whitespace.
++🙂	 ","Second reason"
+docs/receiving/visit-record-csv-ui-65ae877160f6/candidate-browser/expected-original.csv:7: trailing whitespace.
++" original,week.json ","2024-02-26","mock","2024-02-01T00:00:00.000Z","2024-02-25T18:00:00.000Z","2026-10-08T21:10:11.123Z","pick-2","Third café","third-id","restaurant","Friday","Friday","2024-03-01","unrecorded","","","Third reason"
+docs/receiving/visit-record-csv-ui-65ae877160f6/production.diff:10: trailing whitespace.
++ 
+docs/receiving/visit-record-csv-ui-65ae877160f6/production.diff:12: trailing whitespace.
++ 
+docs/receiving/visit-record-csv-ui-65ae877160f6/production.diff:14: trailing whitespace.
++ 
+docs/receiving/visit-record-csv-ui-65ae877160f6/production.diff:16: trailing whitespace.
++ 
+docs/receiving/visit-record-csv-ui-65ae877160f6/production.diff:19: trailing whitespace.
++ 
+docs/receiving/visit-record-csv-ui-65ae877160f6/production.diff:21: trailing whitespace.
++ 
+docs/receiving/visit-record-csv-ui-65ae877160f6/production.diff:24: trailing whitespace.
++ 
+docs/receiving/visit-record-csv-ui-65ae877160f6/production.diff:65: trailing whitespace.
++ 

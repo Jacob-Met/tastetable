@@ -1,0 +1,9 @@
+{
+  "format": "tastetable.visit-record.v1",
+  "savedAt": "2024-03-03T12:00:00.000Z",
+  "source": {
+    "name": "empty.json",
+    "weekText": "{\"format\":\"tastetable.saved-week.v1\",\"receivedAt\":\"2024-02-01T00:00:00.000Z\",\"savedAt\":\"2024-02-25T18:00:00.000Z\",\"calendarId\":null,\"inputs\":{\"city\":\"Fictional City\",\"cuisines\":[],\"music\":[],\"films\":[],\"constraints\":[]},\"response\":{\"mock\":true,\"plan\":{\"meals\":[],\"outing\":null,\"notes\":[],\"rejected\":[]},\"llm_only\":{\"meals\":[],\"outing\":{\"name\":\"Comparison\",\"day\":\"Saturday\",\"why\":\"Original\"}},\"comparison\":{\"constraints\":[],\"grounded\":{\"picks\":0,\"with_qloo_entity_id\":0,\"with_affinity_evidence\":0,\"constraint_checked\":0,\"unsafe_candidates_rejected\":0},\"llm_only\":{\"picks\":0,\"with_qloo_entity_id\":0,\"with_affinity_evidence\":0,\"constraint_checked\":0,\"unsafe_candidates_rejected\":0}},\"trace\":[]},\"week\":{\"start\":\"2024-02-26\",\"assignments\":{}}}"
+  },
+  "visits": []
+}
