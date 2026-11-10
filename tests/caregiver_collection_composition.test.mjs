@@ -70,6 +70,11 @@ async function appFixture() {
   const window = new Node();
   let handoff, collection, worksheet, model = null, changed = 0, changedCallback;
   const mounts = {
+    // Attendance context has its own importer tests. This fixture isolates
+    // caregiver handoff/collection composition without faking arrangement state.
+    "./visit_history.mjs": {
+      mountVisitHistory() { return { label: () => "" }; },
+    },
     "./venue_followup.mjs": {
       mountVenueFollowup(root, current, onChange) {
         changedCallback = () => { events.push("worksheet.changed"); onChange(); };
@@ -108,7 +113,7 @@ async function appFixture() {
   };
   const context = vm.createContext({
     structuredClone, AbortController, Uint8Array, console,
-    document: { querySelector: node, createElement: () => new Node(), body: new Node() },
+    document: { querySelector: node, querySelectorAll: () => [], createElement: () => new Node(), body: new Node() },
     window,
     fetch: async (url, options) => {
       requests.push({ url, method: options?.method || "GET" });
@@ -133,10 +138,18 @@ async function appFixture() {
     assert.equal(specifier, "./week_plan.mjs"); return modelModule;
   });
   await codecModule.evaluate();
+  const historySource = await readFile(new URL("../static/arrangement_history.mjs", import.meta.url), "utf8");
+  const historyModule = new vm.SourceTextModule(historySource, { context, identifier: "static/arrangement_history.mjs" });
+  await historyModule.link(specifier => {
+    assert.equal(specifier, "./week_plan.mjs");
+    return modelModule;
+  });
+  await historyModule.evaluate();
   const app = new vm.SourceTextModule(sources.app, { context, identifier: "static/app.js" });
   await app.link(specifier => {
     if (specifier === "./week_plan.mjs") return modelModule;
     if (specifier === "./week_file.mjs") return codecModule;
+    if (specifier === "./arrangement_history.mjs") return historyModule;
     const values = mounts[specifier];
     assert.ok(values, "Only the declared UI mounts are doubled: " + specifier);
     return new vm.SyntheticModule(Object.keys(values), function () {

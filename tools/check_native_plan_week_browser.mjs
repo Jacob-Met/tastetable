@@ -11,7 +11,7 @@ import {readFile, writeFile, mkdir, mkdtemp, rm, readdir} from "node:fs/promises
 import {dirname, extname, join, resolve} from "node:path";
 import {fileURLToPath} from "node:url";
 import {createRequire} from "node:module";
-import {createWeekPlan, setPickDay, weekRows} from "../static/week_plan.mjs";
+import {createWeekPlan, setPickDay, setWeek, weekRows} from "../static/week_plan.mjs";
 import {readWeekFile} from "../static/week_file.mjs";
 
 const arguments_ = process.argv.slice(2);
@@ -39,13 +39,17 @@ const report = {
 const sourcePaths = [
   "tastetable_cli.py", "agent.py", "constraints.py", "qloo_client.py", "personas.py",
   "fixtures/qloo_fixtures.json", "static/week_plan.mjs", "static/week_file.mjs",
-  "static/calendar.js", "static/calendar.css", "static/app.js", "static/index.html",
+  "static/calendar.js", "static/calendar.css", "static/app.js", "static/arrangement_history.mjs", "static/index.html",
   "static/venue_followup.mjs", "static/venue_followup.css", "static/caregiver_handoff.mjs",
   "static/saved_weeks.mjs", "static/saved_week_store.mjs",
   "static/saved_week_ui.mjs", "static/saved_weeks.css", "static/venue_note_file.mjs",
+  "static/visit_history.mjs", "static/visit_record.mjs",
+  "static/saved_week_collection.mjs", "static/saved_week_collection_ui.mjs",
+  "static/saved_week_import.mjs", "static/saved_week_order.mjs", "static/saved_week_search.mjs",
+  "static/week_compare.mjs", "static/week_change_brief.mjs",
   "static/style.css", "static/plan-request.js", "tools/native_plan_to_week.mjs",
   "tests/test_native_plan_week.py", "tools/check_native_plan_week_browser.mjs",
-  ".github/workflows/native-plan-week-browser.yml",
+  // GitHub Actions are disabled; production browser source is the verified scope.
 ];
 for (const name of sourcePaths) report.sourceSha256[name] = hash(await readFile(join(project, name)));
 const sourceBefore = {...report.sourceSha256};
@@ -254,7 +258,7 @@ async function selectValue(selector, value) {
   await key("Enter", "Enter", 13);
   await waitFor(() => evaluate('document.querySelector(' + JSON.stringify(selector) + ').value===' + JSON.stringify(value)), "native select change");
 }
-async function verifyWeek(expected, sourceName) {
+async function verifyWeek(expected, sourceName, shownDate = expected.weekStart) {
   const observed = await evaluate(`(() => ({
     shown: !document.querySelector("#results").hidden,
     date: document.querySelector("#weekDate").value,
@@ -274,7 +278,7 @@ async function verifyWeek(expected, sourceName) {
     inputs: Object.fromEntries(["cuisines","music","films","city"].map(key => [key, document.querySelector("#form").elements[key].value])),
   }))()`);
   assert.equal(observed.shown, true);
-  assert.equal(observed.date, expected.weekStart);
+  assert.equal(observed.date, shownDate);
   assert.match(observed.source, /fictional/);
   assert.ok(observed.saved.includes(sourceName));
   assert.equal(observed.overflow, false);
@@ -396,6 +400,37 @@ try {
   await verifyWeek(arranged, chosen.name);
   assert.equal(await evaluate("document.activeElement.dataset.pickKey"), lastKey);
   passed("actual keyboard selection moves and omits distinct occurrences without changing source evidence");
+
+  assert.equal(await evaluate('document.querySelector("#undoWeek").disabled'), false);
+  assert.equal(await evaluate('document.querySelector("#redoWeek").disabled'), true);
+  // Exercise actual keyboard controls and the same source-bound calendar identity.
+  await activate("#undoWeek");
+  await verifyWeek(setPickDay(arranged, lastKey, chosen.restored.state.assignments[lastKey]), chosen.name);
+  await activate("#undoWeek");
+  await verifyWeek(chosen.restored.state, chosen.name);
+  assert.equal(await evaluate('document.querySelector("#undoWeek").disabled'), true);
+  assert.equal(await evaluate('document.querySelector("#redoWeek").disabled'), false);
+  const recoveredCalendar = await downloaded("#calendarDownload", "undone-calendar.ics");
+  assert.equal(recoveredCalendar.bytes.toString("utf8"), firstCalendar.bytes.toString("utf8"));
+  await activate("#redoWeek");
+  await verifyWeek(setPickDay(chosen.restored.state, firstKey, "Thursday"), chosen.name);
+  await activate("#redoWeek");
+  await verifyWeek(arranged, chosen.name);
+  assert.equal(await evaluate('document.querySelector("#redoWeek").disabled'), true);
+  // A date jump is a whole-week edit; Undo must restore both the exact date
+  // anchor and the previous occurrence assignments, not just the pick rows.
+  await evaluate("(()=>{const input=document.querySelector('#weekDate');input.value='2027-01-06';input.dispatchEvent(new Event('input',{bubbles:true}));})()");
+  await verifyWeek(setWeek(arranged, "2027-01-06"), chosen.name, "2027-01-06");
+  await activate("#undoWeek");
+  await verifyWeek(arranged, chosen.name);
+  assert.equal(await evaluate('document.querySelector("#weekDate").value'), "2026-12-28");
+  await activate("#redoWeek");
+  await verifyWeek(setWeek(arranged, "2027-01-06"), chosen.name, "2027-01-06");
+  await activate("#undoWeek");
+  await verifyWeek(arranged, chosen.name);
+  assert.equal(await evaluate('document.querySelector("#redoWeek").disabled'), false);
+  await screenshot("undo-redo-desktop.png", "#weekOrganizer");
+  passed("actual keyboard Undo/Redo restores both edits and original calendar without changing source identities");
 
   const saved = await downloaded("#saveWeek", "edited-saved-week.json");
   const resaved = readWeekFile(saved.bytes.toString("utf8"));

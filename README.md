@@ -121,6 +121,13 @@ has a day selector: move it to another day, combine several picks on the same da
 back. **Restore suggested days** restores the original assignments while keeping your chosen
 week. Open days are shown explicitly, including when too few recommendations pass the checks.
 
+**Undo change** and **Redo change** recover moves, omissions, resets and changes to the
+displayed week while the same plan is open. Up to 20 meaningful changes are retained;
+a new change after Undo discards the abandoned Redo branch. Reopening a saved week
+or accepting another plan starts fresh local history. History itself is not embedded
+in week/calendar/handoff files, and Undo never changes original evidence or visit notes.
+Use **Save week** or **Save caregiver handoff** for durable work.
+
 The chronological agenda keeps each venue and its scheduling control together. Open **Why this pick · original checks** for the full original explanation and Qloo ID. The disclosure works with the keyboard and stays open while you rearrange that pick. Printed handoffs always include the full evidence, even if you left it folded on screen.
 
 **Print week** opens the browser's print dialog for a dated caregiver handoff. It includes the
