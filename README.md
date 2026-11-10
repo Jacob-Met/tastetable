@@ -138,6 +138,8 @@ or accepting another plan starts fresh local history. History itself is not embe
 in week/calendar/handoff files, and Undo never changes original evidence or visit notes.
 Use **Save week** or **Save caregiver handoff** for durable work.
 
+The accepted week opens ahead of the intake form, with its first visit visible on a phone. The seven-day index shows scheduled-pick counts and open days; choose a day to move directly to its heading. The index stays within reach while you arrange visits. **Edit tastes & constraints** returns to intake, and **Save & share** takes you to the existing save, print and calendar controls below the agenda.
+
 The chronological agenda keeps each venue and its scheduling control together. Open **Why this pick · original checks** for the full original explanation and Qloo ID. The disclosure works with the keyboard and stays open while you rearrange that pick. Printed handoffs always include the full evidence, even if you left it folded on screen.
 
 **Print week** opens the browser's print dialog for a dated caregiver handoff. It includes the

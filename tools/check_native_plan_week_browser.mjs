@@ -47,7 +47,7 @@ const sourcePaths = [
   "static/saved_week_collection.mjs", "static/saved_week_collection_ui.mjs",
   "static/saved_week_import.mjs", "static/saved_week_order.mjs", "static/saved_week_search.mjs",
   "static/week_compare.mjs", "static/week_change_brief.mjs",
-  "static/style.css", "static/plan-request.js", "tools/native_plan_to_week.mjs",
+  "static/style.css", "static/pick_evidence.mjs", "static/week_workspace.mjs", "static/plan-request.js", "tools/native_plan_to_week.mjs",
   "tests/test_native_plan_week.py", "tools/check_native_plan_week_browser.mjs",
   // GitHub Actions are disabled; production browser source is the verified scope.
 ];
@@ -268,6 +268,10 @@ async function verifyWeek(expected, sourceName, shownDate = expected.weekStart) 
       key: node.dataset.pickKey, day: node.value || null,
       name: node.closest("article").querySelector("h4").textContent,
       why: node.closest("article").querySelector(".why").textContent,
+      checks: [...node.closest("article").querySelectorAll(".care-checks > div")].map(item => ({
+        status: item.querySelector(".check-result").textContent,
+        reason: item.querySelector("dd").textContent,
+      })),
       identity: node.closest("article").querySelector(".mono").textContent,
     })),
     openDays: document.querySelectorAll("#weekDays .open-day").length,
@@ -290,7 +294,12 @@ async function verifyWeek(expected, sourceName, shownDate = expected.weekStart) 
     assert.ok(current);
     assert.equal(current.day, expected.assignments[pick.key]);
     assert.equal(current.name, pick.pick.name);
-    assert.equal(current.why, pick.pick.why);
+    if (pick.pick.evidence?.format === "tastetable.pick-evidence.v1") {
+      assert.equal(current.why, pick.pick.evidence.taste_reason);
+      assert.deepEqual(current.checks, pick.pick.evidence.checks.map(check => ({
+        status: "Tag/keyword check: " + check.status, reason: check.reason,
+      })));
+    } else assert.equal(current.why, pick.pick.why);
     assert.equal(current.identity, "Qloo id: " + pick.pick.entity_id);
   }
   return observed;
