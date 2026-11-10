@@ -214,3 +214,56 @@ button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-v
 .week-heading + .week-range { margin-top:0; }
 .week-links { display:flex; flex-wrap:wrap; gap:.4rem 1.2rem; margin-bottom:.4rem; }
 #weekKeepTitle { scroll-margin-top:5rem; }
+
+/* The week is the working surface; supporting guidance stays within reach. */
+.app-header { padding-block: .85rem .35rem; }
+.app-masthead { display:flex; align-items:baseline; gap:1rem; }
+.app-wordmark { color:var(--ink); font-size:1.65rem; font-weight:750; letter-spacing:-.045em; text-decoration:none; }
+.app-purpose { color:var(--muted); font-size:.9rem; }
+.app-header .mode { margin:.15rem 0; }
+.care-guidance { font-size:.8rem; color:#665322; margin-top:.3rem; }
+.care-guidance summary { cursor:pointer; width:fit-content; padding:.2rem 0; }
+.care-guidance .disclaimer { margin-top:.4rem; font-size:.85rem; max-width:75ch; }
+main { padding-top:.25rem; }
+#weekOrganizer { margin-top:.4rem; }
+.week-heading { margin-bottom:.25rem; }
+.week-heading h2 { margin:.1rem 0 .25rem; font-size:1.5rem; }
+.week-heading + .week-range { margin:.1rem 0 .3rem; font-size:1rem; font-weight:600; color:var(--ink); }
+#weekSource, #savedWeekSource, #weekConstraints { margin-block:.25rem; }
+.week-controls { margin:.7rem 0 .4rem; gap:.5rem; }
+.week-controls label { flex:0 1 13rem; font-size:.8rem; }
+.week-controls button { padding:.5rem .85rem; }
+#weekHelp { margin:.3rem 0; }
+#weekSummary { font-size:.85rem; margin:.4rem 0; }
+#weekFileStatus:empty, #weekStatus:empty, #weekError:empty { display:none; }
+.week-day-nav { margin-top:.65rem; }
+.week-days { margin-top:.65rem; }
+#tasteForm > h2 { margin-top:.15rem; }
+.planning-context { border-left:3px solid #4b6850; background:#f2f5ef; padding:.7rem .9rem; margin:.8rem 0; }
+.planning-context-heading { margin:0 0 .35rem; font-size:.95rem; font-weight:700; }
+.planning-context-summary { margin:.4rem 0; display:grid; grid-template-columns:8rem minmax(0,1fr); gap:.2rem .8rem; font-size:.85rem; }
+.planning-context-summary dt { color:var(--muted); }
+.planning-context-summary dd { margin:0; overflow-wrap:anywhere; }
+.planning-context-summary > div { display:contents; }
+.planning-context-changes { margin:.5rem 0; padding-left:1.2rem; font-size:.85rem; }
+.planning-context-changes li { margin:.2rem 0; overflow-wrap:anywhere; }
+.planning-context-notice { margin:.4rem 0; font-size:.85rem; color:#59491f; }
+.planning-context-actions { display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.5rem; }
+.planning-context-actions button { font-size:.85rem; padding:.5rem .7rem; min-height:44px; }
+@media(max-width:640px) {
+ .app-header, main, footer { padding-inline:.85rem; }
+ .app-masthead { justify-content:space-between; gap:.5rem; }
+ .app-wordmark { font-size:1.45rem; }
+ .app-purpose { font-size:.8rem; }
+ .app-header .mode { font-size:.75rem; }
+ .card { padding:.85rem; }
+ .week-heading { gap:.3rem; }
+ .week-links { gap:.4rem 1rem; margin-bottom:.2rem; }
+ .week-controls { display:grid; grid-template-columns:minmax(0,1fr) auto auto; align-items:end; }
+ .week-controls label { min-width:0; }
+ .week-controls input { min-width:0; font-size:.9rem; padding:.45rem; min-height:44px; }
+ .week-controls button { min-width:0; padding:.5rem .65rem; font-size:.85rem; }
+ .planning-context-summary { grid-template-columns:1fr; gap:.1rem; }
+ .planning-context-summary dd { margin-bottom:.35rem; }
+}
+@media print { .app-purpose, .care-guidance, #planningContext { display:none !important; } .app-wordmark { font-size:20pt; } }
