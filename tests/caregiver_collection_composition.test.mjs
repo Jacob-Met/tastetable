@@ -9,6 +9,7 @@ import { readFile } from "node:fs/promises";
 const sourcePaths = {
   app: "../static/app.js", requests: "../static/plan-request.js",
   model: "../static/week_plan.mjs", codec: "../static/week_file.mjs",
+  evidence: "../static/pick_evidence.mjs",
 };
 const sources = Object.fromEntries(await Promise.all(Object.entries(sourcePaths)
   .map(async ([key, path]) => [key, await readFile(new URL(path, import.meta.url), "utf8")])));
@@ -145,11 +146,17 @@ async function appFixture() {
     return modelModule;
   });
   await historyModule.evaluate();
+  // Exercise the real care-evidence renderer, rather than silently mocking a
+  // module that app.js actually uses to display original checks.
+  const evidenceModule = new vm.SourceTextModule(sources.evidence, { context, identifier: "static/pick_evidence.mjs" });
+  await evidenceModule.link(() => { throw new Error("Unexpected care evidence import"); });
+  await evidenceModule.evaluate();
   const app = new vm.SourceTextModule(sources.app, { context, identifier: "static/app.js" });
   await app.link(specifier => {
     if (specifier === "./week_plan.mjs") return modelModule;
     if (specifier === "./week_file.mjs") return codecModule;
     if (specifier === "./arrangement_history.mjs") return historyModule;
+    if (specifier === "./pick_evidence.mjs") return evidenceModule;
     const values = mounts[specifier];
     assert.ok(values, "Only the declared UI mounts are doubled: " + specifier);
     return new vm.SyntheticModule(Object.keys(values), function () {
@@ -171,6 +178,26 @@ async function appFixture() {
     handoff: () => handoff, collection: () => collection, worksheet: () => worksheet,
     changed: () => changed, source: () => handoff.current(), capture: () => collection.capture() };
 }
+
+
+test("an accepted saved week renders its original structured care evidence through the real app", async () => {
+  const f = await appFixture(), envelope = saved("A");
+  envelope.response.plan.meals[0].evidence = {
+    format: "tastetable.pick-evidence.v1",
+    taste_reason: "Audience <trend> & taste",
+    checks: [{ constraint: "wheelchair", status: "unknown",
+               reason: "Access <not yet verified> & call" }],
+  };
+  assert.equal(await f.open(envelope), true);
+  const html = f.node("#weekDays").innerHTML;
+  assert.match(html, /Audience &lt;trend&gt; &amp; taste/);
+  assert.match(html, /Wheelchair access/);
+  assert.match(html, /Check: unknown/);
+  assert.match(html, /Access &lt;not yet verified&gt; &amp; call/);
+  assert.doesNotMatch(html, /<trend>|<not yet verified>/);
+  assert.deepEqual(JSON.parse(JSON.stringify(f.capture().response.plan.meals[0].evidence)),
+                   envelope.response.plan.meals[0].evidence);
+});
 
 test("both mounted features start without accepted data and only GET bootstrap is allowed", async () => {
   const f = await appFixture();
