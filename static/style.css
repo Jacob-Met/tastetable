@@ -181,3 +181,36 @@ button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-v
 .history-file-choices p { margin-block: .35rem; }
 .history-file-choices summary { cursor: pointer; }
 [data-history-conflicts] > button { margin: 0 .4rem .4rem 0; }
+
+/* The accepted plan is the working surface; intake remains directly reachable. */
+.week-heading { display:flex; align-items:baseline; justify-content:space-between; gap:.6rem 1rem; flex-wrap:wrap; }
+.week-heading h2 { margin:.3rem 0 .9rem; }
+.week-heading a { color:#4b306d; font-size:.85rem; text-underline-offset:.2em; }
+.week-day-nav { position:sticky; top:0; z-index:2; display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); border-block:1px solid #aeb8af; background:#f7f8f4; margin-top:1rem; }
+.week-day-nav a { display:block; text-align:center; padding:.55rem .1rem; color:#253c2c; text-decoration:none; font-weight:650; }
+.week-day-nav a + a { border-left:1px solid #d5dbd4; }
+.week-day-nav small { display:block; font-size:.7rem; font-weight:400; color:#4b5c4f; }
+.week-day-nav a:hover { background:#e4ebdf; }
+.week-day-nav a:focus-visible { outline:3px solid #39236b; outline-offset:-3px; }
+.week-day { scroll-margin-top:5rem; }
+.week-day h3:focus { outline:2px solid #4b6850; outline-offset:.3rem; }
+.week-keep { border-top:2px solid #39432c; margin-top:1.5rem; padding-top:.8rem; }
+.week-keep h3 { margin:.2rem 0 .8rem; }
+.week-export-actions { display:flex; gap:.6rem; flex-wrap:wrap; }
+.week-reset { margin-top:1rem; }
+#tasteForm { scroll-margin-top:1rem; }
+#weekTitle:focus { outline:none; }
+@media(max-width:640px) {
+ .week-controls { gap:.5rem; }
+ .week-controls label { flex-basis:100%; }
+ .week-controls button { flex:1; }
+ .week-day-nav { margin-inline:-.3rem; }
+ .week-day-nav a { font-size:.85rem; }
+ .week-export-actions button { flex:1 1 130px; }
+}
+@media print { .week-heading a, .week-day-nav, .week-keep { display:none !important; } }
+
+.week-heading { margin-bottom:.6rem; }
+.week-heading + .week-range { margin-top:0; }
+.week-links { display:flex; flex-wrap:wrap; gap:.4rem 1.2rem; margin-bottom:.4rem; }
+#weekKeepTitle { scroll-margin-top:5rem; }

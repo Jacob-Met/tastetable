@@ -22,54 +22,9 @@
 </header>
 
 <main>
-  <section class="card taste-form">
-    <h2>1. Tastes &amp; constraints</h2>
-    <div class="sample">
-      <button id="openWeek" type="button">Open saved week</button>
-      <a href="/static/compare-weeks.html" target="_blank" rel="noopener">Compare saved weeks (new tab)</a>
-      <a href="/static/visit-record.html" target="_blank" rel="noopener">Visit record (new tab)</a>
-      <input id="weekFile" type="file" accept=".json,application/json" aria-label="Choose a saved TasteTable week" hidden>
-    </div>
-    <div class="sample">
-      <button id="sampleBtn" class="primary" disabled>Try a sample persona</button>
-      <select id="personaSel" aria-label="Sample persona"></select>
-    </div>
-    <form id="form" aria-busy="false">
-      <label>Favourite cuisines <input name="cuisines" placeholder="Cuban, Mexican"></label>
-      <label>Music they love (artists / era) <input name="music" placeholder="Celia Cruz"></label>
-      <label>Favourite films <input name="films" placeholder="West Side Story"></label>
-      <label>City <input name="city" value="Pasadena"></label>
-      <fieldset>
-        <legend>Constraints</legend>
-        <label class="inline"><input type="checkbox" name="constraints" value="soft_foods"> Soft foods</label>
-        <label class="inline"><input type="checkbox" name="constraints" value="low_sodium"> Low sodium</label>
-        <label class="inline"><input type="checkbox" name="constraints" value="wheelchair"> Wheelchair access</label>
-      </fieldset>
-      <button type="submit">Plan my week</button>
-    </form>
-    <p id="requestStatus" class="why" role="status" aria-live="polite" aria-atomic="true"></p>
-    <button id="cancelPlan" type="button" hidden>Stop waiting</button>
-  </section>
-
-  <details id="visitHistory" class="visit-history">
-    <summary>Remember places you already visited</summary>
-    <p>Open one or more saved visit records to mark matching places in this tab's plans. Only visits marked “went” count. Marks come from your record, not a new venue check; dates show the latest dated visit. Your notes stay on this device. Clear before planning for someone else.</p>
-    <button type="button" data-history-open>Open visit records</button>
-    <button type="button" data-history-clear disabled>Clear visit context</button>
-    <input type="file" accept=".json,application/json" aria-label="Choose prior visit record" multiple hidden>
-    <section data-history-conflicts hidden aria-label="Conflicting visit records"></section>
-    <div data-history-preview hidden>
-      <p data-history-summary></p>
-      <div data-history-records></div>
-      <button type="button" data-history-use>Use for this tab</button>
-      <button type="button" data-history-cancel>Cancel</button>
-    </div>
-    <p data-history-status role="status" aria-live="polite"></p>
-  </details>
-
   <section id="results" hidden>
     <section id="weekOrganizer" class="card grounded" aria-labelledby="weekTitle">
-      <h2 id="weekTitle">Your week</h2>
+      <div class="week-heading"><h2 id="weekTitle" tabindex="-1">Your week</h2><div class="week-links"><a href="#tasteForm">Edit tastes &amp; constraints</a><a href="#weekKeepTitle">Save &amp; share</a></div></div>
       <p id="weekRange" class="week-range"></p>
       <p id="weekSource" class="mode"></p>
       <p id="savedWeekSource" class="why" hidden></p>
@@ -78,28 +33,36 @@
         <label>A date in your week
           <input id="weekDate" type="date" aria-describedby="weekHelp weekError">
         </label>
-        <button id="resetWeek" type="button" disabled>Restore suggested days</button>
         <button id="undoWeek" type="button" disabled aria-controls="weekDays omittedPicks" aria-describedby="weekHelp weekStatus" title="Undo your last change">Undo change</button>
         <button id="redoWeek" type="button" disabled aria-controls="weekDays omittedPicks" aria-describedby="weekHelp weekStatus" title="Redo your last undone change">Redo change</button>
-        <button id="printWeek" type="button" class="primary" disabled>Print week</button>
-        <button id="saveWeek" type="button" disabled aria-describedby="weekFileStatus">Save week (.json)</button>
-        <button id="calendarDownload" type="button" disabled aria-describedby="calendarStatus">Download calendar (.ics)</button>
       </div>
-      <div class="saved-week-actions organizer-help">
-        <label>Name for this browser copy <input id="savedWeekName" maxlength="120" autocomplete="off"></label>
-        <button id="saveCurrentWeek" type="button" disabled>Save in this browser</button>
-      </div>
-      <p id="weekHelp" class="why organizer-help">Choose any date to show its Monday–Sunday week. Move checked picks to the days that suit you, or keep a pick off this week. Undo and Redo recover your changes while this plan is open. Several picks can share a day. Save your week to continue editing after this visit.</p>
+      <p id="weekHelp" class="why organizer-help">Move each pick to the day that suits you. Several picks can share a day. Save below to keep your changes.</p>
       <p id="weekFileStatus" class="why organizer-help" role="status" aria-live="polite"></p>
       <p id="weekError" class="error" role="alert"></p>
       <p id="weekSummary"></p>
       <p id="weekStatus" class="why organizer-help" role="status" aria-live="polite"></p>
+      <nav id="weekDayNav" class="week-day-nav" aria-label="Days in your week"></nav>
       <ol id="weekDays" class="week-days"></ol>
       <section id="omittedSection" hidden aria-labelledby="omittedTitle">
         <h3 id="omittedTitle">Not scheduled this week</h3>
         <ul id="omittedPicks" class="omitted-picks"></ul>
       </section>
       <div id="weekNotes"></div>
+      <section class="week-keep" aria-labelledby="weekKeepTitle">
+        <h3 id="weekKeepTitle">Keep or share this week</h3>
+        <div class="week-export-actions">
+          <button id="printWeek" type="button" class="primary" disabled>Print week</button>
+          <button id="saveWeek" type="button" disabled aria-describedby="weekFileStatus">Save week (.json)</button>
+          <button id="calendarDownload" type="button" disabled aria-describedby="calendarStatus">Download calendar (.ics)</button>
+        </div>
+        <div class="saved-week-actions organizer-help">
+          <label>Name for this browser copy <input id="savedWeekName" maxlength="120" autocomplete="off"></label>
+          <button id="saveCurrentWeek" type="button" disabled>Save in this browser</button>
+        </div>
+        <div class="week-reset">
+          <button id="resetWeek" type="button" disabled>Restore suggested days</button>
+        </div>
+      </section>
       <section id="calendarExport" class="calendar-export" aria-labelledby="calendarTitle">
         <h3 id="calendarTitle">Calendar handoff</h3>
         <p id="calendarSource" class="why"></p>
@@ -163,6 +126,51 @@
     <details class="card"><summary>Agent tool trace</summary><ol id="trace" class="mono"></ol></details>
     </details>
   </section>
+
+  <section id="tasteForm" class="card taste-form">
+    <h2>1. Tastes &amp; constraints</h2>
+    <div class="sample">
+      <button id="openWeek" type="button">Open saved week</button>
+      <a href="/static/compare-weeks.html" target="_blank" rel="noopener">Compare saved weeks (new tab)</a>
+      <a href="/static/visit-record.html" target="_blank" rel="noopener">Visit record (new tab)</a>
+      <input id="weekFile" type="file" accept=".json,application/json" aria-label="Choose a saved TasteTable week" hidden>
+    </div>
+    <div class="sample">
+      <button id="sampleBtn" class="primary" disabled>Try a sample persona</button>
+      <select id="personaSel" aria-label="Sample persona"></select>
+    </div>
+    <form id="form" aria-busy="false">
+      <label>Favourite cuisines <input name="cuisines" placeholder="Cuban, Mexican"></label>
+      <label>Music they love (artists / era) <input name="music" placeholder="Celia Cruz"></label>
+      <label>Favourite films <input name="films" placeholder="West Side Story"></label>
+      <label>City <input name="city" value="Pasadena"></label>
+      <fieldset>
+        <legend>Constraints</legend>
+        <label class="inline"><input type="checkbox" name="constraints" value="soft_foods"> Soft foods</label>
+        <label class="inline"><input type="checkbox" name="constraints" value="low_sodium"> Low sodium</label>
+        <label class="inline"><input type="checkbox" name="constraints" value="wheelchair"> Wheelchair access</label>
+      </fieldset>
+      <button type="submit">Plan my week</button>
+    </form>
+    <p id="requestStatus" class="why" role="status" aria-live="polite" aria-atomic="true"></p>
+    <button id="cancelPlan" type="button" hidden>Stop waiting</button>
+  </section>
+
+  <details id="visitHistory" class="visit-history">
+    <summary>Remember places you already visited</summary>
+    <p>Open one or more saved visit records to mark matching places in this tab's plans. Only visits marked “went” count. Marks come from your record, not a new venue check; dates show the latest dated visit. Your notes stay on this device. Clear before planning for someone else.</p>
+    <button type="button" data-history-open>Open visit records</button>
+    <button type="button" data-history-clear disabled>Clear visit context</button>
+    <input type="file" accept=".json,application/json" aria-label="Choose prior visit record" multiple hidden>
+    <section data-history-conflicts hidden aria-label="Conflicting visit records"></section>
+    <div data-history-preview hidden>
+      <p data-history-summary></p>
+      <div data-history-records></div>
+      <button type="button" data-history-use>Use for this tab</button>
+      <button type="button" data-history-cancel>Cancel</button>
+    </div>
+    <p data-history-status role="status" aria-live="polite"></p>
+  </details>
 
   <nav class="record-paths" aria-label="Keep and revisit your plans">
     <p class="record-paths-heading">After planning</p>
@@ -297,5 +305,6 @@
 <script src="/static/plan-request.js"></script>
 <script src="/static/calendar.js"></script>
 <script type="module" src="/static/app.js"></script>
+<script type="module" src="/static/week_workspace.mjs"></script>
 </body>
 </html>
