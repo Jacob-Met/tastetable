@@ -22,10 +22,10 @@ export function priorVisitLabel(history, mode, pick) {
   const prior = history.venues.get(JSON.stringify([pick.kind, pick.entity_id]));
   if (!prior) return "";
   const dates = [...new Set(prior.dates)].sort();
-  return "Previously went" + (dates.length ? " · most recent recorded date " + dates.at(-1) : " · date not recorded")
-    + (prior.count > 1 ? " · " + prior.count + " recorded visits" : "")
+  return "Visited" + (dates.length ? " · " + dates.at(-1) : " · date not recorded")
+    + (prior.count > 1 ? " · " + prior.count + " visits" : "")
     + (dates.length && prior.undated ? " · " + prior.undated + " without a date" : "")
-    + ". From your visit record; not a new venue check.";
+    + ".";
 }
 
 export function mountVisitHistory(root, changed) {
