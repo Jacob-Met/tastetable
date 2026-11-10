@@ -43,7 +43,6 @@ export function mountVisitRecordFilters(doc = document) {
   const empty = element("p", "No visits match. Try another search or use Clear filters to show every visit.", "visit-filter-empty");
   empty.id = "visitFilterEmpty"; empty.hidden = true;
   panel.append(heading, fields, help, status, empty); list.before(panel);
-  let knownChildren = [...list.children];
 
   function refresh() {
     const cards = [...list.querySelectorAll(":scope > .visit-card")];
@@ -74,7 +73,6 @@ export function mountVisitRecordFilters(doc = document) {
     if (invalid) message += " Visits with fields to correct stay visible.";
     if (editing) message += " The visit you are editing stays visible until you leave it.";
     status.textContent = message;
-    knownChildren = [...list.children];
   }
 
   function reset() { search.value = ""; outcome.value = "all"; refresh(); }
@@ -87,13 +85,7 @@ export function mountVisitRecordFilters(doc = document) {
   list.addEventListener("change", refresh);
   list.addEventListener("focusin", refresh);
   list.addEventListener("focusout", () => queueMicrotask(refresh));
-  doc.querySelector("#useRecord").addEventListener("click", () => {
-    const children = [...list.children];
-    // A successful Use replaces the cards synchronously. A canceled/invalid
-    // open, or a forced click with no prepared record, must retain the view.
-    if (children.length !== knownChildren.length
-      || children.some((child, index) => child !== knownChildren[index])) reset();
-  });
+  list.addEventListener("visit-record-replaced", reset);
   // Observe ordinary re-renders, including a future Undo/Redo composition,
   // without making filter state part of the retained visit record.
   new MutationObserver(refresh).observe(list, {
