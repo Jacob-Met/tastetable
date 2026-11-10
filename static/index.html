@@ -51,6 +51,107 @@
     <button id="cancelPlan" type="button" hidden>Stop waiting</button>
   </section>
 
+  <section id="results" hidden>
+    <section id="weekOrganizer" class="card grounded" aria-labelledby="weekTitle">
+      <h2 id="weekTitle">Your week</h2>
+      <p id="weekRange" class="week-range"></p>
+      <p id="weekSource" class="mode"></p>
+      <p id="savedWeekSource" class="why" hidden></p>
+      <p id="weekConstraints" class="why"></p>
+      <div class="week-controls">
+        <label>A date in your week
+          <input id="weekDate" type="date" aria-describedby="weekHelp weekError">
+        </label>
+        <button id="resetWeek" type="button" disabled>Restore suggested days</button>
+        <button id="printWeek" type="button" class="primary" disabled>Print week</button>
+        <button id="saveWeek" type="button" disabled aria-describedby="weekFileStatus">Save week (.json)</button>
+        <button id="calendarDownload" type="button" disabled aria-describedby="calendarStatus">Download calendar (.ics)</button>
+      </div>
+      <div class="saved-week-actions organizer-help">
+        <label>Name for this browser copy <input id="savedWeekName" maxlength="120" autocomplete="off"></label>
+        <button id="saveCurrentWeek" type="button" disabled>Save in this browser</button>
+      </div>
+      <p id="weekHelp" class="why organizer-help">Choose any date to show its Monday–Sunday week. Move checked picks to the days that suit you, or keep a pick off this week. Several picks can share a day. Save your week to continue editing after this visit.</p>
+      <p id="weekFileStatus" class="why organizer-help" role="status" aria-live="polite"></p>
+      <p id="weekError" class="error" role="alert"></p>
+      <p id="weekSummary"></p>
+      <p id="weekStatus" class="why organizer-help" role="status" aria-live="polite"></p>
+      <ol id="weekDays" class="week-days"></ol>
+      <section id="omittedSection" hidden aria-labelledby="omittedTitle">
+        <h3 id="omittedTitle">Not scheduled this week</h3>
+        <ul id="omittedPicks" class="omitted-picks"></ul>
+      </section>
+      <div id="weekNotes"></div>
+      <section id="calendarExport" class="calendar-export" aria-labelledby="calendarTitle">
+        <h3 id="calendarTitle">Calendar handoff</h3>
+        <p id="calendarSource" class="why"></p>
+        <p id="calendarStatus" class="calendar-status" role="status" aria-live="polite"></p>
+        <details>
+          <summary>Review the calendar dates</summary>
+          <ol id="calendarPreview"></ol>
+        </details>
+        <p class="why">The file contains all-day suggestions for your arranged week. Open it in your calendar app to review and import. Changes here do not update or cancel earlier imports.</p>
+      </section>
+      <p class="handoff-note">Planning draft. Dates are your choices, not reservations or confirmed opening hours. Confirm the venue, accessibility and food needs with the venue and care team before going.</p>
+    </section>
+    <section id="venueFollowup" class="card venue-followup" aria-labelledby="venueFollowupTitle" hidden>
+      <h3 id="venueFollowupTitle">Prepare your venue calls</h3>
+      <p>Use the questions below to ask about each scheduled visit. Record the venue's reply and the next step for another caregiver.</p>
+      <p data-contact-source class="mode"></p>
+      <p class="handoff-note">These are caregiver-entered notes. A recorded reply is not a safety check, reservation or confirmation by TasteTable. Confirm needs with the venue and care team; do not enter names or private health information.</p>
+      <p class="why contact-session-help">Notes stay in this tab for the current plan. While recorded notes remain, your browser may ask before you refresh or leave; choose to stay if you still need to save them. A download does not turn off this reminder. Browser warnings are not guaranteed, so keep a saved copy. Each note belongs to one pick and date. Moving a visit starts a separate note; returning to its previous date restores that note during this visit. Save venue notes to reopen these editable records later, or print/download a readable call sheet. Keep the notes file with its matching saved week. Week save files and calendar files keep their existing formats and do not include these notes.</p>
+      <p data-contact-summary></p>
+      <div class="contact-actions">
+        <button type="button" data-contact-download disabled>Download call sheet (.txt)</button>
+        <button type="button" data-contact-file-save disabled>Save venue notes (.json)</button>
+        <button type="button" data-contact-file-open disabled>Open venue notes</button>
+        <input type="file" id="venueNotesFile" data-contact-file-input accept=".json,application/json" hidden>
+      </div>
+      <p class="why contact-session-help">Open the matching saved week first, then review a notes file before replacing the current notes. Files include the original plan inputs and source details plus your notes; nothing is uploaded or saved automatically. Limit: 2 MiB and 256 visit/date records.</p>
+      <p data-contact-file-status class="why contact-file-status" role="status" aria-live="polite"></p>
+      <section data-contact-file-preview class="contact-file-preview" aria-labelledby="venueNotesPreviewTitle" hidden>
+        <h4 id="venueNotesPreviewTitle">Review venue notes before replacing</h4>
+        <p data-contact-file-description></p>
+        <details><summary>Inspect the file’s note records</summary><ol data-contact-file-records></ol></details>
+        <p class="why">Save your current venue notes first if you want to keep them.</p>
+        <div class="contact-actions">
+          <button type="button" data-contact-file-apply disabled>Replace venue notes</button>
+          <button type="button" data-contact-file-cancel>Cancel replacement</button>
+        </div>
+      </section>
+      <p data-contact-file-source class="why" hidden></p>
+      <p data-contact-status class="why" role="status" aria-live="polite"></p>
+      <ol class="contact-visits" data-contact-list></ol>
+    </section>
+    <details class="original-evidence">
+      <summary>Original suggestions and comparison</summary>
+    <div class="cols">
+      <div class="card grounded">
+        <h2>Qloo-grounded plan</h2>
+        <ol id="plan"></ol>
+        <div id="notes"></div>
+      </div>
+      <div class="card baseline">
+        <h2>LLM-only (no Qloo)</h2>
+        <ol id="baseline"></ol>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Side-by-side</h2>
+      <table id="compare"></table>
+    </div>
+    <details class="card"><summary>Rejected by constraint check</summary><ul id="rejected"></ul></details>
+    <details class="card"><summary>Agent tool trace</summary><ol id="trace" class="mono"></ol></details>
+    </details>
+  </section>
+
+  <nav class="record-paths" aria-label="Keep and revisit your plans">
+    <p class="record-paths-heading">After planning</p>
+    <a href="#caregiverHandoff"><span class="record-paths-step">01</span><span><strong>Carry the week forward</strong><small>Save one editable handoff with venue replies</small></span></a>
+    <a href="#savedWeeks"><span class="record-paths-step">02</span><span><strong>Revisit a saved week</strong><small>Find, open or rename a browser copy</small></span></a>
+    <a href="#savedWeekCollection"><span class="record-paths-step">03</span><span><strong>Protect the collection</strong><small>Back up or recover saved plans</small></span></a>
+  </nav>
+
   <section id="caregiverHandoff" class="card contact-session-help" aria-labelledby="caregiverHandoffTitle">
     <h2 id="caregiverHandoffTitle">Keep your caregiver handoff</h2>
     <p>Save the arranged week and all its venue notes in one editable file. Open a handoff to review it before replacing the current week and notes.</p>
@@ -171,99 +272,7 @@
     </section>
   </section>
 
-  <section id="results" hidden>
-    <section id="weekOrganizer" class="card grounded" aria-labelledby="weekTitle">
-      <h2 id="weekTitle">Your week</h2>
-      <p id="weekRange" class="week-range"></p>
-      <p id="weekSource" class="mode"></p>
-      <p id="savedWeekSource" class="why" hidden></p>
-      <p id="weekConstraints" class="why"></p>
-      <div class="week-controls">
-        <label>A date in your week
-          <input id="weekDate" type="date" aria-describedby="weekHelp weekError">
-        </label>
-        <button id="resetWeek" type="button" disabled>Restore suggested days</button>
-        <button id="printWeek" type="button" class="primary" disabled>Print week</button>
-        <button id="saveWeek" type="button" disabled aria-describedby="weekFileStatus">Save week (.json)</button>
-        <button id="calendarDownload" type="button" disabled aria-describedby="calendarStatus">Download calendar (.ics)</button>
-      </div>
-      <div class="saved-week-actions organizer-help">
-        <label>Name for this browser copy <input id="savedWeekName" maxlength="120" autocomplete="off"></label>
-        <button id="saveCurrentWeek" type="button" disabled>Save in this browser</button>
-      </div>
-      <p id="weekHelp" class="why organizer-help">Choose any date to show its Monday–Sunday week. Move checked picks to the days that suit you, or keep a pick off this week. Several picks can share a day. Save your week to continue editing after this visit.</p>
-      <p id="weekFileStatus" class="why organizer-help" role="status" aria-live="polite"></p>
-      <p id="weekError" class="error" role="alert"></p>
-      <p id="weekSummary"></p>
-      <p id="weekStatus" class="why organizer-help" role="status" aria-live="polite"></p>
-      <ol id="weekDays" class="week-days"></ol>
-      <section id="omittedSection" hidden aria-labelledby="omittedTitle">
-        <h3 id="omittedTitle">Not scheduled this week</h3>
-        <ul id="omittedPicks" class="omitted-picks"></ul>
-      </section>
-      <div id="weekNotes"></div>
-      <section id="calendarExport" class="calendar-export" aria-labelledby="calendarTitle">
-        <h3 id="calendarTitle">Calendar handoff</h3>
-        <p id="calendarSource" class="why"></p>
-        <p id="calendarStatus" class="calendar-status" role="status" aria-live="polite"></p>
-        <details>
-          <summary>Review the calendar dates</summary>
-          <ol id="calendarPreview"></ol>
-        </details>
-        <p class="why">The file contains all-day suggestions for your arranged week. Open it in your calendar app to review and import. Changes here do not update or cancel earlier imports.</p>
-      </section>
-      <p class="handoff-note">Planning draft. Dates are your choices, not reservations or confirmed opening hours. Confirm the venue, accessibility and food needs with the venue and care team before going.</p>
-    </section>
-    <section id="venueFollowup" class="card venue-followup" aria-labelledby="venueFollowupTitle" hidden>
-      <h3 id="venueFollowupTitle">Prepare your venue calls</h3>
-      <p>Use the questions below to ask about each scheduled visit. Record the venue's reply and the next step for another caregiver.</p>
-      <p data-contact-source class="mode"></p>
-      <p class="handoff-note">These are caregiver-entered notes. A recorded reply is not a safety check, reservation or confirmation by TasteTable. Confirm needs with the venue and care team; do not enter names or private health information.</p>
-      <p class="why contact-session-help">Notes stay in this tab for the current plan. While recorded notes remain, your browser may ask before you refresh or leave; choose to stay if you still need to save them. A download does not turn off this reminder. Browser warnings are not guaranteed, so keep a saved copy. Each note belongs to one pick and date. Moving a visit starts a separate note; returning to its previous date restores that note during this visit. Save venue notes to reopen these editable records later, or print/download a readable call sheet. Keep the notes file with its matching saved week. Week save files and calendar files keep their existing formats and do not include these notes.</p>
-      <p data-contact-summary></p>
-      <div class="contact-actions">
-        <button type="button" data-contact-download disabled>Download call sheet (.txt)</button>
-        <button type="button" data-contact-file-save disabled>Save venue notes (.json)</button>
-        <button type="button" data-contact-file-open disabled>Open venue notes</button>
-        <input type="file" id="venueNotesFile" data-contact-file-input accept=".json,application/json" hidden>
-      </div>
-      <p class="why contact-session-help">Open the matching saved week first, then review a notes file before replacing the current notes. Files include the original plan inputs and source details plus your notes; nothing is uploaded or saved automatically. Limit: 2 MiB and 256 visit/date records.</p>
-      <p data-contact-file-status class="why contact-file-status" role="status" aria-live="polite"></p>
-      <section data-contact-file-preview class="contact-file-preview" aria-labelledby="venueNotesPreviewTitle" hidden>
-        <h4 id="venueNotesPreviewTitle">Review venue notes before replacing</h4>
-        <p data-contact-file-description></p>
-        <details><summary>Inspect the file’s note records</summary><ol data-contact-file-records></ol></details>
-        <p class="why">Save your current venue notes first if you want to keep them.</p>
-        <div class="contact-actions">
-          <button type="button" data-contact-file-apply disabled>Replace venue notes</button>
-          <button type="button" data-contact-file-cancel>Cancel replacement</button>
-        </div>
-      </section>
-      <p data-contact-file-source class="why" hidden></p>
-      <p data-contact-status class="why" role="status" aria-live="polite"></p>
-      <ol class="contact-visits" data-contact-list></ol>
-    </section>
-    <details class="original-evidence">
-      <summary>Original suggestions and comparison</summary>
-    <div class="cols">
-      <div class="card grounded">
-        <h2>Qloo-grounded plan</h2>
-        <ol id="plan"></ol>
-        <div id="notes"></div>
-      </div>
-      <div class="card baseline">
-        <h2>LLM-only (no Qloo)</h2>
-        <ol id="baseline"></ol>
-      </div>
-    </div>
-    <div class="card">
-      <h2>Side-by-side</h2>
-      <table id="compare"></table>
-    </div>
-    <details class="card"><summary>Rejected by constraint check</summary><ul id="rejected"></ul></details>
-    <details class="card"><summary>Agent tool trace</summary><ol id="trace" class="mono"></ol></details>
-    </details>
-  </section>
+
 </main>
 <footer>MIT licensed &middot; Uses Qloo's Taste AI insights. Qloo results describe aggregate affinities, not facts about any individual.</footer>
 <script src="/static/plan-request.js"></script>
