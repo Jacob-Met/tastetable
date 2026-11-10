@@ -5,6 +5,7 @@ import argparse
 import os
 from pathlib import Path
 import re
+import signal
 import subprocess
 import sys
 from collections.abc import Mapping
@@ -34,6 +35,37 @@ def _port(value: str) -> int:
     return int(value)
 
 
+def run_server(command: list[str], *, cwd: Path, env: dict[str, str]) -> int:
+    """Keep shutdown signals attached to the server and wait until it exits."""
+    child = None
+    stopped_by = None
+
+    def stop(signum, _frame):
+        nonlocal stopped_by
+        stopped_by = signum
+        if child is not None and child.poll() is None:
+            try:
+                child.send_signal(signum)
+            except ProcessLookupError:
+                pass
+
+    signals = [signal.SIGINT, signal.SIGTERM]
+    if hasattr(signal, "SIGHUP"):
+        signals.append(signal.SIGHUP)
+    previous = {sig: signal.getsignal(sig) for sig in signals}
+    try:
+        for sig in signals:
+            signal.signal(sig, stop)
+        child = subprocess.Popen(command, cwd=cwd, env=env)
+        if stopped_by is not None:
+            stop(stopped_by, None)
+        status = child.wait()
+        return 128 + stopped_by if stopped_by is not None else status
+    finally:
+        for sig, handler in previous.items():
+            signal.signal(sig, handler)
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         description="Run the existing TasteTable app on loopback with fictional "
@@ -49,7 +81,7 @@ def main(argv: list[str] | None = None) -> int:
         "--host", "127.0.0.1", "--port", str(args.port), "--workers", "1",
     ]
     try:
-        return subprocess.call(
+        return run_server(
             command, cwd=PROJECT_ROOT, env=fixture_environment(os.environ),
         )
     except KeyboardInterrupt:
