@@ -54,7 +54,7 @@ try{
   await page.screenshot({path:'docs/inplace-history/omission-phone.png'});
   await page.locator('[data-history-review-kept]').click();
   await page.locator('[data-history-preview]').waitFor({state:'visible'});
-  assert.match(await page.locator('[data-history-summary]').innerText(),/1 whole files omitted/);
+  assert.match(await page.locator('[data-history-summary]').innerText(),/1 whole file omitted/);
   assert.deepEqual(await page.locator('.prior-visit').allTextContents(),initial);
   // Changing any choice invalidates a previously reviewed selection.
   await page.locator('[data-history-keep="0"]').check();

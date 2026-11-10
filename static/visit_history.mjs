@@ -119,7 +119,7 @@ export function mountVisitHistory(root, changed) {
     fieldset.className = "history-file-choices"; legend.textContent = "Files to keep"; fieldset.append(legend);
     const otherFiles = document.createElement("details"), otherSummary = document.createElement("summary");
     const otherIndices = selection.files.map((_, i) => i).filter(i => !selection.involved.has(i));
-    const updateOtherSummary = () => { otherSummary.textContent = otherIndices.length + " other files · " + otherIndices.filter(i => selection.keep[i]).length + " kept"; };
+    const updateOtherSummary = () => { otherSummary.textContent = otherIndices.length + (otherIndices.length === 1 ? " other file · " : " other files · ") + otherIndices.filter(i => selection.keep[i]).length + " kept"; };
     updateOtherSummary(); otherFiles.append(otherSummary);
     selection.files.forEach((file, index) => {
       const row = document.createElement("div"), label = document.createElement("label"), checkbox = document.createElement("input");
@@ -166,7 +166,7 @@ export function mountVisitHistory(root, changed) {
       q("[data-history-summary]").textContent = files.map((file, i) => "File " + (positions[i] + 1) + ": " + file.name).join(", ") + ": " + history.venues.size
         + " previously visited " + (history.venues.size === 1 ? "venue" : "venues") + " (" + (history.mode === "mock" ? "fictional demo" : "live Qloo") + "). "
         + history.duplicates + " repeated attendance " + (history.duplicates === 1 ? "entry" : "entries") + " from the same saved week counted once. "
-        + (selection ? (selection.files.length - files.length) + " whole files omitted. " : "")
+        + (selection ? (selection.files.length - files.length) + (selection.files.length - files.length === 1 ? " whole file omitted. " : " whole files omitted. ") : "")
         + "Different saved weeks remain separate records. Review the visits below for overlap. Only combine records you know belong to the same person; these files do not identify the person.";
       const list = q("[data-history-records]");
       history.summaries.forEach((rows, index) => {
