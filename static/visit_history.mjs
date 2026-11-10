@@ -6,12 +6,20 @@ import { readWeekFile } from "./week_file.mjs";
 const canonical = value => JSON.stringify(value, (_, v) => v && typeof v === "object" && !Array.isArray(v)
   ? Object.fromEntries(Object.keys(v).sort().map(k => [k, v[k]])) : v);
 
+export class VisitHistoryConflict extends Error {
+  constructor(conflicts) {
+    super("These records disagree. Review the conflicting files shown here, then reopen the selection with the correct versions.");
+    this.name = "VisitHistoryConflict";
+    this.conflicts = conflicts;
+  }
+}
+
 export function readVisitHistories(texts) {
   if (!texts.length || texts.length > 20) throw new Error("Choose between 1 and 20 visit records.");
   const occurrences = new Map(), venues = new Map(), sources = new Map();
   let mode = null, duplicates = 0;
-  const summaries = [];
-  for (const text of texts) {
+  const summaries = [], conflicts = [];
+  for (const [recordIndex, text] of texts.entries()) {
     const { record } = readVisitRecord(text);
     const sourceMode = readWeekFile(record.source.weekText).state.sourceMode;
     if (!["mock", "live"].includes(sourceMode)) throw new Error("This record does not identify its demo or live source.");
@@ -23,15 +31,16 @@ export function readVisitHistories(texts) {
     summaries.push(rows.filter(row => row.outcome === "went").map(row => ({ name: row.pick.name, date: row.date })));
     for (const row of rows) {
       const identity = JSON.stringify([sources.get(source), row.key]);
-      const value = { key: JSON.stringify([row.pick.kind, row.pick.entity_id]), outcome: row.outcome, date: row.date };
+      const value = { key: JSON.stringify([row.pick.kind, row.pick.entity_id]), outcome: row.outcome, date: row.date, recordIndex };
       if (occurrences.has(identity)) {
         const prior = occurrences.get(identity);
         if (prior.outcome !== value.outcome || prior.date !== value.date)
-          throw new Error("These records disagree about a visit in the same saved week. Choose the correct version of that week and reopen the selection.");
+          conflicts.push({ name: row.pick.name, first: { recordIndex: prior.recordIndex, outcome: prior.outcome, date: prior.date }, second: { recordIndex, outcome: row.outcome, date: row.date } });
         if (value.outcome === "went") duplicates++;
       } else occurrences.set(identity, value);
     }
   }
+  if (conflicts.length) throw new VisitHistoryConflict(conflicts);
   for (const row of occurrences.values()) {
     if (row.outcome !== "went") continue;
     const prior = venues.get(row.key) || { count: 0, dates: [], undated: 0 };
@@ -58,7 +67,11 @@ export function mountVisitHistory(root, changed) {
   const q = selector => root.querySelector(selector);
   let active = null, pending = null, revision = 0;
   const status = q("[data-history-status]"), preview = q("[data-history-preview]");
-  const clearPreview = () => { pending = null; preview.hidden = true; q("[data-history-records]").replaceChildren(); };
+  const conflictView = q("[data-history-conflicts]");
+  const clearPreview = () => {
+    pending = null; preview.hidden = true; q("[data-history-records]").replaceChildren();
+    if (conflictView) { conflictView.hidden = true; conflictView.replaceChildren(); }
+  };
   q("[data-history-open]").addEventListener("click", () => {
     q("input").value = ""; q("input").click();
   });
@@ -76,13 +89,13 @@ export function mountVisitHistory(root, changed) {
       if (token !== revision) return;
       pending = { history, name: files.length === 1 ? files[0].name : files.length + " visit records" };
       q("[data-history-summary]").textContent = files.map(file => file.name).join(", ") + ": " + history.venues.size
-        + " previously visited venues (" + (history.mode === "mock" ? "fictional demo" : "live Qloo") + "). "
-        + history.duplicates + " repeated attendance entries from the same saved week counted once. "
+        + " previously visited " + (history.venues.size === 1 ? "venue" : "venues") + " (" + (history.mode === "mock" ? "fictional demo" : "live Qloo") + "). "
+        + history.duplicates + " repeated attendance " + (history.duplicates === 1 ? "entry" : "entries") + " from the same saved week counted once. "
         + "Different saved weeks remain separate records. Review the visits below for overlap. Only combine records you know belong to the same person; these files do not identify the person.";
       const list = q("[data-history-records]");
       history.summaries.forEach((rows, index) => {
         const details = document.createElement("details"), heading = document.createElement("summary");
-        heading.textContent = files[index].name + " · " + rows.length + " recorded visits";
+        heading.textContent = files[index].name + " · " + rows.length + " recorded " + (rows.length === 1 ? "visit" : "visits");
         const entries = document.createElement("ul");
         for (const row of rows) {
           const item = document.createElement("li");
@@ -96,14 +109,41 @@ export function mountVisitHistory(root, changed) {
       status.textContent = active ? "Current visit context stays in use until you choose Use." : "Review the file, then choose Use to mark matching venues.";
     } catch (error) {
       if (token !== revision) return;
-      status.textContent = "Could not open visit record: " + error.message + (active ? " Your current visit context is still in use." : "");
+      if (error instanceof VisitHistoryConflict && conflictView) {
+        const title = document.createElement("h3");
+        title.textContent = "Resolve conflicting records";
+        const instruction = document.createElement("p");
+        instruction.textContent = "Compare the entries below. Reopen your selection without the version you do not want to use; no files from this selection have been applied.";
+        const list = document.createElement("ol");
+        list.className = "history-conflict-list";
+        const labels = { went: "Went", did_not_go: "Did not go", unrecorded: "Not recorded" };
+        for (const conflict of error.conflicts) {
+          const item = document.createElement("li"), venue = document.createElement("strong");
+          venue.textContent = conflict.name;
+          item.append(venue);
+          for (const entry of [conflict.first, conflict.second]) {
+            const line = document.createElement("p");
+            const identity = document.createElement("span"), value = document.createElement("span");
+            identity.textContent = "File " + (entry.recordIndex + 1) + ": " + files[entry.recordIndex].name;
+            value.className = "history-conflict-value";
+            value.textContent = labels[entry.outcome] + " · " + (entry.date || "date not recorded");
+            line.append(identity, value);
+            item.append(line);
+          }
+          list.append(item);
+        }
+        conflictView.append(title, instruction, list); conflictView.hidden = false;
+      }
+      status.textContent = error instanceof VisitHistoryConflict && conflictView
+        ? (active ? "Your current visit context is still in use." : "No visit context is in use.")
+        : "Could not open visit record: " + error.message + (active ? " Your current visit context is still in use." : "");
     }
   });
   q("[data-history-use]").addEventListener("click", () => {
     if (!pending) return;
     active = pending.history;
     status.textContent = "Using " + pending.name + " for this tab's current and later plans. " + active.venues.size
-      + " previously visited venues. Notes stay private; recommendations and checks are unchanged.";
+      + " previously visited " + (active.venues.size === 1 ? "venue" : "venues") + ". Notes stay private; recommendations and checks are unchanged.";
     ++revision; clearPreview(); q("[data-history-clear]").disabled = false; changed();
   });
   q("[data-history-cancel]").addEventListener("click", () => {
