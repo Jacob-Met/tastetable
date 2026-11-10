@@ -1,0 +1,9 @@
+.visit-filters h2{margin-bottom:14px}
+.visit-filter-fields{display:grid;grid-template-columns:minmax(0,2fr) minmax(160px,1fr) auto;gap:16px;align-items:end}
+.visit-filter-fields button{margin-bottom:1px}
+.visit-filters .field-help{margin:12px 0 4px}
+#visitFilterStatus{margin:4px 0 0;font-size:.9rem;color:var(--muted)}
+.visit-filter-empty{margin:14px 0 0;padding:14px;background:var(--wash);border-radius:7px}
+.visit-heading[data-visit-record-number]::before{content:attr(data-visit-record-number)}
+@media screen{.visit-record-filtered-out{display:none!important}}
+@media(max-width:650px){.visit-filter-fields{grid-template-columns:minmax(0,1fr)}.visit-filter-fields button{justify-self:start}}
