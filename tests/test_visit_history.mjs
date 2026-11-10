@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readVisitHistory, priorVisitLabel } from "../static/visit_history.mjs";
+import { readVisitHistory, readVisitHistories, priorVisitLabel } from "../static/visit_history.mjs";
 import { createVisitRecord, updateVisitRecord, makeVisitRecordFile } from "../static/visit_record.mjs";
 const counts = {picks:0,with_qloo_entity_id:0,with_affinity_evidence:0,constraint_checked:0,unsafe_candidates_rejected:0};
 function savedText(number = 3) {
@@ -47,4 +47,41 @@ test("actual dated and undated attendance remain distinct; notes are not retaine
 test("unknown source is refused; clearing means no markers",()=>{
  assert.throws(()=>history(null),/source/);
  assert.equal(priorVisitLabel(null,"mock",{kind:"restaurant",entity_id:"same-id"}),"");
+});
+
+function recordText(weekText=savedText(), outcome="went", date="2024-03-02") {
+ let r=createVisitRecord(weekText,"week.json");
+ r=updateVisitRecord(r,"pick-0",{outcome,date,note:"PRIVATE note"});
+ return makeVisitRecordFile(r).text;
+}
+test("multiple weeks combine and copies of original occurrences count once",()=>{
+ const first=recordText();
+ const next=JSON.parse(savedText().replace(/^\uFEFF/,""));
+ next.week.start="2024-03-04";
+ const second=recordText(JSON.stringify(next),"went","2024-03-08");
+ const h=readVisitHistories([first,first,second]);
+ assert.equal(h.records,3); assert.equal(h.duplicates,1);
+ assert.match(priorVisitLabel(h,"mock",{kind:"restaurant",entity_id:"same-id"}),/2024-03-08.*2 visits/);
+ assert.equal(JSON.stringify(h).includes("PRIVATE"),false);
+ assert.equal(JSON.stringify([...h.venues]).includes("PRIVATE"),false);
+});
+test("formatting changes and source filename changes do not inflate visits",()=>{
+ const one=JSON.parse(recordText()), two=structuredClone(one);
+ two.source.name="renamed.json";
+ two.source.weekText=JSON.stringify(JSON.parse(two.source.weekText.replace(/^\uFEFF/,"")));
+ two.visits[0].note="updated private note";
+ const h=readVisitHistories([JSON.stringify(one),JSON.stringify(two)]);
+ assert.equal(h.duplicates,1); assert.equal([...h.venues.values()][0].count,1);
+});
+test("contradictory copies require a choice, regardless of input order",()=>{
+ const went=recordText(), no=recordText(savedText(),"did_not_go");
+ for(const texts of [[went,no],[no,went],[went,recordText(savedText(),"went","2024-03-09")]])
+  assert.throws(()=>readVisitHistories(texts),/disagree/);
+});
+test("mixed provenance, malformed member and excessive selections are atomic refusals",()=>{
+ const week=JSON.parse(savedText().replace(/^\uFEFF/,""));week.response.mock=false;
+ assert.throws(()=>readVisitHistories([recordText(),recordText(JSON.stringify(week))]),/Demo and live/);
+ assert.throws(()=>readVisitHistories([recordText(),"{}"]));
+ assert.throws(()=>readVisitHistories([]),/1 and 20/);
+ assert.throws(()=>readVisitHistories(Array(21).fill(recordText())),/1 and 20/);
 });
