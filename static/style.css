@@ -269,7 +269,7 @@ main { padding-top:.25rem; }
 }
 @media print { .app-purpose, .care-guidance, #planningContext { display:none !important; } .app-wordmark { font-size:20pt; } }
 
-.planning-context-actions[hidden] { display:none; }
+.planning-context [hidden] { display:none; }
 .planning-context-change-title { font-size:.85rem; font-weight:650; margin:.65rem 0 .2rem; }
 
 .taste-form > .sample:first-of-type { display:grid; grid-template-columns:auto minmax(0,1fr); gap:.15rem .8rem; align-items:center; }
