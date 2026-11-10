@@ -198,7 +198,7 @@ are outside this saved-week format and comparison.
 
 ### Save and reopen an editable week
 
-**Save week (.json)** downloads the current week as a local file. It includes the original
+**Save week only (.json)** downloads the current week as a local file. It includes the original
 response, inputs, source explanations, comparison and tool trace, plus your chosen week and
 each pick's assignment. Picks kept off the week are retained so you can restore them later.
 Use **Open saved week** on a later visit and choose that file to continue arranging it. Saving
@@ -379,7 +379,7 @@ Use **Order saved records** to browse all saved names without filtering them awa
 
 Use **Add a portable week to this browser** to review a saved-week JSON file and keep it under an explicit name with **Save imported browser copy**. Review alone saves nothing; **Cancel import** clears that review. The copy retains the exact decoded text and original saved date. Your active planner, venue notes, selected preview, unfinished rename and saved-name search stay open; the search may hide the new copy until cleared. See [Keep a portable week as a named browser copy](docs/SAVED_WEEK_IMPORT.md) for file limits, storage failures and retry behavior.
 
-These copies stay in this browser's site data, with up to 50 named records and a 512 KiB limit per saved JSON payload. Clearing site data removes them. Use **Save caregiver handoff (.json)** to keep the complete plan and notes in a portable file, or back up the saved collection. There is no automatic saving or upload. The separate **Save week (.json)** and calendar files omit venue notes. **Save venue notes (.json)** remains the matching editable companion for a portable week; Print week/Download call sheet produces a readable copy.
+These copies stay in this browser's site data, with up to 50 named records and a 512 KiB limit per saved JSON payload. Clearing site data removes them. Use **Save caregiver handoff (.json)** to keep the complete plan and notes in a portable file, or back up the saved collection. There is no automatic saving or upload. The separate **Save week only (.json)** and calendar files omit venue notes. **Save venue notes (.json)** remains the matching editable companion for a portable week; Print week/Download call sheet produces a readable copy.
 
 The browser collection wraps a saved payload with a local identity and label. Version 1 records retain the unchanged portable-week text. New version 2 records contain the existing validated caregiver-handoff format, so the week and its complete source-bound note set commit together. Mixed collections preserve both formats; older app versions refuse version 2 instead of silently losing notes. Its native IndexedDB mutations resolve only when their transaction commits; malformed or unsupported records remain stored and can be explicitly removed. Failed collection opens follow the existing planner's retirement and recovery behavior. The saved-week codec, model, calendar writer, request controller, worksheet modules, comparison page and offline studio remain their existing implementations.
 

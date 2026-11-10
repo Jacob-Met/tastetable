@@ -52,9 +52,10 @@
         <h3 id="weekKeepTitle">Keep or share this week</h3>
         <div class="week-export-actions">
           <button id="printWeek" type="button" class="primary" disabled>Print week</button>
-          <button id="saveWeek" type="button" disabled aria-describedby="weekFileStatus">Save week (.json)</button>
+          <button id="saveWeek" type="button" disabled aria-describedby="weekFileStatus weekOnlySaveHelp">Save week only (.json)</button>
           <button id="calendarDownload" type="button" disabled aria-describedby="calendarStatus">Download calendar (.ics)</button>
         </div>
+        <p id="weekOnlySaveHelp" class="why">Week JSON and calendar files do not include venue notes. <a href="#caregiverHandoff">Save a caregiver handoff</a> to keep the plan and notes together.</p>
         <div class="saved-week-actions organizer-help">
           <label>Name for this browser copy <input id="savedWeekName" maxlength="120" autocomplete="off"></label>
           <button id="saveCurrentWeek" type="button" aria-describedby="browserSaveHelp" disabled>Save plan and notes in this browser</button>
