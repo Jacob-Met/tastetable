@@ -165,8 +165,11 @@ class ConstraintBindingTests(unittest.TestCase):
         self.assertEqual(verdict["checks"][-1]["status"], "unknown")
 
     def test_each_candidate_uses_its_retained_purpose(self):
+        # Restaurant scans must not ingest the cinema. A later outing scan
+        # may admit the same provider entity with its actual cultural purpose.
+        self.tools.qloo_recs("urn:entity:place", "outing", take=50)
         outing_id = self._id("Rialto Revival Cinema (fictional)")
-        self.state.candidates[outing_id]["purpose"] = "outing"
+        self.assertEqual(self.state.candidates[outing_id]["purpose"], "outing")
         result = self.tools.constraint_check([self.bad_id, outing_id],
                                              self.persona["constraints"], "outing")
         meal, outing = result["verdicts"]

@@ -313,6 +313,13 @@ the same way with the included `Dockerfile`.
   prepared.
 * An affinity score means the venue is popular with similar audiences. It does not mean
   "this person will enjoy it."
+* Qloo's generic place type spans restaurants, museums and performance spaces. The
+  planner admits meal days only when place tags identify dining, and cultural
+  outings only when tags identify a supported cultural venue. Unclassified
+  results are displayed as venue-type exclusions, not failed care checks.
+  Music- or film-only profiles still get four plainly unverified comparison
+  ideas; these are not provider results or bookings. Unknown live tag formats
+  stay unconfirmed rather than being mistaken for dining evidence.
 
 ## License
 
