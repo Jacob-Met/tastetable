@@ -18,6 +18,7 @@ The final plan is assembled deterministically from tool results by
 from __future__ import annotations
 
 import json
+from copy import deepcopy
 import os
 import urllib.request
 from dataclasses import dataclass, field
@@ -347,7 +348,7 @@ class Toolbox:
 
 # ============================================================== plan assembly
 
-def explain(c: dict, v: dict, state: AgentState) -> str:
+def taste_reason(c: dict, state: AgentState) -> str:
     e: Entity = c["entity"]
     sig_names = [state.entities[s].name for s in c["signals"] if s in state.entities]
     matched = [t["name"] for t in e.tags if t.get("tag_id") in c["query_tags"]]
@@ -359,6 +360,18 @@ def explain(c: dict, v: dict, state: AgentState) -> str:
         s += " Weak taste signal: chosen mainly because it passes the care constraints."
     if c.get("fallback"):
         s += " Widened pick: outside the stated cuisines because too few matches passed constraints."
+    return s
+
+
+def pick_evidence(c: dict, v: dict, state: AgentState) -> dict:
+    """Expose the exact original tag checks without reinterpreting their status."""
+    return {"format": "tastetable.pick-evidence.v1",
+            "taste_reason": taste_reason(c, state), "checks": deepcopy(v["checks"])}
+
+
+def explain(c: dict, v: dict, state: AgentState) -> str:
+    # Retain the established complete explanation for saved files and all consumers.
+    s = taste_reason(c, state)
     label = {"soft_foods": "Soft foods", "low_sodium": "Low sodium", "wheelchair": "Wheelchair"}
     checks = "; ".join(f"{label.get(ch['constraint'], ch['constraint'])}: {ch['status']} "
                        f"({ch['reason']})" for ch in v["checks"])
@@ -414,14 +427,16 @@ def assemble_plan(state: AgentState) -> dict:
         e = c["entity"]
         days.append({"day": day, "kind": "restaurant", "entity_id": e.entity_id, "name": e.name,
                      "affinity": e.affinity, "fallback": c.get("fallback", False),
-                     "why": explain(c, verdicts[e.entity_id], state)})
+                     "why": explain(c, verdicts[e.entity_id], state),
+                     "evidence": pick_evidence(c, verdicts[e.entity_id], state)})
     outing = None
     outs = ranked("outing")
     if outs:
         c = outs[0]
         e = c["entity"]
         outing = {"day": OUTING_DAY, "kind": "outing", "entity_id": e.entity_id, "name": e.name,
-                  "affinity": e.affinity, "why": explain(c, verdicts[e.entity_id], state)}
+                  "affinity": e.affinity, "why": explain(c, verdicts[e.entity_id], state),
+                  "evidence": pick_evidence(c, verdicts[e.entity_id], state)}
     rejected = [{"name": state.candidates[eid]["entity"].name, "entity_id": eid,
                  "failed": [ch for ch in v["checks"] if ch["status"] != "pass"]}
                 for eid, v in verdicts.items() if not v["ok"]]

@@ -1,0 +1,13 @@
+{
+  "producer": "astra-47b3-iris",
+  "browser": "156.0.8078.47",
+  "checks": [
+    "native API adds only optional evidence; complete old response retained",
+    "each displayed reason/status equals native original",
+    "390px no overflow",
+    "actual printed new evidence retains every taste reason, check reason/status and source ID",
+    "old saved week displays and prints its complete original paragraph",
+    "new saved week roundtrips evidence exactly"
+  ],
+  "errors": []
+}

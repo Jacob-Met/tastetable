@@ -1,0 +1,24 @@
+import assert from 'node:assert/strict';import{mkdir,readFile,writeFile}from'node:fs/promises';import{execFileSync}from'node:child_process';
+const {chromium}=await import(process.env.TASTETABLE_PLAYWRIGHT_MODULE || 'playwright');
+const out='docs/care-evidence';await mkdir(out,{recursive:true});const b=await chromium.launch({executablePath:process.env.TASTETABLE_REVIEW_CHROMIUM,headless:true,chromiumSandbox:true});const p=await b.newPage({viewport:{width:1365,height:1000}});const errors=[];p.on('pageerror',e=>errors.push(e.message));
+async function sample(url){await p.goto(url);await p.locator('#sampleBtn').click();await p.locator('#results').waitFor({state:'visible'});}
+async function save(){const dl=p.waitForEvent('download');await p.locator('#saveWeek').click();return await readFile(await(await dl).path(),'utf8');}
+const text=path=>execFileSync('pdftotext',[path,'-'],{encoding:'utf8'}).replace(/\s+/g,' ');
+try{
+ await sample(process.env.TASTETABLE_BASELINE_URL||'http://127.0.0.1:8857');const oldText=await save(),old=JSON.parse(oldText);
+ await p.locator('.pick-evidence').first().locator('summary').click();await p.locator('.pick-evidence').first().scrollIntoViewIfNeeded();await p.screenshot({path:out+'/before.png'});
+ await sample(process.env.TASTETABLE_REVIEW_URL||'http://127.0.0.1:8858');const currentText=await save(),current=JSON.parse(currentText);const legacy=structuredClone(current.response);
+ for(const pick of legacy.plan.meals.concat(legacy.plan.outing?[legacy.plan.outing]:[]))delete pick.evidence;
+ assert.deepEqual(legacy,old.response,'only optional evidence projection is added to original response');
+ const first=current.response.plan.meals[0];await p.locator('.pick-evidence').first().locator('summary').click();
+ const shown=p.locator('.pick-evidence').first();assert.equal(await shown.locator('.taste-reason').innerText(),first.evidence.taste_reason);
+ assert.equal(await shown.locator('.care-checks > div').count(),first.evidence.checks.length);
+ for(let i=0;i<first.evidence.checks.length;i++){const ch=first.evidence.checks[i],row=shown.locator('.care-checks > div').nth(i);assert.equal(await row.locator('dd').innerText(),ch.reason);assert.equal(await row.locator('.check-result').innerText(),'Check: '+ch.status);}
+ await shown.scrollIntoViewIfNeeded();await p.screenshot({path:out+'/desktop.png'});await p.setViewportSize({width:390,height:844});await shown.scrollIntoViewIfNeeded();assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);await p.screenshot({path:out+'/mobile.png'});
+ await p.pdf({path:out+'/structured-print.pdf',format:'A4',printBackground:true});const printed=text(out+'/structured-print.pdf');
+ for(const pick of current.response.plan.meals.concat(current.response.plan.outing?[current.response.plan.outing]:[])){assert.ok(printed.includes(pick.entity_id));assert.ok(printed.includes(pick.evidence.taste_reason));for(const ch of pick.evidence.checks){assert.ok(printed.includes(ch.reason));assert.ok(printed.includes('Check: '+ch.status));}}
+ await p.locator('#weekFile').setInputFiles({name:'older-week-without-evidence.json',mimeType:'application/json',buffer:Buffer.from(oldText)});await p.getByText('Saved week opened.',{exact:false}).waitFor();assert.equal(await p.locator('.source-evidence').count(),0);await p.locator('.pick-evidence').first().locator('summary').click();assert.equal(await p.locator('.pick-evidence').first().locator('.why').first().innerText(),old.response.plan.meals[0].why);
+ await p.pdf({path:out+'/legacy-print.pdf',format:'A4'});const legacyPrint=text(out+'/legacy-print.pdf');for(const pick of old.response.plan.meals.concat(old.response.plan.outing?[old.response.plan.outing]:[]))assert.ok(legacyPrint.includes(pick.why));
+ await p.locator('#weekFile').setInputFiles({name:'new-week-with-evidence.json',mimeType:'application/json',buffer:Buffer.from(currentText)});await p.getByText('Saved week opened.',{exact:false}).waitFor();assert.equal(await p.locator('.source-evidence').count(),current.response.plan.meals.length+(current.response.plan.outing?1:0));const reopened=JSON.parse(await save());assert.deepEqual(reopened.response,current.response);
+ assert.deepEqual(errors,[]);await writeFile(out+'/producer-check.json',JSON.stringify({producer:'astra-47b3-iris',browser:await b.version(),checks:['native API adds only optional evidence; complete old response retained','each displayed reason/status equals native original','390px no overflow','actual printed new evidence retains every taste reason, check reason/status and source ID','old saved week displays and prints its complete original paragraph','new saved week roundtrips evidence exactly'],errors},null,2));console.log('Native/browser evidence and legacy compatibility passed');
+}finally{await b.close();}

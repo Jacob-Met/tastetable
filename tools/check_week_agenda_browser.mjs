@@ -29,13 +29,19 @@ try{
  await page.locator('#resetWeek').click();
  assert.equal(await page.locator('[data-evidence-key="pick-0"]').getAttribute('open'),'');
  const saveAfter=page.waitForEvent('download');await page.locator('#saveWeek').click();const after=JSON.parse(await readFile(await (await saveAfter).path(),'utf8'));
- assert.deepEqual(after.response,before.response);assert.deepEqual(after.week,before.week);
+ const historicalResponse=structuredClone(after.response);
+ for(const pick of historicalResponse.plan.meals.concat(historicalResponse.plan.outing?[historicalResponse.plan.outing]:[])) delete pick.evidence;
+ const historicalBefore=structuredClone(before.response);
+ for(const pick of historicalBefore.plan.meals.concat(historicalBefore.plan.outing?[historicalBefore.plan.outing]:[])) delete pick.evidence;
+ assert.deepEqual(historicalResponse,historicalBefore);assert.deepEqual(after.week,before.week);
  await page.locator('[data-evidence-key="pick-0"] summary').click();
  await page.pdf({path:out+'/printed-week.pdf',format:'A4',printBackground:true});
  const printText=execFileSync('pdftotext',[out+'/printed-week.pdf','-'],{encoding:'utf8'});
  for(const pick of after.response.plan.meals.concat(after.response.plan.outing?[after.response.plan.outing]:[])){
   assert.ok(printText.includes(pick.entity_id),'print retains source ID '+pick.entity_id);
-  assert.ok(printText.replace(/\s+/g,' ').includes(pick.why.replace(/\s+/g,' ')),'print retains full original explanation');
+  const printed=printText.replace(/\s+/g,' ');
+  const pieces=pick.evidence?[pick.evidence.taste_reason,...pick.evidence.checks.flatMap(check=>[check.reason,`Check: ${check.status}`])]:[pick.why];
+  for(const piece of pieces) assert.ok(printed.includes(piece.replace(/\s+/g,' ')),'print retains every original evidence part');
  }
  assert.equal(await page.locator('.pick-evidence[open]').count(),0);
  await page.setViewportSize({width:390,height:844});await page.locator('#weekDays').scrollIntoViewIfNeeded();

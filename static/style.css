@@ -155,3 +155,14 @@ button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-v
   .pick-evidence { display: block; }
   .pick-evidence::details-content { display: block; content-visibility: visible; }
 }
+
+.source-evidence { max-width: 48rem; }
+.source-evidence h5 { margin: .9rem 0 .4rem; font-size: .9rem; }
+.care-checks { margin: 0; }
+.care-checks > div { display: grid; grid-template-columns: 12rem minmax(0, 1fr); gap: .5rem 1rem; padding: .6rem 0; border-top: 1px solid #d8dfdc; }
+.care-checks dt { font-size: .875rem; font-weight: 600; }
+.check-result { display: block; font-size: .75rem; font-weight: normal; color: var(--muted); }
+.care-checks dd { margin: 0; font-size: .875rem; line-height: 1.45; }
+.check-limit { font-size: .8rem; color: var(--muted); margin: .6rem 0 .3rem; }
+@media (max-width: 640px) { .care-checks > div { grid-template-columns: 1fr; gap: .2rem; } .check-result { display: inline; margin-left: .5rem; } }
+@media print { .care-checks > div { break-inside: avoid; } }
