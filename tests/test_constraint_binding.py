@@ -237,6 +237,16 @@ class ConstraintBindingTests(unittest.TestCase):
             with self.subTest(persona=pid):
                 result = agent.run_agent(persona, qloo=QlooClient(
                     api_key="TEST", transport=FixtureTransport()))
+                # Keep all three historical hashes: only the new optional projection
+                # is removed, and every projected reason must match the original text.
+                labels = {"soft_foods": "Soft foods", "low_sodium": "Low sodium", "wheelchair": "Wheelchair"}
+                for pick in result["plan"]["meals"] + ([result["plan"]["outing"]] if result["plan"]["outing"] else []):
+                    evidence = pick.pop("evidence")
+                    self.assertEqual(evidence["format"], "tastetable.pick-evidence.v1")
+                    self.assertTrue(pick["why"].startswith(evidence["taste_reason"]))
+                    for check in evidence["checks"]:
+                        self.assertIn(f"{labels.get(check['constraint'], check['constraint'])}: "
+                                      f"{check['status']} ({check['reason']})", pick["why"])
                 data = json.dumps(result, sort_keys=True, separators=(",", ":"),
                                   ensure_ascii=False).encode()
                 self.assertEqual(hashlib.sha256(data).hexdigest(), expected[pid])

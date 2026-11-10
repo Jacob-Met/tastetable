@@ -1,3 +1,4 @@
+import { evidenceMarkup } from "./pick_evidence.mjs";
 import { mountVisitHistory } from "./visit_history.mjs";
 import { DAYS, createWeekPlan, localDate, offWeekPicks, resetDays, setPickDay, setWeek, weekRows } from "./week_plan.mjs";
 import { makeWeekFile, readWeekFile } from "./week_file.mjs";
@@ -51,7 +52,7 @@ function pickCard({ key, pick }, day, sourceMode) {
     </label>
     <details class="pick-evidence" data-evidence-key="${key}">
       <summary aria-label="Why ${esc(pick.name)} was suggested and original checks">Why this pick · original checks</summary>
-      <p class="why">${esc(pick.why)}</p>
+      ${evidenceMarkup(pick, esc)}
       <p class="why mono">Qloo id: ${esc(pick.entity_id)}</p>
     </details>
   </article>`;

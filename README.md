@@ -423,3 +423,7 @@ FastAPI deployment, hosted CI or physical-device acceptance.
 ## Compare caregiver handoffs
 
 Open **Compare caregiver handoffs (new tab)** beside the combined handoff Save/Open controls to compare two local saved copies. The separate page shows arranged-week changes and complete literal venue-note differences only when the original saved source matches. It keeps repeated visits and note dates distinct, preserves both original files, and makes no health or venue-verification inference. See [Compare caregiver handoffs](docs/COMPARE_CAREGIVER_HANDOFFS.md) for file limits, mismatch handling and the difference from arrangement-only saved-week comparison.
+
+## Read original care checks
+
+New plans separate each original care-check reason from the taste explanation inside the venue disclosure. Older saved weeks keep their complete original paragraph. See [care evidence](docs/CARE_EVIDENCE.md) for the source limitations, compatibility and actual browser/print checks.
