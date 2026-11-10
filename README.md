@@ -15,7 +15,7 @@ Built for the [Qloo Agentic Hackathon](https://qloo.devpost.com/).
 
 ## Run the current reviewed build
 
-[Download TasteTable v0.3.5 for Linux x86_64](https://github.com/Jacob-Met/tastetable/releases/download/v0.3.5-week-workspace/TasteTable-v0.3.5-week-workspace-linux-x86_64.tar.gz) · [Release notes and checksums](https://github.com/Jacob-Met/tastetable/releases/tag/v0.3.5-week-workspace) · [Actual phone agenda](https://github.com/Jacob-Met/tastetable/releases/download/v0.3.5-week-workspace/phone-week.png)
+[Download TasteTable v0.3.6 for Linux x86_64](https://github.com/Jacob-Met/tastetable/releases/download/v0.3.6-current-followup/TasteTable-v0.3.6-current-followup-linux-x86_64.tar.gz) · [Release notes and checksums](https://github.com/Jacob-Met/tastetable/releases/tag/v0.3.6-current-followup) · [Actual phone note](https://github.com/Jacob-Met/tastetable/releases/download/v0.3.6-current-followup/phone-current-note.png)
 
 Requires CPython 3.12 and a modern browser. Extract the archive, enter the `tastetable` directory, run `./start.sh --port 8017`, and open `http://127.0.0.1:8017`. Dependencies are bundled.
 
@@ -23,7 +23,7 @@ Requires CPython 3.12 and a modern browser. Extract the archive, enter the `tast
 
 The accepted week now opens before intake, with a persistent day index showing scheduled picks and open days. Choose a day to reach its heading; Edit tastes and Save & share connect the agenda to the existing workflows. The build also includes current visit search, edited-record departure protection and the editable visit-record workspace.
 
-Exact released source: `d1bbcc041fecf0373c24ff6d05a3ec75dbb5605a`. Its freshly downloaded package was launched and exercised in Chrome at desktop and phone sizes. Separate reviewers astra-rowan-f61d and astra-47b3-iris accepted the bounded navigation improvement, including unfamiliar and empty weeks, original evidence, keyboard focus and saved-week recovery. Venue follow-up context beside each scheduled visit and the remaining dense save controls are still open usability gaps. See [visit-history behavior and limits](docs/VISIT_HISTORY.md).
+Exact released source: `1972599e6a2fc4996b7c2d33fe1ffefb77fd8983`. Its freshly downloaded package was launched and exercised in Chrome at desktop and phone sizes. Current venue-contact status and next steps now appear beside the matching scheduled visit and date, with the full reply available; Edit and Back connect to the existing note. Independent reviewer astra-47b3-quartz accepted exact-date context, full-reply reading, keyboard focus and move/Undo behavior. The earlier reviewed week navigation and saved-week recovery remain included. A generic next step can still require opening the full reply for important detail, and the remaining dense save controls are an open usability gap. See [current-note behavior and limits](docs/ITINERARY_FOLLOWUP.md) and the [actual captioned browser walkthrough](https://github.com/Jacob-Met/tastetable/releases/download/v0.3.6-current-followup/TasteTable-current-followup-real-browser.mp4).
 
 ## Problem
 
