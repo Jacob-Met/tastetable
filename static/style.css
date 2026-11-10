@@ -264,8 +264,8 @@ main { padding-top:.25rem; }
  .week-controls label { min-width:0; }
  .week-controls input { min-width:0; font-size:.9rem; padding:.45rem; min-height:44px; }
  .week-controls button { min-width:0; padding:.5rem .65rem; font-size:.85rem; }
- .planning-context-summary { grid-template-columns:1fr; gap:.1rem; }
- .planning-context-summary dd { margin-bottom:.35rem; }
+ .planning-context-summary { grid-template-columns:5.1rem minmax(0,1fr); gap:.25rem .5rem; }
+ .planning-context-summary dd { margin-bottom:0; }
 }
 @media print { .app-purpose, .care-guidance, #planningContext { display:none !important; } .app-wordmark { font-size:20pt; } }
 
