@@ -11,9 +11,9 @@ test("uncertain care evidence stays uncertain and literal, separate from taste",
  const pick={why:"retained complete source",evidence:{format:"tastetable.pick-evidence.v1",
  taste_reason:"Audience signal <not a personal guarantee>",checks:[{constraint:"low_sodium",status:"unknown",reason:"No menu evidence <ask> & confirm"}]}};
  const html=evidenceMarkup(pick,esc);
- assert.match(html,/Check: unknown/);assert.match(html,/No menu evidence &lt;ask&gt; &amp; confirm/);
+ assert.match(html,/Tag\/keyword check: unknown/);assert.match(html,/No menu evidence &lt;ask&gt; &amp; confirm/);
  assert.match(html,/Audience signal &lt;not a personal guarantee&gt;/);
- assert.ok(!html.includes("Check: pass"));assert.match(html,/Confirm current food and access needs/);
+ assert.ok(!html.includes("check: pass"));assert.match(html,/Confirm current food and access needs/);
 });
 test("unsupported optional evidence never suppresses the original explanation", () => {
  for(const evidence of [{format:"future"}, {format:"tastetable.pick-evidence.v1",taste_reason:"x",checks:[{constraint:"wheelchair",status:"safe",reason:"x"}]}])
