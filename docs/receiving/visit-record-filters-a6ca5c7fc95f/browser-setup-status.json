@@ -1,0 +1,20 @@
+{
+  "status": "browser_acceptance_pending",
+  "actualBrowserProcessesLaunched": 0,
+  "nativeTransport": {
+    "receiver": "a6ca5c7fc95f/Runtime",
+    "reportedResult": "Remote Desktop Commander start_process, create_directory and read-only configuration attempts settled with timeout/no response across available devices; no TasteTable browser PID or pending call remained."
+  },
+  "localBrowser": {
+    "installedPlaywrightExpectedExecutable": "/root/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome",
+    "expectedExecutablePresent": false,
+    "installedCliDryRun": "Chrome for Testing 151.0.7922.34 (playwright chromium v1234)",
+    "boundedHeadRequest": "https://cdn.playwright.dev/builds/cft/151.0.7922.34/linux64/chrome-linux64.zip",
+    "exitCode": 28,
+    "stderr": "curl: (28) Proxy CONNECT aborted due to timeout\n",
+    "elapsedSeconds": 9.894397665,
+    "downloadAttempted": false,
+    "installedFiles": false
+  },
+  "qualification": "Environment setup failures only. No browser assertions ran and no product pass, device adoption or deployment is claimed."
+}

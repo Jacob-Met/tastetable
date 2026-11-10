@@ -122,7 +122,7 @@ $("#cancelOpen").addEventListener("click", () => retire("Opening cancelled. Your
 $("#useRecord").addEventListener("click", () => {
   if (!pending) return;
   const next = pending.record; retire(); current = next; invalid.clear();
-  $("#saveStatus").textContent = ""; render(); $("#recordTitle").focus({preventScroll:true});
+  $("#saveStatus").textContent = ""; render(); $("#visits").dispatchEvent(new Event("visit-record-replaced")); $("#recordTitle").focus({preventScroll:true});
 });
 $("#saveRecord").addEventListener("click", () => {
   if (!current || invalid.size) return;
