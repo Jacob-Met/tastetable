@@ -10,15 +10,17 @@
 <link rel="stylesheet" href="/static/saved_weeks.css">
 </head>
 <body>
-<header>
-  <h1>TasteTable</h1>
-  <p class="tag">A weekly plan of restaurants + one cultural outing, grounded in Qloo taste data and checked against care constraints.</p>
-  <div class="disclaimer" role="note">
-    <strong>Not medical or dietary advice.</strong> Constraint checks are heuristics over public venue tags and menu keywords.
-    Always confirm accessibility, texture and sodium needs with the venue and the person's care team.
-    Sample personas are fictional; do not enter real health information.
-  </div>
+<header class="app-header">
+  <div class="app-masthead"><a class="app-wordmark" href="/">TasteTable</a><span class="app-purpose">Your weekly outings</span></div>
   <div id="mode" class="mode"></div>
+  <details class="care-guidance">
+    <summary>Confirm care needs with the venue before visiting</summary>
+    <div class="disclaimer" role="note">
+      <strong>Not medical or dietary advice.</strong> Constraint checks use public venue tags and menu keywords.
+      Confirm accessibility, texture and sodium needs with the venue and the person's care team.
+      Sample personas are fictional; do not enter real health information.
+    </div>
+  </details>
 </header>
 
 <main>
@@ -30,13 +32,13 @@
       <p id="savedWeekSource" class="why" hidden></p>
       <p id="weekConstraints" class="why"></p>
       <div class="week-controls">
-        <label>A date in your week
+        <label>Week containing
           <input id="weekDate" type="date" aria-describedby="weekHelp weekError">
         </label>
-        <button id="undoWeek" type="button" disabled aria-controls="weekDays omittedPicks" aria-describedby="weekHelp weekStatus" title="Undo your last change">Undo change</button>
-        <button id="redoWeek" type="button" disabled aria-controls="weekDays omittedPicks" aria-describedby="weekHelp weekStatus" title="Redo your last undone change">Redo change</button>
+        <button id="undoWeek" type="button" disabled aria-controls="weekDays omittedPicks" aria-describedby="weekHelp weekStatus" title="Undo your last change">Undo</button>
+        <button id="redoWeek" type="button" disabled aria-controls="weekDays omittedPicks" aria-describedby="weekHelp weekStatus" title="Redo your last undone change">Redo</button>
       </div>
-      <p id="weekHelp" class="why organizer-help">Move each pick to the day that suits you. Several picks can share a day. Save below to keep your changes.</p>
+      <p id="weekHelp" class="why organizer-help">Choose a day for each visit. Save below to keep edits.</p>
       <p id="weekFileStatus" class="why organizer-help" role="status" aria-live="polite"></p>
       <p id="weekError" class="error" role="alert"></p>
       <p id="weekSummary"></p>
@@ -128,7 +130,7 @@
   </section>
 
   <section id="tasteForm" class="card taste-form">
-    <h2>1. Tastes &amp; constraints</h2>
+    <h2>Tastes &amp; care needs</h2>
     <div class="sample">
       <button id="openWeek" type="button">Open saved week</button>
       <a href="/static/compare-weeks.html" target="_blank" rel="noopener">Compare saved weeks (new tab)</a>
@@ -139,6 +141,7 @@
       <button id="sampleBtn" class="primary" disabled>Try a sample persona</button>
       <select id="personaSel" aria-label="Sample persona"></select>
     </div>
+    <div id="planningContext"></div>
     <form id="form" aria-busy="false">
       <label>Favourite cuisines <input name="cuisines" placeholder="Cuban, Mexican"></label>
       <label>Music they love (artists / era) <input name="music" placeholder="Celia Cruz"></label>
