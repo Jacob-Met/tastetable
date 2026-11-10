@@ -20,7 +20,7 @@ try {
  record=updateVisitRecord(record,'pick-1',{outcome:'did_not_go',date:'2026-10-25'});
  const payload={name:'prior-visits.json',mimeType:'application/json',buffer:Buffer.from(makeVisitRecordFile(record).text)};
  await page.locator('#visitHistory summary').click();
- await page.locator('#visitHistory input').setInputFiles(payload);
+ await page.locator('#visitHistory input[type="file"]').setInputFiles(payload);
  await page.locator('[data-history-preview]').waitFor({state:'visible'});
  assert.equal(await page.locator('.prior-visit').count(),0);
  await page.locator('[data-history-use]').click();
@@ -31,7 +31,7 @@ try {
  let second=createVisitRecord(JSON.stringify(secondWeek),'Second week.json');
  second=updateVisitRecord(second,'pick-0',{outcome:'went',date:'2026-11-04',note:'PRIVATE other note'});
  const secondPayload={name:'second.json',mimeType:'application/json',buffer:Buffer.from(makeVisitRecordFile(second).text)};
- await page.locator('#visitHistory input').setInputFiles([payload,payload,secondPayload]);
+ await page.locator('#visitHistory input[type="file"]').setInputFiles([payload,payload,secondPayload]);
  await page.locator('[data-history-preview]').waitFor({state:'visible'});
  assert.match(await page.locator('[data-history-summary]').innerText(),/1 repeated attendance/);
  assert.equal(await page.locator('[data-history-records] details').count(),3);
@@ -48,11 +48,11 @@ try {
  await page.locator('[data-history-use]').click();
  assert.match(await page.locator('.prior-visit').innerText(),/2026-11-04.*2 visits/);
  let conflict=updateVisitRecord(record,'pick-0',{outcome:'did_not_go'});
- await page.locator('#visitHistory input').setInputFiles([payload,{name:'conflict.json',mimeType:'application/json',buffer:Buffer.from(makeVisitRecordFile(conflict).text)}]);
- await page.getByText(/These records disagree/).waitFor();
+ await page.locator('#visitHistory input[type="file"]').setInputFiles([payload,{name:'conflict.json',mimeType:'application/json',buffer:Buffer.from(makeVisitRecordFile(conflict).text)}]);
+ await page.getByRole('heading',{name:'Resolve conflicting records'}).waitFor();
  assert.equal(await page.locator('[data-history-preview]').isVisible(),false);
  assert.match(await page.locator('.prior-visit').innerText(),/2 visits/);
- await page.locator('#visitHistory input').setInputFiles([payload,secondPayload]);
+ await page.locator('#visitHistory input[type="file"]').setInputFiles([payload,secondPayload]);
  await page.locator('[data-history-preview]').waitFor({state:'visible'});
  await page.locator('[data-history-cancel]').click();
  assert.match(await page.locator('.prior-visit').innerText(),/2 visits/);
@@ -63,7 +63,7 @@ try {
  assert.equal(await page.locator('.prior-visit').count(),1);
  assert.equal(requests.length,before+1);
  assert.ok(requests.every(r=>!String(r.body).includes('PRIVATE')&&!String(r.body).includes('visits')));
- await page.locator('#visitHistory input').setInputFiles({name:'broken.json',mimeType:'application/json',buffer:Buffer.from('{}')});
+ await page.locator('#visitHistory input[type="file"]').setInputFiles({name:'broken.json',mimeType:'application/json',buffer:Buffer.from('{}')});
  await page.getByText(/Could not open visit record:/).waitFor();
  assert.equal(await page.locator('.prior-visit').count(),1);
  await page.locator('#weekOrganizer').scrollIntoViewIfNeeded();

@@ -8,7 +8,7 @@ This is one reviewed selection for one planning context. Clear before planning f
 
 ## Current gaps, ranked
 
-Remaining conflict-recovery gap: choosing a version still requires reopening the file picker and reselecting files. In-place version choice would reduce effort for large selections; any future choice must preserve explicit review and atomic application.
+Conflict recovery now supports in-place whole-file keep/omit choices. The remaining semantic gap is cross-week real-visit identity: the app cannot establish whether distinct saved weeks describe the same visit or which caregiver record is factually correct.
 
 1. Independent judge astra-47b3 accepted the scoped attendance improvement after real desktop/phone use and comparison with primary Beli/Mapstr screenshots. The new chronological agenda addresses the uniform tall-card problem and folds original evidence behind accessible detail, with complete evidence still printed. Independent judgment of that broader change is tracked separately as tastetable-agenda-evidence-iris47b3; do not treat the attendance judgment as approval of the redesign.
 2. Validate usefulness with real caregiver-provided records and a live Qloo response; current reproducible integration uses clearly labeled synthetic fixtures.
@@ -36,7 +36,7 @@ Independent judge astra-wren-c69e20 found the initial file-name-only preview ins
 
 ## Recovering conflicting files
 
-When a selected group contains contradictory copies of the same original visit, nothing in that selection is applied. The conflict section names the venue, each file's selection position and filename, and each recorded outcome and actual date. Reopen the selection without the unwanted copy, inspect the remaining visits, then choose Use. Even identically named files retain their selection positions; private notes are never shown. The app does not decide which record is correct.
+When a selected group contains contradictory copies of the same original visit, nothing in that selection is applied. The conflict section names the venue, each file's selection position and filename, and each recorded outcome and actual date. Uncheck the whole file you do not want to use, inspect the visits in that file, choose Review kept files, then choose Use after the retained set validates. Even identically named files retain their selection positions; private notes are never shown. The app does not decide which record is correct.
 
 Observed before: twelve unfamiliar selected records produced one generic refusal with zero conflicting filenames exposed. Producer astra-elm-5b9d13 reproduced this on build172 and retained docs/conflict-review/before.png. The corrected actual desktop/390px journey identifies the two files and dates, preserves existing attendance, and successfully recovers by selecting the intended version. The native decoder also returns all conflicting occurrence comparisons, rather than stopping at the first.
 
@@ -45,3 +45,12 @@ Validation: 22 Node history/record tests, actual twelve-file conflict/reselectio
 Independent judge astra-cairn-7f2c used records created through the shipped Mei planner/visit-record UI, including duplicate basenames and conflicting outcomes/dates. Judge-directed wording removes any implication that chronological age decides which record is correct: the caregiver explicitly chooses the version to use.
 
 Final independent acceptance: astra-cairn-7f2c accepted actual desktop and 390px review on source 519af1b3 after inspecting whole dates on aligned value lines. Actual visible-chooser courses verified refusal, pending selection and Cancel preserve planner attendance, while explicit Use replaces it. Receipts: astra-cairn-7f2c-taste-conflict-final-01 and astra-cairn-7f2c-taste-plan-preservation-02, both exit 0. This is a scoped usability acceptance, not real-caregiver validation.
+
+
+## In-place file choices
+
+Conflict review keeps original selection positions even for identical filenames. Conflicting files appear first; unrelated files remain available in a folded group. Every file states its count of entries marked went and exposes those venues/dates on demand. Omitting a file excludes all its entries, not just the conflicting visit. Counts describe each file, not net unique attendance loss: another kept copy may contain the same visit.
+
+Review kept files rereads and validates the retained group through the same decoder before offering Use. An unresolved conflict or an empty choice cannot commit. Editing any checkbox invalidates the pending review, so a formerly valid Use cannot apply stale choices. Cancel and Clear retire the pending selection and delayed reads; cancel preserves active context while Clear removes it. Only browser File handles and sanitized attendance summaries are held during this review, with no persistent storage or private-note rendering.
+
+Producer astra-elm-5b9d13: native suite run with --experimental-vm-modules passed239 tests; the initial command omitted that runtime flag and failed the existing VM composition harness, then was corrected. Chrome156 actual12-file course used identical basenames, whole-file impact (two went entries), reintroduced conflict after a valid preview, review invalidation and explicit commit. Existing multiple-record privacy/cancel/clear/reload journey also passed. The older regression text expectation was updated to the visible conflict heading after the prior judge-directed removal of redundant error text. Screenshots: docs/inplace-history. Independent judgment belongs to astra-cairn-7f2c, separately tracked.

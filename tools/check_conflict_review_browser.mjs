@@ -18,13 +18,13 @@ try{
  const older=payload('Rosa-October-draft.json',old);
  const corrected=payload('Rosa-October-confirmed.json',updateVisitRecord(old,'pick-0',{outcome:'went',date:'2026-10-27',note:'PRIVATE updated detail'}));
  await page.locator('#visitHistory summary').first().click();
- await page.locator('#visitHistory input').setInputFiles(older);
+ await page.locator('#visitHistory input[type="file"]').setInputFiles(older);
  await page.locator('[data-history-use]').click();
  const initial=await page.locator('.prior-visit').allTextContents();
  const files=[older];
  for(let i=0;i<10;i++){const w=JSON.parse(weekText);w.savedAt='2026-11-'+String(i+1).padStart(2,'0')+'T00:00:00.000Z';files.push(payload('Other-week-'+i+'.json',createVisitRecord(JSON.stringify(w),'Another week.json')));}
  files.push(corrected);
- await page.locator('#visitHistory input').setInputFiles(files);
+ await page.locator('#visitHistory input[type="file"]').setInputFiles(files);
  await page.getByText(/current visit context is still in use/).waitFor();
  assert.deepEqual(await page.locator('.prior-visit').allTextContents(),initial);
  await page.locator('#visitHistory').scrollIntoViewIfNeeded();
@@ -42,7 +42,7 @@ try{
   await page.setViewportSize({width:390,height:844});await section.scrollIntoViewIfNeeded();
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
   await page.screenshot({path:'docs/conflict-review/phone.png'});
-  await page.locator('#visitHistory input').setInputFiles(files.slice(1));
+  await page.locator('#visitHistory input[type="file"]').setInputFiles(files.slice(1));
   await page.locator('[data-history-use]').click();
   assert.equal(await section.isVisible(),false);
   assert.match((await page.locator('.prior-visit').allTextContents()).join(' '),/2026-10-27/);
