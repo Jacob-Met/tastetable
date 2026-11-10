@@ -93,7 +93,11 @@ class ModuleMimeTests(unittest.TestCase):
         self.assertEqual((old.status_code, new.status_code), (206, 206))
         self.assertEqual(new.content, old.content.replace(
             b"Content-Type: text/plain; charset=utf-8", b"Content-Type: text/javascript; charset=utf-8"))
-        self.assertEqual(new.content.count(b"Content-Type: text/javascript; charset=utf-8\n"), 2)
+        # Multipart framing uses CRLF in the installed Starlette version; prior
+        # versions used LF. Count the exact header lines without relaxing any
+        # body-byte or old/new response equivalence assertions.
+        parts = new.content.replace(b"\r\n", b"\n").split(b"\n")
+        self.assertEqual(parts.count(b"Content-Type: text/javascript; charset=utf-8"), 2)
         self.assertEqual(int(new.headers["content-length"]) - int(old.headers["content-length"]),
                          len(new.content) - len(old.content))
         for key in set(old.headers) - {"content-type", "content-length"}:
