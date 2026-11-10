@@ -1,11 +1,13 @@
 import { createVisitRecord, updateVisitRecord, visitRecordRows, makeVisitRecordFile, readVisitRecord, VISIT_RECORD_LIMITS } from "./visit_record.mjs";
 import { readWeekFile } from "./week_file.mjs";
 import { renderVisitRecordCsv } from "./visit_record_csv.mjs";
+import { createVisitDepartureGuard } from "./visit_departure.mjs";
 
 const $ = selector => document.querySelector(selector);
 const labels = {unrecorded: "Unrecorded", went: "Went", did_not_go: "Did not go"};
 let current = null, pending = null, generation = 0, downloadUrl = null;
 const invalid = new Map();
+const departure = createVisitDepartureGuard(window);
 function text(tag, value, className) {
   const node = document.createElement(tag); node.textContent = value;
   if (className) node.className = className;
@@ -17,6 +19,7 @@ function retire(message = "") {
   $("#fileStatus").textContent = message; $("#fileError").textContent = "";
 }
 function controls() {
+  departure.update(current, invalid.size > 0);
   const blocked = !current || invalid.size > 0;
   $("#saveRecord").disabled = blocked; $("#printRecord").disabled = blocked;
   $("#downloadCsv").disabled = blocked;
@@ -122,6 +125,7 @@ $("#cancelOpen").addEventListener("click", () => retire("Opening cancelled. Your
 $("#useRecord").addEventListener("click", () => {
   if (!pending) return;
   const next = pending.record; retire(); current = next; invalid.clear();
+  departure.accept(current);
   $("#saveStatus").textContent = ""; render(); $("#visits").dispatchEvent(new Event("visit-record-replaced")); $("#recordTitle").focus({preventScroll:true});
 });
 $("#saveRecord").addEventListener("click", () => {
