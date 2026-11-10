@@ -14,7 +14,7 @@ export function evidenceMarkup(pick, esc) {
     <p class="why taste-reason">${esc(e.taste_reason)}</p>
     <h5>Original care checks</h5>
     ${e.checks.length ? `<dl class="care-checks">${e.checks.map(check => `<div>
-      <dt>${esc(labels[check.constraint] || check.constraint)} <span class="check-result">Check: ${esc(check.status)}</span></dt>
+      <dt>${esc(labels[check.constraint] || check.constraint)} <span class="check-result">Tag/keyword check: ${esc(check.status)}</span></dt>
       <dd>${esc(check.reason)}</dd>
     </div>`).join("")}</dl>` : '<p class="why">No care constraints were checked for this pick.</p>'}
     <p class="check-limit">Based on the original venue tags and keywords. Confirm current food and access needs with the venue.</p>
