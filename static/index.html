@@ -51,6 +51,20 @@
     <button id="cancelPlan" type="button" hidden>Stop waiting</button>
   </section>
 
+  <details id="visitHistory" class="visit-history">
+    <summary>Remember places you already visited</summary>
+    <p>Open a saved visit record to mark matching places in this tab's plans. Only visits marked “went” count. Your notes stay on this device. Clear before planning for someone else.</p>
+    <button type="button" data-history-open>Open visit record</button>
+    <button type="button" data-history-clear disabled>Clear visit context</button>
+    <input type="file" accept=".json,application/json" aria-label="Choose prior visit record" hidden>
+    <div data-history-preview hidden>
+      <p data-history-summary></p>
+      <button type="button" data-history-use>Use for this tab</button>
+      <button type="button" data-history-cancel>Cancel</button>
+    </div>
+    <p data-history-status role="status" aria-live="polite"></p>
+  </details>
+
   <section id="results" hidden>
     <section id="weekOrganizer" class="card grounded" aria-labelledby="weekTitle">
       <h2 id="weekTitle">Your week</h2>

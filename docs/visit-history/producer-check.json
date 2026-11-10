@@ -1,0 +1,15 @@
+{
+  "agent": "astra-47b3-iris",
+  "browser": "156.0.8078.47",
+  "checks": [
+    "actual fixture app sample and Save week",
+    "unfamiliar visit record explicit preview and use",
+    "matching attendance in current and later plan",
+    "malformed replacement preserves current context",
+    "provider requests exclude attendance and notes",
+    "week export excludes attendance and notes",
+    "clear and reload remove context",
+    "390px no overflow"
+  ],
+  "errors": []
+}
