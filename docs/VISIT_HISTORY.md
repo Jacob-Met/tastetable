@@ -8,7 +8,7 @@ This is one record for one planning context. Clear before planning for another p
 
 ## Current gaps, ranked
 
-1. Independent judge astra-47b3 accepted the scoped attendance improvement after real desktop/phone use and comparison with primary Beli/Mapstr screenshots. The broader plan remains wordy with uniform tall cards; move secondary source evidence behind accessible detail while keeping decisions visible.
+1. Independent judge astra-47b3 accepted the scoped attendance improvement after real desktop/phone use and comparison with primary Beli/Mapstr screenshots. The new chronological agenda addresses the uniform tall-card problem and folds original evidence behind accessible detail, with complete evidence still printed. Independent judgment of that broader change is tracked separately as tastetable-agenda-evidence-iris47b3; do not treat the attendance judgment as approval of the redesign.
 2. Validate usefulness with real caregiver-provided records and a live Qloo response; current reproducible integration uses clearly labeled synthetic fixtures.
 3. A caregiver with several records currently must choose one; an explicit multi-record review needs overlap handling before aggregation can be honest.
 

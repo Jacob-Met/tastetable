@@ -124,3 +124,34 @@ button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-v
 .visit-history p { max-width: 70ch; }
 .prior-visit { border-left: 3px solid #66734b; padding-left: .6rem; font-size: .875rem; line-height: 1.45; color: #39432c; }
 @media print { .visit-history { display: none; } }
+
+/* A chronological agenda: decisions align; evidence opens within its own visit. */
+.week-days { display: block; margin-top: 1.2rem; border-top: 2px solid #39432c; }
+.week-day { display: grid; grid-template-columns: 8rem minmax(0, 1fr); column-gap: 1.2rem; border: 0; border-bottom: 1px solid #c8cfc8; border-radius: 0; padding: 1rem 0; }
+.week-day h3 { display: block; grid-column: 1; grid-row: 1; margin: .2rem 0; }
+.week-day time { display: block; margin-top: .25rem; }
+.week-day > .scheduled-pick, .week-day > .open-day { grid-column: 2; }
+.scheduled-pick { display: grid; grid-template-columns: minmax(0, 1fr) 11rem; gap: .35rem 1rem; }
+.pick-meta { margin: .2rem 0; font-size: .8rem; color: var(--muted); }
+.scheduled-pick .prior-visit { margin: .35rem 0; }
+.pick-control { align-self: start; margin: 0; font-size: .8rem; }
+.pick-control select { width: 100%; margin-top: .2rem; }
+.pick-evidence { grid-column: 1 / -1; margin-top: .25rem; }
+.pick-evidence summary { cursor: pointer; font-size: .85rem; color: #46533f; width: fit-content; padding: .25rem 0; }
+.pick-evidence[open] { padding-bottom: .3rem; }
+.pick-evidence .why { max-width: 75ch; }
+.open-day { margin: .2rem 0; }
+@media (max-width: 640px) {
+  .week-day { grid-template-columns: 1fr; gap: .45rem; }
+  .week-day h3 { display: flex; grid-column: 1; grid-row: auto; margin-bottom: .3rem; }
+  .week-day time { margin-top: 0; }
+  .week-day > .scheduled-pick, .week-day > .open-day { grid-column: 1; }
+  .scheduled-pick { grid-template-columns: minmax(0, 1fr) 8.8rem; gap: .35rem .5rem; }
+  .pick-control select { padding-left: .25rem; padding-right: .25rem; }
+}
+@media print {
+  .week-day, .scheduled-pick { display: block; }
+  .pick-evidence summary, .pick-control { display: none; }
+  .pick-evidence { display: block; }
+  .pick-evidence::details-content { display: block; content-visibility: visible; }
+}

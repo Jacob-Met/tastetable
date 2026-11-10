@@ -121,6 +121,8 @@ has a day selector: move it to another day, combine several picks on the same da
 back. **Restore suggested days** restores the original assignments while keeping your chosen
 week. Open days are shown explicitly, including when too few recommendations pass the checks.
 
+The chronological agenda keeps each venue and its scheduling control together. Open **Why this pick · original checks** for the full original explanation and Qloo ID. The disclosure works with the keyboard and stays open while you rearrange that pick. Printed handoffs always include the full evidence, even if you left it folded on screen.
+
 **Print week** opens the browser's print dialog for a dated caregiver handoff. It includes the
 scheduled picks, their original Qloo IDs, affinity and check explanations, the requested
 constraints, any omitted picks, and the response's demo/live/unknown source label. The original
