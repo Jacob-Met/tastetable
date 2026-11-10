@@ -47,7 +47,7 @@ const sourcePaths = [
   "static/saved_week_collection.mjs", "static/saved_week_collection_ui.mjs",
   "static/saved_week_import.mjs", "static/saved_week_order.mjs", "static/saved_week_search.mjs",
   "static/week_compare.mjs", "static/week_change_brief.mjs",
-  "static/style.css", "static/week_workspace.mjs", "static/plan-request.js", "tools/native_plan_to_week.mjs",
+  "static/style.css", "static/pick_evidence.mjs", "static/week_workspace.mjs", "static/plan-request.js", "tools/native_plan_to_week.mjs",
   "tests/test_native_plan_week.py", "tools/check_native_plan_week_browser.mjs",
   // GitHub Actions are disabled; production browser source is the verified scope.
 ];
