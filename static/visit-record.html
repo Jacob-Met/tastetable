@@ -10,12 +10,12 @@
 <body>
 <header class="page-header">
   <a href="/" class="back-link">TasteTable planner</a>
-  <p class="eyebrow">AFTER YOUR WEEK</p>
-  <h1>Your visit record</h1>
-  <p class="intro">Keep what happened beside the original suggestions, one visit at a time.</p>
+  <h1>Visit record</h1>
 </header>
 <main>
-  <section class="card no-print" aria-labelledby="openTitle">
+  <details id="fileControls" class="file-controls no-print" open>
+    <summary>Open a week or visit record</summary>
+    <section aria-labelledby="openTitle">
     <h2 id="openTitle">Start with a saved week</h2>
     <p>In the planner or offline studio, choose <strong>Save week</strong>. Open that JSON file here, or reopen a visit record you saved earlier.</p>
     <div class="actions">
@@ -36,33 +36,31 @@
       <button id="useRecord" type="button">Use this file</button>
     </section>
   </section>
+  </details>
   <section id="emptyState" class="empty card">
     <h2>A record of your choices</h2>
     <p>Mark a visit as went, did not go, or leave it unrecorded. Add an optional date and what you would like to remember. Repeated suggestions remain separate visits.</p>
   </section>
   <section id="record" hidden aria-labelledby="recordTitle">
-    <div class="card source-card">
-      <p class="eyebrow">ORIGINAL SAVED COPY</p>
+    <div class="record-heading">
       <h2 id="recordTitle" tabindex="-1">Your saved week</h2>
-      <p id="sourceName" class="source-name"></p>
       <p id="sourceFacts"></p>
-      <p id="sourceProvenance" class="muted"></p>
-      <details id="sourceDetails">
-        <summary>Original inputs and notes</summary>
-        <dl id="sourceInputs"></dl>
-        <ul id="originalNotes"></ul>
-      </details>
-      <p class="notice">The original recommendations and checks have not been rerun. These are caregiver-entered outcomes, not reservations, venue verification, or medical or dietary advice.</p>
     </div>
+    <details id="sourceDetails" class="source-card">
+      <summary>Source, original checks and file guidance</summary>
+      <p id="sourceName" class="source-name"></p>
+      <p id="sourceProvenance" class="muted"></p>
+      <dl id="sourceInputs"></dl><ul id="originalNotes"></ul>
+      <p class="notice">Original recommendations and checks have not been rerun. These are caregiver-entered outcomes, not reservations or verified venue or care information.</p>
+      <p>Dates record when the visit or decision happened. JSON keeps an editable copy; CSV and print include every visit, even when filtered. Import spreadsheet columns as text.</p>
+    </details>
     <div class="record-toolbar card">
-      <div><h2>What happened</h2><p id="recordSummary" role="status" aria-live="polite"></p></div>
+      <div><p id="recordSummary" role="status" aria-live="polite"></p></div>
       <div class="actions no-print">
-        <button id="saveRecord" type="button" disabled>Download visit record</button>
-        <button id="downloadCsv" type="button" class="secondary" disabled>Download CSV</button>
-        <button id="printRecord" type="button" class="secondary" disabled>Print record</button>
+        <button id="saveRecord" type="button" disabled>Save record</button>
+        <button id="downloadCsv" type="button" class="secondary" disabled>CSV</button>
+        <button id="printRecord" type="button" class="secondary" disabled>Print</button>
       </div>
-      <p class="field-help">Dates below are when the visit or decision happened. They may be outside the planned week. Notes and dates do not change the outcome.</p>
-      <p class="field-help no-print">CSV is a tabular report of every original pick, including omitted and unrecorded visits. Import spreadsheet columns as text to preserve literal values. Keep the JSON file to reopen and edit.</p>
       <p id="draftError" class="error" role="alert"></p>
       <p id="saveStatus" role="status" aria-live="polite" class="no-print"></p>
     </div>
