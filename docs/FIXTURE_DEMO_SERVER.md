@@ -64,7 +64,7 @@ configuration files, change browser profiles or contact a provider. If you
 want the normal environment-selected startup, the existing README command
 remains available independently.
 
-The launcher waits for its child and returns that process's status. Invalid
+The launcher forwards Ctrl+C, termination, and (on POSIX) terminal-close signals to its own server and waits until that server exits, releasing the listening port before the launcher completes. It returns 128 plus the signal number after a requested stop; otherwise it returns the server process status. Invalid
 arguments return 2 without starting it. An operating-system failure to start
 the child returns 1 with a bounded diagnostic; an interrupted launcher returns
 130. Console output from the application remains on the same terminal.
