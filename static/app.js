@@ -38,18 +38,22 @@ const dateLabel = (date) => new Intl.DateTimeFormat(undefined, {
 function pickCard({ key, pick }, day, sourceMode) {
   const priorVisit = visitHistory.label(sourceMode, pick);
   return `<article class="scheduled-pick">
-    <h4>${esc(pick.name)}</h4>
-    ${priorVisit ? `<p class="prior-visit">${esc(priorVisit)}</p>` : ""}
-    <span class="badge">${esc(pick.kind)}</span>${pick.fallback ? '<span class="badge">widened</span>' : ""}
-    ${typeof pick.affinity === "number" ? `<span class="badge ok">affinity ${esc(pick.affinity.toFixed(2))}</span>` : ""}
-    <p class="why">${esc(pick.why)}</p>
-    <p class="why mono">Qloo id: ${esc(pick.entity_id)}</p>
-    <label class="pick-control">Schedule this pick
+    <div class="pick-identity">
+      <h4>${esc(pick.name)}</h4>
+      <p class="pick-meta">${esc(pick.kind)}${pick.fallback ? " · widened search" : ""}${typeof pick.affinity === "number" ? " · affinity " + esc(pick.affinity.toFixed(2)) : ""}</p>
+      ${priorVisit ? `<p class="prior-visit">${esc(priorVisit)}</p>` : ""}
+    </div>
+    <label class="pick-control">Schedule
       <select data-pick-key="${key}" aria-label="Day for ${esc(pick.name)}">
         ${DAYS.map((value) => `<option value="${value}"${day === value ? " selected" : ""}>${value}</option>`).join("")}
         <option value=""${day === null ? " selected" : ""}>Keep off this week</option>
       </select>
     </label>
+    <details class="pick-evidence" data-evidence-key="${key}">
+      <summary aria-label="Why ${esc(pick.name)} was suggested and original checks">Why this pick · original checks</summary>
+      <p class="why">${esc(pick.why)}</p>
+      <p class="why mono">Qloo id: ${esc(pick.entity_id)}</p>
+    </details>
   </article>`;
 }
 
@@ -98,7 +102,9 @@ function commitWeekView(view) {
 }
 
 function renderWeek(message = "") {
+  const expanded = new Set([...document.querySelectorAll(".pick-evidence[open]")].map(item => item.dataset.evidenceKey));
   commitWeekView(prepareWeekView(weekState, message));
+  for (const item of document.querySelectorAll(".pick-evidence")) item.open = expanded.has(item.dataset.evidenceKey);
   refreshCalendar();
   refreshWeekSave();
   venueFollowup.sync();
@@ -511,4 +517,15 @@ $("#calendarDownload").addEventListener("click", () => {
 init().catch(() => {
   $("#sampleBtn").disabled = true;
   $("#mode").textContent += " Sample personas could not load. Enter your own tastes to request a plan.";
+});
+
+// Printed caregiver handoffs retain every original explanation even when folded on screen.
+let printEvidence = [];
+window.addEventListener("beforeprint", () => {
+  printEvidence = [...document.querySelectorAll(".pick-evidence")].map(item => [item, item.open]);
+  for (const [item] of printEvidence) item.open = true;
+});
+window.addEventListener("afterprint", () => {
+  for (const [item, open] of printEvidence) item.open = open;
+  printEvidence = [];
 });
