@@ -39,13 +39,15 @@ const report = {
 const sourcePaths = [
   "tastetable_cli.py", "agent.py", "constraints.py", "qloo_client.py", "personas.py",
   "fixtures/qloo_fixtures.json", "static/week_plan.mjs", "static/week_file.mjs",
-  "static/calendar.js", "static/calendar.css", "static/app.js", "static/index.html",
+  "static/calendar.js", "static/calendar.css", "static/app.js", "static/arrangement_history.mjs", "static/index.html",
   "static/venue_followup.mjs", "static/venue_followup.css", "static/caregiver_handoff.mjs",
   "static/saved_weeks.mjs", "static/saved_week_store.mjs",
   "static/saved_week_ui.mjs", "static/saved_weeks.css", "static/venue_note_file.mjs",
+  "static/saved_week_collection.mjs", "static/saved_week_collection_ui.mjs",
+  "static/saved_week_import.mjs", "static/saved_week_order.mjs", "static/saved_week_search.mjs",
   "static/style.css", "static/plan-request.js", "tools/native_plan_to_week.mjs",
   "tests/test_native_plan_week.py", "tools/check_native_plan_week_browser.mjs",
-  ".github/workflows/native-plan-week-browser.yml",
+  // GitHub Actions are disabled; the removed workflow is not runtime source.
 ];
 for (const name of sourcePaths) report.sourceSha256[name] = hash(await readFile(join(project, name)));
 const sourceBefore = {...report.sourceSha256};
@@ -396,6 +398,26 @@ try {
   await verifyWeek(arranged, chosen.name);
   assert.equal(await evaluate("document.activeElement.dataset.pickKey"), lastKey);
   passed("actual keyboard selection moves and omits distinct occurrences without changing source evidence");
+
+  assert.equal(await evaluate('document.querySelector("#undoWeek").disabled'), false);
+  assert.equal(await evaluate('document.querySelector("#redoWeek").disabled'), true);
+  // Undo the omission, then the move: the original source and source-grounded
+  // calendar are recovered by real browser buttons, not by file reloading.
+  await activate("#undoWeek");
+  await verifyWeek(setPickDay(arranged, lastKey, chosen.restored.state.assignments[lastKey]), chosen.name);
+  await activate("#undoWeek");
+  await verifyWeek(chosen.restored.state, chosen.name);
+  assert.equal(await evaluate('document.querySelector("#undoWeek").disabled'), true);
+  assert.equal(await evaluate('document.querySelector("#redoWeek").disabled'), false);
+  const recoveredCalendar = await downloaded("#calendarDownload", "undone-calendar.ics");
+  assert.equal(recoveredCalendar.bytes.toString("utf8"), firstCalendar.bytes.toString("utf8"));
+  await activate("#redoWeek");
+  await verifyWeek(setPickDay(chosen.restored.state, firstKey, "Thursday"), chosen.name);
+  await activate("#redoWeek");
+  await verifyWeek(arranged, chosen.name);
+  assert.equal(await evaluate('document.querySelector("#redoWeek").disabled'), true);
+  await screenshot("undo-redo-desktop.png", "#weekOrganizer");
+  passed("actual keyboard Undo/Redo restores both edits and the original calendar without changing Qloo sources");
 
   const saved = await downloaded("#saveWeek", "edited-saved-week.json");
   const resaved = readWeekFile(saved.bytes.toString("utf8"));

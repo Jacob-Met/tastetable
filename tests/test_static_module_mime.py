@@ -93,7 +93,10 @@ class ModuleMimeTests(unittest.TestCase):
         self.assertEqual((old.status_code, new.status_code), (206, 206))
         self.assertEqual(new.content, old.content.replace(
             b"Content-Type: text/plain; charset=utf-8", b"Content-Type: text/javascript; charset=utf-8"))
-        self.assertEqual(new.content.count(b"Content-Type: text/javascript; charset=utf-8\n"), 2)
+        # Starlette may frame multipart headers with CRLF (or LF in older versions).
+        # The exact old/new byte comparison above checks unchanged framing; this
+        # assertion still requires the corrected type in both range parts.
+        self.assertEqual(new.content.count(b"Content-Type: text/javascript; charset=utf-8"), 2)
         self.assertEqual(int(new.headers["content-length"]) - int(old.headers["content-length"]),
                          len(new.content) - len(old.content))
         for key in set(old.headers) - {"content-type", "content-length"}:

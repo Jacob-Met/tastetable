@@ -133,10 +133,20 @@ async function appFixture() {
     assert.equal(specifier, "./week_plan.mjs"); return modelModule;
   });
   await codecModule.evaluate();
+  // Run the real immutable arrangement-history module. Only the UI mounts
+  // use declared doubles; Undo/Redo and week changes remain actual product logic.
+  const historySource = await readFile(new URL("../static/arrangement_history.mjs", import.meta.url), "utf8");
+  const historyModule = new vm.SourceTextModule(historySource, { context, identifier: "static/arrangement_history.mjs" });
+  await historyModule.link(specifier => {
+    assert.equal(specifier, "./week_plan.mjs");
+    return modelModule;
+  });
+  await historyModule.evaluate();
   const app = new vm.SourceTextModule(sources.app, { context, identifier: "static/app.js" });
   await app.link(specifier => {
     if (specifier === "./week_plan.mjs") return modelModule;
     if (specifier === "./week_file.mjs") return codecModule;
+    if (specifier === "./arrangement_history.mjs") return historyModule;
     const values = mounts[specifier];
     assert.ok(values, "Only the declared UI mounts are doubled: " + specifier);
     return new vm.SyntheticModule(Object.keys(values), function () {
@@ -331,3 +341,83 @@ for (const [label, values] of [
     ]);
   });
 }
+
+function rearrange(f, key, day) {
+  const select = { dataset: { pickKey: key }, value: day ?? "", closest(selector) {
+    assert.equal(selector, "select[data-pick-key]");
+    return this;
+  } };
+  f.node("#weekOrganizer").fire("change", { target: select });
+}
+
+test("Undo and Redo recover actual planner moves while preserving the accepted handoff and calendar identity", async () => {
+  const f = await appFixture(), a = saved("A");
+  assert.equal(await f.open(a), true);
+  const before = f.source();
+  assert.equal(f.node("#undoWeek").disabled, true);
+  rearrange(f, "pick-0", "Sunday");
+  assert.equal(f.capture().weekState.assignments["pick-0"], "Sunday");
+  assert.equal(f.node("#undoWeek").disabled, false);
+  assert.equal(f.node("#redoWeek").disabled, true);
+  f.node("#undoWeek").click();
+  assert.equal(f.capture().weekState.assignments["pick-0"], "Tuesday");
+  assert.equal(f.node("#redoWeek").disabled, false);
+  assert.equal(f.source().origin, before.origin);
+  assert.equal(f.source().model, before.model);
+  f.node("#redoWeek").click();
+  assert.equal(f.capture().weekState.assignments["pick-0"], "Sunday");
+  assert.equal(f.node("#redoWeek").disabled, true);
+  assert.equal(f.capture().calendarId, a.calendarId);
+  assert.equal(f.calendar.at(-1).options.id, a.calendarId);
+});
+
+test("same-week date and no-op Restore leave Redo available; new edit clears it", async () => {
+  const f = await appFixture(); await f.open(saved("A"));
+  f.node("#resetWeek").click(); // Saved inputs were rearranged; first restore is a real edit.
+  rearrange(f, "pick-0", "Sunday");
+  f.node("#undoWeek").click(); // Back at the actual suggested defaults.
+  f.node("#weekDate").value = "2026-10-16"; // Same Monday-to-Sunday week.
+  f.node("#weekDate").fire("input");
+  f.node("#resetWeek").click(); // Now Restore genuinely changes no assignments.
+  assert.equal(f.node("#redoWeek").disabled, false);
+  f.node("#redoWeek").click();
+  assert.equal(f.capture().weekState.assignments["pick-0"], "Sunday");
+  f.node("#undoWeek").click();
+  rearrange(f, "pick-1", "Friday");
+  assert.equal(f.node("#redoWeek").disabled, true);
+  assert.equal(f.capture().weekState.assignments["pick-1"], "Friday");
+});
+
+test("a new explicitly accepted caregiver handoff retires the previous plan's recovery history", async () => {
+  const f = await appFixture(), a = saved("A"), b = saved("B");
+  await f.open(a);
+  rearrange(f, "pick-0", "Sunday");
+  assert.equal(f.node("#undoWeek").disabled, false);
+  f.handoff().accept(f.prepared(b, "Retained care note"));
+  assert.equal(f.node("#undoWeek").disabled, true);
+  assert.equal(f.node("#redoWeek").disabled, true);
+  assert.equal(f.capture().weekState.assignments["pick-0"], "Tuesday");
+  assert.equal(f.source().model.note, "Retained care note");
+  rearrange(f, "pick-1", "Friday");
+  f.node("#undoWeek").click();
+  assert.equal(f.capture().weekState.assignments["pick-1"], null);
+  assert.equal(f.source().model.note, "Retained care note");
+  assert.equal(f.capture().calendarId, b.calendarId);
+});
+
+test("Undo can recover a valid date and full week after an invalid date draft", async () => {
+  const f = await appFixture(), a = saved("A"); await f.open(a);
+  f.node("#weekDate").value = "bad-date";
+  f.node("#weekDate").fire("input");
+  assert.equal(f.node("#printWeek").disabled, true);
+  rearrange(f, "pick-1", "Sunday");
+  assert.equal(f.node("#saveWeek").disabled, true);
+  f.node("#undoWeek").click();
+  assert.equal(f.node("#weekDate").value, "2026-10-12");
+  assert.equal(f.node("#printWeek").disabled, false);
+  assert.equal(f.capture().weekState.assignments["pick-1"], null);
+  assert.equal(f.node("#redoWeek").disabled, false);
+  f.node("#redoWeek").click();
+  assert.equal(f.capture().weekState.assignments["pick-1"], "Sunday");
+  assert.equal(f.capture().calendarId, a.calendarId);
+});

@@ -113,7 +113,9 @@ dependencies, leaves your shell environment unchanged, and does not open a
 browser or install a service. See [fixture-demo startup](docs/FIXTURE_DEMO_SERVER.md)
 for provider selection, ports and receiving limits.
 
-### Arrange and print your week
+### Arrange, undo and print your week
+
+**Undo change** and **Redo change** recover up to 20 local scheduling edits (moving, omitting, restoring suggested days, and changing the shown week). They preserve original Qloo evidence, the saved calendar identity and venue notes. Opening a new plan, saved week or caregiver handoff starts new history; Undo steps are not stored in your saved files. Controls stay disabled until a recoverable change exists. Print, calendar export and Save do not clear redo history, but editing after Undo does.
 
 After generating a plan, choose any date to display its Monday–Sunday week. Each checked pick
 has a day selector: move it to another day, combine several picks on the same day, or choose
