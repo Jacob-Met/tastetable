@@ -15,13 +15,15 @@ Built for the [Qloo Agentic Hackathon](https://qloo.devpost.com/).
 
 ## Run the current reviewed build
 
-[Download TasteTable v0.3.1 for Linux x86_64](https://github.com/Jacob-Met/tastetable/releases/download/v0.3.1-conflict-recovery/TasteTable-v0.3.1-conflict-recovery-portable-linux-x86_64.tar.gz) · [Release notes and checksums](https://github.com/Jacob-Met/tastetable/releases/tag/v0.3.1-conflict-recovery) · [27-second actual recovery demonstration](https://github.com/Jacob-Met/tastetable/releases/download/v0.3.1-conflict-recovery/TasteTable-v0.3.1-reviewed-recovery.mp4)
+[Download TasteTable v0.3.5 for Linux x86_64](https://github.com/Jacob-Met/tastetable/releases/download/v0.3.5-week-workspace/TasteTable-v0.3.5-week-workspace-linux-x86_64.tar.gz) · [Release notes and checksums](https://github.com/Jacob-Met/tastetable/releases/tag/v0.3.5-week-workspace) · [Actual phone agenda](https://github.com/Jacob-Met/tastetable/releases/download/v0.3.5-week-workspace/phone-week.png)
 
 Requires CPython 3.12 and a modern browser. Extract the archive, enter the `tastetable` directory, run `./start.sh --port 8017`, and open `http://127.0.0.1:8017`. Dependencies are bundled.
 
 **This runnable release uses fictional Qloo fixtures and a scripted model.** Genuine live Qloo planning has not been exercised in this delivery; the live-provider configuration below remains opt-in and requires separately supplied access. The release does not establish real venue availability or care suitability.
 
-The current build adds reviewable multi-record attendance history and in-place recovery from contradictory file copies. Whole-file keep/omit choices expose their visit consequences; retained files are revalidated and only explicit Use changes the planner. It includes the current meal-venue and care-evidence improvements. The exact released source is `31649eb217f0f2fb24f54aa4b2d63b4cab6c9fb7`. Its downloaded bytes were exercised at desktop and phone sizes, with separate unfamiliar-use and visual judgment. See [visit-history behavior and limits](docs/VISIT_HISTORY.md).
+The accepted week now opens before intake, with a persistent day index showing scheduled picks and open days. Choose a day to reach its heading; Edit tastes and Save & share connect the agenda to the existing workflows. The build also includes current visit search, edited-record departure protection and the editable visit-record workspace.
+
+Exact released source: `d1bbcc041fecf0373c24ff6d05a3ec75dbb5605a`. Its freshly downloaded package was launched and exercised in Chrome at desktop and phone sizes. Separate reviewers astra-rowan-f61d and astra-47b3-iris accepted the bounded navigation improvement, including unfamiliar and empty weeks, original evidence, keyboard focus and saved-week recovery. Venue follow-up context beside each scheduled visit and the remaining dense save controls are still open usability gaps. See [visit-history behavior and limits](docs/VISIT_HISTORY.md).
 
 ## Problem
 
