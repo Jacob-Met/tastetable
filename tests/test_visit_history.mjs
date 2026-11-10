@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readVisitHistory, readVisitHistories, priorVisitLabel } from "../static/visit_history.mjs";
+import { readVisitHistory, readVisitHistories, VisitHistoryConflict, priorVisitLabel } from "../static/visit_history.mjs";
 import { createVisitRecord, updateVisitRecord, makeVisitRecordFile } from "../static/visit_record.mjs";
 const counts = {picks:0,with_qloo_entity_id:0,with_affinity_evidence:0,constraint_checked:0,unsafe_candidates_rejected:0};
 function savedText(number = 3) {
@@ -84,4 +84,20 @@ test("mixed provenance, malformed member and excessive selections are atomic ref
  assert.throws(()=>readVisitHistories([recordText(),"{}"]));
  assert.throws(()=>readVisitHistories([]),/1 and 20/);
  assert.throws(()=>readVisitHistories(Array(21).fill(recordText())),/1 and 20/);
+});
+
+test("conflicts expose exact file indices, venue and values without private notes",()=>{
+ let error;
+ try { readVisitHistories([recordText(),recordText(savedText(),"did_not_go","2024-03-09")]); }
+ catch(e) { error=e; }
+ assert.ok(error instanceof VisitHistoryConflict);
+ assert.equal(error.conflicts.length,1);
+ assert.deepEqual(error.conflicts[0],{name:"Same café",first:{recordIndex:0,outcome:"went",date:"2024-03-02"},second:{recordIndex:1,outcome:"did_not_go",date:"2024-03-09"}});
+ assert.ok(!JSON.stringify(error.conflicts).includes("PRIVATE"));
+ assert.ok(!JSON.stringify(error.conflicts).includes("weekText"));
+});
+test("all conflicting original occurrences are disclosed rather than only the first",()=>{
+ const one=JSON.parse(recordText()),two=structuredClone(one);
+ two.visits[0].date="2024-03-09";two.visits[1].outcome="went";
+ assert.throws(()=>readVisitHistories([JSON.stringify(one),JSON.stringify(two)]),e=>e instanceof VisitHistoryConflict && e.conflicts.length===2);
 });

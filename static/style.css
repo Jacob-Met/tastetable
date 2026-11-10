@@ -166,3 +166,7 @@ button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-v
 .check-limit { font-size: .8rem; color: var(--muted); margin: .6rem 0 .3rem; }
 @media (max-width: 640px) { .care-checks > div { grid-template-columns: 1fr; gap: .2rem; } .check-result { display: inline; margin-left: .5rem; } }
 @media print { .care-checks > div { break-inside: avoid; } }
+
+.history-conflict-list { padding-inline-start: 1.4rem; }
+.history-conflict-list li { margin-block: .75rem; }
+.history-conflict-list p { margin-block: .25rem; overflow-wrap: anywhere; }

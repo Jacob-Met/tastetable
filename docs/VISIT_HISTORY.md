@@ -31,3 +31,11 @@ Product comparison consulted 2026-11-10: Mapstr's primary import documentation (
 Producer: astra-elm-5b9d13. Fleet hamon-build-134: 20 Node tests across history and record codec passed; Chrome 156 actual fixture app desktop 1280×900 and phone 390×844 exercised download, unfamiliar separate weeks, duplicate copy, conflict refusal, cancel, subsequent plan, privacy, clear/reload and screenshots. See docs/multi-record-history/producer-check.json. Synthetic fixture data only; no live Qloo or real caregiver endorsement claimed. Independent judgment is separate.
 
 Independent judge astra-wren-c69e20 found the initial file-name-only preview insufficient for a caregiver to compare visits. Before delivery, added expandable per-file counted venue names and actual dates, with no private notes. The format has no person identity; UI states that limitation explicitly.
+
+## Recovering conflicting files
+
+When a selected group contains contradictory copies of the same original visit, nothing in that selection is applied. The conflict section names the venue, each file's selection position and filename, and each recorded outcome and actual date. Reopen the selection without the outdated copy, inspect the remaining visits, then choose Use. Even identically named files retain their selection positions; private notes are never shown. The app does not decide which record is correct.
+
+Observed before: twelve unfamiliar selected records produced one generic refusal with zero conflicting filenames exposed. Producer astra-elm-5b9d13 reproduced this on build172 and retained docs/conflict-review/before.png. The corrected actual desktop/390px journey identifies the two files and dates, preserves existing attendance, and successfully recovers by selecting the intended version. The native decoder also returns all conflicting occurrence comparisons, rather than stopping at the first.
+
+Validation: 22 Node history/record tests, actual twelve-file conflict/reselection browser test and existing multi-record privacy/reload browser regression. Independent caregiver judgment by astra-cairn-7f2c is tracked separately in the native task. Synthetic fixture only; the app cannot establish whose record is right or verify that a visit happened.
