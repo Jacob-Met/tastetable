@@ -92,6 +92,11 @@ export function mountPlanningContext(root, { form, onRestore = () => {} } = {}) 
   function render() {
     if (disposed) return;
     const state = describePlanningContext({ acceptedInputs, draftInputs: readPlanningInputs(form), pending });
+    // The form already explains the first request. Only add context when a
+    // displayed week must be distinguished from edits, or a request is busy.
+    root.hidden = !state.hasCurrentWeek && !state.pending;
+    heading.hidden = !state.hasCurrentWeek;
+    summary.hidden = !state.hasCurrentWeek;
     root.dataset.hasCurrentWeek = String(state.hasCurrentWeek);
     root.dataset.changed = String(state.changed);
     root.dataset.pending = String(state.pending);
