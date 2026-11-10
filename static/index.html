@@ -53,12 +53,13 @@
 
   <details id="visitHistory" class="visit-history">
     <summary>Remember places you already visited</summary>
-    <p>Open a saved visit record to mark matching places in this tab's plans. Only visits marked “went” count. Marks come from your record, not a new venue check; dates show the latest dated visit. Your notes stay on this device. Clear before planning for someone else.</p>
-    <button type="button" data-history-open>Open visit record</button>
+    <p>Open one or more saved visit records to mark matching places in this tab's plans. Only visits marked “went” count. Marks come from your record, not a new venue check; dates show the latest dated visit. Your notes stay on this device. Clear before planning for someone else.</p>
+    <button type="button" data-history-open>Open visit records</button>
     <button type="button" data-history-clear disabled>Clear visit context</button>
-    <input type="file" accept=".json,application/json" aria-label="Choose prior visit record" hidden>
+    <input type="file" accept=".json,application/json" aria-label="Choose prior visit record" multiple hidden>
     <div data-history-preview hidden>
       <p data-history-summary></p>
+      <div data-history-records></div>
       <button type="button" data-history-use>Use for this tab</button>
       <button type="button" data-history-cancel>Cancel</button>
     </div>
