@@ -4,6 +4,7 @@ import { makeWeekFile, readWeekFile } from "./week_file.mjs";
 import { mountVenueFollowup } from "./venue_followup.mjs";
 import { mountCaregiverHandoff } from "./caregiver_handoff.mjs";
 import { createSavedWeeksUI } from "./saved_week_ui.mjs";
+import { canRedoArrangement, canUndoArrangement, createArrangementHistory, recordArrangement, redoArrangement, undoArrangement } from "./arrangement_history.mjs";
 
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -15,6 +16,8 @@ let preferredWeekStart = null;
 let weekDateInitialized = false;
 let calendarSession = null;
 let acceptedPlan = null;
+let arrangementHistory = null;
+let historyPlan = null;
 let requestKind = "plan";
 let savedWeeks = null;
 const OPEN_SAVED_WEEK = Symbol("open saved week");
@@ -102,12 +105,62 @@ function commitWeekView(view) {
 }
 
 function renderWeek(message = "") {
+  // Never write a partial visual state if the new arrangement is invalid.
+  const view = prepareWeekView(weekState, message);
+  const current = currentArrangementHistory();
+  const next = current
+    ? recordArrangement(current, weekState, arrangementDate(weekState), message || "Change the week.")
+    : arrangementHistory;
   const expanded = new Set([...document.querySelectorAll(".pick-evidence[open]")].map(item => item.dataset.evidenceKey));
-  commitWeekView(prepareWeekView(weekState, message));
+  commitWeekView(view);
   for (const item of document.querySelectorAll(".pick-evidence")) item.open = expanded.has(item.dataset.evidenceKey);
+  arrangementHistory = next;
   refreshCalendar();
   refreshWeekSave();
   venueFollowup.sync();
+  refreshArrangementHistory();
+}
+
+function currentArrangementHistory() {
+  const origin = arrangementHistory?.origin;
+  return origin && historyPlan === acceptedPlan && acceptedPlan && weekState
+    && origin.sourcePlan === weekState.sourcePlan && origin.picks === weekState.picks
+    && origin.constraints === weekState.constraints && origin.sourceMode === weekState.sourceMode
+    ? arrangementHistory : null;
+}
+
+function arrangementDate(state) {
+  const input = $("#weekDate");
+  try {
+    if (input.checkValidity() && setWeek(state, input.value).weekStart === state.weekStart) return input.value;
+  } catch { /* Invalid draft is not a committed history state. */ }
+  return arrangementHistory?.present.state.weekStart === state.weekStart
+    ? arrangementHistory.present.date : state.weekStart;
+}
+
+function refreshArrangementHistory() {
+  const history = currentArrangementHistory();
+  $("#undoWeek").disabled = !canUndoArrangement(history);
+  $("#redoWeek").disabled = !canRedoArrangement(history);
+  $("#undoWeek").title = history?.past.at(-1)?.label || "";
+  $("#redoWeek").title = history?.future.at(-1)?.label || "";
+}
+
+function restoreArrangement(direction) {
+  const history = currentArrangementHistory();
+  const undo = direction === "undo";
+  if (!(undo ? canUndoArrangement(history) : canRedoArrangement(history))) return;
+  const label = (undo ? history.past : history.future).at(-1).label;
+  arrangementHistory = undo ? undoArrangement(history) : redoArrangement(history);
+  weekState = arrangementHistory.present.state;
+  $("#weekDate").value = arrangementHistory.present.date;
+  preferredWeekStart = weekState.weekStart;
+  $("#weekDate").removeAttribute("aria-invalid");
+  $("#weekError").textContent = "";
+  $("#printWeek").disabled = false;
+  renderWeek((undo ? "Undid" : "Redid") + ": " + label);
+  const button = $(undo ? "#undoWeek" : "#redoWeek");
+  if (button.disabled) $(undo ? "#redoWeek" : "#undoWeek").focus();
 }
 
 function refreshWeekSave() {
@@ -175,6 +228,9 @@ function acceptCalendar() {
 }
 
 function retirePlan() {
+  arrangementHistory = null;
+  historyPlan = null;
+  refreshArrangementHistory();
   weekState = null;
   venueFollowup.retire();
   acceptedPlan = null;
@@ -206,6 +262,7 @@ function applyWeekDate() {
     refreshCalendar();
     refreshWeekSave();
     venueFollowup.sync();
+    refreshArrangementHistory();
     return false;
   }
 }
@@ -327,6 +384,9 @@ const planRequests = TasteTablePlanRequests.create({
     acceptCalendar();
     refreshWeekSave();
     venueFollowup.accept(weekState, $("#savedWeekSource").hidden ? "" : $("#savedWeekSource").textContent);
+    arrangementHistory = createArrangementHistory(weekState, arrangementDate(weekState));
+    historyPlan = acceptedPlan;
+    refreshArrangementHistory();
     $("#requestStatus").textContent = result.state
       ? "Saved week opened. Its original inputs and your arrangement are restored."
       : "Plan ready for the current inputs.";
@@ -361,6 +421,8 @@ caregiverHandoff = mountCaregiverHandoff($("#caregiverHandoff"), {
   },
   accept(prepared) {
     planRequests.invalidate();
+    arrangementHistory = null;
+    historyPlan = null;
     // Restore the whole handoff before refreshing collection capture or exports.
     commitPlanView(prepared.view, { deferWeekRefresh: true });
     fillForm(prepared.inputs);
@@ -370,6 +432,9 @@ caregiverHandoff = mountCaregiverHandoff($("#caregiverHandoff"), {
     venueFollowup.acceptPrepared(weekState, prepared.model);
     acceptCalendar();
     applyWeekDate();
+    arrangementHistory = createArrangementHistory(weekState, arrangementDate(weekState));
+    historyPlan = acceptedPlan;
+    refreshArrangementHistory();
     $("#requestStatus").textContent = "Caregiver handoff opened. Its original inputs, arrangement and venue notes are restored.";
   },
 });
@@ -454,6 +519,8 @@ window.addEventListener("pagehide", () => {
 
 $("#weekDate").addEventListener("input", applyWeekDate);
 $("#weekDate").addEventListener("change", applyWeekDate);
+$("#undoWeek").addEventListener("click", () => restoreArrangement("undo"));
+$("#redoWeek").addEventListener("click", () => restoreArrangement("redo"));
 $("#weekOrganizer").addEventListener("change", (event) => {
   const select = event.target.closest("select[data-pick-key]");
   if (!select || !weekState) return;
