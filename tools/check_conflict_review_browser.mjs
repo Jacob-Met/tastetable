@@ -25,7 +25,7 @@ try{
  for(let i=0;i<10;i++){const w=JSON.parse(weekText);w.savedAt='2026-11-'+String(i+1).padStart(2,'0')+'T00:00:00.000Z';files.push(payload('Other-week-'+i+'.json',createVisitRecord(JSON.stringify(w),'Another week.json')));}
  files.push(corrected);
  await page.locator('#visitHistory input').setInputFiles(files);
- await page.getByText(/Could not open visit record:/).waitFor();
+ await page.getByText(/current visit context is still in use/).waitFor();
  assert.deepEqual(await page.locator('.prior-visit').allTextContents(),initial);
  await page.locator('#visitHistory').scrollIntoViewIfNeeded();
  if(process.env.TASTETABLE_CAPTURE_BEFORE){

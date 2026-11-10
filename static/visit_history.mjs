@@ -113,7 +113,7 @@ export function mountVisitHistory(root, changed) {
         const title = document.createElement("h3");
         title.textContent = "Resolve conflicting records";
         const instruction = document.createElement("p");
-        instruction.textContent = "Compare the entries below. Reopen your selection without the outdated file; no files from this selection have been applied.";
+        instruction.textContent = "Compare the entries below. Reopen your selection without the version you do not want to use; no files from this selection have been applied.";
         const list = document.createElement("ol");
         list.className = "history-conflict-list";
         const labels = { went: "Went", did_not_go: "Did not go", unrecorded: "Not recorded" };
@@ -123,15 +123,20 @@ export function mountVisitHistory(root, changed) {
           item.append(venue);
           for (const entry of [conflict.first, conflict.second]) {
             const line = document.createElement("p");
-            line.textContent = "File " + (entry.recordIndex + 1) + ": " + files[entry.recordIndex].name
-              + " — " + labels[entry.outcome] + " · " + (entry.date || "date not recorded");
+            const identity = document.createElement("span"), value = document.createElement("span");
+            identity.textContent = "File " + (entry.recordIndex + 1) + ": " + files[entry.recordIndex].name;
+            value.className = "history-conflict-value";
+            value.textContent = labels[entry.outcome] + " · " + (entry.date || "date not recorded");
+            line.append(identity, value);
             item.append(line);
           }
           list.append(item);
         }
         conflictView.append(title, instruction, list); conflictView.hidden = false;
       }
-      status.textContent = "Could not open visit record: " + error.message + (active ? " Your current visit context is still in use." : "");
+      status.textContent = error instanceof VisitHistoryConflict && conflictView
+        ? (active ? "Your current visit context is still in use." : "No visit context is in use.")
+        : "Could not open visit record: " + error.message + (active ? " Your current visit context is still in use." : "");
     }
   });
   q("[data-history-use]").addEventListener("click", () => {

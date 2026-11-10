@@ -170,3 +170,5 @@ button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-v
 .history-conflict-list { padding-inline-start: 1.4rem; }
 .history-conflict-list li { margin-block: .75rem; }
 .history-conflict-list p { margin-block: .25rem; overflow-wrap: anywhere; }
+
+.history-conflict-value { display: block; white-space: nowrap; overflow-wrap: normal; }

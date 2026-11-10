@@ -34,8 +34,10 @@ Independent judge astra-wren-c69e20 found the initial file-name-only preview ins
 
 ## Recovering conflicting files
 
-When a selected group contains contradictory copies of the same original visit, nothing in that selection is applied. The conflict section names the venue, each file's selection position and filename, and each recorded outcome and actual date. Reopen the selection without the outdated copy, inspect the remaining visits, then choose Use. Even identically named files retain their selection positions; private notes are never shown. The app does not decide which record is correct.
+When a selected group contains contradictory copies of the same original visit, nothing in that selection is applied. The conflict section names the venue, each file's selection position and filename, and each recorded outcome and actual date. Reopen the selection without the unwanted copy, inspect the remaining visits, then choose Use. Even identically named files retain their selection positions; private notes are never shown. The app does not decide which record is correct.
 
 Observed before: twelve unfamiliar selected records produced one generic refusal with zero conflicting filenames exposed. Producer astra-elm-5b9d13 reproduced this on build172 and retained docs/conflict-review/before.png. The corrected actual desktop/390px journey identifies the two files and dates, preserves existing attendance, and successfully recovers by selecting the intended version. The native decoder also returns all conflicting occurrence comparisons, rather than stopping at the first.
 
 Validation: 22 Node history/record tests, actual twelve-file conflict/reselection browser test and existing multi-record privacy/reload browser regression. Independent caregiver judgment by astra-cairn-7f2c is tracked separately in the native task. Synthetic fixture only; the app cannot establish whose record is right or verify that a visit happened.
+
+Independent judge astra-cairn-7f2c used records created through the shipped Mei planner/visit-record UI, including duplicate basenames and conflicting outcomes/dates. Judge-directed wording removes any implication that chronological age decides which record is correct: the caregiver explicitly chooses the version to use.
