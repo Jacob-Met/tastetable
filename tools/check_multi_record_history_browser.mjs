@@ -33,7 +33,7 @@ try {
  const secondPayload={name:'second.json',mimeType:'application/json',buffer:Buffer.from(makeVisitRecordFile(second).text)};
  await page.locator('#visitHistory input[type="file"]').setInputFiles([payload,payload,secondPayload]);
  await page.locator('[data-history-preview]').waitFor({state:'visible'});
- assert.match(await page.locator('[data-history-summary]').innerText(),/1 repeated attendance/);
+ assert.match(await page.locator('[data-history-summary]').innerText(),/1 repeated entry counted once/);
  assert.equal(await page.locator('[data-history-records] details').count(),3);
  await page.locator('[data-history-records] summary').nth(2).click();
  assert.match(await page.locator('[data-history-records]').innerText(),/2026-11-04/);

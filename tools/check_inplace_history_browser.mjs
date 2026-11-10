@@ -54,9 +54,12 @@ try{
   await page.screenshot({path:'docs/inplace-history/omission-phone.png'});
   await page.locator('[data-history-review-kept]').click();
   await page.locator('[data-history-preview]').waitFor({state:'visible'});
-  assert.match(await page.locator('[data-history-summary]').innerText(),/1 whole file omitted/);
+  assert.match(await section.innerText(),/11 files kept · 1 omitted/);
+  assert.equal(await page.locator('[data-history-keep="0"]').isVisible(),false);
+  await page.screenshot({path:'docs/inplace-history/review-phone.png'});
   assert.deepEqual(await page.locator('.prior-visit').allTextContents(),initial);
   // Changing any choice invalidates a previously reviewed selection.
+  await page.getByText('Edit file choices',{exact:true}).click();
   await page.locator('[data-history-keep="0"]').check();
   assert.equal(await page.locator('[data-history-preview]').isVisible(),false);
   await page.locator('[data-history-review-kept]').click();

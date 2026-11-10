@@ -91,13 +91,26 @@ export function mountVisitHistory(root, changed) {
     }
     container.append(list);
   };
-  const renderSelection = (conflicts = []) => {
+  const renderSelection = (conflicts = [], reviewed = false) => {
     if (!conflictView || !selection) return;
     conflictView.replaceChildren(); conflictView.hidden = false;
+    let content = conflictView;
+    const choiceSummary = document.createElement("p");
+    const updateChoiceSummary = () => {
+      const kept = selection.keep.filter(Boolean).length, omitted = selection.files.length - kept;
+      choiceSummary.textContent = kept + (kept === 1 ? " file kept" : " files kept") + " · " + omitted + " omitted.";
+    };
+    if (reviewed) {
+      updateChoiceSummary();
+      const editor = document.createElement("details"), edit = document.createElement("summary");
+      edit.textContent = "Edit file choices"; editor.append(edit);
+      conflictView.append(choiceSummary, editor); content = editor;
+    }
     const title = document.createElement("h3"), instruction = document.createElement("p");
     title.textContent = conflicts.length ? "Resolve conflicting records" : "Review your file choices";
     instruction.textContent = "Choose which whole files to keep, then review the kept files. Nothing changes until you choose Use. Omitting a file excludes all its entries; the same visits may still be present in another kept copy.";
-    conflictView.append(title, instruction);
+    if (!reviewed) content.append(title);
+    content.append(instruction);
     if (conflicts.length) {
       const list = document.createElement("ol"); list.className = "history-conflict-list";
       const labels = { went: "Went", did_not_go: "Did not go", unrecorded: "Not recorded" };
@@ -113,7 +126,7 @@ export function mountVisitHistory(root, changed) {
         }
         list.append(item);
       }
-      conflictView.append(list);
+      content.append(list);
     }
     const fieldset = document.createElement("fieldset"), legend = document.createElement("legend");
     fieldset.className = "history-file-choices"; legend.textContent = "Files to keep"; fieldset.append(legend);
@@ -136,7 +149,7 @@ export function mountVisitHistory(root, changed) {
       row.append(consequence, details); (selection.involved.has(index) ? fieldset : otherFiles).append(row);
       checkbox.addEventListener("change", () => {
         if (!selection) return;
-        selection.keep[index] = checkbox.checked; ++revision; clearPending(); updateConsequence(); updateOtherSummary();
+        selection.keep[index] = checkbox.checked; ++revision; clearPending(); updateConsequence(); updateOtherSummary(); updateChoiceSummary();
         status.textContent = "File choices changed. Review the kept files before choosing Use." + (active ? " Current visit context remains in use." : "");
       });
     });
@@ -151,7 +164,7 @@ export function mountVisitHistory(root, changed) {
       reviewFiles(positions.map(i => selection.files[i]), positions);
     });
     cancel.addEventListener("click", cancelReview);
-    conflictView.append(fieldset, review, cancel);
+    content.append(fieldset, review, cancel);
   };
   const reviewFiles = async (files, positions = files.map((_, i) => i)) => {
     const token = ++revision; clearPending();
@@ -163,18 +176,17 @@ export function mountVisitHistory(root, changed) {
       const history = readVisitHistories(await Promise.all(files.map(file => file.text())));
       if (token !== revision) return;
       pending = { history, name: files.length === 1 ? files[0].name : files.length + " visit records" };
-      q("[data-history-summary]").textContent = files.map((file, i) => "File " + (positions[i] + 1) + ": " + file.name).join(", ") + ": " + history.venues.size
+      q("[data-history-summary]").textContent = history.records + (history.records === 1 ? " file" : " files") + " · " + history.venues.size
         + " previously visited " + (history.venues.size === 1 ? "venue" : "venues") + " (" + (history.mode === "mock" ? "fictional demo" : "live Qloo") + "). "
-        + history.duplicates + " repeated attendance " + (history.duplicates === 1 ? "entry" : "entries") + " from the same saved week counted once. "
-        + (selection ? (selection.files.length - files.length) + (selection.files.length - files.length === 1 ? " whole file omitted. " : " whole files omitted. ") : "")
-        + "Different saved weeks remain separate records. Review the visits below for overlap. Only combine records you know belong to the same person; these files do not identify the person.";
+        + (history.duplicates ? history.duplicates + " repeated " + (history.duplicates === 1 ? "entry" : "entries") + " counted once. " : "")
+        + "Only use records you know belong to the same person.";
       const list = q("[data-history-records]");
       history.summaries.forEach((rows, index) => {
         const details = document.createElement("details"), heading = document.createElement("summary");
         heading.textContent = "File " + (positions[index] + 1) + ": " + files[index].name + " · " + rows.length + " recorded " + (rows.length === 1 ? "visit" : "visits");
         details.append(heading); appendVisits(details, rows); list.append(details);
       });
-      if (selection) renderSelection();
+      if (selection) renderSelection([], true);
       preview.hidden = false;
       status.textContent = active ? "Current visit context stays in use until you choose Use." : "Review the files, then choose Use to mark matching venues.";
     } catch (error) {
