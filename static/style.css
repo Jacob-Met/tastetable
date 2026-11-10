@@ -218,6 +218,7 @@ button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-v
 /* The week is the working surface; supporting guidance stays within reach. */
 .app-header { padding-block: .85rem .35rem; }
 .app-masthead { display:flex; align-items:baseline; gap:1rem; }
+.app-masthead h1 { margin:0; font:inherit; }
 .app-wordmark { color:var(--ink); font-size:1.65rem; font-weight:750; letter-spacing:-.045em; text-decoration:none; }
 .app-purpose { color:var(--muted); font-size:.9rem; }
 .app-header .mode { margin:.15rem 0; }
