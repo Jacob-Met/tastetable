@@ -1,7 +1,7 @@
-# Recover one saved week from a collection backup
+# Recover one saved plan from a collection backup
 
 Use this local command when you have a TasteTable collection-backup JSON and
-want one portable saved-week file. You can list the backup, choose its stable
+want one complete saved copy. Version 2 copies contain the plan and all saved venue follow-up; older version 1 copies contain a portable week without notes. You can list the backup, choose its stable
 record ID, and recover the original stored text to a new filename. You do not
 need to restore the entire collection into browser storage or resolve unrelated
 browser conflicts first.
@@ -20,7 +20,7 @@ node tools/collection_week.mjs --input collection-backup.json
 The JSON listing contains the backup's `savedAt`, record count, and each record's
 exact `id`, `name`, `createdAt` and `updatedAt`. It preserves the order in the
 backup; it does not sort records, rename them or infer which version you want.
-An empty valid backup produces a listing with no records.
+Version 2 records also identify `version: 2`, `contentFormat: tastetable.caregiver-handoff.v1` and `openWith: Open caregiver handoff`. Version 1 listing fields remain unchanged. An empty valid backup produces a listing with no records.
 
 Copy the **exact ID** of the desired record. Names can repeat, so selection uses
 the ID rather than the display name or a row number. For example, if your listing
@@ -36,8 +36,7 @@ appears while recovery is in progress. It never replaces that entry or changes
 the backup. Filesystems must support a same-directory hard link: a completed
 private staging file is closed before its final name is admitted.
 
-After success, open the recovered JSON through TasteTable's existing saved-week
-file-opening flow. The saved arrangement and retained source information come
+After success, use **Open caregiver handoff** for a version 2 copy, then review and replace the plan and notes together. Use **Open saved week** for a version 1 copy. The saved arrangement and retained source information come
 from that file. Recovery does not regenerate suggestions, recheck venues,
 authenticate stored claims or change your current browser plan by itself.
 
@@ -77,9 +76,9 @@ Listing writes a JSON object with format `tastetable.collection-index.v1`:
 ```
 
 Extraction writes a JSON receipt with format
-`tastetable.collection-week-recovery.v1`, the absolute input/output paths, exact
+`tastetable.collection-handoff-recovery.v1` for a complete plan with notes, or the unchanged `tastetable.collection-week-recovery.v1` for an older week. Both include the absolute input/output paths, exact
 backup-byte SHA256, recovered UTF-8 byte count and SHA256, and the selected
-record's unchanged ID/name/dates. The receipt appears only after final publication
+record's unchanged ID/name/dates. Handoff records additionally include their version, content format and correct reopening action. The receipt appears only after final publication
 and normal staging cleanup. It contains the explicit paths you supplied; keep
 that in mind if you share it.
 
@@ -114,8 +113,7 @@ example `./--backup.json`.
 
 Diagnostics go to stderr. A failure before the final link does not create the
 final file. A cleanup or receipt failure **after** publication leaves the complete
-recovered file present and returns 1. Its diagnostic says **Recovered week was
-created** and names the final path. Inspect that file before choosing a new output;
+recovered file present and returns 1. Its diagnostic says **Recovered week was created** or **Recovered caregiver handoff was created** and names the final path. Inspect that file before choosing a new output;
 do not treat the error as proof that nothing was written. A broken stdout can
 leave a partial receipt, and broken stderr can prevent the diagnostic itself.
 Neither changes the nonzero outcome or removes the recovered file.

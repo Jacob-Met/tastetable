@@ -7,7 +7,8 @@ import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { readCollectionInput, writeNew, CollectionInputError } from './collection_week.mjs';
 import { MAX_COLLECTION_BYTES, readCollectionBackup } from '../static/saved_week_collection.mjs';
-import { draftSummary } from '../static/saved_weeks.mjs';
+import { draftSummary, openDraft } from '../static/saved_weeks.mjs';
+import { CONTACT_STATES } from '../static/venue_followup.mjs';
 
 export const MAX_REPORT_BYTES = 64 * 1024 * 1024;
 export class CollectionReportError extends Error {}
@@ -71,7 +72,7 @@ dt{font-weight:650}dd{margin:0 0 .65rem}ol,ul{padding-left:1.6rem}.occurrence{ma
 details{padding:.8rem;background:#f4f6f4;border:1px solid #dce4e2}code{overflow-wrap:anywhere}
 @media print{body{max-width:none;padding:0;background:white}header,nav,.saved-week{border-radius:0}.saved-week{break-before:page}a{color:inherit}}
 </style></head><body><header><h1>Saved-week collection report</h1>
-<p>Read-only arrangements from one retained backup. Saved dates, source labels and hashes are recorded data, not current venue verification or care advice.</p>
+<p>Read-only arrangements and saved venue follow-up from one retained backup. Saved dates, source labels and hashes are recorded data, not current venue verification or care advice.</p>
 <p>Text values use JSON quotation and escapes so unusual characters remain visible as literal data. The original backup download preserves its exact bytes.</p><dl>
 `);
   field('format', backup.format);
@@ -104,7 +105,26 @@ details{padding:.8rem;background:#f4f6f4;border:1px solid #dce4e2}code{overflow-
     if (summary.omitted.length) {
       add('<ol>\n');summary.omitted.forEach(occurrence);add('</ol>\n');
     } else add('<p>No suggestions kept off this week.</p>\n');
-    add(`</section><details class="stored-week"><summary>Stored portable-week text</summary><pre>${literal(record.text)}</pre></details></section>\n`);
+    add('</section><section class="saved-followup"><h3>Venue follow-up in this copy</h3>\n');
+    if (!summary.includesNotes) {
+      add('<p>Week-only copy: no venue notes were saved. Reopen the recovered file with Open saved week.</p>\n');
+    } else {
+      const opened = openDraft(record);
+      add('<p>Complete saved note set, including omitted visits and other dates. Reopen the recovered file with Open caregiver handoff.</p>\n');
+      if (!opened.records.length) add('<p>No venue notes in this copy. Opening it replaces current notes with this empty set.</p>\n');
+      for (const entry of opened.records) {
+        const pick = opened.state.picks.find((item) => item.key === entry.key);
+        add(`<article class="venue-note"><h4>${literal(pick.pick.name)} · ${escape(entry.date)}</h4><dl>\n`);
+        field('Visit key', entry.key);
+        field('Contact status', CONTACT_STATES[entry.note.status]);
+        field('Questions', entry.note.question ?? '(Original questions for this visit.)');
+        field('Questions for recorded reply', entry.note.replyQuestions ?? '(No recorded reply.)');
+        field('Venue reply / your notes', entry.note.reply);
+        field('Next step', entry.note.nextStep);
+        add('</dl></article>\n');
+      }
+    }
+    add(`</section><details class="stored-week"><summary>${summary.includesNotes ? 'Stored caregiver-handoff text' : 'Stored portable-week text'}</summary><pre>${literal(record.text)}</pre></details></section>\n`);
   });
   add('</body></html>\n');
   return { html: parts.join(''), records: backup.records.length, inputBytes: raw.length, inputSha256: sha(raw) };

@@ -1,4 +1,5 @@
-import { createDraft, draftSummary, MAX_DRAFT_BYTES } from "./saved_weeks.mjs";
+import { createDraft, openDraft, draftSummary, MAX_DRAFT_BYTES } from "./saved_weeks.mjs";
+import { CONTACT_STATES } from "./venue_followup.mjs";
 import { createSavedWeekStore } from "./saved_week_store.mjs";
 import { filterSavedWeekRows } from "./saved_week_search.mjs";
 import { createImportedDraft } from "./saved_week_import.mjs";
@@ -137,6 +138,10 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
     $("#savedWeekPreview").hidden = false;
     const days = $("#savedPreviewDays");
     days.replaceChildren();
+    const followup = $("#savedPreviewFollowup");
+    const noteList = $("#savedPreviewNotes");
+    if (noteList) noteList.replaceChildren();
+    if (followup) followup.hidden = true;
     if (!row.draft) {
       $("#savedPreviewTitle").textContent = `${row.label || "This saved record"} — cannot be opened`;
       $("#savedPreviewSummary").textContent = `${row.error} It has not been changed. You can remove this record explicitly.`;
@@ -150,6 +155,34 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
     $("#savedPreviewTitle").textContent = summary.name;
     $("#savedPreviewSummary").textContent = `Saved ${savedDate(summary.createdAt)}. ${summary.scheduled} of ${summary.suggested} suggestions scheduled for the week of ${summary.weekStart}. Opening uses the saved suggestions and checks; it does not refresh them.`;
     $("#savedPreviewSource").textContent = sourceLabels[summary.sourceMode];
+    const includes = summary.includesNotes
+      ? "This copy includes " + summary.noteCount + (summary.noteCount === 1 ? " recorded venue follow-up entry." : " recorded venue follow-up entries.") + " Opening replaces the current week and all venue notes."
+      : "Week-only copy: no venue notes were saved. Opening replaces the current week and clears current venue notes.";
+    $("#savedPreviewSummary").textContent += " " + includes;
+    if (followup && noteList && summary.includesNotes) {
+      const opened = openDraft(row.draft);
+      followup.hidden = false;
+      for (const record of opened.records) {
+        const item = document.createElement("li");
+        const heading = document.createElement("h5");
+        const pick = opened.state.picks.find((entry) => entry.key === record.key);
+        heading.textContent = pick.pick.name + " · " + record.date + " · " + CONTACT_STATES[record.note.status];
+        const text = document.createElement("pre");
+        text.textContent = [
+          "Questions: " + (record.note.question ?? "(Original questions for this visit.)"),
+          "Questions for the recorded reply: " + (record.note.replyQuestions ?? "(No recorded reply.)"),
+          "Venue reply / your notes: " + (record.note.reply || "(No reply recorded.)"),
+          "Next step: " + (record.note.nextStep || "(No next step recorded.)"),
+        ].join("\n");
+        item.append(heading, text);
+        noteList.append(item);
+      }
+      if (!opened.records.length) {
+        const item = document.createElement("li");
+        item.textContent = "No venue notes in this copy. Opening it clears current venue notes.";
+        noteList.append(item);
+      }
+    }
     for (const day of summary.rows) {
       const item = document.createElement("li");
       item.textContent = `${day.day} ${day.date}: ${day.picks.length ? day.picks.map(({ pick }) => pick.name).join("; ") : "Open day"}`;
@@ -213,6 +246,9 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
         if (row.draft) {
           const summary = draftSummary(row.draft);
           description.textContent = `${summary.name} · week of ${summary.weekStart} · saved ${savedDate(summary.createdAt)} · ${sourceLabels[summary.sourceMode]}`;
+          description.textContent += summary.includesNotes
+            ? " · Plan + " + summary.noteCount + (summary.noteCount === 1 ? " follow-up entry" : " follow-up entries")
+            : " · Week only · no saved follow-up";
           button.textContent = "Preview saved week";
           button.addEventListener("click", () => { void preview(row.id); });
         } else {
@@ -271,7 +307,7 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
     void action(async (active) => {
       await store.save(draft);
       if (!active()) return;
-      await refresh(`Saved “${draft.name}” in this browser. Later edits need another explicit Save.`);
+      await refresh(`Saved “${draft.name}” in this browser${draftSummary(draft).includesNotes ? " with the complete venue follow-up" : ""}. Later edits need another explicit Save.`);
     });
   });
   $("#importSavedWeekFile").addEventListener("change", async () => {
@@ -345,7 +381,7 @@ export function createSavedWeeksUI({ capture, openSaved, store = createSavedWeek
       const accepted = await openSaved(() => store.get(id));
       if (!active()) return;
       status(accepted
-        ? "Opened the browser copy. Its original inputs, checks and arranged week are restored."
+        ? "Opened the browser copy. Its original inputs, checks and arranged week are restored. Venue notes now match this saved copy."
         : "The browser copy was not opened. See the planner status for the current request.");
     });
   });

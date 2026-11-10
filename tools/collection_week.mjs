@@ -13,7 +13,8 @@ const USAGE = [
   "  node tools/collection_week.mjs --input backup.json --id EXACT_ID --output recovered-week.json",
   "  node tools/collection_week.mjs --help",
   "",
-  "List a complete TasteTable collection backup, or recover one exact stored week.",
+  "List a complete TasteTable collection backup, or recover one exact saved payload.",
+  "New plan-and-notes copies reopen with Open caregiver handoff; old weeks use Open saved week.",
   "The input must be a completed regular UTF-8 file, at most 32 MiB; no stdin or symlinks.",
   "All records are validated before listing or selection. Choose an exact listed ID.",
   "The output parent must exist and the filename must be unused; hard links are required.",
@@ -26,7 +27,9 @@ class InputError extends Error {}
 const NO_FAILURE = Symbol("no failure");
 const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");
 const message = (error) => error?.message || String(error);
-const metadata = ({ id, name, createdAt, updatedAt }) => ({ id, name, createdAt, updatedAt });
+const metadata = ({ id, name, createdAt, updatedAt, version }) => ({ id, name, createdAt, updatedAt,
+  ...(version === 2 ? { version, contentFormat: "tastetable.caregiver-handoff.v1", openWith: "Open caregiver handoff" } : {}),
+});
 
 function requireText(text) {
   if (typeof text !== "string") throw new TypeError("Stored week text must be a string.");
@@ -179,7 +182,7 @@ function emit(write, fd, text) {
 }
 
 export async function main(argv = process.argv.slice(2), { fs = fsDefault, write = writeSync } = {}) {
-  let published = false, output;
+  let published = false, output, recoveryKind = 'week';
   try {
     const args = argsFor(argv);
     if (args === null) { emit(write, 1, USAGE); return 0; }
@@ -192,17 +195,18 @@ export async function main(argv = process.argv.slice(2), { fs = fsDefault, write
       emit(write, 1, JSON.stringify(result, null, 2) + "\n");
       return 0;
     }
+    recoveryKind = result.record.version === 2 ? 'caregiver handoff' : 'week';
     output = resolve(args.output);
     const bytes = Buffer.from(result.text, "utf8");
     await writeNew(output, result.text, { fs, onPublished: () => { published = true; } });
     emit(write, 1, JSON.stringify({
-      format: "tastetable.collection-week-recovery.v1",
+      format: result.record.version === 2 ? "tastetable.collection-handoff-recovery.v1" : "tastetable.collection-week-recovery.v1",
       input: resolve(args.input), inputSha256: input.sha256, output,
       outputBytes: bytes.length, outputSha256: hash(bytes), record: result.record,
     }, null, 2) + "\n");
     return 0;
   } catch (error) {
-    const prefix = published ? "Recovered week was created at " + output + ", but final cleanup or receipt delivery failed: " : "";
+    const prefix = published ? "Recovered " + recoveryKind + " was created at " + output + ", but final cleanup or receipt delivery failed: " : "";
     try { emit(write, 2, "tastetable-collection: " + prefix + message(error) + "\n"); }
     catch { /* Preserve failure even when stderr cannot accept a diagnostic. */ }
     return published ? 1 : (error instanceof InputError || error?.exitCode === 2 ? 2 : 1);
