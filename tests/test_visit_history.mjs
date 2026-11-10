@@ -101,3 +101,14 @@ test("all conflicting original occurrences are disclosed rather than only the fi
  two.visits[0].date="2024-03-09";two.visits[1].outcome="went";
  assert.throws(()=>readVisitHistories([JSON.stringify(one),JSON.stringify(two)]),e=>e instanceof VisitHistoryConflict && e.conflicts.length===2);
 });
+
+test("conflict review summaries expose whole-file went entries but no notes or source",()=>{
+ const one=JSON.parse(recordText()),two=structuredClone(one);
+ one.visits[1].outcome="went";one.visits[1].date="2024-03-03";
+ two.visits[0].date="2024-03-09";
+ assert.throws(()=>readVisitHistories([JSON.stringify(one),JSON.stringify(two)]),e=>{
+  assert.equal(e.summaries[0].length,2);assert.equal(e.summaries[1].length,1);
+  assert.ok(!JSON.stringify(e).includes("PRIVATE"));assert.ok(!JSON.stringify(e).includes("weekText"));
+  return e instanceof VisitHistoryConflict;
+ });
+});

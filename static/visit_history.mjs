@@ -7,10 +7,11 @@ const canonical = value => JSON.stringify(value, (_, v) => v && typeof v === "ob
   ? Object.fromEntries(Object.keys(v).sort().map(k => [k, v[k]])) : v);
 
 export class VisitHistoryConflict extends Error {
-  constructor(conflicts) {
+  constructor(conflicts, summaries) {
     super("These records disagree. Review the conflicting files shown here, then reopen the selection with the correct versions.");
     this.name = "VisitHistoryConflict";
     this.conflicts = conflicts;
+    this.summaries = summaries;
   }
 }
 
@@ -40,7 +41,7 @@ export function readVisitHistories(texts) {
       } else occurrences.set(identity, value);
     }
   }
-  if (conflicts.length) throw new VisitHistoryConflict(conflicts);
+  if (conflicts.length) throw new VisitHistoryConflict(conflicts, summaries);
   for (const row of occurrences.values()) {
     if (row.outcome !== "went") continue;
     const prior = venues.get(row.key) || { count: 0, dates: [], undated: 0 };
@@ -65,21 +66,108 @@ export function priorVisitLabel(history, mode, pick) {
 
 export function mountVisitHistory(root, changed) {
   const q = selector => root.querySelector(selector);
-  let active = null, pending = null, revision = 0;
+  let active = null, pending = null, revision = 0, selection = null;
   const status = q("[data-history-status]"), preview = q("[data-history-preview]");
   const conflictView = q("[data-history-conflicts]");
-  const clearPreview = () => {
+  const clearPending = () => {
     pending = null; preview.hidden = true; q("[data-history-records]").replaceChildren();
+  };
+  const clearReview = () => {
+    clearPending(); selection = null;
     if (conflictView) { conflictView.hidden = true; conflictView.replaceChildren(); }
   };
-  q("[data-history-open]").addEventListener("click", () => {
-    q("input").value = ""; q("input").click();
-  });
-  q("input").addEventListener("change", async () => {
-    const files = [...q("input").files];
-    if (!files.length) return;
-    const token = ++revision;
-    clearPreview();
+  const cancelReview = () => {
+    ++revision; clearReview();
+    status.textContent = active ? "File review canceled. Current visit context remains in use." : "File review canceled.";
+  };
+  const appendVisits = (container, rows) => {
+    const list = document.createElement("ul");
+    for (const row of rows) {
+      const item = document.createElement("li");
+      item.textContent = row.name + " · " + (row.date || "date not recorded"); list.append(item);
+    }
+    if (!rows.length) {
+      const item = document.createElement("li"); item.textContent = "No visits marked went."; list.append(item);
+    }
+    container.append(list);
+  };
+  const renderSelection = (conflicts = [], reviewed = false) => {
+    if (!conflictView || !selection) return;
+    conflictView.replaceChildren(); conflictView.hidden = false;
+    let content = conflictView;
+    const choiceSummary = document.createElement("p");
+    const updateChoiceSummary = () => {
+      const kept = selection.keep.filter(Boolean).length, omitted = selection.files.length - kept;
+      choiceSummary.textContent = kept + (kept === 1 ? " file kept" : " files kept") + " · " + omitted + " omitted.";
+    };
+    if (reviewed) {
+      updateChoiceSummary();
+      const editor = document.createElement("details"), edit = document.createElement("summary");
+      edit.textContent = "Edit file choices"; editor.append(edit);
+      conflictView.append(choiceSummary, editor); content = editor;
+    }
+    const title = document.createElement("h3"), instruction = document.createElement("p");
+    title.textContent = conflicts.length ? "Resolve conflicting records" : "Review your file choices";
+    instruction.textContent = "Choose which whole files to keep, then review the kept files. Nothing changes until you choose Use. Omitting a file excludes all its entries; the same visits may still be present in another kept copy.";
+    if (!reviewed) content.append(title);
+    content.append(instruction);
+    if (conflicts.length) {
+      const list = document.createElement("ol"); list.className = "history-conflict-list";
+      const labels = { went: "Went", did_not_go: "Did not go", unrecorded: "Not recorded" };
+      for (const conflict of conflicts) {
+        const item = document.createElement("li"), venue = document.createElement("strong");
+        venue.textContent = conflict.name; item.append(venue);
+        for (const entry of [conflict.first, conflict.second]) {
+          const line = document.createElement("p"), identity = document.createElement("span"), value = document.createElement("span");
+          identity.textContent = "File " + (entry.position + 1) + ": " + selection.files[entry.position].name;
+          value.className = "history-conflict-value";
+          value.textContent = labels[entry.outcome] + " · " + (entry.date || "date not recorded");
+          line.append(identity, value); item.append(line);
+        }
+        list.append(item);
+      }
+      content.append(list);
+    }
+    const fieldset = document.createElement("fieldset"), legend = document.createElement("legend");
+    fieldset.className = "history-file-choices"; legend.textContent = "Files to keep"; fieldset.append(legend);
+    const otherFiles = document.createElement("details"), otherSummary = document.createElement("summary");
+    const otherIndices = selection.files.map((_, i) => i).filter(i => !selection.involved.has(i));
+    const updateOtherSummary = () => { otherSummary.textContent = otherIndices.length + (otherIndices.length === 1 ? " other file · " : " other files · ") + otherIndices.filter(i => selection.keep[i]).length + " kept"; };
+    updateOtherSummary(); otherFiles.append(otherSummary);
+    selection.files.forEach((file, index) => {
+      const row = document.createElement("div"), label = document.createElement("label"), checkbox = document.createElement("input");
+      checkbox.type = "checkbox"; checkbox.checked = selection.keep[index]; checkbox.dataset.historyKeep = String(index);
+      const name = document.createElement("span"); name.textContent = "File " + (index + 1) + ": " + file.name;
+      label.append(checkbox, name); row.append(label);
+      const consequence = document.createElement("p"), details = document.createElement("details"), summary = document.createElement("summary");
+      const visits = selection.summaries[index] || [];
+      const updateConsequence = () => {
+        consequence.textContent = (checkbox.checked ? "Keeping" : "Omitting") + " this whole file · " + visits.length + (visits.length === 1 ? " entry" : " entries") + " marked went.";
+      };
+      updateConsequence();
+      summary.textContent = "Inspect visits in this file"; details.append(summary); appendVisits(details, visits);
+      row.append(consequence, details); (selection.involved.has(index) ? fieldset : otherFiles).append(row);
+      checkbox.addEventListener("change", () => {
+        if (!selection) return;
+        selection.keep[index] = checkbox.checked; ++revision; clearPending(); updateConsequence(); updateOtherSummary(); updateChoiceSummary();
+        status.textContent = "File choices changed. Review the kept files before choosing Use." + (active ? " Current visit context remains in use." : "");
+      });
+    });
+    if (otherIndices.length) fieldset.append(otherFiles);
+    const review = document.createElement("button"), cancel = document.createElement("button");
+    review.type = cancel.type = "button"; review.textContent = "Review kept files"; review.dataset.historyReviewKept = "";
+    cancel.textContent = "Cancel file review";
+    review.addEventListener("click", () => {
+      if (!selection) return;
+      const positions = selection.keep.flatMap((keep, i) => keep ? [i] : []);
+      if (!positions.length) { clearPending(); status.textContent = "Keep at least one file, or cancel this review."; return; }
+      reviewFiles(positions.map(i => selection.files[i]), positions);
+    });
+    cancel.addEventListener("click", cancelReview);
+    content.append(fieldset, review, cancel);
+  };
+  const reviewFiles = async (files, positions = files.map((_, i) => i)) => {
+    const token = ++revision; clearPending();
     status.textContent = "Reading visit records locally…";
     try {
       if (files.length > 20) throw new Error("Choose at most 20 visit records.");
@@ -88,73 +176,51 @@ export function mountVisitHistory(root, changed) {
       const history = readVisitHistories(await Promise.all(files.map(file => file.text())));
       if (token !== revision) return;
       pending = { history, name: files.length === 1 ? files[0].name : files.length + " visit records" };
-      q("[data-history-summary]").textContent = files.map(file => file.name).join(", ") + ": " + history.venues.size
+      q("[data-history-summary]").textContent = history.records + (history.records === 1 ? " file" : " files") + " · " + history.venues.size
         + " previously visited " + (history.venues.size === 1 ? "venue" : "venues") + " (" + (history.mode === "mock" ? "fictional demo" : "live Qloo") + "). "
-        + history.duplicates + " repeated attendance " + (history.duplicates === 1 ? "entry" : "entries") + " from the same saved week counted once. "
-        + "Different saved weeks remain separate records. Review the visits below for overlap. Only combine records you know belong to the same person; these files do not identify the person.";
+        + (history.duplicates ? history.duplicates + " repeated " + (history.duplicates === 1 ? "entry" : "entries") + " counted once. " : "")
+        + "Only use records you know belong to the same person.";
       const list = q("[data-history-records]");
       history.summaries.forEach((rows, index) => {
         const details = document.createElement("details"), heading = document.createElement("summary");
-        heading.textContent = files[index].name + " · " + rows.length + " recorded " + (rows.length === 1 ? "visit" : "visits");
-        const entries = document.createElement("ul");
-        for (const row of rows) {
-          const item = document.createElement("li");
-          item.textContent = row.name + " · " + (row.date || "date not recorded");
-          entries.append(item);
-        }
-        if (!rows.length) { const item = document.createElement("li"); item.textContent = "No visits marked went."; entries.append(item); }
-        details.append(heading, entries); list.append(details);
+        heading.textContent = "File " + (positions[index] + 1) + ": " + files[index].name + " · " + rows.length + " recorded " + (rows.length === 1 ? "visit" : "visits");
+        details.append(heading); appendVisits(details, rows); list.append(details);
       });
+      if (selection) renderSelection([], true);
       preview.hidden = false;
-      status.textContent = active ? "Current visit context stays in use until you choose Use." : "Review the file, then choose Use to mark matching venues.";
+      status.textContent = active ? "Current visit context stays in use until you choose Use." : "Review the files, then choose Use to mark matching venues.";
     } catch (error) {
       if (token !== revision) return;
       if (error instanceof VisitHistoryConflict && conflictView) {
-        const title = document.createElement("h3");
-        title.textContent = "Resolve conflicting records";
-        const instruction = document.createElement("p");
-        instruction.textContent = "Compare the entries below. Reopen your selection without the version you do not want to use; no files from this selection have been applied.";
-        const list = document.createElement("ol");
-        list.className = "history-conflict-list";
-        const labels = { went: "Went", did_not_go: "Did not go", unrecorded: "Not recorded" };
-        for (const conflict of error.conflicts) {
-          const item = document.createElement("li"), venue = document.createElement("strong");
-          venue.textContent = conflict.name;
-          item.append(venue);
-          for (const entry of [conflict.first, conflict.second]) {
-            const line = document.createElement("p");
-            const identity = document.createElement("span"), value = document.createElement("span");
-            identity.textContent = "File " + (entry.recordIndex + 1) + ": " + files[entry.recordIndex].name;
-            value.className = "history-conflict-value";
-            value.textContent = labels[entry.outcome] + " · " + (entry.date || "date not recorded");
-            line.append(identity, value);
-            item.append(line);
-          }
-          list.append(item);
-        }
-        conflictView.append(title, instruction, list); conflictView.hidden = false;
+        if (!selection) selection = { files, summaries: error.summaries, keep: files.map(() => true), involved: new Set(error.conflicts.flatMap(c => [c.first.recordIndex, c.second.recordIndex])) };
+        renderSelection(error.conflicts.map(conflict => ({
+          ...conflict,
+          first: { ...conflict.first, position: positions[conflict.first.recordIndex] },
+          second: { ...conflict.second, position: positions[conflict.second.recordIndex] },
+        })));
       }
       status.textContent = error instanceof VisitHistoryConflict && conflictView
         ? (active ? "Your current visit context is still in use." : "No visit context is in use.")
         : "Could not open visit record: " + error.message + (active ? " Your current visit context is still in use." : "");
     }
+  };
+  q("[data-history-open]").addEventListener("click", () => { q("input").value = ""; q("input").click(); });
+  q("input").addEventListener("change", () => {
+    const files = [...q("input").files]; if (!files.length) return;
+    clearReview(); reviewFiles(files); q("[data-history-clear]").disabled = false;
   });
   q("[data-history-use]").addEventListener("click", () => {
     if (!pending) return;
     active = pending.history;
     status.textContent = "Using " + pending.name + " for this tab's current and later plans. " + active.venues.size
       + " previously visited " + (active.venues.size === 1 ? "venue" : "venues") + ". Notes stay private; recommendations and checks are unchanged.";
-    ++revision; clearPreview(); q("[data-history-clear]").disabled = false; changed();
+    ++revision; clearReview(); q("[data-history-clear]").disabled = false; changed();
   });
-  q("[data-history-cancel]").addEventListener("click", () => {
-    ++revision; clearPreview(); status.textContent = active ? "File review canceled. Current visit context remains in use." : "File review canceled.";
-  });
+  q("[data-history-cancel]").addEventListener("click", cancelReview);
   q("[data-history-clear]").addEventListener("click", () => {
-    ++revision; active = null; clearPreview(); q("input").value = "";
+    ++revision; active = null; clearReview(); q("input").value = "";
     q("[data-history-clear]").disabled = true; status.textContent = "Visit context cleared from this tab."; changed();
   });
-  // Clear is available during a read too, so an abandoned read cannot restore context.
-  q("input").addEventListener("change", () => { q("[data-history-clear]").disabled = false; });
-  window.addEventListener("pagehide", () => { ++revision; active = null; clearPreview(); });
+  window.addEventListener("pagehide", () => { ++revision; active = null; clearReview(); });
   return { label: (mode, pick) => priorVisitLabel(active, mode, pick) };
 }
