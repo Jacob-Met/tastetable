@@ -192,7 +192,7 @@ test("an accepted saved week renders its original structured care evidence throu
   const html = f.node("#weekDays").innerHTML;
   assert.match(html, /Audience &lt;trend&gt; &amp; taste/);
   assert.match(html, /Wheelchair access/);
-  assert.match(html, /Check: unknown/);
+  assert.match(html, /Tag\/keyword check: unknown/);
   assert.match(html, /Access &lt;not yet verified&gt; &amp; call/);
   assert.doesNotMatch(html, /<trend>|<not yet verified>/);
   assert.deepEqual(JSON.parse(JSON.stringify(f.capture().response.plan.meals[0].evidence)),
