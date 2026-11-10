@@ -73,6 +73,9 @@ async function appFixture() {
   const mounts = {
     // Attendance context has its own importer tests. This fixture isolates
     // caregiver handoff/collection composition without faking arrangement state.
+    "./planning_context.mjs": {
+      mountPlanningContext() { return { sync() {}, destroy() {} }; },
+    },
     "./itinerary_followup.mjs": {
       mountItineraryFollowup() { return { refresh() {} }; },
     },
