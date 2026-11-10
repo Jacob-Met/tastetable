@@ -8,9 +8,11 @@ This is one record for one planning context. Clear before planning for another p
 
 ## Current gaps, ranked
 
-1. Judge usefulness with real caregiver-provided records and a live Qloo response; current reproducible integration uses clearly labeled synthetic fixtures.
-2. A caregiver with several records currently must choose one; a future explicit multi-record review needs overlap handling before aggregation can be honest.
-3. Keep the broader planner's dense controls and handoffs accessible on phones; this change does not redesign the full application.
+1. Independent judge astra-47b3 accepted the scoped attendance improvement after real desktop/phone use and comparison with primary Beli/Mapstr screenshots. The broader plan remains wordy with uniform tall cards; move secondary source evidence behind accessible detail while keeping decisions visible.
+2. Validate usefulness with real caregiver-provided records and a live Qloo response; current reproducible integration uses clearly labeled synthetic fixtures.
+3. A caregiver with several records currently must choose one; an explicit multi-record review needs overlap handling before aggregation can be honest.
+
+Judge-directed refinement: compact “Visited · date” labels replace the repeated per-venue caveat. Source/check limitations now appear once beside the import controls. Root evidence: own unfamiliar dated/undated records, not-going excluded, later plan/request privacy, clear, 390px no overflow and zero browser errors.
 
 ## Checks
 

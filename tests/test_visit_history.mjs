@@ -32,7 +32,7 @@ function history(mock=true) {
 }
 test("exact provenance and identity, not a matching venue name, determines history",()=>{
  const h=history();
- assert.match(priorVisitLabel(h,"mock",{kind:"restaurant",entity_id:"same-id"}),/2 recorded visits/);
+ assert.match(priorVisitLabel(h,"mock",{kind:"restaurant",entity_id:"same-id"}),/2 visits/);
  assert.equal(priorVisitLabel(h,"live",{kind:"restaurant",entity_id:"same-id"}),"");
  assert.equal(priorVisitLabel(h,"mock",{kind:"outing",entity_id:"same-id"}),"");
  assert.equal(priorVisitLabel(h,"mock",{kind:"restaurant",entity_id:"different",name:"Same café"}),"");
