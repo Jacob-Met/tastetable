@@ -73,6 +73,9 @@ async function appFixture() {
   const mounts = {
     // Attendance context has its own importer tests. This fixture isolates
     // caregiver handoff/collection composition without faking arrangement state.
+    "./itinerary_followup.mjs": {
+      mountItineraryFollowup() { return { refresh() {} }; },
+    },
     "./visit_history.mjs": {
       mountVisitHistory() { return { label: () => "" }; },
     },
@@ -113,7 +116,7 @@ async function appFixture() {
     },
   };
   const context = vm.createContext({
-    structuredClone, AbortController, Uint8Array, console,
+    structuredClone, AbortController, Uint8Array, console, queueMicrotask,
     document: { querySelector: node, querySelectorAll: () => [], createElement: () => new Node(), body: new Node() },
     window,
     fetch: async (url, options) => {

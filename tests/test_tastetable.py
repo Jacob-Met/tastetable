@@ -178,7 +178,7 @@ def test_web_endpoints():
     from fastapi.testclient import TestClient
     from app import app
     c = TestClient(app)
-    assert c.get("/").status_code == 200 and "Try a sample persona" in c.get("/").text
+    assert c.get("/").status_code == 200 and 'id="sampleBtn"' in c.get("/").text and "Use sample" in c.get("/").text
     assert "Not medical or dietary advice" in c.get("/").text
     assert len(c.get("/api/personas").json()) == 3
     r = c.post("/api/plan/sample/rosa")
