@@ -35,3 +35,7 @@
 .saved-week-collection li { margin: .75rem 0; }
 .saved-week-collection button:disabled { opacity: .6; cursor: not-allowed; }
 @media print { .saved-week-collection { display: none !important; } }
+
+#savedPreviewNotes { padding-left: 1.3rem; }
+#savedPreviewNotes h5 { font-size: 1rem; margin-bottom: .4rem; }
+#savedPreviewNotes pre { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; line-height: 1.5; margin-top: 0; }

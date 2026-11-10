@@ -5,6 +5,7 @@ import { makeWeekFile, readWeekFile } from "./week_file.mjs";
 import { mountVenueFollowup } from "./venue_followup.mjs";
 import { mountCaregiverHandoff } from "./caregiver_handoff.mjs";
 import { createSavedWeeksUI } from "./saved_week_ui.mjs";
+import { openDraft } from "./saved_weeks.mjs";
 import { canRedoArrangement, canUndoArrangement, createArrangementHistory, recordArrangement, redoArrangement, undoArrangement } from "./arrangement_history.mjs";
 
 const $ = (s) => document.querySelector(s);
@@ -346,7 +347,7 @@ const planRequests = TasteTablePlanRequests.create({
   async send(url, payload, signal) {
     if (url === OPEN_SAVED_WEEK) {
       try {
-        const opened = readWeekFile(await payload.text());
+        const opened = payload.readDraft ? openDraft(await payload.readDraft()) : readWeekFile(await payload.text());
         const supported = [...$("#form").querySelectorAll("[name=constraints]")].map((field) => field.value);
         if (opened.inputs.constraints.some((value) => !supported.includes(value))) {
           throw new Error("This saved week uses a constraint that this page cannot display.");
@@ -384,13 +385,16 @@ const planRequests = TasteTablePlanRequests.create({
       $("#savedWeekSource").hidden = false;
     }
     acceptCalendar();
+    if (result.includesNotes) venueFollowup.acceptPrepared(weekState, result.model);
+    else venueFollowup.accept(weekState, $("#savedWeekSource").hidden ? "" : $("#savedWeekSource").textContent);
     refreshWeekSave();
-    venueFollowup.accept(weekState, $("#savedWeekSource").hidden ? "" : $("#savedWeekSource").textContent);
     arrangementHistory = createArrangementHistory(weekState, arrangementDate(weekState));
     historyPlan = acceptedPlan;
     refreshArrangementHistory();
     $("#requestStatus").textContent = result.state
-      ? "Saved week opened. Its original inputs and your arrangement are restored."
+      ? result.includesNotes
+        ? "Saved care plan opened. Its original inputs, arrangement and complete venue follow-up are restored."
+        : "Saved week opened. Its original inputs and your arrangement are restored. This week-only copy has no venue notes."
       : "Plan ready for the current inputs.";
   },
   onError(error) {
@@ -449,17 +453,17 @@ savedWeeks = createSavedWeeksUI({
     try {
       const shown = setWeek(weekState, $("#weekDate").value);
       if (!$("#weekDate").checkValidity() || shown.weekStart !== weekState.weekStart) return null;
-      return { ...acceptedPlan, weekState };
+      return { ...acceptedPlan, weekState, venueModel: venueFollowup.snapshot().model };
     } catch { return null; }
   },
   openSaved(read) {
     requestKind = "file";
     const payload = {
       name: "this browser's saved weeks",
-      async text() {
+      async readDraft() {
         const draft = await read();
         payload.name = `this browser's saved weeks: ${draft.name}`;
-        return draft.text;
+        return draft;
       },
     };
     return planRequests.run(OPEN_SAVED_WEEK, payload);

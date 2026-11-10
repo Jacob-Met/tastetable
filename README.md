@@ -269,7 +269,8 @@ and 2 MiB of UTF-8 JSON. [Venue-note file usage and receiving](docs/venue-notes/
 explains these limits and the local format.
 
 Unsaved notes remain in this tab for the current accepted plan. Replacing the plan, editing
-its inputs, opening a saved week or leaving the page clears them. While recorded venue-note content remains, the planner asks the browser to confirm refresh, close or navigation. Choose to stay if you still need to save your notes; cancelling keeps the current worksheet and exports available. This includes notes for visits moved to another date or omitted from the current week. Reverting every field to its original/default value or retiring the plan removes the warning. Preparing a download does not turn off the reminder, because the page cannot confirm that you kept the file. Browser warnings can be suppressed or skipped, especially when a mobile browser is closed; save a file before leaving. **Save week** and calendar
+its inputs or leaving the page clears them. Opening a browser copy replaces the whole note
+set with that copy's saved notes; older week-only copies have no saved notes. While recorded venue-note content remains, the planner asks the browser to confirm refresh, close or navigation. Choose to stay if you still need to save your notes; cancelling keeps the current worksheet and exports available. This includes notes for visits moved to another date or omitted from the current week. Reverting every field to its original/default value or retiring the plan removes the warning. Preparing a download does not turn off the reminder, because the page cannot confirm that you kept the file. Browser warnings can be suppressed or skipped, especially when a mobile browser is closed; save the plan and notes explicitly before leaving. **Save week** and calendar
 files retain their existing formats and do not include contact notes. No venue is contacted
 and no note is sent to a provider or stored automatically. Do not enter names or private
 health information.
@@ -370,7 +371,7 @@ Export an explicitly selected saved visit record with `node tools/visit_record_t
 
 ## Named saved weeks in this browser
 
-Choose **Save in this browser** to keep a named copy of the current arranged week. Reload, preview a saved copy, then choose **Open browser copy** to restore its original inputs, source evidence, date, assignments, accepted timestamp and calendar identity. Opening retires the current planner result immediately, as opening a saved JSON file does. Original checks are not rerun. Rename changes only the collection label; Remove deletes only the selected stored copy. Later edits require another explicit Save.
+Choose **Save plan and notes in this browser** to keep a named copy of the current arranged week and its complete venue follow-up, including replies, contact status, next steps and notes for omitted visits or other dates. Reload, preview the saved plan and notes, then choose **Open browser copy** to restore its original inputs, source evidence, date, assignments, accepted timestamp, calendar identity and full note set. Older week-only copies are labelled before opening and contain no saved notes; opening one clears the current notes. Opening retires the current planner result immediately, as opening a saved JSON file does. Original checks are not rerun. Rename changes only the collection label; Remove deletes only the selected stored copy. Later edits require another explicit Save.
 
 Use **Search saved names** to filter the displayed saved names and unreadable-record labels with literal text after ignoring letter case, trimming the ends and collapsing repeated whitespace. The count shows matches out of all saved records; **Clear search** restores the full list. A selected preview stays open even when filtered out, and a name being typed into Rename is preserved. Search does not read or write storage. See [Find a saved week by name](docs/SAVED_WEEK_SEARCH.md) for matching rules and read-error behavior.
 
@@ -378,20 +379,20 @@ Use **Order saved records** to browse all saved names without filtering them awa
 
 Use **Add a portable week to this browser** to review a saved-week JSON file and keep it under an explicit name with **Save imported browser copy**. Review alone saves nothing; **Cancel import** clears that review. The copy retains the exact decoded text and original saved date. Your active planner, venue notes, selected preview, unfinished rename and saved-name search stay open; the search may hide the new copy until cleared. See [Keep a portable week as a named browser copy](docs/SAVED_WEEK_IMPORT.md) for file limits, storage failures and retry behavior.
 
-These copies stay in this browser's site data, with up to 50 named records and a 512 KiB limit per saved JSON payload. Clearing site data removes them. Use the existing **Save week (.json)** action to keep a portable file elsewhere. There is no automatic saving or upload. Venue call notes are excluded from browser copies, saved-week JSON files and calendar files. Use **Save venue notes (.json)** for the matching editable companion, or Print week/Download call sheet for a readable copy.
+These copies stay in this browser's site data, with up to 50 named records and a 512 KiB limit per saved JSON payload. Clearing site data removes them. Use **Save caregiver handoff (.json)** to keep the complete plan and notes in a portable file, or back up the saved collection. There is no automatic saving or upload. The separate **Save week (.json)** and calendar files omit venue notes. **Save venue notes (.json)** remains the matching editable companion for a portable week; Print week/Download call sheet produces a readable copy.
 
-The browser collection wraps the unchanged `makeWeekFile`/`readWeekFile` format with a local identity and label. Its native IndexedDB mutations resolve only when their transaction commits; malformed or unsupported records remain stored and can be explicitly removed. Failed collection opens follow the existing planner's retirement and recovery behavior. The saved-week codec, model, calendar writer, request controller, worksheet modules, comparison page and offline studio remain their existing implementations.
+The browser collection wraps a saved payload with a local identity and label. Version 1 records retain the unchanged portable-week text. New version 2 records contain the existing validated caregiver-handoff format, so the week and its complete source-bound note set commit together. Mixed collections preserve both formats; older app versions refuse version 2 instead of silently losing notes. Its native IndexedDB mutations resolve only when their transaction commits; malformed or unsupported records remain stored and can be explicitly removed. Failed collection opens follow the existing planner's retirement and recovery behavior. The saved-week codec, model, calendar writer, request controller, worksheet modules, comparison page and offline studio remain their existing implementations.
 
 ### Back up and recover the complete collection
 
-Use **Back up saved weeks (.json)** to keep every named browser copy together, independent of search, ordering or selection. The file retains each original name, ID, created/updated date and complete portable-week text. Confirm the completed download and keep it somewhere deliberate; a backup includes the saved responses and personal labels.
+Use **Back up saved weeks (.json)** to keep every named browser copy together, independent of search, ordering or selection. The file retains each original name, ID, created/updated date and complete saved payload, including the venue notes in new plan-and-notes copies. Confirm the completed download and keep it somewhere deliberate; a backup includes the saved responses and personal labels.
 
 Choose **Open collection backup** to review all records before writing. **Add missing saved weeks** adds only absent IDs in one transaction, preserves identical records and refuses the complete addition if an identity conflicts, capacity is insufficient, storage changes after preview or a request fails. Empty and identical-only backups are no-ops. No existing record is overwritten, renamed or deleted, and recovery does not open a week or replace the active planner or venue notes. Use the same browser origin to reach an existing collection, or explicitly recover the file on another origin. See [collection backup and recovery](docs/SAVED_WEEK_COLLECTION.md) for limits, conflicts and stale-preview behavior.
 
-### Recover one week from a collection backup
+### Recover one saved plan from a collection backup
 
 With Node.js 18+ from the repository root, list a retained collection backup, then
-recover one listed ID to a new portable-week file:
+recover one listed ID to a new file:
 
 ```bash
 node tools/collection_week.mjs --input "collection-backup.json"
@@ -402,7 +403,7 @@ Replace `EXACT_ID` with an ID from the listing. Both commands validate the compl
 backup first. Recovery keeps the selected stored text, including its whitespace
 and any UTF-8 BOM. Choose an unused filename in an existing directory on a
 filesystem that supports hard links. The input backup and browser collection stay
-unchanged. Use **Open saved week** to reopen the recovered file. See
+unchanged. A version 2 listing and receipt identify the caregiver-handoff format and say **Open caregiver handoff**; use that action to restore its plan and notes together. Version 1 records remain portable weeks and reopen with **Open saved week**. See
 [recover one stored week](docs/COLLECTION_WEEK_RECOVERY.md) for file limits,
 output receipts and handling a failure after the file was created.
 

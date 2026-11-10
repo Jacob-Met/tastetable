@@ -16,10 +16,10 @@ origins automatically.
    confirm the completed file in your browser's downloads.
 
 The backup preserves each record's name, identity, created and updated dates,
-and complete original portable-week text. Its separate `savedAt` timestamp is
+and complete original saved payload. Older version 1 copies contain a portable week; version 2 copies contain the plan and its complete venue follow-up. Mixed collections keep both, including notes for omitted visits or other dates. Older app versions refuse version 2 rather than discard notes. Its separate `savedAt` timestamp is
 the backup creation time. Existing dates are not reset. Unknown fields inside
 an admitted portable week, its BOM and its line endings remain in that text;
-the tool does not regenerate the week. Saved responses and personal labels may
+the tool does not regenerate the week. Saved responses, personal labels and venue notes may
 be included, so choose where to keep or share the file deliberately.
 
 A collection can contain up to 50 records, each within the existing 512 KiB

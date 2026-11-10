@@ -57,8 +57,9 @@
         </div>
         <div class="saved-week-actions organizer-help">
           <label>Name for this browser copy <input id="savedWeekName" maxlength="120" autocomplete="off"></label>
-          <button id="saveCurrentWeek" type="button" disabled>Save in this browser</button>
+          <button id="saveCurrentWeek" type="button" aria-describedby="browserSaveHelp" disabled>Save plan and notes in this browser</button>
         </div>
+        <p id="browserSaveHelp" class="why organizer-help">This explicit save keeps the week and all venue replies, contact statuses and next steps in this browser. Nothing is sent to a provider.</p>
         <div class="week-reset">
           <button id="resetWeek" type="button" disabled>Restore suggested days</button>
         </div>
@@ -80,7 +81,7 @@
       <p>Use the questions below to ask about each scheduled visit. Record the venue's reply and the next step for another caregiver.</p>
       <p data-contact-source class="mode"></p>
       <p class="handoff-note">These are caregiver-entered notes. A recorded reply is not a safety check, reservation or confirmation by TasteTable. Confirm needs with the venue and care team; do not enter names or private health information.</p>
-      <p class="why contact-session-help">Notes stay in this tab for the current plan. While recorded notes remain, your browser may ask before you refresh or leave; choose to stay if you still need to save them. A download does not turn off this reminder. Browser warnings are not guaranteed, so keep a saved copy. Each note belongs to one pick and date. Moving a visit starts a separate note; returning to its previous date restores that note during this visit. Save venue notes to reopen these editable records later, or print/download a readable call sheet. Keep the notes file with its matching saved week. Week save files and calendar files keep their existing formats and do not include these notes.</p>
+      <p class="why contact-session-help">Notes stay in this tab for the current plan. While recorded notes remain, your browser may ask before you refresh or leave; choose to stay if you still need to save them. A download does not turn off this reminder. Browser warnings are not guaranteed, so keep a saved copy. Each note belongs to one pick and date. Moving a visit starts a separate note; returning to its previous date restores that note during this visit. Save plan and notes in this browser to reopen them together, or download the complete caregiver handoff. A separate venue-notes file still needs its matching saved week. Week save files and calendar files keep their existing formats and do not include these notes.</p>
       <p data-contact-summary></p>
       <div class="contact-actions">
         <button type="button" data-contact-download disabled>Download call sheet (.txt)</button>
@@ -210,7 +211,7 @@
 
   <section id="savedWeeks" class="card saved-weeks" aria-labelledby="savedWeeksTitle">
     <h2 id="savedWeeksTitle">Saved in this browser</h2>
-    <p>Keep named planning drafts in this browser. Each explicit Save keeps the original inputs, source evidence and arranged dates. Venue call notes are not included. It is not refreshed automatically. Clearing this site's browser data removes these drafts.</p>
+    <p>Keep named planning drafts in this browser. Each explicit Save keeps the original inputs, source evidence, arranged dates and complete venue follow-up. Notes stay in this browser until you explicitly download a file. Nothing is saved or refreshed automatically. Clearing this site's browser data removes these drafts.</p>
     <button id="refreshSavedWeeks" type="button">Refresh saved weeks</button>
     <div class="saved-week-search">
       <label for="savedWeeksSearch">Search saved names
@@ -230,7 +231,7 @@
     </div>
     <p id="savedWeeksOrderHelp" class="why">Ordering only rearranges this list. Your selected preview and unfinished edits stay open. Original saved dates are not import times.</p>
     <p id="savedWeeksStatus" class="why" role="status" aria-live="polite"></p>
-    <p id="savedWeeksEmpty" hidden>No saved weeks yet. Generate a plan, arrange it, then choose <strong>Save in this browser</strong>.</p>
+    <p id="savedWeeksEmpty" hidden>No saved weeks yet. Generate a plan, arrange it, then choose <strong>Save plan and notes in this browser</strong>.</p>
     <ul id="savedWeeksList"></ul>
     <section id="savedWeekPreview" class="saved-week-preview" aria-labelledby="savedPreviewTitle" hidden>
       <h3 id="savedPreviewTitle"></h3>
@@ -238,6 +239,10 @@
       <p id="savedPreviewSource" class="mode"></p>
       <ol id="savedPreviewDays"></ol>
       <p id="savedPreviewOmitted"></p>
+      <section id="savedPreviewFollowup" aria-labelledby="savedPreviewFollowupTitle" hidden>
+        <h4 id="savedPreviewFollowupTitle">Venue follow-up in this copy</h4>
+        <ol id="savedPreviewNotes"></ol>
+      </section>
       <div class="saved-week-actions">
         <button id="openSavedWeek" type="button" class="primary" disabled>Open browser copy</button>
         <label>Name for this saved week <input id="renameSavedWeekName" maxlength="120" autocomplete="off"></label>
@@ -247,7 +252,7 @@
       <section id="savedWeekRemoval" class="saved-week-import" aria-labelledby="savedWeekRemovalTitle" hidden>
         <h4 id="savedWeekRemovalTitle">Review removal of this browser copy</h4>
         <p>Saved copy: <strong id="savedWeekRemovalName"></strong></p>
-        <p>Only this saved browser copy will be removed. Your currently open week and venue notes stay unchanged. To recover this copy later, you need a portable week file or collection backup you already kept.</p>
+        <p>Only this saved browser copy will be removed. Your currently open week and venue notes stay unchanged. To recover this copy later, keep a collection backup or caregiver handoff first. A portable week file does not include venue notes.</p>
         <div class="saved-week-actions">
           <button id="keepSavedWeek" type="button" disabled>Keep saved copy</button>
           <button id="confirmRemoveSavedWeek" type="button" disabled>Confirm removal</button>
