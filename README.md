@@ -455,3 +455,7 @@ Open **Compare caregiver handoffs (new tab)** beside the combined handoff Save/O
 ## Read original care checks
 
 New plans separate each original care-check reason from the taste explanation inside the venue disclosure. Older saved weeks keep their complete original paragraph. See [care evidence](docs/CARE_EVIDENCE.md) for the source limitations, compatibility and actual browser/print checks.
+
+### Current venue follow-up beside each visit
+
+The arranged week now shows your current contact status and next step for each exact visit date. Add or edit its note directly, then return to the scheduled visit. Moving a visit reads its new date’s note; Undo restores the earlier date’s note. See [current venue follow-up](docs/ITINERARY_FOLLOWUP.md).

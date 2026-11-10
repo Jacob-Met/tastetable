@@ -1,4 +1,5 @@
 import { evidenceMarkup } from "./pick_evidence.mjs";
+import { mountItineraryFollowup } from "./itinerary_followup.mjs";
 import { mountVisitHistory } from "./visit_history.mjs";
 import { DAYS, createWeekPlan, localDate, offWeekPicks, resetDays, setPickDay, setWeek, weekRows } from "./week_plan.mjs";
 import { makeWeekFile, readWeekFile } from "./week_file.mjs";
@@ -23,7 +24,14 @@ let requestKind = "plan";
 let savedWeeks = null;
 const OPEN_SAVED_WEEK = Symbol("open saved week");
 let caregiverHandoff = null;
-const venueFollowup = mountVenueFollowup($("#venueFollowup"), () => ({ state: weekState, date: $("#weekDate").value, origin: acceptedPlan }), () => caregiverHandoff?.changed());
+let itineraryFollowup = null;
+const venueFollowup = mountVenueFollowup($("#venueFollowup"), () => ({ state: weekState, date: $("#weekDate").value, origin: acceptedPlan }), () => {
+  caregiverHandoff?.changed();
+  // Notes notify before committing an input. Read their final state after this event,
+  // without rerendering the form or disturbing the caregiver's typing.
+  queueMicrotask(() => itineraryFollowup?.refresh());
+});
+itineraryFollowup = mountItineraryFollowup($("#weekOrganizer"), $("#venueFollowup"), () => venueFollowup.snapshot());
 
 const visitHistory = mountVisitHistory($("#visitHistory"), () => { if (weekState) renderWeek(); });
 
@@ -39,7 +47,7 @@ const dateLabel = (date) => new Intl.DateTimeFormat(undefined, {
   year: "numeric", month: "short", day: "numeric", timeZone: "UTC",
 }).format(new Date(`${date}T12:00:00Z`));
 
-function pickCard({ key, pick }, day, sourceMode) {
+function pickCard({ key, pick }, day, sourceMode, date = null) {
   const priorVisit = visitHistory.label(sourceMode, pick);
   return `<article class="scheduled-pick">
     <div class="pick-identity">
@@ -53,6 +61,7 @@ function pickCard({ key, pick }, day, sourceMode) {
         <option value=""${day === null ? " selected" : ""}>Keep off this week</option>
       </select>
     </label>
+    ${date ? `<div class="itinerary-contact" data-itinerary-contact data-itinerary-key="${esc(key)}" data-itinerary-date="${esc(date)}" hidden></div>` : ""}
     <details class="pick-evidence" data-evidence-key="${key}">
       <summary aria-label="Why ${esc(pick.name)} was suggested and original checks">Why this pick · original checks</summary>
       ${evidenceMarkup(pick, esc)}
@@ -79,7 +88,7 @@ function prepareWeekView(state, message = "") {
     : "No constraints listed in the response.";
   const days = rows.map((row) => `<li class="week-day" data-day="${row.day}">
     <h3>${row.day} <time datetime="${row.date}">${esc(dateLabel(row.date))}</time></h3>
-    ${row.picks.length ? row.picks.map((pick) => pickCard(pick, row.day, state.sourceMode)).join("") : '<p class="open-day">Open day <span>No pick scheduled.</span></p>'}
+    ${row.picks.length ? row.picks.map((pick) => pickCard(pick, row.day, state.sourceMode, row.date)).join("") : '<p class="open-day">Open day <span>No pick scheduled.</span></p>'}
   </li>`).join("");
   return {
     text: {
