@@ -35,6 +35,8 @@ function printText(row) {
 }
 function render() {
   const saved = readWeekFile(current.source.weekText), rows = visitRecordRows(current);
+  document.body.classList.add("record-loaded");
+  $("#fileControls").open = false;
   $("#emptyState").hidden = true; $("#record").hidden = false;
   $("#recordTitle").textContent = "Week of " + saved.state.weekStart;
   $("#sourceName").textContent = current.source.name;
@@ -53,8 +55,9 @@ function render() {
     const heading = text("div", "", "visit-heading");
     heading.append(text("h3", row.pick.name)); card.append(heading);
     card.append(text("p", row.plannedDate ? "Planned: " + row.plannedDay + ", " + row.plannedDate : "Not scheduled in this saved week", "planned"));
-    card.append(text("p", "Original suggestion: " + row.originalDay + " · " + row.pick.kind, "muted"));
-    card.append(text("p", row.pick.why, "why"));
+    const evidence = text("details", "", "visit-evidence");
+    evidence.append(text("summary", "Original suggestion"), text("p", row.originalDay + " · " + row.pick.kind, "muted"), text("p", row.pick.why, "why"));
+    card.append(evidence);
     const fields = text("div", "", "visit-fields");
     for (const field of ["outcome", "date", "note"]) {
       const label = text("label", {outcome:"Outcome",date:"Visit or decision date (optional)",note:"What would you like to remember?"}[field], field === "note" ? "note-field" : "");
@@ -91,6 +94,7 @@ function edit(key, field, input, error, card) {
   controls();
 }
 async function open(file, kind) {
+  $("#fileControls").open = true;
   retire(file ? "Reading file… The displayed record stays in place." : "");
   if (!file) return;
   const version = generation;
@@ -126,7 +130,7 @@ $("#useRecord").addEventListener("click", () => {
   if (!pending) return;
   const next = pending.record; retire(); current = next; invalid.clear();
   departure.accept(current);
-  $("#saveStatus").textContent = ""; render(); $("#visits").dispatchEvent(new Event("visit-record-replaced")); $("#recordTitle").focus({preventScroll:true});
+  $("#saveStatus").textContent = ""; render(); $("#visits").dispatchEvent(new Event("visit-record-replaced")); $("#recordTitle").focus({preventScroll:true}); $("#record").scrollIntoView({block:"start"});
 });
 $("#saveRecord").addEventListener("click", () => {
   if (!current || invalid.size) return;
@@ -154,3 +158,14 @@ $("#downloadCsv").addEventListener("click", () => {
 });
 $("#printRecord").addEventListener("click", () => { if (current && !invalid.size) { retire(); window.print(); } });
 window.addEventListener("pagehide", () => { if (downloadUrl) URL.revokeObjectURL(downloadUrl); });
+// Printing is a complete handoff even when the working view keeps evidence folded.
+let printDisclosures = null;
+window.addEventListener("beforeprint", () => {
+  if (printDisclosures) return;
+  printDisclosures = [...document.querySelectorAll("#sourceDetails, .visit-evidence")].map(node => [node, node.open]);
+  for (const [node] of printDisclosures) node.open = true;
+});
+window.addEventListener("afterprint", () => {
+  for (const [node, open] of printDisclosures || []) node.open = open;
+  printDisclosures = null;
+});
