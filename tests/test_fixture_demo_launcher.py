@@ -64,7 +64,7 @@ class FixtureDemoLauncherTests(unittest.TestCase):
                     "UVICORN_HOST": "0.0.0.0", "WEB_CONCURRENCY": "7"}
         root = Path("project with spaces").absolute()
         with patch.object(launcher, "PROJECT_ROOT", root), patch.dict(os.environ, original, clear=True), \
-             patch.object(launcher.subprocess, "call", return_value=0) as child:
+             patch.object(launcher, "run_server", return_value=0) as child:
             before = dict(os.environ)
             self.assertEqual(launcher.main([]), 0)
             self.assertEqual(dict(os.environ), before)
@@ -75,7 +75,7 @@ class FixtureDemoLauncherTests(unittest.TestCase):
         )
 
     def test_explicit_port_and_child_failure_are_forwarded(self):
-        with patch.object(launcher.subprocess, "call", return_value=1) as child:
+        with patch.object(launcher, "run_server", return_value=1) as child:
             self.assertEqual(launcher.main(["--port", "9017"]), 1)
         command = child.call_args.args[0]
         self.assertEqual(command[command.index("--port") + 1], "9017")
@@ -91,7 +91,7 @@ class FixtureDemoLauncherTests(unittest.TestCase):
         cases = [["--port", value] for value in ("0", "65536", "-1", "+8000", "1.5", "\u0661")]
         cases.extend([["--host", "0.0.0.0"], ["--reload"], ["--por", "8000"]])
         for args in cases:
-            with self.subTest(args=args), patch.object(launcher.subprocess, "call") as child, \
+            with self.subTest(args=args), patch.object(launcher, "run_server") as child, \
                  contextlib.redirect_stderr(io.StringIO()):
                 with self.assertRaises(SystemExit) as refused:
                     launcher.main(args)
@@ -100,7 +100,7 @@ class FixtureDemoLauncherTests(unittest.TestCase):
 
     def test_help_does_not_start_a_child(self):
         output = io.StringIO()
-        with patch.object(launcher.subprocess, "call") as child, contextlib.redirect_stdout(output):
+        with patch.object(launcher, "run_server") as child, contextlib.redirect_stdout(output):
             with self.assertRaises(SystemExit) as completed:
                 launcher.main(["--help"])
         self.assertEqual(completed.exception.code, 0)
@@ -109,13 +109,13 @@ class FixtureDemoLauncherTests(unittest.TestCase):
 
     def test_child_start_error_is_a_bounded_diagnostic(self):
         output = io.StringIO()
-        with patch.object(launcher.subprocess, "call", side_effect=OSError("missing executable")), \
+        with patch.object(launcher, "run_server", side_effect=OSError("missing executable")), \
              contextlib.redirect_stderr(output):
             self.assertEqual(launcher.main([]), 1)
         self.assertEqual(output.getvalue(), "fixture demo could not start: missing executable\n")
 
     def test_keyboard_interrupt_returns_conventional_status(self):
-        with patch.object(launcher.subprocess, "call", side_effect=KeyboardInterrupt):
+        with patch.object(launcher, "run_server", side_effect=KeyboardInterrupt):
             self.assertEqual(launcher.main([]), 130)
 
 
