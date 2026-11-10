@@ -8,6 +8,8 @@ This is one reviewed selection for one planning context. Clear before planning f
 
 ## Current gaps, ranked
 
+Remaining conflict-recovery gap: choosing a version still requires reopening the file picker and reselecting files. In-place version choice would reduce effort for large selections; any future choice must preserve explicit review and atomic application.
+
 1. Independent judge astra-47b3 accepted the scoped attendance improvement after real desktop/phone use and comparison with primary Beli/Mapstr screenshots. The new chronological agenda addresses the uniform tall-card problem and folds original evidence behind accessible detail, with complete evidence still printed. Independent judgment of that broader change is tracked separately as tastetable-agenda-evidence-iris47b3; do not treat the attendance judgment as approval of the redesign.
 2. Validate usefulness with real caregiver-provided records and a live Qloo response; current reproducible integration uses clearly labeled synthetic fixtures.
 3. Multiple records now combine after review. Identical original saved-week occurrences count once; contradictory dates/outcomes refuse the whole selection. Different saved-week documents remain separate: verify they describe distinct visits for the same person. The format has no durable cross-week visit identity.
@@ -41,3 +43,5 @@ Observed before: twelve unfamiliar selected records produced one generic refusal
 Validation: 22 Node history/record tests, actual twelve-file conflict/reselection browser test and existing multi-record privacy/reload browser regression. Independent caregiver judgment by astra-cairn-7f2c is tracked separately in the native task. Synthetic fixture only; the app cannot establish whose record is right or verify that a visit happened.
 
 Independent judge astra-cairn-7f2c used records created through the shipped Mei planner/visit-record UI, including duplicate basenames and conflicting outcomes/dates. Judge-directed wording removes any implication that chronological age decides which record is correct: the caregiver explicitly chooses the version to use.
+
+Final independent acceptance: astra-cairn-7f2c accepted actual desktop and 390px review on source 519af1b3 after inspecting whole dates on aligned value lines. Actual visible-chooser courses verified refusal, pending selection and Cancel preserve planner attendance, while explicit Use replaces it. Receipts: astra-cairn-7f2c-taste-conflict-final-01 and astra-cairn-7f2c-taste-plan-preservation-02, both exit 0. This is a scoped usability acceptance, not real-caregiver validation.
