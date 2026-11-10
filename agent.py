@@ -33,6 +33,28 @@ FALLBACK_CUISINES = ["Diner", "Italian", "Japanese"]  # broad, soft-food-friendl
 VENUE_CONCEPTS = ["jazz", "cinema", "museum", "concert hall"]
 MAX_STEPS = 12
 MAX_TRACE_DEPTH = 32
+# Qloo's place type includes museums, restaurants and cinemas. A model asking
+# for a restaurant is not evidence that the returned place serves meals.
+DINING_TAG_PREFIXES = ("urn:tag:genre:restaurant:", "urn:tag:category:place:restaurant")
+CULTURAL_TAG_IDS = frozenset({
+    "urn:tag:category:place:jazz_club",
+    "urn:tag:category:place:movie_theater",
+    # The retained low-sodium peer fixture uses Qloo's place-genre form.
+    "urn:tag:genre:place:cinema",
+    "urn:tag:category:place:museum",
+    "urn:tag:category:place:concert_hall",
+})
+
+
+def _matches_venue_purpose(entity: Entity, purpose: str) -> bool:
+    ids = [str(t.get("tag_id") or t.get("id") or "").strip().casefold()
+           for t in entity.tags if isinstance(t, dict)]
+    if purpose == "restaurant":
+        return any(tag.startswith(DINING_TAG_PREFIXES) for tag in ids)
+    if purpose == "outing":
+        return any(tag in CULTURAL_TAG_IDS for tag in ids)
+    return False
+
 
 TOOLS = [
     {"type": "function", "function": {
@@ -235,6 +257,8 @@ class AgentState:
     # Latest result for each purpose/query: candidate count, or no usable result.
     # This describes lookup completion, never provider or network availability.
     recommendation_outcomes: dict[tuple[str, str], Optional[int]] = field(default_factory=dict)
+    # Excluded place results remain visible; they never count as failed care checks.
+    category_exclusions: dict[tuple[str, str], dict] = field(default_factory=dict)
 
 
 def _candidate_verdict(state: AgentState, candidate: dict) -> dict:
@@ -302,7 +326,15 @@ class Toolbox:
             raise
         if key is not None:
             self.state.recommendation_outcomes[(purpose, key)] = len(ents)
+        admitted = []
         for e in ents:
+            if not _matches_venue_purpose(e, purpose):
+                self.state.category_exclusions[(purpose, e.entity_id)] = {
+                    "purpose": purpose, "entity_id": e.entity_id, "name": e.name,
+                    "reason": (f"Place tags do not establish this as a {purpose}; "
+                               "confirm its type before scheduling."),
+                }
+                continue
             if e.entity_id not in self.state.candidates:
                 self.state.candidates[e.entity_id] = {
                     "entity": e, "purpose": purpose, "query_tags": list(tag_ids or []),
@@ -310,8 +342,12 @@ class Toolbox:
                     "fallback": any(self.state.tag_names.get(t) in FALLBACK_CUISINES
                                     and self.state.tag_names.get(t) not in self.state.persona["cuisines"]
                                     for t in (tag_ids or []))}
+            # A candidate may have been retained for the other purpose already.
+            if self.state.candidates[e.entity_id]["purpose"] == purpose:
+                admitted.append(e)
         return {"candidates": [{"entity_id": e.entity_id, "name": e.name,
-                                "affinity": e.affinity} for e in ents]}
+                                "affinity": e.affinity} for e in admitted],
+                "excluded_venue_types": sum(kind == purpose for kind, _ in self.state.category_exclusions)}
 
     def constraint_check(self, entity_ids: list, constraints: list, kind: str) -> dict:
         # Keep constraints/kind in the tool interface for existing model clients,
@@ -387,6 +423,10 @@ def _plan_notes(state: AgentState, verdicts: dict, meal_count: int, has_outing: 
         outcomes = [value for (kind, _), value in state.recommendation_outcomes.items()
                     if kind == purpose]
         incomplete = any(value is None for value in outcomes)
+        category_count = sum(kind == purpose for kind, _ in state.category_exclusions)
+        if category_count:
+            notes.append(f"{category_count} place result(s) excluded from {purpose} suggestions "
+                         "because their tags did not establish the required venue type.")
         if incomplete:
             article = "An" if purpose == "outing" else "A"
             notes.append(f"{article} {purpose} recommendation lookup could not be completed; "
@@ -441,7 +481,10 @@ def assemble_plan(state: AgentState) -> dict:
                  "failed": [ch for ch in v["checks"] if ch["status"] != "pass"]}
                 for eid, v in verdicts.items() if not v["ok"]]
     notes = _plan_notes(state, verdicts, len(days), outing is not None)
-    return {"meals": days, "outing": outing, "rejected": rejected, "notes": notes}
+    plan = {"meals": days, "outing": outing, "rejected": rejected, "notes": notes}
+    if state.category_exclusions:
+        plan["category_exclusions"] = list(state.category_exclusions.values())
+    return plan
 
 
 # ============================================================== LLM-only baseline
@@ -455,9 +498,15 @@ def llm_only_baseline(persona: dict) -> dict:
     no-tools completion; we keep the template for reproducibility.
     """
     picks = []
-    for day, cuisine in zip(MEAL_DAYS, (persona["cuisines"] * 4)):
-        picks.append({"day": day, "name": f"A well-reviewed {cuisine} restaurant nearby",
-                      "why": f"They enjoy {cuisine} food.",
+    has_cuisines = bool(persona["cuisines"])
+    generic_dining = ["diner", "Italian restaurant", "Japanese restaurant", "neighbourhood cafe"]
+    concepts = persona["cuisines"] * len(MEAL_DAYS) if has_cuisines else generic_dining
+    for day, cuisine in zip(MEAL_DAYS, concepts):
+        name = (f"A well-reviewed {cuisine} restaurant nearby" if has_cuisines
+                else f"A nearby {cuisine}")
+        reason = (f"They enjoy {cuisine} food." if has_cuisines
+                  else "No cuisine preference was supplied; this is an unverified generic dining idea.")
+        picks.append({"day": day, "name": name, "why": reason,
                       "verified": {"exists": False, "entity_id": None,
                                    "constraints_checked": False}})
     era = (persona["music"] or persona["films"] or ["classic"])[0]

@@ -318,6 +318,7 @@ function preparePlanView(res, restoredWeek = null) {
   fragments["#compare"] = `<tr><th></th><th>Qloo-grounded</th><th>LLM-only</th></tr>` +
     rows.map(([l, k]) => `<tr><td>${l}</td><td>${c.grounded[k]}</td><td>${k === "picks" ? c.llm_only[k] : (c.llm_only[k] ?? "&mdash;")}</td></tr>`).join("");
   fragments["#rejected"] = p.rejected.map((r) => `<li>${esc(r.name)}: ${r.failed.map((f) => esc(f.constraint + " " + f.status + " - " + f.reason)).join("; ")}</li>`).join("") || "<li>None</li>";
+  fragments["#kindExcluded"] = (p.category_exclusions || []).map((item) => "<li>" + esc(item.name) + " (" + esc(item.purpose) + "): " + esc(item.reason) + "</li>").join("") || "<li>None</li>";
   fragments["#trace"] = res.trace.map((t) => `<li>${esc(t.tool)}(${esc(JSON.stringify(t.args))}) &rarr; ${esc(t.result_summary)}</li>`).join("");
   const nextWeekView = prepareWeekView(nextWeek);
   return { nextWeek, nextWeekView, fragments, restoredWeek: Boolean(restoredWeek) };
