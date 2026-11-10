@@ -278,3 +278,8 @@ main { padding-top:.25rem; }
 .taste-form > .sample:nth-of-type(2) { display:grid; grid-template-columns:auto minmax(0,1fr); align-items:center; }
 .taste-form > .sample:nth-of-type(2) select { min-width:0; }
 @media(max-width:640px) { .taste-form > .sample button { padding:.55rem .65rem; font-size:.85rem; min-height:44px; } .taste-form > .sample:nth-of-type(2) select { font-size:.85rem; min-height:44px; } }
+
+.back-to-week { display:inline-block; margin:-.5rem 0 .8rem; color:#4b306d; font-size:.85rem; text-underline-offset:.15em; }
+#results[hidden] ~ #tasteForm .back-to-week { display:none; }
+.back-to-week:focus-visible { outline:3px solid #39236b; outline-offset:3px; }
+@media print { .back-to-week { display:none; } }
