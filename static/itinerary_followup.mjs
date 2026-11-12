@@ -64,6 +64,9 @@ export function mountItineraryFollowup(root, notesRoot, current) {
     const slot = button.closest("[data-itinerary-contact]");
     const form = find(notesRoot, "[data-contact-key]", slot.dataset.itineraryKey, slot.dataset.itineraryDate);
     if (!form) return;
+    // The working week stays compact until its own visit asks to edit a note.
+    // Reveal the existing editor before focusing the exact dated occurrence.
+    notesRoot.open = true;
     const control = form.querySelector('[data-contact-field="status"]');
     control.focus({ preventScroll: true });
     control.scrollIntoView({ block: "center" });
