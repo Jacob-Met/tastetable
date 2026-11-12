@@ -55,25 +55,28 @@
           <button id="saveCurrentWeek" class="primary" type="button" aria-describedby="browserSaveHelp" disabled>Save plan and notes in this browser</button>
         </div>
         <p id="browserSaveHelp" class="why organizer-help">Keeps the dates, original checks and every venue reply for reopening. Saved only when you choose Save.</p>
-        <div class="week-export-actions">
-          <button id="printWeek" type="button" disabled>Print week</button>
-          <button id="saveWeek" type="button" disabled aria-describedby="weekFileStatus weekOnlySaveHelp">Week-only JSON</button>
-          <button id="calendarDownload" type="button" disabled aria-describedby="calendarStatus">Calendar (.ics)</button>
-        </div>
-        <p id="weekOnlySaveHelp" class="why">These separate week and calendar files leave out venue notes. The complete caregiver handoff below includes them.</p>
-        <div class="week-reset">
-          <button id="resetWeek" type="button" disabled>Restore suggested days</button>
-        </div>
-      </section>
-      <section id="calendarExport" class="calendar-export" aria-labelledby="calendarTitle">
-        <h3 id="calendarTitle">Calendar handoff</h3>
-        <p id="calendarSource" class="why"></p>
-        <p id="calendarStatus" class="calendar-status" role="status" aria-live="polite"></p>
-        <details>
-          <summary>Review the calendar dates</summary>
-          <ol id="calendarPreview"></ol>
+        <details id="weekTools" class="week-tools">
+          <summary>Print, calendar and portable handoff</summary>
+          <div class="week-export-actions">
+            <button id="printWeek" type="button" disabled>Print week</button>
+            <button id="saveWeek" type="button" disabled aria-describedby="weekFileStatus weekOnlySaveHelp">Week-only JSON</button>
+            <button id="calendarDownload" type="button" disabled aria-describedby="calendarStatus">Calendar (.ics)</button>
+          </div>
+          <p id="weekOnlySaveHelp" class="why">Week-only and calendar files leave out venue notes. Use the complete caregiver handoff here when the replies matter.</p>
+          <section id="calendarExport" class="calendar-export" aria-labelledby="calendarTitle">
+            <h3 id="calendarTitle">Calendar handoff</h3>
+            <p id="calendarSource" class="why"></p>
+            <p id="calendarStatus" class="calendar-status" role="status" aria-live="polite"></p>
+            <details>
+              <summary>Review the calendar dates</summary>
+              <ol id="calendarPreview"></ol>
+            </details>
+            <p class="why">These are all-day suggestions. Review in your calendar app before importing; edits here do not cancel earlier imports.</p>
+          </section>
+          <div class="week-reset">
+            <button id="resetWeek" type="button" disabled>Restore suggested days</button>
+          </div>
         </details>
-        <p class="why">The file contains all-day suggestions for your arranged week. Open it in your calendar app to review and import. Changes here do not update or cancel earlier imports.</p>
       </section>
       <p class="handoff-note">Planning draft. Dates are your choices, not reservations or confirmed opening hours. Confirm the venue, accessibility and food needs with the venue and care team before going.</p>
     </section>
@@ -175,11 +178,10 @@
     <p data-history-status role="status" aria-live="polite"></p>
   </details>
 
-  <nav class="record-paths" aria-label="Keep and revisit your plans">
-    <p class="record-paths-heading">After planning</p>
-    <a href="#caregiverHandoff"><span class="record-paths-step">01</span><span><strong>Carry the week forward</strong><small>Save one editable handoff with venue replies</small></span></a>
-    <a href="#savedWeeks"><span class="record-paths-step">02</span><span><strong>Revisit a saved week</strong><small>Find, open or rename a browser copy</small></span></a>
-    <a href="#savedWeekCollection"><span class="record-paths-step">03</span><span><strong>Protect the collection</strong><small>Back up or recover saved plans</small></span></a>
+  <nav class="record-paths" aria-label="Saved work and files">
+    <a href="#caregiverHandoff">Portable handoff</a>
+    <a href="#savedWeeks">Saved weeks</a>
+    <a href="#savedWeekCollection">Backup &amp; restore</a>
   </nav>
 
   <section id="caregiverHandoff" class="card contact-session-help" aria-labelledby="caregiverHandoffTitle">
@@ -261,8 +263,8 @@
         </div>
       </section>
     </section>
-    <section class="saved-week-import" aria-labelledby="importSavedWeekTitle">
-      <h3 id="importSavedWeekTitle">Add a portable week to this browser</h3>
+    <details class="saved-week-import" aria-labelledby="importSavedWeekTitle">
+      <summary id="importSavedWeekTitle">Import a portable week</summary>
       <p id="importSavedWeekHelp" class="why">Review a portable saved-week file, then give this browser copy a name. Importing does not open it or replace your current week or venue notes.</p>
       <div class="saved-week-import-controls">
         <label for="importSavedWeekFile">Choose a portable saved-week file
@@ -284,11 +286,11 @@
           <button id="saveImportedWeek" type="button" disabled>Save imported browser copy</button>
         </div>
       </section>
-    </section>
+    </details>
   </section>
 
-  <section id="savedWeekCollection" class="card saved-week-collection" aria-labelledby="savedWeekCollectionTitle">
-    <h2 id="savedWeekCollectionTitle">Back up or recover saved weeks</h2>
+  <details id="savedWeekCollection" class="card saved-week-collection" aria-labelledby="savedWeekCollectionTitle">
+    <summary id="savedWeekCollectionTitle">Back up or recover saved weeks</summary>
     <p id="collectionBackupHelp">A collection backup includes every saved week in this browser, regardless of search or ordering. It keeps names, identities, dates and complete portable copies. Store the file privately. Opening a backup only previews it; adding missing records never overwrites existing weeks or changes the active planner or venue notes.</p>
     <div class="saved-week-collection-controls">
       <button id="downloadCollectionBackup" type="button" disabled>Back up saved weeks (.json)</button>
@@ -304,7 +306,7 @@
       <ol id="collectionBackupRecords"></ol>
       <button id="addMissingSavedWeeks" type="button" disabled>Add missing saved weeks</button>
     </section>
-  </section>
+  </details>
 
 
 </main>
