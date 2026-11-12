@@ -50,17 +50,17 @@
       <div id="weekNotes"></div>
       <section class="week-keep" aria-labelledby="weekKeepTitle">
         <h3 id="weekKeepTitle">Keep or share this week</h3>
+        <div class="saved-week-actions organizer-help week-primary-save">
+          <label>Name this saved plan <input id="savedWeekName" maxlength="120" autocomplete="off"></label>
+          <button id="saveCurrentWeek" class="primary" type="button" aria-describedby="browserSaveHelp" disabled>Save plan and notes in this browser</button>
+        </div>
+        <p id="browserSaveHelp" class="why organizer-help">Keeps the dates, original checks and every venue reply for reopening. Saved only when you choose Save.</p>
         <div class="week-export-actions">
-          <button id="printWeek" type="button" class="primary" disabled>Print week</button>
-          <button id="saveWeek" type="button" disabled aria-describedby="weekFileStatus weekOnlySaveHelp">Save week only (.json)</button>
-          <button id="calendarDownload" type="button" disabled aria-describedby="calendarStatus">Download calendar (.ics)</button>
+          <button id="printWeek" type="button" disabled>Print week</button>
+          <button id="saveWeek" type="button" disabled aria-describedby="weekFileStatus weekOnlySaveHelp">Week-only JSON</button>
+          <button id="calendarDownload" type="button" disabled aria-describedby="calendarStatus">Calendar (.ics)</button>
         </div>
-        <p id="weekOnlySaveHelp" class="why">Week JSON and calendar files do not include venue notes. <a href="#caregiverHandoff">Save a caregiver handoff</a> to keep the plan and notes together.</p>
-        <div class="saved-week-actions organizer-help">
-          <label>Name for this browser copy <input id="savedWeekName" maxlength="120" autocomplete="off"></label>
-          <button id="saveCurrentWeek" type="button" aria-describedby="browserSaveHelp" disabled>Save plan and notes in this browser</button>
-        </div>
-        <p id="browserSaveHelp" class="why organizer-help">This explicit save keeps the week and all venue replies, contact statuses and next steps in this browser. Nothing is sent to a provider.</p>
+        <p id="weekOnlySaveHelp" class="why">These separate week and calendar files leave out venue notes. The complete caregiver handoff below includes them.</p>
         <div class="week-reset">
           <button id="resetWeek" type="button" disabled>Restore suggested days</button>
         </div>
@@ -84,6 +84,7 @@
       <p class="handoff-note">These are caregiver-entered notes. A recorded reply is not a safety check, reservation or confirmation by TasteTable. Confirm needs with the venue and care team; do not enter names or private health information.</p>
       <p class="why contact-session-help">Notes stay in this tab for the current plan. While recorded notes remain, your browser may ask before you refresh or leave; choose to stay if you still need to save them. A download does not turn off this reminder. Browser warnings are not guaranteed, so keep a saved copy. Each note belongs to one pick and date. Moving a visit starts a separate note; returning to its previous date restores that note during this visit. Save plan and notes in this browser to reopen them together, or download the complete caregiver handoff. A separate venue-notes file still needs its matching saved week. Week save files and calendar files keep their existing formats and do not include these notes.</p>
       <p data-contact-summary></p>
+      <nav class="contact-visit-nav" data-contact-nav aria-label="Choose a visit to contact" hidden></nav>
       <div class="contact-actions">
         <button type="button" data-contact-download disabled>Download call sheet (.txt)</button>
         <button type="button" data-contact-file-save disabled>Save venue notes (.json)</button>

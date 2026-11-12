@@ -24,6 +24,20 @@ let historyPlan = null;
 let requestKind = "plan";
 let savedWeeks = null;
 const OPEN_SAVED_WEEK = Symbol("open saved week");
+// The same handoff reader must be reachable before planning (to reopen a file)
+// and beside the accepted week (to save it). Never duplicate its controls.
+const handoffHome = document.createComment("caregiver handoff home");
+$("#caregiverHandoff").before(handoffHome);
+function placeHandoffWithWeek(active) {
+  const handoff = $("#caregiverHandoff");
+  if (active) {
+    $("#weekOrganizer .week-keep").append(handoff);
+    handoff.classList.add("handoff-in-week");
+  } else {
+    handoffHome.after(handoff);
+    handoff.classList.remove("handoff-in-week");
+  }
+}
 let caregiverHandoff = null;
 let itineraryFollowup = null;
 const venueFollowup = mountVenueFollowup($("#venueFollowup"), () => ({ state: weekState, date: $("#weekDate").value, origin: acceptedPlan }), () => {
@@ -239,6 +253,7 @@ function acceptCalendar() {
 }
 
 function retirePlan() {
+  placeHandoffWithWeek(false);
   arrangementHistory = null;
   historyPlan = null;
   refreshArrangementHistory();
@@ -345,6 +360,7 @@ function commitPlanView({ nextWeek, nextWeekView, fragments, restoredWeek }, { d
   if (!deferWeekRefresh) applyWeekDate();
   $("#resetWeek").disabled = false;
   $("#results").hidden = false;
+  placeHandoffWithWeek(true);
   $("#results").scrollIntoView({ behavior: "smooth" });
 }
 

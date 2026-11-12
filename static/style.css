@@ -214,3 +214,13 @@ button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-v
 .week-heading + .week-range { margin-top:0; }
 .week-links { display:flex; flex-wrap:wrap; gap:.4rem 1.2rem; margin-bottom:.4rem; }
 #weekKeepTitle { scroll-margin-top:5rem; }
+
+/* Keep the single complete handoff action next to the week it saves. */
+#caregiverHandoff.handoff-in-week { margin:1.2rem 0 0; border-top:1px solid #b9c7b9; border-radius:0; box-shadow:none; padding:1rem 0 0; background:transparent; }
+#caregiverHandoff.handoff-in-week h2 { margin:0 0 .4rem; font-size:1.16rem; }
+#caregiverHandoff.handoff-in-week > p { max-width:65ch; margin:.4rem 0 .8rem; }
+.week-primary-save { display:flex; flex-wrap:wrap; align-items:end; gap:.65rem; margin-bottom:.5rem; }
+.week-primary-save label { flex:1 1 16rem; margin:0; }
+.week-primary-save button { flex:1 1 17rem; min-height:44px; }
+.week-export-actions { border-top:1px solid #e2e6df; padding-top:.75rem; }
+@media print { #caregiverHandoff.handoff-in-week { display:none !important; } }

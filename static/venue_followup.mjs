@@ -174,7 +174,41 @@ export function mountVenueFollowup(root, current, onChange = () => {}) {
   const status = root.querySelector("[data-contact-status]");
   const source = root.querySelector("[data-contact-source]");
   const download = root.querySelector("[data-contact-download]");
+  const visitNav = root.querySelector("[data-contact-nav]");
+  let selectedVisit = null;
   let session = null;
+
+  function visitId(entry) { return JSON.stringify([entry.key, entry.date]); }
+  function updateActiveVisit(identity) {
+    selectedVisit = identity;
+    for (const button of visitNav.querySelectorAll("[data-contact-target]")) {
+      button.setAttribute("aria-pressed", String(button.dataset.contactTarget === identity));
+    }
+  }
+
+  // One focused conversation at a time, without removing the other editable
+  // records from the document, print output or keyboard navigation.
+  visitNav.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-contact-target]");
+    if (!button || !visitNav.contains(button)) return;
+    updateActiveVisit(button.dataset.contactTarget);
+    const card = [...list.children].find((node) =>
+      JSON.stringify([node.dataset.contactKey, node.dataset.contactDate]) === selectedVisit);
+    if (!card) return;
+    card.scrollIntoView({ block: "nearest", inline: "start", behavior: "smooth" });
+    card.querySelector('[data-contact-field="status"]')?.focus({ preventScroll: true });
+  });
+  list.addEventListener("focusin", (event) => {
+    const card = event.target.closest("[data-contact-key]");
+    if (card) updateActiveVisit(JSON.stringify([card.dataset.contactKey, card.dataset.contactDate]));
+  });
+  list.addEventListener("scroll", () => {
+    const nearest = [...list.children].reduce((best, child) => {
+      const distance = Math.abs(child.offsetLeft - list.offsetLeft - list.scrollLeft);
+      return !best || distance < best.distance ? {child, distance} : best;
+    }, null)?.child;
+    if (nearest) updateActiveVisit(JSON.stringify([nearest.dataset.contactKey, nearest.dataset.contactDate]));
+  }, { passive: true });
   const ownerWindow = root.ownerDocument.defaultView;
   let departureProtected = false;
   function beforeLeave(event) {
@@ -257,6 +291,23 @@ export function mountVenueFollowup(root, current, onChange = () => {}) {
         </div>${notePrint(entry)}
       </li>`;
       }).join("");
+      visitNav.replaceChildren();
+      visitNav.hidden = visits.length === 0;
+      for (const entry of visits) {
+        const button = root.ownerDocument.createElement("button");
+        button.type = "button";
+        button.dataset.contactTarget = visitId(entry);
+        button.textContent = entry.day.slice(0, 3) + " · " + entry.pick.name;
+        button.setAttribute("aria-label", "Edit " + entry.pick.name + " on " + entry.date);
+        visitNav.append(button);
+      }
+      const active = visits.find((entry) => visitId(entry) === selectedVisit) || visits[0];
+      updateActiveVisit(active ? visitId(active) : null);
+      // Change only the internal horizontal position, not the page's reading position.
+      if (active) {
+        const child = list.children[visits.indexOf(active)];
+        list.scrollLeft = child.offsetLeft - list.offsetLeft;
+      }
       // Set values after parsing: HTML strips a leading LF inside <textarea>.
       visits.forEach((entry, index) => {
         const visit = list.children[index];
@@ -363,6 +414,9 @@ export function mountVenueFollowup(root, current, onChange = () => {}) {
       noteFiles.retire();
       root.hidden = true;
       list.replaceChildren();
+      visitNav.replaceChildren();
+      visitNav.hidden = true;
+      selectedVisit = null;
       summary.textContent = source.textContent = status.textContent = "";
       download.disabled = true;
       onChange();
