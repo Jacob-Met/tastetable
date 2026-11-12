@@ -17,6 +17,12 @@ try {
   await page.goto(url);
   await page.locator("#sampleBtn").click();
   await page.locator("#results").waitFor({state:"visible"});
+  assert.equal(await page.locator('#caregiverHandoff').evaluate(n => Boolean(n.closest('#weekOrganizer'))), true,
+    "the complete file stays beside the week it saves");
+  const visitButtons = page.locator('#venueFollowup [data-contact-nav] button');
+  assert.equal(await visitButtons.count(), 5, "all five visits have reachable conversation tabs");
+  await visitButtons.nth(1).click();
+  assert.equal(await visitButtons.nth(1).getAttribute("aria-pressed"), "true");
   await slot().getByRole("button", {name:/Edit venue note/}).click();
   const form = page.locator('#venueFollowup [data-contact-key="pick-1"]');
   const originalDate = await form.getAttribute("data-contact-date");
@@ -37,7 +43,14 @@ try {
   await page.screenshot({path:out+"/desktop-current-note.png"});
   await page.setViewportSize({width:390,height:844});
   await slot().scrollIntoViewIfNeeded();
-  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
+  const phoneSize = await page.evaluate(() => ({
+    bodyWidth: document.documentElement.scrollWidth,
+    handoffTop: document.querySelector('#caregiverHandoff').getBoundingClientRect().top + scrollY,
+    worksheetHeight: document.querySelector('#venueFollowup').getBoundingClientRect().height,
+  }));
+  assert.equal(phoneSize.bodyWidth, 390, "the 390px page must not overflow horizontally");
+  assert.ok(phoneSize.handoffTop < 4500, "the complete handoff is part of this week, not buried after every call form");
+  assert.ok(phoneSize.worksheetHeight < 3500, "the venue forms are one focused visit, not five vertically stacked forms");
   await page.screenshot({path:out+"/phone-current-note.png"});
   await slot().getByRole("button").click();
   const control = form.locator('[data-contact-field="status"]');
