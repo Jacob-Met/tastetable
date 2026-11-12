@@ -88,7 +88,6 @@ function pickCard({ key, pick }, day, sourceMode, date = null, constraints = [])
     <div class="pick-identity">
       <h4>${esc(pick.name)}</h4>
       <p class="pick-meta">${esc(pick.kind)}</p>
-      ${priorVisit ? `<p class="prior-visit">${esc(priorVisit)}</p>` : ""}
     </div>
     <label class="pick-control">Schedule
       <select data-pick-key="${key}" aria-label="Day for ${esc(pick.name)}">
@@ -96,6 +95,7 @@ function pickCard({ key, pick }, day, sourceMode, date = null, constraints = [])
         <option value=""${day === null ? " selected" : ""}>Keep off this week</option>
       </select>
     </label>
+    ${priorVisit ? `<p class="prior-visit">${esc(priorVisit)}</p>` : ""}
     ${carePrompt(pick, constraints, esc)}
     ${date ? `<div class="itinerary-contact" data-itinerary-contact data-itinerary-key="${esc(key)}" data-itinerary-date="${esc(date)}" hidden></div>` : ""}
     <details class="pick-evidence" data-evidence-key="${key}">
