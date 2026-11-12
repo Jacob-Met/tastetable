@@ -13,17 +13,15 @@ Built for the [Qloo Agentic Hackathon](https://qloo.devpost.com/).
 > menu keywords. Confirm needs with the venue and the care team. The sample personas are
 > fictional. The app saves browser copies only when explicitly requested, and it never sends names or health details to Qloo.
 
-## Run the current reviewed build
+## Run the current build
 
-[Download TasteTable v0.3.6 for Linux x86_64](https://github.com/Jacob-Met/tastetable/releases/download/v0.3.6-current-followup/TasteTable-v0.3.6-current-followup-linux-x86_64.tar.gz) · [Release notes and checksums](https://github.com/Jacob-Met/tastetable/releases/tag/v0.3.6-current-followup) · [Actual phone note](https://github.com/Jacob-Met/tastetable/releases/download/v0.3.6-current-followup/phone-current-note.png)
+[Download TasteTable v0.3.9 for Linux x86_64](https://github.com/Jacob-Met/tastetable/releases/download/v0.3.9-focused-week/TasteTable-v0.3.9-focused-week-linux-x86_64.tar.gz) · [Release details](https://github.com/Jacob-Met/tastetable/releases/tag/v0.3.9-focused-week) · [Phone view](https://github.com/Jacob-Met/tastetable/releases/download/v0.3.9-focused-week/working-week-phone.png) · [Desktop view](https://github.com/Jacob-Met/tastetable/releases/download/v0.3.9-focused-week/working-week-desktop.png)
 
-Requires CPython 3.12 and a modern browser. Extract the archive, enter the `tastetable` directory, run `./start.sh --port 8017`, and open `http://127.0.0.1:8017`. Dependencies are bundled.
+Requires **CPython 3.12**, Linux x86_64 and a modern browser. Extract the archive, enter the `tastetable` directory, run `./start.sh --port 8017`, and open `http://127.0.0.1:8017`. Dependencies are bundled.
 
-**This runnable release uses fictional Qloo fixtures and a scripted model.** Genuine live Qloo planning has not been exercised in this delivery; the live-provider configuration below remains opt-in and requires separately supplied access. The release does not establish real venue availability or care suitability.
+The week and its dated visit decisions are the main screen. Save the complete week and venue replies directly there; choose **Add note** on a visit to open the matching venue-call editor. Printing, calendar export, portable handoff, saved-week import and collection backup remain accessible when needed, without covering the normal itinerary. An explicitly saved browser copy can be reopened with its replies intact.
 
-The accepted week now opens before intake, with a persistent day index showing scheduled picks and open days. Choose a day to reach its heading; Edit tastes and Save & share connect the agenda to the existing workflows. The build also includes current visit search, edited-record departure protection and the editable visit-record workspace.
-
-Exact released source: `1972599e6a2fc4996b7c2d33fe1ffefb77fd8983`. Its freshly downloaded package was launched and exercised in Chrome at desktop and phone sizes. Current venue-contact status and next steps now appear beside the matching scheduled visit and date, with the full reply available; Edit and Back connect to the existing note. Independent reviewer astra-47b3-quartz accepted exact-date context, full-reply reading, keyboard focus and move/Undo behavior. The earlier reviewed week navigation and saved-week recovery remain included. A generic next step can still require opening the full reply for important detail, and the remaining dense save controls are an open usability gap. See [current-note behavior and limits](docs/ITINERARY_FOLLOWUP.md) and the [actual captioned browser walkthrough](https://github.com/Jacob-Met/tastetable/releases/download/v0.3.6-current-followup/TasteTable-current-followup-real-browser.mp4).
+**This runnable release uses fictional Qloo fixtures and a scripted model.** It is not a source of live venue availability, current dietary/accessibility suitability, or current provider recommendation quality. Confirm the venue and care needs directly. See [current build and next faults](STATUS.md).
 
 ## Problem
 
