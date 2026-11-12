@@ -10,6 +10,6 @@ Compare with [Wanderlog's itinerary interface](https://wanderlog.com/) for day n
 
 ## Working product
 
-The [current runnable TasteTable release](https://github.com/Jacob-Met/tastetable/releases/tag/v0.3.11-visit-outcomes) brings the seven-day itinerary, immediate complete save and dated note editor into one phone workflow, with file administration opened on demand heuristic care checks labeled at the visit itself, and imported attendance outcomes beside matching future venues. Its Linux package uses fictional Qloo fixtures and a scripted model; it is not evidence for real venue recommendations or care suitability.
+The [current runnable TasteTable release](https://github.com/Jacob-Met/tastetable/releases/tag/v0.3.12-visit-history) brings the seven-day itinerary, immediate complete save and dated note editor into one phone workflow, with file administration opened on demand heuristic care checks labeled at the visit itself, and attendance history imported directly from the week beside matching future venues. Its Linux package uses fictional Qloo fixtures and a scripted model; it is not evidence for real venue recommendations or care suitability.
 
 The live faults and current build are maintained in [STATUS.md](STATUS.md). Start with its highest actionable fault, and change the delivered product instead of adding another parallel interface.
