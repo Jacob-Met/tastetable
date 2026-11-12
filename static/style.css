@@ -163,6 +163,8 @@ button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-v
 .week-heading { display:flex; align-items:baseline; justify-content:space-between; gap:.6rem 1rem; flex-wrap:wrap; }
 .week-heading h2 { margin:.3rem 0 .9rem; }
 .week-heading a { color:#4b306d; font-size:.85rem; text-underline-offset:.2em; }
+.week-history-link { color:#4b306d; border:0; border-radius:0; background:transparent; padding:.35rem 0; font-size:.85rem; text-decoration:underline; text-underline-offset:.2em; line-height:1.5; }
+.week-history-link:hover { color:#321f4f; }
 .week-day-nav { position:sticky; top:0; z-index:2; display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); border-block:1px solid #aeb8af; background:#f7f8f4; margin-top:1rem; }
 .week-day-nav a { display:block; text-align:center; padding:.55rem .1rem; color:#253c2c; text-decoration:none; font-weight:650; }
 .week-day-nav a + a { border-left:1px solid #d5dbd4; }
