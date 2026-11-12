@@ -1,4 +1,4 @@
-import { evidenceMarkup } from "./pick_evidence.mjs";
+import { carePrompt, evidenceMarkup } from "./pick_evidence.mjs";
 import { mountItineraryFollowup } from "./itinerary_followup.mjs";
 import { mountVisitHistory } from "./visit_history.mjs";
 import { DAYS, createWeekPlan, localDate, offWeekPicks, resetDays, setPickDay, setWeek, weekRows } from "./week_plan.mjs";
@@ -82,7 +82,7 @@ const dateLabel = (date) => new Intl.DateTimeFormat(undefined, {
   year: "numeric", month: "short", day: "numeric", timeZone: "UTC",
 }).format(new Date(`${date}T12:00:00Z`));
 
-function pickCard({ key, pick }, day, sourceMode, date = null) {
+function pickCard({ key, pick }, day, sourceMode, date = null, constraints = []) {
   const priorVisit = visitHistory.label(sourceMode, pick);
   return `<article class="scheduled-pick">
     <div class="pick-identity">
@@ -96,6 +96,7 @@ function pickCard({ key, pick }, day, sourceMode, date = null) {
         <option value=""${day === null ? " selected" : ""}>Keep off this week</option>
       </select>
     </label>
+    ${carePrompt(pick, constraints, esc)}
     ${date ? `<div class="itinerary-contact" data-itinerary-contact data-itinerary-key="${esc(key)}" data-itinerary-date="${esc(date)}" hidden></div>` : ""}
     <details class="pick-evidence" data-evidence-key="${key}">
       <summary aria-label="Why ${esc(pick.name)} was suggested and original checks">Why this pick · original checks</summary>
@@ -125,7 +126,7 @@ function prepareWeekView(state, message = "") {
     : "No constraints listed in the response.";
   const days = rows.map((row) => `<li class="week-day" data-day="${row.day}">
     <h3>${row.day} <time datetime="${row.date}">${esc(dateLabel(row.date))}</time></h3>
-    ${row.picks.length ? row.picks.map((pick) => pickCard(pick, row.day, state.sourceMode, row.date)).join("") : '<p class="open-day">Open day <span>No pick scheduled.</span></p>'}
+    ${row.picks.length ? row.picks.map((pick) => pickCard(pick, row.day, state.sourceMode, row.date, state.constraints)).join("") : '<p class="open-day">Open day <span>No pick scheduled.</span></p>'}
   </li>`).join("");
   return {
     text: {
@@ -138,7 +139,7 @@ function prepareWeekView(state, message = "") {
     },
     html: {
       "#weekDays": days,
-      "#omittedPicks": omitted.map((pick) => `<li>${pickCard(pick, null, state.sourceMode)}</li>`).join(""),
+      "#omittedPicks": omitted.map((pick) => `<li>${pickCard(pick, null, state.sourceMode, null, state.constraints)}</li>`).join(""),
       "#weekNotes": (state.sourcePlan.notes || []).map((note) => `<p class="why">Original recommendation note: ${esc(note)}</p>`).join(""),
     },
     omittedHidden: !omitted.length,

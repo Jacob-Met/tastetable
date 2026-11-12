@@ -103,6 +103,13 @@ button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-v
 .week-day > .scheduled-pick, .week-day > .open-day { grid-column: 2; }
 .scheduled-pick { display: grid; grid-template-columns: minmax(0, 1fr) 11rem; gap: .35rem 1rem; }
 .pick-meta { margin: .2rem 0; font-size: .8rem; color: var(--muted); }
+/* Care needs remain beside the dated choice; original methods stay in evidence. */
+.care-prompt { grid-column:1 / -1; margin:.2rem 0; color:#34443b; font-size:.84rem; line-height:1.4; }
+.care-prompt strong { color:#2e4131; }
+.care-method { color:#5a645e; display:block; }
+.care-prompt[data-check-status="concern"] strong { color:#8a3925; }
+@media print { .care-prompt { font-size:9pt; break-inside:avoid; } }
+
 .scheduled-pick .prior-visit { margin: .35rem 0; }
 .pick-control { align-self: start; margin: 0; font-size: .8rem; }
 .pick-control select { width: 100%; margin-top: .2rem; }
