@@ -55,6 +55,18 @@ const venueFollowup = mountVenueFollowup($("#venueFollowup"), () => ({ state: we
   queueMicrotask(() => itineraryFollowup?.refresh());
 });
 itineraryFollowup = mountItineraryFollowup($("#weekOrganizer"), $("#venueFollowup"), () => venueFollowup.snapshot());
+// Print still includes complete venue questions and replies, even when the
+// editor is collapsed on screen. Return to its previous screen state afterward.
+let venueWasOpenAtPrint = null;
+window.addEventListener("beforeprint", () => {
+  const editor = $("#venueFollowup");
+  venueWasOpenAtPrint = editor.open;
+  editor.open = true;
+});
+window.addEventListener("afterprint", () => {
+  if (venueWasOpenAtPrint !== null) $("#venueFollowup").open = venueWasOpenAtPrint;
+  venueWasOpenAtPrint = null;
+});
 
 const visitHistory = mountVisitHistory($("#visitHistory"), () => { if (weekState) renderWeek(); });
 
