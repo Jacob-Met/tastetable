@@ -31,13 +31,21 @@ $("#caregiverHandoff").before(handoffHome);
 function placeHandoffWithWeek(active) {
   const handoff = $("#caregiverHandoff");
   if (active) {
-    $("#weekOrganizer .week-keep").append(handoff);
+    $("#weekTools").append(handoff);
     handoff.classList.add("handoff-in-week");
   } else {
     handoffHome.after(handoff);
     handoff.classList.remove("handoff-in-week");
   }
 }
+// Fragment navigation must reveal the actual existing controls, not a blank
+// location inside a closed native disclosure.
+document.querySelectorAll?.('.record-paths a')?.forEach((link) => {
+  link.addEventListener('click', () => {
+    if (link.hash === '#caregiverHandoff' && weekState) $("#weekTools").open = true;
+    if (link.hash === '#savedWeekCollection') $("#savedWeekCollection").open = true;
+  });
+});
 let caregiverHandoff = null;
 let itineraryFollowup = null;
 const venueFollowup = mountVenueFollowup($("#venueFollowup"), () => ({ state: weekState, date: $("#weekDate").value, origin: acceptedPlan }), () => {
@@ -67,7 +75,7 @@ function pickCard({ key, pick }, day, sourceMode, date = null) {
   return `<article class="scheduled-pick">
     <div class="pick-identity">
       <h4>${esc(pick.name)}</h4>
-      <p class="pick-meta">${esc(pick.kind)}${pick.fallback ? " · widened search" : ""}${typeof pick.affinity === "number" ? " · affinity " + esc(pick.affinity.toFixed(2)) : ""}</p>
+      <p class="pick-meta">${esc(pick.kind)}</p>
       ${priorVisit ? `<p class="prior-visit">${esc(priorVisit)}</p>` : ""}
     </div>
     <label class="pick-control">Schedule
@@ -80,6 +88,8 @@ function pickCard({ key, pick }, day, sourceMode, date = null) {
     <details class="pick-evidence" data-evidence-key="${key}">
       <summary aria-label="Why ${esc(pick.name)} was suggested and original checks">Why this pick · original checks</summary>
       ${evidenceMarkup(pick, esc)}
+      ${pick.fallback ? '<p class="why">A wider search supplied this suggestion.</p>' : ''}
+      ${typeof pick.affinity === "number" ? `<p class="why">Original taste affinity: ${esc(pick.affinity.toFixed(2))}</p>` : ''}
       <p class="why mono">Qloo id: ${esc(pick.entity_id)}</p>
     </details>
   </article>`;

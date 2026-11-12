@@ -57,48 +57,18 @@ button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-v
   .week-controls button { flex:1 1 140px; }
 }
 
-/* Keep the actual weekly plan ahead of archive administration. The links below
-   are an index to existing workflows, not an additional set of controls. */
+/* The itinerary is the product; file administration is a quiet return path. */
 .record-paths {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0;
-  margin: 2.2rem 0 .4rem;
-  padding: 1rem 0 .8rem;
-  border-top: 2px solid var(--ink);
-}
-.record-paths-heading {
-  grid-column: 1 / -1;
-  margin: 0 0 .7rem;
-  font-size: .8rem;
-  font-weight: 750;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  color: var(--muted);
-}
-.record-paths a {
   display: flex;
-  gap: .8rem;
-  align-items: baseline;
-  min-width: 0;
-  padding: .45rem 1.2rem .5rem 0;
-  color: var(--ink);
-  text-decoration: none;
+  flex-wrap: wrap;
+  gap: .4rem 1.4rem;
+  border-top: 1px solid #c9cfc8;
+  margin: 1rem 0 .4rem;
+  padding: .8rem 0 .25rem;
 }
-.record-paths a + a { padding-left: 1.2rem; border-left: 1px solid #d7d5cf; }
-.record-paths-step {
-  color: var(--accent);
-  font: 600 .86rem/1.5 ui-monospace, SFMono-Regular, Consolas, monospace;
-}
-.record-paths strong { display: block; font-size: .95rem; font-weight: 700; }
-.record-paths small { display: block; margin-top: .2rem; color: var(--muted); font-size: .79rem; line-height: 1.45; }
-.record-paths a:hover strong, .record-paths a:focus-visible strong { text-decoration: underline; text-underline-offset: .2em; }
-.record-paths a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
-@media (max-width: 650px) {
-  .record-paths { grid-template-columns: 1fr; margin-top: 1.4rem; }
-  .record-paths a { padding: .65rem 0; }
-  .record-paths a + a { padding-left: 0; border-left: 0; border-top: 1px solid #d7d5cf; }
-}
+.record-paths a { color: #3b4d3f; text-underline-offset: .2em; font-size: .88rem; font-weight: 600; }
+.record-paths a:focus-visible { outline: 3px solid #39236b; outline-offset: 3px; }
+@media(max-width:640px) { .record-paths { gap: .5rem 1rem; } }
 
 @media print {
   @page { margin:14mm; }
@@ -224,3 +194,15 @@ button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-v
 .week-primary-save button { flex:1 1 17rem; min-height:44px; }
 .week-export-actions { border-top:1px solid #e2e6df; padding-top:.75rem; }
 @media print { #caregiverHandoff.handoff-in-week { display:none !important; } }
+
+/* Keep one immediate save action; expand infrequent export tools only on demand. */
+.week-tools { border-top:1px solid #dfe4dd; margin-top:.8rem; padding-top:.4rem; }
+.week-tools > summary { cursor:pointer; color:#3b4d3f; font-weight:650; padding:.45rem 0; }
+.week-tools[open] > summary { margin-bottom:.75rem; }
+.week-tools > .week-export-actions { padding-top:.6rem; }
+.week-tools .calendar-export { margin:.7rem 0; }
+.saved-week-import > summary, .saved-week-collection > summary { cursor:pointer; font-weight:700; padding:.65rem .2rem; }
+.saved-week-import:not([open]) { padding-bottom:.15rem; }
+.saved-week-collection:not([open]) { box-shadow:none; background:transparent; padding:.1rem .75rem; border-block:1px solid #c9cfc8; border-radius:0; }
+.saved-week-collection[open] > summary { margin-bottom:.5rem; }
+@media print { .week-tools, .saved-week-import, .saved-week-collection { display:none!important; } }
