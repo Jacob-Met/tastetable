@@ -36,12 +36,13 @@ test("exact provenance and identity, not a matching venue name, determines histo
  assert.equal(priorVisitLabel(h,"live",{kind:"restaurant",entity_id:"same-id"}),"");
  assert.equal(priorVisitLabel(h,"mock",{kind:"outing",entity_id:"same-id"}),"");
  assert.equal(priorVisitLabel(h,"mock",{kind:"restaurant",entity_id:"different",name:"Same café"}),"");
- assert.equal(priorVisitLabel(h,"mock",{kind:"restaurant",entity_id:"id-2"}),"");
+ assert.match(priorVisitLabel(h,"mock",{kind:"restaurant",entity_id:"id-2"}),/Did not go · 2024-03-05/);
 });
 test("actual dated and undated attendance remain distinct; notes are not retained",()=>{
  const h=history(), label=priorVisitLabel(h,"mock",{kind:"restaurant",entity_id:"same-id"});
  assert.match(label,/2024-03-02/); assert.match(label,/1 without a date/);
  assert.equal(JSON.stringify([...h.venues]).includes("PRIVATE"),false);
+ assert.equal(JSON.stringify([...h.missed]).includes("PRIVATE"),false);
  assert.equal(JSON.stringify(h).includes("weekText"),false);
 });
 test("unknown source is refused; clearing means no markers",()=>{
@@ -111,4 +112,26 @@ test("conflict review summaries expose whole-file went entries but no notes or s
   assert.ok(!JSON.stringify(e).includes("PRIVATE"));assert.ok(!JSON.stringify(e).includes("weekText"));
   return e instanceof VisitHistoryConflict;
  });
+});
+
+test("missed and successful outcomes for the same venue appear together, dates and source kept distinct", () => {
+ const first=recordText();
+ const later=JSON.parse(savedText().replace(/^\uFEFF/,"")); later.week.start="2024-03-04";
+ const missed=recordText(JSON.stringify(later),"did_not_go","2024-03-10");
+ const h=readVisitHistories([first,missed]);
+ const label=priorVisitLabel(h,"mock",{kind:"restaurant",entity_id:"same-id"});
+ assert.match(label,/Visited · 2024-03-02/);
+ assert.match(label,/Did not go · 2024-03-10/);
+ assert.equal(label.split("\n").length,2);
+ assert.equal(priorVisitLabel(h,"live",{kind:"restaurant",entity_id:"same-id"}),"");
+ assert.ok(!JSON.stringify([...h.missed]).includes("PRIVATE"));
+});
+test("identical missed records count once; unrecorded picks never pretend to have history", () => {
+ const onlyMissed=recordText(savedText(),"did_not_go","2024-03-05");
+ const h=readVisitHistories([onlyMissed,onlyMissed]);
+ assert.equal(h.duplicates,1);
+ assert.equal(h.venues.size,0);
+ assert.equal(h.missed.size,1);
+ assert.match(priorVisitLabel(h,"mock",{kind:"restaurant",entity_id:"same-id"}),/Did not go/);
+ assert.equal(priorVisitLabel(h,"mock",{kind:"restaurant",entity_id:"id-2"}),"");
 });

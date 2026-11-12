@@ -17,7 +17,7 @@ export class VisitHistoryConflict extends Error {
 
 export function readVisitHistories(texts) {
   if (!texts.length || texts.length > 20) throw new Error("Choose between 1 and 20 visit records.");
-  const occurrences = new Map(), venues = new Map(), sources = new Map();
+  const occurrences = new Map(), venues = new Map(), missed = new Map(), sources = new Map();
   let mode = null, duplicates = 0;
   const summaries = [], conflicts = [];
   for (const [recordIndex, text] of texts.entries()) {
@@ -37,31 +37,36 @@ export function readVisitHistories(texts) {
         const prior = occurrences.get(identity);
         if (prior.outcome !== value.outcome || prior.date !== value.date)
           conflicts.push({ name: row.pick.name, first: { recordIndex: prior.recordIndex, outcome: prior.outcome, date: prior.date }, second: { recordIndex, outcome: row.outcome, date: row.date } });
-        if (value.outcome === "went") duplicates++;
+        if (value.outcome !== "unrecorded") duplicates++;
       } else occurrences.set(identity, value);
     }
   }
   if (conflicts.length) throw new VisitHistoryConflict(conflicts, summaries);
   for (const row of occurrences.values()) {
-    if (row.outcome !== "went") continue;
-    const prior = venues.get(row.key) || { count: 0, dates: [], undated: 0 };
+    const destination = row.outcome === "went" ? venues : row.outcome === "did_not_go" ? missed : null;
+    if (!destination) continue;
+    const prior = destination.get(row.key) || { count: 0, dates: [], undated: 0 };
     prior.count++;
     if (row.date) prior.dates.push(row.date); else prior.undated++;
-    venues.set(row.key, prior);
+    destination.set(row.key, prior);
   }
   // Source text and private notes are discarded; only attendance totals survive.
-  return { mode, venues, duplicates, records: texts.length, summaries };
+  return { mode, venues, missed, duplicates, records: texts.length, summaries };
 }
 export function readVisitHistory(text) { return readVisitHistories([text]); }
 export function priorVisitLabel(history, mode, pick) {
   if (!history || history.mode !== mode) return "";
-  const prior = history.venues.get(JSON.stringify([pick.kind, pick.entity_id]));
-  if (!prior) return "";
-  const dates = [...new Set(prior.dates)].sort();
-  return "Visited" + (dates.length ? " · " + dates.at(-1) : " · date not recorded")
-    + (prior.count > 1 ? " · " + prior.count + " visits" : "")
-    + (dates.length && prior.undated ? " · " + prior.undated + " without a date" : "")
-    + ".";
+  const identity = JSON.stringify([pick.kind, pick.entity_id]);
+  const label = (prior, verb, plural) => {
+    if (!prior) return "";
+    const dates = [...new Set(prior.dates)].sort();
+    return verb + (dates.length ? " · " + dates.at(-1) : " · date not recorded")
+      + (prior.count > 1 ? " · " + prior.count + " " + plural : "")
+      + (dates.length && prior.undated ? " · " + prior.undated + " without a date" : "") + ".";
+  };
+  return [label(history.venues.get(identity), "Visited", "visits"),
+    label(history.missed?.get(identity), "Did not go", "recorded non-visits")]
+    .filter(Boolean).join("\n");
 }
 
 export function mountVisitHistory(root, changed) {
@@ -177,7 +182,8 @@ export function mountVisitHistory(root, changed) {
       if (token !== revision) return;
       pending = { history, name: files.length === 1 ? files[0].name : files.length + " visit records" };
       q("[data-history-summary]").textContent = history.records + (history.records === 1 ? " file" : " files") + " · " + history.venues.size
-        + " previously visited " + (history.venues.size === 1 ? "venue" : "venues") + " (" + (history.mode === "mock" ? "fictional demo" : "live Qloo") + "). "
+        + " previously visited " + (history.venues.size === 1 ? "venue" : "venues") + " · "
+        + history.missed.size + " marked did not go (" + (history.mode === "mock" ? "fictional demo" : "live Qloo") + "). "
         + (history.duplicates ? history.duplicates + " repeated " + (history.duplicates === 1 ? "entry" : "entries") + " counted once. " : "")
         + "Only use records you know belong to the same person.";
       const list = q("[data-history-records]");
@@ -213,7 +219,8 @@ export function mountVisitHistory(root, changed) {
     if (!pending) return;
     active = pending.history;
     status.textContent = "Using " + pending.name + " for this tab's current and later plans. " + active.venues.size
-      + " previously visited " + (active.venues.size === 1 ? "venue" : "venues") + ". Notes stay private; recommendations and checks are unchanged.";
+      + " previously visited " + (active.venues.size === 1 ? "venue" : "venues")
+      + " · " + active.missed.size + " marked did not go. Notes stay private; recommendations and checks are unchanged.";
     ++revision; clearReview(); q("[data-history-clear]").disabled = false; changed();
   });
   q("[data-history-cancel]").addEventListener("click", cancelReview);

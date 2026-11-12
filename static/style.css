@@ -92,7 +92,7 @@ button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-v
 .visit-history { margin: 1rem 0; padding: .75rem 0; border-block: 1px solid #bdb8ad; }
 .visit-history summary { cursor: pointer; font-weight: 600; }
 .visit-history p { max-width: 70ch; }
-.prior-visit { border-left: 3px solid #66734b; padding-left: .6rem; font-size: .875rem; line-height: 1.45; color: #39432c; }
+.prior-visit { border-left: 3px solid #7c8880; padding-left: .6rem; font-size: .875rem; line-height: 1.45; color: #39432c; white-space: pre-line; }
 @media print { .visit-history { display: none; } }
 
 /* A chronological agenda: decisions align; evidence opens within its own visit. */
@@ -110,7 +110,7 @@ button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-v
 .care-prompt[data-check-status="concern"] strong { color:#8a3925; }
 @media print { .care-prompt { font-size:9pt; break-inside:avoid; } }
 
-.scheduled-pick .prior-visit { margin: .35rem 0; }
+.scheduled-pick > .prior-visit { grid-column: 1 / -1; margin: .15rem 0; overflow-wrap: anywhere; }
 .pick-control { align-self: start; margin: 0; font-size: .8rem; }
 .pick-control select { width: 100%; margin-top: .2rem; }
 .pick-evidence { grid-column: 1 / -1; margin-top: .25rem; }
