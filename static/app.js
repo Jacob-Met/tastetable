@@ -68,7 +68,27 @@ window.addEventListener("afterprint", () => {
   venueWasOpenAtPrint = null;
 });
 
-const visitHistory = mountVisitHistory($("#visitHistory"), () => { if (weekState) renderWeek(); });
+// Enter the original private record picker from the decision itself. There is
+// one importer, one review and one session-only history, not a second store.
+let returnToWeekAfterHistory = false;
+const historyRoot = $("#visitHistory");
+const visitHistory = mountVisitHistory(historyRoot, () => {
+  if (weekState) renderWeek();
+  if (returnToWeekAfterHistory && weekState) {
+    returnToWeekAfterHistory = false;
+    $("#weekTitle").focus({ preventScroll: true });
+    $("#weekTitle").scrollIntoView({ block: "start" });
+  }
+});
+$("#weekHistoryOpen").addEventListener("click", () => {
+  returnToWeekAfterHistory = true;
+  historyRoot.open = true;
+  historyRoot.scrollIntoView({ block: "start" });
+  historyRoot.querySelector("[data-history-open]").click();
+});
+historyRoot.querySelector("[data-history-cancel]").addEventListener("click", () => {
+  returnToWeekAfterHistory = false;
+});
 
 function newCalendarId() {
   try {
