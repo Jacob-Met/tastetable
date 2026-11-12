@@ -7,6 +7,27 @@ export function structuredEvidence(pick) {
       && ["pass", "fail", "unknown"].includes(check.status) && typeof check.reason === "string")) return null;
   return e;
 }
+/** The original screen is only a tag/keyword guess, never a current venue answer. */
+export function carePrompt(pick, constraints, esc) {
+  if (!Array.isArray(constraints)) return "";
+  const requested = [...new Set(constraints.filter((value) => typeof value === "string" && value))];
+  if (!requested.length) return "";
+  const evidence = structuredEvidence(pick);
+  const recorded = new Map(evidence?.checks.map((check) => [check.constraint, check.status]) || []);
+  const names = (items) => items.map((value) => labels[value] || value).join(", ");
+  const concern = requested.filter((value) => recorded.get(value) === "fail");
+  const unanswered = requested.filter((value) => !recorded.has(value) || recorded.get(value) === "unknown");
+  const cautions = [];
+  if (concern.length) cautions.push(`Original tags raised concerns about ${names(concern)}.`);
+  if (unanswered.length) cautions.push(`Original data could not establish ${names(unanswered)}.`);
+  const summary = cautions.join(" ") || "Original tags and keywords suggested a fit.";
+  const state = concern.length ? "concern" : unanswered.length ? "unknown" : "screened";
+  return `<p class="care-prompt" data-care-prompt data-check-status="${state}">
+    <strong>Confirm with the venue:</strong> ${esc(names(requested))}.
+    <span class="care-method">${esc(summary)} These checks are not a current venue confirmation.</span>
+  </p>`;
+}
+
 export function evidenceMarkup(pick, esc) {
   const e = structuredEvidence(pick);
   if (!e) return `<p class="why">${esc(pick.why)}</p>`;
